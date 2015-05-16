@@ -1,0 +1,45 @@
+﻿@model Tuple<Article, List<ArticleMetadata>, string, bool>
+
+@{
+    var article = Model.Item1;
+    var list = Model.Item2;
+    var blogname = Model.Item3;
+    var isEditable = Model.Item4;
+
+    ViewBag.Title = article != null ? article.Metadata.Name : "Articles";
+}
+
+@article.Content
+
+<div class="row">
+    @for (var i = 0; i < list.Count; i++) 
+    {
+        var curr = list[i];
+        if (curr.DisplayName == article.Metadata.DisplayName)
+        {
+            <div class="col-md-5 text-right">
+                @if (i > 0)
+                {
+                    <a href="/Blogs/@blogname/@list[i-1].DisplayName">&laquo; @list[i-1].Name</a>
+                }
+            </div>
+            <div class="col-md-2 text-center">
+                |
+                <a href="/Blogs/@blogname/">all</a>
+                |
+                @if (isEditable)
+                {
+                    @Html.ActionLink("edit", article.Metadata.DisplayName, "Edit")
+                    @:|
+                }
+            </div>
+            <div class="col-md-5 text-left">
+                @if (i + 1 < list.Count)
+                {
+                    <a href="/Blogs/@blogname/@list[i+1].DisplayName">@list[i+1].Name &raquo;</a>
+                }
+            </div>
+            break;
+        }
+    }
+</div>

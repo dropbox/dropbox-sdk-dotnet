@@ -23,6 +23,8 @@ Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "BabelDocs", "doc\BabelDocs.
 		{0E57A534-F4CA-402B-88F4-0B43E55264BA} = {0E57A534-F4CA-402B-88F4-0B43E55264BA}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlogDemo", "SimpleBlogDemo\SimpleBlogDemo.csproj", "{8772EB1E-3019-4FB3-9059-67681693E873}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{1E44F241-EC24-4D32-8837-868CBE134F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E44F241-EC24-4D32-8837-868CBE134F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E44F241-EC24-4D32-8837-868CBE134F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8772EB1E-3019-4FB3-9059-67681693E873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8772EB1E-3019-4FB3-9059-67681693E873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8772EB1E-3019-4FB3-9059-67681693E873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8772EB1E-3019-4FB3-9059-67681693E873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
