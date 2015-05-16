@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7a16f255-245f-4592-a39a-2d3524e06a27}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>run_this.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="csharp.babelg.py" />
+    <Compile Include="csproj.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="run_this.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="common\Babel\" />
+    <Folder Include="common\Babel\Json\" />
+    <Folder Include="common\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common\ApiException.cs" />
+    <Content Include="common\app.config" />
+    <Content Include="common\Babel\Empty.cs" />
+    <Content Include="common\Babel\IDecoder.cs" />
+    <Content Include="common\Babel\IEncodable.cs" />
+    <Content Include="common\Babel\IEncoder.cs" />
+    <Content Include="common\Babel\ITransport.cs" />
+    <Content Include="common\Babel\JsonDecoder.cs" />
+    <Content Include="common\Babel\JsonEncoder.cs" />
+    <Content Include="common\Babel\Json\JsonArray.cs" />
+    <Content Include="common\Babel\Json\JsonObject.cs" />
+    <Content Include="common\Babel\Json\JsonParser.cs" />
+    <Content Include="common\Babel\Util.cs" />
+    <Content Include="common\babel_summaries.xml" />
+    <Content Include="common\DropboxCertHelper.cs" />
+    <Content Include="common\DropboxClient.common.cs" />
+    <Content Include="common\DropboxOauth2Helper.cs" />
+    <Content Include="common\packages.config" />
+    <Content Include="common\Properties\AssemblyInfo.cs" />
+    <Content Include="common\Settings.StyleCop" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

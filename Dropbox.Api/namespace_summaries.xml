@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>_NamespaceSummaries_</name>
+    </assembly>
+    <members>
+        <member name="N:Dropbox.Api">
+            <summary>
+                <para>Contains the dropbox client - <see
+                cref="T:Dropbox.Api.DropboxClient"/>.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Files">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Files.Routes.FilesRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Files.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Files" />
+                namespace.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Users">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Users.Routes.UsersRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Users.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Users" />
+                namespace.</para>
+            </summary>
+        </member>
+    </members>
+</doc>

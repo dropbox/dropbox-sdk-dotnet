@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7B167CE-3AF8-478E-82F2-684D38F1DF98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dropbox.Api</RootNamespace>
+    <AssemblyName>Dropbox.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile344</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Dropbox.Api.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <NoWarn>419</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Dropbox.Api.XML</DocumentationFile>
+    <NoWarn>419</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiException.cs" />
+    <Compile Include="Babel\Empty.cs" />
+    <Compile Include="Babel\IDecoder.cs" />
+    <Compile Include="Babel\IEncodable.cs" />
+    <Compile Include="Babel\IEncoder.cs" />
+    <Compile Include="Babel\ITransport.cs" />
+    <Compile Include="Babel\JsonDecoder.cs" />
+    <Compile Include="Babel\JsonEncoder.cs" />
+    <Compile Include="Babel\Json\JsonArray.cs" />
+    <Compile Include="Babel\Json\JsonObject.cs" />
+    <Compile Include="Babel\Json\JsonParser.cs" />
+    <Compile Include="Babel\Util.cs" />
+    <Compile Include="DropboxCertHelper.cs" />
+    <Compile Include="DropboxClient.common.cs" />
+    <Compile Include="DropboxClient.cs" />
+    <Compile Include="DropboxOauth2Helper.cs" />
+    <Compile Include="Files\ChangeEntry.cs" />
+    <Compile Include="Files\CommitConflictError.cs" />
+    <Compile Include="Files\CommitError.cs" />
+    <Compile Include="Files\CommitInfo.cs" />
+    <Compile Include="Files\Disallowed.cs" />
+    <Compile Include="Files\DisallowedReason.cs" />
+    <Compile Include="Files\DownloadArg.cs" />
+    <Compile Include="Files\DownloadError.cs" />
+    <Compile Include="Files\FileMetadata.cs" />
+    <Compile Include="Files\FileMetadataWithName.cs" />
+    <Compile Include="Files\FilesRoutes.cs" />
+    <Compile Include="Files\FolderMetadata.cs" />
+    <Compile Include="Files\FolderPathError.cs" />
+    <Compile Include="Files\GetMetadataArg.cs" />
+    <Compile Include="Files\GetMetadataError.cs" />
+    <Compile Include="Files\ListFolderArg.cs" />
+    <Compile Include="Files\ListFolderContinueArg.cs" />
+    <Compile Include="Files\ListFolderContinueEntries.cs" />
+    <Compile Include="Files\ListFolderContinueError.cs" />
+    <Compile Include="Files\ListFolderContinueResult.cs" />
+    <Compile Include="Files\ListFolderError.cs" />
+    <Compile Include="Files\ListFolderFooter.cs" />
+    <Compile Include="Files\ListFolderResult.cs" />
+    <Compile Include="Files\Metadata.cs" />
+    <Compile Include="Files\MetadataWithName.cs" />
+    <Compile Include="Files\MetadataWithPath.cs" />
+    <Compile Include="Files\NoFile.cs" />
+    <Compile Include="Files\NoFileReason.cs" />
+    <Compile Include="Files\Restricted.cs" />
+    <Compile Include="Files\RestrictedReason.cs" />
+    <Compile Include="Files\SearchError.cs" />
+    <Compile Include="Files\SearchMatch.cs" />
+    <Compile Include="Files\SearchMatchType.cs" />
+    <Compile Include="Files\SearchMode.cs" />
+    <Compile Include="Files\SearchQuery.cs" />
+    <Compile Include="Files\SearchResults.cs" />
+    <Compile Include="Files\UploadCommitError.cs" />
+    <Compile Include="Files\UploadError.cs" />
+    <Compile Include="Files\UploadSessionCursor.cs" />
+    <Compile Include="Files\UploadSessionFinishArg.cs" />
+    <Compile Include="Files\UploadSessionFinishError.cs" />
+    <Compile Include="Files\UploadSessionLookupError.cs" />
+    <Compile Include="Files\UploadSessionOffsetError.cs" />
+    <Compile Include="Files\UploadSessionStartResult.cs" />
+    <Compile Include="Files\WriteMode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Account.cs" />
+    <Compile Include="Users\BasicAccount.cs" />
+    <Compile Include="Users\FullAccount.cs" />
+    <Compile Include="Users\GetAccountArg.cs" />
+    <Compile Include="Users\GetAccountError.cs" />
+    <Compile Include="Users\Name.cs" />
+    <Compile Include="Users\SpaceUsage.cs" />
+    <Compile Include="Users\Team.cs" />
+    <Compile Include="Users\UsersRoutes.cs" />
+  </ItemGroup>
+<ItemGroup>
+    <Content Include="babel_summaries.xml" />
+    <Content Include="namespace_summaries.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api", "Dropbox.Api\Dropbox.Api.csproj", "{D7B167CE-3AF8-478E-82F2-684D38F1DF98}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "generator", "generator\generator.pyproj", "{7A16F255-245F-4592-A39A-2D3524E06A27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTest", "SimpleTest\SimpleTest.csproj", "{33A16535-A722-4679-BD9F-A78576988519}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D94D9DCE-1798-495F-8B29-9A4629E82D51}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Doc", "Dropbox.Api\Dropbox.Api.Doc.csproj", "{0E57A534-F4CA-402B-88F4-0B43E55264BA}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "BabelDocs", "doc\BabelDocs.shfbproj", "{1E44F241-EC24-4D32-8837-868CBE134F98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E57A534-F4CA-402B-88F4-0B43E55264BA} = {0E57A534-F4CA-402B-88F4-0B43E55264BA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7B167CE-3AF8-478E-82F2-684D38F1DF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B167CE-3AF8-478E-82F2-684D38F1DF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B167CE-3AF8-478E-82F2-684D38F1DF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B167CE-3AF8-478E-82F2-684D38F1DF98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A16F255-245F-4592-A39A-2D3524E06A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A16F255-245F-4592-A39A-2D3524E06A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A16535-A722-4679-BD9F-A78576988519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A16535-A722-4679-BD9F-A78576988519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A16535-A722-4679-BD9F-A78576988519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A16535-A722-4679-BD9F-A78576988519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E57A534-F4CA-402B-88F4-0B43E55264BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E57A534-F4CA-402B-88F4-0B43E55264BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E57A534-F4CA-402B-88F4-0B43E55264BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E57A534-F4CA-402B-88F4-0B43E55264BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E44F241-EC24-4D32-8837-868CBE134F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E44F241-EC24-4D32-8837-868CBE134F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E44F241-EC24-4D32-8837-868CBE134F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E44F241-EC24-4D32-8837-868CBE134F98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
