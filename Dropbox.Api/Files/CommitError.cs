@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files
     public class CommitError : enc.IEncodable<CommitError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the CommitError class.</para>
+        /// <para>Initializes a new instance of the <see cref="CommitError" /> class.</para>
         /// </summary>
         public CommitError()
         {

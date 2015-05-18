@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class GetMetadataError : enc.IEncodable<GetMetadataError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the GetMetadataError class.</para>
+        /// <para>Initializes a new instance of the <see cref="GetMetadataError" />
+        /// class.</para>
         /// </summary>
         public GetMetadataError()
         {

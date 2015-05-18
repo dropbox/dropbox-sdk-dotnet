@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files
     public class NoFileReason : enc.IEncodable<NoFileReason>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the NoFileReason class.</para>
+        /// <para>Initializes a new instance of the <see cref="NoFileReason" /> class.</para>
         /// </summary>
         public NoFileReason()
         {

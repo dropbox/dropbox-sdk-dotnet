@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class FolderPathError : enc.IEncodable<FolderPathError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the FolderPathError class.</para>
+        /// <para>Initializes a new instance of the <see cref="FolderPathError" />
+        /// class.</para>
         /// </summary>
         public FolderPathError()
         {

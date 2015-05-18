@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class ListFolderError : enc.IEncodable<ListFolderError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the ListFolderError class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderError" />
+        /// class.</para>
         /// </summary>
         public ListFolderError()
         {

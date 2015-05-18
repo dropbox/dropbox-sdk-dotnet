@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class CommitConflictError : enc.IEncodable<CommitConflictError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the CommitConflictError class.</para>
+        /// <para>Initializes a new instance of the <see cref="CommitConflictError" />
+        /// class.</para>
         /// </summary>
         public CommitConflictError()
         {

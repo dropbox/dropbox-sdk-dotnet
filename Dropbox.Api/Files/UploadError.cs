@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files
     public class UploadError : enc.IEncodable<UploadError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the UploadError class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadError" /> class.</para>
         /// </summary>
         public UploadError()
         {

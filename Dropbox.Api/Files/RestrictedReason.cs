@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class RestrictedReason : enc.IEncodable<RestrictedReason>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the RestrictedReason class.</para>
+        /// <para>Initializes a new instance of the <see cref="RestrictedReason" />
+        /// class.</para>
         /// </summary>
         public RestrictedReason()
         {

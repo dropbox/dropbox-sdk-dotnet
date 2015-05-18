@@ -16,7 +16,7 @@ namespace Dropbox.Api.Users.Routes
     public class UsersRoutes
     {
         /// <summary>
-        /// <para>Initializes a new instance of the UsersRoutes class</para>
+        /// <para>Initializes a new instance of the <see cref="UsersRoutes" /> class.</para>
         /// </summary>
         /// <param name="transport">The transport to use</param>
         internal UsersRoutes(enc.ITransport transport)

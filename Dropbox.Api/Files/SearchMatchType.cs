@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class SearchMatchType : enc.IEncodable<SearchMatchType>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the SearchMatchType class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchMatchType" />
+        /// class.</para>
         /// </summary>
         public SearchMatchType()
         {

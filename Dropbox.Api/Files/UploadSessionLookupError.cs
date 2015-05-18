@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class UploadSessionLookupError : enc.IEncodable<UploadSessionLookupError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the UploadSessionLookupError class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadSessionLookupError" />
+        /// class.</para>
         /// </summary>
         public UploadSessionLookupError()
         {

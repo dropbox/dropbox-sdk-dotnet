@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files
     public class DownloadError : enc.IEncodable<DownloadError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the DownloadError class.</para>
+        /// <para>Initializes a new instance of the <see cref="DownloadError" /> class.</para>
         /// </summary>
         public DownloadError()
         {

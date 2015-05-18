@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class ListFolderContinueError : enc.IEncodable<ListFolderContinueError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the ListFolderContinueError class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderContinueError" />
+        /// class.</para>
         /// </summary>
         public ListFolderContinueError()
         {

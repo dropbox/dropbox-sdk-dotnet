@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files
     public class SearchError : enc.IEncodable<SearchError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the SearchError class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchError" /> class.</para>
         /// </summary>
         public SearchError()
         {

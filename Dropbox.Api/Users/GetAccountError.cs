@@ -16,7 +16,8 @@ namespace Dropbox.Api.Users
     public class GetAccountError : enc.IEncodable<GetAccountError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the GetAccountError class.</para>
+        /// <para>Initializes a new instance of the <see cref="GetAccountError" />
+        /// class.</para>
         /// </summary>
         public GetAccountError()
         {

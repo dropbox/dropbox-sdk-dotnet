@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files.Routes
     public class FilesRoutes
     {
         /// <summary>
-        /// <para>Initializes a new instance of the FilesRoutes class</para>
+        /// <para>Initializes a new instance of the <see cref="FilesRoutes" /> class.</para>
         /// </summary>
         /// <param name="transport">The transport to use</param>
         internal FilesRoutes(enc.ITransport transport)

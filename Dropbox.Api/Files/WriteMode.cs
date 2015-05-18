@@ -23,7 +23,7 @@ namespace Dropbox.Api.Files
     public class WriteMode : enc.IEncodable<WriteMode>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the WriteMode class.</para>
+        /// <para>Initializes a new instance of the <see cref="WriteMode" /> class.</para>
         /// </summary>
         public WriteMode()
         {

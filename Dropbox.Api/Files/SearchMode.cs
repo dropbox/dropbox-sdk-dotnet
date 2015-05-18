@@ -16,7 +16,7 @@ namespace Dropbox.Api.Files
     public class SearchMode : enc.IEncodable<SearchMode>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the SearchMode class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchMode" /> class.</para>
         /// </summary>
         public SearchMode()
         {

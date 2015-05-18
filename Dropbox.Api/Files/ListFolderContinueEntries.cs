@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class ListFolderContinueEntries : enc.IEncodable<ListFolderContinueEntries>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the ListFolderContinueEntries class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderContinueEntries" />
+        /// class.</para>
         /// </summary>
         public ListFolderContinueEntries()
         {

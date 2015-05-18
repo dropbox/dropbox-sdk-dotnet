@@ -36,12 +36,18 @@ from babelapi.generator import CodeGenerator
 try:
     from csproj import make_csproj_file
 except ImportError:
+    # The babel generate calls imp.load_source on this file, which precludes
+    # referencing csproj as if it was part of a module, so we have to jump
+    # through this hoop...
     csproj = os.path.join(os.path.dirname(__file__), 'csproj.py')
     csproj_module = imp.load_source('csproj_module', csproj)
     make_csproj_file = csproj_module.make_csproj_file
 
 
 def memo_one(fn):
+    """
+    Memoize a single argument instance method.
+    """
     cache = {}
     def wrapper(self, arg):
         value = cache.get(arg)
@@ -53,7 +59,7 @@ def memo_one(fn):
     return wrapper
 
 
-ConstructorArgs = namedtuple('ConstructorArgs', ('type', 'name', 'arg', 'doc'))
+ConstructorArg = namedtuple('ConstructorArg', ('type', 'name', 'arg', 'doc'))
 
 
 class CSharpGenerator(CodeGenerator):
@@ -84,6 +90,7 @@ class CSharpGenerator(CodeGenerator):
         self._name_list = []
         self._prevent_collisions = set()
         self._generated_files = []
+        self._tag_context = None
 
     def generate(self, api):
         for namespace in api.namespaces.itervalues():
@@ -97,12 +104,23 @@ class CSharpGenerator(CodeGenerator):
 
     @contextmanager
     def cs_block(self, **kwargs):
+        """
+        Context manager for an allman style block, which is more common
+        style for c#
+        """ 
         kwargs['allman'] = True
         with self.block(**kwargs):
             yield
 
     @contextmanager
     def region(self, label):
+        """
+        Context manager for a c# region. All code emitted within the context
+        is within the region.
+
+        Args:
+            label (str): The region label
+        """
         self.emit('#region {0}'.format(label))
         self.emit()
         yield
@@ -110,18 +128,53 @@ class CSharpGenerator(CodeGenerator):
         self.emit('#endregion')
 
     def if_(self, condition):
+        """
+        Context manager for an `if` statement. All code emitted within the context
+        is within the if statement.
+
+        Args:
+            condition (str): The if condition
+        """
+            
         return self.cs_block(before='if ({0})'.format(condition))
 
     def else_(self):
+        """
+        Context manager for an else statement. All code emitted within the context
+        is within the else statement.
+        """
         return self.cs_block(before='else')
 
     def else_if(self, condition):
+        """
+        Context manager for an `else if` statement. All code emitted within the
+        context is within the `else if` statement.
+
+        Args:
+            condition (str): The else if condition.
+        """
         return self.cs_block(before='else if ({0})'.format(condition))
 
     def namespace(self, name):
+        """
+        Context manager for a `namespace` stement. All code emitted within the
+        context is within the namespace.
+        """
         return self.cs_block(before='namespace {0}{1}'.format(self.DEFAULT_NAMESPACE, name))
 
     def class_(self, name, inherits=None, access=''):
+        """
+        Context manager for a class. All code emitted within the context is part of
+        the class.
+
+        Args:
+            name (str): The name of the class.
+            inherits (str|iterable): The base types for the class, if any. If
+                this is a string it is added to the code verbatim, if an 
+                iterable, then joined with ', '
+            access (str): The access modifierd of the class.
+        """
+
         elements = []
         if access:
             elements.append(access)
@@ -136,20 +189,51 @@ class CSharpGenerator(CodeGenerator):
         return self.cs_block(before=' '.join(elements))
 
     def using(self, declaration):
+        """
+        Context manager for a `using` block. All code emitted within the context
+        is within the using block.
+
+        Args:
+            declaration (str): The using declaration.
+        """
         return self.cs_block(before='using ({0})'.format(declaration))
 
     def emit(self, text=''):
+        """
+        Wraps the regular generator emit() method. 
+
+        This is used by the prefix() and doc_comment() methods to prepend a
+        fixed string to each line emitted within those contexts.
+
+        Args:
+            text (str): The text to emit
+        """
         if text and self._prefix:
             super(CSharpGenerator, self).emit(self._prefix + text)
         else:
             super(CSharpGenerator, self).emit(text)
 
     def output_to_relative_path(self, filename):
+        """
+        Wraps the regular generator output_to_relative_path() method.
+
+        This is used to keep track of the set of all files that are generated.
+
+        Args:
+            filename (str): The name of the file to generate.
+        """
         self._generated_files.append(filename)
         return super(CSharpGenerator, self).output_to_relative_path(filename)
 
     @contextmanager
     def prefix(self, prefix):
+        """
+        Context manager that prepends the supplied prefix to every line of text
+        that is emitted within the context.
+
+        Args:
+            prefix (str): The prefix to prepend to every line.
+        """
         self._prefixes.append(prefix)
         self._prefix = ''.join(self._prefixes)
         yield
@@ -158,12 +242,27 @@ class CSharpGenerator(CodeGenerator):
 
     @contextmanager
     def doc_comment(self, data_type=None, is_constructor=False):
+        """
+        Context manager that treats all lines of text emitted within the
+        context as part of a doc comment (i.e. prefixed with '///').
+
+        Args:
+            data_type (babelapi.data_type.DataType): The type for which this
+                documentation is being generated. This helps resolve references
+                in the _tag_handler method.
+            is_constructor (bool): Indicated whether this doc comment if for
+                a constructor - also used when resolving references.
+        """
         self._tag_context = (data_type, is_constructor)
         with self.prefix('/// '):
             yield
         self._tag_context = None
 
     def auto_generated(self):
+        """
+        Generates a standard comment for the head of every file. This prevents
+        StyleCop from measuring the contents of the file.
+        """
         with self.prefix('// '):
             self.emit('<auto-generated>')
             self.emit('Auto-generated by BabelAPI, do not modify.')
@@ -171,6 +270,19 @@ class CSharpGenerator(CodeGenerator):
         self.emit()
 
     def emit_wrapped_text(self, s, **kwargs):
+        """
+        Wraps the regular generator emit_wrapped_text() method. 
+
+        This does three things.
+        1. It ensures consistend prefix behavior with the modified emit method
+        2. It sets a default width of 95
+        3. It calls self.process_doc on the input string if the process keyword
+            is present
+
+        Args:
+            s (str): The string to emit and wrap.
+            process (callable): The function to handle tags in the emitted text.
+        """
         kwargs['prefix'] = self._prefix + kwargs.get('prefix', '')
         if 'width' not in kwargs:
             kwargs['width'] = 95
@@ -181,14 +293,29 @@ class CSharpGenerator(CodeGenerator):
         super(CSharpGenerator, self).emit_wrapped_text(s, **kwargs)
 
     @contextmanager
-    def switch(self, statement):
-        self.emit('switch ({0})'.format(statement))
+    def switch(self, expression):
+        """
+        Context manager for a `switch` statement.
+
+        Args:
+            expression (str): The expression to switch on.
+        """
+        self.emit('switch ({0})'.format(expression))
         self.emit('{')
         yield
         self.emit('}')
 
     @contextmanager
     def case(self, constant=None, needs_break=True):
+        """
+        Context manager for a `case` statement.
+
+        Args:
+            constant (str): If this is not provided, then this is generated as
+                the default case. 
+            need_break (bool): Indicates whether a break statement should 
+                automatically be appended with the case statement ends.
+        """
         self.emit('case {0}:'.format(constant) if constant else 'default:')
         with self.indent():
             yield
@@ -197,31 +324,49 @@ class CSharpGenerator(CodeGenerator):
 
     @contextmanager
     def _local_names(self, names):
-        self._name_list.append(names)
+        """
+        This context manager is used to help resolve names if there are
+        collisions between struct or union members and top level type names
+        within the namespace.
+
+        Args:
+            names (iterable of str): The local names.
+        """
+        self._name_list.append(list(names))
         self._prevent_collisions = set(itertools.chain(*self._name_list))
         yield
         self._name_list.pop()
         self._prevent_collisions = set(itertools.chain(*self._name_list))
 
-    def _encase(self, doc, tag, **attrs):
-        if attrs:
-            attributes = ' '.join('{0}="{1}"'.format(k, v) for k, v in attrs.iteritems())
-            return '<{0} {1}>{2}</{0}>'.format(tag, attributes, doc)
-        else:
-            return '<{0}>{1}</{0}>'.format(tag, doc)
-
     def emit_xml(self, doc, tag, **attrs):
+        """
+        Emits an xml element.
+
+        Args:
+            doc (str): The contents of the xml element, if this is `None` then
+                the element is emitted in self closed form
+            tag (str): The xml element tag name.
+            attrs (dict): The attributes (if any) for the elemen
+        """
+        tag_start = '<' + tag
+        if attrs:
+            tag_start += ' ' + ' '.join('{0}="{1}"'.format(k, v) for k,v in attrs.iteritems())
+
         if doc is None:
-            if attrs:
-                attributes = ' '.join('{0}="{1}"'.format(k, v) for k,v in attrs.iteritems())
-                self.emit('<{0} {1} />'.format(tag, attributes))
-            else:
-                self.emit('<{0} />'.format(tag))
+            self.emit(tag_start + ' />')
         else:
-            self.emit_wrapped_text(self._encase(doc, tag, **attrs), process=self._tag_handler)
+            self.emit_wrapped_text('{0}>{1}</{2}>'.format(tag_start, doc, tag),
+                                   process=self._tag_handler)
 
     @contextmanager
     def xml_block(self, tag, **attrs):
+        """
+        Context manager that includes all emitted code within an xml element
+
+        Args:
+            tag (str): The xml element tag name
+            attrs (dict): The xml element attributes, if any.
+        """
         if attrs:
             attributes = ' '.join('{0}="{1}"'.format(k, v) for k,v in attrs.iteritems())
             self.emit('<{0} {1}>'.format(tag, attributes))
@@ -235,6 +380,13 @@ class CSharpGenerator(CodeGenerator):
         self.emit('</{0}>'.format(tag))
 
     def emit_summary(self, doc=""):
+        """
+        Emits the supplied documentation as a summary element.
+
+        Args:
+            doc (str): The documentation to emit, if this is multi-line, then
+                each line is wrapped in a `para` element.
+        """
         lines = doc.splitlines()
         if len(lines) > 0:
             with self.xml_block('summary'):
@@ -243,7 +395,19 @@ class CSharpGenerator(CodeGenerator):
         else:
             self.emit_xml(doc, 'summary')
 
+    def emit_ctor_summary(self, class_name):
+        self.emit_summary('Initializes a new instance of the <see cref="{0}" /> '
+                          'class.'.format(class_name))
+
     def _tag_handler(self, tag, value):
+        """
+        Passed as to the process_doc() method to handle tags that are found in
+        the documentation string
+
+        Args:
+            tag (str): The tag type, one of 'field|link|route|type|val'
+            value (str): The value of the tag.
+        """
         if tag == 'field':
             if '.' in value:
                 parts = map(self._public_name, value.split('.'))
@@ -271,7 +435,24 @@ class CSharpGenerator(CodeGenerator):
         else:
             assert False, 'Unknown tag: {0}:{1}'.format(tag, value)
 
-    def _typename(self, data_type, informal=True, void=None, is_property=False, check_collisions=True):
+    def _typename(self, data_type, void=None, is_property=False):
+        """
+        Generates a C# type from a data_type
+
+        The translations for the primitive types are the exact equivalent
+        C# value types. For composite types, the type name is represented using
+        CamelCase. The list type is handled slightly differently for the 
+        property and constructor cases where it is an IList or IEnumerable
+        respectively.j
+
+        Args:
+            data_type (babelapi.data_type.DataType): The type to translate.
+            void (str): If supplied, this is the value to return if data_type
+                is void.
+            is_property (bool): Indicates whether the type translation is for
+                a property type. Lists have different types expressed for
+                properties than in other places.
+        """
         if is_nullable_type(data_type):
             nullable = True
             data_type = data_type.data_type
@@ -281,9 +462,8 @@ class CSharpGenerator(CodeGenerator):
         name = data_type.name
         if is_composite_type(data_type):
             public = self._public_name(name)
-            if check_collisions:
-                if public in self._prevent_collisions:
-                    return self.DEFAULT_NAMESPACE + self._ns + '.' + public
+            if public in self._prevent_collisions:
+                return self.DEFAULT_NAMESPACE + self._ns + '.' + public
             return public
         elif is_list_type(data_type):
             if is_property:
@@ -291,28 +471,28 @@ class CSharpGenerator(CodeGenerator):
             else:
                 return 'col.IEnumerable<{0}>'.format(self._typename(data_type.data_type))
         elif is_string_type(data_type):
-            return 'string' if informal else 'String'
+            return 'string'
         elif is_binary_type(data_type):
-            return 'byte[]' if informal else 'ByteArray'
+            return 'byte[]'
         else:
-            suffix = '?' if informal and nullable else ''
+            suffix = '?' if nullable else ''
 
             if is_boolean_type(data_type):
-                typename = 'bool' if informal else 'Boolean'
+                typename = 'bool'
             elif isinstance(data_type, Int32):
-                typename = 'int' if informal else 'Int32'
+                typename = 'int'
             elif isinstance(data_type, UInt32):
-                typename = 'uint' if informal else 'UInt32'
+                typename = 'uint'
             elif isinstance(data_type, Int64):
-                typename = 'long' if informal else 'Int64'
+                typename = 'long'
             elif isinstance(data_type, UInt64):
-                typename = 'ulong' if informal else 'UInt64'
+                typename = 'ulong'
             elif isinstance(data_type, Float32):
-                typename = 'float' if informal else 'Single'
+                typename = 'float'
             elif isinstance(data_type, Float64):
-                typename = 'double' if informal else 'Double'
+                typename = 'double'
             elif is_timestamp_type(data_type):
-                typename = 'sys.DateTime' if informal else 'DateTime'
+                typename = 'sys.DateTime'
             elif is_void_type(data_type):
                 return void or 'void'
             else:
@@ -320,17 +500,13 @@ class CSharpGenerator(CodeGenerator):
 
             return typename + suffix
 
-    def _has_constraints(self, data_type):
-        if is_numeric_type(data_type):
-            return data_type.min_value is not None or data_type.max_value is not None
-        elif is_string_type(data_type):
-            return (data_type.min_length is not None or
-                    data_type.max_length is not None or
-                    data_type.pattern is not None)
-        elif is_list_type(data_type):
-            return data_type.min_items is not None or data_type.max_items is not None
-
     def _process_literal(self, literal):
+        """
+        Translate literal values used in defaults
+
+        Args:
+            literal: The literal value.
+        """
         if isinstance(literal, bool):
             return 'true' if literal else 'false'
         return literal
@@ -338,6 +514,9 @@ class CSharpGenerator(CodeGenerator):
     def _type_literal_suffix(self, data_type):
         """
         Returns the suffix needed to make a numeric literal values type explicit.
+
+        Args:
+            data_type (babelapi.data_type.DataType): The type in question.
         """
         if not is_numeric_type(data_type) or isinstance(data_type, Int32):
             return ''
@@ -357,13 +536,32 @@ class CSharpGenerator(CodeGenerator):
     def _could_be_null(self, data_type):
         """
         Returns true if 'data_type' could be null, i.e. if it is not a value type
+
+        Args:
+            data_type (babelapi.data_type.DataType): The type in question.
         """
         return is_composite_type(data_type) or is_string_type(data_type) or is_list_type(data_type)
 
     def _verbatim_string(self, string):
+        """
+        Creates a C# verbatim string (way easier than dealing with escapes)
+
+        Args:
+            string (str): The string to represent.
+        """
         return '@"{0}"'.format(string.replace('"', '""'))
 
     def _process_composite_default(self, field, include_null_check=True):
+        """
+        Generate code to initialize a default value for a composite field.
+
+        Note: This is not implemented for fields that are structs.
+
+        Args:
+            field: (babelapi.data_type.Field): The field to initialize.
+            include_null_check (bool): Indicates whether a check for an
+                argument being null should be emitted.
+        """
         if is_struct_type(field.data_type):
             raise NotImplementedError()
         elif is_union_type(field.data_type):
@@ -372,15 +570,28 @@ class CSharpGenerator(CodeGenerator):
             assert False, 'field is neither struct nor union: {0}.'.format(field)
 
     def _process_union_default(self, field, include_null_check):
+        """
+        Generate code to initialize a default value for a field that is a union.
+
+        Note: This only works for union fields that don't have arguments.
+
+        Args:
+            field: (babelapi.data_type.Field): The field to initialize.
+            include_null_check (bool): Indicates whether a check for an
+                argument being null should be emitted.
+        """
         assert is_tag_ref(field.default), (
             'Default union value is not a tag ref: {0}'.format(field.default))
 
         union = field.default.union_data_type
         default = field.default.tag_name
 
-        arg_name = self._arg_name(field.name) if include_null_check else 'this.{0}'.format(self._public_name(field.name))
+        arg_name = (self._arg_name(field.name) if include_null_check else
+                    'this.{0}'.format(self._public_name(field.name)))
       
-        assign_default = '{0} = {1}.{2}.Instance;'.format(arg_name, self._public_name(union.name), self._public_name(default))
+        assign_default = '{0} = {1}.{2}.Instance;'.format(
+            arg_name, self._public_name(union.name), self._public_name(default))
+
         if include_null_check: 
             with self.if_('{0} == null'.format(arg_name)):
                 self.emit(assign_default)
@@ -388,6 +599,17 @@ class CSharpGenerator(CodeGenerator):
             self.emit(assign_default)
     
     def _check_constraints(self, name, data_type, has_null_check):
+        """
+        Emits code to checks the validity of a field when constructing an
+        object. 
+
+        Args:
+            name (str): The field name.
+            data_type (babelapi.data_type.DataType): The type of the field
+            has_null_check (bool): Indicates whether prior code has already
+                generated a null check for this field - this happens if a
+                composite field has a default.
+        """
         if is_nullable_type(data_type):
             nullable = True
             data_type = data_type.data_type
@@ -445,16 +667,46 @@ class CSharpGenerator(CodeGenerator):
 
     @memo_one
     def _segment_name(self, name):
+        """
+        Segments a name into a list of lowercase components.
+
+        Names are segmented on '/' or '_' characters and also on CamelCase boundaries.
+
+        Args:
+            name (str): The name to segment.
+        """
         name = name.replace('/', '_')
         name = CSharpGenerator._CAMEL_CASE_RE.sub(r'_\1', name).lower()
         return name.split('_')
 
     @memo_one
     def _public_name(self, name):
+        """
+        Creates an initial capitalize CamelCase representation of name.
+    
+        This performs the following transformations.
+            foo_bar -> FooBar
+            fooBar -> FooBar
+            FooBar -> FooBar
+
+        Args:
+            name (str): The name to transform
+        """
         return ''.join(x.capitalize() for x in self._segment_name(name))
 
     @memo_one
     def _arg_name(self, name):
+        """
+        Creates an initial lowercase camelCase representation of name.
+    
+        This performs the following transformations.
+            foo_bar -> fooBar
+            fooBar -> fooBar
+            FooBar -> fooBar
+
+        Args:
+            name (str): The name to transform
+        """
         public = self._public_name(name)
         arg_name = public[0].lower() + public[1:]
         if arg_name in CSharpGenerator._CSHARP_KEYWORDS:
@@ -463,9 +715,27 @@ class CSharpGenerator(CodeGenerator):
 
     @memo_one
     def _name_words(self, name):
+        """
+        Creates a space separated sequence of words from a name.
+
+        This performs the following transformation.
+            foo_bar -> 'foo bar'
+            fooBar -> 'foo bar'
+            FooBar -> 'foo bar'
+
+        Args:
+            name (str): The name to transform
+        """
         return ' '.join(self._segment_name(name))
 
     def _generate_xml_doc(self, api):
+        """
+        Generates an xml documentation file containing the namespace level
+        documentation for the API specification being generated.
+
+        Args:
+            api (babelapi.api.Api): The API specification.
+        """
         with self.output_to_relative_path('namespace_summaries.xml'):
             self.emit('<?xml version="1.0"?>')
             with self.xml_block('doc'):
@@ -489,6 +759,14 @@ class CSharpGenerator(CodeGenerator):
                                     'namespace.'.format(self.DEFAULT_NAMESPACE, ns_name))
 
     def _generate_csproj(self):
+        """
+        Generates two csproj files.
+
+        One is a portable assembly - this is the assembly that is intended to
+        be distributed; the other is a regular desktop .Net assembly that is
+        used to generate documentation - the documentation tool SandCastle 
+        cannot reliably generate documentation from a portable assembly.
+        """
         files = [f for f in self._generated_files if f.endswith('.cs')]
         with self.output_to_relative_path('Dropbox.Api.csproj'):
             self.emit_raw(make_csproj_file(files, is_doc=False))
@@ -496,6 +774,9 @@ class CSharpGenerator(CodeGenerator):
             self.emit_raw(make_csproj_file(files, is_doc=True))
 
     def _copy_common_files(self):
+        """
+        Copies all the files in the `common` subdirectory into the target dir.
+        """
         common_dir = os.path.join(os.path.dirname(__file__), 'common')
         common_len = len(common_dir)
         for dirpath, _, filenames in os.walk(common_dir):
@@ -512,6 +793,14 @@ class CSharpGenerator(CodeGenerator):
                         self.emit_raw(doc)
                             
     def _generate_dropbox_client(self, api):
+        """
+        Generates a partial class for the DropboxClient, this only includes
+        the route declarations and the route initialization, the rest of the
+        class is in the file `common/DropboxClient.common.cs`
+
+        Args:
+            api (babelapi.api.Api): The API specification.
+        """
         ns_names = [self._public_name(ns.name) for ns in api.namespaces.itervalues()]
 
         with self.output_to_relative_path('DropboxClient.cs'):
@@ -546,7 +835,11 @@ class CSharpGenerator(CodeGenerator):
 
     def _compute_related_types(self, ns): 
         """
-        This is a comment
+        This creates a map of supertype-subtype relationships.
+
+        This is used to generate `seealso` documentation, because the
+        specification type hierarchy is not always present in the generated
+        code.
         """
         related_types = defaultdict(set)
         for data_type in ns.data_types:
@@ -568,6 +861,15 @@ class CSharpGenerator(CodeGenerator):
         self._related_types = related_types
 
     def _generate_namespace(self, ns):
+        """
+        Perform code generation for the namespace.
+
+        This calls methods that generate classes for each data type and a class
+        for all the routes.
+
+        Args:
+            ns (babelapi.api.ApiNamespace): The namespace to generate.
+        """
         ns_name = self._public_name(ns.name)
         self._ns = ns_name
         for data_type in ns.data_types:
@@ -576,6 +878,16 @@ class CSharpGenerator(CodeGenerator):
             self._generate_routes(ns, ns.routes)
 
     def _generate_data_type(self, ns_name, data_type):
+        """
+        Generate the classes for a data type.
+
+        This generates the framework of the code file and calls an appropriate 
+        method for structs and unions to generate the type itself.
+
+        Args:
+            ns_name (str): The name of the namespace.
+            data_type (babelapi.data_type.DataType): The type to generate.
+        """
         assert is_composite_type(data_type)
         class_name = self._public_name(data_type.name)
         with self.output_to_relative_path(os.path.join(ns_name, class_name + ".cs")):
@@ -600,12 +912,18 @@ class CSharpGenerator(CodeGenerator):
                     assert False, 'Unknown composite type: %r' % data_type
 
     def _emit_encode_doc_comment(self):
+        """
+        Generates a standard doc comment for an encode method.
+        """
         with self.doc_comment():
             self.emit_summary('Encodes the object using the supplied encoder.')
             self.emit_xml('The encoder being used to serialize the object.', 'param',
                     name='encoder')
 
     def _emit_decode_doc_comment(self):
+        """
+        Generates a standard doc comment for a decode method.
+        """
         with self.doc_comment():
             self.emit_summary('Decodes on object using the supplied decoder.')
             self.emit_xml('The decoder used to deserialize the object.', 'param', name='decoder')
@@ -613,9 +931,22 @@ class CSharpGenerator(CodeGenerator):
                     'instance.', 'returns')
 
     def _emit_explicit_interface_suppress(self):
-        self.emit('[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]')
+        """
+        Generates a suppression attribute that prevents a useless CodeAnalysis warning
+
+        The warning isn't useless in general, but just isn't relevant to our use case.
+        """
+        self.emit('[System.Diagnostics.CodeAnalysis.SuppressMessage('
+                  '"Microsoft.Design", '
+                  '"CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]')
 
     def _emit_encoder(self, field):
+        """
+        Emits an encoder fragment for a struct field.
+
+        Args:
+            field (babelapi.data_type.Field): The field to generate the encoder for
+        """
         field_public_name = self._public_name(field.name)
         if is_nullable_type(field.data_type):
             nullable = True
@@ -655,6 +986,13 @@ class CSharpGenerator(CodeGenerator):
                 null_block.__exit__(None, None, None)
 
     def _get_decoder_method(self, field):
+        """
+        Computes the decoder method that will be needed to decode the supplied
+        field.
+
+        Args:
+            field (babelapi.data_type.Field): the field to be decoded.
+        """
         data_type = field.data_type.data_type if is_nullable_type(field.data_type) else field.data_type 
         generic_type = self._typename(data_type)
 
@@ -670,12 +1008,22 @@ class CSharpGenerator(CodeGenerator):
             method = 'GetField'
 
         if is_list_type(data_type):
-            return ('new col.List<{0}>(obj.{1}<{0}>("{2}"))'.format(generic_type, method, field.name))
-            pass
+            return 'new col.List<{0}>(obj.{1}<{0}>("{2}"))'.format(generic_type,
+                                                                   method,
+                                                                   field.name)
         else:
-            return ('obj.{0}<{1}>("{2}")'.format(method, generic_type, field.name))
+            return 'obj.{0}<{1}>("{2}")'.format(method, generic_type, field.name)
 
     def _emit_decoder(self, field, target='this'):
+        """
+        Emits a decoder fragment for a struct field
+
+        Args:
+            field (babelapi.data_type.Field): The field to be decoded
+            target (str): The target object on which the field will be decoded,
+                this is specified when decoding a struct with enumerated
+                subtypes
+        """
         field_public_name = self._public_name(field.name)
 
         nullable = is_nullable_type(field.data_type)
@@ -700,6 +1048,22 @@ class CSharpGenerator(CodeGenerator):
                             target, field_public_name, self._typename(data_type.data_type)))
 
     def _make_struct_constructor_args(self, struct):
+        """
+        Creates a list of ConstructorArg instances for the fields of the 
+        supplied struct. This prevents re-calculating the same information
+        for each field in multiple places.
+
+        Each entry in the returned list has the following elements
+             - The C# type of the field
+             - The name of the field suitable for use as an argument parameter
+             - The argument declaration of the field for the constructor, this
+                will include a default value where appropriate.
+             - The doc string for the field.
+
+        Args:
+            struct (babelapi.data_type.Struct): The struct whose constructor 
+                arguments are being enumerated.
+        """
         constructor_args = []
         for field in struct.all_fields:
             fieldtype = self._typename(field.data_type)
@@ -721,188 +1085,493 @@ class CSharpGenerator(CodeGenerator):
             self._tag_context = (struct, True)
             doc = self.process_doc(doc, self._tag_handler)
             self._tag_context = None
-            doc = self._encase(doc, 'param', name=doc_name)
+            doc = '<param name="{0}">{1}</param>'.format(doc_name, doc)
 
-            constructor_args.append(ConstructorArgs(fieldtype, arg_name, arg, doc))
+            constructor_args.append(ConstructorArg(fieldtype, arg_name, arg, doc))
 
         return constructor_args
 
+    def _generate_struct_init_ctor(self, struct, class_name, parent_type, parent_type_fields):
+        """
+        Generates the initialization constructor for a struct.
+
+        This constructor has arguments for all fields on the struct, and
+        performs validation and default handling for fields.
+
+        Args:
+            struct (babelapi.data_type.Struct): The struct for which we are
+                generating a constructor.
+            class_name (str): The C# class name of the struct.
+            parent_type (babelapi.data_type.Struct): The parent type of this
+                struct, if any.
+            parent_type_fields (set): A set containing the names of fields
+                that are implemented by this struct's parent type hierarchy.
+        """
+        ctor_args = self._make_struct_constructor_args(struct)
+        super_args = []
+        if parent_type:
+            super_args = self._make_struct_constructor_args(parent_type)
+
+        with self.doc_comment(data_type=struct, is_constructor=True):
+            self.emit_ctor_summary(class_name)
+            for arg in ctor_args:
+                self.emit_wrapped_text(arg.doc)
+
+        ctor_access = 'protected' if struct.has_enumerated_subtypes() and ctor_args else 'public'
+        self.generate_multiline_list(
+            [item.arg for item in ctor_args],
+            before='{0} {1}'.format(ctor_access, class_name),
+            skip_last_sep=True
+        )
+        if super_args:
+            with self.indent():
+                self.emit(': base({0})'.format(', '.join([item.name for item in super_args])))
+
+        with self.cs_block():
+            for field in struct.all_fields:
+                # Initialize fields and check that they meet their
+                # constraints according to the specification.
+                if field.name in parent_type_fields:
+                    continue
+
+                has_null_check = False
+                if field.has_default and is_composite_type(field.data_type):
+                    self._process_composite_default(field)
+                    has_null_check = True
+                self._check_constraints(self._arg_name(field.name), field.data_type, has_null_check)
+
+            for field in struct.all_fields:
+                if field.name in parent_type_fields:
+                    continue
+
+                field_public_name = self._public_name(field.name)
+                field_arg_name = self._arg_name(field.name)
+                if (is_list_type(field.data_type) or
+                    (is_nullable_type(field.data_type) and is_list_type(field.data_type.data_type))):
+                    self.emit('this.{0} = {1}List;'.format(field_public_name, field_arg_name))
+                else:
+                    self.emit('this.{0} = {1};'.format(field_public_name, field_arg_name))
+
+
+    def _generate_struct_default_ctor(self, struct, class_name, parent_type_fields):
+        """
+        Generates the default constructor for a struct.
+
+        This is only relevant if the struct has fields - otherwise the
+        initializing constructor is also the default constructor.
+
+        This intializes fields to their default values if any, so that when the
+        struct is being decoded, if the fields are not present in the message
+        they will have their default values.
+
+        Args:
+            struct (babelapi.data_type.Struct): The struct to generate a
+                constructor for.
+            class_name (str): The C# class name for the struct.
+            parent_type_fields (set): A set containing the names of fields
+                that are implemented by this struct's parent type hierarchy.
+        """
+        assert len(struct.all_fields), ('Only generate a default ctor when '
+                'the struct {0} has fields'.format(struct.name))
+
+        self.emit()
+        with self.doc_comment():
+            self.emit_ctor_summary(class_name)
+            self.emit_xml('This is to construct an instance of the object when '
+                    'deserializing.', 'remarks')
+        with self.cs_block(before='public {0}()'.format(class_name)):
+            # initialize fields to their default values, where necessary
+            for field in struct.all_fields:
+                if field.name in parent_type_fields:
+                    continue
+                if field.has_default:
+                    if is_composite_type(field.data_type):
+                        self._process_composite_default(field, include_null_check=False)
+                    else:
+                        self.emit('this.{0} = {1};'.format(
+                            self._public_name(field.name), self._process_literal(field.default)))
+
+    def _generate_struct_strunion_is_as(self, struct):
+        """
+        Generates the IsFoo AsFoo properties for the subtypes of this struct.
+
+        This is only relevant if the struct has enumerated subtypes - it is a
+        strunion.
+
+        Args:
+            struct (babelapi.data_type.Struct): The struct in question.
+        """
+        assert struct.has_enumerated_subtypes(), ('Only generate is/as '
+                'properties when the struct {0} has enumerated '
+                'subtypes'.format(struct.name))
+
+        for subtype in struct.get_enumerated_subtypes():
+            subtype_type = self._typename(subtype.data_type)
+            subtype_name = self._public_name(subtype.name)
+            self.emit()
+            with self.doc_comment():
+                self.emit_summary('Gets a value indicating whether this instance is {0}'.format(subtype_name))
+            with self.cs_block(before='public bool Is{0}'.format(subtype_name)):
+                with self.cs_block(before='get'):
+                    self.emit('return this is {0};'.format(subtype_type))
+
+            self.emit()
+            with self.doc_comment():
+                self.emit_summary('Gets this instance as a <see cref="{0}" />, or <c>null</c>.'.format(subtype_type))
+            with self.cs_block(before='public {0} As{1}'.format(subtype_type, subtype_name)):
+                with self.cs_block(before='get'):
+                    self.emit('return this as {0};'.format(subtype_type))
+
+    def _generate_struct_properties(self, struct, parent_type_fields):
+        """
+        Generates the properties for struct fields.
+
+        Args:
+            struct (babelapi.data_type.Struct): The struct in question.
+            parent_type_fields (set): A set containing the names of fields
+                that are implemented by this struct's parent type hierarchy.
+        """
+        for field in struct.all_fields:
+            if field.name in parent_type_fields:
+                continue
+            self.emit()
+            doc = field.doc or 'Gets the {0} of the {1}'.format(
+                self._name_words(field.name), self._name_words(struct.name))
+            with self.doc_comment(data_type=struct):
+                self.emit_summary(doc)
+
+            fieldtype = self._typename(field.data_type, is_property=True)
+            self.emit('public {0} {1} {{ get; private set; }}'.format(fieldtype, self._public_name(field.name)))
+
+    def _generate_struct_encodable_methods(self, struct, class_name, parent_type_fields):
+        """
+        Generates the Encode and Decode methods that make this class implement
+        the IEncodable<T> interface.
+
+        Args:
+            struct (babelapi.data_type.Struct): The struct in question.
+            class_name (str): The C# class name for the struct
+            parent_type_fields (set): A set containing the names of fields
+                that are implemented by this struct's parent type hierarchy.
+        """
+        self.emit()
+        with self.region('IEncodable<{0}> methods'.format(class_name)):
+            # Emit the encoder
+            self._emit_encode_doc_comment()
+            self._emit_explicit_interface_suppress()
+            with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
+                with self.using('var obj = encoder.AddObject()'):
+                    if struct.has_enumerated_subtypes():
+                        for index, subtype in enumerate(struct.get_enumerated_subtypes()):
+                            cond = self.if_ if not index else self.else_if
+                            subtype_public_name = self._public_name(subtype.name)
+                            with cond('this.Is{0}'.format(subtype_public_name)):
+                                self.emit('obj.AddFieldObject<{0}>("{1}", this.As{2});'.format(
+                                    self._typename(subtype.data_type), subtype.name, subtype_public_name))
+
+                        if not struct.is_catch_all():
+                            with self.else_():
+                                self.emit('throw new sys.InvalidOperationException();')
+                        self.emit()
+
+                    for field in struct.all_fields:
+                        if field.name in parent_type_fields:
+                            continue
+                        self._emit_encoder(field)
+
+            # Emit the decoder
+            self.emit()
+            self._emit_decode_doc_comment()
+            self._emit_explicit_interface_suppress()
+            with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
+                    with self.using('var obj = decoder.GetObject()'):
+                        if struct.has_enumerated_subtypes():
+                            self.emit('{0} target;'.format(class_name))
+                            self.emit()
+                            first = True
+                            for index, subtype in enumerate(struct.get_enumerated_subtypes()):
+                                cond = self.if_ if not index else self.else_if
+                                with cond('obj.HasField("{0}")'.format(subtype.name)):
+                                    subtype_type = self._typename(subtype.data_type)
+                                    self.emit('target = obj.GetFieldObject<{0}>("{1}");'.format(
+                                        subtype_type, subtype.name))
+
+                            with self.else_():
+                                if struct.is_catch_all():
+                                    self.emit('target = this;')
+                                else:
+                                    self.emit('throw new sys.InvalidOperationException();')
+
+                            self.emit();
+                            target = 'target'
+                        else:
+                            target = 'this'
+
+                        for field in struct.all_fields:
+                            if field.name in parent_type_fields:
+                                continue
+                            self._emit_decoder(field, target) 
+
+                        self.emit()
+                        self.emit('return {0};'.format(target))
 
     def _generate_struct(self, struct):
+        """
+        Generates the class for a struct.
+
+        This performs the following steps.
+            - Emits class documentation
+            - Emits the class declaration
+            - Emits a constructor that takes arguments to initialize the fields
+            - If there are fields, emits a default constructor which will be
+                used by the deserialization process, and which initializes 
+                fields to their default values.
+            - If this struct has enumerated subtypes, then emit accessor
+                properties for those subtypes
+            - Emits properties for fields (not including fields in parent 
+                types)
+            - Emits the encoder and decoder implementations
+        """
         with self.doc_comment(data_type=struct):
             self.emit_summary(struct.doc or 'The {0} object'.format(self._name_words(struct.name)))
             for related in sorted(self._related_types[struct.name]):
                 self.emit_xml(None, 'seealso', cref=self._public_name(related))
 
         class_name = self._public_name(struct.name)
-        inherits = []
-        parent_type = None
-        parent_type_fields = set()
+
         if struct.parent_type and struct.parent_type.has_enumerated_subtypes():
             parent_type = struct.parent_type
-            inherits.append(self._public_name(struct.parent_type.name))
+            inherits = [self._public_name(parent_type.name)]
             parent_type_fields = set(f.name for f in parent_type.all_fields)
+        else:
+            parent_type = None
+            parent_type_fields = set()
+            inherits = []
 
         inherits.append('enc.IEncodable<{0}>'.format(class_name))
         access = 'public' if struct.has_enumerated_subtypes() else 'public sealed'
         with self.class_(class_name, inherits=inherits, access=access):
-            # constructor
-            ctor_args = self._make_struct_constructor_args(struct)
-            super_args = []
-            if parent_type:
-                super_args = self._make_struct_constructor_args(parent_type)
 
-            with self.doc_comment(data_type=struct, is_constructor=True):
-                self.emit_summary('Initializes a new instance of the <see cref="{0}" /> class.'.format(class_name))
-                for arg in ctor_args:
-                    self.emit_wrapped_text(arg.doc)
+            # Generate the initializing constructor.
+            self._generate_struct_init_ctor(struct, class_name, parent_type, parent_type_fields)
 
-            ctor_access = 'protected' if struct.has_enumerated_subtypes() and ctor_args else 'public'
-            self.generate_multiline_list(
-                [item.arg for item in ctor_args],
-                before='{0} {1}'.format(ctor_access, class_name),
-                skip_last_sep=True
-            )
-            if super_args:
-                with self.indent():
-                    self.emit(': base({0})'.format(', '.join([item.name for item in super_args])))
-
-            with self.cs_block():
-                for field in struct.all_fields:
-                    if field.name in parent_type_fields:
-                        continue
-
-                    has_null_check = False
-                    if field.has_default and is_composite_type(field.data_type):
-                        self._process_composite_default(field)
-                        has_null_check = True
-                    self._check_constraints(self._arg_name(field.name), field.data_type, has_null_check)
-
-                for field in struct.all_fields:
-                    if field.name in parent_type_fields:
-                        continue
-                    field_public_name = self._public_name(field.name)
-                    field_arg_name = self._arg_name(field.name)
-                    if (is_list_type(field.data_type) or
-                        (is_nullable_type(field.data_type) and is_list_type(field.data_type.data_type))):
-                        self.emit('this.{0} = {1}List;'.format(field_public_name, field_arg_name))
-                    else:
-                        self.emit('this.{0} = {1};'.format(field_public_name, field_arg_name))
-
+            # Generate a default constructor
             if len(struct.all_fields):
-                # the default constructor is only needed if the struct has
-                # fields
-                self.emit()
-                with self.doc_comment():
-                    self.emit_summary('Initializes a new instance of the <see cref="{0}" /> class.'.format(class_name))
-                    self.emit_xml('This is to construct an instance of the object when '
-                            'deserializing.', 'remarks')
-                with self.cs_block(before='public {0}()'.format(class_name)):
-                    for field in struct.all_fields:
-                        if field.name in parent_type_fields:
-                            continue
-                        if field.has_default:
-                            if is_composite_type(field.data_type):
-                                self._process_composite_default(field, include_null_check=False)
-                            else:
-                                self.emit('this.{0} = {1};'.format(
-                                    self._public_name(field.name), self._process_literal(field.default)))
-
+                # the default constructor is only needed if the struct has fields
+                self._generate_struct_default_ctor(struct, class_name, parent_type_fields)
 
             if struct.has_enumerated_subtypes():
-                # properties for checking/getting actual type
-                for subtype in struct.get_enumerated_subtypes():
-                    subtype_type = self._typename(subtype.data_type)
-                    subtype_name = self._public_name(subtype.name)
-                    self.emit()
-                    with self.doc_comment():
-                        self.emit_summary('Gets a value indicating whether this instance is {0}'.format(subtype_name))
-                    with self.cs_block(before='public bool Is{0}'.format(subtype_name)):
-                        with self.cs_block(before='get'):
-                            self.emit('return this is {0};'.format(subtype_type))
+                # Generate properties for checking/getting the actual type
+                self._generate_struct_strunion_is_as(struct)
 
-                    self.emit()
-                    with self.doc_comment():
-                        self.emit_summary('Gets this instance as a <see cref="{0}" />, or <c>null</c>.'.format(subtype_type))
-                    with self.cs_block(before='public {0} As{1}'.format(subtype_type, subtype_name)):
-                        with self.cs_block(before='get'):
-                            self.emit('return this as {0};'.format(subtype_type))
+            # Emit properties for all fields
+            self._generate_struct_properties(struct, parent_type_fields)
 
-            # properties
-            for field in struct.all_fields:
-                if field.name in parent_type_fields:
-                    continue
-                self.emit()
-                doc = field.doc or 'Gets the {0} of the {1}'.format(
-                    self._name_words(field.name), self._name_words(struct.name))
-                with self.doc_comment(data_type=struct):
-                    self.emit_summary(doc)
+            # Emit methods that make this object IEncodable
+            self._generate_struct_encodable_methods(struct, class_name, parent_type_fields)
 
-                fieldtype = self._typename(field.data_type, is_property=True)
-                self.emit('public {0} {1} {{ get; private set; }}'.format(fieldtype, self._public_name(field.name)))
+    def _generate_union_is_as_properties(self, union):
+        """
+        Generates this IsFoo AsFoo properties for the union fields.
 
+        These properties allow code to check and cast a union instances.
+
+        Args:
+            union (babelapi.data_type.Union): The union in question.
+        """
+        for field in union.fields:
+            field_type = self._public_name(field.name)
+            self.emit();
+            with self.doc_comment():
+                self.emit_summary('Gets a value indicating whether this instance is {0}'.format(field_type))
+            with self.cs_block(before='public bool Is{0}'.format(field_type)):
+                with self.cs_block(before='get'):
+                    self.emit('return this is {0};'.format(field_type))
+
+            self.emit();
+            with self.doc_comment():
+                self.emit_summary('Gets this instance as a {0}, or <c>null</c>.'.format(field_type))
+            with self.cs_block(before='public {0} As{0}'.format(field_type)):
+                with self.cs_block(before='get'):
+                    self.emit('return this as {0};'.format(field_type))
+
+    def _generate_union_encodable_methods(self, union, class_name):
+        """
+        Generates the IEncodable<T> methods for a union.
+
+        Args:
+            union (babelapi.data_type.Union): The union in question.
+            class_name (str): The C# class name of the union.
+        """
+        self.emit()
+        with self.region('IEncodable<{0}> methods'.format(class_name)):
+            # encoder - is the responsibility of the concrete classes
+            self._emit_encode_doc_comment()
+            self._emit_explicit_interface_suppress()
+            with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
+                has_catch_all = False
+                for index, field in enumerate(union.fields):
+                    public_field_name = self._public_name(field.name)
+                    condition = 'this.Is{0}'.format(public_field_name)
+                    if index == 0:
+                        cond = self.if_(condition)
+                    elif union.catch_all_field == field:
+                        cond = self.else_()
+                        has_catch_all = True
+                    else:
+                        cond = self.else_if(condition)
+
+                    with cond:
+                        self.emit('((enc.IEncodable<{0}>)this).Encode(encoder);'.format(public_field_name))
+
+                if not has_catch_all:
+                    with self.else_():
+                        self.emit('throw new sys.InvalidOperationException();')
+
+            # decoder
             self.emit()
-            with self.region('IEncodable<{0}> methods'.format(class_name)):
-                # encoder
-                self._emit_encode_doc_comment()
-                self._emit_explicit_interface_suppress()
-                with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
-                    with self.using('var obj = encoder.AddObject()'):
-                        if struct.has_enumerated_subtypes():
-                            for index, subtype in enumerate(struct.get_enumerated_subtypes()):
-                                cond = self.if_ if not index else self.else_if
-                                subtype_public_name = self._public_name(subtype.name)
-                                with cond('this.Is{0}'.format(subtype_public_name)):
-                                    self.emit('obj.AddFieldObject<{0}>("{1}", this.As{2});'.format(
-                                        self._typename(subtype.data_type), subtype.name, subtype_public_name))
-
-                            if not struct.is_catch_all():
-                                with self.else_():
-                                    self.emit('throw new sys.InvalidOperationException();')
-                            self.emit()
-
-                        for field in struct.all_fields:
-                            if field.name in parent_type_fields:
-                                continue
-                            self._emit_encoder(field)
-
-                # decoder
-                self.emit()
-                self._emit_decode_doc_comment()
-                self._emit_explicit_interface_suppress()
-                with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
-                        with self.using('var obj = decoder.GetObject()'):
-                            if struct.has_enumerated_subtypes():
-                                self.emit('{0} target;'.format(class_name))
-                                self.emit()
-                                first = True
-                                for index, subtype in enumerate(struct.get_enumerated_subtypes()):
-                                    cond = self.if_ if not index else self.else_if
-                                    with cond('obj.HasField("{0}")'.format(subtype.name)):
-                                        subtype_type = self._typename(subtype.data_type)
-                                        self.emit('target = obj.GetFieldObject<{0}>("{1}");'.format(
-                                            subtype_type, subtype.name))
-
-                                with self.else_():
-                                    if struct.is_catch_all():
-                                        self.emit('target = this;')
-                                    else:
-                                        self.emit('throw new sys.InvalidOperationException();')
-
-                                self.emit();
-                                target = 'target'
+            self._emit_decode_doc_comment()
+            self._emit_explicit_interface_suppress()
+            with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
+                with self.switch('decoder.GetUnionName()'):
+                    for field in union.fields:
+                        constant = None if union.catch_all_field == field else '"{0}"'.format(field.name)
+                        with self.case(constant, needs_break=False):
+                            public_field_name = self._public_name(field.name)
+                            if is_void_type(field.data_type):
+                                self.emit('return {0}.Instance;'.format(public_field_name))
                             else:
-                                target = 'this'
+                                with self.using('var obj = decoder.GetObject()'):
+                                    method = self._get_decoder_method(field)
+                                    self.emit('return new {0}({1});'.format(public_field_name, method))
 
-                            for field in struct.all_fields:
-                                if field.name in parent_type_fields:
-                                    continue
-                                self._emit_decoder(field, target) 
+                    if not union.catch_all_field:
+                        self.emit('default:')
+                        with self.indent():
+                            self.emit('throw new sys.InvalidOperationException();')
 
-                            self.emit()
-                            self.emit('return {0};'.format(target))
+    def _generate_union_field_void_type(self, field, field_type):
+        """
+        Generates the inner type for a union field that is void.
+
+        This has a private constructor and a singleton static instance.
+
+        Args:
+            field (babelapi.data_type.UnionField): The union field in question.
+            field_type (str): The C# type name of the union field.
+        """
+        # constructor
+        with self.doc_comment():
+            self.emit_ctor_summary(field_type)
+        with self.cs_block(before='private {0}()'.format(field_type)):
+            pass
+
+        # singleton instance
+        self.emit()
+        with self.doc_comment():
+            self.emit_summary('A singleton instance of {0}'.format(field_type))
+        self.emit('public static readonly {0} Instance = new {0}();'.format(field_type))
+
+        # encoder
+        self.emit()
+        self._emit_encode_doc_comment()
+        self._emit_explicit_interface_suppress()
+        with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
+            self.emit('encoder.AddUnion("{0}");'.format(field.name))
+
+        self._generate_union_field_decoder(field_type)
+
+    def _generate_union_field_value_type(self, field, field_type):
+        """
+        Generates the inner type for a union field that has a value.
+
+        This has a public constructor and a Value property.
+
+        Args:
+            field (babelapi.data_type.UnionField): The union field in question.
+            field_type (str): The C# type name of the union field.
+        """
+        with self.doc_comment():
+            self.emit_ctor_summary(field_type)
+            self.emit('<param name="value">The value</param>')
+
+        value_type = self._typename(field.data_type)
+        with self.cs_block(
+                before='public {0}({1} value)'.format(field_type, value_type)):
+            if is_list_type(field.data_type):
+                self.emit('this.Value = new col.List<{0}>(value);'.format(
+                        self._typename(field.data_type.data_type)))
+            else:
+                self.emit('this.Value = value;')
+        self.emit()
+        with self.doc_comment():
+            self.emit_summary('Gets the value of this instance.')
+        value_type = self._typename(field.data_type, is_property=True)
+        self.emit('public {0} Value {{ get; private set; }}'.format(value_type))
+
+        # encoder
+        self.emit()
+        self._emit_encode_doc_comment()
+        with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
+            with self.using('var obj = encoder.AddObject()'):
+                self.emit('obj.AddField("{0}", this.Value);'.format(field.name))
+
+        self._generate_union_field_decoder(field_type)
+
+    def _generate_union_field_decoder(self, field_type):
+        """
+        Emits the decoder for union field inner type.
+
+        This decoder just throws a exception. Decoding always happens through
+        the union class.
+
+        Args:
+            field_type (str): The C# type name of the union field.
+        """
+        # decoder
+        self.emit()
+        self._emit_decode_doc_comment()
+        self._emit_explicit_interface_suppress()
+        with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(field_type)):
+            self.emit('throw new sys.InvalidOperationException("Decoding happens through the base class");')
+
+
+    def _generate_union_field_type(self, field, class_name):
+        """
+        Generates the inner class for a union field.
+
+        Args:
+            field (babelapi.data_type.UnionField): The union field in question.
+            class_name (str): The C# type name of the parent union.
+        """
+        field_type = self._public_name(field.name)
+        self.emit()
+
+        with self.doc_comment():
+            self.emit_summary(field.doc or 'The {0} object'.format(self._name_words(field.name)))
+        inherits = (class_name, 'enc.IEncodable<{0}>'.format(field_type))
+        with self.class_(field_type, inherits=inherits, access='public sealed'):
+            if is_void_type(field.data_type):
+                self._generate_union_field_void_type(field, field_type)
+            else:
+                self._generate_union_field_value_type(field, field_type)
 
     def _generate_union(self, union):
+        """
+        Generates the class for a union.
+
+        This performs the following steps
+            - Creates a name context with the union field names, this protects
+                against name collisions when resolving names.
+            - Generates the class level documentation for the union class
+            - Generates the class and its default constructor
+            - Generates type helper ('Is<field>' and 'As<field>') properties
+            - Generates encodable methos
+            - Generates an inner type for each union field.
+
+        Args:
+            union (babelapi.data_type.Union): The union in question.
+        """
         union_field_names = [self._public_name(f.name) for f in union.fields]
         with self._local_names(union_field_names):
             with self.doc_comment():
@@ -910,130 +1579,32 @@ class CSharpGenerator(CodeGenerator):
             class_name = self._public_name(union.name)
             with self.class_(class_name, inherits='enc.IEncodable<{0}>'.format(class_name), access='public'):
                 with self.doc_comment():
-                    self.emit_summary('Initializes a new instance of the {0} class.'.format(class_name))
+                    self.emit_ctor_summary(class_name)
                 with self.cs_block(before='public {0}()'.format(class_name)):
                     pass
 
+                # generate type helper properties
+                self._generate_union_is_as_properties(union)
+
+                # generate encodable
+                self._generate_union_encodable_methods(union, class_name)
+
+                # generate j types for each union field
                 for field in union.fields:
-                    field_type = self._public_name(field.name)
-                    self.emit();
-                    with self.doc_comment():
-                        self.emit_summary('Gets a value indicating whether this instance is {0}'.format(field_type))
-                    with self.cs_block(before='public bool Is{0}'.format(field_type)):
-                        with self.cs_block(before='get'):
-                            self.emit('return this is {0};'.format(field_type))
-
-                    self.emit();
-                    with self.doc_comment():
-                        self.emit_summary('Gets this instance as a {0}, or <c>null</c>.'.format(field_type))
-                    with self.cs_block(before='public {0} As{0}'.format(field_type)):
-                        with self.cs_block(before='get'):
-                            self.emit('return this as {0};'.format(field_type))
-
-                self.emit()
-                with self.region('IEncodable<{0}> methods'.format(class_name)):
-                    # encoder - is the responsibility of the concrete classes
-                    self._emit_encode_doc_comment()
-                    self._emit_explicit_interface_suppress()
-                    with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
-                        has_catch_all = False
-                        for index, field in enumerate(union.fields):
-                            public_field_name = self._public_name(field.name)
-                            condition = 'this.Is{0}'.format(public_field_name)
-                            if index == 0:
-                                cond = self.if_(condition)
-                            elif union.catch_all_field == field:
-                                cond = self.else_()
-                                has_catch_all = True
-                            else:
-                                cond = self.else_if(condition)
-
-                            with cond:
-                                self.emit('((enc.IEncodable<{0}>)this).Encode(encoder);'.format(public_field_name))
-
-                        if not has_catch_all:
-                            with self.else_():
-                                self.emit('throw new sys.InvalidOperationException();')
-
-                    # decoder
-                    self.emit()
-                    self._emit_decode_doc_comment()
-                    self._emit_explicit_interface_suppress()
-                    with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
-                        with self.switch('decoder.GetUnionName()'):
-                            for field in union.fields:
-                                constant = None if union.catch_all_field == field else '"{0}"'.format(field.name)
-                                with self.case(constant, needs_break=False):
-                                    public_field_name = self._public_name(field.name)
-                                    if is_void_type(field.data_type):
-                                        self.emit('return {0}.Instance;'.format(public_field_name))
-                                    else:
-                                        with self.using('var obj = decoder.GetObject()'):
-                                            method = self._get_decoder_method(field)
-                                            self.emit('return new {0}({1});'.format(public_field_name, method))
-
-                            if not union.catch_all_field:
-                                self.emit('default:')
-                                with self.indent():
-                                    self.emit('throw new sys.InvalidOperationException();')
-
-                for field in union.fields:
-                    field_type = self._public_name(field.name)
-                    self.emit()
-
-                    with self.doc_comment():
-                        self.emit_summary(field.doc or 'The {0} object'.format(self._name_words(field.name)))
-                    inherits = (class_name, 'enc.IEncodable<{0}>'.format(field_type))
-                    with self.class_(field_type, inherits=inherits, access='public sealed'):
-                        with self.doc_comment():
-                            self.emit_summary('Initializes a new instance of the <see cref="{0}" /> class.'.format(field_type))
-                            if not is_void_type(field.data_type):
-                                self.emit('<param name="value">The value</param>')
-                        if is_void_type(field.data_type):
-                            with self.cs_block(before='private {0}()'.format(field_type)):
-                                pass
-
-                            self.emit()
-                            with self.doc_comment():
-                                self.emit_summary('A singleton instance of {0}'.format(field_type))
-                            self.emit('public static readonly {0} Instance = new {0}();'.format(field_type))
-
-                            # encoder
-                            self.emit()
-                            self._emit_encode_doc_comment()
-                            self._emit_explicit_interface_suppress()
-                            with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
-                                self.emit('encoder.AddUnion("{0}");'.format(field.name))
-                        else:
-                            value_type = self._typename(field.data_type)
-                            with self.cs_block(
-                                    before='public {0}({1} value)'.format(field_type, value_type)):
-                                if is_list_type(field.data_type):
-                                    self.emit('this.Value = new col.List<{0}>(value);'.format(
-                                            self._typename(field.data_type.data_type)))
-                                else:
-                                    self.emit('this.Value = value;')
-                            self.emit()
-                            with self.doc_comment():
-                                self.emit_summary('Gets the value of this instance.')
-                            value_type = self._typename(field.data_type, is_property=True)
-                            self.emit('public {0} Value {{ get; private set; }}'.format(value_type))
-
-                            # encoder
-                            self.emit()
-                            self._emit_encode_doc_comment()
-                            with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
-                                with self.using('var obj = encoder.AddObject()'):
-                                    self.emit('obj.AddField("{0}", this.Value);'.format(field.name))
-
-                        # decoder
-                        self.emit()
-                        self._emit_decode_doc_comment()
-                        self._emit_explicit_interface_suppress()
-                        with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(field_type)):
-                            self.emit('throw new sys.InvalidOperationException("Decoding happens through the base class");')
+                    self._generate_union_field_type(field, class_name)
 
     def _generate_routes(self, ns, routes):
+        """
+        Generates the class that encapsulates the routes in this namespace.
+
+        This class has methods for each route and is constructed with an
+        instance of the ITransport interface.
+
+        Args:
+            ns (babelapi.api.ApiNamespace): The namespace.
+            routes (iterable of babelapi.api.ApiRoute): The routes in this
+                namespace.
+        """
         ns_name = self._public_name(ns.name)
         class_name = ns_name + 'Routes'
         with self.output_to_relative_path(os.path.join(ns_name, class_name +  '.cs')):
@@ -1052,7 +1623,7 @@ class CSharpGenerator(CodeGenerator):
                         self.DEFAULT_NAMESPACE, ns_name))
                 with self.class_(class_name, access='public'):
                     with self.doc_comment():
-                        self.emit_summary('Initializes a new instance of the {0} class'.format(class_name))
+                        self.emit_ctor_summary(class_name)
                         self.emit_xml('The transport to use', 'param', name='transport')
                     with self.cs_block(before='internal {0}(enc.ITransport transport)'.format(
                             class_name)):
@@ -1067,6 +1638,23 @@ class CSharpGenerator(CodeGenerator):
                         self._generate_route(ns, route)
 
     def _generate_route(self, ns, route):
+        """
+        Generates the methods that allow a route to be called.
+
+        The route has at least one, maybe two, *Async() methods - there is only
+        one method if the request type is void or has no fields, otherwise there
+        are two, one with the request type explicitly and another with the 
+        request type constructor arguments.
+
+        For each *Async method there is a Begin* method with the same arguments - 
+        plus callback and state arguments.
+
+        There is one End* method generated.
+
+        Args:
+            ns (babelapi.api.ApiNamespace): The namespace of the route.
+            route (babelapi.api.ApiRoute): The route in question.
+        """
         public_name = self._public_name(route.name)
         member_name = '{0}Async'.format(public_name)
 
@@ -1104,7 +1692,7 @@ class CSharpGenerator(CodeGenerator):
                 body_arg = 'io.Stream body = null'
             else:
                 body_arg = 'io.Stream body'
-            ctor_args.append(ConstructorArgs('io.Stream', 'body', body_arg, '<param name="body">The document to upload</param>'))
+            ctor_args.append(ConstructorArg('io.Stream', 'body', body_arg, '<param name="body">The document to upload</param>'))
        
         async_fn = 'public {0} {1}({2})'.format(task_type, member_name, ', '.join(route_args)) 
 

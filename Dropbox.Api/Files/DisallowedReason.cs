@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class DisallowedReason : enc.IEncodable<DisallowedReason>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the DisallowedReason class.</para>
+        /// <para>Initializes a new instance of the <see cref="DisallowedReason" />
+        /// class.</para>
         /// </summary>
         public DisallowedReason()
         {

@@ -16,7 +16,8 @@ namespace Dropbox.Api.Files
     public class UploadSessionFinishError : enc.IEncodable<UploadSessionFinishError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the UploadSessionFinishError class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadSessionFinishError" />
+        /// class.</para>
         /// </summary>
         public UploadSessionFinishError()
         {
