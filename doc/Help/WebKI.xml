@@ -289,8 +289,8 @@
     <HelpKINode Title="Disallowed Class" Url="html/T_Dropbox_Api_Files_Disallowed.htm" />
     <HelpKINode Title="about Disallowed class" Url="html/T_Dropbox_Api_Files_Disallowed.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_Disallowed__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_Disallowed.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_Disallowed.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_Disallowed.htm" />
   </HelpKINode>
   <HelpKINode Title="Disallowed.Disallowed constructor" Url="html/Overload_Dropbox_Api_Files_Disallowed__ctor.htm" />
   <HelpKINode Title="Disallowed.Reason property" Url="html/P_Dropbox_Api_Files_Disallowed_Reason.htm" />
@@ -1218,10 +1218,10 @@
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFolder.htm" />
   </HelpKINode>
   <HelpKINode Title="NotFound class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_NotFound.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm" />
   </HelpKINode>
   <HelpKINode Title="NoWritePermission class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_NoWritePermission.htm" />
@@ -1238,17 +1238,17 @@
   <HelpKINode Title="OAuthResponseType enumeration" Url="html/T_Dropbox_Api_OAuthResponseType.htm" />
   <HelpKINode Title="Offset property" Url="html/P_Dropbox_Api_Files_UploadSessionCursor_Offset.htm" />
   <HelpKINode Title="Other class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_DownloadError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Other.htm" />
   </HelpKINode>
   <HelpKINode Title="Overwrite class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Overwrite.htm" />
