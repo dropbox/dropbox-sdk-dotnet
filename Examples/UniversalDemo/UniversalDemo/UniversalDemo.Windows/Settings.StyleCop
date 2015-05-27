@@ -1,0 +1,9 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>auth</Value>
+      <Value>Dropbox</Value>
+      <Value>flyout</Value>
+    </CollectionProperty>
+  </GlobalSettings>
+</StyleCopSettings>

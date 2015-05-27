@@ -1,5 +1,6 @@
 ## Visual studio stuff
 *.suo
+*.user
 
 #ignore build contents
 [dD]ebug/
@@ -28,3 +29,7 @@
 
 ## files containing keys
 *.[Dd]o[Nn]ot[Ss]ync.*
+*.pfx
+
+## Stylecop cache
+[Ss]tyle[Cc]op.[Cc]ache
