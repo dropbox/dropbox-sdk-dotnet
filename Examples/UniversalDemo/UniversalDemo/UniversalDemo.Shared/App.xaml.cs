@@ -68,16 +68,17 @@ namespace UniversalDemo
         }
 
         /// <summary>
-        /// Occurs when [dropbox client changed].
+        /// Occurs when the dropbox client is changed.
         /// </summary>
+        /// <remarks>
+        /// This is typically if the user connects to, or disconnects from,
+        /// dropbox.
+        /// </remarks>
         public event EventHandler DropboxClientChanged;
 
         /// <summary>
         /// Gets or sets the access token.
         /// </summary>
-        /// <value>
-        /// The access token.
-        /// </value>
         public string AccessToken
         {
             get
@@ -111,9 +112,6 @@ namespace UniversalDemo
         /// <summary>
         /// Gets the dropbox client.
         /// </summary>
-        /// <value>
-        /// The dropbox client.
-        /// </value>
         public DropboxClient DropboxClient
         {
             get

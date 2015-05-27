@@ -99,7 +99,8 @@ namespace UniversalDemo.ViewModel
         }
 
         /// <summary>
-        /// Updates the revision of this image. If t
+        /// Updates the revision of this image. If the revision has changed,
+        /// then this will cause an image update.
         /// </summary>
         /// <param name="rev">The rev.</param>
         public void UpdateRev(string rev)
