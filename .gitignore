@@ -20,6 +20,7 @@
 
 ## nuget packages
 /packages/*/
+*.nupkg
 
 ## nuget tools
 /.nuget/
