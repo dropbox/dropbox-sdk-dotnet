@@ -78,15 +78,6 @@ namespace Dropbox.Api.Babel
         }
 
         /// <summary>
-        /// Adds a parameter-less union.
-        /// </summary>
-        /// <param name="name">The name of the union type.</param>
-        public void AddUnion(string name)
-        {
-            this.JsonObject = name;
-        }
-
-        /// <summary>
         /// Gets the encoded object as a string.
         /// </summary>
         /// <returns>The string encoding of the object.</returns>

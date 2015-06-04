@@ -111,7 +111,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Reset>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("reset");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "reset");
+                }
             }
 
             /// <summary>

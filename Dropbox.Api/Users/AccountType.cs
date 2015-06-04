@@ -163,7 +163,10 @@ namespace Dropbox.Api.Users
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Basic>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("basic");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "basic");
+                }
             }
 
             /// <summary>
@@ -203,7 +206,10 @@ namespace Dropbox.Api.Users
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Pro>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("pro");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "pro");
+                }
             }
 
             /// <summary>
@@ -243,7 +249,10 @@ namespace Dropbox.Api.Users
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Business>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("business");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "business");
+                }
             }
 
             /// <summary>

@@ -219,7 +219,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Xs>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("xs");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "xs");
+                }
             }
 
             /// <summary>
@@ -259,7 +262,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<S>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("s");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "s");
+                }
             }
 
             /// <summary>
@@ -299,7 +305,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<M>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("m");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "m");
+                }
             }
 
             /// <summary>
@@ -339,7 +348,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<L>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("l");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "l");
+                }
             }
 
             /// <summary>
@@ -379,7 +391,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Xl>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("xl");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "xl");
+                }
             }
 
             /// <summary>

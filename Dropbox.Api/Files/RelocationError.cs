@@ -226,6 +226,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "from_error");
                     obj.AddField("from_error", this.Value);
                 }
             }
@@ -271,6 +272,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "to_error");
                     obj.AddField("to_error", this.Value);
                 }
             }
@@ -313,7 +315,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<TooManyFiles>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("too_many_files");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "too_many_files");
+                }
             }
 
             /// <summary>
@@ -353,7 +358,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<QuotaError>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("quota_error");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "quota_error");
+                }
             }
 
             /// <summary>
@@ -393,7 +401,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("other");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
             }
 
             /// <summary>

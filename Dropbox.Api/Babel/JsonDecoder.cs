@@ -83,14 +83,10 @@ namespace Dropbox.Api.Babel
         {
             if (this.JsonObject != null)
             {
-                if (this.JsonObject.Count == 1)
+                if (this.JsonObject.ContainsKey(".tag"))
                 {
-                    return this.JsonObject.Keys.First();
+                    return this.JsonObject[".tag"].ToString();
                 }
-            }
-            else if (!string.IsNullOrEmpty(this.JsonString))
-            {
-                return this.JsonString;
             }
 
             throw new InvalidOperationException(

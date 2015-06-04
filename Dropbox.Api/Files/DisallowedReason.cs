@@ -140,7 +140,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Permission>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("permission");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "permission");
+                }
             }
 
             /// <summary>
@@ -183,6 +186,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "restricted");
                     obj.AddField("restricted", this.Value);
                 }
             }

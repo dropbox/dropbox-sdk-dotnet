@@ -167,6 +167,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "disallowed");
                     obj.AddField("disallowed", this.Value);
                 }
             }
@@ -211,6 +212,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "no_file");
                     obj.AddField("no_file", this.Value);
                 }
             }
@@ -252,7 +254,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("other");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
             }
 
             /// <summary>

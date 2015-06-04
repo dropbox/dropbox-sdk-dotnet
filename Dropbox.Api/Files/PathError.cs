@@ -445,7 +445,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<RootDisallowed>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("root_disallowed");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "root_disallowed");
+                }
             }
 
             /// <summary>
@@ -489,6 +492,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "malformed_path");
                     obj.AddField("malformed_path", this.Value);
                 }
             }
@@ -530,7 +534,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<NotFound>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("not_found");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "not_found");
+                }
             }
 
             /// <summary>
@@ -571,7 +578,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<FileDisallowed>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("file_disallowed");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "file_disallowed");
+                }
             }
 
             /// <summary>
@@ -612,7 +622,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<FolderDisallowed>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("folder_disallowed");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "folder_disallowed");
+                }
             }
 
             /// <summary>
@@ -653,7 +666,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<ConflictFile>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("conflict_file");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "conflict_file");
+                }
             }
 
             /// <summary>
@@ -694,7 +710,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<ConflictFolder>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("conflict_folder");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "conflict_folder");
+                }
             }
 
             /// <summary>
@@ -735,7 +754,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<ConflictFileAncestor>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("conflict_file_ancestor");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "conflict_file_ancestor");
+                }
             }
 
             /// <summary>
@@ -775,7 +797,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<ReadOnly>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("read_only");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "read_only");
+                }
             }
 
             /// <summary>
@@ -816,7 +841,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<SharedFolderDisallowed>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("shared_folder_disallowed");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "shared_folder_disallowed");
+                }
             }
 
             /// <summary>
@@ -857,7 +885,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<AutorenameFiled>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("autorename_filed");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "autorename_filed");
+                }
             }
 
             /// <summary>
@@ -900,6 +931,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "misc");
                     obj.AddField("misc", this.Value);
                 }
             }
@@ -941,7 +973,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("other");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
             }
 
             /// <summary>

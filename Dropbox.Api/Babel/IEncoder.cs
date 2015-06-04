@@ -23,12 +23,6 @@ namespace Dropbox.Api.Babel
         IEncoderContext AddObject();
 
         /// <summary>
-        /// Adds a parameter-less union.
-        /// </summary>
-        /// <param name="name">The name of the union type.</param>
-        void AddUnion(string name);
-       
-        /// <summary>
         /// Gets the encoded object as a string.
         /// </summary>
         /// <returns>The string encoding of the object.</returns>

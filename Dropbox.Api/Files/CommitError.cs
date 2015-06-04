@@ -192,6 +192,7 @@ namespace Dropbox.Api.Files
             {
                 using (var obj = encoder.AddObject())
                 {
+                    obj.AddField(".tag", "conflict");
                     obj.AddField("conflict", this.Value);
                 }
             }
@@ -235,7 +236,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<NoWritePermission>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("no_write_permission");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "no_write_permission");
+                }
             }
 
             /// <summary>
@@ -276,7 +280,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<InsufficientQuota>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("insufficient_quota");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "insufficient_quota");
+                }
             }
 
             /// <summary>
@@ -316,7 +323,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("other");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
             }
 
             /// <summary>

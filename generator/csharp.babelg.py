@@ -1496,7 +1496,8 @@ class CSharpGenerator(CodeGenerator):
         self._emit_encode_doc_comment()
         self._emit_explicit_interface_suppress()
         with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
-            self.emit('encoder.AddUnion("{0}");'.format(field.name))
+            with self.using('var obj = encoder.AddObject()'):
+                self.emit('obj.AddField(".tag", "{0}");'.format(field.name))
 
         self._generate_union_field_decoder(field_type)
 
@@ -1533,6 +1534,7 @@ class CSharpGenerator(CodeGenerator):
         self._emit_encode_doc_comment()
         with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
             with self.using('var obj = encoder.AddObject()'):
+                self.emit('obj.AddField(".tag", "{0}");'.format(field.name))
                 self.emit('obj.AddField("{0}", this.Value);'.format(field.name))
 
         self._generate_union_field_decoder(field_type)

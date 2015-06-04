@@ -60,10 +60,6 @@
     <HelpKINode Title="IEncoder.AddObject Method " Url="html/M_Dropbox_Api_Babel_IEncoder_AddObject.htm" />
     <HelpKINode Title="JsonEncoder.AddObject Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddObject.htm" />
   </HelpKINode>
-  <HelpKINode Title="AddUnion method">
-    <HelpKINode Title="IEncoder.AddUnion Method " Url="html/M_Dropbox_Api_Babel_IEncoder_AddUnion.htm" />
-    <HelpKINode Title="JsonEncoder.AddUnion Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddUnion.htm" />
-  </HelpKINode>
   <HelpKINode Title="Allocated property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Allocated.htm" />
   <HelpKINode Title="ApiException(Of TError) class">
     <HelpKINode Title="ApiException(TError) Class" Url="html/T_Dropbox_Api_ApiException_1.htm" />
@@ -714,8 +710,8 @@
   <HelpKINode Title="FileMetadata.ServerModified property" Url="html/P_Dropbox_Api_Files_FileMetadata_ServerModified.htm" />
   <HelpKINode Title="FileMetadata.Size property" Url="html/P_Dropbox_Api_Files_FileMetadata_Size.htm" />
   <HelpKINode Title="Filename class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_Filename.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Filename.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_Filename.htm" />
   </HelpKINode>
   <HelpKINode Title="FilenameAndContent class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm" />
@@ -991,7 +987,6 @@
     <HelpKINode Title="methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncoder.htm" />
   </HelpKINode>
   <HelpKINode Title="IEncoder.AddObject method" Url="html/M_Dropbox_Api_Babel_IEncoder_AddObject.htm" />
-  <HelpKINode Title="IEncoder.AddUnion method" Url="html/M_Dropbox_Api_Babel_IEncoder_AddUnion.htm" />
   <HelpKINode Title="IEncoder.GetEncodedBytes method" Url="html/M_Dropbox_Api_Babel_IEncoder_GetEncodedBytes.htm" />
   <HelpKINode Title="IEncoder.GetEncodedString method" Url="html/M_Dropbox_Api_Babel_IEncoder_GetEncodedString.htm" />
   <HelpKINode Title="IEncoderContext interface">
@@ -1215,7 +1210,6 @@
     <HelpKINode Title="methods" Url="html/Methods_T_Dropbox_Api_Babel_JsonEncoder.htm" />
   </HelpKINode>
   <HelpKINode Title="JsonEncoder.AddObject method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddObject.htm" />
-  <HelpKINode Title="JsonEncoder.AddUnion method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddUnion.htm" />
   <HelpKINode Title="JsonEncoder.Encode(Of T) method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_Encode__1.htm" />
   <HelpKINode Title="JsonEncoder.Encode&lt;T&gt; method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_Encode__1.htm" />
   <HelpKINode Title="JsonEncoder.GetEncodedBytes method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_GetEncodedBytes.htm" />
@@ -1344,8 +1338,8 @@
     <HelpKINode Title="NoFile Class" Url="html/T_Dropbox_Api_Files_NoFile.htm" />
     <HelpKINode Title="about NoFile class" Url="html/T_Dropbox_Api_Files_NoFile.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_NoFile__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_NoFile.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_NoFile.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_NoFile.htm" />
   </HelpKINode>
   <HelpKINode Title="NoFile.NoFile constructor" Url="html/Overload_Dropbox_Api_Files_NoFile__ctor.htm" />
   <HelpKINode Title="NoFile.Reason property" Url="html/P_Dropbox_Api_Files_NoFile_Reason.htm" />
@@ -1374,11 +1368,11 @@
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFolder.htm" />
   </HelpKINode>
   <HelpKINode Title="NotFound class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_NotFound.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_NotFound.htm" />
   </HelpKINode>
   <HelpKINode Title="NoWritePermission class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_NoWritePermission.htm" />
@@ -1395,18 +1389,18 @@
   <HelpKINode Title="OAuthResponseType enumeration" Url="html/T_Dropbox_Api_OAuthResponseType.htm" />
   <HelpKINode Title="Offset property" Url="html/P_Dropbox_Api_Files_UploadSessionCursor_Offset.htm" />
   <HelpKINode Title="Other class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_DownloadError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_Other.htm" />
   </HelpKINode>
   <HelpKINode Title="Overwrite class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Overwrite.htm" />
@@ -1613,8 +1607,8 @@
     <HelpKINode Title="Restricted Class" Url="html/T_Dropbox_Api_Files_Restricted.htm" />
     <HelpKINode Title="about Restricted class" Url="html/T_Dropbox_Api_Files_Restricted.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_Restricted__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DisallowedReason_Restricted.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_Restricted.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DisallowedReason_Restricted.htm" />
   </HelpKINode>
   <HelpKINode Title="Restricted.Reason property" Url="html/P_Dropbox_Api_Files_Restricted_Reason.htm" />
   <HelpKINode Title="Restricted.Restricted constructor" Url="html/Overload_Dropbox_Api_Files_Restricted__ctor.htm" />

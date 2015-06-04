@@ -186,7 +186,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<File>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("file");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "file");
+                }
             }
 
             /// <summary>
@@ -226,7 +229,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Folder>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("folder");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "folder");
+                }
             }
 
             /// <summary>
@@ -267,7 +273,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<AutorenameFailed>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("autorename_failed");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "autorename_failed");
+                }
             }
 
             /// <summary>
@@ -307,7 +316,10 @@ namespace Dropbox.Api.Files
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
             {
-                encoder.AddUnion("other");
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
             }
 
             /// <summary>
