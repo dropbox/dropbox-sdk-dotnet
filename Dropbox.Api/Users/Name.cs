@@ -11,8 +11,7 @@ namespace Dropbox.Api.Users
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Contains several ways a name might be represented to make internationalization
-    /// more convenient.</para>
+    /// <para>Representations for a person's name to assist with internationalization.</para>
     /// </summary>
     /// <seealso cref="Account" />
     /// <seealso cref="BasicAccount" />
@@ -126,9 +125,9 @@ namespace Dropbox.Api.Users
                 this.Surname = obj.GetField<string>("surname");
                 this.FamiliarName = obj.GetField<string>("familiar_name");
                 this.DisplayName = obj.GetField<string>("display_name");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

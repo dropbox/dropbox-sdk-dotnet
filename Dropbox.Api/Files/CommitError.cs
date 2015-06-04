@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The commit error object</para>
+    /// <para>Errors from <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadAsync"
+    /// />.</para>
     /// </summary>
     public class CommitError : enc.IEncodable<CommitError>
     {
@@ -165,7 +166,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The conflict object</para>
+        /// <para>A conflict prevented the commit. See the value for the reason.</para>
         /// </summary>
         public sealed class Conflict : CommitError, enc.IEncodable<Conflict>
         {
@@ -292,7 +293,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : CommitError, enc.IEncodable<Other>
         {

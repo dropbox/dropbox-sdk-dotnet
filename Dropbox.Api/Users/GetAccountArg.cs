@@ -11,7 +11,8 @@ namespace Dropbox.Api.Users
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The get account arg object</para>
+    /// <para>Arguments for <see cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountAsync"
+    /// />.</para>
     /// </summary>
     public sealed class GetAccountArg : enc.IEncodable<GetAccountArg>
     {
@@ -74,9 +75,9 @@ namespace Dropbox.Api.Users
             using (var obj = decoder.GetObject())
             {
                 this.AccountId = obj.GetField<string>("account_id");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

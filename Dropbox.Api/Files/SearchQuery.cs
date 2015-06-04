@@ -11,21 +11,24 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The search query object</para>
+    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync"
+    /// />.</para>
     /// </summary>
     public sealed class SearchQuery : enc.IEncodable<SearchQuery>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SearchQuery" /> class.</para>
         /// </summary>
-        /// <param name="path">The path in the user's Dropbox to search.</param>
+        /// <param name="path">The path in the user's Dropbox to search. Should probably be a
+        /// folder. May be the root (i.e. empty).</param>
         /// <param name="query">The string to search for. The search string is split on spaces
         /// into multiple tokens. For file name searching, the last token is used for prefix
         /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
         /// <param name="start">The starting index within the search results (used for
         /// paging).</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
-        /// <param name="mode">The mode</param>
+        /// <param name="mode">The search mode (filename, filename_and_content, or
+        /// deleted_filename).</param>
         public SearchQuery(string path,
                            string query,
                            ulong start = 0,
@@ -72,7 +75,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The path in the user's Dropbox to search.</para>
+        /// <para>The path in the user's Dropbox to search. Should probably be a folder. May be
+        /// the root (i.e. empty).</para>
         /// </summary>
         public string Path { get; private set; }
 
@@ -94,7 +98,7 @@ namespace Dropbox.Api.Files
         public ulong MaxResults { get; private set; }
 
         /// <summary>
-        /// <para>Gets the mode of the search query</para>
+        /// <para>The search mode (filename, filename_and_content, or deleted_filename).</para>
         /// </summary>
         public SearchMode Mode { get; private set; }
 
@@ -142,9 +146,9 @@ namespace Dropbox.Api.Files
                 {
                     this.Mode = obj.GetFieldObject<SearchMode>("mode");
                 }
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

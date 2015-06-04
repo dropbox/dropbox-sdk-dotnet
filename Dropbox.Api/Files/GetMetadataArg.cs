@@ -11,14 +11,16 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The get metadata arg object</para>
+    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync"
+    /// />.</para>
     /// </summary>
     public sealed class GetMetadataArg : enc.IEncodable<GetMetadataArg>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetMetadataArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path</param>
+        /// <param name="path">The path of the file or folder on Dropbox. Must not be the
+        /// root.</param>
         public GetMetadataArg(string path)
         {
             if (path == null)
@@ -39,7 +41,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the path of the get metadata arg</para>
+        /// <para>The path of the file or folder on Dropbox. Must not be the root.</para>
         /// </summary>
         public string Path { get; private set; }
 
@@ -70,9 +72,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.Path = obj.GetField<string>("path");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

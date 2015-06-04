@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The folder path error object</para>
+    /// <para>Base class for errors returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />.</para>
     /// </summary>
     public class FolderPathError : enc.IEncodable<FolderPathError>
     {

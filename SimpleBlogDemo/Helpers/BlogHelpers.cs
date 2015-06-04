@@ -93,12 +93,12 @@
             var articles = new List<ArticleMetadata>();
             foreach (var item in list.Entries)
             {
-                if (!item.Metadata.IsFile)
+                if (!item.IsFile)
                 {
                     continue;
                 }
 
-                var fileMetadata = item.Metadata.AsFile;
+                var fileMetadata = item.AsFile;
 
                 var metadata = ArticleMetadata.Parse(item.Name, fileMetadata.Rev);
                 if (metadata != null)
@@ -238,13 +238,13 @@
 
         public HtmlString Content { get; private set; }
 
-        public static Article FromMetadata(FileMetadataWithName metadata, HtmlString content)
+        public static Article FromMetadata(FileMetadata metadata, HtmlString content)
         {
             var parsed = metadata.Name.ParseBlogFileName();
 
             return new Article(
                 metadata.Name,
-                ArticleMetadata.Parse(metadata.Name, metadata.Metadata.Rev),
+                ArticleMetadata.Parse(metadata.Name, metadata.Rev),
                 content);
         }
     }

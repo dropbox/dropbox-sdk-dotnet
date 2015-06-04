@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The restricted reason object</para>
+    /// <para>Errors for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" /> when
+    /// download is forbidden.</para>
     /// </summary>
     public class RestrictedReason : enc.IEncodable<RestrictedReason>
     {
@@ -107,7 +108,8 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The dmca object</para>
+        /// <para>The download is forbidden because of a DMCA (U.S. Digital Millenium Copyright
+        /// Act) takedown request.</para>
         /// </summary>
         public sealed class Dmca : RestrictedReason, enc.IEncodable<Dmca>
         {
@@ -147,7 +149,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>The download is forbidden for some other reason.</para>
         /// </summary>
         public sealed class Other : RestrictedReason, enc.IEncodable<Other>
         {

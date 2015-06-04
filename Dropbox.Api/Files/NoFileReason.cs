@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The no file reason object</para>
+    /// <para>Errors from <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" />
+    /// when the file cannot be downloaded.</para>
     /// </summary>
     public class NoFileReason : enc.IEncodable<NoFileReason>
     {
@@ -112,7 +113,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The not found object</para>
+        /// <para>The path is not found.</para>
         /// </summary>
         public sealed class NotFound : NoFileReason, enc.IEncodable<NotFound>
         {
@@ -152,7 +153,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The is folder object</para>
+        /// <para>The path refers to a folder. Only files can be downloaded.</para>
         /// </summary>
         public sealed class IsFolder : NoFileReason, enc.IEncodable<IsFolder>
         {

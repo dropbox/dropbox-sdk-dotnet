@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload session finish arg object</para>
+    /// <para>Arguments for <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
     /// </summary>
     public sealed class UploadSessionFinishArg : enc.IEncodable<UploadSessionFinishArg>
     {
@@ -19,8 +20,9 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadSessionFinishArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="cursor">The cursor</param>
-        /// <param name="commit">The commit</param>
+        /// <param name="cursor">Contains the upload session ID and the offset.</param>
+        /// <param name="commit">Contains the path and other optional modifiers for the
+        /// commit.</param>
         public UploadSessionFinishArg(UploadSessionCursor cursor,
                                       CommitInfo commit)
         {
@@ -49,12 +51,12 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the cursor of the upload session finish arg</para>
+        /// <para>Contains the upload session ID and the offset.</para>
         /// </summary>
         public UploadSessionCursor Cursor { get; private set; }
 
         /// <summary>
-        /// <para>Gets the commit of the upload session finish arg</para>
+        /// <para>Contains the path and other optional modifiers for the commit.</para>
         /// </summary>
         public CommitInfo Commit { get; private set; }
 
@@ -87,9 +89,9 @@ namespace Dropbox.Api.Files
             {
                 this.Cursor = obj.GetFieldObject<UploadSessionCursor>("cursor");
                 this.Commit = obj.GetFieldObject<CommitInfo>("commit");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

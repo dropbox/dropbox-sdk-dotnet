@@ -85,9 +85,9 @@ namespace Dropbox.Api.Users
             {
                 this.Id = obj.GetField<string>("id");
                 this.Name = obj.GetField<string>("name");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

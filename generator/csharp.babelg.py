@@ -1014,15 +1014,12 @@ class CSharpGenerator(CodeGenerator):
         else:
             return 'obj.{0}<{1}>("{2}")'.format(method, generic_type, field.name)
 
-    def _emit_decoder(self, field, target='this'):
+    def _emit_decoder(self, field):
         """
         Emits a decoder fragment for a struct field
 
         Args:
             field (babelapi.data_type.Field): The field to be decoded
-            target (str): The target object on which the field will be decoded,
-                this is specified when decoding a struct with enumerated
-                subtypes
         """
         field_public_name = self._public_name(field.name)
 
@@ -1038,14 +1035,14 @@ class CSharpGenerator(CodeGenerator):
 
         try:
             method = self._get_decoder_method(field)
-            self.emit('{0}.{1} = {2};'.format(target, field_public_name, method))
+            self.emit('this.{0} = {1};'.format(field_public_name, method))
         finally:
             if null_block:
                 null_block.__exit__(None, None, None)
                 if is_list_type(data_type):
                     with self.else_():
-                        self.emit('{0}.{1} = new col.List<{2}>();'.format(
-                            target, field_public_name, self._typename(data_type.data_type)))
+                        self.emit('this.{0} = new col.List<{1}>();'.format(
+                            field_public_name, self._typename(data_type.data_type)))
 
     def _make_struct_constructor_args(self, struct):
         """
@@ -1241,7 +1238,16 @@ class CSharpGenerator(CodeGenerator):
                 self.emit_summary(doc)
 
             fieldtype = self._typename(field.data_type, is_property=True)
-            self.emit('public {0} {1} {{ get; private set; }}'.format(fieldtype, self._public_name(field.name)))
+            setter_access = 'protected' if struct.has_enumerated_subtypes() else 'private'
+            self.emit('public {0} {1} {{ get; {2} set; }}'.format(fieldtype,
+                                                                  self._public_name(field.name),
+                                                                  setter_access))
+
+    def _get_struct_tag(self, struct):
+        if struct.parent_type and struct.parent_type.has_enumerated_subtypes():
+            for subtype in struct.parent_type.get_enumerated_subtypes():
+                if subtype.data_type is struct:
+                    return subtype.name
 
     def _generate_struct_encodable_methods(self, struct, class_name, parent_type_fields):
         """
@@ -1260,60 +1266,73 @@ class CSharpGenerator(CodeGenerator):
             self._emit_encode_doc_comment()
             self._emit_explicit_interface_suppress()
             with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
-                with self.using('var obj = encoder.AddObject()'):
-                    if struct.has_enumerated_subtypes():
-                        for index, subtype in enumerate(struct.get_enumerated_subtypes()):
-                            cond = self.if_ if not index else self.else_if
-                            subtype_public_name = self._public_name(subtype.name)
-                            with cond('this.Is{0}'.format(subtype_public_name)):
-                                self.emit('obj.AddFieldObject<{0}>("{1}", this.As{2});'.format(
-                                    self._typename(subtype.data_type), subtype.name, subtype_public_name))
+                if struct.has_enumerated_subtypes():
+                    for index, subtype in enumerate(struct.get_enumerated_subtypes()):
+                        cond = self.if_ if not index else self.else_if
+                        subtype_public_name = self._public_name(subtype.name)
+                        subtype_typename = self._typename(subtype.data_type)
+                        with cond('this.Is{0}'.format(subtype_public_name)):
+                            self.emit('((enc.IEncodable<{0}>)this.As{1}).Encode(encoder);'.format(
+                                subtype_typename, subtype_public_name))
 
+                    with self.else_():
                         if not struct.is_catch_all():
-                            with self.else_():
                                 self.emit('throw new sys.InvalidOperationException();')
-                        self.emit()
+                        else:
+                            with self.using('var obj = encoder.AddObject()'):
+                                tag = self._get_struct_tag(struct)
+                                self.emit('obj.AddField<string>(".tag", "{0}");'.format(tag or ''))
+                                for field in struct.all_fields:
+                                    self._emit_encoder(field)
+                elif struct.parent_type and struct.parent_type.has_enumerated_subtypes():
+                    tag = self._get_struct_tag(struct);
+                    assert tag is not None, 'Tag should not be none within a subtype hierarchy'
 
-                    for field in struct.all_fields:
-                        if field.name in parent_type_fields:
-                            continue
-                        self._emit_encoder(field)
+                    with self.using('var obj = encoder.AddObject()'):
+                        self.emit('obj.AddField<string>(".tag", "{0}");'.format(tag))
+                        for field in struct.all_fields:
+                            self._emit_encoder(field)
+                else:
+                    with self.using('var obj = encoder.AddObject()'):
+                        for field in struct.all_fields:
+                            if field.name in parent_type_fields:
+                                continue
+                            self._emit_encoder(field)
 
             # Emit the decoder
             self.emit()
             self._emit_decode_doc_comment()
             self._emit_explicit_interface_suppress()
             with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
+                if struct.has_enumerated_subtypes():
+                    self.emit('var tag = string.Empty;')
                     with self.using('var obj = decoder.GetObject()'):
-                        if struct.has_enumerated_subtypes():
-                            self.emit('{0} target;'.format(class_name))
-                            self.emit()
-                            first = True
-                            for index, subtype in enumerate(struct.get_enumerated_subtypes()):
-                                cond = self.if_ if not index else self.else_if
-                                with cond('obj.HasField("{0}")'.format(subtype.name)):
-                                    subtype_type = self._typename(subtype.data_type)
-                                    self.emit('target = obj.GetFieldObject<{0}>("{1}");'.format(
-                                        subtype_type, subtype.name))
-
-                            with self.else_():
-                                if struct.is_catch_all():
-                                    self.emit('target = this;')
-                                else:
-                                    self.emit('throw new sys.InvalidOperationException();')
-
-                            self.emit();
-                            target = 'target'
+                        self.emit('tag = obj.GetField<string>(".tag");')
+                    self.emit()
+                    with self.switch('tag'):
+                        for subtype in struct.get_enumerated_subtypes():
+                            with self.case('"{0}"'.format(subtype.name), needs_break=False):
+                                subtype_arg_name = self._arg_name(subtype.name)
+                                subtype_typename = self._typename(subtype.data_type)
+                                self.emit('var {0} = new {1}();'.format(subtype_arg_name, subtype_typename))
+                                self.emit('return ((enc.IEncodable<{0}>){1}).Decode(decoder);'.format(
+                                    subtype_typename, subtype_arg_name))
+                        if struct.is_catch_all():
+                            with self.case(needs_break=False):
+                                with self.using('var obj = decoder.GetObject()'):
+                                    for field in struct.all_fields:
+                                        self._emit_decoder(field) 
+                                self.emit()
+                                self.emit('return this;')
                         else:
-                            target = 'this'
-
+                            with self.case(needs_break=False):
+                                self.emit('throw new sys.InvalidOperationException();')
+                else:
+                    with self.using('var obj = decoder.GetObject()'):
                         for field in struct.all_fields:
-                            if field.name in parent_type_fields:
-                                continue
-                            self._emit_decoder(field, target) 
-
-                        self.emit()
-                        self.emit('return {0};'.format(target))
+                            self._emit_decoder(field) 
+                    self.emit()
+                    self.emit('return this;')
 
     def _generate_struct(self, struct):
         """

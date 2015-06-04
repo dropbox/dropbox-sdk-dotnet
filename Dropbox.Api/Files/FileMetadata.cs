@@ -11,15 +11,18 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The file metadata object</para>
+    /// <para>Metadata (excluding name or path) for a file.</para>
     /// </summary>
-    /// <seealso cref="FileMetadataWithName" />
     /// <seealso cref="Metadata" />
     public sealed class FileMetadata : Metadata, enc.IEncodable<FileMetadata>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="FileMetadata" /> class.</para>
         /// </summary>
+        /// <param name="name">The last component of the path (including extension). This never
+        /// contains a slash.</param>
+        /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
+        /// starts with a slash.</param>
         /// <param name="clientModified">For files, this is the modification time set by the
         /// desktop client when the file was added to Dropbox. Since this time is not verified
         /// (the Dropbox server stores whatever the desktop client sends up), this should only
@@ -31,14 +34,21 @@ namespace Dropbox.Api.Files
         /// field is the same rev as elsewhere in the API and can be used to detect changes and
         /// avoid conflicts.</param>
         /// <param name="size">The file size in bytes.</param>
-        public FileMetadata(sys.DateTime clientModified,
+        public FileMetadata(string name,
+                            string pathLower,
+                            sys.DateTime clientModified,
                             sys.DateTime serverModified,
                             string rev,
                             ulong size)
+            : base(name, pathLower)
         {
             if (rev == null)
             {
                 throw new sys.ArgumentNullException("rev");
+            }
+            else if (rev.Length < 9 || !re.Regex.IsMatch(rev, @"[0-9a-f]+"))
+            {
+                throw new sys.ArgumentOutOfRangeException("rev");
             }
 
             this.ClientModified = clientModified;
@@ -93,6 +103,9 @@ namespace Dropbox.Api.Files
         {
             using (var obj = encoder.AddObject())
             {
+                obj.AddField<string>(".tag", "file");
+                obj.AddField<string>("name", this.Name);
+                obj.AddField<string>("path_lower", this.PathLower);
                 obj.AddField<sys.DateTime>("client_modified", this.ClientModified);
                 obj.AddField<sys.DateTime>("server_modified", this.ServerModified);
                 obj.AddField<string>("rev", this.Rev);
@@ -111,13 +124,15 @@ namespace Dropbox.Api.Files
         {
             using (var obj = decoder.GetObject())
             {
+                this.Name = obj.GetField<string>("name");
+                this.PathLower = obj.GetField<string>("path_lower");
                 this.ClientModified = obj.GetField<sys.DateTime>("client_modified");
                 this.ServerModified = obj.GetField<sys.DateTime>("server_modified");
                 this.Rev = obj.GetField<string>("rev");
                 this.Size = obj.GetField<ulong>("size");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

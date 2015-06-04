@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The list folder result object</para>
+    /// <para>Information returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />.</para>
     /// </summary>
     public sealed class ListFolderResult : enc.IEncodable<ListFolderResult>
     {
@@ -19,25 +20,32 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ListFolderResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="entries">The entries</param>
-        /// <param name="footer">The footer</param>
-        public ListFolderResult(col.IEnumerable<ChangeEntry> entries,
-                                ListFolderFooter footer)
+        /// <param name="entries">The files and (direct) subfolders in the folder.</param>
+        /// <param name="cursor">Pass the cursor into <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
+        /// what's changed in the folder since your previous query.</param>
+        /// <param name="hasMore">If true, then there are more entries available. Pass the
+        /// cursor to <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync"
+        /// /> to retrieve the rest.</param>
+        public ListFolderResult(col.IEnumerable<Metadata> entries,
+                                string cursor,
+                                bool hasMore)
         {
-            var entriesList = new col.List<ChangeEntry>(entries ?? new ChangeEntry[0]);
+            var entriesList = new col.List<Metadata>(entries ?? new Metadata[0]);
 
             if (entries == null)
             {
                 throw new sys.ArgumentNullException("entries");
             }
 
-            if (footer == null)
+            if (cursor == null)
             {
-                throw new sys.ArgumentNullException("footer");
+                throw new sys.ArgumentNullException("cursor");
             }
 
             this.Entries = entriesList;
-            this.Footer = footer;
+            this.Cursor = cursor;
+            this.HasMore = hasMore;
         }
 
         /// <summary>
@@ -51,14 +59,23 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the entries of the list folder result</para>
+        /// <para>The files and (direct) subfolders in the folder.</para>
         /// </summary>
-        public col.IList<ChangeEntry> Entries { get; private set; }
+        public col.IList<Metadata> Entries { get; private set; }
 
         /// <summary>
-        /// <para>Gets the footer of the list folder result</para>
+        /// <para>Pass the cursor into <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
+        /// what's changed in the folder since your previous query.</para>
         /// </summary>
-        public ListFolderFooter Footer { get; private set; }
+        public string Cursor { get; private set; }
+
+        /// <summary>
+        /// <para>If true, then there are more entries available. Pass the cursor to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to retrieve
+        /// the rest.</para>
+        /// </summary>
+        public bool HasMore { get; private set; }
 
         #region IEncodable<ListFolderResult> methods
 
@@ -71,8 +88,9 @@ namespace Dropbox.Api.Files
         {
             using (var obj = encoder.AddObject())
             {
-                obj.AddFieldObjectList<ChangeEntry>("entries", this.Entries);
-                obj.AddFieldObject<ListFolderFooter>("footer", this.Footer);
+                obj.AddFieldObjectList<Metadata>("entries", this.Entries);
+                obj.AddField<string>("cursor", this.Cursor);
+                obj.AddField<bool>("has_more", this.HasMore);
             }
         }
 
@@ -87,11 +105,12 @@ namespace Dropbox.Api.Files
         {
             using (var obj = decoder.GetObject())
             {
-                this.Entries = new col.List<ChangeEntry>(obj.GetFieldObjectList<ChangeEntry>("entries"));
-                this.Footer = obj.GetFieldObject<ListFolderFooter>("footer");
-
-                return this;
+                this.Entries = new col.List<Metadata>(obj.GetFieldObjectList<Metadata>("entries"));
+                this.Cursor = obj.GetField<string>("cursor");
+                this.HasMore = obj.GetField<bool>("has_more");
             }
+
+            return this;
         }
 
         #endregion

@@ -11,12 +11,12 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Your intent when writing a file to some path.  This is used to determine what
+    /// <para>Your intent when writing a file to some path. This is used to determine what
     /// constitutes a conflict and what the autorename strategy is.</para>
-    /// <para>In some situations, the conflict behavior is identical: - If the target path
-    /// doesn't contain anything, the file is always written;   no conflict. - If the target
-    /// path contains a folder, it's always a conflict. - If the target path contains a file
-    /// with identical contents, nothing gets   written; no conflict.</para>
+    /// <para>In some situations, the conflict behavior is identical: (a) If the target path
+    /// doesn't contain anything, the file is always written; no conflict. (b) If the target
+    /// path contains a folder, it's always a conflict. (c) If the target path contains a file
+    /// with identical contents, nothing gets written; no conflict.</para>
     /// <para>The conflict checking differs in the case where there's a file at the target path
     /// with contents different from the contents you're trying to write.</para>
     /// </summary>
@@ -150,8 +150,8 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>It's always a conflict.  The autorename strategy is to append a number to the
-        /// file name.  For example "document.txt" might become "document (2).txt".</para>
+        /// <para>It's always a conflict. The autorename strategy is to append a number to the
+        /// file name. For example "document.txt" might become "document (2).txt".</para>
         /// </summary>
         public sealed class Add : WriteMode, enc.IEncodable<Add>
         {
@@ -191,7 +191,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>It's never a conflict.  Overwrite the existing file.  The autorename strategy
+        /// <para>It's never a conflict. Overwrite the existing file. The autorename strategy
         /// is the same as it is for <see cref="Add" />.</para>
         /// </summary>
         public sealed class Overwrite : WriteMode, enc.IEncodable<Overwrite>
@@ -232,10 +232,10 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>It's a conflict only if the current "rev" matches the given "rev".  The
-        /// autorename strategy is to append the string "conflicted copy" to the file name.
-        /// For example, "document.txt" might become "document (conflicted copy).txt" or
-        /// "document (Panda's conflicted copy).txt".</para>
+        /// <para>It's a conflict only if the current "rev" doesn't match the given "rev". The
+        /// autorename strategy is to append the string "conflicted copy" to the file name. For
+        /// example, "document.txt" might become "document (conflicted copy).txt" or "document
+        /// (Panda's conflicted copy).txt".</para>
         /// </summary>
         public sealed class Update : WriteMode, enc.IEncodable<Update>
         {

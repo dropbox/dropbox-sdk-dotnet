@@ -11,7 +11,9 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Placeholder to make parser work.</para>
+    /// <para>Metadata (excluding name or path) for a folder.</para>
+    /// <para>(There are currently no fields defined here, but we will add folder-specific
+    /// metadata in the future.)</para>
     /// </summary>
     /// <seealso cref="Metadata" />
     public sealed class FolderMetadata : Metadata, enc.IEncodable<FolderMetadata>
@@ -19,6 +21,21 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="FolderMetadata" /> class.</para>
         /// </summary>
+        /// <param name="name">The last component of the path (including extension). This never
+        /// contains a slash.</param>
+        /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
+        /// starts with a slash.</param>
+        public FolderMetadata(string name,
+                              string pathLower)
+            : base(name, pathLower)
+        {
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="FolderMetadata" /> class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
         public FolderMetadata()
         {
         }
@@ -34,6 +51,9 @@ namespace Dropbox.Api.Files
         {
             using (var obj = encoder.AddObject())
             {
+                obj.AddField<string>(".tag", "folder");
+                obj.AddField<string>("name", this.Name);
+                obj.AddField<string>("path_lower", this.PathLower);
             }
         }
 
@@ -48,9 +68,11 @@ namespace Dropbox.Api.Files
         {
             using (var obj = decoder.GetObject())
             {
-
-                return this;
+                this.Name = obj.GetField<string>("name");
+                this.PathLower = obj.GetField<string>("path_lower");
             }
+
+            return this;
         }
 
         #endregion

@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The disallowed reason object</para>
+    /// <para>Errors for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" /> when
+    /// download is disallowed or forbidden.</para>
     /// </summary>
     public class DisallowedReason : enc.IEncodable<DisallowedReason>
     {
@@ -116,7 +117,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The permission object</para>
+        /// <para>The requesting user has no permission to access the file.</para>
         /// </summary>
         public sealed class Permission : DisallowedReason, enc.IEncodable<Permission>
         {
@@ -156,7 +157,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The restricted object</para>
+        /// <para>The download is forbidden; see the value for the reason.</para>
         /// </summary>
         public sealed class Restricted : DisallowedReason, enc.IEncodable<Restricted>
         {

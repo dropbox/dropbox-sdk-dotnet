@@ -11,14 +11,15 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The restricted object</para>
+    /// <para>Error structure for <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" />.</para>
     /// </summary>
     public sealed class Restricted : enc.IEncodable<Restricted>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="Restricted" /> class.</para>
         /// </summary>
-        /// <param name="reason">The reason</param>
+        /// <param name="reason">The download is forbidden. The value gives the reason.</param>
         public Restricted(RestrictedReason reason)
         {
             if (reason == null)
@@ -39,7 +40,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the reason of the restricted</para>
+        /// <para>The download is forbidden. The value gives the reason.</para>
         /// </summary>
         public RestrictedReason Reason { get; private set; }
 
@@ -70,9 +71,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.Reason = obj.GetFieldObject<RestrictedReason>("reason");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

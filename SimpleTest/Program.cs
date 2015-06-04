@@ -8,6 +8,7 @@
 
     using Dropbox.Api;
     using Dropbox.Api.Files;
+    using System.Threading;
 
     partial class Program
     {
@@ -32,7 +33,7 @@
         {
             InitializeCertPinning();
 
-            var access_token = this.GetAccessToken();
+            var access_token = await this.GetAccessToken();
             if (string.IsNullOrEmpty(access_token))
             {
                 return 1;
@@ -40,15 +41,28 @@
 
             this.client = new DropboxClient(access_token, userAgent: "SimpleTestApp");
 
-            await GetCurrentAccount();
-
-            var path = "/DotNetApi/Help";
-            var list = await ListFolder(path);
-
-            var firstFile = list.Entries.FirstOrDefault(i => i.Metadata.IsFile);
-            if (firstFile != null)
+            try
             {
-                await Download(path, firstFile);
+                await GetCurrentAccount();
+
+                var path = "/DotNetApi/Help";
+                var list = await ListFolder(path);
+
+                var firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
+                if (firstFile != null)
+                {
+                    await Download(path, firstFile.AsFile);
+                }
+            }
+            catch (HttpException e)
+            {
+                Console.WriteLine("Exception reported from RPC layer");
+                Console.WriteLine("    Status code: {0}", e.StatusCode);
+                Console.WriteLine("    Message    : {0}", e.Message);
+                if (e.RequestUri != null)
+                {
+                    Console.WriteLine("    Request uri: {0}", e.RequestUri);
+                }
             }
 
             return 0;
@@ -77,7 +91,7 @@
         /// </para>
         /// </summary>
         /// <returns>A valid access token or null.</returns>
-        private string GetAccessToken()
+        private async Task<string> GetAccessToken()
         {
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
@@ -91,24 +105,52 @@
             if (string.IsNullOrEmpty(access_token))
             {
                 Console.WriteLine("Waiting for credentials.");
-                var app = new Application();
-                var login = new LoginForm(ApiKey);
-                app.Run(login);
-                Console.WriteLine("and back...");
+                var completion = new TaskCompletionSource<Tuple<string, string>>();
 
-                if (!login.Result)
+                var thread = new Thread(() =>
+                    {
+                        try
+                        {
+                            var app = new Application();
+                            var login = new LoginForm(ApiKey);
+                            app.Run(login);
+                            if (login.Result)
+                            {
+                                completion.TrySetResult(Tuple.Create(login.AccessToken, login.Uid));
+                            }
+                            else
+                            {
+                                completion.TrySetCanceled();
+                            }
+                        }
+                        catch(Exception e)
+                        {
+                            completion.TrySetException(e);
+                        }
+                    });
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+
+                try
                 {
-                    Console.WriteLine("Unable to authenticate with Dropbox");
+                    var result = await completion.Task;
+                    Console.WriteLine("and back...");
+
+                    access_token = result.Item1;
+                    var uid = result.Item2;
+                    Console.WriteLine("Uid: {0}", uid);
+
+                    Settings.Default.AccessToken = access_token;
+                    Settings.Default.Uid = uid;
+
+                    Settings.Default.Save();
+                }
+                catch (Exception e)
+                {
+                    e = e.InnerException ?? e;
+                    Console.WriteLine("Error: {0}", e.Message);
                     return null;
                 }
-
-                access_token = login.AccessToken;
-                Console.WriteLine("Uid: {0}", login.Uid);
-
-                Settings.Default.AccessToken = access_token;
-                Settings.Default.Uid = login.Uid;
-
-                Settings.Default.Save();
             }
 
             return access_token;
@@ -161,21 +203,21 @@
             var list = await this.client.Files.ListFolderAsync(path);
 
             // show folders then files
-            foreach (var item in list.Entries.Where(i => i.Metadata.IsFolder))
+            foreach (var item in list.Entries.Where(i => i.IsFolder))
             {
                 Console.WriteLine("D  {0}/", item.Name);
             }
 
-            foreach (var item in list.Entries.Where(i => i.Metadata.IsFile))
+            foreach (var item in list.Entries.Where(i => i.IsFile))
             {
-                var file = item.Metadata.AsFile;
+                var file = item.AsFile;
 
                 Console.WriteLine("F{0,8} {1}",
                     file.Size,
                     item.Name);
             }
 
-            if (list.Footer.HasMore)
+            if (list.HasMore)
             {
                 Console.WriteLine("   ...");
             }
@@ -189,13 +231,13 @@
         /// <param name="folder">The folder path in which the file should be found.</param>
         /// <param name="file">The file to download within <paramref name="folder"/>.</param>
         /// <returns></returns>
-        private async Task Download(string folder, ChangeEntry file)
+        private async Task Download(string folder, FileMetadata file)
         {
             Console.WriteLine("Download file...");
 
             using (var response = await this.client.Files.DownloadAsync(folder + "/" + file.Name))
             {
-                Console.WriteLine("Downloaded {0} Rev {1}", response.Response.Name, response.Response.Metadata.Rev);
+                Console.WriteLine("Downloaded {0} Rev {1}", response.Response.Name, response.Response.Rev);
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(await response.GetContentAsStringAsync());
                 Console.WriteLine("------------------------------");

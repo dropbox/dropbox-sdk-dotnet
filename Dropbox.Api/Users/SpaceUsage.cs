@@ -18,17 +18,13 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SpaceUsage" /> class.</para>
         /// </summary>
-        /// <param name="quota">The user's total quota allocation (bytes).</param>
-        /// <param name="usageIndividual">The user's used quota not including shared folders
-        /// (bytes).</param>
-        /// <param name="usageShared">The user's used quota in shared folders (bytes).</param>
-        public SpaceUsage(ulong quota,
-                          ulong usageIndividual,
-                          ulong usageShared)
+        /// <param name="allocated">The user's total space allocation (bytes).</param>
+        /// <param name="used">The user's total space usage (bytes).</param>
+        public SpaceUsage(ulong allocated,
+                          ulong used)
         {
-            this.Quota = quota;
-            this.UsageIndividual = usageIndividual;
-            this.UsageShared = usageShared;
+            this.Allocated = allocated;
+            this.Used = used;
         }
 
         /// <summary>
@@ -41,19 +37,14 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The user's total quota allocation (bytes).</para>
+        /// <para>The user's total space allocation (bytes).</para>
         /// </summary>
-        public ulong Quota { get; private set; }
+        public ulong Allocated { get; private set; }
 
         /// <summary>
-        /// <para>The user's used quota not including shared folders (bytes).</para>
+        /// <para>The user's total space usage (bytes).</para>
         /// </summary>
-        public ulong UsageIndividual { get; private set; }
-
-        /// <summary>
-        /// <para>The user's used quota in shared folders (bytes).</para>
-        /// </summary>
-        public ulong UsageShared { get; private set; }
+        public ulong Used { get; private set; }
 
         #region IEncodable<SpaceUsage> methods
 
@@ -66,9 +57,8 @@ namespace Dropbox.Api.Users
         {
             using (var obj = encoder.AddObject())
             {
-                obj.AddField<ulong>("quota", this.Quota);
-                obj.AddField<ulong>("usage_individual", this.UsageIndividual);
-                obj.AddField<ulong>("usage_shared", this.UsageShared);
+                obj.AddField<ulong>("allocated", this.Allocated);
+                obj.AddField<ulong>("used", this.Used);
             }
         }
 
@@ -83,12 +73,11 @@ namespace Dropbox.Api.Users
         {
             using (var obj = decoder.GetObject())
             {
-                this.Quota = obj.GetField<ulong>("quota");
-                this.UsageIndividual = obj.GetField<ulong>("usage_individual");
-                this.UsageShared = obj.GetField<ulong>("usage_shared");
-
-                return this;
+                this.Allocated = obj.GetField<ulong>("allocated");
+                this.Used = obj.GetField<ulong>("used");
             }
+
+            return this;
         }
 
         #endregion

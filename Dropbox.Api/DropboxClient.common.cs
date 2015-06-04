@@ -54,7 +54,7 @@ namespace Dropbox.Api
         /// <summary>
         /// The API version
         /// </summary>
-        private const string ApiVersion = "2-beta";
+        private const string ApiVersion = "2-beta-2";
 
         /// <summary>
         /// The default domain
@@ -358,6 +358,23 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Attempts to extract the value of a field named <c>error</c> from <paramref name="text"/>
+        /// if it is a valid JSON object.
+        /// </summary>
+        /// <param name="text">The text to check</param>
+        /// <returns>The contents of the error field if present, otherwise <paramref name="text" />.</returns>
+        private string CheckForError(string text)
+        {
+            Babel.Json.JsonObject obj;
+            if (Babel.Json.JsonObject.TryParse(text, out obj) && obj.ContainsKey("error"))
+            {
+                text = obj["error"].ToString();
+            }
+
+            return text;
+        }
+
+        /// <summary>
         /// Requests the JSON string.
         /// </summary>
         /// <param name="host">The host.</param>
@@ -411,24 +428,24 @@ namespace Dropbox.Api
                 if ((int)response.StatusCode >= 500)
                 {
                     var text = await response.Content.ReadAsStringAsync();
-
-                    throw new RetryException((int)response.StatusCode, message: text);
+                    text = this.CheckForError(text);
+                    throw new RetryException((int)response.StatusCode, message: text, uri: uri);
                 }
                 else if (response.StatusCode == HttpStatusCode.BadRequest)
                 {
                     var text = await response.Content.ReadAsStringAsync();
-                    throw new BadInputException(text);
+                    text = this.CheckForError(text);
+                    throw new BadInputException(text, uri);
                 }
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     var text = await response.Content.ReadAsStringAsync();
-
-                    // TODO (paul) deal with json issues
-                    throw new AuthException(text);
+                    text = this.CheckForError(text);
+                    throw new AuthException(text, uri);
                 }
                 else if ((int)response.StatusCode == 429)
                 {
-                    throw new RetryException(429, isRateLimit: true);
+                    throw new RetryException(429, uri: uri, isRateLimit: true);
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict)
                 {
@@ -464,7 +481,8 @@ namespace Dropbox.Api
                 else
                 {
                     var text = await response.Content.ReadAsStringAsync();
-                    throw new HttpException((int)response.StatusCode, text);
+                    text = this.CheckForError(text);
+                    throw new HttpException((int)response.StatusCode, text, uri);
                 }
             }
             finally
@@ -599,10 +617,13 @@ namespace Dropbox.Api
         /// </summary>
         /// <param name="statusCode">The status code.</param>
         /// <param name="message">The message.</param>
+        /// <param name="uri">The request uri.</param>
         /// <param name="inner">The inner.</param>
-        public HttpException(int statusCode, string message = null, Exception inner = null)
+        public HttpException(int statusCode, string message = null, Uri uri = null, Exception inner = null)
             : base(message, inner)
         {
+            this.StatusCode = statusCode;
+            this.RequestUri = uri;
         }
 
         /// <summary>
@@ -612,6 +633,14 @@ namespace Dropbox.Api
         /// The status code.
         /// </value>
         public int StatusCode { get; private set; }
+
+        /// <summary>
+        /// Gets the URI for the request that prompted this exception.
+        /// </summary>
+        /// <value>
+        /// The request URI.
+        /// </value>
+        public Uri RequestUri { get; private set; }
     }
 
     /// <summary>
@@ -623,8 +652,9 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="BadInputException"/> class.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
-        public BadInputException(string message)
-            : base(400, message)
+        /// <param name="uri">The request URI.</param>
+        public BadInputException(string message, Uri uri = null)
+            : base(400, message, uri)
         {
         }
     }
@@ -638,8 +668,9 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="AuthException"/> class.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
-        public AuthException(string message)
-            : base(401, message)
+        /// <param name="uri">The request URI</param>
+        public AuthException(string message, Uri uri = null)
+            : base(401, message, uri)
         {
         }
     }
@@ -656,9 +687,10 @@ namespace Dropbox.Api
         /// <param name="isRateLimit">if set to <c>true</c> the server responded with
         /// an error indicating rate limiting.</param>
         /// <param name="message">The message.</param>
+        /// <param name="uri">The request URI.</param>
         /// <param name="inner">The inner.</param>
-        public RetryException(int statusCode, bool isRateLimit = false, string message = null, Exception inner = null)
-            : base(statusCode, message, inner)
+        public RetryException(int statusCode, bool isRateLimit = false, string message = null, Uri uri = null, Exception inner = null)
+            : base(statusCode, message, uri, inner)
         {
             this.IsRateLimit = isRateLimit;
         }

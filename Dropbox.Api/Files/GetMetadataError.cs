@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The get metadata error object</para>
+    /// <para>Error returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync" />.</para>
     /// </summary>
     public class GetMetadataError : enc.IEncodable<GetMetadataError>
     {
@@ -107,7 +108,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>File was not found at the specified path.</para>
+        /// <para>File is not found at the specified path.</para>
         /// </summary>
         public sealed class NotFound : GetMetadataError, enc.IEncodable<NotFound>
         {
@@ -147,7 +148,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : GetMetadataError, enc.IEncodable<Other>
         {

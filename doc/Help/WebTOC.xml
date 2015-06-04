@@ -1,64 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="1ee8e9a4-4146-4600-970a-b605b3721a54" Title="Dropbox" Url="html/R_Project_DotNetApiDocumentation.htm">
-    <HelpTOCNode Id="1b36f7aa-f3a2-44c4-b1c6-2750d67bbe4e" Title="Dropbox.Api" Url="html/N_Dropbox_Api.htm">
-      <HelpTOCNode Id="4df365fa-afec-414e-96a3-dba2c22165e7" Title="ApiException(TError) Class" Url="html/T_Dropbox_Api_ApiException_1.htm">
-        <HelpTOCNode Id="8c6205bc-3162-4283-a82a-4fa4ea51067c" Title="ApiException(TError) Constructor " Url="html/Overload_Dropbox_Api_ApiException_1__ctor.htm">
+  <HelpTOCNode Id="e768e3a4-382e-4be8-a971-cef1e8a363f5" Title="Dropbox" Url="html/R_Project_DotNetApiDocumentation.htm">
+    <HelpTOCNode Id="0b6ec93c-18b8-4e23-b192-1a9944bf883c" Title="Dropbox.Api" Url="html/N_Dropbox_Api.htm">
+      <HelpTOCNode Id="552cebb5-684e-44b0-a39b-fe7338c62d59" Title="ApiException(TError) Class" Url="html/T_Dropbox_Api_ApiException_1.htm">
+        <HelpTOCNode Id="95a035fa-5dd2-40d6-a280-81287534d33c" Title="ApiException(TError) Constructor " Url="html/Overload_Dropbox_Api_ApiException_1__ctor.htm">
           <HelpTOCNode Title="ApiException(TError) Constructor " Url="html/M_Dropbox_Api_ApiException_1__ctor.htm" />
           <HelpTOCNode Title="ApiException(TError) Constructor (TError)" Url="html/M_Dropbox_Api_ApiException_1__ctor_1.htm" />
           <HelpTOCNode Title="ApiException(TError) Constructor (TError, String)" Url="html/M_Dropbox_Api_ApiException_1__ctor_2.htm" />
           <HelpTOCNode Title="ApiException(TError) Constructor (TError, String, Exception)" Url="html/M_Dropbox_Api_ApiException_1__ctor_3.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="7cf3ac3d-340f-413f-a7eb-29b410e43616" Title="ApiException(TError) Properties" Url="html/Properties_T_Dropbox_Api_ApiException_1.htm">
+        <HelpTOCNode Id="ee2b70cf-8f5b-4b3f-90ec-3a8505b0da25" Title="ApiException(TError) Properties" Url="html/Properties_T_Dropbox_Api_ApiException_1.htm">
           <HelpTOCNode Title="ErrorResponse Property " Url="html/P_Dropbox_Api_ApiException_1_ErrorResponse.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d36a1fe1-2daf-496a-8881-674ceb8bf659" Title="AuthException Class" Url="html/T_Dropbox_Api_AuthException.htm">
+      <HelpTOCNode Id="a53a7dab-3c57-4a61-b6c9-9464e27dcfa0" Title="AuthException Class" Url="html/T_Dropbox_Api_AuthException.htm">
         <HelpTOCNode Title="AuthException Constructor " Url="html/M_Dropbox_Api_AuthException__ctor.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="50f17ea8-4160-4e95-8109-f038a873b69a" Title="BadInputException Class" Url="html/T_Dropbox_Api_BadInputException.htm">
+      <HelpTOCNode Id="afdd59c2-65eb-47e1-b153-ad2113eb29e9" Title="BadInputException Class" Url="html/T_Dropbox_Api_BadInputException.htm">
         <HelpTOCNode Title="BadInputException Constructor " Url="html/M_Dropbox_Api_BadInputException__ctor.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0970ecaf-0afe-4fb0-8df0-6bb62cba7bf0" Title="DropboxCertHelper Class" Url="html/T_Dropbox_Api_DropboxCertHelper.htm">
-        <HelpTOCNode Id="8c4b6f0d-4190-4a8a-991d-2a743ba73143" Title="DropboxCertHelper Methods" Url="html/Methods_T_Dropbox_Api_DropboxCertHelper.htm">
-          <HelpTOCNode Id="01e71eb3-a768-467d-9dee-985313154e62" Title="IsKnownRootCertPublicKey Method " Url="html/Overload_Dropbox_Api_DropboxCertHelper_IsKnownRootCertPublicKey.htm">
+      <HelpTOCNode Id="c0766e14-5855-4f87-be8d-509039232525" Title="DropboxCertHelper Class" Url="html/T_Dropbox_Api_DropboxCertHelper.htm">
+        <HelpTOCNode Id="f2946cd7-0600-4549-b0a2-9865030c82ce" Title="DropboxCertHelper Methods" Url="html/Methods_T_Dropbox_Api_DropboxCertHelper.htm">
+          <HelpTOCNode Id="305fc760-7523-40eb-a47f-782901c1ad76" Title="IsKnownRootCertPublicKey Method " Url="html/Overload_Dropbox_Api_DropboxCertHelper_IsKnownRootCertPublicKey.htm">
             <HelpTOCNode Title="IsKnownRootCertPublicKey Method (Byte[])" Url="html/M_Dropbox_Api_DropboxCertHelper_IsKnownRootCertPublicKey.htm" />
             <HelpTOCNode Title="IsKnownRootCertPublicKey Method (String)" Url="html/M_Dropbox_Api_DropboxCertHelper_IsKnownRootCertPublicKey_1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a443e6f8-c669-443c-931a-d836d76fa9e6" Title="DropboxClient Class" Url="html/T_Dropbox_Api_DropboxClient.htm">
+      <HelpTOCNode Id="2545e6a8-3038-4d97-a93b-8e83368282df" Title="DropboxClient Class" Url="html/T_Dropbox_Api_DropboxClient.htm">
         <HelpTOCNode Title="DropboxClient Constructor " Url="html/M_Dropbox_Api_DropboxClient__ctor.htm" />
-        <HelpTOCNode Id="a5f23d0b-a628-4358-ad15-35d3b2a5eaed" Title="DropboxClient Methods" Url="html/Methods_T_Dropbox_Api_DropboxClient.htm">
+        <HelpTOCNode Id="b96c261f-ed05-4f76-8b4c-acee71752940" Title="DropboxClient Methods" Url="html/Methods_T_Dropbox_Api_DropboxClient.htm">
           <HelpTOCNode Title="Dispose Method " Url="html/M_Dropbox_Api_DropboxClient_Dispose.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="8843127b-d017-4462-be8b-4564c0d71b88" Title="DropboxClient Properties" Url="html/Properties_T_Dropbox_Api_DropboxClient.htm">
+        <HelpTOCNode Id="232fb3b8-bb1b-4e67-a3a9-941557d231bf" Title="DropboxClient Properties" Url="html/Properties_T_Dropbox_Api_DropboxClient.htm">
           <HelpTOCNode Title="Files Property " Url="html/P_Dropbox_Api_DropboxClient_Files.htm" />
           <HelpTOCNode Title="Users Property " Url="html/P_Dropbox_Api_DropboxClient_Users.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="27360c4d-1300-4f3c-bdc8-919aa46fedef" Title="DropboxOAuth2Helper Class" Url="html/T_Dropbox_Api_DropboxOAuth2Helper.htm">
-        <HelpTOCNode Id="456d7b33-cb4e-4d0c-b456-18b12bea73bf" Title="DropboxOAuth2Helper Methods" Url="html/Methods_T_Dropbox_Api_DropboxOAuth2Helper.htm">
-          <HelpTOCNode Id="e4597cc1-219c-44e5-b297-29c4ec13e47b" Title="GetAuthorizeUri Method " Url="html/Overload_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">
+      <HelpTOCNode Id="22cf4d80-c368-4597-afa9-ce16de4371bf" Title="DropboxOAuth2Helper Class" Url="html/T_Dropbox_Api_DropboxOAuth2Helper.htm">
+        <HelpTOCNode Id="daf80545-662b-4869-9bbc-226327bcc79e" Title="DropboxOAuth2Helper Methods" Url="html/Methods_T_Dropbox_Api_DropboxOAuth2Helper.htm">
+          <HelpTOCNode Id="92d8c8ab-8f58-4e73-83a0-ad141c339375" Title="GetAuthorizeUri Method " Url="html/Overload_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">
             <HelpTOCNode Title="GetAuthorizeUri Method (OAuthResponseType, String, String, String, Boolean, Boolean)" Url="html/M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm" />
             <HelpTOCNode Title="GetAuthorizeUri Method (OAuthResponseType, String, Uri, String, Boolean, Boolean)" Url="html/M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_1.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="ParseTokenFragment Method " Url="html/M_Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment.htm" />
-          <HelpTOCNode Id="d1dc3ba8-38d2-4bfa-b60e-54aeb9c6330b" Title="ProcessCodeFlowAsync Method " Url="html/Overload_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm">
+          <HelpTOCNode Id="69e10d6f-aa5d-4931-9599-1f5468d204e1" Title="ProcessCodeFlowAsync Method " Url="html/Overload_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm">
             <HelpTOCNode Title="ProcessCodeFlowAsync Method (String, String, String, String, HttpClient)" Url="html/M_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm" />
             <HelpTOCNode Title="ProcessCodeFlowAsync Method (Uri, String, String, String, String, HttpClient)" Url="html/M_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="986d50e5-32c7-4ba1-8b3c-10dbd97aa54e" Title="HttpException Class" Url="html/T_Dropbox_Api_HttpException.htm">
+      <HelpTOCNode Id="656a34c4-f7fe-45c1-baae-cae50432dd1f" Title="HttpException Class" Url="html/T_Dropbox_Api_HttpException.htm">
         <HelpTOCNode Title="HttpException Constructor " Url="html/M_Dropbox_Api_HttpException__ctor.htm" />
-        <HelpTOCNode Id="ed4cc5b6-9474-43b5-8bd8-4771787528df" Title="HttpException Properties" Url="html/Properties_T_Dropbox_Api_HttpException.htm">
+        <HelpTOCNode Id="d3cd4a6e-f914-40d2-b07c-1d3ab99f1756" Title="HttpException Properties" Url="html/Properties_T_Dropbox_Api_HttpException.htm">
+          <HelpTOCNode Title="RequestUri Property " Url="html/P_Dropbox_Api_HttpException_RequestUri.htm" />
           <HelpTOCNode Title="StatusCode Property " Url="html/P_Dropbox_Api_HttpException_StatusCode.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="338d9d17-720b-4044-a4c9-5a0d4d34d2d1" Title="OAuth2Response Class" Url="html/T_Dropbox_Api_OAuth2Response.htm">
-        <HelpTOCNode Id="f29822d8-c735-4d5e-a602-15e4a34867c8" Title="OAuth2Response Properties" Url="html/Properties_T_Dropbox_Api_OAuth2Response.htm">
+      <HelpTOCNode Id="529c1ba3-0817-4c06-ac78-2957d353c748" Title="OAuth2Response Class" Url="html/T_Dropbox_Api_OAuth2Response.htm">
+        <HelpTOCNode Id="f1d5129d-d42d-4809-9100-9f1ec2f16c9b" Title="OAuth2Response Properties" Url="html/Properties_T_Dropbox_Api_OAuth2Response.htm">
           <HelpTOCNode Title="AccessToken Property " Url="html/P_Dropbox_Api_OAuth2Response_AccessToken.htm" />
           <HelpTOCNode Title="State Property " Url="html/P_Dropbox_Api_OAuth2Response_State.htm" />
           <HelpTOCNode Title="TokenType Property " Url="html/P_Dropbox_Api_OAuth2Response_TokenType.htm" />
@@ -67,29 +68,29 @@
       </HelpTOCNode>
       <HelpTOCNode Title="OAuthResponseType Enumeration" Url="html/T_Dropbox_Api_OAuthResponseType.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="b9a927a5-0264-4f0c-ad58-06c72a50ca72" Title="Dropbox.Api.Babel" Url="html/N_Dropbox_Api_Babel.htm">
-      <HelpTOCNode Id="db50e745-932c-4f5e-89ff-39b4121b8eca" Title="Empty Class" Url="html/T_Dropbox_Api_Babel_Empty.htm">
+    <HelpTOCNode Id="2f9dddcb-878c-4261-8246-1db0b874df81" Title="Dropbox.Api.Babel" Url="html/N_Dropbox_Api_Babel.htm">
+      <HelpTOCNode Id="df92d3e0-c237-4b71-9384-852838b8236b" Title="Empty Class" Url="html/T_Dropbox_Api_Babel_Empty.htm">
         <HelpTOCNode Title="Empty Constructor " Url="html/M_Dropbox_Api_Babel_Empty__ctor.htm" />
-        <HelpTOCNode Id="b8e04995-c5f3-4c38-9def-0d870feca5ce" Title="Empty Fields" Url="html/Fields_T_Dropbox_Api_Babel_Empty.htm">
+        <HelpTOCNode Id="5e9f34fa-bbed-45ab-b65c-fc6e6d23292e" Title="Empty Fields" Url="html/Fields_T_Dropbox_Api_Babel_Empty.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Babel_Empty_Instance.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="696926d8-9e67-4015-9ce4-f3fd34365661" Title="Empty Methods" Url="html/Methods_T_Dropbox_Api_Babel_Empty.htm">
+        <HelpTOCNode Id="a7565fe3-aff2-48ed-95c1-113bf1af4861" Title="Empty Methods" Url="html/Methods_T_Dropbox_Api_Babel_Empty.htm">
           <HelpTOCNode Title="Decode Method " Url="html/M_Dropbox_Api_Babel_Empty_Decode.htm" />
           <HelpTOCNode Title="Encode Method " Url="html/M_Dropbox_Api_Babel_Empty_Encode.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2ad7d838-bbe0-4b2b-be5f-9202c13f35f5" Title="IDecoder Interface" Url="html/T_Dropbox_Api_Babel_IDecoder.htm">
-        <HelpTOCNode Id="341abab2-3ad5-474f-ae6a-2bd21c22d341" Title="IDecoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_IDecoder.htm">
+      <HelpTOCNode Id="c76e8954-ca52-4265-b1b0-a3de6854d8aa" Title="IDecoder Interface" Url="html/T_Dropbox_Api_Babel_IDecoder.htm">
+        <HelpTOCNode Id="55b051da-01cd-4190-982a-8c2ffa14fdfe" Title="IDecoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_IDecoder.htm">
           <HelpTOCNode Title="GetObject Method " Url="html/M_Dropbox_Api_Babel_IDecoder_GetObject.htm" />
           <HelpTOCNode Title="GetUnionName Method " Url="html/M_Dropbox_Api_Babel_IDecoder_GetUnionName.htm" />
-          <HelpTOCNode Id="4c1193b3-b8a6-4ab6-b6f5-564ec099ef15" Title="SetSource Method " Url="html/Overload_Dropbox_Api_Babel_IDecoder_SetSource.htm">
+          <HelpTOCNode Id="31feabec-4082-48c5-8467-c4c6a6bd31d6" Title="SetSource Method " Url="html/Overload_Dropbox_Api_Babel_IDecoder_SetSource.htm">
             <HelpTOCNode Title="SetSource Method (Byte[])" Url="html/M_Dropbox_Api_Babel_IDecoder_SetSource.htm" />
             <HelpTOCNode Title="SetSource Method (String)" Url="html/M_Dropbox_Api_Babel_IDecoder_SetSource_1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1f7d55e4-eb57-4745-b8ed-6cee22767c6f" Title="IDecoderContext Interface" Url="html/T_Dropbox_Api_Babel_IDecoderContext.htm">
-        <HelpTOCNode Id="e0144800-a75b-4a0c-99de-8d0954138a4e" Title="IDecoderContext Methods" Url="html/Methods_T_Dropbox_Api_Babel_IDecoderContext.htm">
+      <HelpTOCNode Id="a0aa9b5e-f3da-4e1b-ae36-d35de4859cf5" Title="IDecoderContext Interface" Url="html/T_Dropbox_Api_Babel_IDecoderContext.htm">
+        <HelpTOCNode Id="9e120369-53d0-4fb1-9aa1-06433dc2ff76" Title="IDecoderContext Methods" Url="html/Methods_T_Dropbox_Api_Babel_IDecoderContext.htm">
           <HelpTOCNode Title="GetField(T) Method " Url="html/M_Dropbox_Api_Babel_IDecoderContext_GetField__1.htm" />
           <HelpTOCNode Title="GetFieldList(T) Method " Url="html/M_Dropbox_Api_Babel_IDecoderContext_GetFieldList__1.htm" />
           <HelpTOCNode Title="GetFieldObject(T) Method " Url="html/M_Dropbox_Api_Babel_IDecoderContext_GetFieldObject__1.htm" />
@@ -97,60 +98,60 @@
           <HelpTOCNode Title="HasField Method " Url="html/M_Dropbox_Api_Babel_IDecoderContext_HasField.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="676edf40-2b6e-4942-83ca-6de122e9daa4" Title="IDownloadResponse(TResponse) Interface" Url="html/T_Dropbox_Api_Babel_IDownloadResponse_1.htm">
-        <HelpTOCNode Id="26789c12-98b7-4b42-8c73-a29ec9f3aa17" Title="IDownloadResponse(TResponse) Methods" Url="html/Methods_T_Dropbox_Api_Babel_IDownloadResponse_1.htm">
+      <HelpTOCNode Id="3e5e5a77-7ff5-4595-a56a-cf6e050ca6ea" Title="IDownloadResponse(TResponse) Interface" Url="html/T_Dropbox_Api_Babel_IDownloadResponse_1.htm">
+        <HelpTOCNode Id="5eb8118b-84f8-48d6-9493-55b74f10cf63" Title="IDownloadResponse(TResponse) Methods" Url="html/Methods_T_Dropbox_Api_Babel_IDownloadResponse_1.htm">
           <HelpTOCNode Title="GetContentAsByteArrayAsync Method " Url="html/M_Dropbox_Api_Babel_IDownloadResponse_1_GetContentAsByteArrayAsync.htm" />
           <HelpTOCNode Title="GetContentAsStreamAsync Method " Url="html/M_Dropbox_Api_Babel_IDownloadResponse_1_GetContentAsStreamAsync.htm" />
           <HelpTOCNode Title="GetContentAsStringAsync Method " Url="html/M_Dropbox_Api_Babel_IDownloadResponse_1_GetContentAsStringAsync.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="9a68dac2-a4d0-4ff1-bf22-8a45a471d49d" Title="IDownloadResponse(TResponse) Properties" Url="html/Properties_T_Dropbox_Api_Babel_IDownloadResponse_1.htm">
+        <HelpTOCNode Id="940d9752-f791-43d8-9da9-4fe431679f1e" Title="IDownloadResponse(TResponse) Properties" Url="html/Properties_T_Dropbox_Api_Babel_IDownloadResponse_1.htm">
           <HelpTOCNode Title="Response Property " Url="html/P_Dropbox_Api_Babel_IDownloadResponse_1_Response.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="71b2bcaa-8bb0-48b5-af28-031c94862c40" Title="IEncodable(T) Interface" Url="html/T_Dropbox_Api_Babel_IEncodable_1.htm">
-        <HelpTOCNode Id="29761482-912a-4a4a-bdd6-a7266a38083c" Title="IEncodable(T) Methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncodable_1.htm">
+      <HelpTOCNode Id="045eae71-63cf-46dc-b0b8-4e5c8d662cf0" Title="IEncodable(T) Interface" Url="html/T_Dropbox_Api_Babel_IEncodable_1.htm">
+        <HelpTOCNode Id="0802934a-fd76-4e31-818c-61f7316df6ef" Title="IEncodable(T) Methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncodable_1.htm">
           <HelpTOCNode Title="Decode Method " Url="html/M_Dropbox_Api_Babel_IEncodable_1_Decode.htm" />
           <HelpTOCNode Title="Encode Method " Url="html/M_Dropbox_Api_Babel_IEncodable_1_Encode.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="0e633271-ce4a-4d64-a87f-60e21cfb865a" Title="IEncoder Interface" Url="html/T_Dropbox_Api_Babel_IEncoder.htm">
-        <HelpTOCNode Id="0dbb9efd-58a9-44c1-920d-76ab4b2d6335" Title="IEncoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncoder.htm">
+      <HelpTOCNode Id="516686bc-a15f-4144-9485-1c0f72f2d495" Title="IEncoder Interface" Url="html/T_Dropbox_Api_Babel_IEncoder.htm">
+        <HelpTOCNode Id="b1f0dd3f-4ce0-4b85-a7a3-490eb5c7369e" Title="IEncoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncoder.htm">
           <HelpTOCNode Title="AddObject Method " Url="html/M_Dropbox_Api_Babel_IEncoder_AddObject.htm" />
           <HelpTOCNode Title="AddUnion Method " Url="html/M_Dropbox_Api_Babel_IEncoder_AddUnion.htm" />
           <HelpTOCNode Title="GetEncodedBytes Method " Url="html/M_Dropbox_Api_Babel_IEncoder_GetEncodedBytes.htm" />
           <HelpTOCNode Title="GetEncodedString Method " Url="html/M_Dropbox_Api_Babel_IEncoder_GetEncodedString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="225dc41c-854f-4b75-b449-d1b49506e5d8" Title="IEncoderContext Interface" Url="html/T_Dropbox_Api_Babel_IEncoderContext.htm">
-        <HelpTOCNode Id="2bec7b44-fa16-4cd0-b2f5-d9a1c144ef2f" Title="IEncoderContext Methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncoderContext.htm">
+      <HelpTOCNode Id="278d504f-1f4a-4afb-afe5-39025dc34229" Title="IEncoderContext Interface" Url="html/T_Dropbox_Api_Babel_IEncoderContext.htm">
+        <HelpTOCNode Id="4d32b446-e96d-4c5a-bea6-9096897960ab" Title="IEncoderContext Methods" Url="html/Methods_T_Dropbox_Api_Babel_IEncoderContext.htm">
           <HelpTOCNode Title="AddField(T) Method " Url="html/M_Dropbox_Api_Babel_IEncoderContext_AddField__1.htm" />
           <HelpTOCNode Title="AddFieldList(T) Method " Url="html/M_Dropbox_Api_Babel_IEncoderContext_AddFieldList__1.htm" />
           <HelpTOCNode Title="AddFieldObject(T) Method " Url="html/M_Dropbox_Api_Babel_IEncoderContext_AddFieldObject__1.htm" />
           <HelpTOCNode Title="AddFieldObjectList(T) Method " Url="html/M_Dropbox_Api_Babel_IEncoderContext_AddFieldObjectList__1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="8ecc8198-319f-4448-b264-0ad16c4112ee" Title="ITransport Interface" Url="html/T_Dropbox_Api_Babel_ITransport.htm">
-        <HelpTOCNode Id="f77b9aa7-34d3-449e-8cb6-0e2740083d2e" Title="ITransport Methods" Url="html/Methods_T_Dropbox_Api_Babel_ITransport.htm">
+      <HelpTOCNode Id="bdd7ec09-808b-4541-a2a9-4d5a7bc66b34" Title="ITransport Interface" Url="html/T_Dropbox_Api_Babel_ITransport.htm">
+        <HelpTOCNode Id="f9ad7824-5787-4c84-8710-7e4c660c8d65" Title="ITransport Methods" Url="html/Methods_T_Dropbox_Api_Babel_ITransport.htm">
           <HelpTOCNode Title="SendDownloadRequestAsync(TRequest, TResponse, TError) Method " Url="html/M_Dropbox_Api_Babel_ITransport_SendDownloadRequestAsync__3.htm" />
           <HelpTOCNode Title="SendRpcRequestAsync(TRequest, TResponse, TError) Method " Url="html/M_Dropbox_Api_Babel_ITransport_SendRpcRequestAsync__3.htm" />
           <HelpTOCNode Title="SendUploadRequestAsync(TRequest, TResponse, TError) Method " Url="html/M_Dropbox_Api_Babel_ITransport_SendUploadRequestAsync__3.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="9e07726a-1846-44d0-9218-22297f4483eb" Title="JsonDecoder Class" Url="html/T_Dropbox_Api_Babel_JsonDecoder.htm">
+      <HelpTOCNode Id="c5f626c2-eabb-4a6c-b364-21d3dc6ee471" Title="JsonDecoder Class" Url="html/T_Dropbox_Api_Babel_JsonDecoder.htm">
         <HelpTOCNode Title="JsonDecoder Constructor " Url="html/M_Dropbox_Api_Babel_JsonDecoder__ctor.htm" />
-        <HelpTOCNode Id="8bac4ef2-d640-47c5-a8f9-fca4d5572a7e" Title="JsonDecoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_JsonDecoder.htm">
+        <HelpTOCNode Id="9f615d9d-8c9d-4b37-b3df-c2f84859240a" Title="JsonDecoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_JsonDecoder.htm">
           <HelpTOCNode Title="Decode(T) Method " Url="html/M_Dropbox_Api_Babel_JsonDecoder_Decode__1.htm" />
           <HelpTOCNode Title="GetObject Method " Url="html/M_Dropbox_Api_Babel_JsonDecoder_GetObject.htm" />
           <HelpTOCNode Title="GetUnionName Method " Url="html/M_Dropbox_Api_Babel_JsonDecoder_GetUnionName.htm" />
-          <HelpTOCNode Id="b6b038ee-df9b-4e01-bf76-1a062a7c7a1b" Title="SetSource Method " Url="html/Overload_Dropbox_Api_Babel_JsonDecoder_SetSource.htm">
+          <HelpTOCNode Id="d1f46b4b-b446-41b9-992b-05ea7195825a" Title="SetSource Method " Url="html/Overload_Dropbox_Api_Babel_JsonDecoder_SetSource.htm">
             <HelpTOCNode Title="SetSource Method (Byte[])" Url="html/M_Dropbox_Api_Babel_JsonDecoder_SetSource.htm" />
             <HelpTOCNode Title="SetSource Method (String)" Url="html/M_Dropbox_Api_Babel_JsonDecoder_SetSource_1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a66935bb-dac8-40b0-bc4c-f4194f48730b" Title="JsonEncoder Class" Url="html/T_Dropbox_Api_Babel_JsonEncoder.htm">
+      <HelpTOCNode Id="44af28a0-55a0-4769-8732-98d4a901016f" Title="JsonEncoder Class" Url="html/T_Dropbox_Api_Babel_JsonEncoder.htm">
         <HelpTOCNode Title="JsonEncoder Constructor " Url="html/M_Dropbox_Api_Babel_JsonEncoder__ctor.htm" />
-        <HelpTOCNode Id="4f89cc55-c80f-47fe-a75b-342de86d9b7d" Title="JsonEncoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_JsonEncoder.htm">
+        <HelpTOCNode Id="f697697b-7b74-4060-b6d3-705c68a93952" Title="JsonEncoder Methods" Url="html/Methods_T_Dropbox_Api_Babel_JsonEncoder.htm">
           <HelpTOCNode Title="AddObject Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddObject.htm" />
           <HelpTOCNode Title="AddUnion Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddUnion.htm" />
           <HelpTOCNode Title="Encode(T) Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_Encode__1.htm" />
@@ -158,29 +159,19 @@
           <HelpTOCNode Title="GetEncodedString Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_GetEncodedString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="957e1b91-666e-49e3-8640-03155f813f1a" Title="Util Class" Url="html/T_Dropbox_Api_Babel_Util.htm">
-        <HelpTOCNode Id="38105067-098a-4649-abe0-5ce3a83220b3" Title="Util Methods" Url="html/Methods_T_Dropbox_Api_Babel_Util.htm">
-          <HelpTOCNode Id="54851a6c-d0b6-4a4b-ab2f-3d2c78580dac" Title="ToApm Method " Url="html/Overload_Dropbox_Api_Babel_Util_ToApm.htm">
+      <HelpTOCNode Id="abff5133-03f6-46a1-8289-79d5c7263990" Title="Util Class" Url="html/T_Dropbox_Api_Babel_Util.htm">
+        <HelpTOCNode Id="087bd3df-c50a-41a7-9155-cee375ef3433" Title="Util Methods" Url="html/Methods_T_Dropbox_Api_Babel_Util.htm">
+          <HelpTOCNode Id="a71f895c-d422-49bd-ab9f-44c9e06493f9" Title="ToApm Method " Url="html/Overload_Dropbox_Api_Babel_Util_ToApm.htm">
             <HelpTOCNode Title="ToApm Method (Task, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Babel_Util_ToApm.htm" />
             <HelpTOCNode Title="ToApm(TResult) Method (Task(TResult), AsyncCallback, Object)" Url="html/M_Dropbox_Api_Babel_Util_ToApm__1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7beb0654-b3df-4fb3-b089-3b8b630c4feb" Title="Dropbox.Api.Files" Url="html/N_Dropbox_Api_Files.htm">
-      <HelpTOCNode Id="65267e7a-4eb4-4803-aa73-37a2e7239d57" Title="ChangeEntry Class" Url="html/T_Dropbox_Api_Files_ChangeEntry.htm">
-        <HelpTOCNode Id="988b6cc0-b32a-4f06-af3e-2d490da9655b" Title="ChangeEntry Constructor " Url="html/Overload_Dropbox_Api_Files_ChangeEntry__ctor.htm">
-          <HelpTOCNode Title="ChangeEntry Constructor " Url="html/M_Dropbox_Api_Files_ChangeEntry__ctor.htm" />
-          <HelpTOCNode Title="ChangeEntry Constructor (String, Metadata)" Url="html/M_Dropbox_Api_Files_ChangeEntry__ctor_1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="87765ee1-c91f-4889-8ecc-a8bac43ce89a" Title="ChangeEntry Properties" Url="html/Properties_T_Dropbox_Api_Files_ChangeEntry.htm">
-          <HelpTOCNode Title="Metadata Property " Url="html/P_Dropbox_Api_Files_ChangeEntry_Metadata.htm" />
-          <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Files_ChangeEntry_Name.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="28ef97a5-c102-4334-ac11-c80c5de7bb39" Title="CommitConflictError Class" Url="html/T_Dropbox_Api_Files_CommitConflictError.htm">
+    <HelpTOCNode Id="684733ff-569b-426e-bcaa-86aa0f86d48b" Title="Dropbox.Api.Files" Url="html/N_Dropbox_Api_Files.htm">
+      <HelpTOCNode Id="9e4d5746-468d-44e0-94fb-73ec5b0d2ecc" Title="CommitConflictError Class" Url="html/T_Dropbox_Api_Files_CommitConflictError.htm">
         <HelpTOCNode Title="CommitConflictError Constructor " Url="html/M_Dropbox_Api_Files_CommitConflictError__ctor.htm" />
-        <HelpTOCNode Id="4c3ce13a-51bc-4689-9c42-375a694c5f91" Title="CommitConflictError Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitConflictError.htm">
+        <HelpTOCNode Id="28ccecf6-a0bd-4fa9-8fe4-eb13ed78b58b" Title="CommitConflictError Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitConflictError.htm">
           <HelpTOCNode Title="AsAutorenameFailed Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_AsAutorenameFailed.htm" />
           <HelpTOCNode Title="AsFile Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_AsFile.htm" />
           <HelpTOCNode Title="AsFolder Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_AsFolder.htm" />
@@ -191,29 +182,29 @@
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="5fdbac17-1489-4978-85dc-72bd542ee4a6" Title="CommitConflictError.AutorenameFailed Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_AutorenameFailed.htm">
-        <HelpTOCNode Id="3c4ce3db-9e2c-4abe-a4d4-a5227f583b73" Title="AutorenameFailed Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_AutorenameFailed.htm">
+      <HelpTOCNode Id="b63a6f92-3350-46f6-8123-ee26e162593a" Title="CommitConflictError.AutorenameFailed Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_AutorenameFailed.htm">
+        <HelpTOCNode Id="b354cc41-c212-4614-bf93-b5959a6855f5" Title="AutorenameFailed Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_AutorenameFailed.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_AutorenameFailed_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="fa774a7c-816b-4631-a8a3-45ddb80c3604" Title="CommitConflictError.File Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_File.htm">
-        <HelpTOCNode Id="87128dca-b03f-4fa8-bc08-b1e06823a9c5" Title="File Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_File.htm">
+      <HelpTOCNode Id="71f8c78f-b692-43fd-8a5f-073fffae6840" Title="CommitConflictError.File Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_File.htm">
+        <HelpTOCNode Id="556793c4-3282-4e68-9bdd-c9f078075889" Title="File Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_File.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_File_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="142c8ca5-f63a-42a5-bdec-0bb248d2d1ff" Title="CommitConflictError.Folder Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_Folder.htm">
-        <HelpTOCNode Id="f6d098a4-86b0-4fdc-b8fa-6a6afadce805" Title="Folder Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Folder.htm">
+      <HelpTOCNode Id="8e78977d-a942-4886-83e0-83b3c6114380" Title="CommitConflictError.Folder Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_Folder.htm">
+        <HelpTOCNode Id="e3387911-9945-4e00-87d7-0a25f7b55ead" Title="Folder Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Folder.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_Folder_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="8dd3d0ed-35d8-42cf-a710-2f1a1e17a667" Title="CommitConflictError.Other Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_Other.htm">
-        <HelpTOCNode Id="ede44cad-6ebe-46a1-86ba-0bd11522ed81" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Other.htm">
+      <HelpTOCNode Id="23067331-dfee-43a4-8d02-fe6d86d41093" Title="CommitConflictError.Other Class" Url="html/T_Dropbox_Api_Files_CommitConflictError_Other.htm">
+        <HelpTOCNode Id="8c34fdd1-caca-4146-9722-f9e1963d7938" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="f16b557f-a12a-4caa-af73-8548da878bc5" Title="CommitError Class" Url="html/T_Dropbox_Api_Files_CommitError.htm">
+      <HelpTOCNode Id="3b6f6863-d120-43de-b54a-34e984a1f021" Title="CommitError Class" Url="html/T_Dropbox_Api_Files_CommitError.htm">
         <HelpTOCNode Title="CommitError Constructor " Url="html/M_Dropbox_Api_Files_CommitError__ctor.htm" />
-        <HelpTOCNode Id="f271c65a-d0b2-494e-8e07-dd1938929e12" Title="CommitError Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitError.htm">
+        <HelpTOCNode Id="f564408d-74c4-471e-b0b1-fed577dd7547" Title="CommitError Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitError.htm">
           <HelpTOCNode Title="AsConflict Property " Url="html/P_Dropbox_Api_Files_CommitError_AsConflict.htm" />
           <HelpTOCNode Title="AsInsufficientQuota Property " Url="html/P_Dropbox_Api_Files_CommitError_AsInsufficientQuota.htm" />
           <HelpTOCNode Title="AsNoWritePermission Property " Url="html/P_Dropbox_Api_Files_CommitError_AsNoWritePermission.htm" />
@@ -224,33 +215,33 @@
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_CommitError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ac6f2d2b-ad20-42f8-b4a0-cbc286a5d405" Title="CommitError.Conflict Class" Url="html/T_Dropbox_Api_Files_CommitError_Conflict.htm">
+      <HelpTOCNode Id="1d8fd38e-1e4a-4b76-8831-69327d14f63c" Title="CommitError.Conflict Class" Url="html/T_Dropbox_Api_Files_CommitError_Conflict.htm">
         <HelpTOCNode Title="CommitError.Conflict Constructor " Url="html/M_Dropbox_Api_Files_CommitError_Conflict__ctor.htm" />
-        <HelpTOCNode Id="5929ca4d-b078-49fc-9053-2ea5d673b612" Title="Conflict Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitError_Conflict.htm">
+        <HelpTOCNode Id="849753f3-81a7-48b2-9065-6160e6ee37e7" Title="Conflict Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitError_Conflict.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_CommitError_Conflict_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="00165a90-dcc2-4988-83b6-71341acd9225" Title="CommitError.InsufficientQuota Class" Url="html/T_Dropbox_Api_Files_CommitError_InsufficientQuota.htm">
-        <HelpTOCNode Id="a423039f-6173-46a7-8c3d-0d781aeedcaf" Title="InsufficientQuota Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_InsufficientQuota.htm">
+      <HelpTOCNode Id="6ee68a82-c415-4dbc-84cf-79159b6db613" Title="CommitError.InsufficientQuota Class" Url="html/T_Dropbox_Api_Files_CommitError_InsufficientQuota.htm">
+        <HelpTOCNode Id="bd22d912-7e0c-4ffc-b366-4285026586d8" Title="InsufficientQuota Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_InsufficientQuota.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitError_InsufficientQuota_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1dc9aa30-ed28-4225-8ee4-951aff985881" Title="CommitError.NoWritePermission Class" Url="html/T_Dropbox_Api_Files_CommitError_NoWritePermission.htm">
-        <HelpTOCNode Id="e6dd2ad5-118f-4f9a-abcd-116ec3f8bd84" Title="NoWritePermission Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_NoWritePermission.htm">
+      <HelpTOCNode Id="308c5c73-b701-41eb-a7f5-9afde4a8cd38" Title="CommitError.NoWritePermission Class" Url="html/T_Dropbox_Api_Files_CommitError_NoWritePermission.htm">
+        <HelpTOCNode Id="7f120fe5-7065-469d-a836-133a1db4fa89" Title="NoWritePermission Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_NoWritePermission.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitError_NoWritePermission_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6fbb5a98-6bc0-441b-b9c9-7b6ce61a8f94" Title="CommitError.Other Class" Url="html/T_Dropbox_Api_Files_CommitError_Other.htm">
-        <HelpTOCNode Id="55caa11e-cca2-4226-8248-b66d258bdb7a" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm">
+      <HelpTOCNode Id="2b2de238-4b73-42e6-acb8-b81140bf7eb0" Title="CommitError.Other Class" Url="html/T_Dropbox_Api_Files_CommitError_Other.htm">
+        <HelpTOCNode Id="3500e96f-2902-4776-9982-48bb579dae58" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_CommitError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c64cd4df-7eec-4dca-b61c-3a4eea68f2f0" Title="CommitInfo Class" Url="html/T_Dropbox_Api_Files_CommitInfo.htm">
-        <HelpTOCNode Id="18488642-9f8e-4d58-990d-1f66e57bcaa4" Title="CommitInfo Constructor " Url="html/Overload_Dropbox_Api_Files_CommitInfo__ctor.htm">
+      <HelpTOCNode Id="274898d2-10ba-46f5-bd17-3ab70960875c" Title="CommitInfo Class" Url="html/T_Dropbox_Api_Files_CommitInfo.htm">
+        <HelpTOCNode Id="caa1c104-cd93-49f7-9ab2-d167d11dde26" Title="CommitInfo Constructor " Url="html/Overload_Dropbox_Api_Files_CommitInfo__ctor.htm">
           <HelpTOCNode Title="CommitInfo Constructor " Url="html/M_Dropbox_Api_Files_CommitInfo__ctor.htm" />
           <HelpTOCNode Title="CommitInfo Constructor (String, WriteMode, Boolean, Nullable(DateTime), Boolean)" Url="html/M_Dropbox_Api_Files_CommitInfo__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="cf33b58b-5a3e-4af6-a49e-be2dba99493e" Title="CommitInfo Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitInfo.htm">
+        <HelpTOCNode Id="311723f1-6af5-4a3a-8043-759f33af139a" Title="CommitInfo Properties" Url="html/Properties_T_Dropbox_Api_Files_CommitInfo.htm">
           <HelpTOCNode Title="Autorename Property " Url="html/P_Dropbox_Api_Files_CommitInfo_Autorename.htm" />
           <HelpTOCNode Title="ClientModified Property " Url="html/P_Dropbox_Api_Files_CommitInfo_ClientModified.htm" />
           <HelpTOCNode Title="Mode Property " Url="html/P_Dropbox_Api_Files_CommitInfo_Mode.htm" />
@@ -258,48 +249,72 @@
           <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_CommitInfo_Path.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="15d5b638-e284-41ef-b59c-17c10e0f6e2f" Title="Disallowed Class" Url="html/T_Dropbox_Api_Files_Disallowed.htm">
-        <HelpTOCNode Id="7ad78924-50bc-4f94-973b-4d2db7267439" Title="Disallowed Constructor " Url="html/Overload_Dropbox_Api_Files_Disallowed__ctor.htm">
+      <HelpTOCNode Id="66925c25-ac2c-4eaa-81bf-ab2b64bf32c0" Title="CreateFolderArg Class" Url="html/T_Dropbox_Api_Files_CreateFolderArg.htm">
+        <HelpTOCNode Id="c477e65d-257c-470a-a847-3d02f85bb47a" Title="CreateFolderArg Constructor " Url="html/Overload_Dropbox_Api_Files_CreateFolderArg__ctor.htm">
+          <HelpTOCNode Title="CreateFolderArg Constructor " Url="html/M_Dropbox_Api_Files_CreateFolderArg__ctor.htm" />
+          <HelpTOCNode Title="CreateFolderArg Constructor (String)" Url="html/M_Dropbox_Api_Files_CreateFolderArg__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7672f193-9809-4639-af77-d2016a404b38" Title="CreateFolderArg Properties" Url="html/Properties_T_Dropbox_Api_Files_CreateFolderArg.htm">
+          <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_CreateFolderArg_Path.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a9b5ca4f-0a6e-4b20-8e69-92fcdc1d7888" Title="DeleteArg Class" Url="html/T_Dropbox_Api_Files_DeleteArg.htm">
+        <HelpTOCNode Id="420db520-9547-4a66-b157-28a45332b877" Title="DeleteArg Constructor " Url="html/Overload_Dropbox_Api_Files_DeleteArg__ctor.htm">
+          <HelpTOCNode Title="DeleteArg Constructor " Url="html/M_Dropbox_Api_Files_DeleteArg__ctor.htm" />
+          <HelpTOCNode Title="DeleteArg Constructor (String)" Url="html/M_Dropbox_Api_Files_DeleteArg__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="299fba31-0bea-48ed-a032-edcb53a0c26d" Title="DeleteArg Properties" Url="html/Properties_T_Dropbox_Api_Files_DeleteArg.htm">
+          <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_DeleteArg_Path.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e47fda69-26d0-4a8a-b551-c3c0ff617400" Title="DeletedMetadata Class" Url="html/T_Dropbox_Api_Files_DeletedMetadata.htm">
+        <HelpTOCNode Id="70fedbcc-d3a6-4777-bb93-5300e31404b1" Title="DeletedMetadata Constructor " Url="html/Overload_Dropbox_Api_Files_DeletedMetadata__ctor.htm">
+          <HelpTOCNode Title="DeletedMetadata Constructor " Url="html/M_Dropbox_Api_Files_DeletedMetadata__ctor.htm" />
+          <HelpTOCNode Title="DeletedMetadata Constructor (String, String)" Url="html/M_Dropbox_Api_Files_DeletedMetadata__ctor_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f2471987-f4c5-4b05-84d3-7837d9bd88b1" Title="Disallowed Class" Url="html/T_Dropbox_Api_Files_Disallowed.htm">
+        <HelpTOCNode Id="76143fb7-6141-4bd3-aa3e-f0c371a5d4a1" Title="Disallowed Constructor " Url="html/Overload_Dropbox_Api_Files_Disallowed__ctor.htm">
           <HelpTOCNode Title="Disallowed Constructor " Url="html/M_Dropbox_Api_Files_Disallowed__ctor.htm" />
           <HelpTOCNode Title="Disallowed Constructor (DisallowedReason)" Url="html/M_Dropbox_Api_Files_Disallowed__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="4f08f7ec-6308-4689-9fb4-706b2a286b27" Title="Disallowed Properties" Url="html/Properties_T_Dropbox_Api_Files_Disallowed.htm">
+        <HelpTOCNode Id="caa4dd09-d9f9-4cca-b658-6a558144983a" Title="Disallowed Properties" Url="html/Properties_T_Dropbox_Api_Files_Disallowed.htm">
           <HelpTOCNode Title="Reason Property " Url="html/P_Dropbox_Api_Files_Disallowed_Reason.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="38c76f7b-939e-4da9-b430-15264545c641" Title="DisallowedReason Class" Url="html/T_Dropbox_Api_Files_DisallowedReason.htm">
+      <HelpTOCNode Id="b1da8549-f7fd-465f-807e-9d515f0102b0" Title="DisallowedReason Class" Url="html/T_Dropbox_Api_Files_DisallowedReason.htm">
         <HelpTOCNode Title="DisallowedReason Constructor " Url="html/M_Dropbox_Api_Files_DisallowedReason__ctor.htm" />
-        <HelpTOCNode Id="ef59d889-9f0b-428c-baaf-ca23d92a6dd1" Title="DisallowedReason Properties" Url="html/Properties_T_Dropbox_Api_Files_DisallowedReason.htm">
+        <HelpTOCNode Id="9ecccf26-fd21-4f8c-8233-db8613c74949" Title="DisallowedReason Properties" Url="html/Properties_T_Dropbox_Api_Files_DisallowedReason.htm">
           <HelpTOCNode Title="AsPermission Property " Url="html/P_Dropbox_Api_Files_DisallowedReason_AsPermission.htm" />
           <HelpTOCNode Title="AsRestricted Property " Url="html/P_Dropbox_Api_Files_DisallowedReason_AsRestricted.htm" />
           <HelpTOCNode Title="IsPermission Property " Url="html/P_Dropbox_Api_Files_DisallowedReason_IsPermission.htm" />
           <HelpTOCNode Title="IsRestricted Property " Url="html/P_Dropbox_Api_Files_DisallowedReason_IsRestricted.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="f2357203-1213-465a-b801-d95a5b5df012" Title="DisallowedReason.Permission Class" Url="html/T_Dropbox_Api_Files_DisallowedReason_Permission.htm">
-        <HelpTOCNode Id="7e25012c-86e5-4387-a61f-51e39c7ad4dc" Title="Permission Fields" Url="html/Fields_T_Dropbox_Api_Files_DisallowedReason_Permission.htm">
+      <HelpTOCNode Id="c70d8ec0-870b-4828-b19d-b2205016beed" Title="DisallowedReason.Permission Class" Url="html/T_Dropbox_Api_Files_DisallowedReason_Permission.htm">
+        <HelpTOCNode Id="e64276e1-a8cb-4378-bfe1-acb9ec452ab8" Title="Permission Fields" Url="html/Fields_T_Dropbox_Api_Files_DisallowedReason_Permission.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_DisallowedReason_Permission_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6bba0ec2-0f95-4dcc-b06a-7ba70414a6e4" Title="DisallowedReason.Restricted Class" Url="html/T_Dropbox_Api_Files_DisallowedReason_Restricted.htm">
+      <HelpTOCNode Id="552f1532-865b-48d0-8532-86ff66d925f2" Title="DisallowedReason.Restricted Class" Url="html/T_Dropbox_Api_Files_DisallowedReason_Restricted.htm">
         <HelpTOCNode Title="DisallowedReason.Restricted Constructor " Url="html/M_Dropbox_Api_Files_DisallowedReason_Restricted__ctor.htm" />
-        <HelpTOCNode Id="558944af-b563-413f-9237-e3775c6db792" Title="Restricted Properties" Url="html/Properties_T_Dropbox_Api_Files_DisallowedReason_Restricted.htm">
+        <HelpTOCNode Id="caec18b3-ad6f-4921-b6c6-994d890cf184" Title="Restricted Properties" Url="html/Properties_T_Dropbox_Api_Files_DisallowedReason_Restricted.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_DisallowedReason_Restricted_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="3df056ba-d4d8-42bc-b3aa-e1b9103f4556" Title="DownloadArg Class" Url="html/T_Dropbox_Api_Files_DownloadArg.htm">
-        <HelpTOCNode Id="26db0f8c-c324-47d5-8232-104af0c23ad5" Title="DownloadArg Constructor " Url="html/Overload_Dropbox_Api_Files_DownloadArg__ctor.htm">
+      <HelpTOCNode Id="db02cc77-7bd3-4b4b-afc7-5f2488cab3e9" Title="DownloadArg Class" Url="html/T_Dropbox_Api_Files_DownloadArg.htm">
+        <HelpTOCNode Id="8dbb9c21-4ff5-4b5d-b324-10133ceea62d" Title="DownloadArg Constructor " Url="html/Overload_Dropbox_Api_Files_DownloadArg__ctor.htm">
           <HelpTOCNode Title="DownloadArg Constructor " Url="html/M_Dropbox_Api_Files_DownloadArg__ctor.htm" />
           <HelpTOCNode Title="DownloadArg Constructor (String, String)" Url="html/M_Dropbox_Api_Files_DownloadArg__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="2adfd107-c7d0-4480-aae6-bcb2d0ca3296" Title="DownloadArg Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadArg.htm">
+        <HelpTOCNode Id="bf01bea7-84f2-4651-87e6-245546c9cc79" Title="DownloadArg Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadArg.htm">
           <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_DownloadArg_Path.htm" />
           <HelpTOCNode Title="Rev Property " Url="html/P_Dropbox_Api_Files_DownloadArg_Rev.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="70c63a35-69f2-4f1f-98aa-93839ceb1ec5" Title="DownloadError Class" Url="html/T_Dropbox_Api_Files_DownloadError.htm">
+      <HelpTOCNode Id="f476137f-28e1-4976-8110-83b06a2fc4bb" Title="DownloadError Class" Url="html/T_Dropbox_Api_Files_DownloadError.htm">
         <HelpTOCNode Title="DownloadError Constructor " Url="html/M_Dropbox_Api_Files_DownloadError__ctor.htm" />
-        <HelpTOCNode Id="67191931-1b6f-41bd-bc6e-f92abaccf073" Title="DownloadError Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError.htm">
+        <HelpTOCNode Id="aafd233c-1bb6-484f-837b-3f2b386326cb" Title="DownloadError Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError.htm">
           <HelpTOCNode Title="AsDisallowed Property " Url="html/P_Dropbox_Api_Files_DownloadError_AsDisallowed.htm" />
           <HelpTOCNode Title="AsNoFile Property " Url="html/P_Dropbox_Api_Files_DownloadError_AsNoFile.htm" />
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_DownloadError_AsOther.htm" />
@@ -308,313 +323,388 @@
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_DownloadError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a4276997-e328-4581-bfeb-849df2c2d257" Title="DownloadError.Disallowed Class" Url="html/T_Dropbox_Api_Files_DownloadError_Disallowed.htm">
+      <HelpTOCNode Id="9825d5f8-4555-44ce-b7c2-8b220efc46c5" Title="DownloadError.Disallowed Class" Url="html/T_Dropbox_Api_Files_DownloadError_Disallowed.htm">
         <HelpTOCNode Title="DownloadError.Disallowed Constructor " Url="html/M_Dropbox_Api_Files_DownloadError_Disallowed__ctor.htm" />
-        <HelpTOCNode Id="1a37164d-410d-4cba-92d3-0ad2746bf24e" Title="Disallowed Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_Disallowed.htm">
+        <HelpTOCNode Id="f883cfd0-d325-4b3f-ad3f-c240d902ef75" Title="Disallowed Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_Disallowed.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_DownloadError_Disallowed_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="83a7c370-b603-4a83-9e4d-ce4ba557a25f" Title="DownloadError.NoFile Class" Url="html/T_Dropbox_Api_Files_DownloadError_NoFile.htm">
+      <HelpTOCNode Id="17c842e1-bff6-42b7-86fe-830860d27fc2" Title="DownloadError.NoFile Class" Url="html/T_Dropbox_Api_Files_DownloadError_NoFile.htm">
         <HelpTOCNode Title="DownloadError.NoFile Constructor " Url="html/M_Dropbox_Api_Files_DownloadError_NoFile__ctor.htm" />
-        <HelpTOCNode Id="e98a6f4d-c48d-4f04-8b1e-6460c0e2f8d2" Title="NoFile Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_NoFile.htm">
+        <HelpTOCNode Id="c978e967-2daa-40a2-84f2-16eff18de483" Title="NoFile Properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_NoFile.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_DownloadError_NoFile_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="272ee925-d188-40f2-802d-2b9a9e7caf07" Title="DownloadError.Other Class" Url="html/T_Dropbox_Api_Files_DownloadError_Other.htm">
-        <HelpTOCNode Id="cc48b80f-efee-4691-9215-d8a29800c1f9" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_DownloadError_Other.htm">
+      <HelpTOCNode Id="93f8ab21-3ef6-4086-bc86-06b1e2806ad8" Title="DownloadError.Other Class" Url="html/T_Dropbox_Api_Files_DownloadError_Other.htm">
+        <HelpTOCNode Id="2f5d1d54-0329-4540-bdcf-99fe86390691" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_DownloadError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_DownloadError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2c89822c-0538-4a9c-922f-e6c3aaa4e929" Title="FileMetadata Class" Url="html/T_Dropbox_Api_Files_FileMetadata.htm">
-        <HelpTOCNode Id="6c629c03-6bac-425e-bd32-46fd2cd710fb" Title="FileMetadata Constructor " Url="html/Overload_Dropbox_Api_Files_FileMetadata__ctor.htm">
+      <HelpTOCNode Id="d5f0b373-188b-450a-81cc-7bfa42f3a65b" Title="FileMetadata Class" Url="html/T_Dropbox_Api_Files_FileMetadata.htm">
+        <HelpTOCNode Id="7963bbe1-cfc6-46f8-81e3-fdef49aa3580" Title="FileMetadata Constructor " Url="html/Overload_Dropbox_Api_Files_FileMetadata__ctor.htm">
           <HelpTOCNode Title="FileMetadata Constructor " Url="html/M_Dropbox_Api_Files_FileMetadata__ctor.htm" />
-          <HelpTOCNode Title="FileMetadata Constructor (DateTime, DateTime, String, UInt64)" Url="html/M_Dropbox_Api_Files_FileMetadata__ctor_1.htm" />
+          <HelpTOCNode Title="FileMetadata Constructor (String, String, DateTime, DateTime, String, UInt64)" Url="html/M_Dropbox_Api_Files_FileMetadata__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="30f11b07-ef2d-45c0-97a1-112903bc53c9" Title="FileMetadata Properties" Url="html/Properties_T_Dropbox_Api_Files_FileMetadata.htm">
+        <HelpTOCNode Id="3a25fc47-180c-4b6e-8136-0f47e4696545" Title="FileMetadata Properties" Url="html/Properties_T_Dropbox_Api_Files_FileMetadata.htm">
           <HelpTOCNode Title="ClientModified Property " Url="html/P_Dropbox_Api_Files_FileMetadata_ClientModified.htm" />
           <HelpTOCNode Title="Rev Property " Url="html/P_Dropbox_Api_Files_FileMetadata_Rev.htm" />
           <HelpTOCNode Title="ServerModified Property " Url="html/P_Dropbox_Api_Files_FileMetadata_ServerModified.htm" />
           <HelpTOCNode Title="Size Property " Url="html/P_Dropbox_Api_Files_FileMetadata_Size.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="79eae7ce-cef2-4ed1-92bb-837bb762095e" Title="FileMetadataWithName Class" Url="html/T_Dropbox_Api_Files_FileMetadataWithName.htm">
-        <HelpTOCNode Id="bc4874ab-637f-496d-b85a-ca7d353438b6" Title="FileMetadataWithName Constructor " Url="html/Overload_Dropbox_Api_Files_FileMetadataWithName__ctor.htm">
-          <HelpTOCNode Title="FileMetadataWithName Constructor " Url="html/M_Dropbox_Api_Files_FileMetadataWithName__ctor.htm" />
-          <HelpTOCNode Title="FileMetadataWithName Constructor (String, FileMetadata)" Url="html/M_Dropbox_Api_Files_FileMetadataWithName__ctor_1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="7b885001-1bea-43df-b3c8-f678ef43e461" Title="FileMetadataWithName Properties" Url="html/Properties_T_Dropbox_Api_Files_FileMetadataWithName.htm">
-          <HelpTOCNode Title="Metadata Property " Url="html/P_Dropbox_Api_Files_FileMetadataWithName_Metadata.htm" />
-          <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Files_FileMetadataWithName_Name.htm" />
+      <HelpTOCNode Id="be1eb223-646a-4645-8f90-b159301ea999" Title="FolderMetadata Class" Url="html/T_Dropbox_Api_Files_FolderMetadata.htm">
+        <HelpTOCNode Id="79713d91-36fb-4147-a28a-6c07d0d323b2" Title="FolderMetadata Constructor " Url="html/Overload_Dropbox_Api_Files_FolderMetadata__ctor.htm">
+          <HelpTOCNode Title="FolderMetadata Constructor " Url="html/M_Dropbox_Api_Files_FolderMetadata__ctor.htm" />
+          <HelpTOCNode Title="FolderMetadata Constructor (String, String)" Url="html/M_Dropbox_Api_Files_FolderMetadata__ctor_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="56a145fb-4997-4263-bc18-e26e8a26423d" Title="FolderMetadata Class" Url="html/T_Dropbox_Api_Files_FolderMetadata.htm">
-        <HelpTOCNode Title="FolderMetadata Constructor " Url="html/M_Dropbox_Api_Files_FolderMetadata__ctor.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="d963a108-0329-41a5-9fae-e1e75d8cafc5" Title="FolderPathError Class" Url="html/T_Dropbox_Api_Files_FolderPathError.htm">
+      <HelpTOCNode Id="79145011-41a0-4839-a27c-7a15fa44f7a4" Title="FolderPathError Class" Url="html/T_Dropbox_Api_Files_FolderPathError.htm">
         <HelpTOCNode Title="FolderPathError Constructor " Url="html/M_Dropbox_Api_Files_FolderPathError__ctor.htm" />
-        <HelpTOCNode Id="a3deecb1-b97d-409c-a220-8823d8d4f59d" Title="FolderPathError Properties" Url="html/Properties_T_Dropbox_Api_Files_FolderPathError.htm">
+        <HelpTOCNode Id="d4ff5c0f-c8e7-4d03-9a0b-f680aa1dac64" Title="FolderPathError Properties" Url="html/Properties_T_Dropbox_Api_Files_FolderPathError.htm">
           <HelpTOCNode Title="AsNotFolder Property " Url="html/P_Dropbox_Api_Files_FolderPathError_AsNotFolder.htm" />
           <HelpTOCNode Title="AsNotFound Property " Url="html/P_Dropbox_Api_Files_FolderPathError_AsNotFound.htm" />
           <HelpTOCNode Title="IsNotFolder Property " Url="html/P_Dropbox_Api_Files_FolderPathError_IsNotFolder.htm" />
           <HelpTOCNode Title="IsNotFound Property " Url="html/P_Dropbox_Api_Files_FolderPathError_IsNotFound.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1e56d45b-c7da-4a29-80ea-ade4345acf91" Title="FolderPathError.NotFolder Class" Url="html/T_Dropbox_Api_Files_FolderPathError_NotFolder.htm">
-        <HelpTOCNode Id="f44f67e1-54ce-4a50-89d0-a4e6c3a19afb" Title="NotFolder Fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFolder.htm">
+      <HelpTOCNode Id="2facb6bf-4b52-4459-a3f6-df46da46c5e8" Title="FolderPathError.NotFolder Class" Url="html/T_Dropbox_Api_Files_FolderPathError_NotFolder.htm">
+        <HelpTOCNode Id="ea22f6df-84a6-4795-bfe6-12cde7fa4f81" Title="NotFolder Fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFolder.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_FolderPathError_NotFolder_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="854f3219-77fc-4150-a37b-3b9900df3d1d" Title="FolderPathError.NotFound Class" Url="html/T_Dropbox_Api_Files_FolderPathError_NotFound.htm">
-        <HelpTOCNode Id="889df803-8205-4239-81ef-2924e1b94445" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm">
+      <HelpTOCNode Id="ad61e33a-a376-4fec-83ae-55ea5e16f22a" Title="FolderPathError.NotFound Class" Url="html/T_Dropbox_Api_Files_FolderPathError_NotFound.htm">
+        <HelpTOCNode Id="e5265e8c-2487-46cc-8213-60fc6705f9c3" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_FolderPathError_NotFound_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6579db48-6cb3-4872-a719-95910cd6775f" Title="GetMetadataArg Class" Url="html/T_Dropbox_Api_Files_GetMetadataArg.htm">
-        <HelpTOCNode Id="fc431690-345d-42a6-b6e3-7edc1e5e8354" Title="GetMetadataArg Constructor " Url="html/Overload_Dropbox_Api_Files_GetMetadataArg__ctor.htm">
+      <HelpTOCNode Id="af40adf7-e07a-47bd-9729-bab95f640442" Title="GetMetadataArg Class" Url="html/T_Dropbox_Api_Files_GetMetadataArg.htm">
+        <HelpTOCNode Id="7bc877dc-ac37-4e47-b0a0-fef6dc2977b2" Title="GetMetadataArg Constructor " Url="html/Overload_Dropbox_Api_Files_GetMetadataArg__ctor.htm">
           <HelpTOCNode Title="GetMetadataArg Constructor " Url="html/M_Dropbox_Api_Files_GetMetadataArg__ctor.htm" />
           <HelpTOCNode Title="GetMetadataArg Constructor (String)" Url="html/M_Dropbox_Api_Files_GetMetadataArg__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="7a4be360-413e-4508-8385-7841e3bb6a1f" Title="GetMetadataArg Properties" Url="html/Properties_T_Dropbox_Api_Files_GetMetadataArg.htm">
+        <HelpTOCNode Id="c53ad28f-4c93-4f87-b57a-e230e91ab858" Title="GetMetadataArg Properties" Url="html/Properties_T_Dropbox_Api_Files_GetMetadataArg.htm">
           <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_GetMetadataArg_Path.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="85fee432-189e-4501-b4e1-bafed0b7fb51" Title="GetMetadataError Class" Url="html/T_Dropbox_Api_Files_GetMetadataError.htm">
+      <HelpTOCNode Id="e2d51bea-bf58-4d65-9c23-c4ed8483c1e1" Title="GetMetadataError Class" Url="html/T_Dropbox_Api_Files_GetMetadataError.htm">
         <HelpTOCNode Title="GetMetadataError Constructor " Url="html/M_Dropbox_Api_Files_GetMetadataError__ctor.htm" />
-        <HelpTOCNode Id="a325b523-5414-402b-be15-0ef0ed0fd68c" Title="GetMetadataError Properties" Url="html/Properties_T_Dropbox_Api_Files_GetMetadataError.htm">
+        <HelpTOCNode Id="b095f0e8-d85e-4557-8a1c-cf795e785332" Title="GetMetadataError Properties" Url="html/Properties_T_Dropbox_Api_Files_GetMetadataError.htm">
           <HelpTOCNode Title="AsNotFound Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_AsNotFound.htm" />
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_AsOther.htm" />
           <HelpTOCNode Title="IsNotFound Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_IsNotFound.htm" />
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="bb3f4b52-c918-42ba-8b5b-632859c35c2a" Title="GetMetadataError.NotFound Class" Url="html/T_Dropbox_Api_Files_GetMetadataError_NotFound.htm">
-        <HelpTOCNode Id="6afeb772-8090-4a02-8167-7a81229d46b1" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm">
+      <HelpTOCNode Id="87af55c7-119c-44e8-be1c-e3e6b92f7826" Title="GetMetadataError.NotFound Class" Url="html/T_Dropbox_Api_Files_GetMetadataError_NotFound.htm">
+        <HelpTOCNode Id="575a3bb2-2e20-4652-9440-12752ab32077" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_GetMetadataError_NotFound_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ea6787e9-df5b-42ae-bd0a-a51fb9b9ea33" Title="GetMetadataError.Other Class" Url="html/T_Dropbox_Api_Files_GetMetadataError_Other.htm">
-        <HelpTOCNode Id="b23a3be0-a5dd-4faa-b871-de461edda6eb" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm">
+      <HelpTOCNode Id="6a904d23-bb7a-4d2f-9cbe-c93da24c1981" Title="GetMetadataError.Other Class" Url="html/T_Dropbox_Api_Files_GetMetadataError_Other.htm">
+        <HelpTOCNode Id="325c75a5-5ac9-4f5d-937b-b74ea1f1e039" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_GetMetadataError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="09dbccf0-dfca-424d-8636-fa15558b9520" Title="ListFolderArg Class" Url="html/T_Dropbox_Api_Files_ListFolderArg.htm">
-        <HelpTOCNode Id="31a7cb3a-eaf0-434e-9c09-a46e4f03d6a2" Title="ListFolderArg Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderArg__ctor.htm">
+      <HelpTOCNode Id="64cb94b9-0581-462f-bc9b-cdfac2c7b4db" Title="ListFolderArg Class" Url="html/T_Dropbox_Api_Files_ListFolderArg.htm">
+        <HelpTOCNode Id="9a2f39f5-3802-42ee-8a8c-d85793b644bd" Title="ListFolderArg Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderArg__ctor.htm">
           <HelpTOCNode Title="ListFolderArg Constructor " Url="html/M_Dropbox_Api_Files_ListFolderArg__ctor.htm" />
           <HelpTOCNode Title="ListFolderArg Constructor (String)" Url="html/M_Dropbox_Api_Files_ListFolderArg__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="cebeea2e-d284-46ec-a36d-870fdbc77c86" Title="ListFolderArg Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderArg.htm">
+        <HelpTOCNode Id="4ab2605e-8d32-45f1-a3d6-b57d2b39900b" Title="ListFolderArg Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderArg.htm">
           <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_ListFolderArg_Path.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="15f8970d-c55b-4f01-98dc-1bf9dcdea4ac" Title="ListFolderContinueArg Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueArg.htm">
-        <HelpTOCNode Id="1237ff98-8b86-40a9-a612-73ca8cc41e37" Title="ListFolderContinueArg Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderContinueArg__ctor.htm">
+      <HelpTOCNode Id="914e99cc-9d54-4bf2-b1b2-c63d4bded533" Title="ListFolderContinueArg Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueArg.htm">
+        <HelpTOCNode Id="caeda724-f6c1-45d9-9152-cccbb82c2685" Title="ListFolderContinueArg Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderContinueArg__ctor.htm">
           <HelpTOCNode Title="ListFolderContinueArg Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueArg__ctor.htm" />
           <HelpTOCNode Title="ListFolderContinueArg Constructor (String)" Url="html/M_Dropbox_Api_Files_ListFolderContinueArg__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b79e3f5b-4ad3-490b-9840-960c8c56a0bf" Title="ListFolderContinueArg Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueArg.htm">
+        <HelpTOCNode Id="a02f5316-0c03-46f9-95a1-f5a336c3a66a" Title="ListFolderContinueArg Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueArg.htm">
           <HelpTOCNode Title="Cursor Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueArg_Cursor.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="54ba6eb8-cc0f-46c0-9657-94143f3c91b9" Title="ListFolderContinueEntries Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries.htm">
-        <HelpTOCNode Title="ListFolderContinueEntries Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries__ctor.htm" />
-        <HelpTOCNode Id="4e16afd3-0859-4070-967b-6875a10c87ca" Title="ListFolderContinueEntries Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueEntries.htm">
-          <HelpTOCNode Title="AsContinue Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_AsContinue.htm" />
-          <HelpTOCNode Title="AsRestart Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_AsRestart.htm" />
-          <HelpTOCNode Title="IsContinue Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_IsContinue.htm" />
-          <HelpTOCNode Title="IsRestart Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_IsRestart.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="67140f82-2cb1-4ba8-9034-352417755e2f" Title="ListFolderContinueEntries.Continue Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Continue.htm">
-        <HelpTOCNode Title="ListFolderContinueEntries.Continue Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries_Continue__ctor.htm" />
-        <HelpTOCNode Id="cd5523ca-d869-4029-8687-86e3a5ad6f76" Title="Continue Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueEntries_Continue.htm">
-          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_Continue_Value.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="262b46df-c1a5-41d1-8985-615b3bbbb081" Title="ListFolderContinueEntries.Restart Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Restart.htm">
-        <HelpTOCNode Title="ListFolderContinueEntries.Restart Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries_Restart__ctor.htm" />
-        <HelpTOCNode Id="0640dd06-c015-43f8-9e6d-ad8fd0123c97" Title="Restart Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueEntries_Restart.htm">
-          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_Restart_Value.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="0801d93e-89cc-42c2-9f90-eeade480817f" Title="ListFolderContinueError Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError.htm">
+      <HelpTOCNode Id="f34d7d59-2cc9-4a4c-bf02-537f4fe7ddb3" Title="ListFolderContinueError Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError.htm">
         <HelpTOCNode Title="ListFolderContinueError Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueError__ctor.htm" />
-        <HelpTOCNode Id="670e0232-3224-43e6-a956-a475d7697d08" Title="ListFolderContinueError Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueError.htm">
-          <HelpTOCNode Title="AsListFolderError Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsListFolderError.htm" />
-          <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsOther.htm" />
+        <HelpTOCNode Id="fc9c25b9-e4e3-4bdb-b5dc-9e9331f96c00" Title="ListFolderContinueError Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueError.htm">
           <HelpTOCNode Title="AsReset Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsReset.htm" />
-          <HelpTOCNode Title="IsListFolderError Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsListFolderError.htm" />
-          <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsOther.htm" />
           <HelpTOCNode Title="IsReset Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsReset.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="70a05e2e-813a-4ef4-93fc-e9307a23ee73" Title="ListFolderContinueError.ListFolderError Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_ListFolderError.htm">
-        <HelpTOCNode Title="ListFolderContinueError.ListFolderError Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueError_ListFolderError__ctor.htm" />
-        <HelpTOCNode Id="c3b8f5ed-116a-49e2-9edc-e0a979080258" Title="ListFolderError Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueError_ListFolderError.htm">
-          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_ListFolderError_Value.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="5e6c994f-a6c9-4a43-94d9-3a0555b1de59" Title="ListFolderContinueError.Other Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Other.htm">
-        <HelpTOCNode Id="b7b71c4f-53bd-4af8-8f98-94d2c75c4fdd" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Other.htm">
-          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ListFolderContinueError_Other_Instance.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="77344432-61b9-47ff-9407-38a0ad2d81b5" Title="ListFolderContinueError.Reset Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm">
-        <HelpTOCNode Id="c6658846-7b27-418a-85f5-d10da69347b4" Title="Reset Fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm">
+      <HelpTOCNode Id="93ba9131-66b6-40a7-8296-0c0eb2745053" Title="ListFolderContinueError.Reset Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm">
+        <HelpTOCNode Id="56b5359e-05f7-47b4-b213-82c8de6e7000" Title="Reset Fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ListFolderContinueError_Reset_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="33cc7f37-b8af-4ec1-aeb1-c56a41f6335c" Title="ListFolderContinueResult Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueResult.htm">
-        <HelpTOCNode Id="8ee83cf2-55e1-4a90-b809-aa6d56f85557" Title="ListFolderContinueResult Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderContinueResult__ctor.htm">
-          <HelpTOCNode Title="ListFolderContinueResult Constructor " Url="html/M_Dropbox_Api_Files_ListFolderContinueResult__ctor.htm" />
-          <HelpTOCNode Title="ListFolderContinueResult Constructor (ListFolderContinueEntries, ListFolderFooter)" Url="html/M_Dropbox_Api_Files_ListFolderContinueResult__ctor_1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="9da3e83b-eaf7-4a71-bd70-713973e4035c" Title="ListFolderContinueResult Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueResult.htm">
-          <HelpTOCNode Title="Entries Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueResult_Entries.htm" />
-          <HelpTOCNode Title="Footer Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueResult_Footer.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="2d6f7755-b626-42cd-8d63-1dd275c28c53" Title="ListFolderError Class" Url="html/T_Dropbox_Api_Files_ListFolderError.htm">
+      <HelpTOCNode Id="ae55bf52-6fa4-490d-adbb-0af725bf7b22" Title="ListFolderError Class" Url="html/T_Dropbox_Api_Files_ListFolderError.htm">
         <HelpTOCNode Title="ListFolderError Constructor " Url="html/M_Dropbox_Api_Files_ListFolderError__ctor.htm" />
-        <HelpTOCNode Id="59ff8baa-f7bc-40b9-ab54-02b96f2647a2" Title="ListFolderError Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderError.htm">
+        <HelpTOCNode Id="553e4b17-937c-482b-a7b2-c2a6a67d446f" Title="ListFolderError Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderError.htm">
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderError_AsOther.htm" />
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d3ca37be-24d6-4a6f-b43c-69dedd7b342e" Title="ListFolderError.Other Class" Url="html/T_Dropbox_Api_Files_ListFolderError_Other.htm">
-        <HelpTOCNode Id="b40622a6-37e0-465c-aaf9-12729fcc1733" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm">
+      <HelpTOCNode Id="e730adf5-7b86-45de-aac5-f5d35a9a5053" Title="ListFolderError.Other Class" Url="html/T_Dropbox_Api_Files_ListFolderError_Other.htm">
+        <HelpTOCNode Id="c6c80a5f-9b14-4bbb-b13c-54bd75726809" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ListFolderError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="97bb787e-3fae-498f-b4c2-1219d7478092" Title="ListFolderFooter Class" Url="html/T_Dropbox_Api_Files_ListFolderFooter.htm">
-        <HelpTOCNode Id="35432d70-57f4-4f27-8c69-7bbf8efce097" Title="ListFolderFooter Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderFooter__ctor.htm">
-          <HelpTOCNode Title="ListFolderFooter Constructor " Url="html/M_Dropbox_Api_Files_ListFolderFooter__ctor.htm" />
-          <HelpTOCNode Title="ListFolderFooter Constructor (String, Boolean)" Url="html/M_Dropbox_Api_Files_ListFolderFooter__ctor_1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="5f57047a-4f9c-4c1c-978e-e4b3cc30ac12" Title="ListFolderFooter Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderFooter.htm">
-          <HelpTOCNode Title="Cursor Property " Url="html/P_Dropbox_Api_Files_ListFolderFooter_Cursor.htm" />
-          <HelpTOCNode Title="HasMore Property " Url="html/P_Dropbox_Api_Files_ListFolderFooter_HasMore.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="974c1c2c-f7ca-4a4b-9659-85eca22784ec" Title="ListFolderResult Class" Url="html/T_Dropbox_Api_Files_ListFolderResult.htm">
-        <HelpTOCNode Id="5c1532a3-c547-4bc6-a968-3a9d561ff522" Title="ListFolderResult Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderResult__ctor.htm">
+      <HelpTOCNode Id="b47753d0-d161-431c-b8cb-827966076fff" Title="ListFolderResult Class" Url="html/T_Dropbox_Api_Files_ListFolderResult.htm">
+        <HelpTOCNode Id="7c8c351c-844d-48b2-8f48-cc8be8ea7a2f" Title="ListFolderResult Constructor " Url="html/Overload_Dropbox_Api_Files_ListFolderResult__ctor.htm">
           <HelpTOCNode Title="ListFolderResult Constructor " Url="html/M_Dropbox_Api_Files_ListFolderResult__ctor.htm" />
-          <HelpTOCNode Title="ListFolderResult Constructor (IEnumerable(ChangeEntry), ListFolderFooter)" Url="html/M_Dropbox_Api_Files_ListFolderResult__ctor_1.htm" />
+          <HelpTOCNode Title="ListFolderResult Constructor (IEnumerable(Metadata), String, Boolean)" Url="html/M_Dropbox_Api_Files_ListFolderResult__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="810bc8df-7fdc-4b73-a0c0-caec75e5dc7b" Title="ListFolderResult Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderResult.htm">
+        <HelpTOCNode Id="17ad83df-2dd9-461f-a625-a96fb85f1d47" Title="ListFolderResult Properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderResult.htm">
+          <HelpTOCNode Title="Cursor Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_Cursor.htm" />
           <HelpTOCNode Title="Entries Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_Entries.htm" />
-          <HelpTOCNode Title="Footer Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_Footer.htm" />
+          <HelpTOCNode Title="HasMore Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_HasMore.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="e2b929b9-dba3-4a7c-82c4-28199254e79d" Title="Metadata Class" Url="html/T_Dropbox_Api_Files_Metadata.htm">
-        <HelpTOCNode Title="Metadata Constructor " Url="html/M_Dropbox_Api_Files_Metadata__ctor.htm" />
-        <HelpTOCNode Id="f4196f0a-c965-4e35-a2be-53e8035ecc23" Title="Metadata Properties" Url="html/Properties_T_Dropbox_Api_Files_Metadata.htm">
+      <HelpTOCNode Id="678334ed-df8b-4dab-9add-7b5282813e1b" Title="Metadata Class" Url="html/T_Dropbox_Api_Files_Metadata.htm">
+        <HelpTOCNode Id="c5371ffb-8c8d-41f2-81de-0d590b68fe37" Title="Metadata Constructor " Url="html/Overload_Dropbox_Api_Files_Metadata__ctor.htm">
+          <HelpTOCNode Title="Metadata Constructor " Url="html/M_Dropbox_Api_Files_Metadata__ctor.htm" />
+          <HelpTOCNode Title="Metadata Constructor (String, String)" Url="html/M_Dropbox_Api_Files_Metadata__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="90450405-8120-44a9-bc1a-ab7657a69443" Title="Metadata Properties" Url="html/Properties_T_Dropbox_Api_Files_Metadata.htm">
+          <HelpTOCNode Title="AsDeleted Property " Url="html/P_Dropbox_Api_Files_Metadata_AsDeleted.htm" />
           <HelpTOCNode Title="AsFile Property " Url="html/P_Dropbox_Api_Files_Metadata_AsFile.htm" />
           <HelpTOCNode Title="AsFolder Property " Url="html/P_Dropbox_Api_Files_Metadata_AsFolder.htm" />
+          <HelpTOCNode Title="IsDeleted Property " Url="html/P_Dropbox_Api_Files_Metadata_IsDeleted.htm" />
           <HelpTOCNode Title="IsFile Property " Url="html/P_Dropbox_Api_Files_Metadata_IsFile.htm" />
           <HelpTOCNode Title="IsFolder Property " Url="html/P_Dropbox_Api_Files_Metadata_IsFolder.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Files_Metadata_Name.htm" />
+          <HelpTOCNode Title="PathLower Property " Url="html/P_Dropbox_Api_Files_Metadata_PathLower.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c26bf848-af95-47a0-8d72-f334a7ecb04e" Title="MetadataWithName Class" Url="html/T_Dropbox_Api_Files_MetadataWithName.htm">
-        <HelpTOCNode Id="759e11bd-7768-4179-a7b9-88597613a385" Title="MetadataWithName Constructor " Url="html/Overload_Dropbox_Api_Files_MetadataWithName__ctor.htm">
-          <HelpTOCNode Title="MetadataWithName Constructor " Url="html/M_Dropbox_Api_Files_MetadataWithName__ctor.htm" />
-          <HelpTOCNode Title="MetadataWithName Constructor (String, Metadata)" Url="html/M_Dropbox_Api_Files_MetadataWithName__ctor_1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="9a752d3a-0916-4f3a-acea-d2a9079e4555" Title="MetadataWithName Properties" Url="html/Properties_T_Dropbox_Api_Files_MetadataWithName.htm">
-          <HelpTOCNode Title="Metadata Property " Url="html/P_Dropbox_Api_Files_MetadataWithName_Metadata.htm" />
-          <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Files_MetadataWithName_Name.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="87219058-0870-4b30-b653-503354318031" Title="MetadataWithPath Class" Url="html/T_Dropbox_Api_Files_MetadataWithPath.htm">
-        <HelpTOCNode Id="64969209-2898-4645-b9e7-f07948ddc84a" Title="MetadataWithPath Constructor " Url="html/Overload_Dropbox_Api_Files_MetadataWithPath__ctor.htm">
-          <HelpTOCNode Title="MetadataWithPath Constructor " Url="html/M_Dropbox_Api_Files_MetadataWithPath__ctor.htm" />
-          <HelpTOCNode Title="MetadataWithPath Constructor (String, Metadata)" Url="html/M_Dropbox_Api_Files_MetadataWithPath__ctor_1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="c440106b-0e91-4f7d-96b2-2bfa9c29d206" Title="MetadataWithPath Properties" Url="html/Properties_T_Dropbox_Api_Files_MetadataWithPath.htm">
-          <HelpTOCNode Title="Metadata Property " Url="html/P_Dropbox_Api_Files_MetadataWithPath_Metadata.htm" />
-          <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_MetadataWithPath_Path.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="79821703-178b-4900-aa49-c378532070dc" Title="NoFile Class" Url="html/T_Dropbox_Api_Files_NoFile.htm">
-        <HelpTOCNode Id="d9ab31fc-afaf-479a-99ed-2bbdcb11223a" Title="NoFile Constructor " Url="html/Overload_Dropbox_Api_Files_NoFile__ctor.htm">
+      <HelpTOCNode Id="d60a22c0-5eda-46e5-88cd-b34ce54e8f7c" Title="NoFile Class" Url="html/T_Dropbox_Api_Files_NoFile.htm">
+        <HelpTOCNode Id="f52cbce9-0adb-4f6e-a2b6-4aabf9ddb144" Title="NoFile Constructor " Url="html/Overload_Dropbox_Api_Files_NoFile__ctor.htm">
           <HelpTOCNode Title="NoFile Constructor " Url="html/M_Dropbox_Api_Files_NoFile__ctor.htm" />
           <HelpTOCNode Title="NoFile Constructor (NoFileReason)" Url="html/M_Dropbox_Api_Files_NoFile__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="654895f5-6cd9-41d6-8554-d48204860c93" Title="NoFile Properties" Url="html/Properties_T_Dropbox_Api_Files_NoFile.htm">
+        <HelpTOCNode Id="fc5ae60c-0d5e-40e5-862a-1df63f6dfc16" Title="NoFile Properties" Url="html/Properties_T_Dropbox_Api_Files_NoFile.htm">
           <HelpTOCNode Title="Reason Property " Url="html/P_Dropbox_Api_Files_NoFile_Reason.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7711fb9c-5349-4084-bf53-dc45cf472894" Title="NoFileReason Class" Url="html/T_Dropbox_Api_Files_NoFileReason.htm">
+      <HelpTOCNode Id="77a402cc-144e-4228-9d93-c2291146c646" Title="NoFileReason Class" Url="html/T_Dropbox_Api_Files_NoFileReason.htm">
         <HelpTOCNode Title="NoFileReason Constructor " Url="html/M_Dropbox_Api_Files_NoFileReason__ctor.htm" />
-        <HelpTOCNode Id="518da72d-f73d-4b1b-af56-938bb3aefb7d" Title="NoFileReason Properties" Url="html/Properties_T_Dropbox_Api_Files_NoFileReason.htm">
+        <HelpTOCNode Id="99c28a24-581a-4045-89ca-e443ac6f3877" Title="NoFileReason Properties" Url="html/Properties_T_Dropbox_Api_Files_NoFileReason.htm">
           <HelpTOCNode Title="AsIsFolder Property " Url="html/P_Dropbox_Api_Files_NoFileReason_AsIsFolder.htm" />
           <HelpTOCNode Title="AsNotFound Property " Url="html/P_Dropbox_Api_Files_NoFileReason_AsNotFound.htm" />
           <HelpTOCNode Title="IsIsFolder Property " Url="html/P_Dropbox_Api_Files_NoFileReason_IsIsFolder.htm" />
           <HelpTOCNode Title="IsNotFound Property " Url="html/P_Dropbox_Api_Files_NoFileReason_IsNotFound.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="944eb811-7b84-46d5-aa10-e21352dc7345" Title="NoFileReason.IsFolder Class" Url="html/T_Dropbox_Api_Files_NoFileReason_IsFolder.htm">
-        <HelpTOCNode Id="1b7cb7cd-9067-4528-b015-9c49270aa322" Title="IsFolder Fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_IsFolder.htm">
+      <HelpTOCNode Id="9a100a19-4198-475e-b8cb-7a388ac78955" Title="NoFileReason.IsFolder Class" Url="html/T_Dropbox_Api_Files_NoFileReason_IsFolder.htm">
+        <HelpTOCNode Id="19f9f0df-cd5b-495f-8090-962a98288ebb" Title="IsFolder Fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_IsFolder.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_NoFileReason_IsFolder_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6bca2055-6e6a-4058-8ea5-75858ece3fa3" Title="NoFileReason.NotFound Class" Url="html/T_Dropbox_Api_Files_NoFileReason_NotFound.htm">
-        <HelpTOCNode Id="7bd0686a-492a-4800-9a51-b93dcb92eef3" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_NotFound.htm">
+      <HelpTOCNode Id="76e2d044-8c5c-40b6-8a33-b78770aef40a" Title="NoFileReason.NotFound Class" Url="html/T_Dropbox_Api_Files_NoFileReason_NotFound.htm">
+        <HelpTOCNode Id="a3983232-3cd1-4058-bf20-e65972978bcb" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_NotFound.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_NoFileReason_NotFound_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="398e2632-bca1-4677-8dbd-df1c07d3ff08" Title="Restricted Class" Url="html/T_Dropbox_Api_Files_Restricted.htm">
-        <HelpTOCNode Id="ef87f8c6-c234-4965-acbf-4b2f324286e9" Title="Restricted Constructor " Url="html/Overload_Dropbox_Api_Files_Restricted__ctor.htm">
+      <HelpTOCNode Id="00c3728f-118c-4d29-9c0e-19b29afb2c60" Title="PathError Class" Url="html/T_Dropbox_Api_Files_PathError.htm">
+        <HelpTOCNode Title="PathError Constructor " Url="html/M_Dropbox_Api_Files_PathError__ctor.htm" />
+        <HelpTOCNode Id="efd2e3bd-6859-463b-8ee2-fbe00b3e1c65" Title="PathError Properties" Url="html/Properties_T_Dropbox_Api_Files_PathError.htm">
+          <HelpTOCNode Title="AsAutorenameFiled Property " Url="html/P_Dropbox_Api_Files_PathError_AsAutorenameFiled.htm" />
+          <HelpTOCNode Title="AsConflictFile Property " Url="html/P_Dropbox_Api_Files_PathError_AsConflictFile.htm" />
+          <HelpTOCNode Title="AsConflictFileAncestor Property " Url="html/P_Dropbox_Api_Files_PathError_AsConflictFileAncestor.htm" />
+          <HelpTOCNode Title="AsConflictFolder Property " Url="html/P_Dropbox_Api_Files_PathError_AsConflictFolder.htm" />
+          <HelpTOCNode Title="AsFileDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_AsFileDisallowed.htm" />
+          <HelpTOCNode Title="AsFolderDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_AsFolderDisallowed.htm" />
+          <HelpTOCNode Title="AsMalformedPath Property " Url="html/P_Dropbox_Api_Files_PathError_AsMalformedPath.htm" />
+          <HelpTOCNode Title="AsMisc Property " Url="html/P_Dropbox_Api_Files_PathError_AsMisc.htm" />
+          <HelpTOCNode Title="AsNotFound Property " Url="html/P_Dropbox_Api_Files_PathError_AsNotFound.htm" />
+          <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_PathError_AsOther.htm" />
+          <HelpTOCNode Title="AsReadOnly Property " Url="html/P_Dropbox_Api_Files_PathError_AsReadOnly.htm" />
+          <HelpTOCNode Title="AsRootDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_AsRootDisallowed.htm" />
+          <HelpTOCNode Title="AsSharedFolderDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_AsSharedFolderDisallowed.htm" />
+          <HelpTOCNode Title="IsAutorenameFiled Property " Url="html/P_Dropbox_Api_Files_PathError_IsAutorenameFiled.htm" />
+          <HelpTOCNode Title="IsConflictFile Property " Url="html/P_Dropbox_Api_Files_PathError_IsConflictFile.htm" />
+          <HelpTOCNode Title="IsConflictFileAncestor Property " Url="html/P_Dropbox_Api_Files_PathError_IsConflictFileAncestor.htm" />
+          <HelpTOCNode Title="IsConflictFolder Property " Url="html/P_Dropbox_Api_Files_PathError_IsConflictFolder.htm" />
+          <HelpTOCNode Title="IsFileDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_IsFileDisallowed.htm" />
+          <HelpTOCNode Title="IsFolderDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_IsFolderDisallowed.htm" />
+          <HelpTOCNode Title="IsMalformedPath Property " Url="html/P_Dropbox_Api_Files_PathError_IsMalformedPath.htm" />
+          <HelpTOCNode Title="IsMisc Property " Url="html/P_Dropbox_Api_Files_PathError_IsMisc.htm" />
+          <HelpTOCNode Title="IsNotFound Property " Url="html/P_Dropbox_Api_Files_PathError_IsNotFound.htm" />
+          <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_PathError_IsOther.htm" />
+          <HelpTOCNode Title="IsReadOnly Property " Url="html/P_Dropbox_Api_Files_PathError_IsReadOnly.htm" />
+          <HelpTOCNode Title="IsRootDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_IsRootDisallowed.htm" />
+          <HelpTOCNode Title="IsSharedFolderDisallowed Property " Url="html/P_Dropbox_Api_Files_PathError_IsSharedFolderDisallowed.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a18efaff-0e64-4158-ba23-b79c7a54c374" Title="PathError.AutorenameFiled Class" Url="html/T_Dropbox_Api_Files_PathError_AutorenameFiled.htm">
+        <HelpTOCNode Id="dd076fa6-d337-492c-8661-cbe7ec9b0a97" Title="AutorenameFiled Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_AutorenameFiled.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_AutorenameFiled_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5f23c011-ebfe-4752-9b95-a463e21d3de7" Title="PathError.ConflictFile Class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFile.htm">
+        <HelpTOCNode Id="ed275a6a-e322-43e6-8965-e3c71875890f" Title="ConflictFile Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ConflictFile.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFile_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9ab434b5-438a-4349-9de5-a37ab7aa04c1" Title="PathError.ConflictFileAncestor Class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFileAncestor.htm">
+        <HelpTOCNode Id="131cd86e-2a5d-4277-85cb-13ff4354c1a7" Title="ConflictFileAncestor Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ConflictFileAncestor.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFileAncestor_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b0970b29-4862-4464-9fcf-0b75c6cde316" Title="PathError.ConflictFolder Class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFolder.htm">
+        <HelpTOCNode Id="7524d52a-d19d-45e1-b807-4aefdc1f7625" Title="ConflictFolder Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ConflictFolder.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFolder_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="eba933a9-8396-40de-ac9d-113a190681a0" Title="PathError.FileDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_FileDisallowed.htm">
+        <HelpTOCNode Id="ad60d534-9095-4ae9-987f-58bf70c26eb1" Title="FileDisallowed Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_FileDisallowed.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_FileDisallowed_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="eefb9ea8-ede9-49c7-a857-6f0d71222289" Title="PathError.FolderDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_FolderDisallowed.htm">
+        <HelpTOCNode Id="7a96cd6f-2652-4ef0-934a-4e51830634d5" Title="FolderDisallowed Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_FolderDisallowed.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_FolderDisallowed_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="38f6ba55-9899-4184-92c7-44f32ea830cb" Title="PathError.MalformedPath Class" Url="html/T_Dropbox_Api_Files_PathError_MalformedPath.htm">
+        <HelpTOCNode Title="PathError.MalformedPath Constructor " Url="html/M_Dropbox_Api_Files_PathError_MalformedPath__ctor.htm" />
+        <HelpTOCNode Id="02889c15-7142-4c7b-b79d-e25bc7a7b47f" Title="MalformedPath Properties" Url="html/Properties_T_Dropbox_Api_Files_PathError_MalformedPath.htm">
+          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_PathError_MalformedPath_Value.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9d093893-6c3b-438c-a12f-3697a2d9a4a3" Title="PathError.Misc Class" Url="html/T_Dropbox_Api_Files_PathError_Misc.htm">
+        <HelpTOCNode Title="PathError.Misc Constructor " Url="html/M_Dropbox_Api_Files_PathError_Misc__ctor.htm" />
+        <HelpTOCNode Id="30068da3-99a9-495c-bd57-979b0673701a" Title="Misc Properties" Url="html/Properties_T_Dropbox_Api_Files_PathError_Misc.htm">
+          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_PathError_Misc_Value.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5f70b014-f584-49e8-8e12-28d2499b9f62" Title="PathError.NotFound Class" Url="html/T_Dropbox_Api_Files_PathError_NotFound.htm">
+        <HelpTOCNode Id="a5ccc34b-6eb0-4707-afc7-6d7547ba19df" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_NotFound.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_NotFound_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e7305b9d-d055-44aa-94c9-08f077041824" Title="PathError.Other Class" Url="html/T_Dropbox_Api_Files_PathError_Other.htm">
+        <HelpTOCNode Id="952ee582-3266-4b01-bd78-b4c15fd619b5" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_Other.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_Other_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="45b0024c-1ee4-49a7-822d-8c72003d737c" Title="PathError.ReadOnly Class" Url="html/T_Dropbox_Api_Files_PathError_ReadOnly.htm">
+        <HelpTOCNode Id="b1e39955-a767-4be8-a15c-3b452dca7f17" Title="ReadOnly Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ReadOnly.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ReadOnly_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="511da147-766e-4538-9dd3-aa6827c0ee35" Title="PathError.RootDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_RootDisallowed.htm">
+        <HelpTOCNode Id="9d81641d-2e87-4a9e-ba18-04489a42ae03" Title="RootDisallowed Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_RootDisallowed.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_RootDisallowed_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d2b9d857-d519-457a-b313-9fbaa4e5ebf2" Title="PathError.SharedFolderDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_SharedFolderDisallowed.htm">
+        <HelpTOCNode Id="dbb34ca0-9609-4d15-bc80-e9ceb20993f7" Title="SharedFolderDisallowed Fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_SharedFolderDisallowed.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_PathError_SharedFolderDisallowed_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5b4426c6-ca83-4691-bb7e-aa1338c35bfa" Title="RelocationArg Class" Url="html/T_Dropbox_Api_Files_RelocationArg.htm">
+        <HelpTOCNode Id="40c5dfe7-0baf-4766-b38e-7264adab2122" Title="RelocationArg Constructor " Url="html/Overload_Dropbox_Api_Files_RelocationArg__ctor.htm">
+          <HelpTOCNode Title="RelocationArg Constructor " Url="html/M_Dropbox_Api_Files_RelocationArg__ctor.htm" />
+          <HelpTOCNode Title="RelocationArg Constructor (String, String)" Url="html/M_Dropbox_Api_Files_RelocationArg__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="95cb49e6-c240-4c72-a08a-c7a816983f4f" Title="RelocationArg Properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationArg.htm">
+          <HelpTOCNode Title="FromPath Property " Url="html/P_Dropbox_Api_Files_RelocationArg_FromPath.htm" />
+          <HelpTOCNode Title="ToPath Property " Url="html/P_Dropbox_Api_Files_RelocationArg_ToPath.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="caee45af-7e70-4cf7-8a26-e35e8902c506" Title="RelocationError Class" Url="html/T_Dropbox_Api_Files_RelocationError.htm">
+        <HelpTOCNode Title="RelocationError Constructor " Url="html/M_Dropbox_Api_Files_RelocationError__ctor.htm" />
+        <HelpTOCNode Id="96414439-2081-427f-87e7-58b2641b4fb7" Title="RelocationError Properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationError.htm">
+          <HelpTOCNode Title="AsFromError Property " Url="html/P_Dropbox_Api_Files_RelocationError_AsFromError.htm" />
+          <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_RelocationError_AsOther.htm" />
+          <HelpTOCNode Title="AsQuotaError Property " Url="html/P_Dropbox_Api_Files_RelocationError_AsQuotaError.htm" />
+          <HelpTOCNode Title="AsToError Property " Url="html/P_Dropbox_Api_Files_RelocationError_AsToError.htm" />
+          <HelpTOCNode Title="AsTooManyFiles Property " Url="html/P_Dropbox_Api_Files_RelocationError_AsTooManyFiles.htm" />
+          <HelpTOCNode Title="IsFromError Property " Url="html/P_Dropbox_Api_Files_RelocationError_IsFromError.htm" />
+          <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_RelocationError_IsOther.htm" />
+          <HelpTOCNode Title="IsQuotaError Property " Url="html/P_Dropbox_Api_Files_RelocationError_IsQuotaError.htm" />
+          <HelpTOCNode Title="IsToError Property " Url="html/P_Dropbox_Api_Files_RelocationError_IsToError.htm" />
+          <HelpTOCNode Title="IsTooManyFiles Property " Url="html/P_Dropbox_Api_Files_RelocationError_IsTooManyFiles.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="7858e1b0-d87e-4aa6-a2c8-8a235f028374" Title="RelocationError.FromError Class" Url="html/T_Dropbox_Api_Files_RelocationError_FromError.htm">
+        <HelpTOCNode Title="RelocationError.FromError Constructor " Url="html/M_Dropbox_Api_Files_RelocationError_FromError__ctor.htm" />
+        <HelpTOCNode Id="1e5e80d4-1a9c-49e0-9b91-d4cdf2cd2bad" Title="FromError Properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationError_FromError.htm">
+          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_RelocationError_FromError_Value.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="454e4515-cc46-44cc-bcff-e43a6d95f2bc" Title="RelocationError.Other Class" Url="html/T_Dropbox_Api_Files_RelocationError_Other.htm">
+        <HelpTOCNode Id="9feb6676-1942-4023-868f-3d82962a580d" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_Other.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_RelocationError_Other_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="91a2dae4-391a-430d-8d7b-f4d539bd6eb3" Title="RelocationError.QuotaError Class" Url="html/T_Dropbox_Api_Files_RelocationError_QuotaError.htm">
+        <HelpTOCNode Id="b6df5b8a-3fc2-44e5-939d-1cba5a50997b" Title="QuotaError Fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_QuotaError.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_RelocationError_QuotaError_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="cf682288-1bd4-4737-a25c-592ddefd7455" Title="RelocationError.ToError Class" Url="html/T_Dropbox_Api_Files_RelocationError_ToError.htm">
+        <HelpTOCNode Title="RelocationError.ToError Constructor " Url="html/M_Dropbox_Api_Files_RelocationError_ToError__ctor.htm" />
+        <HelpTOCNode Id="b0997722-70ab-4353-bf3f-431329cbcaed" Title="ToError Properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationError_ToError.htm">
+          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_RelocationError_ToError_Value.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ac9f614b-e433-42f8-b722-2a4eb3596e6e" Title="RelocationError.TooManyFiles Class" Url="html/T_Dropbox_Api_Files_RelocationError_TooManyFiles.htm">
+        <HelpTOCNode Id="b9b58f1f-84ff-4970-95c1-887589e33bf0" Title="TooManyFiles Fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_TooManyFiles.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_RelocationError_TooManyFiles_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d9c0a52a-1369-4eb4-b294-59cc4672a53c" Title="Restricted Class" Url="html/T_Dropbox_Api_Files_Restricted.htm">
+        <HelpTOCNode Id="1c8f7c10-f936-40ea-b322-e1af3c9314ec" Title="Restricted Constructor " Url="html/Overload_Dropbox_Api_Files_Restricted__ctor.htm">
           <HelpTOCNode Title="Restricted Constructor " Url="html/M_Dropbox_Api_Files_Restricted__ctor.htm" />
           <HelpTOCNode Title="Restricted Constructor (RestrictedReason)" Url="html/M_Dropbox_Api_Files_Restricted__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5b6b8f52-563e-4c09-850a-5a1532522a6b" Title="Restricted Properties" Url="html/Properties_T_Dropbox_Api_Files_Restricted.htm">
+        <HelpTOCNode Id="27c11560-eb95-4765-b80b-5e732d2c35f9" Title="Restricted Properties" Url="html/Properties_T_Dropbox_Api_Files_Restricted.htm">
           <HelpTOCNode Title="Reason Property " Url="html/P_Dropbox_Api_Files_Restricted_Reason.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7a9fbd76-6ba0-4404-88c5-d7f36933360c" Title="RestrictedReason Class" Url="html/T_Dropbox_Api_Files_RestrictedReason.htm">
+      <HelpTOCNode Id="c19cbdb6-bbe1-4ce4-893e-4d50dcf26002" Title="RestrictedReason Class" Url="html/T_Dropbox_Api_Files_RestrictedReason.htm">
         <HelpTOCNode Title="RestrictedReason Constructor " Url="html/M_Dropbox_Api_Files_RestrictedReason__ctor.htm" />
-        <HelpTOCNode Id="ee9a329a-6b10-43df-ad57-72e9dac6da92" Title="RestrictedReason Properties" Url="html/Properties_T_Dropbox_Api_Files_RestrictedReason.htm">
+        <HelpTOCNode Id="9c8e155e-e244-4ea6-819f-5c05a22c4152" Title="RestrictedReason Properties" Url="html/Properties_T_Dropbox_Api_Files_RestrictedReason.htm">
           <HelpTOCNode Title="AsDmca Property " Url="html/P_Dropbox_Api_Files_RestrictedReason_AsDmca.htm" />
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_RestrictedReason_AsOther.htm" />
           <HelpTOCNode Title="IsDmca Property " Url="html/P_Dropbox_Api_Files_RestrictedReason_IsDmca.htm" />
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_RestrictedReason_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ed5ad977-f793-4ba7-9f74-5e0972012709" Title="RestrictedReason.Dmca Class" Url="html/T_Dropbox_Api_Files_RestrictedReason_Dmca.htm">
-        <HelpTOCNode Id="c42c8b07-1a63-49ba-9454-793641ace440" Title="Dmca Fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Dmca.htm">
+      <HelpTOCNode Id="8b5bf96d-50dc-45e5-997e-dfe6e47a9787" Title="RestrictedReason.Dmca Class" Url="html/T_Dropbox_Api_Files_RestrictedReason_Dmca.htm">
+        <HelpTOCNode Id="90cab872-a9bf-431a-b51b-b30dd5d7095c" Title="Dmca Fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Dmca.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_RestrictedReason_Dmca_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="0eac41d3-5f6a-4483-9022-68d08d3f9d89" Title="RestrictedReason.Other Class" Url="html/T_Dropbox_Api_Files_RestrictedReason_Other.htm">
-        <HelpTOCNode Id="f3e17a6a-4b26-4ef4-9459-905289ba9808" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm">
+      <HelpTOCNode Id="250e9a74-bf12-4ba6-bc18-22a8157dd4f4" Title="RestrictedReason.Other Class" Url="html/T_Dropbox_Api_Files_RestrictedReason_Other.htm">
+        <HelpTOCNode Id="24912998-b991-46c1-b0f3-bc1566691a2a" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_RestrictedReason_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6e5739ca-0de7-4bb5-aeb8-5c9666687b6a" Title="SearchError Class" Url="html/T_Dropbox_Api_Files_SearchError.htm">
+      <HelpTOCNode Id="0141b164-9c8d-4cc6-b317-0c2fd061ce16" Title="SearchError Class" Url="html/T_Dropbox_Api_Files_SearchError.htm">
         <HelpTOCNode Title="SearchError Constructor " Url="html/M_Dropbox_Api_Files_SearchError__ctor.htm" />
-        <HelpTOCNode Id="42681d07-e3ee-4284-83d9-fe1c11811cf5" Title="SearchError Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchError.htm">
+        <HelpTOCNode Id="a8c61d3b-5cfb-4360-87cf-2f134faf90eb" Title="SearchError Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchError.htm">
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_SearchError_AsOther.htm" />
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_SearchError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="21766489-311e-4863-92bc-cdbbbce4514d" Title="SearchError.Other Class" Url="html/T_Dropbox_Api_Files_SearchError_Other.htm">
-        <HelpTOCNode Id="08514625-323c-4bb2-8c30-5444490f1a90" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchError_Other.htm">
+      <HelpTOCNode Id="4fb81941-84d9-4778-a157-8e38065a6937" Title="SearchError.Other Class" Url="html/T_Dropbox_Api_Files_SearchError_Other.htm">
+        <HelpTOCNode Id="f1316a15-ba9d-4f98-a7aa-522de58387b5" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7b676564-e49c-441c-b3d7-686b9f7c034c" Title="SearchMatch Class" Url="html/T_Dropbox_Api_Files_SearchMatch.htm">
-        <HelpTOCNode Id="62fbb5cf-7447-4ae8-804f-a2a03d8c37b0" Title="SearchMatch Constructor " Url="html/Overload_Dropbox_Api_Files_SearchMatch__ctor.htm">
+      <HelpTOCNode Id="5061b525-253c-4bfc-b06e-c2fa56bcfe2c" Title="SearchMatch Class" Url="html/T_Dropbox_Api_Files_SearchMatch.htm">
+        <HelpTOCNode Id="92de6b97-3bff-4ea5-8206-5c89f7a73572" Title="SearchMatch Constructor " Url="html/Overload_Dropbox_Api_Files_SearchMatch__ctor.htm">
           <HelpTOCNode Title="SearchMatch Constructor " Url="html/M_Dropbox_Api_Files_SearchMatch__ctor.htm" />
-          <HelpTOCNode Title="SearchMatch Constructor (SearchMatchType, MetadataWithPath)" Url="html/M_Dropbox_Api_Files_SearchMatch__ctor_1.htm" />
+          <HelpTOCNode Title="SearchMatch Constructor (SearchMatchType, Metadata)" Url="html/M_Dropbox_Api_Files_SearchMatch__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ecc62aec-de29-40ea-80f6-dc23964099e1" Title="SearchMatch Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchMatch.htm">
+        <HelpTOCNode Id="2e59edd0-12d1-4088-b3ce-6e2cb1d89087" Title="SearchMatch Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchMatch.htm">
           <HelpTOCNode Title="MatchType Property " Url="html/P_Dropbox_Api_Files_SearchMatch_MatchType.htm" />
           <HelpTOCNode Title="Metadata Property " Url="html/P_Dropbox_Api_Files_SearchMatch_Metadata.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1d535bf1-6d02-441d-b44d-17c366472967" Title="SearchMatchType Class" Url="html/T_Dropbox_Api_Files_SearchMatchType.htm">
+      <HelpTOCNode Id="f8fee105-4212-4d55-8b6f-d4c82107d3bc" Title="SearchMatchType Class" Url="html/T_Dropbox_Api_Files_SearchMatchType.htm">
         <HelpTOCNode Title="SearchMatchType Constructor " Url="html/M_Dropbox_Api_Files_SearchMatchType__ctor.htm" />
-        <HelpTOCNode Id="93faf24e-297c-48a5-95bf-102a15878f6c" Title="SearchMatchType Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchMatchType.htm">
+        <HelpTOCNode Id="e448bf32-283c-4ba7-a4aa-7563efcdf465" Title="SearchMatchType Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchMatchType.htm">
           <HelpTOCNode Title="AsBoth Property " Url="html/P_Dropbox_Api_Files_SearchMatchType_AsBoth.htm" />
           <HelpTOCNode Title="AsContent Property " Url="html/P_Dropbox_Api_Files_SearchMatchType_AsContent.htm" />
           <HelpTOCNode Title="AsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMatchType_AsFilename.htm" />
@@ -623,24 +713,24 @@
           <HelpTOCNode Title="IsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMatchType_IsFilename.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="913a5824-9a80-41d8-91d4-0f3802d25244" Title="SearchMatchType.Both Class" Url="html/T_Dropbox_Api_Files_SearchMatchType_Both.htm">
-        <HelpTOCNode Id="559bbba7-b8e3-4e82-aa34-9751cdfe9867" Title="Both Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Both.htm">
+      <HelpTOCNode Id="e6359d82-f6e1-4164-bbf8-daf05e52e512" Title="SearchMatchType.Both Class" Url="html/T_Dropbox_Api_Files_SearchMatchType_Both.htm">
+        <HelpTOCNode Id="026fd5a2-71d6-4ac2-b386-6615442867d2" Title="Both Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Both.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchMatchType_Both_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6923d91b-9b54-47e4-8bd2-6738e167b033" Title="SearchMatchType.Content Class" Url="html/T_Dropbox_Api_Files_SearchMatchType_Content.htm">
-        <HelpTOCNode Id="759f6f3a-fe49-419f-b012-cc0725b0b180" Title="Content Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Content.htm">
+      <HelpTOCNode Id="67d06c97-c02b-425b-9e3f-b4b39dba14c1" Title="SearchMatchType.Content Class" Url="html/T_Dropbox_Api_Files_SearchMatchType_Content.htm">
+        <HelpTOCNode Id="3cfeb0be-96fb-41b1-9282-2ab09368ff23" Title="Content Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Content.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchMatchType_Content_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="5c4b4562-2b96-4984-9d0c-ece4e1c00f48" Title="SearchMatchType.Filename Class" Url="html/T_Dropbox_Api_Files_SearchMatchType_Filename.htm">
-        <HelpTOCNode Id="49dbe5af-6d7a-4454-a8a0-97f4433caf12" Title="Filename Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Filename.htm">
+      <HelpTOCNode Id="d581605d-15b9-4b03-9722-e1a86573333b" Title="SearchMatchType.Filename Class" Url="html/T_Dropbox_Api_Files_SearchMatchType_Filename.htm">
+        <HelpTOCNode Id="317174d6-dce0-428d-9c1c-1f69d6233aa5" Title="Filename Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Filename.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchMatchType_Filename_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="f850a66d-93cb-416f-a599-de76224ab162" Title="SearchMode Class" Url="html/T_Dropbox_Api_Files_SearchMode.htm">
+      <HelpTOCNode Id="eb4e3ba6-2e72-47a0-8e3c-a8bb1dc33f44" Title="SearchMode Class" Url="html/T_Dropbox_Api_Files_SearchMode.htm">
         <HelpTOCNode Title="SearchMode Constructor " Url="html/M_Dropbox_Api_Files_SearchMode__ctor.htm" />
-        <HelpTOCNode Id="5f9acffd-e30d-40d6-ba59-fa4f2c9f8601" Title="SearchMode Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchMode.htm">
+        <HelpTOCNode Id="87c15540-70d1-4d44-8ead-5047c4236072" Title="SearchMode Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchMode.htm">
           <HelpTOCNode Title="AsDeletedFilename Property " Url="html/P_Dropbox_Api_Files_SearchMode_AsDeletedFilename.htm" />
           <HelpTOCNode Title="AsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMode_AsFilename.htm" />
           <HelpTOCNode Title="AsFilenameAndContent Property " Url="html/P_Dropbox_Api_Files_SearchMode_AsFilenameAndContent.htm" />
@@ -649,27 +739,27 @@
           <HelpTOCNode Title="IsFilenameAndContent Property " Url="html/P_Dropbox_Api_Files_SearchMode_IsFilenameAndContent.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="da1124b3-21ba-44b6-bdb6-140dee4649c7" Title="SearchMode.DeletedFilename Class" Url="html/T_Dropbox_Api_Files_SearchMode_DeletedFilename.htm">
-        <HelpTOCNode Id="ea3b04a2-5778-4f5a-bacb-439275950e3f" Title="DeletedFilename Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_DeletedFilename.htm">
+      <HelpTOCNode Id="288be495-7810-49ce-b897-52b597bf3432" Title="SearchMode.DeletedFilename Class" Url="html/T_Dropbox_Api_Files_SearchMode_DeletedFilename.htm">
+        <HelpTOCNode Id="61e7f74e-b458-4e89-b838-eace5f083576" Title="DeletedFilename Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_DeletedFilename.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchMode_DeletedFilename_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="48d6405b-aed3-4ee7-8a9c-3f46d5e83166" Title="SearchMode.Filename Class" Url="html/T_Dropbox_Api_Files_SearchMode_Filename.htm">
-        <HelpTOCNode Id="13acbdb4-7f6b-42d6-9ea5-980bc4705000" Title="Filename Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_Filename.htm">
+      <HelpTOCNode Id="e94c9ab3-9681-4561-91f1-ed363f674a8b" Title="SearchMode.Filename Class" Url="html/T_Dropbox_Api_Files_SearchMode_Filename.htm">
+        <HelpTOCNode Id="d0b7b0f8-876a-49fa-adf0-d2a80acfd1cc" Title="Filename Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_Filename.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchMode_Filename_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="4b4043af-30fd-4b59-a923-23ac648c0f61" Title="SearchMode.FilenameAndContent Class" Url="html/T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm">
-        <HelpTOCNode Id="878f8e76-9498-4fd7-b750-c4a662d4bb45" Title="FilenameAndContent Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm">
+      <HelpTOCNode Id="1536d8c2-1dcf-4d9e-b763-747ebef9c07d" Title="SearchMode.FilenameAndContent Class" Url="html/T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm">
+        <HelpTOCNode Id="318e2a7c-a13c-4e50-86f7-55c66812d69c" Title="FilenameAndContent Fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_SearchMode_FilenameAndContent_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d2376d05-1b23-4e6e-a91a-5b1e0744e217" Title="SearchQuery Class" Url="html/T_Dropbox_Api_Files_SearchQuery.htm">
-        <HelpTOCNode Id="aead9c94-68c4-4be8-9fa2-936dbe584d64" Title="SearchQuery Constructor " Url="html/Overload_Dropbox_Api_Files_SearchQuery__ctor.htm">
+      <HelpTOCNode Id="39b6817c-82ba-4201-8d49-36387d65b46d" Title="SearchQuery Class" Url="html/T_Dropbox_Api_Files_SearchQuery.htm">
+        <HelpTOCNode Id="886312f4-b509-4ea3-8498-c878be1a11c9" Title="SearchQuery Constructor " Url="html/Overload_Dropbox_Api_Files_SearchQuery__ctor.htm">
           <HelpTOCNode Title="SearchQuery Constructor " Url="html/M_Dropbox_Api_Files_SearchQuery__ctor.htm" />
           <HelpTOCNode Title="SearchQuery Constructor (String, String, UInt64, UInt64, SearchMode)" Url="html/M_Dropbox_Api_Files_SearchQuery__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="7f8d93d7-0125-4212-bfc9-ad5d93e5c8ef" Title="SearchQuery Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchQuery.htm">
+        <HelpTOCNode Id="0575a052-6bff-4e0c-b1de-22069b58b48e" Title="SearchQuery Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchQuery.htm">
           <HelpTOCNode Title="MaxResults Property " Url="html/P_Dropbox_Api_Files_SearchQuery_MaxResults.htm" />
           <HelpTOCNode Title="Mode Property " Url="html/P_Dropbox_Api_Files_SearchQuery_Mode.htm" />
           <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_SearchQuery_Path.htm" />
@@ -677,70 +767,188 @@
           <HelpTOCNode Title="Start Property " Url="html/P_Dropbox_Api_Files_SearchQuery_Start.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="cee3b40c-9b65-4af2-b79d-f88b72b251b1" Title="SearchResults Class" Url="html/T_Dropbox_Api_Files_SearchResults.htm">
-        <HelpTOCNode Id="865f35c0-ac55-4edd-a321-a2ea4a1a2878" Title="SearchResults Constructor " Url="html/Overload_Dropbox_Api_Files_SearchResults__ctor.htm">
+      <HelpTOCNode Id="7e8c212b-571c-426c-aba5-c4d7ecfb9206" Title="SearchResults Class" Url="html/T_Dropbox_Api_Files_SearchResults.htm">
+        <HelpTOCNode Id="7e807578-489f-442f-b1e0-c99c3ac95f1e" Title="SearchResults Constructor " Url="html/Overload_Dropbox_Api_Files_SearchResults__ctor.htm">
           <HelpTOCNode Title="SearchResults Constructor " Url="html/M_Dropbox_Api_Files_SearchResults__ctor.htm" />
           <HelpTOCNode Title="SearchResults Constructor (IEnumerable(SearchMatch), Boolean, UInt64)" Url="html/M_Dropbox_Api_Files_SearchResults__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="59544f5a-8a1c-4d4d-9cc4-759d99512618" Title="SearchResults Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchResults.htm">
+        <HelpTOCNode Id="9552e321-be4d-4443-80d9-f0fa3770cd00" Title="SearchResults Properties" Url="html/Properties_T_Dropbox_Api_Files_SearchResults.htm">
           <HelpTOCNode Title="Matches Property " Url="html/P_Dropbox_Api_Files_SearchResults_Matches.htm" />
           <HelpTOCNode Title="More Property " Url="html/P_Dropbox_Api_Files_SearchResults_More.htm" />
           <HelpTOCNode Title="Start Property " Url="html/P_Dropbox_Api_Files_SearchResults_Start.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="e653f6b3-1ca9-4c1b-9fed-01e7795390c8" Title="UploadCommitError Class" Url="html/T_Dropbox_Api_Files_UploadCommitError.htm">
-        <HelpTOCNode Id="9cd167f2-a421-48d5-8578-ac0d29d1b2cc" Title="UploadCommitError Constructor " Url="html/Overload_Dropbox_Api_Files_UploadCommitError__ctor.htm">
+      <HelpTOCNode Id="7945a344-754f-4b8c-aba7-558775acbcee" Title="ThumbnailArg Class" Url="html/T_Dropbox_Api_Files_ThumbnailArg.htm">
+        <HelpTOCNode Id="b7ab620e-ff93-4c6d-b17f-1ec258437714" Title="ThumbnailArg Constructor " Url="html/Overload_Dropbox_Api_Files_ThumbnailArg__ctor.htm">
+          <HelpTOCNode Title="ThumbnailArg Constructor " Url="html/M_Dropbox_Api_Files_ThumbnailArg__ctor.htm" />
+          <HelpTOCNode Title="ThumbnailArg Constructor (String, ThumbnailFormat, ThumbnailSize)" Url="html/M_Dropbox_Api_Files_ThumbnailArg__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="28bd5bcf-ab2e-44b2-a560-d82d7299c6d4" Title="ThumbnailArg Properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailArg.htm">
+          <HelpTOCNode Title="Format Property " Url="html/P_Dropbox_Api_Files_ThumbnailArg_Format.htm" />
+          <HelpTOCNode Title="Path Property " Url="html/P_Dropbox_Api_Files_ThumbnailArg_Path.htm" />
+          <HelpTOCNode Title="Size Property " Url="html/P_Dropbox_Api_Files_ThumbnailArg_Size.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="3a793688-81ee-4313-8120-b4d71c99f1b2" Title="ThumbnailError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError.htm">
+        <HelpTOCNode Title="ThumbnailError Constructor " Url="html/M_Dropbox_Api_Files_ThumbnailError__ctor.htm" />
+        <HelpTOCNode Id="b9807331-e65e-4188-ab6b-e3ef8a8e8772" Title="ThumbnailError Properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailError.htm">
+          <HelpTOCNode Title="AsConversionError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_AsConversionError.htm" />
+          <HelpTOCNode Title="AsDownloadError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_AsDownloadError.htm" />
+          <HelpTOCNode Title="AsExtensionError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_AsExtensionError.htm" />
+          <HelpTOCNode Title="AsFormatError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_AsFormatError.htm" />
+          <HelpTOCNode Title="AsInvalidImage Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_AsInvalidImage.htm" />
+          <HelpTOCNode Title="AsSizeError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_AsSizeError.htm" />
+          <HelpTOCNode Title="IsConversionError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_IsConversionError.htm" />
+          <HelpTOCNode Title="IsDownloadError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_IsDownloadError.htm" />
+          <HelpTOCNode Title="IsExtensionError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_IsExtensionError.htm" />
+          <HelpTOCNode Title="IsFormatError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_IsFormatError.htm" />
+          <HelpTOCNode Title="IsInvalidImage Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_IsInvalidImage.htm" />
+          <HelpTOCNode Title="IsSizeError Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_IsSizeError.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5e0d9577-e3e9-4ffc-9fb5-b2ef209c45f6" Title="ThumbnailError.ConversionError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ConversionError.htm">
+        <HelpTOCNode Id="d9c0facd-345b-4c8b-8d99-5cc2d5f93b80" Title="ConversionError Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_ConversionError.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_ConversionError_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9a01c281-5a24-4919-ac93-0dc9cfc2968e" Title="ThumbnailError.DownloadError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_DownloadError.htm">
+        <HelpTOCNode Title="ThumbnailError.DownloadError Constructor " Url="html/M_Dropbox_Api_Files_ThumbnailError_DownloadError__ctor.htm" />
+        <HelpTOCNode Id="7526d9eb-efdd-4ee3-8b5c-ccad4793ee2f" Title="DownloadError Properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailError_DownloadError.htm">
+          <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_DownloadError_Value.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b569134c-4387-451b-80b4-ecda6fb28d3a" Title="ThumbnailError.ExtensionError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ExtensionError.htm">
+        <HelpTOCNode Id="195ed839-dd93-4a0e-a685-a35397e717b0" Title="ExtensionError Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_ExtensionError.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_ExtensionError_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a72bcdd2-73eb-4f88-a182-13ad516a1bbb" Title="ThumbnailError.FormatError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_FormatError.htm">
+        <HelpTOCNode Id="2a421f00-2236-45e6-9031-244faf56c2c6" Title="FormatError Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_FormatError.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_FormatError_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="781f6d2d-56fd-4ed3-9558-3ef0778d5318" Title="ThumbnailError.InvalidImage Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_InvalidImage.htm">
+        <HelpTOCNode Id="66ab80a9-e5bd-4a40-905c-70a798882f05" Title="InvalidImage Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_InvalidImage.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_InvalidImage_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e656b37b-c1a9-4978-9698-084bf2eb6b01" Title="ThumbnailError.SizeError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_SizeError.htm">
+        <HelpTOCNode Id="eff697fa-2100-4c62-9a24-2e6638e5a8e5" Title="SizeError Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_SizeError.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_SizeError_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="810653c0-95df-410b-aab4-6e4209c75643" Title="ThumbnailFormat Class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat.htm">
+        <HelpTOCNode Title="ThumbnailFormat Constructor " Url="html/M_Dropbox_Api_Files_ThumbnailFormat__ctor.htm" />
+        <HelpTOCNode Id="48d72e23-2545-4c08-95f4-2cc78da8a1ff" Title="ThumbnailFormat Properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailFormat.htm">
+          <HelpTOCNode Title="AsJpeg Property " Url="html/P_Dropbox_Api_Files_ThumbnailFormat_AsJpeg.htm" />
+          <HelpTOCNode Title="AsPng Property " Url="html/P_Dropbox_Api_Files_ThumbnailFormat_AsPng.htm" />
+          <HelpTOCNode Title="IsJpeg Property " Url="html/P_Dropbox_Api_Files_ThumbnailFormat_IsJpeg.htm" />
+          <HelpTOCNode Title="IsPng Property " Url="html/P_Dropbox_Api_Files_ThumbnailFormat_IsPng.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="15e97c4e-1c13-49bb-aea2-fada40206d0b" Title="ThumbnailFormat.Jpeg Class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Jpeg.htm">
+        <HelpTOCNode Id="6d5b2bfc-ab01-46dc-b162-90cdb2240384" Title="Jpeg Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailFormat_Jpeg.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailFormat_Jpeg_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a67cc064-e0bb-4dd4-a365-8496223d7af0" Title="ThumbnailFormat.Png Class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Png.htm">
+        <HelpTOCNode Id="6b05939a-a0cd-49ac-b13e-7ea1c09a235b" Title="Png Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailFormat_Png.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailFormat_Png_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c91d385c-4508-4665-bb9a-88d7c6b38586" Title="ThumbnailSize Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize.htm">
+        <HelpTOCNode Title="ThumbnailSize Constructor " Url="html/M_Dropbox_Api_Files_ThumbnailSize__ctor.htm" />
+        <HelpTOCNode Id="53ebc957-3df9-4368-adbe-e73f400a2725" Title="ThumbnailSize Properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailSize.htm">
+          <HelpTOCNode Title="AsL Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsL.htm" />
+          <HelpTOCNode Title="AsM Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsM.htm" />
+          <HelpTOCNode Title="AsS Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsS.htm" />
+          <HelpTOCNode Title="AsXl Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsXl.htm" />
+          <HelpTOCNode Title="AsXs Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsXs.htm" />
+          <HelpTOCNode Title="IsL Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsL.htm" />
+          <HelpTOCNode Title="IsM Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsM.htm" />
+          <HelpTOCNode Title="IsS Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsS.htm" />
+          <HelpTOCNode Title="IsXl Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsXl.htm" />
+          <HelpTOCNode Title="IsXs Property " Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsXs.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a99cdd16-4be0-462d-b84b-d43e7cc413d9" Title="ThumbnailSize.L Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_L.htm">
+        <HelpTOCNode Id="5ec8b1b8-82e4-4a4f-b5b0-f26cdc137e22" Title="L Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_L.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_L_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="497087d0-491d-4caa-a13b-0cf81784a466" Title="ThumbnailSize.M Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_M.htm">
+        <HelpTOCNode Id="2d508ca6-340b-4b60-bbd4-1ca302c2ba4d" Title="M Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_M.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_M_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ceffdc02-9e89-46c2-85c1-7c8b0948a1a6" Title="ThumbnailSize.S Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_S.htm">
+        <HelpTOCNode Id="c053fb12-24b3-487c-ad04-662f76422dc6" Title="S Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_S.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_S_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4fe3f12f-2b82-46d7-b7d7-dced13bd43c4" Title="ThumbnailSize.Xl Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xl.htm">
+        <HelpTOCNode Id="916ef187-dc1e-4401-ae3b-20c7f372431f" Title="Xl Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_Xl.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_Xl_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="211e7e88-a7cb-4031-a1f3-1160d0f602f1" Title="ThumbnailSize.Xs Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xs.htm">
+        <HelpTOCNode Id="cd56987f-565c-4b61-aa5c-bfc6c55b4294" Title="Xs Fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_Xs.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_Xs_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e2d8f41e-6cf6-465b-adce-cca6740abece" Title="UploadCommitError Class" Url="html/T_Dropbox_Api_Files_UploadCommitError.htm">
+        <HelpTOCNode Id="08762bb8-78f1-4aa2-ae4e-b4cb8108ded0" Title="UploadCommitError Constructor " Url="html/Overload_Dropbox_Api_Files_UploadCommitError__ctor.htm">
           <HelpTOCNode Title="UploadCommitError Constructor " Url="html/M_Dropbox_Api_Files_UploadCommitError__ctor.htm" />
           <HelpTOCNode Title="UploadCommitError Constructor (CommitError, String)" Url="html/M_Dropbox_Api_Files_UploadCommitError__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="be09b3d1-d72f-4512-ac6d-7d3b9476195e" Title="UploadCommitError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadCommitError.htm">
+        <HelpTOCNode Id="c47e080e-b732-459c-8748-50f4898632af" Title="UploadCommitError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadCommitError.htm">
           <HelpTOCNode Title="Reason Property " Url="html/P_Dropbox_Api_Files_UploadCommitError_Reason.htm" />
           <HelpTOCNode Title="UploadSessionId Property " Url="html/P_Dropbox_Api_Files_UploadCommitError_UploadSessionId.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c7c64f70-a86a-4ab6-bbed-04e913ed7ae1" Title="UploadError Class" Url="html/T_Dropbox_Api_Files_UploadError.htm">
+      <HelpTOCNode Id="888926b7-69be-41a0-b621-73d613d51833" Title="UploadError Class" Url="html/T_Dropbox_Api_Files_UploadError.htm">
         <HelpTOCNode Title="UploadError Constructor " Url="html/M_Dropbox_Api_Files_UploadError__ctor.htm" />
-        <HelpTOCNode Id="62d90a35-a301-4607-85c0-0705edf9e9b4" Title="UploadError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadError.htm">
+        <HelpTOCNode Id="0729e7ca-870e-4115-8226-1a917062f5cb" Title="UploadError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadError.htm">
           <HelpTOCNode Title="AsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadError_AsCommitFailed.htm" />
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_UploadError_AsOther.htm" />
           <HelpTOCNode Title="IsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadError_IsCommitFailed.htm" />
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_UploadError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="e0fba65f-30b8-442a-9ba5-b7be5d233a8f" Title="UploadError.CommitFailed Class" Url="html/T_Dropbox_Api_Files_UploadError_CommitFailed.htm">
+      <HelpTOCNode Id="063b8091-af86-4c61-9a04-ea87de875538" Title="UploadError.CommitFailed Class" Url="html/T_Dropbox_Api_Files_UploadError_CommitFailed.htm">
         <HelpTOCNode Title="UploadError.CommitFailed Constructor " Url="html/M_Dropbox_Api_Files_UploadError_CommitFailed__ctor.htm" />
-        <HelpTOCNode Id="34ae7f79-8e0f-431b-8d67-a4f81bee3320" Title="CommitFailed Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadError_CommitFailed.htm">
+        <HelpTOCNode Id="1ca7007c-bc26-42d6-b43d-caed5af19afa" Title="CommitFailed Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadError_CommitFailed.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_UploadError_CommitFailed_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="32eee907-da15-4052-bdf9-ec34a7f83e09" Title="UploadError.Other Class" Url="html/T_Dropbox_Api_Files_UploadError_Other.htm">
-        <HelpTOCNode Id="f3cd93a0-3298-4394-887f-66e396a8b225" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm">
+      <HelpTOCNode Id="468dd889-45fa-4e08-8868-11e865d7f4a3" Title="UploadError.Other Class" Url="html/T_Dropbox_Api_Files_UploadError_Other.htm">
+        <HelpTOCNode Id="80ef7318-b2c2-4869-8758-99ee5c5d6f22" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_UploadError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="251171b0-10f1-4475-83a7-ab49fe6de53b" Title="UploadSessionCursor Class" Url="html/T_Dropbox_Api_Files_UploadSessionCursor.htm">
-        <HelpTOCNode Id="f54c0b22-f8b3-4939-a831-31fbc23c3b4d" Title="UploadSessionCursor Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionCursor__ctor.htm">
+      <HelpTOCNode Id="4a65d815-3e6b-407c-9bf0-3de558e56862" Title="UploadSessionCursor Class" Url="html/T_Dropbox_Api_Files_UploadSessionCursor.htm">
+        <HelpTOCNode Id="c479bda9-a583-41d1-9dcf-877629a7b095" Title="UploadSessionCursor Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionCursor__ctor.htm">
           <HelpTOCNode Title="UploadSessionCursor Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionCursor__ctor.htm" />
           <HelpTOCNode Title="UploadSessionCursor Constructor (String, UInt64)" Url="html/M_Dropbox_Api_Files_UploadSessionCursor__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="bc946af7-f867-4fdd-8c7d-7fa5bb280023" Title="UploadSessionCursor Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionCursor.htm">
+        <HelpTOCNode Id="2aaf35d8-78b1-486d-9c12-808c152555be" Title="UploadSessionCursor Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionCursor.htm">
           <HelpTOCNode Title="Offset Property " Url="html/P_Dropbox_Api_Files_UploadSessionCursor_Offset.htm" />
           <HelpTOCNode Title="SessionId Property " Url="html/P_Dropbox_Api_Files_UploadSessionCursor_SessionId.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="65502233-1c08-4217-b7bd-aac29007a969" Title="UploadSessionFinishArg Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishArg.htm">
-        <HelpTOCNode Id="e13e6ef2-2ae0-4c60-93d9-554adb2ceebf" Title="UploadSessionFinishArg Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionFinishArg__ctor.htm">
+      <HelpTOCNode Id="b846fc26-fed9-49ac-adab-9381b6e079c6" Title="UploadSessionFinishArg Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishArg.htm">
+        <HelpTOCNode Id="18d4e1b5-295d-4be2-96f5-833a51185d0a" Title="UploadSessionFinishArg Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionFinishArg__ctor.htm">
           <HelpTOCNode Title="UploadSessionFinishArg Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionFinishArg__ctor.htm" />
           <HelpTOCNode Title="UploadSessionFinishArg Constructor (UploadSessionCursor, CommitInfo)" Url="html/M_Dropbox_Api_Files_UploadSessionFinishArg__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="db5a59e4-21da-458d-9690-93841f49625c" Title="UploadSessionFinishArg Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishArg.htm">
+        <HelpTOCNode Id="04efb890-d148-462f-824e-9a6b913e3cd9" Title="UploadSessionFinishArg Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishArg.htm">
           <HelpTOCNode Title="Commit Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishArg_Commit.htm" />
           <HelpTOCNode Title="Cursor Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishArg_Cursor.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="b31e4fc2-1572-44cf-9bc4-99c170395321" Title="UploadSessionFinishError Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError.htm">
+      <HelpTOCNode Id="ca2c2644-bf61-4202-9dfb-5a18a603734a" Title="UploadSessionFinishError Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError.htm">
         <HelpTOCNode Title="UploadSessionFinishError Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionFinishError__ctor.htm" />
-        <HelpTOCNode Id="d0740ae9-4112-49ec-bd5b-67370b9c8b7a" Title="UploadSessionFinishError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError.htm">
+        <HelpTOCNode Id="1a4b74ab-6958-43a4-b6c2-47e4dd06f1a4" Title="UploadSessionFinishError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError.htm">
           <HelpTOCNode Title="AsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_AsCommitFailed.htm" />
           <HelpTOCNode Title="AsLookupFailed Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_AsLookupFailed.htm" />
           <HelpTOCNode Title="AsOther Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_AsOther.htm" />
@@ -749,26 +957,26 @@
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c644bf8a-a95a-4f71-8379-9d1d4393daa5" Title="UploadSessionFinishError.CommitFailed Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed.htm">
+      <HelpTOCNode Id="2fa20be6-5781-4e89-b3ea-525b239e9077" Title="UploadSessionFinishError.CommitFailed Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed.htm">
         <HelpTOCNode Title="UploadSessionFinishError.CommitFailed Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed__ctor.htm" />
-        <HelpTOCNode Id="23704f8b-6909-4ab7-ac0b-1d63cb185f64" Title="CommitFailed Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed.htm">
+        <HelpTOCNode Id="4f8cb57a-da36-4061-9bd1-d414f6aa7f30" Title="CommitFailed Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="3c697d5d-887c-4dd0-ad23-b35944c56352" Title="UploadSessionFinishError.LookupFailed Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed.htm">
+      <HelpTOCNode Id="030bce66-f3ba-4f59-80db-9f424bebb4db" Title="UploadSessionFinishError.LookupFailed Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed.htm">
         <HelpTOCNode Title="UploadSessionFinishError.LookupFailed Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed__ctor.htm" />
-        <HelpTOCNode Id="6abaddc6-1c43-4ea9-b221-143f633bbb3e" Title="LookupFailed Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed.htm">
+        <HelpTOCNode Id="7c6ad3ff-c7cd-424a-9c65-3112d9a28864" Title="LookupFailed Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="f4b2556e-52cc-47be-8162-4d77963c8e93" Title="UploadSessionFinishError.Other Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm">
-        <HelpTOCNode Id="7b152838-d81f-4ca7-b76f-14416ad26a03" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm">
+      <HelpTOCNode Id="d84a2590-e52a-4583-ac80-7c0deadacdcd" Title="UploadSessionFinishError.Other Class" Url="html/T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm">
+        <HelpTOCNode Id="431b4563-11cc-4ee5-b70c-69937092708c" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_UploadSessionFinishError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a51d6328-8e1d-47b9-888a-9f9c1dd6b8cf" Title="UploadSessionLookupError Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError.htm">
+      <HelpTOCNode Id="9a455e55-0237-47f4-aa37-e49dd224302f" Title="UploadSessionLookupError Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError.htm">
         <HelpTOCNode Title="UploadSessionLookupError Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionLookupError__ctor.htm" />
-        <HelpTOCNode Id="fe39bbf3-e340-4939-b859-e661c0ea2643" Title="UploadSessionLookupError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionLookupError.htm">
+        <HelpTOCNode Id="e70123d1-4a67-474d-bb88-6296878e0a1a" Title="UploadSessionLookupError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionLookupError.htm">
           <HelpTOCNode Title="AsClosed Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_AsClosed.htm" />
           <HelpTOCNode Title="AsIncorrectOffset Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_AsIncorrectOffset.htm" />
           <HelpTOCNode Title="AsNotFound Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_AsNotFound.htm" />
@@ -779,48 +987,48 @@
           <HelpTOCNode Title="IsOther Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_IsOther.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="17af08b2-901e-4fbe-a08a-cfaad43ab7ae" Title="UploadSessionLookupError.Closed Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_Closed.htm">
-        <HelpTOCNode Id="644b3df4-133b-4d8f-b947-d7cc6c2f17c9" Title="Closed Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Closed.htm">
+      <HelpTOCNode Id="893d26fc-18d6-4326-af70-c78ca00f6c2e" Title="UploadSessionLookupError.Closed Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_Closed.htm">
+        <HelpTOCNode Id="26358233-b8fe-49ec-a3a0-c369d3ef8bfc" Title="Closed Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Closed.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_UploadSessionLookupError_Closed_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="eda46f2e-c128-4227-a5e7-33bd36a4e6e0" Title="UploadSessionLookupError.IncorrectOffset Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset.htm">
+      <HelpTOCNode Id="42ab87d7-fe76-4bc8-b74e-a74aa7ef2fb6" Title="UploadSessionLookupError.IncorrectOffset Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset.htm">
         <HelpTOCNode Title="UploadSessionLookupError.IncorrectOffset Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset__ctor.htm" />
-        <HelpTOCNode Id="a9681084-ae87-43bb-b2b7-0fbb0651b88c" Title="IncorrectOffset Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset.htm">
+        <HelpTOCNode Id="3424724f-4f91-4a3a-beb4-4a7e9faaf5f7" Title="IncorrectOffset Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2898321a-ca28-4768-b9b8-7c3744cf7174" Title="UploadSessionLookupError.NotFound Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm">
-        <HelpTOCNode Id="1ff1f98d-3d24-466f-896a-961083ff136d" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm">
+      <HelpTOCNode Id="a53387e8-9100-415b-a760-d6755276633d" Title="UploadSessionLookupError.NotFound Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm">
+        <HelpTOCNode Id="ed2d5f8a-1046-46c3-a0c1-cb89ff286cc8" Title="NotFound Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_UploadSessionLookupError_NotFound_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a6f13be8-a71d-4ac8-847f-e4f1acd0b3eb" Title="UploadSessionLookupError.Other Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm">
-        <HelpTOCNode Id="11d52628-7571-4abb-ba95-a2066c6d86b3" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm">
+      <HelpTOCNode Id="5e9ee354-39e4-4539-8b53-01c3bccf6fe5" Title="UploadSessionLookupError.Other Class" Url="html/T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm">
+        <HelpTOCNode Id="4acafd89-f838-451f-bc19-b93a6d6c9a7a" Title="Other Fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_UploadSessionLookupError_Other_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c898cef4-6595-4a3e-8334-00fb28a4bb74" Title="UploadSessionOffsetError Class" Url="html/T_Dropbox_Api_Files_UploadSessionOffsetError.htm">
-        <HelpTOCNode Id="654d004b-b56b-45dd-b607-c7fd42e55e13" Title="UploadSessionOffsetError Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionOffsetError__ctor.htm">
+      <HelpTOCNode Id="d7994dd9-15a5-41d7-a1cc-7405bc7471a1" Title="UploadSessionOffsetError Class" Url="html/T_Dropbox_Api_Files_UploadSessionOffsetError.htm">
+        <HelpTOCNode Id="4567e8c7-9e78-488c-a03b-e39cc161547f" Title="UploadSessionOffsetError Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionOffsetError__ctor.htm">
           <HelpTOCNode Title="UploadSessionOffsetError Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionOffsetError__ctor.htm" />
           <HelpTOCNode Title="UploadSessionOffsetError Constructor (UInt64)" Url="html/M_Dropbox_Api_Files_UploadSessionOffsetError__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="4b1af8fc-fa4b-40e4-8fd2-084c3beae693" Title="UploadSessionOffsetError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionOffsetError.htm">
+        <HelpTOCNode Id="c8174370-a5ae-4d85-9302-2390af3b41bb" Title="UploadSessionOffsetError Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionOffsetError.htm">
           <HelpTOCNode Title="CorrectOffset Property " Url="html/P_Dropbox_Api_Files_UploadSessionOffsetError_CorrectOffset.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1b5c3389-11d4-4081-b94b-8afc832ece53" Title="UploadSessionStartResult Class" Url="html/T_Dropbox_Api_Files_UploadSessionStartResult.htm">
-        <HelpTOCNode Id="a1dc9670-1f00-4942-aecb-1c89ff644518" Title="UploadSessionStartResult Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionStartResult__ctor.htm">
+      <HelpTOCNode Id="e4203e97-346f-48b0-8777-b4bb033ca483" Title="UploadSessionStartResult Class" Url="html/T_Dropbox_Api_Files_UploadSessionStartResult.htm">
+        <HelpTOCNode Id="47a49e24-f74a-4044-9422-17f6c107eb6e" Title="UploadSessionStartResult Constructor " Url="html/Overload_Dropbox_Api_Files_UploadSessionStartResult__ctor.htm">
           <HelpTOCNode Title="UploadSessionStartResult Constructor " Url="html/M_Dropbox_Api_Files_UploadSessionStartResult__ctor.htm" />
           <HelpTOCNode Title="UploadSessionStartResult Constructor (String)" Url="html/M_Dropbox_Api_Files_UploadSessionStartResult__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="07e3f5fa-d2da-4d10-926e-4b6ec4bfc21c" Title="UploadSessionStartResult Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionStartResult.htm">
+        <HelpTOCNode Id="bf1441f0-d441-479c-a245-2b17087229d1" Title="UploadSessionStartResult Properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionStartResult.htm">
           <HelpTOCNode Title="SessionId Property " Url="html/P_Dropbox_Api_Files_UploadSessionStartResult_SessionId.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="3177ddeb-09ae-4461-9adf-5571f9de53f6" Title="WriteMode Class" Url="html/T_Dropbox_Api_Files_WriteMode.htm">
+      <HelpTOCNode Id="04561672-db40-4eb4-acac-39a22f331005" Title="WriteMode Class" Url="html/T_Dropbox_Api_Files_WriteMode.htm">
         <HelpTOCNode Title="WriteMode Constructor " Url="html/M_Dropbox_Api_Files_WriteMode__ctor.htm" />
-        <HelpTOCNode Id="67c46dd3-05b4-4c63-bf2d-236f660c559b" Title="WriteMode Properties" Url="html/Properties_T_Dropbox_Api_Files_WriteMode.htm">
+        <HelpTOCNode Id="dd154c6f-8820-4c99-a314-56434bb98adf" Title="WriteMode Properties" Url="html/Properties_T_Dropbox_Api_Files_WriteMode.htm">
           <HelpTOCNode Title="AsAdd Property " Url="html/P_Dropbox_Api_Files_WriteMode_AsAdd.htm" />
           <HelpTOCNode Title="AsOverwrite Property " Url="html/P_Dropbox_Api_Files_WriteMode_AsOverwrite.htm" />
           <HelpTOCNode Title="AsUpdate Property " Url="html/P_Dropbox_Api_Files_WriteMode_AsUpdate.htm" />
@@ -829,97 +1037,142 @@
           <HelpTOCNode Title="IsUpdate Property " Url="html/P_Dropbox_Api_Files_WriteMode_IsUpdate.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="23f3c0f2-8d1b-439e-8089-c50761ce4531" Title="WriteMode.Add Class" Url="html/T_Dropbox_Api_Files_WriteMode_Add.htm">
-        <HelpTOCNode Id="d271a099-9429-4297-94d9-5d1467f2a6f7" Title="Add Fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Add.htm">
+      <HelpTOCNode Id="3a789a87-9f07-4b8a-8983-8284e32231e0" Title="WriteMode.Add Class" Url="html/T_Dropbox_Api_Files_WriteMode_Add.htm">
+        <HelpTOCNode Id="66c818ee-1937-4a07-8909-db0c86a98dd7" Title="Add Fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Add.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_WriteMode_Add_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="83fe54e0-7592-4279-9d7d-fdce3ef9d140" Title="WriteMode.Overwrite Class" Url="html/T_Dropbox_Api_Files_WriteMode_Overwrite.htm">
-        <HelpTOCNode Id="e2806826-9ec9-4ede-9384-3bedab082cf9" Title="Overwrite Fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Overwrite.htm">
+      <HelpTOCNode Id="773fcbc7-156a-4c5f-993a-9d2d786b2bc5" Title="WriteMode.Overwrite Class" Url="html/T_Dropbox_Api_Files_WriteMode_Overwrite.htm">
+        <HelpTOCNode Id="54706ce0-00a5-4ff3-ad48-f4365dba7d28" Title="Overwrite Fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Overwrite.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Files_WriteMode_Overwrite_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2d124d7c-59ed-4b53-9602-92fd502c8ae4" Title="WriteMode.Update Class" Url="html/T_Dropbox_Api_Files_WriteMode_Update.htm">
+      <HelpTOCNode Id="1ffe41bb-f2b8-4211-9f51-0740503e1ba0" Title="WriteMode.Update Class" Url="html/T_Dropbox_Api_Files_WriteMode_Update.htm">
         <HelpTOCNode Title="WriteMode.Update Constructor " Url="html/M_Dropbox_Api_Files_WriteMode_Update__ctor.htm" />
-        <HelpTOCNode Id="05d529c8-a9c6-4c8c-802f-f0cbdbfb6a6e" Title="Update Properties" Url="html/Properties_T_Dropbox_Api_Files_WriteMode_Update.htm">
+        <HelpTOCNode Id="458905db-e4fb-4b74-b2cf-8c5222c37e51" Title="Update Properties" Url="html/Properties_T_Dropbox_Api_Files_WriteMode_Update.htm">
           <HelpTOCNode Title="Value Property " Url="html/P_Dropbox_Api_Files_WriteMode_Update_Value.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b68c8c41-0d94-46d4-9735-4f9e1dbf2713" Title="Dropbox.Api.Files.Routes" Url="html/N_Dropbox_Api_Files_Routes.htm">
-      <HelpTOCNode Id="b0f65e82-4f60-4e7b-90fa-dcc5389a6ea4" Title="FilesRoutes Class" Url="html/T_Dropbox_Api_Files_Routes_FilesRoutes.htm">
-        <HelpTOCNode Id="ad88ec84-ee07-4521-9896-071176371d4b" Title="FilesRoutes Methods" Url="html/Methods_T_Dropbox_Api_Files_Routes_FilesRoutes.htm">
-          <HelpTOCNode Id="72a0c77c-7935-4b4f-a1ac-b1524cda3bb7" Title="BeginDownload Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDownload.htm">
+    <HelpTOCNode Id="257a6655-4900-4ea6-8680-a2052eace39d" Title="Dropbox.Api.Files.Routes" Url="html/N_Dropbox_Api_Files_Routes.htm">
+      <HelpTOCNode Id="6fcc7cdf-7af6-4576-92af-cdf72e653502" Title="FilesRoutes Class" Url="html/T_Dropbox_Api_Files_Routes_FilesRoutes.htm">
+        <HelpTOCNode Id="1ca2d1e7-5275-4df6-ae68-24ca70f25e85" Title="FilesRoutes Methods" Url="html/Methods_T_Dropbox_Api_Files_Routes_FilesRoutes.htm">
+          <HelpTOCNode Id="2c857f93-155c-4a7e-87db-66b5159220bc" Title="BeginCopy Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginCopy.htm">
+            <HelpTOCNode Title="BeginCopy Method (RelocationArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginCopy.htm" />
+            <HelpTOCNode Title="BeginCopy Method (String, String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginCopy_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c0b857f7-ad89-4599-b748-f1951fb565ce" Title="BeginCreateFolder Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginCreateFolder.htm">
+            <HelpTOCNode Title="BeginCreateFolder Method (String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginCreateFolder_1.htm" />
+            <HelpTOCNode Title="BeginCreateFolder Method (CreateFolderArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginCreateFolder.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="23943b80-cd51-4575-97e8-a69be54de590" Title="BeginDelete Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDelete.htm">
+            <HelpTOCNode Title="BeginDelete Method (String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginDelete_1.htm" />
+            <HelpTOCNode Title="BeginDelete Method (DeleteArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginDelete.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1ae7176d-fc15-4052-961b-13f9b1329876" Title="BeginDownload Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDownload.htm">
             <HelpTOCNode Title="BeginDownload Method (DownloadArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginDownload.htm" />
             <HelpTOCNode Title="BeginDownload Method (String, String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginDownload_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="ca7386ce-8724-4128-92ff-1c811a8839e9" Title="BeginGetMetadata Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetMetadata.htm">
+          <HelpTOCNode Id="efe7972e-3d4d-4cb7-821c-616479d1fa7f" Title="BeginGetMetadata Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetMetadata.htm">
             <HelpTOCNode Title="BeginGetMetadata Method (String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetMetadata_1.htm" />
             <HelpTOCNode Title="BeginGetMetadata Method (GetMetadataArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetMetadata.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="8126beef-c709-49b5-bc6b-9f6a719a2fcd" Title="BeginListFolder Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolder.htm">
+          <HelpTOCNode Id="f9cc5f6e-a347-411a-ae9f-559921a0db93" Title="BeginGetThumbnail Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetThumbnail.htm">
+            <HelpTOCNode Title="BeginGetThumbnail Method (ThumbnailArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetThumbnail.htm" />
+            <HelpTOCNode Title="BeginGetThumbnail Method (String, ThumbnailFormat, ThumbnailSize, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetThumbnail_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="8b398d2d-8297-4bd5-9640-9ca7a9f5f2ce" Title="BeginListFolder Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolder.htm">
             <HelpTOCNode Title="BeginListFolder Method (String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolder_1.htm" />
             <HelpTOCNode Title="BeginListFolder Method (ListFolderArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolder.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="6ba3fbd1-bc86-4645-9ebb-ddeb9b202721" Title="BeginListFolderContinue Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolderContinue.htm">
+          <HelpTOCNode Id="73269534-03c2-4fe5-84bf-8b968d14b65e" Title="BeginListFolderContinue Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolderContinue.htm">
             <HelpTOCNode Title="BeginListFolderContinue Method (String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolderContinue_1.htm" />
             <HelpTOCNode Title="BeginListFolderContinue Method (ListFolderContinueArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolderContinue.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="e93eef6d-2606-4164-a7e3-02dcff5d2a5f" Title="BeginSearch Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginSearch.htm">
+          <HelpTOCNode Id="d3ed6142-1330-4ab9-beae-54a7d34e1ada" Title="BeginMove Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginMove.htm">
+            <HelpTOCNode Title="BeginMove Method (RelocationArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginMove.htm" />
+            <HelpTOCNode Title="BeginMove Method (String, String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginMove_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f84b40a9-6fdd-4b21-8887-fbe65e5612f5" Title="BeginSearch Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginSearch.htm">
             <HelpTOCNode Title="BeginSearch Method (SearchQuery, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginSearch.htm" />
             <HelpTOCNode Title="BeginSearch Method (String, String, UInt64, UInt64, SearchMode, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginSearch_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="66be6534-3728-47e5-a3f2-16e4ce42f210" Title="BeginUpload Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUpload.htm">
+          <HelpTOCNode Id="0feadbef-cfe7-4f4c-bb5b-1f7e8042a565" Title="BeginUpload Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUpload.htm">
             <HelpTOCNode Title="BeginUpload Method (CommitInfo, Stream, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUpload.htm" />
             <HelpTOCNode Title="BeginUpload Method (String, WriteMode, Boolean, Nullable(DateTime), Boolean, Stream, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUpload_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="89579c34-7f46-4f63-8692-89ff39077ecd" Title="BeginUploadSessionAppend Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionAppend.htm">
+          <HelpTOCNode Id="3aa4ec96-b1c4-4aa1-ba4e-dfff7ada6bc4" Title="BeginUploadSessionAppend Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionAppend.htm">
             <HelpTOCNode Title="BeginUploadSessionAppend Method (UploadSessionCursor, Stream, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionAppend.htm" />
             <HelpTOCNode Title="BeginUploadSessionAppend Method (String, UInt64, Stream, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionAppend_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="a17c0bb9-6554-4250-9d05-cc9aa19c28f5" Title="BeginUploadSessionFinish Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionFinish.htm">
+          <HelpTOCNode Id="6c3f8162-f27f-41ac-86a8-2b936112a3d5" Title="BeginUploadSessionFinish Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionFinish.htm">
             <HelpTOCNode Title="BeginUploadSessionFinish Method (UploadSessionFinishArg, Stream, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionFinish_1.htm" />
             <HelpTOCNode Title="BeginUploadSessionFinish Method (UploadSessionCursor, CommitInfo, Stream, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionFinish.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="BeginUploadSessionStart Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionStart.htm" />
-          <HelpTOCNode Id="0ef28a28-0a60-45ad-8e33-458920a1f790" Title="DownloadAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_DownloadAsync.htm">
+          <HelpTOCNode Id="ed6d3447-54a7-4287-9b24-7c0c7e3f5c23" Title="CopyAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_CopyAsync.htm">
+            <HelpTOCNode Title="CopyAsync Method (RelocationArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_CopyAsync.htm" />
+            <HelpTOCNode Title="CopyAsync Method (String, String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_CopyAsync_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="533d9547-34e4-4cde-8636-b8ff5cf3ecd9" Title="CreateFolderAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_CreateFolderAsync.htm">
+            <HelpTOCNode Title="CreateFolderAsync Method (String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_CreateFolderAsync_1.htm" />
+            <HelpTOCNode Title="CreateFolderAsync Method (CreateFolderArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_CreateFolderAsync.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e2ba3225-e914-4c62-b9e5-f92f6cd6a33d" Title="DeleteAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_DeleteAsync.htm">
+            <HelpTOCNode Title="DeleteAsync Method (String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_DeleteAsync_1.htm" />
+            <HelpTOCNode Title="DeleteAsync Method (DeleteArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_DeleteAsync.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4a515bec-69a1-4344-9daf-e87b741a8cfc" Title="DownloadAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_DownloadAsync.htm">
             <HelpTOCNode Title="DownloadAsync Method (DownloadArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_DownloadAsync.htm" />
             <HelpTOCNode Title="DownloadAsync Method (String, String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_DownloadAsync_1.htm" />
           </HelpTOCNode>
+          <HelpTOCNode Title="EndCopy Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndCopy.htm" />
+          <HelpTOCNode Title="EndCreateFolder Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndCreateFolder.htm" />
+          <HelpTOCNode Title="EndDelete Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndDelete.htm" />
           <HelpTOCNode Title="EndDownload Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndDownload.htm" />
           <HelpTOCNode Title="EndGetMetadata Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndGetMetadata.htm" />
+          <HelpTOCNode Title="EndGetThumbnail Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndGetThumbnail.htm" />
           <HelpTOCNode Title="EndListFolder Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndListFolder.htm" />
           <HelpTOCNode Title="EndListFolderContinue Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndListFolderContinue.htm" />
+          <HelpTOCNode Title="EndMove Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndMove.htm" />
           <HelpTOCNode Title="EndSearch Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndSearch.htm" />
           <HelpTOCNode Title="EndUpload Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUpload.htm" />
           <HelpTOCNode Title="EndUploadSessionAppend Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionAppend.htm" />
           <HelpTOCNode Title="EndUploadSessionFinish Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionFinish.htm" />
           <HelpTOCNode Title="EndUploadSessionStart Method " Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionStart.htm" />
-          <HelpTOCNode Id="0397cc3e-c85c-4d4b-922d-1109320648fe" Title="GetMetadataAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_GetMetadataAsync.htm">
+          <HelpTOCNode Id="ffbfe9ce-182e-4a62-82d5-cd55064b91c5" Title="GetMetadataAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_GetMetadataAsync.htm">
             <HelpTOCNode Title="GetMetadataAsync Method (String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_GetMetadataAsync_1.htm" />
             <HelpTOCNode Title="GetMetadataAsync Method (GetMetadataArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_GetMetadataAsync.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="6b3dc6c0-dbcf-462a-a7f8-4ac37c25c2b0" Title="ListFolderAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderAsync.htm">
+          <HelpTOCNode Id="13e5663f-679d-40c8-9cf8-fcd38bdd10ea" Title="GetThumbnailAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_GetThumbnailAsync.htm">
+            <HelpTOCNode Title="GetThumbnailAsync Method (ThumbnailArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_GetThumbnailAsync.htm" />
+            <HelpTOCNode Title="GetThumbnailAsync Method (String, ThumbnailFormat, ThumbnailSize)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_GetThumbnailAsync_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d952780c-4f62-4e61-9362-785698334b6f" Title="ListFolderAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderAsync.htm">
             <HelpTOCNode Title="ListFolderAsync Method (String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderAsync_1.htm" />
             <HelpTOCNode Title="ListFolderAsync Method (ListFolderArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderAsync.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="efd3e5a4-cd32-4719-af03-7a243f16ea15" Title="ListFolderContinueAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderContinueAsync.htm">
+          <HelpTOCNode Id="7de8aae3-bfb8-4722-9f6b-2940fee4ecb7" Title="ListFolderContinueAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderContinueAsync.htm">
             <HelpTOCNode Title="ListFolderContinueAsync Method (String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderContinueAsync_1.htm" />
             <HelpTOCNode Title="ListFolderContinueAsync Method (ListFolderContinueArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderContinueAsync.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="9cb9be2b-1c8f-4bcd-a177-cd803ad5ab08" Title="SearchAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_SearchAsync.htm">
+          <HelpTOCNode Id="6a8f5531-ed0a-4c18-9f82-c419a21401ed" Title="MoveAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_MoveAsync.htm">
+            <HelpTOCNode Title="MoveAsync Method (RelocationArg)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_MoveAsync.htm" />
+            <HelpTOCNode Title="MoveAsync Method (String, String)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_MoveAsync_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c25e3af6-3561-4098-ab2c-3ed9aaa2d061" Title="SearchAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_SearchAsync.htm">
             <HelpTOCNode Title="SearchAsync Method (SearchQuery)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_SearchAsync.htm" />
             <HelpTOCNode Title="SearchAsync Method (String, String, UInt64, UInt64, SearchMode)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_SearchAsync_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="cab0859b-7d21-4dad-a702-199bc0e9efe8" Title="UploadAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadAsync.htm">
+          <HelpTOCNode Id="355540a4-9314-4c85-9952-6f0de3505c86" Title="UploadAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadAsync.htm">
             <HelpTOCNode Title="UploadAsync Method (CommitInfo, Stream)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_UploadAsync.htm" />
             <HelpTOCNode Title="UploadAsync Method (String, WriteMode, Boolean, Nullable(DateTime), Boolean, Stream)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_UploadAsync_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="cb8d38f8-060b-483d-9ee6-9e9947d06213" Title="UploadSessionAppendAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionAppendAsync.htm">
+          <HelpTOCNode Id="20cd96b1-267f-4958-a55d-34b720ebb6a7" Title="UploadSessionAppendAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionAppendAsync.htm">
             <HelpTOCNode Title="UploadSessionAppendAsync Method (UploadSessionCursor, Stream)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionAppendAsync.htm" />
             <HelpTOCNode Title="UploadSessionAppendAsync Method (String, UInt64, Stream)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionAppendAsync_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="216ec7c1-32e6-4266-8567-5969247bc750" Title="UploadSessionFinishAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionFinishAsync.htm">
+          <HelpTOCNode Id="4b94792d-c070-4248-a4dc-327412b6aa0f" Title="UploadSessionFinishAsync Method " Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionFinishAsync.htm">
             <HelpTOCNode Title="UploadSessionFinishAsync Method (UploadSessionFinishArg, Stream)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionFinishAsync_1.htm" />
             <HelpTOCNode Title="UploadSessionFinishAsync Method (UploadSessionCursor, CommitInfo, Stream)" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionFinishAsync.htm" />
           </HelpTOCNode>
@@ -927,35 +1180,62 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4a4f146f-1d4c-4404-af84-54c4bb0d7cac" Title="Dropbox.Api.Users" Url="html/N_Dropbox_Api_Users.htm">
-      <HelpTOCNode Id="5e564e32-bcce-497c-ad36-6cdfe7a8f92c" Title="Account Class" Url="html/T_Dropbox_Api_Users_Account.htm">
-        <HelpTOCNode Id="79250278-2953-4ae0-8822-f866d62b0899" Title="Account Constructor " Url="html/Overload_Dropbox_Api_Users_Account__ctor.htm">
+    <HelpTOCNode Id="539b468d-9d51-45b6-b059-a3dc01ac6d04" Title="Dropbox.Api.Users" Url="html/N_Dropbox_Api_Users.htm">
+      <HelpTOCNode Id="08ce7441-6450-4df5-9dff-4e15d3303aab" Title="Account Class" Url="html/T_Dropbox_Api_Users_Account.htm">
+        <HelpTOCNode Id="688ef22a-5cff-48ce-9cab-5e180b6bdece" Title="Account Constructor " Url="html/Overload_Dropbox_Api_Users_Account__ctor.htm">
           <HelpTOCNode Title="Account Constructor " Url="html/M_Dropbox_Api_Users_Account__ctor.htm" />
           <HelpTOCNode Title="Account Constructor (String, Name)" Url="html/M_Dropbox_Api_Users_Account__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="4d987d46-ba58-4ecb-b10d-c906648a1200" Title="Account Properties" Url="html/Properties_T_Dropbox_Api_Users_Account.htm">
+        <HelpTOCNode Id="7bd49975-ca02-460c-a819-4062acf4e7fe" Title="Account Properties" Url="html/Properties_T_Dropbox_Api_Users_Account.htm">
           <HelpTOCNode Title="AccountId Property " Url="html/P_Dropbox_Api_Users_Account_AccountId.htm" />
           <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Users_Account_Name.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a1517753-72b3-425e-93ef-fe7185f72d05" Title="BasicAccount Class" Url="html/T_Dropbox_Api_Users_BasicAccount.htm">
-        <HelpTOCNode Id="95b06935-9acf-46b9-abce-4b18c1963525" Title="BasicAccount Constructor " Url="html/Overload_Dropbox_Api_Users_BasicAccount__ctor.htm">
+      <HelpTOCNode Id="dd52088c-9524-4e6c-8b86-61e82974a328" Title="AccountType Class" Url="html/T_Dropbox_Api_Users_AccountType.htm">
+        <HelpTOCNode Title="AccountType Constructor " Url="html/M_Dropbox_Api_Users_AccountType__ctor.htm" />
+        <HelpTOCNode Id="b72c56d2-c990-4994-81e7-11cdb62205a2" Title="AccountType Properties" Url="html/Properties_T_Dropbox_Api_Users_AccountType.htm">
+          <HelpTOCNode Title="AsBasic Property " Url="html/P_Dropbox_Api_Users_AccountType_AsBasic.htm" />
+          <HelpTOCNode Title="AsBusiness Property " Url="html/P_Dropbox_Api_Users_AccountType_AsBusiness.htm" />
+          <HelpTOCNode Title="AsPro Property " Url="html/P_Dropbox_Api_Users_AccountType_AsPro.htm" />
+          <HelpTOCNode Title="IsBasic Property " Url="html/P_Dropbox_Api_Users_AccountType_IsBasic.htm" />
+          <HelpTOCNode Title="IsBusiness Property " Url="html/P_Dropbox_Api_Users_AccountType_IsBusiness.htm" />
+          <HelpTOCNode Title="IsPro Property " Url="html/P_Dropbox_Api_Users_AccountType_IsPro.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1e597b09-2931-4f32-a468-f9f72bed86d3" Title="AccountType.Basic Class" Url="html/T_Dropbox_Api_Users_AccountType_Basic.htm">
+        <HelpTOCNode Id="4901015f-9f56-4faf-a665-a24eadbe9602" Title="Basic Fields" Url="html/Fields_T_Dropbox_Api_Users_AccountType_Basic.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Users_AccountType_Basic_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="611ccc37-0248-43d2-aaa3-02055c988656" Title="AccountType.Business Class" Url="html/T_Dropbox_Api_Users_AccountType_Business.htm">
+        <HelpTOCNode Id="183009f5-d38d-4b35-b248-489812221744" Title="Business Fields" Url="html/Fields_T_Dropbox_Api_Users_AccountType_Business.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Users_AccountType_Business_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="19acfbca-f379-41d6-8584-20615d7e53d2" Title="AccountType.Pro Class" Url="html/T_Dropbox_Api_Users_AccountType_Pro.htm">
+        <HelpTOCNode Id="12dfa689-9c0a-45c4-b996-0b95fd381b7e" Title="Pro Fields" Url="html/Fields_T_Dropbox_Api_Users_AccountType_Pro.htm">
+          <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Users_AccountType_Pro_Instance.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ac81a2a4-428e-4cd2-84ee-f6cdd09e30f4" Title="BasicAccount Class" Url="html/T_Dropbox_Api_Users_BasicAccount.htm">
+        <HelpTOCNode Id="b7f3f3c2-0ace-42f5-87ee-251bac43a295" Title="BasicAccount Constructor " Url="html/Overload_Dropbox_Api_Users_BasicAccount__ctor.htm">
           <HelpTOCNode Title="BasicAccount Constructor " Url="html/M_Dropbox_Api_Users_BasicAccount__ctor.htm" />
           <HelpTOCNode Title="BasicAccount Constructor (String, Name, Boolean)" Url="html/M_Dropbox_Api_Users_BasicAccount__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5c1913f5-a7c6-4c00-9400-32451437b308" Title="BasicAccount Properties" Url="html/Properties_T_Dropbox_Api_Users_BasicAccount.htm">
+        <HelpTOCNode Id="304ed336-4ebf-472c-805a-4c02683ccef1" Title="BasicAccount Properties" Url="html/Properties_T_Dropbox_Api_Users_BasicAccount.htm">
           <HelpTOCNode Title="AccountId Property " Url="html/P_Dropbox_Api_Users_BasicAccount_AccountId.htm" />
           <HelpTOCNode Title="IsTeammate Property " Url="html/P_Dropbox_Api_Users_BasicAccount_IsTeammate.htm" />
           <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Users_BasicAccount_Name.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="884c9486-ade6-4c6f-bd51-ba3b033d3516" Title="FullAccount Class" Url="html/T_Dropbox_Api_Users_FullAccount.htm">
-        <HelpTOCNode Id="f3c4b652-e3ca-41a1-857d-183c34807a5c" Title="FullAccount Constructor " Url="html/Overload_Dropbox_Api_Users_FullAccount__ctor.htm">
+      <HelpTOCNode Id="7bb2d0c7-b306-4c29-b067-5e05af4e810f" Title="FullAccount Class" Url="html/T_Dropbox_Api_Users_FullAccount.htm">
+        <HelpTOCNode Id="5f3f4ea7-6c5a-41b7-b7e9-eabdb73d4419" Title="FullAccount Constructor " Url="html/Overload_Dropbox_Api_Users_FullAccount__ctor.htm">
           <HelpTOCNode Title="FullAccount Constructor " Url="html/M_Dropbox_Api_Users_FullAccount__ctor.htm" />
-          <HelpTOCNode Title="FullAccount Constructor (String, Name, String, String, String, Boolean, String, Team)" Url="html/M_Dropbox_Api_Users_FullAccount__ctor_1.htm" />
+          <HelpTOCNode Title="FullAccount Constructor (String, Name, String, String, String, Boolean, AccountType, String, Team)" Url="html/M_Dropbox_Api_Users_FullAccount__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="50f7bc37-f9ba-4128-8ee4-09f8596ec449" Title="FullAccount Properties" Url="html/Properties_T_Dropbox_Api_Users_FullAccount.htm">
+        <HelpTOCNode Id="19193889-8645-4184-9471-99294dacac73" Title="FullAccount Properties" Url="html/Properties_T_Dropbox_Api_Users_FullAccount.htm">
           <HelpTOCNode Title="AccountId Property " Url="html/P_Dropbox_Api_Users_FullAccount_AccountId.htm" />
+          <HelpTOCNode Title="AccountType Property " Url="html/P_Dropbox_Api_Users_FullAccount_AccountType.htm" />
           <HelpTOCNode Title="Country Property " Url="html/P_Dropbox_Api_Users_FullAccount_Country.htm" />
           <HelpTOCNode Title="Email Property " Url="html/P_Dropbox_Api_Users_FullAccount_Email.htm" />
           <HelpTOCNode Title="IsPaired Property " Url="html/P_Dropbox_Api_Users_FullAccount_IsPaired.htm" />
@@ -965,72 +1245,71 @@
           <HelpTOCNode Title="Team Property " Url="html/P_Dropbox_Api_Users_FullAccount_Team.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c679ab5a-c85e-45d8-88c7-f46b2be0d41c" Title="GetAccountArg Class" Url="html/T_Dropbox_Api_Users_GetAccountArg.htm">
-        <HelpTOCNode Id="d9ea4870-ae1b-4124-b4a4-cb60b8b40dee" Title="GetAccountArg Constructor " Url="html/Overload_Dropbox_Api_Users_GetAccountArg__ctor.htm">
+      <HelpTOCNode Id="38caf239-7ade-4467-8bbc-a126c512ad64" Title="GetAccountArg Class" Url="html/T_Dropbox_Api_Users_GetAccountArg.htm">
+        <HelpTOCNode Id="20106be7-13c5-40f3-a1db-1f78d37cf5a5" Title="GetAccountArg Constructor " Url="html/Overload_Dropbox_Api_Users_GetAccountArg__ctor.htm">
           <HelpTOCNode Title="GetAccountArg Constructor " Url="html/M_Dropbox_Api_Users_GetAccountArg__ctor.htm" />
           <HelpTOCNode Title="GetAccountArg Constructor (String)" Url="html/M_Dropbox_Api_Users_GetAccountArg__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="1c88d861-32d2-446f-ac0d-330c49a226a1" Title="GetAccountArg Properties" Url="html/Properties_T_Dropbox_Api_Users_GetAccountArg.htm">
+        <HelpTOCNode Id="b9e712db-78a8-464c-8b85-5a8a158dee94" Title="GetAccountArg Properties" Url="html/Properties_T_Dropbox_Api_Users_GetAccountArg.htm">
           <HelpTOCNode Title="AccountId Property " Url="html/P_Dropbox_Api_Users_GetAccountArg_AccountId.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c0cdcd33-fb04-4c7e-92d2-3e0507e7c468" Title="GetAccountError Class" Url="html/T_Dropbox_Api_Users_GetAccountError.htm">
+      <HelpTOCNode Id="78d0c324-defd-4f1d-9490-18f1db08db7f" Title="GetAccountError Class" Url="html/T_Dropbox_Api_Users_GetAccountError.htm">
         <HelpTOCNode Title="GetAccountError Constructor " Url="html/M_Dropbox_Api_Users_GetAccountError__ctor.htm" />
-        <HelpTOCNode Id="53998d4e-ea58-42c8-b13b-7e8645a988ae" Title="GetAccountError Properties" Url="html/Properties_T_Dropbox_Api_Users_GetAccountError.htm">
+        <HelpTOCNode Id="09a2a227-c0fa-441d-a06f-bef1051e35ae" Title="GetAccountError Properties" Url="html/Properties_T_Dropbox_Api_Users_GetAccountError.htm">
           <HelpTOCNode Title="AsNoAccount Property " Url="html/P_Dropbox_Api_Users_GetAccountError_AsNoAccount.htm" />
           <HelpTOCNode Title="AsUnknown Property " Url="html/P_Dropbox_Api_Users_GetAccountError_AsUnknown.htm" />
           <HelpTOCNode Title="IsNoAccount Property " Url="html/P_Dropbox_Api_Users_GetAccountError_IsNoAccount.htm" />
           <HelpTOCNode Title="IsUnknown Property " Url="html/P_Dropbox_Api_Users_GetAccountError_IsUnknown.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="f5b384c5-b92e-487f-8cd2-d25cfc0811ec" Title="GetAccountError.NoAccount Class" Url="html/T_Dropbox_Api_Users_GetAccountError_NoAccount.htm">
-        <HelpTOCNode Id="fb59a5a2-86ee-46ba-bd6d-345b5f410260" Title="NoAccount Fields" Url="html/Fields_T_Dropbox_Api_Users_GetAccountError_NoAccount.htm">
+      <HelpTOCNode Id="cbcef546-4f2d-4e5c-b15f-68edae62e2a5" Title="GetAccountError.NoAccount Class" Url="html/T_Dropbox_Api_Users_GetAccountError_NoAccount.htm">
+        <HelpTOCNode Id="023c840d-431d-4dd5-91d1-3530e385bff5" Title="NoAccount Fields" Url="html/Fields_T_Dropbox_Api_Users_GetAccountError_NoAccount.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Users_GetAccountError_NoAccount_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="29e0ff58-5421-4257-bbb1-873b0fb9761d" Title="GetAccountError.Unknown Class" Url="html/T_Dropbox_Api_Users_GetAccountError_Unknown.htm">
-        <HelpTOCNode Id="906b7040-53e1-4762-901e-b587bd588317" Title="Unknown Fields" Url="html/Fields_T_Dropbox_Api_Users_GetAccountError_Unknown.htm">
+      <HelpTOCNode Id="0df5a220-bbf9-41cc-a97f-0540404d74a0" Title="GetAccountError.Unknown Class" Url="html/T_Dropbox_Api_Users_GetAccountError_Unknown.htm">
+        <HelpTOCNode Id="342f12e3-277c-45a8-a4ae-8734cc6773e2" Title="Unknown Fields" Url="html/Fields_T_Dropbox_Api_Users_GetAccountError_Unknown.htm">
           <HelpTOCNode Title="Instance Field" Url="html/F_Dropbox_Api_Users_GetAccountError_Unknown_Instance.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="591b5756-e342-42aa-8991-14413c340e74" Title="Name Class" Url="html/T_Dropbox_Api_Users_Name.htm">
-        <HelpTOCNode Id="9758f359-0b97-4392-add0-4d2d5e2d5240" Title="Name Constructor " Url="html/Overload_Dropbox_Api_Users_Name__ctor.htm">
+      <HelpTOCNode Id="63b21e7c-fb53-4ec5-b17f-f4121c9ec797" Title="Name Class" Url="html/T_Dropbox_Api_Users_Name.htm">
+        <HelpTOCNode Id="069ec2ec-3f33-4e88-b7db-cfc58997b97b" Title="Name Constructor " Url="html/Overload_Dropbox_Api_Users_Name__ctor.htm">
           <HelpTOCNode Title="Name Constructor " Url="html/M_Dropbox_Api_Users_Name__ctor.htm" />
           <HelpTOCNode Title="Name Constructor (String, String, String, String)" Url="html/M_Dropbox_Api_Users_Name__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="db9c38e4-ff0b-48c8-9af8-0a8bb63cf761" Title="Name Properties" Url="html/Properties_T_Dropbox_Api_Users_Name.htm">
+        <HelpTOCNode Id="b6936322-c037-4d2c-857f-c25e2c9582ea" Title="Name Properties" Url="html/Properties_T_Dropbox_Api_Users_Name.htm">
           <HelpTOCNode Title="DisplayName Property " Url="html/P_Dropbox_Api_Users_Name_DisplayName.htm" />
           <HelpTOCNode Title="FamiliarName Property " Url="html/P_Dropbox_Api_Users_Name_FamiliarName.htm" />
           <HelpTOCNode Title="GivenName Property " Url="html/P_Dropbox_Api_Users_Name_GivenName.htm" />
           <HelpTOCNode Title="Surname Property " Url="html/P_Dropbox_Api_Users_Name_Surname.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="fd9b9b09-03fd-4b4e-96b4-ea015b0353d7" Title="SpaceUsage Class" Url="html/T_Dropbox_Api_Users_SpaceUsage.htm">
-        <HelpTOCNode Id="6d52e9b4-f1a2-49fb-86cc-14889a38a2f6" Title="SpaceUsage Constructor " Url="html/Overload_Dropbox_Api_Users_SpaceUsage__ctor.htm">
+      <HelpTOCNode Id="292a1930-c479-4217-a151-71f5cde512eb" Title="SpaceUsage Class" Url="html/T_Dropbox_Api_Users_SpaceUsage.htm">
+        <HelpTOCNode Id="642b8d01-9d16-4b46-998b-c462c09df100" Title="SpaceUsage Constructor " Url="html/Overload_Dropbox_Api_Users_SpaceUsage__ctor.htm">
           <HelpTOCNode Title="SpaceUsage Constructor " Url="html/M_Dropbox_Api_Users_SpaceUsage__ctor.htm" />
-          <HelpTOCNode Title="SpaceUsage Constructor (UInt64, UInt64, UInt64)" Url="html/M_Dropbox_Api_Users_SpaceUsage__ctor_1.htm" />
+          <HelpTOCNode Title="SpaceUsage Constructor (UInt64, UInt64)" Url="html/M_Dropbox_Api_Users_SpaceUsage__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="2a558dd1-16a2-44de-a374-3be553c99b8c" Title="SpaceUsage Properties" Url="html/Properties_T_Dropbox_Api_Users_SpaceUsage.htm">
-          <HelpTOCNode Title="Quota Property " Url="html/P_Dropbox_Api_Users_SpaceUsage_Quota.htm" />
-          <HelpTOCNode Title="UsageIndividual Property " Url="html/P_Dropbox_Api_Users_SpaceUsage_UsageIndividual.htm" />
-          <HelpTOCNode Title="UsageShared Property " Url="html/P_Dropbox_Api_Users_SpaceUsage_UsageShared.htm" />
+        <HelpTOCNode Id="c25653a3-36cb-46da-8d01-9259f10fc51a" Title="SpaceUsage Properties" Url="html/Properties_T_Dropbox_Api_Users_SpaceUsage.htm">
+          <HelpTOCNode Title="Allocated Property " Url="html/P_Dropbox_Api_Users_SpaceUsage_Allocated.htm" />
+          <HelpTOCNode Title="Used Property " Url="html/P_Dropbox_Api_Users_SpaceUsage_Used.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d7000f1c-7d9c-4f07-83f4-80da64f15c1b" Title="Team Class" Url="html/T_Dropbox_Api_Users_Team.htm">
-        <HelpTOCNode Id="97793d9a-20df-42c6-93e8-edfc34807fd4" Title="Team Constructor " Url="html/Overload_Dropbox_Api_Users_Team__ctor.htm">
+      <HelpTOCNode Id="87bbe7e3-f057-4fa0-8b7c-2e469a1fbd0e" Title="Team Class" Url="html/T_Dropbox_Api_Users_Team.htm">
+        <HelpTOCNode Id="c059198d-2870-44e5-8bd8-7de2a2b461a9" Title="Team Constructor " Url="html/Overload_Dropbox_Api_Users_Team__ctor.htm">
           <HelpTOCNode Title="Team Constructor " Url="html/M_Dropbox_Api_Users_Team__ctor.htm" />
           <HelpTOCNode Title="Team Constructor (String, String)" Url="html/M_Dropbox_Api_Users_Team__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="18d86eff-be91-4be5-b10b-8da2749ddf4a" Title="Team Properties" Url="html/Properties_T_Dropbox_Api_Users_Team.htm">
+        <HelpTOCNode Id="dcb5429c-fd5a-4bd3-84d8-84d3bcf31a54" Title="Team Properties" Url="html/Properties_T_Dropbox_Api_Users_Team.htm">
           <HelpTOCNode Title="Id Property " Url="html/P_Dropbox_Api_Users_Team_Id.htm" />
           <HelpTOCNode Title="Name Property " Url="html/P_Dropbox_Api_Users_Team_Name.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a450a80a-ca7c-4fe1-ba33-49811e640e49" Title="Dropbox.Api.Users.Routes" Url="html/N_Dropbox_Api_Users_Routes.htm">
-      <HelpTOCNode Id="8d668cae-9e0d-4e44-8bdc-a688599ac1a0" Title="UsersRoutes Class" Url="html/T_Dropbox_Api_Users_Routes_UsersRoutes.htm">
-        <HelpTOCNode Id="42732d40-28e0-4951-a1bc-4b0f81ceb31b" Title="UsersRoutes Methods" Url="html/Methods_T_Dropbox_Api_Users_Routes_UsersRoutes.htm">
-          <HelpTOCNode Id="07643647-7e45-414f-97c7-064c4178c7ca" Title="BeginGetAccount Method " Url="html/Overload_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetAccount.htm">
+    <HelpTOCNode Id="4c395f14-cc51-42ec-8105-3638cbc1ff88" Title="Dropbox.Api.Users.Routes" Url="html/N_Dropbox_Api_Users_Routes.htm">
+      <HelpTOCNode Id="b26b5e03-29b4-455a-87cc-a6470c462006" Title="UsersRoutes Class" Url="html/T_Dropbox_Api_Users_Routes_UsersRoutes.htm">
+        <HelpTOCNode Id="be8f11c3-8c43-4661-bed6-5da309b774af" Title="UsersRoutes Methods" Url="html/Methods_T_Dropbox_Api_Users_Routes_UsersRoutes.htm">
+          <HelpTOCNode Id="40413b48-479b-49c3-ba8b-284dca9454e4" Title="BeginGetAccount Method " Url="html/Overload_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetAccount.htm">
             <HelpTOCNode Title="BeginGetAccount Method (String, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetAccount_1.htm" />
             <HelpTOCNode Title="BeginGetAccount Method (GetAccountArg, AsyncCallback, Object)" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetAccount.htm" />
           </HelpTOCNode>
@@ -1039,7 +1318,7 @@
           <HelpTOCNode Title="EndGetAccount Method " Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_EndGetAccount.htm" />
           <HelpTOCNode Title="EndGetCurrentAccount Method " Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_EndGetCurrentAccount.htm" />
           <HelpTOCNode Title="EndGetSpaceUsage Method " Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_EndGetSpaceUsage.htm" />
-          <HelpTOCNode Id="c4dbc4a4-a0ea-44c1-9a96-95214c89e0de" Title="GetAccountAsync Method " Url="html/Overload_Dropbox_Api_Users_Routes_UsersRoutes_GetAccountAsync.htm">
+          <HelpTOCNode Id="a5d0d62c-e394-4000-91b5-b35878762b41" Title="GetAccountAsync Method " Url="html/Overload_Dropbox_Api_Users_Routes_UsersRoutes_GetAccountAsync.htm">
             <HelpTOCNode Title="GetAccountAsync Method (String)" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_GetAccountAsync_1.htm" />
             <HelpTOCNode Title="GetAccountAsync Method (GetAccountArg)" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_GetAccountAsync.htm" />
           </HelpTOCNode>

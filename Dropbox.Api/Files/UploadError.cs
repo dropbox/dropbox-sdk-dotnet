@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload error object</para>
+    /// <para>Errors for upload.</para>
     /// </summary>
     public class UploadError : enc.IEncodable<UploadError>
     {
@@ -109,7 +109,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The commit failed object</para>
+        /// <para>The upload failed; the value explains the reason.</para>
         /// </summary>
         public sealed class CommitFailed : UploadError, enc.IEncodable<CommitFailed>
         {
@@ -154,7 +154,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : UploadError, enc.IEncodable<Other>
         {

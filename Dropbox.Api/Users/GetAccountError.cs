@@ -11,7 +11,8 @@ namespace Dropbox.Api.Users
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The get account error object</para>
+    /// <para>Error returned by <see
+    /// cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountAsync" />.</para>
     /// </summary>
     public class GetAccountError : enc.IEncodable<GetAccountError>
     {

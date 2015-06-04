@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload session start result object</para>
+    /// <para>The result of <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
     /// </summary>
     public sealed class UploadSessionStartResult : enc.IEncodable<UploadSessionStartResult>
     {
@@ -19,7 +20,10 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadSessionStartResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">A unique identifier for the upload session.</param>
+        /// <param name="sessionId">A unique identifier for the upload session. Pass this to
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
+        /// />.</param>
         public UploadSessionStartResult(string sessionId)
         {
             if (sessionId == null)
@@ -41,7 +45,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>A unique identifier for the upload session.</para>
+        /// <para>A unique identifier for the upload session. Pass this to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> and <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
         /// </summary>
         public string SessionId { get; private set; }
 
@@ -72,9 +78,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.SessionId = obj.GetField<string>("session_id");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

@@ -11,14 +11,16 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The no file object</para>
+    /// <para>Error structure for <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" />.</para>
     /// </summary>
     public sealed class NoFile : enc.IEncodable<NoFile>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="NoFile" /> class.</para>
         /// </summary>
-        /// <param name="reason">The reason</param>
+        /// <param name="reason">The path could not be downloaded. The value gives the
+        /// reason.</param>
         public NoFile(NoFileReason reason)
         {
             if (reason == null)
@@ -39,7 +41,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the reason of the no file</para>
+        /// <para>The path could not be downloaded. The value gives the reason.</para>
         /// </summary>
         public NoFileReason Reason { get; private set; }
 
@@ -70,9 +72,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.Reason = obj.GetFieldObject<NoFileReason>("reason");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

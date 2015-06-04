@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload commit error object</para>
+    /// <para>Error structure for commit errors.</para>
     /// </summary>
     public sealed class UploadCommitError : enc.IEncodable<UploadCommitError>
     {
@@ -19,8 +19,9 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadCommitError" />
         /// class.</para>
         /// </summary>
-        /// <param name="reason">The reason</param>
-        /// <param name="uploadSessionId">The upload session id</param>
+        /// <param name="reason">The reason why the commit failed.</param>
+        /// <param name="uploadSessionId">The upload session ID; this may be used to retry the
+        /// commit.</param>
         public UploadCommitError(CommitError reason,
                                  string uploadSessionId)
         {
@@ -49,12 +50,12 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the reason of the upload commit error</para>
+        /// <para>The reason why the commit failed.</para>
         /// </summary>
         public CommitError Reason { get; private set; }
 
         /// <summary>
-        /// <para>Gets the upload session id of the upload commit error</para>
+        /// <para>The upload session ID; this may be used to retry the commit.</para>
         /// </summary>
         public string UploadSessionId { get; private set; }
 
@@ -87,9 +88,9 @@ namespace Dropbox.Api.Files
             {
                 this.Reason = obj.GetFieldObject<CommitError>("reason");
                 this.UploadSessionId = obj.GetField<string>("upload_session_id");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

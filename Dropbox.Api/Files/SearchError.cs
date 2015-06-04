@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The search error object</para>
+    /// <para>Errors for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync"
+    /// />.</para>
     /// </summary>
     public class SearchError : enc.IEncodable<SearchError>
     {
@@ -82,7 +83,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : SearchError, enc.IEncodable<Other>
         {

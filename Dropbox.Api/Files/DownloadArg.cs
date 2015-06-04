@@ -11,21 +11,28 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The download arg object</para>
+    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync"
+    /// />.</para>
     /// </summary>
     public sealed class DownloadArg : enc.IEncodable<DownloadArg>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="DownloadArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path</param>
-        /// <param name="rev">The rev</param>
+        /// <param name="path">The path of the file to download.</param>
+        /// <param name="rev">Optional revision, taken from the corresponding <see
+        /// cref="Metadata" /> field.</param>
         public DownloadArg(string path,
                            string rev = null)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+
+            if (rev != null && (rev.Length < 9 || !re.Regex.IsMatch(rev, @"[0-9a-f]+")))
+            {
+                throw new sys.ArgumentOutOfRangeException("rev");
             }
 
             this.Path = path;
@@ -42,12 +49,13 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the path of the download arg</para>
+        /// <para>The path of the file to download.</para>
         /// </summary>
         public string Path { get; private set; }
 
         /// <summary>
-        /// <para>Gets the rev of the download arg</para>
+        /// <para>Optional revision, taken from the corresponding <see cref="Metadata" />
+        /// field.</para>
         /// </summary>
         public string Rev { get; private set; }
 
@@ -86,9 +94,9 @@ namespace Dropbox.Api.Files
                 {
                     this.Rev = obj.GetField<string>("rev");
                 }
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

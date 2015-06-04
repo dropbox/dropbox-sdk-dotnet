@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The list folder continue error object</para>
+    /// <para>Error returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
     /// </summary>
     public class ListFolderContinueError : enc.IEncodable<ListFolderContinueError>
     {
@@ -45,50 +46,6 @@ namespace Dropbox.Api.Files
             }
         }
 
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is ListFolderError</para>
-        /// </summary>
-        public bool IsListFolderError
-        {
-            get
-            {
-                return this is ListFolderError;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a ListFolderError, or <c>null</c>.</para>
-        /// </summary>
-        public ListFolderError AsListFolderError
-        {
-            get
-            {
-                return this as ListFolderError;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Other</para>
-        /// </summary>
-        public bool IsOther
-        {
-            get
-            {
-                return this is Other;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
-        /// </summary>
-        public Other AsOther
-        {
-            get
-            {
-                return this as Other;
-            }
-        }
-
         #region IEncodable<ListFolderContinueError> methods
 
         /// <summary>
@@ -102,13 +59,9 @@ namespace Dropbox.Api.Files
             {
                 ((enc.IEncodable<Reset>)this).Encode(encoder);
             }
-            else if (this.IsListFolderError)
-            {
-                ((enc.IEncodable<ListFolderError>)this).Encode(encoder);
-            }
             else
             {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                throw new sys.InvalidOperationException();
             }
         }
 
@@ -125,21 +78,15 @@ namespace Dropbox.Api.Files
             {
             case "reset":
                 return Reset.Instance;
-            case "list_folder_error":
-                using (var obj = decoder.GetObject())
-                {
-                    return new ListFolderError(obj.GetFieldObject<Dropbox.Api.Files.ListFolderError>("list_folder_error"));
-                }
             default:
-                return Other.Instance;
+                throw new sys.InvalidOperationException();
             }
         }
 
         #endregion
 
         /// <summary>
-        /// <para>Indicates that the format of the cursor has changed in a backwards
-        /// incompatible way which means the client must call <see
+        /// <para>Indicates that the cursor has been invalidated. Call <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> to obtain a new
         /// cursor.</para>
         /// </summary>
@@ -175,91 +122,6 @@ namespace Dropbox.Api.Files
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             Reset enc.IEncodable<Reset>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>The list folder error object</para>
-        /// </summary>
-        public sealed class ListFolderError : ListFolderContinueError, enc.IEncodable<ListFolderError>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="ListFolderError" />
-            /// class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public ListFolderError(Dropbox.Api.Files.ListFolderError value)
-            {
-                this.Value = value;
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public Dropbox.Api.Files.ListFolderError Value { get; private set; }
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<ListFolderError>.Encode(enc.IEncoder encoder)
-            {
-                using (var obj = encoder.AddObject())
-                {
-                    obj.AddField("list_folder_error", this.Value);
-                }
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            ListFolderError enc.IEncodable<ListFolderError>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>The other object</para>
-        /// </summary>
-        public sealed class Other : ListFolderContinueError, enc.IEncodable<Other>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
-            /// </summary>
-            private Other()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Other</para>
-            /// </summary>
-            public static readonly Other Instance = new Other();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
-            {
-                encoder.AddUnion("other");
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

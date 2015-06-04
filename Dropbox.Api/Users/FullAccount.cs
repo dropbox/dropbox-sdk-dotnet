@@ -31,6 +31,7 @@ namespace Dropbox.Api.Users
         /// current account is personal, then <paramref name="team" /> will always be
         /// <c>null</c>, but <paramref name="isPaired" /> will indicate if a work account is
         /// linked.</param>
+        /// <param name="accountType">What type of account this user has.</param>
         /// <param name="country">The user's two-letter country code, if available. Country
         /// codes are based on <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO
         /// 3166-1</a>.</param>
@@ -42,6 +43,7 @@ namespace Dropbox.Api.Users
                            string locale,
                            string referralLink,
                            bool isPaired,
+                           AccountType accountType,
                            string country = null,
                            Team team = null)
         {
@@ -78,6 +80,11 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentNullException("referralLink");
             }
 
+            if (accountType == null)
+            {
+                throw new sys.ArgumentNullException("accountType");
+            }
+
             if (country != null && (country.Length < 2 || country.Length > 2))
             {
                 throw new sys.ArgumentOutOfRangeException("country");
@@ -89,6 +96,7 @@ namespace Dropbox.Api.Users
             this.Locale = locale;
             this.ReferralLink = referralLink;
             this.IsPaired = isPaired;
+            this.AccountType = accountType;
             this.Country = country;
             this.Team = team;
         }
@@ -138,6 +146,11 @@ namespace Dropbox.Api.Users
         public bool IsPaired { get; private set; }
 
         /// <summary>
+        /// <para>What type of account this user has.</para>
+        /// </summary>
+        public AccountType AccountType { get; private set; }
+
+        /// <summary>
         /// <para>The user's two-letter country code, if available. Country codes are based on
         /// <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a>.</para>
         /// </summary>
@@ -165,6 +178,7 @@ namespace Dropbox.Api.Users
                 obj.AddField<string>("locale", this.Locale);
                 obj.AddField<string>("referral_link", this.ReferralLink);
                 obj.AddField<bool>("is_paired", this.IsPaired);
+                obj.AddFieldObject<AccountType>("account_type", this.AccountType);
                 if (this.Country != null)
                 {
                     obj.AddField<string>("country", this.Country);
@@ -193,6 +207,7 @@ namespace Dropbox.Api.Users
                 this.Locale = obj.GetField<string>("locale");
                 this.ReferralLink = obj.GetField<string>("referral_link");
                 this.IsPaired = obj.GetField<bool>("is_paired");
+                this.AccountType = obj.GetFieldObject<AccountType>("account_type");
                 if (obj.HasField("country"))
                 {
                     this.Country = obj.GetField<string>("country");
@@ -201,9 +216,9 @@ namespace Dropbox.Api.Users
                 {
                     this.Team = obj.GetFieldObject<Team>("team");
                 }
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

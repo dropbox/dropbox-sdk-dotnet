@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload session finish error object</para>
+    /// <para>Errors for <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
     /// </summary>
     public class UploadSessionFinishError : enc.IEncodable<UploadSessionFinishError>
     {
@@ -141,7 +142,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The lookup failed object</para>
+        /// <para>The session arguments are incorrect; the value explains the reason.</para>
         /// </summary>
         public sealed class LookupFailed : UploadSessionFinishError, enc.IEncodable<LookupFailed>
         {
@@ -186,7 +187,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The commit failed object</para>
+        /// <para>The commit failed; the value explains the reason.</para>
         /// </summary>
         public sealed class CommitFailed : UploadSessionFinishError, enc.IEncodable<CommitFailed>
         {
@@ -231,7 +232,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : UploadSessionFinishError, enc.IEncodable<Other>
         {

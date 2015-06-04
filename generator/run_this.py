@@ -16,9 +16,9 @@ SPECS = [
     'users.babel',
     ]
 
-SPEC_DIR = r'c:\src\babel-test\spec'
-OUTPUT_DIR = r'c:\src\babel-test\babel\Dropbox.Api'
-SOURCE_DIR = r'c:\src\babel-test\babel\generator'
+SPEC_DIR = os.path.join('c:\\','Users','Dropbox','Dropbox (Dropbox)','ApiSpec')
+OUTPUT_DIR = os.path.join('c:\\','Users','Dropbox','Desktop','temp','babel','Dropbox.Api')
+SOURCE_DIR = os.path.join('c:\\','Users','Dropbox','Desktop','temp','babel','generator')
 
 if __name__ == '__main__':
     specs = []

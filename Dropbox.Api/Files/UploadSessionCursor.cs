@@ -11,7 +11,9 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload session cursor object</para>
+    /// <para>Arguments for <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" />. Also used by
+    /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
     /// </summary>
     /// <seealso cref="UploadSessionFinishArg" />
     public sealed class UploadSessionCursor : enc.IEncodable<UploadSessionCursor>
@@ -20,8 +22,9 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadSessionCursor" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
-        /// <param name="offset">The amount of data that has been uploaded so far.  We use this
+        /// <param name="sessionId">The upload session ID (returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</param>
+        /// <param name="offset">The amount of data that has been uploaded so far. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
         public UploadSessionCursor(string sessionId,
@@ -47,12 +50,13 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the session id of the upload session cursor</para>
+        /// <para>The upload session ID (returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</para>
         /// </summary>
         public string SessionId { get; private set; }
 
         /// <summary>
-        /// <para>The amount of data that has been uploaded so far.  We use this to make sure
+        /// <para>The amount of data that has been uploaded so far. We use this to make sure
         /// upload data isn't lost or duplicated in the event of a network error.</para>
         /// </summary>
         public ulong Offset { get; private set; }
@@ -86,9 +90,9 @@ namespace Dropbox.Api.Files
             {
                 this.SessionId = obj.GetField<string>("session_id");
                 this.Offset = obj.GetField<ulong>("offset");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

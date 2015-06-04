@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The commit conflict error object</para>
+    /// <para>Errors related to commit conflicts.</para>
     /// </summary>
     public class CommitConflictError : enc.IEncodable<CommitConflictError>
     {
@@ -284,7 +284,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : CommitConflictError, enc.IEncodable<Other>
         {

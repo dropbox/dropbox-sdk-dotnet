@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The search match object</para>
+    /// <para>Describes a search result.</para>
     /// </summary>
     public sealed class SearchMatch : enc.IEncodable<SearchMatch>
     {
@@ -21,7 +21,7 @@ namespace Dropbox.Api.Files
         /// <param name="matchType">The type of the match.</param>
         /// <param name="metadata">The metadata for the matched file or folder.</param>
         public SearchMatch(SearchMatchType matchType,
-                           MetadataWithPath metadata)
+                           Metadata metadata)
         {
             if (matchType == null)
             {
@@ -54,7 +54,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The metadata for the matched file or folder.</para>
         /// </summary>
-        public MetadataWithPath Metadata { get; private set; }
+        public Metadata Metadata { get; private set; }
 
         #region IEncodable<SearchMatch> methods
 
@@ -68,7 +68,7 @@ namespace Dropbox.Api.Files
             using (var obj = encoder.AddObject())
             {
                 obj.AddFieldObject<SearchMatchType>("match_type", this.MatchType);
-                obj.AddFieldObject<MetadataWithPath>("metadata", this.Metadata);
+                obj.AddFieldObject<Metadata>("metadata", this.Metadata);
             }
         }
 
@@ -84,10 +84,10 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.MatchType = obj.GetFieldObject<SearchMatchType>("match_type");
-                this.Metadata = obj.GetFieldObject<MetadataWithPath>("metadata");
-
-                return this;
+                this.Metadata = obj.GetFieldObject<Metadata>("metadata");
             }
+
+            return this;
         }
 
         #endregion

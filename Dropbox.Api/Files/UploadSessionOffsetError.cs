@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload session offset error object</para>
+    /// <para>Error structure for recovering the correct upload offset.</para>
     /// </summary>
     public sealed class UploadSessionOffsetError : enc.IEncodable<UploadSessionOffsetError>
     {
@@ -19,7 +19,7 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadSessionOffsetError" />
         /// class.</para>
         /// </summary>
-        /// <param name="correctOffset">The correct offset</param>
+        /// <param name="correctOffset">The offset up to which data has been collected.</param>
         public UploadSessionOffsetError(ulong correctOffset)
         {
             this.CorrectOffset = correctOffset;
@@ -36,7 +36,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the correct offset of the upload session offset error</para>
+        /// <para>The offset up to which data has been collected.</para>
         /// </summary>
         public ulong CorrectOffset { get; private set; }
 
@@ -67,9 +67,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.CorrectOffset = obj.GetField<ulong>("correct_offset");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

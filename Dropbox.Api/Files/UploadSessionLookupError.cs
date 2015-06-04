@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The upload session lookup error object</para>
+    /// <para>Errors related to upload sessions.</para>
     /// </summary>
     public class UploadSessionLookupError : enc.IEncodable<UploadSessionLookupError>
     {
@@ -166,7 +166,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The upload id was not found.</para>
+        /// <para>The upload session id was not found.</para>
         /// </summary>
         public sealed class NotFound : UploadSessionLookupError, enc.IEncodable<NotFound>
         {
@@ -206,7 +206,10 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The incorrect offset object</para>
+        /// <para>The specified offset was incorrect. See the value for the correct offset.
+        /// (This error may occur when a previous request was received and processed
+        /// successfully but the client did not receive the response, e.g. due to a network
+        /// error.)</para>
         /// </summary>
         public sealed class IncorrectOffset : UploadSessionLookupError, enc.IEncodable<IncorrectOffset>
         {
@@ -251,8 +254,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>You are attempting to append data to an upload session that has been
-        /// closed.</para>
+        /// <para>You are attempting to append data to an upload session that has alread been
+        /// closed (i.e. committed).</para>
         /// </summary>
         public sealed class Closed : UploadSessionLookupError, enc.IEncodable<Closed>
         {
@@ -292,7 +295,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : UploadSessionLookupError, enc.IEncodable<Other>
         {

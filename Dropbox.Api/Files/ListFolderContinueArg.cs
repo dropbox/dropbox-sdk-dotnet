@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The list folder continue arg object</para>
+    /// <para>Arguments for <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
     /// </summary>
     public sealed class ListFolderContinueArg : enc.IEncodable<ListFolderContinueArg>
     {
@@ -19,7 +20,9 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ListFolderContinueArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="cursor">The cursor</param>
+        /// <param name="cursor">The cursor returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</param>
         public ListFolderContinueArg(string cursor)
         {
             if (cursor == null)
@@ -41,7 +44,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the cursor of the list folder continue arg</para>
+        /// <para>The cursor returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
         /// </summary>
         public string Cursor { get; private set; }
 
@@ -72,9 +77,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.Cursor = obj.GetField<string>("cursor");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

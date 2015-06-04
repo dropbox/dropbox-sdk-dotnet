@@ -11,14 +11,16 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The list folder arg object</para>
+    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync"
+    /// />.</para>
     /// </summary>
     public sealed class ListFolderArg : enc.IEncodable<ListFolderArg>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path</param>
+        /// <param name="path">The path to the folder you want to see the contents of. May be
+        /// the root (i.e. empty).</param>
         public ListFolderArg(string path)
         {
             if (path == null)
@@ -39,7 +41,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the path of the list folder arg</para>
+        /// <para>The path to the folder you want to see the contents of. May be the root (i.e.
+        /// empty).</para>
         /// </summary>
         public string Path { get; private set; }
 
@@ -70,9 +73,9 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.Path = obj.GetField<string>("path");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

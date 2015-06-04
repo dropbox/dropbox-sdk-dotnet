@@ -11,7 +11,9 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The commit info object</para>
+    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadAsync" />.
+    /// Also part of the arguments to <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
     /// </summary>
     /// <seealso cref="UploadSessionFinishArg" />
     public sealed class CommitInfo : enc.IEncodable<CommitInfo>
@@ -20,17 +22,17 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="CommitInfo" /> class.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
-        /// <param name="mode">The mode</param>
+        /// <param name="mode">Selects what to do if the file already exists.</param>
         /// <param name="autorename">If there's a conflict, as determined by <paramref
         /// name="mode" />, have the Dropbox server try to autorename the file to avoid
         /// conflict.</param>
         /// <param name="clientModified">The value to store as the <paramref
-        /// name="clientModified" /> timestamp.  Dropbox automatically records the time at
-        /// which the file was written to the Dropbox servers.  It can also record an
-        /// additional timestamp, provided by Dropbox desktop clients, mobile clients, and API
-        /// apps of when the file was actually created or modified.</param>
+        /// name="clientModified" /> timestamp. Dropbox automatically records the time at which
+        /// the file was written to the Dropbox servers. It can also record an additional
+        /// timestamp, provided by Dropbox desktop clients, mobile clients, and API apps of
+        /// when the file was actually created or modified.</param>
         /// <param name="mute">Normally, users are made aware of any file modifications in
-        /// their Dropbox account via notifications in the client software.  If <c>true</c>,
+        /// their Dropbox account via notifications in the client software. If <c>true</c>,
         /// this tells the clients that this modification shouldn't result in a user
         /// notification.</param>
         public CommitInfo(string path,
@@ -74,7 +76,7 @@ namespace Dropbox.Api.Files
         public string Path { get; private set; }
 
         /// <summary>
-        /// <para>Gets the mode of the commit info</para>
+        /// <para>Selects what to do if the file already exists.</para>
         /// </summary>
         public WriteMode Mode { get; private set; }
 
@@ -85,9 +87,9 @@ namespace Dropbox.Api.Files
         public bool Autorename { get; private set; }
 
         /// <summary>
-        /// <para>The value to store as the <see cref="ClientModified" /> timestamp.  Dropbox
+        /// <para>The value to store as the <see cref="ClientModified" /> timestamp. Dropbox
         /// automatically records the time at which the file was written to the Dropbox
-        /// servers.  It can also record an additional timestamp, provided by Dropbox desktop
+        /// servers. It can also record an additional timestamp, provided by Dropbox desktop
         /// clients, mobile clients, and API apps of when the file was actually created or
         /// modified.</para>
         /// </summary>
@@ -95,7 +97,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Normally, users are made aware of any file modifications in their Dropbox
-        /// account via notifications in the client software.  If <c>true</c>, this tells the
+        /// account via notifications in the client software. If <c>true</c>, this tells the
         /// clients that this modification shouldn't result in a user notification.</para>
         /// </summary>
         public bool Mute { get; private set; }
@@ -150,9 +152,9 @@ namespace Dropbox.Api.Files
                 {
                     this.Mute = obj.GetField<bool>("mute");
                 }
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

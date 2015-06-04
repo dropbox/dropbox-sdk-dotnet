@@ -11,7 +11,9 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The list folder error object</para>
+    /// <para>Error returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> and <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
     /// </summary>
     public class ListFolderError : enc.IEncodable<ListFolderError>
     {
@@ -83,7 +85,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : ListFolderError, enc.IEncodable<Other>
         {

@@ -11,14 +11,15 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The search results object</para>
+    /// <para>Information returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" />.</para>
     /// </summary>
     public sealed class SearchResults : enc.IEncodable<SearchResults>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SearchResults" /> class.</para>
         /// </summary>
-        /// <param name="matches">The matches</param>
+        /// <param name="matches">A list (possibly empty) of matches for the query.</param>
         /// <param name="more">Used for paging. If true, indicates there is another page of
         /// results available that can be fetched by calling <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" /> again.</param>
@@ -51,7 +52,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the matches of the search results</para>
+        /// <para>A list (possibly empty) of matches for the query.</para>
         /// </summary>
         public col.IList<SearchMatch> Matches { get; private set; }
 
@@ -100,9 +101,9 @@ namespace Dropbox.Api.Files
                 this.Matches = new col.List<SearchMatch>(obj.GetFieldObjectList<SearchMatch>("matches"));
                 this.More = obj.GetField<bool>("more");
                 this.Start = obj.GetField<ulong>("start");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

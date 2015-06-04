@@ -16,6 +16,35 @@
     <HelpKINode Title="FullAccount.AccountId Property " Url="html/P_Dropbox_Api_Users_FullAccount_AccountId.htm" />
     <HelpKINode Title="GetAccountArg.AccountId Property " Url="html/P_Dropbox_Api_Users_GetAccountArg_AccountId.htm" />
   </HelpKINode>
+  <HelpKINode Title="AccountType class">
+    <HelpKINode Title="AccountType Class" Url="html/T_Dropbox_Api_Users_AccountType.htm" />
+    <HelpKINode Title="about AccountType class" Url="html/T_Dropbox_Api_Users_AccountType.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Users_AccountType__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Users_AccountType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountType property" Url="html/P_Dropbox_Api_Users_FullAccount_AccountType.htm" />
+  <HelpKINode Title="AccountType.AccountType constructor" Url="html/M_Dropbox_Api_Users_AccountType__ctor.htm" />
+  <HelpKINode Title="AccountType.AsBasic property" Url="html/P_Dropbox_Api_Users_AccountType_AsBasic.htm" />
+  <HelpKINode Title="AccountType.AsBusiness property" Url="html/P_Dropbox_Api_Users_AccountType_AsBusiness.htm" />
+  <HelpKINode Title="AccountType.AsPro property" Url="html/P_Dropbox_Api_Users_AccountType_AsPro.htm" />
+  <HelpKINode Title="AccountType.Basic class">
+    <HelpKINode Title="AccountType.Basic Class" Url="html/T_Dropbox_Api_Users_AccountType_Basic.htm" />
+    <HelpKINode Title="about AccountType.Basic class" Url="html/T_Dropbox_Api_Users_AccountType_Basic.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountType.Basic.Instance field" Url="html/F_Dropbox_Api_Users_AccountType_Basic_Instance.htm" />
+  <HelpKINode Title="AccountType.Business class">
+    <HelpKINode Title="AccountType.Business Class" Url="html/T_Dropbox_Api_Users_AccountType_Business.htm" />
+    <HelpKINode Title="about AccountType.Business class" Url="html/T_Dropbox_Api_Users_AccountType_Business.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountType.Business.Instance field" Url="html/F_Dropbox_Api_Users_AccountType_Business_Instance.htm" />
+  <HelpKINode Title="AccountType.IsBasic property" Url="html/P_Dropbox_Api_Users_AccountType_IsBasic.htm" />
+  <HelpKINode Title="AccountType.IsBusiness property" Url="html/P_Dropbox_Api_Users_AccountType_IsBusiness.htm" />
+  <HelpKINode Title="AccountType.IsPro property" Url="html/P_Dropbox_Api_Users_AccountType_IsPro.htm" />
+  <HelpKINode Title="AccountType.Pro class">
+    <HelpKINode Title="AccountType.Pro Class" Url="html/T_Dropbox_Api_Users_AccountType_Pro.htm" />
+    <HelpKINode Title="about AccountType.Pro class" Url="html/T_Dropbox_Api_Users_AccountType_Pro.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountType.Pro.Instance field" Url="html/F_Dropbox_Api_Users_AccountType_Pro_Instance.htm" />
   <HelpKINode Title="Add class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Add.htm" />
   </HelpKINode>
@@ -35,6 +64,7 @@
     <HelpKINode Title="IEncoder.AddUnion Method " Url="html/M_Dropbox_Api_Babel_IEncoder_AddUnion.htm" />
     <HelpKINode Title="JsonEncoder.AddUnion Method " Url="html/M_Dropbox_Api_Babel_JsonEncoder_AddUnion.htm" />
   </HelpKINode>
+  <HelpKINode Title="Allocated property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Allocated.htm" />
   <HelpKINode Title="ApiException(Of TError) class">
     <HelpKINode Title="ApiException(TError) Class" Url="html/T_Dropbox_Api_ApiException_1.htm" />
     <HelpKINode Title="about ApiException(Of TError) class" Url="html/T_Dropbox_Api_ApiException_1.htm" />
@@ -53,22 +83,32 @@
   <HelpKINode Title="ApiException&lt;TError&gt;.ErrorResponse property" Url="html/P_Dropbox_Api_ApiException_1_ErrorResponse.htm" />
   <HelpKINode Title="AsAdd property" Url="html/P_Dropbox_Api_Files_WriteMode_AsAdd.htm" />
   <HelpKINode Title="AsAutorenameFailed property" Url="html/P_Dropbox_Api_Files_CommitConflictError_AsAutorenameFailed.htm" />
+  <HelpKINode Title="AsAutorenameFiled property" Url="html/P_Dropbox_Api_Files_PathError_AsAutorenameFiled.htm" />
+  <HelpKINode Title="AsBasic property" Url="html/P_Dropbox_Api_Users_AccountType_AsBasic.htm" />
   <HelpKINode Title="AsBoth property" Url="html/P_Dropbox_Api_Files_SearchMatchType_AsBoth.htm" />
+  <HelpKINode Title="AsBusiness property" Url="html/P_Dropbox_Api_Users_AccountType_AsBusiness.htm" />
   <HelpKINode Title="AsClosed property" Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_AsClosed.htm" />
   <HelpKINode Title="AsCommitFailed property">
     <HelpKINode Title="UploadError.AsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadError_AsCommitFailed.htm" />
     <HelpKINode Title="UploadSessionFinishError.AsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_AsCommitFailed.htm" />
   </HelpKINode>
   <HelpKINode Title="AsConflict property" Url="html/P_Dropbox_Api_Files_CommitError_AsConflict.htm" />
+  <HelpKINode Title="AsConflictFile property" Url="html/P_Dropbox_Api_Files_PathError_AsConflictFile.htm" />
+  <HelpKINode Title="AsConflictFileAncestor property" Url="html/P_Dropbox_Api_Files_PathError_AsConflictFileAncestor.htm" />
+  <HelpKINode Title="AsConflictFolder property" Url="html/P_Dropbox_Api_Files_PathError_AsConflictFolder.htm" />
   <HelpKINode Title="AsContent property" Url="html/P_Dropbox_Api_Files_SearchMatchType_AsContent.htm" />
-  <HelpKINode Title="AsContinue property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_AsContinue.htm" />
+  <HelpKINode Title="AsConversionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsConversionError.htm" />
+  <HelpKINode Title="AsDeleted property" Url="html/P_Dropbox_Api_Files_Metadata_AsDeleted.htm" />
   <HelpKINode Title="AsDeletedFilename property" Url="html/P_Dropbox_Api_Files_SearchMode_AsDeletedFilename.htm" />
   <HelpKINode Title="AsDisallowed property" Url="html/P_Dropbox_Api_Files_DownloadError_AsDisallowed.htm" />
   <HelpKINode Title="AsDmca property" Url="html/P_Dropbox_Api_Files_RestrictedReason_AsDmca.htm" />
+  <HelpKINode Title="AsDownloadError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsDownloadError.htm" />
+  <HelpKINode Title="AsExtensionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsExtensionError.htm" />
   <HelpKINode Title="AsFile property">
     <HelpKINode Title="CommitConflictError.AsFile Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_AsFile.htm" />
     <HelpKINode Title="Metadata.AsFile Property " Url="html/P_Dropbox_Api_Files_Metadata_AsFile.htm" />
   </HelpKINode>
+  <HelpKINode Title="AsFileDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsFileDisallowed.htm" />
   <HelpKINode Title="AsFilename property">
     <HelpKINode Title="SearchMatchType.AsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMatchType_AsFilename.htm" />
     <HelpKINode Title="SearchMode.AsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMode_AsFilename.htm" />
@@ -78,11 +118,19 @@
     <HelpKINode Title="CommitConflictError.AsFolder Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_AsFolder.htm" />
     <HelpKINode Title="Metadata.AsFolder Property " Url="html/P_Dropbox_Api_Files_Metadata_AsFolder.htm" />
   </HelpKINode>
+  <HelpKINode Title="AsFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsFolderDisallowed.htm" />
+  <HelpKINode Title="AsFormatError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsFormatError.htm" />
+  <HelpKINode Title="AsFromError property" Url="html/P_Dropbox_Api_Files_RelocationError_AsFromError.htm" />
   <HelpKINode Title="AsIncorrectOffset property" Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_AsIncorrectOffset.htm" />
   <HelpKINode Title="AsInsufficientQuota property" Url="html/P_Dropbox_Api_Files_CommitError_AsInsufficientQuota.htm" />
+  <HelpKINode Title="AsInvalidImage property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsInvalidImage.htm" />
   <HelpKINode Title="AsIsFolder property" Url="html/P_Dropbox_Api_Files_NoFileReason_AsIsFolder.htm" />
-  <HelpKINode Title="AsListFolderError property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsListFolderError.htm" />
+  <HelpKINode Title="AsJpeg property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_AsJpeg.htm" />
+  <HelpKINode Title="AsL property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsL.htm" />
   <HelpKINode Title="AsLookupFailed property" Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_AsLookupFailed.htm" />
+  <HelpKINode Title="AsM property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsM.htm" />
+  <HelpKINode Title="AsMalformedPath property" Url="html/P_Dropbox_Api_Files_PathError_AsMalformedPath.htm" />
+  <HelpKINode Title="AsMisc property" Url="html/P_Dropbox_Api_Files_PathError_AsMisc.htm" />
   <HelpKINode Title="AsNoAccount property" Url="html/P_Dropbox_Api_Users_GetAccountError_AsNoAccount.htm" />
   <HelpKINode Title="AsNoFile property" Url="html/P_Dropbox_Api_Files_DownloadError_AsNoFile.htm" />
   <HelpKINode Title="AsNotFolder property" Url="html/P_Dropbox_Api_Files_FolderPathError_AsNotFolder.htm" />
@@ -90,6 +138,7 @@
     <HelpKINode Title="FolderPathError.AsNotFound Property " Url="html/P_Dropbox_Api_Files_FolderPathError_AsNotFound.htm" />
     <HelpKINode Title="GetMetadataError.AsNotFound Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_AsNotFound.htm" />
     <HelpKINode Title="NoFileReason.AsNotFound Property " Url="html/P_Dropbox_Api_Files_NoFileReason_AsNotFound.htm" />
+    <HelpKINode Title="PathError.AsNotFound Property " Url="html/P_Dropbox_Api_Files_PathError_AsNotFound.htm" />
     <HelpKINode Title="UploadSessionLookupError.AsNotFound Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_AsNotFound.htm" />
   </HelpKINode>
   <HelpKINode Title="AsNoWritePermission property" Url="html/P_Dropbox_Api_Files_CommitError_AsNoWritePermission.htm" />
@@ -98,8 +147,9 @@
     <HelpKINode Title="CommitError.AsOther Property " Url="html/P_Dropbox_Api_Files_CommitError_AsOther.htm" />
     <HelpKINode Title="DownloadError.AsOther Property " Url="html/P_Dropbox_Api_Files_DownloadError_AsOther.htm" />
     <HelpKINode Title="GetMetadataError.AsOther Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_AsOther.htm" />
-    <HelpKINode Title="ListFolderContinueError.AsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsOther.htm" />
     <HelpKINode Title="ListFolderError.AsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderError_AsOther.htm" />
+    <HelpKINode Title="PathError.AsOther Property " Url="html/P_Dropbox_Api_Files_PathError_AsOther.htm" />
+    <HelpKINode Title="RelocationError.AsOther Property " Url="html/P_Dropbox_Api_Files_RelocationError_AsOther.htm" />
     <HelpKINode Title="RestrictedReason.AsOther Property " Url="html/P_Dropbox_Api_Files_RestrictedReason_AsOther.htm" />
     <HelpKINode Title="SearchError.AsOther Property " Url="html/P_Dropbox_Api_Files_SearchError_AsOther.htm" />
     <HelpKINode Title="UploadError.AsOther Property " Url="html/P_Dropbox_Api_Files_UploadError_AsOther.htm" />
@@ -108,11 +158,22 @@
   </HelpKINode>
   <HelpKINode Title="AsOverwrite property" Url="html/P_Dropbox_Api_Files_WriteMode_AsOverwrite.htm" />
   <HelpKINode Title="AsPermission property" Url="html/P_Dropbox_Api_Files_DisallowedReason_AsPermission.htm" />
+  <HelpKINode Title="AsPng property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_AsPng.htm" />
+  <HelpKINode Title="AsPro property" Url="html/P_Dropbox_Api_Users_AccountType_AsPro.htm" />
+  <HelpKINode Title="AsQuotaError property" Url="html/P_Dropbox_Api_Files_RelocationError_AsQuotaError.htm" />
+  <HelpKINode Title="AsReadOnly property" Url="html/P_Dropbox_Api_Files_PathError_AsReadOnly.htm" />
   <HelpKINode Title="AsReset property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsReset.htm" />
-  <HelpKINode Title="AsRestart property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_AsRestart.htm" />
   <HelpKINode Title="AsRestricted property" Url="html/P_Dropbox_Api_Files_DisallowedReason_AsRestricted.htm" />
+  <HelpKINode Title="AsRootDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsRootDisallowed.htm" />
+  <HelpKINode Title="AsS property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsS.htm" />
+  <HelpKINode Title="AsSharedFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsSharedFolderDisallowed.htm" />
+  <HelpKINode Title="AsSizeError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsSizeError.htm" />
+  <HelpKINode Title="AsToError property" Url="html/P_Dropbox_Api_Files_RelocationError_AsToError.htm" />
+  <HelpKINode Title="AsTooManyFiles property" Url="html/P_Dropbox_Api_Files_RelocationError_AsTooManyFiles.htm" />
   <HelpKINode Title="AsUnknown property" Url="html/P_Dropbox_Api_Users_GetAccountError_AsUnknown.htm" />
   <HelpKINode Title="AsUpdate property" Url="html/P_Dropbox_Api_Files_WriteMode_AsUpdate.htm" />
+  <HelpKINode Title="AsXl property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsXl.htm" />
+  <HelpKINode Title="AsXs property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsXs.htm" />
   <HelpKINode Title="AuthException class">
     <HelpKINode Title="AuthException Class" Url="html/T_Dropbox_Api_AuthException.htm" />
     <HelpKINode Title="about AuthException class" Url="html/T_Dropbox_Api_AuthException.htm" />
@@ -123,12 +184,18 @@
   <HelpKINode Title="AutorenameFailed class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_AutorenameFailed.htm" />
   </HelpKINode>
+  <HelpKINode Title="AutorenameFiled class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_AutorenameFiled.htm" />
+  </HelpKINode>
   <HelpKINode Title="BadInputException class">
     <HelpKINode Title="BadInputException Class" Url="html/T_Dropbox_Api_BadInputException.htm" />
     <HelpKINode Title="about BadInputException class" Url="html/T_Dropbox_Api_BadInputException.htm" />
     <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_BadInputException__ctor.htm" />
   </HelpKINode>
   <HelpKINode Title="BadInputException.BadInputException constructor" Url="html/M_Dropbox_Api_BadInputException__ctor.htm" />
+  <HelpKINode Title="Basic class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Users_AccountType_Basic.htm" />
+  </HelpKINode>
   <HelpKINode Title="BasicAccount class">
     <HelpKINode Title="BasicAccount Class" Url="html/T_Dropbox_Api_Users_BasicAccount.htm" />
     <HelpKINode Title="about BasicAccount class" Url="html/T_Dropbox_Api_Users_BasicAccount.htm" />
@@ -139,13 +206,18 @@
   <HelpKINode Title="BasicAccount.BasicAccount constructor" Url="html/Overload_Dropbox_Api_Users_BasicAccount__ctor.htm" />
   <HelpKINode Title="BasicAccount.IsTeammate property" Url="html/P_Dropbox_Api_Users_BasicAccount_IsTeammate.htm" />
   <HelpKINode Title="BasicAccount.Name property" Url="html/P_Dropbox_Api_Users_BasicAccount_Name.htm" />
+  <HelpKINode Title="BeginCopy method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginCopy.htm" />
+  <HelpKINode Title="BeginCreateFolder method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginCreateFolder.htm" />
+  <HelpKINode Title="BeginDelete method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDelete.htm" />
   <HelpKINode Title="BeginDownload method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDownload.htm" />
   <HelpKINode Title="BeginGetAccount method" Url="html/Overload_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetAccount.htm" />
   <HelpKINode Title="BeginGetCurrentAccount method" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetCurrentAccount.htm" />
   <HelpKINode Title="BeginGetMetadata method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetMetadata.htm" />
   <HelpKINode Title="BeginGetSpaceUsage method" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_BeginGetSpaceUsage.htm" />
+  <HelpKINode Title="BeginGetThumbnail method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetThumbnail.htm" />
   <HelpKINode Title="BeginListFolder method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolder.htm" />
   <HelpKINode Title="BeginListFolderContinue method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolderContinue.htm" />
+  <HelpKINode Title="BeginMove method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginMove.htm" />
   <HelpKINode Title="BeginSearch method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginSearch.htm" />
   <HelpKINode Title="BeginUpload method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUpload.htm" />
   <HelpKINode Title="BeginUploadSessionAppend method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionAppend.htm" />
@@ -154,15 +226,9 @@
   <HelpKINode Title="Both class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Both.htm" />
   </HelpKINode>
-  <HelpKINode Title="ChangeEntry class">
-    <HelpKINode Title="ChangeEntry Class" Url="html/T_Dropbox_Api_Files_ChangeEntry.htm" />
-    <HelpKINode Title="about ChangeEntry class" Url="html/T_Dropbox_Api_Files_ChangeEntry.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_ChangeEntry__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ChangeEntry.htm" />
+  <HelpKINode Title="Business class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Users_AccountType_Business.htm" />
   </HelpKINode>
-  <HelpKINode Title="ChangeEntry.ChangeEntry constructor" Url="html/Overload_Dropbox_Api_Files_ChangeEntry__ctor.htm" />
-  <HelpKINode Title="ChangeEntry.Metadata property" Url="html/P_Dropbox_Api_Files_ChangeEntry_Metadata.htm" />
-  <HelpKINode Title="ChangeEntry.Name property" Url="html/P_Dropbox_Api_Files_ChangeEntry_Name.htm" />
   <HelpKINode Title="ClientModified property">
     <HelpKINode Title="CommitInfo.ClientModified Property " Url="html/P_Dropbox_Api_Files_CommitInfo_ClientModified.htm" />
     <HelpKINode Title="FileMetadata.ClientModified Property " Url="html/P_Dropbox_Api_Files_FileMetadata_ClientModified.htm" />
@@ -245,8 +311,8 @@
   </HelpKINode>
   <HelpKINode Title="CommitError.Other.Instance field" Url="html/F_Dropbox_Api_Files_CommitError_Other_Instance.htm" />
   <HelpKINode Title="CommitFailed class">
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_UploadError_CommitFailed.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed.htm" />
   </HelpKINode>
   <HelpKINode Title="CommitInfo class">
     <HelpKINode Title="CommitInfo Class" Url="html/T_Dropbox_Api_Files_CommitInfo.htm" />
@@ -263,17 +329,36 @@
   <HelpKINode Title="Conflict class">
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_CommitError_Conflict.htm" />
   </HelpKINode>
+  <HelpKINode Title="ConflictFile class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ConflictFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConflictFileAncestor class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ConflictFileAncestor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConflictFolder class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ConflictFolder.htm" />
+  </HelpKINode>
   <HelpKINode Title="Content class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Content.htm" />
   </HelpKINode>
-  <HelpKINode Title="Continue class">
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueEntries_Continue.htm" />
+  <HelpKINode Title="ConversionError class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_ConversionError.htm" />
   </HelpKINode>
+  <HelpKINode Title="CopyAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_CopyAsync.htm" />
   <HelpKINode Title="CorrectOffset property" Url="html/P_Dropbox_Api_Files_UploadSessionOffsetError_CorrectOffset.htm" />
   <HelpKINode Title="Country property" Url="html/P_Dropbox_Api_Users_FullAccount_Country.htm" />
+  <HelpKINode Title="CreateFolderArg class">
+    <HelpKINode Title="CreateFolderArg Class" Url="html/T_Dropbox_Api_Files_CreateFolderArg.htm" />
+    <HelpKINode Title="about CreateFolderArg class" Url="html/T_Dropbox_Api_Files_CreateFolderArg.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_CreateFolderArg__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_CreateFolderArg.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreateFolderArg.CreateFolderArg constructor" Url="html/Overload_Dropbox_Api_Files_CreateFolderArg__ctor.htm" />
+  <HelpKINode Title="CreateFolderArg.Path property" Url="html/P_Dropbox_Api_Files_CreateFolderArg_Path.htm" />
+  <HelpKINode Title="CreateFolderAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_CreateFolderAsync.htm" />
   <HelpKINode Title="Cursor property">
     <HelpKINode Title="ListFolderContinueArg.Cursor Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueArg_Cursor.htm" />
-    <HelpKINode Title="ListFolderFooter.Cursor Property " Url="html/P_Dropbox_Api_Files_ListFolderFooter_Cursor.htm" />
+    <HelpKINode Title="ListFolderResult.Cursor Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_Cursor.htm" />
     <HelpKINode Title="UploadSessionFinishArg.Cursor Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishArg_Cursor.htm" />
   </HelpKINode>
   <HelpKINode Title="Decode method">
@@ -282,15 +367,30 @@
   </HelpKINode>
   <HelpKINode Title="Decode(Of T) method" Url="html/M_Dropbox_Api_Babel_JsonDecoder_Decode__1.htm" />
   <HelpKINode Title="Decode&lt;T&gt; method" Url="html/M_Dropbox_Api_Babel_JsonDecoder_Decode__1.htm" />
+  <HelpKINode Title="DeleteArg class">
+    <HelpKINode Title="DeleteArg Class" Url="html/T_Dropbox_Api_Files_DeleteArg.htm" />
+    <HelpKINode Title="about DeleteArg class" Url="html/T_Dropbox_Api_Files_DeleteArg.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_DeleteArg__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DeleteArg.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeleteArg.DeleteArg constructor" Url="html/Overload_Dropbox_Api_Files_DeleteArg__ctor.htm" />
+  <HelpKINode Title="DeleteArg.Path property" Url="html/P_Dropbox_Api_Files_DeleteArg_Path.htm" />
+  <HelpKINode Title="DeleteAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_DeleteAsync.htm" />
   <HelpKINode Title="DeletedFilename class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_DeletedFilename.htm" />
   </HelpKINode>
+  <HelpKINode Title="DeletedMetadata class">
+    <HelpKINode Title="DeletedMetadata Class" Url="html/T_Dropbox_Api_Files_DeletedMetadata.htm" />
+    <HelpKINode Title="about DeletedMetadata class" Url="html/T_Dropbox_Api_Files_DeletedMetadata.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_DeletedMetadata__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeletedMetadata.DeletedMetadata constructor" Url="html/Overload_Dropbox_Api_Files_DeletedMetadata__ctor.htm" />
   <HelpKINode Title="Disallowed class">
     <HelpKINode Title="Disallowed Class" Url="html/T_Dropbox_Api_Files_Disallowed.htm" />
     <HelpKINode Title="about Disallowed class" Url="html/T_Dropbox_Api_Files_Disallowed.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_Disallowed__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_Disallowed.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError_Disallowed.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_Disallowed.htm" />
   </HelpKINode>
   <HelpKINode Title="Disallowed.Disallowed constructor" Url="html/Overload_Dropbox_Api_Files_Disallowed__ctor.htm" />
   <HelpKINode Title="Disallowed.Reason property" Url="html/P_Dropbox_Api_Files_Disallowed_Reason.htm" />
@@ -337,6 +437,7 @@
     <HelpKINode Title="about DownloadError class" Url="html/T_Dropbox_Api_Files_DownloadError.htm" />
     <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_DownloadError__ctor.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_DownloadError.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailError_DownloadError.htm" />
   </HelpKINode>
   <HelpKINode Title="DownloadError.AsDisallowed property" Url="html/P_Dropbox_Api_Files_DownloadError_AsDisallowed.htm" />
   <HelpKINode Title="DownloadError.AsNoFile property" Url="html/P_Dropbox_Api_Files_DownloadError_AsNoFile.htm" />
@@ -387,7 +488,6 @@
   <HelpKINode Title="Dropbox.Api.DropboxClient class" Url="html/T_Dropbox_Api_DropboxClient.htm" />
   <HelpKINode Title="Dropbox.Api.DropboxOAuth2Helper class" Url="html/T_Dropbox_Api_DropboxOAuth2Helper.htm" />
   <HelpKINode Title="Dropbox.Api.Files namespace" Url="html/N_Dropbox_Api_Files.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ChangeEntry class" Url="html/T_Dropbox_Api_Files_ChangeEntry.htm" />
   <HelpKINode Title="Dropbox.Api.Files.CommitConflictError class" Url="html/T_Dropbox_Api_Files_CommitConflictError.htm" />
   <HelpKINode Title="Dropbox.Api.Files.CommitConflictError.AutorenameFailed class" Url="html/T_Dropbox_Api_Files_CommitConflictError_AutorenameFailed.htm" />
   <HelpKINode Title="Dropbox.Api.Files.CommitConflictError.File class" Url="html/T_Dropbox_Api_Files_CommitConflictError_File.htm" />
@@ -399,6 +499,9 @@
   <HelpKINode Title="Dropbox.Api.Files.CommitError.NoWritePermission class" Url="html/T_Dropbox_Api_Files_CommitError_NoWritePermission.htm" />
   <HelpKINode Title="Dropbox.Api.Files.CommitError.Other class" Url="html/T_Dropbox_Api_Files_CommitError_Other.htm" />
   <HelpKINode Title="Dropbox.Api.Files.CommitInfo class" Url="html/T_Dropbox_Api_Files_CommitInfo.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.CreateFolderArg class" Url="html/T_Dropbox_Api_Files_CreateFolderArg.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.DeleteArg class" Url="html/T_Dropbox_Api_Files_DeleteArg.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.DeletedMetadata class" Url="html/T_Dropbox_Api_Files_DeletedMetadata.htm" />
   <HelpKINode Title="Dropbox.Api.Files.Disallowed class" Url="html/T_Dropbox_Api_Files_Disallowed.htm" />
   <HelpKINode Title="Dropbox.Api.Files.DisallowedReason class" Url="html/T_Dropbox_Api_Files_DisallowedReason.htm" />
   <HelpKINode Title="Dropbox.Api.Files.DisallowedReason.Permission class" Url="html/T_Dropbox_Api_Files_DisallowedReason_Permission.htm" />
@@ -409,7 +512,6 @@
   <HelpKINode Title="Dropbox.Api.Files.DownloadError.NoFile class" Url="html/T_Dropbox_Api_Files_DownloadError_NoFile.htm" />
   <HelpKINode Title="Dropbox.Api.Files.DownloadError.Other class" Url="html/T_Dropbox_Api_Files_DownloadError_Other.htm" />
   <HelpKINode Title="Dropbox.Api.Files.FileMetadata class" Url="html/T_Dropbox_Api_Files_FileMetadata.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.FileMetadataWithName class" Url="html/T_Dropbox_Api_Files_FileMetadataWithName.htm" />
   <HelpKINode Title="Dropbox.Api.Files.FolderMetadata class" Url="html/T_Dropbox_Api_Files_FolderMetadata.htm" />
   <HelpKINode Title="Dropbox.Api.Files.FolderPathError class" Url="html/T_Dropbox_Api_Files_FolderPathError.htm" />
   <HelpKINode Title="Dropbox.Api.Files.FolderPathError.NotFolder class" Url="html/T_Dropbox_Api_Files_FolderPathError_NotFolder.htm" />
@@ -420,25 +522,37 @@
   <HelpKINode Title="Dropbox.Api.Files.GetMetadataError.Other class" Url="html/T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderArg class" Url="html/T_Dropbox_Api_Files_ListFolderArg.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueArg class" Url="html/T_Dropbox_Api_Files_ListFolderContinueArg.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueEntries class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueEntries.Continue class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Continue.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueEntries.Restart class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Restart.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueError class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueError.ListFolderError class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_ListFolderError.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueError.Other class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Other.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueError.Reset class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderContinueResult class" Url="html/T_Dropbox_Api_Files_ListFolderContinueResult.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderError class" Url="html/T_Dropbox_Api_Files_ListFolderError.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderError.Other class" Url="html/T_Dropbox_Api_Files_ListFolderError_Other.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.ListFolderFooter class" Url="html/T_Dropbox_Api_Files_ListFolderFooter.htm" />
   <HelpKINode Title="Dropbox.Api.Files.ListFolderResult class" Url="html/T_Dropbox_Api_Files_ListFolderResult.htm" />
   <HelpKINode Title="Dropbox.Api.Files.Metadata class" Url="html/T_Dropbox_Api_Files_Metadata.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.MetadataWithName class" Url="html/T_Dropbox_Api_Files_MetadataWithName.htm" />
-  <HelpKINode Title="Dropbox.Api.Files.MetadataWithPath class" Url="html/T_Dropbox_Api_Files_MetadataWithPath.htm" />
   <HelpKINode Title="Dropbox.Api.Files.NoFile class" Url="html/T_Dropbox_Api_Files_NoFile.htm" />
   <HelpKINode Title="Dropbox.Api.Files.NoFileReason class" Url="html/T_Dropbox_Api_Files_NoFileReason.htm" />
   <HelpKINode Title="Dropbox.Api.Files.NoFileReason.IsFolder class" Url="html/T_Dropbox_Api_Files_NoFileReason_IsFolder.htm" />
   <HelpKINode Title="Dropbox.Api.Files.NoFileReason.NotFound class" Url="html/T_Dropbox_Api_Files_NoFileReason_NotFound.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError class" Url="html/T_Dropbox_Api_Files_PathError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.AutorenameFiled class" Url="html/T_Dropbox_Api_Files_PathError_AutorenameFiled.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.ConflictFile class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFile.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.ConflictFileAncestor class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFileAncestor.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.ConflictFolder class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFolder.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.FileDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_FileDisallowed.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.FolderDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_FolderDisallowed.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.MalformedPath class" Url="html/T_Dropbox_Api_Files_PathError_MalformedPath.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.Misc class" Url="html/T_Dropbox_Api_Files_PathError_Misc.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.NotFound class" Url="html/T_Dropbox_Api_Files_PathError_NotFound.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.Other class" Url="html/T_Dropbox_Api_Files_PathError_Other.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.ReadOnly class" Url="html/T_Dropbox_Api_Files_PathError_ReadOnly.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.RootDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_RootDisallowed.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.PathError.SharedFolderDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_SharedFolderDisallowed.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationArg class" Url="html/T_Dropbox_Api_Files_RelocationArg.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationError class" Url="html/T_Dropbox_Api_Files_RelocationError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationError.FromError class" Url="html/T_Dropbox_Api_Files_RelocationError_FromError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationError.Other class" Url="html/T_Dropbox_Api_Files_RelocationError_Other.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationError.QuotaError class" Url="html/T_Dropbox_Api_Files_RelocationError_QuotaError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationError.ToError class" Url="html/T_Dropbox_Api_Files_RelocationError_ToError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.RelocationError.TooManyFiles class" Url="html/T_Dropbox_Api_Files_RelocationError_TooManyFiles.htm" />
   <HelpKINode Title="Dropbox.Api.Files.Restricted class" Url="html/T_Dropbox_Api_Files_Restricted.htm" />
   <HelpKINode Title="Dropbox.Api.Files.RestrictedReason class" Url="html/T_Dropbox_Api_Files_RestrictedReason.htm" />
   <HelpKINode Title="Dropbox.Api.Files.RestrictedReason.Dmca class" Url="html/T_Dropbox_Api_Files_RestrictedReason_Dmca.htm" />
@@ -458,6 +572,23 @@
   <HelpKINode Title="Dropbox.Api.Files.SearchMode.FilenameAndContent class" Url="html/T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm" />
   <HelpKINode Title="Dropbox.Api.Files.SearchQuery class" Url="html/T_Dropbox_Api_Files_SearchQuery.htm" />
   <HelpKINode Title="Dropbox.Api.Files.SearchResults class" Url="html/T_Dropbox_Api_Files_SearchResults.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailArg class" Url="html/T_Dropbox_Api_Files_ThumbnailArg.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError class" Url="html/T_Dropbox_Api_Files_ThumbnailError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError.ConversionError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ConversionError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError.DownloadError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_DownloadError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError.ExtensionError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ExtensionError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError.FormatError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_FormatError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError.InvalidImage class" Url="html/T_Dropbox_Api_Files_ThumbnailError_InvalidImage.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailError.SizeError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_SizeError.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailFormat class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailFormat.Jpeg class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Jpeg.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailFormat.Png class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Png.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailSize class" Url="html/T_Dropbox_Api_Files_ThumbnailSize.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailSize.L class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_L.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailSize.M class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_M.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailSize.S class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_S.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailSize.Xl class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xl.htm" />
+  <HelpKINode Title="Dropbox.Api.Files.ThumbnailSize.Xs class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xs.htm" />
   <HelpKINode Title="Dropbox.Api.Files.UploadCommitError class" Url="html/T_Dropbox_Api_Files_UploadCommitError.htm" />
   <HelpKINode Title="Dropbox.Api.Files.UploadError class" Url="html/T_Dropbox_Api_Files_UploadError.htm" />
   <HelpKINode Title="Dropbox.Api.Files.UploadError.CommitFailed class" Url="html/T_Dropbox_Api_Files_UploadError_CommitFailed.htm" />
@@ -484,6 +615,10 @@
   <HelpKINode Title="Dropbox.Api.OAuthResponseType enumeration" Url="html/T_Dropbox_Api_OAuthResponseType.htm" />
   <HelpKINode Title="Dropbox.Api.Users namespace" Url="html/N_Dropbox_Api_Users.htm" />
   <HelpKINode Title="Dropbox.Api.Users.Account class" Url="html/T_Dropbox_Api_Users_Account.htm" />
+  <HelpKINode Title="Dropbox.Api.Users.AccountType class" Url="html/T_Dropbox_Api_Users_AccountType.htm" />
+  <HelpKINode Title="Dropbox.Api.Users.AccountType.Basic class" Url="html/T_Dropbox_Api_Users_AccountType_Basic.htm" />
+  <HelpKINode Title="Dropbox.Api.Users.AccountType.Business class" Url="html/T_Dropbox_Api_Users_AccountType_Business.htm" />
+  <HelpKINode Title="Dropbox.Api.Users.AccountType.Pro class" Url="html/T_Dropbox_Api_Users_AccountType_Pro.htm" />
   <HelpKINode Title="Dropbox.Api.Users.BasicAccount class" Url="html/T_Dropbox_Api_Users_BasicAccount.htm" />
   <HelpKINode Title="Dropbox.Api.Users.FullAccount class" Url="html/T_Dropbox_Api_Users_FullAccount.htm" />
   <HelpKINode Title="Dropbox.Api.Users.GetAccountArg class" Url="html/T_Dropbox_Api_Users_GetAccountArg.htm" />
@@ -538,26 +673,34 @@
   </HelpKINode>
   <HelpKINode Title="Encode(Of T) method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_Encode__1.htm" />
   <HelpKINode Title="Encode&lt;T&gt; method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_Encode__1.htm" />
+  <HelpKINode Title="EndCopy method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndCopy.htm" />
+  <HelpKINode Title="EndCreateFolder method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndCreateFolder.htm" />
+  <HelpKINode Title="EndDelete method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndDelete.htm" />
   <HelpKINode Title="EndDownload method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndDownload.htm" />
   <HelpKINode Title="EndGetAccount method" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_EndGetAccount.htm" />
   <HelpKINode Title="EndGetCurrentAccount method" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_EndGetCurrentAccount.htm" />
   <HelpKINode Title="EndGetMetadata method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndGetMetadata.htm" />
   <HelpKINode Title="EndGetSpaceUsage method" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_EndGetSpaceUsage.htm" />
+  <HelpKINode Title="EndGetThumbnail method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndGetThumbnail.htm" />
   <HelpKINode Title="EndListFolder method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndListFolder.htm" />
   <HelpKINode Title="EndListFolderContinue method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndListFolderContinue.htm" />
+  <HelpKINode Title="EndMove method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndMove.htm" />
   <HelpKINode Title="EndSearch method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndSearch.htm" />
   <HelpKINode Title="EndUpload method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUpload.htm" />
   <HelpKINode Title="EndUploadSessionAppend method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionAppend.htm" />
   <HelpKINode Title="EndUploadSessionFinish method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionFinish.htm" />
   <HelpKINode Title="EndUploadSessionStart method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionStart.htm" />
-  <HelpKINode Title="Entries property">
-    <HelpKINode Title="ListFolderContinueResult.Entries Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueResult_Entries.htm" />
-    <HelpKINode Title="ListFolderResult.Entries Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_Entries.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Entries property" Url="html/P_Dropbox_Api_Files_ListFolderResult_Entries.htm" />
   <HelpKINode Title="ErrorResponse property" Url="html/P_Dropbox_Api_ApiException_1_ErrorResponse.htm" />
+  <HelpKINode Title="ExtensionError class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_ExtensionError.htm" />
+  </HelpKINode>
   <HelpKINode Title="FamiliarName property" Url="html/P_Dropbox_Api_Users_Name_FamiliarName.htm" />
   <HelpKINode Title="File class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_File.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FileDisallowed class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_FileDisallowed.htm" />
   </HelpKINode>
   <HelpKINode Title="FileMetadata class">
     <HelpKINode Title="FileMetadata Class" Url="html/T_Dropbox_Api_Files_FileMetadata.htm" />
@@ -570,18 +713,9 @@
   <HelpKINode Title="FileMetadata.Rev property" Url="html/P_Dropbox_Api_Files_FileMetadata_Rev.htm" />
   <HelpKINode Title="FileMetadata.ServerModified property" Url="html/P_Dropbox_Api_Files_FileMetadata_ServerModified.htm" />
   <HelpKINode Title="FileMetadata.Size property" Url="html/P_Dropbox_Api_Files_FileMetadata_Size.htm" />
-  <HelpKINode Title="FileMetadataWithName class">
-    <HelpKINode Title="FileMetadataWithName Class" Url="html/T_Dropbox_Api_Files_FileMetadataWithName.htm" />
-    <HelpKINode Title="about FileMetadataWithName class" Url="html/T_Dropbox_Api_Files_FileMetadataWithName.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_FileMetadataWithName__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_FileMetadataWithName.htm" />
-  </HelpKINode>
-  <HelpKINode Title="FileMetadataWithName.FileMetadataWithName constructor" Url="html/Overload_Dropbox_Api_Files_FileMetadataWithName__ctor.htm" />
-  <HelpKINode Title="FileMetadataWithName.Metadata property" Url="html/P_Dropbox_Api_Files_FileMetadataWithName_Metadata.htm" />
-  <HelpKINode Title="FileMetadataWithName.Name property" Url="html/P_Dropbox_Api_Files_FileMetadataWithName_Name.htm" />
   <HelpKINode Title="Filename class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Filename.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_Filename.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMatchType_Filename.htm" />
   </HelpKINode>
   <HelpKINode Title="FilenameAndContent class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchMode_FilenameAndContent.htm" />
@@ -592,28 +726,43 @@
     <HelpKINode Title="about FilesRoutes class" Url="html/T_Dropbox_Api_Files_Routes_FilesRoutes.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Dropbox_Api_Files_Routes_FilesRoutes.htm" />
   </HelpKINode>
+  <HelpKINode Title="FilesRoutes.BeginCopy method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginCopy.htm" />
+  <HelpKINode Title="FilesRoutes.BeginCreateFolder method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginCreateFolder.htm" />
+  <HelpKINode Title="FilesRoutes.BeginDelete method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDelete.htm" />
   <HelpKINode Title="FilesRoutes.BeginDownload method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginDownload.htm" />
   <HelpKINode Title="FilesRoutes.BeginGetMetadata method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetMetadata.htm" />
+  <HelpKINode Title="FilesRoutes.BeginGetThumbnail method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginGetThumbnail.htm" />
   <HelpKINode Title="FilesRoutes.BeginListFolder method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolder.htm" />
   <HelpKINode Title="FilesRoutes.BeginListFolderContinue method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginListFolderContinue.htm" />
+  <HelpKINode Title="FilesRoutes.BeginMove method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginMove.htm" />
   <HelpKINode Title="FilesRoutes.BeginSearch method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginSearch.htm" />
   <HelpKINode Title="FilesRoutes.BeginUpload method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUpload.htm" />
   <HelpKINode Title="FilesRoutes.BeginUploadSessionAppend method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionAppend.htm" />
   <HelpKINode Title="FilesRoutes.BeginUploadSessionFinish method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionFinish.htm" />
   <HelpKINode Title="FilesRoutes.BeginUploadSessionStart method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_BeginUploadSessionStart.htm" />
+  <HelpKINode Title="FilesRoutes.CopyAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_CopyAsync.htm" />
+  <HelpKINode Title="FilesRoutes.CreateFolderAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_CreateFolderAsync.htm" />
+  <HelpKINode Title="FilesRoutes.DeleteAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_DeleteAsync.htm" />
   <HelpKINode Title="FilesRoutes.DownloadAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_DownloadAsync.htm" />
+  <HelpKINode Title="FilesRoutes.EndCopy method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndCopy.htm" />
+  <HelpKINode Title="FilesRoutes.EndCreateFolder method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndCreateFolder.htm" />
+  <HelpKINode Title="FilesRoutes.EndDelete method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndDelete.htm" />
   <HelpKINode Title="FilesRoutes.EndDownload method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndDownload.htm" />
   <HelpKINode Title="FilesRoutes.EndGetMetadata method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndGetMetadata.htm" />
+  <HelpKINode Title="FilesRoutes.EndGetThumbnail method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndGetThumbnail.htm" />
   <HelpKINode Title="FilesRoutes.EndListFolder method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndListFolder.htm" />
   <HelpKINode Title="FilesRoutes.EndListFolderContinue method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndListFolderContinue.htm" />
+  <HelpKINode Title="FilesRoutes.EndMove method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndMove.htm" />
   <HelpKINode Title="FilesRoutes.EndSearch method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndSearch.htm" />
   <HelpKINode Title="FilesRoutes.EndUpload method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUpload.htm" />
   <HelpKINode Title="FilesRoutes.EndUploadSessionAppend method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionAppend.htm" />
   <HelpKINode Title="FilesRoutes.EndUploadSessionFinish method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionFinish.htm" />
   <HelpKINode Title="FilesRoutes.EndUploadSessionStart method" Url="html/M_Dropbox_Api_Files_Routes_FilesRoutes_EndUploadSessionStart.htm" />
   <HelpKINode Title="FilesRoutes.GetMetadataAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_GetMetadataAsync.htm" />
+  <HelpKINode Title="FilesRoutes.GetThumbnailAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_GetThumbnailAsync.htm" />
   <HelpKINode Title="FilesRoutes.ListFolderAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderAsync.htm" />
   <HelpKINode Title="FilesRoutes.ListFolderContinueAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderContinueAsync.htm" />
+  <HelpKINode Title="FilesRoutes.MoveAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_MoveAsync.htm" />
   <HelpKINode Title="FilesRoutes.SearchAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_SearchAsync.htm" />
   <HelpKINode Title="FilesRoutes.UploadAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadAsync.htm" />
   <HelpKINode Title="FilesRoutes.UploadSessionAppendAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_UploadSessionAppendAsync.htm" />
@@ -622,12 +771,15 @@
   <HelpKINode Title="Folder class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Folder.htm" />
   </HelpKINode>
+  <HelpKINode Title="FolderDisallowed class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_FolderDisallowed.htm" />
+  </HelpKINode>
   <HelpKINode Title="FolderMetadata class">
     <HelpKINode Title="FolderMetadata Class" Url="html/T_Dropbox_Api_Files_FolderMetadata.htm" />
     <HelpKINode Title="about FolderMetadata class" Url="html/T_Dropbox_Api_Files_FolderMetadata.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_FolderMetadata__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_FolderMetadata__ctor.htm" />
   </HelpKINode>
-  <HelpKINode Title="FolderMetadata.FolderMetadata constructor" Url="html/M_Dropbox_Api_Files_FolderMetadata__ctor.htm" />
+  <HelpKINode Title="FolderMetadata.FolderMetadata constructor" Url="html/Overload_Dropbox_Api_Files_FolderMetadata__ctor.htm" />
   <HelpKINode Title="FolderPathError class">
     <HelpKINode Title="FolderPathError Class" Url="html/T_Dropbox_Api_Files_FolderPathError.htm" />
     <HelpKINode Title="about FolderPathError class" Url="html/T_Dropbox_Api_Files_FolderPathError.htm" />
@@ -649,10 +801,14 @@
     <HelpKINode Title="about FolderPathError.NotFound class" Url="html/T_Dropbox_Api_Files_FolderPathError_NotFound.htm" />
   </HelpKINode>
   <HelpKINode Title="FolderPathError.NotFound.Instance field" Url="html/F_Dropbox_Api_Files_FolderPathError_NotFound_Instance.htm" />
-  <HelpKINode Title="Footer property">
-    <HelpKINode Title="ListFolderContinueResult.Footer Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueResult_Footer.htm" />
-    <HelpKINode Title="ListFolderResult.Footer Property " Url="html/P_Dropbox_Api_Files_ListFolderResult_Footer.htm" />
+  <HelpKINode Title="Format property" Url="html/P_Dropbox_Api_Files_ThumbnailArg_Format.htm" />
+  <HelpKINode Title="FormatError class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_FormatError.htm" />
   </HelpKINode>
+  <HelpKINode Title="FromError class">
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationError_FromError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FromPath property" Url="html/P_Dropbox_Api_Files_RelocationArg_FromPath.htm" />
   <HelpKINode Title="FullAccount class">
     <HelpKINode Title="FullAccount Class" Url="html/T_Dropbox_Api_Users_FullAccount.htm" />
     <HelpKINode Title="about FullAccount class" Url="html/T_Dropbox_Api_Users_FullAccount.htm" />
@@ -660,6 +816,7 @@
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Users_FullAccount.htm" />
   </HelpKINode>
   <HelpKINode Title="FullAccount.AccountId property" Url="html/P_Dropbox_Api_Users_FullAccount_AccountId.htm" />
+  <HelpKINode Title="FullAccount.AccountType property" Url="html/P_Dropbox_Api_Users_FullAccount_AccountType.htm" />
   <HelpKINode Title="FullAccount.Country property" Url="html/P_Dropbox_Api_Users_FullAccount_Country.htm" />
   <HelpKINode Title="FullAccount.Email property" Url="html/P_Dropbox_Api_Users_FullAccount_Email.htm" />
   <HelpKINode Title="FullAccount.FullAccount constructor" Url="html/Overload_Dropbox_Api_Users_FullAccount__ctor.htm" />
@@ -754,13 +911,14 @@
     <HelpKINode Title="JsonDecoder.GetObject Method " Url="html/M_Dropbox_Api_Babel_JsonDecoder_GetObject.htm" />
   </HelpKINode>
   <HelpKINode Title="GetSpaceUsageAsync method" Url="html/M_Dropbox_Api_Users_Routes_UsersRoutes_GetSpaceUsageAsync.htm" />
+  <HelpKINode Title="GetThumbnailAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_GetThumbnailAsync.htm" />
   <HelpKINode Title="GetUnionName method">
     <HelpKINode Title="IDecoder.GetUnionName Method " Url="html/M_Dropbox_Api_Babel_IDecoder_GetUnionName.htm" />
     <HelpKINode Title="JsonDecoder.GetUnionName Method " Url="html/M_Dropbox_Api_Babel_JsonDecoder_GetUnionName.htm" />
   </HelpKINode>
   <HelpKINode Title="GivenName property" Url="html/P_Dropbox_Api_Users_Name_GivenName.htm" />
   <HelpKINode Title="HasField method" Url="html/M_Dropbox_Api_Babel_IDecoderContext_HasField.htm" />
-  <HelpKINode Title="HasMore property" Url="html/P_Dropbox_Api_Files_ListFolderFooter_HasMore.htm" />
+  <HelpKINode Title="HasMore property" Url="html/P_Dropbox_Api_Files_ListFolderResult_HasMore.htm" />
   <HelpKINode Title="HttpException class">
     <HelpKINode Title="HttpException Class" Url="html/T_Dropbox_Api_HttpException.htm" />
     <HelpKINode Title="about HttpException class" Url="html/T_Dropbox_Api_HttpException.htm" />
@@ -768,6 +926,7 @@
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_HttpException.htm" />
   </HelpKINode>
   <HelpKINode Title="HttpException.HttpException constructor" Url="html/M_Dropbox_Api_HttpException__ctor.htm" />
+  <HelpKINode Title="HttpException.RequestUri property" Url="html/P_Dropbox_Api_HttpException_RequestUri.htm" />
   <HelpKINode Title="HttpException.StatusCode property" Url="html/P_Dropbox_Api_HttpException_StatusCode.htm" />
   <HelpKINode Title="Id property" Url="html/P_Dropbox_Api_Users_Team_Id.htm" />
   <HelpKINode Title="IDecoder interface">
@@ -852,6 +1011,9 @@
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionLookupError_IncorrectOffset.htm" />
   </HelpKINode>
   <HelpKINode Title="Instance field">
+    <HelpKINode Title="AccountType.Basic.Instance Field" Url="html/F_Dropbox_Api_Users_AccountType_Basic_Instance.htm" />
+    <HelpKINode Title="AccountType.Business.Instance Field" Url="html/F_Dropbox_Api_Users_AccountType_Business_Instance.htm" />
+    <HelpKINode Title="AccountType.Pro.Instance Field" Url="html/F_Dropbox_Api_Users_AccountType_Pro_Instance.htm" />
     <HelpKINode Title="CommitConflictError.AutorenameFailed.Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_AutorenameFailed_Instance.htm" />
     <HelpKINode Title="CommitConflictError.File.Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_File_Instance.htm" />
     <HelpKINode Title="CommitConflictError.Folder.Instance Field" Url="html/F_Dropbox_Api_Files_CommitConflictError_Folder_Instance.htm" />
@@ -868,11 +1030,24 @@
     <HelpKINode Title="GetAccountError.Unknown.Instance Field" Url="html/F_Dropbox_Api_Users_GetAccountError_Unknown_Instance.htm" />
     <HelpKINode Title="GetMetadataError.NotFound.Instance Field" Url="html/F_Dropbox_Api_Files_GetMetadataError_NotFound_Instance.htm" />
     <HelpKINode Title="GetMetadataError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_GetMetadataError_Other_Instance.htm" />
-    <HelpKINode Title="ListFolderContinueError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_ListFolderContinueError_Other_Instance.htm" />
     <HelpKINode Title="ListFolderContinueError.Reset.Instance Field" Url="html/F_Dropbox_Api_Files_ListFolderContinueError_Reset_Instance.htm" />
     <HelpKINode Title="ListFolderError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_ListFolderError_Other_Instance.htm" />
     <HelpKINode Title="NoFileReason.IsFolder.Instance Field" Url="html/F_Dropbox_Api_Files_NoFileReason_IsFolder_Instance.htm" />
     <HelpKINode Title="NoFileReason.NotFound.Instance Field" Url="html/F_Dropbox_Api_Files_NoFileReason_NotFound_Instance.htm" />
+    <HelpKINode Title="PathError.AutorenameFiled.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_AutorenameFiled_Instance.htm" />
+    <HelpKINode Title="PathError.ConflictFile.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFile_Instance.htm" />
+    <HelpKINode Title="PathError.ConflictFileAncestor.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFileAncestor_Instance.htm" />
+    <HelpKINode Title="PathError.ConflictFolder.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFolder_Instance.htm" />
+    <HelpKINode Title="PathError.FileDisallowed.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_FileDisallowed_Instance.htm" />
+    <HelpKINode Title="PathError.FolderDisallowed.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_FolderDisallowed_Instance.htm" />
+    <HelpKINode Title="PathError.NotFound.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_NotFound_Instance.htm" />
+    <HelpKINode Title="PathError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_Other_Instance.htm" />
+    <HelpKINode Title="PathError.ReadOnly.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_ReadOnly_Instance.htm" />
+    <HelpKINode Title="PathError.RootDisallowed.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_RootDisallowed_Instance.htm" />
+    <HelpKINode Title="PathError.SharedFolderDisallowed.Instance Field" Url="html/F_Dropbox_Api_Files_PathError_SharedFolderDisallowed_Instance.htm" />
+    <HelpKINode Title="RelocationError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_RelocationError_Other_Instance.htm" />
+    <HelpKINode Title="RelocationError.QuotaError.Instance Field" Url="html/F_Dropbox_Api_Files_RelocationError_QuotaError_Instance.htm" />
+    <HelpKINode Title="RelocationError.TooManyFiles.Instance Field" Url="html/F_Dropbox_Api_Files_RelocationError_TooManyFiles_Instance.htm" />
     <HelpKINode Title="RestrictedReason.Dmca.Instance Field" Url="html/F_Dropbox_Api_Files_RestrictedReason_Dmca_Instance.htm" />
     <HelpKINode Title="RestrictedReason.Other.Instance Field" Url="html/F_Dropbox_Api_Files_RestrictedReason_Other_Instance.htm" />
     <HelpKINode Title="SearchError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_SearchError_Other_Instance.htm" />
@@ -882,6 +1057,18 @@
     <HelpKINode Title="SearchMode.DeletedFilename.Instance Field" Url="html/F_Dropbox_Api_Files_SearchMode_DeletedFilename_Instance.htm" />
     <HelpKINode Title="SearchMode.Filename.Instance Field" Url="html/F_Dropbox_Api_Files_SearchMode_Filename_Instance.htm" />
     <HelpKINode Title="SearchMode.FilenameAndContent.Instance Field" Url="html/F_Dropbox_Api_Files_SearchMode_FilenameAndContent_Instance.htm" />
+    <HelpKINode Title="ThumbnailError.ConversionError.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_ConversionError_Instance.htm" />
+    <HelpKINode Title="ThumbnailError.ExtensionError.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_ExtensionError_Instance.htm" />
+    <HelpKINode Title="ThumbnailError.FormatError.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_FormatError_Instance.htm" />
+    <HelpKINode Title="ThumbnailError.InvalidImage.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_InvalidImage_Instance.htm" />
+    <HelpKINode Title="ThumbnailError.SizeError.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailError_SizeError_Instance.htm" />
+    <HelpKINode Title="ThumbnailFormat.Jpeg.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailFormat_Jpeg_Instance.htm" />
+    <HelpKINode Title="ThumbnailFormat.Png.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailFormat_Png_Instance.htm" />
+    <HelpKINode Title="ThumbnailSize.L.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_L_Instance.htm" />
+    <HelpKINode Title="ThumbnailSize.M.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_M_Instance.htm" />
+    <HelpKINode Title="ThumbnailSize.S.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_S_Instance.htm" />
+    <HelpKINode Title="ThumbnailSize.Xl.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_Xl_Instance.htm" />
+    <HelpKINode Title="ThumbnailSize.Xs.Instance Field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_Xs_Instance.htm" />
     <HelpKINode Title="UploadError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_UploadError_Other_Instance.htm" />
     <HelpKINode Title="UploadSessionFinishError.Other.Instance Field" Url="html/F_Dropbox_Api_Files_UploadSessionFinishError_Other_Instance.htm" />
     <HelpKINode Title="UploadSessionLookupError.Closed.Instance Field" Url="html/F_Dropbox_Api_Files_UploadSessionLookupError_Closed_Instance.htm" />
@@ -893,24 +1080,37 @@
   <HelpKINode Title="InsufficientQuota class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_InsufficientQuota.htm" />
   </HelpKINode>
+  <HelpKINode Title="InvalidImage class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_InvalidImage.htm" />
+  </HelpKINode>
   <HelpKINode Title="IsAdd property" Url="html/P_Dropbox_Api_Files_WriteMode_IsAdd.htm" />
   <HelpKINode Title="IsAutorenameFailed property" Url="html/P_Dropbox_Api_Files_CommitConflictError_IsAutorenameFailed.htm" />
+  <HelpKINode Title="IsAutorenameFiled property" Url="html/P_Dropbox_Api_Files_PathError_IsAutorenameFiled.htm" />
+  <HelpKINode Title="IsBasic property" Url="html/P_Dropbox_Api_Users_AccountType_IsBasic.htm" />
   <HelpKINode Title="IsBoth property" Url="html/P_Dropbox_Api_Files_SearchMatchType_IsBoth.htm" />
+  <HelpKINode Title="IsBusiness property" Url="html/P_Dropbox_Api_Users_AccountType_IsBusiness.htm" />
   <HelpKINode Title="IsClosed property" Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_IsClosed.htm" />
   <HelpKINode Title="IsCommitFailed property">
     <HelpKINode Title="UploadError.IsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadError_IsCommitFailed.htm" />
     <HelpKINode Title="UploadSessionFinishError.IsCommitFailed Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_IsCommitFailed.htm" />
   </HelpKINode>
   <HelpKINode Title="IsConflict property" Url="html/P_Dropbox_Api_Files_CommitError_IsConflict.htm" />
+  <HelpKINode Title="IsConflictFile property" Url="html/P_Dropbox_Api_Files_PathError_IsConflictFile.htm" />
+  <HelpKINode Title="IsConflictFileAncestor property" Url="html/P_Dropbox_Api_Files_PathError_IsConflictFileAncestor.htm" />
+  <HelpKINode Title="IsConflictFolder property" Url="html/P_Dropbox_Api_Files_PathError_IsConflictFolder.htm" />
   <HelpKINode Title="IsContent property" Url="html/P_Dropbox_Api_Files_SearchMatchType_IsContent.htm" />
-  <HelpKINode Title="IsContinue property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_IsContinue.htm" />
+  <HelpKINode Title="IsConversionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsConversionError.htm" />
+  <HelpKINode Title="IsDeleted property" Url="html/P_Dropbox_Api_Files_Metadata_IsDeleted.htm" />
   <HelpKINode Title="IsDeletedFilename property" Url="html/P_Dropbox_Api_Files_SearchMode_IsDeletedFilename.htm" />
   <HelpKINode Title="IsDisallowed property" Url="html/P_Dropbox_Api_Files_DownloadError_IsDisallowed.htm" />
   <HelpKINode Title="IsDmca property" Url="html/P_Dropbox_Api_Files_RestrictedReason_IsDmca.htm" />
+  <HelpKINode Title="IsDownloadError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsDownloadError.htm" />
+  <HelpKINode Title="IsExtensionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsExtensionError.htm" />
   <HelpKINode Title="IsFile property">
     <HelpKINode Title="CommitConflictError.IsFile Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_IsFile.htm" />
     <HelpKINode Title="Metadata.IsFile Property " Url="html/P_Dropbox_Api_Files_Metadata_IsFile.htm" />
   </HelpKINode>
+  <HelpKINode Title="IsFileDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsFileDisallowed.htm" />
   <HelpKINode Title="IsFilename property">
     <HelpKINode Title="SearchMatchType.IsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMatchType_IsFilename.htm" />
     <HelpKINode Title="SearchMode.IsFilename Property " Url="html/P_Dropbox_Api_Files_SearchMode_IsFilename.htm" />
@@ -923,12 +1123,20 @@
     <HelpKINode Title="CommitConflictError.IsFolder Property " Url="html/P_Dropbox_Api_Files_CommitConflictError_IsFolder.htm" />
     <HelpKINode Title="Metadata.IsFolder Property " Url="html/P_Dropbox_Api_Files_Metadata_IsFolder.htm" />
   </HelpKINode>
+  <HelpKINode Title="IsFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsFolderDisallowed.htm" />
+  <HelpKINode Title="IsFormatError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsFormatError.htm" />
+  <HelpKINode Title="IsFromError property" Url="html/P_Dropbox_Api_Files_RelocationError_IsFromError.htm" />
   <HelpKINode Title="IsIncorrectOffset property" Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_IsIncorrectOffset.htm" />
   <HelpKINode Title="IsInsufficientQuota property" Url="html/P_Dropbox_Api_Files_CommitError_IsInsufficientQuota.htm" />
+  <HelpKINode Title="IsInvalidImage property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsInvalidImage.htm" />
   <HelpKINode Title="IsIsFolder property" Url="html/P_Dropbox_Api_Files_NoFileReason_IsIsFolder.htm" />
+  <HelpKINode Title="IsJpeg property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_IsJpeg.htm" />
   <HelpKINode Title="IsKnownRootCertPublicKey method" Url="html/Overload_Dropbox_Api_DropboxCertHelper_IsKnownRootCertPublicKey.htm" />
-  <HelpKINode Title="IsListFolderError property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsListFolderError.htm" />
+  <HelpKINode Title="IsL property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsL.htm" />
   <HelpKINode Title="IsLookupFailed property" Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_IsLookupFailed.htm" />
+  <HelpKINode Title="IsM property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsM.htm" />
+  <HelpKINode Title="IsMalformedPath property" Url="html/P_Dropbox_Api_Files_PathError_IsMalformedPath.htm" />
+  <HelpKINode Title="IsMisc property" Url="html/P_Dropbox_Api_Files_PathError_IsMisc.htm" />
   <HelpKINode Title="IsNoAccount property" Url="html/P_Dropbox_Api_Users_GetAccountError_IsNoAccount.htm" />
   <HelpKINode Title="IsNoFile property" Url="html/P_Dropbox_Api_Files_DownloadError_IsNoFile.htm" />
   <HelpKINode Title="IsNotFolder property" Url="html/P_Dropbox_Api_Files_FolderPathError_IsNotFolder.htm" />
@@ -936,6 +1144,7 @@
     <HelpKINode Title="FolderPathError.IsNotFound Property " Url="html/P_Dropbox_Api_Files_FolderPathError_IsNotFound.htm" />
     <HelpKINode Title="GetMetadataError.IsNotFound Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_IsNotFound.htm" />
     <HelpKINode Title="NoFileReason.IsNotFound Property " Url="html/P_Dropbox_Api_Files_NoFileReason_IsNotFound.htm" />
+    <HelpKINode Title="PathError.IsNotFound Property " Url="html/P_Dropbox_Api_Files_PathError_IsNotFound.htm" />
     <HelpKINode Title="UploadSessionLookupError.IsNotFound Property " Url="html/P_Dropbox_Api_Files_UploadSessionLookupError_IsNotFound.htm" />
   </HelpKINode>
   <HelpKINode Title="IsNoWritePermission property" Url="html/P_Dropbox_Api_Files_CommitError_IsNoWritePermission.htm" />
@@ -944,8 +1153,9 @@
     <HelpKINode Title="CommitError.IsOther Property " Url="html/P_Dropbox_Api_Files_CommitError_IsOther.htm" />
     <HelpKINode Title="DownloadError.IsOther Property " Url="html/P_Dropbox_Api_Files_DownloadError_IsOther.htm" />
     <HelpKINode Title="GetMetadataError.IsOther Property " Url="html/P_Dropbox_Api_Files_GetMetadataError_IsOther.htm" />
-    <HelpKINode Title="ListFolderContinueError.IsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsOther.htm" />
     <HelpKINode Title="ListFolderError.IsOther Property " Url="html/P_Dropbox_Api_Files_ListFolderError_IsOther.htm" />
+    <HelpKINode Title="PathError.IsOther Property " Url="html/P_Dropbox_Api_Files_PathError_IsOther.htm" />
+    <HelpKINode Title="RelocationError.IsOther Property " Url="html/P_Dropbox_Api_Files_RelocationError_IsOther.htm" />
     <HelpKINode Title="RestrictedReason.IsOther Property " Url="html/P_Dropbox_Api_Files_RestrictedReason_IsOther.htm" />
     <HelpKINode Title="SearchError.IsOther Property " Url="html/P_Dropbox_Api_Files_SearchError_IsOther.htm" />
     <HelpKINode Title="UploadError.IsOther Property " Url="html/P_Dropbox_Api_Files_UploadError_IsOther.htm" />
@@ -955,12 +1165,23 @@
   <HelpKINode Title="IsOverwrite property" Url="html/P_Dropbox_Api_Files_WriteMode_IsOverwrite.htm" />
   <HelpKINode Title="IsPaired property" Url="html/P_Dropbox_Api_Users_FullAccount_IsPaired.htm" />
   <HelpKINode Title="IsPermission property" Url="html/P_Dropbox_Api_Files_DisallowedReason_IsPermission.htm" />
+  <HelpKINode Title="IsPng property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_IsPng.htm" />
+  <HelpKINode Title="IsPro property" Url="html/P_Dropbox_Api_Users_AccountType_IsPro.htm" />
+  <HelpKINode Title="IsQuotaError property" Url="html/P_Dropbox_Api_Files_RelocationError_IsQuotaError.htm" />
+  <HelpKINode Title="IsReadOnly property" Url="html/P_Dropbox_Api_Files_PathError_IsReadOnly.htm" />
   <HelpKINode Title="IsReset property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsReset.htm" />
-  <HelpKINode Title="IsRestart property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_IsRestart.htm" />
   <HelpKINode Title="IsRestricted property" Url="html/P_Dropbox_Api_Files_DisallowedReason_IsRestricted.htm" />
+  <HelpKINode Title="IsRootDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsRootDisallowed.htm" />
+  <HelpKINode Title="IsS property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsS.htm" />
+  <HelpKINode Title="IsSharedFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsSharedFolderDisallowed.htm" />
+  <HelpKINode Title="IsSizeError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsSizeError.htm" />
   <HelpKINode Title="IsTeammate property" Url="html/P_Dropbox_Api_Users_BasicAccount_IsTeammate.htm" />
+  <HelpKINode Title="IsToError property" Url="html/P_Dropbox_Api_Files_RelocationError_IsToError.htm" />
+  <HelpKINode Title="IsTooManyFiles property" Url="html/P_Dropbox_Api_Files_RelocationError_IsTooManyFiles.htm" />
   <HelpKINode Title="IsUnknown property" Url="html/P_Dropbox_Api_Users_GetAccountError_IsUnknown.htm" />
   <HelpKINode Title="IsUpdate property" Url="html/P_Dropbox_Api_Files_WriteMode_IsUpdate.htm" />
+  <HelpKINode Title="IsXl property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsXl.htm" />
+  <HelpKINode Title="IsXs property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsXs.htm" />
   <HelpKINode Title="ITransport interface">
     <HelpKINode Title="ITransport Interface" Url="html/T_Dropbox_Api_Babel_ITransport.htm" />
     <HelpKINode Title="about ITransport interface" Url="html/T_Dropbox_Api_Babel_ITransport.htm" />
@@ -972,6 +1193,9 @@
   <HelpKINode Title="ITransport.SendRpcRequestAsync&lt;TRequest, TResponse, TError&gt; method" Url="html/M_Dropbox_Api_Babel_ITransport_SendRpcRequestAsync__3.htm" />
   <HelpKINode Title="ITransport.SendUploadRequestAsync(Of TRequest, TResponse, TError) method" Url="html/M_Dropbox_Api_Babel_ITransport_SendUploadRequestAsync__3.htm" />
   <HelpKINode Title="ITransport.SendUploadRequestAsync&lt;TRequest, TResponse, TError&gt; method" Url="html/M_Dropbox_Api_Babel_ITransport_SendUploadRequestAsync__3.htm" />
+  <HelpKINode Title="Jpeg class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailFormat_Jpeg.htm" />
+  </HelpKINode>
   <HelpKINode Title="JsonDecoder class">
     <HelpKINode Title="JsonDecoder Class" Url="html/T_Dropbox_Api_Babel_JsonDecoder.htm" />
     <HelpKINode Title="about JsonDecoder class" Url="html/T_Dropbox_Api_Babel_JsonDecoder.htm" />
@@ -997,6 +1221,9 @@
   <HelpKINode Title="JsonEncoder.GetEncodedBytes method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_GetEncodedBytes.htm" />
   <HelpKINode Title="JsonEncoder.GetEncodedString method" Url="html/M_Dropbox_Api_Babel_JsonEncoder_GetEncodedString.htm" />
   <HelpKINode Title="JsonEncoder.JsonEncoder constructor" Url="html/M_Dropbox_Api_Babel_JsonEncoder__ctor.htm" />
+  <HelpKINode Title="L class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_L.htm" />
+  </HelpKINode>
   <HelpKINode Title="ListFolderArg class">
     <HelpKINode Title="ListFolderArg Class" Url="html/T_Dropbox_Api_Files_ListFolderArg.htm" />
     <HelpKINode Title="about ListFolderArg class" Url="html/T_Dropbox_Api_Files_ListFolderArg.htm" />
@@ -1015,75 +1242,24 @@
   <HelpKINode Title="ListFolderContinueArg.Cursor property" Url="html/P_Dropbox_Api_Files_ListFolderContinueArg_Cursor.htm" />
   <HelpKINode Title="ListFolderContinueArg.ListFolderContinueArg constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderContinueArg__ctor.htm" />
   <HelpKINode Title="ListFolderContinueAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_ListFolderContinueAsync.htm" />
-  <HelpKINode Title="ListFolderContinueEntries class">
-    <HelpKINode Title="ListFolderContinueEntries Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries.htm" />
-    <HelpKINode Title="about ListFolderContinueEntries class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueEntries.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderContinueEntries.AsContinue property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_AsContinue.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.AsRestart property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_AsRestart.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.Continue class">
-    <HelpKINode Title="ListFolderContinueEntries.Continue Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Continue.htm" />
-    <HelpKINode Title="about ListFolderContinueEntries.Continue class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Continue.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries_Continue__ctor.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderContinueEntries.Continue.Continue constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries_Continue__ctor.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.Continue.Value property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_Continue_Value.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.IsContinue property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_IsContinue.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.IsRestart property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_IsRestart.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.ListFolderContinueEntries constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries__ctor.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.Restart class">
-    <HelpKINode Title="ListFolderContinueEntries.Restart Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Restart.htm" />
-    <HelpKINode Title="about ListFolderContinueEntries.Restart class" Url="html/T_Dropbox_Api_Files_ListFolderContinueEntries_Restart.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries_Restart__ctor.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderContinueEntries.Restart.Restart constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueEntries_Restart__ctor.htm" />
-  <HelpKINode Title="ListFolderContinueEntries.Restart.Value property" Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_Restart_Value.htm" />
   <HelpKINode Title="ListFolderContinueError class">
     <HelpKINode Title="ListFolderContinueError Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError.htm" />
     <HelpKINode Title="about ListFolderContinueError class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError.htm" />
     <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueError__ctor.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueError.htm" />
   </HelpKINode>
-  <HelpKINode Title="ListFolderContinueError.AsListFolderError property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsListFolderError.htm" />
-  <HelpKINode Title="ListFolderContinueError.AsOther property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsOther.htm" />
   <HelpKINode Title="ListFolderContinueError.AsReset property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_AsReset.htm" />
-  <HelpKINode Title="ListFolderContinueError.IsListFolderError property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsListFolderError.htm" />
-  <HelpKINode Title="ListFolderContinueError.IsOther property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsOther.htm" />
   <HelpKINode Title="ListFolderContinueError.IsReset property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_IsReset.htm" />
   <HelpKINode Title="ListFolderContinueError.ListFolderContinueError constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueError__ctor.htm" />
-  <HelpKINode Title="ListFolderContinueError.ListFolderError class">
-    <HelpKINode Title="ListFolderContinueError.ListFolderError Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_ListFolderError.htm" />
-    <HelpKINode Title="about ListFolderContinueError.ListFolderError class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_ListFolderError.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueError_ListFolderError__ctor.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderContinueError.ListFolderError.ListFolderError constructor" Url="html/M_Dropbox_Api_Files_ListFolderContinueError_ListFolderError__ctor.htm" />
-  <HelpKINode Title="ListFolderContinueError.ListFolderError.Value property" Url="html/P_Dropbox_Api_Files_ListFolderContinueError_ListFolderError_Value.htm" />
-  <HelpKINode Title="ListFolderContinueError.Other class">
-    <HelpKINode Title="ListFolderContinueError.Other Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Other.htm" />
-    <HelpKINode Title="about ListFolderContinueError.Other class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Other.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderContinueError.Other.Instance field" Url="html/F_Dropbox_Api_Files_ListFolderContinueError_Other_Instance.htm" />
   <HelpKINode Title="ListFolderContinueError.Reset class">
     <HelpKINode Title="ListFolderContinueError.Reset Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm" />
     <HelpKINode Title="about ListFolderContinueError.Reset class" Url="html/T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm" />
   </HelpKINode>
   <HelpKINode Title="ListFolderContinueError.Reset.Instance field" Url="html/F_Dropbox_Api_Files_ListFolderContinueError_Reset_Instance.htm" />
-  <HelpKINode Title="ListFolderContinueResult class">
-    <HelpKINode Title="ListFolderContinueResult Class" Url="html/T_Dropbox_Api_Files_ListFolderContinueResult.htm" />
-    <HelpKINode Title="about ListFolderContinueResult class" Url="html/T_Dropbox_Api_Files_ListFolderContinueResult.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderContinueResult__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueResult.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderContinueResult.Entries property" Url="html/P_Dropbox_Api_Files_ListFolderContinueResult_Entries.htm" />
-  <HelpKINode Title="ListFolderContinueResult.Footer property" Url="html/P_Dropbox_Api_Files_ListFolderContinueResult_Footer.htm" />
-  <HelpKINode Title="ListFolderContinueResult.ListFolderContinueResult constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderContinueResult__ctor.htm" />
   <HelpKINode Title="ListFolderError class">
     <HelpKINode Title="ListFolderError Class" Url="html/T_Dropbox_Api_Files_ListFolderError.htm" />
     <HelpKINode Title="about ListFolderError class" Url="html/T_Dropbox_Api_Files_ListFolderError.htm" />
     <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ListFolderError__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueError_ListFolderError.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderError.htm" />
   </HelpKINode>
   <HelpKINode Title="ListFolderError.AsOther property" Url="html/P_Dropbox_Api_Files_ListFolderError_AsOther.htm" />
@@ -1094,27 +1270,25 @@
     <HelpKINode Title="about ListFolderError.Other class" Url="html/T_Dropbox_Api_Files_ListFolderError_Other.htm" />
   </HelpKINode>
   <HelpKINode Title="ListFolderError.Other.Instance field" Url="html/F_Dropbox_Api_Files_ListFolderError_Other_Instance.htm" />
-  <HelpKINode Title="ListFolderFooter class">
-    <HelpKINode Title="ListFolderFooter Class" Url="html/T_Dropbox_Api_Files_ListFolderFooter.htm" />
-    <HelpKINode Title="about ListFolderFooter class" Url="html/T_Dropbox_Api_Files_ListFolderFooter.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderFooter__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderFooter.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ListFolderFooter.Cursor property" Url="html/P_Dropbox_Api_Files_ListFolderFooter_Cursor.htm" />
-  <HelpKINode Title="ListFolderFooter.HasMore property" Url="html/P_Dropbox_Api_Files_ListFolderFooter_HasMore.htm" />
-  <HelpKINode Title="ListFolderFooter.ListFolderFooter constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderFooter__ctor.htm" />
   <HelpKINode Title="ListFolderResult class">
     <HelpKINode Title="ListFolderResult Class" Url="html/T_Dropbox_Api_Files_ListFolderResult.htm" />
     <HelpKINode Title="about ListFolderResult class" Url="html/T_Dropbox_Api_Files_ListFolderResult.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderResult__ctor.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderResult.htm" />
   </HelpKINode>
+  <HelpKINode Title="ListFolderResult.Cursor property" Url="html/P_Dropbox_Api_Files_ListFolderResult_Cursor.htm" />
   <HelpKINode Title="ListFolderResult.Entries property" Url="html/P_Dropbox_Api_Files_ListFolderResult_Entries.htm" />
-  <HelpKINode Title="ListFolderResult.Footer property" Url="html/P_Dropbox_Api_Files_ListFolderResult_Footer.htm" />
+  <HelpKINode Title="ListFolderResult.HasMore property" Url="html/P_Dropbox_Api_Files_ListFolderResult_HasMore.htm" />
   <HelpKINode Title="ListFolderResult.ListFolderResult constructor" Url="html/Overload_Dropbox_Api_Files_ListFolderResult__ctor.htm" />
   <HelpKINode Title="Locale property" Url="html/P_Dropbox_Api_Users_FullAccount_Locale.htm" />
   <HelpKINode Title="LookupFailed class">
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="M class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_M.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MalformedPath class">
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_PathError_MalformedPath.htm" />
   </HelpKINode>
   <HelpKINode Title="Matches property" Url="html/P_Dropbox_Api_Files_SearchResults_Matches.htm" />
   <HelpKINode Title="MatchType property" Url="html/P_Dropbox_Api_Files_SearchMatch_MatchType.htm" />
@@ -1122,44 +1296,28 @@
   <HelpKINode Title="Metadata class">
     <HelpKINode Title="Metadata Class" Url="html/T_Dropbox_Api_Files_Metadata.htm" />
     <HelpKINode Title="about Metadata class" Url="html/T_Dropbox_Api_Files_Metadata.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_Metadata__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_Metadata__ctor.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_Metadata.htm" />
   </HelpKINode>
-  <HelpKINode Title="Metadata property">
-    <HelpKINode Title="ChangeEntry.Metadata Property " Url="html/P_Dropbox_Api_Files_ChangeEntry_Metadata.htm" />
-    <HelpKINode Title="FileMetadataWithName.Metadata Property " Url="html/P_Dropbox_Api_Files_FileMetadataWithName_Metadata.htm" />
-    <HelpKINode Title="MetadataWithName.Metadata Property " Url="html/P_Dropbox_Api_Files_MetadataWithName_Metadata.htm" />
-    <HelpKINode Title="MetadataWithPath.Metadata Property " Url="html/P_Dropbox_Api_Files_MetadataWithPath_Metadata.htm" />
-    <HelpKINode Title="SearchMatch.Metadata Property " Url="html/P_Dropbox_Api_Files_SearchMatch_Metadata.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Metadata property" Url="html/P_Dropbox_Api_Files_SearchMatch_Metadata.htm" />
+  <HelpKINode Title="Metadata.AsDeleted property" Url="html/P_Dropbox_Api_Files_Metadata_AsDeleted.htm" />
   <HelpKINode Title="Metadata.AsFile property" Url="html/P_Dropbox_Api_Files_Metadata_AsFile.htm" />
   <HelpKINode Title="Metadata.AsFolder property" Url="html/P_Dropbox_Api_Files_Metadata_AsFolder.htm" />
+  <HelpKINode Title="Metadata.IsDeleted property" Url="html/P_Dropbox_Api_Files_Metadata_IsDeleted.htm" />
   <HelpKINode Title="Metadata.IsFile property" Url="html/P_Dropbox_Api_Files_Metadata_IsFile.htm" />
   <HelpKINode Title="Metadata.IsFolder property" Url="html/P_Dropbox_Api_Files_Metadata_IsFolder.htm" />
-  <HelpKINode Title="Metadata.Metadata constructor" Url="html/M_Dropbox_Api_Files_Metadata__ctor.htm" />
-  <HelpKINode Title="MetadataWithName class">
-    <HelpKINode Title="MetadataWithName Class" Url="html/T_Dropbox_Api_Files_MetadataWithName.htm" />
-    <HelpKINode Title="about MetadataWithName class" Url="html/T_Dropbox_Api_Files_MetadataWithName.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_MetadataWithName__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_MetadataWithName.htm" />
+  <HelpKINode Title="Metadata.Metadata constructor" Url="html/Overload_Dropbox_Api_Files_Metadata__ctor.htm" />
+  <HelpKINode Title="Metadata.Name property" Url="html/P_Dropbox_Api_Files_Metadata_Name.htm" />
+  <HelpKINode Title="Metadata.PathLower property" Url="html/P_Dropbox_Api_Files_Metadata_PathLower.htm" />
+  <HelpKINode Title="Misc class">
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_PathError_Misc.htm" />
   </HelpKINode>
-  <HelpKINode Title="MetadataWithName.Metadata property" Url="html/P_Dropbox_Api_Files_MetadataWithName_Metadata.htm" />
-  <HelpKINode Title="MetadataWithName.MetadataWithName constructor" Url="html/Overload_Dropbox_Api_Files_MetadataWithName__ctor.htm" />
-  <HelpKINode Title="MetadataWithName.Name property" Url="html/P_Dropbox_Api_Files_MetadataWithName_Name.htm" />
-  <HelpKINode Title="MetadataWithPath class">
-    <HelpKINode Title="MetadataWithPath Class" Url="html/T_Dropbox_Api_Files_MetadataWithPath.htm" />
-    <HelpKINode Title="about MetadataWithPath class" Url="html/T_Dropbox_Api_Files_MetadataWithPath.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_MetadataWithPath__ctor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_MetadataWithPath.htm" />
-  </HelpKINode>
-  <HelpKINode Title="MetadataWithPath.Metadata property" Url="html/P_Dropbox_Api_Files_MetadataWithPath_Metadata.htm" />
-  <HelpKINode Title="MetadataWithPath.MetadataWithPath constructor" Url="html/Overload_Dropbox_Api_Files_MetadataWithPath__ctor.htm" />
-  <HelpKINode Title="MetadataWithPath.Path property" Url="html/P_Dropbox_Api_Files_MetadataWithPath_Path.htm" />
   <HelpKINode Title="Mode property">
     <HelpKINode Title="CommitInfo.Mode Property " Url="html/P_Dropbox_Api_Files_CommitInfo_Mode.htm" />
     <HelpKINode Title="SearchQuery.Mode Property " Url="html/P_Dropbox_Api_Files_SearchQuery_Mode.htm" />
   </HelpKINode>
   <HelpKINode Title="More property" Url="html/P_Dropbox_Api_Files_SearchResults_More.htm" />
+  <HelpKINode Title="MoveAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_MoveAsync.htm" />
   <HelpKINode Title="Mute property" Url="html/P_Dropbox_Api_Files_CommitInfo_Mute.htm" />
   <HelpKINode Title="Name class">
     <HelpKINode Title="Name Class" Url="html/T_Dropbox_Api_Users_Name.htm" />
@@ -1170,10 +1328,8 @@
   <HelpKINode Title="Name property">
     <HelpKINode Title="Account.Name Property " Url="html/P_Dropbox_Api_Users_Account_Name.htm" />
     <HelpKINode Title="BasicAccount.Name Property " Url="html/P_Dropbox_Api_Users_BasicAccount_Name.htm" />
-    <HelpKINode Title="ChangeEntry.Name Property " Url="html/P_Dropbox_Api_Files_ChangeEntry_Name.htm" />
-    <HelpKINode Title="FileMetadataWithName.Name Property " Url="html/P_Dropbox_Api_Files_FileMetadataWithName_Name.htm" />
     <HelpKINode Title="FullAccount.Name Property " Url="html/P_Dropbox_Api_Users_FullAccount_Name.htm" />
-    <HelpKINode Title="MetadataWithName.Name Property " Url="html/P_Dropbox_Api_Files_MetadataWithName_Name.htm" />
+    <HelpKINode Title="Metadata.Name Property " Url="html/P_Dropbox_Api_Files_Metadata_Name.htm" />
     <HelpKINode Title="Team.Name Property " Url="html/P_Dropbox_Api_Users_Team_Name.htm" />
   </HelpKINode>
   <HelpKINode Title="Name.DisplayName property" Url="html/P_Dropbox_Api_Users_Name_DisplayName.htm" />
@@ -1218,10 +1374,11 @@
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFolder.htm" />
   </HelpKINode>
   <HelpKINode Title="NotFound class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_NotFound.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_FolderPathError_NotFound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_NoFileReason_NotFound.htm" />
   </HelpKINode>
   <HelpKINode Title="NoWritePermission class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_NoWritePermission.htm" />
@@ -1238,17 +1395,18 @@
   <HelpKINode Title="OAuthResponseType enumeration" Url="html/T_Dropbox_Api_OAuthResponseType.htm" />
   <HelpKINode Title="Offset property" Url="html/P_Dropbox_Api_Files_UploadSessionCursor_Offset.htm" />
   <HelpKINode Title="Other class">
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_DownloadError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RestrictedReason_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_DownloadError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionFinishError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_SearchError_Other.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_UploadSessionLookupError_Other.htm" />
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_CommitConflictError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_GetMetadataError_Other.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_Other.htm" />
   </HelpKINode>
   <HelpKINode Title="Overwrite class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_WriteMode_Overwrite.htm" />
@@ -1256,18 +1414,134 @@
   <HelpKINode Title="ParseTokenFragment method" Url="html/M_Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment.htm" />
   <HelpKINode Title="Path property">
     <HelpKINode Title="CommitInfo.Path Property " Url="html/P_Dropbox_Api_Files_CommitInfo_Path.htm" />
+    <HelpKINode Title="CreateFolderArg.Path Property " Url="html/P_Dropbox_Api_Files_CreateFolderArg_Path.htm" />
+    <HelpKINode Title="DeleteArg.Path Property " Url="html/P_Dropbox_Api_Files_DeleteArg_Path.htm" />
     <HelpKINode Title="DownloadArg.Path Property " Url="html/P_Dropbox_Api_Files_DownloadArg_Path.htm" />
     <HelpKINode Title="GetMetadataArg.Path Property " Url="html/P_Dropbox_Api_Files_GetMetadataArg_Path.htm" />
     <HelpKINode Title="ListFolderArg.Path Property " Url="html/P_Dropbox_Api_Files_ListFolderArg_Path.htm" />
-    <HelpKINode Title="MetadataWithPath.Path Property " Url="html/P_Dropbox_Api_Files_MetadataWithPath_Path.htm" />
     <HelpKINode Title="SearchQuery.Path Property " Url="html/P_Dropbox_Api_Files_SearchQuery_Path.htm" />
+    <HelpKINode Title="ThumbnailArg.Path Property " Url="html/P_Dropbox_Api_Files_ThumbnailArg_Path.htm" />
   </HelpKINode>
+  <HelpKINode Title="PathError class">
+    <HelpKINode Title="PathError Class" Url="html/T_Dropbox_Api_Files_PathError.htm" />
+    <HelpKINode Title="about PathError class" Url="html/T_Dropbox_Api_Files_PathError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_PathError__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_PathError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.AsAutorenameFiled property" Url="html/P_Dropbox_Api_Files_PathError_AsAutorenameFiled.htm" />
+  <HelpKINode Title="PathError.AsConflictFile property" Url="html/P_Dropbox_Api_Files_PathError_AsConflictFile.htm" />
+  <HelpKINode Title="PathError.AsConflictFileAncestor property" Url="html/P_Dropbox_Api_Files_PathError_AsConflictFileAncestor.htm" />
+  <HelpKINode Title="PathError.AsConflictFolder property" Url="html/P_Dropbox_Api_Files_PathError_AsConflictFolder.htm" />
+  <HelpKINode Title="PathError.AsFileDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsFileDisallowed.htm" />
+  <HelpKINode Title="PathError.AsFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsFolderDisallowed.htm" />
+  <HelpKINode Title="PathError.AsMalformedPath property" Url="html/P_Dropbox_Api_Files_PathError_AsMalformedPath.htm" />
+  <HelpKINode Title="PathError.AsMisc property" Url="html/P_Dropbox_Api_Files_PathError_AsMisc.htm" />
+  <HelpKINode Title="PathError.AsNotFound property" Url="html/P_Dropbox_Api_Files_PathError_AsNotFound.htm" />
+  <HelpKINode Title="PathError.AsOther property" Url="html/P_Dropbox_Api_Files_PathError_AsOther.htm" />
+  <HelpKINode Title="PathError.AsReadOnly property" Url="html/P_Dropbox_Api_Files_PathError_AsReadOnly.htm" />
+  <HelpKINode Title="PathError.AsRootDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsRootDisallowed.htm" />
+  <HelpKINode Title="PathError.AsSharedFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_AsSharedFolderDisallowed.htm" />
+  <HelpKINode Title="PathError.AutorenameFiled class">
+    <HelpKINode Title="PathError.AutorenameFiled Class" Url="html/T_Dropbox_Api_Files_PathError_AutorenameFiled.htm" />
+    <HelpKINode Title="about PathError.AutorenameFiled class" Url="html/T_Dropbox_Api_Files_PathError_AutorenameFiled.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.AutorenameFiled.Instance field" Url="html/F_Dropbox_Api_Files_PathError_AutorenameFiled_Instance.htm" />
+  <HelpKINode Title="PathError.ConflictFile class">
+    <HelpKINode Title="PathError.ConflictFile Class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFile.htm" />
+    <HelpKINode Title="about PathError.ConflictFile class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.ConflictFile.Instance field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFile_Instance.htm" />
+  <HelpKINode Title="PathError.ConflictFileAncestor class">
+    <HelpKINode Title="PathError.ConflictFileAncestor Class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFileAncestor.htm" />
+    <HelpKINode Title="about PathError.ConflictFileAncestor class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFileAncestor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.ConflictFileAncestor.Instance field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFileAncestor_Instance.htm" />
+  <HelpKINode Title="PathError.ConflictFolder class">
+    <HelpKINode Title="PathError.ConflictFolder Class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFolder.htm" />
+    <HelpKINode Title="about PathError.ConflictFolder class" Url="html/T_Dropbox_Api_Files_PathError_ConflictFolder.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.ConflictFolder.Instance field" Url="html/F_Dropbox_Api_Files_PathError_ConflictFolder_Instance.htm" />
+  <HelpKINode Title="PathError.FileDisallowed class">
+    <HelpKINode Title="PathError.FileDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_FileDisallowed.htm" />
+    <HelpKINode Title="about PathError.FileDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_FileDisallowed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.FileDisallowed.Instance field" Url="html/F_Dropbox_Api_Files_PathError_FileDisallowed_Instance.htm" />
+  <HelpKINode Title="PathError.FolderDisallowed class">
+    <HelpKINode Title="PathError.FolderDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_FolderDisallowed.htm" />
+    <HelpKINode Title="about PathError.FolderDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_FolderDisallowed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.FolderDisallowed.Instance field" Url="html/F_Dropbox_Api_Files_PathError_FolderDisallowed_Instance.htm" />
+  <HelpKINode Title="PathError.IsAutorenameFiled property" Url="html/P_Dropbox_Api_Files_PathError_IsAutorenameFiled.htm" />
+  <HelpKINode Title="PathError.IsConflictFile property" Url="html/P_Dropbox_Api_Files_PathError_IsConflictFile.htm" />
+  <HelpKINode Title="PathError.IsConflictFileAncestor property" Url="html/P_Dropbox_Api_Files_PathError_IsConflictFileAncestor.htm" />
+  <HelpKINode Title="PathError.IsConflictFolder property" Url="html/P_Dropbox_Api_Files_PathError_IsConflictFolder.htm" />
+  <HelpKINode Title="PathError.IsFileDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsFileDisallowed.htm" />
+  <HelpKINode Title="PathError.IsFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsFolderDisallowed.htm" />
+  <HelpKINode Title="PathError.IsMalformedPath property" Url="html/P_Dropbox_Api_Files_PathError_IsMalformedPath.htm" />
+  <HelpKINode Title="PathError.IsMisc property" Url="html/P_Dropbox_Api_Files_PathError_IsMisc.htm" />
+  <HelpKINode Title="PathError.IsNotFound property" Url="html/P_Dropbox_Api_Files_PathError_IsNotFound.htm" />
+  <HelpKINode Title="PathError.IsOther property" Url="html/P_Dropbox_Api_Files_PathError_IsOther.htm" />
+  <HelpKINode Title="PathError.IsReadOnly property" Url="html/P_Dropbox_Api_Files_PathError_IsReadOnly.htm" />
+  <HelpKINode Title="PathError.IsRootDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsRootDisallowed.htm" />
+  <HelpKINode Title="PathError.IsSharedFolderDisallowed property" Url="html/P_Dropbox_Api_Files_PathError_IsSharedFolderDisallowed.htm" />
+  <HelpKINode Title="PathError.MalformedPath class">
+    <HelpKINode Title="PathError.MalformedPath Class" Url="html/T_Dropbox_Api_Files_PathError_MalformedPath.htm" />
+    <HelpKINode Title="about PathError.MalformedPath class" Url="html/T_Dropbox_Api_Files_PathError_MalformedPath.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_PathError_MalformedPath__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.MalformedPath.MalformedPath constructor" Url="html/M_Dropbox_Api_Files_PathError_MalformedPath__ctor.htm" />
+  <HelpKINode Title="PathError.MalformedPath.Value property" Url="html/P_Dropbox_Api_Files_PathError_MalformedPath_Value.htm" />
+  <HelpKINode Title="PathError.Misc class">
+    <HelpKINode Title="PathError.Misc Class" Url="html/T_Dropbox_Api_Files_PathError_Misc.htm" />
+    <HelpKINode Title="about PathError.Misc class" Url="html/T_Dropbox_Api_Files_PathError_Misc.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_PathError_Misc__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.Misc.Misc constructor" Url="html/M_Dropbox_Api_Files_PathError_Misc__ctor.htm" />
+  <HelpKINode Title="PathError.Misc.Value property" Url="html/P_Dropbox_Api_Files_PathError_Misc_Value.htm" />
+  <HelpKINode Title="PathError.NotFound class">
+    <HelpKINode Title="PathError.NotFound Class" Url="html/T_Dropbox_Api_Files_PathError_NotFound.htm" />
+    <HelpKINode Title="about PathError.NotFound class" Url="html/T_Dropbox_Api_Files_PathError_NotFound.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.NotFound.Instance field" Url="html/F_Dropbox_Api_Files_PathError_NotFound_Instance.htm" />
+  <HelpKINode Title="PathError.Other class">
+    <HelpKINode Title="PathError.Other Class" Url="html/T_Dropbox_Api_Files_PathError_Other.htm" />
+    <HelpKINode Title="about PathError.Other class" Url="html/T_Dropbox_Api_Files_PathError_Other.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.Other.Instance field" Url="html/F_Dropbox_Api_Files_PathError_Other_Instance.htm" />
+  <HelpKINode Title="PathError.PathError constructor" Url="html/M_Dropbox_Api_Files_PathError__ctor.htm" />
+  <HelpKINode Title="PathError.ReadOnly class">
+    <HelpKINode Title="PathError.ReadOnly Class" Url="html/T_Dropbox_Api_Files_PathError_ReadOnly.htm" />
+    <HelpKINode Title="about PathError.ReadOnly class" Url="html/T_Dropbox_Api_Files_PathError_ReadOnly.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.ReadOnly.Instance field" Url="html/F_Dropbox_Api_Files_PathError_ReadOnly_Instance.htm" />
+  <HelpKINode Title="PathError.RootDisallowed class">
+    <HelpKINode Title="PathError.RootDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_RootDisallowed.htm" />
+    <HelpKINode Title="about PathError.RootDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_RootDisallowed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.RootDisallowed.Instance field" Url="html/F_Dropbox_Api_Files_PathError_RootDisallowed_Instance.htm" />
+  <HelpKINode Title="PathError.SharedFolderDisallowed class">
+    <HelpKINode Title="PathError.SharedFolderDisallowed Class" Url="html/T_Dropbox_Api_Files_PathError_SharedFolderDisallowed.htm" />
+    <HelpKINode Title="about PathError.SharedFolderDisallowed class" Url="html/T_Dropbox_Api_Files_PathError_SharedFolderDisallowed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathError.SharedFolderDisallowed.Instance field" Url="html/F_Dropbox_Api_Files_PathError_SharedFolderDisallowed_Instance.htm" />
+  <HelpKINode Title="PathLower property" Url="html/P_Dropbox_Api_Files_Metadata_PathLower.htm" />
   <HelpKINode Title="Permission class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_DisallowedReason_Permission.htm" />
   </HelpKINode>
+  <HelpKINode Title="Png class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailFormat_Png.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Pro class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Users_AccountType_Pro.htm" />
+  </HelpKINode>
   <HelpKINode Title="ProcessCodeFlowAsync method" Url="html/Overload_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm" />
   <HelpKINode Title="Query property" Url="html/P_Dropbox_Api_Files_SearchQuery_Query.htm" />
-  <HelpKINode Title="Quota property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Quota.htm" />
+  <HelpKINode Title="QuotaError class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_QuotaError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReadOnly class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_ReadOnly.htm" />
+  </HelpKINode>
   <HelpKINode Title="Reason property">
     <HelpKINode Title="Disallowed.Reason Property " Url="html/P_Dropbox_Api_Files_Disallowed_Reason.htm" />
     <HelpKINode Title="NoFile.Reason Property " Url="html/P_Dropbox_Api_Files_NoFile_Reason.htm" />
@@ -1275,13 +1549,66 @@
     <HelpKINode Title="UploadCommitError.Reason Property " Url="html/P_Dropbox_Api_Files_UploadCommitError_Reason.htm" />
   </HelpKINode>
   <HelpKINode Title="ReferralLink property" Url="html/P_Dropbox_Api_Users_FullAccount_ReferralLink.htm" />
+  <HelpKINode Title="RelocationArg class">
+    <HelpKINode Title="RelocationArg Class" Url="html/T_Dropbox_Api_Files_RelocationArg.htm" />
+    <HelpKINode Title="about RelocationArg class" Url="html/T_Dropbox_Api_Files_RelocationArg.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_RelocationArg__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationArg.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationArg.FromPath property" Url="html/P_Dropbox_Api_Files_RelocationArg_FromPath.htm" />
+  <HelpKINode Title="RelocationArg.RelocationArg constructor" Url="html/Overload_Dropbox_Api_Files_RelocationArg__ctor.htm" />
+  <HelpKINode Title="RelocationArg.ToPath property" Url="html/P_Dropbox_Api_Files_RelocationArg_ToPath.htm" />
+  <HelpKINode Title="RelocationError class">
+    <HelpKINode Title="RelocationError Class" Url="html/T_Dropbox_Api_Files_RelocationError.htm" />
+    <HelpKINode Title="about RelocationError class" Url="html/T_Dropbox_Api_Files_RelocationError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_RelocationError__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationError.AsFromError property" Url="html/P_Dropbox_Api_Files_RelocationError_AsFromError.htm" />
+  <HelpKINode Title="RelocationError.AsOther property" Url="html/P_Dropbox_Api_Files_RelocationError_AsOther.htm" />
+  <HelpKINode Title="RelocationError.AsQuotaError property" Url="html/P_Dropbox_Api_Files_RelocationError_AsQuotaError.htm" />
+  <HelpKINode Title="RelocationError.AsToError property" Url="html/P_Dropbox_Api_Files_RelocationError_AsToError.htm" />
+  <HelpKINode Title="RelocationError.AsTooManyFiles property" Url="html/P_Dropbox_Api_Files_RelocationError_AsTooManyFiles.htm" />
+  <HelpKINode Title="RelocationError.FromError class">
+    <HelpKINode Title="RelocationError.FromError Class" Url="html/T_Dropbox_Api_Files_RelocationError_FromError.htm" />
+    <HelpKINode Title="about RelocationError.FromError class" Url="html/T_Dropbox_Api_Files_RelocationError_FromError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_RelocationError_FromError__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationError.FromError.FromError constructor" Url="html/M_Dropbox_Api_Files_RelocationError_FromError__ctor.htm" />
+  <HelpKINode Title="RelocationError.FromError.Value property" Url="html/P_Dropbox_Api_Files_RelocationError_FromError_Value.htm" />
+  <HelpKINode Title="RelocationError.IsFromError property" Url="html/P_Dropbox_Api_Files_RelocationError_IsFromError.htm" />
+  <HelpKINode Title="RelocationError.IsOther property" Url="html/P_Dropbox_Api_Files_RelocationError_IsOther.htm" />
+  <HelpKINode Title="RelocationError.IsQuotaError property" Url="html/P_Dropbox_Api_Files_RelocationError_IsQuotaError.htm" />
+  <HelpKINode Title="RelocationError.IsToError property" Url="html/P_Dropbox_Api_Files_RelocationError_IsToError.htm" />
+  <HelpKINode Title="RelocationError.IsTooManyFiles property" Url="html/P_Dropbox_Api_Files_RelocationError_IsTooManyFiles.htm" />
+  <HelpKINode Title="RelocationError.Other class">
+    <HelpKINode Title="RelocationError.Other Class" Url="html/T_Dropbox_Api_Files_RelocationError_Other.htm" />
+    <HelpKINode Title="about RelocationError.Other class" Url="html/T_Dropbox_Api_Files_RelocationError_Other.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationError.Other.Instance field" Url="html/F_Dropbox_Api_Files_RelocationError_Other_Instance.htm" />
+  <HelpKINode Title="RelocationError.QuotaError class">
+    <HelpKINode Title="RelocationError.QuotaError Class" Url="html/T_Dropbox_Api_Files_RelocationError_QuotaError.htm" />
+    <HelpKINode Title="about RelocationError.QuotaError class" Url="html/T_Dropbox_Api_Files_RelocationError_QuotaError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationError.QuotaError.Instance field" Url="html/F_Dropbox_Api_Files_RelocationError_QuotaError_Instance.htm" />
+  <HelpKINode Title="RelocationError.RelocationError constructor" Url="html/M_Dropbox_Api_Files_RelocationError__ctor.htm" />
+  <HelpKINode Title="RelocationError.ToError class">
+    <HelpKINode Title="RelocationError.ToError Class" Url="html/T_Dropbox_Api_Files_RelocationError_ToError.htm" />
+    <HelpKINode Title="about RelocationError.ToError class" Url="html/T_Dropbox_Api_Files_RelocationError_ToError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_RelocationError_ToError__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationError.ToError.ToError constructor" Url="html/M_Dropbox_Api_Files_RelocationError_ToError__ctor.htm" />
+  <HelpKINode Title="RelocationError.ToError.Value property" Url="html/P_Dropbox_Api_Files_RelocationError_ToError_Value.htm" />
+  <HelpKINode Title="RelocationError.TooManyFiles class">
+    <HelpKINode Title="RelocationError.TooManyFiles Class" Url="html/T_Dropbox_Api_Files_RelocationError_TooManyFiles.htm" />
+    <HelpKINode Title="about RelocationError.TooManyFiles class" Url="html/T_Dropbox_Api_Files_RelocationError_TooManyFiles.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelocationError.TooManyFiles.Instance field" Url="html/F_Dropbox_Api_Files_RelocationError_TooManyFiles_Instance.htm" />
+  <HelpKINode Title="RequestUri property" Url="html/P_Dropbox_Api_HttpException_RequestUri.htm" />
   <HelpKINode Title="Reset class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ListFolderContinueError_Reset.htm" />
   </HelpKINode>
   <HelpKINode Title="Response property" Url="html/P_Dropbox_Api_Babel_IDownloadResponse_1_Response.htm" />
-  <HelpKINode Title="Restart class">
-    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ListFolderContinueEntries_Restart.htm" />
-  </HelpKINode>
   <HelpKINode Title="Restricted class">
     <HelpKINode Title="Restricted Class" Url="html/T_Dropbox_Api_Files_Restricted.htm" />
     <HelpKINode Title="about Restricted class" Url="html/T_Dropbox_Api_Files_Restricted.htm" />
@@ -1315,6 +1642,12 @@
   <HelpKINode Title="Rev property">
     <HelpKINode Title="DownloadArg.Rev Property " Url="html/P_Dropbox_Api_Files_DownloadArg_Rev.htm" />
     <HelpKINode Title="FileMetadata.Rev Property " Url="html/P_Dropbox_Api_Files_FileMetadata_Rev.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RootDisallowed class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_RootDisallowed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="S class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_S.htm" />
   </HelpKINode>
   <HelpKINode Title="SearchAsync method" Url="html/Overload_Dropbox_Api_Files_Routes_FilesRoutes_SearchAsync.htm" />
   <HelpKINode Title="SearchError class">
@@ -1433,17 +1766,25 @@
     <HelpKINode Title="IDecoder.SetSource Method " Url="html/Overload_Dropbox_Api_Babel_IDecoder_SetSource.htm" />
     <HelpKINode Title="JsonDecoder.SetSource Method " Url="html/Overload_Dropbox_Api_Babel_JsonDecoder_SetSource.htm" />
   </HelpKINode>
-  <HelpKINode Title="Size property" Url="html/P_Dropbox_Api_Files_FileMetadata_Size.htm" />
+  <HelpKINode Title="SharedFolderDisallowed class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_PathError_SharedFolderDisallowed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Size property">
+    <HelpKINode Title="FileMetadata.Size Property " Url="html/P_Dropbox_Api_Files_FileMetadata_Size.htm" />
+    <HelpKINode Title="ThumbnailArg.Size Property " Url="html/P_Dropbox_Api_Files_ThumbnailArg_Size.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SizeError class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailError_SizeError.htm" />
+  </HelpKINode>
   <HelpKINode Title="SpaceUsage class">
     <HelpKINode Title="SpaceUsage Class" Url="html/T_Dropbox_Api_Users_SpaceUsage.htm" />
     <HelpKINode Title="about SpaceUsage class" Url="html/T_Dropbox_Api_Users_SpaceUsage.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Users_SpaceUsage__ctor.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Users_SpaceUsage.htm" />
   </HelpKINode>
-  <HelpKINode Title="SpaceUsage.Quota property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Quota.htm" />
+  <HelpKINode Title="SpaceUsage.Allocated property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Allocated.htm" />
   <HelpKINode Title="SpaceUsage.SpaceUsage constructor" Url="html/Overload_Dropbox_Api_Users_SpaceUsage__ctor.htm" />
-  <HelpKINode Title="SpaceUsage.UsageIndividual property" Url="html/P_Dropbox_Api_Users_SpaceUsage_UsageIndividual.htm" />
-  <HelpKINode Title="SpaceUsage.UsageShared property" Url="html/P_Dropbox_Api_Users_SpaceUsage_UsageShared.htm" />
+  <HelpKINode Title="SpaceUsage.Used property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Used.htm" />
   <HelpKINode Title="Start property">
     <HelpKINode Title="SearchQuery.Start Property " Url="html/P_Dropbox_Api_Files_SearchQuery_Start.htm" />
     <HelpKINode Title="SearchResults.Start Property " Url="html/P_Dropbox_Api_Files_SearchResults_Start.htm" />
@@ -1461,9 +1802,140 @@
   <HelpKINode Title="Team.Id property" Url="html/P_Dropbox_Api_Users_Team_Id.htm" />
   <HelpKINode Title="Team.Name property" Url="html/P_Dropbox_Api_Users_Team_Name.htm" />
   <HelpKINode Title="Team.Team constructor" Url="html/Overload_Dropbox_Api_Users_Team__ctor.htm" />
+  <HelpKINode Title="ThumbnailArg class">
+    <HelpKINode Title="ThumbnailArg Class" Url="html/T_Dropbox_Api_Files_ThumbnailArg.htm" />
+    <HelpKINode Title="about ThumbnailArg class" Url="html/T_Dropbox_Api_Files_ThumbnailArg.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Dropbox_Api_Files_ThumbnailArg__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailArg.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailArg.Format property" Url="html/P_Dropbox_Api_Files_ThumbnailArg_Format.htm" />
+  <HelpKINode Title="ThumbnailArg.Path property" Url="html/P_Dropbox_Api_Files_ThumbnailArg_Path.htm" />
+  <HelpKINode Title="ThumbnailArg.Size property" Url="html/P_Dropbox_Api_Files_ThumbnailArg_Size.htm" />
+  <HelpKINode Title="ThumbnailArg.ThumbnailArg constructor" Url="html/Overload_Dropbox_Api_Files_ThumbnailArg__ctor.htm" />
+  <HelpKINode Title="ThumbnailError class">
+    <HelpKINode Title="ThumbnailError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError.htm" />
+    <HelpKINode Title="about ThumbnailError class" Url="html/T_Dropbox_Api_Files_ThumbnailError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ThumbnailError__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.AsConversionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsConversionError.htm" />
+  <HelpKINode Title="ThumbnailError.AsDownloadError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsDownloadError.htm" />
+  <HelpKINode Title="ThumbnailError.AsExtensionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsExtensionError.htm" />
+  <HelpKINode Title="ThumbnailError.AsFormatError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsFormatError.htm" />
+  <HelpKINode Title="ThumbnailError.AsInvalidImage property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsInvalidImage.htm" />
+  <HelpKINode Title="ThumbnailError.AsSizeError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_AsSizeError.htm" />
+  <HelpKINode Title="ThumbnailError.ConversionError class">
+    <HelpKINode Title="ThumbnailError.ConversionError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ConversionError.htm" />
+    <HelpKINode Title="about ThumbnailError.ConversionError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ConversionError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.ConversionError.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailError_ConversionError_Instance.htm" />
+  <HelpKINode Title="ThumbnailError.DownloadError class">
+    <HelpKINode Title="ThumbnailError.DownloadError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_DownloadError.htm" />
+    <HelpKINode Title="about ThumbnailError.DownloadError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_DownloadError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ThumbnailError_DownloadError__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.DownloadError.DownloadError constructor" Url="html/M_Dropbox_Api_Files_ThumbnailError_DownloadError__ctor.htm" />
+  <HelpKINode Title="ThumbnailError.DownloadError.Value property" Url="html/P_Dropbox_Api_Files_ThumbnailError_DownloadError_Value.htm" />
+  <HelpKINode Title="ThumbnailError.ExtensionError class">
+    <HelpKINode Title="ThumbnailError.ExtensionError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ExtensionError.htm" />
+    <HelpKINode Title="about ThumbnailError.ExtensionError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_ExtensionError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.ExtensionError.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailError_ExtensionError_Instance.htm" />
+  <HelpKINode Title="ThumbnailError.FormatError class">
+    <HelpKINode Title="ThumbnailError.FormatError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_FormatError.htm" />
+    <HelpKINode Title="about ThumbnailError.FormatError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_FormatError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.FormatError.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailError_FormatError_Instance.htm" />
+  <HelpKINode Title="ThumbnailError.InvalidImage class">
+    <HelpKINode Title="ThumbnailError.InvalidImage Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_InvalidImage.htm" />
+    <HelpKINode Title="about ThumbnailError.InvalidImage class" Url="html/T_Dropbox_Api_Files_ThumbnailError_InvalidImage.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.InvalidImage.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailError_InvalidImage_Instance.htm" />
+  <HelpKINode Title="ThumbnailError.IsConversionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsConversionError.htm" />
+  <HelpKINode Title="ThumbnailError.IsDownloadError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsDownloadError.htm" />
+  <HelpKINode Title="ThumbnailError.IsExtensionError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsExtensionError.htm" />
+  <HelpKINode Title="ThumbnailError.IsFormatError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsFormatError.htm" />
+  <HelpKINode Title="ThumbnailError.IsInvalidImage property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsInvalidImage.htm" />
+  <HelpKINode Title="ThumbnailError.IsSizeError property" Url="html/P_Dropbox_Api_Files_ThumbnailError_IsSizeError.htm" />
+  <HelpKINode Title="ThumbnailError.SizeError class">
+    <HelpKINode Title="ThumbnailError.SizeError Class" Url="html/T_Dropbox_Api_Files_ThumbnailError_SizeError.htm" />
+    <HelpKINode Title="about ThumbnailError.SizeError class" Url="html/T_Dropbox_Api_Files_ThumbnailError_SizeError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailError.SizeError.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailError_SizeError_Instance.htm" />
+  <HelpKINode Title="ThumbnailError.ThumbnailError constructor" Url="html/M_Dropbox_Api_Files_ThumbnailError__ctor.htm" />
+  <HelpKINode Title="ThumbnailFormat class">
+    <HelpKINode Title="ThumbnailFormat Class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat.htm" />
+    <HelpKINode Title="about ThumbnailFormat class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ThumbnailFormat__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailFormat.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailFormat.AsJpeg property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_AsJpeg.htm" />
+  <HelpKINode Title="ThumbnailFormat.AsPng property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_AsPng.htm" />
+  <HelpKINode Title="ThumbnailFormat.IsJpeg property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_IsJpeg.htm" />
+  <HelpKINode Title="ThumbnailFormat.IsPng property" Url="html/P_Dropbox_Api_Files_ThumbnailFormat_IsPng.htm" />
+  <HelpKINode Title="ThumbnailFormat.Jpeg class">
+    <HelpKINode Title="ThumbnailFormat.Jpeg Class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Jpeg.htm" />
+    <HelpKINode Title="about ThumbnailFormat.Jpeg class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Jpeg.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailFormat.Jpeg.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailFormat_Jpeg_Instance.htm" />
+  <HelpKINode Title="ThumbnailFormat.Png class">
+    <HelpKINode Title="ThumbnailFormat.Png Class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Png.htm" />
+    <HelpKINode Title="about ThumbnailFormat.Png class" Url="html/T_Dropbox_Api_Files_ThumbnailFormat_Png.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailFormat.Png.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailFormat_Png_Instance.htm" />
+  <HelpKINode Title="ThumbnailFormat.ThumbnailFormat constructor" Url="html/M_Dropbox_Api_Files_ThumbnailFormat__ctor.htm" />
+  <HelpKINode Title="ThumbnailSize class">
+    <HelpKINode Title="ThumbnailSize Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize.htm" />
+    <HelpKINode Title="about ThumbnailSize class" Url="html/T_Dropbox_Api_Files_ThumbnailSize.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Dropbox_Api_Files_ThumbnailSize__ctor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_ThumbnailSize.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailSize.AsL property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsL.htm" />
+  <HelpKINode Title="ThumbnailSize.AsM property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsM.htm" />
+  <HelpKINode Title="ThumbnailSize.AsS property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsS.htm" />
+  <HelpKINode Title="ThumbnailSize.AsXl property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsXl.htm" />
+  <HelpKINode Title="ThumbnailSize.AsXs property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_AsXs.htm" />
+  <HelpKINode Title="ThumbnailSize.IsL property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsL.htm" />
+  <HelpKINode Title="ThumbnailSize.IsM property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsM.htm" />
+  <HelpKINode Title="ThumbnailSize.IsS property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsS.htm" />
+  <HelpKINode Title="ThumbnailSize.IsXl property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsXl.htm" />
+  <HelpKINode Title="ThumbnailSize.IsXs property" Url="html/P_Dropbox_Api_Files_ThumbnailSize_IsXs.htm" />
+  <HelpKINode Title="ThumbnailSize.L class">
+    <HelpKINode Title="ThumbnailSize.L Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_L.htm" />
+    <HelpKINode Title="about ThumbnailSize.L class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_L.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailSize.L.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_L_Instance.htm" />
+  <HelpKINode Title="ThumbnailSize.M class">
+    <HelpKINode Title="ThumbnailSize.M Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_M.htm" />
+    <HelpKINode Title="about ThumbnailSize.M class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_M.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailSize.M.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_M_Instance.htm" />
+  <HelpKINode Title="ThumbnailSize.S class">
+    <HelpKINode Title="ThumbnailSize.S Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_S.htm" />
+    <HelpKINode Title="about ThumbnailSize.S class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_S.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailSize.S.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_S_Instance.htm" />
+  <HelpKINode Title="ThumbnailSize.ThumbnailSize constructor" Url="html/M_Dropbox_Api_Files_ThumbnailSize__ctor.htm" />
+  <HelpKINode Title="ThumbnailSize.Xl class">
+    <HelpKINode Title="ThumbnailSize.Xl Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xl.htm" />
+    <HelpKINode Title="about ThumbnailSize.Xl class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailSize.Xl.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_Xl_Instance.htm" />
+  <HelpKINode Title="ThumbnailSize.Xs class">
+    <HelpKINode Title="ThumbnailSize.Xs Class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xs.htm" />
+    <HelpKINode Title="about ThumbnailSize.Xs class" Url="html/T_Dropbox_Api_Files_ThumbnailSize_Xs.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ThumbnailSize.Xs.Instance field" Url="html/F_Dropbox_Api_Files_ThumbnailSize_Xs_Instance.htm" />
   <HelpKINode Title="ToApm method" Url="html/Overload_Dropbox_Api_Babel_Util_ToApm.htm" />
+  <HelpKINode Title="ToError class">
+    <HelpKINode Title="properties" Url="html/Properties_T_Dropbox_Api_Files_RelocationError_ToError.htm" />
+  </HelpKINode>
   <HelpKINode Title="Token enumeration member" Url="html/T_Dropbox_Api_OAuthResponseType.htm" />
   <HelpKINode Title="TokenType property" Url="html/P_Dropbox_Api_OAuth2Response_TokenType.htm" />
+  <HelpKINode Title="TooManyFiles class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_RelocationError_TooManyFiles.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ToPath property" Url="html/P_Dropbox_Api_Files_RelocationArg_ToPath.htm" />
   <HelpKINode Title="Uid property" Url="html/P_Dropbox_Api_OAuth2Response_Uid.htm" />
   <HelpKINode Title="Unknown class">
     <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Users_GetAccountError_Unknown.htm" />
@@ -1611,8 +2083,7 @@
   </HelpKINode>
   <HelpKINode Title="UploadSessionStartResult.SessionId property" Url="html/P_Dropbox_Api_Files_UploadSessionStartResult_SessionId.htm" />
   <HelpKINode Title="UploadSessionStartResult.UploadSessionStartResult constructor" Url="html/Overload_Dropbox_Api_Files_UploadSessionStartResult__ctor.htm" />
-  <HelpKINode Title="UsageIndividual property" Url="html/P_Dropbox_Api_Users_SpaceUsage_UsageIndividual.htm" />
-  <HelpKINode Title="UsageShared property" Url="html/P_Dropbox_Api_Users_SpaceUsage_UsageShared.htm" />
+  <HelpKINode Title="Used property" Url="html/P_Dropbox_Api_Users_SpaceUsage_Used.htm" />
   <HelpKINode Title="Users property" Url="html/P_Dropbox_Api_DropboxClient_Users.htm" />
   <HelpKINode Title="UsersRoutes class">
     <HelpKINode Title="UsersRoutes Class" Url="html/T_Dropbox_Api_Users_Routes_UsersRoutes.htm" />
@@ -1639,9 +2110,11 @@
     <HelpKINode Title="DisallowedReason.Restricted.Value Property " Url="html/P_Dropbox_Api_Files_DisallowedReason_Restricted_Value.htm" />
     <HelpKINode Title="DownloadError.Disallowed.Value Property " Url="html/P_Dropbox_Api_Files_DownloadError_Disallowed_Value.htm" />
     <HelpKINode Title="DownloadError.NoFile.Value Property " Url="html/P_Dropbox_Api_Files_DownloadError_NoFile_Value.htm" />
-    <HelpKINode Title="ListFolderContinueEntries.Continue.Value Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_Continue_Value.htm" />
-    <HelpKINode Title="ListFolderContinueEntries.Restart.Value Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueEntries_Restart_Value.htm" />
-    <HelpKINode Title="ListFolderContinueError.ListFolderError.Value Property " Url="html/P_Dropbox_Api_Files_ListFolderContinueError_ListFolderError_Value.htm" />
+    <HelpKINode Title="PathError.MalformedPath.Value Property " Url="html/P_Dropbox_Api_Files_PathError_MalformedPath_Value.htm" />
+    <HelpKINode Title="PathError.Misc.Value Property " Url="html/P_Dropbox_Api_Files_PathError_Misc_Value.htm" />
+    <HelpKINode Title="RelocationError.FromError.Value Property " Url="html/P_Dropbox_Api_Files_RelocationError_FromError_Value.htm" />
+    <HelpKINode Title="RelocationError.ToError.Value Property " Url="html/P_Dropbox_Api_Files_RelocationError_ToError_Value.htm" />
+    <HelpKINode Title="ThumbnailError.DownloadError.Value Property " Url="html/P_Dropbox_Api_Files_ThumbnailError_DownloadError_Value.htm" />
     <HelpKINode Title="UploadError.CommitFailed.Value Property " Url="html/P_Dropbox_Api_Files_UploadError_CommitFailed_Value.htm" />
     <HelpKINode Title="UploadSessionFinishError.CommitFailed.Value Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_CommitFailed_Value.htm" />
     <HelpKINode Title="UploadSessionFinishError.LookupFailed.Value Property " Url="html/P_Dropbox_Api_Files_UploadSessionFinishError_LookupFailed_Value.htm" />
@@ -1678,4 +2151,10 @@
   <HelpKINode Title="WriteMode.Update.Update constructor" Url="html/M_Dropbox_Api_Files_WriteMode_Update__ctor.htm" />
   <HelpKINode Title="WriteMode.Update.Value property" Url="html/P_Dropbox_Api_Files_WriteMode_Update_Value.htm" />
   <HelpKINode Title="WriteMode.WriteMode constructor" Url="html/M_Dropbox_Api_Files_WriteMode__ctor.htm" />
+  <HelpKINode Title="Xl class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_Xl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Xs class">
+    <HelpKINode Title="fields" Url="html/Fields_T_Dropbox_Api_Files_ThumbnailSize_Xs.htm" />
+  </HelpKINode>
 </HelpKI>

@@ -11,7 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The download error object</para>
+    /// <para>Errors from <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync"
+    /// />.</para>
     /// </summary>
     public class DownloadError : enc.IEncodable<DownloadError>
     {
@@ -140,7 +141,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The disallowed object</para>
+        /// <para>The download is disallowed or forbidden; see the value for the reason.</para>
         /// </summary>
         public sealed class Disallowed : DownloadError, enc.IEncodable<Disallowed>
         {
@@ -184,7 +185,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The no file object</para>
+        /// <para>The path cannot be downloaded.</para>
         /// </summary>
         public sealed class NoFile : DownloadError, enc.IEncodable<NoFile>
         {
@@ -228,7 +229,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The other object</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
         public sealed class Other : DownloadError, enc.IEncodable<Other>
         {

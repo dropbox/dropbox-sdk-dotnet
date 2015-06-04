@@ -78,7 +78,7 @@
                             "/" + filename,
                             WriteMode.Overwrite.Instance,
                             body: mem);
-                        rev = updated.Metadata.Rev;
+                        rev = updated.Rev;
                     }
                     catch (ApiException<UploadError> e)
                     {
@@ -136,7 +136,7 @@
                 {
                     var upload = await client.Files.UploadAsync("/" + filename, body: mem);
 
-                    var metadata = ArticleMetadata.Parse(upload.Name, upload.Metadata.Rev);
+                    var metadata = ArticleMetadata.Parse(upload.Name, upload.Rev);
 
                     return Redirect(string.Format(
                         CultureInfo.InvariantCulture,

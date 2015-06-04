@@ -102,9 +102,9 @@ namespace Dropbox.Api.Users
                 this.AccountId = obj.GetField<string>("account_id");
                 this.Name = obj.GetFieldObject<Name>("name");
                 this.IsTeammate = obj.GetField<bool>("is_teammate");
-
-                return this;
             }
+
+            return this;
         }
 
         #endregion

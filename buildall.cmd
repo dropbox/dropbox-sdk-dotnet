@@ -2,8 +2,22 @@
 
 SETLOCAL
 
+SET PRE=
+SET GENERATE=""
+SET RESTORE=""
+
 :process_arg
 IF "%~1"=="" GOTO :done_args
+IF "%~1"=="/nogen" (
+    SHIFT
+    SET GENERATE=NOGENERATE
+    GOTO :process_arg
+)
+IF "%~1"=="/norest" (
+    SHIFT
+    SET RESTORE=NORESTORE
+    GOTO :process_arg
+)
 SET NAME=%~1
 SHIFT
 IF "%~1"=="" (
@@ -26,10 +40,12 @@ GOTO :run
 :usage
     echo.
     echo Usage:
-    echo ^   buildall Spec_Dir ^<specs^>
+    echo ^   buildall Spec_Dir ^<specs^> [/nogen] [/norest]
     echo. 
     echo ^   Args:
-    echo ^       Spec_Dir ^<specs^>      The directory containing babel specifications
+    echo ^       Spec_Dir ^<specs^>       The directory containing babel specifications
+    echo ^       /nogen                 Don't run the python code generator
+    echo ^       /norest                Don't restore nuget packages
     echo. 
 
 GOTO :eof
@@ -48,23 +64,39 @@ IF NOT "%ERRORLEVEL%" == "0" (
     GOTO :eof
 )
 
-where python /q
-IF NOT "%ERRORLEVEL%" == "0" (
-    echo Cannot find python.exe, do you need to check your path?
-    GOTO :eof
+IF NOT "%GENERATE%" == "NOGENERATE" (
+    where python /q
+    IF NOT "%ERRORLEVEL%" == "0" (
+        echo Cannot find python.exe, do you need to check your path?
+        GOTO :eof
+    )
+
+    where babelapi /q
+    IF NOT "%ERRORLEVEL%" == "0" (
+        echo Cannot find babelapi.exe, do you need to check your path?
+        GOTO :eof
+    )
+
+    echo Generating Dropbox.Api...
+    %PRE% babelapi generator\csharp.babelg.py "%ARG_SPEC_DIR%\files.babel" "%ARG_SPEC_DIR%\users.babel" Dropbox.Api --clean-build
 )
 
-where babelapi /q
-IF NOT "%ERRORLEVEL%" == "0" (
-    echo Cannot find babelapi.exe, do you need to check your path?
-    GOTO :eof
+if NOT "%RESTORE%" =="NORESTORE" (
+    echo Restoring packages using nuget.exe ...
+    IF EXIST .nuget\nuget.exe (
+        %PRE% .nuget\nuget.exe restore babel.sln
+    ) ELSE (
+        where nuget /q
+        if NOT "%ERRORLEVEL%" == "0" (
+            echo Cannot find nuget.exe, install from nuget.org
+            GOTO :eof
+        )
+        %PRE% nuget.exe restore babel.sln
+    )
 )
-
-echo Generating Dropbox.Api...
-babelapi generator\csharp.babelg.py %ARG_SPEC_DIR%\files.babel %ARG_SPEC_DIR%\users.babel Dropbox.Api --clean-build
 
 echo Building...
-msbuild babel.sln
+%PRE% msbuild /verbosity:minimal /m babel.sln
 
 :eof
     ENDLOCAL
