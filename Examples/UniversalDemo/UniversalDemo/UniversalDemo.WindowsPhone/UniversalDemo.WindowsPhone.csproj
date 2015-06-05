@@ -113,7 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Dropbox.Api">
-      <HintPath>..\..\..\..\..\..\Desktop\DotNetDropboxV2Api\Dropbox.Api\bin\Debug\Dropbox.Api.dll</HintPath>
+      <HintPath>..\..\..\..\Dropbox.Api\bin\Debug\Dropbox.Api.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

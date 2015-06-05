@@ -14,13 +14,6 @@
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
             <Setter Property="VerticalContentAlignment" Value="Stretch" />
         </Style>
-        <Style x:Key="OuterImageBox" TargetType="ContentControl" BasedOn="{StaticResource ImageBox}">
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <TranslateTransform X="0" Y="0"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
         <DataTemplate x:Key="ImageTemplate">
             <Grid>
                 <Border Margin="20" CornerRadius="20" Background="#2FFF">
@@ -42,7 +35,8 @@
             <Grid.RenderTransform>
                 <TranslateTransform />
             </Grid.RenderTransform>
-            <ContentControl Content="{Binding CurrentImage}"
+            <ContentControl Name="CurrHolder"
+                            Content="{Binding CurrentImage}"
                             ContentTemplate="{StaticResource ImageTemplate}"
                             Style="{StaticResource ImageBox}"/>
             <ContentControl Name="NextHolder"

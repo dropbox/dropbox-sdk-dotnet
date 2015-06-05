@@ -8,7 +8,9 @@ namespace UniversalDemo
 {
     using System;
     using UniversalDemo.ViewModel;
+    using Windows.System;
     using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Input;
     using Windows.UI.Xaml.Media;
     using Windows.UI.Xaml.Media.Animation;
@@ -27,10 +29,12 @@ namespace UniversalDemo
         {
             this.Root = root;
             this.ImageSet = imageSet;
+
            
             this.Root.ManipulationMode = ManipulationModes.TranslateX;
             this.Root.ManipulationDelta += this.OnManipulationDelta;
             this.Root.ManipulationCompleted += this.OnManipulationCompleted;
+            this.Root.KeyUp += this.OnKeyUp;
         }
 
         /// <summary>
@@ -70,35 +74,76 @@ namespace UniversalDemo
         /// <param name="args">The <see cref="ManipulationCompletedRoutedEventArgs"/> instance containing the event data.</param>
         private void OnManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs args)
         {
+            var from = args.Cumulative.Translation.X;
+
+            var absX = Math.Abs(args.Cumulative.Translation.X);
+            if (absX < this.Root.ActualWidth / 2)
+            {
+                // no transition, just animate back from the current location.
+            }
+            else if (args.Cumulative.Translation.X > 0)
+            {
+                // swiping right - move to previous
+                from -= this.Root.ActualWidth;
+                this.ImageSet.MoveToPreviousImage();
+            }
+            else
+            {
+                // swiping left - move to next
+                from += this.Root.ActualWidth;
+                this.ImageSet.MoveToNextImage();
+            }
+
+            this.AnimateToZero(from);
+            args.Handled = true;
+        }
+
+        /// <summary>
+        /// Called when a key up event is received by the root object.
+        /// </summary>
+        /// <remarks>
+        /// If this is the left or right arrow key, then this mimics a swipe gesture in that direction.
+        /// </remarks>
+        /// <param name="sender">The sender.</param>
+        /// <param name="args">The <see cref="KeyRoutedEventArgs"/> instance containing the event data.</param>
+        private void OnKeyUp(object sender, KeyRoutedEventArgs args)
+        {
+            double from;
+
+            if (args.Key == VirtualKey.Left)
+            {
+                this.ImageSet.MoveToPreviousImage();
+                from = -this.Root.ActualWidth;
+            }
+            else if (args.Key == VirtualKey.Right)
+            {
+                this.ImageSet.MoveToNextImage();
+                from = this.Root.ActualWidth;
+            }
+            else
+            {
+                return;
+            }
+
+            this.AnimateToZero(from);
+        }
+
+        /// <summary>
+        /// Animates the Root object from the coordinate in <paramref name="from"/> to 0.
+        /// </summary>
+        /// <param name="from">The start coordinate from which to animate.</param>
+        private void AnimateToZero(double from)
+        {
             var anim = new DoubleAnimation
             {
                 To = 0,
+                From = from,
                 Duration = new Duration(TimeSpan.FromSeconds(0.5)),
                 EasingFunction = new CircleEase { EasingMode = EasingMode.EaseInOut }
             };
 
             Storyboard.SetTarget(anim, this.Root);
             Storyboard.SetTargetProperty(anim, "(Border.RenderTransform).(TranslateTransform.X)");
-
-            var absX = Math.Abs(args.Cumulative.Translation.X);
-            if (absX < this.Root.ActualWidth / 2)
-            {
-                // no transition, just animate back to 0
-            }
-            else if (args.Cumulative.Translation.X > 0)
-            {
-                // swiping right - move to previous
-                anim.From = args.Cumulative.Translation.X - this.Root.ActualWidth;
-                this.ImageSet.MoveToPreviousImage();
-            }
-            else
-            {
-                // swiping left - move to next
-                anim.From = args.Cumulative.Translation.X + this.Root.ActualWidth;
-                this.ImageSet.MoveToNextImage();
-            }
-
-            args.Handled = true;
 
             var sb = new Storyboard();
             sb.Children.Add(anim);

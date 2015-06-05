@@ -88,7 +88,7 @@ namespace UniversalDemo.ViewModel
             var list = await client.Files.ListFolderAsync(string.Empty);
             var previous = this.Images.Select(i => i.Name).ToList();
 
-            foreach (var entry in list.Entries.Where(e => e.Metadata.IsFile))
+            foreach (var entry in list.Entries.Where(e => e.IsFile))
             {
                 var ext = Path.GetExtension(entry.Name).ToLowerInvariant();
 
@@ -97,7 +97,7 @@ namespace UniversalDemo.ViewModel
                     continue;
                 }
 
-                var rev = entry.Metadata.AsFile.Rev;
+                var rev = entry.AsFile.Rev;
                 var existing = this.Images.FirstOrDefault(i => i.Name == entry.Name);
 
                 if (existing == null)
@@ -105,7 +105,7 @@ namespace UniversalDemo.ViewModel
                     var image = new AppImage(entry.Name, rev);
                     this.Images.Add(image);
                 }
-                else if (existing.Rev != entry.Metadata.AsFile.Rev)
+                else if (existing.Rev != entry.AsFile.Rev)
                 {
                     existing.UpdateRev(rev);
                 }

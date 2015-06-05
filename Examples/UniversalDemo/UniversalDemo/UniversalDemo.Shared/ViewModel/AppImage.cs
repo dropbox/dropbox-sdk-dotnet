@@ -84,9 +84,9 @@ namespace UniversalDemo.ViewModel
                     this.Image = bitmap;
                     this.NotifyPropertyChanged("Image");
 
-                    if (download.Response.Metadata.Rev != this.Rev)
+                    if (download.Response.Rev != this.Rev)
                     {
-                        this.Rev = download.Response.Metadata.Rev;
+                        this.Rev = download.Response.Rev;
                         this.NotifyPropertyChanged("Rev");
                     }
                 }

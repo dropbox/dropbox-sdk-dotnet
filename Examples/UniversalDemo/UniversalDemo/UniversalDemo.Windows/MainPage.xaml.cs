@@ -9,6 +9,7 @@ namespace UniversalDemo
     using System;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Input;
     using Windows.UI.Xaml.Media;
 
     /// <summary>
@@ -35,6 +36,7 @@ namespace UniversalDemo
             this.Loaded += this.OnLoaded;
             this.SizeChanged += this.OnLoaded;
         }
+
 
         /// <summary>
         /// Called when the app is loaded or when the size changes, this keeps the
