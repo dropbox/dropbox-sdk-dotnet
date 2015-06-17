@@ -146,8 +146,8 @@
     <Compile Include="Users\UsersRoutes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="babel_summaries.xml" />
-    <Content Include="namespace_summaries.xml" />
+    <None Include="babel_summaries.xml" />
+    <None Include="namespace_summaries.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
