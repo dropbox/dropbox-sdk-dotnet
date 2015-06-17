@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "New Article";
+}
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-8">
+        <h2>New Article</h2>
+
+        @using (Html.BeginForm("Add", "Edit", FormMethod.Post, new { id = "add-form" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label class="control-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Date</label>
+                <input type="date" id="date" name="date" class="form-control" placeholder="Effective date" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Text</label>
+                <textarea name="content" id="content" rows="20" class="form-control"></textarea>
+            </div>
+
+            <div class="text-right">
+                <button id="preview" class="btn btn-default" disabled>Preview</button>
+                <input type="submit" id="add" name="add" value="Add" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div class="modal fade" role="dialog" id="preview-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Preview</h4>
+            </div>
+            <div class="modal-body">
+                <div id="preview-loading">
+                    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> loading...
+                </div>
+                <div id="preview-content" style="display: none;">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/preview.js" async></script>
+    <script>
+        $(document).ready(function () {
+            $('#add-form').validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 1
+                    },
+                    date: {
+                        required: true,
+                        date: true
+                    },
+                    content: {
+                        required: true,
+                        minlength: 10
+                    }
+                }
+            });
+        });
+    </script> 
+}
+

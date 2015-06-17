@@ -1,0 +1,36 @@
+## Visual studio stuff
+*.suo
+*.user
+
+#ignore build contents
+[dD]ebug/
+[rR]elease/
+[bB]in/
+[oO]bj/
+[Ll]ast[Bb]uild.log
+
+# test stuff
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+
+## vim files
+*.un~
+*~
+
+## nuget packages
+*/[pP]ackages/*/
+*.nupkg
+
+## nuget tools
+*/.nuget/
+
+##pyc
+*.pyc
+
+## files containing keys
+*.[Dd]o[Nn]ot[Ss]ync.*
+*.pfx
+
+## Stylecop cache
+[Ss]tyle[Cc]op.[Cc]ache

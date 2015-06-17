@@ -1,0 +1,35 @@
+﻿<SettingsFlyout
+    x:Class="UniversalDemo.DropboxSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Dropbox"
+    d:DesignWidth="346">
+
+    <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+        <!-- The StackPanel(s) below define individual content sections -->
+
+        <!-- Content Section 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Section 1 header -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Dropbox Connection" />
+
+            <!-- Section 1 body -->
+            <TextBlock Name="ConnectText" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    You are currently connected to Dropbox as Joe User.
+                </TextBlock.Text>
+            </TextBlock>
+
+            <Button Name="ConnectBtn" Click="ConnectBtn_Click">Connect</Button> 
+            <Button Name="DisconnectBtn" Click="DisconnectBtn_Click">Disconnect</Button> 
+        </StackPanel>
+
+    </StackPanel>
+</SettingsFlyout>

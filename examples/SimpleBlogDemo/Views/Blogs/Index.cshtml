@@ -1,0 +1,49 @@
+﻿@model Tuple<List<ArticleMetadata>, string, bool>
+
+@{
+    var list = Model.Item1;
+    list.Reverse();
+    var blogname = Model.Item2;
+    var isEditable = Model.Item3;
+
+    ViewBag.Title = blogname + " Articles";
+}
+
+<div class="row">
+    <h2 class="col-md-offset-2 col-md-8">Articles</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-6">
+        <strong>Name</strong>
+    </div>
+    <div class="col-md-2">
+        <strong>Date</strong>
+    </div>
+</div>
+
+@foreach (var curr in list)
+{
+    <div class="row">
+        <div class="col-md-offset-2 col-md-6">
+            <a href="/Blogs/@blogname/@curr.DisplayName">@curr.Name</a>
+            @if (isEditable)
+            {
+                <a href="/Edit/@curr.DisplayName">[edit]</a>
+            }
+        </div>
+        <div class="col-md-2">
+            @curr.Date.ToShortDateString()
+        </div>
+    </div>
+}
+
+@if (isEditable)
+{
+    <div class="row">
+        <div class="col-md-offset-2 col-md-6">
+            New Article
+            <a href="/Add">[add]</a>
+        </div>
+    </div>
+}

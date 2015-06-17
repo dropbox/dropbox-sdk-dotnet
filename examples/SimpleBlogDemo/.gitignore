@@ -1,0 +1,8 @@
+[Bb]in/
+[Oo]bj/
+[Aa]pp_[Dd]ata/
+*.suo
+*.user
+*~
+/packages/*/
+
