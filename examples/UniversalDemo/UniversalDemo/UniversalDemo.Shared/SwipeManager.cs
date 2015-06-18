@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------------
-// <copyright file="SwipeManager.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
-namespace UniversalDemo
+﻿namespace UniversalDemo
 {
     using System;
     using UniversalDemo.ViewModel;

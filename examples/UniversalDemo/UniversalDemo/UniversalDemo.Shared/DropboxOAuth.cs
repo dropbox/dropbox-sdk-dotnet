@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------------
-// <copyright file="DropboxOAuth.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
-namespace UniversalDemo
+﻿namespace UniversalDemo
 {
     using System;
     using System.Threading.Tasks;

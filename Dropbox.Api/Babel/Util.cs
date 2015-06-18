@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------------
-// <copyright file="Util.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
-namespace Dropbox.Api.Babel
+﻿namespace Dropbox.Api.Babel
 {
     using System;
     using System.Threading.Tasks;

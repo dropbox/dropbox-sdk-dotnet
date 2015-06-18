@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------------
-// <copyright file="App.xaml.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
-namespace UniversalDemo
+﻿namespace UniversalDemo
 {
     using System;
     using Dropbox.Api;

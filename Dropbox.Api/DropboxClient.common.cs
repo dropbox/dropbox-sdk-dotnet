@@ -1,9 +1,3 @@
-//-----------------------------------------------------------------------------
-// <copyright file="DropboxClient.common.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
 namespace Dropbox.Api
 {
     using System;

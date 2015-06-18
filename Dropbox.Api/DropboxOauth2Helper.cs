@@ -1,15 +1,9 @@
-﻿//-----------------------------------------------------------------------------
-// <copyright file="DropboxOAuth2Helper.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
-namespace Dropbox.Api
+﻿namespace Dropbox.Api
 {
     using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Text;
     using System.Threading.Tasks;
 
     /// <summary>
