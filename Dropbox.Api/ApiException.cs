@@ -64,7 +64,7 @@
         /// Encodes the object using the supplied encoder.
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
-        /// <exception cref="System.NotImplementedException"></exception>
+        /// <exception cref="System.NotSupportedException">Exceptions cannot be encoded.</exception>
         void IEncodable<ApiException<TError>>.Encode(IEncoder encoder)
         {
             throw new NotSupportedException("Exceptions cannot be encoded");
@@ -77,7 +77,6 @@
         /// <returns>
         /// The deserialized object. Note: this is not necessarily the current instance.
         /// </returns>
-        /// <exception cref="System.NotImplementedException"></exception>
         ApiException<TError> IEncodable<ApiException<TError>>.Decode(IDecoder decoder)
         {
             using (var obj = decoder.GetObject())

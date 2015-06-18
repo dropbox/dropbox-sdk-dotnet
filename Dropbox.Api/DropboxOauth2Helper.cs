@@ -12,7 +12,7 @@
     public enum OAuthResponseType
     {
         /// <summary>
-        /// This represents the OAauth 2.0 token or implicit grant flow. The server will return the bearer token via
+        /// This represents the OAuth 2.0 token or implicit grant flow. The server will return the bearer token via
         /// the <c>redirectUri</c> callback, rather than requiring your app to make a second call to a server.
         /// This is useful for pure client-side apps, such as mobile apps or JavaScript-based apps.
         /// </summary>
@@ -48,7 +48,7 @@
     /// It first checks if the URI to which the browser is navigating starts with the redirect uri provided in the call to
     /// <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> &#x2014; it is important not to prevent other navigation which may happen within the 
     /// authorization flow &#x2014; if the URI matches, then the code uses <see cref="DropboxOAuth2Helper.ParseTokenFragment"/> to parse the 
-    /// <see cref="OAuth2Response"/> from the fragment componented of the redirected URI. The <see cref="OAuth2Response.AccessToken" />
+    /// <see cref="OAuth2Response"/> from the fragment component of the redirected URI. The <see cref="OAuth2Response.AccessToken" />
     /// will then be used to construct an instance of <see cref="DropboxClient"/>.
     /// </para>
     /// <code>
@@ -164,7 +164,7 @@
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <returns>The uri of a web page which must be displayed to the user inorder to authorize the app.</returns>
+        /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false)
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
@@ -192,7 +192,7 @@
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <returns>The uri of a web page which must be displayed to the user inorder to authorize the app.</returns>
+        /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false)
         {
             if (string.IsNullOrWhiteSpace(clientId))
@@ -250,11 +250,11 @@
         }
 
         /// <summary>
-        /// Parses the token fragment. When using the OAuth 2.0 token or implict grant flow, the 
+        /// Parses the token fragment. When using the OAuth 2.0 token or implicit grant flow, the 
         /// user will be redirected to a URI with a fragment containing the authorization token.
         /// </summary>
         /// <param name="redirectedUri">The redirected URI.</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <returns>The authorization response, containing the access token and UID of the authorized user</returns>
         public static OAuth2Response ParseTokenFragment(Uri redirectedUri)
         {
             if (redirectedUri == null)
@@ -282,7 +282,6 @@
                 {
                     continue;
                 }
-
 
                 switch (elements[0])
                 {
@@ -314,12 +313,12 @@
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="appSecret">The application secret, found in the 
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
-        /// <param name="redirectUri">The redirect URI that was provided in the inital authorize URI,
+        /// <param name="redirectUri">The redirect URI that was provided in the initial authorize URI,
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
-        public async static Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret, string redirectUri, HttpClient client = null)
+        /// <returns>The authorization response, containing the access token and UID of the authorized user</returns>
+        public static async Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret, string redirectUri, HttpClient client = null)
         {
             if (string.IsNullOrEmpty(code))
             {
@@ -340,11 +339,11 @@
                 var content = new FormUrlEncodedContent(
                     new Dictionary<string, string>
                     {
-                        {"code", code},
-                        {"grant_type", "authorization_code"},
-                        {"client_id", appKey},
-                        {"client_secret", appSecret},
-                        {"redirect_uri", redirectUri}
+                        { "code", code },
+                        { "grant_type", "authorization_code" },
+                        { "client_id", appKey },
+                        { "client_secret", appSecret },
+                        { "redirect_uri", redirectUri }
                     });
                 var response = await httpClient.PostAsync("https://api.dropbox.com/1/oauth2/token", content);
 
@@ -374,12 +373,12 @@
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="appSecret">The application secret, found in the 
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
-        /// <param name="redirectUri">The redirect URI that was provided in the inital authorize URI,
+        /// <param name="redirectUri">The redirect URI that was provided in the initial authorize URI,
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="state">The state parameter (if any) that matches that used in the initial authorize URI.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <returns>The authorization response, containing the access token and UID of the authorized user</returns>
         public static Task<OAuth2Response> ProcessCodeFlowAsync(Uri responseUri, string appKey, string appSecret, string redirectUri, string state = null, HttpClient client = null)
         {
             if (responseUri == null)
@@ -421,12 +420,13 @@
                         {
                             throw new ArgumentNullException("state", "The state argument is expected.");
                         }
-                        else if(state != Uri.UnescapeDataString(elements[1]))
+                        else if (state != Uri.UnescapeDataString(elements[1]))
                         {
                             throw new ArgumentException(
                                 "responseUri",
                                 "The state in the responseUri does not match the provided value.");
                         }
+
                         break;
                     default:
                         throw new ArgumentException(
@@ -455,7 +455,7 @@
         /// Initializes a new instance of the <see cref="OAuth2Response"/> class.
         /// </summary>
         /// <param name="access_token">The access_token.</param>
-        /// <param name="uid">The uid.</param>
+        /// <param name="uid">The UID.</param>
         /// <param name="state">The state.</param>
         /// <param name="token_type">The token_type.</param>
         internal OAuth2Response(string access_token, string uid, string state, string token_type)
