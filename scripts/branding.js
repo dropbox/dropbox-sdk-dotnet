@@ -51,6 +51,9 @@ else
 // The OnLoad method
 function OnLoad(defaultLanguage)
 {
+    // Remove the search form
+    $('#SearchForm').remove();
+
     var defLang;
 
     if(typeof (defaultLanguage) == "undefined" || defaultLanguage == null || defaultLanguage == "")
