@@ -11,14 +11,16 @@ from babelapi.babel.tower import InvalidSpec, TowerOfBabel
 SPECS = [
 #    'dfb.babel',
 #    'feed_chat.babel',
+    'common.babel',
     'files.babel',
+    'sharing.babel',
 #    'resellers.babel',
     'users.babel',
     ]
 
 SPEC_DIR = os.path.join('c:\\','Users','Dropbox','Dropbox (Dropbox)','ApiSpec')
 OUTPUT_DIR = os.path.join('c:\\','Users','Dropbox','Desktop','temp','babel','Dropbox.Api')
-SOURCE_DIR = os.path.join('c:\\','Users','Dropbox','Desktop','temp','babel','generator')
+SOURCE_DIR = os.path.join('.\\')
 
 if __name__ == '__main__':
     specs = []
@@ -52,7 +54,7 @@ if __name__ == '__main__':
                   generator, file=sys.stderr)
             raise
 
-    c = Compiler(api, generator_module, OUTPUT_DIR)
+    c = Compiler(api, generator_module, None, OUTPUT_DIR)
     try:
         c.build()
     except GeneratorException as e:

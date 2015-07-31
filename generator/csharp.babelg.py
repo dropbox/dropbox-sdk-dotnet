@@ -462,6 +462,9 @@ class CSharpGenerator(CodeGenerator):
         name = data_type.name
         if is_composite_type(data_type):
             public = self._public_name(name)
+            type_ns = self._public_name(data_type.namespace.name)
+            if type_ns != self._ns:
+                public = type_ns + '.' + public
             if public in self._prevent_collisions:
                 return self.DEFAULT_NAMESPACE + self._ns + '.' + public
             return public
@@ -871,6 +874,7 @@ class CSharpGenerator(CodeGenerator):
             ns (babelapi.api.ApiNamespace): The namespace to generate.
         """
         ns_name = self._public_name(ns.name)
+
         self._ns = ns_name
         for data_type in ns.data_types:
             self._generate_data_type(ns_name, data_type)
