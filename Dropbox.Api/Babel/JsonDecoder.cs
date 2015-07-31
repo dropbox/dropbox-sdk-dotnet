@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------------
-// <copyright file="JsonDecoder.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------------
-
-namespace Dropbox.Api.Babel
+﻿namespace Dropbox.Api.Babel
 {
     using System;
     using System.Collections.Generic;
@@ -18,7 +12,7 @@ namespace Dropbox.Api.Babel
     /// JSON string.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable",
-        Justification="The context object doesn't represent a resource that can leak, and when it is disposed it cleans up the internal reference")]
+        Justification = "The context object doesn't represent a resource that can leak, and when it is disposed it cleans up the internal reference")]
     public class JsonDecoder : IDecoder
     {
         /// <summary>
