@@ -19,7 +19,7 @@ SPECS = [
     ]
 
 SPEC_DIR = os.path.join('c:\\','Users','Dropbox','Dropbox (Dropbox)','ApiSpec')
-OUTPUT_DIR = os.path.join('c:\\','Users','Dropbox','Desktop','temp','babel','Dropbox.Api')
+OUTPUT_DIR = os.path.join('..\\','Dropbox.Api')
 SOURCE_DIR = os.path.join('.\\')
 
 if __name__ == '__main__':

@@ -12,8 +12,8 @@
         </member>
         <member name="N:Dropbox.Api.Files">
             <summary>
-                <para>Contains the types used by the routes declared in <see
-                cref="T:Dropbox.Api.Files.Routes.FilesRoutes" />.</para>
+                <para>This endpoint contains endpoints and data types for basic file</para>
+                <para>operations.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Files.Routes">
@@ -22,10 +22,22 @@
                 namespace.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Sharing">
+            <summary>
+                <para>This namespace contains endpoints and data types for creating and
+                managing</para>
+                <para>shared links.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Sharing.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Sharing" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Users">
             <summary>
-                <para>Contains the types used by the routes declared in <see
-                cref="T:Dropbox.Api.Users.Routes.UsersRoutes" />.</para>
+                <para>This namespace contains endpoints user management.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Users.Routes">

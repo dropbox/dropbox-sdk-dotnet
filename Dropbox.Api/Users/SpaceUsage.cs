@@ -18,13 +18,18 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SpaceUsage" /> class.</para>
         /// </summary>
-        /// <param name="allocated">The user's total space allocation (bytes).</param>
         /// <param name="used">The user's total space usage (bytes).</param>
-        public SpaceUsage(ulong allocated,
-                          ulong used)
+        /// <param name="allocation">The user's space allocation.</param>
+        public SpaceUsage(ulong used,
+                          SpaceAllocation allocation)
         {
-            this.Allocated = allocated;
+            if (allocation == null)
+            {
+                throw new sys.ArgumentNullException("allocation");
+            }
+
             this.Used = used;
+            this.Allocation = allocation;
         }
 
         /// <summary>
@@ -37,14 +42,14 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The user's total space allocation (bytes).</para>
-        /// </summary>
-        public ulong Allocated { get; private set; }
-
-        /// <summary>
         /// <para>The user's total space usage (bytes).</para>
         /// </summary>
         public ulong Used { get; private set; }
+
+        /// <summary>
+        /// <para>The user's space allocation.</para>
+        /// </summary>
+        public SpaceAllocation Allocation { get; private set; }
 
         #region IEncodable<SpaceUsage> methods
 
@@ -57,8 +62,8 @@ namespace Dropbox.Api.Users
         {
             using (var obj = encoder.AddObject())
             {
-                obj.AddField<ulong>("allocated", this.Allocated);
                 obj.AddField<ulong>("used", this.Used);
+                obj.AddFieldObject<SpaceAllocation>("allocation", this.Allocation);
             }
         }
 
@@ -73,8 +78,8 @@ namespace Dropbox.Api.Users
         {
             using (var obj = decoder.GetObject())
             {
-                this.Allocated = obj.GetField<ulong>("allocated");
                 this.Used = obj.GetField<ulong>("used");
+                this.Allocation = obj.GetFieldObject<SpaceAllocation>("allocation");
             }
 
             return this;
