@@ -2,18 +2,18 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.2-beta</version>
+    <version>$version$</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
-    <licenseUrl>https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/dropbox/DotNetV2Api/blob/master/LICENSE</licenseUrl>
 
     <projectUrl>https://www.dropbox.com/developers</projectUrl>
     <iconUrl>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
-    <releaseNotes>Preview Release</releaseNotes>
-    <copyright>Copyright (c) Dropbox Inc. 2015</copyright>
+    <releaseNotes>Initial version</releaseNotes>
+    <copyright>Copyright (c) Dropbox Inc.2015</copyright>
     <tags>Dropbox Api</tags>
   </metadata>
 </package>

@@ -11,59 +11,58 @@ namespace Dropbox.Api.Users
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Information about a user's space usage and quota.</para>
+    /// <para>The team space allocation object</para>
     /// </summary>
-    public sealed class SpaceUsage : enc.IEncodable<SpaceUsage>
+    public sealed class TeamSpaceAllocation : enc.IEncodable<TeamSpaceAllocation>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SpaceUsage" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="TeamSpaceAllocation" />
+        /// class.</para>
         /// </summary>
-        /// <param name="used">The user's total space usage (bytes).</param>
-        /// <param name="allocation">The user's space allocation.</param>
-        public SpaceUsage(ulong used,
-                          SpaceAllocation allocation)
+        /// <param name="used">The total space currently used by the user's team
+        /// (bytes).</param>
+        /// <param name="allocated">The total space allocated to the user's team
+        /// (bytes).</param>
+        public TeamSpaceAllocation(ulong used,
+                                   ulong allocated)
         {
-            if (allocation == null)
-            {
-                throw new sys.ArgumentNullException("allocation");
-            }
-
             this.Used = used;
-            this.Allocation = allocation;
+            this.Allocated = allocated;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SpaceUsage" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="TeamSpaceAllocation" />
+        /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public SpaceUsage()
+        public TeamSpaceAllocation()
         {
         }
 
         /// <summary>
-        /// <para>The user's total space usage (bytes).</para>
+        /// <para>The total space currently used by the user's team (bytes).</para>
         /// </summary>
         public ulong Used { get; private set; }
 
         /// <summary>
-        /// <para>The user's space allocation.</para>
+        /// <para>The total space allocated to the user's team (bytes).</para>
         /// </summary>
-        public SpaceAllocation Allocation { get; private set; }
+        public ulong Allocated { get; private set; }
 
-        #region IEncodable<SpaceUsage> methods
+        #region IEncodable<TeamSpaceAllocation> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SpaceUsage>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<TeamSpaceAllocation>.Encode(enc.IEncoder encoder)
         {
             using (var obj = encoder.AddObject())
             {
                 obj.AddField<ulong>("used", this.Used);
-                obj.AddFieldObject<SpaceAllocation>("allocation", this.Allocation);
+                obj.AddField<ulong>("allocated", this.Allocated);
             }
         }
 
@@ -74,12 +73,12 @@ namespace Dropbox.Api.Users
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SpaceUsage enc.IEncodable<SpaceUsage>.Decode(enc.IDecoder decoder)
+        TeamSpaceAllocation enc.IEncodable<TeamSpaceAllocation>.Decode(enc.IDecoder decoder)
         {
             using (var obj = decoder.GetObject())
             {
                 this.Used = obj.GetField<ulong>("used");
-                this.Allocation = obj.GetFieldObject<SpaceAllocation>("allocation");
+                this.Allocated = obj.GetField<ulong>("allocated");
             }
 
             return this;

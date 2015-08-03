@@ -12,9 +12,6 @@ namespace Dropbox.Api.Files
 
     /// <summary>
     /// <para>Metadata for a file or folder.</para>
-    /// <para>You should never see a bare <see cref="Metadata" /> instance; you will always
-    /// receive an instance of <see cref="FileMetadata" /> or <see cref="FolderMetadata"
-    /// />.</para>
     /// </summary>
     /// <seealso cref="DeletedMetadata" />
     /// <seealso cref="FileMetadata" />

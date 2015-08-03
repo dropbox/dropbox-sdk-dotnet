@@ -1350,5 +1350,284 @@ namespace Dropbox.Api.Files.Routes
 
             return task.Result;
         }
+
+        /// <summary>
+        /// <para>Get a preview for a file. Currently previews are only generated for the files
+        /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
+        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
+        /// </summary>
+        /// <param name="previewArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{PreviewError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="PreviewError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(PreviewArg previewArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview");
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get preview route.</para>
+        /// </summary>
+        /// <param name="previewArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetPreview(PreviewArg previewArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetPreviewAsync(previewArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get a preview for a file. Currently previews are only generated for the files
+        /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
+        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
+        /// </summary>
+        /// <param name="path">The path of the file to preview.</param>
+        /// <param name="rev">Optional revision, taken from the corresponding <see
+        /// cref="Metadata" /> field.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{PreviewError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="PreviewError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(string path,
+                                                                           string rev = null)
+        {
+            var previewArg = new PreviewArg(path,
+                                            rev);
+
+            return this.GetPreviewAsync(previewArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get preview route.</para>
+        /// </summary>
+        /// <param name="path">The path of the file to preview.</param>
+        /// <param name="rev">Optional revision, taken from the corresponding <see
+        /// cref="Metadata" /> field.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetPreview(string path,
+                                                string rev = null,
+                                                sys.AsyncCallback callback = null,
+                                                object callbackState = null)
+        {
+            var previewArg = new PreviewArg(path,
+                                            rev);
+
+            return this.BeginGetPreview(previewArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get preview route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{PreviewError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="PreviewError"/>.</exception>
+        public enc.IDownloadResponse<FileMetadata> EndGetPreview(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Return revisions of a file</para>
+        /// </summary>
+        /// <param name="listRevisionsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ListRevisionsError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="ListRevisionsError"/>.</exception>
+        public t.Task<ListRevisionsResult> ListRevisionsAsync(ListRevisionsArg listRevisionsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions");
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list revisions route.</para>
+        /// </summary>
+        /// <param name="listRevisionsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListRevisions(ListRevisionsArg listRevisionsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListRevisionsAsync(listRevisionsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Return revisions of a file</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ListRevisionsError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="ListRevisionsError"/>.</exception>
+        public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
+                                                              ulong limit = 10)
+        {
+            var listRevisionsArg = new ListRevisionsArg(path,
+                                                        limit);
+
+            return this.ListRevisionsAsync(listRevisionsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list revisions route.</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListRevisions(string path,
+                                                   ulong limit = 10,
+                                                   sys.AsyncCallback callback = null,
+                                                   object callbackState = null)
+        {
+            var listRevisionsArg = new ListRevisionsArg(path,
+                                                        limit);
+
+            return this.BeginListRevisions(listRevisionsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list revisions route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ListRevisionsError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="ListRevisionsError"/>.</exception>
+        public ListRevisionsResult EndListRevisions(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListRevisionsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Restore a file to a specific revision</para>
+        /// </summary>
+        /// <param name="restoreArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RestoreError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="RestoreError"/>.</exception>
+        public t.Task<FileMetadata> RestoreAsync(RestoreArg restoreArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore");
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the restore route.</para>
+        /// </summary>
+        /// <param name="restoreArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRestore(RestoreArg restoreArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.RestoreAsync(restoreArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Restore a file to a specific revision</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to restore.</param>
+        /// <param name="rev">The revision to restore for the file.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RestoreError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="RestoreError"/>.</exception>
+        public t.Task<FileMetadata> RestoreAsync(string path,
+                                                 string rev)
+        {
+            var restoreArg = new RestoreArg(path,
+                                            rev);
+
+            return this.RestoreAsync(restoreArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the restore route.</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to restore.</param>
+        /// <param name="rev">The revision to restore for the file.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRestore(string path,
+                                             string rev,
+                                             sys.AsyncCallback callback,
+                                             object callbackState = null)
+        {
+            var restoreArg = new RestoreArg(path,
+                                            rev);
+
+            return this.BeginRestore(restoreArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the restore route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RestoreError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="RestoreError"/>.</exception>
+        public FileMetadata EndRestore(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<FileMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
     }
 }
