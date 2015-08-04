@@ -29,7 +29,7 @@ _cmdline_parser.add_argument(
 _cmdline_parser.add_argument(
     'repo_path',
     type=str,
-    help='Path to a checkout of the dropbox-api-spec repo.',
+    help='Path to a checkout of the dropbox-sdk-dotnet repo.',
 )
 
 def check_remote_origin_url(repo_path, accepted_remote_origin_urls):
@@ -76,7 +76,7 @@ def main():
               file=sys.stderr)
         sys.exit(1)
 
-    # Check that repo path points to the top-level of the spec repo
+    # Check that repo path points to the top-level of the repo
     if not os.path.exists(os.path.join(repo_path, '.git')):
         print('error: The repo folder (%s) is not the top-level of the '
               'public SDK repo.' % repo_path)
