@@ -19,11 +19,8 @@
 *~
 
 ## nuget packages
-/packages/*/
+/drobox-sdk-dotnet/packages/*/
 *.nupkg
-
-## nuget tools
-/.nuget/
 
 ##pyc
 *.pyc
