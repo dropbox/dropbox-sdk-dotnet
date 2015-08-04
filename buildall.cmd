@@ -1,54 +1,8 @@
 @echo off
 
-SETLOCAL
+SETLOCAL EnableDelayedExpansion
 
 SET PRE=
-SET GENERATE=""
-SET RESTORE=""
-
-:process_arg
-IF "%~1"=="" GOTO :done_args
-IF "%~1"=="/nogen" (
-    SHIFT
-    SET GENERATE=NOGENERATE
-    GOTO :process_arg
-)
-IF "%~1"=="/norest" (
-    SHIFT
-    SET RESTORE=NORESTORE
-    GOTO :process_arg
-)
-SET NAME=%~1
-SHIFT
-IF "%~1"=="" (
-    echo %NAME% is missing a parameter
-    GOTO :eof
-)
-SET ARG_%NAME%=%~1
-SHIFT
-GOTO :process_arg
-
-:done_args
-
-IF "%ARG_spec_dir%"=="" (
-    echo Missing 'Spec_Dir' argument
-    GOTO :usage
-)
-
-GOTO :run
-
-:usage
-    echo.
-    echo Usage:
-    echo ^   buildall Spec_Dir ^<specs^> [/nogen] [/norest]
-    echo. 
-    echo ^   Args:
-    echo ^       Spec_Dir ^<specs^>       The directory containing babel specifications
-    echo ^       /nogen                 Don't run the python code generator
-    echo ^       /norest                Don't restore nuget packages
-    echo. 
-
-GOTO :eof
 
 :run
 
@@ -64,39 +18,45 @@ IF NOT "%ERRORLEVEL%" == "0" (
     GOTO :eof
 )
 
-IF NOT "%GENERATE%" == "NOGENERATE" (
-    where python /q
-    IF NOT "%ERRORLEVEL%" == "0" (
-        echo Cannot find python.exe, do you need to check your path?
-        GOTO :eof
-    )
-
-    where babelapi /q
-    IF NOT "%ERRORLEVEL%" == "0" (
-        echo Cannot find babelapi.exe, do you need to check your path?
-        GOTO :eof
-    )
-
-    echo Generating Dropbox.Api...
-    %PRE% babelapi generator\csharp.babelg.py "%ARG_SPEC_DIR%\files.babel" "%ARG_SPEC_DIR%\users.babel" Dropbox.Api --clean-build
+where python /q
+IF NOT "%ERRORLEVEL%" == "0" (
+    echo Cannot find python.exe, do you need to check your path?
+    GOTO :eof
 )
 
-if NOT "%RESTORE%" =="NORESTORE" (
-    echo Restoring packages using nuget.exe ...
-    IF EXIST .nuget\nuget.exe (
-        %PRE% .nuget\nuget.exe restore babel.sln
-    ) ELSE (
-        where nuget /q
-        if NOT "%ERRORLEVEL%" == "0" (
-            echo Cannot find nuget.exe, install from nuget.org
-            GOTO :eof
-        )
-        %PRE% nuget.exe restore babel.sln
+where babelapi /q
+IF NOT "%ERRORLEVEL%" == "0" (
+    echo Cannot find babelapi.exe, do you need to check your path?
+    GOTO :eof
+)
+
+echo Generating Dropbox.Api...
+
+SET BABEL_LIST=
+
+FOR %%f IN (spec\*.babel) DO SET BABEL_LIST=%%f !BABEL_LIST!
+
+%PRE% babelapi generator\csharp.babelg.py !BABEL_LIST! dropbox-sdk-dotnet\Dropbox.Api --clean-build
+
+SET SOLUTION_DIR="dropbox-sdk-dotnet"
+
+echo Restoring packages using nuget.exe ...
+
+IF EXIST %SOLUTION_DIR%\.nuget\nuget.exe (
+    %PRE% %SOLUTION_DIR%\.nuget\nuget.exe restore %SOLUTION_DIR%\Dropbox.Api.sln
+) ELSE (
+    where nuget /q
+    if NOT "%ERRORLEVEL%" == "0" (
+        echo Cannot find nuget.exe, install from nuget.org
+        GOTO :eof
     )
+    %PRE% nuget.exe restore %SOLUTION_DIR%\Dropbox.Api.sln
 )
 
 echo Building...
-%PRE% msbuild /verbosity:minimal /m babel.sln
+%PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api.sln
+%PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.Doc.csproj
+%PRE% msbuild /verbosity:minimal /m doc\BabelDocs.shfbproj
 
 :eof
     ENDLOCAL
