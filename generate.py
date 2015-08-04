@@ -57,11 +57,6 @@ def check_remote_origin_url(repo_path, accepted_remote_origin_urls):
 def main():
     """The entry point for the program."""
 
-    # Run babelapi csharp.babelg.py
-    #     - dump output to private or public repo folder?
-    # Script #1: Copy files to public repo folder
-    # Script #2: Copy doc to public repo gh-pages branch
-
     args = _cmdline_parser.parse_args()
     repo_path = args.repo_path
     verbose = args.verbose
