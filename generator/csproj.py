@@ -97,8 +97,8 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 
 
 CSPROJ_END_BLOCK = r"""<ItemGroup>
-    <Content Include="babel_summaries.xml" />
-    <Content Include="namespace_summaries.xml" />
+    <None Include="babel_summaries.xml" />
+    <None Include="namespace_summaries.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
