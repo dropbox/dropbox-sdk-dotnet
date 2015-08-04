@@ -41,12 +41,16 @@ Updating the SDK for a new spec
 
 Publishing a new SDK
 --------------------
+1. From the private repo, edit `generator/common/Dropbox.Api.nuspec`. by updating version and release note.
+2. Run `buildall.cmd`.
+3. In `dropbox-sdk-dotnet/Dropbox.Api` run
+   
+   nuget.exe pack Dropbox.Api.csproj
 
-From the private repo, run `buildall.cmd`. TBD.
-
+4. Go to nuget.org to publish the package.
 
 Generating Docs
 ---------------
-
-We use GitHub pages. TBD.
+1. Run `buildall.cmd`.
+2. Push generated code in doc/Help to public homepage branch.
 
