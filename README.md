@@ -22,19 +22,19 @@ Updating the SDK for a new spec
 
     $ git pull
 
-2. Commit the change of the sub repo to the private SDK repo. Do not do this
-   from a sub repo folder:
-
-    $ git commit -a -m "Updated spec"
-    $ git push
-
-3. Use the `generate.py` script with the path to the local check out of the public:
+2. Use the `generate.py` script with the path to the local check out of the public:
 
     $ python generate.py -h
     $ python generate.py ../dropbox-sdk-dotnet
 
-4. From the public repo, open up the `Dropbox.Api.sln` in Visual Studio and run
+3. From the public repo, open up the `Dropbox.Api.sln` in Visual Studio and run
    the included examples as a sanity check.
+
+4. Commit the update to the spec sub repo (from step 1) to the private SDK repo.
+   Do this from the root of the private SDK repo:
+
+    $ git commit -a -m "Updated spec"
+    $ git push
 
 5. Commit and push the public repo.
 
