@@ -19,7 +19,7 @@
 *~
 
 ## nuget packages
-/drobox-sdk-dotnet/packages/*/
+/dropbox-sdk-dotnet/packages/*/
 *.nupkg
 
 ##pyc
