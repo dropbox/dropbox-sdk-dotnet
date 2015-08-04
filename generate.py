@@ -86,9 +86,10 @@ def main():
 
     if verbose:
         print('Generating code')
+    shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
     subprocess.check_output(
         (['python', '-m', 'babelapi.cli', 'generator/csharp.babelg.py'] +
-         glob.glob('spec/*.babel') + [repo_path + '/Dropbox.Api']))
+         glob.glob('spec/*.babel') + [os.path.join(repo_path, 'Dropbox.Api')]))
 
     if verbose:
         print('Copying Dropbox.Api.sln, examples, license, and readme')
