@@ -20,34 +20,43 @@ Updating the SDK for a new spec
 1. Go into the `spec` folder and update it to the desired commit. To update to
    the latest, simply use:
 
-    $ git pull
-
+   ```
+   $ git pull
+   ```
+   
 2. Use the `generate.py` script with the path to the local check out of the public:
-
-    $ python generate.py -h
-    $ python generate.py ../dropbox-sdk-dotnet
-
+3. 
+   ```
+   $ python generate.py -h
+   $ python generate.py ../dropbox-sdk-dotnet
+   ```
+   
 3. From the public repo, open up the `Dropbox.Api.sln` in Visual Studio and run
    the included examples as a sanity check.
 
 4. Commit the update to the spec sub repo (from step 1) to the private SDK repo.
    Do this from the root of the private SDK repo:
-
+   
+   ```
     $ git commit -a -m "Updated spec"
     $ git push
-
+   ```
+   
 5. Commit and push the public repo.
 
 
-Publishing a new SDK
+Publishing a new SDK (This needs to be done on Windows)
 --------------------
 1. From the private repo, edit `generator/common/Dropbox.Api.nuspec` by updating version and release note.
 2. Run `buildall.cmd`.
 3. In `dropbox-sdk-dotnet/Dropbox.Api` run
    
-   nuget.exe pack Dropbox.Api.csproj
-
-4. Go to nuget.org to publish the package.
+   ```
+   ..\.nuget\nuget.exe pack Dropbox.Api.csproj
+   ```
+   
+   A .nukpg file will be generated in the same directory.
+4. Go to nuget.org to publish the package. Please ask around for the account credentials.
 
 Generating Docs
 ---------------
