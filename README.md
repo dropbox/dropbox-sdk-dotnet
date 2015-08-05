@@ -41,7 +41,7 @@ Updating the SDK for a new spec
 
 Publishing a new SDK
 --------------------
-1. From the private repo, edit `generator/common/Dropbox.Api.nuspec`. by updating version and release note.
+1. From the private repo, edit `generator/common/Dropbox.Api.nuspec` by updating version and release note.
 2. Run `buildall.cmd`.
 3. In `dropbox-sdk-dotnet/Dropbox.Api` run
    
