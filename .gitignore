@@ -23,7 +23,7 @@
 *.nupkg
 
 ## nuget tools
-*/.nuget/
+/.nuget/
 
 ##pyc
 *.pyc
