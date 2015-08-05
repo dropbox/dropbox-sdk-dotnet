@@ -34,12 +34,14 @@ namespace Dropbox.Api.Files
         /// field is the same rev as elsewhere in the API and can be used to detect changes and
         /// avoid conflicts.</param>
         /// <param name="size">The file size in bytes.</param>
+        /// <param name="id">A unique identifier for the file.</param>
         public FileMetadata(string name,
                             string pathLower,
                             sys.DateTime clientModified,
                             sys.DateTime serverModified,
                             string rev,
-                            ulong size)
+                            ulong size,
+                            string id = null)
             : base(name, pathLower)
         {
             if (rev == null)
@@ -51,10 +53,16 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentOutOfRangeException("rev");
             }
 
+            if (id != null && (id.Length < 1))
+            {
+                throw new sys.ArgumentOutOfRangeException("id");
+            }
+
             this.ClientModified = clientModified;
             this.ServerModified = serverModified;
             this.Rev = rev;
             this.Size = size;
+            this.Id = id;
         }
 
         /// <summary>
@@ -92,6 +100,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public ulong Size { get; private set; }
 
+        /// <summary>
+        /// <para>A unique identifier for the file.</para>
+        /// </summary>
+        public string Id { get; private set; }
+
         #region IEncodable<FileMetadata> methods
 
         /// <summary>
@@ -110,6 +123,10 @@ namespace Dropbox.Api.Files
                 obj.AddField<sys.DateTime>("server_modified", this.ServerModified);
                 obj.AddField<string>("rev", this.Rev);
                 obj.AddField<ulong>("size", this.Size);
+                if (this.Id != null)
+                {
+                    obj.AddField<string>("id", this.Id);
+                }
             }
         }
 
@@ -130,6 +147,10 @@ namespace Dropbox.Api.Files
                 this.ServerModified = obj.GetField<sys.DateTime>("server_modified");
                 this.Rev = obj.GetField<string>("rev");
                 this.Size = obj.GetField<ulong>("size");
+                if (obj.HasField("id"))
+                {
+                    this.Id = obj.GetField<string>("id");
+                }
             }
 
             return this;

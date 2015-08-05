@@ -1,4 +1,10 @@
-﻿namespace Dropbox.Api.Babel
+﻿//-----------------------------------------------------------------------------
+// <copyright file="Empty.cs" company="Dropbox Inc">
+//  Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------------
+
+namespace Dropbox.Api.Babel
 {
     /// <summary>
     /// An empty object used when a route doesn't have one or more of the

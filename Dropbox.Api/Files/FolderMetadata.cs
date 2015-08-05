@@ -25,10 +25,18 @@ namespace Dropbox.Api.Files
         /// contains a slash.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
         /// starts with a slash.</param>
+        /// <param name="id">A unique identifier for the folder.</param>
         public FolderMetadata(string name,
-                              string pathLower)
+                              string pathLower,
+                              string id = null)
             : base(name, pathLower)
         {
+            if (id != null && (id.Length < 1))
+            {
+                throw new sys.ArgumentOutOfRangeException("id");
+            }
+
+            this.Id = id;
         }
 
         /// <summary>
@@ -39,6 +47,11 @@ namespace Dropbox.Api.Files
         public FolderMetadata()
         {
         }
+
+        /// <summary>
+        /// <para>A unique identifier for the folder.</para>
+        /// </summary>
+        public string Id { get; private set; }
 
         #region IEncodable<FolderMetadata> methods
 
@@ -54,6 +67,10 @@ namespace Dropbox.Api.Files
                 obj.AddField<string>(".tag", "folder");
                 obj.AddField<string>("name", this.Name);
                 obj.AddField<string>("path_lower", this.PathLower);
+                if (this.Id != null)
+                {
+                    obj.AddField<string>("id", this.Id);
+                }
             }
         }
 
@@ -70,6 +87,10 @@ namespace Dropbox.Api.Files
             {
                 this.Name = obj.GetField<string>("name");
                 this.PathLower = obj.GetField<string>("path_lower");
+                if (obj.HasField("id"))
+                {
+                    this.Id = obj.GetField<string>("id");
+                }
             }
 
             return this;

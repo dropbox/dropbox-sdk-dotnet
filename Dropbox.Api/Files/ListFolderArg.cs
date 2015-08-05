@@ -21,7 +21,10 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="path">The path to the folder you want to see the contents of. May be
         /// the root (i.e. empty).</param>
-        public ListFolderArg(string path)
+        /// <param name="recursive">If true, list folder operation will be applied recursively
+        /// to all subfolders. And the response will contain contents of all subfolders</param>
+        public ListFolderArg(string path,
+                             bool recursive = false)
         {
             if (path == null)
             {
@@ -29,6 +32,7 @@ namespace Dropbox.Api.Files
             }
 
             this.Path = path;
+            this.Recursive = recursive;
         }
 
         /// <summary>
@@ -38,6 +42,7 @@ namespace Dropbox.Api.Files
         /// deserializing.</remarks>
         public ListFolderArg()
         {
+            this.Recursive = false;
         }
 
         /// <summary>
@@ -45,6 +50,12 @@ namespace Dropbox.Api.Files
         /// empty).</para>
         /// </summary>
         public string Path { get; private set; }
+
+        /// <summary>
+        /// <para>If true, list folder operation will be applied recursively to all subfolders.
+        /// And the response will contain contents of all subfolders</para>
+        /// </summary>
+        public bool Recursive { get; private set; }
 
         #region IEncodable<ListFolderArg> methods
 
@@ -58,6 +69,7 @@ namespace Dropbox.Api.Files
             using (var obj = encoder.AddObject())
             {
                 obj.AddField<string>("path", this.Path);
+                obj.AddField<bool>("recursive", this.Recursive);
             }
         }
 
@@ -73,6 +85,10 @@ namespace Dropbox.Api.Files
             using (var obj = decoder.GetObject())
             {
                 this.Path = obj.GetField<string>("path");
+                if (obj.HasField("recursive"))
+                {
+                    this.Recursive = obj.GetField<bool>("recursive");
+                }
             }
 
             return this;

@@ -1,4 +1,10 @@
-﻿namespace Dropbox.Api.Babel
+﻿//-----------------------------------------------------------------------------
+// <copyright file="ITransport.cs" company="Dropbox Inc">
+//  Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------------
+
+namespace Dropbox.Api.Babel
 {
     using System;
     using System.Collections.Generic;

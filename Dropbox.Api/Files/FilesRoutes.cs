@@ -62,7 +62,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
         /// </summary>
-        /// <param name="path">The path of the file or folder on Dropbox. Must not be the
+        /// <param name="path">The path or ID of a file or folder on Dropbox. Must not be the
         /// root.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -79,7 +79,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the get metadata route.</para>
         /// </summary>
-        /// <param name="path">The path of the file or folder on Dropbox. Must not be the
+        /// <param name="path">The path or ID of a file or folder on Dropbox. Must not be the
         /// root.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -153,14 +153,18 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path to the folder you want to see the contents of. May be
         /// the root (i.e. empty).</param>
+        /// <param name="recursive">If true, list folder operation will be applied recursively
+        /// to all subfolders. And the response will contain contents of all subfolders</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
         /// error processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
-        public t.Task<ListFolderResult> ListFolderAsync(string path)
+        public t.Task<ListFolderResult> ListFolderAsync(string path,
+                                                        bool recursive = false)
         {
-            var listFolderArg = new ListFolderArg(path);
+            var listFolderArg = new ListFolderArg(path,
+                                                  recursive);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -170,16 +174,20 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path to the folder you want to see the contents of. May be
         /// the root (i.e. empty).</param>
+        /// <param name="recursive">If true, list folder operation will be applied recursively
+        /// to all subfolders. And the response will contain contents of all subfolders</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolder(string path,
-                                                sys.AsyncCallback callback,
+                                                bool recursive = false,
+                                                sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
-            var listFolderArg = new ListFolderArg(path);
+            var listFolderArg = new ListFolderArg(path,
+                                                  recursive);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }
@@ -292,6 +300,113 @@ namespace Dropbox.Api.Files.Routes
         public ListFolderResult EndListFolderContinue(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListFolderResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderGetLatestCursorAsync" />
+        /// doesn't return any entries. This endpoint is for app which only needs to know about
+        /// new files and modifications and doesn't need to know about files that already exist
+        /// in Dropbox.</para>
+        /// </summary>
+        /// <param name="listFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="ListFolderError"/>.</exception>
+        public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(ListFolderArg listFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderGetLatestCursorResult, ListFolderError>(listFolderArg, "api", "/files/list_folder/get_latest_cursor");
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list folder get latest cursor
+        /// route.</para>
+        /// </summary>
+        /// <param name="listFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListFolderGetLatestCursor(ListFolderArg listFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListFolderGetLatestCursorAsync(listFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderGetLatestCursorAsync" />
+        /// doesn't return any entries. This endpoint is for app which only needs to know about
+        /// new files and modifications and doesn't need to know about files that already exist
+        /// in Dropbox.</para>
+        /// </summary>
+        /// <param name="path">The path to the folder you want to see the contents of. May be
+        /// the root (i.e. empty).</param>
+        /// <param name="recursive">If true, list folder operation will be applied recursively
+        /// to all subfolders. And the response will contain contents of all subfolders</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="ListFolderError"/>.</exception>
+        public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(string path,
+                                                                                      bool recursive = false)
+        {
+            var listFolderArg = new ListFolderArg(path,
+                                                  recursive);
+
+            return this.ListFolderGetLatestCursorAsync(listFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list folder get latest cursor
+        /// route.</para>
+        /// </summary>
+        /// <param name="path">The path to the folder you want to see the contents of. May be
+        /// the root (i.e. empty).</param>
+        /// <param name="recursive">If true, list folder operation will be applied recursively
+        /// to all subfolders. And the response will contain contents of all subfolders</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListFolderGetLatestCursor(string path,
+                                                               bool recursive = false,
+                                                               sys.AsyncCallback callback = null,
+                                                               object callbackState = null)
+        {
+            var listFolderArg = new ListFolderArg(path,
+                                                  recursive);
+
+            return this.BeginListFolderGetLatestCursor(listFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list folder get latest cursor
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="ListFolderError"/>.</exception>
+        public ListFolderGetLatestCursorResult EndListFolderGetLatestCursor(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListFolderGetLatestCursorResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

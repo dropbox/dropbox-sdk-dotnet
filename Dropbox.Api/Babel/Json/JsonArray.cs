@@ -1,4 +1,10 @@
-﻿namespace Dropbox.Api.Babel.Json
+﻿//----------------------------------------------------------------------------
+//  <copyright file="JsonArray.cs" company="Dropbox Inc">
+//      Copyright (c) Dropbox Inc. All rights reserved.
+//  </copyright>
+//----------------------------------------------------------------------------
+
+namespace Dropbox.Api.Babel.Json
 {
     using System.Collections;
     using System.Collections.Generic;

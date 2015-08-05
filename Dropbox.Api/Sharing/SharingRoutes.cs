@@ -242,5 +242,178 @@ namespace Dropbox.Api.Sharing.Routes
 
             return task.Result;
         }
+
+        /// <summary>
+        /// <para>Gets shared folder by its folder ID.</para>
+        /// </summary>
+        /// <param name="getSharedFolderArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="SharedFolderAccessError"/>.</exception>
+        public t.Task<SharedFolderMetadata> GetSharedFolderAsync(GetSharedFolderArgs getSharedFolderArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<GetSharedFolderArgs, SharedFolderMetadata, SharedFolderAccessError>(getSharedFolderArgs, "api", "/sharing/get_shared_folder");
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get shared folder route.</para>
+        /// </summary>
+        /// <param name="getSharedFolderArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetSharedFolder(GetSharedFolderArgs getSharedFolderArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetSharedFolderAsync(getSharedFolderArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Gets shared folder by its folder ID.</para>
+        /// </summary>
+        /// <param name="id">The ID for the shared folder.</param>
+        /// <param name="includeMembership">If include user and group membership information in
+        /// the response.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="SharedFolderAccessError"/>.</exception>
+        public t.Task<SharedFolderMetadata> GetSharedFolderAsync(string id,
+                                                                 bool includeMembership = true)
+        {
+            var getSharedFolderArgs = new GetSharedFolderArgs(id,
+                                                              includeMembership);
+
+            return this.GetSharedFolderAsync(getSharedFolderArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get shared folder route.</para>
+        /// </summary>
+        /// <param name="id">The ID for the shared folder.</param>
+        /// <param name="includeMembership">If include user and group membership information in
+        /// the response.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetSharedFolder(string id,
+                                                     bool includeMembership = true,
+                                                     sys.AsyncCallback callback = null,
+                                                     object callbackState = null)
+        {
+            var getSharedFolderArgs = new GetSharedFolderArgs(id,
+                                                              includeMembership);
+
+            return this.BeginGetSharedFolder(getSharedFolderArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get shared folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="SharedFolderAccessError"/>.</exception>
+        public SharedFolderMetadata EndGetSharedFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SharedFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Return the list of all shared folders the authenticated user has access
+        /// to.</para>
+        /// </summary>
+        /// <param name="listSharedFoldersArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ListSharedFoldersResult> ListSharedFoldersAsync(ListSharedFoldersArgs listSharedFoldersArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<ListSharedFoldersArgs, ListSharedFoldersResult, enc.Empty>(listSharedFoldersArgs, "api", "/sharing/list_shared_folders");
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list shared folders route.</para>
+        /// </summary>
+        /// <param name="listSharedFoldersArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListSharedFolders(ListSharedFoldersArgs listSharedFoldersArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListSharedFoldersAsync(listSharedFoldersArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Return the list of all shared folders the authenticated user has access
+        /// to.</para>
+        /// </summary>
+        /// <param name="includeMembership">If include user and group membership information in
+        /// the response.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ListSharedFoldersResult> ListSharedFoldersAsync(bool includeMembership = false)
+        {
+            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership);
+
+            return this.ListSharedFoldersAsync(listSharedFoldersArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list shared folders route.</para>
+        /// </summary>
+        /// <param name="includeMembership">If include user and group membership information in
+        /// the response.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListSharedFolders(bool includeMembership = false,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership);
+
+            return this.BeginListSharedFolders(listSharedFoldersArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list shared folders route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public ListSharedFoldersResult EndListSharedFolders(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListSharedFoldersResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
     }
 }

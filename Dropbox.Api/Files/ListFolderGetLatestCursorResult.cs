@@ -11,52 +11,57 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync"
-    /// />.</para>
+    /// <para>Information returned by <see
+    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderGetLatestCursorAsync" />.</para>
     /// </summary>
-    public sealed class GetMetadataArg : enc.IEncodable<GetMetadataArg>
+    public sealed class ListFolderGetLatestCursorResult : enc.IEncodable<ListFolderGetLatestCursorResult>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GetMetadataArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderGetLatestCursorResult"
+        /// /> class.</para>
         /// </summary>
-        /// <param name="path">The path or ID of a file or folder on Dropbox. Must not be the
-        /// root.</param>
-        public GetMetadataArg(string path)
+        /// <param name="cursor">Pass the cursor into <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
+        /// what's changed in the folder since your previous query.</param>
+        public ListFolderGetLatestCursorResult(string cursor)
         {
-            if (path == null)
+            if (cursor == null)
             {
-                throw new sys.ArgumentNullException("path");
+                throw new sys.ArgumentNullException("cursor");
             }
 
-            this.Path = path;
+            this.Cursor = cursor;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GetMetadataArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderGetLatestCursorResult"
+        /// /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public GetMetadataArg()
+        public ListFolderGetLatestCursorResult()
         {
         }
 
         /// <summary>
-        /// <para>The path or ID of a file or folder on Dropbox. Must not be the root.</para>
+        /// <para>Pass the cursor into <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
+        /// what's changed in the folder since your previous query.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Cursor { get; private set; }
 
-        #region IEncodable<GetMetadataArg> methods
+        #region IEncodable<ListFolderGetLatestCursorResult> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GetMetadataArg>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<ListFolderGetLatestCursorResult>.Encode(enc.IEncoder encoder)
         {
             using (var obj = encoder.AddObject())
             {
-                obj.AddField<string>("path", this.Path);
+                obj.AddField<string>("cursor", this.Cursor);
             }
         }
 
@@ -67,11 +72,11 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GetMetadataArg enc.IEncodable<GetMetadataArg>.Decode(enc.IDecoder decoder)
+        ListFolderGetLatestCursorResult enc.IEncodable<ListFolderGetLatestCursorResult>.Decode(enc.IDecoder decoder)
         {
             using (var obj = decoder.GetObject())
             {
-                this.Path = obj.GetField<string>("path");
+                this.Cursor = obj.GetField<string>("cursor");
             }
 
             return this;

@@ -1,3 +1,9 @@
+//-----------------------------------------------------------------------------
+// <copyright file="DropboxClient.common.cs" company="Dropbox Inc">
+//  Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------------
+
 namespace Dropbox.Api
 {
     using System;
@@ -8,11 +14,11 @@ namespace Dropbox.Api
     using System.Net;
     using System.Net.Http;
     using System.Net.Http.Headers;
-    using System.Reflection;
     using System.Text;
     using System.Threading.Tasks;
 
     using Dropbox.Api.Babel;
+    using System.Reflection;
 
     /// <summary>
     /// The known route styles
@@ -101,9 +107,9 @@ namespace Dropbox.Api
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
         /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="apiHostname">The hostname that will process API requests;
+        /// <param name="apiHostname">The hostname that will process api requests;
         /// this is for internal Dropbox use only.</param>
-        /// <param name="apiContentHostname">The hostname that will process API content requests;
+        /// <param name="apiContentHostname">The hostname that will process api content requests;
         /// this is for internal Dropbox use only.</param>
         /// <remarks>
         /// The <paramref name="userAgent"/> helps Dropbox to identify requests coming from your application.
@@ -115,7 +121,8 @@ namespace Dropbox.Api
             int maxRetriesOnError = 4,
             string userAgent = null,
             string apiHostname = "api." + DefaultDomain,
-            string apiContentHostname = "api-content." + DefaultDomain)
+            string apiContentHostname = "api-content." + DefaultDomain
+            )
         {
             if (string.IsNullOrEmpty(oauth2AccessToken))
             {
@@ -403,7 +410,6 @@ namespace Dropbox.Api
                     {
                         throw new ArgumentNullException("body");
                     }
-
                     request.Content = new StreamContent(body);
                     request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                     break;
