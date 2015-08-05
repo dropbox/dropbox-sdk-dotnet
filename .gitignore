@@ -19,7 +19,7 @@
 *~
 
 ## nuget packages
-/dropbox-sdk-dotnet/packages/*/
+/dropbox-sdk-dotnet/packages/
 *.nupkg
 
 ##pyc
@@ -38,3 +38,5 @@
 ## Generated docs
 /doc/Help
 
+## App Packages
+AppPackages/
