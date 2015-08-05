@@ -19,7 +19,7 @@
 *~
 
 ## nuget packages
-*/[pP]ackages/*/
+[pP]ackages/
 *.nupkg
 
 ## nuget tools
@@ -34,3 +34,6 @@
 
 ## Stylecop cache
 [Ss]tyle[Cc]op.[Cc]ache
+
+## AppPackages
+AppPackages/
