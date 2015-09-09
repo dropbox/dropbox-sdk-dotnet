@@ -1,4 +1,4 @@
-﻿//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 // <copyright file="ApiException.cs" company="Dropbox Inc">
 //  Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
@@ -88,7 +88,7 @@ namespace Dropbox.Api
         {
             using (var obj = decoder.GetObject())
             {
-                this.ErrorResponse = obj.GetFieldObject<TError>("reason");
+                this.ErrorResponse = obj.GetFieldObject<TError>("error");
             }
 
             return this;
