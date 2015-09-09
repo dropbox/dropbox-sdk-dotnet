@@ -447,7 +447,9 @@ namespace Dropbox.Api
                 {
                     throw new RetryException(429, uri: uri, isRateLimit: true);
                 }
-                else if (response.StatusCode == HttpStatusCode.Conflict)
+                else if (response.StatusCode == HttpStatusCode.Conflict ||
+                    response.StatusCode == HttpStatusCode.Forbidden ||
+                    response.StatusCode == HttpStatusCode.NotFound)
                 {
                     var reason = await response.Content.ReadAsStringAsync();
 
