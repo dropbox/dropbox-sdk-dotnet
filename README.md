@@ -25,7 +25,7 @@ Updating the SDK for a new spec
    ```
 
 2. Use the `generate.py` script with the path to the local check out of the public:
-3.
+
    ```
    $ python generate.py -h
    $ python generate.py ../dropbox-sdk-dotnet
