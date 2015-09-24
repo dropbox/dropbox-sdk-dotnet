@@ -12,7 +12,7 @@
 # test stuff
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
-
+App_Data/
 
 ## vim files
 *.un~
@@ -21,6 +21,7 @@
 ## nuget packages
 /dropbox-sdk-dotnet/packages/
 *.nupkg
+.nuget/
 
 ##pyc
 *.pyc
