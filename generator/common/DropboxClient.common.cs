@@ -54,12 +54,12 @@ namespace Dropbox.Api
         /// <summary>
         /// The API version
         /// </summary>
-        private const string ApiVersion = "2-beta-2";
+        private const string ApiVersion = "2";
 
         /// <summary>
         /// The default domain
         /// </summary>
-        private const string DefaultDomain = "dropbox.com";
+        private const string DefaultDomain = "dropboxapi.com";
 
         /// <summary>
         /// The host for RPC-style routes.
@@ -107,10 +107,8 @@ namespace Dropbox.Api
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
         /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="apiHostname">The hostname that will process api requests;
-        /// this is for internal Dropbox use only.</param>
-        /// <param name="apiContentHostname">The hostname that will process api content requests;
-        /// this is for internal Dropbox use only.</param>
+        /// <param name="httpClient">The custom http client. If not provided, a default 
+        /// http client will be created.</param>
         /// <remarks>
         /// The <paramref name="userAgent"/> helps Dropbox to identify requests coming from your application.
         /// We recommend that you use the format <c>"AppName/Version"</c>; if a value is supplied, the string
@@ -120,9 +118,30 @@ namespace Dropbox.Api
             string oauth2AccessToken,
             int maxRetriesOnError = 4,
             string userAgent = null,
-            string apiHostname = "api." + DefaultDomain,
-            string apiContentHostname = "api-content." + DefaultDomain
-            )
+            HttpClient httpClient = null)
+            : this(oauth2AccessToken, maxRetriesOnError, userAgent, "api." + DefaultDomain, "content." + DefaultDomain, httpClient)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// </summary>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
+        /// <param name="userAgent">The user agent to use when making requests.</param>
+        /// <param name="apiHostname">The hostname that will process api requests;
+        /// this is for internal Dropbox use only.</param>
+        /// <param name="apiContentHostname">The hostname that will process api content requests;
+        /// this is for internal Dropbox use only.</param>
+        /// <param name="httpClient">The custom http client. If not provided, a default 
+        /// http client will be created.</param>
+        internal DropboxClient(
+            string oauth2AccessToken,
+            int maxRetriesOnError,
+            string userAgent,
+            string apiHostname,
+            string apiContentHostname,
+            HttpClient httpClient = null)
         {
             if (string.IsNullOrEmpty(oauth2AccessToken))
             {
@@ -149,7 +168,7 @@ namespace Dropbox.Api
                 { HostContent, apiContentHostname }
             };
 
-            this.httpClient = new HttpClient();
+            this.httpClient = httpClient ?? new HttpClient();
             this.httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", oauth2AccessToken);
             this.httpClient.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", clientUserAgent);
 

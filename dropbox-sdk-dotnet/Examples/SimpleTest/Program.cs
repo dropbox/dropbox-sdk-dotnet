@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Net;
+    using System.Net.Http;
     using System.Threading.Tasks;
     using System.Windows;
 
@@ -39,7 +40,16 @@
                 return 1;
             }
 
-            this.client = new DropboxClient(access_token, userAgent: "SimpleTestApp");
+            // Specify socket level timeout which decides maximum waiting time when on bytes are
+            // received by the socket.
+            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            {
+                // Specify request level timeout which decides maximum time taht can be spent on
+                // download/upload files.
+                Timeout = TimeSpan.FromMinutes(20)
+            };
+
+            this.client = new DropboxClient(access_token, userAgent: "SimpleTestApp", httpClient: httpClient);
 
             try
             {
