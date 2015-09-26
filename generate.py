@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import absolute_import, division, print_function, unicode_literals
+from __future__ import absolute_import, division, print_function
 
 import argparse
 import errno
@@ -84,7 +84,8 @@ def main():
     shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
     subprocess.check_output(
         (['python', '-m', 'babelapi.cli', 'generator/csharp.babelg.py'] +
-         glob.glob('spec/*.babel') + [os.path.join(repo_path, 'Dropbox.Api')]))
+         glob.glob('spec/*.babel') + [os.path.join(repo_path, 'Dropbox.Api')]),
+	 env={'PYTHONPATH': 'babel'})
 
     if verbose:
         print('Copying Dropbox.Api.sln, examples, license, and readme')
