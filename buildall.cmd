@@ -42,21 +42,29 @@ SET SOLUTION_DIR="dropbox-sdk-dotnet"
 
 echo Restoring packages using nuget.exe ...
 
+SET NUGET_COMMAND=
+
 IF EXIST %SOLUTION_DIR%\.nuget\nuget.exe (
-    %PRE% %SOLUTION_DIR%\.nuget\nuget.exe restore %SOLUTION_DIR%\Dropbox.Api.sln
+    SET NUGET_COMMAND=%SOLUTION_DIR%\.nuget\nuget.exe
 ) ELSE (
     where nuget /q
     if NOT "%ERRORLEVEL%" == "0" (
         echo Cannot find nuget.exe, install from nuget.org
         GOTO :eof
     )
-    %PRE% nuget.exe restore %SOLUTION_DIR%\Dropbox.Api.sln
+    SET NUGET_COMMAND=nuget.exe
 )
+
+%PRE% %NUGET_COMMAND% restore %SOLUTION_DIR%\Dropbox.Api.sln
 
 echo Building...
 %PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api.sln
 %PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.Doc.csproj
 %PRE% msbuild /verbosity:minimal /m doc\BabelDocs.shfbproj
+
+echo Creating nuget package...
+
+%PRE% %NUGET_COMMAND% pack %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.csproj
 
 :eof
     ENDLOCAL
