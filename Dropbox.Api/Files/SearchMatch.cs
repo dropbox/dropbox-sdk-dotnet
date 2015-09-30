@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Describes a search result.</para>
+    /// <para>The search match object</para>
     /// </summary>
     public sealed class SearchMatch : enc.IEncodable<SearchMatch>
     {

@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.GetPreviewAsync"
-    /// />.</para>
+    /// <para>The preview arg object</para>
     /// </summary>
     public sealed class PreviewArg : enc.IEncodable<PreviewArg>
     {
@@ -28,6 +27,10 @@ namespace Dropbox.Api.Files
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             if (rev != null && (rev.Length < 9 || !re.Regex.IsMatch(rev, @"[0-9a-f]+")))

@@ -11,9 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadAsync" />.
-    /// Also part of the arguments to <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
+    /// <para>The commit info object</para>
     /// </summary>
     /// <seealso cref="UploadSessionFinishArg" />
     public sealed class CommitInfo : enc.IEncodable<CommitInfo>
@@ -44,6 +42,10 @@ namespace Dropbox.Api.Files
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             if (mode == null)

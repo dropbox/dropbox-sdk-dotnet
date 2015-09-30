@@ -11,9 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" />. Also used by
-    /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
+    /// <para>The upload session cursor object</para>
     /// </summary>
     /// <seealso cref="UploadSessionFinishArg" />
     public sealed class UploadSessionCursor : enc.IEncodable<UploadSessionCursor>

@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Metadata (excluding name or path) for a file.</para>
+    /// <para>The file metadata object</para>
     /// </summary>
     /// <seealso cref="Metadata" />
     public sealed class FileMetadata : Metadata, enc.IEncodable<FileMetadata>

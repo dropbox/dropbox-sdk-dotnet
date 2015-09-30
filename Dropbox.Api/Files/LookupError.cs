@@ -11,147 +11,124 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The relocation error object</para>
+    /// <para>The lookup error object</para>
     /// </summary>
-    public class RelocationError : enc.IEncodable<RelocationError>
+    public class LookupError : enc.IEncodable<LookupError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="RelocationError" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="LookupError" /> class.</para>
         /// </summary>
-        public RelocationError()
+        public LookupError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is FromLookup</para>
+        /// <para>Gets a value indicating whether this instance is MalformedPath</para>
         /// </summary>
-        public bool IsFromLookup
+        public bool IsMalformedPath
         {
             get
             {
-                return this is FromLookup;
+                return this is MalformedPath;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a FromLookup, or <c>null</c>.</para>
+        /// <para>Gets this instance as a MalformedPath, or <c>null</c>.</para>
         /// </summary>
-        public FromLookup AsFromLookup
+        public MalformedPath AsMalformedPath
         {
             get
             {
-                return this as FromLookup;
+                return this as MalformedPath;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is FromWrite</para>
+        /// <para>Gets a value indicating whether this instance is NotFound</para>
         /// </summary>
-        public bool IsFromWrite
+        public bool IsNotFound
         {
             get
             {
-                return this is FromWrite;
+                return this is NotFound;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a FromWrite, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NotFound, or <c>null</c>.</para>
         /// </summary>
-        public FromWrite AsFromWrite
+        public NotFound AsNotFound
         {
             get
             {
-                return this as FromWrite;
+                return this as NotFound;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is To</para>
+        /// <para>Gets a value indicating whether this instance is NotFile</para>
         /// </summary>
-        public bool IsTo
+        public bool IsNotFile
         {
             get
             {
-                return this is To;
+                return this is NotFile;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a To, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NotFile, or <c>null</c>.</para>
         /// </summary>
-        public To AsTo
+        public NotFile AsNotFile
         {
             get
             {
-                return this as To;
+                return this as NotFile;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is CantCopySharedFolder</para>
+        /// <para>Gets a value indicating whether this instance is NotFolder</para>
         /// </summary>
-        public bool IsCantCopySharedFolder
+        public bool IsNotFolder
         {
             get
             {
-                return this is CantCopySharedFolder;
+                return this is NotFolder;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a CantCopySharedFolder, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NotFolder, or <c>null</c>.</para>
         /// </summary>
-        public CantCopySharedFolder AsCantCopySharedFolder
+        public NotFolder AsNotFolder
         {
             get
             {
-                return this as CantCopySharedFolder;
+                return this as NotFolder;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is CantNestSharedFolder</para>
+        /// <para>Gets a value indicating whether this instance is RestrictedContent</para>
         /// </summary>
-        public bool IsCantNestSharedFolder
+        public bool IsRestrictedContent
         {
             get
             {
-                return this is CantNestSharedFolder;
+                return this is RestrictedContent;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a CantNestSharedFolder, or <c>null</c>.</para>
+        /// <para>Gets this instance as a RestrictedContent, or <c>null</c>.</para>
         /// </summary>
-        public CantNestSharedFolder AsCantNestSharedFolder
+        public RestrictedContent AsRestrictedContent
         {
             get
             {
-                return this as CantNestSharedFolder;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is TooManyFiles</para>
-        /// </summary>
-        public bool IsTooManyFiles
-        {
-            get
-            {
-                return this is TooManyFiles;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a TooManyFiles, or <c>null</c>.</para>
-        /// </summary>
-        public TooManyFiles AsTooManyFiles
-        {
-            get
-            {
-                return this as TooManyFiles;
+                return this as RestrictedContent;
             }
         }
 
@@ -177,38 +154,34 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<RelocationError> methods
+        #region IEncodable<LookupError> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<RelocationError>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<LookupError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsFromLookup)
+            if (this.IsMalformedPath)
             {
-                ((enc.IEncodable<FromLookup>)this).Encode(encoder);
+                ((enc.IEncodable<MalformedPath>)this).Encode(encoder);
             }
-            else if (this.IsFromWrite)
+            else if (this.IsNotFound)
             {
-                ((enc.IEncodable<FromWrite>)this).Encode(encoder);
+                ((enc.IEncodable<NotFound>)this).Encode(encoder);
             }
-            else if (this.IsTo)
+            else if (this.IsNotFile)
             {
-                ((enc.IEncodable<To>)this).Encode(encoder);
+                ((enc.IEncodable<NotFile>)this).Encode(encoder);
             }
-            else if (this.IsCantCopySharedFolder)
+            else if (this.IsNotFolder)
             {
-                ((enc.IEncodable<CantCopySharedFolder>)this).Encode(encoder);
+                ((enc.IEncodable<NotFolder>)this).Encode(encoder);
             }
-            else if (this.IsCantNestSharedFolder)
+            else if (this.IsRestrictedContent)
             {
-                ((enc.IEncodable<CantNestSharedFolder>)this).Encode(encoder);
-            }
-            else if (this.IsTooManyFiles)
-            {
-                ((enc.IEncodable<TooManyFiles>)this).Encode(encoder);
+                ((enc.IEncodable<RestrictedContent>)this).Encode(encoder);
             }
             else
             {
@@ -223,31 +196,23 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        RelocationError enc.IEncodable<RelocationError>.Decode(enc.IDecoder decoder)
+        LookupError enc.IEncodable<LookupError>.Decode(enc.IDecoder decoder)
         {
             switch (decoder.GetUnionName())
             {
-            case "from_lookup":
+            case "malformed_path":
                 using (var obj = decoder.GetObject())
                 {
-                    return new FromLookup(obj.GetFieldObject<LookupError>("from_lookup"));
+                    return new MalformedPath(obj.GetField<string>("malformed_path"));
                 }
-            case "from_write":
-                using (var obj = decoder.GetObject())
-                {
-                    return new FromWrite(obj.GetFieldObject<WriteError>("from_write"));
-                }
-            case "to":
-                using (var obj = decoder.GetObject())
-                {
-                    return new To(obj.GetFieldObject<WriteError>("to"));
-                }
-            case "cant_copy_shared_folder":
-                return CantCopySharedFolder.Instance;
-            case "cant_nest_shared_folder":
-                return CantNestSharedFolder.Instance;
-            case "too_many_files":
-                return TooManyFiles.Instance;
+            case "not_found":
+                return NotFound.Instance;
+            case "not_file":
+                return NotFile.Instance;
+            case "not_folder":
+                return NotFolder.Instance;
+            case "restricted_content":
+                return RestrictedContent.Instance;
             default:
                 return Other.Instance;
             }
@@ -256,15 +221,16 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The from lookup object</para>
+        /// <para>The malformed path object</para>
         /// </summary>
-        public sealed class FromLookup : RelocationError, enc.IEncodable<FromLookup>
+        public sealed class MalformedPath : LookupError, enc.IEncodable<MalformedPath>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="FromLookup" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="MalformedPath" />
+            /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public FromLookup(LookupError value)
+            public MalformedPath(string value)
             {
                 this.Value = value;
             }
@@ -272,18 +238,18 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public LookupError Value { get; private set; }
+            public string Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<FromLookup>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<MalformedPath>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "from_lookup");
-                    obj.AddField("from_lookup", this.Value);
+                    obj.AddField(".tag", "malformed_path");
+                    obj.AddField("malformed_path", this.Value);
                 }
             }
 
@@ -294,41 +260,39 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            FromLookup enc.IEncodable<FromLookup>.Decode(enc.IDecoder decoder)
+            MalformedPath enc.IEncodable<MalformedPath>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>The from write object</para>
+        /// <para>There is nothing at the given path.</para>
         /// </summary>
-        public sealed class FromWrite : RelocationError, enc.IEncodable<FromWrite>
+        public sealed class NotFound : LookupError, enc.IEncodable<NotFound>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="FromWrite" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="NotFound" /> class.</para>
             /// </summary>
-            /// <param name="value">The value</param>
-            public FromWrite(WriteError value)
+            private NotFound()
             {
-                this.Value = value;
             }
 
             /// <summary>
-            /// <para>Gets the value of this instance.</para>
+            /// <para>A singleton instance of NotFound</para>
             /// </summary>
-            public WriteError Value { get; private set; }
+            public static readonly NotFound Instance = new NotFound();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<FromWrite>.Encode(enc.IEncoder encoder)
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            void enc.IEncodable<NotFound>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "from_write");
-                    obj.AddField("from_write", this.Value);
+                    obj.AddField(".tag", "not_found");
                 }
             }
 
@@ -339,41 +303,40 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            FromWrite enc.IEncodable<FromWrite>.Decode(enc.IDecoder decoder)
+            NotFound enc.IEncodable<NotFound>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>The to object</para>
+        /// <para>We were expecting a file, but the given path refers to something that isn't a
+        /// file.</para>
         /// </summary>
-        public sealed class To : RelocationError, enc.IEncodable<To>
+        public sealed class NotFile : LookupError, enc.IEncodable<NotFile>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="To" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="NotFile" /> class.</para>
             /// </summary>
-            /// <param name="value">The value</param>
-            public To(WriteError value)
+            private NotFile()
             {
-                this.Value = value;
             }
 
             /// <summary>
-            /// <para>Gets the value of this instance.</para>
+            /// <para>A singleton instance of NotFile</para>
             /// </summary>
-            public WriteError Value { get; private set; }
+            public static readonly NotFile Instance = new NotFile();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<To>.Encode(enc.IEncoder encoder)
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            void enc.IEncodable<NotFile>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "to");
-                    obj.AddField("to", this.Value);
+                    obj.AddField(".tag", "not_file");
                 }
             }
 
@@ -384,40 +347,85 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            To enc.IEncodable<To>.Decode(enc.IDecoder decoder)
+            NotFile enc.IEncodable<NotFile>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>Shared folders can't be copied.</para>
+        /// <para>We were expecting a folder, but the given path refers to something that isn't
+        /// a folder.</para>
         /// </summary>
-        public sealed class CantCopySharedFolder : RelocationError, enc.IEncodable<CantCopySharedFolder>
+        public sealed class NotFolder : LookupError, enc.IEncodable<NotFolder>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="CantCopySharedFolder" />
+            /// <para>Initializes a new instance of the <see cref="NotFolder" /> class.</para>
+            /// </summary>
+            private NotFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NotFolder</para>
+            /// </summary>
+            public static readonly NotFolder Instance = new NotFolder();
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            void enc.IEncodable<NotFolder>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "not_folder");
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            NotFolder enc.IEncodable<NotFolder>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
+
+        /// <summary>
+        /// <para>The file cannot be transferred because the content is restricted.  For
+        /// example, sometimes there are legal restrictions due to copyright claims.</para>
+        /// </summary>
+        public sealed class RestrictedContent : LookupError, enc.IEncodable<RestrictedContent>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RestrictedContent" />
             /// class.</para>
             /// </summary>
-            private CantCopySharedFolder()
+            private RestrictedContent()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of CantCopySharedFolder</para>
+            /// <para>A singleton instance of RestrictedContent</para>
             /// </summary>
-            public static readonly CantCopySharedFolder Instance = new CantCopySharedFolder();
+            public static readonly RestrictedContent Instance = new RestrictedContent();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<CantCopySharedFolder>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<RestrictedContent>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "cant_copy_shared_folder");
+                    obj.AddField(".tag", "restricted_content");
                 }
             }
 
@@ -428,105 +436,16 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            CantCopySharedFolder enc.IEncodable<CantCopySharedFolder>.Decode(enc.IDecoder decoder)
+            RestrictedContent enc.IEncodable<RestrictedContent>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>Your move operation would result in nested shared folders.  This is not
-        /// allowed.</para>
+        /// <para>The other object</para>
         /// </summary>
-        public sealed class CantNestSharedFolder : RelocationError, enc.IEncodable<CantNestSharedFolder>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="CantNestSharedFolder" />
-            /// class.</para>
-            /// </summary>
-            private CantNestSharedFolder()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of CantNestSharedFolder</para>
-            /// </summary>
-            public static readonly CantNestSharedFolder Instance = new CantNestSharedFolder();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<CantNestSharedFolder>.Encode(enc.IEncoder encoder)
-            {
-                using (var obj = encoder.AddObject())
-                {
-                    obj.AddField(".tag", "cant_nest_shared_folder");
-                }
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            CantNestSharedFolder enc.IEncodable<CantNestSharedFolder>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>The operation would involve more than 10,000 files and folders.</para>
-        /// </summary>
-        public sealed class TooManyFiles : RelocationError, enc.IEncodable<TooManyFiles>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="TooManyFiles" />
-            /// class.</para>
-            /// </summary>
-            private TooManyFiles()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of TooManyFiles</para>
-            /// </summary>
-            public static readonly TooManyFiles Instance = new TooManyFiles();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<TooManyFiles>.Encode(enc.IEncoder encoder)
-            {
-                using (var obj = encoder.AddObject())
-                {
-                    obj.AddField(".tag", "too_many_files");
-                }
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            TooManyFiles enc.IEncodable<TooManyFiles>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>An unspecified error.</para>
-        /// </summary>
-        public sealed class Other : RelocationError, enc.IEncodable<Other>
+        public sealed class Other : LookupError, enc.IEncodable<Other>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>

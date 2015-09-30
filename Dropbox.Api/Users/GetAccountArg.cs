@@ -11,8 +11,7 @@ namespace Dropbox.Api.Users
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountAsync"
-    /// />.</para>
+    /// <para>The get account arg object</para>
     /// </summary>
     public sealed class GetAccountArg : enc.IEncodable<GetAccountArg>
     {

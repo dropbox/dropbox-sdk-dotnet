@@ -11,15 +11,15 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors related to commit conflicts.</para>
+    /// <para>The write conflict error object</para>
     /// </summary>
-    public class CommitConflictError : enc.IEncodable<CommitConflictError>
+    public class WriteConflictError : enc.IEncodable<WriteConflictError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CommitConflictError" />
+        /// <para>Initializes a new instance of the <see cref="WriteConflictError" />
         /// class.</para>
         /// </summary>
-        public CommitConflictError()
+        public WriteConflictError()
         {
         }
 
@@ -68,24 +68,24 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AutorenameFailed</para>
+        /// <para>Gets a value indicating whether this instance is FileAncestor</para>
         /// </summary>
-        public bool IsAutorenameFailed
+        public bool IsFileAncestor
         {
             get
             {
-                return this is AutorenameFailed;
+                return this is FileAncestor;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a AutorenameFailed, or <c>null</c>.</para>
+        /// <para>Gets this instance as a FileAncestor, or <c>null</c>.</para>
         /// </summary>
-        public AutorenameFailed AsAutorenameFailed
+        public FileAncestor AsFileAncestor
         {
             get
             {
-                return this as AutorenameFailed;
+                return this as FileAncestor;
             }
         }
 
@@ -111,14 +111,14 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<CommitConflictError> methods
+        #region IEncodable<WriteConflictError> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<CommitConflictError>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<WriteConflictError>.Encode(enc.IEncoder encoder)
         {
             if (this.IsFile)
             {
@@ -128,9 +128,9 @@ namespace Dropbox.Api.Files
             {
                 ((enc.IEncodable<Folder>)this).Encode(encoder);
             }
-            else if (this.IsAutorenameFailed)
+            else if (this.IsFileAncestor)
             {
-                ((enc.IEncodable<AutorenameFailed>)this).Encode(encoder);
+                ((enc.IEncodable<FileAncestor>)this).Encode(encoder);
             }
             else
             {
@@ -145,7 +145,7 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        CommitConflictError enc.IEncodable<CommitConflictError>.Decode(enc.IDecoder decoder)
+        WriteConflictError enc.IEncodable<WriteConflictError>.Decode(enc.IDecoder decoder)
         {
             switch (decoder.GetUnionName())
             {
@@ -153,8 +153,8 @@ namespace Dropbox.Api.Files
                 return File.Instance;
             case "folder":
                 return Folder.Instance;
-            case "autorename_failed":
-                return AutorenameFailed.Instance;
+            case "file_ancestor":
+                return FileAncestor.Instance;
             default:
                 return Other.Instance;
             }
@@ -163,9 +163,9 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>A file already exists at this path.</para>
+        /// <para>There's a file in the way.</para>
         /// </summary>
-        public sealed class File : CommitConflictError, enc.IEncodable<File>
+        public sealed class File : WriteConflictError, enc.IEncodable<File>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="File" /> class.</para>
@@ -206,9 +206,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>A folder already exists at this path.</para>
+        /// <para>There's a folder in the way.</para>
         /// </summary>
-        public sealed class Folder : CommitConflictError, enc.IEncodable<Folder>
+        public sealed class Folder : WriteConflictError, enc.IEncodable<Folder>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Folder" /> class.</para>
@@ -249,33 +249,34 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>File could not be automatically renamed.</para>
+        /// <para>There's a file at an ancestor path, so we couldn't create the required parent
+        /// folders.</para>
         /// </summary>
-        public sealed class AutorenameFailed : CommitConflictError, enc.IEncodable<AutorenameFailed>
+        public sealed class FileAncestor : WriteConflictError, enc.IEncodable<FileAncestor>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AutorenameFailed" />
+            /// <para>Initializes a new instance of the <see cref="FileAncestor" />
             /// class.</para>
             /// </summary>
-            private AutorenameFailed()
+            private FileAncestor()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of AutorenameFailed</para>
+            /// <para>A singleton instance of FileAncestor</para>
             /// </summary>
-            public static readonly AutorenameFailed Instance = new AutorenameFailed();
+            public static readonly FileAncestor Instance = new FileAncestor();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<AutorenameFailed>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<FileAncestor>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "autorename_failed");
+                    obj.AddField(".tag", "file_ancestor");
                 }
             }
 
@@ -286,16 +287,16 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            AutorenameFailed enc.IEncodable<AutorenameFailed>.Decode(enc.IDecoder decoder)
+            FileAncestor enc.IEncodable<FileAncestor>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>An unspecified error.</para>
+        /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : CommitConflictError, enc.IEncodable<Other>
+        public sealed class Other : WriteConflictError, enc.IEncodable<Other>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>

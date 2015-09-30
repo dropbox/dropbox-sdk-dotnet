@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors related to upload sessions.</para>
+    /// <para>The upload session lookup error object</para>
     /// </summary>
     public class UploadSessionLookupError : enc.IEncodable<UploadSessionLookupError>
     {

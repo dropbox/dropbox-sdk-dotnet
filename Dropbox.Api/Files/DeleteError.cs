@@ -11,38 +11,58 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" /> when
-    /// download is forbidden.</para>
+    /// <para>The delete error object</para>
     /// </summary>
-    public class RestrictedReason : enc.IEncodable<RestrictedReason>
+    public class DeleteError : enc.IEncodable<DeleteError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="RestrictedReason" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="DeleteError" /> class.</para>
         /// </summary>
-        public RestrictedReason()
+        public DeleteError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Dmca</para>
+        /// <para>Gets a value indicating whether this instance is PathLookup</para>
         /// </summary>
-        public bool IsDmca
+        public bool IsPathLookup
         {
             get
             {
-                return this is Dmca;
+                return this is PathLookup;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Dmca, or <c>null</c>.</para>
+        /// <para>Gets this instance as a PathLookup, or <c>null</c>.</para>
         /// </summary>
-        public Dmca AsDmca
+        public PathLookup AsPathLookup
         {
             get
             {
-                return this as Dmca;
+                return this as PathLookup;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PathWrite</para>
+        /// </summary>
+        public bool IsPathWrite
+        {
+            get
+            {
+                return this is PathWrite;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PathWrite, or <c>null</c>.</para>
+        /// </summary>
+        public PathWrite AsPathWrite
+        {
+            get
+            {
+                return this as PathWrite;
             }
         }
 
@@ -68,18 +88,22 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<RestrictedReason> methods
+        #region IEncodable<DeleteError> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<RestrictedReason>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<DeleteError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsDmca)
+            if (this.IsPathLookup)
             {
-                ((enc.IEncodable<Dmca>)this).Encode(encoder);
+                ((enc.IEncodable<PathLookup>)this).Encode(encoder);
+            }
+            else if (this.IsPathWrite)
+            {
+                ((enc.IEncodable<PathWrite>)this).Encode(encoder);
             }
             else
             {
@@ -94,12 +118,20 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        RestrictedReason enc.IEncodable<RestrictedReason>.Decode(enc.IDecoder decoder)
+        DeleteError enc.IEncodable<DeleteError>.Decode(enc.IDecoder decoder)
         {
             switch (decoder.GetUnionName())
             {
-            case "dmca":
-                return Dmca.Instance;
+            case "path_lookup":
+                using (var obj = decoder.GetObject())
+                {
+                    return new PathLookup(obj.GetFieldObject<LookupError>("path_lookup"));
+                }
+            case "path_write":
+                using (var obj = decoder.GetObject())
+                {
+                    return new PathWrite(obj.GetFieldObject<WriteError>("path_write"));
+                }
             default:
                 return Other.Instance;
             }
@@ -108,33 +140,34 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The download is forbidden because of a DMCA (U.S. Digital Millenium Copyright
-        /// Act) takedown request.</para>
+        /// <para>The path lookup object</para>
         /// </summary>
-        public sealed class Dmca : RestrictedReason, enc.IEncodable<Dmca>
+        public sealed class PathLookup : DeleteError, enc.IEncodable<PathLookup>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Dmca" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="PathLookup" /> class.</para>
             /// </summary>
-            private Dmca()
+            /// <param name="value">The value</param>
+            public PathLookup(LookupError value)
             {
+                this.Value = value;
             }
 
             /// <summary>
-            /// <para>A singleton instance of Dmca</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly Dmca Instance = new Dmca();
+            public LookupError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Dmca>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<PathLookup>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "dmca");
+                    obj.AddField(".tag", "path_lookup");
+                    obj.AddField("path_lookup", this.Value);
                 }
             }
 
@@ -145,16 +178,61 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Dmca enc.IEncodable<Dmca>.Decode(enc.IDecoder decoder)
+            PathLookup enc.IEncodable<PathLookup>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>The download is forbidden for some other reason.</para>
+        /// <para>The path write object</para>
         /// </summary>
-        public sealed class Other : RestrictedReason, enc.IEncodable<Other>
+        public sealed class PathWrite : DeleteError, enc.IEncodable<PathWrite>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PathWrite" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PathWrite(WriteError value)
+            {
+                this.Value = value;
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public WriteError Value { get; private set; }
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            void enc.IEncodable<PathWrite>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "path_write");
+                    obj.AddField("path_write", this.Value);
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            PathWrite enc.IEncodable<PathWrite>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : DeleteError, enc.IEncodable<Other>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>

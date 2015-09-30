@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Error returned by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync" />.</para>
+    /// <para>The get metadata error object</para>
     /// </summary>
     public class GetMetadataError : enc.IEncodable<GetMetadataError>
     {
@@ -25,46 +24,24 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NotFound</para>
+        /// <para>Gets a value indicating whether this instance is Path</para>
         /// </summary>
-        public bool IsNotFound
+        public bool IsPath
         {
             get
             {
-                return this is NotFound;
+                return this is Path;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a NotFound, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Path, or <c>null</c>.</para>
         /// </summary>
-        public NotFound AsNotFound
+        public Path AsPath
         {
             get
             {
-                return this as NotFound;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Other</para>
-        /// </summary>
-        public bool IsOther
-        {
-            get
-            {
-                return this is Other;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
-        /// </summary>
-        public Other AsOther
-        {
-            get
-            {
-                return this as Other;
+                return this as Path;
             }
         }
 
@@ -77,13 +54,13 @@ namespace Dropbox.Api.Files
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         void enc.IEncodable<GetMetadataError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsNotFound)
+            if (this.IsPath)
             {
-                ((enc.IEncodable<NotFound>)this).Encode(encoder);
+                ((enc.IEncodable<Path>)this).Encode(encoder);
             }
             else
             {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                throw new sys.InvalidOperationException();
             }
         }
 
@@ -98,42 +75,47 @@ namespace Dropbox.Api.Files
         {
             switch (decoder.GetUnionName())
             {
-            case "not_found":
-                return NotFound.Instance;
+            case "path":
+                using (var obj = decoder.GetObject())
+                {
+                    return new Path(obj.GetFieldObject<LookupError>("path"));
+                }
             default:
-                return Other.Instance;
+                throw new sys.InvalidOperationException();
             }
         }
 
         #endregion
 
         /// <summary>
-        /// <para>File is not found at the specified path.</para>
+        /// <para>The path object</para>
         /// </summary>
-        public sealed class NotFound : GetMetadataError, enc.IEncodable<NotFound>
+        public sealed class Path : GetMetadataError, enc.IEncodable<Path>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NotFound" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
-            private NotFound()
+            /// <param name="value">The value</param>
+            public Path(LookupError value)
             {
+                this.Value = value;
             }
 
             /// <summary>
-            /// <para>A singleton instance of NotFound</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly NotFound Instance = new NotFound();
+            public LookupError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<NotFound>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "not_found");
+                    obj.AddField(".tag", "path");
+                    obj.AddField("path", this.Value);
                 }
             }
 
@@ -144,50 +126,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            NotFound enc.IEncodable<NotFound>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>An unspecified error.</para>
-        /// </summary>
-        public sealed class Other : GetMetadataError, enc.IEncodable<Other>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
-            /// </summary>
-            private Other()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Other</para>
-            /// </summary>
-            public static readonly Other Instance = new Other();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
-            {
-                using (var obj = encoder.AddObject())
-                {
-                    obj.AddField(".tag", "other");
-                }
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

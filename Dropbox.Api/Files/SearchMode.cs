@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Select which type of data to search.</para>
+    /// <para>The search mode object</para>
     /// </summary>
     public class SearchMode : enc.IEncodable<SearchMode>
     {

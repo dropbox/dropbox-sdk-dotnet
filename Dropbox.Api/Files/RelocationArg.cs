@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyAsync" /> and
-    /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.MoveAsync" />.</para>
+    /// <para>The relocation arg object</para>
     /// </summary>
     public sealed class RelocationArg : enc.IEncodable<RelocationArg>
     {
@@ -28,10 +27,18 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("fromPath");
             }
+            else if (!re.Regex.IsMatch(fromPath, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("fromPath");
+            }
 
             if (toPath == null)
             {
                 throw new sys.ArgumentNullException("toPath");
+            }
+            else if (!re.Regex.IsMatch(toPath, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("toPath");
             }
 
             this.FromPath = fromPath;

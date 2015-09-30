@@ -11,16 +11,15 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync"
-    /// />.</para>
+    /// <para>The search arg object</para>
     /// </summary>
-    public sealed class SearchQuery : enc.IEncodable<SearchQuery>
+    public sealed class SearchArg : enc.IEncodable<SearchArg>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SearchQuery" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path in the user's Dropbox to search. Should probably be a
-        /// folder. May be the root (i.e. empty).</param>
+        /// folder.</param>
         /// <param name="query">The string to search for. The search string is split on spaces
         /// into multiple tokens. For file name searching, the last token is used for prefix
         /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
@@ -29,15 +28,19 @@ namespace Dropbox.Api.Files
         /// <param name="maxResults">The maximum number of search results to return.</param>
         /// <param name="mode">The search mode (filename, filename_and_content, or
         /// deleted_filename).</param>
-        public SearchQuery(string path,
-                           string query,
-                           ulong start = 0,
-                           ulong maxResults = 100,
-                           SearchMode mode = null)
+        public SearchArg(string path,
+                         string query,
+                         ulong start = 0,
+                         ulong maxResults = 100,
+                         SearchMode mode = null)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"(/.*)?"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             if (query == null)
@@ -63,11 +66,11 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SearchQuery" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchArg" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public SearchQuery()
+        public SearchArg()
         {
             this.Start = 0;
             this.MaxResults = 100;
@@ -75,8 +78,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The path in the user's Dropbox to search. Should probably be a folder. May be
-        /// the root (i.e. empty).</para>
+        /// <para>The path in the user's Dropbox to search. Should probably be a folder.</para>
         /// </summary>
         public string Path { get; private set; }
 
@@ -102,14 +104,14 @@ namespace Dropbox.Api.Files
         /// </summary>
         public SearchMode Mode { get; private set; }
 
-        #region IEncodable<SearchQuery> methods
+        #region IEncodable<SearchArg> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SearchQuery>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<SearchArg>.Encode(enc.IEncoder encoder)
         {
             using (var obj = encoder.AddObject())
             {
@@ -128,7 +130,7 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SearchQuery enc.IEncodable<SearchQuery>.Decode(enc.IDecoder decoder)
+        SearchArg enc.IEncodable<SearchArg>.Decode(enc.IDecoder decoder)
         {
             using (var obj = decoder.GetObject())
             {

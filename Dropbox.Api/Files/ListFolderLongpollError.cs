@@ -11,82 +11,78 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors from <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" />
-    /// when the file cannot be downloaded.</para>
+    /// <para>The list folder longpoll error object</para>
     /// </summary>
-    public class NoFileReason : enc.IEncodable<NoFileReason>
+    public class ListFolderLongpollError : enc.IEncodable<ListFolderLongpollError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="NoFileReason" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderLongpollError" />
+        /// class.</para>
         /// </summary>
-        public NoFileReason()
+        public ListFolderLongpollError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NotFound</para>
+        /// <para>Gets a value indicating whether this instance is Reset</para>
         /// </summary>
-        public bool IsNotFound
+        public bool IsReset
         {
             get
             {
-                return this is NotFound;
+                return this is Reset;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a NotFound, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Reset, or <c>null</c>.</para>
         /// </summary>
-        public NotFound AsNotFound
+        public Reset AsReset
         {
             get
             {
-                return this as NotFound;
+                return this as Reset;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is IsFolder</para>
+        /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
-        public bool IsIsFolder
+        public bool IsOther
         {
             get
             {
-                return this is IsFolder;
+                return this is Other;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a IsFolder, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
         /// </summary>
-        public IsFolder AsIsFolder
+        public Other AsOther
         {
             get
             {
-                return this as IsFolder;
+                return this as Other;
             }
         }
 
-        #region IEncodable<NoFileReason> methods
+        #region IEncodable<ListFolderLongpollError> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<NoFileReason>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<ListFolderLongpollError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsNotFound)
+            if (this.IsReset)
             {
-                ((enc.IEncodable<NotFound>)this).Encode(encoder);
-            }
-            else if (this.IsIsFolder)
-            {
-                ((enc.IEncodable<IsFolder>)this).Encode(encoder);
+                ((enc.IEncodable<Reset>)this).Encode(encoder);
             }
             else
             {
-                throw new sys.InvalidOperationException();
+                ((enc.IEncodable<Other>)this).Encode(encoder);
             }
         }
 
@@ -97,48 +93,48 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        NoFileReason enc.IEncodable<NoFileReason>.Decode(enc.IDecoder decoder)
+        ListFolderLongpollError enc.IEncodable<ListFolderLongpollError>.Decode(enc.IDecoder decoder)
         {
             switch (decoder.GetUnionName())
             {
-            case "not_found":
-                return NotFound.Instance;
-            case "is_folder":
-                return IsFolder.Instance;
+            case "reset":
+                return Reset.Instance;
             default:
-                throw new sys.InvalidOperationException();
+                return Other.Instance;
             }
         }
 
         #endregion
 
         /// <summary>
-        /// <para>The path is not found.</para>
+        /// <para>Indicates that the cursor has been invalidated. Call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> to obtain a new
+        /// cursor.</para>
         /// </summary>
-        public sealed class NotFound : NoFileReason, enc.IEncodable<NotFound>
+        public sealed class Reset : ListFolderLongpollError, enc.IEncodable<Reset>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NotFound" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Reset" /> class.</para>
             /// </summary>
-            private NotFound()
+            private Reset()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of NotFound</para>
+            /// <para>A singleton instance of Reset</para>
             /// </summary>
-            public static readonly NotFound Instance = new NotFound();
+            public static readonly Reset Instance = new Reset();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<NotFound>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<Reset>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "not_found");
+                    obj.AddField(".tag", "reset");
                 }
             }
 
@@ -149,39 +145,39 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            NotFound enc.IEncodable<NotFound>.Decode(enc.IDecoder decoder)
+            Reset enc.IEncodable<Reset>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>The path refers to a folder. Only files can be downloaded.</para>
+        /// <para>The other object</para>
         /// </summary>
-        public sealed class IsFolder : NoFileReason, enc.IEncodable<IsFolder>
+        public sealed class Other : ListFolderLongpollError, enc.IEncodable<Other>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="IsFolder" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
-            private IsFolder()
+            private Other()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of IsFolder</para>
+            /// <para>A singleton instance of Other</para>
             /// </summary>
-            public static readonly IsFolder Instance = new IsFolder();
+            public static readonly Other Instance = new Other();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<IsFolder>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "is_folder");
+                    obj.AddField(".tag", "other");
                 }
             }
 
@@ -192,7 +188,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            IsFolder enc.IEncodable<IsFolder>.Decode(enc.IDecoder decoder)
+            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

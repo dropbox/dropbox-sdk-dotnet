@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
+    /// <para>The upload session finish arg object</para>
     /// </summary>
     public sealed class UploadSessionFinishArg : enc.IEncodable<UploadSessionFinishArg>
     {

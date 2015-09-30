@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The size option for thumbnail image.</para>
+    /// <para>The thumbnail size object</para>
     /// </summary>
     public class ThumbnailSize : enc.IEncodable<ThumbnailSize>
     {
@@ -23,112 +23,112 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Xs</para>
+        /// <para>Gets a value indicating whether this instance is W32h32</para>
         /// </summary>
-        public bool IsXs
+        public bool IsW32h32
         {
             get
             {
-                return this is Xs;
+                return this is W32h32;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Xs, or <c>null</c>.</para>
+        /// <para>Gets this instance as a W32h32, or <c>null</c>.</para>
         /// </summary>
-        public Xs AsXs
+        public W32h32 AsW32h32
         {
             get
             {
-                return this as Xs;
+                return this as W32h32;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is S</para>
+        /// <para>Gets a value indicating whether this instance is W64h64</para>
         /// </summary>
-        public bool IsS
+        public bool IsW64h64
         {
             get
             {
-                return this is S;
+                return this is W64h64;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a S, or <c>null</c>.</para>
+        /// <para>Gets this instance as a W64h64, or <c>null</c>.</para>
         /// </summary>
-        public S AsS
+        public W64h64 AsW64h64
         {
             get
             {
-                return this as S;
+                return this as W64h64;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is M</para>
+        /// <para>Gets a value indicating whether this instance is W128h128</para>
         /// </summary>
-        public bool IsM
+        public bool IsW128h128
         {
             get
             {
-                return this is M;
+                return this is W128h128;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a M, or <c>null</c>.</para>
+        /// <para>Gets this instance as a W128h128, or <c>null</c>.</para>
         /// </summary>
-        public M AsM
+        public W128h128 AsW128h128
         {
             get
             {
-                return this as M;
+                return this as W128h128;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is L</para>
+        /// <para>Gets a value indicating whether this instance is W640h480</para>
         /// </summary>
-        public bool IsL
+        public bool IsW640h480
         {
             get
             {
-                return this is L;
+                return this is W640h480;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a L, or <c>null</c>.</para>
+        /// <para>Gets this instance as a W640h480, or <c>null</c>.</para>
         /// </summary>
-        public L AsL
+        public W640h480 AsW640h480
         {
             get
             {
-                return this as L;
+                return this as W640h480;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Xl</para>
+        /// <para>Gets a value indicating whether this instance is W1024h768</para>
         /// </summary>
-        public bool IsXl
+        public bool IsW1024h768
         {
             get
             {
-                return this is Xl;
+                return this is W1024h768;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Xl, or <c>null</c>.</para>
+        /// <para>Gets this instance as a W1024h768, or <c>null</c>.</para>
         /// </summary>
-        public Xl AsXl
+        public W1024h768 AsW1024h768
         {
             get
             {
-                return this as Xl;
+                return this as W1024h768;
             }
         }
 
@@ -141,25 +141,25 @@ namespace Dropbox.Api.Files
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         void enc.IEncodable<ThumbnailSize>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsXs)
+            if (this.IsW32h32)
             {
-                ((enc.IEncodable<Xs>)this).Encode(encoder);
+                ((enc.IEncodable<W32h32>)this).Encode(encoder);
             }
-            else if (this.IsS)
+            else if (this.IsW64h64)
             {
-                ((enc.IEncodable<S>)this).Encode(encoder);
+                ((enc.IEncodable<W64h64>)this).Encode(encoder);
             }
-            else if (this.IsM)
+            else if (this.IsW128h128)
             {
-                ((enc.IEncodable<M>)this).Encode(encoder);
+                ((enc.IEncodable<W128h128>)this).Encode(encoder);
             }
-            else if (this.IsL)
+            else if (this.IsW640h480)
             {
-                ((enc.IEncodable<L>)this).Encode(encoder);
+                ((enc.IEncodable<W640h480>)this).Encode(encoder);
             }
-            else if (this.IsXl)
+            else if (this.IsW1024h768)
             {
-                ((enc.IEncodable<Xl>)this).Encode(encoder);
+                ((enc.IEncodable<W1024h768>)this).Encode(encoder);
             }
             else
             {
@@ -178,16 +178,16 @@ namespace Dropbox.Api.Files
         {
             switch (decoder.GetUnionName())
             {
-            case "xs":
-                return Xs.Instance;
-            case "s":
-                return S.Instance;
-            case "m":
-                return M.Instance;
-            case "l":
-                return L.Instance;
-            case "xl":
-                return Xl.Instance;
+            case "w32h32":
+                return W32h32.Instance;
+            case "w64h64":
+                return W64h64.Instance;
+            case "w128h128":
+                return W128h128.Instance;
+            case "w640h480":
+                return W640h480.Instance;
+            case "w1024h768":
+                return W1024h768.Instance;
             default:
                 throw new sys.InvalidOperationException();
             }
@@ -198,30 +198,30 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>32 by 32 px.</para>
         /// </summary>
-        public sealed class Xs : ThumbnailSize, enc.IEncodable<Xs>
+        public sealed class W32h32 : ThumbnailSize, enc.IEncodable<W32h32>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Xs" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="W32h32" /> class.</para>
             /// </summary>
-            private Xs()
+            private W32h32()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Xs</para>
+            /// <para>A singleton instance of W32h32</para>
             /// </summary>
-            public static readonly Xs Instance = new Xs();
+            public static readonly W32h32 Instance = new W32h32();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Xs>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<W32h32>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "xs");
+                    obj.AddField(".tag", "w32h32");
                 }
             }
 
@@ -232,7 +232,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Xs enc.IEncodable<Xs>.Decode(enc.IDecoder decoder)
+            W32h32 enc.IEncodable<W32h32>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
@@ -241,30 +241,30 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>64 by 64 px.</para>
         /// </summary>
-        public sealed class S : ThumbnailSize, enc.IEncodable<S>
+        public sealed class W64h64 : ThumbnailSize, enc.IEncodable<W64h64>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="S" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="W64h64" /> class.</para>
             /// </summary>
-            private S()
+            private W64h64()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of S</para>
+            /// <para>A singleton instance of W64h64</para>
             /// </summary>
-            public static readonly S Instance = new S();
+            public static readonly W64h64 Instance = new W64h64();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<S>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<W64h64>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "s");
+                    obj.AddField(".tag", "w64h64");
                 }
             }
 
@@ -275,7 +275,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            S enc.IEncodable<S>.Decode(enc.IDecoder decoder)
+            W64h64 enc.IEncodable<W64h64>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
@@ -284,30 +284,30 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>128 by 128 px.</para>
         /// </summary>
-        public sealed class M : ThumbnailSize, enc.IEncodable<M>
+        public sealed class W128h128 : ThumbnailSize, enc.IEncodable<W128h128>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="M" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="W128h128" /> class.</para>
             /// </summary>
-            private M()
+            private W128h128()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of M</para>
+            /// <para>A singleton instance of W128h128</para>
             /// </summary>
-            public static readonly M Instance = new M();
+            public static readonly W128h128 Instance = new W128h128();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<M>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<W128h128>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "m");
+                    obj.AddField(".tag", "w128h128");
                 }
             }
 
@@ -318,7 +318,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            M enc.IEncodable<M>.Decode(enc.IDecoder decoder)
+            W128h128 enc.IEncodable<W128h128>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
@@ -327,30 +327,30 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>640 by 480 px.</para>
         /// </summary>
-        public sealed class L : ThumbnailSize, enc.IEncodable<L>
+        public sealed class W640h480 : ThumbnailSize, enc.IEncodable<W640h480>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="L" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="W640h480" /> class.</para>
             /// </summary>
-            private L()
+            private W640h480()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of L</para>
+            /// <para>A singleton instance of W640h480</para>
             /// </summary>
-            public static readonly L Instance = new L();
+            public static readonly W640h480 Instance = new W640h480();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<L>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<W640h480>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "l");
+                    obj.AddField(".tag", "w640h480");
                 }
             }
 
@@ -361,7 +361,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            L enc.IEncodable<L>.Decode(enc.IDecoder decoder)
+            W640h480 enc.IEncodable<W640h480>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
@@ -370,30 +370,30 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>1024 by 768</para>
         /// </summary>
-        public sealed class Xl : ThumbnailSize, enc.IEncodable<Xl>
+        public sealed class W1024h768 : ThumbnailSize, enc.IEncodable<W1024h768>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Xl" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="W1024h768" /> class.</para>
             /// </summary>
-            private Xl()
+            private W1024h768()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Xl</para>
+            /// <para>A singleton instance of W1024h768</para>
             /// </summary>
-            public static readonly Xl Instance = new Xl();
+            public static readonly W1024h768 Instance = new W1024h768();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Xl>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<W1024h768>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "xl");
+                    obj.AddField(".tag", "w1024h768");
                 }
             }
 
@@ -404,7 +404,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Xl enc.IEncodable<Xl>.Decode(enc.IDecoder decoder)
+            W1024h768 enc.IEncodable<W1024h768>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

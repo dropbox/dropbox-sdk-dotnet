@@ -11,13 +11,12 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Information returned by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" />.</para>
+    /// <para>The search result object</para>
     /// </summary>
-    public sealed class SearchResults : enc.IEncodable<SearchResults>
+    public sealed class SearchResult : enc.IEncodable<SearchResult>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SearchResults" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchResult" /> class.</para>
         /// </summary>
         /// <param name="matches">A list (possibly empty) of matches for the query.</param>
         /// <param name="more">Used for paging. If true, indicates there is another page of
@@ -26,9 +25,9 @@ namespace Dropbox.Api.Files
         /// <param name="start">Used for paging. Value to set the start argument to when
         /// calling <see cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" /> to fetch
         /// the next page of results.</param>
-        public SearchResults(col.IEnumerable<SearchMatch> matches,
-                             bool more,
-                             ulong start)
+        public SearchResult(col.IEnumerable<SearchMatch> matches,
+                            bool more,
+                            ulong start)
         {
             var matchesList = new col.List<SearchMatch>(matches ?? new SearchMatch[0]);
 
@@ -43,11 +42,11 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SearchResults" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="SearchResult" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public SearchResults()
+        public SearchResult()
         {
         }
 
@@ -70,14 +69,14 @@ namespace Dropbox.Api.Files
         /// </summary>
         public ulong Start { get; private set; }
 
-        #region IEncodable<SearchResults> methods
+        #region IEncodable<SearchResult> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SearchResults>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<SearchResult>.Encode(enc.IEncoder encoder)
         {
             using (var obj = encoder.AddObject())
             {
@@ -94,7 +93,7 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SearchResults enc.IEncodable<SearchResults>.Decode(enc.IDecoder decoder)
+        SearchResult enc.IEncodable<SearchResult>.Decode(enc.IDecoder decoder)
         {
             using (var obj = decoder.GetObject())
             {

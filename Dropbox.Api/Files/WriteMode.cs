@@ -150,8 +150,9 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>It's always a conflict. The autorename strategy is to append a number to the
-        /// file name. For example "document.txt" might become "document (2).txt".</para>
+        /// <para>Never overwrite the existing file. The autorename strategy is to append a
+        /// number to the file name. For example, "document.txt" might become "document
+        /// (2).txt".</para>
         /// </summary>
         public sealed class Add : WriteMode, enc.IEncodable<Add>
         {
@@ -194,8 +195,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>It's never a conflict. Overwrite the existing file. The autorename strategy
-        /// is the same as it is for <see cref="Add" />.</para>
+        /// <para>Always overwrite the existing file. The autorename strategy is the same as it
+        /// is for <see cref="Add" />.</para>
         /// </summary>
         public sealed class Overwrite : WriteMode, enc.IEncodable<Overwrite>
         {
@@ -238,7 +239,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>It's a conflict only if the current "rev" doesn't match the given "rev". The
+        /// <para>Overwrite if the given "rev" matches the existing file's "rev". The
         /// autorename strategy is to append the string "conflicted copy" to the file name. For
         /// example, "document.txt" might become "document (conflicted copy).txt" or "document
         /// (Panda's conflicted copy).txt".</para>

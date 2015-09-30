@@ -42,12 +42,12 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="getSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Files.PathError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="Files.PathError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="GetSharedLinksError"/>.</exception>
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, Files.PathError>(getSharedLinksArg, "api", "/sharing/get_shared_links");
+            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links");
         }
 
         /// <summary>
@@ -81,9 +81,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// description.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Files.PathError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="Files.PathError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="GetSharedLinksError"/>.</exception>
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(string path = null)
         {
             var getSharedLinksArg = new GetSharedLinksArg(path);
@@ -118,9 +118,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Files.PathError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="Files.PathError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="GetSharedLinksError"/>.</exception>
         public GetSharedLinksResult EndGetSharedLinks(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetSharedLinksResult>;
@@ -143,12 +143,12 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="createSharedLinkArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Files.PathError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="Files.PathError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="CreateSharedLinkError"/>.</exception>
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
         {
-            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, Files.PathError>(createSharedLinkArg, "api", "/sharing/create_shared_link");
+            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link");
         }
 
         /// <summary>
@@ -182,9 +182,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Files.PathError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="Files.PathError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="CreateSharedLinkError"/>.</exception>
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(string path,
                                                               bool shortUrl = false,
                                                               PendingUploadMode pendingUpload = null)
@@ -229,9 +229,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Files.PathError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="Files.PathError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="CreateSharedLinkError"/>.</exception>
         public PathLinkMetadata EndCreateSharedLink(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<PathLinkMetadata>;
@@ -370,11 +370,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="includeMembership">If include user and group membership information in
         /// the response.</param>
+        /// <param name="showUnmounted">Determines whether the returned list of shared folders
+        /// will include folders  that the user has left (but may still rejoin).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListSharedFoldersResult> ListSharedFoldersAsync(bool includeMembership = false)
+        public t.Task<ListSharedFoldersResult> ListSharedFoldersAsync(bool includeMembership = false,
+                                                                      bool showUnmounted = false)
         {
-            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership);
+            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership,
+                                                                  showUnmounted);
 
             return this.ListSharedFoldersAsync(listSharedFoldersArgs);
         }
@@ -384,16 +388,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="includeMembership">If include user and group membership information in
         /// the response.</param>
+        /// <param name="showUnmounted">Determines whether the returned list of shared folders
+        /// will include folders  that the user has left (but may still rejoin).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListSharedFolders(bool includeMembership = false,
+                                                       bool showUnmounted = false,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
-            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership);
+            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership,
+                                                                  showUnmounted);
 
             return this.BeginListSharedFolders(listSharedFoldersArgs, callback, callbackState);
         }

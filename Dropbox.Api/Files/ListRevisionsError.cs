@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors reported by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListRevisionsAsync" />.</para>
+    /// <para>The list revisions error object</para>
     /// </summary>
     public class ListRevisionsError : enc.IEncodable<ListRevisionsError>
     {
@@ -25,24 +24,46 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is DownloadError</para>
+        /// <para>Gets a value indicating whether this instance is Path</para>
         /// </summary>
-        public bool IsDownloadError
+        public bool IsPath
         {
             get
             {
-                return this is DownloadError;
+                return this is Path;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a DownloadError, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Path, or <c>null</c>.</para>
         /// </summary>
-        public DownloadError AsDownloadError
+        public Path AsPath
         {
             get
             {
-                return this as DownloadError;
+                return this as Path;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Other</para>
+        /// </summary>
+        public bool IsOther
+        {
+            get
+            {
+                return this is Other;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
+        /// </summary>
+        public Other AsOther
+        {
+            get
+            {
+                return this as Other;
             }
         }
 
@@ -55,13 +76,13 @@ namespace Dropbox.Api.Files
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         void enc.IEncodable<ListRevisionsError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsDownloadError)
+            if (this.IsPath)
             {
-                ((enc.IEncodable<DownloadError>)this).Encode(encoder);
+                ((enc.IEncodable<Path>)this).Encode(encoder);
             }
             else
             {
-                throw new sys.InvalidOperationException();
+                ((enc.IEncodable<Other>)this).Encode(encoder);
             }
         }
 
@@ -76,29 +97,28 @@ namespace Dropbox.Api.Files
         {
             switch (decoder.GetUnionName())
             {
-            case "download_error":
+            case "path":
                 using (var obj = decoder.GetObject())
                 {
-                    return new DownloadError(obj.GetFieldObject<Dropbox.Api.Files.DownloadError>("download_error"));
+                    return new Path(obj.GetFieldObject<LookupError>("path"));
                 }
             default:
-                throw new sys.InvalidOperationException();
+                return Other.Instance;
             }
         }
 
         #endregion
 
         /// <summary>
-        /// <para>An error occurs when downloading metadata for the file.</para>
+        /// <para>The path object</para>
         /// </summary>
-        public sealed class DownloadError : ListRevisionsError, enc.IEncodable<DownloadError>
+        public sealed class Path : ListRevisionsError, enc.IEncodable<Path>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="DownloadError" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public DownloadError(Dropbox.Api.Files.DownloadError value)
+            public Path(LookupError value)
             {
                 this.Value = value;
             }
@@ -106,18 +126,18 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Files.DownloadError Value { get; private set; }
+            public LookupError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<DownloadError>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "download_error");
-                    obj.AddField("download_error", this.Value);
+                    obj.AddField(".tag", "path");
+                    obj.AddField("path", this.Value);
                 }
             }
 
@@ -128,7 +148,50 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            DownloadError enc.IEncodable<DownloadError>.Decode(enc.IDecoder decoder)
+            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : ListRevisionsError, enc.IEncodable<Other>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
+            /// </summary>
+            private Other()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Other</para>
+            /// </summary>
+            public static readonly Other Instance = new Other();
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

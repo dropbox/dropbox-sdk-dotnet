@@ -11,8 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedFoldersAsync" />.</para>
+    /// <para>The list shared folders args object</para>
     /// </summary>
     public sealed class ListSharedFoldersArgs : enc.IEncodable<ListSharedFoldersArgs>
     {
@@ -22,9 +21,13 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="includeMembership">If include user and group membership information in
         /// the response.</param>
-        public ListSharedFoldersArgs(bool includeMembership = false)
+        /// <param name="showUnmounted">Determines whether the returned list of shared folders
+        /// will include folders  that the user has left (but may still rejoin).</param>
+        public ListSharedFoldersArgs(bool includeMembership = false,
+                                     bool showUnmounted = false)
         {
             this.IncludeMembership = includeMembership;
+            this.ShowUnmounted = showUnmounted;
         }
 
         /// <summary>
@@ -36,12 +39,19 @@ namespace Dropbox.Api.Sharing
         public ListSharedFoldersArgs()
         {
             this.IncludeMembership = false;
+            this.ShowUnmounted = false;
         }
 
         /// <summary>
         /// <para>If include user and group membership information in the response.</para>
         /// </summary>
         public bool IncludeMembership { get; private set; }
+
+        /// <summary>
+        /// <para>Determines whether the returned list of shared folders will include folders
+        /// that the user has left (but may still rejoin).</para>
+        /// </summary>
+        public bool ShowUnmounted { get; private set; }
 
         #region IEncodable<ListSharedFoldersArgs> methods
 
@@ -55,6 +65,7 @@ namespace Dropbox.Api.Sharing
             using (var obj = encoder.AddObject())
             {
                 obj.AddField<bool>("include_membership", this.IncludeMembership);
+                obj.AddField<bool>("show_unmounted", this.ShowUnmounted);
             }
         }
 
@@ -72,6 +83,10 @@ namespace Dropbox.Api.Sharing
                 if (obj.HasField("include_membership"))
                 {
                     this.IncludeMembership = obj.GetField<bool>("include_membership");
+                }
+                if (obj.HasField("show_unmounted"))
+                {
+                    this.ShowUnmounted = obj.GetField<bool>("show_unmounted");
                 }
             }
 

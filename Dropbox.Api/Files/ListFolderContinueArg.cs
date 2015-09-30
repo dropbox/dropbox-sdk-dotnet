@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
+    /// <para>The list folder continue arg object</para>
     /// </summary>
     public sealed class ListFolderContinueArg : enc.IEncodable<ListFolderContinueArg>
     {
@@ -20,7 +19,7 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ListFolderContinueArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="cursor">The cursor returned by <see
+        /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</param>
         public ListFolderContinueArg(string cursor)
@@ -44,7 +43,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The cursor returned by <see
+        /// <para>The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
         /// </summary>

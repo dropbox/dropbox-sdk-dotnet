@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Information returned by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderGetLatestCursorAsync" />.</para>
+    /// <para>The list folder get latest cursor result object</para>
     /// </summary>
     public sealed class ListFolderGetLatestCursorResult : enc.IEncodable<ListFolderGetLatestCursorResult>
     {

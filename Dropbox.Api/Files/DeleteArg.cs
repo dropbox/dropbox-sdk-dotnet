@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.DeleteAsync"
-    /// />.</para>
+    /// <para>The delete arg object</para>
     /// </summary>
     public sealed class DeleteArg : enc.IEncodable<DeleteArg>
     {
@@ -25,6 +24,10 @@ namespace Dropbox.Api.Files
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             this.Path = path;

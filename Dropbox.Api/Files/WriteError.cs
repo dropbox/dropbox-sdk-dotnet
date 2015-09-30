@@ -11,16 +11,37 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors from <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadAsync"
-    /// />.</para>
+    /// <para>The write error object</para>
     /// </summary>
-    public class CommitError : enc.IEncodable<CommitError>
+    public class WriteError : enc.IEncodable<WriteError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CommitError" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="WriteError" /> class.</para>
         /// </summary>
-        public CommitError()
+        public WriteError()
         {
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is MalformedPath</para>
+        /// </summary>
+        public bool IsMalformedPath
+        {
+            get
+            {
+                return this is MalformedPath;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MalformedPath, or <c>null</c>.</para>
+        /// </summary>
+        public MalformedPath AsMalformedPath
+        {
+            get
+            {
+                return this as MalformedPath;
+            }
         }
 
         /// <summary>
@@ -68,24 +89,46 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is InsufficientQuota</para>
+        /// <para>Gets a value indicating whether this instance is InsufficientSpace</para>
         /// </summary>
-        public bool IsInsufficientQuota
+        public bool IsInsufficientSpace
         {
             get
             {
-                return this is InsufficientQuota;
+                return this is InsufficientSpace;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a InsufficientQuota, or <c>null</c>.</para>
+        /// <para>Gets this instance as a InsufficientSpace, or <c>null</c>.</para>
         /// </summary>
-        public InsufficientQuota AsInsufficientQuota
+        public InsufficientSpace AsInsufficientSpace
         {
             get
             {
-                return this as InsufficientQuota;
+                return this as InsufficientSpace;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is DisallowedName</para>
+        /// </summary>
+        public bool IsDisallowedName
+        {
+            get
+            {
+                return this is DisallowedName;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DisallowedName, or <c>null</c>.</para>
+        /// </summary>
+        public DisallowedName AsDisallowedName
+        {
+            get
+            {
+                return this as DisallowedName;
             }
         }
 
@@ -111,16 +154,20 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<CommitError> methods
+        #region IEncodable<WriteError> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<CommitError>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<WriteError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsConflict)
+            if (this.IsMalformedPath)
+            {
+                ((enc.IEncodable<MalformedPath>)this).Encode(encoder);
+            }
+            else if (this.IsConflict)
             {
                 ((enc.IEncodable<Conflict>)this).Encode(encoder);
             }
@@ -128,9 +175,13 @@ namespace Dropbox.Api.Files
             {
                 ((enc.IEncodable<NoWritePermission>)this).Encode(encoder);
             }
-            else if (this.IsInsufficientQuota)
+            else if (this.IsInsufficientSpace)
             {
-                ((enc.IEncodable<InsufficientQuota>)this).Encode(encoder);
+                ((enc.IEncodable<InsufficientSpace>)this).Encode(encoder);
+            }
+            else if (this.IsDisallowedName)
+            {
+                ((enc.IEncodable<DisallowedName>)this).Encode(encoder);
             }
             else
             {
@@ -145,19 +196,26 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        CommitError enc.IEncodable<CommitError>.Decode(enc.IDecoder decoder)
+        WriteError enc.IEncodable<WriteError>.Decode(enc.IDecoder decoder)
         {
             switch (decoder.GetUnionName())
             {
+            case "malformed_path":
+                using (var obj = decoder.GetObject())
+                {
+                    return new MalformedPath(obj.GetField<string>("malformed_path"));
+                }
             case "conflict":
                 using (var obj = decoder.GetObject())
                 {
-                    return new Conflict(obj.GetFieldObject<CommitConflictError>("conflict"));
+                    return new Conflict(obj.GetFieldObject<WriteConflictError>("conflict"));
                 }
             case "no_write_permission":
                 return NoWritePermission.Instance;
-            case "insufficient_quota":
-                return InsufficientQuota.Instance;
+            case "insufficient_space":
+                return InsufficientSpace.Instance;
+            case "disallowed_name":
+                return DisallowedName.Instance;
             default:
                 return Other.Instance;
             }
@@ -166,15 +224,16 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>A conflict prevented the commit. See the value for the reason.</para>
+        /// <para>The malformed path object</para>
         /// </summary>
-        public sealed class Conflict : CommitError, enc.IEncodable<Conflict>
+        public sealed class MalformedPath : WriteError, enc.IEncodable<MalformedPath>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Conflict" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="MalformedPath" />
+            /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Conflict(CommitConflictError value)
+            public MalformedPath(string value)
             {
                 this.Value = value;
             }
@@ -182,7 +241,53 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public CommitConflictError Value { get; private set; }
+            public string Value { get; private set; }
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            void enc.IEncodable<MalformedPath>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "malformed_path");
+                    obj.AddField("malformed_path", this.Value);
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            MalformedPath enc.IEncodable<MalformedPath>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
+
+        /// <summary>
+        /// <para>Couldn't write to the target path because there was something in the
+        /// way.</para>
+        /// </summary>
+        public sealed class Conflict : WriteError, enc.IEncodable<Conflict>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Conflict" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public Conflict(WriteConflictError value)
+            {
+                this.Value = value;
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public WriteConflictError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
@@ -211,10 +316,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>User does not have permission to write in the folder. An example of this is
-        /// if the folder is a read-only shared folder.</para>
+        /// <para>The user doesn't have permissions to write to the target location.</para>
         /// </summary>
-        public sealed class NoWritePermission : CommitError, enc.IEncodable<NoWritePermission>
+        public sealed class NoWritePermission : WriteError, enc.IEncodable<NoWritePermission>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="NoWritePermission" />
@@ -256,33 +360,34 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>User does not have sufficient space quota to save the file.</para>
+        /// <para>The user doesn't have enough available space (bytes) to write more
+        /// data.</para>
         /// </summary>
-        public sealed class InsufficientQuota : CommitError, enc.IEncodable<InsufficientQuota>
+        public sealed class InsufficientSpace : WriteError, enc.IEncodable<InsufficientSpace>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="InsufficientQuota" />
+            /// <para>Initializes a new instance of the <see cref="InsufficientSpace" />
             /// class.</para>
             /// </summary>
-            private InsufficientQuota()
+            private InsufficientSpace()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of InsufficientQuota</para>
+            /// <para>A singleton instance of InsufficientSpace</para>
             /// </summary>
-            public static readonly InsufficientQuota Instance = new InsufficientQuota();
+            public static readonly InsufficientSpace Instance = new InsufficientSpace();
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<InsufficientQuota>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<InsufficientSpace>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "insufficient_quota");
+                    obj.AddField(".tag", "insufficient_space");
                 }
             }
 
@@ -293,16 +398,60 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            InsufficientQuota enc.IEncodable<InsufficientQuota>.Decode(enc.IDecoder decoder)
+            InsufficientSpace enc.IEncodable<InsufficientSpace>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>An unspecified error.</para>
+        /// <para>Dropbox will not save the file or folder because it of its name.</para>
         /// </summary>
-        public sealed class Other : CommitError, enc.IEncodable<Other>
+        public sealed class DisallowedName : WriteError, enc.IEncodable<DisallowedName>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DisallowedName" />
+            /// class.</para>
+            /// </summary>
+            private DisallowedName()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DisallowedName</para>
+            /// </summary>
+            public static readonly DisallowedName Instance = new DisallowedName();
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            void enc.IEncodable<DisallowedName>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "disallowed_name");
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            DisallowedName enc.IEncodable<DisallowedName>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : WriteError, enc.IEncodable<Other>
         {
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>

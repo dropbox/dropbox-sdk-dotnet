@@ -11,11 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.GetThumbnailAsync"
-    /// />.</para>
-    /// <para>This method currently supports files with the following file extensions: jpg,
-    /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't be
-    /// converted to a thumbnail.</para>
+    /// <para>The thumbnail arg object</para>
     /// </summary>
     public sealed class ThumbnailArg : enc.IEncodable<ThumbnailArg>
     {
@@ -26,7 +22,7 @@ namespace Dropbox.Api.Files
         /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
         /// images that are photos, jpeg should be preferred, while png is  better for
         /// screenshots and digital arts.</param>
-        /// <param name="size">The size for the thumbnail image (default s).</param>
+        /// <param name="size">The size for the thumbnail image.</param>
         public ThumbnailArg(string path,
                             ThumbnailFormat format = null,
                             ThumbnailSize size = null)
@@ -34,6 +30,10 @@ namespace Dropbox.Api.Files
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             if (format == null)
@@ -43,7 +43,7 @@ namespace Dropbox.Api.Files
 
             if (size == null)
             {
-                size = ThumbnailSize.S.Instance;
+                size = ThumbnailSize.W64h64.Instance;
             }
 
             this.Path = path;
@@ -59,7 +59,7 @@ namespace Dropbox.Api.Files
         public ThumbnailArg()
         {
             this.Format = ThumbnailFormat.Jpeg.Instance;
-            this.Size = ThumbnailSize.S.Instance;
+            this.Size = ThumbnailSize.W64h64.Instance;
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Dropbox.Api.Files
         public ThumbnailFormat Format { get; private set; }
 
         /// <summary>
-        /// <para>The size for the thumbnail image (default s).</para>
+        /// <para>The size for the thumbnail image.</para>
         /// </summary>
         public ThumbnailSize Size { get; private set; }
 

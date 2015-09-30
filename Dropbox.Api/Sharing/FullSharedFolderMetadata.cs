@@ -21,21 +21,22 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="FullSharedFolderMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="pathLower">The lower-cased full path of this shared folder.</param>
         /// <param name="name">The name of the this shared folder.</param>
         /// <param name="id">The ID of the shared folder.</param>
         /// <param name="accessType">Who can access this shared folder.</param>
         /// <param name="sharedLinkPolicy">Who links can be shared with.</param>
         /// <param name="membership">The list of user members of the shared folder.</param>
         /// <param name="groups">The list of group members of the shared folder.</param>
-        public FullSharedFolderMetadata(string pathLower,
-                                        string name,
+        /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
+        /// unmounted folders.</param>
+        public FullSharedFolderMetadata(string name,
                                         string id,
                                         AccessType accessType,
                                         SharedLinkPolicy sharedLinkPolicy,
                                         col.IEnumerable<UserMembershipInfo> membership,
-                                        col.IEnumerable<GroupMembershipInfo> groups)
-            : base(pathLower, name, id, accessType, sharedLinkPolicy)
+                                        col.IEnumerable<GroupMembershipInfo> groups,
+                                        string pathLower = null)
+            : base(name, id, accessType, sharedLinkPolicy, pathLower)
         {
             var membershipList = new col.List<UserMembershipInfo>(membership ?? new UserMembershipInfo[0]);
 
@@ -87,13 +88,16 @@ namespace Dropbox.Api.Sharing
             using (var obj = encoder.AddObject())
             {
                 obj.AddField<string>(".tag", "full");
-                obj.AddField<string>("path_lower", this.PathLower);
                 obj.AddField<string>("name", this.Name);
                 obj.AddField<string>("id", this.Id);
                 obj.AddFieldObject<AccessType>("access_type", this.AccessType);
                 obj.AddFieldObject<SharedLinkPolicy>("shared_link_policy", this.SharedLinkPolicy);
                 obj.AddFieldObjectList<UserMembershipInfo>("membership", this.Membership);
                 obj.AddFieldObjectList<GroupMembershipInfo>("groups", this.Groups);
+                if (this.PathLower != null)
+                {
+                    obj.AddField<string>("path_lower", this.PathLower);
+                }
             }
         }
 
@@ -108,13 +112,16 @@ namespace Dropbox.Api.Sharing
         {
             using (var obj = decoder.GetObject())
             {
-                this.PathLower = obj.GetField<string>("path_lower");
                 this.Name = obj.GetField<string>("name");
                 this.Id = obj.GetField<string>("id");
                 this.AccessType = obj.GetFieldObject<AccessType>("access_type");
                 this.SharedLinkPolicy = obj.GetFieldObject<SharedLinkPolicy>("shared_link_policy");
                 this.Membership = new col.List<UserMembershipInfo>(obj.GetFieldObjectList<UserMembershipInfo>("membership"));
                 this.Groups = new col.List<GroupMembershipInfo>(obj.GetFieldObjectList<GroupMembershipInfo>("groups"));
+                if (obj.HasField("path_lower"))
+                {
+                    this.PathLower = obj.GetField<string>("path_lower");
+                }
             }
 
             return this;

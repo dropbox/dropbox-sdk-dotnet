@@ -11,21 +11,23 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync"
-    /// />.</para>
+    /// <para>The get metadata arg object</para>
     /// </summary>
     public sealed class GetMetadataArg : enc.IEncodable<GetMetadataArg>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetMetadataArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path or ID of a file or folder on Dropbox. Must not be the
-        /// root.</param>
+        /// <param name="path">The path of a file or folder on Dropbox</param>
         public GetMetadataArg(string path)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"((/|id:).*)|(rev:[0-9a-f]{9,})"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             this.Path = path;
@@ -41,7 +43,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The path or ID of a file or folder on Dropbox. Must not be the root.</para>
+        /// <para>The path of a file or folder on Dropbox</para>
         /// </summary>
         public string Path { get; private set; }
 

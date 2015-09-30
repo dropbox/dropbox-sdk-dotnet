@@ -21,22 +21,18 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="SharedFolderMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="pathLower">The lower-cased full path of this shared folder.</param>
         /// <param name="name">The name of the this shared folder.</param>
         /// <param name="id">The ID of the shared folder.</param>
         /// <param name="accessType">Who can access this shared folder.</param>
         /// <param name="sharedLinkPolicy">Who links can be shared with.</param>
-        protected SharedFolderMetadata(string pathLower,
-                                       string name,
+        /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
+        /// unmounted folders.</param>
+        protected SharedFolderMetadata(string name,
                                        string id,
                                        AccessType accessType,
-                                       SharedLinkPolicy sharedLinkPolicy)
+                                       SharedLinkPolicy sharedLinkPolicy,
+                                       string pathLower = null)
         {
-            if (pathLower == null)
-            {
-                throw new sys.ArgumentNullException("pathLower");
-            }
-
             if (name == null)
             {
                 throw new sys.ArgumentNullException("name");
@@ -61,11 +57,11 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("sharedLinkPolicy");
             }
 
-            this.PathLower = pathLower;
             this.Name = name;
             this.Id = id;
             this.AccessType = accessType;
             this.SharedLinkPolicy = sharedLinkPolicy;
+            this.PathLower = pathLower;
         }
 
         /// <summary>
@@ -125,11 +121,6 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The lower-cased full path of this shared folder.</para>
-        /// </summary>
-        public string PathLower { get; protected set; }
-
-        /// <summary>
         /// <para>The name of the this shared folder.</para>
         /// </summary>
         public string Name { get; protected set; }
@@ -148,6 +139,12 @@ namespace Dropbox.Api.Sharing
         /// <para>Who links can be shared with.</para>
         /// </summary>
         public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>The lower-cased full path of this shared folder. Absent for unmounted
+        /// folders.</para>
+        /// </summary>
+        public string PathLower { get; protected set; }
 
         #region IEncodable<SharedFolderMetadata> methods
 

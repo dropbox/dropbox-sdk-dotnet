@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The format option for thumbnail image.</para>
+    /// <para>The thumbnail format object</para>
     /// </summary>
     public class ThumbnailFormat : enc.IEncodable<ThumbnailFormat>
     {

@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListRevisionsAsync"
-    /// />.</para>
+    /// <para>The list revisions arg object</para>
     /// </summary>
     public sealed class ListRevisionsArg : enc.IEncodable<ListRevisionsArg>
     {
@@ -28,6 +27,10 @@ namespace Dropbox.Api.Files
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"/.*"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             if (limit < 1UL || limit > 100UL)

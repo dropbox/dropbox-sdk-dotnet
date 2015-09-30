@@ -11,9 +11,8 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Indicates a deleted file or folder in results returned by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> or <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" />.</para>
+    /// <para>Indicates that there used to be a file or folder at this path, but it no longer
+    /// exists.</para>
     /// </summary>
     /// <seealso cref="Metadata" />
     public sealed class DeletedMetadata : Metadata, enc.IEncodable<DeletedMetadata>

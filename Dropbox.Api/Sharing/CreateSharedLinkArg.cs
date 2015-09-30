@@ -11,8 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CreateSharedLinkAsync" />.</para>
+    /// <para>The create shared link arg object</para>
     /// </summary>
     public sealed class CreateSharedLinkArg : enc.IEncodable<CreateSharedLinkArg>
     {

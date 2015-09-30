@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors reported by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetThumbnailAsync" />.</para>
+    /// <para>The thumbnail error object</para>
     /// </summary>
     public class ThumbnailError : enc.IEncodable<ThumbnailError>
     {
@@ -24,24 +23,24 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is DownloadError</para>
+        /// <para>Gets a value indicating whether this instance is Path</para>
         /// </summary>
-        public bool IsDownloadError
+        public bool IsPath
         {
             get
             {
-                return this is DownloadError;
+                return this is Path;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a DownloadError, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Path, or <c>null</c>.</para>
         /// </summary>
-        public DownloadError AsDownloadError
+        public Path AsPath
         {
             get
             {
-                return this as DownloadError;
+                return this as Path;
             }
         }
 
@@ -64,50 +63,6 @@ namespace Dropbox.Api.Files
             get
             {
                 return this as UnsupportedExtension;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is UnsupportedFormat</para>
-        /// </summary>
-        public bool IsUnsupportedFormat
-        {
-            get
-            {
-                return this is UnsupportedFormat;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a UnsupportedFormat, or <c>null</c>.</para>
-        /// </summary>
-        public UnsupportedFormat AsUnsupportedFormat
-        {
-            get
-            {
-                return this as UnsupportedFormat;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is UnsupportedSize</para>
-        /// </summary>
-        public bool IsUnsupportedSize
-        {
-            get
-            {
-                return this is UnsupportedSize;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a UnsupportedSize, or <c>null</c>.</para>
-        /// </summary>
-        public UnsupportedSize AsUnsupportedSize
-        {
-            get
-            {
-                return this as UnsupportedSize;
             }
         }
 
@@ -164,21 +119,13 @@ namespace Dropbox.Api.Files
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         void enc.IEncodable<ThumbnailError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsDownloadError)
+            if (this.IsPath)
             {
-                ((enc.IEncodable<DownloadError>)this).Encode(encoder);
+                ((enc.IEncodable<Path>)this).Encode(encoder);
             }
             else if (this.IsUnsupportedExtension)
             {
                 ((enc.IEncodable<UnsupportedExtension>)this).Encode(encoder);
-            }
-            else if (this.IsUnsupportedFormat)
-            {
-                ((enc.IEncodable<UnsupportedFormat>)this).Encode(encoder);
-            }
-            else if (this.IsUnsupportedSize)
-            {
-                ((enc.IEncodable<UnsupportedSize>)this).Encode(encoder);
             }
             else if (this.IsUnsupportedImage)
             {
@@ -205,17 +152,13 @@ namespace Dropbox.Api.Files
         {
             switch (decoder.GetUnionName())
             {
-            case "download_error":
+            case "path":
                 using (var obj = decoder.GetObject())
                 {
-                    return new DownloadError(obj.GetFieldObject<Dropbox.Api.Files.DownloadError>("download_error"));
+                    return new Path(obj.GetFieldObject<LookupError>("path"));
                 }
             case "unsupported_extension":
                 return UnsupportedExtension.Instance;
-            case "unsupported_format":
-                return UnsupportedFormat.Instance;
-            case "unsupported_size":
-                return UnsupportedSize.Instance;
             case "unsupported_image":
                 return UnsupportedImage.Instance;
             case "conversion_error":
@@ -230,14 +173,13 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>An error occurs when downloading metadata for the image.</para>
         /// </summary>
-        public sealed class DownloadError : ThumbnailError, enc.IEncodable<DownloadError>
+        public sealed class Path : ThumbnailError, enc.IEncodable<Path>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="DownloadError" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public DownloadError(Dropbox.Api.Files.DownloadError value)
+            public Path(LookupError value)
             {
                 this.Value = value;
             }
@@ -245,18 +187,18 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Files.DownloadError Value { get; private set; }
+            public LookupError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<DownloadError>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "download_error");
-                    obj.AddField("download_error", this.Value);
+                    obj.AddField(".tag", "path");
+                    obj.AddField("path", this.Value);
                 }
             }
 
@@ -267,7 +209,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            DownloadError enc.IEncodable<DownloadError>.Decode(enc.IDecoder decoder)
+            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
@@ -312,94 +254,6 @@ namespace Dropbox.Api.Files
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             UnsupportedExtension enc.IEncodable<UnsupportedExtension>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>The thumbnail format specified is not supported.</para>
-        /// </summary>
-        public sealed class UnsupportedFormat : ThumbnailError, enc.IEncodable<UnsupportedFormat>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="UnsupportedFormat" />
-            /// class.</para>
-            /// </summary>
-            private UnsupportedFormat()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of UnsupportedFormat</para>
-            /// </summary>
-            public static readonly UnsupportedFormat Instance = new UnsupportedFormat();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<UnsupportedFormat>.Encode(enc.IEncoder encoder)
-            {
-                using (var obj = encoder.AddObject())
-                {
-                    obj.AddField(".tag", "unsupported_format");
-                }
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            UnsupportedFormat enc.IEncodable<UnsupportedFormat>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
-
-        /// <summary>
-        /// <para>The size value specified is not supported.</para>
-        /// </summary>
-        public sealed class UnsupportedSize : ThumbnailError, enc.IEncodable<UnsupportedSize>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="UnsupportedSize" />
-            /// class.</para>
-            /// </summary>
-            private UnsupportedSize()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of UnsupportedSize</para>
-            /// </summary>
-            public static readonly UnsupportedSize Instance = new UnsupportedSize();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<UnsupportedSize>.Encode(enc.IEncoder encoder)
-            {
-                using (var obj = encoder.AddObject())
-                {
-                    obj.AddField(".tag", "unsupported_size");
-                }
-            }
-
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            UnsupportedSize enc.IEncodable<UnsupportedSize>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

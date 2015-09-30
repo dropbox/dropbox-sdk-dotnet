@@ -11,52 +11,67 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Error structure for <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.DownloadAsync" />.</para>
+    /// <para>The upload write failed object</para>
     /// </summary>
-    public sealed class NoFile : enc.IEncodable<NoFile>
+    public sealed class UploadWriteFailed : enc.IEncodable<UploadWriteFailed>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="NoFile" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadWriteFailed" />
+        /// class.</para>
         /// </summary>
-        /// <param name="reason">The path could not be downloaded. The value gives the
-        /// reason.</param>
-        public NoFile(NoFileReason reason)
+        /// <param name="reason">The reason why the file couldn't be saved.</param>
+        /// <param name="uploadSessionId">The upload session ID; this may be used to retry the
+        /// commit.</param>
+        public UploadWriteFailed(WriteError reason,
+                                 string uploadSessionId)
         {
             if (reason == null)
             {
                 throw new sys.ArgumentNullException("reason");
             }
 
+            if (uploadSessionId == null)
+            {
+                throw new sys.ArgumentNullException("uploadSessionId");
+            }
+
             this.Reason = reason;
+            this.UploadSessionId = uploadSessionId;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="NoFile" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadWriteFailed" />
+        /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public NoFile()
+        public UploadWriteFailed()
         {
         }
 
         /// <summary>
-        /// <para>The path could not be downloaded. The value gives the reason.</para>
+        /// <para>The reason why the file couldn't be saved.</para>
         /// </summary>
-        public NoFileReason Reason { get; private set; }
+        public WriteError Reason { get; private set; }
 
-        #region IEncodable<NoFile> methods
+        /// <summary>
+        /// <para>The upload session ID; this may be used to retry the commit.</para>
+        /// </summary>
+        public string UploadSessionId { get; private set; }
+
+        #region IEncodable<UploadWriteFailed> methods
 
         /// <summary>
         /// <para>Encodes the object using the supplied encoder.</para>
         /// </summary>
         /// <param name="encoder">The encoder being used to serialize the object.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<NoFile>.Encode(enc.IEncoder encoder)
+        void enc.IEncodable<UploadWriteFailed>.Encode(enc.IEncoder encoder)
         {
             using (var obj = encoder.AddObject())
             {
-                obj.AddFieldObject<NoFileReason>("reason", this.Reason);
+                obj.AddFieldObject<WriteError>("reason", this.Reason);
+                obj.AddField<string>("upload_session_id", this.UploadSessionId);
             }
         }
 
@@ -67,11 +82,12 @@ namespace Dropbox.Api.Files
         /// <returns>The deserialized object. Note: this is not necessarily the current
         /// instance.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        NoFile enc.IEncodable<NoFile>.Decode(enc.IDecoder decoder)
+        UploadWriteFailed enc.IEncodable<UploadWriteFailed>.Decode(enc.IDecoder decoder)
         {
             using (var obj = decoder.GetObject())
             {
-                this.Reason = obj.GetFieldObject<NoFileReason>("reason");
+                this.Reason = obj.GetFieldObject<WriteError>("reason");
+                this.UploadSessionId = obj.GetField<string>("upload_session_id");
             }
 
             return this;

@@ -13,6 +13,8 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>Result for <see
     /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedFoldersAsync" />.</para>
+    /// <para>Unmounted shared folders can be identified by the absence of <see
+    /// cref="SharedFolderMetadata.PathLower" />.</para>
     /// </summary>
     public sealed class ListSharedFoldersResult : enc.IEncodable<ListSharedFoldersResult>
     {

@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors for <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
+    /// <para>The upload session finish error object</para>
     /// </summary>
     public class UploadSessionFinishError : enc.IEncodable<UploadSessionFinishError>
     {
@@ -47,24 +46,24 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is CommitFailed</para>
+        /// <para>Gets a value indicating whether this instance is Path</para>
         /// </summary>
-        public bool IsCommitFailed
+        public bool IsPath
         {
             get
             {
-                return this is CommitFailed;
+                return this is Path;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a CommitFailed, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Path, or <c>null</c>.</para>
         /// </summary>
-        public CommitFailed AsCommitFailed
+        public Path AsPath
         {
             get
             {
-                return this as CommitFailed;
+                return this as Path;
             }
         }
 
@@ -103,9 +102,9 @@ namespace Dropbox.Api.Files
             {
                 ((enc.IEncodable<LookupFailed>)this).Encode(encoder);
             }
-            else if (this.IsCommitFailed)
+            else if (this.IsPath)
             {
-                ((enc.IEncodable<CommitFailed>)this).Encode(encoder);
+                ((enc.IEncodable<Path>)this).Encode(encoder);
             }
             else
             {
@@ -129,10 +128,10 @@ namespace Dropbox.Api.Files
                 {
                     return new LookupFailed(obj.GetFieldObject<UploadSessionLookupError>("lookup_failed"));
                 }
-            case "commit_failed":
+            case "path":
                 using (var obj = decoder.GetObject())
                 {
-                    return new CommitFailed(obj.GetFieldObject<CommitError>("commit_failed"));
+                    return new Path(obj.GetFieldObject<WriteError>("path"));
                 }
             default:
                 return Other.Instance;
@@ -188,16 +187,15 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The commit failed; the value explains the reason.</para>
+        /// <para>Unable to save the uploaded contents to a file.</para>
         /// </summary>
-        public sealed class CommitFailed : UploadSessionFinishError, enc.IEncodable<CommitFailed>
+        public sealed class Path : UploadSessionFinishError, enc.IEncodable<Path>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="CommitFailed" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public CommitFailed(CommitError value)
+            public Path(WriteError value)
             {
                 this.Value = value;
             }
@@ -205,18 +203,18 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public CommitError Value { get; private set; }
+            public WriteError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<CommitFailed>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "commit_failed");
-                    obj.AddField("commit_failed", this.Value);
+                    obj.AddField(".tag", "path");
+                    obj.AddField("path", this.Value);
                 }
             }
 
@@ -227,7 +225,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            CommitFailed enc.IEncodable<CommitFailed>.Decode(enc.IDecoder decoder)
+            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

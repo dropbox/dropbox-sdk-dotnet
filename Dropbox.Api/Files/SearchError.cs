@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync"
-    /// />.</para>
+    /// <para>The search error object</para>
     /// </summary>
     public class SearchError : enc.IEncodable<SearchError>
     {
@@ -21,6 +20,28 @@ namespace Dropbox.Api.Files
         /// </summary>
         public SearchError()
         {
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Path</para>
+        /// </summary>
+        public bool IsPath
+        {
+            get
+            {
+                return this is Path;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Path, or <c>null</c>.</para>
+        /// </summary>
+        public Path AsPath
+        {
+            get
+            {
+                return this as Path;
+            }
         }
 
         /// <summary>
@@ -54,13 +75,13 @@ namespace Dropbox.Api.Files
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         void enc.IEncodable<SearchError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsOther)
+            if (this.IsPath)
             {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                ((enc.IEncodable<Path>)this).Encode(encoder);
             }
             else
             {
-                throw new sys.InvalidOperationException();
+                ((enc.IEncodable<Other>)this).Encode(encoder);
             }
         }
 
@@ -75,12 +96,62 @@ namespace Dropbox.Api.Files
         {
             switch (decoder.GetUnionName())
             {
+            case "path":
+                using (var obj = decoder.GetObject())
+                {
+                    return new Path(obj.GetFieldObject<LookupError>("path"));
+                }
             default:
                 return Other.Instance;
             }
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The path object</para>
+        /// </summary>
+        public sealed class Path : SearchError, enc.IEncodable<Path>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public Path(LookupError value)
+            {
+                this.Value = value;
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public LookupError Value { get; private set; }
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "path");
+                    obj.AddField("path", this.Value);
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
 
         /// <summary>
         /// <para>An unspecified error.</para>

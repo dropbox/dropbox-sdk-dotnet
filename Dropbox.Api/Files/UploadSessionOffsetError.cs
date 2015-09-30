@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Error structure for recovering the correct upload offset.</para>
+    /// <para>The upload session offset error object</para>
     /// </summary>
     public sealed class UploadSessionOffsetError : enc.IEncodable<UploadSessionOffsetError>
     {

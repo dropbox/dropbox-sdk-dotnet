@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Errors reported by <see cref="Dropbox.Api.Files.Routes.FilesRoutes.RestoreAsync"
-    /// />.</para>
+    /// <para>The restore error object</para>
     /// </summary>
     public class RestoreError : enc.IEncodable<RestoreError>
     {
@@ -24,46 +23,46 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is DownloadError</para>
+        /// <para>Gets a value indicating whether this instance is PathLookup</para>
         /// </summary>
-        public bool IsDownloadError
+        public bool IsPathLookup
         {
             get
             {
-                return this is DownloadError;
+                return this is PathLookup;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a DownloadError, or <c>null</c>.</para>
+        /// <para>Gets this instance as a PathLookup, or <c>null</c>.</para>
         /// </summary>
-        public DownloadError AsDownloadError
+        public PathLookup AsPathLookup
         {
             get
             {
-                return this as DownloadError;
+                return this as PathLookup;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is CommitFailed</para>
+        /// <para>Gets a value indicating whether this instance is PathWrite</para>
         /// </summary>
-        public bool IsCommitFailed
+        public bool IsPathWrite
         {
             get
             {
-                return this is CommitFailed;
+                return this is PathWrite;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a CommitFailed, or <c>null</c>.</para>
+        /// <para>Gets this instance as a PathWrite, or <c>null</c>.</para>
         /// </summary>
-        public CommitFailed AsCommitFailed
+        public PathWrite AsPathWrite
         {
             get
             {
-                return this as CommitFailed;
+                return this as PathWrite;
             }
         }
 
@@ -89,6 +88,28 @@ namespace Dropbox.Api.Files
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Other</para>
+        /// </summary>
+        public bool IsOther
+        {
+            get
+            {
+                return this is Other;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
+        /// </summary>
+        public Other AsOther
+        {
+            get
+            {
+                return this as Other;
+            }
+        }
+
         #region IEncodable<RestoreError> methods
 
         /// <summary>
@@ -98,13 +119,13 @@ namespace Dropbox.Api.Files
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         void enc.IEncodable<RestoreError>.Encode(enc.IEncoder encoder)
         {
-            if (this.IsDownloadError)
+            if (this.IsPathLookup)
             {
-                ((enc.IEncodable<DownloadError>)this).Encode(encoder);
+                ((enc.IEncodable<PathLookup>)this).Encode(encoder);
             }
-            else if (this.IsCommitFailed)
+            else if (this.IsPathWrite)
             {
-                ((enc.IEncodable<CommitFailed>)this).Encode(encoder);
+                ((enc.IEncodable<PathWrite>)this).Encode(encoder);
             }
             else if (this.IsInvalidRevision)
             {
@@ -112,7 +133,7 @@ namespace Dropbox.Api.Files
             }
             else
             {
-                throw new sys.InvalidOperationException();
+                ((enc.IEncodable<Other>)this).Encode(encoder);
             }
         }
 
@@ -127,20 +148,20 @@ namespace Dropbox.Api.Files
         {
             switch (decoder.GetUnionName())
             {
-            case "download_error":
+            case "path_lookup":
                 using (var obj = decoder.GetObject())
                 {
-                    return new DownloadError(obj.GetFieldObject<Dropbox.Api.Files.DownloadError>("download_error"));
+                    return new PathLookup(obj.GetFieldObject<LookupError>("path_lookup"));
                 }
-            case "commit_failed":
+            case "path_write":
                 using (var obj = decoder.GetObject())
                 {
-                    return new CommitFailed(obj.GetFieldObject<CommitError>("commit_failed"));
+                    return new PathWrite(obj.GetFieldObject<WriteError>("path_write"));
                 }
             case "invalid_revision":
                 return InvalidRevision.Instance;
             default:
-                throw new sys.InvalidOperationException();
+                return Other.Instance;
             }
         }
 
@@ -149,14 +170,13 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>An error occurs when downloading metadata for the file.</para>
         /// </summary>
-        public sealed class DownloadError : RestoreError, enc.IEncodable<DownloadError>
+        public sealed class PathLookup : RestoreError, enc.IEncodable<PathLookup>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="DownloadError" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="PathLookup" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public DownloadError(Dropbox.Api.Files.DownloadError value)
+            public PathLookup(LookupError value)
             {
                 this.Value = value;
             }
@@ -164,18 +184,18 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Files.DownloadError Value { get; private set; }
+            public LookupError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<DownloadError>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<PathLookup>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "download_error");
-                    obj.AddField("download_error", this.Value);
+                    obj.AddField(".tag", "path_lookup");
+                    obj.AddField("path_lookup", this.Value);
                 }
             }
 
@@ -186,23 +206,22 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            DownloadError enc.IEncodable<DownloadError>.Decode(enc.IDecoder decoder)
+            PathLookup enc.IEncodable<PathLookup>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
         }
 
         /// <summary>
-        /// <para>The commit for the restore failed.</para>
+        /// <para>An error occurs when trying to restore the file to that path.</para>
         /// </summary>
-        public sealed class CommitFailed : RestoreError, enc.IEncodable<CommitFailed>
+        public sealed class PathWrite : RestoreError, enc.IEncodable<PathWrite>
         {
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="CommitFailed" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="PathWrite" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public CommitFailed(CommitError value)
+            public PathWrite(WriteError value)
             {
                 this.Value = value;
             }
@@ -210,18 +229,18 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public CommitError Value { get; private set; }
+            public WriteError Value { get; private set; }
 
             /// <summary>
             /// <para>Encodes the object using the supplied encoder.</para>
             /// </summary>
             /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<CommitFailed>.Encode(enc.IEncoder encoder)
+            void enc.IEncodable<PathWrite>.Encode(enc.IEncoder encoder)
             {
                 using (var obj = encoder.AddObject())
                 {
-                    obj.AddField(".tag", "commit_failed");
-                    obj.AddField("commit_failed", this.Value);
+                    obj.AddField(".tag", "path_write");
+                    obj.AddField("path_write", this.Value);
                 }
             }
 
@@ -232,7 +251,7 @@ namespace Dropbox.Api.Files
             /// <returns>The deserialized object. Note: this is not necessarily the current
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            CommitFailed enc.IEncodable<CommitFailed>.Decode(enc.IDecoder decoder)
+            PathWrite enc.IEncodable<PathWrite>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }
@@ -277,6 +296,49 @@ namespace Dropbox.Api.Files
             /// instance.</returns>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
             InvalidRevision enc.IEncodable<InvalidRevision>.Decode(enc.IDecoder decoder)
+            {
+                throw new sys.InvalidOperationException("Decoding happens through the base class");
+            }
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : RestoreError, enc.IEncodable<Other>
+        {
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
+            /// </summary>
+            private Other()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Other</para>
+            /// </summary>
+            public static readonly Other Instance = new Other();
+
+            /// <summary>
+            /// <para>Encodes the object using the supplied encoder.</para>
+            /// </summary>
+            /// <param name="encoder">The encoder being used to serialize the object.</param>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            {
+                using (var obj = encoder.AddObject())
+                {
+                    obj.AddField(".tag", "other");
+                }
+            }
+
+            /// <summary>
+            /// <para>Decodes on object using the supplied decoder.</para>
+            /// </summary>
+            /// <param name="decoder">The decoder used to deserialize the object.</param>
+            /// <returns>The deserialized object. Note: this is not necessarily the current
+            /// instance.</returns>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
             {
                 throw new sys.InvalidOperationException("Decoding happens through the base class");
             }

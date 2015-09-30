@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Information returned by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />.</para>
+    /// <para>The list folder result object</para>
     /// </summary>
     public sealed class ListFolderResult : enc.IEncodable<ListFolderResult>
     {

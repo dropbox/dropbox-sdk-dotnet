@@ -11,16 +11,14 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Arguments for <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync"
-    /// />.</para>
+    /// <para>The list folder arg object</para>
     /// </summary>
     public sealed class ListFolderArg : enc.IEncodable<ListFolderArg>
     {
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path to the folder you want to see the contents of. May be
-        /// the root (i.e. empty).</param>
+        /// <param name="path">The path to the folder you want to see the contents of.</param>
         /// <param name="recursive">If true, list folder operation will be applied recursively
         /// to all subfolders. And the response will contain contents of all subfolders</param>
         public ListFolderArg(string path,
@@ -29,6 +27,10 @@ namespace Dropbox.Api.Files
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
+            }
+            else if (!re.Regex.IsMatch(path, @"(/.*)?"))
+            {
+                throw new sys.ArgumentOutOfRangeException("path");
             }
 
             this.Path = path;
@@ -46,8 +48,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The path to the folder you want to see the contents of. May be the root (i.e.
-        /// empty).</para>
+        /// <para>The path to the folder you want to see the contents of.</para>
         /// </summary>
         public string Path { get; private set; }
 

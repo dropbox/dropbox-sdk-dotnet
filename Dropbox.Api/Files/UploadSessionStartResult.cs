@@ -11,8 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The result of <see
-    /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+    /// <para>The upload session start result object</para>
     /// </summary>
     public sealed class UploadSessionStartResult : enc.IEncodable<UploadSessionStartResult>
     {
