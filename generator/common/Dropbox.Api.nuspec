@@ -2,8 +2,8 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.1.2-beta</version>
-    <title>Dropbox v2 API</title>
+    <version>1.1.2</version>
+    <title>Dropbox v2 API Beta</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
     <licenseUrl>https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE</licenseUrl>
