@@ -1,4 +1,4 @@
-﻿//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 // <copyright file="DropboxOAuth2Helper.cs" company="Dropbox Inc">
 //  Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
@@ -7,9 +7,9 @@
 namespace Dropbox.Api
 {
     using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Text;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -210,8 +210,6 @@ using System.Text;
                 throw new ArgumentNullException("redirectUri");
             }
 
-            var dict = new Dictionary<string, string>();
-
             var queryBuilder = new StringBuilder();
 
             queryBuilder.Append("response_type=");
@@ -249,8 +247,10 @@ using System.Text;
                 queryBuilder.Append("&disable_signup=true");
             }
 
-            var uriBuilder = new UriBuilder("https://www.dropbox.com/1/oauth2/authorize");
-            uriBuilder.Query = queryBuilder.ToString();
+            var uriBuilder = new UriBuilder("https://www.dropbox.com/1/oauth2/authorize")
+            {
+                Query = queryBuilder.ToString()
+            };
 
             return uriBuilder.Uri;
         }
@@ -271,15 +271,15 @@ using System.Text;
             var fragment = redirectedUri.Fragment;
             if (string.IsNullOrWhiteSpace(fragment))
             {
-                throw new ArgumentException("redirectedUri", "The supplied uri doesn't contain a fragment");
+                throw new ArgumentException("The supplied uri doesn't contain a fragment", "redirectedUri");
             }
 
             fragment = fragment.TrimStart('#');
 
-            string access_token = null;
+            string accessToken = null;
             string uid = null;
             string state = null;
-            string token_type = null;
+            string tokenType = null;
 
             foreach (var pair in fragment.Split('&'))
             {
@@ -289,11 +289,10 @@ using System.Text;
                     continue;
                 }
 
-
                 switch (elements[0])
                 {
                     case "access_token":
-                        access_token = Uri.UnescapeDataString(elements[1]);
+                        accessToken = Uri.UnescapeDataString(elements[1]);
                         break;
                     case "uid":
                         uid = Uri.UnescapeDataString(elements[1]);
@@ -302,14 +301,14 @@ using System.Text;
                         state = Uri.UnescapeDataString(elements[1]);
                         break;
                     case "token_type":
-                        token_type = Uri.UnescapeDataString(elements[1]);
+                        tokenType = Uri.UnescapeDataString(elements[1]);
                         break;
                     default:
-                        throw new ArgumentException("redirectedUri", "Unexpected values in fragment");
+                        throw new ArgumentException("Unexpected values in fragment", "redirectedUri");
                 }
             }
 
-            return new OAuth2Response(access_token, uid, state, token_type);
+            return new OAuth2Response(accessToken, uid, state, tokenType);
         }
 
         /// <summary>
@@ -325,7 +324,7 @@ using System.Text;
         /// again.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
         /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
-        public async static Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret, string redirectUri, HttpClient client = null)
+        public async static Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret, string redirectUri = null, HttpClient client = null)
         {
             if (string.IsNullOrEmpty(code))
             {
@@ -343,15 +342,20 @@ using System.Text;
             var httpClient = client ?? new HttpClient();
             try
             {
-                var content = new FormUrlEncodedContent(
-                    new Dictionary<string, string>
-                    {
-                        {"code", code},
-                        {"grant_type", "authorization_code"},
-                        {"client_id", appKey},
-                        {"client_secret", appSecret},
-                        {"redirect_uri", redirectUri}
-                    });
+                var parameters = new Dictionary<string, string>
+                {
+                    {"code", code},
+                    {"grant_type", "authorization_code"},
+                    {"client_id", appKey},
+                    {"client_secret", appSecret}
+                };
+
+                if (!string.IsNullOrEmpty(redirectUri))
+                {
+                    parameters["redirect_uri"] = redirectUri;
+                }
+
+                var content = new FormUrlEncodedContent(parameters);
                 var response = await httpClient.PostAsync("https://api.dropbox.com/1/oauth2/token", content);
 
                 var raw = await response.Content.ReadAsStringAsync();
@@ -386,7 +390,7 @@ using System.Text;
         /// <param name="state">The state parameter (if any) that matches that used in the initial authorize URI.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
         /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
-        public static Task<OAuth2Response> ProcessCodeFlowAsync(Uri responseUri, string appKey, string appSecret, string redirectUri, string state = null, HttpClient client = null)
+        public static Task<OAuth2Response> ProcessCodeFlowAsync(Uri responseUri, string appKey, string appSecret, string redirectUri = null, string state = null, HttpClient client = null)
         {
             if (responseUri == null)
             {
@@ -404,7 +408,7 @@ using System.Text;
             var query = responseUri.Query;
             if (string.IsNullOrEmpty(query))
             {
-                throw new ArgumentException("responseUri", "The redirect uri is missing expected query arguments.");
+                throw new ArgumentException("The redirect uri is missing expected query arguments.", "responseUri");
             }
 
             query = query.TrimStart('?');
@@ -429,23 +433,17 @@ using System.Text;
                         }
                         else if(state != Uri.UnescapeDataString(elements[1]))
                         {
-                            throw new ArgumentException(
-                                "responseUri",
-                                "The state in the responseUri does not match the provided value.");
+                            throw new ArgumentException("The state in the responseUri does not match the provided value.", "responseUri");
                         }
                         break;
                     default:
-                        throw new ArgumentException(
-                            "responseUri",
-                            "The responseUri contains unexpected values in the query component.");
+                        throw new ArgumentException("The responseUri contains unexpected values in the query component.", "responseUri");
                 }
             }
 
             if (string.IsNullOrEmpty(code))
             {
-                throw new ArgumentException(
-                    "responseUri",
-                    "The responseUri is missing a code value in the query component.");
+                throw new ArgumentException("The responseUri is missing a code value in the query component.", "responseUri");
             }
 
             return ProcessCodeFlowAsync(code, appKey, appSecret, redirectUri, client);
@@ -460,21 +458,21 @@ using System.Text;
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuth2Response"/> class.
         /// </summary>
-        /// <param name="access_token">The access_token.</param>
+        /// <param name="accessToken">The access_token.</param>
         /// <param name="uid">The uid.</param>
         /// <param name="state">The state.</param>
-        /// <param name="token_type">The token_type.</param>
-        internal OAuth2Response(string access_token, string uid, string state, string token_type)
+        /// <param name="tokenType">The token_type.</param>
+        internal OAuth2Response(string accessToken, string uid, string state, string tokenType)
         {
-            if (string.IsNullOrEmpty(access_token) || string.IsNullOrEmpty(uid))
+            if (string.IsNullOrEmpty(accessToken) || string.IsNullOrEmpty(uid))
             {
                 throw new ArgumentException("Invalid OAuth 2.0 response, missing access_token and/or uid.");
             }
 
-            this.AccessToken = access_token;
+            this.AccessToken = accessToken;
             this.Uid = uid;
             this.State = state;
-            this.TokenType = token_type;
+            this.TokenType = tokenType;
         }
 
         /// <summary>

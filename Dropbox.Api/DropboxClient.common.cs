@@ -84,7 +84,7 @@ namespace Dropbox.Api
         /// <summary>
         /// The base user agent, used to construct all user agent strings.
         /// </summary>
-        private const string BaseUserAgent = "OfficialDropboxDotNetV2SDK";
+        private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
 
         /// <summary>
         /// The maximum retries on a 5xx error.

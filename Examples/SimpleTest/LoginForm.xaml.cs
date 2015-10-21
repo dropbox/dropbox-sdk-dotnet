@@ -1,4 +1,4 @@
-﻿using Dropbox.Api;
+using Dropbox.Api;
 using System;
 using System.Collections.Generic;
 using System.Globalization;

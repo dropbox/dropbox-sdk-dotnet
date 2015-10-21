@@ -1,4 +1,4 @@
-﻿namespace SimpleTest
+namespace SimpleTest
 {
     using System;
     using System.Linq;
@@ -34,8 +34,8 @@
         {
             InitializeCertPinning();
 
-            var access_token = await this.GetAccessToken();
-            if (string.IsNullOrEmpty(access_token))
+            var accessToken = await this.GetAccessToken();
+            if (string.IsNullOrEmpty(accessToken))
             {
                 return 1;
             }
@@ -49,7 +49,7 @@
                 Timeout = TimeSpan.FromMinutes(20)
             };
 
-            this.client = new DropboxClient(access_token, userAgent: "SimpleTestApp", httpClient: httpClient);
+            this.client = new DropboxClient(accessToken, userAgent: "SimpleTestApp", httpClient: httpClient);
 
             try
             {
@@ -110,9 +110,9 @@
             }
             Console.WriteLine();
 
-            var access_token = Settings.Default.AccessToken;
+            var accessToken = Settings.Default.AccessToken;
 
-            if (string.IsNullOrEmpty(access_token))
+            if (string.IsNullOrEmpty(accessToken))
             {
                 Console.WriteLine("Waiting for credentials.");
                 var completion = new TaskCompletionSource<Tuple<string, string>>();
@@ -146,11 +146,11 @@
                     var result = await completion.Task;
                     Console.WriteLine("and back...");
 
-                    access_token = result.Item1;
+                    accessToken = result.Item1;
                     var uid = result.Item2;
                     Console.WriteLine("Uid: {0}", uid);
 
-                    Settings.Default.AccessToken = access_token;
+                    Settings.Default.AccessToken = accessToken;
                     Settings.Default.Uid = uid;
 
                     Settings.Default.Save();
@@ -163,7 +163,7 @@
                 }
             }
 
-            return access_token;
+            return accessToken;
         }
 
         /// <summary>
