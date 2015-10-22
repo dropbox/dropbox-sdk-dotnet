@@ -1,4 +1,4 @@
-﻿<Window x:Class="SimpleTest.LoginForm"
+<Window x:Class="SimpleTest.LoginForm"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Authenticate" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow"

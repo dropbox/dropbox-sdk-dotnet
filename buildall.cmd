@@ -3,6 +3,7 @@
 SETLOCAL EnableDelayedExpansion
 
 SET PRE=
+SET PYTHONPATH=babel
 
 :run
 
@@ -24,19 +25,13 @@ IF NOT "%ERRORLEVEL%" == "0" (
     GOTO :eof
 )
 
-where babelapi /q
-IF NOT "%ERRORLEVEL%" == "0" (
-    echo Cannot find babelapi.exe, do you need to check your path?
-    GOTO :eof
-)
-
 echo Generating Dropbox.Api...
 
 SET BABEL_LIST=
 
 FOR %%f IN (spec\*.babel) DO SET BABEL_LIST=%%f !BABEL_LIST!
 
-%PRE% babelapi generator\csharp.babelg.py !BABEL_LIST! dropbox-sdk-dotnet\Dropbox.Api --clean-build
+%PRE% python -m babelapi.cli generator\csharp.babelg.py !BABEL_LIST! dropbox-sdk-dotnet\Dropbox.Api --clean-build
 
 SET SOLUTION_DIR="dropbox-sdk-dotnet"
 

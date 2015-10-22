@@ -1,4 +1,4 @@
-﻿using Dropbox.Api;
+using Dropbox.Api;
 using SimpleBlogDemo.Models;
 using System;
 using System.Collections.Generic;

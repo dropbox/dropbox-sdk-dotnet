@@ -1,4 +1,4 @@
-﻿namespace UniversalDemo.ViewModel
+namespace UniversalDemo.ViewModel
 {
     using System;
     using System.Collections.ObjectModel;
