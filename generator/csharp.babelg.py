@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+import argparse
 import imp
 import itertools
 import os
@@ -32,6 +33,18 @@ from babelapi.data_type import (
     is_void_type,
 )
 from babelapi.generator import CodeGenerator
+
+cmdline_desc = """\
+Generate .NET project for Dropbox Api.
+"""
+
+_cmdline_parser = argparse.ArgumentParser(description=cmdline_desc)
+_cmdline_parser.add_argument(
+    '-l',
+    '--link',
+    action='store_true',
+    help='Link instead of copy files',
+)
 
 try:
     from csproj import make_csproj_file
@@ -83,6 +96,8 @@ class CSharpGenerator(CodeGenerator):
         'var', 'virtual', 'void', 'volatile', 'where', 'while', 'yield',
     })
 
+    cmdline_parser = _cmdline_parser
+
     def __init__(self, *args, **kwargs):
         super(CSharpGenerator, self).__init__(*args, **kwargs)
         self._prefixes = []
@@ -92,7 +107,7 @@ class CSharpGenerator(CodeGenerator):
         self._generated_files = []
         self._tag_context = None
 
-    def generate(self, api):
+    def generate(self, api):        
         for namespace in api.namespaces.itervalues():
             self._compute_related_types(namespace)
             self._generate_namespace(namespace)
@@ -772,9 +787,9 @@ class CSharpGenerator(CodeGenerator):
         """
         files = [f for f in self._generated_files if f.endswith('.cs')]
         with self.output_to_relative_path('Dropbox.Api.csproj'):
-            self.emit_raw(make_csproj_file(files, is_doc=False))
+            self.emit_raw(make_csproj_file(files, is_doc=False, link=self.args.link))
         with self.output_to_relative_path('Dropbox.Api.Doc.csproj'):
-            self.emit_raw(make_csproj_file(files, is_doc=True))
+            self.emit_raw(make_csproj_file(files, is_doc=True, link=self.args.link))
 
     def _copy_common_files(self):
         """

@@ -22,6 +22,11 @@ COMPILE_INCLUDES = [
     "Properties\\AssemblyInfo.cs",
 ]
 
+NONE_INCLUDES = [
+    "babel_summaries.xml",
+    "app.config",
+    "packages.config",        
+]
 
 CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -96,13 +101,8 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 """
 
 
-CSPROJ_END_BLOCK = r"""<ItemGroup>
-    <None Include="babel_summaries.xml" />
+CSPROJ_END_BLOCK = r"""  <ItemGroup>
     <None Include="namespace_summaries.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
@@ -174,8 +174,7 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 
 
 DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
-    <Content Include="babel_summaries.xml" />
-    <Content Include="namespace_summaries.xml" />
+    <None Include="namespace_summaries.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -188,19 +187,31 @@ DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
 </Project>
 """
 
+LINK_PREFIX = "..\\..\\generator\\common\\"
 
-def make_csproj_file(files, is_doc = False):
+def _include_items(buffer, item_type, paths, link):
+    prefix =  LINK_PREFIX if link else ""
+    buffer.write('  <ItemGroup>\n')
+    for path in paths:
+    	buffer.write('    <{0} Include="{1}{2}"'.format(item_type, prefix, path))
+    	if link:
+            buffer.write('>\n      <Link>{0}</Link>\n'.format(path))
+            buffer.write('    </{0}>\n'.format(item_type))
+        else:
+            buffer.write(' />\n')
+    buffer.write('  </ItemGroup>\n')
+
+def make_csproj_file(files, is_doc=False, link=False):
     compile = []
     compile.extend(COMPILE_INCLUDES)
-    compile.extend(files)
-
+    
     buffer = StringIO()
     buffer.write(DOC_CSPROJ_START_BLOCK if is_doc else CSPROJ_START_BLOCK)
-    buffer.write('  <ItemGroup>\n')
-    for f in sorted(compile):
-        buffer.write('    <Compile Include="{0}" />\n'.format(f))
-    buffer.write('  </ItemGroup>\n')
+    
+    _include_items(buffer, 'Compile', COMPILE_INCLUDES, link)
+    _include_items(buffer, 'Compile', sorted(files), False)
+    _include_items(buffer, 'None', NONE_INCLUDES, link)
+ 
     buffer.write(DOC_CSPROJ_END_BLOCK if is_doc else CSPROJ_END_BLOCK)
 
     return buffer.getvalue()
-
