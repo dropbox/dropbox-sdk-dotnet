@@ -205,7 +205,8 @@ namespace Dropbox.Api
             {
                 throw new ArgumentNullException("clientId");
             }
-            else if (redirectUri == null && oauthResponseType != OAuthResponseType.Code)
+            
+            if (redirectUri == null && oauthResponseType != OAuthResponseType.Code)
             {
                 throw new ArgumentNullException("redirectUri");
             }
@@ -253,6 +254,20 @@ namespace Dropbox.Api
             };
 
             return uriBuilder.Uri;
+        }
+
+        /// <summary>
+        /// Gets the URI used to start the OAuth2.0 authorization flow which doesn't require a redirect URL.
+        /// </summary>
+        /// <param name="clientId">The apps key, found in the
+        /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
+        /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
+        /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
+        /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
+        /// <returns>The uri of a web page which must be displayed to the user inorder to authorize the app.</returns>
+        public static Uri GetAuthorizeUri(string clientId, bool disableSignup = false)
+        {
+            return GetAuthorizeUri(OAuthResponseType.Code, clientId, (Uri)null, disableSignup: disableSignup);
         }
 
         /// <summary>
