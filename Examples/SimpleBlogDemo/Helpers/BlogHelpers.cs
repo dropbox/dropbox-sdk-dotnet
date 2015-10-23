@@ -1,4 +1,4 @@
-﻿namespace SimpleBlogDemo.Helpers
+namespace SimpleBlogDemo.Helpers
 {
     using System;
     using System.Collections.Generic;
@@ -53,7 +53,9 @@
             }
             catch (ApiException<DownloadError> e)
             {
-                if (e.ErrorResponse.IsNoFile)
+                var pathError = e.ErrorResponse.AsPath;
+
+                if (pathError != null && pathError.Value.IsNotFile)
                 {
                     return null;
                 }

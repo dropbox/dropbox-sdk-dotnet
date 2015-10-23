@@ -228,20 +228,14 @@ namespace Dropbox.Api.Files
             switch (decoder.GetUnionName())
             {
             case "from_lookup":
-                using (var obj = decoder.GetObject())
-                {
-                    return new FromLookup(obj.GetFieldObject<LookupError>("from_lookup"));
-                }
+                var fromLookup = new LookupError();
+                return new FromLookup(((enc.IEncodable<LookupError>)fromLookup).Decode(decoder));
             case "from_write":
-                using (var obj = decoder.GetObject())
-                {
-                    return new FromWrite(obj.GetFieldObject<WriteError>("from_write"));
-                }
+                var fromWrite = new WriteError();
+                return new FromWrite(((enc.IEncodable<WriteError>)fromWrite).Decode(decoder));
             case "to":
-                using (var obj = decoder.GetObject())
-                {
-                    return new To(obj.GetFieldObject<WriteError>("to"));
-                }
+                var to = new WriteError();
+                return new To(((enc.IEncodable<WriteError>)to).Decode(decoder));
             case "cant_copy_shared_folder":
                 return CantCopySharedFolder.Instance;
             case "cant_nest_shared_folder":

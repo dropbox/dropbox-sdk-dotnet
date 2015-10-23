@@ -124,15 +124,11 @@ namespace Dropbox.Api.Users
             switch (decoder.GetUnionName())
             {
             case "individual":
-                using (var obj = decoder.GetObject())
-                {
-                    return new Individual(obj.GetFieldObject<IndividualSpaceAllocation>("individual"));
-                }
+                var individual = new IndividualSpaceAllocation();
+                return new Individual(((enc.IEncodable<IndividualSpaceAllocation>)individual).Decode(decoder));
             case "team":
-                using (var obj = decoder.GetObject())
-                {
-                    return new Team(obj.GetFieldObject<TeamSpaceAllocation>("team"));
-                }
+                var team = new TeamSpaceAllocation();
+                return new Team(((enc.IEncodable<TeamSpaceAllocation>)team).Decode(decoder));
             default:
                 return Other.Instance;
             }

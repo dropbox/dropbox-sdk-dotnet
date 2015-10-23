@@ -1,4 +1,4 @@
-﻿//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 // <copyright file="JsonDecoder.cs" company="Dropbox Inc">
 //  Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>

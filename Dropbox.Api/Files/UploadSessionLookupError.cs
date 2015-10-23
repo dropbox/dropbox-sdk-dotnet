@@ -152,10 +152,8 @@ namespace Dropbox.Api.Files
             case "not_found":
                 return NotFound.Instance;
             case "incorrect_offset":
-                using (var obj = decoder.GetObject())
-                {
-                    return new IncorrectOffset(obj.GetFieldObject<UploadSessionOffsetError>("incorrect_offset"));
-                }
+                var incorrectOffset = new UploadSessionOffsetError();
+                return new IncorrectOffset(((enc.IEncodable<UploadSessionOffsetError>)incorrectOffset).Decode(decoder));
             case "closed":
                 return Closed.Instance;
             default:

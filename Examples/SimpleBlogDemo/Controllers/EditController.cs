@@ -1,4 +1,4 @@
-﻿namespace SimpleBlogDemo.Controllers
+namespace SimpleBlogDemo.Controllers
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -82,10 +82,10 @@
                     }
                     catch (ApiException<UploadError> e)
                     {
-                        var uploadError = e.ErrorResponse;
-                        if (uploadError.IsCommitFailed)
+                        var uploadError = e.ErrorResponse.AsPath;
+                        if (uploadError != null)
                         {
-                            var reason = uploadError.AsCommitFailed.Value.Reason;
+                            var reason = uploadError.Value.Reason;
                             var id = filename.Split('.')[0];
 
                             var message = string.Format( "Unable to update {0}. Reason: {1}", id, reason);

@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+$(document).ready(function () {
     $('#preview').prop('disabled', false).click(function (e) {
         var markdown = $('#content').val();
         $.ajax('/Preview', {

@@ -1,4 +1,4 @@
-﻿namespace SimpleBlogDemo.Helpers
+namespace SimpleBlogDemo.Helpers
 {
     using System.Linq;
     using System.Text;

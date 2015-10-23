@@ -1,4 +1,4 @@
-﻿@using WebMatrix.WebData
+@using WebMatrix.WebData
 @if (WebSecurity.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))

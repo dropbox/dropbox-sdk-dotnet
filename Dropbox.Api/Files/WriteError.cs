@@ -206,10 +206,8 @@ namespace Dropbox.Api.Files
                     return new MalformedPath(obj.GetField<string>("malformed_path"));
                 }
             case "conflict":
-                using (var obj = decoder.GetObject())
-                {
-                    return new Conflict(obj.GetFieldObject<WriteConflictError>("conflict"));
-                }
+                var conflict = new WriteConflictError();
+                return new Conflict(((enc.IEncodable<WriteConflictError>)conflict).Decode(decoder));
             case "no_write_permission":
                 return NoWritePermission.Instance;
             case "insufficient_space":

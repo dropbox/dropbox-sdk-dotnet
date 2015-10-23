@@ -98,10 +98,8 @@ namespace Dropbox.Api.Sharing
             switch (decoder.GetUnionName())
             {
             case "path":
-                using (var obj = decoder.GetObject())
-                {
-                    return new Path(obj.GetFieldObject<Files.LookupError>("path"));
-                }
+                var path = new Files.LookupError();
+                return new Path(((enc.IEncodable<Files.LookupError>)path).Decode(decoder));
             default:
                 return Other.Instance;
             }

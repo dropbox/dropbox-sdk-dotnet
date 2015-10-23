@@ -123,15 +123,11 @@ namespace Dropbox.Api.Files
             switch (decoder.GetUnionName())
             {
             case "path_lookup":
-                using (var obj = decoder.GetObject())
-                {
-                    return new PathLookup(obj.GetFieldObject<LookupError>("path_lookup"));
-                }
+                var pathLookup = new LookupError();
+                return new PathLookup(((enc.IEncodable<LookupError>)pathLookup).Decode(decoder));
             case "path_write":
-                using (var obj = decoder.GetObject())
-                {
-                    return new PathWrite(obj.GetFieldObject<WriteError>("path_write"));
-                }
+                var pathWrite = new WriteError();
+                return new PathWrite(((enc.IEncodable<WriteError>)pathWrite).Decode(decoder));
             default:
                 return Other.Instance;
             }

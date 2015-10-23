@@ -8,7 +8,7 @@ To get started with Dropbox.NET, we recommend you add it to your project using N
 
 To install `Dropbox.Api`, run the following command in the Package Manager Console:
 
-```PM> Install-Package Dropbox.Api```
+```PM> Install-Package Dropbox.Api -Pre```
 
 ## Creating an application
 

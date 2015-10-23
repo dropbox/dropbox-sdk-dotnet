@@ -1,4 +1,4 @@
-﻿namespace UniversalDemo
+namespace UniversalDemo
 {
     using System;
     using UniversalDemo.ViewModel;

@@ -97,10 +97,8 @@ namespace Dropbox.Api.Files
             switch (decoder.GetUnionName())
             {
             case "path":
-                using (var obj = decoder.GetObject())
-                {
-                    return new Path(obj.GetFieldObject<UploadWriteFailed>("path"));
-                }
+                var path = new UploadWriteFailed();
+                return new Path(((enc.IEncodable<UploadWriteFailed>)path).Decode(decoder));
             default:
                 return Other.Instance;
             }
