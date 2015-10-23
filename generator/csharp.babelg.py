@@ -1478,6 +1478,12 @@ class CSharpGenerator(CodeGenerator):
                             public_field_name = self._public_name(field.name)
                             if is_void_type(field.data_type):
                                 self.emit('return {0}.Instance;'.format(public_field_name))
+                            elif is_composite_type(field.data_type):
+                                arg_name = self._arg_name(field.name)
+                                type_name = self._typename(field.data_type)
+                                self.emit('var {0} = new {1}();'.format(arg_name, type_name))                          
+                                self.emit('return new {0}(((enc.IEncodable<{1}>){2}).Decode(decoder));'.format(
+                                    public_field_name, type_name, arg_name))
                             else:
                                 with self.using('var obj = decoder.GetObject()'):
                                     method = self._get_decoder_method(field)
