@@ -49,14 +49,8 @@ Publishing a new SDK (This needs to be done on Windows)
 --------------------
 1. From the private repo, edit `generator/common/Dropbox.Api.nuspec` by updating version and release note.
 2. Run `buildall.cmd`.
-3. In `dropbox-sdk-dotnet/Dropbox.Api` run
-
-   ```
-   ..\.nuget\nuget.exe pack Dropbox.Api.csproj
-   ```
-
-   A .nukpg file will be generated in the same directory.
-4. Go to nuget.org to publish the package. Please ask around for the account credentials.
+   A .nukpg file will be generated in `Dropbox.Api` directory.
+3. Go to nuget.org to publish the package. Please ask around for the account credentials.
 
 Generating Docs
 ---------------
