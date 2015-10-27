@@ -12,7 +12,7 @@
 # test stuff
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
-
+App_Data/
 
 ## vim files
 *.un~
