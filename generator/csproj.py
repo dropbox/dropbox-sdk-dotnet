@@ -19,6 +19,7 @@ COMPILE_INCLUDES = [
     "DropboxCertHelper.cs",
     "DropboxClient.common.cs",
     "DropboxOauth2Helper.cs",
+    "DropboxRequestHandler.cs",
     "Properties\\AssemblyInfo.cs",
 ]
 

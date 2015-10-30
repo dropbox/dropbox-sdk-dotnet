@@ -112,7 +112,9 @@ class CSharpGenerator(CodeGenerator):
             self._compute_related_types(namespace)
             self._generate_namespace(namespace)
 
-        self._generate_dropbox_client(api)
+        self._generate_dropbox_client(api, 'DropboxClient', 'user')
+        self._generate_dropbox_client(api, 'DropboxTeamClient', 'team')
+
         self._generate_xml_doc(api)
         self._generate_csproj()
         self._copy_common_files()
@@ -810,7 +812,7 @@ class CSharpGenerator(CodeGenerator):
                             doc += '\n'
                         self.emit_raw(doc)
                             
-    def _generate_dropbox_client(self, api):
+    def _generate_dropbox_client(self, api, client_name, auth_type):
         """
         Generates a partial class for the DropboxClient, this only includes
         the route declarations and the route initialization, the rest of the
@@ -818,10 +820,19 @@ class CSharpGenerator(CodeGenerator):
 
         Args:
             api (babelapi.api.Api): The API specification.
+            client_name (str): The name of the client. e.g. DropboxClient, DropboxTeamClient
+            auth_type (str): The expected auth type for the client. e.g. User, Team
         """
-        ns_names = [self._public_name(ns.name) for ns in api.namespaces.itervalues()]
+        def get_auth_type(ns):
+            routes = ns.routes
+            if not routes:
+                return None
+            return routes[0].attrs.get('auth', 'user')
+            
+        ns_names = [self._public_name(ns.name) for ns in api.namespaces.itervalues()
+                    if get_auth_type(ns) == auth_type]
 
-        with self.output_to_relative_path('DropboxClient.cs'):
+        with self.output_to_relative_path('{0}.cs'.format(client_name)):
             self.auto_generated()
             with self.cs_block(before='namespace {}'.format(self.DEFAULT_NAMESPACE[:-1])):
                 self.emit('using sys = System;')
@@ -831,7 +842,7 @@ class CSharpGenerator(CodeGenerator):
                     self.emit('using {0}{1}.Routes;'.format(self.DEFAULT_NAMESPACE, ns_name))
                 self.emit()
 
-                with self.class_('DropboxClient', access='public sealed partial'):
+                with self.class_(client_name, access='public sealed partial'):
                     first = True
                     for ns_name in ns_names:
                         if first:
