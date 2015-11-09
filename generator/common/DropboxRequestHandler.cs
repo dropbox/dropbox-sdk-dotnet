@@ -19,136 +19,7 @@ namespace Dropbox.Api
     using System.Threading.Tasks;
 
     using Dropbox.Api.Babel;
-
-    /// <summary>
-    /// The known route styles
-    /// </summary>
-    internal enum RouteStyle
-    {
-        /// <summary>
-        /// RPC style means that the argument and result of a route are contained in the 
-        /// HTTP body.
-        /// </summary>
-        Rpc,
-
-        /// <summary>
-        /// Download style means that the route argument goes in a <c>Dropbox-API-Args</c>
-        /// header, and the result comes back in a <c>Dropbox-API-Result</c> header. The
-        /// HTTP response body contains a binary payload.
-        /// </summary>
-        Download,
-
-        /// <summary>
-        /// Upload style means that the route argument goes in a <c>Dropbox-API-Arg</c>
-        /// header. The HTTP request body contains a binary payload. The result comes
-        /// back in a <c>Dropbox-API-Result</c> header.
-        /// </summary>
-        Upload
-    }
-
-    /// <summary>
-    /// The type of api hosts.
-    /// </summary>
-    internal static class HostType
-    {
-        /// <summary>
-        /// Host type for api.
-        /// </summary>
-        public const string Api = "api";
-
-        /// <summary>
-        /// Host type for api content.
-        /// </summary>
-        public const string ApiContent = "content";
-    }
-
-    /// <summary>
-    /// The class which contains configurations for the request handler.
-    /// </summary>
-    internal sealed class DrpoboxRequestHandlerOptions
-    {
-        /// <summary>
-        /// The default api domain
-        /// </summary>
-        private const string DefaultApiDomain = "api-dbdev.dev.corp.dropbox.com";
-
-        /// <summary>
-        /// The default api content domain
-        /// </summary>
-        private const string DefaultApiContentDomain = "content.dropboxapi.com";
-
-        /// <summary>
-        /// The base user agent, used to construct all user agent strings.
-        /// </summary>
-        private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
-
-        /// <summary>
-        /// The default http client instance.
-        /// </summary>
-        private static readonly HttpClient DefaultHttpClient = new HttpClient();
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DrpoboxRequestHandlerOptions"/> class.
-        /// </summary>
-        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
-        /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="apiHostname">The hostname that will process api requests;
-        /// this is for internal Dropbox use only.</param>
-        /// <param name="apiContentHostname">The hostname that will process api content requests;
-        /// this is for internal Dropbox use only.</param>
-        /// <param name="httpClient">The custom http client. If not provided, a default 
-        /// http client will be created.</param>
-        public DrpoboxRequestHandlerOptions(
-            string oauth2AccessToken = null,
-            int maxRetriesOnError = 4,
-            string userAgent = null,
-            string apiHostname = DefaultApiDomain,
-            string apiContentHostname = DefaultApiContentDomain,
-            HttpClient httpClient = null)
-        {
-            var name = new AssemblyName(typeof(DrpoboxRequestHandlerOptions).Assembly.FullName);
-            var sdkVersion = name.Version.ToString();
-
-            this.UserAgent = userAgent == null
-                ? string.Join("/", BaseUserAgent, sdkVersion)
-                : string.Join("/", UserAgent, BaseUserAgent, sdkVersion);
-
-            this.HttpClient = httpClient ?? DefaultHttpClient;
-            this.OAuth2AccessToken = oauth2AccessToken;
-            this.MaxClientRetries = maxRetriesOnError;
-            this.HostMap = new Dictionary<string, string>
-            {
-                { HostType.Api, apiHostname },
-                { HostType.ApiContent, apiContentHostname }
-            };
-        }
-
-        /// <summary>
-        /// Gets the maximum retries on a 5xx error.
-        /// </summary>
-        public int MaxClientRetries { get; private set; }
-
-        /// <summary>
-        /// Gets the OAuth2 token.
-        /// </summary>
-        public string OAuth2AccessToken { get; private set; }
-
-        /// <summary>
-        /// Gets the HTTP client use to send requests to the server.
-        /// </summary>
-        public HttpClient HttpClient { get; private set; }
-
-        /// <summary>
-        /// Gets the user agent string.
-        /// </summary>
-        public string UserAgent { get; private set; }
-
-        /// <summary>
-        /// Gets the maps from host types to domain names.
-        /// </summary>
-        public IDictionary<string, string> HostMap { get; private set; }
-    }
+    using Newtonsoft.Json.Linq;
 
     /// <summary>
     /// The object used to to make requests to the Dropbox API.
@@ -199,35 +70,29 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Sends the RPC request asynchronously.
+        /// The known route styles
         /// </summary>
-        /// <typeparam name="TRequest">The type of the request.</typeparam>
-        /// <typeparam name="TResponse">The type of the response.</typeparam>
-        /// <typeparam name="TError">The type of the error.</typeparam>
-        /// <param name="request">The request.</param>
-        /// <param name="host">The server host to send the request to.</param>
-        /// <param name="route">The route name.</param>
-        /// <returns>
-        /// An asynchronous task for the response.
-        /// </returns>
-        /// <exception cref="ApiException{TError}">
-        /// This exception is thrown when there is an error reported by the server.
-        /// </exception>
-        async Task<TResponse> ITransport.SendRpcRequestAsync<TRequest, TResponse, TError>(
-            TRequest request,
-            string host,
-            string route)
+        internal enum RouteStyle
         {
-            var serializedArg = JsonEncoder.Encode(request);
+            /// <summary>
+            /// RPC style means that the argument and result of a route are contained in the 
+            /// HTTP body.
+            /// </summary>
+            Rpc,
 
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Rpc, serializedArg);
+            /// <summary>
+            /// Download style means that the route argument goes in a <c>Dropbox-API-Args</c>
+            /// header, and the result comes back in a <c>Dropbox-API-Result</c> header. The
+            /// HTTP response body contains a binary payload.
+            /// </summary>
+            Download,
 
-            if (res.IsError)
-            {
-                throw JsonDecoder.Decode<ApiException<TError>>(res.ObjectResult);
-            }
-
-            return JsonDecoder.Decode<TResponse>(res.ObjectResult);
+            /// <summary>
+            /// Upload style means that the route argument goes in a <c>Dropbox-API-Arg</c>
+            /// header. The HTTP request body contains a binary payload. The result comes
+            /// back in a <c>Dropbox-API-Result</c> header.
+            /// </summary>
+            Upload
         }
 
         /// <summary>
@@ -237,12 +102,48 @@ namespace Dropbox.Api
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         /// <typeparam name="TError">The type of the error.</typeparam>
         /// <param name="request">The request.</param>
-        /// <param name="body">The document to upload.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
-        /// <returns>
-        /// An asynchronous task for the response.
-        /// </returns>
+        /// <param name="requestEncoder">The request encoder.</param>
+        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="errorDecoder">The error decoder.</param>
+        /// <returns>An asynchronous task for the response.</returns>
+        /// <exception cref="ApiException{TError}">
+        /// This exception is thrown when there is an error reported by the server.
+        /// </exception>
+        async Task<TResponse> ITransport.SendRpcRequestAsync<TRequest, TResponse, TError>(
+            TRequest request,
+            string host,
+            string route,
+            IEncoder<TRequest> requestEncoder,
+            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TError> errorDecoder)
+        {
+            var serializedArg = JsonWriter.Write(request, requestEncoder);
+            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Rpc, serializedArg);
+
+            if (res.IsError)
+            {
+                throw ApiException<TError>.Decode(res.ObjectResult, errorDecoder);
+            }
+
+            return JsonReader.Read(res.ObjectResult, resposneDecoder);
+        }
+
+        /// <summary>
+        /// Sends the upload request asynchronously.
+        /// </summary>
+        /// <typeparam name="TRequest">The type of the request.</typeparam>
+        /// <typeparam name="TResponse">The type of the response.</typeparam>
+        /// <typeparam name="TError">The type of the error.</typeparam>
+        /// <param name="request">The request.</param>
+        /// <param name="body">The content to be uploaded.</param>
+        /// <param name="host">The server host to send the request to.</param>
+        /// <param name="route">The route name.</param>
+        /// <param name="requestEncoder">The request encoder.</param>
+        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="errorDecoder">The error decoder.</param>
+        /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
         /// This exception is thrown when there is an error reported by the server.
         /// </exception>
@@ -250,17 +151,20 @@ namespace Dropbox.Api
             TRequest request,
             Stream body,
             string host,
-            string route)
+            string route,
+            IEncoder<TRequest> requestEncoder,
+            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TError> errorDecoder)
         {
-            var serializedArg = JsonEncoder.Encode(request);
+            var serializedArg = JsonWriter.Write(request, requestEncoder);
             var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Upload, serializedArg, body);
 
             if (res.IsError)
             {
-                throw JsonDecoder.Decode<ApiException<TError>>(res.ObjectResult);
+                throw ApiException<TError>.Decode(res.ObjectResult, errorDecoder);
             }
 
-            return JsonDecoder.Decode<TResponse>(res.ObjectResult);
+            return JsonReader.Read(res.ObjectResult, resposneDecoder);
         }
 
         /// <summary>
@@ -272,26 +176,30 @@ namespace Dropbox.Api
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
-        /// <returns>
-        /// An asynchronous task for the response.
-        /// </returns>
+        /// <param name="requestEncoder">The request encoder.</param>
+        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="errorDecoder">The error decoder.</param>
+        /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
         /// This exception is thrown when there is an error reported by the server.
         /// </exception>
         async Task<IDownloadResponse<TResponse>> ITransport.SendDownloadRequestAsync<TRequest, TResponse, TError>(
             TRequest request,
             string host,
-            string route)
+            string route,
+            IEncoder<TRequest> requestEncoder,
+            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TError> errorDecoder)
         {
-            var serializedArg = JsonEncoder.Encode(request);
+            var serializedArg = JsonWriter.Write(request, requestEncoder);
             var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Download, serializedArg);
 
             if (res.IsError)
             {
-                throw JsonDecoder.Decode<ApiException<TError>>(res.ObjectResult);
+                throw ApiException<TError>.Decode(res.ObjectResult, errorDecoder);
             }
 
-            var response = JsonDecoder.Decode<TResponse>(res.ObjectResult);
+            var response = JsonReader.Read(res.ObjectResult, resposneDecoder);
             return new DownloadResponse<TResponse>(response, res.HttpResponse);
         }
 
@@ -393,13 +301,21 @@ namespace Dropbox.Api
         /// <returns>The contents of the error field if present, otherwise <paramref name="text" />.</returns>
         private string CheckForError(string text)
         {
-            Babel.Json.JsonObject obj;
-            if (Babel.Json.JsonObject.TryParse(text, out obj) && obj.ContainsKey("error"))
+            try 
             {
-                text = obj["error"].ToString();
-            }
+                var obj = JObject.Parse(text);
+                JToken error;
+                if (obj.TryGetValue("error", out error))
+                {
+                    return error.ToString();
+                }
 
-            return text;
+                return text;
+            }
+            catch (Exception)
+            {
+                return text;
+            }
         }
 
         /// <summary>
@@ -446,6 +362,7 @@ namespace Dropbox.Api
                     {
                         throw new ArgumentNullException("body");
                     }
+
                     request.Content = new StreamContent(body);
                     request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                     break;
@@ -582,7 +499,7 @@ namespace Dropbox.Api
         /// </summary>
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         private class DownloadResponse<TResponse> : IDownloadResponse<TResponse>
-            where TResponse : IEncodable<TResponse>, new()
+            where TResponse : new()
         {
             /// <summary>
             /// The HTTP response containing the body content.
@@ -643,5 +560,109 @@ namespace Dropbox.Api
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// The type of api hosts.
+    /// </summary>
+    internal class HostType
+    {
+        /// <summary>
+        /// Host type for api.
+        /// </summary>
+        public const string Api = "api";
+
+        /// <summary>
+        /// Host type for api content.
+        /// </summary>
+        public const string ApiContent = "content";
+    }
+
+    /// <summary>
+    /// The class which contains configurations for the request handler.
+    /// </summary>
+    internal sealed class DrpoboxRequestHandlerOptions
+    {
+        /// <summary>
+        /// The default api domain
+        /// </summary>
+        private const string DefaultApiDomain = "api.dropboxapi.com";
+
+        /// <summary>
+        /// The default api content domain
+        /// </summary>
+        private const string DefaultApiContentDomain = "content.dropboxapi.com";
+
+        /// <summary>
+        /// The base user agent, used to construct all user agent strings.
+        /// </summary>
+        private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
+
+        /// <summary>
+        /// The default http client instance.
+        /// </summary>
+        private static readonly HttpClient DefaultHttpClient = new HttpClient();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DrpoboxRequestHandlerOptions"/> class.
+        /// </summary>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
+        /// <param name="userAgent">The user agent to use when making requests.</param>
+        /// <param name="apiHostname">The hostname that will process api requests;
+        /// this is for internal Dropbox use only.</param>
+        /// <param name="apiContentHostname">The hostname that will process api content requests;
+        /// this is for internal Dropbox use only.</param>
+        /// <param name="httpClient">The custom http client. If not provided, a default 
+        /// http client will be created.</param>
+        public DrpoboxRequestHandlerOptions(
+            string oauth2AccessToken = null,
+            int maxRetriesOnError = 4,
+            string userAgent = null,
+            string apiHostname = DefaultApiDomain,
+            string apiContentHostname = DefaultApiContentDomain,
+            HttpClient httpClient = null)
+        {
+            var name = new AssemblyName(typeof(DrpoboxRequestHandlerOptions).Assembly.FullName);
+            var sdkVersion = name.Version.ToString();
+
+            this.UserAgent = userAgent == null
+                ? string.Join("/", BaseUserAgent, sdkVersion)
+                : string.Join("/", this.UserAgent, BaseUserAgent, sdkVersion);
+
+            this.HttpClient = httpClient ?? DefaultHttpClient;
+            this.OAuth2AccessToken = oauth2AccessToken;
+            this.MaxClientRetries = maxRetriesOnError;
+            this.HostMap = new Dictionary<string, string>
+            {
+                { HostType.Api, apiHostname },
+                { HostType.ApiContent, apiContentHostname }
+            };
+        }
+
+        /// <summary>
+        /// Gets the maximum retries on a 5xx error.
+        /// </summary>
+        public int MaxClientRetries { get; private set; }
+
+        /// <summary>
+        /// Gets the OAuth2 token.
+        /// </summary>
+        public string OAuth2AccessToken { get; private set; }
+
+        /// <summary>
+        /// Gets the HTTP client use to send requests to the server.
+        /// </summary>
+        public HttpClient HttpClient { get; private set; }
+
+        /// <summary>
+        /// Gets the user agent string.
+        /// </summary>
+        public string UserAgent { get; private set; }
+
+        /// <summary>
+        /// Gets the maps from host types to domain names.
+        /// </summary>
+        public IDictionary<string, string> HostMap { get; private set; }
     }
 }

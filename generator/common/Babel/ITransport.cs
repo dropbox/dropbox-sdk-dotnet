@@ -25,14 +25,18 @@ namespace Dropbox.Api.Babel
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="requestEncoder">The request encoder.</param>
+        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         Task<TResponse> SendRpcRequestAsync<TRequest, TResponse, TError>(
             TRequest request,
             string host,
-            string route)
-                where TRequest : IEncodable<TRequest>, new()
-                where TResponse : IEncodable<TResponse>, new()
-                where TError : IEncodable<TError>, new();
+            string route,
+            IEncoder<TRequest> requestEncoder,
+            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TError> errorDecoder)
+                where TResponse : new();
 
         /// <summary>
         /// Sends the upload request asynchronously.
@@ -44,15 +48,19 @@ namespace Dropbox.Api.Babel
         /// <param name="body">The content to be uploaded.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="requestEncoder">The request encoder.</param>
+        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         Task<TResponse> SendUploadRequestAsync<TRequest, TResponse, TError>(
             TRequest request,
             Stream body,
             string host,
-            string route)
-                where TRequest : IEncodable<TRequest>, new()
-                where TResponse : IEncodable<TResponse>, new()
-                where TError : IEncodable<TError>, new();
+            string route,
+            IEncoder<TRequest> requestEncoder,
+            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TError> errorDecoder)
+                where TResponse : new();
 
         /// <summary>
         /// Sends the download request asynchronously.
@@ -63,14 +71,18 @@ namespace Dropbox.Api.Babel
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="requestEncoder">The request encoder.</param>
+        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         Task<IDownloadResponse<TResponse>> SendDownloadRequestAsync<TRequest, TResponse, TError>(
             TRequest request,
             string host,
-            string route)
-                where TRequest : IEncodable<TRequest>, new()
-                where TResponse : IEncodable<TResponse>, new()
-                where TError : IEncodable<TError>, new();
+            string route,
+            IEncoder<TRequest> requestEncoder,
+            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TError> errorDecoder)
+                where TResponse : new();
     }
 
     /// <summary>
@@ -79,7 +91,7 @@ namespace Dropbox.Api.Babel
     /// </summary>
     /// <typeparam name="TResponse">The type of the response.</typeparam>
     public interface IDownloadResponse<TResponse> : IDisposable
-        where TResponse : IEncodable<TResponse>, new()
+        where TResponse : new()
     {
         /// <summary>
         /// Gets the response.

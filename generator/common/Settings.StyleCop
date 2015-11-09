@@ -3,6 +3,11 @@
     <CollectionProperty Name="RecognizedWords">
       <Value>Dropbox</Value>
       <Value>oauth</Value>
+      <Value>Auth</Value>
+      <Value>api</Value>
+      <Value>int</Value>
+      <Value>json</Value>
+      <Value>uid</Value>
     </CollectionProperty>
   </GlobalSettings>
   <Analyzers>
@@ -11,6 +16,16 @@
         <StringProperty Name="CompanyName">Dropbox Inc</StringProperty>
         <StringProperty Name="Copyright">Copyright (c) Dropbox Inc. All rights reserved.</StringProperty>
       </AnalyzerSettings>
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.MaintainabilityRules">
+      <Rules>
+        <Rule Name="FileMayOnlyContainASingleClass">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
     </Analyzer>
   </Analyzers>
 </StyleCopSettings>

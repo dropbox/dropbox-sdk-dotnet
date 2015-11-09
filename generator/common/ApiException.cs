@@ -15,13 +15,12 @@ namespace Dropbox.Api
     /// implementation if there is an error processing the request.
     /// </summary>
     /// <typeparam name="TError">The type of the error.</typeparam>
-    public sealed class ApiException<TError> : Exception, IEncodable<ApiException<TError>>
-        where TError : IEncodable<TError>, new()
+    public sealed class ApiException<TError> : Exception
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiException{TError}"/> class.
         /// </summary>
-        /// <remarks>This constructor is only used when deserializing from JSON.</remarks>
+        /// <remarks>This constructor is only used when decoded from JSON.</remarks>
         public ApiException()
             : this(default(TError))
         {
@@ -56,6 +55,7 @@ namespace Dropbox.Api
             : base(message, inner)
         {
             this.ErrorResponse = errorResponse;
+            this.ErrorMessage = message;
         }
 
         /// <summary>
@@ -67,31 +67,78 @@ namespace Dropbox.Api
         public TError ErrorResponse { get; private set; }
 
         /// <summary>
-        /// Encodes the object using the supplied encoder.
+        /// Gets the exception message.
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        /// <exception cref="System.NotImplementedException"></exception>
-        void IEncodable<ApiException<TError>>.Encode(IEncoder encoder)
+        public override string Message
         {
-            throw new NotSupportedException("Exceptions cannot be encoded");
+            get { return this.ErrorMessage; }
         }
 
         /// <summary>
-        /// Decodes on object using the supplied decoder.
+        /// Gets or sets the error message.
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>
-        /// The deserialized object. Note: this is not necessarily the current instance.
-        /// </returns>
-        /// <exception cref="System.NotImplementedException"></exception>
-        ApiException<TError> IEncodable<ApiException<TError>>.Decode(IDecoder decoder)
+        private string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// Decode from given json using given decoder.
+        /// </summary>
+        /// <param name="json">The json.</param>
+        /// <param name="errorDecoder">The error json.</param>
+        /// <returns>The <see cref="ApiException{TError}"/></returns>
+        public static ApiException<TError> Decode(string json, IDecoder<TError> errorDecoder)
         {
-            using (var obj = decoder.GetObject())
+            return JsonReader.Read(json, new ApiExceptionDecoder(errorDecoder));
+        }
+
+        /// <summary>
+        /// The exception decoder.
+        /// </summary>
+        private class ApiExceptionDecoder : StructDecoder<ApiException<TError>>
+        {
+            /// <summary>
+            /// The error decoder.
+            /// </summary>
+            private readonly IDecoder<TError> errorDecoder;
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="ApiExceptionDecoder"/> class.
+            /// </summary>
+            /// <param name="errorDecoder">The error decoder.</param>
+            public ApiExceptionDecoder(IDecoder<TError> errorDecoder)
             {
-                this.ErrorResponse = obj.GetFieldObject<TError>("error");
+                this.errorDecoder = errorDecoder;
             }
 
-            return this;
+            /// <summary>
+            /// Create a struct instance.
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ApiException<TError> Create()
+            {
+                return new ApiException<TError>();
+            }
+
+            /// <summary>
+            /// Set given field.
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The reader.</param>
+            protected override void SetField(ApiException<TError> value, string fieldName, IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "error":
+                        value.ErrorResponse = this.errorDecoder.Decode(reader);
+                        break;
+                    case "error_summary":
+                        value.ErrorMessage = StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
     }
 }

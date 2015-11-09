@@ -4,16 +4,16 @@ from StringIO import StringIO
 
 
 COMPILE_INCLUDES = [
+    "Babel\\Decoder.cs",
     "Babel\\Empty.cs",
-    "Babel\\IDecoder.cs",
-    "Babel\\IEncodable.cs",
+    "Babel\\Encoder.cs",
     "Babel\\IEncoder.cs",
+    "Babel\\IDecoder.cs",
+    "Babel\\IJsonReader.cs",
+    "Babel\\IJsonWriter.cs",
     "Babel\\ITransport.cs",
-    "Babel\\JsonDecoder.cs",
-    "Babel\\JsonEncoder.cs",
-    "Babel\\Json\\JsonArray.cs",
-    "Babel\\Json\\JsonObject.cs",
-    "Babel\\Json\\JsonParser.cs",
+    "Babel\\JsonReader.cs",
+    "Babel\\JsonWriter.cs",
     "ApiException.cs",
     "Babel\\Util.cs",
     "DropboxCertHelper.cs",
@@ -98,6 +98,9 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Reference Include="System.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
 """
 
@@ -169,8 +172,12 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="Newtonsoft.Json" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+   </ItemGroup>
 """
 
 

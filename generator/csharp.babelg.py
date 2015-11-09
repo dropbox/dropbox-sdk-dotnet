@@ -333,11 +333,12 @@ class CSharpGenerator(CodeGenerator):
             need_break (bool): Indicates whether a break statement should 
                 automatically be appended with the case statement ends.
         """
-        self.emit('case {0}:'.format(constant) if constant else 'default:')
         with self.indent():
-            yield
-            if needs_break:
-                self.emit('break;')
+            self.emit('case {0}:'.format(constant) if constant else 'default:')
+            with self.indent():
+                yield
+                if needs_break:
+                    self.emit('break;')
 
     @contextmanager
     def _local_names(self, names):
@@ -396,6 +397,101 @@ class CSharpGenerator(CodeGenerator):
                 yield
         self.emit('</{0}>'.format(tag))
 
+    @contextmanager
+    def encoder_block(self, class_name):
+        """
+        Context manager that emit the private decoder class
+
+        Args:
+            class_name (str): The class name for this decoder.
+            inherit (str): The base type for this decoder.
+        """
+        self.emit()
+        with self.region('Encoder class'):
+            with self.doc_comment():
+                self.emit_summary('Encoder for  <see cref="{0}" />.'.format(class_name))
+            with self.class_(class_name + 'Encoder', inherits=['enc.StructEncoder<{0}>'.format(class_name)], access = 'private'):
+                with self.doc_comment():
+                    self.emit_summary('Encode fields of given value.')
+                    self.emit_xml('The value.', 'param', name='value')
+                    self.emit_xml('The writer.', 'param', name='writer')
+                with self.cs_block(before='public override void EncodeFields({0} value, enc.IJsonWriter writer)'.format(class_name)):
+                    yield
+
+    @contextmanager
+    def decoder_block(self, class_name, inherit):
+        """
+        Context manager that emit the private decoder class
+
+        Args:
+            class_name (str): The class name for this decoder.
+            inherit (str): The base type for this decoder.
+        """
+        self.emit()
+        with self.region('Decoder class'):
+            with self.doc_comment():
+                self.emit_summary('Decoder for  <see cref="{0}" />.'.format(class_name))
+            with self.class_(class_name + 'Decoder', inherits=['enc.{0}<{1}>'.format(inherit, class_name)], access = 'private'):
+                with self.doc_comment():
+                    self.emit_summary('Create a new instance of type <see cref="{0}" />.'.format(class_name))
+                    self.emit_xml('The struct instance.', 'returns')
+                with self.cs_block(before='protected override {0} Create()'.format(class_name)):
+                    self.emit('return new {0}();'.format(class_name))
+                self.emit()
+                yield
+    
+    @contextmanager
+    def decoder_decode_fields_block(self, class_name):
+        """
+        Context manager that emit the DecodeFields override.
+
+        Args:
+            class_name (str): The class name for this decoder.
+        """
+        with self.doc_comment():
+            self.emit_summary('Decode fields without ensuring start and end object.')
+            self.emit_xml('The json reader.', 'param', name='reader')
+            self.emit_xml('The decoded object.', 'returns')
+        with self.cs_block(before='public override {0} DecodeFields(enc.IJsonReader reader)'.format(class_name)):
+            yield
+
+    @contextmanager
+    def decoder_set_field_block(self, class_name):
+        """
+        Context manager that emit the SetField override block for struct decoder.
+
+        Args:
+            class_name (str): The class name for this decoder.
+        """
+        with self.doc_comment():
+            self.emit_summary('Set given field.')
+            self.emit_xml('The field value.', 'param', name='value')
+            self.emit_xml('The field name.', 'param', name='fieldName')
+            self.emit_xml('The json reader.', 'param', name='reader')
+        with self.cs_block(
+            before='protected override void SetField({0} value, string fieldName, enc.IJsonReader reader)'
+            .format(class_name)):
+            with self.switch('fieldName'):
+                yield
+                with self.case(needs_break=True):
+                    self.emit('SkipProperty(reader);')
+
+    @contextmanager
+    def decoder_tag_block(self, class_name):
+        """
+        Context manager that emit the Decode(tag) override block for union decoder.
+
+        Args:
+            class_name (str): The class name for this decoder.
+        """
+        with self.doc_comment():
+            self.emit_summary('Decode based on given tag.')
+            self.emit_xml('The tag.', 'param', name='tag')
+            self.emit_xml('The json reader.', 'param', name='reader')
+            self.emit_xml('The decoded object.', 'returns')
+        with self.cs_block(before='protected override {0} Decode(string tag, enc.IJsonReader reader)'.format(class_name)):
+            yield
+
     def emit_summary(self, doc=""):
         """
         Emits the supplied documentation as a summary element.
@@ -452,7 +548,7 @@ class CSharpGenerator(CodeGenerator):
         else:
             assert False, 'Unknown tag: {0}:{1}'.format(tag, value)
 
-    def _typename(self, data_type, void=None, is_property=False):
+    def _typename(self, data_type, void=None, is_property=False, is_response=False):
         """
         Generates a C# type from a data_type
 
@@ -469,6 +565,9 @@ class CSharpGenerator(CodeGenerator):
             is_property (bool): Indicates whether the type translation is for
                 a property type. Lists have different types expressed for
                 properties than in other places.
+            is_property (bool): Indicates whether the type translation is for
+                a resposne type. Lists need to concrete list class in order to
+                be created by Apm.
         """
         if is_nullable_type(data_type):
             nullable = True
@@ -488,6 +587,8 @@ class CSharpGenerator(CodeGenerator):
         elif is_list_type(data_type):
             if is_property:
                 return 'col.IList<{0}>'.format(self._typename(data_type.data_type))
+            elif is_response:
+                return 'col.List<{0}>'.format(self._typename(data_type.data_type))
             else:
                 return 'col.IEnumerable<{0}>'.format(self._typename(data_type.data_type))
         elif is_string_type(data_type):
@@ -519,7 +620,6 @@ class CSharpGenerator(CodeGenerator):
                 assert False, 'Unknown data type %r' % data_type
 
             return typename + suffix
-
     def _process_literal(self, literal):
         """
         Translate literal values used in defaults
@@ -941,25 +1041,6 @@ class CSharpGenerator(CodeGenerator):
                 else:
                     assert False, 'Unknown composite type: %r' % data_type
 
-    def _emit_encode_doc_comment(self):
-        """
-        Generates a standard doc comment for an encode method.
-        """
-        with self.doc_comment():
-            self.emit_summary('Encodes the object using the supplied encoder.')
-            self.emit_xml('The encoder being used to serialize the object.', 'param',
-                    name='encoder')
-
-    def _emit_decode_doc_comment(self):
-        """
-        Generates a standard doc comment for a decode method.
-        """
-        with self.doc_comment():
-            self.emit_summary('Decodes on object using the supplied decoder.')
-            self.emit_xml('The decoder used to deserialize the object.', 'param', name='decoder')
-            self.emit_xml('The deserialized object. Note: this is not necessarily the current '
-                    'instance.', 'returns')
-
     def _emit_explicit_interface_suppress(self):
         """
         Generates a suppression attribute that prevents a useless CodeAnalysis warning
@@ -969,110 +1050,154 @@ class CSharpGenerator(CodeGenerator):
         self.emit('[System.Diagnostics.CodeAnalysis.SuppressMessage('
                   '"Microsoft.Design", '
                   '"CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]')
-
-    def _emit_encoder(self, field):
+    
+    def _parse_data_type(self, data_type):
         """
-        Emits an encoder fragment for a struct field.
+        Parse the data data type and get its core type.
+
+        """
+        
+        is_nullable = is_nullable_type(data_type)
+        if is_nullable:
+            data_type = data_type.data_type
+
+        is_list = is_list_type(data_type)
+        if is_list:
+            data_type = data_type.data_type
+
+        return data_type, is_nullable, is_list
+
+    def _get_primitive_prefix(self, data_type):
+        """
+        Get encoder/decoder name prefix for primitive types.
 
         Args:
-            field (babelapi.data_type.Field): The field to generate the encoder for
+            data_type (babelapi.data_type.DataType): The type.
         """
-        field_public_name = self._public_name(field.name)
-        if is_nullable_type(field.data_type):
-            nullable = True
-            data_type = field.data_type.data_type
-            if is_list_type(data_type):
-                null_block = self.if_('this.{0}.Count > 0'.format(field_public_name))
-            else:
-                null_block = self.if_('this.{0} != null'.format(field_public_name))
-            null_block.__enter__()
+        if is_string_type(data_type):
+            return 'String'
+        elif is_binary_type(data_type):
+            return 'Bytes'
+        elif is_boolean_type(data_type):
+            return 'Boolean'
+        elif isinstance(data_type, Int32):
+            return 'Int32'
+        elif isinstance(data_type, UInt32):
+            return 'UInt32'
+        elif isinstance(data_type, Int64):
+            return 'Int64'
+        elif isinstance(data_type, UInt64):
+            return 'UInt64'
+        elif isinstance(data_type, Float32):
+            return 'Float'
+        elif isinstance(data_type, Float64):
+            return 'Double'
+        elif is_timestamp_type(data_type):
+            return 'DateTime'
+        elif is_void_type(data_type):
+            return 'Empty'
         else:
-            nullable = False
-            data_type = field.data_type
-            null_block = None
-
-        try:
-            field_type = self._typename(data_type)
-            if is_composite_type(data_type):
-                self.emit('obj.AddFieldObject<{0}>("{1}", this.{2});'.format(
-                    field_type, field.name, field_public_name))
-            elif is_list_type(data_type):
-                element_type = self._typename(data_type.data_type)
-                if is_composite_type(data_type.data_type):
-                    self.emit('obj.AddFieldObjectList<{0}>("{1}", this.{2});'.format(
-                        element_type, field.name, field_public_name))
-                else:
-                    self.emit('obj.AddFieldList<{0}>("{1}", this.{2});'.format(
-                        element_type, field.name, field_public_name))
-            elif nullable and not is_string_type(field.data_type.data_type):
-                self.emit('obj.AddField<{0}>("{1}", this.{2}.Value);'.format(
-                    field_type, field.name, self._public_name(field.name)))
-            else:
-                self.emit('obj.AddField<{0}>("{1}", this.{2});'.format(
-                    field_type, field.name, self._public_name(field.name)))
-
-        finally:
-            if null_block:
-                null_block.__exit__(None, None, None)
-
-    def _get_decoder_method(self, field):
+            assert False, 'Unknown data type %r' % data_type
+    
+    def _get_decoder(self, data_type):
         """
-        Computes the decoder method that will be needed to decode the supplied
-        field.
+        Get decoder of type IDecoder<T> for given data type.
 
         Args:
-            field (babelapi.data_type.Field): the field to be decoded.
+            data_type (babelapi.data_type.DataType): The type.
         """
-        data_type = field.data_type.data_type if is_nullable_type(field.data_type) else field.data_type 
-        generic_type = self._typename(data_type)
 
-        if is_composite_type(data_type):
-            method = 'GetFieldObject'
-        elif is_list_type(data_type):
-            generic_type = self._typename(data_type.data_type)
-            if is_composite_type(data_type.data_type):
-                method = 'GetFieldObjectList'
-            else:
-                method = 'GetFieldList'
+        data_type, is_nullable, is_list = self._parse_data_type(data_type)
+
+        if is_list:
+            return 'enc.Decoder.CreateListDecoder({0})'.format(self._get_decoder(data_type))
+        elif is_composite_type(data_type):
+            return self._typename(data_type) + '.Decoder'
+        else: 
+            return 'enc.{0}Decoder.Instance'.format(self._get_primitive_prefix(data_type))
+
+    def _get_encoder(self, data_type):
+        """
+        Get encoder of type IEncoder<T> for given data type.
+
+        Args:
+            data_type (babelapi.data_type.DataType): The type.
+        """
+
+        data_type, is_nullable, is_list = self._parse_data_type(data_type)
+
+        if is_list:
+            return 'enc.Encoder.CreateListEncoder({0})'.format(self._get_encoder(data_type))
+        elif is_composite_type(data_type):
+            return '{0}.Encoder'.format(self._typename(data_type))
         else:
-            method = 'GetField'
+            return 'enc.{0}Encoder.Instance'.format(self._get_primitive_prefix(data_type))
 
-        if is_list_type(data_type):
-            return 'new col.List<{0}>(obj.{1}<{0}>("{2}"))'.format(generic_type,
-                                                                   method,
-                                                                   field.name)
-        else:
-            return 'obj.{0}<{1}>("{2}")'.format(method, generic_type, field.name)
-
-    def _emit_decoder(self, field):
+    def _emit_decoder(self, field, field_public_name=None):
         """
         Emits a decoder fragment for a struct field
 
         Args:
-            field (babelapi.data_type.Field): The field to be decoded
+            field (babelapi.data_type.Field): The field to be decoded.
+            field_public_name (str): Optional field public name.
         """
-        field_public_name = self._public_name(field.name)
+        field_public_name = field_public_name or self._public_name(field.name)
+        data_type, is_nullable, is_list = self._parse_data_type(field.data_type)
 
-        nullable = is_nullable_type(field.data_type)
-        if nullable or field.has_default:
-            data_type = field.data_type.data_type if nullable else field.data_type
-            null_block = self.if_('obj.HasField("{0}")'.format(field.name))
+        if is_list:
+            value = 'ReadList(reader, {0})'.format(self._get_decoder(data_type))
+        else:
+            value = '{0}.Decode(reader)'.format(self._get_decoder(data_type))
+
+        self.emit('value.{0} = {1};'.format(field_public_name, value))
+    
+    def _emit_encoder(self, field, field_public_name=None, inline_composite_type=False):
+        """
+        Emits an encoder fragment for a struct field.
+
+        Args:
+            field (babelapi.data_type.Field): The field to generate the encoder for.
+            field_public_name (str): Optional field_public_name.
+            inline_composite_type (bool): If True, composite type will be inline instead
+            of encoded as field.
+        """
+        field_public_name = field_public_name or self._public_name(field.name)
+        data_type, is_nullable, is_list = self._parse_data_type(field.data_type)
+        
+        if is_nullable:
+            nullable = True
+            if is_list:
+                null_block = self.if_('value.{0}.Count > 0'.format(field_public_name))
+            else:
+                null_block = self.if_('value.{0} != null'.format(field_public_name))
             null_block.__enter__()
         else:
             nullable = False
-            data_type = field.data_type
             null_block = None
 
         try:
-            method = self._get_decoder_method(field)
-            self.emit('this.{0} = {1};'.format(field_public_name, method))
+            method = 'WriteProperty'
+            if is_list:
+                method = 'WriteListProperty'
+            elif is_composite_type(data_type):
+                if inline_composite_type:
+                    self.emit('{0}.EncodeFields(value.Value, writer);'.format(self._get_encoder(data_type)))
+                    return
+            elif nullable and not is_string_type(data_type):
+                field_public_name = field_public_name + '.Value'
+
+            self.emit('{0}("{1}", value.{2}, writer, {3});'.format(
+                method, field.name, field_public_name, self._get_encoder(data_type)))
+
         finally:
             if null_block:
                 null_block.__exit__(None, None, None)
-                if is_list_type(data_type):
-                    with self.else_():
-                        self.emit('this.{0} = new col.List<{1}>();'.format(
-                            field_public_name, self._typename(data_type.data_type)))
+    
+    def _emit_encoder_subtype(self, tag, subtype_name):
+        with self.if_('value is {0}'.format(subtype_name)):
+            self.emit('WriteProperty(".tag", "{0}", writer, enc.StringEncoder.Instance);'.format(tag))
+            self.emit('{0}.Encoder.EncodeFields(({0})value, writer);'.format(subtype_name))
+            self.emit('return;')
 
     def _make_struct_constructor_args(self, struct):
         """
@@ -1117,6 +1242,27 @@ class CSharpGenerator(CodeGenerator):
             constructor_args.append(ConstructorArg(fieldtype, arg_name, arg, doc))
 
         return constructor_args
+
+    def _generate_encoder_decoder_instance(self, class_name):
+        """
+        Emits the encoder and decoder instance.
+
+        Args:
+            class_name (str): The C# class name of the struct.
+        """
+
+        self.emit('#pragma warning disable 108')
+        self.emit()
+
+        with self.doc_comment():
+            self.emit_summary('The encoder instance.')
+        self.emit('internal static enc.StructEncoder<{0}> Encoder = new {0}Encoder();'.format(class_name))
+        self.emit()
+
+        with self.doc_comment():
+            self.emit_summary('The decoder instance.')
+        self.emit('internal static enc.StructDecoder<{0}> Decoder = new {0}Decoder();'.format(class_name))
+        self.emit()
 
     def _generate_struct_init_ctor(self, struct, class_name, parent_type, parent_type_fields):
         """
@@ -1271,7 +1417,7 @@ class CSharpGenerator(CodeGenerator):
             setter_access = 'protected' if struct.has_enumerated_subtypes() else 'private'
             self.emit('public {0} {1} {{ get; {2} set; }}'.format(fieldtype,
                                                                   self._public_name(field.name),
-                                                                  setter_access))
+                                                                  'protected'))
 
     def _get_struct_tag(self, struct):
         if struct.parent_type and struct.parent_type.has_enumerated_subtypes():
@@ -1279,90 +1425,59 @@ class CSharpGenerator(CodeGenerator):
                 if subtype.data_type is struct:
                     return subtype.name
 
-    def _generate_struct_encodable_methods(self, struct, class_name, parent_type_fields):
+    def _generate_struct_encoder(self, struct):
         """
-        Generates the Encode and Decode methods that make this class implement
-        the IEncodable<T> interface.
+        Generates the private encoder for the struct.
 
         Args:
             struct (babelapi.data_type.Struct): The struct in question.
-            class_name (str): The C# class name for the struct
-            parent_type_fields (set): A set containing the names of fields
-                that are implemented by this struct's parent type hierarchy.
         """
+        class_name = self._public_name(struct.name)
+
+        with self.encoder_block(class_name=class_name):
+            if struct.has_enumerated_subtypes():
+                for subtype in struct.get_enumerated_subtypes():
+                    data_type = subtype.data_type
+                    self._emit_encoder_subtype(self._get_struct_tag(data_type), self._typename(data_type))
+                for field in struct.all_fields:
+                    self._emit_encoder(field)
+            else:
+                for field in struct.all_fields:
+                    self._emit_encoder(field)
+ 
+    def _generate_struct_decoder(self, struct):
+        """
+        Generates the private decoder for the struct.
+
+        """
+
+        class_name = self._public_name(struct.name)
         self.emit()
-        with self.region('IEncodable<{0}> methods'.format(class_name)):
-            # Emit the encoder
-            self._emit_encode_doc_comment()
-            self._emit_explicit_interface_suppress()
-            with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
-                if struct.has_enumerated_subtypes():
-                    for index, subtype in enumerate(struct.get_enumerated_subtypes()):
-                        cond = self.if_ if not index else self.else_if
-                        subtype_public_name = self._public_name(subtype.name)
-                        subtype_typename = self._typename(subtype.data_type)
-                        with cond('this.Is{0}'.format(subtype_public_name)):
-                            self.emit('((enc.IEncodable<{0}>)this.As{1}).Encode(encoder);'.format(
-                                subtype_typename, subtype_public_name))
 
-                    with self.else_():
-                        if not struct.is_catch_all():
-                                self.emit('throw new sys.InvalidOperationException();')
-                        else:
-                            with self.using('var obj = encoder.AddObject()'):
-                                tag = self._get_struct_tag(struct)
-                                self.emit('obj.AddField<string>(".tag", "{0}");'.format(tag or ''))
-                                for field in struct.all_fields:
-                                    self._emit_encoder(field)
-                elif struct.parent_type and struct.parent_type.has_enumerated_subtypes():
-                    tag = self._get_struct_tag(struct);
-                    assert tag is not None, 'Tag should not be none within a subtype hierarchy'
+        if struct.has_enumerated_subtypes():
+            inherit = 'UnionDecoder'
+        else:
+            inherit = 'StructDecoder'
 
-                    with self.using('var obj = encoder.AddObject()'):
-                        self.emit('obj.AddField<string>(".tag", "{0}");'.format(tag))
-                        for field in struct.all_fields:
-                            self._emit_encoder(field)
-                else:
-                    with self.using('var obj = encoder.AddObject()'):
-                        for field in struct.all_fields:
-                            if field.name in parent_type_fields:
-                                continue
-                            self._emit_encoder(field)
-
-            # Emit the decoder
-            self.emit()
-            self._emit_decode_doc_comment()
-            self._emit_explicit_interface_suppress()
-            with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
-                if struct.has_enumerated_subtypes():
-                    self.emit('var tag = string.Empty;')
-                    with self.using('var obj = decoder.GetObject()'):
-                        self.emit('tag = obj.GetField<string>(".tag");')
-                    self.emit()
+        with self.decoder_block(class_name=class_name, inherit=inherit):
+            if struct.has_enumerated_subtypes():
+                with self.decoder_tag_block(class_name=class_name):
                     with self.switch('tag'):
                         for subtype in struct.get_enumerated_subtypes():
                             with self.case('"{0}"'.format(subtype.name), needs_break=False):
-                                subtype_arg_name = self._arg_name(subtype.name)
                                 subtype_typename = self._typename(subtype.data_type)
-                                self.emit('var {0} = new {1}();'.format(subtype_arg_name, subtype_typename))
-                                self.emit('return ((enc.IEncodable<{0}>){1}).Decode(decoder);'.format(
-                                    subtype_typename, subtype_arg_name))
+                                self.emit('return {0}.Decoder.DecodeFields(reader);'.format(subtype_typename))
                         if struct.is_catch_all():
                             with self.case(needs_break=False):
-                                with self.using('var obj = decoder.GetObject()'):
-                                    for field in struct.all_fields:
-                                        self._emit_decoder(field) 
-                                self.emit()
-                                self.emit('return this;')
+                                self.emit('return base.Decode(reader);')
                         else:
                             with self.case(needs_break=False):
                                 self.emit('throw new sys.InvalidOperationException();')
-                else:
-                    with self.using('var obj = decoder.GetObject()'):
-                        for field in struct.all_fields:
-                            self._emit_decoder(field) 
-                    self.emit()
-                    self.emit('return this;')
+
+            with self.decoder_set_field_block(class_name=class_name):
+                for field in struct.all_fields:
+                    with self.case('"{0}"'.format(field.name), needs_break=True):
+                        self._emit_decoder(field)   
 
     def _generate_struct(self, struct):
         """
@@ -1388,18 +1503,18 @@ class CSharpGenerator(CodeGenerator):
 
         class_name = self._public_name(struct.name)
 
-        if struct.parent_type and struct.parent_type.has_enumerated_subtypes():
+        if struct.parent_type:
             parent_type = struct.parent_type
-            inherits = [self._public_name(parent_type.name)]
+            inherits = [self._typename(parent_type)]
             parent_type_fields = set(f.name for f in parent_type.all_fields)
         else:
             parent_type = None
             parent_type_fields = set()
             inherits = []
 
-        inherits.append('enc.IEncodable<{0}>'.format(class_name))
-        access = 'public' if struct.has_enumerated_subtypes() else 'public sealed'
-        with self.class_(class_name, inherits=inherits, access=access):
+        with self.class_(class_name, inherits=inherits, access='public'):
+            # Generate encoder and decoder
+            self._generate_encoder_decoder_instance(class_name)
 
             # Generate the initializing constructor.
             self._generate_struct_init_ctor(struct, class_name, parent_type, parent_type_fields)
@@ -1416,8 +1531,11 @@ class CSharpGenerator(CodeGenerator):
             # Emit properties for all fields
             self._generate_struct_properties(struct, parent_type_fields)
 
-            # Emit methods that make this object IEncodable
-            self._generate_struct_encodable_methods(struct, class_name, parent_type_fields)
+            # Emit private encoder class.
+            self._generate_struct_encoder(struct)
+
+            # Emit private decoder class.
+            self._generate_struct_decoder(struct)
 
     def _generate_union_is_as_properties(self, union):
         """
@@ -1443,67 +1561,41 @@ class CSharpGenerator(CodeGenerator):
             with self.cs_block(before='public {0} As{0}'.format(field_type)):
                 with self.cs_block(before='get'):
                     self.emit('return this as {0};'.format(field_type))
-
-    def _generate_union_encodable_methods(self, union, class_name):
+    
+    def _generate_union_encoder(self, union, class_name):
         """
-        Generates the IEncodable<T> methods for a union.
+        Generates private encoder class for a union.
 
         Args:
             union (babelapi.data_type.Union): The union in question.
             class_name (str): The C# class name of the union.
         """
-        self.emit()
-        with self.region('IEncodable<{0}> methods'.format(class_name)):
-            # encoder - is the responsibility of the concrete classes
-            self._emit_encode_doc_comment()
-            self._emit_explicit_interface_suppress()
-            with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(class_name)):
-                has_catch_all = False
-                for index, field in enumerate(union.fields):
-                    public_field_name = self._public_name(field.name)
-                    condition = 'this.Is{0}'.format(public_field_name)
-                    if index == 0:
-                        cond = self.if_(condition)
-                    elif union.catch_all_field == field:
-                        cond = self.else_()
-                        has_catch_all = True
-                    else:
-                        cond = self.else_if(condition)
+        with self.encoder_block(class_name=class_name):
+            for field in union.fields:
+                self._emit_encoder_subtype(field.name, self._public_name(field.name))
+            self.emit('throw new sys.InvalidOperationException();')
 
-                    with cond:
-                        self.emit('((enc.IEncodable<{0}>)this).Encode(encoder);'.format(public_field_name))
+    def _generate_union_decoder(self, union, class_name):
+        """
+        Generates private decoder class for a union.
 
-                if not has_catch_all:
-                    with self.else_():
-                        self.emit('throw new sys.InvalidOperationException();')
+        Args:
+            union (babelapi.data_type.Union): The union in question.
+            class_name (str): The C# class name of the union.
+        """
 
-            # decoder
-            self.emit()
-            self._emit_decode_doc_comment()
-            self._emit_explicit_interface_suppress()
-            with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(class_name)):
-                with self.switch('decoder.GetUnionName()'):
+        with self.decoder_block(class_name=class_name, inherit='UnionDecoder'):
+            with self.decoder_tag_block(class_name=class_name):
+                with self.switch('tag'):
                     for field in union.fields:
                         constant = None if union.catch_all_field == field else '"{0}"'.format(field.name)
                         with self.case(constant, needs_break=False):
-                            public_field_name = self._public_name(field.name)
-                            if is_void_type(field.data_type):
-                                self.emit('return {0}.Instance;'.format(public_field_name))
-                            elif is_composite_type(field.data_type):
-                                arg_name = self._arg_name(field.name)
-                                type_name = self._typename(field.data_type)
-                                self.emit('var {0} = new {1}();'.format(arg_name, type_name))                          
-                                self.emit('return new {0}(((enc.IEncodable<{1}>){2}).Decode(decoder));'.format(
-                                    public_field_name, type_name, arg_name))
-                            else:
-                                with self.using('var obj = decoder.GetObject()'):
-                                    method = self._get_decoder_method(field)
-                                    self.emit('return new {0}({1});'.format(public_field_name, method))
-
+                            self.emit('return {0}.Decoder.DecodeFields(reader);'.format(self._public_name(field.name)))
                     if not union.catch_all_field:
-                        self.emit('default:')
                         with self.indent():
-                            self.emit('throw new sys.InvalidOperationException();')
+                            self.emit('default:')
+                            with self.indent():
+                                self.emit('throw new sys.InvalidOperationException();')
 
     def _generate_union_field_void_type(self, field, field_type):
         """
@@ -1527,15 +1619,14 @@ class CSharpGenerator(CodeGenerator):
             self.emit_summary('A singleton instance of {0}'.format(field_type))
         self.emit('public static readonly {0} Instance = new {0}();'.format(field_type))
 
-        # encoder
-        self.emit()
-        self._emit_encode_doc_comment()
-        self._emit_explicit_interface_suppress()
-        with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
-            with self.using('var obj = encoder.AddObject()'):
-                self.emit('obj.AddField(".tag", "{0}");'.format(field.name))
-
-        self._generate_union_field_decoder(field_type)
+        # Private encoder.
+        with self.encoder_block(class_name=field_type):
+            pass
+        
+        # Private decoder.
+        with self.decoder_block(class_name=field_type, inherit='StructDecoder'):
+            with self.decoder_decode_fields_block(class_name=field_type):
+                self.emit('return {0}.Instance;'.format(field_type))
 
     def _generate_union_field_value_type(self, field, field_type):
         """
@@ -1559,39 +1650,36 @@ class CSharpGenerator(CodeGenerator):
                         self._typename(field.data_type.data_type)))
             else:
                 self.emit('this.Value = value;')
+
+        with self.doc_comment():
+            self.emit_ctor_summary(field_type)
+        with self.cs_block(before='private {0}()'.format(field_type)):
+            pass
+
         self.emit()
         with self.doc_comment():
             self.emit_summary('Gets the value of this instance.')
         value_type = self._typename(field.data_type, is_property=True)
         self.emit('public {0} Value {{ get; private set; }}'.format(value_type))
 
-        # encoder
-        self.emit()
-        self._emit_encode_doc_comment()
-        with self.cs_block(before='void enc.IEncodable<{0}>.Encode(enc.IEncoder encoder)'.format(field_type)):
-            with self.using('var obj = encoder.AddObject()'):
-                self.emit('obj.AddField(".tag", "{0}");'.format(field.name))
-                self.emit('obj.AddField("{0}", this.Value);'.format(field.name))
+        # Private encoder.
+        with self.encoder_block(class_name=field_type):
+            self._emit_encoder(field, 'Value', True)
+        
+        data_type = field.data_type
+        if is_nullable_type(data_type):
+            data_type = data_type.data_type
 
-        self._generate_union_field_decoder(field_type)
-
-    def _generate_union_field_decoder(self, field_type):
-        """
-        Emits the decoder for union field inner type.
-
-        This decoder just throws a exception. Decoding always happens through
-        the union class.
-
-        Args:
-            field_type (str): The C# type name of the union field.
-        """
-        # decoder
-        self.emit()
-        self._emit_decode_doc_comment()
-        self._emit_explicit_interface_suppress()
-        with self.cs_block(before='{0} enc.IEncodable<{0}>.Decode(enc.IDecoder decoder)'.format(field_type)):
-            self.emit('throw new sys.InvalidOperationException("Decoding happens through the base class");')
-
+        # Private decoder.
+        with self.decoder_block(class_name=field_type, inherit='StructDecoder'):
+            if is_struct_type(data_type):
+                with self.decoder_decode_fields_block(class_name=field_type):
+                    self.emit('return new {0}({1}.DecodeFields(reader));'.format(
+                        field_type, self._get_decoder(data_type)))
+            else:
+                with self.decoder_set_field_block(class_name=field_type):
+                    with self.case('"{0}"'.format(field.name), needs_break=True):
+                        self._emit_decoder(field, 'Value')
 
     def _generate_union_field_type(self, field, class_name):
         """
@@ -1606,8 +1694,10 @@ class CSharpGenerator(CodeGenerator):
 
         with self.doc_comment():
             self.emit_summary(field.doc or 'The {0} object'.format(self._name_words(field.name)))
-        inherits = (class_name, 'enc.IEncodable<{0}>'.format(field_type))
-        with self.class_(field_type, inherits=inherits, access='public sealed'):
+
+        with self.class_(field_type, inherits=(class_name,), access='public sealed'):
+            self._generate_encoder_decoder_instance(field_type)
+
             if is_void_type(field.data_type):
                 self._generate_union_field_void_type(field, field_type)
             else:
@@ -1634,7 +1724,9 @@ class CSharpGenerator(CodeGenerator):
             with self.doc_comment():
                 self.emit_summary(union.doc or 'The {0} object'.format(self._name_words(union.name)))
             class_name = self._public_name(union.name)
-            with self.class_(class_name, inherits='enc.IEncodable<{0}>'.format(class_name), access='public'):
+            with self.class_(class_name, access='public'):
+                self._generate_encoder_decoder_instance(class_name)
+
                 with self.doc_comment():
                     self.emit_ctor_summary(class_name)
                 with self.cs_block(before='public {0}()'.format(class_name)):
@@ -1643,8 +1735,11 @@ class CSharpGenerator(CodeGenerator):
                 # generate type helper properties
                 self._generate_union_is_as_properties(union)
 
-                # generate encodable
-                self._generate_union_encodable_methods(union, class_name)
+                # Emit private encoder class for the union.
+                self._generate_union_encoder(union, class_name)
+
+                # Emit private decoder class for the union.
+                self._generate_union_decoder(union, class_name)
 
                 # generate j types for each union field
                 for field in union.fields:
@@ -1722,7 +1817,7 @@ class CSharpGenerator(CodeGenerator):
         request_is_void = is_void_type(route.request_data_type)
         request_arg = (self._arg_name(route.request_data_type.name) if
                 is_composite_type(route.request_data_type) else 'request')
-        response_type = self._typename(route.response_data_type, void='enc.Empty')
+        response_type = self._typename(route.response_data_type, void='enc.Empty', is_response=True)
         response_is_void = is_void_type(route.response_data_type)
         error_type = self._typename(route.error_data_type, void='enc.Empty')
         error_is_void = is_void_type(route.error_data_type)
@@ -1783,7 +1878,10 @@ class CSharpGenerator(CodeGenerator):
                 args.append('body')
             args.extend([
                 '"{0}"'.format(route_host),
-                '"/{0}/{1}"'.format(ns.name, route.name)
+                '"/{0}/{1}"'.format(ns.name, route.name),
+                self._get_encoder(route.request_data_type),
+                self._get_decoder(route.response_data_type),
+                self._get_decoder(route.error_data_type),
             ])
 
             self.emit('return this.Transport.Send{0}RequestAsync<{1}>({2});'.format(
