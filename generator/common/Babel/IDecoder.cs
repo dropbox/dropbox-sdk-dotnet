@@ -13,7 +13,7 @@ namespace Dropbox.Api.Babel
     /// Interface that is used to decode objects of specific type.
     /// </summary>
     /// <typeparam name="T">The type of the decoded object.</typeparam>
-    public interface IDecoder<T>
+    internal interface IDecoder<T>
     {
         /// <summary>
         /// Decode into specific type.

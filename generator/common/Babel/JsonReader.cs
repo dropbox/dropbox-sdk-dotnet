@@ -16,7 +16,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Parse and read from json string.
     /// </summary>
-    internal class JsonReader : IJsonReader
+    internal sealed class JsonReader : IJsonReader
     {
         /// <summary>
         /// The json text reader.

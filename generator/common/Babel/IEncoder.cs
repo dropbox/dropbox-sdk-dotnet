@@ -13,7 +13,7 @@ namespace Dropbox.Api.Babel
     /// The encoder interface.
     /// </summary>
     /// <typeparam name="T">The type to encode.</typeparam>
-    public interface IEncoder<T>
+    internal interface IEncoder<T>
     {
         /// <summary>
         /// Encode given data using provided writer.

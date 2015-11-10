@@ -29,7 +29,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for Int32.
     /// </summary>
-    internal class Int32Decoder : IDecoder<int>
+    internal sealed class Int32Decoder : IDecoder<int>
     {
         /// <summary>
         /// The instance.
@@ -50,7 +50,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for Int64.
     /// </summary>
-    internal class Int64Decoder : IDecoder<long>
+    internal sealed class Int64Decoder : IDecoder<long>
     {
         /// <summary>
         /// The instance.
@@ -71,7 +71,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for UInt32.
     /// </summary>
-    internal class UInt32Decoder : IDecoder<uint>
+    internal sealed class UInt32Decoder : IDecoder<uint>
     {
         /// <summary>
         /// The instance.
@@ -92,7 +92,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for UInt64.
     /// </summary>
-    internal class UInt64Decoder : IDecoder<ulong>
+    internal sealed class UInt64Decoder : IDecoder<ulong>
     {
         /// <summary>
         /// The instance.
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for Float.
     /// </summary>
-    internal class SingleDecoder : IDecoder<float>
+    internal sealed class SingleDecoder : IDecoder<float>
     {
         /// <summary>
         /// The instance.
@@ -134,7 +134,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for double.
     /// </summary>
-    internal class DoubleDecoder : IDecoder<double>
+    internal sealed class DoubleDecoder : IDecoder<double>
     {
         /// <summary>
         /// The instance.
@@ -155,7 +155,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for boolean.
     /// </summary>
-    internal class BooleanDecoder : IDecoder<bool>
+    internal sealed class BooleanDecoder : IDecoder<bool>
     {
         /// <summary>
         /// The instance.
@@ -176,7 +176,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for DateTime.
     /// </summary>
-    internal class DateTimeDecoder : IDecoder<DateTime>
+    internal sealed class DateTimeDecoder : IDecoder<DateTime>
     {
         /// <summary>
         /// The instance.
@@ -197,7 +197,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for bytes.
     /// </summary>
-    internal class BytesDecoder : IDecoder<byte[]>
+    internal sealed class BytesDecoder : IDecoder<byte[]>
     {
         /// <summary>
         /// The instance.
@@ -218,7 +218,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Decoder for string.
     /// </summary>
-    internal class StringDecoder : IDecoder<string>
+    internal sealed class StringDecoder : IDecoder<string>
     {
         /// <summary>
         /// The instance.
@@ -407,7 +407,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// The decoder for Empty Type.
     /// </summary>
-    internal class EmptyDecoder : StructDecoder<Empty>
+    internal sealed class EmptyDecoder : StructDecoder<Empty>
     {
         /// <summary>
         /// The instance.
@@ -439,7 +439,7 @@ namespace Dropbox.Api.Babel
     /// Decoder for generic list.
     /// </summary>
     /// <typeparam name="T">The list item type.</typeparam>
-    internal class ListDecoder<T> : IDecoder<List<T>>
+    internal sealed class ListDecoder<T> : IDecoder<List<T>>
     {
         /// <summary>
         /// Decoder for list item.

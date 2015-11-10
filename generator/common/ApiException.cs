@@ -85,7 +85,7 @@ namespace Dropbox.Api
         /// <param name="json">The json.</param>
         /// <param name="errorDecoder">The error json.</param>
         /// <returns>The <see cref="ApiException{TError}"/></returns>
-        public static ApiException<TError> Decode(string json, IDecoder<TError> errorDecoder)
+        internal static ApiException<TError> Decode(string json, IDecoder<TError> errorDecoder)
         {
             return JsonReader.Read(json, new ApiExceptionDecoder(errorDecoder));
         }

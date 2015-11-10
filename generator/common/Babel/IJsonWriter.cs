@@ -11,7 +11,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// The json writer interface.
     /// </summary>
-    public interface IJsonWriter
+    internal interface IJsonWriter
     {
         /// <summary>
         /// Write a Int32 value.

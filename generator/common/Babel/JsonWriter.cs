@@ -16,7 +16,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Write json as string.
     /// </summary>
-    internal class JsonWriter : IJsonWriter
+    internal sealed class JsonWriter : IJsonWriter
     {
         /// <summary>
         /// The json text writer.

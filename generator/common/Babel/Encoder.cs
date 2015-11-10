@@ -12,7 +12,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// The factory class for encoders.
     /// </summary>
-    internal class Encoder
+    internal static class Encoder
     {
         /// <summary>
         /// Create a list encoder instance.
@@ -29,7 +29,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for Int32.
     /// </summary>
-    internal class Int32Encoder : IEncoder<int>
+    internal sealed class Int32Encoder : IEncoder<int>
     {
         /// <summary>
         /// The instance.
@@ -50,7 +50,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for Int64.
     /// </summary>
-    internal class Int64Encoder : IEncoder<long>
+    internal sealed class Int64Encoder : IEncoder<long>
     {
         /// <summary>
         /// The instance.
@@ -71,7 +71,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for UInt32.
     /// </summary>
-    internal class UInt32Encoder : IEncoder<uint>
+    internal sealed class UInt32Encoder : IEncoder<uint>
     {
         /// <summary>
         /// The instance.
@@ -92,7 +92,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for UInt64.
     /// </summary>
-    internal class UInt64Encoder : IEncoder<ulong>
+    internal sealed class UInt64Encoder : IEncoder<ulong>
     {
         /// <summary>
         /// The instance.
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for Float.
     /// </summary>
-    internal class SingleEncoder : IEncoder<float>
+    internal sealed class SingleEncoder : IEncoder<float>
     {
         /// <summary>
         /// The instance.
@@ -134,7 +134,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for double.
     /// </summary>
-    internal class DoubleEncoder : IEncoder<double>
+    internal sealed class DoubleEncoder : IEncoder<double>
     {
         /// <summary>
         /// The instance.
@@ -155,7 +155,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for boolean.
     /// </summary>
-    internal class BooleanEncoder : IEncoder<bool>
+    internal sealed class BooleanEncoder : IEncoder<bool>
     {
         /// <summary>
         /// The instance.
@@ -176,7 +176,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for DateTime.
     /// </summary>
-    internal class DateTimeEncoder : IEncoder<DateTime>
+    internal sealed class DateTimeEncoder : IEncoder<DateTime>
     {
         /// <summary>
         /// The instance.
@@ -197,7 +197,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for bytes.
     /// </summary>
-    internal class BytesEncoder : IEncoder<byte[]>
+    internal sealed class BytesEncoder : IEncoder<byte[]>
     {
         /// <summary>
         /// The instance.
@@ -218,7 +218,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for string.
     /// </summary>
-    internal class StringEncoder : IEncoder<string>
+    internal sealed class StringEncoder : IEncoder<string>
     {
         /// <summary>
         /// The instance.
@@ -239,7 +239,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Encoder for empty.
     /// </summary>
-    internal class EmptyEncoder : IEncoder<Empty>
+    internal sealed class EmptyEncoder : IEncoder<Empty>
     {
         /// <summary>
         /// The instance.
@@ -314,7 +314,7 @@ namespace Dropbox.Api.Babel
     /// Encoder for list type.
     /// </summary>
     /// <typeparam name="T">The list item type.</typeparam>
-    internal class ListEncoder<T> : IEncoder<IList<T>>
+    internal sealed class ListEncoder<T> : IEncoder<IList<T>>
     {
         /// <summary>
         /// The item encoder.

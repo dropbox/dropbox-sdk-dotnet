@@ -11,7 +11,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// The json reader interface.
     /// </summary>
-    public interface IJsonReader
+    internal interface IJsonReader
     {
         /// <summary>
         /// Gets a value indicating whether current token is start object.

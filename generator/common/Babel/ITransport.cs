@@ -12,9 +12,44 @@ namespace Dropbox.Api.Babel
     using System.Threading.Tasks;
 
     /// <summary>
+    /// Used to encapsulate both the response object and the response body from
+    /// a download operation.
+    /// </summary>
+    /// <typeparam name="TResponse">The type of the response.</typeparam>
+    public interface IDownloadResponse<TResponse> : IDisposable
+        where TResponse : new()
+    {
+        /// <summary>
+        /// Gets the response.
+        /// </summary>
+        /// <value>
+        /// The response.
+        /// </value>
+        TResponse Response { get; }
+
+        /// <summary>
+        /// Asynchronously gets the content as a <see cref="Stream"/>.
+        /// </summary>
+        /// <returns>The downloaded content as a stream.</returns>
+        Task<Stream> GetContentAsStreamAsync();
+
+        /// <summary>
+        /// Asynchronously gets the content as a <see cref="byte"/> array.
+        /// </summary>
+        /// <returns>The downloaded content as a byte array.</returns>
+        Task<byte[]> GetContentAsByteArrayAsync();
+
+        /// <summary>
+        /// Asynchronously gets the content as <see cref="String"/>.
+        /// </summary>
+        /// <returns>The downloaded content as a string.</returns>
+        Task<string> GetContentAsStringAsync();
+    }
+
+    /// <summary>
     /// An interface that abstracts route transports
     /// </summary>
-    public interface ITransport
+    internal interface ITransport
     {
         /// <summary>
         /// Sends the RPC request asynchronously.
@@ -83,40 +118,5 @@ namespace Dropbox.Api.Babel
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
                 where TResponse : new();
-    }
-
-    /// <summary>
-    /// Used to encapsulate both the response object and the response body from
-    /// a download operation.
-    /// </summary>
-    /// <typeparam name="TResponse">The type of the response.</typeparam>
-    public interface IDownloadResponse<TResponse> : IDisposable
-        where TResponse : new()
-    {
-        /// <summary>
-        /// Gets the response.
-        /// </summary>
-        /// <value>
-        /// The response.
-        /// </value>
-        TResponse Response { get; }
-
-        /// <summary>
-        /// Asynchronously gets the content as a <see cref="Stream"/>.
-        /// </summary>
-        /// <returns>The downloaded content as a stream.</returns>
-        Task<Stream> GetContentAsStreamAsync();
-
-        /// <summary>
-        /// Asynchronously gets the content as a <see cref="byte"/> array.
-        /// </summary>
-        /// <returns>The downloaded content as a byte array.</returns>
-        Task<byte[]> GetContentAsByteArrayAsync();
-
-        /// <summary>
-        /// Asynchronously gets the content as <see cref="String"/>.
-        /// </summary>
-        /// <returns>The downloaded content as a string.</returns>
-        Task<string> GetContentAsStringAsync();
     }
 }
