@@ -13,8 +13,20 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>The individual space allocation object</para>
     /// </summary>
-    public sealed class IndividualSpaceAllocation : enc.IEncodable<IndividualSpaceAllocation>
+    public class IndividualSpaceAllocation
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<IndividualSpaceAllocation> Encoder = new IndividualSpaceAllocationEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<IndividualSpaceAllocation> Decoder = new IndividualSpaceAllocationDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="IndividualSpaceAllocation" />
         /// class.</para>
@@ -39,38 +51,64 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>The total space allocated to the user's account (bytes).</para>
         /// </summary>
-        public ulong Allocated { get; private set; }
+        public ulong Allocated { get; protected set; }
 
-        #region IEncodable<IndividualSpaceAllocation> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="IndividualSpaceAllocation" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<IndividualSpaceAllocation>.Encode(enc.IEncoder encoder)
+        private class IndividualSpaceAllocationEncoder : enc.StructEncoder<IndividualSpaceAllocation>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(IndividualSpaceAllocation value, enc.IJsonWriter writer)
             {
-                obj.AddField<ulong>("allocated", this.Allocated);
+                WriteProperty("allocated", value.Allocated, writer, enc.UInt64Encoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="IndividualSpaceAllocation" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        IndividualSpaceAllocation enc.IEncodable<IndividualSpaceAllocation>.Decode(enc.IDecoder decoder)
+        private class IndividualSpaceAllocationDecoder : enc.StructDecoder<IndividualSpaceAllocation>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="IndividualSpaceAllocation"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override IndividualSpaceAllocation Create()
             {
-                this.Allocated = obj.GetField<ulong>("allocated");
+                return new IndividualSpaceAllocation();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(IndividualSpaceAllocation value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "allocated":
+                        value.Allocated = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

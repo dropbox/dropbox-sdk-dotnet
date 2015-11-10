@@ -13,16 +13,32 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The list folder arg object</para>
     /// </summary>
-    public sealed class ListFolderArg : enc.IEncodable<ListFolderArg>
+    public class ListFolderArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ListFolderArg> Encoder = new ListFolderArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ListFolderArg> Decoder = new ListFolderArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path to the folder you want to see the contents of.</param>
-        /// <param name="recursive">If true, list folder operation will be applied recursively
-        /// to all subfolders. And the response will contain contents of all subfolders</param>
+        /// <param name="recursive">If true, the list folder operation will be applied
+        /// recursively to all subfolders and the response will contain contents of all
+        /// subfolders.</param>
+        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
+        /// photo and video.</param>
         public ListFolderArg(string path,
-                             bool recursive = false)
+                             bool recursive = false,
+                             bool includeMediaInfo = false)
         {
             if (path == null)
             {
@@ -35,6 +51,7 @@ namespace Dropbox.Api.Files
 
             this.Path = path;
             this.Recursive = recursive;
+            this.IncludeMediaInfo = includeMediaInfo;
         }
 
         /// <summary>
@@ -45,54 +62,88 @@ namespace Dropbox.Api.Files
         public ListFolderArg()
         {
             this.Recursive = false;
+            this.IncludeMediaInfo = false;
         }
 
         /// <summary>
         /// <para>The path to the folder you want to see the contents of.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>If true, list folder operation will be applied recursively to all subfolders.
-        /// And the response will contain contents of all subfolders</para>
+        /// <para>If true, the list folder operation will be applied recursively to all
+        /// subfolders and the response will contain contents of all subfolders.</para>
         /// </summary>
-        public bool Recursive { get; private set; }
-
-        #region IEncodable<ListFolderArg> methods
+        public bool Recursive { get; protected set; }
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>If true, :field:'FileMetadata.media_info' is set for photo and video.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ListFolderArg>.Encode(enc.IEncoder encoder)
+        public bool IncludeMediaInfo { get; protected set; }
+
+        #region Encoder class
+
+        /// <summary>
+        /// <para>Encoder for  <see cref="ListFolderArg" />.</para>
+        /// </summary>
+        private class ListFolderArgEncoder : enc.StructEncoder<ListFolderArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ListFolderArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                obj.AddField<bool>("recursive", this.Recursive);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("recursive", value.Recursive, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ListFolderArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ListFolderArg enc.IEncodable<ListFolderArg>.Decode(enc.IDecoder decoder)
+        private class ListFolderArgDecoder : enc.StructDecoder<ListFolderArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ListFolderArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ListFolderArg Create()
             {
-                this.Path = obj.GetField<string>("path");
-                if (obj.HasField("recursive"))
-                {
-                    this.Recursive = obj.GetField<bool>("recursive");
-                }
+                return new ListFolderArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(ListFolderArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "recursive":
+                        value.Recursive = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_media_info":
+                        value.IncludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

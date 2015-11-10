@@ -10,10 +10,22 @@
                 cref="T:Dropbox.Api.DropboxClient"/>.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Async">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Async.Routes.AsyncRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Async.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Async" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Files">
             <summary>
-                <para>This endpoint contains endpoints and data types for basic file</para>
-                <para>operations.</para>
+                <para>This namespace contains endpoints and data types for basic file
+                operations.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Files.Routes">
@@ -25,8 +37,9 @@
         <member name="N:Dropbox.Api.Sharing">
             <summary>
                 <para>This namespace contains endpoints and data types for creating and
-                managing</para>
-                <para>shared links.</para>
+                managing shared links.</para>
+                <para>Additionally, this namespace contains endpoints for creating and managing
+                shared folders.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Sharing.Routes">
@@ -35,9 +48,22 @@
                 namespace.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Team">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Team.Routes.TeamRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Team.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Team" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Users">
             <summary>
-                <para>This namespace contains endpoints user management.</para>
+                <para>This namespace contains endpoints and data types for user
+                management.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Users.Routes">

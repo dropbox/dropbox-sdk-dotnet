@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The list revisions result object</para>
     /// </summary>
-    public sealed class ListRevisionsResult : enc.IEncodable<ListRevisionsResult>
+    public class ListRevisionsResult
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ListRevisionsResult> Encoder = new ListRevisionsResultEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ListRevisionsResult> Decoder = new ListRevisionsResultDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListRevisionsResult" />
         /// class.</para>
@@ -49,46 +61,73 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>If the file is deleted.</para>
         /// </summary>
-        public bool IsDeleted { get; private set; }
+        public bool IsDeleted { get; protected set; }
 
         /// <summary>
         /// <para>The revisions for the file. Only non-delete revisions will show up
         /// here.</para>
         /// </summary>
-        public col.IList<FileMetadata> Entries { get; private set; }
+        public col.IList<FileMetadata> Entries { get; protected set; }
 
-        #region IEncodable<ListRevisionsResult> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ListRevisionsResult" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ListRevisionsResult>.Encode(enc.IEncoder encoder)
+        private class ListRevisionsResultEncoder : enc.StructEncoder<ListRevisionsResult>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ListRevisionsResult value, enc.IJsonWriter writer)
             {
-                obj.AddField<bool>("is_deleted", this.IsDeleted);
-                obj.AddFieldObjectList<FileMetadata>("entries", this.Entries);
+                WriteProperty("is_deleted", value.IsDeleted, writer, enc.BooleanEncoder.Instance);
+                WriteListProperty("entries", value.Entries, writer, FileMetadata.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ListRevisionsResult" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ListRevisionsResult enc.IEncodable<ListRevisionsResult>.Decode(enc.IDecoder decoder)
+        private class ListRevisionsResultDecoder : enc.StructDecoder<ListRevisionsResult>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ListRevisionsResult" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ListRevisionsResult Create()
             {
-                this.IsDeleted = obj.GetField<bool>("is_deleted");
-                this.Entries = new col.List<FileMetadata>(obj.GetFieldObjectList<FileMetadata>("entries"));
+                return new ListRevisionsResult();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(ListRevisionsResult value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "is_deleted":
+                        value.IsDeleted = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "entries":
+                        value.Entries = ReadList(reader, FileMetadata.Decoder);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

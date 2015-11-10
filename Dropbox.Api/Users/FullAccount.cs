@@ -14,8 +14,20 @@ namespace Dropbox.Api.Users
     /// <para>Detailed information about the current user's account.</para>
     /// </summary>
     /// <seealso cref="Account" />
-    public sealed class FullAccount : enc.IEncodable<FullAccount>
+    public class FullAccount : Account
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<FullAccount> Encoder = new FullAccountEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<FullAccount> Decoder = new FullAccountDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="FullAccount" /> class.</para>
         /// </summary>
@@ -46,21 +58,8 @@ namespace Dropbox.Api.Users
                            AccountType accountType,
                            string country = null,
                            Team team = null)
+            : base(accountId, name)
         {
-            if (accountId == null)
-            {
-                throw new sys.ArgumentNullException("accountId");
-            }
-            else if (accountId.Length < 40 || accountId.Length > 40)
-            {
-                throw new sys.ArgumentOutOfRangeException("accountId");
-            }
-
-            if (name == null)
-            {
-                throw new sys.ArgumentNullException("name");
-            }
-
             if (email == null)
             {
                 throw new sys.ArgumentNullException("email");
@@ -70,7 +69,7 @@ namespace Dropbox.Api.Users
             {
                 throw new sys.ArgumentNullException("locale");
             }
-            else if (locale.Length < 2 || locale.Length > 2)
+            else if (locale.Length < 2)
             {
                 throw new sys.ArgumentOutOfRangeException("locale");
             }
@@ -90,8 +89,6 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentOutOfRangeException("country");
             }
 
-            this.AccountId = accountId;
-            this.Name = name;
             this.Email = email;
             this.Locale = locale;
             this.ReferralLink = referralLink;
@@ -111,114 +108,139 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The user's unique Dropbox ID.</para>
-        /// </summary>
-        public string AccountId { get; private set; }
-
-        /// <summary>
-        /// <para>Details of a user's name.</para>
-        /// </summary>
-        public Name Name { get; private set; }
-
-        /// <summary>
         /// <para>The user's e-mail address.</para>
         /// </summary>
-        public string Email { get; private set; }
+        public string Email { get; protected set; }
 
         /// <summary>
         /// <para>The language that the user specified. Locale tags will be <a
         /// href="http://en.wikipedia.org/wiki/IETF_language_tag">IETF language
         /// tags</a>.</para>
         /// </summary>
-        public string Locale { get; private set; }
+        public string Locale { get; protected set; }
 
         /// <summary>
         /// <para>The user's <a href="https://www.dropbox.com/referrals">referral
         /// link</a>.</para>
         /// </summary>
-        public string ReferralLink { get; private set; }
+        public string ReferralLink { get; protected set; }
 
         /// <summary>
         /// <para>Whether the user has a personal and work account. If the current account is
         /// personal, then <see cref="Team" /> will always be <c>null</c>, but <see
         /// cref="IsPaired" /> will indicate if a work account is linked.</para>
         /// </summary>
-        public bool IsPaired { get; private set; }
+        public bool IsPaired { get; protected set; }
 
         /// <summary>
         /// <para>What type of account this user has.</para>
         /// </summary>
-        public AccountType AccountType { get; private set; }
+        public AccountType AccountType { get; protected set; }
 
         /// <summary>
         /// <para>The user's two-letter country code, if available. Country codes are based on
         /// <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a>.</para>
         /// </summary>
-        public string Country { get; private set; }
+        public string Country { get; protected set; }
 
         /// <summary>
         /// <para>If this account is a member of a team, information about that team.</para>
         /// </summary>
-        public Team Team { get; private set; }
+        public Team Team { get; protected set; }
 
-        #region IEncodable<FullAccount> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="FullAccount" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<FullAccount>.Encode(enc.IEncoder encoder)
+        private class FullAccountEncoder : enc.StructEncoder<FullAccount>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(FullAccount value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("account_id", this.AccountId);
-                obj.AddFieldObject<Name>("name", this.Name);
-                obj.AddField<string>("email", this.Email);
-                obj.AddField<string>("locale", this.Locale);
-                obj.AddField<string>("referral_link", this.ReferralLink);
-                obj.AddField<bool>("is_paired", this.IsPaired);
-                obj.AddFieldObject<AccountType>("account_type", this.AccountType);
-                if (this.Country != null)
+                WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
+                WriteProperty("name", value.Name, writer, Name.Encoder);
+                WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
+                WriteProperty("locale", value.Locale, writer, enc.StringEncoder.Instance);
+                WriteProperty("referral_link", value.ReferralLink, writer, enc.StringEncoder.Instance);
+                WriteProperty("is_paired", value.IsPaired, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("account_type", value.AccountType, writer, AccountType.Encoder);
+                if (value.Country != null)
                 {
-                    obj.AddField<string>("country", this.Country);
+                    WriteProperty("country", value.Country, writer, enc.StringEncoder.Instance);
                 }
-                if (this.Team != null)
+                if (value.Team != null)
                 {
-                    obj.AddFieldObject<Team>("team", this.Team);
+                    WriteProperty("team", value.Team, writer, Team.Encoder);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="FullAccount" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        FullAccount enc.IEncodable<FullAccount>.Decode(enc.IDecoder decoder)
+        private class FullAccountDecoder : enc.StructDecoder<FullAccount>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="FullAccount" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override FullAccount Create()
             {
-                this.AccountId = obj.GetField<string>("account_id");
-                this.Name = obj.GetFieldObject<Name>("name");
-                this.Email = obj.GetField<string>("email");
-                this.Locale = obj.GetField<string>("locale");
-                this.ReferralLink = obj.GetField<string>("referral_link");
-                this.IsPaired = obj.GetField<bool>("is_paired");
-                this.AccountType = obj.GetFieldObject<AccountType>("account_type");
-                if (obj.HasField("country"))
-                {
-                    this.Country = obj.GetField<string>("country");
-                }
-                if (obj.HasField("team"))
-                {
-                    this.Team = obj.GetFieldObject<Team>("team");
-                }
+                return new FullAccount();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(FullAccount value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "account_id":
+                        value.AccountId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "name":
+                        value.Name = Name.Decoder.Decode(reader);
+                        break;
+                    case "email":
+                        value.Email = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "locale":
+                        value.Locale = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "referral_link":
+                        value.ReferralLink = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_paired":
+                        value.IsPaired = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "account_type":
+                        value.AccountType = AccountType.Decoder.Decode(reader);
+                        break;
+                    case "country":
+                        value.Country = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "team":
+                        value.Team = Team.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

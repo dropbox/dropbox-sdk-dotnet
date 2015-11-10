@@ -11,10 +11,22 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Policy governing who can links be shared with.</para>
+    /// <para>Policy governing who can view shared links.</para>
     /// </summary>
-    public class SharedLinkPolicy : enc.IEncodable<SharedLinkPolicy>
+    public class SharedLinkPolicy
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SharedLinkPolicy> Encoder = new SharedLinkPolicyEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SharedLinkPolicy> Decoder = new SharedLinkPolicyDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SharedLinkPolicy" />
         /// class.</para>
@@ -24,46 +36,46 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is All</para>
+        /// <para>Gets a value indicating whether this instance is Anyone</para>
         /// </summary>
-        public bool IsAll
+        public bool IsAnyone
         {
             get
             {
-                return this is All;
+                return this is Anyone;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a All, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Anyone, or <c>null</c>.</para>
         /// </summary>
-        public All AsAll
+        public Anyone AsAnyone
         {
             get
             {
-                return this as All;
+                return this as Anyone;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is MembersOnly</para>
+        /// <para>Gets a value indicating whether this instance is Members</para>
         /// </summary>
-        public bool IsMembersOnly
+        public bool IsMembers
         {
             get
             {
-                return this is MembersOnly;
+                return this is Members;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a MembersOnly, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Members, or <c>null</c>.</para>
         /// </summary>
-        public MembersOnly AsMembersOnly
+        public Members AsMembers
         {
             get
             {
-                return this as MembersOnly;
+                return this as Members;
             }
         }
 
@@ -89,46 +101,77 @@ namespace Dropbox.Api.Sharing
             }
         }
 
-        #region IEncodable<SharedLinkPolicy> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SharedLinkPolicy" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SharedLinkPolicy>.Encode(enc.IEncoder encoder)
+        private class SharedLinkPolicyEncoder : enc.StructEncoder<SharedLinkPolicy>
         {
-            if (this.IsAll)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SharedLinkPolicy value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<All>)this).Encode(encoder);
-            }
-            else if (this.IsMembersOnly)
-            {
-                ((enc.IEncodable<MembersOnly>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is Anyone)
+                {
+                    WriteProperty(".tag", "anyone", writer, enc.StringEncoder.Instance);
+                    Anyone.Encoder.EncodeFields((Anyone)value, writer);
+                    return;
+                }
+                if (value is Members)
+                {
+                    WriteProperty(".tag", "members", writer, enc.StringEncoder.Instance);
+                    Members.Encoder.EncodeFields((Members)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SharedLinkPolicy" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SharedLinkPolicy enc.IEncodable<SharedLinkPolicy>.Decode(enc.IDecoder decoder)
+        private class SharedLinkPolicyDecoder : enc.UnionDecoder<SharedLinkPolicy>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SharedLinkPolicy" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SharedLinkPolicy Create()
             {
-            case "all":
-                return All.Instance;
-            case "members_only":
-                return MembersOnly.Instance;
-            default:
-                return Other.Instance;
+                return new SharedLinkPolicy();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override SharedLinkPolicy Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "anyone":
+                        return Anyone.Decoder.DecodeFields(reader);
+                    case "members":
+                        return Members.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -137,95 +180,176 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Links can be shared with anyone.</para>
         /// </summary>
-        public sealed class All : SharedLinkPolicy, enc.IEncodable<All>
+        public sealed class Anyone : SharedLinkPolicy
         {
+            #pragma warning disable 108
+
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="All" /> class.</para>
+            /// <para>The encoder instance.</para>
             /// </summary>
-            private All()
+            internal static enc.StructEncoder<Anyone> Encoder = new AnyoneEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Anyone> Decoder = new AnyoneDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Anyone" /> class.</para>
+            /// </summary>
+            private Anyone()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of All</para>
+            /// <para>A singleton instance of Anyone</para>
             /// </summary>
-            public static readonly All Instance = new All();
+            public static readonly Anyone Instance = new Anyone();
+
+            #region Encoder class
 
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Anyone" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<All>.Encode(enc.IEncoder encoder)
+            private class AnyoneEncoder : enc.StructEncoder<Anyone>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Anyone value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "all");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Anyone" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            All enc.IEncodable<All>.Decode(enc.IDecoder decoder)
+            private class AnyoneDecoder : enc.StructDecoder<Anyone>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Anyone" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Anyone Create()
+                {
+                    return new Anyone();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Anyone DecodeFields(enc.IJsonReader reader)
+                {
+                    return Anyone.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Links can only be shared among members of the shared folder.</para>
         /// </summary>
-        public sealed class MembersOnly : SharedLinkPolicy, enc.IEncodable<MembersOnly>
+        public sealed class Members : SharedLinkPolicy
         {
+            #pragma warning disable 108
+
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MembersOnly" />
-            /// class.</para>
+            /// <para>The encoder instance.</para>
             /// </summary>
-            private MembersOnly()
+            internal static enc.StructEncoder<Members> Encoder = new MembersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Members> Decoder = new MembersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Members" /> class.</para>
+            /// </summary>
+            private Members()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of MembersOnly</para>
+            /// <para>A singleton instance of Members</para>
             /// </summary>
-            public static readonly MembersOnly Instance = new MembersOnly();
+            public static readonly Members Instance = new Members();
+
+            #region Encoder class
 
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Members" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<MembersOnly>.Encode(enc.IEncoder encoder)
+            private class MembersEncoder : enc.StructEncoder<Members>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Members value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "members_only");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Members" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            MembersOnly enc.IEncodable<MembersOnly>.Decode(enc.IDecoder decoder)
+            private class MembersDecoder : enc.StructDecoder<Members>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Members" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Members Create()
+                {
+                    return new Members();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Members DecodeFields(enc.IJsonReader reader)
+                {
+                    return Members.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>An unknown shared link policy.</para>
         /// </summary>
-        public sealed class Other : SharedLinkPolicy, enc.IEncodable<Other>
+        public sealed class Other : SharedLinkPolicy
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -238,30 +362,53 @@ namespace Dropbox.Api.Sharing
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

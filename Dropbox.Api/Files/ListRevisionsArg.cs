@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The list revisions arg object</para>
     /// </summary>
-    public sealed class ListRevisionsArg : enc.IEncodable<ListRevisionsArg>
+    public class ListRevisionsArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ListRevisionsArg> Encoder = new ListRevisionsArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ListRevisionsArg> Decoder = new ListRevisionsArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListRevisionsArg" />
         /// class.</para>
@@ -56,48 +68,72 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The path to the file you want to see the revisions of.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
         /// <para>The maximum number of revision entries returned.</para>
         /// </summary>
-        public ulong Limit { get; private set; }
+        public ulong Limit { get; protected set; }
 
-        #region IEncodable<ListRevisionsArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ListRevisionsArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ListRevisionsArg>.Encode(enc.IEncoder encoder)
+        private class ListRevisionsArgEncoder : enc.StructEncoder<ListRevisionsArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ListRevisionsArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                obj.AddField<ulong>("limit", this.Limit);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("limit", value.Limit, writer, enc.UInt64Encoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ListRevisionsArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ListRevisionsArg enc.IEncodable<ListRevisionsArg>.Decode(enc.IDecoder decoder)
+        private class ListRevisionsArgDecoder : enc.StructDecoder<ListRevisionsArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ListRevisionsArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ListRevisionsArg Create()
             {
-                this.Path = obj.GetField<string>("path");
-                if (obj.HasField("limit"))
-                {
-                    this.Limit = obj.GetField<ulong>("limit");
-                }
+                return new ListRevisionsArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(ListRevisionsArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "limit":
+                        value.Limit = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

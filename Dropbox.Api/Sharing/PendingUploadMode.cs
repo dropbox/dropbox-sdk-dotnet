@@ -14,8 +14,20 @@ namespace Dropbox.Api.Sharing
     /// <para>Flag to indicate pending upload default (for linking to not-yet-existing
     /// paths).</para>
     /// </summary>
-    public class PendingUploadMode : enc.IEncodable<PendingUploadMode>
+    public class PendingUploadMode
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<PendingUploadMode> Encoder = new PendingUploadModeEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<PendingUploadMode> Decoder = new PendingUploadModeDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="PendingUploadMode" />
         /// class.</para>
@@ -68,46 +80,71 @@ namespace Dropbox.Api.Sharing
             }
         }
 
-        #region IEncodable<PendingUploadMode> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="PendingUploadMode" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<PendingUploadMode>.Encode(enc.IEncoder encoder)
+        private class PendingUploadModeEncoder : enc.StructEncoder<PendingUploadMode>
         {
-            if (this.IsFile)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(PendingUploadMode value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<File>)this).Encode(encoder);
-            }
-            else if (this.IsFolder)
-            {
-                ((enc.IEncodable<Folder>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is File)
+                {
+                    WriteProperty(".tag", "file", writer, enc.StringEncoder.Instance);
+                    File.Encoder.EncodeFields((File)value, writer);
+                    return;
+                }
+                if (value is Folder)
+                {
+                    WriteProperty(".tag", "folder", writer, enc.StringEncoder.Instance);
+                    Folder.Encoder.EncodeFields((Folder)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="PendingUploadMode" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        PendingUploadMode enc.IEncodable<PendingUploadMode>.Decode(enc.IDecoder decoder)
+        private class PendingUploadModeDecoder : enc.UnionDecoder<PendingUploadMode>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="PendingUploadMode" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override PendingUploadMode Create()
             {
-            case "file":
-                return File.Instance;
-            case "folder":
-                return Folder.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new PendingUploadMode();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override PendingUploadMode Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "file":
+                        return File.Decoder.DecodeFields(reader);
+                    case "folder":
+                        return Folder.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -116,8 +153,20 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Assume pending uploads are files.</para>
         /// </summary>
-        public sealed class File : PendingUploadMode, enc.IEncodable<File>
+        public sealed class File : PendingUploadMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<File> Encoder = new FileEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<File> Decoder = new FileDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="File" /> class.</para>
             /// </summary>
@@ -130,37 +179,72 @@ namespace Dropbox.Api.Sharing
             /// </summary>
             public static readonly File Instance = new File();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="File" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<File>.Encode(enc.IEncoder encoder)
+            private class FileEncoder : enc.StructEncoder<File>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(File value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "file");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="File" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            File enc.IEncodable<File>.Decode(enc.IDecoder decoder)
+            private class FileDecoder : enc.StructDecoder<File>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="File" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override File Create()
+                {
+                    return new File();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override File DecodeFields(enc.IJsonReader reader)
+                {
+                    return File.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Assume pending uploads are folders.</para>
         /// </summary>
-        public sealed class Folder : PendingUploadMode, enc.IEncodable<Folder>
+        public sealed class Folder : PendingUploadMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Folder> Encoder = new FolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Folder> Decoder = new FolderDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Folder" /> class.</para>
             /// </summary>
@@ -173,30 +257,53 @@ namespace Dropbox.Api.Sharing
             /// </summary>
             public static readonly Folder Instance = new Folder();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Folder" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Folder>.Encode(enc.IEncoder encoder)
+            private class FolderEncoder : enc.StructEncoder<Folder>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Folder value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "folder");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Folder" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Folder enc.IEncodable<Folder>.Decode(enc.IDecoder decoder)
+            private class FolderDecoder : enc.StructDecoder<Folder>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Folder" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Folder Create()
+                {
+                    return new Folder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Folder DecodeFields(enc.IJsonReader reader)
+                {
+                    return Folder.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

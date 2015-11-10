@@ -13,8 +13,20 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>The get account error object</para>
     /// </summary>
-    public class GetAccountError : enc.IEncodable<GetAccountError>
+    public class GetAccountError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GetAccountError> Encoder = new GetAccountErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GetAccountError> Decoder = new GetAccountErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetAccountError" />
         /// class.</para>
@@ -67,40 +79,69 @@ namespace Dropbox.Api.Users
             }
         }
 
-        #region IEncodable<GetAccountError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="GetAccountError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GetAccountError>.Encode(enc.IEncoder encoder)
+        private class GetAccountErrorEncoder : enc.StructEncoder<GetAccountError>
         {
-            if (this.IsNoAccount)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GetAccountError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<NoAccount>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Unknown>)this).Encode(encoder);
+                if (value is NoAccount)
+                {
+                    WriteProperty(".tag", "no_account", writer, enc.StringEncoder.Instance);
+                    NoAccount.Encoder.EncodeFields((NoAccount)value, writer);
+                    return;
+                }
+                if (value is Unknown)
+                {
+                    WriteProperty(".tag", "unknown", writer, enc.StringEncoder.Instance);
+                    Unknown.Encoder.EncodeFields((Unknown)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GetAccountError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GetAccountError enc.IEncodable<GetAccountError>.Decode(enc.IDecoder decoder)
+        private class GetAccountErrorDecoder : enc.UnionDecoder<GetAccountError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GetAccountError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GetAccountError Create()
             {
-            case "no_account":
-                return NoAccount.Instance;
-            default:
-                return Unknown.Instance;
+                return new GetAccountError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override GetAccountError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "no_account":
+                        return NoAccount.Decoder.DecodeFields(reader);
+                    default:
+                        return Unknown.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -109,8 +150,20 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>The specified <see cref="GetAccountArg.AccountId" /> does not exist.</para>
         /// </summary>
-        public sealed class NoAccount : GetAccountError, enc.IEncodable<NoAccount>
+        public sealed class NoAccount : GetAccountError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoAccount> Encoder = new NoAccountEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoAccount> Decoder = new NoAccountDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="NoAccount" /> class.</para>
             /// </summary>
@@ -123,37 +176,72 @@ namespace Dropbox.Api.Users
             /// </summary>
             public static readonly NoAccount Instance = new NoAccount();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="NoAccount" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<NoAccount>.Encode(enc.IEncoder encoder)
+            private class NoAccountEncoder : enc.StructEncoder<NoAccount>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoAccount value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "no_account");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="NoAccount" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            NoAccount enc.IEncodable<NoAccount>.Decode(enc.IDecoder decoder)
+            private class NoAccountDecoder : enc.StructDecoder<NoAccount>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoAccount" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoAccount Create()
+                {
+                    return new NoAccount();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoAccount DecodeFields(enc.IJsonReader reader)
+                {
+                    return NoAccount.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The unknown object</para>
         /// </summary>
-        public sealed class Unknown : GetAccountError, enc.IEncodable<Unknown>
+        public sealed class Unknown : GetAccountError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Unknown> Encoder = new UnknownEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Unknown> Decoder = new UnknownDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Unknown" /> class.</para>
             /// </summary>
@@ -166,30 +254,53 @@ namespace Dropbox.Api.Users
             /// </summary>
             public static readonly Unknown Instance = new Unknown();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Unknown" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Unknown>.Encode(enc.IEncoder encoder)
+            private class UnknownEncoder : enc.StructEncoder<Unknown>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Unknown value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "unknown");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Unknown" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Unknown enc.IEncodable<Unknown>.Decode(enc.IDecoder decoder)
+            private class UnknownDecoder : enc.StructDecoder<Unknown>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Unknown" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Unknown Create()
+                {
+                    return new Unknown();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Unknown DecodeFields(enc.IJsonReader reader)
+                {
+                    return Unknown.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

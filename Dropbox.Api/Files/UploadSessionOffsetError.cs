@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The upload session offset error object</para>
     /// </summary>
-    public sealed class UploadSessionOffsetError : enc.IEncodable<UploadSessionOffsetError>
+    public class UploadSessionOffsetError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UploadSessionOffsetError> Encoder = new UploadSessionOffsetErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UploadSessionOffsetError> Decoder = new UploadSessionOffsetErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UploadSessionOffsetError" />
         /// class.</para>
@@ -38,38 +50,64 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The offset up to which data has been collected.</para>
         /// </summary>
-        public ulong CorrectOffset { get; private set; }
+        public ulong CorrectOffset { get; protected set; }
 
-        #region IEncodable<UploadSessionOffsetError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="UploadSessionOffsetError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UploadSessionOffsetError>.Encode(enc.IEncoder encoder)
+        private class UploadSessionOffsetErrorEncoder : enc.StructEncoder<UploadSessionOffsetError>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UploadSessionOffsetError value, enc.IJsonWriter writer)
             {
-                obj.AddField<ulong>("correct_offset", this.CorrectOffset);
+                WriteProperty("correct_offset", value.CorrectOffset, writer, enc.UInt64Encoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UploadSessionOffsetError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UploadSessionOffsetError enc.IEncodable<UploadSessionOffsetError>.Decode(enc.IDecoder decoder)
+        private class UploadSessionOffsetErrorDecoder : enc.StructDecoder<UploadSessionOffsetError>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UploadSessionOffsetError"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UploadSessionOffsetError Create()
             {
-                this.CorrectOffset = obj.GetField<ulong>("correct_offset");
+                return new UploadSessionOffsetError();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(UploadSessionOffsetError value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "correct_offset":
+                        value.CorrectOffset = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

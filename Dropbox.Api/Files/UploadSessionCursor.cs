@@ -14,8 +14,20 @@ namespace Dropbox.Api.Files
     /// <para>The upload session cursor object</para>
     /// </summary>
     /// <seealso cref="UploadSessionFinishArg" />
-    public sealed class UploadSessionCursor : enc.IEncodable<UploadSessionCursor>
+    public class UploadSessionCursor
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UploadSessionCursor> Encoder = new UploadSessionCursorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UploadSessionCursor> Decoder = new UploadSessionCursorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UploadSessionCursor" />
         /// class.</para>
@@ -51,46 +63,73 @@ namespace Dropbox.Api.Files
         /// <para>The upload session ID (returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</para>
         /// </summary>
-        public string SessionId { get; private set; }
+        public string SessionId { get; protected set; }
 
         /// <summary>
         /// <para>The amount of data that has been uploaded so far. We use this to make sure
         /// upload data isn't lost or duplicated in the event of a network error.</para>
         /// </summary>
-        public ulong Offset { get; private set; }
+        public ulong Offset { get; protected set; }
 
-        #region IEncodable<UploadSessionCursor> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="UploadSessionCursor" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UploadSessionCursor>.Encode(enc.IEncoder encoder)
+        private class UploadSessionCursorEncoder : enc.StructEncoder<UploadSessionCursor>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UploadSessionCursor value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("session_id", this.SessionId);
-                obj.AddField<ulong>("offset", this.Offset);
+                WriteProperty("session_id", value.SessionId, writer, enc.StringEncoder.Instance);
+                WriteProperty("offset", value.Offset, writer, enc.UInt64Encoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UploadSessionCursor" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UploadSessionCursor enc.IEncodable<UploadSessionCursor>.Decode(enc.IDecoder decoder)
+        private class UploadSessionCursorDecoder : enc.StructDecoder<UploadSessionCursor>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UploadSessionCursor" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UploadSessionCursor Create()
             {
-                this.SessionId = obj.GetField<string>("session_id");
-                this.Offset = obj.GetField<ulong>("offset");
+                return new UploadSessionCursor();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(UploadSessionCursor value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "session_id":
+                        value.SessionId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "offset":
+                        value.Offset = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

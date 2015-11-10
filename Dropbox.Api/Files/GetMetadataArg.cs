@@ -13,13 +13,28 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The get metadata arg object</para>
     /// </summary>
-    public sealed class GetMetadataArg : enc.IEncodable<GetMetadataArg>
+    public class GetMetadataArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GetMetadataArg> Encoder = new GetMetadataArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GetMetadataArg> Decoder = new GetMetadataArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetMetadataArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path of a file or folder on Dropbox</param>
-        public GetMetadataArg(string path)
+        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
+        /// photo and video.</param>
+        public GetMetadataArg(string path,
+                              bool includeMediaInfo = false)
         {
             if (path == null)
             {
@@ -31,6 +46,7 @@ namespace Dropbox.Api.Files
             }
 
             this.Path = path;
+            this.IncludeMediaInfo = includeMediaInfo;
         }
 
         /// <summary>
@@ -40,43 +56,78 @@ namespace Dropbox.Api.Files
         /// deserializing.</remarks>
         public GetMetadataArg()
         {
+            this.IncludeMediaInfo = false;
         }
 
         /// <summary>
         /// <para>The path of a file or folder on Dropbox</para>
         /// </summary>
-        public string Path { get; private set; }
-
-        #region IEncodable<GetMetadataArg> methods
+        public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>If true, :field:'FileMetadata.media_info' is set for photo and video.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GetMetadataArg>.Encode(enc.IEncoder encoder)
+        public bool IncludeMediaInfo { get; protected set; }
+
+        #region Encoder class
+
+        /// <summary>
+        /// <para>Encoder for  <see cref="GetMetadataArg" />.</para>
+        /// </summary>
+        private class GetMetadataArgEncoder : enc.StructEncoder<GetMetadataArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GetMetadataArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GetMetadataArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GetMetadataArg enc.IEncodable<GetMetadataArg>.Decode(enc.IDecoder decoder)
+        private class GetMetadataArgDecoder : enc.StructDecoder<GetMetadataArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GetMetadataArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GetMetadataArg Create()
             {
-                this.Path = obj.GetField<string>("path");
+                return new GetMetadataArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(GetMetadataArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_media_info":
+                        value.IncludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

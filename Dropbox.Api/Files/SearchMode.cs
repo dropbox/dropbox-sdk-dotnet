@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The search mode object</para>
     /// </summary>
-    public class SearchMode : enc.IEncodable<SearchMode>
+    public class SearchMode
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SearchMode> Encoder = new SearchModeEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SearchMode> Decoder = new SearchModeDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SearchMode" /> class.</para>
         /// </summary>
@@ -88,52 +100,79 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<SearchMode> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SearchMode" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SearchMode>.Encode(enc.IEncoder encoder)
+        private class SearchModeEncoder : enc.StructEncoder<SearchMode>
         {
-            if (this.IsFilename)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SearchMode value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Filename>)this).Encode(encoder);
-            }
-            else if (this.IsFilenameAndContent)
-            {
-                ((enc.IEncodable<FilenameAndContent>)this).Encode(encoder);
-            }
-            else if (this.IsDeletedFilename)
-            {
-                ((enc.IEncodable<DeletedFilename>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is Filename)
+                {
+                    WriteProperty(".tag", "filename", writer, enc.StringEncoder.Instance);
+                    Filename.Encoder.EncodeFields((Filename)value, writer);
+                    return;
+                }
+                if (value is FilenameAndContent)
+                {
+                    WriteProperty(".tag", "filename_and_content", writer, enc.StringEncoder.Instance);
+                    FilenameAndContent.Encoder.EncodeFields((FilenameAndContent)value, writer);
+                    return;
+                }
+                if (value is DeletedFilename)
+                {
+                    WriteProperty(".tag", "deleted_filename", writer, enc.StringEncoder.Instance);
+                    DeletedFilename.Encoder.EncodeFields((DeletedFilename)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SearchMode" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SearchMode enc.IEncodable<SearchMode>.Decode(enc.IDecoder decoder)
+        private class SearchModeDecoder : enc.UnionDecoder<SearchMode>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SearchMode" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SearchMode Create()
             {
-            case "filename":
-                return Filename.Instance;
-            case "filename_and_content":
-                return FilenameAndContent.Instance;
-            case "deleted_filename":
-                return DeletedFilename.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new SearchMode();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override SearchMode Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "filename":
+                        return Filename.Decoder.DecodeFields(reader);
+                    case "filename_and_content":
+                        return FilenameAndContent.Decoder.DecodeFields(reader);
+                    case "deleted_filename":
+                        return DeletedFilename.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -142,8 +181,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Search file and folder names.</para>
         /// </summary>
-        public sealed class Filename : SearchMode, enc.IEncodable<Filename>
+        public sealed class Filename : SearchMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Filename> Encoder = new FilenameEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Filename> Decoder = new FilenameDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Filename" /> class.</para>
             /// </summary>
@@ -156,37 +207,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Filename Instance = new Filename();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Filename" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Filename>.Encode(enc.IEncoder encoder)
+            private class FilenameEncoder : enc.StructEncoder<Filename>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Filename value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "filename");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Filename" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Filename enc.IEncodable<Filename>.Decode(enc.IDecoder decoder)
+            private class FilenameDecoder : enc.StructDecoder<Filename>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Filename" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Filename Create()
+                {
+                    return new Filename();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Filename DecodeFields(enc.IJsonReader reader)
+                {
+                    return Filename.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Search file and folder names as well as file contents.</para>
         /// </summary>
-        public sealed class FilenameAndContent : SearchMode, enc.IEncodable<FilenameAndContent>
+        public sealed class FilenameAndContent : SearchMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FilenameAndContent> Encoder = new FilenameAndContentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FilenameAndContent> Decoder = new FilenameAndContentDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="FilenameAndContent" />
             /// class.</para>
@@ -200,37 +286,73 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly FilenameAndContent Instance = new FilenameAndContent();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="FilenameAndContent" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<FilenameAndContent>.Encode(enc.IEncoder encoder)
+            private class FilenameAndContentEncoder : enc.StructEncoder<FilenameAndContent>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FilenameAndContent value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "filename_and_content");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="FilenameAndContent" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            FilenameAndContent enc.IEncodable<FilenameAndContent>.Decode(enc.IDecoder decoder)
+            private class FilenameAndContentDecoder : enc.StructDecoder<FilenameAndContent>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FilenameAndContent"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FilenameAndContent Create()
+                {
+                    return new FilenameAndContent();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FilenameAndContent DecodeFields(enc.IJsonReader reader)
+                {
+                    return FilenameAndContent.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Search for deleted file and folder names.</para>
         /// </summary>
-        public sealed class DeletedFilename : SearchMode, enc.IEncodable<DeletedFilename>
+        public sealed class DeletedFilename : SearchMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DeletedFilename> Encoder = new DeletedFilenameEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DeletedFilename> Decoder = new DeletedFilenameDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="DeletedFilename" />
             /// class.</para>
@@ -244,30 +366,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly DeletedFilename Instance = new DeletedFilename();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="DeletedFilename" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<DeletedFilename>.Encode(enc.IEncoder encoder)
+            private class DeletedFilenameEncoder : enc.StructEncoder<DeletedFilename>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DeletedFilename value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "deleted_filename");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="DeletedFilename" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            DeletedFilename enc.IEncodable<DeletedFilename>.Decode(enc.IDecoder decoder)
+            private class DeletedFilenameDecoder : enc.StructDecoder<DeletedFilename>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DeletedFilename" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DeletedFilename Create()
+                {
+                    return new DeletedFilename();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DeletedFilename DecodeFields(enc.IJsonReader reader)
+                {
+                    return DeletedFilename.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

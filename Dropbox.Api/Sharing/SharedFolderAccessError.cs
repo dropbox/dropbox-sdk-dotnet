@@ -13,8 +13,20 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>There is an error accessing the shared folder.</para>
     /// </summary>
-    public class SharedFolderAccessError : enc.IEncodable<SharedFolderAccessError>
+    public class SharedFolderAccessError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SharedFolderAccessError> Encoder = new SharedFolderAccessErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SharedFolderAccessError> Decoder = new SharedFolderAccessErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SharedFolderAccessError" />
         /// class.</para>
@@ -68,185 +80,219 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is HasLeft</para>
+        /// <para>Gets a value indicating whether this instance is NoPermission</para>
         /// </summary>
-        public bool IsHasLeft
+        public bool IsNoPermission
         {
             get
             {
-                return this is HasLeft;
+                return this is NoPermission;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a HasLeft, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NoPermission, or <c>null</c>.</para>
         /// </summary>
-        public HasLeft AsHasLeft
+        public NoPermission AsNoPermission
         {
             get
             {
-                return this as HasLeft;
+                return this as NoPermission;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is RequireOwner</para>
+        /// <para>Gets a value indicating whether this instance is EmailUnverified</para>
         /// </summary>
-        public bool IsRequireOwner
+        public bool IsEmailUnverified
         {
             get
             {
-                return this is RequireOwner;
+                return this is EmailUnverified;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a RequireOwner, or <c>null</c>.</para>
+        /// <para>Gets this instance as a EmailUnverified, or <c>null</c>.</para>
         /// </summary>
-        public RequireOwner AsRequireOwner
+        public EmailUnverified AsEmailUnverified
         {
             get
             {
-                return this as RequireOwner;
+                return this as EmailUnverified;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is IsRoot</para>
+        /// <para>Gets a value indicating whether this instance is TeamFolder</para>
         /// </summary>
-        public bool IsIsRoot
+        public bool IsTeamFolder
         {
             get
             {
-                return this is IsRoot;
+                return this is TeamFolder;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a IsRoot, or <c>null</c>.</para>
+        /// <para>Gets this instance as a TeamFolder, or <c>null</c>.</para>
         /// </summary>
-        public IsRoot AsIsRoot
+        public TeamFolder AsTeamFolder
         {
             get
             {
-                return this as IsRoot;
+                return this as TeamFolder;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is IsTeamSharedFolder</para>
+        /// <para>Gets a value indicating whether this instance is Unmounted</para>
         /// </summary>
-        public bool IsIsTeamSharedFolder
+        public bool IsUnmounted
         {
             get
             {
-                return this is IsTeamSharedFolder;
+                return this is Unmounted;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a IsTeamSharedFolder, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Unmounted, or <c>null</c>.</para>
         /// </summary>
-        public IsTeamSharedFolder AsIsTeamSharedFolder
+        public Unmounted AsUnmounted
         {
             get
             {
-                return this as IsTeamSharedFolder;
+                return this as Unmounted;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is IsAppFolder</para>
+        /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
-        public bool IsIsAppFolder
+        public bool IsOther
         {
             get
             {
-                return this is IsAppFolder;
+                return this is Other;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a IsAppFolder, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
         /// </summary>
-        public IsAppFolder AsIsAppFolder
+        public Other AsOther
         {
             get
             {
-                return this as IsAppFolder;
+                return this as Other;
             }
         }
 
-        #region IEncodable<SharedFolderAccessError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SharedFolderAccessError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SharedFolderAccessError>.Encode(enc.IEncoder encoder)
+        private class SharedFolderAccessErrorEncoder : enc.StructEncoder<SharedFolderAccessError>
         {
-            if (this.IsInvalidId)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SharedFolderAccessError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<InvalidId>)this).Encode(encoder);
-            }
-            else if (this.IsNotMember)
-            {
-                ((enc.IEncodable<NotMember>)this).Encode(encoder);
-            }
-            else if (this.IsHasLeft)
-            {
-                ((enc.IEncodable<HasLeft>)this).Encode(encoder);
-            }
-            else if (this.IsRequireOwner)
-            {
-                ((enc.IEncodable<RequireOwner>)this).Encode(encoder);
-            }
-            else if (this.IsIsRoot)
-            {
-                ((enc.IEncodable<IsRoot>)this).Encode(encoder);
-            }
-            else if (this.IsIsTeamSharedFolder)
-            {
-                ((enc.IEncodable<IsTeamSharedFolder>)this).Encode(encoder);
-            }
-            else if (this.IsIsAppFolder)
-            {
-                ((enc.IEncodable<IsAppFolder>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is InvalidId)
+                {
+                    WriteProperty(".tag", "invalid_id", writer, enc.StringEncoder.Instance);
+                    InvalidId.Encoder.EncodeFields((InvalidId)value, writer);
+                    return;
+                }
+                if (value is NotMember)
+                {
+                    WriteProperty(".tag", "not_member", writer, enc.StringEncoder.Instance);
+                    NotMember.Encoder.EncodeFields((NotMember)value, writer);
+                    return;
+                }
+                if (value is NoPermission)
+                {
+                    WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
+                    NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
+                    return;
+                }
+                if (value is EmailUnverified)
+                {
+                    WriteProperty(".tag", "email_unverified", writer, enc.StringEncoder.Instance);
+                    EmailUnverified.Encoder.EncodeFields((EmailUnverified)value, writer);
+                    return;
+                }
+                if (value is TeamFolder)
+                {
+                    WriteProperty(".tag", "team_folder", writer, enc.StringEncoder.Instance);
+                    TeamFolder.Encoder.EncodeFields((TeamFolder)value, writer);
+                    return;
+                }
+                if (value is Unmounted)
+                {
+                    WriteProperty(".tag", "unmounted", writer, enc.StringEncoder.Instance);
+                    Unmounted.Encoder.EncodeFields((Unmounted)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SharedFolderAccessError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SharedFolderAccessError enc.IEncodable<SharedFolderAccessError>.Decode(enc.IDecoder decoder)
+        private class SharedFolderAccessErrorDecoder : enc.UnionDecoder<SharedFolderAccessError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SharedFolderAccessError"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SharedFolderAccessError Create()
             {
-            case "invalid_id":
-                return InvalidId.Instance;
-            case "not_member":
-                return NotMember.Instance;
-            case "has_left":
-                return HasLeft.Instance;
-            case "require_owner":
-                return RequireOwner.Instance;
-            case "is_root":
-                return IsRoot.Instance;
-            case "is_team_shared_folder":
-                return IsTeamSharedFolder.Instance;
-            case "is_app_folder":
-                return IsAppFolder.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new SharedFolderAccessError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override SharedFolderAccessError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "invalid_id":
+                        return InvalidId.Decoder.DecodeFields(reader);
+                    case "not_member":
+                        return NotMember.Decoder.DecodeFields(reader);
+                    case "no_permission":
+                        return NoPermission.Decoder.DecodeFields(reader);
+                    case "email_unverified":
+                        return EmailUnverified.Decoder.DecodeFields(reader);
+                    case "team_folder":
+                        return TeamFolder.Decoder.DecodeFields(reader);
+                    case "unmounted":
+                        return Unmounted.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -255,8 +301,20 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>This shared folder ID is invalid.</para>
         /// </summary>
-        public sealed class InvalidId : SharedFolderAccessError, enc.IEncodable<InvalidId>
+        public sealed class InvalidId : SharedFolderAccessError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidId> Encoder = new InvalidIdEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidId> Decoder = new InvalidIdDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="InvalidId" /> class.</para>
             /// </summary>
@@ -269,37 +327,72 @@ namespace Dropbox.Api.Sharing
             /// </summary>
             public static readonly InvalidId Instance = new InvalidId();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="InvalidId" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<InvalidId>.Encode(enc.IEncoder encoder)
+            private class InvalidIdEncoder : enc.StructEncoder<InvalidId>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidId value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "invalid_id");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="InvalidId" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            InvalidId enc.IEncodable<InvalidId>.Decode(enc.IDecoder decoder)
+            private class InvalidIdDecoder : enc.StructDecoder<InvalidId>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidId" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidId Create()
+                {
+                    return new InvalidId();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InvalidId DecodeFields(enc.IJsonReader reader)
+                {
+                    return InvalidId.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The user is not a member of the shared folder thus cannot access it.</para>
         /// </summary>
-        public sealed class NotMember : SharedFolderAccessError, enc.IEncodable<NotMember>
+        public sealed class NotMember : SharedFolderAccessError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NotMember> Encoder = new NotMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NotMember> Decoder = new NotMemberDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="NotMember" /> class.</para>
             /// </summary>
@@ -312,249 +405,446 @@ namespace Dropbox.Api.Sharing
             /// </summary>
             public static readonly NotMember Instance = new NotMember();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="NotMember" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<NotMember>.Encode(enc.IEncoder encoder)
+            private class NotMemberEncoder : enc.StructEncoder<NotMember>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NotMember value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "not_member");
                 }
             }
 
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            NotMember enc.IEncodable<NotMember>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
+            #endregion
 
-        /// <summary>
-        /// <para>The user has left the shared folder already thus is no longer able to access
-        /// it.</para>
-        /// </summary>
-        public sealed class HasLeft : SharedFolderAccessError, enc.IEncodable<HasLeft>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="HasLeft" /> class.</para>
-            /// </summary>
-            private HasLeft()
-            {
-            }
+            #region Decoder class
 
             /// <summary>
-            /// <para>A singleton instance of HasLeft</para>
+            /// <para>Decoder for  <see cref="NotMember" />.</para>
             /// </summary>
-            public static readonly HasLeft Instance = new HasLeft();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<HasLeft>.Encode(enc.IEncoder encoder)
+            private class NotMemberDecoder : enc.StructDecoder<NotMember>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NotMember" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NotMember Create()
                 {
-                    obj.AddField(".tag", "has_left");
+                    return new NotMember();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NotMember DecodeFields(enc.IJsonReader reader)
+                {
+                    return NotMember.Instance;
                 }
             }
 
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            HasLeft enc.IEncodable<HasLeft>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
+            #endregion
         }
 
         /// <summary>
-        /// <para>The user needs to be the owner to access the shared folder.</para>
+        /// <para>The current user does not have sufficient privileges to perform the desired
+        /// action.</para>
         /// </summary>
-        public sealed class RequireOwner : SharedFolderAccessError, enc.IEncodable<RequireOwner>
+        public sealed class NoPermission : SharedFolderAccessError
         {
+            #pragma warning disable 108
+
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="RequireOwner" />
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoPermission> Encoder = new NoPermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoPermission> Decoder = new NoPermissionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoPermission" />
             /// class.</para>
             /// </summary>
-            private RequireOwner()
+            private NoPermission()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of RequireOwner</para>
+            /// <para>A singleton instance of NoPermission</para>
             /// </summary>
-            public static readonly RequireOwner Instance = new RequireOwner();
+            public static readonly NoPermission Instance = new NoPermission();
+
+            #region Encoder class
 
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="NoPermission" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<RequireOwner>.Encode(enc.IEncoder encoder)
+            private class NoPermissionEncoder : enc.StructEncoder<NoPermission>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoPermission value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "require_owner");
                 }
             }
 
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            RequireOwner enc.IEncodable<RequireOwner>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
-        }
+            #endregion
 
-        /// <summary>
-        /// <para>The folder is a root folder and cannot be shared.</para>
-        /// </summary>
-        public sealed class IsRoot : SharedFolderAccessError, enc.IEncodable<IsRoot>
-        {
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="IsRoot" /> class.</para>
-            /// </summary>
-            private IsRoot()
-            {
-            }
+            #region Decoder class
 
             /// <summary>
-            /// <para>A singleton instance of IsRoot</para>
+            /// <para>Decoder for  <see cref="NoPermission" />.</para>
             /// </summary>
-            public static readonly IsRoot Instance = new IsRoot();
-
-            /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
-            /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<IsRoot>.Encode(enc.IEncoder encoder)
+            private class NoPermissionDecoder : enc.StructDecoder<NoPermission>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoPermission" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoPermission Create()
                 {
-                    obj.AddField(".tag", "is_root");
+                    return new NoPermission();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoPermission DecodeFields(enc.IJsonReader reader)
+                {
+                    return NoPermission.Instance;
                 }
             }
 
-            /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
-            /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            IsRoot enc.IEncodable<IsRoot>.Decode(enc.IDecoder decoder)
-            {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
-            }
+            #endregion
         }
 
         /// <summary>
-        /// <para>The folder is a team shared folder and the user cannot access it.</para>
+        /// <para>The current account's e-mail address is unverified.</para>
         /// </summary>
-        public sealed class IsTeamSharedFolder : SharedFolderAccessError, enc.IEncodable<IsTeamSharedFolder>
+        public sealed class EmailUnverified : SharedFolderAccessError
         {
+            #pragma warning disable 108
+
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="IsTeamSharedFolder" />
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EmailUnverified> Encoder = new EmailUnverifiedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EmailUnverified> Decoder = new EmailUnverifiedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EmailUnverified" />
             /// class.</para>
             /// </summary>
-            private IsTeamSharedFolder()
+            private EmailUnverified()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of IsTeamSharedFolder</para>
+            /// <para>A singleton instance of EmailUnverified</para>
             /// </summary>
-            public static readonly IsTeamSharedFolder Instance = new IsTeamSharedFolder();
+            public static readonly EmailUnverified Instance = new EmailUnverified();
+
+            #region Encoder class
 
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="EmailUnverified" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<IsTeamSharedFolder>.Encode(enc.IEncoder encoder)
+            private class EmailUnverifiedEncoder : enc.StructEncoder<EmailUnverified>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EmailUnverified value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "is_team_shared_folder");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="EmailUnverified" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            IsTeamSharedFolder enc.IEncodable<IsTeamSharedFolder>.Decode(enc.IDecoder decoder)
+            private class EmailUnverifiedDecoder : enc.StructDecoder<EmailUnverified>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EmailUnverified" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EmailUnverified Create()
+                {
+                    return new EmailUnverified();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EmailUnverified DecodeFields(enc.IJsonReader reader)
+                {
+                    return EmailUnverified.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
-        /// <para>The folder is an app folder and cannot be shared.</para>
+        /// <para>The current user cannot perform this action on a team shared folder.</para>
         /// </summary>
-        public sealed class IsAppFolder : SharedFolderAccessError, enc.IEncodable<IsAppFolder>
+        public sealed class TeamFolder : SharedFolderAccessError
         {
+            #pragma warning disable 108
+
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="IsAppFolder" />
-            /// class.</para>
+            /// <para>The encoder instance.</para>
             /// </summary>
-            private IsAppFolder()
+            internal static enc.StructEncoder<TeamFolder> Encoder = new TeamFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolder> Decoder = new TeamFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamFolder" /> class.</para>
+            /// </summary>
+            private TeamFolder()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of IsAppFolder</para>
+            /// <para>A singleton instance of TeamFolder</para>
             /// </summary>
-            public static readonly IsAppFolder Instance = new IsAppFolder();
+            public static readonly TeamFolder Instance = new TeamFolder();
+
+            #region Encoder class
 
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="TeamFolder" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<IsAppFolder>.Encode(enc.IEncoder encoder)
+            private class TeamFolderEncoder : enc.StructEncoder<TeamFolder>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolder value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "is_app_folder");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="TeamFolder" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            IsAppFolder enc.IEncodable<IsAppFolder>.Decode(enc.IDecoder decoder)
+            private class TeamFolderDecoder : enc.StructDecoder<TeamFolder>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamFolder" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolder Create()
+                {
+                    return new TeamFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return TeamFolder.Instance;
+                }
             }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The shared folder is unmounted.</para>
+        /// </summary>
+        public sealed class Unmounted : SharedFolderAccessError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Unmounted> Encoder = new UnmountedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Unmounted> Decoder = new UnmountedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Unmounted" /> class.</para>
+            /// </summary>
+            private Unmounted()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Unmounted</para>
+            /// </summary>
+            public static readonly Unmounted Instance = new Unmounted();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Unmounted" />.</para>
+            /// </summary>
+            private class UnmountedEncoder : enc.StructEncoder<Unmounted>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Unmounted value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Unmounted" />.</para>
+            /// </summary>
+            private class UnmountedDecoder : enc.StructDecoder<Unmounted>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Unmounted" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Unmounted Create()
+                {
+                    return new Unmounted();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Unmounted DecodeFields(enc.IJsonReader reader)
+                {
+                    return Unmounted.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : SharedFolderAccessError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
+            /// </summary>
+            private Other()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Other</para>
+            /// </summary>
+            public static readonly Other Instance = new Other();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherEncoder : enc.StructEncoder<Other>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherDecoder : enc.StructDecoder<Other>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
+            }
+
+            #endregion
         }
     }
 }

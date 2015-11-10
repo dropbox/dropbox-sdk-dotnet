@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The get metadata error object</para>
     /// </summary>
-    public class GetMetadataError : enc.IEncodable<GetMetadataError>
+    public class GetMetadataError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GetMetadataError> Encoder = new GetMetadataErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GetMetadataError> Decoder = new GetMetadataErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetMetadataError" />
         /// class.</para>
@@ -45,41 +57,63 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<GetMetadataError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="GetMetadataError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GetMetadataError>.Encode(enc.IEncoder encoder)
+        private class GetMetadataErrorEncoder : enc.StructEncoder<GetMetadataError>
         {
-            if (this.IsPath)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GetMetadataError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Path>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is Path)
+                {
+                    WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
+                    Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GetMetadataError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GetMetadataError enc.IEncodable<GetMetadataError>.Decode(enc.IDecoder decoder)
+        private class GetMetadataErrorDecoder : enc.UnionDecoder<GetMetadataError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GetMetadataError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GetMetadataError Create()
             {
-            case "path":
-                var path = new LookupError();
-                return new Path(((enc.IEncodable<LookupError>)path).Decode(decoder));
-            default:
-                throw new sys.InvalidOperationException();
+                return new GetMetadataError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override GetMetadataError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "path":
+                        return Path.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -88,8 +122,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The path object</para>
         /// </summary>
-        public sealed class Path : GetMetadataError, enc.IEncodable<Path>
+        public sealed class Path : GetMetadataError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Path> Encoder = new PathEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Path> Decoder = new PathDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
@@ -98,36 +144,75 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
+            /// </summary>
+            private Path()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public LookupError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Path" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
+            private class PathEncoder : enc.StructEncoder<Path>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "path");
-                    obj.AddField("path", this.Value);
+                    LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Path" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
+            private class PathDecoder : enc.StructDecoder<Path>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Path" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Path Create()
+                {
+                    return new Path();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(Path value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "path":
+                            value.Value = LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
     }
 }

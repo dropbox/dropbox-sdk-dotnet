@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The thumbnail size object</para>
     /// </summary>
-    public class ThumbnailSize : enc.IEncodable<ThumbnailSize>
+    public class ThumbnailSize
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ThumbnailSize> Encoder = new ThumbnailSizeEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ThumbnailSize> Decoder = new ThumbnailSizeDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ThumbnailSize" /> class.</para>
         /// </summary>
@@ -132,64 +144,95 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<ThumbnailSize> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ThumbnailSize" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ThumbnailSize>.Encode(enc.IEncoder encoder)
+        private class ThumbnailSizeEncoder : enc.StructEncoder<ThumbnailSize>
         {
-            if (this.IsW32h32)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ThumbnailSize value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<W32h32>)this).Encode(encoder);
-            }
-            else if (this.IsW64h64)
-            {
-                ((enc.IEncodable<W64h64>)this).Encode(encoder);
-            }
-            else if (this.IsW128h128)
-            {
-                ((enc.IEncodable<W128h128>)this).Encode(encoder);
-            }
-            else if (this.IsW640h480)
-            {
-                ((enc.IEncodable<W640h480>)this).Encode(encoder);
-            }
-            else if (this.IsW1024h768)
-            {
-                ((enc.IEncodable<W1024h768>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is W32h32)
+                {
+                    WriteProperty(".tag", "w32h32", writer, enc.StringEncoder.Instance);
+                    W32h32.Encoder.EncodeFields((W32h32)value, writer);
+                    return;
+                }
+                if (value is W64h64)
+                {
+                    WriteProperty(".tag", "w64h64", writer, enc.StringEncoder.Instance);
+                    W64h64.Encoder.EncodeFields((W64h64)value, writer);
+                    return;
+                }
+                if (value is W128h128)
+                {
+                    WriteProperty(".tag", "w128h128", writer, enc.StringEncoder.Instance);
+                    W128h128.Encoder.EncodeFields((W128h128)value, writer);
+                    return;
+                }
+                if (value is W640h480)
+                {
+                    WriteProperty(".tag", "w640h480", writer, enc.StringEncoder.Instance);
+                    W640h480.Encoder.EncodeFields((W640h480)value, writer);
+                    return;
+                }
+                if (value is W1024h768)
+                {
+                    WriteProperty(".tag", "w1024h768", writer, enc.StringEncoder.Instance);
+                    W1024h768.Encoder.EncodeFields((W1024h768)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ThumbnailSize" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ThumbnailSize enc.IEncodable<ThumbnailSize>.Decode(enc.IDecoder decoder)
+        private class ThumbnailSizeDecoder : enc.UnionDecoder<ThumbnailSize>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ThumbnailSize" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ThumbnailSize Create()
             {
-            case "w32h32":
-                return W32h32.Instance;
-            case "w64h64":
-                return W64h64.Instance;
-            case "w128h128":
-                return W128h128.Instance;
-            case "w640h480":
-                return W640h480.Instance;
-            case "w1024h768":
-                return W1024h768.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new ThumbnailSize();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override ThumbnailSize Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "w32h32":
+                        return W32h32.Decoder.DecodeFields(reader);
+                    case "w64h64":
+                        return W64h64.Decoder.DecodeFields(reader);
+                    case "w128h128":
+                        return W128h128.Decoder.DecodeFields(reader);
+                    case "w640h480":
+                        return W640h480.Decoder.DecodeFields(reader);
+                    case "w1024h768":
+                        return W1024h768.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -198,8 +241,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>32 by 32 px.</para>
         /// </summary>
-        public sealed class W32h32 : ThumbnailSize, enc.IEncodable<W32h32>
+        public sealed class W32h32 : ThumbnailSize
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W32h32> Encoder = new W32h32Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W32h32> Decoder = new W32h32Decoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="W32h32" /> class.</para>
             /// </summary>
@@ -212,37 +267,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly W32h32 Instance = new W32h32();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="W32h32" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<W32h32>.Encode(enc.IEncoder encoder)
+            private class W32h32Encoder : enc.StructEncoder<W32h32>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W32h32 value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "w32h32");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="W32h32" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            W32h32 enc.IEncodable<W32h32>.Decode(enc.IDecoder decoder)
+            private class W32h32Decoder : enc.StructDecoder<W32h32>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W32h32" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W32h32 Create()
+                {
+                    return new W32h32();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override W32h32 DecodeFields(enc.IJsonReader reader)
+                {
+                    return W32h32.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>64 by 64 px.</para>
         /// </summary>
-        public sealed class W64h64 : ThumbnailSize, enc.IEncodable<W64h64>
+        public sealed class W64h64 : ThumbnailSize
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W64h64> Encoder = new W64h64Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W64h64> Decoder = new W64h64Decoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="W64h64" /> class.</para>
             /// </summary>
@@ -255,37 +345,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly W64h64 Instance = new W64h64();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="W64h64" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<W64h64>.Encode(enc.IEncoder encoder)
+            private class W64h64Encoder : enc.StructEncoder<W64h64>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W64h64 value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "w64h64");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="W64h64" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            W64h64 enc.IEncodable<W64h64>.Decode(enc.IDecoder decoder)
+            private class W64h64Decoder : enc.StructDecoder<W64h64>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W64h64" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W64h64 Create()
+                {
+                    return new W64h64();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override W64h64 DecodeFields(enc.IJsonReader reader)
+                {
+                    return W64h64.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>128 by 128 px.</para>
         /// </summary>
-        public sealed class W128h128 : ThumbnailSize, enc.IEncodable<W128h128>
+        public sealed class W128h128 : ThumbnailSize
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W128h128> Encoder = new W128h128Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W128h128> Decoder = new W128h128Decoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="W128h128" /> class.</para>
             /// </summary>
@@ -298,37 +423,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly W128h128 Instance = new W128h128();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="W128h128" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<W128h128>.Encode(enc.IEncoder encoder)
+            private class W128h128Encoder : enc.StructEncoder<W128h128>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W128h128 value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "w128h128");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="W128h128" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            W128h128 enc.IEncodable<W128h128>.Decode(enc.IDecoder decoder)
+            private class W128h128Decoder : enc.StructDecoder<W128h128>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W128h128" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W128h128 Create()
+                {
+                    return new W128h128();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override W128h128 DecodeFields(enc.IJsonReader reader)
+                {
+                    return W128h128.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>640 by 480 px.</para>
         /// </summary>
-        public sealed class W640h480 : ThumbnailSize, enc.IEncodable<W640h480>
+        public sealed class W640h480 : ThumbnailSize
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W640h480> Encoder = new W640h480Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W640h480> Decoder = new W640h480Decoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="W640h480" /> class.</para>
             /// </summary>
@@ -341,37 +501,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly W640h480 Instance = new W640h480();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="W640h480" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<W640h480>.Encode(enc.IEncoder encoder)
+            private class W640h480Encoder : enc.StructEncoder<W640h480>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W640h480 value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "w640h480");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="W640h480" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            W640h480 enc.IEncodable<W640h480>.Decode(enc.IDecoder decoder)
+            private class W640h480Decoder : enc.StructDecoder<W640h480>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W640h480" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W640h480 Create()
+                {
+                    return new W640h480();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override W640h480 DecodeFields(enc.IJsonReader reader)
+                {
+                    return W640h480.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>1024 by 768</para>
         /// </summary>
-        public sealed class W1024h768 : ThumbnailSize, enc.IEncodable<W1024h768>
+        public sealed class W1024h768 : ThumbnailSize
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W1024h768> Encoder = new W1024h768Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W1024h768> Decoder = new W1024h768Decoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="W1024h768" /> class.</para>
             /// </summary>
@@ -384,30 +579,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly W1024h768 Instance = new W1024h768();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="W1024h768" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<W1024h768>.Encode(enc.IEncoder encoder)
+            private class W1024h768Encoder : enc.StructEncoder<W1024h768>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W1024h768 value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "w1024h768");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="W1024h768" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            W1024h768 enc.IEncodable<W1024h768>.Decode(enc.IDecoder decoder)
+            private class W1024h768Decoder : enc.StructDecoder<W1024h768>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W1024h768" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W1024h768 Create()
+                {
+                    return new W1024h768();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override W1024h768 DecodeFields(enc.IJsonReader reader)
+                {
+                    return W1024h768.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

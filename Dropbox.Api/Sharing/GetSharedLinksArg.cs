@@ -13,8 +13,20 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The get shared links arg object</para>
     /// </summary>
-    public sealed class GetSharedLinksArg : enc.IEncodable<GetSharedLinksArg>
+    public class GetSharedLinksArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GetSharedLinksArg> Encoder = new GetSharedLinksArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GetSharedLinksArg> Decoder = new GetSharedLinksArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetSharedLinksArg" />
         /// class.</para>
@@ -41,44 +53,66 @@ namespace Dropbox.Api.Sharing
         /// <para>See <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.GetSharedLinksAsync"
         /// /> description.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
-        #region IEncodable<GetSharedLinksArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="GetSharedLinksArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GetSharedLinksArg>.Encode(enc.IEncoder encoder)
+        private class GetSharedLinksArgEncoder : enc.StructEncoder<GetSharedLinksArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GetSharedLinksArg value, enc.IJsonWriter writer)
             {
-                if (this.Path != null)
+                if (value.Path != null)
                 {
-                    obj.AddField<string>("path", this.Path);
+                    WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GetSharedLinksArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GetSharedLinksArg enc.IEncodable<GetSharedLinksArg>.Decode(enc.IDecoder decoder)
+        private class GetSharedLinksArgDecoder : enc.StructDecoder<GetSharedLinksArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GetSharedLinksArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GetSharedLinksArg Create()
             {
-                if (obj.HasField("path"))
-                {
-                    this.Path = obj.GetField<string>("path");
-                }
+                return new GetSharedLinksArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(GetSharedLinksArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

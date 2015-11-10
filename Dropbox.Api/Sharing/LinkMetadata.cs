@@ -16,8 +16,20 @@ namespace Dropbox.Api.Sharing
     /// </summary>
     /// <seealso cref="CollectionLinkMetadata" />
     /// <seealso cref="PathLinkMetadata" />
-    public class LinkMetadata : enc.IEncodable<LinkMetadata>
+    public class LinkMetadata
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<LinkMetadata> Encoder = new LinkMetadataEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<LinkMetadata> Decoder = new LinkMetadataDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="LinkMetadata" /> class.</para>
         /// </summary>
@@ -114,73 +126,101 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public sys.DateTime? Expires { get; protected set; }
 
-        #region IEncodable<LinkMetadata> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="LinkMetadata" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<LinkMetadata>.Encode(enc.IEncoder encoder)
+        private class LinkMetadataEncoder : enc.StructEncoder<LinkMetadata>
         {
-            if (this.IsPath)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(LinkMetadata value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<PathLinkMetadata>)this.AsPath).Encode(encoder);
-            }
-            else if (this.IsCollection)
-            {
-                ((enc.IEncodable<CollectionLinkMetadata>)this.AsCollection).Encode(encoder);
-            }
-            else
-            {
-                using (var obj = encoder.AddObject())
+                if (value is PathLinkMetadata)
                 {
-                    obj.AddField<string>(".tag", "");
-                    obj.AddField<string>("url", this.Url);
-                    obj.AddFieldObject<Visibility>("visibility", this.Visibility);
-                    if (this.Expires != null)
-                    {
-                        obj.AddField<sys.DateTime>("expires", this.Expires.Value);
-                    }
+                    WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
+                    PathLinkMetadata.Encoder.EncodeFields((PathLinkMetadata)value, writer);
+                    return;
+                }
+                if (value is CollectionLinkMetadata)
+                {
+                    WriteProperty(".tag", "collection", writer, enc.StringEncoder.Instance);
+                    CollectionLinkMetadata.Encoder.EncodeFields((CollectionLinkMetadata)value, writer);
+                    return;
+                }
+                WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
+                WriteProperty("visibility", value.Visibility, writer, Visibility.Encoder);
+                if (value.Expires != null)
+                {
+                    WriteProperty("expires", value.Expires.Value, writer, enc.DateTimeEncoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="LinkMetadata" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        LinkMetadata enc.IEncodable<LinkMetadata>.Decode(enc.IDecoder decoder)
+        private class LinkMetadataDecoder : enc.UnionDecoder<LinkMetadata>
         {
-            var tag = string.Empty;
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="LinkMetadata" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override LinkMetadata Create()
             {
-                tag = obj.GetField<string>(".tag");
+                return new LinkMetadata();
             }
 
-            switch (tag)
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override LinkMetadata Decode(string tag, enc.IJsonReader reader)
             {
-            case "path":
-                var path = new PathLinkMetadata();
-                return ((enc.IEncodable<PathLinkMetadata>)path).Decode(decoder);
-            case "collection":
-                var collection = new CollectionLinkMetadata();
-                return ((enc.IEncodable<CollectionLinkMetadata>)collection).Decode(decoder);
-            default:
-                using (var obj = decoder.GetObject())
+                switch (tag)
                 {
-                    this.Url = obj.GetField<string>("url");
-                    this.Visibility = obj.GetFieldObject<Visibility>("visibility");
-                    if (obj.HasField("expires"))
-                    {
-                        this.Expires = obj.GetField<sys.DateTime>("expires");
-                    }
+                    case "path":
+                        return PathLinkMetadata.Decoder.DecodeFields(reader);
+                    case "collection":
+                        return CollectionLinkMetadata.Decoder.DecodeFields(reader);
+                    default:
+                        return base.Decode(reader);
                 }
-
-                return this;
+            }
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(LinkMetadata value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "url":
+                        value.Url = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "visibility":
+                        value.Visibility = Visibility.Decoder.Decode(reader);
+                        break;
+                    case "expires":
+                        value.Expires = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
             }
         }
 

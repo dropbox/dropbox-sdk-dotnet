@@ -13,8 +13,20 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>The get account arg object</para>
     /// </summary>
-    public sealed class GetAccountArg : enc.IEncodable<GetAccountArg>
+    public class GetAccountArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GetAccountArg> Encoder = new GetAccountArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GetAccountArg> Decoder = new GetAccountArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetAccountArg" /> class.</para>
         /// </summary>
@@ -45,38 +57,63 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>A user's account identifier.</para>
         /// </summary>
-        public string AccountId { get; private set; }
+        public string AccountId { get; protected set; }
 
-        #region IEncodable<GetAccountArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="GetAccountArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GetAccountArg>.Encode(enc.IEncoder encoder)
+        private class GetAccountArgEncoder : enc.StructEncoder<GetAccountArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GetAccountArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("account_id", this.AccountId);
+                WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GetAccountArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GetAccountArg enc.IEncodable<GetAccountArg>.Decode(enc.IDecoder decoder)
+        private class GetAccountArgDecoder : enc.StructDecoder<GetAccountArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GetAccountArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GetAccountArg Create()
             {
-                this.AccountId = obj.GetField<string>("account_id");
+                return new GetAccountArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(GetAccountArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "account_id":
+                        value.AccountId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

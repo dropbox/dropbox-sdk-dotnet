@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The list folder get latest cursor result object</para>
     /// </summary>
-    public sealed class ListFolderGetLatestCursorResult : enc.IEncodable<ListFolderGetLatestCursorResult>
+    public class ListFolderGetLatestCursorResult
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ListFolderGetLatestCursorResult> Encoder = new ListFolderGetLatestCursorResultEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ListFolderGetLatestCursorResult> Decoder = new ListFolderGetLatestCursorResultDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderGetLatestCursorResult"
         /// /> class.</para>
@@ -47,38 +59,64 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
         /// what's changed in the folder since your previous query.</para>
         /// </summary>
-        public string Cursor { get; private set; }
+        public string Cursor { get; protected set; }
 
-        #region IEncodable<ListFolderGetLatestCursorResult> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ListFolderGetLatestCursorResult" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ListFolderGetLatestCursorResult>.Encode(enc.IEncoder encoder)
+        private class ListFolderGetLatestCursorResultEncoder : enc.StructEncoder<ListFolderGetLatestCursorResult>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ListFolderGetLatestCursorResult value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("cursor", this.Cursor);
+                WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ListFolderGetLatestCursorResult" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ListFolderGetLatestCursorResult enc.IEncodable<ListFolderGetLatestCursorResult>.Decode(enc.IDecoder decoder)
+        private class ListFolderGetLatestCursorResultDecoder : enc.StructDecoder<ListFolderGetLatestCursorResult>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ListFolderGetLatestCursorResult"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ListFolderGetLatestCursorResult Create()
             {
-                this.Cursor = obj.GetField<string>("cursor");
+                return new ListFolderGetLatestCursorResult();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(ListFolderGetLatestCursorResult value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "cursor":
+                        value.Cursor = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

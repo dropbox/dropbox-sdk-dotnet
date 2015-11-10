@@ -14,14 +14,27 @@ namespace Dropbox.Api.Sharing
     /// <para>The information about a member of the shared folder.</para>
     /// </summary>
     /// <seealso cref="GroupMembershipInfo" />
+    /// <seealso cref="InviteeMembershipInfo" />
     /// <seealso cref="UserMembershipInfo" />
-    public sealed class MembershipInfo : enc.IEncodable<MembershipInfo>
+    public class MembershipInfo
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<MembershipInfo> Encoder = new MembershipInfoEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<MembershipInfo> Decoder = new MembershipInfoDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="MembershipInfo" /> class.</para>
         /// </summary>
-        /// <param name="accessType">This access type for this user member.</param>
-        public MembershipInfo(AccessType accessType)
+        /// <param name="accessType">The access type for this member.</param>
+        public MembershipInfo(AccessLevel accessType)
         {
             if (accessType == null)
             {
@@ -41,40 +54,65 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>This access type for this user member.</para>
+        /// <para>The access type for this member.</para>
         /// </summary>
-        public AccessType AccessType { get; private set; }
+        public AccessLevel AccessType { get; protected set; }
 
-        #region IEncodable<MembershipInfo> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="MembershipInfo" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<MembershipInfo>.Encode(enc.IEncoder encoder)
+        private class MembershipInfoEncoder : enc.StructEncoder<MembershipInfo>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(MembershipInfo value, enc.IJsonWriter writer)
             {
-                obj.AddFieldObject<AccessType>("access_type", this.AccessType);
+                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="MembershipInfo" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        MembershipInfo enc.IEncodable<MembershipInfo>.Decode(enc.IDecoder decoder)
+        private class MembershipInfoDecoder : enc.StructDecoder<MembershipInfo>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="MembershipInfo" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override MembershipInfo Create()
             {
-                this.AccessType = obj.GetFieldObject<AccessType>("access_type");
+                return new MembershipInfo();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(MembershipInfo value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "access_type":
+                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

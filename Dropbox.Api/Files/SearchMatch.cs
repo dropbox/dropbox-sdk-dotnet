@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The search match object</para>
     /// </summary>
-    public sealed class SearchMatch : enc.IEncodable<SearchMatch>
+    public class SearchMatch
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SearchMatch> Encoder = new SearchMatchEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SearchMatch> Decoder = new SearchMatchDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SearchMatch" /> class.</para>
         /// </summary>
@@ -49,45 +61,72 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The type of the match.</para>
         /// </summary>
-        public SearchMatchType MatchType { get; private set; }
+        public SearchMatchType MatchType { get; protected set; }
 
         /// <summary>
         /// <para>The metadata for the matched file or folder.</para>
         /// </summary>
-        public Metadata Metadata { get; private set; }
+        public Metadata Metadata { get; protected set; }
 
-        #region IEncodable<SearchMatch> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SearchMatch" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SearchMatch>.Encode(enc.IEncoder encoder)
+        private class SearchMatchEncoder : enc.StructEncoder<SearchMatch>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SearchMatch value, enc.IJsonWriter writer)
             {
-                obj.AddFieldObject<SearchMatchType>("match_type", this.MatchType);
-                obj.AddFieldObject<Metadata>("metadata", this.Metadata);
+                WriteProperty("match_type", value.MatchType, writer, SearchMatchType.Encoder);
+                WriteProperty("metadata", value.Metadata, writer, Metadata.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SearchMatch" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SearchMatch enc.IEncodable<SearchMatch>.Decode(enc.IDecoder decoder)
+        private class SearchMatchDecoder : enc.StructDecoder<SearchMatch>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SearchMatch" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SearchMatch Create()
             {
-                this.MatchType = obj.GetFieldObject<SearchMatchType>("match_type");
-                this.Metadata = obj.GetFieldObject<Metadata>("metadata");
+                return new SearchMatch();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(SearchMatch value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "match_type":
+                        value.MatchType = SearchMatchType.Decoder.Decode(reader);
+                        break;
+                    case "metadata":
+                        value.Metadata = Metadata.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

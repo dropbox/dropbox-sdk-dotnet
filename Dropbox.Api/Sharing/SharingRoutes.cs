@@ -47,7 +47,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="GetSharedLinksError"/>.</exception>
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links");
+            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", GetSharedLinksArg.Encoder, GetSharedLinksResult.Decoder, GetSharedLinksError.Decoder);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="CreateSharedLinkError"/>.</exception>
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
         {
-            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link");
+            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", CreateSharedLinkArg.Encoder, PathLinkMetadata.Decoder, CreateSharedLinkError.Decoder);
         }
 
         /// <summary>
@@ -244,79 +244,165 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Gets shared folder by its folder ID.</para>
+        /// <para>Revoke a shared link.</para>
+        /// <para>This API is only supported for full dropbox apps.</para>
         /// </summary>
-        /// <param name="getSharedFolderArgs">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// <param name="revokeSharedLinkArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RevokeSharedLinkError}">Thrown if there
         /// is an error processing the request; This will contain a <see
-        /// cref="SharedFolderAccessError"/>.</exception>
-        public t.Task<SharedFolderMetadata> GetSharedFolderAsync(GetSharedFolderArgs getSharedFolderArgs)
+        /// cref="RevokeSharedLinkError"/>.</exception>
+        public t.Task RevokeSharedLinkAsync(RevokeSharedLinkArg revokeSharedLinkArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedFolderArgs, SharedFolderMetadata, SharedFolderAccessError>(getSharedFolderArgs, "api", "/sharing/get_shared_folder");
+            return this.Transport.SendRpcRequestAsync<RevokeSharedLinkArg, enc.Empty, RevokeSharedLinkError>(revokeSharedLinkArg, "api", "/sharing/revoke_shared_link", RevokeSharedLinkArg.Encoder, enc.EmptyDecoder.Instance, RevokeSharedLinkError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the get shared folder route.</para>
+        /// <para>Begins an asynchronous send to the revoke shared link route.</para>
         /// </summary>
-        /// <param name="getSharedFolderArgs">The request parameters.</param>
+        /// <param name="revokeSharedLinkArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetSharedFolder(GetSharedFolderArgs getSharedFolderArgs, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginRevokeSharedLink(RevokeSharedLinkArg revokeSharedLinkArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.GetSharedFolderAsync(getSharedFolderArgs);
+            var task = this.RevokeSharedLinkAsync(revokeSharedLinkArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Gets shared folder by its folder ID.</para>
+        /// <para>Revoke a shared link.</para>
+        /// <para>This API is only supported for full dropbox apps.</para>
         /// </summary>
-        /// <param name="id">The ID for the shared folder.</param>
-        /// <param name="includeMembership">If include user and group membership information in
-        /// the response.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// <param name="url">URL of the shared link.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RevokeSharedLinkError}">Thrown if there
         /// is an error processing the request; This will contain a <see
-        /// cref="SharedFolderAccessError"/>.</exception>
-        public t.Task<SharedFolderMetadata> GetSharedFolderAsync(string id,
-                                                                 bool includeMembership = true)
+        /// cref="RevokeSharedLinkError"/>.</exception>
+        public t.Task RevokeSharedLinkAsync(string url)
         {
-            var getSharedFolderArgs = new GetSharedFolderArgs(id,
-                                                              includeMembership);
+            var revokeSharedLinkArg = new RevokeSharedLinkArg(url);
 
-            return this.GetSharedFolderAsync(getSharedFolderArgs);
+            return this.RevokeSharedLinkAsync(revokeSharedLinkArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the get shared folder route.</para>
+        /// <para>Begins an asynchronous send to the revoke shared link route.</para>
         /// </summary>
-        /// <param name="id">The ID for the shared folder.</param>
-        /// <param name="includeMembership">If include user and group membership information in
-        /// the response.</param>
+        /// <param name="url">URL of the shared link.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetSharedFolder(string id,
-                                                     bool includeMembership = true,
-                                                     sys.AsyncCallback callback = null,
-                                                     object callbackState = null)
+        public sys.IAsyncResult BeginRevokeSharedLink(string url,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
         {
-            var getSharedFolderArgs = new GetSharedFolderArgs(id,
-                                                              includeMembership);
+            var revokeSharedLinkArg = new RevokeSharedLinkArg(url);
 
-            return this.BeginGetSharedFolder(getSharedFolderArgs, callback, callbackState);
+            return this.BeginRevokeSharedLink(revokeSharedLinkArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the get shared folder route to
+        /// <para>Waits for the pending asynchronous send to the revoke shared link route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{RevokeSharedLinkError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="RevokeSharedLinkError"/>.</exception>
+        public void EndRevokeSharedLink(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Returns shared folder metadata by its folder ID.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="getMetadataArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="SharedFolderAccessError"/>.</exception>
+        public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(GetMetadataArgs getMetadataArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<GetMetadataArgs, SharedFolderMetadata, SharedFolderAccessError>(getMetadataArgs, "api", "/sharing/get_folder_metadata", GetMetadataArgs.Encoder, SharedFolderMetadata.Decoder, SharedFolderAccessError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get folder metadata route.</para>
+        /// </summary>
+        /// <param name="getMetadataArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetFolderMetadata(GetMetadataArgs getMetadataArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetFolderMetadataAsync(getMetadataArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns shared folder metadata by its folder ID.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="includeMembership">If <c>true</c>, user and group membership included
+        /// in the response.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="SharedFolderAccessError"/>.</exception>
+        public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(string sharedFolderId,
+                                                                   bool includeMembership = true)
+        {
+            var getMetadataArgs = new GetMetadataArgs(sharedFolderId,
+                                                      includeMembership);
+
+            return this.GetFolderMetadataAsync(getMetadataArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get folder metadata route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="includeMembership">If <c>true</c>, user and group membership included
+        /// in the response.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetFolderMetadata(string sharedFolderId,
+                                                       bool includeMembership = true,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var getMetadataArgs = new GetMetadataArgs(sharedFolderId,
+                                                      includeMembership);
+
+            return this.BeginGetFolderMetadata(getMetadataArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get folder metadata route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
@@ -325,7 +411,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
         /// is an error processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
-        public SharedFolderMetadata EndGetSharedFolder(sys.IAsyncResult asyncResult)
+        public SharedFolderMetadata EndGetFolderMetadata(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SharedFolderMetadata>;
             if (task == null)
@@ -337,91 +423,1310 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Return the list of all shared folders the authenticated user has access
-        /// to.</para>
+        /// <para>Return the list of all shared folders the current user has access to.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
         /// </summary>
-        /// <param name="listSharedFoldersArgs">The request parameters</param>
+        /// <param name="listFoldersArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListSharedFoldersResult> ListSharedFoldersAsync(ListSharedFoldersArgs listSharedFoldersArgs)
+        public t.Task<ListFoldersResult> ListFoldersAsync(ListFoldersArgs listFoldersArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListSharedFoldersArgs, ListSharedFoldersResult, enc.Empty>(listSharedFoldersArgs, "api", "/sharing/list_shared_folders");
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_folders", ListFoldersArgs.Encoder, ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the list shared folders route.</para>
+        /// <para>Begins an asynchronous send to the list folders route.</para>
         /// </summary>
-        /// <param name="listSharedFoldersArgs">The request parameters.</param>
+        /// <param name="listFoldersArgs">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListSharedFolders(ListSharedFoldersArgs listSharedFoldersArgs, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginListFolders(ListFoldersArgs listFoldersArgs, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.ListSharedFoldersAsync(listSharedFoldersArgs);
+            var task = this.ListFoldersAsync(listFoldersArgs);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Return the list of all shared folders the authenticated user has access
-        /// to.</para>
+        /// <para>Return the list of all shared folders the current user has access to.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="includeMembership">If include user and group membership information in
         /// the response.</param>
-        /// <param name="showUnmounted">Determines whether the returned list of shared folders
-        /// will include folders  that the user has left (but may still rejoin).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListSharedFoldersResult> ListSharedFoldersAsync(bool includeMembership = false,
-                                                                      bool showUnmounted = false)
+        public t.Task<ListFoldersResult> ListFoldersAsync(bool includeMembership = false)
         {
-            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership,
-                                                                  showUnmounted);
+            var listFoldersArgs = new ListFoldersArgs(includeMembership);
 
-            return this.ListSharedFoldersAsync(listSharedFoldersArgs);
+            return this.ListFoldersAsync(listFoldersArgs);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the list shared folders route.</para>
+        /// <para>Begins an asynchronous send to the list folders route.</para>
         /// </summary>
         /// <param name="includeMembership">If include user and group membership information in
         /// the response.</param>
-        /// <param name="showUnmounted">Determines whether the returned list of shared folders
-        /// will include folders  that the user has left (but may still rejoin).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListSharedFolders(bool includeMembership = false,
-                                                       bool showUnmounted = false,
-                                                       sys.AsyncCallback callback = null,
-                                                       object callbackState = null)
+        public sys.IAsyncResult BeginListFolders(bool includeMembership = false,
+                                                 sys.AsyncCallback callback = null,
+                                                 object callbackState = null)
         {
-            var listSharedFoldersArgs = new ListSharedFoldersArgs(includeMembership,
-                                                                  showUnmounted);
+            var listFoldersArgs = new ListFoldersArgs(includeMembership);
 
-            return this.BeginListSharedFolders(listSharedFoldersArgs, callback, callbackState);
+            return this.BeginListFolders(listFoldersArgs, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the list shared folders route to
+        /// <para>Waits for the pending asynchronous send to the list folders route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        public ListSharedFoldersResult EndListSharedFolders(sys.IAsyncResult asyncResult)
+        public ListFoldersResult EndListFolders(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<ListSharedFoldersResult>;
+            var task = asyncResult as t.Task<ListFoldersResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
             }
 
             return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Share a folder with collaborators.</para>
+        /// <para>Most sharing will be completed synchronously. Large folders will be completed
+        /// asynchronously. To make testing the async case repeatable, set
+        /// `ShareFolderArg.force_async`.</para>
+        /// <para>If a <see cref="ShareFolderLaunch.AsyncJobId" /> is returned, you'll need to
+        /// call <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync"
+        /// /> until the action completes to get the metadata for the folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="shareFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ShareFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="ShareFolderError"/>.</exception>
+        public t.Task<ShareFolderLaunch> ShareFolderAsync(ShareFolderArg shareFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ShareFolderArg, ShareFolderLaunch, ShareFolderError>(shareFolderArg, "api", "/sharing/share_folder", ShareFolderArg.Encoder, ShareFolderLaunch.Decoder, ShareFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the share folder route.</para>
+        /// </summary>
+        /// <param name="shareFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginShareFolder(ShareFolderArg shareFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ShareFolderAsync(shareFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Share a folder with collaborators.</para>
+        /// <para>Most sharing will be completed synchronously. Large folders will be completed
+        /// asynchronously. To make testing the async case repeatable, set
+        /// `ShareFolderArg.force_async`.</para>
+        /// <para>If a <see cref="ShareFolderLaunch.AsyncJobId" /> is returned, you'll need to
+        /// call <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync"
+        /// /> until the action completes to get the metadata for the folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="path">The path to the folder to share. If it does not exist, then a
+        /// new one is created.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder.</param>
+        /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
+        /// folder.</param>
+        /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
+        /// content inside this shared folder.</param>
+        /// <param name="forceAsync">Whether to force the share to happen
+        /// asynchronously.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ShareFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="ShareFolderError"/>.</exception>
+        public t.Task<ShareFolderLaunch> ShareFolderAsync(string path,
+                                                          MemberPolicy memberPolicy = null,
+                                                          AclUpdatePolicy aclUpdatePolicy = null,
+                                                          SharedLinkPolicy sharedLinkPolicy = null,
+                                                          bool forceAsync = false)
+        {
+            var shareFolderArg = new ShareFolderArg(path,
+                                                    memberPolicy,
+                                                    aclUpdatePolicy,
+                                                    sharedLinkPolicy,
+                                                    forceAsync);
+
+            return this.ShareFolderAsync(shareFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the share folder route.</para>
+        /// </summary>
+        /// <param name="path">The path to the folder to share. If it does not exist, then a
+        /// new one is created.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder.</param>
+        /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
+        /// folder.</param>
+        /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
+        /// content inside this shared folder.</param>
+        /// <param name="forceAsync">Whether to force the share to happen
+        /// asynchronously.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginShareFolder(string path,
+                                                 MemberPolicy memberPolicy = null,
+                                                 AclUpdatePolicy aclUpdatePolicy = null,
+                                                 SharedLinkPolicy sharedLinkPolicy = null,
+                                                 bool forceAsync = false,
+                                                 sys.AsyncCallback callback = null,
+                                                 object callbackState = null)
+        {
+            var shareFolderArg = new ShareFolderArg(path,
+                                                    memberPolicy,
+                                                    aclUpdatePolicy,
+                                                    sharedLinkPolicy,
+                                                    forceAsync);
+
+            return this.BeginShareFolder(shareFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the share folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{ShareFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="ShareFolderError"/>.</exception>
+        public ShareFolderLaunch EndShareFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ShareFolderLaunch>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Update the sharing policies for a shared folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="updateFolderPolicyArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderPolicyError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="UpdateFolderPolicyError"/>.</exception>
+        public t.Task<BasicSharedFolderMetadata> UpdateFolderPolicyAsync(UpdateFolderPolicyArg updateFolderPolicyArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UpdateFolderPolicyArg, BasicSharedFolderMetadata, UpdateFolderPolicyError>(updateFolderPolicyArg, "api", "/sharing/update_folder_policy", UpdateFolderPolicyArg.Encoder, BasicSharedFolderMetadata.Decoder, UpdateFolderPolicyError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update folder policy route.</para>
+        /// </summary>
+        /// <param name="updateFolderPolicyArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFolderPolicy(UpdateFolderPolicyArg updateFolderPolicyArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UpdateFolderPolicyAsync(updateFolderPolicyArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Update the sharing policies for a shared folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only set this
+        /// if the current user is on a team.</param>
+        /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
+        /// folder.</param>
+        /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
+        /// content inside this shared folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderPolicyError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="UpdateFolderPolicyError"/>.</exception>
+        public t.Task<BasicSharedFolderMetadata> UpdateFolderPolicyAsync(string sharedFolderId,
+                                                                         MemberPolicy memberPolicy = null,
+                                                                         AclUpdatePolicy aclUpdatePolicy = null,
+                                                                         SharedLinkPolicy sharedLinkPolicy = null)
+        {
+            var updateFolderPolicyArg = new UpdateFolderPolicyArg(sharedFolderId,
+                                                                  memberPolicy,
+                                                                  aclUpdatePolicy,
+                                                                  sharedLinkPolicy);
+
+            return this.UpdateFolderPolicyAsync(updateFolderPolicyArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update folder policy route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only set this
+        /// if the current user is on a team.</param>
+        /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
+        /// folder.</param>
+        /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
+        /// content inside this shared folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFolderPolicy(string sharedFolderId,
+                                                        MemberPolicy memberPolicy = null,
+                                                        AclUpdatePolicy aclUpdatePolicy = null,
+                                                        SharedLinkPolicy sharedLinkPolicy = null,
+                                                        sys.AsyncCallback callback = null,
+                                                        object callbackState = null)
+        {
+            var updateFolderPolicyArg = new UpdateFolderPolicyArg(sharedFolderId,
+                                                                  memberPolicy,
+                                                                  aclUpdatePolicy,
+                                                                  sharedLinkPolicy);
+
+            return this.BeginUpdateFolderPolicy(updateFolderPolicyArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the update folder policy route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderPolicyError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="UpdateFolderPolicyError"/>.</exception>
+        public BasicSharedFolderMetadata EndUpdateFolderPolicy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<BasicSharedFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Allows a shared folder owner to unshare the folder.</para>
+        /// <para>You'll need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckJobStatusAsync" /> to determine
+        /// if the action has completed successfully.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="unshareFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UnshareFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="UnshareFolderError"/>.</exception>
+        public t.Task<Async.LaunchEmptyResult> UnshareFolderAsync(UnshareFolderArg unshareFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UnshareFolderArg, Async.LaunchEmptyResult, UnshareFolderError>(unshareFolderArg, "api", "/sharing/unshare_folder", UnshareFolderArg.Encoder, Async.LaunchEmptyResult.Decoder, UnshareFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the unshare folder route.</para>
+        /// </summary>
+        /// <param name="unshareFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUnshareFolder(UnshareFolderArg unshareFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UnshareFolderAsync(unshareFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Allows a shared folder owner to unshare the folder.</para>
+        /// <para>You'll need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckJobStatusAsync" /> to determine
+        /// if the action has completed successfully.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="leaveACopy">If true, members of this shared folder will get a copy of
+        /// this folder after it's unshared. Otherwise, it will be removed from their Dropbox.
+        /// The current user, who is an owner, will always retain their copy.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UnshareFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="UnshareFolderError"/>.</exception>
+        public t.Task<Async.LaunchEmptyResult> UnshareFolderAsync(string sharedFolderId,
+                                                                  bool leaveACopy)
+        {
+            var unshareFolderArg = new UnshareFolderArg(sharedFolderId,
+                                                        leaveACopy);
+
+            return this.UnshareFolderAsync(unshareFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the unshare folder route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="leaveACopy">If true, members of this shared folder will get a copy of
+        /// this folder after it's unshared. Otherwise, it will be removed from their Dropbox.
+        /// The current user, who is an owner, will always retain their copy.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUnshareFolder(string sharedFolderId,
+                                                   bool leaveACopy,
+                                                   sys.AsyncCallback callback,
+                                                   object callbackState = null)
+        {
+            var unshareFolderArg = new UnshareFolderArg(sharedFolderId,
+                                                        leaveACopy);
+
+            return this.BeginUnshareFolder(unshareFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the unshare folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UnshareFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="UnshareFolderError"/>.</exception>
+        public Async.LaunchEmptyResult EndUnshareFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Transfer ownership of a shared folder to a member of the shared
+        /// folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="transferFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TransferFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="TransferFolderError"/>.</exception>
+        public t.Task TransferFolderAsync(TransferFolderArg transferFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TransferFolderArg, enc.Empty, TransferFolderError>(transferFolderArg, "api", "/sharing/transfer_folder", TransferFolderArg.Encoder, enc.EmptyDecoder.Instance, TransferFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the transfer folder route.</para>
+        /// </summary>
+        /// <param name="transferFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTransferFolder(TransferFolderArg transferFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TransferFolderAsync(transferFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Transfer ownership of a shared folder to a member of the shared
+        /// folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="toDropboxId">A account or team member ID to transfer ownership
+        /// to.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TransferFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="TransferFolderError"/>.</exception>
+        public t.Task TransferFolderAsync(string sharedFolderId,
+                                          string toDropboxId)
+        {
+            var transferFolderArg = new TransferFolderArg(sharedFolderId,
+                                                          toDropboxId);
+
+            return this.TransferFolderAsync(transferFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the transfer folder route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="toDropboxId">A account or team member ID to transfer ownership
+        /// to.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTransferFolder(string sharedFolderId,
+                                                    string toDropboxId,
+                                                    sys.AsyncCallback callback,
+                                                    object callbackState = null)
+        {
+            var transferFolderArg = new TransferFolderArg(sharedFolderId,
+                                                          toDropboxId);
+
+            return this.BeginTransferFolder(transferFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the transfer folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TransferFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="TransferFolderError"/>.</exception>
+        public void EndTransferFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>The current user unmounts the designated folder. They can re-mount the folder
+        /// at a later time using <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" />.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="unmountFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UnmountFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="UnmountFolderError"/>.</exception>
+        public t.Task UnmountFolderAsync(UnmountFolderArg unmountFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UnmountFolderArg, enc.Empty, UnmountFolderError>(unmountFolderArg, "api", "/sharing/unmount_folder", UnmountFolderArg.Encoder, enc.EmptyDecoder.Instance, UnmountFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the unmount folder route.</para>
+        /// </summary>
+        /// <param name="unmountFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUnmountFolder(UnmountFolderArg unmountFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UnmountFolderAsync(unmountFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>The current user unmounts the designated folder. They can re-mount the folder
+        /// at a later time using <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" />.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UnmountFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="UnmountFolderError"/>.</exception>
+        public t.Task UnmountFolderAsync(string sharedFolderId)
+        {
+            var unmountFolderArg = new UnmountFolderArg(sharedFolderId);
+
+            return this.UnmountFolderAsync(unmountFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the unmount folder route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUnmountFolder(string sharedFolderId,
+                                                   sys.AsyncCallback callback,
+                                                   object callbackState = null)
+        {
+            var unmountFolderArg = new UnmountFolderArg(sharedFolderId);
+
+            return this.BeginUnmountFolder(unmountFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the unmount folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{UnmountFolderError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="UnmountFolderError"/>.</exception>
+        public void EndUnmountFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>The current user mounts the designated folder.</para>
+        /// <para>Mount a shared folder for a user after they have been added as a member. Once
+        /// mounted, the shared folder will appear in their Dropbox.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="mountFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{MountFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="MountFolderError"/>.</exception>
+        public t.Task<BasicSharedFolderMetadata> MountFolderAsync(MountFolderArg mountFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MountFolderArg, BasicSharedFolderMetadata, MountFolderError>(mountFolderArg, "api", "/sharing/mount_folder", MountFolderArg.Encoder, BasicSharedFolderMetadata.Decoder, MountFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the mount folder route.</para>
+        /// </summary>
+        /// <param name="mountFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMountFolder(MountFolderArg mountFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MountFolderAsync(mountFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>The current user mounts the designated folder.</para>
+        /// <para>Mount a shared folder for a user after they have been added as a member. Once
+        /// mounted, the shared folder will appear in their Dropbox.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{MountFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="MountFolderError"/>.</exception>
+        public t.Task<BasicSharedFolderMetadata> MountFolderAsync(string sharedFolderId)
+        {
+            var mountFolderArg = new MountFolderArg(sharedFolderId);
+
+            return this.MountFolderAsync(mountFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the mount folder route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMountFolder(string sharedFolderId,
+                                                 sys.AsyncCallback callback,
+                                                 object callbackState = null)
+        {
+            var mountFolderArg = new MountFolderArg(sharedFolderId);
+
+            return this.BeginMountFolder(mountFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the mount folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{MountFolderError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="MountFolderError"/>.</exception>
+        public BasicSharedFolderMetadata EndMountFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<BasicSharedFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
+        /// folder to add another member.</para>
+        /// <para>For the new member to get access to all the functionality for this folder,
+        /// you will need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" /> on their
+        /// behalf.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="addFolderMemberArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{AddFolderMemberError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="AddFolderMemberError"/>.</exception>
+        public t.Task AddFolderMemberAsync(AddFolderMemberArg addFolderMemberArg)
+        {
+            return this.Transport.SendRpcRequestAsync<AddFolderMemberArg, enc.Empty, AddFolderMemberError>(addFolderMemberArg, "api", "/sharing/add_folder_member", AddFolderMemberArg.Encoder, enc.EmptyDecoder.Instance, AddFolderMemberError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the add folder member route.</para>
+        /// </summary>
+        /// <param name="addFolderMemberArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginAddFolderMember(AddFolderMemberArg addFolderMemberArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.AddFolderMemberAsync(addFolderMemberArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
+        /// folder to add another member.</para>
+        /// <para>For the new member to get access to all the functionality for this folder,
+        /// you will need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" /> on their
+        /// behalf.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="members">The intended list of members to add.  Added members will
+        /// receive invites to join the shared folder.</param>
+        /// <param name="quiet">Whether added members should be notified via email and device
+        /// notifications of their invite.</param>
+        /// <param name="customMessage">Optional message to display to added members in their
+        /// invitation.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{AddFolderMemberError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="AddFolderMemberError"/>.</exception>
+        public t.Task AddFolderMemberAsync(string sharedFolderId,
+                                           col.IEnumerable<AddMember> members,
+                                           bool quiet = false,
+                                           string customMessage = null)
+        {
+            var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
+                                                            members,
+                                                            quiet,
+                                                            customMessage);
+
+            return this.AddFolderMemberAsync(addFolderMemberArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the add folder member route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="members">The intended list of members to add.  Added members will
+        /// receive invites to join the shared folder.</param>
+        /// <param name="quiet">Whether added members should be notified via email and device
+        /// notifications of their invite.</param>
+        /// <param name="customMessage">Optional message to display to added members in their
+        /// invitation.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginAddFolderMember(string sharedFolderId,
+                                                     col.IEnumerable<AddMember> members,
+                                                     bool quiet = false,
+                                                     string customMessage = null,
+                                                     sys.AsyncCallback callback = null,
+                                                     object callbackState = null)
+        {
+            var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
+                                                            members,
+                                                            quiet,
+                                                            customMessage);
+
+            return this.BeginAddFolderMember(addFolderMemberArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the add folder member route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{AddFolderMemberError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="AddFolderMemberError"/>.</exception>
+        public void EndAddFolderMember(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for sharing a folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{Async.PollError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="Async.PollError"/>.</exception>
+        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Async.PollArg, ShareFolderJobStatus, Async.PollError>(pollArg, "api", "/sharing/check_share_job_status", Async.PollArg.Encoder, ShareFolderJobStatus.Decoder, Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the check share job status route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCheckShareJobStatus(Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CheckShareJobStatusAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for sharing a folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{Async.PollError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="Async.PollError"/>.</exception>
+        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(string asyncJobId)
+        {
+            var pollArg = new Async.PollArg(asyncJobId);
+
+            return this.CheckShareJobStatusAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the check share job status route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCheckShareJobStatus(string asyncJobId,
+                                                         sys.AsyncCallback callback,
+                                                         object callbackState = null)
+        {
+            var pollArg = new Async.PollArg(asyncJobId);
+
+            return this.BeginCheckShareJobStatus(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the check share job status route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{Async.PollError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="Async.PollError"/>.</exception>
+        public ShareFolderJobStatus EndCheckShareJobStatus(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ShareFolderJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{Async.PollError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="Async.PollError"/>.</exception>
+        public t.Task<JobStatus> CheckJobStatusAsync(Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Async.PollArg, JobStatus, Async.PollError>(pollArg, "api", "/sharing/check_job_status", Async.PollArg.Encoder, JobStatus.Decoder, Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the check job status route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCheckJobStatus(Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CheckJobStatusAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{Async.PollError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="Async.PollError"/>.</exception>
+        public t.Task<JobStatus> CheckJobStatusAsync(string asyncJobId)
+        {
+            var pollArg = new Async.PollArg(asyncJobId);
+
+            return this.CheckJobStatusAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the check job status route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCheckJobStatus(string asyncJobId,
+                                                    sys.AsyncCallback callback,
+                                                    object callbackState = null)
+        {
+            var pollArg = new Async.PollArg(asyncJobId);
+
+            return this.BeginCheckJobStatus(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the check job status route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{Async.PollError}">Thrown if there is an
+        /// error processing the request; This will contain a <see
+        /// cref="Async.PollError"/>.</exception>
+        public JobStatus EndCheckJobStatus(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<JobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
+        /// folder to remove another member.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="removeFolderMemberArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RemoveFolderMemberError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="RemoveFolderMemberError"/>.</exception>
+        public t.Task<Async.LaunchEmptyResult> RemoveFolderMemberAsync(RemoveFolderMemberArg removeFolderMemberArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RemoveFolderMemberArg, Async.LaunchEmptyResult, RemoveFolderMemberError>(removeFolderMemberArg, "api", "/sharing/remove_folder_member", RemoveFolderMemberArg.Encoder, Async.LaunchEmptyResult.Decoder, RemoveFolderMemberError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the remove folder member route.</para>
+        /// </summary>
+        /// <param name="removeFolderMemberArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRemoveFolderMember(RemoveFolderMemberArg removeFolderMemberArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.RemoveFolderMemberAsync(removeFolderMemberArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
+        /// folder to remove another member.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="member">The member to remove from the folder. Only the <see
+        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// <param name="leaveACopy">If true, the removed user will keep their copy of the
+        /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
+        /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RemoveFolderMemberError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="RemoveFolderMemberError"/>.</exception>
+        public t.Task<Async.LaunchEmptyResult> RemoveFolderMemberAsync(string sharedFolderId,
+                                                                       MemberSelector member,
+                                                                       bool leaveACopy)
+        {
+            var removeFolderMemberArg = new RemoveFolderMemberArg(sharedFolderId,
+                                                                  member,
+                                                                  leaveACopy);
+
+            return this.RemoveFolderMemberAsync(removeFolderMemberArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the remove folder member route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="member">The member to remove from the folder. Only the <see
+        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// <param name="leaveACopy">If true, the removed user will keep their copy of the
+        /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
+        /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRemoveFolderMember(string sharedFolderId,
+                                                        MemberSelector member,
+                                                        bool leaveACopy,
+                                                        sys.AsyncCallback callback,
+                                                        object callbackState = null)
+        {
+            var removeFolderMemberArg = new RemoveFolderMemberArg(sharedFolderId,
+                                                                  member,
+                                                                  leaveACopy);
+
+            return this.BeginRemoveFolderMember(removeFolderMemberArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the remove folder member route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RemoveFolderMemberError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="RemoveFolderMemberError"/>.</exception>
+        public Async.LaunchEmptyResult EndRemoveFolderMember(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Allows an owner or editor of a shared folder to update another member's
+        /// permissions.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="updateFolderMemberArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderMemberError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="UpdateFolderMemberError"/>.</exception>
+        public t.Task UpdateFolderMemberAsync(UpdateFolderMemberArg updateFolderMemberArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UpdateFolderMemberArg, enc.Empty, UpdateFolderMemberError>(updateFolderMemberArg, "api", "/sharing/update_folder_member", UpdateFolderMemberArg.Encoder, enc.EmptyDecoder.Instance, UpdateFolderMemberError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update folder member route.</para>
+        /// </summary>
+        /// <param name="updateFolderMemberArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFolderMember(UpdateFolderMemberArg updateFolderMemberArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UpdateFolderMemberAsync(updateFolderMemberArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Allows an owner or editor of a shared folder to update another member's
+        /// permissions.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="member">The member of the shared folder to update.  Only the <see
+        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// <param name="accessLevel">The new access level for <paramref name="member" />. <see
+        /// cref="AccessLevel.Owner" /> is disallowed.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderMemberError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="UpdateFolderMemberError"/>.</exception>
+        public t.Task UpdateFolderMemberAsync(string sharedFolderId,
+                                              MemberSelector member,
+                                              AccessLevel accessLevel)
+        {
+            var updateFolderMemberArg = new UpdateFolderMemberArg(sharedFolderId,
+                                                                  member,
+                                                                  accessLevel);
+
+            return this.UpdateFolderMemberAsync(updateFolderMemberArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update folder member route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="member">The member of the shared folder to update.  Only the <see
+        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// <param name="accessLevel">The new access level for <paramref name="member" />. <see
+        /// cref="AccessLevel.Owner" /> is disallowed.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFolderMember(string sharedFolderId,
+                                                        MemberSelector member,
+                                                        AccessLevel accessLevel,
+                                                        sys.AsyncCallback callback,
+                                                        object callbackState = null)
+        {
+            var updateFolderMemberArg = new UpdateFolderMemberArg(sharedFolderId,
+                                                                  member,
+                                                                  accessLevel);
+
+            return this.BeginUpdateFolderMember(updateFolderMemberArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the update folder member route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderMemberError}">Thrown if there
+        /// is an error processing the request; This will contain a <see
+        /// cref="UpdateFolderMemberError"/>.</exception>
+        public void EndUpdateFolderMember(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>The current user relinquishes their membership in the designated shared
+        /// folder and will no longer have access to the folder.  A folder owner cannot
+        /// relinquish membership in their own folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="relinquishFolderMembershipArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RelinquishFolderMembershipError}">Thrown
+        /// if there is an error processing the request; This will contain a <see
+        /// cref="RelinquishFolderMembershipError"/>.</exception>
+        public t.Task RelinquishFolderMembershipAsync(RelinquishFolderMembershipArg relinquishFolderMembershipArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelinquishFolderMembershipArg, enc.Empty, RelinquishFolderMembershipError>(relinquishFolderMembershipArg, "api", "/sharing/relinquish_folder_membership", RelinquishFolderMembershipArg.Encoder, enc.EmptyDecoder.Instance, RelinquishFolderMembershipError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the relinquish folder membership route.</para>
+        /// </summary>
+        /// <param name="relinquishFolderMembershipArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRelinquishFolderMembership(RelinquishFolderMembershipArg relinquishFolderMembershipArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.RelinquishFolderMembershipAsync(relinquishFolderMembershipArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>The current user relinquishes their membership in the designated shared
+        /// folder and will no longer have access to the folder.  A folder owner cannot
+        /// relinquish membership in their own folder.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{RelinquishFolderMembershipError}">Thrown
+        /// if there is an error processing the request; This will contain a <see
+        /// cref="RelinquishFolderMembershipError"/>.</exception>
+        public t.Task RelinquishFolderMembershipAsync(string sharedFolderId)
+        {
+            var relinquishFolderMembershipArg = new RelinquishFolderMembershipArg(sharedFolderId);
+
+            return this.RelinquishFolderMembershipAsync(relinquishFolderMembershipArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the relinquish folder membership route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRelinquishFolderMembership(string sharedFolderId,
+                                                                sys.AsyncCallback callback,
+                                                                object callbackState = null)
+        {
+            var relinquishFolderMembershipArg = new RelinquishFolderMembershipArg(sharedFolderId);
+
+            return this.BeginRelinquishFolderMembership(relinquishFolderMembershipArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the relinquish folder membership
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{RelinquishFolderMembershipError}">Thrown
+        /// if there is an error processing the request; This will contain a <see
+        /// cref="RelinquishFolderMembershipError"/>.</exception>
+        public void EndRelinquishFolderMembership(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
         }
     }
 }

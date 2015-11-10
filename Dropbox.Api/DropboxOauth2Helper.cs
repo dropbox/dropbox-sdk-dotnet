@@ -12,13 +12,15 @@ namespace Dropbox.Api
     using System.Text;
     using System.Threading.Tasks;
 
+    using Newtonsoft.Json.Linq;
+
     /// <summary>
     /// Used by <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> to specify which OAuth 2.0 flow to use.
     /// </summary>
     public enum OAuthResponseType
     {
         /// <summary>
-        /// This represents the OAauth 2.0 token or implicit grant flow. The server will return the bearer token via
+        /// This represents the OAuth 2.0 token or implicit grant flow. The server will return the bearer token via
         /// the <c>redirectUri</c> callback, rather than requiring your app to make a second call to a server.
         /// This is useful for pure client-side apps, such as mobile apps or JavaScript-based apps.
         /// </summary>
@@ -54,7 +56,7 @@ namespace Dropbox.Api
     /// It first checks if the URI to which the browser is navigating starts with the redirect uri provided in the call to
     /// <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> &#x2014; it is important not to prevent other navigation which may happen within the 
     /// authorization flow &#x2014; if the URI matches, then the code uses <see cref="DropboxOAuth2Helper.ParseTokenFragment"/> to parse the 
-    /// <see cref="OAuth2Response"/> from the fragment componented of the redirected URI. The <see cref="OAuth2Response.AccessToken" />
+    /// <see cref="OAuth2Response"/> from the fragment component of the redirected URI. The <see cref="OAuth2Response.AccessToken" />
     /// will then be used to construct an instance of <see cref="DropboxClient"/>.
     /// </para>
     /// <code>
@@ -170,7 +172,7 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <returns>The uri of a web page which must be displayed to the user inorder to authorize the app.</returns>
+        /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false)
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
@@ -198,7 +200,7 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <returns>The uri of a web page which must be displayed to the user inorder to authorize the app.</returns>
+        /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false)
         {
             if (string.IsNullOrWhiteSpace(clientId))
@@ -264,14 +266,14 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <returns>The uri of a web page which must be displayed to the user inorder to authorize the app.</returns>
+        /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(string clientId, bool disableSignup = false)
         {
             return GetAuthorizeUri(OAuthResponseType.Code, clientId, (Uri)null, disableSignup: disableSignup);
         }
 
         /// <summary>
-        /// Parses the token fragment. When using the OAuth 2.0 token or implict grant flow, the 
+        /// Parses the token fragment. When using the OAuth 2.0 token or implicit grant flow, the 
         /// user will be redirected to a URI with a fragment containing the authorization token.
         /// </summary>
         /// <param name="redirectedUri">The redirected URI.</param>
@@ -334,12 +336,12 @@ namespace Dropbox.Api
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="appSecret">The application secret, found in the 
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
-        /// <param name="redirectUri">The redirect URI that was provided in the inital authorize URI,
+        /// <param name="redirectUri">The redirect URI that was provided in the initial authorize URI,
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
         /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
-        public async static Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret, string redirectUri = null, HttpClient client = null)
+        public static async Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret, string redirectUri = null, HttpClient client = null)
         {
             if (string.IsNullOrEmpty(code))
             {
@@ -359,10 +361,10 @@ namespace Dropbox.Api
             {
                 var parameters = new Dictionary<string, string>
                 {
-                    {"code", code},
-                    {"grant_type", "authorization_code"},
-                    {"client_id", appKey},
-                    {"client_secret", appSecret}
+                    { "code", code },
+                    { "grant_type", "authorization_code" },
+                    { "client_id", appKey },
+                    { "client_secret", appSecret }
                 };
 
                 if (!string.IsNullOrEmpty(redirectUri))
@@ -374,7 +376,7 @@ namespace Dropbox.Api
                 var response = await httpClient.PostAsync("https://api.dropbox.com/1/oauth2/token", content);
 
                 var raw = await response.Content.ReadAsStringAsync();
-                var json = Babel.Json.JsonObject.Parse(raw);
+                var json = JObject.Parse(raw);
 
                 return new OAuth2Response(
                     json["access_token"].ToString(),
@@ -399,7 +401,7 @@ namespace Dropbox.Api
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="appSecret">The application secret, found in the 
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
-        /// <param name="redirectUri">The redirect URI that was provided in the inital authorize URI,
+        /// <param name="redirectUri">The redirect URI that was provided in the initial authorize URI,
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="state">The state parameter (if any) that matches that used in the initial authorize URI.</param>
@@ -446,10 +448,11 @@ namespace Dropbox.Api
                         {
                             throw new ArgumentNullException("state", "The state argument is expected.");
                         }
-                        else if(state != Uri.UnescapeDataString(elements[1]))
+                        else if (state != Uri.UnescapeDataString(elements[1]))
                         {
                             throw new ArgumentException("The state in the responseUri does not match the provided value.", "responseUri");
                         }
+
                         break;
                     default:
                         throw new ArgumentException("The responseUri contains unexpected values in the query component.", "responseUri");

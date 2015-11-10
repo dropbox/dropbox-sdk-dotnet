@@ -15,28 +15,47 @@ namespace Dropbox.Api.Sharing
     /// membership.</para>
     /// </summary>
     /// <seealso cref="SharedFolderMetadata" />
-    public sealed class FullSharedFolderMetadata : SharedFolderMetadata, enc.IEncodable<FullSharedFolderMetadata>
+    public class FullSharedFolderMetadata : SharedFolderMetadata
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<FullSharedFolderMetadata> Encoder = new FullSharedFolderMetadataEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<FullSharedFolderMetadata> Decoder = new FullSharedFolderMetadataDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="FullSharedFolderMetadata" />
         /// class.</para>
         /// </summary>
         /// <param name="name">The name of the this shared folder.</param>
         /// <param name="id">The ID of the shared folder.</param>
-        /// <param name="accessType">Who can access this shared folder.</param>
-        /// <param name="sharedLinkPolicy">Who links can be shared with.</param>
+        /// <param name="accessType">The current user's access level for this shared
+        /// folder.</param>
+        /// <param name="isTeamFolder">Whether this folder is a <a
+        /// href="https://www.dropbox.com/en/help/986">team folder</a>.</param>
+        /// <param name="policy">Policies governing this shared folder.</param>
         /// <param name="membership">The list of user members of the shared folder.</param>
         /// <param name="groups">The list of group members of the shared folder.</param>
+        /// <param name="invitees">The list of non-Dropbox users invited to join the shared
+        /// folder.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
         public FullSharedFolderMetadata(string name,
                                         string id,
-                                        AccessType accessType,
-                                        SharedLinkPolicy sharedLinkPolicy,
+                                        AccessLevel accessType,
+                                        bool isTeamFolder,
+                                        FolderPolicy policy,
                                         col.IEnumerable<UserMembershipInfo> membership,
                                         col.IEnumerable<GroupMembershipInfo> groups,
+                                        col.IEnumerable<InviteeMembershipInfo> invitees,
                                         string pathLower = null)
-            : base(name, id, accessType, sharedLinkPolicy, pathLower)
+            : base(name, id, accessType, isTeamFolder, policy, pathLower)
         {
             var membershipList = new col.List<UserMembershipInfo>(membership ?? new UserMembershipInfo[0]);
 
@@ -52,8 +71,16 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("groups");
             }
 
+            var inviteesList = new col.List<InviteeMembershipInfo>(invitees ?? new InviteeMembershipInfo[0]);
+
+            if (invitees == null)
+            {
+                throw new sys.ArgumentNullException("invitees");
+            }
+
             this.Membership = membershipList;
             this.Groups = groupsList;
+            this.Invitees = inviteesList;
         }
 
         /// <summary>
@@ -69,62 +96,109 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The list of user members of the shared folder.</para>
         /// </summary>
-        public col.IList<UserMembershipInfo> Membership { get; private set; }
+        public col.IList<UserMembershipInfo> Membership { get; protected set; }
 
         /// <summary>
         /// <para>The list of group members of the shared folder.</para>
         /// </summary>
-        public col.IList<GroupMembershipInfo> Groups { get; private set; }
-
-        #region IEncodable<FullSharedFolderMetadata> methods
+        public col.IList<GroupMembershipInfo> Groups { get; protected set; }
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>The list of non-Dropbox users invited to join the shared folder.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<FullSharedFolderMetadata>.Encode(enc.IEncoder encoder)
+        public col.IList<InviteeMembershipInfo> Invitees { get; protected set; }
+
+        #region Encoder class
+
+        /// <summary>
+        /// <para>Encoder for  <see cref="FullSharedFolderMetadata" />.</para>
+        /// </summary>
+        private class FullSharedFolderMetadataEncoder : enc.StructEncoder<FullSharedFolderMetadata>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(FullSharedFolderMetadata value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>(".tag", "full");
-                obj.AddField<string>("name", this.Name);
-                obj.AddField<string>("id", this.Id);
-                obj.AddFieldObject<AccessType>("access_type", this.AccessType);
-                obj.AddFieldObject<SharedLinkPolicy>("shared_link_policy", this.SharedLinkPolicy);
-                obj.AddFieldObjectList<UserMembershipInfo>("membership", this.Membership);
-                obj.AddFieldObjectList<GroupMembershipInfo>("groups", this.Groups);
-                if (this.PathLower != null)
+                WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
+                WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
+                WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("policy", value.Policy, writer, FolderPolicy.Encoder);
+                WriteListProperty("membership", value.Membership, writer, UserMembershipInfo.Encoder);
+                WriteListProperty("groups", value.Groups, writer, GroupMembershipInfo.Encoder);
+                WriteListProperty("invitees", value.Invitees, writer, InviteeMembershipInfo.Encoder);
+                if (value.PathLower != null)
                 {
-                    obj.AddField<string>("path_lower", this.PathLower);
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="FullSharedFolderMetadata" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        FullSharedFolderMetadata enc.IEncodable<FullSharedFolderMetadata>.Decode(enc.IDecoder decoder)
+        private class FullSharedFolderMetadataDecoder : enc.StructDecoder<FullSharedFolderMetadata>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="FullSharedFolderMetadata"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override FullSharedFolderMetadata Create()
             {
-                this.Name = obj.GetField<string>("name");
-                this.Id = obj.GetField<string>("id");
-                this.AccessType = obj.GetFieldObject<AccessType>("access_type");
-                this.SharedLinkPolicy = obj.GetFieldObject<SharedLinkPolicy>("shared_link_policy");
-                this.Membership = new col.List<UserMembershipInfo>(obj.GetFieldObjectList<UserMembershipInfo>("membership"));
-                this.Groups = new col.List<GroupMembershipInfo>(obj.GetFieldObjectList<GroupMembershipInfo>("groups"));
-                if (obj.HasField("path_lower"))
-                {
-                    this.PathLower = obj.GetField<string>("path_lower");
-                }
+                return new FullSharedFolderMetadata();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(FullSharedFolderMetadata value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "name":
+                        value.Name = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "id":
+                        value.Id = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "access_type":
+                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "is_team_folder":
+                        value.IsTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "policy":
+                        value.Policy = FolderPolicy.Decoder.Decode(reader);
+                        break;
+                    case "membership":
+                        value.Membership = ReadList(reader, UserMembershipInfo.Decoder);
+                        break;
+                    case "groups":
+                        value.Groups = ReadList(reader, GroupMembershipInfo.Decoder);
+                        break;
+                    case "invitees":
+                        value.Invitees = ReadList(reader, InviteeMembershipInfo.Decoder);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

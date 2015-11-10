@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The list folder longpoll result object</para>
     /// </summary>
-    public sealed class ListFolderLongpollResult : enc.IEncodable<ListFolderLongpollResult>
+    public class ListFolderLongpollResult
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ListFolderLongpollResult> Encoder = new ListFolderLongpollResultEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ListFolderLongpollResult> Decoder = new ListFolderLongpollResultDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderLongpollResult" />
         /// class.</para>
@@ -47,53 +59,78 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> to retrieve the
         /// changes.</para>
         /// </summary>
-        public bool Changes { get; private set; }
+        public bool Changes { get; protected set; }
 
         /// <summary>
         /// <para>If present, backoff for at least this many seconds before calling <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderLongpollAsync" />
         /// again.</para>
         /// </summary>
-        public ulong? Backoff { get; private set; }
+        public ulong? Backoff { get; protected set; }
 
-        #region IEncodable<ListFolderLongpollResult> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ListFolderLongpollResult" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ListFolderLongpollResult>.Encode(enc.IEncoder encoder)
+        private class ListFolderLongpollResultEncoder : enc.StructEncoder<ListFolderLongpollResult>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ListFolderLongpollResult value, enc.IJsonWriter writer)
             {
-                obj.AddField<bool>("changes", this.Changes);
-                if (this.Backoff != null)
+                WriteProperty("changes", value.Changes, writer, enc.BooleanEncoder.Instance);
+                if (value.Backoff != null)
                 {
-                    obj.AddField<ulong>("backoff", this.Backoff.Value);
+                    WriteProperty("backoff", value.Backoff.Value, writer, enc.UInt64Encoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ListFolderLongpollResult" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ListFolderLongpollResult enc.IEncodable<ListFolderLongpollResult>.Decode(enc.IDecoder decoder)
+        private class ListFolderLongpollResultDecoder : enc.StructDecoder<ListFolderLongpollResult>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ListFolderLongpollResult"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ListFolderLongpollResult Create()
             {
-                this.Changes = obj.GetField<bool>("changes");
-                if (obj.HasField("backoff"))
-                {
-                    this.Backoff = obj.GetField<ulong>("backoff");
-                }
+                return new ListFolderLongpollResult();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(ListFolderLongpollResult value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "changes":
+                        value.Changes = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "backoff":
+                        value.Backoff = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The write conflict error object</para>
     /// </summary>
-    public class WriteConflictError : enc.IEncodable<WriteConflictError>
+    public class WriteConflictError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<WriteConflictError> Encoder = new WriteConflictErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<WriteConflictError> Decoder = new WriteConflictErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="WriteConflictError" />
         /// class.</para>
@@ -111,52 +123,85 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<WriteConflictError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="WriteConflictError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<WriteConflictError>.Encode(enc.IEncoder encoder)
+        private class WriteConflictErrorEncoder : enc.StructEncoder<WriteConflictError>
         {
-            if (this.IsFile)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(WriteConflictError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<File>)this).Encode(encoder);
-            }
-            else if (this.IsFolder)
-            {
-                ((enc.IEncodable<Folder>)this).Encode(encoder);
-            }
-            else if (this.IsFileAncestor)
-            {
-                ((enc.IEncodable<FileAncestor>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is File)
+                {
+                    WriteProperty(".tag", "file", writer, enc.StringEncoder.Instance);
+                    File.Encoder.EncodeFields((File)value, writer);
+                    return;
+                }
+                if (value is Folder)
+                {
+                    WriteProperty(".tag", "folder", writer, enc.StringEncoder.Instance);
+                    Folder.Encoder.EncodeFields((Folder)value, writer);
+                    return;
+                }
+                if (value is FileAncestor)
+                {
+                    WriteProperty(".tag", "file_ancestor", writer, enc.StringEncoder.Instance);
+                    FileAncestor.Encoder.EncodeFields((FileAncestor)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="WriteConflictError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        WriteConflictError enc.IEncodable<WriteConflictError>.Decode(enc.IDecoder decoder)
+        private class WriteConflictErrorDecoder : enc.UnionDecoder<WriteConflictError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="WriteConflictError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override WriteConflictError Create()
             {
-            case "file":
-                return File.Instance;
-            case "folder":
-                return Folder.Instance;
-            case "file_ancestor":
-                return FileAncestor.Instance;
-            default:
-                return Other.Instance;
+                return new WriteConflictError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override WriteConflictError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "file":
+                        return File.Decoder.DecodeFields(reader);
+                    case "folder":
+                        return Folder.Decoder.DecodeFields(reader);
+                    case "file_ancestor":
+                        return FileAncestor.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -165,8 +210,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>There's a file in the way.</para>
         /// </summary>
-        public sealed class File : WriteConflictError, enc.IEncodable<File>
+        public sealed class File : WriteConflictError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<File> Encoder = new FileEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<File> Decoder = new FileDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="File" /> class.</para>
             /// </summary>
@@ -179,37 +236,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly File Instance = new File();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="File" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<File>.Encode(enc.IEncoder encoder)
+            private class FileEncoder : enc.StructEncoder<File>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(File value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "file");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="File" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            File enc.IEncodable<File>.Decode(enc.IDecoder decoder)
+            private class FileDecoder : enc.StructDecoder<File>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="File" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override File Create()
+                {
+                    return new File();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override File DecodeFields(enc.IJsonReader reader)
+                {
+                    return File.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>There's a folder in the way.</para>
         /// </summary>
-        public sealed class Folder : WriteConflictError, enc.IEncodable<Folder>
+        public sealed class Folder : WriteConflictError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Folder> Encoder = new FolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Folder> Decoder = new FolderDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Folder" /> class.</para>
             /// </summary>
@@ -222,38 +314,73 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Folder Instance = new Folder();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Folder" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Folder>.Encode(enc.IEncoder encoder)
+            private class FolderEncoder : enc.StructEncoder<Folder>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Folder value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "folder");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Folder" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Folder enc.IEncodable<Folder>.Decode(enc.IDecoder decoder)
+            private class FolderDecoder : enc.StructDecoder<Folder>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Folder" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Folder Create()
+                {
+                    return new Folder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Folder DecodeFields(enc.IJsonReader reader)
+                {
+                    return Folder.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>There's a file at an ancestor path, so we couldn't create the required parent
         /// folders.</para>
         /// </summary>
-        public sealed class FileAncestor : WriteConflictError, enc.IEncodable<FileAncestor>
+        public sealed class FileAncestor : WriteConflictError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileAncestor> Encoder = new FileAncestorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileAncestor> Decoder = new FileAncestorDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="FileAncestor" />
             /// class.</para>
@@ -267,37 +394,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly FileAncestor Instance = new FileAncestor();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="FileAncestor" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<FileAncestor>.Encode(enc.IEncoder encoder)
+            private class FileAncestorEncoder : enc.StructEncoder<FileAncestor>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileAncestor value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "file_ancestor");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="FileAncestor" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            FileAncestor enc.IEncodable<FileAncestor>.Decode(enc.IDecoder decoder)
+            private class FileAncestorDecoder : enc.StructDecoder<FileAncestor>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileAncestor" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileAncestor Create()
+                {
+                    return new FileAncestor();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FileAncestor DecodeFields(enc.IJsonReader reader)
+                {
+                    return FileAncestor.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : WriteConflictError, enc.IEncodable<Other>
+        public sealed class Other : WriteConflictError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -310,30 +472,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

@@ -13,8 +13,20 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>Information about a user's space usage and quota.</para>
     /// </summary>
-    public sealed class SpaceUsage : enc.IEncodable<SpaceUsage>
+    public class SpaceUsage
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SpaceUsage> Encoder = new SpaceUsageEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SpaceUsage> Decoder = new SpaceUsageDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SpaceUsage" /> class.</para>
         /// </summary>
@@ -44,45 +56,72 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>The user's total space usage (bytes).</para>
         /// </summary>
-        public ulong Used { get; private set; }
+        public ulong Used { get; protected set; }
 
         /// <summary>
         /// <para>The user's space allocation.</para>
         /// </summary>
-        public SpaceAllocation Allocation { get; private set; }
+        public SpaceAllocation Allocation { get; protected set; }
 
-        #region IEncodable<SpaceUsage> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SpaceUsage" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SpaceUsage>.Encode(enc.IEncoder encoder)
+        private class SpaceUsageEncoder : enc.StructEncoder<SpaceUsage>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SpaceUsage value, enc.IJsonWriter writer)
             {
-                obj.AddField<ulong>("used", this.Used);
-                obj.AddFieldObject<SpaceAllocation>("allocation", this.Allocation);
+                WriteProperty("used", value.Used, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("allocation", value.Allocation, writer, SpaceAllocation.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SpaceUsage" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SpaceUsage enc.IEncodable<SpaceUsage>.Decode(enc.IDecoder decoder)
+        private class SpaceUsageDecoder : enc.StructDecoder<SpaceUsage>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SpaceUsage" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SpaceUsage Create()
             {
-                this.Used = obj.GetField<ulong>("used");
-                this.Allocation = obj.GetFieldObject<SpaceAllocation>("allocation");
+                return new SpaceUsage();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(SpaceUsage value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "used":
+                        value.Used = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "allocation":
+                        value.Allocation = SpaceAllocation.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

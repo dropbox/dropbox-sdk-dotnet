@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The thumbnail error object</para>
     /// </summary>
-    public class ThumbnailError : enc.IEncodable<ThumbnailError>
+    public class ThumbnailError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ThumbnailError> Encoder = new ThumbnailErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ThumbnailError> Decoder = new ThumbnailErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ThumbnailError" /> class.</para>
         /// </summary>
@@ -110,59 +122,87 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<ThumbnailError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ThumbnailError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ThumbnailError>.Encode(enc.IEncoder encoder)
+        private class ThumbnailErrorEncoder : enc.StructEncoder<ThumbnailError>
         {
-            if (this.IsPath)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ThumbnailError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Path>)this).Encode(encoder);
-            }
-            else if (this.IsUnsupportedExtension)
-            {
-                ((enc.IEncodable<UnsupportedExtension>)this).Encode(encoder);
-            }
-            else if (this.IsUnsupportedImage)
-            {
-                ((enc.IEncodable<UnsupportedImage>)this).Encode(encoder);
-            }
-            else if (this.IsConversionError)
-            {
-                ((enc.IEncodable<ConversionError>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is Path)
+                {
+                    WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
+                    Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is UnsupportedExtension)
+                {
+                    WriteProperty(".tag", "unsupported_extension", writer, enc.StringEncoder.Instance);
+                    UnsupportedExtension.Encoder.EncodeFields((UnsupportedExtension)value, writer);
+                    return;
+                }
+                if (value is UnsupportedImage)
+                {
+                    WriteProperty(".tag", "unsupported_image", writer, enc.StringEncoder.Instance);
+                    UnsupportedImage.Encoder.EncodeFields((UnsupportedImage)value, writer);
+                    return;
+                }
+                if (value is ConversionError)
+                {
+                    WriteProperty(".tag", "conversion_error", writer, enc.StringEncoder.Instance);
+                    ConversionError.Encoder.EncodeFields((ConversionError)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ThumbnailError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ThumbnailError enc.IEncodable<ThumbnailError>.Decode(enc.IDecoder decoder)
+        private class ThumbnailErrorDecoder : enc.UnionDecoder<ThumbnailError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ThumbnailError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ThumbnailError Create()
             {
-            case "path":
-                var path = new LookupError();
-                return new Path(((enc.IEncodable<LookupError>)path).Decode(decoder));
-            case "unsupported_extension":
-                return UnsupportedExtension.Instance;
-            case "unsupported_image":
-                return UnsupportedImage.Instance;
-            case "conversion_error":
-                return ConversionError.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new ThumbnailError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override ThumbnailError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "path":
+                        return Path.Decoder.DecodeFields(reader);
+                    case "unsupported_extension":
+                        return UnsupportedExtension.Decoder.DecodeFields(reader);
+                    case "unsupported_image":
+                        return UnsupportedImage.Decoder.DecodeFields(reader);
+                    case "conversion_error":
+                        return ConversionError.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -171,8 +211,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>An error occurs when downloading metadata for the image.</para>
         /// </summary>
-        public sealed class Path : ThumbnailError, enc.IEncodable<Path>
+        public sealed class Path : ThumbnailError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Path> Encoder = new PathEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Path> Decoder = new PathDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
@@ -181,43 +233,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
+            /// </summary>
+            private Path()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public LookupError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Path" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<Path>.Encode(enc.IEncoder encoder)
+            private class PathEncoder : enc.StructEncoder<Path>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "path");
-                    obj.AddField("path", this.Value);
+                    LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Path" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Path enc.IEncodable<Path>.Decode(enc.IDecoder decoder)
+            private class PathDecoder : enc.StructDecoder<Path>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Path" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Path Create()
+                {
+                    return new Path();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(Path value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "path":
+                            value.Value = LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The file extension doesn't allow conversion to a thumbnail.</para>
         /// </summary>
-        public sealed class UnsupportedExtension : ThumbnailError, enc.IEncodable<UnsupportedExtension>
+        public sealed class UnsupportedExtension : ThumbnailError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedExtension> Encoder = new UnsupportedExtensionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedExtension> Decoder = new UnsupportedExtensionDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="UnsupportedExtension" />
             /// class.</para>
@@ -231,37 +334,73 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly UnsupportedExtension Instance = new UnsupportedExtension();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="UnsupportedExtension" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<UnsupportedExtension>.Encode(enc.IEncoder encoder)
+            private class UnsupportedExtensionEncoder : enc.StructEncoder<UnsupportedExtension>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedExtension value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "unsupported_extension");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="UnsupportedExtension" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            UnsupportedExtension enc.IEncodable<UnsupportedExtension>.Decode(enc.IDecoder decoder)
+            private class UnsupportedExtensionDecoder : enc.StructDecoder<UnsupportedExtension>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedExtension"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedExtension Create()
+                {
+                    return new UnsupportedExtension();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UnsupportedExtension DecodeFields(enc.IJsonReader reader)
+                {
+                    return UnsupportedExtension.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The image cannot be converted to a thumbnail.</para>
         /// </summary>
-        public sealed class UnsupportedImage : ThumbnailError, enc.IEncodable<UnsupportedImage>
+        public sealed class UnsupportedImage : ThumbnailError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedImage> Encoder = new UnsupportedImageEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedImage> Decoder = new UnsupportedImageDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="UnsupportedImage" />
             /// class.</para>
@@ -275,37 +414,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly UnsupportedImage Instance = new UnsupportedImage();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="UnsupportedImage" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<UnsupportedImage>.Encode(enc.IEncoder encoder)
+            private class UnsupportedImageEncoder : enc.StructEncoder<UnsupportedImage>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedImage value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "unsupported_image");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="UnsupportedImage" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            UnsupportedImage enc.IEncodable<UnsupportedImage>.Decode(enc.IDecoder decoder)
+            private class UnsupportedImageDecoder : enc.StructDecoder<UnsupportedImage>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedImage" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedImage Create()
+                {
+                    return new UnsupportedImage();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UnsupportedImage DecodeFields(enc.IJsonReader reader)
+                {
+                    return UnsupportedImage.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>An error occurs during thumbnail conversion.</para>
         /// </summary>
-        public sealed class ConversionError : ThumbnailError, enc.IEncodable<ConversionError>
+        public sealed class ConversionError : ThumbnailError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ConversionError> Encoder = new ConversionErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ConversionError> Decoder = new ConversionErrorDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="ConversionError" />
             /// class.</para>
@@ -319,30 +493,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly ConversionError Instance = new ConversionError();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="ConversionError" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<ConversionError>.Encode(enc.IEncoder encoder)
+            private class ConversionErrorEncoder : enc.StructEncoder<ConversionError>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ConversionError value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "conversion_error");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="ConversionError" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            ConversionError enc.IEncodable<ConversionError>.Decode(enc.IDecoder decoder)
+            private class ConversionErrorDecoder : enc.StructDecoder<ConversionError>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ConversionError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ConversionError Create()
+                {
+                    return new ConversionError();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ConversionError DecodeFields(enc.IJsonReader reader)
+                {
+                    return ConversionError.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

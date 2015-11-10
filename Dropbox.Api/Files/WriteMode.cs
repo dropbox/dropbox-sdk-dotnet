@@ -20,8 +20,20 @@ namespace Dropbox.Api.Files
     /// <para>The conflict checking differs in the case where there's a file at the target path
     /// with contents different from the contents you're trying to write.</para>
     /// </summary>
-    public class WriteMode : enc.IEncodable<WriteMode>
+    public class WriteMode
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<WriteMode> Encoder = new WriteModeEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<WriteMode> Decoder = new WriteModeDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="WriteMode" /> class.</para>
         /// </summary>
@@ -95,55 +107,79 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<WriteMode> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="WriteMode" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<WriteMode>.Encode(enc.IEncoder encoder)
+        private class WriteModeEncoder : enc.StructEncoder<WriteMode>
         {
-            if (this.IsAdd)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(WriteMode value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Add>)this).Encode(encoder);
-            }
-            else if (this.IsOverwrite)
-            {
-                ((enc.IEncodable<Overwrite>)this).Encode(encoder);
-            }
-            else if (this.IsUpdate)
-            {
-                ((enc.IEncodable<Update>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is Add)
+                {
+                    WriteProperty(".tag", "add", writer, enc.StringEncoder.Instance);
+                    Add.Encoder.EncodeFields((Add)value, writer);
+                    return;
+                }
+                if (value is Overwrite)
+                {
+                    WriteProperty(".tag", "overwrite", writer, enc.StringEncoder.Instance);
+                    Overwrite.Encoder.EncodeFields((Overwrite)value, writer);
+                    return;
+                }
+                if (value is Update)
+                {
+                    WriteProperty(".tag", "update", writer, enc.StringEncoder.Instance);
+                    Update.Encoder.EncodeFields((Update)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="WriteMode" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        WriteMode enc.IEncodable<WriteMode>.Decode(enc.IDecoder decoder)
+        private class WriteModeDecoder : enc.UnionDecoder<WriteMode>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="WriteMode" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override WriteMode Create()
             {
-            case "add":
-                return Add.Instance;
-            case "overwrite":
-                return Overwrite.Instance;
-            case "update":
-                using (var obj = decoder.GetObject())
+                return new WriteMode();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override WriteMode Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
                 {
-                    return new Update(obj.GetField<string>("update"));
+                    case "add":
+                        return Add.Decoder.DecodeFields(reader);
+                    case "overwrite":
+                        return Overwrite.Decoder.DecodeFields(reader);
+                    case "update":
+                        return Update.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
                 }
-            default:
-                throw new sys.InvalidOperationException();
             }
         }
 
@@ -154,8 +190,20 @@ namespace Dropbox.Api.Files
         /// number to the file name. For example, "document.txt" might become "document
         /// (2).txt".</para>
         /// </summary>
-        public sealed class Add : WriteMode, enc.IEncodable<Add>
+        public sealed class Add : WriteMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Add> Encoder = new AddEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Add> Decoder = new AddDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Add" /> class.</para>
             /// </summary>
@@ -168,38 +216,73 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Add Instance = new Add();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Add" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Add>.Encode(enc.IEncoder encoder)
+            private class AddEncoder : enc.StructEncoder<Add>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Add value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "add");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Add" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Add enc.IEncodable<Add>.Decode(enc.IDecoder decoder)
+            private class AddDecoder : enc.StructDecoder<Add>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Add" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Add Create()
+                {
+                    return new Add();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Add DecodeFields(enc.IJsonReader reader)
+                {
+                    return Add.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Always overwrite the existing file. The autorename strategy is the same as it
         /// is for <see cref="Add" />.</para>
         /// </summary>
-        public sealed class Overwrite : WriteMode, enc.IEncodable<Overwrite>
+        public sealed class Overwrite : WriteMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Overwrite> Encoder = new OverwriteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Overwrite> Decoder = new OverwriteDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Overwrite" /> class.</para>
             /// </summary>
@@ -212,30 +295,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Overwrite Instance = new Overwrite();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Overwrite" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Overwrite>.Encode(enc.IEncoder encoder)
+            private class OverwriteEncoder : enc.StructEncoder<Overwrite>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Overwrite value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "overwrite");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Overwrite" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Overwrite enc.IEncodable<Overwrite>.Decode(enc.IDecoder decoder)
+            private class OverwriteDecoder : enc.StructDecoder<Overwrite>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Overwrite" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Overwrite Create()
+                {
+                    return new Overwrite();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Overwrite DecodeFields(enc.IJsonReader reader)
+                {
+                    return Overwrite.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
@@ -244,8 +350,20 @@ namespace Dropbox.Api.Files
         /// example, "document.txt" might become "document (conflicted copy).txt" or "document
         /// (Panda's conflicted copy).txt".</para>
         /// </summary>
-        public sealed class Update : WriteMode, enc.IEncodable<Update>
+        public sealed class Update : WriteMode
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Update> Encoder = new UpdateEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Update> Decoder = new UpdateDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Update" /> class.</para>
             /// </summary>
@@ -254,36 +372,75 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Update" /> class.</para>
+            /// </summary>
+            private Update()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public string Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Update" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<Update>.Encode(enc.IEncoder encoder)
+            private class UpdateEncoder : enc.StructEncoder<Update>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Update value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "update");
-                    obj.AddField("update", this.Value);
+                    WriteProperty("update", value.Value, writer, enc.StringEncoder.Instance);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Update" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Update enc.IEncodable<Update>.Decode(enc.IDecoder decoder)
+            private class UpdateDecoder : enc.StructDecoder<Update>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Update" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Update Create()
+                {
+                    return new Update();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(Update value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "update":
+                            value.Value = enc.StringDecoder.Instance.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
     }
 }

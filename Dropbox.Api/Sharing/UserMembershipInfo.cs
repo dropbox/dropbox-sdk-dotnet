@@ -14,33 +14,36 @@ namespace Dropbox.Api.Sharing
     /// <para>The information about a user member of the shared folder.</para>
     /// </summary>
     /// <seealso cref="MembershipInfo" />
-    public sealed class UserMembershipInfo : enc.IEncodable<UserMembershipInfo>
+    public class UserMembershipInfo : MembershipInfo
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UserMembershipInfo> Encoder = new UserMembershipInfoEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UserMembershipInfo> Decoder = new UserMembershipInfoDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UserMembershipInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="accessType">This access type for this user member.</param>
+        /// <param name="accessType">The access type for this member.</param>
         /// <param name="user">The account information for the membership user.</param>
-        /// <param name="active">If this membership is active. When the field is false, it
-        /// means the user has left the shared folder (but may still rejoin).</param>
-        public UserMembershipInfo(AccessType accessType,
-                                  UserInfo user,
-                                  bool active)
+        public UserMembershipInfo(AccessLevel accessType,
+                                  UserInfo user)
+            : base(accessType)
         {
-            if (accessType == null)
-            {
-                throw new sys.ArgumentNullException("accessType");
-            }
-
             if (user == null)
             {
                 throw new sys.ArgumentNullException("user");
             }
 
-            this.AccessType = accessType;
             this.User = user;
-            this.Active = active;
         }
 
         /// <summary>
@@ -54,55 +57,69 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>This access type for this user member.</para>
-        /// </summary>
-        public AccessType AccessType { get; private set; }
-
-        /// <summary>
         /// <para>The account information for the membership user.</para>
         /// </summary>
-        public UserInfo User { get; private set; }
+        public UserInfo User { get; protected set; }
+
+        #region Encoder class
 
         /// <summary>
-        /// <para>If this membership is active. When the field is false, it means the user has
-        /// left the shared folder (but may still rejoin).</para>
+        /// <para>Encoder for  <see cref="UserMembershipInfo" />.</para>
         /// </summary>
-        public bool Active { get; private set; }
-
-        #region IEncodable<UserMembershipInfo> methods
-
-        /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
-        /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UserMembershipInfo>.Encode(enc.IEncoder encoder)
+        private class UserMembershipInfoEncoder : enc.StructEncoder<UserMembershipInfo>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UserMembershipInfo value, enc.IJsonWriter writer)
             {
-                obj.AddFieldObject<AccessType>("access_type", this.AccessType);
-                obj.AddFieldObject<UserInfo>("user", this.User);
-                obj.AddField<bool>("active", this.Active);
+                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
+                WriteProperty("user", value.User, writer, UserInfo.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UserMembershipInfo" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UserMembershipInfo enc.IEncodable<UserMembershipInfo>.Decode(enc.IDecoder decoder)
+        private class UserMembershipInfoDecoder : enc.StructDecoder<UserMembershipInfo>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UserMembershipInfo" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UserMembershipInfo Create()
             {
-                this.AccessType = obj.GetFieldObject<AccessType>("access_type");
-                this.User = obj.GetFieldObject<UserInfo>("user");
-                this.Active = obj.GetField<bool>("active");
+                return new UserMembershipInfo();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(UserMembershipInfo value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "access_type":
+                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "user":
+                        value.User = UserInfo.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The create folder arg object</para>
     /// </summary>
-    public sealed class CreateFolderArg : enc.IEncodable<CreateFolderArg>
+    public class CreateFolderArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<CreateFolderArg> Encoder = new CreateFolderArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<CreateFolderArg> Decoder = new CreateFolderArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="CreateFolderArg" />
         /// class.</para>
@@ -47,38 +59,63 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Path in the user's Dropbox to create.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
-        #region IEncodable<CreateFolderArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="CreateFolderArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<CreateFolderArg>.Encode(enc.IEncoder encoder)
+        private class CreateFolderArgEncoder : enc.StructEncoder<CreateFolderArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(CreateFolderArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="CreateFolderArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        CreateFolderArg enc.IEncodable<CreateFolderArg>.Decode(enc.IDecoder decoder)
+        private class CreateFolderArgDecoder : enc.StructDecoder<CreateFolderArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="CreateFolderArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override CreateFolderArg Create()
             {
-                this.Path = obj.GetField<string>("path");
+                return new CreateFolderArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(CreateFolderArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

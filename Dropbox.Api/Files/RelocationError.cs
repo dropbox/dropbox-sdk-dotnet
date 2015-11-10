@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The relocation error object</para>
     /// </summary>
-    public class RelocationError : enc.IEncodable<RelocationError>
+    public class RelocationError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<RelocationError> Encoder = new RelocationErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<RelocationError> Decoder = new RelocationErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="RelocationError" />
         /// class.</para>
@@ -177,73 +189,109 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<RelocationError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="RelocationError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<RelocationError>.Encode(enc.IEncoder encoder)
+        private class RelocationErrorEncoder : enc.StructEncoder<RelocationError>
         {
-            if (this.IsFromLookup)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(RelocationError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<FromLookup>)this).Encode(encoder);
-            }
-            else if (this.IsFromWrite)
-            {
-                ((enc.IEncodable<FromWrite>)this).Encode(encoder);
-            }
-            else if (this.IsTo)
-            {
-                ((enc.IEncodable<To>)this).Encode(encoder);
-            }
-            else if (this.IsCantCopySharedFolder)
-            {
-                ((enc.IEncodable<CantCopySharedFolder>)this).Encode(encoder);
-            }
-            else if (this.IsCantNestSharedFolder)
-            {
-                ((enc.IEncodable<CantNestSharedFolder>)this).Encode(encoder);
-            }
-            else if (this.IsTooManyFiles)
-            {
-                ((enc.IEncodable<TooManyFiles>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is FromLookup)
+                {
+                    WriteProperty(".tag", "from_lookup", writer, enc.StringEncoder.Instance);
+                    FromLookup.Encoder.EncodeFields((FromLookup)value, writer);
+                    return;
+                }
+                if (value is FromWrite)
+                {
+                    WriteProperty(".tag", "from_write", writer, enc.StringEncoder.Instance);
+                    FromWrite.Encoder.EncodeFields((FromWrite)value, writer);
+                    return;
+                }
+                if (value is To)
+                {
+                    WriteProperty(".tag", "to", writer, enc.StringEncoder.Instance);
+                    To.Encoder.EncodeFields((To)value, writer);
+                    return;
+                }
+                if (value is CantCopySharedFolder)
+                {
+                    WriteProperty(".tag", "cant_copy_shared_folder", writer, enc.StringEncoder.Instance);
+                    CantCopySharedFolder.Encoder.EncodeFields((CantCopySharedFolder)value, writer);
+                    return;
+                }
+                if (value is CantNestSharedFolder)
+                {
+                    WriteProperty(".tag", "cant_nest_shared_folder", writer, enc.StringEncoder.Instance);
+                    CantNestSharedFolder.Encoder.EncodeFields((CantNestSharedFolder)value, writer);
+                    return;
+                }
+                if (value is TooManyFiles)
+                {
+                    WriteProperty(".tag", "too_many_files", writer, enc.StringEncoder.Instance);
+                    TooManyFiles.Encoder.EncodeFields((TooManyFiles)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="RelocationError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        RelocationError enc.IEncodable<RelocationError>.Decode(enc.IDecoder decoder)
+        private class RelocationErrorDecoder : enc.UnionDecoder<RelocationError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="RelocationError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override RelocationError Create()
             {
-            case "from_lookup":
-                var fromLookup = new LookupError();
-                return new FromLookup(((enc.IEncodable<LookupError>)fromLookup).Decode(decoder));
-            case "from_write":
-                var fromWrite = new WriteError();
-                return new FromWrite(((enc.IEncodable<WriteError>)fromWrite).Decode(decoder));
-            case "to":
-                var to = new WriteError();
-                return new To(((enc.IEncodable<WriteError>)to).Decode(decoder));
-            case "cant_copy_shared_folder":
-                return CantCopySharedFolder.Instance;
-            case "cant_nest_shared_folder":
-                return CantNestSharedFolder.Instance;
-            case "too_many_files":
-                return TooManyFiles.Instance;
-            default:
-                return Other.Instance;
+                return new RelocationError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override RelocationError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "from_lookup":
+                        return FromLookup.Decoder.DecodeFields(reader);
+                    case "from_write":
+                        return FromWrite.Decoder.DecodeFields(reader);
+                    case "to":
+                        return To.Decoder.DecodeFields(reader);
+                    case "cant_copy_shared_folder":
+                        return CantCopySharedFolder.Decoder.DecodeFields(reader);
+                    case "cant_nest_shared_folder":
+                        return CantNestSharedFolder.Decoder.DecodeFields(reader);
+                    case "too_many_files":
+                        return TooManyFiles.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -252,8 +300,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The from lookup object</para>
         /// </summary>
-        public sealed class FromLookup : RelocationError, enc.IEncodable<FromLookup>
+        public sealed class FromLookup : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FromLookup> Encoder = new FromLookupEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FromLookup> Decoder = new FromLookupDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="FromLookup" /> class.</para>
             /// </summary>
@@ -262,43 +322,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FromLookup" /> class.</para>
+            /// </summary>
+            private FromLookup()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public LookupError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="FromLookup" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<FromLookup>.Encode(enc.IEncoder encoder)
+            private class FromLookupEncoder : enc.StructEncoder<FromLookup>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FromLookup value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "from_lookup");
-                    obj.AddField("from_lookup", this.Value);
+                    LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="FromLookup" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            FromLookup enc.IEncodable<FromLookup>.Decode(enc.IDecoder decoder)
+            private class FromLookupDecoder : enc.StructDecoder<FromLookup>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FromLookup" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FromLookup Create()
+                {
+                    return new FromLookup();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(FromLookup value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "from_lookup":
+                            value.Value = LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The from write object</para>
         /// </summary>
-        public sealed class FromWrite : RelocationError, enc.IEncodable<FromWrite>
+        public sealed class FromWrite : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FromWrite> Encoder = new FromWriteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FromWrite> Decoder = new FromWriteDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="FromWrite" /> class.</para>
             /// </summary>
@@ -307,43 +418,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FromWrite" /> class.</para>
+            /// </summary>
+            private FromWrite()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public WriteError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="FromWrite" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<FromWrite>.Encode(enc.IEncoder encoder)
+            private class FromWriteEncoder : enc.StructEncoder<FromWrite>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FromWrite value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "from_write");
-                    obj.AddField("from_write", this.Value);
+                    WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="FromWrite" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            FromWrite enc.IEncodable<FromWrite>.Decode(enc.IDecoder decoder)
+            private class FromWriteDecoder : enc.StructDecoder<FromWrite>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FromWrite" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FromWrite Create()
+                {
+                    return new FromWrite();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(FromWrite value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "from_write":
+                            value.Value = WriteError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The to object</para>
         /// </summary>
-        public sealed class To : RelocationError, enc.IEncodable<To>
+        public sealed class To : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<To> Encoder = new ToEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<To> Decoder = new ToDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="To" /> class.</para>
             /// </summary>
@@ -352,43 +514,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="To" /> class.</para>
+            /// </summary>
+            private To()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public WriteError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="To" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<To>.Encode(enc.IEncoder encoder)
+            private class ToEncoder : enc.StructEncoder<To>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(To value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "to");
-                    obj.AddField("to", this.Value);
+                    WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="To" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            To enc.IEncodable<To>.Decode(enc.IDecoder decoder)
+            private class ToDecoder : enc.StructDecoder<To>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="To" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override To Create()
+                {
+                    return new To();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(To value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "to":
+                            value.Value = WriteError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Shared folders can't be copied.</para>
         /// </summary>
-        public sealed class CantCopySharedFolder : RelocationError, enc.IEncodable<CantCopySharedFolder>
+        public sealed class CantCopySharedFolder : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantCopySharedFolder> Encoder = new CantCopySharedFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantCopySharedFolder> Decoder = new CantCopySharedFolderDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="CantCopySharedFolder" />
             /// class.</para>
@@ -402,38 +615,74 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly CantCopySharedFolder Instance = new CantCopySharedFolder();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="CantCopySharedFolder" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<CantCopySharedFolder>.Encode(enc.IEncoder encoder)
+            private class CantCopySharedFolderEncoder : enc.StructEncoder<CantCopySharedFolder>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantCopySharedFolder value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "cant_copy_shared_folder");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="CantCopySharedFolder" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            CantCopySharedFolder enc.IEncodable<CantCopySharedFolder>.Decode(enc.IDecoder decoder)
+            private class CantCopySharedFolderDecoder : enc.StructDecoder<CantCopySharedFolder>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantCopySharedFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantCopySharedFolder Create()
+                {
+                    return new CantCopySharedFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CantCopySharedFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return CantCopySharedFolder.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Your move operation would result in nested shared folders.  This is not
         /// allowed.</para>
         /// </summary>
-        public sealed class CantNestSharedFolder : RelocationError, enc.IEncodable<CantNestSharedFolder>
+        public sealed class CantNestSharedFolder : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantNestSharedFolder> Encoder = new CantNestSharedFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantNestSharedFolder> Decoder = new CantNestSharedFolderDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="CantNestSharedFolder" />
             /// class.</para>
@@ -447,37 +696,73 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly CantNestSharedFolder Instance = new CantNestSharedFolder();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="CantNestSharedFolder" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<CantNestSharedFolder>.Encode(enc.IEncoder encoder)
+            private class CantNestSharedFolderEncoder : enc.StructEncoder<CantNestSharedFolder>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantNestSharedFolder value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "cant_nest_shared_folder");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="CantNestSharedFolder" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            CantNestSharedFolder enc.IEncodable<CantNestSharedFolder>.Decode(enc.IDecoder decoder)
+            private class CantNestSharedFolderDecoder : enc.StructDecoder<CantNestSharedFolder>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantNestSharedFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantNestSharedFolder Create()
+                {
+                    return new CantNestSharedFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CantNestSharedFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return CantNestSharedFolder.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The operation would involve more than 10,000 files and folders.</para>
         /// </summary>
-        public sealed class TooManyFiles : RelocationError, enc.IEncodable<TooManyFiles>
+        public sealed class TooManyFiles : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManyFiles> Encoder = new TooManyFilesEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManyFiles> Decoder = new TooManyFilesDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="TooManyFiles" />
             /// class.</para>
@@ -491,37 +776,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly TooManyFiles Instance = new TooManyFiles();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="TooManyFiles" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<TooManyFiles>.Encode(enc.IEncoder encoder)
+            private class TooManyFilesEncoder : enc.StructEncoder<TooManyFiles>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManyFiles value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "too_many_files");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="TooManyFiles" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            TooManyFiles enc.IEncodable<TooManyFiles>.Decode(enc.IDecoder decoder)
+            private class TooManyFilesDecoder : enc.StructDecoder<TooManyFiles>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManyFiles" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManyFiles Create()
+                {
+                    return new TooManyFiles();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TooManyFiles DecodeFields(enc.IJsonReader reader)
+                {
+                    return TooManyFiles.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>An unspecified error.</para>
         /// </summary>
-        public sealed class Other : RelocationError, enc.IEncodable<Other>
+        public sealed class Other : RelocationError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -534,30 +854,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

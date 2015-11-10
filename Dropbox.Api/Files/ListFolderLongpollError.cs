@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The list folder longpoll error object</para>
     /// </summary>
-    public class ListFolderLongpollError : enc.IEncodable<ListFolderLongpollError>
+    public class ListFolderLongpollError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ListFolderLongpollError> Encoder = new ListFolderLongpollErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ListFolderLongpollError> Decoder = new ListFolderLongpollErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderLongpollError" />
         /// class.</para>
@@ -67,40 +79,70 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<ListFolderLongpollError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ListFolderLongpollError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ListFolderLongpollError>.Encode(enc.IEncoder encoder)
+        private class ListFolderLongpollErrorEncoder : enc.StructEncoder<ListFolderLongpollError>
         {
-            if (this.IsReset)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ListFolderLongpollError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Reset>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is Reset)
+                {
+                    WriteProperty(".tag", "reset", writer, enc.StringEncoder.Instance);
+                    Reset.Encoder.EncodeFields((Reset)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ListFolderLongpollError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ListFolderLongpollError enc.IEncodable<ListFolderLongpollError>.Decode(enc.IDecoder decoder)
+        private class ListFolderLongpollErrorDecoder : enc.UnionDecoder<ListFolderLongpollError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ListFolderLongpollError"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ListFolderLongpollError Create()
             {
-            case "reset":
-                return Reset.Instance;
-            default:
-                return Other.Instance;
+                return new ListFolderLongpollError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override ListFolderLongpollError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "reset":
+                        return Reset.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -111,8 +153,20 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> to obtain a new
         /// cursor.</para>
         /// </summary>
-        public sealed class Reset : ListFolderLongpollError, enc.IEncodable<Reset>
+        public sealed class Reset : ListFolderLongpollError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Reset> Encoder = new ResetEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Reset> Decoder = new ResetDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Reset" /> class.</para>
             /// </summary>
@@ -125,37 +179,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Reset Instance = new Reset();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Reset" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Reset>.Encode(enc.IEncoder encoder)
+            private class ResetEncoder : enc.StructEncoder<Reset>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Reset value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "reset");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Reset" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Reset enc.IEncodable<Reset>.Decode(enc.IDecoder decoder)
+            private class ResetDecoder : enc.StructDecoder<Reset>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Reset" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Reset Create()
+                {
+                    return new Reset();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Reset DecodeFields(enc.IJsonReader reader)
+                {
+                    return Reset.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : ListFolderLongpollError, enc.IEncodable<Other>
+        public sealed class Other : ListFolderLongpollError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -168,30 +257,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

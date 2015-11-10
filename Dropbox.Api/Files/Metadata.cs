@@ -17,8 +17,20 @@ namespace Dropbox.Api.Files
     /// <seealso cref="FileMetadata" />
     /// <seealso cref="FolderMetadata" />
     /// <seealso cref="SearchMatch" />
-    public class Metadata : enc.IEncodable<Metadata>
+    public class Metadata
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<Metadata> Encoder = new MetadataEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<Metadata> Decoder = new MetadataDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="Metadata" /> class.</para>
         /// </summary>
@@ -131,61 +143,102 @@ namespace Dropbox.Api.Files
         /// </summary>
         public string PathLower { get; protected set; }
 
-        #region IEncodable<Metadata> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="Metadata" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<Metadata>.Encode(enc.IEncoder encoder)
+        private class MetadataEncoder : enc.StructEncoder<Metadata>
         {
-            if (this.IsFile)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(Metadata value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<FileMetadata>)this.AsFile).Encode(encoder);
-            }
-            else if (this.IsFolder)
-            {
-                ((enc.IEncodable<FolderMetadata>)this.AsFolder).Encode(encoder);
-            }
-            else if (this.IsDeleted)
-            {
-                ((enc.IEncodable<DeletedMetadata>)this.AsDeleted).Encode(encoder);
-            }
-            else
-            {
-                throw new sys.InvalidOperationException();
+                if (value is FileMetadata)
+                {
+                    WriteProperty(".tag", "file", writer, enc.StringEncoder.Instance);
+                    FileMetadata.Encoder.EncodeFields((FileMetadata)value, writer);
+                    return;
+                }
+                if (value is FolderMetadata)
+                {
+                    WriteProperty(".tag", "folder", writer, enc.StringEncoder.Instance);
+                    FolderMetadata.Encoder.EncodeFields((FolderMetadata)value, writer);
+                    return;
+                }
+                if (value is DeletedMetadata)
+                {
+                    WriteProperty(".tag", "deleted", writer, enc.StringEncoder.Instance);
+                    DeletedMetadata.Encoder.EncodeFields((DeletedMetadata)value, writer);
+                    return;
+                }
+                WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
+                WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="Metadata" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        Metadata enc.IEncodable<Metadata>.Decode(enc.IDecoder decoder)
+        private class MetadataDecoder : enc.UnionDecoder<Metadata>
         {
-            var tag = string.Empty;
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="Metadata" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override Metadata Create()
             {
-                tag = obj.GetField<string>(".tag");
+                return new Metadata();
             }
 
-            switch (tag)
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override Metadata Decode(string tag, enc.IJsonReader reader)
             {
-            case "file":
-                var file = new FileMetadata();
-                return ((enc.IEncodable<FileMetadata>)file).Decode(decoder);
-            case "folder":
-                var folder = new FolderMetadata();
-                return ((enc.IEncodable<FolderMetadata>)folder).Decode(decoder);
-            case "deleted":
-                var deleted = new DeletedMetadata();
-                return ((enc.IEncodable<DeletedMetadata>)deleted).Decode(decoder);
-            default:
-                throw new sys.InvalidOperationException();
+                switch (tag)
+                {
+                    case "file":
+                        return FileMetadata.Decoder.DecodeFields(reader);
+                    case "folder":
+                        return FolderMetadata.Decoder.DecodeFields(reader);
+                    case "deleted":
+                        return DeletedMetadata.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
+            }
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(Metadata value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "name":
+                        value.Name = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
             }
         }
 

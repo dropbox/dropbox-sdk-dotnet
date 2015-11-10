@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The upload session start result object</para>
     /// </summary>
-    public sealed class UploadSessionStartResult : enc.IEncodable<UploadSessionStartResult>
+    public class UploadSessionStartResult
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UploadSessionStartResult> Encoder = new UploadSessionStartResultEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UploadSessionStartResult> Decoder = new UploadSessionStartResultDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UploadSessionStartResult" />
         /// class.</para>
@@ -48,38 +60,64 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> and <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
         /// </summary>
-        public string SessionId { get; private set; }
+        public string SessionId { get; protected set; }
 
-        #region IEncodable<UploadSessionStartResult> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="UploadSessionStartResult" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UploadSessionStartResult>.Encode(enc.IEncoder encoder)
+        private class UploadSessionStartResultEncoder : enc.StructEncoder<UploadSessionStartResult>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UploadSessionStartResult value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("session_id", this.SessionId);
+                WriteProperty("session_id", value.SessionId, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UploadSessionStartResult" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UploadSessionStartResult enc.IEncodable<UploadSessionStartResult>.Decode(enc.IDecoder decoder)
+        private class UploadSessionStartResultDecoder : enc.StructDecoder<UploadSessionStartResult>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UploadSessionStartResult"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UploadSessionStartResult Create()
             {
-                this.SessionId = obj.GetField<string>("session_id");
+                return new UploadSessionStartResult();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(UploadSessionStartResult value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "session_id":
+                        value.SessionId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

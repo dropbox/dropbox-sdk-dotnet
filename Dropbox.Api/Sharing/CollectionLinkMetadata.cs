@@ -14,8 +14,20 @@ namespace Dropbox.Api.Sharing
     /// <para>Metadata for a collection-based shared link.</para>
     /// </summary>
     /// <seealso cref="LinkMetadata" />
-    public sealed class CollectionLinkMetadata : LinkMetadata, enc.IEncodable<CollectionLinkMetadata>
+    public class CollectionLinkMetadata : LinkMetadata
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<CollectionLinkMetadata> Encoder = new CollectionLinkMetadataEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<CollectionLinkMetadata> Decoder = new CollectionLinkMetadataDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="CollectionLinkMetadata" />
         /// class.</para>
@@ -41,47 +53,73 @@ namespace Dropbox.Api.Sharing
         {
         }
 
-        #region IEncodable<CollectionLinkMetadata> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="CollectionLinkMetadata" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<CollectionLinkMetadata>.Encode(enc.IEncoder encoder)
+        private class CollectionLinkMetadataEncoder : enc.StructEncoder<CollectionLinkMetadata>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(CollectionLinkMetadata value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>(".tag", "collection");
-                obj.AddField<string>("url", this.Url);
-                obj.AddFieldObject<Visibility>("visibility", this.Visibility);
-                if (this.Expires != null)
+                WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
+                WriteProperty("visibility", value.Visibility, writer, Visibility.Encoder);
+                if (value.Expires != null)
                 {
-                    obj.AddField<sys.DateTime>("expires", this.Expires.Value);
+                    WriteProperty("expires", value.Expires.Value, writer, enc.DateTimeEncoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="CollectionLinkMetadata" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        CollectionLinkMetadata enc.IEncodable<CollectionLinkMetadata>.Decode(enc.IDecoder decoder)
+        private class CollectionLinkMetadataDecoder : enc.StructDecoder<CollectionLinkMetadata>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="CollectionLinkMetadata"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override CollectionLinkMetadata Create()
             {
-                this.Url = obj.GetField<string>("url");
-                this.Visibility = obj.GetFieldObject<Visibility>("visibility");
-                if (obj.HasField("expires"))
-                {
-                    this.Expires = obj.GetField<sys.DateTime>("expires");
-                }
+                return new CollectionLinkMetadata();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(CollectionLinkMetadata value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "url":
+                        value.Url = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "visibility":
+                        value.Visibility = Visibility.Decoder.Decode(reader);
+                        break;
+                    case "expires":
+                        value.Expires = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

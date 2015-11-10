@@ -16,8 +16,20 @@ namespace Dropbox.Api.Users
     /// <seealso cref="Account" />
     /// <seealso cref="BasicAccount" />
     /// <seealso cref="FullAccount" />
-    public sealed class Name : enc.IEncodable<Name>
+    public class Name
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<Name> Encoder = new NameEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<Name> Decoder = new NameDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="Name" /> class.</para>
         /// </summary>
@@ -72,62 +84,93 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>Also known as a first name.</para>
         /// </summary>
-        public string GivenName { get; private set; }
+        public string GivenName { get; protected set; }
 
         /// <summary>
         /// <para>Also known as a last name or family name.</para>
         /// </summary>
-        public string Surname { get; private set; }
+        public string Surname { get; protected set; }
 
         /// <summary>
         /// <para>Locale-dependent name. In the US, a person's familiar name is their <see
         /// cref="GivenName" />, but elsewhere, it could be any combination of a person's <see
         /// cref="GivenName" /> and <see cref="Surname" />.</para>
         /// </summary>
-        public string FamiliarName { get; private set; }
+        public string FamiliarName { get; protected set; }
 
         /// <summary>
         /// <para>A name that can be used directly to represent the name of a user's Dropbox
         /// account.</para>
         /// </summary>
-        public string DisplayName { get; private set; }
+        public string DisplayName { get; protected set; }
 
-        #region IEncodable<Name> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="Name" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<Name>.Encode(enc.IEncoder encoder)
+        private class NameEncoder : enc.StructEncoder<Name>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(Name value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("given_name", this.GivenName);
-                obj.AddField<string>("surname", this.Surname);
-                obj.AddField<string>("familiar_name", this.FamiliarName);
-                obj.AddField<string>("display_name", this.DisplayName);
+                WriteProperty("given_name", value.GivenName, writer, enc.StringEncoder.Instance);
+                WriteProperty("surname", value.Surname, writer, enc.StringEncoder.Instance);
+                WriteProperty("familiar_name", value.FamiliarName, writer, enc.StringEncoder.Instance);
+                WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="Name" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        Name enc.IEncodable<Name>.Decode(enc.IDecoder decoder)
+        private class NameDecoder : enc.StructDecoder<Name>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="Name" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override Name Create()
             {
-                this.GivenName = obj.GetField<string>("given_name");
-                this.Surname = obj.GetField<string>("surname");
-                this.FamiliarName = obj.GetField<string>("familiar_name");
-                this.DisplayName = obj.GetField<string>("display_name");
+                return new Name();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(Name value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "given_name":
+                        value.GivenName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "surname":
+                        value.Surname = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "familiar_name":
+                        value.FamiliarName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "display_name":
+                        value.DisplayName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

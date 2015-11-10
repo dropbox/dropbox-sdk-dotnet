@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The search arg object</para>
     /// </summary>
-    public sealed class SearchArg : enc.IEncodable<SearchArg>
+    public class SearchArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SearchArg> Encoder = new SearchArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SearchArg> Decoder = new SearchArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SearchArg" /> class.</para>
         /// </summary>
@@ -80,77 +92,101 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The path in the user's Dropbox to search. Should probably be a folder.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
         /// <para>The string to search for. The search string is split on spaces into multiple
         /// tokens. For file name searching, the last token is used for prefix matching (i.e.
         /// "bat c" matches "bat cave" but not "batman car").</para>
         /// </summary>
-        public string Query { get; private set; }
+        public string Query { get; protected set; }
 
         /// <summary>
         /// <para>The starting index within the search results (used for paging).</para>
         /// </summary>
-        public ulong Start { get; private set; }
+        public ulong Start { get; protected set; }
 
         /// <summary>
         /// <para>The maximum number of search results to return.</para>
         /// </summary>
-        public ulong MaxResults { get; private set; }
+        public ulong MaxResults { get; protected set; }
 
         /// <summary>
         /// <para>The search mode (filename, filename_and_content, or deleted_filename).</para>
         /// </summary>
-        public SearchMode Mode { get; private set; }
+        public SearchMode Mode { get; protected set; }
 
-        #region IEncodable<SearchArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SearchArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SearchArg>.Encode(enc.IEncoder encoder)
+        private class SearchArgEncoder : enc.StructEncoder<SearchArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SearchArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                obj.AddField<string>("query", this.Query);
-                obj.AddField<ulong>("start", this.Start);
-                obj.AddField<ulong>("max_results", this.MaxResults);
-                obj.AddFieldObject<SearchMode>("mode", this.Mode);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("query", value.Query, writer, enc.StringEncoder.Instance);
+                WriteProperty("start", value.Start, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("max_results", value.MaxResults, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("mode", value.Mode, writer, SearchMode.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SearchArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SearchArg enc.IEncodable<SearchArg>.Decode(enc.IDecoder decoder)
+        private class SearchArgDecoder : enc.StructDecoder<SearchArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SearchArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SearchArg Create()
             {
-                this.Path = obj.GetField<string>("path");
-                this.Query = obj.GetField<string>("query");
-                if (obj.HasField("start"))
-                {
-                    this.Start = obj.GetField<ulong>("start");
-                }
-                if (obj.HasField("max_results"))
-                {
-                    this.MaxResults = obj.GetField<ulong>("max_results");
-                }
-                if (obj.HasField("mode"))
-                {
-                    this.Mode = obj.GetFieldObject<SearchMode>("mode");
-                }
+                return new SearchArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(SearchArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "query":
+                        value.Query = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "start":
+                        value.Start = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "max_results":
+                        value.MaxResults = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "mode":
+                        value.Mode = SearchMode.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

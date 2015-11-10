@@ -14,8 +14,20 @@ namespace Dropbox.Api.Files
     /// <para>The commit info object</para>
     /// </summary>
     /// <seealso cref="UploadSessionFinishArg" />
-    public sealed class CommitInfo : enc.IEncodable<CommitInfo>
+    public class CommitInfo
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<CommitInfo> Encoder = new CommitInfoEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<CommitInfo> Decoder = new CommitInfoDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="CommitInfo" /> class.</para>
         /// </summary>
@@ -75,18 +87,18 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Path in the user's Dropbox to save the file.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
         /// <para>Selects what to do if the file already exists.</para>
         /// </summary>
-        public WriteMode Mode { get; private set; }
+        public WriteMode Mode { get; protected set; }
 
         /// <summary>
         /// <para>If there's a conflict, as determined by <see cref="Mode" />, have the Dropbox
         /// server try to autorename the file to avoid conflict.</para>
         /// </summary>
-        public bool Autorename { get; private set; }
+        public bool Autorename { get; protected set; }
 
         /// <summary>
         /// <para>The value to store as the <see cref="ClientModified" /> timestamp. Dropbox
@@ -95,68 +107,89 @@ namespace Dropbox.Api.Files
         /// clients, mobile clients, and API apps of when the file was actually created or
         /// modified.</para>
         /// </summary>
-        public sys.DateTime? ClientModified { get; private set; }
+        public sys.DateTime? ClientModified { get; protected set; }
 
         /// <summary>
         /// <para>Normally, users are made aware of any file modifications in their Dropbox
         /// account via notifications in the client software. If <c>true</c>, this tells the
         /// clients that this modification shouldn't result in a user notification.</para>
         /// </summary>
-        public bool Mute { get; private set; }
+        public bool Mute { get; protected set; }
 
-        #region IEncodable<CommitInfo> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="CommitInfo" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<CommitInfo>.Encode(enc.IEncoder encoder)
+        private class CommitInfoEncoder : enc.StructEncoder<CommitInfo>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(CommitInfo value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                obj.AddFieldObject<WriteMode>("mode", this.Mode);
-                obj.AddField<bool>("autorename", this.Autorename);
-                if (this.ClientModified != null)
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("mode", value.Mode, writer, WriteMode.Encoder);
+                WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
+                if (value.ClientModified != null)
                 {
-                    obj.AddField<sys.DateTime>("client_modified", this.ClientModified.Value);
+                    WriteProperty("client_modified", value.ClientModified.Value, writer, enc.DateTimeEncoder.Instance);
                 }
-                obj.AddField<bool>("mute", this.Mute);
+                WriteProperty("mute", value.Mute, writer, enc.BooleanEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="CommitInfo" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        CommitInfo enc.IEncodable<CommitInfo>.Decode(enc.IDecoder decoder)
+        private class CommitInfoDecoder : enc.StructDecoder<CommitInfo>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="CommitInfo" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override CommitInfo Create()
             {
-                this.Path = obj.GetField<string>("path");
-                if (obj.HasField("mode"))
-                {
-                    this.Mode = obj.GetFieldObject<WriteMode>("mode");
-                }
-                if (obj.HasField("autorename"))
-                {
-                    this.Autorename = obj.GetField<bool>("autorename");
-                }
-                if (obj.HasField("client_modified"))
-                {
-                    this.ClientModified = obj.GetField<sys.DateTime>("client_modified");
-                }
-                if (obj.HasField("mute"))
-                {
-                    this.Mute = obj.GetField<bool>("mute");
-                }
+                return new CommitInfo();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(CommitInfo value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "mode":
+                        value.Mode = WriteMode.Decoder.Decode(reader);
+                        break;
+                    case "autorename":
+                        value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "client_modified":
+                        value.ClientModified = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "mute":
+                        value.Mute = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

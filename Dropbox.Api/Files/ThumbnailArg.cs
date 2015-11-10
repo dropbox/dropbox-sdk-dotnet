@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The thumbnail arg object</para>
     /// </summary>
-    public sealed class ThumbnailArg : enc.IEncodable<ThumbnailArg>
+    public class ThumbnailArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ThumbnailArg> Encoder = new ThumbnailArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ThumbnailArg> Decoder = new ThumbnailArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ThumbnailArg" /> class.</para>
         /// </summary>
@@ -31,7 +43,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"/.*"))
+            else if (!re.Regex.IsMatch(path, @"((/|id:).*)|(rev:[0-9a-f]{9,})"))
             {
                 throw new sys.ArgumentOutOfRangeException("path");
             }
@@ -65,60 +77,83 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The path to the image file you want to thumbnail.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
         /// <para>The format for the thumbnail image, jpeg (default) or png. For  images that
         /// are photos, jpeg should be preferred, while png is  better for screenshots and
         /// digital arts.</para>
         /// </summary>
-        public ThumbnailFormat Format { get; private set; }
+        public ThumbnailFormat Format { get; protected set; }
 
         /// <summary>
         /// <para>The size for the thumbnail image.</para>
         /// </summary>
-        public ThumbnailSize Size { get; private set; }
+        public ThumbnailSize Size { get; protected set; }
 
-        #region IEncodable<ThumbnailArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ThumbnailArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ThumbnailArg>.Encode(enc.IEncoder encoder)
+        private class ThumbnailArgEncoder : enc.StructEncoder<ThumbnailArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ThumbnailArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                obj.AddFieldObject<ThumbnailFormat>("format", this.Format);
-                obj.AddFieldObject<ThumbnailSize>("size", this.Size);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("format", value.Format, writer, ThumbnailFormat.Encoder);
+                WriteProperty("size", value.Size, writer, ThumbnailSize.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ThumbnailArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ThumbnailArg enc.IEncodable<ThumbnailArg>.Decode(enc.IDecoder decoder)
+        private class ThumbnailArgDecoder : enc.StructDecoder<ThumbnailArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ThumbnailArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ThumbnailArg Create()
             {
-                this.Path = obj.GetField<string>("path");
-                if (obj.HasField("format"))
-                {
-                    this.Format = obj.GetFieldObject<ThumbnailFormat>("format");
-                }
-                if (obj.HasField("size"))
-                {
-                    this.Size = obj.GetFieldObject<ThumbnailSize>("size");
-                }
+                return new ThumbnailArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(ThumbnailArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "format":
+                        value.Format = ThumbnailFormat.Decoder.Decode(reader);
+                        break;
+                    case "size":
+                        value.Size = ThumbnailSize.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

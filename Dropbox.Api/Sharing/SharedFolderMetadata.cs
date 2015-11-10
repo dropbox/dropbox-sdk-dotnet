@@ -15,22 +15,38 @@ namespace Dropbox.Api.Sharing
     /// </summary>
     /// <seealso cref="BasicSharedFolderMetadata" />
     /// <seealso cref="FullSharedFolderMetadata" />
-    public class SharedFolderMetadata : enc.IEncodable<SharedFolderMetadata>
+    public class SharedFolderMetadata
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<SharedFolderMetadata> Encoder = new SharedFolderMetadataEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<SharedFolderMetadata> Decoder = new SharedFolderMetadataDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SharedFolderMetadata" />
         /// class.</para>
         /// </summary>
         /// <param name="name">The name of the this shared folder.</param>
         /// <param name="id">The ID of the shared folder.</param>
-        /// <param name="accessType">Who can access this shared folder.</param>
-        /// <param name="sharedLinkPolicy">Who links can be shared with.</param>
+        /// <param name="accessType">The current user's access level for this shared
+        /// folder.</param>
+        /// <param name="isTeamFolder">Whether this folder is a <a
+        /// href="https://www.dropbox.com/en/help/986">team folder</a>.</param>
+        /// <param name="policy">Policies governing this shared folder.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
         protected SharedFolderMetadata(string name,
                                        string id,
-                                       AccessType accessType,
-                                       SharedLinkPolicy sharedLinkPolicy,
+                                       AccessLevel accessType,
+                                       bool isTeamFolder,
+                                       FolderPolicy policy,
                                        string pathLower = null)
         {
             if (name == null)
@@ -52,15 +68,16 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("accessType");
             }
 
-            if (sharedLinkPolicy == null)
+            if (policy == null)
             {
-                throw new sys.ArgumentNullException("sharedLinkPolicy");
+                throw new sys.ArgumentNullException("policy");
             }
 
             this.Name = name;
             this.Id = id;
             this.AccessType = accessType;
-            this.SharedLinkPolicy = sharedLinkPolicy;
+            this.IsTeamFolder = isTeamFolder;
+            this.Policy = policy;
             this.PathLower = pathLower;
         }
 
@@ -131,14 +148,20 @@ namespace Dropbox.Api.Sharing
         public string Id { get; protected set; }
 
         /// <summary>
-        /// <para>Who can access this shared folder.</para>
+        /// <para>The current user's access level for this shared folder.</para>
         /// </summary>
-        public AccessType AccessType { get; protected set; }
+        public AccessLevel AccessType { get; protected set; }
 
         /// <summary>
-        /// <para>Who links can be shared with.</para>
+        /// <para>Whether this folder is a <a href="https://www.dropbox.com/en/help/986">team
+        /// folder</a>.</para>
         /// </summary>
-        public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
+        public bool IsTeamFolder { get; protected set; }
+
+        /// <summary>
+        /// <para>Policies governing this shared folder.</para>
+        /// </summary>
+        public FolderPolicy Policy { get; protected set; }
 
         /// <summary>
         /// <para>The lower-cased full path of this shared folder. Absent for unmounted
@@ -146,54 +169,113 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string PathLower { get; protected set; }
 
-        #region IEncodable<SharedFolderMetadata> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="SharedFolderMetadata" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<SharedFolderMetadata>.Encode(enc.IEncoder encoder)
+        private class SharedFolderMetadataEncoder : enc.StructEncoder<SharedFolderMetadata>
         {
-            if (this.IsBasic)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(SharedFolderMetadata value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<BasicSharedFolderMetadata>)this.AsBasic).Encode(encoder);
-            }
-            else if (this.IsFull)
-            {
-                ((enc.IEncodable<FullSharedFolderMetadata>)this.AsFull).Encode(encoder);
-            }
-            else
-            {
-                throw new sys.InvalidOperationException();
+                if (value is BasicSharedFolderMetadata)
+                {
+                    WriteProperty(".tag", "basic", writer, enc.StringEncoder.Instance);
+                    BasicSharedFolderMetadata.Encoder.EncodeFields((BasicSharedFolderMetadata)value, writer);
+                    return;
+                }
+                if (value is FullSharedFolderMetadata)
+                {
+                    WriteProperty(".tag", "full", writer, enc.StringEncoder.Instance);
+                    FullSharedFolderMetadata.Encoder.EncodeFields((FullSharedFolderMetadata)value, writer);
+                    return;
+                }
+                WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
+                WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
+                WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("policy", value.Policy, writer, FolderPolicy.Encoder);
+                if (value.PathLower != null)
+                {
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="SharedFolderMetadata" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        SharedFolderMetadata enc.IEncodable<SharedFolderMetadata>.Decode(enc.IDecoder decoder)
+        private class SharedFolderMetadataDecoder : enc.UnionDecoder<SharedFolderMetadata>
         {
-            var tag = string.Empty;
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="SharedFolderMetadata" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override SharedFolderMetadata Create()
             {
-                tag = obj.GetField<string>(".tag");
+                return new SharedFolderMetadata();
             }
 
-            switch (tag)
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override SharedFolderMetadata Decode(string tag, enc.IJsonReader reader)
             {
-            case "basic":
-                var basic = new BasicSharedFolderMetadata();
-                return ((enc.IEncodable<BasicSharedFolderMetadata>)basic).Decode(decoder);
-            case "full":
-                var full = new FullSharedFolderMetadata();
-                return ((enc.IEncodable<FullSharedFolderMetadata>)full).Decode(decoder);
-            default:
-                throw new sys.InvalidOperationException();
+                switch (tag)
+                {
+                    case "basic":
+                        return BasicSharedFolderMetadata.Decoder.DecodeFields(reader);
+                    case "full":
+                        return FullSharedFolderMetadata.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
+            }
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(SharedFolderMetadata value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "name":
+                        value.Name = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "id":
+                        value.Id = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "access_type":
+                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "is_team_folder":
+                        value.IsTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "policy":
+                        value.Policy = FolderPolicy.Decoder.Decode(reader);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
             }
         }
 

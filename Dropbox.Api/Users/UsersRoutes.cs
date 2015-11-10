@@ -40,7 +40,7 @@ namespace Dropbox.Api.Users.Routes
         /// cref="GetAccountError"/>.</exception>
         public t.Task<BasicAccount> GetAccountAsync(GetAccountArg getAccountArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetAccountArg, BasicAccount, GetAccountError>(getAccountArg, "api", "/users/get_account");
+            return this.Transport.SendRpcRequestAsync<GetAccountArg, BasicAccount, GetAccountError>(getAccountArg, "api", "/users/get_account", GetAccountArg.Encoder, BasicAccount.Decoder, GetAccountError.Decoder);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Dropbox.Api.Users.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<FullAccount> GetCurrentAccountAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account");
+            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", enc.EmptyEncoder.Instance, FullAccount.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Dropbox.Api.Users.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<SpaceUsage> GetSpaceUsageAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage");
+            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", enc.EmptyEncoder.Instance, SpaceUsage.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -192,6 +192,95 @@ namespace Dropbox.Api.Users.Routes
         public SpaceUsage EndGetSpaceUsage(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SpaceUsage>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get information about multiple user accounts.  At most 300 accounts may be
+        /// queried per request.</para>
+        /// </summary>
+        /// <param name="getAccountBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{GetAccountBatchError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="GetAccountBatchError"/>.</exception>
+        public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(GetAccountBatchArg getAccountBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<GetAccountBatchArg, col.List<BasicAccount>, GetAccountBatchError>(getAccountBatchArg, "api", "/users/get_account_batch", GetAccountBatchArg.Encoder, enc.Decoder.CreateListDecoder(BasicAccount.Decoder), GetAccountBatchError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get account batch route.</para>
+        /// </summary>
+        /// <param name="getAccountBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetAccountBatch(GetAccountBatchArg getAccountBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetAccountBatchAsync(getAccountBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get information about multiple user accounts.  At most 300 accounts may be
+        /// queried per request.</para>
+        /// </summary>
+        /// <param name="accountIds">List of user account identifiers.  Should not contain any
+        /// duplicate account IDs.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{GetAccountBatchError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="GetAccountBatchError"/>.</exception>
+        public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(col.IEnumerable<string> accountIds)
+        {
+            var getAccountBatchArg = new GetAccountBatchArg(accountIds);
+
+            return this.GetAccountBatchAsync(getAccountBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get account batch route.</para>
+        /// </summary>
+        /// <param name="accountIds">List of user account identifiers.  Should not contain any
+        /// duplicate account IDs.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetAccountBatch(col.IEnumerable<string> accountIds,
+                                                     sys.AsyncCallback callback,
+                                                     object callbackState = null)
+        {
+            var getAccountBatchArg = new GetAccountBatchArg(accountIds);
+
+            return this.BeginGetAccountBatch(getAccountBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get account batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{GetAccountBatchError}">Thrown if there is
+        /// an error processing the request; This will contain a <see
+        /// cref="GetAccountBatchError"/>.</exception>
+        public col.List<BasicAccount> EndGetAccountBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<col.List<BasicAccount>>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

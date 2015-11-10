@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The upload session lookup error object</para>
     /// </summary>
-    public class UploadSessionLookupError : enc.IEncodable<UploadSessionLookupError>
+    public class UploadSessionLookupError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UploadSessionLookupError> Encoder = new UploadSessionLookupErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UploadSessionLookupError> Decoder = new UploadSessionLookupErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UploadSessionLookupError" />
         /// class.</para>
@@ -111,53 +123,86 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<UploadSessionLookupError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="UploadSessionLookupError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UploadSessionLookupError>.Encode(enc.IEncoder encoder)
+        private class UploadSessionLookupErrorEncoder : enc.StructEncoder<UploadSessionLookupError>
         {
-            if (this.IsNotFound)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UploadSessionLookupError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<NotFound>)this).Encode(encoder);
-            }
-            else if (this.IsIncorrectOffset)
-            {
-                ((enc.IEncodable<IncorrectOffset>)this).Encode(encoder);
-            }
-            else if (this.IsClosed)
-            {
-                ((enc.IEncodable<Closed>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is NotFound)
+                {
+                    WriteProperty(".tag", "not_found", writer, enc.StringEncoder.Instance);
+                    NotFound.Encoder.EncodeFields((NotFound)value, writer);
+                    return;
+                }
+                if (value is IncorrectOffset)
+                {
+                    WriteProperty(".tag", "incorrect_offset", writer, enc.StringEncoder.Instance);
+                    IncorrectOffset.Encoder.EncodeFields((IncorrectOffset)value, writer);
+                    return;
+                }
+                if (value is Closed)
+                {
+                    WriteProperty(".tag", "closed", writer, enc.StringEncoder.Instance);
+                    Closed.Encoder.EncodeFields((Closed)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UploadSessionLookupError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UploadSessionLookupError enc.IEncodable<UploadSessionLookupError>.Decode(enc.IDecoder decoder)
+        private class UploadSessionLookupErrorDecoder : enc.UnionDecoder<UploadSessionLookupError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UploadSessionLookupError"
+            /// />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UploadSessionLookupError Create()
             {
-            case "not_found":
-                return NotFound.Instance;
-            case "incorrect_offset":
-                var incorrectOffset = new UploadSessionOffsetError();
-                return new IncorrectOffset(((enc.IEncodable<UploadSessionOffsetError>)incorrectOffset).Decode(decoder));
-            case "closed":
-                return Closed.Instance;
-            default:
-                return Other.Instance;
+                return new UploadSessionLookupError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override UploadSessionLookupError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "not_found":
+                        return NotFound.Decoder.DecodeFields(reader);
+                    case "incorrect_offset":
+                        return IncorrectOffset.Decoder.DecodeFields(reader);
+                    case "closed":
+                        return Closed.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -166,8 +211,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The upload session id was not found.</para>
         /// </summary>
-        public sealed class NotFound : UploadSessionLookupError, enc.IEncodable<NotFound>
+        public sealed class NotFound : UploadSessionLookupError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NotFound> Encoder = new NotFoundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NotFound> Decoder = new NotFoundDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="NotFound" /> class.</para>
             /// </summary>
@@ -180,30 +237,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly NotFound Instance = new NotFound();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="NotFound" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<NotFound>.Encode(enc.IEncoder encoder)
+            private class NotFoundEncoder : enc.StructEncoder<NotFound>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NotFound value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "not_found");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="NotFound" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            NotFound enc.IEncodable<NotFound>.Decode(enc.IDecoder decoder)
+            private class NotFoundDecoder : enc.StructDecoder<NotFound>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NotFound" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NotFound Create()
+                {
+                    return new NotFound();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NotFound DecodeFields(enc.IJsonReader reader)
+                {
+                    return NotFound.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
@@ -212,8 +292,20 @@ namespace Dropbox.Api.Files
         /// successfully but the client did not receive the response, e.g. due to a network
         /// error.)</para>
         /// </summary>
-        public sealed class IncorrectOffset : UploadSessionLookupError, enc.IEncodable<IncorrectOffset>
+        public sealed class IncorrectOffset : UploadSessionLookupError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IncorrectOffset> Encoder = new IncorrectOffsetEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IncorrectOffset> Decoder = new IncorrectOffsetDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="IncorrectOffset" />
             /// class.</para>
@@ -223,44 +315,87 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IncorrectOffset" />
+            /// class.</para>
+            /// </summary>
+            private IncorrectOffset()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public UploadSessionOffsetError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="IncorrectOffset" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<IncorrectOffset>.Encode(enc.IEncoder encoder)
+            private class IncorrectOffsetEncoder : enc.StructEncoder<IncorrectOffset>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IncorrectOffset value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "incorrect_offset");
-                    obj.AddField("incorrect_offset", this.Value);
+                    UploadSessionOffsetError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="IncorrectOffset" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            IncorrectOffset enc.IEncodable<IncorrectOffset>.Decode(enc.IDecoder decoder)
+            private class IncorrectOffsetDecoder : enc.StructDecoder<IncorrectOffset>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IncorrectOffset" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IncorrectOffset Create()
+                {
+                    return new IncorrectOffset();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override IncorrectOffset DecodeFields(enc.IJsonReader reader)
+                {
+                    return new IncorrectOffset(UploadSessionOffsetError.Decoder.DecodeFields(reader));
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>You are attempting to append data to an upload session that has alread been
         /// closed (i.e. committed).</para>
         /// </summary>
-        public sealed class Closed : UploadSessionLookupError, enc.IEncodable<Closed>
+        public sealed class Closed : UploadSessionLookupError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Closed> Encoder = new ClosedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Closed> Decoder = new ClosedDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Closed" /> class.</para>
             /// </summary>
@@ -273,37 +408,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Closed Instance = new Closed();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Closed" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Closed>.Encode(enc.IEncoder encoder)
+            private class ClosedEncoder : enc.StructEncoder<Closed>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Closed value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "closed");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Closed" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Closed enc.IEncodable<Closed>.Decode(enc.IDecoder decoder)
+            private class ClosedDecoder : enc.StructDecoder<Closed>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Closed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Closed Create()
+                {
+                    return new Closed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Closed DecodeFields(enc.IJsonReader reader)
+                {
+                    return Closed.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>An unspecified error.</para>
         /// </summary>
-        public sealed class Other : UploadSessionLookupError, enc.IEncodable<Other>
+        public sealed class Other : UploadSessionLookupError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -316,30 +486,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

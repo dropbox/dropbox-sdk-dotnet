@@ -8,6 +8,7 @@ namespace Dropbox.Api
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Text;
 
@@ -16,7 +17,7 @@ namespace Dropbox.Api
     /// </summary>
     /// <remarks>
     /// <para>
-    /// Dropbox recommends that all clients implement certficate pinning, unfortunately it isn't currently
+    /// Dropbox recommends that all clients implement certificate pinning, unfortunately it isn't currently
     /// possible to implement this in a portable assembly, so this class is provided to help implement this.</para>
     /// <para>
     /// For more information about certificate pinning see
@@ -52,7 +53,9 @@ namespace Dropbox.Api
         /// <summary>
         /// The public keys of the known valid root certificates
         /// </summary>
-        private static readonly HashSet<string> ValidRoots = new HashSet<string> { 
+        [SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1515:SingleLineCommentMustBePrecededByBlankLine", Justification = "Reviewed.")]
+        private static readonly HashSet<string> ValidRoots = new HashSet<string>
+        { 
             // CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
             "3082010A0282010100AD0E15CEE443805CB187F3B760F97112A5AEDC269488AAF4CEF520" +
             "392858600CF880DAA9159532613CB5B128848A8ADC9F0A0C83177A8F90AC8AE779535C31" +
@@ -217,7 +220,7 @@ namespace Dropbox.Api
         /// public key; <c>false</c> otherwise.</returns>
         public static bool IsKnownRootCertPublicKey(byte[] publicKey)
         {
-            var publicKeyString = BitConverter.ToString(publicKey).Replace("-", "");
+            var publicKeyString = BitConverter.ToString(publicKey).Replace("-", string.Empty);
 
             return ValidRoots.Contains(publicKeyString);
         }

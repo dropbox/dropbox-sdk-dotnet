@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The restore error object</para>
     /// </summary>
-    public class RestoreError : enc.IEncodable<RestoreError>
+    public class RestoreError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<RestoreError> Encoder = new RestoreErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<RestoreError> Decoder = new RestoreErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="RestoreError" /> class.</para>
         /// </summary>
@@ -110,54 +122,85 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<RestoreError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="RestoreError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<RestoreError>.Encode(enc.IEncoder encoder)
+        private class RestoreErrorEncoder : enc.StructEncoder<RestoreError>
         {
-            if (this.IsPathLookup)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(RestoreError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<PathLookup>)this).Encode(encoder);
-            }
-            else if (this.IsPathWrite)
-            {
-                ((enc.IEncodable<PathWrite>)this).Encode(encoder);
-            }
-            else if (this.IsInvalidRevision)
-            {
-                ((enc.IEncodable<InvalidRevision>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is PathLookup)
+                {
+                    WriteProperty(".tag", "path_lookup", writer, enc.StringEncoder.Instance);
+                    PathLookup.Encoder.EncodeFields((PathLookup)value, writer);
+                    return;
+                }
+                if (value is PathWrite)
+                {
+                    WriteProperty(".tag", "path_write", writer, enc.StringEncoder.Instance);
+                    PathWrite.Encoder.EncodeFields((PathWrite)value, writer);
+                    return;
+                }
+                if (value is InvalidRevision)
+                {
+                    WriteProperty(".tag", "invalid_revision", writer, enc.StringEncoder.Instance);
+                    InvalidRevision.Encoder.EncodeFields((InvalidRevision)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="RestoreError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        RestoreError enc.IEncodable<RestoreError>.Decode(enc.IDecoder decoder)
+        private class RestoreErrorDecoder : enc.UnionDecoder<RestoreError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="RestoreError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override RestoreError Create()
             {
-            case "path_lookup":
-                var pathLookup = new LookupError();
-                return new PathLookup(((enc.IEncodable<LookupError>)pathLookup).Decode(decoder));
-            case "path_write":
-                var pathWrite = new WriteError();
-                return new PathWrite(((enc.IEncodable<WriteError>)pathWrite).Decode(decoder));
-            case "invalid_revision":
-                return InvalidRevision.Instance;
-            default:
-                return Other.Instance;
+                return new RestoreError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override RestoreError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "path_lookup":
+                        return PathLookup.Decoder.DecodeFields(reader);
+                    case "path_write":
+                        return PathWrite.Decoder.DecodeFields(reader);
+                    case "invalid_revision":
+                        return InvalidRevision.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
+                }
             }
         }
 
@@ -166,8 +209,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>An error occurs when downloading metadata for the file.</para>
         /// </summary>
-        public sealed class PathLookup : RestoreError, enc.IEncodable<PathLookup>
+        public sealed class PathLookup : RestoreError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PathLookup> Encoder = new PathLookupEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PathLookup> Decoder = new PathLookupDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="PathLookup" /> class.</para>
             /// </summary>
@@ -176,43 +231,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PathLookup" /> class.</para>
+            /// </summary>
+            private PathLookup()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public LookupError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="PathLookup" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<PathLookup>.Encode(enc.IEncoder encoder)
+            private class PathLookupEncoder : enc.StructEncoder<PathLookup>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PathLookup value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "path_lookup");
-                    obj.AddField("path_lookup", this.Value);
+                    LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="PathLookup" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            PathLookup enc.IEncodable<PathLookup>.Decode(enc.IDecoder decoder)
+            private class PathLookupDecoder : enc.StructDecoder<PathLookup>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PathLookup" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PathLookup Create()
+                {
+                    return new PathLookup();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(PathLookup value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "path_lookup":
+                            value.Value = LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>An error occurs when trying to restore the file to that path.</para>
         /// </summary>
-        public sealed class PathWrite : RestoreError, enc.IEncodable<PathWrite>
+        public sealed class PathWrite : RestoreError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PathWrite> Encoder = new PathWriteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PathWrite> Decoder = new PathWriteDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="PathWrite" /> class.</para>
             /// </summary>
@@ -221,43 +327,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PathWrite" /> class.</para>
+            /// </summary>
+            private PathWrite()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public WriteError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="PathWrite" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<PathWrite>.Encode(enc.IEncoder encoder)
+            private class PathWriteEncoder : enc.StructEncoder<PathWrite>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PathWrite value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "path_write");
-                    obj.AddField("path_write", this.Value);
+                    WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="PathWrite" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            PathWrite enc.IEncodable<PathWrite>.Decode(enc.IDecoder decoder)
+            private class PathWriteDecoder : enc.StructDecoder<PathWrite>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PathWrite" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PathWrite Create()
+                {
+                    return new PathWrite();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(PathWrite value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "path_write":
+                            value.Value = WriteError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The revision is invalid. It may point to a different file.</para>
         /// </summary>
-        public sealed class InvalidRevision : RestoreError, enc.IEncodable<InvalidRevision>
+        public sealed class InvalidRevision : RestoreError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidRevision> Encoder = new InvalidRevisionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidRevision> Decoder = new InvalidRevisionDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="InvalidRevision" />
             /// class.</para>
@@ -271,37 +428,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly InvalidRevision Instance = new InvalidRevision();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="InvalidRevision" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<InvalidRevision>.Encode(enc.IEncoder encoder)
+            private class InvalidRevisionEncoder : enc.StructEncoder<InvalidRevision>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidRevision value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "invalid_revision");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="InvalidRevision" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            InvalidRevision enc.IEncodable<InvalidRevision>.Decode(enc.IDecoder decoder)
+            private class InvalidRevisionDecoder : enc.StructDecoder<InvalidRevision>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidRevision" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidRevision Create()
+                {
+                    return new InvalidRevision();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InvalidRevision DecodeFields(enc.IJsonReader reader)
+                {
+                    return InvalidRevision.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : RestoreError, enc.IEncodable<Other>
+        public sealed class Other : RestoreError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -314,30 +506,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

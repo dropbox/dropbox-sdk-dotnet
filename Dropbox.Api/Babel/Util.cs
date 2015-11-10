@@ -12,7 +12,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// Contains utility extension methods.
     /// </summary>
-    public static class Util
+    internal static class Util
     {
         /// <summary>
         /// Converts a <see cref="T:System.Threading.Tasks.Task`1"/> to the APM

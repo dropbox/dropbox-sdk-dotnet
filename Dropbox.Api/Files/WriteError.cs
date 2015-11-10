@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The write error object</para>
     /// </summary>
-    public class WriteError : enc.IEncodable<WriteError>
+    public class WriteError
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<WriteError> Encoder = new WriteErrorEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<WriteError> Decoder = new WriteErrorDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="WriteError" /> class.</para>
         /// </summary>
@@ -154,68 +166,101 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<WriteError> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="WriteError" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<WriteError>.Encode(enc.IEncoder encoder)
+        private class WriteErrorEncoder : enc.StructEncoder<WriteError>
         {
-            if (this.IsMalformedPath)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(WriteError value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<MalformedPath>)this).Encode(encoder);
-            }
-            else if (this.IsConflict)
-            {
-                ((enc.IEncodable<Conflict>)this).Encode(encoder);
-            }
-            else if (this.IsNoWritePermission)
-            {
-                ((enc.IEncodable<NoWritePermission>)this).Encode(encoder);
-            }
-            else if (this.IsInsufficientSpace)
-            {
-                ((enc.IEncodable<InsufficientSpace>)this).Encode(encoder);
-            }
-            else if (this.IsDisallowedName)
-            {
-                ((enc.IEncodable<DisallowedName>)this).Encode(encoder);
-            }
-            else
-            {
-                ((enc.IEncodable<Other>)this).Encode(encoder);
+                if (value is MalformedPath)
+                {
+                    WriteProperty(".tag", "malformed_path", writer, enc.StringEncoder.Instance);
+                    MalformedPath.Encoder.EncodeFields((MalformedPath)value, writer);
+                    return;
+                }
+                if (value is Conflict)
+                {
+                    WriteProperty(".tag", "conflict", writer, enc.StringEncoder.Instance);
+                    Conflict.Encoder.EncodeFields((Conflict)value, writer);
+                    return;
+                }
+                if (value is NoWritePermission)
+                {
+                    WriteProperty(".tag", "no_write_permission", writer, enc.StringEncoder.Instance);
+                    NoWritePermission.Encoder.EncodeFields((NoWritePermission)value, writer);
+                    return;
+                }
+                if (value is InsufficientSpace)
+                {
+                    WriteProperty(".tag", "insufficient_space", writer, enc.StringEncoder.Instance);
+                    InsufficientSpace.Encoder.EncodeFields((InsufficientSpace)value, writer);
+                    return;
+                }
+                if (value is DisallowedName)
+                {
+                    WriteProperty(".tag", "disallowed_name", writer, enc.StringEncoder.Instance);
+                    DisallowedName.Encoder.EncodeFields((DisallowedName)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
+                throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="WriteError" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        WriteError enc.IEncodable<WriteError>.Decode(enc.IDecoder decoder)
+        private class WriteErrorDecoder : enc.UnionDecoder<WriteError>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="WriteError" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override WriteError Create()
             {
-            case "malformed_path":
-                using (var obj = decoder.GetObject())
+                return new WriteError();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override WriteError Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
                 {
-                    return new MalformedPath(obj.GetField<string>("malformed_path"));
+                    case "malformed_path":
+                        return MalformedPath.Decoder.DecodeFields(reader);
+                    case "conflict":
+                        return Conflict.Decoder.DecodeFields(reader);
+                    case "no_write_permission":
+                        return NoWritePermission.Decoder.DecodeFields(reader);
+                    case "insufficient_space":
+                        return InsufficientSpace.Decoder.DecodeFields(reader);
+                    case "disallowed_name":
+                        return DisallowedName.Decoder.DecodeFields(reader);
+                    default:
+                        return Other.Decoder.DecodeFields(reader);
                 }
-            case "conflict":
-                var conflict = new WriteConflictError();
-                return new Conflict(((enc.IEncodable<WriteConflictError>)conflict).Decode(decoder));
-            case "no_write_permission":
-                return NoWritePermission.Instance;
-            case "insufficient_space":
-                return InsufficientSpace.Instance;
-            case "disallowed_name":
-                return DisallowedName.Instance;
-            default:
-                return Other.Instance;
             }
         }
 
@@ -224,8 +269,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The malformed path object</para>
         /// </summary>
-        public sealed class MalformedPath : WriteError, enc.IEncodable<MalformedPath>
+        public sealed class MalformedPath : WriteError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MalformedPath> Encoder = new MalformedPathEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MalformedPath> Decoder = new MalformedPathDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="MalformedPath" />
             /// class.</para>
@@ -235,44 +292,99 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MalformedPath" />
+            /// class.</para>
+            /// </summary>
+            private MalformedPath()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public string Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="MalformedPath" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<MalformedPath>.Encode(enc.IEncoder encoder)
+            private class MalformedPathEncoder : enc.StructEncoder<MalformedPath>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MalformedPath value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "malformed_path");
-                    obj.AddField("malformed_path", this.Value);
+                    if (value.Value != null)
+                    {
+                        WriteProperty("malformed_path", value.Value, writer, enc.StringEncoder.Instance);
+                    }
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="MalformedPath" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            MalformedPath enc.IEncodable<MalformedPath>.Decode(enc.IDecoder decoder)
+            private class MalformedPathDecoder : enc.StructDecoder<MalformedPath>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MalformedPath" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MalformedPath Create()
+                {
+                    return new MalformedPath();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(MalformedPath value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "malformed_path":
+                            value.Value = enc.StringDecoder.Instance.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Couldn't write to the target path because there was something in the
         /// way.</para>
         /// </summary>
-        public sealed class Conflict : WriteError, enc.IEncodable<Conflict>
+        public sealed class Conflict : WriteError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Conflict> Encoder = new ConflictEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Conflict> Decoder = new ConflictDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Conflict" /> class.</para>
             /// </summary>
@@ -281,43 +393,94 @@ namespace Dropbox.Api.Files
             {
                 this.Value = value;
             }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Conflict" /> class.</para>
+            /// </summary>
+            private Conflict()
+            {
+            }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
             public WriteConflictError Value { get; private set; }
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Conflict" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            void enc.IEncodable<Conflict>.Encode(enc.IEncoder encoder)
+            private class ConflictEncoder : enc.StructEncoder<Conflict>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Conflict value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "conflict");
-                    obj.AddField("conflict", this.Value);
+                    WriteConflictError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Conflict" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Conflict enc.IEncodable<Conflict>.Decode(enc.IDecoder decoder)
+            private class ConflictDecoder : enc.StructDecoder<Conflict>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Conflict" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Conflict Create()
+                {
+                    return new Conflict();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(Conflict value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "conflict":
+                            value.Value = WriteConflictError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The user doesn't have permissions to write to the target location.</para>
         /// </summary>
-        public sealed class NoWritePermission : WriteError, enc.IEncodable<NoWritePermission>
+        public sealed class NoWritePermission : WriteError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoWritePermission> Encoder = new NoWritePermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoWritePermission> Decoder = new NoWritePermissionDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="NoWritePermission" />
             /// class.</para>
@@ -331,38 +494,74 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly NoWritePermission Instance = new NoWritePermission();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="NoWritePermission" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<NoWritePermission>.Encode(enc.IEncoder encoder)
+            private class NoWritePermissionEncoder : enc.StructEncoder<NoWritePermission>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoWritePermission value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "no_write_permission");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="NoWritePermission" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            NoWritePermission enc.IEncodable<NoWritePermission>.Decode(enc.IDecoder decoder)
+            private class NoWritePermissionDecoder : enc.StructDecoder<NoWritePermission>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoWritePermission"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoWritePermission Create()
+                {
+                    return new NoWritePermission();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoWritePermission DecodeFields(enc.IJsonReader reader)
+                {
+                    return NoWritePermission.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The user doesn't have enough available space (bytes) to write more
         /// data.</para>
         /// </summary>
-        public sealed class InsufficientSpace : WriteError, enc.IEncodable<InsufficientSpace>
+        public sealed class InsufficientSpace : WriteError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InsufficientSpace> Encoder = new InsufficientSpaceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InsufficientSpace> Decoder = new InsufficientSpaceDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="InsufficientSpace" />
             /// class.</para>
@@ -376,37 +575,73 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly InsufficientSpace Instance = new InsufficientSpace();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="InsufficientSpace" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<InsufficientSpace>.Encode(enc.IEncoder encoder)
+            private class InsufficientSpaceEncoder : enc.StructEncoder<InsufficientSpace>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InsufficientSpace value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "insufficient_space");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="InsufficientSpace" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            InsufficientSpace enc.IEncodable<InsufficientSpace>.Decode(enc.IDecoder decoder)
+            private class InsufficientSpaceDecoder : enc.StructDecoder<InsufficientSpace>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InsufficientSpace"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InsufficientSpace Create()
+                {
+                    return new InsufficientSpace();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InsufficientSpace DecodeFields(enc.IJsonReader reader)
+                {
+                    return InsufficientSpace.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>Dropbox will not save the file or folder because it of its name.</para>
         /// </summary>
-        public sealed class DisallowedName : WriteError, enc.IEncodable<DisallowedName>
+        public sealed class DisallowedName : WriteError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DisallowedName> Encoder = new DisallowedNameEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DisallowedName> Decoder = new DisallowedNameDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="DisallowedName" />
             /// class.</para>
@@ -420,37 +655,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly DisallowedName Instance = new DisallowedName();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="DisallowedName" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<DisallowedName>.Encode(enc.IEncoder encoder)
+            private class DisallowedNameEncoder : enc.StructEncoder<DisallowedName>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DisallowedName value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "disallowed_name");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="DisallowedName" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            DisallowedName enc.IEncodable<DisallowedName>.Decode(enc.IDecoder decoder)
+            private class DisallowedNameDecoder : enc.StructDecoder<DisallowedName>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DisallowedName" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DisallowedName Create()
+                {
+                    return new DisallowedName();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DisallowedName DecodeFields(enc.IJsonReader reader)
+                {
+                    return DisallowedName.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : WriteError, enc.IEncodable<Other>
+        public sealed class Other : WriteError
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
@@ -463,30 +733,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Other Instance = new Other();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Other>.Encode(enc.IEncoder encoder)
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "other");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Other enc.IEncodable<Other>.Decode(enc.IDecoder decoder)
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

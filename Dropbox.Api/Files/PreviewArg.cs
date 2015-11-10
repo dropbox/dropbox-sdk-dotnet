@@ -13,14 +13,26 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The preview arg object</para>
     /// </summary>
-    public sealed class PreviewArg : enc.IEncodable<PreviewArg>
+    public class PreviewArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<PreviewArg> Encoder = new PreviewArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<PreviewArg> Decoder = new PreviewArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="PreviewArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Optional revision, taken from the corresponding <see
-        /// cref="Metadata" /> field.</param>
+        /// <param name="rev">Deprecated. Please specify revision in :field:'path'
+        /// instead</param>
         public PreviewArg(string path,
                           string rev = null)
         {
@@ -28,7 +40,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"/.*"))
+            else if (!re.Regex.IsMatch(path, @"((/|id:).*)|(rev:[0-9a-f]{9,})"))
             {
                 throw new sys.ArgumentOutOfRangeException("path");
             }
@@ -54,52 +66,75 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The path of the file to preview.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Optional revision, taken from the corresponding <see cref="Metadata" />
-        /// field.</para>
+        /// <para>Deprecated. Please specify revision in :field:'path' instead</para>
         /// </summary>
-        public string Rev { get; private set; }
+        public string Rev { get; protected set; }
 
-        #region IEncodable<PreviewArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="PreviewArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<PreviewArg>.Encode(enc.IEncoder encoder)
+        private class PreviewArgEncoder : enc.StructEncoder<PreviewArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(PreviewArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                if (this.Rev != null)
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                if (value.Rev != null)
                 {
-                    obj.AddField<string>("rev", this.Rev);
+                    WriteProperty("rev", value.Rev, writer, enc.StringEncoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="PreviewArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        PreviewArg enc.IEncodable<PreviewArg>.Decode(enc.IDecoder decoder)
+        private class PreviewArgDecoder : enc.StructDecoder<PreviewArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="PreviewArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override PreviewArg Create()
             {
-                this.Path = obj.GetField<string>("path");
-                if (obj.HasField("rev"))
-                {
-                    this.Rev = obj.GetField<string>("rev");
-                }
+                return new PreviewArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(PreviewArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "rev":
+                        value.Rev = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

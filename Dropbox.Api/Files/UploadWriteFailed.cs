@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The upload write failed object</para>
     /// </summary>
-    public sealed class UploadWriteFailed : enc.IEncodable<UploadWriteFailed>
+    public class UploadWriteFailed
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UploadWriteFailed> Encoder = new UploadWriteFailedEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UploadWriteFailed> Decoder = new UploadWriteFailedDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UploadWriteFailed" />
         /// class.</para>
@@ -52,45 +64,72 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The reason why the file couldn't be saved.</para>
         /// </summary>
-        public WriteError Reason { get; private set; }
+        public WriteError Reason { get; protected set; }
 
         /// <summary>
         /// <para>The upload session ID; this may be used to retry the commit.</para>
         /// </summary>
-        public string UploadSessionId { get; private set; }
+        public string UploadSessionId { get; protected set; }
 
-        #region IEncodable<UploadWriteFailed> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="UploadWriteFailed" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UploadWriteFailed>.Encode(enc.IEncoder encoder)
+        private class UploadWriteFailedEncoder : enc.StructEncoder<UploadWriteFailed>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UploadWriteFailed value, enc.IJsonWriter writer)
             {
-                obj.AddFieldObject<WriteError>("reason", this.Reason);
-                obj.AddField<string>("upload_session_id", this.UploadSessionId);
+                WriteProperty("reason", value.Reason, writer, WriteError.Encoder);
+                WriteProperty("upload_session_id", value.UploadSessionId, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UploadWriteFailed" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UploadWriteFailed enc.IEncodable<UploadWriteFailed>.Decode(enc.IDecoder decoder)
+        private class UploadWriteFailedDecoder : enc.StructDecoder<UploadWriteFailed>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UploadWriteFailed" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UploadWriteFailed Create()
             {
-                this.Reason = obj.GetFieldObject<WriteError>("reason");
-                this.UploadSessionId = obj.GetField<string>("upload_session_id");
+                return new UploadWriteFailed();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(UploadWriteFailed value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "reason":
+                        value.Reason = WriteError.Decoder.Decode(reader);
+                        break;
+                    case "upload_session_id":
+                        value.UploadSessionId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

@@ -11,23 +11,36 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The information about a user.</para>
+    /// <para>Basic information about a user. Use <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.Users.getAccountAsync" /> and <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.Users.getAccountBatchAsync" />` to
+    /// obtain more detailed information.</para>
     /// </summary>
     /// <seealso cref="UserMembershipInfo" />
-    public sealed class UserInfo : enc.IEncodable<UserInfo>
+    public class UserInfo
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<UserInfo> Encoder = new UserInfoEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<UserInfo> Decoder = new UserInfoDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UserInfo" /> class.</para>
         /// </summary>
         /// <param name="accountId">The account ID of the user.</param>
-        /// <param name="displayName">The display name of the user.</param>
         /// <param name="sameTeam">If the user is in the same team as current user.</param>
-        /// <param name="memberId">The member id of the user for the shared folder. This field
-        /// will only present if same_team field is true.</param>
+        /// <param name="teamMemberId">The team member ID of the shared folder member. Only
+        /// present if <paramref name="sameTeam" /> is true.</param>
         public UserInfo(string accountId,
-                        string displayName,
                         bool sameTeam,
-                        string memberId = null)
+                        string teamMemberId = null)
         {
             if (accountId == null)
             {
@@ -38,15 +51,9 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("accountId");
             }
 
-            if (displayName == null)
-            {
-                throw new sys.ArgumentNullException("displayName");
-            }
-
             this.AccountId = accountId;
-            this.DisplayName = displayName;
             this.SameTeam = sameTeam;
-            this.MemberId = memberId;
+            this.TeamMemberId = teamMemberId;
         }
 
         /// <summary>
@@ -61,66 +68,85 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The account ID of the user.</para>
         /// </summary>
-        public string AccountId { get; private set; }
-
-        /// <summary>
-        /// <para>The display name of the user.</para>
-        /// </summary>
-        public string DisplayName { get; private set; }
+        public string AccountId { get; protected set; }
 
         /// <summary>
         /// <para>If the user is in the same team as current user.</para>
         /// </summary>
-        public bool SameTeam { get; private set; }
+        public bool SameTeam { get; protected set; }
 
         /// <summary>
-        /// <para>The member id of the user for the shared folder. This field will only present
-        /// if same_team field is true.</para>
+        /// <para>The team member ID of the shared folder member. Only present if <see
+        /// cref="SameTeam" /> is true.</para>
         /// </summary>
-        public string MemberId { get; private set; }
+        public string TeamMemberId { get; protected set; }
 
-        #region IEncodable<UserInfo> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="UserInfo" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<UserInfo>.Encode(enc.IEncoder encoder)
+        private class UserInfoEncoder : enc.StructEncoder<UserInfo>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(UserInfo value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("account_id", this.AccountId);
-                obj.AddField<string>("display_name", this.DisplayName);
-                obj.AddField<bool>("same_team", this.SameTeam);
-                if (this.MemberId != null)
+                WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
+                WriteProperty("same_team", value.SameTeam, writer, enc.BooleanEncoder.Instance);
+                if (value.TeamMemberId != null)
                 {
-                    obj.AddField<string>("member_id", this.MemberId);
+                    WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="UserInfo" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        UserInfo enc.IEncodable<UserInfo>.Decode(enc.IDecoder decoder)
+        private class UserInfoDecoder : enc.StructDecoder<UserInfo>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="UserInfo" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override UserInfo Create()
             {
-                this.AccountId = obj.GetField<string>("account_id");
-                this.DisplayName = obj.GetField<string>("display_name");
-                this.SameTeam = obj.GetField<bool>("same_team");
-                if (obj.HasField("member_id"))
-                {
-                    this.MemberId = obj.GetField<string>("member_id");
-                }
+                return new UserInfo();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(UserInfo value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "account_id":
+                        value.AccountId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "same_team":
+                        value.SameTeam = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "team_member_id":
+                        value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

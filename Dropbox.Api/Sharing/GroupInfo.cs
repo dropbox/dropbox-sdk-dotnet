@@ -11,38 +11,41 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The information about a group. Group is a way to manage a list of users  who need
-    /// same access permission to the shared folder.</para>
+    /// <para>The information about a group. Groups is a way to manage a list of users  who
+    /// need same access permission to the shared folder.</para>
     /// </summary>
     /// <seealso cref="GroupMembershipInfo" />
-    public sealed class GroupInfo : enc.IEncodable<GroupInfo>
+    /// <seealso cref="GroupSummary" />
+    public class GroupInfo : Team.GroupSummary
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GroupInfo> Encoder = new GroupInfoEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GroupInfo> Decoder = new GroupInfoDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GroupInfo" /> class.</para>
         /// </summary>
-        /// <param name="displayName">The display name of the group.</param>
-        /// <param name="id">The ID of the group.</param>
-        /// <param name="memberCount">The total number of member for this group.</param>
-        /// <param name="sameTeam">If all members of the group are in the same team as current
-        /// user.</param>
-        public GroupInfo(string displayName,
-                         string id,
-                         long memberCount,
-                         bool sameTeam)
+        /// <param name="groupName">The group name</param>
+        /// <param name="groupId">The group id</param>
+        /// <param name="memberCount">The number of members in the group.</param>
+        /// <param name="sameTeam">If the group is owned by the current user's team.</param>
+        /// <param name="groupExternalId">External ID of group. This is an arbitrary ID that an
+        /// admin can attach to a group.</param>
+        public GroupInfo(string groupName,
+                         string groupId,
+                         uint memberCount,
+                         bool sameTeam,
+                         string groupExternalId = null)
+            : base(groupName, groupId, memberCount, groupExternalId)
         {
-            if (displayName == null)
-            {
-                throw new sys.ArgumentNullException("displayName");
-            }
-
-            if (id == null)
-            {
-                throw new sys.ArgumentNullException("id");
-            }
-
-            this.DisplayName = displayName;
-            this.Id = id;
-            this.MemberCount = memberCount;
             this.SameTeam = sameTeam;
         }
 
@@ -56,61 +59,84 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The display name of the group.</para>
+        /// <para>If the group is owned by the current user's team.</para>
         /// </summary>
-        public string DisplayName { get; private set; }
+        public bool SameTeam { get; protected set; }
+
+        #region Encoder class
 
         /// <summary>
-        /// <para>The ID of the group.</para>
+        /// <para>Encoder for  <see cref="GroupInfo" />.</para>
         /// </summary>
-        public string Id { get; private set; }
-
-        /// <summary>
-        /// <para>The total number of member for this group.</para>
-        /// </summary>
-        public long MemberCount { get; private set; }
-
-        /// <summary>
-        /// <para>If all members of the group are in the same team as current user.</para>
-        /// </summary>
-        public bool SameTeam { get; private set; }
-
-        #region IEncodable<GroupInfo> methods
-
-        /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
-        /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GroupInfo>.Encode(enc.IEncoder encoder)
+        private class GroupInfoEncoder : enc.StructEncoder<GroupInfo>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GroupInfo value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("display_name", this.DisplayName);
-                obj.AddField<string>("id", this.Id);
-                obj.AddField<long>("member_count", this.MemberCount);
-                obj.AddField<bool>("same_team", this.SameTeam);
+                WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
+                WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
+                WriteProperty("member_count", value.MemberCount, writer, enc.UInt32Encoder.Instance);
+                WriteProperty("same_team", value.SameTeam, writer, enc.BooleanEncoder.Instance);
+                if (value.GroupExternalId != null)
+                {
+                    WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GroupInfo" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GroupInfo enc.IEncodable<GroupInfo>.Decode(enc.IDecoder decoder)
+        private class GroupInfoDecoder : enc.StructDecoder<GroupInfo>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GroupInfo" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GroupInfo Create()
             {
-                this.DisplayName = obj.GetField<string>("display_name");
-                this.Id = obj.GetField<string>("id");
-                this.MemberCount = obj.GetField<long>("member_count");
-                this.SameTeam = obj.GetField<bool>("same_team");
+                return new GroupInfo();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(GroupInfo value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "group_name":
+                        value.GroupName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "group_id":
+                        value.GroupId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "member_count":
+                        value.MemberCount = enc.UInt32Decoder.Instance.Decode(reader);
+                        break;
+                    case "same_team":
+                        value.SameTeam = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "group_external_id":
+                        value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

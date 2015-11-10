@@ -13,8 +13,20 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>What type of account this user has.</para>
     /// </summary>
-    public class AccountType : enc.IEncodable<AccountType>
+    public class AccountType
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<AccountType> Encoder = new AccountTypeEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<AccountType> Decoder = new AccountTypeDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="AccountType" /> class.</para>
         /// </summary>
@@ -88,52 +100,79 @@ namespace Dropbox.Api.Users
             }
         }
 
-        #region IEncodable<AccountType> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="AccountType" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<AccountType>.Encode(enc.IEncoder encoder)
+        private class AccountTypeEncoder : enc.StructEncoder<AccountType>
         {
-            if (this.IsBasic)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(AccountType value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Basic>)this).Encode(encoder);
-            }
-            else if (this.IsPro)
-            {
-                ((enc.IEncodable<Pro>)this).Encode(encoder);
-            }
-            else if (this.IsBusiness)
-            {
-                ((enc.IEncodable<Business>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is Basic)
+                {
+                    WriteProperty(".tag", "basic", writer, enc.StringEncoder.Instance);
+                    Basic.Encoder.EncodeFields((Basic)value, writer);
+                    return;
+                }
+                if (value is Pro)
+                {
+                    WriteProperty(".tag", "pro", writer, enc.StringEncoder.Instance);
+                    Pro.Encoder.EncodeFields((Pro)value, writer);
+                    return;
+                }
+                if (value is Business)
+                {
+                    WriteProperty(".tag", "business", writer, enc.StringEncoder.Instance);
+                    Business.Encoder.EncodeFields((Business)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="AccountType" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        AccountType enc.IEncodable<AccountType>.Decode(enc.IDecoder decoder)
+        private class AccountTypeDecoder : enc.UnionDecoder<AccountType>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="AccountType" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override AccountType Create()
             {
-            case "basic":
-                return Basic.Instance;
-            case "pro":
-                return Pro.Instance;
-            case "business":
-                return Business.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new AccountType();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override AccountType Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "basic":
+                        return Basic.Decoder.DecodeFields(reader);
+                    case "pro":
+                        return Pro.Decoder.DecodeFields(reader);
+                    case "business":
+                        return Business.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -142,8 +181,20 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>The basic account type.</para>
         /// </summary>
-        public sealed class Basic : AccountType, enc.IEncodable<Basic>
+        public sealed class Basic : AccountType
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Basic> Encoder = new BasicEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Basic> Decoder = new BasicDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Basic" /> class.</para>
             /// </summary>
@@ -156,37 +207,72 @@ namespace Dropbox.Api.Users
             /// </summary>
             public static readonly Basic Instance = new Basic();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Basic" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Basic>.Encode(enc.IEncoder encoder)
+            private class BasicEncoder : enc.StructEncoder<Basic>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Basic value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "basic");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Basic" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Basic enc.IEncodable<Basic>.Decode(enc.IDecoder decoder)
+            private class BasicDecoder : enc.StructDecoder<Basic>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Basic" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Basic Create()
+                {
+                    return new Basic();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Basic DecodeFields(enc.IJsonReader reader)
+                {
+                    return Basic.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The Dropbox Pro account type.</para>
         /// </summary>
-        public sealed class Pro : AccountType, enc.IEncodable<Pro>
+        public sealed class Pro : AccountType
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Pro> Encoder = new ProEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Pro> Decoder = new ProDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Pro" /> class.</para>
             /// </summary>
@@ -199,37 +285,72 @@ namespace Dropbox.Api.Users
             /// </summary>
             public static readonly Pro Instance = new Pro();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Pro" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Pro>.Encode(enc.IEncoder encoder)
+            private class ProEncoder : enc.StructEncoder<Pro>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Pro value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "pro");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Pro" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Pro enc.IEncodable<Pro>.Decode(enc.IDecoder decoder)
+            private class ProDecoder : enc.StructDecoder<Pro>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Pro" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Pro Create()
+                {
+                    return new Pro();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Pro DecodeFields(enc.IJsonReader reader)
+                {
+                    return Pro.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The Dropbox for Business account type.</para>
         /// </summary>
-        public sealed class Business : AccountType, enc.IEncodable<Business>
+        public sealed class Business : AccountType
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Business> Encoder = new BusinessEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Business> Decoder = new BusinessDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Business" /> class.</para>
             /// </summary>
@@ -242,30 +363,53 @@ namespace Dropbox.Api.Users
             /// </summary>
             public static readonly Business Instance = new Business();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Business" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Business>.Encode(enc.IEncoder encoder)
+            private class BusinessEncoder : enc.StructEncoder<Business>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Business value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "business");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Business" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Business enc.IEncodable<Business>.Decode(enc.IDecoder decoder)
+            private class BusinessDecoder : enc.StructDecoder<Business>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Business" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Business Create()
+                {
+                    return new Business();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Business DecodeFields(enc.IJsonReader reader)
+                {
+                    return Business.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }

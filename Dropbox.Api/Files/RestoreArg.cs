@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The restore arg object</para>
     /// </summary>
-    public sealed class RestoreArg : enc.IEncodable<RestoreArg>
+    public class RestoreArg
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<RestoreArg> Encoder = new RestoreArgEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<RestoreArg> Decoder = new RestoreArgDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="RestoreArg" /> class.</para>
         /// </summary>
@@ -57,45 +69,72 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The path to the file you want to restore.</para>
         /// </summary>
-        public string Path { get; private set; }
+        public string Path { get; protected set; }
 
         /// <summary>
         /// <para>The revision to restore for the file.</para>
         /// </summary>
-        public string Rev { get; private set; }
+        public string Rev { get; protected set; }
 
-        #region IEncodable<RestoreArg> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="RestoreArg" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<RestoreArg>.Encode(enc.IEncoder encoder)
+        private class RestoreArgEncoder : enc.StructEncoder<RestoreArg>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(RestoreArg value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>("path", this.Path);
-                obj.AddField<string>("rev", this.Rev);
+                WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("rev", value.Rev, writer, enc.StringEncoder.Instance);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="RestoreArg" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        RestoreArg enc.IEncodable<RestoreArg>.Decode(enc.IDecoder decoder)
+        private class RestoreArgDecoder : enc.StructDecoder<RestoreArg>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="RestoreArg" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override RestoreArg Create()
             {
-                this.Path = obj.GetField<string>("path");
-                this.Rev = obj.GetField<string>("rev");
+                return new RestoreArg();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(RestoreArg value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "rev":
+                        value.Rev = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

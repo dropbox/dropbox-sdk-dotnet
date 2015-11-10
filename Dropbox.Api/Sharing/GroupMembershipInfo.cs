@@ -14,28 +14,35 @@ namespace Dropbox.Api.Sharing
     /// <para>The information about a group member of the shared folder.</para>
     /// </summary>
     /// <seealso cref="MembershipInfo" />
-    public sealed class GroupMembershipInfo : enc.IEncodable<GroupMembershipInfo>
+    public class GroupMembershipInfo : MembershipInfo
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<GroupMembershipInfo> Encoder = new GroupMembershipInfoEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<GroupMembershipInfo> Decoder = new GroupMembershipInfoDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GroupMembershipInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="accessType">This access type for this user member.</param>
+        /// <param name="accessType">The access type for this member.</param>
         /// <param name="group">The information about the membership group.</param>
-        public GroupMembershipInfo(AccessType accessType,
+        public GroupMembershipInfo(AccessLevel accessType,
                                    GroupInfo @group)
+            : base(accessType)
         {
-            if (accessType == null)
-            {
-                throw new sys.ArgumentNullException("accessType");
-            }
-
             if (@group == null)
             {
                 throw new sys.ArgumentNullException("@group");
             }
 
-            this.AccessType = accessType;
             this.Group = @group;
         }
 
@@ -50,47 +57,69 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>This access type for this user member.</para>
-        /// </summary>
-        public AccessType AccessType { get; private set; }
-
-        /// <summary>
         /// <para>The information about the membership group.</para>
         /// </summary>
-        public GroupInfo Group { get; private set; }
+        public GroupInfo Group { get; protected set; }
 
-        #region IEncodable<GroupMembershipInfo> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="GroupMembershipInfo" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<GroupMembershipInfo>.Encode(enc.IEncoder encoder)
+        private class GroupMembershipInfoEncoder : enc.StructEncoder<GroupMembershipInfo>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(GroupMembershipInfo value, enc.IJsonWriter writer)
             {
-                obj.AddFieldObject<AccessType>("access_type", this.AccessType);
-                obj.AddFieldObject<GroupInfo>("group", this.Group);
+                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
+                WriteProperty("group", value.Group, writer, GroupInfo.Encoder);
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="GroupMembershipInfo" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        GroupMembershipInfo enc.IEncodable<GroupMembershipInfo>.Decode(enc.IDecoder decoder)
+        private class GroupMembershipInfoDecoder : enc.StructDecoder<GroupMembershipInfo>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="GroupMembershipInfo" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override GroupMembershipInfo Create()
             {
-                this.AccessType = obj.GetFieldObject<AccessType>("access_type");
-                this.Group = obj.GetFieldObject<GroupInfo>("group");
+                return new GroupMembershipInfo();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(GroupMembershipInfo value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "access_type":
+                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "group":
+                        value.Group = GroupInfo.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

@@ -14,8 +14,20 @@ namespace Dropbox.Api.Files
     /// <para>The file metadata object</para>
     /// </summary>
     /// <seealso cref="Metadata" />
-    public sealed class FileMetadata : Metadata, enc.IEncodable<FileMetadata>
+    public class FileMetadata : Metadata
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<FileMetadata> Encoder = new FileMetadataEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<FileMetadata> Decoder = new FileMetadataDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="FileMetadata" /> class.</para>
         /// </summary>
@@ -35,13 +47,16 @@ namespace Dropbox.Api.Files
         /// avoid conflicts.</param>
         /// <param name="size">The file size in bytes.</param>
         /// <param name="id">A unique identifier for the file.</param>
+        /// <param name="mediaInfo">Additional information if the file is a photo or
+        /// video.</param>
         public FileMetadata(string name,
                             string pathLower,
                             sys.DateTime clientModified,
                             sys.DateTime serverModified,
                             string rev,
                             ulong size,
-                            string id = null)
+                            string id = null,
+                            MediaInfo mediaInfo = null)
             : base(name, pathLower)
         {
             if (rev == null)
@@ -63,6 +78,7 @@ namespace Dropbox.Api.Files
             this.Rev = rev;
             this.Size = size;
             this.Id = id;
+            this.MediaInfo = mediaInfo;
         }
 
         /// <summary>
@@ -81,79 +97,124 @@ namespace Dropbox.Api.Files
         /// purposes (such as sorting) and not, for example, to determine if a file has changed
         /// or not.</para>
         /// </summary>
-        public sys.DateTime ClientModified { get; private set; }
+        public sys.DateTime ClientModified { get; protected set; }
 
         /// <summary>
         /// <para>The last time the file was modified on Dropbox.</para>
         /// </summary>
-        public sys.DateTime ServerModified { get; private set; }
+        public sys.DateTime ServerModified { get; protected set; }
 
         /// <summary>
         /// <para>A unique identifier for the current revision of a file. This field is the
         /// same rev as elsewhere in the API and can be used to detect changes and avoid
         /// conflicts.</para>
         /// </summary>
-        public string Rev { get; private set; }
+        public string Rev { get; protected set; }
 
         /// <summary>
         /// <para>The file size in bytes.</para>
         /// </summary>
-        public ulong Size { get; private set; }
+        public ulong Size { get; protected set; }
 
         /// <summary>
         /// <para>A unique identifier for the file.</para>
         /// </summary>
-        public string Id { get; private set; }
-
-        #region IEncodable<FileMetadata> methods
+        public string Id { get; protected set; }
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Additional information if the file is a photo or video.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<FileMetadata>.Encode(enc.IEncoder encoder)
+        public MediaInfo MediaInfo { get; protected set; }
+
+        #region Encoder class
+
+        /// <summary>
+        /// <para>Encoder for  <see cref="FileMetadata" />.</para>
+        /// </summary>
+        private class FileMetadataEncoder : enc.StructEncoder<FileMetadata>
         {
-            using (var obj = encoder.AddObject())
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(FileMetadata value, enc.IJsonWriter writer)
             {
-                obj.AddField<string>(".tag", "file");
-                obj.AddField<string>("name", this.Name);
-                obj.AddField<string>("path_lower", this.PathLower);
-                obj.AddField<sys.DateTime>("client_modified", this.ClientModified);
-                obj.AddField<sys.DateTime>("server_modified", this.ServerModified);
-                obj.AddField<string>("rev", this.Rev);
-                obj.AddField<ulong>("size", this.Size);
-                if (this.Id != null)
+                WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
+                WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                WriteProperty("client_modified", value.ClientModified, writer, enc.DateTimeEncoder.Instance);
+                WriteProperty("server_modified", value.ServerModified, writer, enc.DateTimeEncoder.Instance);
+                WriteProperty("rev", value.Rev, writer, enc.StringEncoder.Instance);
+                WriteProperty("size", value.Size, writer, enc.UInt64Encoder.Instance);
+                if (value.Id != null)
                 {
-                    obj.AddField<string>("id", this.Id);
+                    WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                }
+                if (value.MediaInfo != null)
+                {
+                    WriteProperty("media_info", value.MediaInfo, writer, MediaInfo.Encoder);
                 }
             }
         }
 
+        #endregion
+
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="FileMetadata" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        FileMetadata enc.IEncodable<FileMetadata>.Decode(enc.IDecoder decoder)
+        private class FileMetadataDecoder : enc.StructDecoder<FileMetadata>
         {
-            using (var obj = decoder.GetObject())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="FileMetadata" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override FileMetadata Create()
             {
-                this.Name = obj.GetField<string>("name");
-                this.PathLower = obj.GetField<string>("path_lower");
-                this.ClientModified = obj.GetField<sys.DateTime>("client_modified");
-                this.ServerModified = obj.GetField<sys.DateTime>("server_modified");
-                this.Rev = obj.GetField<string>("rev");
-                this.Size = obj.GetField<ulong>("size");
-                if (obj.HasField("id"))
-                {
-                    this.Id = obj.GetField<string>("id");
-                }
+                return new FileMetadata();
             }
 
-            return this;
+            /// <summary>
+            /// <para>Set given field.</para>
+            /// </summary>
+            /// <param name="value">The field value.</param>
+            /// <param name="fieldName">The field name.</param>
+            /// <param name="reader">The json reader.</param>
+            protected override void SetField(FileMetadata value, string fieldName, enc.IJsonReader reader)
+            {
+                switch (fieldName)
+                {
+                    case "name":
+                        value.Name = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "client_modified":
+                        value.ClientModified = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "server_modified":
+                        value.ServerModified = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "rev":
+                        value.Rev = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "size":
+                        value.Size = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "id":
+                        value.Id = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "media_info":
+                        value.MediaInfo = MediaInfo.Decoder.Decode(reader);
+                        break;
+                    default:
+                        SkipProperty(reader);
+                        break;
+                }
+            }
         }
 
         #endregion

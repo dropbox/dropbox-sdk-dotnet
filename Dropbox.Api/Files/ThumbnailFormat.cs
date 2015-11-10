@@ -13,8 +13,20 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The thumbnail format object</para>
     /// </summary>
-    public class ThumbnailFormat : enc.IEncodable<ThumbnailFormat>
+    public class ThumbnailFormat
     {
+        #pragma warning disable 108
+
+        /// <summary>
+        /// <para>The encoder instance.</para>
+        /// </summary>
+        internal static enc.StructEncoder<ThumbnailFormat> Encoder = new ThumbnailFormatEncoder();
+
+        /// <summary>
+        /// <para>The decoder instance.</para>
+        /// </summary>
+        internal static enc.StructDecoder<ThumbnailFormat> Decoder = new ThumbnailFormatDecoder();
+
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ThumbnailFormat" />
         /// class.</para>
@@ -67,46 +79,71 @@ namespace Dropbox.Api.Files
             }
         }
 
-        #region IEncodable<ThumbnailFormat> methods
+        #region Encoder class
 
         /// <summary>
-        /// <para>Encodes the object using the supplied encoder.</para>
+        /// <para>Encoder for  <see cref="ThumbnailFormat" />.</para>
         /// </summary>
-        /// <param name="encoder">The encoder being used to serialize the object.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        void enc.IEncodable<ThumbnailFormat>.Encode(enc.IEncoder encoder)
+        private class ThumbnailFormatEncoder : enc.StructEncoder<ThumbnailFormat>
         {
-            if (this.IsJpeg)
+            /// <summary>
+            /// <para>Encode fields of given value.</para>
+            /// </summary>
+            /// <param name="value">The value.</param>
+            /// <param name="writer">The writer.</param>
+            public override void EncodeFields(ThumbnailFormat value, enc.IJsonWriter writer)
             {
-                ((enc.IEncodable<Jpeg>)this).Encode(encoder);
-            }
-            else if (this.IsPng)
-            {
-                ((enc.IEncodable<Png>)this).Encode(encoder);
-            }
-            else
-            {
+                if (value is Jpeg)
+                {
+                    WriteProperty(".tag", "jpeg", writer, enc.StringEncoder.Instance);
+                    Jpeg.Encoder.EncodeFields((Jpeg)value, writer);
+                    return;
+                }
+                if (value is Png)
+                {
+                    WriteProperty(".tag", "png", writer, enc.StringEncoder.Instance);
+                    Png.Encoder.EncodeFields((Png)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
 
+        #endregion
+
+        #region Decoder class
+
         /// <summary>
-        /// <para>Decodes on object using the supplied decoder.</para>
+        /// <para>Decoder for  <see cref="ThumbnailFormat" />.</para>
         /// </summary>
-        /// <param name="decoder">The decoder used to deserialize the object.</param>
-        /// <returns>The deserialized object. Note: this is not necessarily the current
-        /// instance.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        ThumbnailFormat enc.IEncodable<ThumbnailFormat>.Decode(enc.IDecoder decoder)
+        private class ThumbnailFormatDecoder : enc.UnionDecoder<ThumbnailFormat>
         {
-            switch (decoder.GetUnionName())
+            /// <summary>
+            /// <para>Create a new instance of type <see cref="ThumbnailFormat" />.</para>
+            /// </summary>
+            /// <returns>The struct instance.</returns>
+            protected override ThumbnailFormat Create()
             {
-            case "jpeg":
-                return Jpeg.Instance;
-            case "png":
-                return Png.Instance;
-            default:
-                throw new sys.InvalidOperationException();
+                return new ThumbnailFormat();
+            }
+
+            /// <summary>
+            /// <para>Decode based on given tag.</para>
+            /// </summary>
+            /// <param name="tag">The tag.</param>
+            /// <param name="reader">The json reader.</param>
+            /// <returns>The decoded object.</returns>
+            protected override ThumbnailFormat Decode(string tag, enc.IJsonReader reader)
+            {
+                switch (tag)
+                {
+                    case "jpeg":
+                        return Jpeg.Decoder.DecodeFields(reader);
+                    case "png":
+                        return Png.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
+                }
             }
         }
 
@@ -115,8 +152,20 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The jpeg object</para>
         /// </summary>
-        public sealed class Jpeg : ThumbnailFormat, enc.IEncodable<Jpeg>
+        public sealed class Jpeg : ThumbnailFormat
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Jpeg> Encoder = new JpegEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Jpeg> Decoder = new JpegDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Jpeg" /> class.</para>
             /// </summary>
@@ -129,37 +178,72 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Jpeg Instance = new Jpeg();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Jpeg" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Jpeg>.Encode(enc.IEncoder encoder)
+            private class JpegEncoder : enc.StructEncoder<Jpeg>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Jpeg value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "jpeg");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Jpeg" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Jpeg enc.IEncodable<Jpeg>.Decode(enc.IDecoder decoder)
+            private class JpegDecoder : enc.StructDecoder<Jpeg>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Jpeg" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Jpeg Create()
+                {
+                    return new Jpeg();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Jpeg DecodeFields(enc.IJsonReader reader)
+                {
+                    return Jpeg.Instance;
+                }
             }
+
+            #endregion
         }
 
         /// <summary>
         /// <para>The png object</para>
         /// </summary>
-        public sealed class Png : ThumbnailFormat, enc.IEncodable<Png>
+        public sealed class Png : ThumbnailFormat
         {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Png> Encoder = new PngEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Png> Decoder = new PngDecoder();
+
             /// <summary>
             /// <para>Initializes a new instance of the <see cref="Png" /> class.</para>
             /// </summary>
@@ -172,30 +256,53 @@ namespace Dropbox.Api.Files
             /// </summary>
             public static readonly Png Instance = new Png();
 
+            #region Encoder class
+
             /// <summary>
-            /// <para>Encodes the object using the supplied encoder.</para>
+            /// <para>Encoder for  <see cref="Png" />.</para>
             /// </summary>
-            /// <param name="encoder">The encoder being used to serialize the object.</param>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            void enc.IEncodable<Png>.Encode(enc.IEncoder encoder)
+            private class PngEncoder : enc.StructEncoder<Png>
             {
-                using (var obj = encoder.AddObject())
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Png value, enc.IJsonWriter writer)
                 {
-                    obj.AddField(".tag", "png");
                 }
             }
 
+            #endregion
+
+            #region Decoder class
+
             /// <summary>
-            /// <para>Decodes on object using the supplied decoder.</para>
+            /// <para>Decoder for  <see cref="Png" />.</para>
             /// </summary>
-            /// <param name="decoder">The decoder used to deserialize the object.</param>
-            /// <returns>The deserialized object. Note: this is not necessarily the current
-            /// instance.</returns>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-            Png enc.IEncodable<Png>.Decode(enc.IDecoder decoder)
+            private class PngDecoder : enc.StructDecoder<Png>
             {
-                throw new sys.InvalidOperationException("Decoding happens through the base class");
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Png" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Png Create()
+                {
+                    return new Png();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Png DecodeFields(enc.IJsonReader reader)
+                {
+                    return Png.Instance;
+                }
             }
+
+            #endregion
         }
     }
 }
