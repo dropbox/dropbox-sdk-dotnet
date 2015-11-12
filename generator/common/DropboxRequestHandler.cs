@@ -340,7 +340,11 @@ namespace Dropbox.Api
 
             var request = new HttpRequestMessage(HttpMethod.Post, uri);
 
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.options.OAuth2AccessToken);
+            if (host != HostType.ApiNotify)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.options.OAuth2AccessToken);
+            }
+
             request.Headers.TryAddWithoutValidation("User-Agent", this.options.UserAgent);
 
             if (this.selectUser != null)
@@ -576,6 +580,11 @@ namespace Dropbox.Api
         /// Host type for api content.
         /// </summary>
         public const string ApiContent = "content";
+
+        /// <summary>
+        /// Host type for api notify.
+        /// </summary>
+        public const string ApiNotify = "notify";
     }
 
     /// <summary>
@@ -592,6 +601,11 @@ namespace Dropbox.Api
         /// The default api content domain
         /// </summary>
         private const string DefaultApiContentDomain = "content.dropboxapi.com";
+
+        /// <summary>
+        /// The default api notify domain
+        /// </summary>
+        private const string DefaultApiNotifyDomain = "notify.dropboxapi.com";
 
         /// <summary>
         /// The base user agent, used to construct all user agent strings.
@@ -613,6 +627,8 @@ namespace Dropbox.Api
         /// this is for internal Dropbox use only.</param>
         /// <param name="apiContentHostname">The hostname that will process api content requests;
         /// this is for internal Dropbox use only.</param>
+        /// <param name="apiNotifyHostname">The hostname that will process api notify requests;
+        /// this is for internal Dropbox use only.</param>
         /// <param name="httpClient">The custom http client. If not provided, a default 
         /// http client will be created.</param>
         public DrpoboxRequestHandlerOptions(
@@ -621,6 +637,7 @@ namespace Dropbox.Api
             string userAgent = null,
             string apiHostname = DefaultApiDomain,
             string apiContentHostname = DefaultApiContentDomain,
+            string apiNotifyHostname = DefaultApiNotifyDomain,
             HttpClient httpClient = null)
         {
             var name = new AssemblyName(typeof(DrpoboxRequestHandlerOptions).Assembly.FullName);
@@ -636,7 +653,8 @@ namespace Dropbox.Api
             this.HostMap = new Dictionary<string, string>
             {
                 { HostType.Api, apiHostname },
-                { HostType.ApiContent, apiContentHostname }
+                { HostType.ApiContent, apiContentHostname },
+                { HostType.ApiNotify, apiNotifyHostname }
             };
         }
 
