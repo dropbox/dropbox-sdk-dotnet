@@ -1672,7 +1672,7 @@ class CSharpGenerator(CodeGenerator):
 
         # Private decoder.
         with self.decoder_block(class_name=field_type, inherit='StructDecoder'):
-            if is_struct_type(data_type):
+            if is_struct_type(data_type) and not data_type.has_enumerated_subtypes():
                 with self.decoder_decode_fields_block(class_name=field_type):
                     self.emit('return new {0}({1}.DecodeFields(reader));'.format(
                         field_type, self._get_decoder(data_type)))
