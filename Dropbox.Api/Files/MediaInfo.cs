@@ -301,13 +301,22 @@ namespace Dropbox.Api.Files
                 }
 
                 /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
+                /// <para>Set given field.</para>
                 /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Metadata DecodeFields(enc.IJsonReader reader)
+                protected override void SetField(Metadata value, string fieldName, enc.IJsonReader reader)
                 {
-                    return new Metadata(MediaMetadata.Decoder.DecodeFields(reader));
+                    switch (fieldName)
+                    {
+                        case "metadata":
+                            value.Value = MediaMetadata.Decoder.Decode(reader);
+                            break;
+                        default:
+                            SkipProperty(reader);
+                            break;
+                    }
                 }
             }
 
