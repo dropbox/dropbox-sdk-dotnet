@@ -296,16 +296,6 @@ namespace Dropbox.Api.Babel
         }
 
         /// <summary>
-        /// Skip current property.
-        /// </summary>
-        /// <param name="reader">The json reader.</param>
-        protected static void SkipProperty(IJsonReader reader)
-        {
-            reader.Skip();
-            reader.Read();
-        }
-
-        /// <summary>
         /// Read list of specific type.
         /// </summary>
         /// <typeparam name="TItem">The item type.</typeparam>
@@ -407,7 +397,7 @@ namespace Dropbox.Api.Babel
     /// <summary>
     /// The decoder for Empty Type.
     /// </summary>
-    internal sealed class EmptyDecoder : StructDecoder<Empty>
+    internal sealed class EmptyDecoder : IDecoder<Empty>
     {
         /// <summary>
         /// The instance.
@@ -415,23 +405,13 @@ namespace Dropbox.Api.Babel
         public static readonly IDecoder<Empty> Instance = new EmptyDecoder();
 
         /// <summary>
-        /// Create a struct instance.
+        /// Decoder for struct type.
         /// </summary>
-        /// <returns>The struct instance.</returns>
-        protected override Empty Create()
+        /// <typeparam name="T">The struct type.</typeparam>
+        public Empty Decode(IJsonReader reader)
         {
+            reader.Skip();
             return Empty.Instance;
-        }
-
-        /// <summary>
-        /// Set given field.
-        /// </summary>
-        /// <param name="value">The field value.</param>
-        /// <param name="fieldName">The field name.</param>
-        /// <param name="reader">The json reader.</param>
-        protected override void SetField(Empty value, string fieldName, IJsonReader reader)
-        {
-            SkipProperty(reader);
         }
     }
 

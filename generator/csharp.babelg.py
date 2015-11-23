@@ -474,7 +474,7 @@ class CSharpGenerator(CodeGenerator):
             with self.switch('fieldName'):
                 yield
                 with self.case(needs_break=True):
-                    self.emit('SkipProperty(reader);')
+                    self.emit('reader.Skip();')
 
     @contextmanager
     def decoder_tag_block(self, class_name):

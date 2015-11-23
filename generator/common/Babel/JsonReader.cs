@@ -96,11 +96,12 @@ namespace Dropbox.Api.Babel
         }
         
         /// <summary>
-        /// Skip children of current token.
+        /// Skip current token.
         /// </summary>
         void IJsonReader.Skip()
         {
             this.reader.Skip();
+            this.reader.Read();
         }
 
         /// <summary>
