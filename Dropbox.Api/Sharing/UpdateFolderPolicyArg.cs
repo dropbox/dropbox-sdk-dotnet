@@ -163,7 +163,7 @@ namespace Dropbox.Api.Sharing
                         value.SharedLinkPolicy = SharedLinkPolicy.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

@@ -112,7 +112,7 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

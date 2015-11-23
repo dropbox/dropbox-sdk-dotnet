@@ -314,7 +314,7 @@ namespace Dropbox.Api.Files
                             value.Value = MediaMetadata.Decoder.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }

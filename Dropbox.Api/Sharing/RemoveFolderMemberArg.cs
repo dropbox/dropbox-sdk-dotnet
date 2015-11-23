@@ -148,7 +148,7 @@ namespace Dropbox.Api.Sharing
                         value.LeaveACopy = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

@@ -110,7 +110,7 @@ namespace Dropbox.Api.Sharing
                         value.Links = ReadList(reader, LinkMetadata.Decoder);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

@@ -130,7 +130,7 @@ namespace Dropbox.Api.Users
                         value.Name = Name.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

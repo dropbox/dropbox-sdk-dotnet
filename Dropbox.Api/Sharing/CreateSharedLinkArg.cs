@@ -139,7 +139,7 @@ namespace Dropbox.Api.Sharing
                         value.PendingUpload = PendingUploadMode.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

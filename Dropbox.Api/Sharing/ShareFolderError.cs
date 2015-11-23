@@ -375,7 +375,7 @@ namespace Dropbox.Api.Sharing
                             value.Value = SharePathError.Decoder.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }

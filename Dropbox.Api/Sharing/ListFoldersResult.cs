@@ -114,7 +114,7 @@ namespace Dropbox.Api.Sharing
                         value.Entries = ReadList(reader, SharedFolderMetadata.Decoder);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

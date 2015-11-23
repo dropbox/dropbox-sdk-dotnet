@@ -211,7 +211,7 @@ namespace Dropbox.Api.Async
                             value.Value = enc.StringDecoder.Instance.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }

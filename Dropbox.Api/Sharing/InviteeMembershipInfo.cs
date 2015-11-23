@@ -118,7 +118,7 @@ namespace Dropbox.Api.Sharing
                         value.Invitee = InviteeInfo.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

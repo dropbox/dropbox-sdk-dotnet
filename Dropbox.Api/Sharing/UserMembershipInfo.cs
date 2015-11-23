@@ -116,7 +116,7 @@ namespace Dropbox.Api.Sharing
                         value.User = UserInfo.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

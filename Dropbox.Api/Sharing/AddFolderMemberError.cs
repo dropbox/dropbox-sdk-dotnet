@@ -446,7 +446,7 @@ namespace Dropbox.Api.Sharing
                             value.Value = SharedFolderAccessError.Decoder.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }
@@ -622,7 +622,7 @@ namespace Dropbox.Api.Sharing
                             value.Value = AddMemberSelectorError.Decoder.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }
@@ -879,7 +879,7 @@ namespace Dropbox.Api.Sharing
                             value.Value = enc.UInt64Decoder.Instance.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }
@@ -978,7 +978,7 @@ namespace Dropbox.Api.Sharing
                             value.Value = enc.UInt64Decoder.Instance.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }

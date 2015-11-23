@@ -183,7 +183,7 @@ namespace Dropbox.Api.Files
                         value.Mode = SearchMode.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

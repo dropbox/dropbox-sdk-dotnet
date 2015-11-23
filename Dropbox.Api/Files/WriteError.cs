@@ -358,7 +358,7 @@ namespace Dropbox.Api.Files
                             value.Value = enc.StringDecoder.Instance.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }
@@ -455,7 +455,7 @@ namespace Dropbox.Api.Files
                             value.Value = WriteConflictError.Decoder.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }

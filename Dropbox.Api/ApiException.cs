@@ -135,7 +135,7 @@ namespace Dropbox.Api
                         value.ErrorMessage = StringDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

@@ -45,7 +45,7 @@ namespace Dropbox.Api.Babel
         bool Read();
 
         /// <summary>
-        /// Skip children of current token.
+        /// Skip current token.
         /// </summary>
         void Skip();
 

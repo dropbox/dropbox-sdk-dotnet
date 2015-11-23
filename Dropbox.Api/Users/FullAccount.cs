@@ -237,7 +237,7 @@ namespace Dropbox.Api.Users
                         value.Team = Team.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

@@ -123,7 +123,7 @@ namespace Dropbox.Api.Files
                         value.Metadata = Metadata.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

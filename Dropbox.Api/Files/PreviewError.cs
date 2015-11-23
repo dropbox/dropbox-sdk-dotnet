@@ -295,7 +295,7 @@ namespace Dropbox.Api.Files
                             value.Value = LookupError.Decoder.Decode(reader);
                             break;
                         default:
-                            SkipProperty(reader);
+                            reader.Skip();
                             break;
                     }
                 }

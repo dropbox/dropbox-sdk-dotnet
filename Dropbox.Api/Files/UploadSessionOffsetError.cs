@@ -104,7 +104,7 @@ namespace Dropbox.Api.Files
                         value.CorrectOffset = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

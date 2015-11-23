@@ -113,7 +113,7 @@ namespace Dropbox.Api.Files
                         value.Longitude = enc.DoubleDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

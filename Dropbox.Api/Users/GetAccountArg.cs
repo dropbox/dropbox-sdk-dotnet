@@ -110,7 +110,7 @@ namespace Dropbox.Api.Users
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

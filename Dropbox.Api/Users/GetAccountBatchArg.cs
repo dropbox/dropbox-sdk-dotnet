@@ -116,7 +116,7 @@ namespace Dropbox.Api.Users
                         value.AccountIds = ReadList(reader, enc.StringDecoder.Instance);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

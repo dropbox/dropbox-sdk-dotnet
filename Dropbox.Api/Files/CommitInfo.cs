@@ -186,7 +186,7 @@ namespace Dropbox.Api.Files
                         value.Mute = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

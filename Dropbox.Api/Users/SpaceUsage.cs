@@ -118,7 +118,7 @@ namespace Dropbox.Api.Users
                         value.Allocation = SpaceAllocation.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

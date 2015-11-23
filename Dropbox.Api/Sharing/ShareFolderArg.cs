@@ -183,7 +183,7 @@ namespace Dropbox.Api.Sharing
                         value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

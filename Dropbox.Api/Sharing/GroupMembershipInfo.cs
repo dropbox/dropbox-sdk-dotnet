@@ -116,7 +116,7 @@ namespace Dropbox.Api.Sharing
                         value.Group = GroupInfo.Decoder.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

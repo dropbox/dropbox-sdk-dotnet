@@ -126,7 +126,7 @@ namespace Dropbox.Api.Files
                         value.UploadSessionId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }

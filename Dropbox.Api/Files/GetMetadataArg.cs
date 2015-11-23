@@ -124,7 +124,7 @@ namespace Dropbox.Api.Files
                         value.IncludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
-                        SkipProperty(reader);
+                        reader.Skip();
                         break;
                 }
             }
