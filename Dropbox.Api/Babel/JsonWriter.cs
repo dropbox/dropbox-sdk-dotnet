@@ -39,10 +39,17 @@ namespace Dropbox.Api.Babel
         /// <param name="encodable">The object to write.</param>
         /// <param name="encoder">The encoder.</param>
         /// <returns>The encoded object as a JSON string.</returns>
-        public static string Write<T>(T encodable, IEncoder<T> encoder)
+        public static string Write<T>(T encodable, IEncoder<T> encoder, bool escapeNonAscii = false)
         {
             var builder = new StringBuilder();
-            var writer = new JsonWriter(new JsonTextWriter(new StringWriter(builder)));
+            var textWriter = new JsonTextWriter(new StringWriter(builder));
+
+            if (escapeNonAscii)
+            {
+                textWriter.StringEscapeHandling = StringEscapeHandling.EscapeNonAscii;
+            }
+
+            var writer = new JsonWriter(textWriter);
             encoder.Encode(encodable, writer);
 
             var json = builder.ToString();
