@@ -58,46 +58,24 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is InvalidDropboxId</para>
+        /// <para>Gets a value indicating whether this instance is MemberError</para>
         /// </summary>
-        public bool IsInvalidDropboxId
+        public bool IsMemberError
         {
             get
             {
-                return this is InvalidDropboxId;
+                return this is MemberError;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a InvalidDropboxId, or <c>null</c>.</para>
+        /// <para>Gets this instance as a MemberError, or <c>null</c>.</para>
         /// </summary>
-        public InvalidDropboxId AsInvalidDropboxId
+        public MemberError AsMemberError
         {
             get
             {
-                return this as InvalidDropboxId;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is NotAMember</para>
-        /// </summary>
-        public bool IsNotAMember
-        {
-            get
-            {
-                return this is NotAMember;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a NotAMember, or <c>null</c>.</para>
-        /// </summary>
-        public NotAMember AsNotAMember
-        {
-            get
-            {
-                return this as NotAMember;
+                return this as MemberError;
             }
         }
 
@@ -165,16 +143,10 @@ namespace Dropbox.Api.Sharing
                     AccessError.Encoder.EncodeFields((AccessError)value, writer);
                     return;
                 }
-                if (value is InvalidDropboxId)
+                if (value is MemberError)
                 {
-                    WriteProperty(".tag", "invalid_dropbox_id", writer, enc.StringEncoder.Instance);
-                    InvalidDropboxId.Encoder.EncodeFields((InvalidDropboxId)value, writer);
-                    return;
-                }
-                if (value is NotAMember)
-                {
-                    WriteProperty(".tag", "not_a_member", writer, enc.StringEncoder.Instance);
-                    NotAMember.Encoder.EncodeFields((NotAMember)value, writer);
+                    WriteProperty(".tag", "member_error", writer, enc.StringEncoder.Instance);
+                    MemberError.Encoder.EncodeFields((MemberError)value, writer);
                     return;
                 }
                 if (value is InsufficientPlan)
@@ -224,10 +196,8 @@ namespace Dropbox.Api.Sharing
                 {
                     case "access_error":
                         return AccessError.Decoder.DecodeFields(reader);
-                    case "invalid_dropbox_id":
-                        return InvalidDropboxId.Decoder.DecodeFields(reader);
-                    case "not_a_member":
-                        return NotAMember.Decoder.DecodeFields(reader);
+                    case "member_error":
+                        return MemberError.Decoder.DecodeFields(reader);
                     case "insufficient_plan":
                         return InsufficientPlan.Decoder.DecodeFields(reader);
                     default:
@@ -337,49 +307,59 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The target <see cref="MemberSelector.DropboxId" /> is invalid.</para>
+        /// <para>The member error object</para>
         /// </summary>
-        public sealed class InvalidDropboxId : UpdateFolderMemberError
+        public sealed class MemberError : UpdateFolderMemberError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<InvalidDropboxId> Encoder = new InvalidDropboxIdEncoder();
+            internal static enc.StructEncoder<MemberError> Encoder = new MemberErrorEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<InvalidDropboxId> Decoder = new InvalidDropboxIdDecoder();
+            internal static enc.StructDecoder<MemberError> Decoder = new MemberErrorDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="InvalidDropboxId" />
+            /// <para>Initializes a new instance of the <see cref="MemberError" />
             /// class.</para>
             /// </summary>
-            private InvalidDropboxId()
+            /// <param name="value">The value</param>
+            public MemberError(SharedFolderMemberError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberError" />
+            /// class.</para>
+            /// </summary>
+            private MemberError()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of InvalidDropboxId</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly InvalidDropboxId Instance = new InvalidDropboxId();
+            public SharedFolderMemberError Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="InvalidDropboxId" />.</para>
+            /// <para>Encoder for  <see cref="MemberError" />.</para>
             /// </summary>
-            private class InvalidDropboxIdEncoder : enc.StructEncoder<InvalidDropboxId>
+            private class MemberErrorEncoder : enc.StructEncoder<MemberError>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(InvalidDropboxId value, enc.IJsonWriter writer)
+                public override void EncodeFields(MemberError value, enc.IJsonWriter writer)
                 {
+                    SharedFolderMemberError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -388,106 +368,36 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="InvalidDropboxId" />.</para>
+            /// <para>Decoder for  <see cref="MemberError" />.</para>
             /// </summary>
-            private class InvalidDropboxIdDecoder : enc.StructDecoder<InvalidDropboxId>
+            private class MemberErrorDecoder : enc.StructDecoder<MemberError>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="InvalidDropboxId" />.</para>
+                /// <para>Create a new instance of type <see cref="MemberError" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override InvalidDropboxId Create()
+                protected override MemberError Create()
                 {
-                    return new InvalidDropboxId();
+                    return new MemberError();
                 }
 
                 /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
+                /// <para>Set given field.</para>
                 /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidDropboxId DecodeFields(enc.IJsonReader reader)
+                protected override void SetField(MemberError value, string fieldName, enc.IJsonReader reader)
                 {
-                    return InvalidDropboxId.Instance;
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The target <see cref="UpdateFolderMemberArg.Member" /> is not a member of the
-        /// shared folder.</para>
-        /// </summary>
-        public sealed class NotAMember : UpdateFolderMemberError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<NotAMember> Encoder = new NotAMemberEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<NotAMember> Decoder = new NotAMemberDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NotAMember" /> class.</para>
-            /// </summary>
-            private NotAMember()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of NotAMember</para>
-            /// </summary>
-            public static readonly NotAMember Instance = new NotAMember();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="NotAMember" />.</para>
-            /// </summary>
-            private class NotAMemberEncoder : enc.StructEncoder<NotAMember>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(NotAMember value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="NotAMember" />.</para>
-            /// </summary>
-            private class NotAMemberDecoder : enc.StructDecoder<NotAMember>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="NotAMember" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override NotAMember Create()
-                {
-                    return new NotAMember();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NotAMember DecodeFields(enc.IJsonReader reader)
-                {
-                    return NotAMember.Instance;
+                    switch (fieldName)
+                    {
+                        case "member_error":
+                            value.Value = SharedFolderMemberError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

@@ -11,48 +11,49 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The information about a user invited to become a member a shared folder.</para>
+    /// <para>The list folders continue error object</para>
     /// </summary>
-    public class InviteeInfo
+    public class ListFoldersContinueError
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<InviteeInfo> Encoder = new InviteeInfoEncoder();
+        internal static enc.StructEncoder<ListFoldersContinueError> Encoder = new ListFoldersContinueErrorEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<InviteeInfo> Decoder = new InviteeInfoDecoder();
+        internal static enc.StructDecoder<ListFoldersContinueError> Decoder = new ListFoldersContinueErrorDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="InviteeInfo" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFoldersContinueError" />
+        /// class.</para>
         /// </summary>
-        public InviteeInfo()
+        public ListFoldersContinueError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Email</para>
+        /// <para>Gets a value indicating whether this instance is InvalidCursor</para>
         /// </summary>
-        public bool IsEmail
+        public bool IsInvalidCursor
         {
             get
             {
-                return this is Email;
+                return this is InvalidCursor;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Email, or <c>null</c>.</para>
+        /// <para>Gets this instance as a InvalidCursor, or <c>null</c>.</para>
         /// </summary>
-        public Email AsEmail
+        public InvalidCursor AsInvalidCursor
         {
             get
             {
-                return this as Email;
+                return this as InvalidCursor;
             }
         }
 
@@ -81,21 +82,21 @@ namespace Dropbox.Api.Sharing
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="InviteeInfo" />.</para>
+        /// <para>Encoder for  <see cref="ListFoldersContinueError" />.</para>
         /// </summary>
-        private class InviteeInfoEncoder : enc.StructEncoder<InviteeInfo>
+        private class ListFoldersContinueErrorEncoder : enc.StructEncoder<ListFoldersContinueError>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(InviteeInfo value, enc.IJsonWriter writer)
+            public override void EncodeFields(ListFoldersContinueError value, enc.IJsonWriter writer)
             {
-                if (value is Email)
+                if (value is InvalidCursor)
                 {
-                    WriteProperty(".tag", "email", writer, enc.StringEncoder.Instance);
-                    Email.Encoder.EncodeFields((Email)value, writer);
+                    WriteProperty(".tag", "invalid_cursor", writer, enc.StringEncoder.Instance);
+                    InvalidCursor.Encoder.EncodeFields((InvalidCursor)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -113,17 +114,18 @@ namespace Dropbox.Api.Sharing
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="InviteeInfo" />.</para>
+        /// <para>Decoder for  <see cref="ListFoldersContinueError" />.</para>
         /// </summary>
-        private class InviteeInfoDecoder : enc.UnionDecoder<InviteeInfo>
+        private class ListFoldersContinueErrorDecoder : enc.UnionDecoder<ListFoldersContinueError>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="InviteeInfo" />.</para>
+            /// <para>Create a new instance of type <see cref="ListFoldersContinueError"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override InviteeInfo Create()
+            protected override ListFoldersContinueError Create()
             {
-                return new InviteeInfo();
+                return new ListFoldersContinueError();
             }
 
             /// <summary>
@@ -132,12 +134,12 @@ namespace Dropbox.Api.Sharing
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override InviteeInfo Decode(string tag, enc.IJsonReader reader)
+            protected override ListFoldersContinueError Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "email":
-                        return Email.Decoder.DecodeFields(reader);
+                    case "invalid_cursor":
+                        return InvalidCursor.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -147,57 +149,49 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>E-mail address of invited user.</para>
+        /// <para><see cref="ListFoldersContinueArg.Cursor" /> is invalid.</para>
         /// </summary>
-        public sealed class Email : InviteeInfo
+        public sealed class InvalidCursor : ListFoldersContinueError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Email> Encoder = new EmailEncoder();
+            internal static enc.StructEncoder<InvalidCursor> Encoder = new InvalidCursorEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Email> Decoder = new EmailDecoder();
+            internal static enc.StructDecoder<InvalidCursor> Decoder = new InvalidCursorDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Email" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="InvalidCursor" />
+            /// class.</para>
             /// </summary>
-            /// <param name="value">The value</param>
-            public Email(string value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Email" /> class.</para>
-            /// </summary>
-            private Email()
+            private InvalidCursor()
             {
             }
 
             /// <summary>
-            /// <para>Gets the value of this instance.</para>
+            /// <para>A singleton instance of InvalidCursor</para>
             /// </summary>
-            public string Value { get; private set; }
+            public static readonly InvalidCursor Instance = new InvalidCursor();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Email" />.</para>
+            /// <para>Encoder for  <see cref="InvalidCursor" />.</para>
             /// </summary>
-            private class EmailEncoder : enc.StructEncoder<Email>
+            private class InvalidCursorEncoder : enc.StructEncoder<InvalidCursor>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Email value, enc.IJsonWriter writer)
+                public override void EncodeFields(InvalidCursor value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("email", value.Value, writer, enc.StringEncoder.Instance);
                 }
             }
 
@@ -206,36 +200,27 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Email" />.</para>
+            /// <para>Decoder for  <see cref="InvalidCursor" />.</para>
             /// </summary>
-            private class EmailDecoder : enc.StructDecoder<Email>
+            private class InvalidCursorDecoder : enc.StructDecoder<InvalidCursor>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Email" />.</para>
+                /// <para>Create a new instance of type <see cref="InvalidCursor" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Email Create()
+                protected override InvalidCursor Create()
                 {
-                    return new Email();
+                    return new InvalidCursor();
                 }
 
                 /// <summary>
-                /// <para>Set given field.</para>
+                /// <para>Decode fields without ensuring start and end object.</para>
                 /// </summary>
-                /// <param name="value">The field value.</param>
-                /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(Email value, string fieldName, enc.IJsonReader reader)
+                /// <returns>The decoded object.</returns>
+                public override InvalidCursor DecodeFields(enc.IJsonReader reader)
                 {
-                    switch (fieldName)
-                    {
-                        case "email":
-                            value.Value = enc.StringDecoder.Instance.Decode(reader);
-                            break;
-                        default:
-                            reader.Skip();
-                            break;
-                    }
+                    return InvalidCursor.Instance;
                 }
             }
 
@@ -245,7 +230,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : InviteeInfo
+        public sealed class Other : ListFoldersContinueError
         {
             #pragma warning disable 108
 

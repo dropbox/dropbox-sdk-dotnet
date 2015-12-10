@@ -190,6 +190,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is RateLimit</para>
+        /// </summary>
+        public bool IsRateLimit
+        {
+            get
+            {
+                return this is RateLimit;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RateLimit, or <c>null</c>.</para>
+        /// </summary>
+        public RateLimit AsRateLimit
+        {
+            get
+            {
+                return this as RateLimit;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is InsufficientPlan</para>
         /// </summary>
         public bool IsInsufficientPlan
@@ -289,6 +311,12 @@ namespace Dropbox.Api.Sharing
                     TooManyPendingInvites.Encoder.EncodeFields((TooManyPendingInvites)value, writer);
                     return;
                 }
+                if (value is RateLimit)
+                {
+                    WriteProperty(".tag", "rate_limit", writer, enc.StringEncoder.Instance);
+                    RateLimit.Encoder.EncodeFields((RateLimit)value, writer);
+                    return;
+                }
                 if (value is InsufficientPlan)
                 {
                     WriteProperty(".tag", "insufficient_plan", writer, enc.StringEncoder.Instance);
@@ -347,6 +375,8 @@ namespace Dropbox.Api.Sharing
                         return TooManyMembers.Decoder.DecodeFields(reader);
                     case "too_many_pending_invites":
                         return TooManyPendingInvites.Decoder.DecodeFields(reader);
+                    case "rate_limit":
+                        return RateLimit.Decoder.DecodeFields(reader);
                     case "insufficient_plan":
                         return InsufficientPlan.Decoder.DecodeFields(reader);
                     default:
@@ -981,6 +1011,84 @@ namespace Dropbox.Api.Sharing
                             reader.Skip();
                             break;
                     }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user has reached the rate limit for invitations.</para>
+        /// </summary>
+        public sealed class RateLimit : AddFolderMemberError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RateLimit> Encoder = new RateLimitEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RateLimit> Decoder = new RateLimitDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RateLimit" /> class.</para>
+            /// </summary>
+            private RateLimit()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RateLimit</para>
+            /// </summary>
+            public static readonly RateLimit Instance = new RateLimit();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RateLimit" />.</para>
+            /// </summary>
+            private class RateLimitEncoder : enc.StructEncoder<RateLimit>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RateLimit value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RateLimit" />.</para>
+            /// </summary>
+            private class RateLimitDecoder : enc.StructDecoder<RateLimit>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RateLimit" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RateLimit Create()
+                {
+                    return new RateLimit();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RateLimit DecodeFields(enc.IJsonReader reader)
+                {
+                    return RateLimit.Instance;
                 }
             }
 

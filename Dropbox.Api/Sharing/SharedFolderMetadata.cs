@@ -11,10 +11,8 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The base type for shared folder metadata.</para>
+    /// <para>The metadata which includes basic information about the shared folder.</para>
     /// </summary>
-    /// <seealso cref="BasicSharedFolderMetadata" />
-    /// <seealso cref="FullSharedFolderMetadata" />
     public class SharedFolderMetadata
     {
         #pragma warning disable 108
@@ -34,7 +32,7 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="name">The name of the this shared folder.</param>
-        /// <param name="id">The ID of the shared folder.</param>
+        /// <param name="sharedFolderId">The ID of the shared folder.</param>
         /// <param name="accessType">The current user's access level for this shared
         /// folder.</param>
         /// <param name="isTeamFolder">Whether this folder is a <a
@@ -42,25 +40,25 @@ namespace Dropbox.Api.Sharing
         /// <param name="policy">Policies governing this shared folder.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
-        protected SharedFolderMetadata(string name,
-                                       string id,
-                                       AccessLevel accessType,
-                                       bool isTeamFolder,
-                                       FolderPolicy policy,
-                                       string pathLower = null)
+        public SharedFolderMetadata(string name,
+                                    string sharedFolderId,
+                                    AccessLevel accessType,
+                                    bool isTeamFolder,
+                                    FolderPolicy policy,
+                                    string pathLower = null)
         {
             if (name == null)
             {
                 throw new sys.ArgumentNullException("name");
             }
 
-            if (id == null)
+            if (sharedFolderId == null)
             {
-                throw new sys.ArgumentNullException("id");
+                throw new sys.ArgumentNullException("sharedFolderId");
             }
-            else if (!re.Regex.IsMatch(id, @"[-_0-9a-zA-Z]+"))
+            else if (!re.Regex.IsMatch(sharedFolderId, @"\A[-_0-9a-zA-Z:]+\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("id");
+                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }
 
             if (accessType == null)
@@ -74,7 +72,7 @@ namespace Dropbox.Api.Sharing
             }
 
             this.Name = name;
-            this.Id = id;
+            this.SharedFolderId = sharedFolderId;
             this.AccessType = accessType;
             this.IsTeamFolder = isTeamFolder;
             this.Policy = policy;
@@ -92,52 +90,6 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Basic</para>
-        /// </summary>
-        public bool IsBasic
-        {
-            get
-            {
-                return this is BasicSharedFolderMetadata;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a <see cref="BasicSharedFolderMetadata" />, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public BasicSharedFolderMetadata AsBasic
-        {
-            get
-            {
-                return this as BasicSharedFolderMetadata;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Full</para>
-        /// </summary>
-        public bool IsFull
-        {
-            get
-            {
-                return this is FullSharedFolderMetadata;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a <see cref="FullSharedFolderMetadata" />, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public FullSharedFolderMetadata AsFull
-        {
-            get
-            {
-                return this as FullSharedFolderMetadata;
-            }
-        }
-
-        /// <summary>
         /// <para>The name of the this shared folder.</para>
         /// </summary>
         public string Name { get; protected set; }
@@ -145,7 +97,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The ID of the shared folder.</para>
         /// </summary>
-        public string Id { get; protected set; }
+        public string SharedFolderId { get; protected set; }
 
         /// <summary>
         /// <para>The current user's access level for this shared folder.</para>
@@ -183,20 +135,8 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderMetadata value, enc.IJsonWriter writer)
             {
-                if (value is BasicSharedFolderMetadata)
-                {
-                    WriteProperty(".tag", "basic", writer, enc.StringEncoder.Instance);
-                    BasicSharedFolderMetadata.Encoder.EncodeFields((BasicSharedFolderMetadata)value, writer);
-                    return;
-                }
-                if (value is FullSharedFolderMetadata)
-                {
-                    WriteProperty(".tag", "full", writer, enc.StringEncoder.Instance);
-                    FullSharedFolderMetadata.Encoder.EncodeFields((FullSharedFolderMetadata)value, writer);
-                    return;
-                }
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("policy", value.Policy, writer, FolderPolicy.Encoder);
@@ -215,7 +155,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Decoder for  <see cref="SharedFolderMetadata" />.</para>
         /// </summary>
-        private class SharedFolderMetadataDecoder : enc.UnionDecoder<SharedFolderMetadata>
+        private class SharedFolderMetadataDecoder : enc.StructDecoder<SharedFolderMetadata>
         {
             /// <summary>
             /// <para>Create a new instance of type <see cref="SharedFolderMetadata" />.</para>
@@ -226,24 +166,6 @@ namespace Dropbox.Api.Sharing
                 return new SharedFolderMetadata();
             }
 
-            /// <summary>
-            /// <para>Decode based on given tag.</para>
-            /// </summary>
-            /// <param name="tag">The tag.</param>
-            /// <param name="reader">The json reader.</param>
-            /// <returns>The decoded object.</returns>
-            protected override SharedFolderMetadata Decode(string tag, enc.IJsonReader reader)
-            {
-                switch (tag)
-                {
-                    case "basic":
-                        return BasicSharedFolderMetadata.Decoder.DecodeFields(reader);
-                    case "full":
-                        return FullSharedFolderMetadata.Decoder.DecodeFields(reader);
-                    default:
-                        throw new sys.InvalidOperationException();
-                }
-            }
             /// <summary>
             /// <para>Set given field.</para>
             /// </summary>
@@ -257,8 +179,8 @@ namespace Dropbox.Api.Sharing
                     case "name":
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "id":
-                        value.Id = enc.StringDecoder.Instance.Decode(reader);
+                    case "shared_folder_id":
+                        value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "access_type":
                         value.AccessType = AccessLevel.Decoder.Decode(reader);

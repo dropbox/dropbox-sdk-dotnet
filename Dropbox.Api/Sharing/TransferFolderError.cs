@@ -58,28 +58,6 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is InvalidDropboxId</para>
-        /// </summary>
-        public bool IsInvalidDropboxId
-        {
-            get
-            {
-                return this is InvalidDropboxId;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a InvalidDropboxId, or <c>null</c>.</para>
-        /// </summary>
-        public InvalidDropboxId AsInvalidDropboxId
-        {
-            get
-            {
-                return this as InvalidDropboxId;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is NoPermission</para>
         /// </summary>
         public bool IsNoPermission
@@ -102,24 +80,46 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NewOwnerNotMember</para>
+        /// <para>Gets a value indicating whether this instance is InvalidDropboxId</para>
         /// </summary>
-        public bool IsNewOwnerNotMember
+        public bool IsInvalidDropboxId
         {
             get
             {
-                return this is NewOwnerNotMember;
+                return this is InvalidDropboxId;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a NewOwnerNotMember, or <c>null</c>.</para>
+        /// <para>Gets this instance as a InvalidDropboxId, or <c>null</c>.</para>
         /// </summary>
-        public NewOwnerNotMember AsNewOwnerNotMember
+        public InvalidDropboxId AsInvalidDropboxId
         {
             get
             {
-                return this as NewOwnerNotMember;
+                return this as InvalidDropboxId;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is NewOwnerNotAMember</para>
+        /// </summary>
+        public bool IsNewOwnerNotAMember
+        {
+            get
+            {
+                return this is NewOwnerNotAMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NewOwnerNotAMember, or <c>null</c>.</para>
+        /// </summary>
+        public NewOwnerNotAMember AsNewOwnerNotAMember
+        {
+            get
+            {
+                return this as NewOwnerNotAMember;
             }
         }
 
@@ -210,22 +210,22 @@ namespace Dropbox.Api.Sharing
                     AccessError.Encoder.EncodeFields((AccessError)value, writer);
                     return;
                 }
-                if (value is InvalidDropboxId)
-                {
-                    WriteProperty(".tag", "invalid_dropbox_id", writer, enc.StringEncoder.Instance);
-                    InvalidDropboxId.Encoder.EncodeFields((InvalidDropboxId)value, writer);
-                    return;
-                }
                 if (value is NoPermission)
                 {
                     WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
                     NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
                     return;
                 }
-                if (value is NewOwnerNotMember)
+                if (value is InvalidDropboxId)
                 {
-                    WriteProperty(".tag", "new_owner_not_member", writer, enc.StringEncoder.Instance);
-                    NewOwnerNotMember.Encoder.EncodeFields((NewOwnerNotMember)value, writer);
+                    WriteProperty(".tag", "invalid_dropbox_id", writer, enc.StringEncoder.Instance);
+                    InvalidDropboxId.Encoder.EncodeFields((InvalidDropboxId)value, writer);
+                    return;
+                }
+                if (value is NewOwnerNotAMember)
+                {
+                    WriteProperty(".tag", "new_owner_not_a_member", writer, enc.StringEncoder.Instance);
+                    NewOwnerNotAMember.Encoder.EncodeFields((NewOwnerNotAMember)value, writer);
                     return;
                 }
                 if (value is NewOwnerUnmounted)
@@ -280,12 +280,12 @@ namespace Dropbox.Api.Sharing
                 {
                     case "access_error":
                         return AccessError.Decoder.DecodeFields(reader);
-                    case "invalid_dropbox_id":
-                        return InvalidDropboxId.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
-                    case "new_owner_not_member":
-                        return NewOwnerNotMember.Decoder.DecodeFields(reader);
+                    case "invalid_dropbox_id":
+                        return InvalidDropboxId.Decoder.DecodeFields(reader);
+                    case "new_owner_not_a_member":
+                        return NewOwnerNotAMember.Decoder.DecodeFields(reader);
                     case "new_owner_unmounted":
                         return NewOwnerUnmounted.Decoder.DecodeFields(reader);
                     case "new_owner_email_unverified":
@@ -397,86 +397,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The invalid dropbox id object</para>
-        /// </summary>
-        public sealed class InvalidDropboxId : TransferFolderError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<InvalidDropboxId> Encoder = new InvalidDropboxIdEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<InvalidDropboxId> Decoder = new InvalidDropboxIdDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="InvalidDropboxId" />
-            /// class.</para>
-            /// </summary>
-            private InvalidDropboxId()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of InvalidDropboxId</para>
-            /// </summary>
-            public static readonly InvalidDropboxId Instance = new InvalidDropboxId();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="InvalidDropboxId" />.</para>
-            /// </summary>
-            private class InvalidDropboxIdEncoder : enc.StructEncoder<InvalidDropboxId>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(InvalidDropboxId value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="InvalidDropboxId" />.</para>
-            /// </summary>
-            private class InvalidDropboxIdDecoder : enc.StructDecoder<InvalidDropboxId>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="InvalidDropboxId" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override InvalidDropboxId Create()
-                {
-                    return new InvalidDropboxId();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidDropboxId DecodeFields(enc.IJsonReader reader)
-                {
-                    return InvalidDropboxId.Instance;
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The no permission object</para>
+        /// <para>The current account does not have permission to perform this action.</para>
         /// </summary>
         public sealed class NoPermission : TransferFolderError
         {
@@ -555,49 +476,48 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The new designated owner is not currently a member of the shared
-        /// folder.</para>
+        /// <para><see cref="TransferFolderArg.ToDropboxId" /> is invalid.</para>
         /// </summary>
-        public sealed class NewOwnerNotMember : TransferFolderError
+        public sealed class InvalidDropboxId : TransferFolderError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<NewOwnerNotMember> Encoder = new NewOwnerNotMemberEncoder();
+            internal static enc.StructEncoder<InvalidDropboxId> Encoder = new InvalidDropboxIdEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<NewOwnerNotMember> Decoder = new NewOwnerNotMemberDecoder();
+            internal static enc.StructDecoder<InvalidDropboxId> Decoder = new InvalidDropboxIdDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NewOwnerNotMember" />
+            /// <para>Initializes a new instance of the <see cref="InvalidDropboxId" />
             /// class.</para>
             /// </summary>
-            private NewOwnerNotMember()
+            private InvalidDropboxId()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of NewOwnerNotMember</para>
+            /// <para>A singleton instance of InvalidDropboxId</para>
             /// </summary>
-            public static readonly NewOwnerNotMember Instance = new NewOwnerNotMember();
+            public static readonly InvalidDropboxId Instance = new InvalidDropboxId();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="NewOwnerNotMember" />.</para>
+            /// <para>Encoder for  <see cref="InvalidDropboxId" />.</para>
             /// </summary>
-            private class NewOwnerNotMemberEncoder : enc.StructEncoder<NewOwnerNotMember>
+            private class InvalidDropboxIdEncoder : enc.StructEncoder<InvalidDropboxId>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(NewOwnerNotMember value, enc.IJsonWriter writer)
+                public override void EncodeFields(InvalidDropboxId value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -607,18 +527,17 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="NewOwnerNotMember" />.</para>
+            /// <para>Decoder for  <see cref="InvalidDropboxId" />.</para>
             /// </summary>
-            private class NewOwnerNotMemberDecoder : enc.StructDecoder<NewOwnerNotMember>
+            private class InvalidDropboxIdDecoder : enc.StructDecoder<InvalidDropboxId>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="NewOwnerNotMember"
-                /// />.</para>
+                /// <para>Create a new instance of type <see cref="InvalidDropboxId" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override NewOwnerNotMember Create()
+                protected override InvalidDropboxId Create()
                 {
-                    return new NewOwnerNotMember();
+                    return new InvalidDropboxId();
                 }
 
                 /// <summary>
@@ -626,9 +545,90 @@ namespace Dropbox.Api.Sharing
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override NewOwnerNotMember DecodeFields(enc.IJsonReader reader)
+                public override InvalidDropboxId DecodeFields(enc.IJsonReader reader)
                 {
-                    return NewOwnerNotMember.Instance;
+                    return InvalidDropboxId.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The new designated owner is not currently a member of the shared
+        /// folder.</para>
+        /// </summary>
+        public sealed class NewOwnerNotAMember : TransferFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NewOwnerNotAMember> Encoder = new NewOwnerNotAMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NewOwnerNotAMember> Decoder = new NewOwnerNotAMemberDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NewOwnerNotAMember" />
+            /// class.</para>
+            /// </summary>
+            private NewOwnerNotAMember()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NewOwnerNotAMember</para>
+            /// </summary>
+            public static readonly NewOwnerNotAMember Instance = new NewOwnerNotAMember();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NewOwnerNotAMember" />.</para>
+            /// </summary>
+            private class NewOwnerNotAMemberEncoder : enc.StructEncoder<NewOwnerNotAMember>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NewOwnerNotAMember value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NewOwnerNotAMember" />.</para>
+            /// </summary>
+            private class NewOwnerNotAMemberDecoder : enc.StructDecoder<NewOwnerNotAMember>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NewOwnerNotAMember"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NewOwnerNotAMember Create()
+                {
+                    return new NewOwnerNotAMember();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NewOwnerNotAMember DecodeFields(enc.IJsonReader reader)
+                {
+                    return NewOwnerNotAMember.Instance;
                 }
             }
 

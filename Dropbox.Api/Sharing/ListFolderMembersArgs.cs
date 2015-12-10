@@ -11,27 +11,28 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The mount folder arg object</para>
+    /// <para>The list folder members args object</para>
     /// </summary>
-    public class MountFolderArg
+    public class ListFolderMembersArgs
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MountFolderArg> Encoder = new MountFolderArgEncoder();
+        internal static enc.StructEncoder<ListFolderMembersArgs> Encoder = new ListFolderMembersArgsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MountFolderArg> Decoder = new MountFolderArgDecoder();
+        internal static enc.StructDecoder<ListFolderMembersArgs> Decoder = new ListFolderMembersArgsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MountFolderArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderMembersArgs" />
+        /// class.</para>
         /// </summary>
-        /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
-        public MountFolderArg(string sharedFolderId)
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        public ListFolderMembersArgs(string sharedFolderId)
         {
             if (sharedFolderId == null)
             {
@@ -46,32 +47,33 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MountFolderArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderMembersArgs" />
+        /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public MountFolderArg()
+        public ListFolderMembersArgs()
         {
         }
 
         /// <summary>
-        /// <para>The ID of the shared folder to mount.</para>
+        /// <para>The ID for the shared folder.</para>
         /// </summary>
         public string SharedFolderId { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MountFolderArg" />.</para>
+        /// <para>Encoder for  <see cref="ListFolderMembersArgs" />.</para>
         /// </summary>
-        private class MountFolderArgEncoder : enc.StructEncoder<MountFolderArg>
+        private class ListFolderMembersArgsEncoder : enc.StructEncoder<ListFolderMembersArgs>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MountFolderArg value, enc.IJsonWriter writer)
+            public override void EncodeFields(ListFolderMembersArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
             }
@@ -83,17 +85,18 @@ namespace Dropbox.Api.Sharing
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MountFolderArg" />.</para>
+        /// <para>Decoder for  <see cref="ListFolderMembersArgs" />.</para>
         /// </summary>
-        private class MountFolderArgDecoder : enc.StructDecoder<MountFolderArg>
+        private class ListFolderMembersArgsDecoder : enc.StructDecoder<ListFolderMembersArgs>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MountFolderArg" />.</para>
+            /// <para>Create a new instance of type <see cref="ListFolderMembersArgs"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MountFolderArg Create()
+            protected override ListFolderMembersArgs Create()
             {
-                return new MountFolderArg();
+                return new ListFolderMembersArgs();
             }
 
             /// <summary>
@@ -102,7 +105,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(MountFolderArg value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(ListFolderMembersArgs value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {

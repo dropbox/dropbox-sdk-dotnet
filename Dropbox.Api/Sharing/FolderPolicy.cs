@@ -13,8 +13,6 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>A set of policies governing membership and privileges for a shared folder.</para>
     /// </summary>
-    /// <seealso cref="BasicSharedFolderMetadata" />
-    /// <seealso cref="FullSharedFolderMetadata" />
     /// <seealso cref="SharedFolderMetadata" />
     public class FolderPolicy
     {

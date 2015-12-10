@@ -58,24 +58,24 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NotMember</para>
+        /// <para>Gets a value indicating whether this instance is NotAMember</para>
         /// </summary>
-        public bool IsNotMember
+        public bool IsNotAMember
         {
             get
             {
-                return this is NotMember;
+                return this is NotAMember;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a NotMember, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NotAMember, or <c>null</c>.</para>
         /// </summary>
-        public NotMember AsNotMember
+        public NotAMember AsNotAMember
         {
             get
             {
-                return this as NotMember;
+                return this as NotAMember;
             }
         }
 
@@ -209,10 +209,10 @@ namespace Dropbox.Api.Sharing
                     InvalidId.Encoder.EncodeFields((InvalidId)value, writer);
                     return;
                 }
-                if (value is NotMember)
+                if (value is NotAMember)
                 {
-                    WriteProperty(".tag", "not_member", writer, enc.StringEncoder.Instance);
-                    NotMember.Encoder.EncodeFields((NotMember)value, writer);
+                    WriteProperty(".tag", "not_a_member", writer, enc.StringEncoder.Instance);
+                    NotAMember.Encoder.EncodeFields((NotAMember)value, writer);
                     return;
                 }
                 if (value is NoPermission)
@@ -280,8 +280,8 @@ namespace Dropbox.Api.Sharing
                 {
                     case "invalid_id":
                         return InvalidId.Decoder.DecodeFields(reader);
-                    case "not_member":
-                        return NotMember.Decoder.DecodeFields(reader);
+                    case "not_a_member":
+                        return NotAMember.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
                     case "email_unverified":
@@ -379,45 +379,45 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The user is not a member of the shared folder thus cannot access it.</para>
         /// </summary>
-        public sealed class NotMember : SharedFolderAccessError
+        public sealed class NotAMember : SharedFolderAccessError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<NotMember> Encoder = new NotMemberEncoder();
+            internal static enc.StructEncoder<NotAMember> Encoder = new NotAMemberEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<NotMember> Decoder = new NotMemberDecoder();
+            internal static enc.StructDecoder<NotAMember> Decoder = new NotAMemberDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NotMember" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="NotAMember" /> class.</para>
             /// </summary>
-            private NotMember()
+            private NotAMember()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of NotMember</para>
+            /// <para>A singleton instance of NotAMember</para>
             /// </summary>
-            public static readonly NotMember Instance = new NotMember();
+            public static readonly NotAMember Instance = new NotAMember();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="NotMember" />.</para>
+            /// <para>Encoder for  <see cref="NotAMember" />.</para>
             /// </summary>
-            private class NotMemberEncoder : enc.StructEncoder<NotMember>
+            private class NotAMemberEncoder : enc.StructEncoder<NotAMember>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(NotMember value, enc.IJsonWriter writer)
+                public override void EncodeFields(NotAMember value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -427,17 +427,17 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="NotMember" />.</para>
+            /// <para>Decoder for  <see cref="NotAMember" />.</para>
             /// </summary>
-            private class NotMemberDecoder : enc.StructDecoder<NotMember>
+            private class NotAMemberDecoder : enc.StructDecoder<NotAMember>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="NotMember" />.</para>
+                /// <para>Create a new instance of type <see cref="NotAMember" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override NotMember Create()
+                protected override NotAMember Create()
                 {
-                    return new NotMember();
+                    return new NotAMember();
                 }
 
                 /// <summary>
@@ -445,9 +445,9 @@ namespace Dropbox.Api.Sharing
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override NotMember DecodeFields(enc.IJsonReader reader)
+                public override NotAMember DecodeFields(enc.IJsonReader reader)
                 {
-                    return NotMember.Instance;
+                    return NotAMember.Instance;
                 }
             }
 

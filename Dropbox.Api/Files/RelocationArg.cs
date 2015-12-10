@@ -39,7 +39,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("fromPath");
             }
-            else if (!re.Regex.IsMatch(fromPath, @"/.*"))
+            else if (!re.Regex.IsMatch(fromPath, @"\A/.*\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("fromPath");
             }
@@ -48,7 +48,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("toPath");
             }
-            else if (!re.Regex.IsMatch(toPath, @"/.*"))
+            else if (!re.Regex.IsMatch(toPath, @"\A/.*\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("toPath");
             }

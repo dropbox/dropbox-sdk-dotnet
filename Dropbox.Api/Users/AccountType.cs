@@ -335,7 +335,7 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The Dropbox for Business account type.</para>
+        /// <para>The Dropbox Business account type.</para>
         /// </summary>
         public sealed class Business : AccountType
         {

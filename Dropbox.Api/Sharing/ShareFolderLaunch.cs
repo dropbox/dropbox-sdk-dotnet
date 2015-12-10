@@ -140,7 +140,7 @@ namespace Dropbox.Api.Sharing
             /// <para>Initializes a new instance of the <see cref="Complete" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Complete(FullSharedFolderMetadata value)
+            public Complete(SharedFolderMetadata value)
             {
                 this.Value = value;
             }
@@ -154,7 +154,7 @@ namespace Dropbox.Api.Sharing
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public FullSharedFolderMetadata Value { get; private set; }
+            public SharedFolderMetadata Value { get; private set; }
 
             #region Encoder class
 
@@ -170,7 +170,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Complete value, enc.IJsonWriter writer)
                 {
-                    FullSharedFolderMetadata.Encoder.EncodeFields(value.Value, writer);
+                    SharedFolderMetadata.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -199,7 +199,7 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The decoded object.</returns>
                 public override Complete DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Complete(FullSharedFolderMetadata.Decoder.DecodeFields(reader));
+                    return new Complete(SharedFolderMetadata.Decoder.DecodeFields(reader));
                 }
             }
 

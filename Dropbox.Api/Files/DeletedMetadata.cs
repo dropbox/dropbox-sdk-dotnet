@@ -37,9 +37,12 @@ namespace Dropbox.Api.Files
         /// contains a slash.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
         /// starts with a slash.</param>
+        /// <param name="parentSharedFolderId">Set if this file or folder is contained in a
+        /// shared folder.</param>
         public DeletedMetadata(string name,
-                               string pathLower)
-            : base(name, pathLower)
+                               string pathLower,
+                               string parentSharedFolderId = null)
+            : base(name, pathLower, parentSharedFolderId)
         {
         }
 
@@ -69,6 +72,10 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                if (value.ParentSharedFolderId != null)
+                {
+                    WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -106,6 +113,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "parent_shared_folder_id":
+                        value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

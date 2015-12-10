@@ -35,18 +35,30 @@ namespace Dropbox.Api.Files
         /// contains a slash.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
         /// starts with a slash.</param>
+        /// <param name="parentSharedFolderId">Set if this file or folder is contained in a
+        /// shared folder.</param>
         /// <param name="id">A unique identifier for the folder.</param>
+        /// <param name="sharedFolderId">If this folder is a shared folder mount point, the ID
+        /// of the shared folder mounted at this location.</param>
         public FolderMetadata(string name,
                               string pathLower,
-                              string id = null)
-            : base(name, pathLower)
+                              string parentSharedFolderId = null,
+                              string id = null,
+                              string sharedFolderId = null)
+            : base(name, pathLower, parentSharedFolderId)
         {
             if (id != null && (id.Length < 1))
             {
                 throw new sys.ArgumentOutOfRangeException("id");
             }
 
+            if (sharedFolderId != null && (!re.Regex.IsMatch(sharedFolderId, @"\A[-_0-9a-zA-Z:]+\z")))
+            {
+                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+            }
+
             this.Id = id;
+            this.SharedFolderId = sharedFolderId;
         }
 
         /// <summary>
@@ -62,6 +74,12 @@ namespace Dropbox.Api.Files
         /// <para>A unique identifier for the folder.</para>
         /// </summary>
         public string Id { get; protected set; }
+
+        /// <summary>
+        /// <para>If this folder is a shared folder mount point, the ID of the shared folder
+        /// mounted at this location.</para>
+        /// </summary>
+        public string SharedFolderId { get; protected set; }
 
         #region Encoder class
 
@@ -79,9 +97,17 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                if (value.ParentSharedFolderId != null)
+                {
+                    WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
+                }
                 if (value.Id != null)
                 {
                     WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                }
+                if (value.SharedFolderId != null)
+                {
+                    WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -121,8 +147,14 @@ namespace Dropbox.Api.Files
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
                         break;
+                    case "parent_shared_folder_id":
+                        value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     case "id":
                         value.Id = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "shared_folder_id":
+                        value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -39,7 +39,8 @@ namespace Dropbox.Api.Files
         /// paging).</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
         /// <param name="mode">The search mode (filename, filename_and_content, or
-        /// deleted_filename).</param>
+        /// deleted_filename). Note that searching file content is only available for Dropbox
+        /// Business accounts.</param>
         public SearchArg(string path,
                          string query,
                          ulong start = 0,
@@ -50,7 +51,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"(/.*)?"))
+            else if (!re.Regex.IsMatch(path, @"\A(/.*)?\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("path");
             }
@@ -112,7 +113,8 @@ namespace Dropbox.Api.Files
         public ulong MaxResults { get; protected set; }
 
         /// <summary>
-        /// <para>The search mode (filename, filename_and_content, or deleted_filename).</para>
+        /// <para>The search mode (filename, filename_and_content, or deleted_filename). Note
+        /// that searching file content is only available for Dropbox Business accounts.</para>
         /// </summary>
         public SearchMode Mode { get; protected set; }
 

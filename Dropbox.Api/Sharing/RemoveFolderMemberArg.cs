@@ -32,8 +32,7 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="member">The member to remove from the folder. Only the <see
-        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// <param name="member">The member to remove from the folder.</param>
         /// <param name="leaveACopy">If true, the removed user will keep their copy of the
         /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
         /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
@@ -45,7 +44,7 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("sharedFolderId");
             }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"[-_0-9a-zA-Z]+"))
+            else if (!re.Regex.IsMatch(sharedFolderId, @"\A[-_0-9a-zA-Z:]+\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }
@@ -76,8 +75,7 @@ namespace Dropbox.Api.Sharing
         public string SharedFolderId { get; protected set; }
 
         /// <summary>
-        /// <para>The member to remove from the folder. Only the <see
-        /// cref="MemberSelector.DropboxId" /> may be set at this time.</para>
+        /// <para>The member to remove from the folder.</para>
         /// </summary>
         public MemberSelector Member { get; protected set; }
 

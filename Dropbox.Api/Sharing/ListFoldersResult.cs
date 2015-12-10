@@ -36,7 +36,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="entries">List of all shared folders the authenticated user has access
         /// to.</param>
-        public ListFoldersResult(col.IEnumerable<SharedFolderMetadata> entries)
+        /// <param name="cursor">Present if there are additional shared folders that have not
+        /// been returned yet. Pass the cursor into <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> to list
+        /// additional folders.</param>
+        public ListFoldersResult(col.IEnumerable<SharedFolderMetadata> entries,
+                                 string cursor = null)
         {
             var entriesList = new col.List<SharedFolderMetadata>(entries ?? new SharedFolderMetadata[0]);
 
@@ -46,6 +51,7 @@ namespace Dropbox.Api.Sharing
             }
 
             this.Entries = entriesList;
+            this.Cursor = cursor;
         }
 
         /// <summary>
@@ -63,6 +69,14 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public col.IList<SharedFolderMetadata> Entries { get; protected set; }
 
+        /// <summary>
+        /// <para>Present if there are additional shared folders that have not been returned
+        /// yet. Pass the cursor into <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> to list
+        /// additional folders.</para>
+        /// </summary>
+        public string Cursor { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -78,6 +92,10 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ListFoldersResult value, enc.IJsonWriter writer)
             {
                 WriteListProperty("entries", value.Entries, writer, SharedFolderMetadata.Encoder);
+                if (value.Cursor != null)
+                {
+                    WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -112,6 +130,9 @@ namespace Dropbox.Api.Sharing
                 {
                     case "entries":
                         value.Entries = ReadList(reader, SharedFolderMetadata.Decoder);
+                        break;
+                    case "cursor":
+                        value.Cursor = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

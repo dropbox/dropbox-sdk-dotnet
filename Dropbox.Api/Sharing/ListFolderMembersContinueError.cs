@@ -11,70 +11,71 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Includes different ways to identify a member of a shared folder.</para>
+    /// <para>The list folder members continue error object</para>
     /// </summary>
-    public class MemberSelector
+    public class ListFolderMembersContinueError
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MemberSelector> Encoder = new MemberSelectorEncoder();
+        internal static enc.StructEncoder<ListFolderMembersContinueError> Encoder = new ListFolderMembersContinueErrorEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MemberSelector> Decoder = new MemberSelectorDecoder();
+        internal static enc.StructDecoder<ListFolderMembersContinueError> Decoder = new ListFolderMembersContinueErrorDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MemberSelector" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="ListFolderMembersContinueError"
+        /// /> class.</para>
         /// </summary>
-        public MemberSelector()
+        public ListFolderMembersContinueError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is DropboxId</para>
+        /// <para>Gets a value indicating whether this instance is AccessError</para>
         /// </summary>
-        public bool IsDropboxId
+        public bool IsAccessError
         {
             get
             {
-                return this is DropboxId;
+                return this is AccessError;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a DropboxId, or <c>null</c>.</para>
+        /// <para>Gets this instance as a AccessError, or <c>null</c>.</para>
         /// </summary>
-        public DropboxId AsDropboxId
+        public AccessError AsAccessError
         {
             get
             {
-                return this as DropboxId;
+                return this as AccessError;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Email</para>
+        /// <para>Gets a value indicating whether this instance is InvalidCursor</para>
         /// </summary>
-        public bool IsEmail
+        public bool IsInvalidCursor
         {
             get
             {
-                return this is Email;
+                return this is InvalidCursor;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Email, or <c>null</c>.</para>
+        /// <para>Gets this instance as a InvalidCursor, or <c>null</c>.</para>
         /// </summary>
-        public Email AsEmail
+        public InvalidCursor AsInvalidCursor
         {
             get
             {
-                return this as Email;
+                return this as InvalidCursor;
             }
         }
 
@@ -103,27 +104,27 @@ namespace Dropbox.Api.Sharing
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MemberSelector" />.</para>
+        /// <para>Encoder for  <see cref="ListFolderMembersContinueError" />.</para>
         /// </summary>
-        private class MemberSelectorEncoder : enc.StructEncoder<MemberSelector>
+        private class ListFolderMembersContinueErrorEncoder : enc.StructEncoder<ListFolderMembersContinueError>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MemberSelector value, enc.IJsonWriter writer)
+            public override void EncodeFields(ListFolderMembersContinueError value, enc.IJsonWriter writer)
             {
-                if (value is DropboxId)
+                if (value is AccessError)
                 {
-                    WriteProperty(".tag", "dropbox_id", writer, enc.StringEncoder.Instance);
-                    DropboxId.Encoder.EncodeFields((DropboxId)value, writer);
+                    WriteProperty(".tag", "access_error", writer, enc.StringEncoder.Instance);
+                    AccessError.Encoder.EncodeFields((AccessError)value, writer);
                     return;
                 }
-                if (value is Email)
+                if (value is InvalidCursor)
                 {
-                    WriteProperty(".tag", "email", writer, enc.StringEncoder.Instance);
-                    Email.Encoder.EncodeFields((Email)value, writer);
+                    WriteProperty(".tag", "invalid_cursor", writer, enc.StringEncoder.Instance);
+                    InvalidCursor.Encoder.EncodeFields((InvalidCursor)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -141,17 +142,18 @@ namespace Dropbox.Api.Sharing
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MemberSelector" />.</para>
+        /// <para>Decoder for  <see cref="ListFolderMembersContinueError" />.</para>
         /// </summary>
-        private class MemberSelectorDecoder : enc.UnionDecoder<MemberSelector>
+        private class ListFolderMembersContinueErrorDecoder : enc.UnionDecoder<ListFolderMembersContinueError>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MemberSelector" />.</para>
+            /// <para>Create a new instance of type <see cref="ListFolderMembersContinueError"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MemberSelector Create()
+            protected override ListFolderMembersContinueError Create()
             {
-                return new MemberSelector();
+                return new ListFolderMembersContinueError();
             }
 
             /// <summary>
@@ -160,14 +162,14 @@ namespace Dropbox.Api.Sharing
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override MemberSelector Decode(string tag, enc.IJsonReader reader)
+            protected override ListFolderMembersContinueError Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "dropbox_id":
-                        return DropboxId.Decoder.DecodeFields(reader);
-                    case "email":
-                        return Email.Decoder.DecodeFields(reader);
+                    case "access_error":
+                        return AccessError.Decoder.DecodeFields(reader);
+                    case "invalid_cursor":
+                        return InvalidCursor.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -177,57 +179,59 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>Dropbox account, team member, or group ID of member.</para>
+        /// <para>The access error object</para>
         /// </summary>
-        public sealed class DropboxId : MemberSelector
+        public sealed class AccessError : ListFolderMembersContinueError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<DropboxId> Encoder = new DropboxIdEncoder();
+            internal static enc.StructEncoder<AccessError> Encoder = new AccessErrorEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<DropboxId> Decoder = new DropboxIdDecoder();
+            internal static enc.StructDecoder<AccessError> Decoder = new AccessErrorDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="DropboxId" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public DropboxId(string value)
+            public AccessError(SharedFolderAccessError value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="DropboxId" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// class.</para>
             /// </summary>
-            private DropboxId()
+            private AccessError()
             {
             }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public string Value { get; private set; }
+            public SharedFolderAccessError Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="DropboxId" />.</para>
+            /// <para>Encoder for  <see cref="AccessError" />.</para>
             /// </summary>
-            private class DropboxIdEncoder : enc.StructEncoder<DropboxId>
+            private class AccessErrorEncoder : enc.StructEncoder<AccessError>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(DropboxId value, enc.IJsonWriter writer)
+                public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("dropbox_id", value.Value, writer, enc.StringEncoder.Instance);
+                    SharedFolderAccessError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -236,17 +240,17 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="DropboxId" />.</para>
+            /// <para>Decoder for  <see cref="AccessError" />.</para>
             /// </summary>
-            private class DropboxIdDecoder : enc.StructDecoder<DropboxId>
+            private class AccessErrorDecoder : enc.StructDecoder<AccessError>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="DropboxId" />.</para>
+                /// <para>Create a new instance of type <see cref="AccessError" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override DropboxId Create()
+                protected override AccessError Create()
                 {
-                    return new DropboxId();
+                    return new AccessError();
                 }
 
                 /// <summary>
@@ -255,12 +259,12 @@ namespace Dropbox.Api.Sharing
                 /// <param name="value">The field value.</param>
                 /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(DropboxId value, string fieldName, enc.IJsonReader reader)
+                protected override void SetField(AccessError value, string fieldName, enc.IJsonReader reader)
                 {
                     switch (fieldName)
                     {
-                        case "dropbox_id":
-                            value.Value = enc.StringDecoder.Instance.Decode(reader);
+                        case "access_error":
+                            value.Value = SharedFolderAccessError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -273,57 +277,49 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>E-mail address of member.</para>
+        /// <para><see cref="ListFolderMembersContinueArg.Cursor" /> is invalid.</para>
         /// </summary>
-        public sealed class Email : MemberSelector
+        public sealed class InvalidCursor : ListFolderMembersContinueError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Email> Encoder = new EmailEncoder();
+            internal static enc.StructEncoder<InvalidCursor> Encoder = new InvalidCursorEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Email> Decoder = new EmailDecoder();
+            internal static enc.StructDecoder<InvalidCursor> Decoder = new InvalidCursorDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Email" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="InvalidCursor" />
+            /// class.</para>
             /// </summary>
-            /// <param name="value">The value</param>
-            public Email(string value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Email" /> class.</para>
-            /// </summary>
-            private Email()
+            private InvalidCursor()
             {
             }
 
             /// <summary>
-            /// <para>Gets the value of this instance.</para>
+            /// <para>A singleton instance of InvalidCursor</para>
             /// </summary>
-            public string Value { get; private set; }
+            public static readonly InvalidCursor Instance = new InvalidCursor();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Email" />.</para>
+            /// <para>Encoder for  <see cref="InvalidCursor" />.</para>
             /// </summary>
-            private class EmailEncoder : enc.StructEncoder<Email>
+            private class InvalidCursorEncoder : enc.StructEncoder<InvalidCursor>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Email value, enc.IJsonWriter writer)
+                public override void EncodeFields(InvalidCursor value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("email", value.Value, writer, enc.StringEncoder.Instance);
                 }
             }
 
@@ -332,36 +328,27 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Email" />.</para>
+            /// <para>Decoder for  <see cref="InvalidCursor" />.</para>
             /// </summary>
-            private class EmailDecoder : enc.StructDecoder<Email>
+            private class InvalidCursorDecoder : enc.StructDecoder<InvalidCursor>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Email" />.</para>
+                /// <para>Create a new instance of type <see cref="InvalidCursor" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Email Create()
+                protected override InvalidCursor Create()
                 {
-                    return new Email();
+                    return new InvalidCursor();
                 }
 
                 /// <summary>
-                /// <para>Set given field.</para>
+                /// <para>Decode fields without ensuring start and end object.</para>
                 /// </summary>
-                /// <param name="value">The field value.</param>
-                /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(Email value, string fieldName, enc.IJsonReader reader)
+                /// <returns>The decoded object.</returns>
+                public override InvalidCursor DecodeFields(enc.IJsonReader reader)
                 {
-                    switch (fieldName)
-                    {
-                        case "email":
-                            value.Value = enc.StringDecoder.Instance.Decode(reader);
-                            break;
-                        default:
-                            reader.Skip();
-                            break;
-                    }
+                    return InvalidCursor.Instance;
                 }
             }
 
@@ -371,7 +358,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : MemberSelector
+        public sealed class Other : ListFolderMembersContinueError
         {
             #pragma warning disable 108
 

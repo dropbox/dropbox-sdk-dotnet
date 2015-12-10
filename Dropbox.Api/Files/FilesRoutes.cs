@@ -126,7 +126,11 @@ namespace Dropbox.Api.Files.Routes
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
         /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, this call
         /// gives you a low-latency way to monitor an account for file changes. The connection
-        /// will block until there are changes available or a timeout occurs.</para>
+        /// will block until there are changes available or a timeout occurs. This endpoint is
+        /// useful mostly for client-side apps. If you're looking for server-side
+        /// notifications, check out our <a
+        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
+        /// documentation</a>.</para>
         /// </summary>
         /// <param name="listFolderLongpollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -159,7 +163,11 @@ namespace Dropbox.Api.Files.Routes
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
         /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, this call
         /// gives you a low-latency way to monitor an account for file changes. The connection
-        /// will block until there are changes available or a timeout occurs.</para>
+        /// will block until there are changes available or a timeout occurs. This endpoint is
+        /// useful mostly for client-side apps. If you're looking for server-side
+        /// notifications, check out our <a
+        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
+        /// documentation</a>.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
@@ -268,6 +276,8 @@ namespace Dropbox.Api.Files.Routes
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
         /// photo and video.</param>
+        /// <param name="includeDeleted">If true, the results will include entries for files
+        /// and folders that used to exist but were deleted.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
@@ -275,11 +285,13 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(string path,
                                                         bool recursive = false,
-                                                        bool includeMediaInfo = false)
+                                                        bool includeMediaInfo = false,
+                                                        bool includeDeleted = false)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
-                                                  includeMediaInfo);
+                                                  includeMediaInfo,
+                                                  includeDeleted);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -293,6 +305,8 @@ namespace Dropbox.Api.Files.Routes
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
         /// photo and video.</param>
+        /// <param name="includeDeleted">If true, the results will include entries for files
+        /// and folders that used to exist but were deleted.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -301,12 +315,14 @@ namespace Dropbox.Api.Files.Routes
         public sys.IAsyncResult BeginListFolder(string path,
                                                 bool recursive = false,
                                                 bool includeMediaInfo = false,
+                                                bool includeDeleted = false,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
-                                                  includeMediaInfo);
+                                                  includeMediaInfo,
+                                                  includeDeleted);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }
@@ -475,6 +491,8 @@ namespace Dropbox.Api.Files.Routes
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
         /// photo and video.</param>
+        /// <param name="includeDeleted">If true, the results will include entries for files
+        /// and folders that used to exist but were deleted.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
@@ -482,11 +500,13 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(string path,
                                                                                       bool recursive = false,
-                                                                                      bool includeMediaInfo = false)
+                                                                                      bool includeMediaInfo = false,
+                                                                                      bool includeDeleted = false)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
-                                                  includeMediaInfo);
+                                                  includeMediaInfo,
+                                                  includeDeleted);
 
             return this.ListFolderGetLatestCursorAsync(listFolderArg);
         }
@@ -501,6 +521,8 @@ namespace Dropbox.Api.Files.Routes
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
         /// photo and video.</param>
+        /// <param name="includeDeleted">If true, the results will include entries for files
+        /// and folders that used to exist but were deleted.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -509,12 +531,14 @@ namespace Dropbox.Api.Files.Routes
         public sys.IAsyncResult BeginListFolderGetLatestCursor(string path,
                                                                bool recursive = false,
                                                                bool includeMediaInfo = false,
+                                                               bool includeDeleted = false,
                                                                sys.AsyncCallback callback = null,
                                                                object callbackState = null)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
-                                                  includeMediaInfo);
+                                                  includeMediaInfo,
+                                                  includeDeleted);
 
             return this.BeginListFolderGetLatestCursor(listFolderArg, callback, callbackState);
         }
@@ -639,6 +663,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> to add more
         /// data and <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
         /// /> to save all the data to a file in Dropbox.</para>
+        /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -684,6 +709,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Append more data to an upload session.</para>
+        /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="uploadSessionCursor">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -715,6 +741,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Append more data to an upload session.</para>
+        /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="sessionId">The upload session ID (returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</param>
@@ -783,6 +810,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Finish an upload session and save the uploaded data to the given file
         /// path.</para>
+        /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="uploadSessionFinishArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -816,6 +844,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Finish an upload session and save the uploaded data to the given file
         /// path.</para>
+        /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
@@ -883,6 +912,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Create a new file with the contents provided in the request.</para>
+        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
+        /// upload session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="commitInfo">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -914,6 +946,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Create a new file with the contents provided in the request.</para>
+        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
+        /// upload session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
         /// <param name="mode">Selects what to do if the file already exists.</param>
@@ -1052,7 +1087,8 @@ namespace Dropbox.Api.Files.Routes
         /// paging).</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
         /// <param name="mode">The search mode (filename, filename_and_content, or
-        /// deleted_filename).</param>
+        /// deleted_filename). Note that searching file content is only available for Dropbox
+        /// Business accounts.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{SearchError}">Thrown if there is an error
@@ -1084,7 +1120,8 @@ namespace Dropbox.Api.Files.Routes
         /// paging).</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
         /// <param name="mode">The search mode (filename, filename_and_content, or
-        /// deleted_filename).</param>
+        /// deleted_filename). Note that searching file content is only available for Dropbox
+        /// Business accounts.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1299,6 +1336,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Permanently delete the file or folder at a given path (see
         /// https://www.dropbox.com/en/help/40).</para>
+        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
         /// </summary>
         /// <param name="deleteArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -1328,6 +1366,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Permanently delete the file or folder at a given path (see
         /// https://www.dropbox.com/en/help/40).</para>
+        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>

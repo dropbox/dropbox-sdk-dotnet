@@ -36,15 +36,18 @@ namespace Dropbox.Api.Files
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
         /// photo and video.</param>
+        /// <param name="includeDeleted">If true, the results will include entries for files
+        /// and folders that used to exist but were deleted.</param>
         public ListFolderArg(string path,
                              bool recursive = false,
-                             bool includeMediaInfo = false)
+                             bool includeMediaInfo = false,
+                             bool includeDeleted = false)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"(/.*)?"))
+            else if (!re.Regex.IsMatch(path, @"\A(/.*)?\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("path");
             }
@@ -52,6 +55,7 @@ namespace Dropbox.Api.Files
             this.Path = path;
             this.Recursive = recursive;
             this.IncludeMediaInfo = includeMediaInfo;
+            this.IncludeDeleted = includeDeleted;
         }
 
         /// <summary>
@@ -63,6 +67,7 @@ namespace Dropbox.Api.Files
         {
             this.Recursive = false;
             this.IncludeMediaInfo = false;
+            this.IncludeDeleted = false;
         }
 
         /// <summary>
@@ -81,6 +86,12 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool IncludeMediaInfo { get; protected set; }
 
+        /// <summary>
+        /// <para>If true, the results will include entries for files and folders that used to
+        /// exist but were deleted.</para>
+        /// </summary>
+        public bool IncludeDeleted { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -98,6 +109,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 WriteProperty("recursive", value.Recursive, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_deleted", value.IncludeDeleted, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -138,6 +150,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_media_info":
                         value.IncludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_deleted":
+                        value.IncludeDeleted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

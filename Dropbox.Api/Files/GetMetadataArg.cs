@@ -40,7 +40,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"((/|id:).*)|(rev:[0-9a-f]{9,})"))
+            else if (!re.Regex.IsMatch(path, @"\A((/|id:).*)|(rev:[0-9a-f]{9,})\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("path");
             }

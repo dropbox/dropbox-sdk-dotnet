@@ -32,22 +32,18 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="includeMembership">If <c>true</c>, user and group membership included
-        /// in the response.</param>
-        public GetMetadataArgs(string sharedFolderId,
-                               bool includeMembership = true)
+        public GetMetadataArgs(string sharedFolderId)
         {
             if (sharedFolderId == null)
             {
                 throw new sys.ArgumentNullException("sharedFolderId");
             }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"[-_0-9a-zA-Z]+"))
+            else if (!re.Regex.IsMatch(sharedFolderId, @"\A[-_0-9a-zA-Z:]+\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }
 
             this.SharedFolderId = sharedFolderId;
-            this.IncludeMembership = includeMembership;
         }
 
         /// <summary>
@@ -58,18 +54,12 @@ namespace Dropbox.Api.Sharing
         /// deserializing.</remarks>
         public GetMetadataArgs()
         {
-            this.IncludeMembership = true;
         }
 
         /// <summary>
         /// <para>The ID for the shared folder.</para>
         /// </summary>
         public string SharedFolderId { get; protected set; }
-
-        /// <summary>
-        /// <para>If <c>true</c>, user and group membership included in the response.</para>
-        /// </summary>
-        public bool IncludeMembership { get; protected set; }
 
         #region Encoder class
 
@@ -86,7 +76,6 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(GetMetadataArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
-                WriteProperty("include_membership", value.IncludeMembership, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -121,9 +110,6 @@ namespace Dropbox.Api.Sharing
                 {
                     case "shared_folder_id":
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "include_membership":
-                        value.IncludeMembership = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

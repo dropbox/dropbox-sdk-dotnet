@@ -46,6 +46,8 @@ namespace Dropbox.Api.Files
         /// field is the same rev as elsewhere in the API and can be used to detect changes and
         /// avoid conflicts.</param>
         /// <param name="size">The file size in bytes.</param>
+        /// <param name="parentSharedFolderId">Set if this file or folder is contained in a
+        /// shared folder.</param>
         /// <param name="id">A unique identifier for the file.</param>
         /// <param name="mediaInfo">Additional information if the file is a photo or
         /// video.</param>
@@ -55,15 +57,16 @@ namespace Dropbox.Api.Files
                             sys.DateTime serverModified,
                             string rev,
                             ulong size,
+                            string parentSharedFolderId = null,
                             string id = null,
                             MediaInfo mediaInfo = null)
-            : base(name, pathLower)
+            : base(name, pathLower, parentSharedFolderId)
         {
             if (rev == null)
             {
                 throw new sys.ArgumentNullException("rev");
             }
-            else if (rev.Length < 9 || !re.Regex.IsMatch(rev, @"[0-9a-f]+"))
+            else if (rev.Length < 9 || !re.Regex.IsMatch(rev, @"\A[0-9a-f]+\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("rev");
             }
@@ -146,6 +149,10 @@ namespace Dropbox.Api.Files
                 WriteProperty("server_modified", value.ServerModified, writer, enc.DateTimeEncoder.Instance);
                 WriteProperty("rev", value.Rev, writer, enc.StringEncoder.Instance);
                 WriteProperty("size", value.Size, writer, enc.UInt64Encoder.Instance);
+                if (value.ParentSharedFolderId != null)
+                {
+                    WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
+                }
                 if (value.Id != null)
                 {
                     WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
@@ -203,6 +210,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "size":
                         value.Size = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "parent_shared_folder_id":
+                        value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "id":
                         value.Id = enc.StringDecoder.Instance.Decode(reader);

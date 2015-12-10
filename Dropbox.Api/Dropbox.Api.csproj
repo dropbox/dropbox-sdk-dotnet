@@ -165,12 +165,10 @@
     <Compile Include="Sharing\AddFolderMemberError.cs" />
     <Compile Include="Sharing\AddMember.cs" />
     <Compile Include="Sharing\AddMemberSelectorError.cs" />
-    <Compile Include="Sharing\BasicSharedFolderMetadata.cs" />
     <Compile Include="Sharing\CollectionLinkMetadata.cs" />
     <Compile Include="Sharing\CreateSharedLinkArg.cs" />
     <Compile Include="Sharing\CreateSharedLinkError.cs" />
     <Compile Include="Sharing\FolderPolicy.cs" />
-    <Compile Include="Sharing\FullSharedFolderMetadata.cs" />
     <Compile Include="Sharing\GetMetadataArgs.cs" />
     <Compile Include="Sharing\GetSharedLinksArg.cs" />
     <Compile Include="Sharing\GetSharedLinksError.cs" />
@@ -182,7 +180,11 @@
     <Compile Include="Sharing\JobError.cs" />
     <Compile Include="Sharing\JobStatus.cs" />
     <Compile Include="Sharing\LinkMetadata.cs" />
-    <Compile Include="Sharing\ListFoldersArgs.cs" />
+    <Compile Include="Sharing\ListFolderMembersArgs.cs" />
+    <Compile Include="Sharing\ListFolderMembersContinueArg.cs" />
+    <Compile Include="Sharing\ListFolderMembersContinueError.cs" />
+    <Compile Include="Sharing\ListFoldersContinueArg.cs" />
+    <Compile Include="Sharing\ListFoldersContinueError.cs" />
     <Compile Include="Sharing\ListFoldersResult.cs" />
     <Compile Include="Sharing\MemberPolicy.cs" />
     <Compile Include="Sharing\MemberSelector.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="Sharing\SharePathError.cs" />
     <Compile Include="Sharing\SharedFolderAccessError.cs" />
     <Compile Include="Sharing\SharedFolderMemberError.cs" />
+    <Compile Include="Sharing\SharedFolderMembers.cs" />
     <Compile Include="Sharing\SharedFolderMetadata.cs" />
     <Compile Include="Sharing\SharedLinkPolicy.cs" />
     <Compile Include="Sharing\SharingRoutes.cs" />

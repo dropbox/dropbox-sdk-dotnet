@@ -55,7 +55,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"/.*"))
+            else if (!re.Regex.IsMatch(path, @"\A/.*\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("path");
             }

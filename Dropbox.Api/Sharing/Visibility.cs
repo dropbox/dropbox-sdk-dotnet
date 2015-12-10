@@ -347,8 +347,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Only members of the same DfB (Dropbox for Business) team can access the link.
-        /// Login is required.</para>
+        /// <para>Only members of the same team can access the link. Login is required.</para>
         /// </summary>
         public sealed class TeamOnly : Visibility
         {
@@ -505,8 +504,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Only members of the same DfB (Dropbox for Business) team who have the
-        /// link-specific password can access the link.</para>
+        /// <para>Only members of the same team who have the link-specific password can access
+        /// the link.</para>
         /// </summary>
         public sealed class TeamAndPassword : Visibility
         {
