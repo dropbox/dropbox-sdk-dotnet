@@ -750,7 +750,7 @@ class CSharpGenerator(CodeGenerator):
                 checks.append('{0}.Length > {1}'.format(name, data_type.max_length))
             if data_type.pattern is not None:
                 # patterns must match entire input sequence:
-                verbatim_pattern = self._verbatim_string('\\A{0}\\z'.format(data_type.pattern))
+                verbatim_pattern = self._verbatim_string('\\A(?:{0})\\z'.format(data_type.pattern))
                 checks.append('!re.Regex.IsMatch({0}, {1})'.format(name, verbatim_pattern))
         elif is_list_type(data_type):
             listName = name + 'List'
