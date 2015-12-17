@@ -37,7 +37,7 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("sharedFolderId");
             }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"\A[-_0-9a-zA-Z:]+\z"))
+            else if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }

@@ -66,7 +66,7 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("rev");
             }
-            else if (rev.Length < 9 || !re.Regex.IsMatch(rev, @"\A[0-9a-f]+\z"))
+            else if (rev.Length < 9 || !re.Regex.IsMatch(rev, @"\A(?:[0-9a-f]+)\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("rev");
             }
