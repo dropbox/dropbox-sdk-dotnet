@@ -53,13 +53,13 @@ IF EXIST %SOLUTION_DIR%\.nuget\nuget.exe (
 %PRE% %NUGET_COMMAND% restore %SOLUTION_DIR%\Dropbox.Api.sln
 
 echo Building...
-%PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api.sln
+%PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api.sln /p:Configuration=Release
 %PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.Doc.csproj
 %PRE% msbuild /verbosity:minimal /m doc\BabelDocs.shfbproj
 
 echo Creating nuget package...
 
-%PRE% %NUGET_COMMAND% pack %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.csproj
+%PRE% %NUGET_COMMAND% pack %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.csproj -Prop Configuration=RELEASE
 
 :eof
     ENDLOCAL

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>2.1.1</version>
+    <version>2.2.0</version>
     <title>Dropbox v2 API Beta</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -12,7 +12,7 @@
     <iconUrl>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
-    <releaseNotes>Preview Release. Minor bug fixes.</releaseNotes>
+    <releaseNotes>Preview Release. Built using Release configuration.</releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2015</copyright>
     <tags>Dropbox Api</tags>
   </metadata>
