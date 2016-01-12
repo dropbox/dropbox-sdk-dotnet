@@ -8,6 +8,7 @@ namespace Dropbox.Api
 {
     using System;
     using System.Collections.Generic;
+    using System.Net;
     using System.Net.Http;
     using System.Text;
     using System.Threading.Tasks;
@@ -378,6 +379,11 @@ namespace Dropbox.Api
                 var raw = await response.Content.ReadAsStringAsync();
                 var json = JObject.Parse(raw);
 
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new OAuth2Exception(json["error"].ToString(), json.Value<string>("error_description"));
+                }
+
                 return new OAuth2Response(
                     json["access_token"].ToString(),
                     json["uid"].ToString(),
@@ -527,5 +533,26 @@ namespace Dropbox.Api
         /// This will always be <c>bearer</c> if set.
         /// </value>
         public string TokenType { get; private set; }
+    }
+
+    /// <summary>
+    /// Exception when error occurs during oauth2 flow.
+    /// </summary>
+    public sealed class OAuth2Exception : Exception
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OAuth2Exception"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="errorDescription">The error description</param>
+        public OAuth2Exception(string message, string errorDescription = null) : base(message)
+        {
+            this.ErrorDescription = errorDescription;
+        }
+
+        /// <summary>
+        /// Gets the error description.
+        /// </summary>
+        public string ErrorDescription { get; private set; }
     }
 }
