@@ -352,6 +352,8 @@ namespace Dropbox.Api
                 request.Headers.TryAddWithoutValidation("Dropbox-Api-Select-User", this.selectUser);
             }
 
+            var completionOption = HttpCompletionOption.ResponseContentRead;
+
             switch (routeStyle)
             {
                 case RouteStyle.Rpc:
@@ -359,6 +361,7 @@ namespace Dropbox.Api
                     break;
                 case RouteStyle.Download:
                     request.Headers.Add(DropboxApiArgHeader, requestArg);
+                    completionOption = HttpCompletionOption.ResponseHeadersRead;
                     break;
                 case RouteStyle.Upload:
                     request.Headers.Add(DropboxApiArgHeader, requestArg);
@@ -378,7 +381,7 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.options.HttpClient.SendAsync(request);
+            var response = await this.options.HttpClient.SendAsync(request, completionOption);
 
             try
             {
