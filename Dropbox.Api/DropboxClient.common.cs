@@ -179,7 +179,7 @@ namespace Dropbox.Api
     /// <summary>
     /// An HTTP Exception that will cause a retry
     /// </summary>
-    internal class RetryException : HttpException
+    public class RetryException : HttpException
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RetryException"/> class.
