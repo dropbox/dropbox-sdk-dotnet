@@ -74,6 +74,14 @@ namespace Dropbox.Api.Babel
         }
 
         /// <summary>
+        /// Gets a value indicating whether current token is null.
+        /// </summary>
+        bool IJsonReader.IsNull
+        {
+            get { return this.reader.TokenType == JsonToken.Null; }
+        }
+
+        /// <summary>
         /// Read specific type form given json.
         /// </summary>
         /// <typeparam name="T">The type.</typeparam>

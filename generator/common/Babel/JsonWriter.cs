@@ -148,6 +148,14 @@ namespace Dropbox.Api.Babel
         }
 
         /// <summary>
+        /// Write a null value.
+        /// </summary>
+        void IJsonWriter.WriteNull()
+        {
+            this.writer.WriteNull();
+        }
+
+        /// <summary>
         /// Write start object.
         /// </summary>
         void IJsonWriter.WriteStartObject()

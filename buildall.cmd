@@ -29,7 +29,7 @@ echo Generating Dropbox.Api...
 
 SET BABEL_LIST=
 
-FOR %%f IN (spec\*.babel) DO SET BABEL_LIST=%%f !BABEL_LIST!
+FOR %%f IN (spec\*.babel) DO SET BABEL_LIST=!BABEL_LIST! %%f
 
 %PRE% python -m babelapi.cli generator\csharp.babelg.py !BABEL_LIST! dropbox-sdk-dotnet\Dropbox.Api --clean-build -- -l
 

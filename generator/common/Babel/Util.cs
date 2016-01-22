@@ -7,6 +7,7 @@
 namespace Dropbox.Api.Babel
 {
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -105,6 +106,40 @@ namespace Dropbox.Api.Babel
                 });
 
             return completion.Task;
+        }
+
+        /// <summary>
+        /// Convert an IEnumerable to IList.
+        /// </summary>
+        /// <typeparam name="T">The item type.</typeparam>
+        /// <param name="items">The item.</param>
+        /// <returns></returns>
+        public static IList<T> ToList<T>(IEnumerable<T> items)
+        {
+            return items != null ? new List<T>(items) : new List<T>();
+        }
+
+        /// <summary>
+        /// Convert an nested IEnumerable to IList.
+        /// </summary>
+        /// <typeparam name="T">The item type.</typeparam>
+        /// <param name="items">The item.</param>
+        /// <returns></returns>
+        public static IList<IList<T>> ToList<T>(IEnumerable<IEnumerable<T>> items)
+        {
+            var ret = new List<IList<T>>();
+
+            if (items == null)
+            {
+                return ret;
+            }
+
+            foreach (var item in items)
+            {
+                ret.Add(ToList(item));
+            }
+
+            return ret;
         }
     }
 }

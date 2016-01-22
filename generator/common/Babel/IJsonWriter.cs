@@ -74,6 +74,11 @@ namespace Dropbox.Api.Babel
         void WriteString(string value);
 
         /// <summary>
+        /// Write a null value.
+        /// </summary>
+        void WriteNull();
+
+        /// <summary>
         /// Write start object.
         /// </summary>
         void WriteStartObject();

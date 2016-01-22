@@ -27,6 +27,43 @@ namespace Dropbox.Api.Babel
     }
 
     /// <summary>
+    /// Encoder for nullable struct.
+    /// </summary>
+    /// <typeparam name="T">Type of the struct.</typeparam>
+    internal sealed class NullableEncoder<T> : IEncoder<T?> where T : struct
+    {
+        /// <summary>
+        /// The encoder.
+        /// </summary>
+        private readonly IEncoder<T> encoder;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NullableEncoder{T}"/> class.
+        /// </summary>
+        /// <param name="encoder">The encoder.</param>
+        public NullableEncoder(IEncoder<T> encoder)
+        {
+            this.encoder = encoder;
+        }
+
+        /// <summary>
+        /// The encode.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="writer">The writer.</param>
+        public void Encode(T? value, IJsonWriter writer)
+        {
+            if (value == null)
+            {
+                writer.WriteNull();
+                return;
+            }
+
+            this.encoder.Encode(value.Value, writer);
+        }
+    }
+
+    /// <summary>
     /// Encoder for Int32.
     /// </summary>
     internal sealed class Int32Encoder : IEncoder<int>
@@ -35,6 +72,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IEncoder<int> Instance = new Int32Encoder();
+
+        /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<int?> NullableInstance = new NullableEncoder<int>(Instance);
 
         /// <summary>
         /// The encode.
@@ -58,6 +100,11 @@ namespace Dropbox.Api.Babel
         public static readonly IEncoder<long> Instance = new Int64Encoder();
 
         /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<long?> NullableInstance = new NullableEncoder<long>(Instance);
+
+        /// <summary>
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
@@ -79,6 +126,11 @@ namespace Dropbox.Api.Babel
         public static readonly IEncoder<uint> Instance = new UInt32Encoder();
 
         /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<uint?> NullableInstance = new NullableEncoder<uint>(Instance);
+
+        /// <summary>
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
@@ -98,6 +150,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IEncoder<ulong> Instance = new UInt64Encoder();
+
+        /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<ulong?> NullableInstance = new NullableEncoder<ulong>(Instance);
 
         /// <summary>
         /// The encode.
@@ -142,6 +199,11 @@ namespace Dropbox.Api.Babel
         public static readonly IEncoder<double> Instance = new DoubleEncoder();
 
         /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<double?> NullableInstance = new NullableEncoder<double>(Instance);
+
+        /// <summary>
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
@@ -163,6 +225,11 @@ namespace Dropbox.Api.Babel
         public static readonly IEncoder<bool> Instance = new BooleanEncoder();
 
         /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<bool?> NullableInstance = new NullableEncoder<bool>(Instance);
+
+        /// <summary>
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
@@ -182,6 +249,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IEncoder<DateTime> Instance = new DateTimeEncoder();
+
+        /// <summary>
+        /// The nullable instance.
+        /// </summary>
+        public static readonly IEncoder<DateTime?> NullableInstance = new NullableEncoder<DateTime>(Instance);
 
         /// <summary>
         /// The encode.
@@ -260,7 +332,7 @@ namespace Dropbox.Api.Babel
     /// Encoder for struct type.
     /// </summary>
     /// <typeparam name="T">The type.</typeparam>
-    internal abstract class StructEncoder<T> : IEncoder<T>
+    internal abstract class StructEncoder<T> : IEncoder<T> where T : class
     {
         /// <summary>
         /// The encode.
@@ -269,6 +341,12 @@ namespace Dropbox.Api.Babel
         /// <param name="writer">The writer.</param> 
         public void Encode(T value, IJsonWriter writer)
         {
+            if (value == null)
+            {
+                writer.WriteNull();
+                return;
+            }
+
             writer.WriteStartObject();
             this.EncodeFields(value, writer);
             writer.WriteEndObject();

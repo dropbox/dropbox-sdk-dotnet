@@ -548,7 +548,7 @@ class CSharpGenerator(CodeGenerator):
         else:
             assert False, 'Unknown tag: {0}:{1}'.format(tag, value)
 
-    def _typename(self, data_type, void=None, is_property=False, is_response=False):
+    def _typename(self, data_type, void=None, is_property=False, is_response=False, include_namespace=False):
         """
         Generates a C# type from a data_type
 
@@ -565,9 +565,11 @@ class CSharpGenerator(CodeGenerator):
             is_property (bool): Indicates whether the type translation is for
                 a property type. Lists have different types expressed for
                 properties than in other places.
-            is_property (bool): Indicates whether the type translation is for
+            is_response (bool): Indicates whether the type translation is for
                 a resposne type. Lists need to concrete list class in order to
                 be created by Apm.
+            include_namespace (bool): Indicates wheather the type translation includes
+                namespace. Sometimes this needs to be true to avoild colliding with property name.
         """
         if is_nullable_type(data_type):
             nullable = True
@@ -580,15 +582,16 @@ class CSharpGenerator(CodeGenerator):
             public = self._public_name(name)
             type_ns = self._public_name(data_type.namespace.name)
             if type_ns != self._ns:
-                public = type_ns + '.' + public
-            if public in self._prevent_collisions:
+                return self.DEFAULT_NAMESPACE + type_ns + '.' + public
+            elif public in self._prevent_collisions or include_namespace:
                 return self.DEFAULT_NAMESPACE + self._ns + '.' + public
-            return public
+            else:
+                return public
         elif is_list_type(data_type):
             if is_property:
-                return 'col.IList<{0}>'.format(self._typename(data_type.data_type))
+                return 'col.IList<{0}>'.format(self._typename(data_type.data_type, is_property=True))
             elif is_response:
-                return 'col.List<{0}>'.format(self._typename(data_type.data_type))
+                return 'col.List<{0}>'.format(self._typename(data_type.data_type, is_response=True))
             else:
                 return 'col.IEnumerable<{0}>'.format(self._typename(data_type.data_type))
         elif is_string_type(data_type):
@@ -754,9 +757,8 @@ class CSharpGenerator(CodeGenerator):
                 checks.append('!re.Regex.IsMatch({0}, {1})'.format(name, verbatim_pattern))
         elif is_list_type(data_type):
             listName = name + 'List'
-            element_type = self._typename(data_type.data_type)
-            self.emit('var {0} = new col.List<{1}>({2} ?? new {1}[0]);'.format(
-                    listName, element_type, name))
+            element_type = self._typename(data_type.data_type, is_property=True)
+            self.emit('var {0} = enc.Util.ToList({1});'.format(listName, name))
             self.emit()
 
             if data_type.min_items is not None:
@@ -1100,6 +1102,16 @@ class CSharpGenerator(CodeGenerator):
         else:
             assert False, 'Unknown data type %r' % data_type
     
+    def _get_primitive_instance_name(self, is_nullable):
+        """
+        Get encoder/decoder instance name.
+
+        Args:
+            is_nullable (bool): If the type is nullable.
+        """
+
+        return 'NullableInstance' if is_nullable else 'Instance'
+
     def _get_decoder(self, data_type):
         """
         Get decoder of type IDecoder<T> for given data type.
@@ -1113,9 +1125,11 @@ class CSharpGenerator(CodeGenerator):
         if is_list:
             return 'enc.Decoder.CreateListDecoder({0})'.format(self._get_decoder(data_type))
         elif is_composite_type(data_type):
-            return self._typename(data_type) + '.Decoder'
+            return '{0}.Decoder'.format(self._typename(data_type, include_namespace=True))
         else: 
-            return 'enc.{0}Decoder.Instance'.format(self._get_primitive_prefix(data_type))
+            return 'enc.{0}Decoder.{1}'.format(
+                self._get_primitive_prefix(data_type),
+                self._get_primitive_instance_name(is_nullable))
 
     def _get_encoder(self, data_type):
         """
@@ -1130,9 +1144,11 @@ class CSharpGenerator(CodeGenerator):
         if is_list:
             return 'enc.Encoder.CreateListEncoder({0})'.format(self._get_encoder(data_type))
         elif is_composite_type(data_type):
-            return '{0}.Encoder'.format(self._typename(data_type))
+            return '{0}.Encoder'.format(self._typename(data_type, include_namespace=True))
         else:
-            return 'enc.{0}Encoder.Instance'.format(self._get_primitive_prefix(data_type))
+            return 'enc.{0}Encoder.{1}'.format(
+                self._get_primitive_prefix(data_type),
+                self._get_primitive_instance_name(is_nullable))
 
     def _emit_decoder(self, field, field_public_name=None):
         """
@@ -1146,7 +1162,7 @@ class CSharpGenerator(CodeGenerator):
         data_type, is_nullable, is_list = self._parse_data_type(field.data_type)
 
         if is_list:
-            value = 'ReadList(reader, {0})'.format(self._get_decoder(data_type))
+            value = 'ReadList<{0}>(reader, {1})'.format(self._typename(data_type, is_property=True), self._get_decoder(data_type))
         else:
             value = '{0}.Decode(reader)'.format(self._get_decoder(data_type))
 
