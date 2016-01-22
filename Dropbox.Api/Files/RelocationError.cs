@@ -146,6 +146,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CantMoveFolderIntoItself</para>
+        /// </summary>
+        public bool IsCantMoveFolderIntoItself
+        {
+            get
+            {
+                return this is CantMoveFolderIntoItself;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CantMoveFolderIntoItself, or <c>null</c>.</para>
+        /// </summary>
+        public CantMoveFolderIntoItself AsCantMoveFolderIntoItself
+        {
+            get
+            {
+                return this as CantMoveFolderIntoItself;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TooManyFiles</para>
         /// </summary>
         public bool IsTooManyFiles
@@ -233,6 +256,12 @@ namespace Dropbox.Api.Files
                     CantNestSharedFolder.Encoder.EncodeFields((CantNestSharedFolder)value, writer);
                     return;
                 }
+                if (value is CantMoveFolderIntoItself)
+                {
+                    WriteProperty(".tag", "cant_move_folder_into_itself", writer, enc.StringEncoder.Instance);
+                    CantMoveFolderIntoItself.Encoder.EncodeFields((CantMoveFolderIntoItself)value, writer);
+                    return;
+                }
                 if (value is TooManyFiles)
                 {
                     WriteProperty(".tag", "too_many_files", writer, enc.StringEncoder.Instance);
@@ -287,6 +316,8 @@ namespace Dropbox.Api.Files
                         return CantCopySharedFolder.Decoder.DecodeFields(reader);
                     case "cant_nest_shared_folder":
                         return CantNestSharedFolder.Decoder.DecodeFields(reader);
+                    case "cant_move_folder_into_itself":
+                        return CantMoveFolderIntoItself.Decoder.DecodeFields(reader);
                     case "too_many_files":
                         return TooManyFiles.Decoder.DecodeFields(reader);
                     default:
@@ -348,7 +379,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FromLookup value, enc.IJsonWriter writer)
                 {
-                    LookupError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -381,7 +412,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "from_lookup":
-                            value.Value = LookupError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -444,7 +475,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FromWrite value, enc.IJsonWriter writer)
                 {
-                    WriteError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -477,7 +508,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "from_write":
-                            value.Value = WriteError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -540,7 +571,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(To value, enc.IJsonWriter writer)
                 {
-                    WriteError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -573,7 +604,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "to":
-                            value.Value = WriteError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -740,6 +771,86 @@ namespace Dropbox.Api.Files
                 public override CantNestSharedFolder DecodeFields(enc.IJsonReader reader)
                 {
                     return CantNestSharedFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>You cannot move a folder into itself.</para>
+        /// </summary>
+        public sealed class CantMoveFolderIntoItself : RelocationError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantMoveFolderIntoItself> Encoder = new CantMoveFolderIntoItselfEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantMoveFolderIntoItself> Decoder = new CantMoveFolderIntoItselfDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantMoveFolderIntoItself" />
+            /// class.</para>
+            /// </summary>
+            private CantMoveFolderIntoItself()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CantMoveFolderIntoItself</para>
+            /// </summary>
+            public static readonly CantMoveFolderIntoItself Instance = new CantMoveFolderIntoItself();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CantMoveFolderIntoItself" />.</para>
+            /// </summary>
+            private class CantMoveFolderIntoItselfEncoder : enc.StructEncoder<CantMoveFolderIntoItself>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantMoveFolderIntoItself value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CantMoveFolderIntoItself" />.</para>
+            /// </summary>
+            private class CantMoveFolderIntoItselfDecoder : enc.StructDecoder<CantMoveFolderIntoItself>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantMoveFolderIntoItself"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantMoveFolderIntoItself Create()
+                {
+                    return new CantMoveFolderIntoItself();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CantMoveFolderIntoItself DecodeFields(enc.IJsonReader reader)
+                {
+                    return CantMoveFolderIntoItself.Instance;
                 }
             }
 

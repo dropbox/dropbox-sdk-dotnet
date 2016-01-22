@@ -197,7 +197,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    UploadWriteFailed.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.UploadWriteFailed.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -226,7 +226,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override Path DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Path(UploadWriteFailed.Decoder.DecodeFields(reader));
+                    return new Path(Dropbox.Api.Files.UploadWriteFailed.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -16,7 +16,7 @@ namespace Dropbox.Api.Sharing
     /// </summary>
     /// <seealso cref="GroupMembershipInfo" />
     /// <seealso cref="GroupSummary" />
-    public class GroupInfo : Team.GroupSummary
+    public class GroupInfo : Dropbox.Api.Team.GroupSummary
     {
         #pragma warning disable 108
 

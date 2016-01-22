@@ -45,21 +45,21 @@ namespace Dropbox.Api.Sharing
                                    col.IEnumerable<InviteeMembershipInfo> invitees,
                                    string cursor = null)
         {
-            var usersList = new col.List<UserMembershipInfo>(users ?? new UserMembershipInfo[0]);
+            var usersList = enc.Util.ToList(users);
 
             if (users == null)
             {
                 throw new sys.ArgumentNullException("users");
             }
 
-            var groupsList = new col.List<GroupMembershipInfo>(groups ?? new GroupMembershipInfo[0]);
+            var groupsList = enc.Util.ToList(groups);
 
             if (groups == null)
             {
                 throw new sys.ArgumentNullException("groups");
             }
 
-            var inviteesList = new col.List<InviteeMembershipInfo>(invitees ?? new InviteeMembershipInfo[0]);
+            var inviteesList = enc.Util.ToList(invitees);
 
             if (invitees == null)
             {
@@ -120,9 +120,9 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderMembers value, enc.IJsonWriter writer)
             {
-                WriteListProperty("users", value.Users, writer, UserMembershipInfo.Encoder);
-                WriteListProperty("groups", value.Groups, writer, GroupMembershipInfo.Encoder);
-                WriteListProperty("invitees", value.Invitees, writer, InviteeMembershipInfo.Encoder);
+                WriteListProperty("users", value.Users, writer, Dropbox.Api.Sharing.UserMembershipInfo.Encoder);
+                WriteListProperty("groups", value.Groups, writer, Dropbox.Api.Sharing.GroupMembershipInfo.Encoder);
+                WriteListProperty("invitees", value.Invitees, writer, Dropbox.Api.Sharing.InviteeMembershipInfo.Encoder);
                 if (value.Cursor != null)
                 {
                     WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
@@ -160,13 +160,13 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "users":
-                        value.Users = ReadList(reader, UserMembershipInfo.Decoder);
+                        value.Users = ReadList<UserMembershipInfo>(reader, Dropbox.Api.Sharing.UserMembershipInfo.Decoder);
                         break;
                     case "groups":
-                        value.Groups = ReadList(reader, GroupMembershipInfo.Decoder);
+                        value.Groups = ReadList<GroupMembershipInfo>(reader, Dropbox.Api.Sharing.GroupMembershipInfo.Decoder);
                         break;
                     case "invitees":
-                        value.Invitees = ReadList(reader, InviteeMembershipInfo.Decoder);
+                        value.Invitees = ReadList<InviteeMembershipInfo>(reader, Dropbox.Api.Sharing.InviteeMembershipInfo.Decoder);
                         break;
                     case "cursor":
                         value.Cursor = enc.StringDecoder.Instance.Decode(reader);

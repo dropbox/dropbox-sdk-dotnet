@@ -131,7 +131,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(CommitInfo value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteProperty("mode", value.Mode, writer, WriteMode.Encoder);
+                WriteProperty("mode", value.Mode, writer, Dropbox.Api.Files.WriteMode.Encoder);
                 WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
                 if (value.ClientModified != null)
                 {
@@ -174,7 +174,7 @@ namespace Dropbox.Api.Files
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "mode":
-                        value.Mode = WriteMode.Decoder.Decode(reader);
+                        value.Mode = Dropbox.Api.Files.WriteMode.Decoder.Decode(reader);
                         break;
                     case "autorename":
                         value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);

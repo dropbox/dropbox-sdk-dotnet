@@ -7,9 +7,14 @@ namespace Dropbox.Api
     using sys = System;
 
     using Dropbox.Api.Babel;
+    using Dropbox.Api.Team.Routes;
 
     public sealed partial class DropboxTeamClient
     {
+        /// <summary>
+        /// <para>Gets the Team routes.</para>
+        /// </summary>
+        public TeamRoutes Team { get; private set; }
 
         /// <summary>
         /// <para>Initializes the routes.</para>
@@ -17,6 +22,7 @@ namespace Dropbox.Api
         /// <returns>The transport.</returns>
         private void InitializeRoutes(ITransport transport)
         {
+            this.Team = new TeamRoutes(transport);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Dropbox.Api.Files
         public ListRevisionsResult(bool isDeleted,
                                    col.IEnumerable<FileMetadata> entries)
         {
-            var entriesList = new col.List<FileMetadata>(entries ?? new FileMetadata[0]);
+            var entriesList = enc.Util.ToList(entries);
 
             if (entries == null)
             {
@@ -84,7 +84,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(ListRevisionsResult value, enc.IJsonWriter writer)
             {
                 WriteProperty("is_deleted", value.IsDeleted, writer, enc.BooleanEncoder.Instance);
-                WriteListProperty("entries", value.Entries, writer, FileMetadata.Encoder);
+                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Files.FileMetadata.Encoder);
             }
         }
 
@@ -121,7 +121,7 @@ namespace Dropbox.Api.Files
                         value.IsDeleted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "entries":
-                        value.Entries = ReadList(reader, FileMetadata.Decoder);
+                        value.Entries = ReadList<FileMetadata>(reader, Dropbox.Api.Files.FileMetadata.Decoder);
                         break;
                     default:
                         reader.Skip();

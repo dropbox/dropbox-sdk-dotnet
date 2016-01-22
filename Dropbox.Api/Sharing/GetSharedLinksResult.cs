@@ -34,7 +34,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="links">Shared links applicable to the path argument.</param>
         public GetSharedLinksResult(col.IEnumerable<LinkMetadata> links)
         {
-            var linksList = new col.List<LinkMetadata>(links ?? new LinkMetadata[0]);
+            var linksList = enc.Util.ToList(links);
 
             if (links == null)
             {
@@ -73,7 +73,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GetSharedLinksResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("links", value.Links, writer, LinkMetadata.Encoder);
+                WriteListProperty("links", value.Links, writer, Dropbox.Api.Sharing.LinkMetadata.Encoder);
             }
         }
 
@@ -107,7 +107,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "links":
-                        value.Links = ReadList(reader, LinkMetadata.Decoder);
+                        value.Links = ReadList<LinkMetadata>(reader, Dropbox.Api.Sharing.LinkMetadata.Decoder);
                         break;
                     default:
                         reader.Skip();

@@ -80,6 +80,53 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamPolicyDisallowsMemberPolicy</para>
+        /// </summary>
+        public bool IsTeamPolicyDisallowsMemberPolicy
+        {
+            get
+            {
+                return this is TeamPolicyDisallowsMemberPolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamPolicyDisallowsMemberPolicy, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamPolicyDisallowsMemberPolicy AsTeamPolicyDisallowsMemberPolicy
+        {
+            get
+            {
+                return this as TeamPolicyDisallowsMemberPolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DisallowedSharedLinkPolicy</para>
+        /// </summary>
+        public bool IsDisallowedSharedLinkPolicy
+        {
+            get
+            {
+                return this is DisallowedSharedLinkPolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DisallowedSharedLinkPolicy, or <c>null</c>.</para>
+        /// </summary>
+        public DisallowedSharedLinkPolicy AsDisallowedSharedLinkPolicy
+        {
+            get
+            {
+                return this as DisallowedSharedLinkPolicy;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +174,18 @@ namespace Dropbox.Api.Sharing
                     NotOnTeam.Encoder.EncodeFields((NotOnTeam)value, writer);
                     return;
                 }
+                if (value is TeamPolicyDisallowsMemberPolicy)
+                {
+                    WriteProperty(".tag", "team_policy_disallows_member_policy", writer, enc.StringEncoder.Instance);
+                    TeamPolicyDisallowsMemberPolicy.Encoder.EncodeFields((TeamPolicyDisallowsMemberPolicy)value, writer);
+                    return;
+                }
+                if (value is DisallowedSharedLinkPolicy)
+                {
+                    WriteProperty(".tag", "disallowed_shared_link_policy", writer, enc.StringEncoder.Instance);
+                    DisallowedSharedLinkPolicy.Encoder.EncodeFields((DisallowedSharedLinkPolicy)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +229,10 @@ namespace Dropbox.Api.Sharing
                         return AccessError.Decoder.DecodeFields(reader);
                     case "not_on_team":
                         return NotOnTeam.Decoder.DecodeFields(reader);
+                    case "team_policy_disallows_member_policy":
+                        return TeamPolicyDisallowsMemberPolicy.Decoder.DecodeFields(reader);
+                    case "disallowed_shared_link_policy":
+                        return DisallowedSharedLinkPolicy.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -231,7 +294,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    SharedFolderAccessError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Sharing.SharedFolderAccessError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -264,7 +327,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "access_error":
-                            value.Value = SharedFolderAccessError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Sharing.SharedFolderAccessError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -349,6 +412,168 @@ namespace Dropbox.Api.Sharing
                 public override NotOnTeam DecodeFields(enc.IJsonReader reader)
                 {
                     return NotOnTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Team policy is more restrictive than <see cref="ShareFolderArg.MemberPolicy"
+        /// />.</para>
+        /// </summary>
+        public sealed class TeamPolicyDisallowsMemberPolicy : UpdateFolderPolicyError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamPolicyDisallowsMemberPolicy> Encoder = new TeamPolicyDisallowsMemberPolicyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamPolicyDisallowsMemberPolicy> Decoder = new TeamPolicyDisallowsMemberPolicyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamPolicyDisallowsMemberPolicy" /> class.</para>
+            /// </summary>
+            private TeamPolicyDisallowsMemberPolicy()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamPolicyDisallowsMemberPolicy</para>
+            /// </summary>
+            public static readonly TeamPolicyDisallowsMemberPolicy Instance = new TeamPolicyDisallowsMemberPolicy();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamPolicyDisallowsMemberPolicy" />.</para>
+            /// </summary>
+            private class TeamPolicyDisallowsMemberPolicyEncoder : enc.StructEncoder<TeamPolicyDisallowsMemberPolicy>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamPolicyDisallowsMemberPolicy value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamPolicyDisallowsMemberPolicy" />.</para>
+            /// </summary>
+            private class TeamPolicyDisallowsMemberPolicyDecoder : enc.StructDecoder<TeamPolicyDisallowsMemberPolicy>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamPolicyDisallowsMemberPolicy" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamPolicyDisallowsMemberPolicy Create()
+                {
+                    return new TeamPolicyDisallowsMemberPolicy();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamPolicyDisallowsMemberPolicy DecodeFields(enc.IJsonReader reader)
+                {
+                    return TeamPolicyDisallowsMemberPolicy.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current account is not allowed to select the specified <see
+        /// cref="ShareFolderArg.SharedLinkPolicy" />.</para>
+        /// </summary>
+        public sealed class DisallowedSharedLinkPolicy : UpdateFolderPolicyError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DisallowedSharedLinkPolicy> Encoder = new DisallowedSharedLinkPolicyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DisallowedSharedLinkPolicy> Decoder = new DisallowedSharedLinkPolicyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DisallowedSharedLinkPolicy"
+            /// /> class.</para>
+            /// </summary>
+            private DisallowedSharedLinkPolicy()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DisallowedSharedLinkPolicy</para>
+            /// </summary>
+            public static readonly DisallowedSharedLinkPolicy Instance = new DisallowedSharedLinkPolicy();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DisallowedSharedLinkPolicy" />.</para>
+            /// </summary>
+            private class DisallowedSharedLinkPolicyEncoder : enc.StructEncoder<DisallowedSharedLinkPolicy>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DisallowedSharedLinkPolicy value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DisallowedSharedLinkPolicy" />.</para>
+            /// </summary>
+            private class DisallowedSharedLinkPolicyDecoder : enc.StructDecoder<DisallowedSharedLinkPolicy>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DisallowedSharedLinkPolicy"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DisallowedSharedLinkPolicy Create()
+                {
+                    return new DisallowedSharedLinkPolicy();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DisallowedSharedLinkPolicy DecodeFields(enc.IJsonReader reader)
+                {
+                    return DisallowedSharedLinkPolicy.Instance;
                 }
             }
 

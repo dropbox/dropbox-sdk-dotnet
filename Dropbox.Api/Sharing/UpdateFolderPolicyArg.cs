@@ -107,15 +107,15 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 if (value.MemberPolicy != null)
                 {
-                    WriteProperty("member_policy", value.MemberPolicy, writer, MemberPolicy.Encoder);
+                    WriteProperty("member_policy", value.MemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
                 }
                 if (value.AclUpdatePolicy != null)
                 {
-                    WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, AclUpdatePolicy.Encoder);
+                    WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
                 }
                 if (value.SharedLinkPolicy != null)
                 {
-                    WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, SharedLinkPolicy.Encoder);
+                    WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
                 }
             }
         }
@@ -154,13 +154,13 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member_policy":
-                        value.MemberPolicy = MemberPolicy.Decoder.Decode(reader);
+                        value.MemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
                         break;
                     case "acl_update_policy":
-                        value.AclUpdatePolicy = AclUpdatePolicy.Decoder.Decode(reader);
+                        value.AclUpdatePolicy = Dropbox.Api.Sharing.AclUpdatePolicy.Decoder.Decode(reader);
                         break;
                     case "shared_link_policy":
-                        value.SharedLinkPolicy = SharedLinkPolicy.Decoder.Decode(reader);
+                        value.SharedLinkPolicy = Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -82,8 +82,8 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SearchMatch value, enc.IJsonWriter writer)
             {
-                WriteProperty("match_type", value.MatchType, writer, SearchMatchType.Encoder);
-                WriteProperty("metadata", value.Metadata, writer, Metadata.Encoder);
+                WriteProperty("match_type", value.MatchType, writer, Dropbox.Api.Files.SearchMatchType.Encoder);
+                WriteProperty("metadata", value.Metadata, writer, Dropbox.Api.Files.Metadata.Encoder);
             }
         }
 
@@ -117,10 +117,10 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "match_type":
-                        value.MatchType = SearchMatchType.Decoder.Decode(reader);
+                        value.MatchType = Dropbox.Api.Files.SearchMatchType.Decoder.Decode(reader);
                         break;
                     case "metadata":
-                        value.Metadata = Metadata.Decoder.Decode(reader);
+                        value.Metadata = Dropbox.Api.Files.Metadata.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

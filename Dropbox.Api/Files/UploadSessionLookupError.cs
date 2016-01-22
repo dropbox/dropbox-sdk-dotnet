@@ -342,7 +342,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(IncorrectOffset value, enc.IJsonWriter writer)
                 {
-                    UploadSessionOffsetError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.UploadSessionOffsetError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -371,7 +371,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override IncorrectOffset DecodeFields(enc.IJsonReader reader)
                 {
-                    return new IncorrectOffset(UploadSessionOffsetError.Decoder.DecodeFields(reader));
+                    return new IncorrectOffset(Dropbox.Api.Files.UploadSessionOffsetError.Decoder.DecodeFields(reader));
                 }
             }
 

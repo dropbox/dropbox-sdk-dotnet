@@ -39,6 +39,11 @@ namespace Dropbox.Api.Babel
         bool IsPropertyName { get; }
 
         /// <summary>
+        /// Gets a value indicating whether current token is null.
+        /// </summary>
+        bool IsNull { get; }
+
+        /// <summary>
         /// Read one token.
         /// </summary>
         /// <returns>If read succeeded.</returns>

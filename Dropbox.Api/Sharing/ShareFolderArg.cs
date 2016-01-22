@@ -131,9 +131,9 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ShareFolderArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteProperty("member_policy", value.MemberPolicy, writer, MemberPolicy.Encoder);
-                WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, AclUpdatePolicy.Encoder);
-                WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, SharedLinkPolicy.Encoder);
+                WriteProperty("member_policy", value.MemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
+                WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
+                WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
                 WriteProperty("force_async", value.ForceAsync, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -171,13 +171,13 @@ namespace Dropbox.Api.Sharing
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member_policy":
-                        value.MemberPolicy = MemberPolicy.Decoder.Decode(reader);
+                        value.MemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
                         break;
                     case "acl_update_policy":
-                        value.AclUpdatePolicy = AclUpdatePolicy.Decoder.Decode(reader);
+                        value.AclUpdatePolicy = Dropbox.Api.Sharing.AclUpdatePolicy.Decoder.Decode(reader);
                         break;
                     case "shared_link_policy":
-                        value.SharedLinkPolicy = SharedLinkPolicy.Decoder.Decode(reader);
+                        value.SharedLinkPolicy = Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
                         break;
                     case "force_async":
                         value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);

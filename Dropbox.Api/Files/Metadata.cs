@@ -38,8 +38,9 @@ namespace Dropbox.Api.Files
         /// contains a slash.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
         /// starts with a slash.</param>
-        /// <param name="parentSharedFolderId">Set if this file or folder is contained in a
-        /// shared folder.</param>
+        /// <param name="parentSharedFolderId">Deprecated. Please use
+        /// :field:'FileSharingInfo.parent_shared_folder_id' or
+        /// :field:'FolderSharingInfo.parent_shared_folder_id' instead.</param>
         protected Metadata(string name,
                            string pathLower,
                            string parentSharedFolderId = null)
@@ -153,7 +154,8 @@ namespace Dropbox.Api.Files
         public string PathLower { get; protected set; }
 
         /// <summary>
-        /// <para>Set if this file or folder is contained in a shared folder.</para>
+        /// <para>Deprecated. Please use :field:'FileSharingInfo.parent_shared_folder_id' or
+        /// :field:'FolderSharingInfo.parent_shared_folder_id' instead.</para>
         /// </summary>
         public string ParentSharedFolderId { get; protected set; }
 

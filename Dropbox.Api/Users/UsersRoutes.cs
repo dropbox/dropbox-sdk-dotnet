@@ -40,7 +40,7 @@ namespace Dropbox.Api.Users.Routes
         /// cref="GetAccountError"/>.</exception>
         public t.Task<BasicAccount> GetAccountAsync(GetAccountArg getAccountArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetAccountArg, BasicAccount, GetAccountError>(getAccountArg, "api", "/users/get_account", GetAccountArg.Encoder, BasicAccount.Decoder, GetAccountError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetAccountArg, BasicAccount, GetAccountError>(getAccountArg, "api", "/users/get_account", Dropbox.Api.Users.GetAccountArg.Encoder, Dropbox.Api.Users.BasicAccount.Decoder, Dropbox.Api.Users.GetAccountError.Decoder);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Dropbox.Api.Users.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<FullAccount> GetCurrentAccountAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", enc.EmptyEncoder.Instance, FullAccount.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", enc.EmptyEncoder.Instance, Dropbox.Api.Users.FullAccount.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Dropbox.Api.Users.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<SpaceUsage> GetSpaceUsageAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", enc.EmptyEncoder.Instance, SpaceUsage.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", enc.EmptyEncoder.Instance, Dropbox.Api.Users.SpaceUsage.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace Dropbox.Api.Users.Routes
         /// cref="GetAccountBatchError"/>.</exception>
         public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(GetAccountBatchArg getAccountBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetAccountBatchArg, col.List<BasicAccount>, GetAccountBatchError>(getAccountBatchArg, "api", "/users/get_account_batch", GetAccountBatchArg.Encoder, enc.Decoder.CreateListDecoder(BasicAccount.Decoder), GetAccountBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetAccountBatchArg, col.List<BasicAccount>, GetAccountBatchError>(getAccountBatchArg, "api", "/users/get_account_batch", Dropbox.Api.Users.GetAccountBatchArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Users.BasicAccount.Decoder), Dropbox.Api.Users.GetAccountBatchError.Decoder);
         }
 
         /// <summary>

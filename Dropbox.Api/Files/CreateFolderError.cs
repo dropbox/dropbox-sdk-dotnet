@@ -170,7 +170,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    WriteError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -203,7 +203,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "path":
-                            value.Value = WriteError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

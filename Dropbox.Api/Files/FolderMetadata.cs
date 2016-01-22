@@ -35,16 +35,20 @@ namespace Dropbox.Api.Files
         /// contains a slash.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
         /// starts with a slash.</param>
-        /// <param name="parentSharedFolderId">Set if this file or folder is contained in a
-        /// shared folder.</param>
+        /// <param name="parentSharedFolderId">Deprecated. Please use
+        /// :field:'FileSharingInfo.parent_shared_folder_id' or
+        /// :field:'FolderSharingInfo.parent_shared_folder_id' instead.</param>
         /// <param name="id">A unique identifier for the folder.</param>
-        /// <param name="sharedFolderId">If this folder is a shared folder mount point, the ID
-        /// of the shared folder mounted at this location.</param>
+        /// <param name="sharedFolderId">Deprecated. Please use :field:'sharing_info'
+        /// instead.</param>
+        /// <param name="sharingInfo">Set if the folder is contained in a shared folder or is a
+        /// shared folder mount point.</param>
         public FolderMetadata(string name,
                               string pathLower,
                               string parentSharedFolderId = null,
                               string id = null,
-                              string sharedFolderId = null)
+                              string sharedFolderId = null,
+                              FolderSharingInfo sharingInfo = null)
             : base(name, pathLower, parentSharedFolderId)
         {
             if (id != null && (id.Length < 1))
@@ -59,6 +63,7 @@ namespace Dropbox.Api.Files
 
             this.Id = id;
             this.SharedFolderId = sharedFolderId;
+            this.SharingInfo = sharingInfo;
         }
 
         /// <summary>
@@ -76,10 +81,15 @@ namespace Dropbox.Api.Files
         public string Id { get; protected set; }
 
         /// <summary>
-        /// <para>If this folder is a shared folder mount point, the ID of the shared folder
-        /// mounted at this location.</para>
+        /// <para>Deprecated. Please use :field:'sharing_info' instead.</para>
         /// </summary>
         public string SharedFolderId { get; protected set; }
+
+        /// <summary>
+        /// <para>Set if the folder is contained in a shared folder or is a shared folder mount
+        /// point.</para>
+        /// </summary>
+        public FolderSharingInfo SharingInfo { get; protected set; }
 
         #region Encoder class
 
@@ -108,6 +118,10 @@ namespace Dropbox.Api.Files
                 if (value.SharedFolderId != null)
                 {
                     WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.SharingInfo != null)
+                {
+                    WriteProperty("sharing_info", value.SharingInfo, writer, Dropbox.Api.Files.FolderSharingInfo.Encoder);
                 }
             }
         }
@@ -155,6 +169,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "shared_folder_id":
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "sharing_info":
+                        value.SharingInfo = Dropbox.Api.Files.FolderSharingInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

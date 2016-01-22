@@ -37,9 +37,7 @@
         <member name="N:Dropbox.Api.Sharing">
             <summary>
                 <para>This namespace contains endpoints and data types for creating and
-                managing shared links.</para>
-                <para>Additionally, this namespace contains endpoints for creating and managing
-                shared folders.</para>
+                managing shared links and shared folders.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Sharing.Routes">

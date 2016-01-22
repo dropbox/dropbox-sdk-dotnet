@@ -33,7 +33,11 @@ namespace Dropbox.Api.Users
         /// </summary>
         /// <param name="accountId">The user's unique Dropbox ID.</param>
         /// <param name="name">Details of a user's name.</param>
-        /// <param name="email">The user's e-mail address.</param>
+        /// <param name="email">The user's e-mail address. Do not rely on this without checking
+        /// the <paramref name="emailVerified" /> field. Even then, it's possible that the user
+        /// has since lost access to their e-mail.</param>
+        /// <param name="emailVerified">Whether the user has verified their e-mail
+        /// address.</param>
         /// <param name="locale">The language that the user specified. Locale tags will be <a
         /// href="http://en.wikipedia.org/wiki/IETF_language_tag">IETF language
         /// tags</a>.</param>
@@ -52,6 +56,7 @@ namespace Dropbox.Api.Users
         public FullAccount(string accountId,
                            Name name,
                            string email,
+                           bool emailVerified,
                            string locale,
                            string referralLink,
                            bool isPaired,
@@ -90,6 +95,7 @@ namespace Dropbox.Api.Users
             }
 
             this.Email = email;
+            this.EmailVerified = emailVerified;
             this.Locale = locale;
             this.ReferralLink = referralLink;
             this.IsPaired = isPaired;
@@ -108,9 +114,16 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The user's e-mail address.</para>
+        /// <para>The user's e-mail address. Do not rely on this without checking the <see
+        /// cref="EmailVerified" /> field. Even then, it's possible that the user has since
+        /// lost access to their e-mail.</para>
         /// </summary>
         public string Email { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user has verified their e-mail address.</para>
+        /// </summary>
+        public bool EmailVerified { get; protected set; }
 
         /// <summary>
         /// <para>The language that the user specified. Locale tags will be <a
@@ -163,19 +176,20 @@ namespace Dropbox.Api.Users
             public override void EncodeFields(FullAccount value, enc.IJsonWriter writer)
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
-                WriteProperty("name", value.Name, writer, Name.Encoder);
+                WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
+                WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("locale", value.Locale, writer, enc.StringEncoder.Instance);
                 WriteProperty("referral_link", value.ReferralLink, writer, enc.StringEncoder.Instance);
                 WriteProperty("is_paired", value.IsPaired, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("account_type", value.AccountType, writer, AccountType.Encoder);
+                WriteProperty("account_type", value.AccountType, writer, Dropbox.Api.Users.AccountType.Encoder);
                 if (value.Country != null)
                 {
                     WriteProperty("country", value.Country, writer, enc.StringEncoder.Instance);
                 }
                 if (value.Team != null)
                 {
-                    WriteProperty("team", value.Team, writer, Team.Encoder);
+                    WriteProperty("team", value.Team, writer, Dropbox.Api.Users.Team.Encoder);
                 }
             }
         }
@@ -213,10 +227,13 @@ namespace Dropbox.Api.Users
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "name":
-                        value.Name = Name.Decoder.Decode(reader);
+                        value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
                         break;
                     case "email":
                         value.Email = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "email_verified":
+                        value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "locale":
                         value.Locale = enc.StringDecoder.Instance.Decode(reader);
@@ -228,13 +245,13 @@ namespace Dropbox.Api.Users
                         value.IsPaired = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "account_type":
-                        value.AccountType = AccountType.Decoder.Decode(reader);
+                        value.AccountType = Dropbox.Api.Users.AccountType.Decoder.Decode(reader);
                         break;
                     case "country":
                         value.Country = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "team":
-                        value.Team = Team.Decoder.Decode(reader);
+                        value.Team = Dropbox.Api.Users.Team.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -73,7 +73,7 @@ namespace Dropbox.Api.Users
             public override void EncodeFields(BasicAccount value, enc.IJsonWriter writer)
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
-                WriteProperty("name", value.Name, writer, Name.Encoder);
+                WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("is_teammate", value.IsTeammate, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -111,7 +111,7 @@ namespace Dropbox.Api.Users
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "name":
-                        value.Name = Name.Decoder.Decode(reader);
+                        value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
                         break;
                     case "is_teammate":
                         value.IsTeammate = enc.BooleanDecoder.Instance.Decode(reader);

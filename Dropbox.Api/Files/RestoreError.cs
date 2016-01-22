@@ -257,7 +257,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PathLookup value, enc.IJsonWriter writer)
                 {
-                    LookupError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -290,7 +290,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "path_lookup":
-                            value.Value = LookupError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -353,7 +353,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PathWrite value, enc.IJsonWriter writer)
                 {
-                    WriteError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -386,7 +386,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "path_write":
-                            value.Value = WriteError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

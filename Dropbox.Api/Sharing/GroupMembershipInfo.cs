@@ -75,8 +75,8 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupMembershipInfo value, enc.IJsonWriter writer)
             {
-                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
-                WriteProperty("group", value.Group, writer, GroupInfo.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("group", value.Group, writer, Dropbox.Api.Sharing.GroupInfo.Encoder);
             }
         }
 
@@ -110,10 +110,10 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "access_type":
-                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "group":
-                        value.Group = GroupInfo.Decoder.Decode(reader);
+                        value.Group = Dropbox.Api.Sharing.GroupInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

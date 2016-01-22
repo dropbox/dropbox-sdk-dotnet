@@ -419,7 +419,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Conflict value, enc.IJsonWriter writer)
                 {
-                    WriteConflictError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Files.WriteConflictError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -452,7 +452,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "conflict":
-                            value.Value = WriteConflictError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Files.WriteConflictError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -626,7 +626,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Dropbox will not save the file or folder because it of its name.</para>
+        /// <para>Dropbox will not save the file or folder because of its name.</para>
         /// </summary>
         public sealed class DisallowedName : WriteError
         {

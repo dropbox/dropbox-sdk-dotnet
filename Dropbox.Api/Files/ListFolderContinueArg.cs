@@ -40,6 +40,10 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("cursor");
             }
+            else if (cursor.Length < 1)
+            {
+                throw new sys.ArgumentOutOfRangeException("cursor");
+            }
 
             this.Cursor = cursor;
         }

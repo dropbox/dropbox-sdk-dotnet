@@ -35,7 +35,7 @@ namespace Dropbox.Api.Users
         /// duplicate account IDs.</param>
         public GetAccountBatchArg(col.IEnumerable<string> accountIds)
         {
-            var accountIdsList = new col.List<string>(accountIds ?? new string[0]);
+            var accountIdsList = enc.Util.ToList(accountIds);
 
             if (accountIds == null)
             {
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Users
                 switch (fieldName)
                 {
                     case "account_ids":
-                        value.AccountIds = ReadList(reader, enc.StringDecoder.Instance);
+                        value.AccountIds = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     default:
                         reader.Skip();

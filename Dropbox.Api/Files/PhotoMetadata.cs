@@ -66,11 +66,11 @@ namespace Dropbox.Api.Files
             {
                 if (value.Dimensions != null)
                 {
-                    WriteProperty("dimensions", value.Dimensions, writer, Dimensions.Encoder);
+                    WriteProperty("dimensions", value.Dimensions, writer, Dropbox.Api.Files.Dimensions.Encoder);
                 }
                 if (value.Location != null)
                 {
-                    WriteProperty("location", value.Location, writer, GpsCoordinates.Encoder);
+                    WriteProperty("location", value.Location, writer, Dropbox.Api.Files.GpsCoordinates.Encoder);
                 }
                 if (value.TimeTaken != null)
                 {
@@ -109,10 +109,10 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "dimensions":
-                        value.Dimensions = Dimensions.Decoder.Decode(reader);
+                        value.Dimensions = Dropbox.Api.Files.Dimensions.Decoder.Decode(reader);
                         break;
                     case "location":
-                        value.Location = GpsCoordinates.Decoder.Decode(reader);
+                        value.Location = Dropbox.Api.Files.GpsCoordinates.Decoder.Decode(reader);
                         break;
                     case "time_taken":
                         value.TimeTaken = enc.DateTimeDecoder.Instance.Decode(reader);

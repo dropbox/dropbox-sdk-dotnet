@@ -104,6 +104,51 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DisallowedSharedLinkPolicy</para>
+        /// </summary>
+        public bool IsDisallowedSharedLinkPolicy
+        {
+            get
+            {
+                return this is DisallowedSharedLinkPolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DisallowedSharedLinkPolicy, or <c>null</c>.</para>
+        /// </summary>
+        public DisallowedSharedLinkPolicy AsDisallowedSharedLinkPolicy
+        {
+            get
+            {
+                return this as DisallowedSharedLinkPolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoPermission</para>
+        /// </summary>
+        public bool IsNoPermission
+        {
+            get
+            {
+                return this is NoPermission;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoPermission, or <c>null</c>.</para>
+        /// </summary>
+        public NoPermission AsNoPermission
+        {
+            get
+            {
+                return this as NoPermission;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -157,6 +202,18 @@ namespace Dropbox.Api.Sharing
                     TeamPolicyDisallowsMemberPolicy.Encoder.EncodeFields((TeamPolicyDisallowsMemberPolicy)value, writer);
                     return;
                 }
+                if (value is DisallowedSharedLinkPolicy)
+                {
+                    WriteProperty(".tag", "disallowed_shared_link_policy", writer, enc.StringEncoder.Instance);
+                    DisallowedSharedLinkPolicy.Encoder.EncodeFields((DisallowedSharedLinkPolicy)value, writer);
+                    return;
+                }
+                if (value is NoPermission)
+                {
+                    WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
+                    NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -201,6 +258,10 @@ namespace Dropbox.Api.Sharing
                         return BadPath.Decoder.DecodeFields(reader);
                     case "team_policy_disallows_member_policy":
                         return TeamPolicyDisallowsMemberPolicy.Decoder.DecodeFields(reader);
+                    case "disallowed_shared_link_policy":
+                        return DisallowedSharedLinkPolicy.Decoder.DecodeFields(reader);
+                    case "no_permission":
+                        return NoPermission.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -339,7 +400,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(BadPath value, enc.IJsonWriter writer)
                 {
-                    SharePathError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Sharing.SharePathError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -372,7 +433,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "bad_path":
-                            value.Value = SharePathError.Decoder.Decode(reader);
+                            value.Value = Dropbox.Api.Sharing.SharePathError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -459,6 +520,166 @@ namespace Dropbox.Api.Sharing
                 public override TeamPolicyDisallowsMemberPolicy DecodeFields(enc.IJsonReader reader)
                 {
                     return TeamPolicyDisallowsMemberPolicy.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current account is not allowed to select the specified <see
+        /// cref="ShareFolderArg.SharedLinkPolicy" />.</para>
+        /// </summary>
+        public sealed class DisallowedSharedLinkPolicy : ShareFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DisallowedSharedLinkPolicy> Encoder = new DisallowedSharedLinkPolicyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DisallowedSharedLinkPolicy> Decoder = new DisallowedSharedLinkPolicyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DisallowedSharedLinkPolicy"
+            /// /> class.</para>
+            /// </summary>
+            private DisallowedSharedLinkPolicy()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DisallowedSharedLinkPolicy</para>
+            /// </summary>
+            public static readonly DisallowedSharedLinkPolicy Instance = new DisallowedSharedLinkPolicy();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DisallowedSharedLinkPolicy" />.</para>
+            /// </summary>
+            private class DisallowedSharedLinkPolicyEncoder : enc.StructEncoder<DisallowedSharedLinkPolicy>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DisallowedSharedLinkPolicy value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DisallowedSharedLinkPolicy" />.</para>
+            /// </summary>
+            private class DisallowedSharedLinkPolicyDecoder : enc.StructDecoder<DisallowedSharedLinkPolicy>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DisallowedSharedLinkPolicy"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DisallowedSharedLinkPolicy Create()
+                {
+                    return new DisallowedSharedLinkPolicy();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DisallowedSharedLinkPolicy DecodeFields(enc.IJsonReader reader)
+                {
+                    return DisallowedSharedLinkPolicy.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current account does not have permission to perform this action.</para>
+        /// </summary>
+        public sealed class NoPermission : ShareFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoPermission> Encoder = new NoPermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoPermission> Decoder = new NoPermissionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoPermission" />
+            /// class.</para>
+            /// </summary>
+            private NoPermission()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NoPermission</para>
+            /// </summary>
+            public static readonly NoPermission Instance = new NoPermission();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionEncoder : enc.StructEncoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoPermission value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionDecoder : enc.StructDecoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoPermission" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoPermission Create()
+                {
+                    return new NoPermission();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoPermission DecodeFields(enc.IJsonReader reader)
+                {
+                    return NoPermission.Instance;
                 }
             }
 

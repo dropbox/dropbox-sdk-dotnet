@@ -97,7 +97,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("short_url", value.ShortUrl, writer, enc.BooleanEncoder.Instance);
                 if (value.PendingUpload != null)
                 {
-                    WriteProperty("pending_upload", value.PendingUpload, writer, PendingUploadMode.Encoder);
+                    WriteProperty("pending_upload", value.PendingUpload, writer, Dropbox.Api.Sharing.PendingUploadMode.Encoder);
                 }
             }
         }
@@ -138,7 +138,7 @@ namespace Dropbox.Api.Sharing
                         value.ShortUrl = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "pending_upload":
-                        value.PendingUpload = PendingUploadMode.Decoder.Decode(reader);
+                        value.PendingUpload = Dropbox.Api.Sharing.PendingUploadMode.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -81,7 +81,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(PathLinkMetadata value, enc.IJsonWriter writer)
             {
                 WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
-                WriteProperty("visibility", value.Visibility, writer, Visibility.Encoder);
+                WriteProperty("visibility", value.Visibility, writer, Dropbox.Api.Sharing.Visibility.Encoder);
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 if (value.Expires != null)
                 {
@@ -123,7 +123,7 @@ namespace Dropbox.Api.Sharing
                         value.Url = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "visibility":
-                        value.Visibility = Visibility.Decoder.Decode(reader);
+                        value.Visibility = Dropbox.Api.Sharing.Visibility.Decoder.Decode(reader);
                         break;
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);

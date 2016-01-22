@@ -43,7 +43,7 @@ namespace Dropbox.Api.Sharing
         public ListFoldersResult(col.IEnumerable<SharedFolderMetadata> entries,
                                  string cursor = null)
         {
-            var entriesList = new col.List<SharedFolderMetadata>(entries ?? new SharedFolderMetadata[0]);
+            var entriesList = enc.Util.ToList(entries);
 
             if (entries == null)
             {
@@ -91,7 +91,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ListFoldersResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, SharedFolderMetadata.Encoder);
+                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Sharing.SharedFolderMetadata.Encoder);
                 if (value.Cursor != null)
                 {
                     WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
@@ -129,7 +129,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList(reader, SharedFolderMetadata.Decoder);
+                        value.Entries = ReadList<SharedFolderMetadata>(reader, Dropbox.Api.Sharing.SharedFolderMetadata.Decoder);
                         break;
                     case "cursor":
                         value.Cursor = enc.StringDecoder.Instance.Decode(reader);

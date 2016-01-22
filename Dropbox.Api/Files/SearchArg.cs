@@ -136,7 +136,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("query", value.Query, writer, enc.StringEncoder.Instance);
                 WriteProperty("start", value.Start, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("max_results", value.MaxResults, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("mode", value.Mode, writer, SearchMode.Encoder);
+                WriteProperty("mode", value.Mode, writer, Dropbox.Api.Files.SearchMode.Encoder);
             }
         }
 
@@ -182,7 +182,7 @@ namespace Dropbox.Api.Files
                         value.MaxResults = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "mode":
-                        value.Mode = SearchMode.Decoder.Decode(reader);
+                        value.Mode = Dropbox.Api.Files.SearchMode.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

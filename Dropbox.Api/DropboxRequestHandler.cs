@@ -191,7 +191,7 @@ namespace Dropbox.Api
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder);
+            var serializedArg = JsonWriter.Write(request, requestEncoder, true);
             var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Download, serializedArg);
 
             if (res.IsError)

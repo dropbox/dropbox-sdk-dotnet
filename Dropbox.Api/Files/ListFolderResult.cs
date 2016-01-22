@@ -42,7 +42,7 @@ namespace Dropbox.Api.Files
                                 string cursor,
                                 bool hasMore)
         {
-            var entriesList = new col.List<Metadata>(entries ?? new Metadata[0]);
+            var entriesList = enc.Util.ToList(entries);
 
             if (entries == null)
             {
@@ -52,6 +52,10 @@ namespace Dropbox.Api.Files
             if (cursor == null)
             {
                 throw new sys.ArgumentNullException("cursor");
+            }
+            else if (cursor.Length < 1)
+            {
+                throw new sys.ArgumentOutOfRangeException("cursor");
             }
 
             this.Entries = entriesList;
@@ -102,7 +106,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ListFolderResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, Metadata.Encoder);
+                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Files.Metadata.Encoder);
                 WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
             }
@@ -138,7 +142,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList(reader, Metadata.Decoder);
+                        value.Entries = ReadList<Metadata>(reader, Dropbox.Api.Files.Metadata.Decoder);
                         break;
                     case "cursor":
                         value.Cursor = enc.StringDecoder.Instance.Decode(reader);

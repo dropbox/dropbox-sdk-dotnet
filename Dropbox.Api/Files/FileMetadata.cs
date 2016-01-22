@@ -46,11 +46,13 @@ namespace Dropbox.Api.Files
         /// field is the same rev as elsewhere in the API and can be used to detect changes and
         /// avoid conflicts.</param>
         /// <param name="size">The file size in bytes.</param>
-        /// <param name="parentSharedFolderId">Set if this file or folder is contained in a
-        /// shared folder.</param>
+        /// <param name="parentSharedFolderId">Deprecated. Please use
+        /// :field:'FileSharingInfo.parent_shared_folder_id' or
+        /// :field:'FolderSharingInfo.parent_shared_folder_id' instead.</param>
         /// <param name="id">A unique identifier for the file.</param>
         /// <param name="mediaInfo">Additional information if the file is a photo or
         /// video.</param>
+        /// <param name="sharingInfo">Set if this file is contained in a shared folder.</param>
         public FileMetadata(string name,
                             string pathLower,
                             sys.DateTime clientModified,
@@ -59,7 +61,8 @@ namespace Dropbox.Api.Files
                             ulong size,
                             string parentSharedFolderId = null,
                             string id = null,
-                            MediaInfo mediaInfo = null)
+                            MediaInfo mediaInfo = null,
+                            FileSharingInfo sharingInfo = null)
             : base(name, pathLower, parentSharedFolderId)
         {
             if (rev == null)
@@ -82,6 +85,7 @@ namespace Dropbox.Api.Files
             this.Size = size;
             this.Id = id;
             this.MediaInfo = mediaInfo;
+            this.SharingInfo = sharingInfo;
         }
 
         /// <summary>
@@ -129,6 +133,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public MediaInfo MediaInfo { get; protected set; }
 
+        /// <summary>
+        /// <para>Set if this file is contained in a shared folder.</para>
+        /// </summary>
+        public FileSharingInfo SharingInfo { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -159,7 +168,11 @@ namespace Dropbox.Api.Files
                 }
                 if (value.MediaInfo != null)
                 {
-                    WriteProperty("media_info", value.MediaInfo, writer, MediaInfo.Encoder);
+                    WriteProperty("media_info", value.MediaInfo, writer, Dropbox.Api.Files.MediaInfo.Encoder);
+                }
+                if (value.SharingInfo != null)
+                {
+                    WriteProperty("sharing_info", value.SharingInfo, writer, Dropbox.Api.Files.FileSharingInfo.Encoder);
                 }
             }
         }
@@ -218,7 +231,10 @@ namespace Dropbox.Api.Files
                         value.Id = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "media_info":
-                        value.MediaInfo = MediaInfo.Decoder.Decode(reader);
+                        value.MediaInfo = Dropbox.Api.Files.MediaInfo.Decoder.Decode(reader);
+                        break;
+                    case "sharing_info":
+                        value.SharingInfo = Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

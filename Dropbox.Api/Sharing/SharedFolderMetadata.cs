@@ -137,9 +137,9 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
-                WriteProperty("access_type", value.AccessType, writer, AccessLevel.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("policy", value.Policy, writer, FolderPolicy.Encoder);
+                WriteProperty("policy", value.Policy, writer, Dropbox.Api.Sharing.FolderPolicy.Encoder);
                 if (value.PathLower != null)
                 {
                     WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
@@ -183,13 +183,13 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "access_type":
-                        value.AccessType = AccessLevel.Decoder.Decode(reader);
+                        value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "is_team_folder":
                         value.IsTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "policy":
-                        value.Policy = FolderPolicy.Decoder.Decode(reader);
+                        value.Policy = Dropbox.Api.Sharing.FolderPolicy.Decoder.Decode(reader);
                         break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);

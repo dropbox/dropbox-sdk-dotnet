@@ -41,7 +41,7 @@ namespace Dropbox.Api.Files
                             bool more,
                             ulong start)
         {
-            var matchesList = new col.List<SearchMatch>(matches ?? new SearchMatch[0]);
+            var matchesList = enc.Util.ToList(matches);
 
             if (matches == null)
             {
@@ -95,7 +95,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SearchResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("matches", value.Matches, writer, SearchMatch.Encoder);
+                WriteListProperty("matches", value.Matches, writer, Dropbox.Api.Files.SearchMatch.Encoder);
                 WriteProperty("more", value.More, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("start", value.Start, writer, enc.UInt64Encoder.Instance);
             }
@@ -131,7 +131,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "matches":
-                        value.Matches = ReadList(reader, SearchMatch.Decoder);
+                        value.Matches = ReadList<SearchMatch>(reader, Dropbox.Api.Files.SearchMatch.Decoder);
                         break;
                     case "more":
                         value.More = enc.BooleanDecoder.Instance.Decode(reader);

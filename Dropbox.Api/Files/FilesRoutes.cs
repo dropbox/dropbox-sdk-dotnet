@@ -40,7 +40,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="GetMetadataError"/>.</exception>
         public t.Task<Metadata> GetMetadataAsync(GetMetadataArg getMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetMetadataArg, Metadata, GetMetadataError>(getMetadataArg, "api", "/files/get_metadata", GetMetadataArg.Encoder, Metadata.Decoder, GetMetadataError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetMetadataArg, Metadata, GetMetadataError>(getMetadataArg, "api", "/files/get_metadata", Dropbox.Api.Files.GetMetadataArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.GetMetadataError.Decoder);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderLongpollError"/>.</exception>
         public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(ListFolderLongpollArg listFolderLongpollArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderLongpollArg, ListFolderLongpollResult, ListFolderLongpollError>(listFolderLongpollArg, "notify", "/files/list_folder/longpoll", ListFolderLongpollArg.Encoder, ListFolderLongpollResult.Decoder, ListFolderLongpollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderLongpollArg, ListFolderLongpollResult, ListFolderLongpollError>(listFolderLongpollArg, "notify", "/files/list_folder/longpoll", Dropbox.Api.Files.ListFolderLongpollArg.Encoder, Dropbox.Api.Files.ListFolderLongpollResult.Decoder, Dropbox.Api.Files.ListFolderLongpollError.Decoder);
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(ListFolderArg listFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderResult, ListFolderError>(listFolderArg, "api", "/files/list_folder", ListFolderArg.Encoder, ListFolderResult.Decoder, ListFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderResult, ListFolderError>(listFolderArg, "api", "/files/list_folder", Dropbox.Api.Files.ListFolderArg.Encoder, Dropbox.Api.Files.ListFolderResult.Decoder, Dropbox.Api.Files.ListFolderError.Decoder);
         }
 
         /// <summary>
@@ -361,7 +361,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderContinueError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderContinueAsync(ListFolderContinueArg listFolderContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderContinueArg, ListFolderResult, ListFolderContinueError>(listFolderContinueArg, "api", "/files/list_folder/continue", ListFolderContinueArg.Encoder, ListFolderResult.Decoder, ListFolderContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderContinueArg, ListFolderResult, ListFolderContinueError>(listFolderContinueArg, "api", "/files/list_folder/continue", Dropbox.Api.Files.ListFolderContinueArg.Encoder, Dropbox.Api.Files.ListFolderResult.Decoder, Dropbox.Api.Files.ListFolderContinueError.Decoder);
         }
 
         /// <summary>
@@ -457,7 +457,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(ListFolderArg listFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderGetLatestCursorResult, ListFolderError>(listFolderArg, "api", "/files/list_folder/get_latest_cursor", ListFolderArg.Encoder, ListFolderGetLatestCursorResult.Decoder, ListFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderGetLatestCursorResult, ListFolderError>(listFolderArg, "api", "/files/list_folder/get_latest_cursor", Dropbox.Api.Files.ListFolderArg.Encoder, Dropbox.Api.Files.ListFolderGetLatestCursorResult.Decoder, Dropbox.Api.Files.ListFolderError.Decoder);
         }
 
         /// <summary>
@@ -575,7 +575,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="DownloadError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(DownloadArg downloadArg)
         {
-            return this.Transport.SendDownloadRequestAsync<DownloadArg, FileMetadata, DownloadError>(downloadArg, "content", "/files/download", DownloadArg.Encoder, FileMetadata.Decoder, DownloadError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<DownloadArg, FileMetadata, DownloadError>(downloadArg, "content", "/files/download", Dropbox.Api.Files.DownloadArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.DownloadError.Decoder);
         }
 
         /// <summary>
@@ -670,7 +670,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<UploadSessionStartResult> UploadSessionStartAsync(io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<enc.Empty, UploadSessionStartResult, enc.Empty>(enc.Empty.Instance, body, "content", "/files/upload_session/start", enc.EmptyEncoder.Instance, UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendUploadRequestAsync<enc.Empty, UploadSessionStartResult, enc.Empty>(enc.Empty.Instance, body, "content", "/files/upload_session/start", enc.EmptyEncoder.Instance, Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -719,7 +719,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionLookupError"/>.</exception>
         public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, UploadSessionLookupError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.UploadSessionLookupError.Decoder);
         }
 
         /// <summary>
@@ -821,7 +821,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionFinishError"/>.</exception>
         public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionFinishArg uploadSessionFinishArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionFinishArg, FileMetadata, UploadSessionFinishError>(uploadSessionFinishArg, body, "content", "/files/upload_session/finish", UploadSessionFinishArg.Encoder, FileMetadata.Decoder, UploadSessionFinishError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionFinishArg, FileMetadata, UploadSessionFinishError>(uploadSessionFinishArg, body, "content", "/files/upload_session/finish", Dropbox.Api.Files.UploadSessionFinishArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadSessionFinishError.Decoder);
         }
 
         /// <summary>
@@ -924,7 +924,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
         public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", CommitInfo.Encoder, FileMetadata.Decoder, UploadError.Decoder);
+            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", Dropbox.Api.Files.CommitInfo.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadError.Decoder);
         }
 
         /// <summary>
@@ -1056,7 +1056,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
         public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
         {
-            return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", SearchArg.Encoder, SearchResult.Decoder, SearchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", Dropbox.Api.Files.SearchArg.Encoder, Dropbox.Api.Files.SearchResult.Decoder, Dropbox.Api.Files.SearchError.Decoder);
         }
 
         /// <summary>
@@ -1175,7 +1175,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="CreateFolderError"/>.</exception>
         public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", CreateFolderArg.Encoder, FolderMetadata.Decoder, CreateFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", Dropbox.Api.Files.CreateFolderArg.Encoder, Dropbox.Api.Files.FolderMetadata.Decoder, Dropbox.Api.Files.CreateFolderError.Decoder);
         }
 
         /// <summary>
@@ -1260,7 +1260,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", DeleteArg.Encoder, Metadata.Decoder, DeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", Dropbox.Api.Files.DeleteArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.DeleteError.Decoder);
         }
 
         /// <summary>
@@ -1344,7 +1344,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task PermanentlyDeleteAsync(DeleteArg deleteArg)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, enc.Empty, DeleteError>(deleteArg, "api", "/files/permanently_delete", DeleteArg.Encoder, enc.EmptyDecoder.Instance, DeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DeleteArg, enc.Empty, DeleteError>(deleteArg, "api", "/files/permanently_delete", Dropbox.Api.Files.DeleteArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.DeleteError.Decoder);
         }
 
         /// <summary>
@@ -1426,7 +1426,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", RelocationArg.Encoder, Metadata.Decoder, RelocationError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
         }
 
         /// <summary>
@@ -1518,7 +1518,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", RelocationArg.Encoder, Metadata.Decoder, RelocationError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
         }
 
         /// <summary>
@@ -1612,7 +1612,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ThumbnailError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(ThumbnailArg thumbnailArg)
         {
-            return this.Transport.SendDownloadRequestAsync<ThumbnailArg, FileMetadata, ThumbnailError>(thumbnailArg, "content", "/files/get_thumbnail", ThumbnailArg.Encoder, FileMetadata.Decoder, ThumbnailError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<ThumbnailArg, FileMetadata, ThumbnailError>(thumbnailArg, "content", "/files/get_thumbnail", Dropbox.Api.Files.ThumbnailArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.ThumbnailError.Decoder);
         }
 
         /// <summary>
@@ -1718,7 +1718,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="PreviewError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(PreviewArg previewArg)
         {
-            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", PreviewArg.Encoder, FileMetadata.Decoder, PreviewError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", Dropbox.Api.Files.PreviewArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.PreviewError.Decoder);
         }
 
         /// <summary>
@@ -1813,7 +1813,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(ListRevisionsArg listRevisionsArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions", ListRevisionsArg.Encoder, ListRevisionsResult.Decoder, ListRevisionsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions", Dropbox.Api.Files.ListRevisionsArg.Encoder, Dropbox.Api.Files.ListRevisionsResult.Decoder, Dropbox.Api.Files.ListRevisionsError.Decoder);
         }
 
         /// <summary>
@@ -1904,7 +1904,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="RestoreError"/>.</exception>
         public t.Task<FileMetadata> RestoreAsync(RestoreArg restoreArg)
         {
-            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", RestoreArg.Encoder, FileMetadata.Decoder, RestoreError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", Dropbox.Api.Files.RestoreArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.RestoreError.Decoder);
         }
 
         /// <summary>

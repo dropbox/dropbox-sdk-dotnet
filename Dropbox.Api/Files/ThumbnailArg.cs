@@ -106,8 +106,8 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(ThumbnailArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteProperty("format", value.Format, writer, ThumbnailFormat.Encoder);
-                WriteProperty("size", value.Size, writer, ThumbnailSize.Encoder);
+                WriteProperty("format", value.Format, writer, Dropbox.Api.Files.ThumbnailFormat.Encoder);
+                WriteProperty("size", value.Size, writer, Dropbox.Api.Files.ThumbnailSize.Encoder);
             }
         }
 
@@ -144,10 +144,10 @@ namespace Dropbox.Api.Files
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "format":
-                        value.Format = ThumbnailFormat.Decoder.Decode(reader);
+                        value.Format = Dropbox.Api.Files.ThumbnailFormat.Decoder.Decode(reader);
                         break;
                     case "size":
-                        value.Size = ThumbnailSize.Decoder.Decode(reader);
+                        value.Size = Dropbox.Api.Files.ThumbnailSize.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

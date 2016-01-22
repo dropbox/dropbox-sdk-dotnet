@@ -27,6 +27,43 @@ namespace Dropbox.Api.Babel
     }
 
     /// <summary>
+    /// Decoder for nullable struct.
+    /// </summary>
+    /// <typeparam name="T">Type of the struct.</typeparam>
+    internal sealed class NullableDecoder<T> : IDecoder<T?> where T : struct
+    {
+        /// <summary>
+        /// The decoder.
+        /// </summary>
+        private readonly IDecoder<T> decoder;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NullableDecoder{T}"/>
+        /// </summary>
+        /// <param name="decoder">The decoder.</param>
+        public NullableDecoder(IDecoder<T> decoder)
+        {
+            this.decoder = decoder;
+        }
+
+        /// <summary>
+        /// The decode.
+        /// </summary>
+        /// <param name="reader">The reader.</param>
+        /// <returns>The value.</returns>
+        public T? Decode(IJsonReader reader)
+        {
+            if (reader.IsNull)
+            {
+                reader.Read();
+                return null;
+            }
+
+            return this.decoder.Decode(reader);
+        }
+    }
+
+    /// <summary>
     /// Decoder for Int32.
     /// </summary>
     internal sealed class Int32Decoder : IDecoder<int>
@@ -35,6 +72,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IDecoder<int> Instance = new Int32Decoder();
+
+        /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<int?> NullableInstance = new NullableDecoder<int>(Instance);
 
         /// <summary>
         /// The decode.
@@ -58,6 +100,11 @@ namespace Dropbox.Api.Babel
         public static readonly IDecoder<long> Instance = new Int64Decoder();
 
         /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<long?> NullableInstance = new NullableDecoder<long>(Instance);
+
+        /// <summary>
         /// The decode.
         /// </summary>
         /// <param name="reader">The reader.</param>
@@ -77,6 +124,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IDecoder<uint> Instance = new UInt32Decoder();
+
+        /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<uint?> NullableInstance = new NullableDecoder<uint>(Instance);
 
         /// <summary>
         /// The decode.
@@ -100,6 +152,11 @@ namespace Dropbox.Api.Babel
         public static readonly IDecoder<ulong> Instance = new UInt64Decoder();
 
         /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<ulong?> NullableInstance = new NullableDecoder<ulong>(Instance);
+
+        /// <summary>
         /// The decode.
         /// </summary>
         /// <param name="reader">The reader.</param>
@@ -119,6 +176,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IDecoder<float> Instance = new SingleDecoder();
+
+        /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<float?> NullableInstance = new NullableDecoder<float>(Instance);
 
         /// <summary>
         /// The decode.
@@ -142,6 +204,11 @@ namespace Dropbox.Api.Babel
         public static readonly IDecoder<double> Instance = new DoubleDecoder();
 
         /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<double?> NullableInstance = new NullableDecoder<double>(Instance);
+
+        /// <summary>
         /// The decode.
         /// </summary>
         /// <param name="reader">The reader.</param>
@@ -163,6 +230,11 @@ namespace Dropbox.Api.Babel
         public static readonly IDecoder<bool> Instance = new BooleanDecoder();
 
         /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<bool?> NullableInstance = new NullableDecoder<bool>(Instance);
+
+        /// <summary>
         /// The decode.
         /// </summary>
         /// <param name="reader">The reader.</param>
@@ -182,6 +254,11 @@ namespace Dropbox.Api.Babel
         /// The instance.
         /// </summary>
         public static readonly IDecoder<DateTime> Instance = new DateTimeDecoder();
+
+        /// <summary>
+        /// The instance for nullable.
+        /// </summary>
+        public static readonly IDecoder<DateTime?> NullableInstance = new NullableDecoder<DateTime>(Instance);
 
         /// <summary>
         /// The decode.
@@ -240,7 +317,7 @@ namespace Dropbox.Api.Babel
     /// Decoder for struct type.
     /// </summary>
     /// <typeparam name="T">The struct type.</typeparam>
-    internal abstract class StructDecoder<T> : IDecoder<T>
+    internal abstract class StructDecoder<T> : IDecoder<T> where T : class
     {
         /// <summary>
         /// The decode.
@@ -249,6 +326,12 @@ namespace Dropbox.Api.Babel
         /// <returns>The value.</returns>
         public T Decode(IJsonReader reader)
         {
+            if (reader.IsNull)
+            {
+                reader.Read();
+                return null;
+            }
+
             EnsureStartObject(reader);
 
             var obj = this.DecodeFields(reader);
@@ -357,7 +440,7 @@ namespace Dropbox.Api.Babel
     /// Decoder for union type.
     /// </summary>
     /// <typeparam name="T">The union type.</typeparam>
-    internal abstract class UnionDecoder<T> : StructDecoder<T> where T : new()
+    internal abstract class UnionDecoder<T> : StructDecoder<T> where T : class, new()
     {
         /// <summary>
         /// Decode fields without ensuring start and end object.

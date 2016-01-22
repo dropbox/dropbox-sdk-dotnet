@@ -85,8 +85,8 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UploadSessionFinishArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("cursor", value.Cursor, writer, UploadSessionCursor.Encoder);
-                WriteProperty("commit", value.Commit, writer, CommitInfo.Encoder);
+                WriteProperty("cursor", value.Cursor, writer, Dropbox.Api.Files.UploadSessionCursor.Encoder);
+                WriteProperty("commit", value.Commit, writer, Dropbox.Api.Files.CommitInfo.Encoder);
             }
         }
 
@@ -121,10 +121,10 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "cursor":
-                        value.Cursor = UploadSessionCursor.Decoder.Decode(reader);
+                        value.Cursor = Dropbox.Api.Files.UploadSessionCursor.Decoder.Decode(reader);
                         break;
                     case "commit":
-                        value.Commit = CommitInfo.Decoder.Decode(reader);
+                        value.Commit = Dropbox.Api.Files.CommitInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();
