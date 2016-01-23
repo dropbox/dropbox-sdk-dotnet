@@ -654,6 +654,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
         /// an error processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
         {
             return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", Dropbox.Api.Sharing.GetSharedLinksArg.Encoder, Dropbox.Api.Sharing.GetSharedLinksResult.Decoder, Dropbox.Api.Sharing.GetSharedLinksError.Decoder);
@@ -668,6 +669,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginListSharedLinks instead.")]
         public sys.IAsyncResult BeginGetSharedLinks(GetSharedLinksArg getSharedLinksArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetSharedLinksAsync(getSharedLinksArg);
@@ -692,6 +694,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
         /// an error processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(string path = null)
         {
             var getSharedLinksArg = new GetSharedLinksArg(path);
@@ -710,6 +713,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginListSharedLinks instead.")]
         public sys.IAsyncResult BeginGetSharedLinks(string path = null,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
@@ -729,6 +733,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
         /// an error processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndListSharedLinks instead.")]
         public GetSharedLinksResult EndGetSharedLinks(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetSharedLinksResult>;
@@ -759,6 +764,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
         /// is an error processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
         {
             return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", Dropbox.Api.Sharing.CreateSharedLinkArg.Encoder, Dropbox.Api.Sharing.PathLinkMetadata.Decoder, Dropbox.Api.Sharing.CreateSharedLinkError.Decoder);
@@ -773,6 +779,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginCreateSharedLinkWithSettings instead.")]
         public sys.IAsyncResult BeginCreateSharedLink(CreateSharedLinkArg createSharedLinkArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CreateSharedLinkAsync(createSharedLinkArg);
@@ -804,6 +811,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
         /// is an error processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(string path,
                                                               bool shortUrl = false,
                                                               PendingUploadMode pendingUpload = null)
@@ -829,6 +837,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginCreateSharedLinkWithSettings instead.")]
         public sys.IAsyncResult BeginCreateSharedLink(string path,
                                                       bool shortUrl = false,
                                                       PendingUploadMode pendingUpload = null,
@@ -852,6 +861,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
         /// is an error processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndCreateSharedLinkWithSettings instead.")]
         public PathLinkMetadata EndCreateSharedLink(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<PathLinkMetadata>;
