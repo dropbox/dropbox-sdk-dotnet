@@ -10,14 +10,13 @@ namespace SimpleTest
 
     using Dropbox.Api;
     using Dropbox.Api.Files;
+    using Dropbox.Api.Team;
     using System.Threading;
 
     partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
         // private const string ApiKey = "XXXXXXXXXXXXXXX";
-
-        private DropboxClient client;
 
         [STAThread]
         static int Main(string[] args)
@@ -50,24 +49,18 @@ namespace SimpleTest
                 Timeout = TimeSpan.FromMinutes(20)
             };
 
-            this.client = new DropboxClient(accessToken, userAgent: "SimpleTestApp", httpClient: httpClient);
-
             try
             {
-                await GetCurrentAccount();
+                var client = new DropboxClient(accessToken, userAgent: "SimpleTestApp", httpClient: httpClient);
+                await RunUserTests(client);
 
-                var path = "/DotNetApi/Help";
-                var list = await ListFolder(path);
+                // Tests below are for Dropbox Business endpoints. To run these tests, make sure the ApiKey is for
+                // a Dropbox Business app and you have an admin account to log in.
 
-                var firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
-                if (firstFile != null)
-                {
-                    await Download(path, firstFile.AsFile);
-                }
-
-                await Upload(path, "Test.txt", "This is a text file");
-
-                await ChunkUpload(path, "Binary");
+                /*
+                var client = new DropboxTeamClient(accessToken, userAgent: "SimpleTeamTestApp", httpClient: httpClient);
+                await RunTeamTests(client);
+                */
             }
             catch (HttpException e)
             {
@@ -81,6 +74,50 @@ namespace SimpleTest
             }
 
             return 0;
+        }
+
+        /// <summary>
+        /// Run tests for user-level operations.
+        /// </summary>
+        /// <param name="client">The Dropbox client.</param>
+        /// <returns>An asynchronous task.</returns>
+        private async Task RunUserTests(DropboxClient client)
+        {
+            await GetCurrentAccount(client);
+
+            var path = "/DotNetApi/Help";
+            var list = await ListFolder(client, path);
+
+            var firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
+            if (firstFile != null)
+            {
+                await Download(client, path, firstFile.AsFile);
+            }
+
+            await Upload(client, path, "Test.txt", "This is a text file");
+
+            await ChunkUpload(client, path, "Binary");
+        }
+
+        /// <summary>
+        /// Run tests for team-level operations.
+        /// </summary>
+        /// <param name="client">The Dropbox client.</param>
+        /// <returns>An asynchronous task.</returns>
+        private async Task RunTeamTests(DropboxTeamClient client)
+        {
+            var members = await client.Team.MembersListAsync();
+
+            var member = members.Members.FirstOrDefault();
+
+            if (member != null)
+            {
+                // A team client can perform action on a team member's behalf. To do this,
+                // just pass in team member id in to AsMember function which returns a user client.
+                // This client will operates on this team member's Dropbox.
+                var userClient = client.AsMember(member.Profile.TeamMemberId);
+                await RunUserTests(userClient);
+            }
         }
 
         /// <summary>
@@ -177,10 +214,11 @@ namespace SimpleTest
         /// This demonstrates calling a simple rpc style api from the Users namespace.
         /// </para>
         /// </summary>
+        /// <param name="client">The Dropbox client.</param>
         /// <returns>An asynchronous task.</returns>
-        private async Task GetCurrentAccount()
+        private async Task GetCurrentAccount(DropboxClient client)
         {
-            var full = await this.client.Users.GetCurrentAccountAsync();
+            var full = await client.Users.GetCurrentAccountAsync();
 
             Console.WriteLine("Account id    : {0}", full.AccountId);
             Console.WriteLine("Country       : {0}", full.Country);
@@ -211,11 +249,12 @@ namespace SimpleTest
         /// </summary>
         /// <remarks>This is a demonstrates calling an rpc style api in the Files namespace.</remarks>
         /// <param name="path">The path to list.</param>
+        /// <param name="client">The Dropbox client.</param>
         /// <returns>The result from the ListFolderAsync call.</returns>
-        private async Task<ListFolderResult> ListFolder(string path)
+        private async Task<ListFolderResult> ListFolder(DropboxClient client, string path)
         {
             Console.WriteLine("--- Files ---");
-            var list = await this.client.Files.ListFolderAsync(path);
+            var list = await client.Files.ListFolderAsync(path);
 
             // show folders then files
             foreach (var item in list.Entries.Where(i => i.IsFolder))
@@ -243,14 +282,15 @@ namespace SimpleTest
         /// Downloads a file.
         /// </summary>
         /// <remarks>This demonstrates calling a download style api in the Files namespace.</remarks>
+        /// <param name="client">The Dropbox client.</param>
         /// <param name="folder">The folder path in which the file should be found.</param>
         /// <param name="file">The file to download within <paramref name="folder"/>.</param>
         /// <returns></returns>
-        private async Task Download(string folder, FileMetadata file)
+        private async Task Download(DropboxClient client, string folder, FileMetadata file)
         {
             Console.WriteLine("Download file...");
 
-            using (var response = await this.client.Files.DownloadAsync(folder + "/" + file.Name))
+            using (var response = await client.Files.DownloadAsync(folder + "/" + file.Name))
             {
                 Console.WriteLine("Downloaded {0} Rev {1}", response.Response.Name, response.Response.Rev);
                 Console.WriteLine("------------------------------");
@@ -262,17 +302,18 @@ namespace SimpleTest
         /// <summary>
         /// Uploads given content to a file in Dropbox.
         /// </summary>
+        /// <param name="client">The Dropbox client.</param>
         /// <param name="folder">The folder to upload the file.</param>
         /// <param name="fileName">The name of the file.</param>
         /// <param name="fileContent">The file content.</param>
         /// <returns></returns>
-        private async Task Upload(string folder, string fileName, string fileContent)
+        private async Task Upload(DropboxClient client, string folder, string fileName, string fileContent)
         {
             Console.WriteLine("Upload file...");
 
             using (var stream = new MemoryStream(System.Text.UTF8Encoding.UTF8.GetBytes(fileContent)))
             {
-                var response = await this.client.Files.UploadAsync(folder + "/" + fileName, WriteMode.Overwrite.Instance, body: stream);
+                var response = await client.Files.UploadAsync(folder + "/" + fileName, WriteMode.Overwrite.Instance, body: stream);
 
                 Console.WriteLine("Uploaded Id {0} Rev {1}", response.Id, response.Rev);
             }
@@ -282,10 +323,11 @@ namespace SimpleTest
         /// Uploads a big file in chunk. The is very helpful for uploading large file in slow network condition
         /// and also enable capability to track upload progerss.
         /// </summary>
+        /// <param name="client">The Dropbox client.</param>
         /// <param name="folder">The folder to upload the file.</param>
         /// <param name="fileName">The name of the file.</param>
         /// <returns></returns>
-        private async Task ChunkUpload(string folder, string fileName)
+        private async Task ChunkUpload(DropboxClient client, string folder, string fileName)
         {
             Console.WriteLine("Chunk upload file...");
             // Chunk size is 128KB.
@@ -311,7 +353,7 @@ namespace SimpleTest
                     {
                         if (idx == 0)
                         {
-                            var result = await this.client.Files.UploadSessionStartAsync(memStream);
+                            var result = await client.Files.UploadSessionStartAsync(memStream);
                             sessionId = result.SessionId;
                         }
 
@@ -321,18 +363,36 @@ namespace SimpleTest
 
                             if (idx == numChunks - 1)
                             {
-                                await this.client.Files.UploadSessionFinishAsync(cursor, new CommitInfo(folder + "/" + fileName), memStream);
+                                await client.Files.UploadSessionFinishAsync(cursor, new CommitInfo(folder + "/" + fileName), memStream);
                             }
 
                             else
                             {
-                                await this.client.Files.UploadSessionAppendAsync(cursor, memStream);
+                                await client.Files.UploadSessionAppendAsync(cursor, memStream);
                             }
                         }
                     }
                 }
             }
+        }
 
+        /// <summary>
+        /// List all members in the team.
+        /// </summary>
+        /// <param name="client">The Dropbox team client.</param>
+        /// <returns>The result from the MembersListAsync call.</returns>
+        private async Task<MembersListResult> ListTeamMembers(DropboxTeamClient client)
+        {
+            var members = await client.Team.MembersListAsync();
+
+            foreach (var member in members.Members)
+            {
+                Console.WriteLine("Member id    : {0}", member.Profile.TeamMemberId);
+                Console.WriteLine("Name         : {0}", member.Profile.Name);
+                Console.WriteLine("Email        : {0}", member.Profile.Email);
+            }
+
+            return members;
         }
     }
 }
