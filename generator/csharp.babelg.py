@@ -1825,8 +1825,7 @@ class CSharpGenerator(CodeGenerator):
             route (babelapi.api.ApiRoute): The route in question.
         """
         public_name = self._public_name(route.name)
-        member_name = '{0}Async'.format(public_name)
-
+        async_name = '{0}Async'.format(public_name)
         route_host = route.attrs.get('host', 'api')
         route_style = route.attrs.get('style', 'rpc')
 
@@ -1863,7 +1862,7 @@ class CSharpGenerator(CodeGenerator):
                 body_arg = 'io.Stream body'
             ctor_args.append(ConstructorArg('io.Stream', 'body', body_arg, '<param name="body">The document to upload</param>'))
        
-        async_fn = 'public {0} {1}({2})'.format(task_type, member_name, ', '.join(route_args)) 
+        async_fn = 'public {0} {1}({2})'.format(task_type, async_name, ', '.join(route_args)) 
 
         apm_args = route_args + ['sys.AsyncCallback callback', 'object state = null']
         apm_fn = 'public sys.IAsyncResult Begin{0}({1})'.format(public_name, ', '.join(apm_args))
@@ -1889,6 +1888,7 @@ class CSharpGenerator(CodeGenerator):
                               'This will contain a <see cref="{0}"/>.'.format(error_type),
                               'exception', cref='Dropbox.Api.ApiException{{{0}}}'.format(error_type))
 
+        self._generate_obsolete_attribute(route.deprecated, suffix='Async')
         with self.cs_block(before=async_fn):
             args = ['enc.Empty.Instance' if request_is_void else request_arg]
             if route_style == 'upload':
@@ -1918,6 +1918,8 @@ class CSharpGenerator(CodeGenerator):
             self.emit_xml('A user provided object that distinguished this send from other send '
                     'requests.', 'param', name='state')
             self.emit_xml('An object that represents the asynchronous send request.', 'returns')
+
+        self._generate_obsolete_attribute(route.deprecated, prefix='Begin')
         with self.cs_block(before=apm_fn):
             async_args = []
             if not request_is_void:
@@ -1925,7 +1927,7 @@ class CSharpGenerator(CodeGenerator):
             if route_style == 'upload':
                 async_args.append('body')
 
-            self.emit('var task = this.{0}({1});'.format(member_name, ', '.join(async_args)))
+            self.emit('var task = this.{0}({1});'.format(async_name, ', '.join(async_args)))
             self.emit()
             self.emit('return enc.Util.ToApm(task, callback, state);')
 
@@ -1949,9 +1951,11 @@ class CSharpGenerator(CodeGenerator):
                     self.emit_xml('Thrown if there is an error processing the request; '
                                   'This will contain a <see cref="{0}"/>.'.format(error_type),
                                   'exception', cref='Dropbox.Api.ApiException{{{0}}}'.format(error_type))
+
+            self._generate_obsolete_attribute(route.deprecated, suffix='Async')
             self.generate_multiline_list(
                 arg_list,
-                before='public {0} {1}'.format(task_type, member_name),
+                before='public {0} {1}'.format(task_type, async_name),
                 skip_last_sep=True
             )
             with self.cs_block():
@@ -1965,7 +1969,7 @@ class CSharpGenerator(CodeGenerator):
                 async_args = [request_arg]
                 if route_style == 'upload':
                     async_args.append('body')
-                self.emit('return this.{0}({1});'.format(member_name, ', '.join(async_args)))
+                self.emit('return this.{0}({1});'.format(async_name, ', '.join(async_args)))
 
             self.emit()
             with self.doc_comment():
@@ -1986,6 +1990,7 @@ class CSharpGenerator(CodeGenerator):
                 arg_list.append('sys.AsyncCallback callback')
             arg_list.append('object callbackState = null')
 
+            self._generate_obsolete_attribute(route.deprecated, prefix='Begin')
             self.generate_multiline_list(
                     arg_list,
                     before='public sys.IAsyncResult Begin{0}'.format(public_name),
@@ -2016,6 +2021,8 @@ class CSharpGenerator(CodeGenerator):
                 self.emit_xml('Thrown if there is an error processing the request; '
                               'This will contain a <see cref="{0}"/>.'.format(error_type),
                               'exception', cref='Dropbox.Api.ApiException{{{0}}}'.format(error_type))
+
+        self._generate_obsolete_attribute(route.deprecated, prefix='End')
         with self.cs_block(before='public {0} End{1}(sys.IAsyncResult asyncResult)'.format(
                 apm_response_type, public_name)):
             self.emit('var task = asyncResult as {0};'.format(task_type))
@@ -2024,3 +2031,19 @@ class CSharpGenerator(CodeGenerator):
             if not response_is_void:
                 self.emit()
                 self.emit('return task.Result;')
+    
+    def _generate_obsolete_attribute(self, deprecated, prefix='', suffix=''):
+        """
+        Generate obsolete attribute for depreated route.
+
+        Args:
+            deprecated (babelapi.api.DeprecationInfo): The route which deprecates.
+            prefix (str): The prefix for the route function.
+            suffix (str): The suffix for the route function.
+        """
+        if not deprecated:
+            return
+
+        self.cs_block
+        self.emit('[sys.Obsolete("This function is deprecated, please use {0}{1}{2} instead.")]'
+                  .format(prefix, self._public_name(deprecated.by.name), suffix))
