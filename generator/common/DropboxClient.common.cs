@@ -32,7 +32,7 @@ namespace Dropbox.Api
             int maxRetriesOnError = 4,
             string userAgent = null,
             HttpClient httpClient = null)
-            : this(new DrpoboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient))
+            : this(new DropboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient))
         {
             if (oauth2AccessToken == null)
             {
@@ -46,9 +46,9 @@ namespace Dropbox.Api
         /// <param name="options">The request handler options.</param>
         /// <param name="selectUser">The member id of the selected user. If provided together with
         /// a team access token, actions will be performed on this this user's Dropbox.</param>
-        internal DropboxClient(DrpoboxRequestHandlerOptions options, string selectUser = null)
+        internal DropboxClient(DropboxRequestHandlerOptions options, string selectUser = null)
         {
-            this.InitializeRoutes(new DropboxRequestHandler(options, selectUser));
+            this.InitializeRoutes(DropboxRequestHandlerFactory.Create(options, selectUser));
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Dropbox.Api
         /// <summary>
         /// The request handler options.
         /// </summary>
-        private readonly DrpoboxRequestHandlerOptions options;
+        private readonly DropboxRequestHandlerOptions options;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxTeamClient"/> class.
@@ -93,8 +93,8 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("oauth2AccessToken");
             }
 
-            this.options = new DrpoboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient);
-            this.InitializeRoutes(new DropboxRequestHandler(this.options));
+            this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient);
+            this.InitializeRoutes(DropboxRequestHandlerFactory.Create(this.options));
         }
 
         /// <summary>
@@ -163,6 +163,7 @@ namespace Dropbox.Api
     /// <summary>
     /// An HTTP exception that is caused by the server reporting an authentication problem.
     /// </summary>
+    [Obsolete("This exception is no longer thrown. Please catch ApiException<AuthError> instead.")]
     public class AuthException : HttpException
     {
         /// <summary>

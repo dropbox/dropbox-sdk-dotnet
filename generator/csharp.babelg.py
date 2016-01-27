@@ -114,6 +114,7 @@ class CSharpGenerator(CodeGenerator):
 
         self._generate_dropbox_client(api, 'DropboxClient', 'user')
         self._generate_dropbox_client(api, 'DropboxTeamClient', 'team')
+        self._generate_dropbox_request_handler_factory(api)
 
         self._generate_xml_doc(api)
         self._generate_csproj()
@@ -964,6 +965,35 @@ class CSharpGenerator(CodeGenerator):
                     with self.cs_block(before='private void InitializeRoutes(ITransport transport)'):
                         for ns_name in ns_names:
                             self.emit('this.{0} = new {0}Routes(transport);'.format(ns_name))
+    
+    def _generate_dropbox_request_handler_factory(self, api):
+        """
+        Generates the request handler factory based on auth error babel union.
+
+        Args:
+            api (babelapi.api.Api): The API specification.
+        """
+        ns = api.namespaces['auth']
+        auth_error = ns.data_type_by_name['AuthError']
+        
+        with self.output_to_relative_path('DropboxRequestHandlerFactory.cs'):
+            self.auto_generated()
+            with self.cs_block(before='namespace {}'.format(self.DEFAULT_NAMESPACE[:-1])):
+                self.emit('using sys = System;')
+                self.emit()
+                self.emit('using Dropbox.Api.Babel;')
+                self.emit('using Dropbox.Api.{0};'.format(self._public_name(ns.name)))
+                self.emit()
+
+                with self.class_('DropboxRequestHandlerFactory', access='internal static'):
+                    self.emit()
+                    with self.doc_comment():
+                        self.emit_summary('Creates a <see cref="DropboxRequestHandler{T}"/> instance.')
+                        self.emit_xml('The request handler options.', 'param', name='options')
+                        self.emit_xml('The select user id.', 'param', name='selectUser')
+                    with self.cs_block(before='public static ITransport Create(DropboxRequestHandlerOptions options, string selectUser = null)'):
+                            self.emit('return new DropboxRequestHandler<{0}>(options, {0}.Decoder, selectUser);'
+                                      .format(self._public_name(auth_error.name)))
 
     def _compute_related_types(self, ns): 
         """
