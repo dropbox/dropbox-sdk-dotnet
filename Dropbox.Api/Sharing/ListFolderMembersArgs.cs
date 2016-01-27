@@ -32,7 +32,9 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        public ListFolderMembersArgs(string sharedFolderId)
+        /// <param name="actions">Member actions to query.</param>
+        public ListFolderMembersArgs(string sharedFolderId,
+                                     col.IEnumerable<MemberAction> actions = null)
         {
             if (sharedFolderId == null)
             {
@@ -43,7 +45,10 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }
 
+            var actionsList = enc.Util.ToList(actions);
+
             this.SharedFolderId = sharedFolderId;
+            this.Actions = actionsList;
         }
 
         /// <summary>
@@ -61,6 +66,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string SharedFolderId { get; protected set; }
 
+        /// <summary>
+        /// <para>Member actions to query.</para>
+        /// </summary>
+        public col.IList<MemberAction> Actions { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -76,6 +86,10 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ListFolderMembersArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
+                if (value.Actions.Count > 0)
+                {
+                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.MemberAction.Encoder);
+                }
             }
         }
 
@@ -111,6 +125,9 @@ namespace Dropbox.Api.Sharing
                 {
                     case "shared_folder_id":
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "actions":
+                        value.Actions = ReadList<MemberAction>(reader, Dropbox.Api.Sharing.MemberAction.Decoder);
                         break;
                     default:
                         reader.Skip();

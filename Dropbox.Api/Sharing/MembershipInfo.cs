@@ -34,14 +34,20 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="MembershipInfo" /> class.</para>
         /// </summary>
         /// <param name="accessType">The access type for this member.</param>
-        public MembershipInfo(AccessLevel accessType)
+        /// <param name="permissions">The permissions that requesting user has on this member.
+        /// The set of permissions corresponds to the MemberActions in the request.</param>
+        public MembershipInfo(AccessLevel accessType,
+                              col.IEnumerable<MemberPermission> permissions = null)
         {
             if (accessType == null)
             {
                 throw new sys.ArgumentNullException("accessType");
             }
 
+            var permissionsList = enc.Util.ToList(permissions);
+
             this.AccessType = accessType;
+            this.Permissions = permissionsList;
         }
 
         /// <summary>
@@ -58,6 +64,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public AccessLevel AccessType { get; protected set; }
 
+        /// <summary>
+        /// <para>The permissions that requesting user has on this member. The set of
+        /// permissions corresponds to the MemberActions in the request.</para>
+        /// </summary>
+        public col.IList<MemberPermission> Permissions { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,6 +85,10 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(MembershipInfo value, enc.IJsonWriter writer)
             {
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                if (value.Permissions.Count > 0)
+                {
+                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
+                }
             }
         }
 
@@ -107,6 +123,9 @@ namespace Dropbox.Api.Sharing
                 {
                     case "access_type":
                         value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "permissions":
+                        value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
                         break;
                     default:
                         reader.Skip();

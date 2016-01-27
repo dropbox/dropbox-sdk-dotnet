@@ -34,9 +34,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="accessType">The access type for this member.</param>
         /// <param name="group">The information about the membership group.</param>
+        /// <param name="permissions">The permissions that requesting user has on this member.
+        /// The set of permissions corresponds to the MemberActions in the request.</param>
         public GroupMembershipInfo(AccessLevel accessType,
-                                   GroupInfo @group)
-            : base(accessType)
+                                   GroupInfo @group,
+                                   col.IEnumerable<MemberPermission> permissions = null)
+            : base(accessType, permissions)
         {
             if (@group == null)
             {
@@ -77,6 +80,10 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("group", value.Group, writer, Dropbox.Api.Sharing.GroupInfo.Encoder);
+                if (value.Permissions.Count > 0)
+                {
+                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
+                }
             }
         }
 
@@ -114,6 +121,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "group":
                         value.Group = Dropbox.Api.Sharing.GroupInfo.Decoder.Decode(reader);
+                        break;
+                    case "permissions":
+                        value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
                         break;
                     default:
                         reader.Skip();

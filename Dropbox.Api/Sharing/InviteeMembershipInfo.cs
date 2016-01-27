@@ -35,9 +35,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="accessType">The access type for this member.</param>
         /// <param name="invitee">The information for the invited user.</param>
+        /// <param name="permissions">The permissions that requesting user has on this member.
+        /// The set of permissions corresponds to the MemberActions in the request.</param>
         public InviteeMembershipInfo(AccessLevel accessType,
-                                     InviteeInfo invitee)
-            : base(accessType)
+                                     InviteeInfo invitee,
+                                     col.IEnumerable<MemberPermission> permissions = null)
+            : base(accessType, permissions)
         {
             if (invitee == null)
             {
@@ -78,6 +81,10 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("invitee", value.Invitee, writer, Dropbox.Api.Sharing.InviteeInfo.Encoder);
+                if (value.Permissions.Count > 0)
+                {
+                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
+                }
             }
         }
 
@@ -116,6 +123,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "invitee":
                         value.Invitee = Dropbox.Api.Sharing.InviteeInfo.Decoder.Decode(reader);
+                        break;
+                    case "permissions":
+                        value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
                         break;
                     default:
                         reader.Skip();

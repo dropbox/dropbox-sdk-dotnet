@@ -97,7 +97,9 @@
     <Compile Include="Async\PollEmptyResult.cs" />
     <Compile Include="Async\PollError.cs" />
     <Compile Include="Async\PollResultBase.cs" />
+    <Compile Include="Auth\AuthError.cs" />
     <Compile Include="DropboxClient.cs" />
+    <Compile Include="DropboxRequestHandlerFactory.cs" />
     <Compile Include="DropboxTeamClient.cs" />
     <Compile Include="Files\CommitInfo.cs" />
     <Compile Include="Files\CreateFolderArg.cs" />
@@ -174,7 +176,9 @@
     <Compile Include="Sharing\CreateSharedLinkWithSettingsArg.cs" />
     <Compile Include="Sharing\CreateSharedLinkWithSettingsError.cs" />
     <Compile Include="Sharing\FileLinkMetadata.cs" />
+    <Compile Include="Sharing\FolderAction.cs" />
     <Compile Include="Sharing\FolderLinkMetadata.cs" />
+    <Compile Include="Sharing\FolderPermission.cs" />
     <Compile Include="Sharing\FolderPolicy.cs" />
     <Compile Include="Sharing\GetMetadataArgs.cs" />
     <Compile Include="Sharing\GetSharedLinkFileError.cs" />
@@ -199,6 +203,8 @@
     <Compile Include="Sharing\ListSharedLinksArg.cs" />
     <Compile Include="Sharing\ListSharedLinksError.cs" />
     <Compile Include="Sharing\ListSharedLinksResult.cs" />
+    <Compile Include="Sharing\MemberAction.cs" />
+    <Compile Include="Sharing\MemberPermission.cs" />
     <Compile Include="Sharing\MemberPolicy.cs" />
     <Compile Include="Sharing\MemberSelector.cs" />
     <Compile Include="Sharing\MembershipInfo.cs" />
@@ -208,6 +214,7 @@
     <Compile Include="Sharing\MountFolderError.cs" />
     <Compile Include="Sharing\PathLinkMetadata.cs" />
     <Compile Include="Sharing\PendingUploadMode.cs" />
+    <Compile Include="Sharing\PermissionDeniedReason.cs" />
     <Compile Include="Sharing\RelinquishFolderMembershipArg.cs" />
     <Compile Include="Sharing\RelinquishFolderMembershipError.cs" />
     <Compile Include="Sharing\RemoveFolderMemberArg.cs" />

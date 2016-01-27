@@ -24,7 +24,8 @@ namespace Dropbox.Api
     /// <summary>
     /// The object used to to make requests to the Dropbox API.
     /// </summary>
-    internal sealed class DropboxRequestHandler : ITransport
+    /// <typeparam name="TAuthError">The type for auth error.</typeparam>
+    internal sealed class DropboxRequestHandler<TAuthError> : ITransport
     {
         /// <summary>
         /// The API version
@@ -49,15 +50,22 @@ namespace Dropbox.Api
         /// <summary>
         /// The configuration options for dropbox client.
         /// </summary>
-        private readonly DrpoboxRequestHandlerOptions options;
+        private readonly DropboxRequestHandlerOptions options;
+
+        /// <summary>
+        /// The auth error decoder.
+        /// </summary>
+        private readonly IDecoder<TAuthError> authErrorDecoder;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxRequestHandler"/> class.
         /// </summary>
         /// <param name="options">The configuration options for dropbox client.</param>
+        /// <param name="authErrorDecoder">The auth error decoder.</param>
         /// <param name="selectUser">The member id of the selected user.</param>
         public DropboxRequestHandler(
-            DrpoboxRequestHandlerOptions options,
+            DropboxRequestHandlerOptions options,
+            IDecoder<TAuthError> authErrorDecoder,
             string selectUser = null)
         {
             if (options == null)
@@ -65,7 +73,13 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("options");
             }
 
+            if (authErrorDecoder == null)
+            {
+                throw new ArgumentNullException("authErrorDecoder");
+            }
+
             this.options = options;
+            this.authErrorDecoder = authErrorDecoder;
             this.selectUser = selectUser;
         }
 
@@ -399,9 +413,8 @@ namespace Dropbox.Api
                 }
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    var text = await response.Content.ReadAsStringAsync();
-                    text = this.CheckForError(text);
-                    throw new AuthException(text, uri);
+                    var reason = await response.Content.ReadAsStringAsync();
+                    throw ApiException<TAuthError>.Decode(reason, this.authErrorDecoder);
                 }
                 else if ((int)response.StatusCode == 429)
                 {
@@ -593,7 +606,7 @@ namespace Dropbox.Api
     /// <summary>
     /// The class which contains configurations for the request handler.
     /// </summary>
-    internal sealed class DrpoboxRequestHandlerOptions
+    internal sealed class DropboxRequestHandlerOptions
     {
         /// <summary>
         /// The default api domain
@@ -634,7 +647,7 @@ namespace Dropbox.Api
         /// this is for internal Dropbox use only.</param>
         /// <param name="httpClient">The custom http client. If not provided, a default 
         /// http client will be created.</param>
-        public DrpoboxRequestHandlerOptions(
+        public DropboxRequestHandlerOptions(
             string oauth2AccessToken = null,
             int maxRetriesOnError = 4,
             string userAgent = null,
@@ -643,7 +656,7 @@ namespace Dropbox.Api
             string apiNotifyHostname = DefaultApiNotifyDomain,
             HttpClient httpClient = null)
         {
-            var name = new AssemblyName(typeof(DrpoboxRequestHandlerOptions).Assembly.FullName);
+            var name = new AssemblyName(typeof(DropboxRequestHandlerOptions).Assembly.FullName);
             var sdkVersion = name.Version.ToString();
 
             this.UserAgent = userAgent == null

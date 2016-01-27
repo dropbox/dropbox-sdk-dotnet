@@ -22,6 +22,18 @@
                 namespace.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Auth">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Auth.Routes.AuthRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Auth.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Auth" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Files">
             <summary>
                 <para>This namespace contains endpoints and data types for basic file

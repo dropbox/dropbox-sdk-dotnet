@@ -32,7 +32,9 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        public GetMetadataArgs(string sharedFolderId)
+        /// <param name="actions">Folder actions to query.</param>
+        public GetMetadataArgs(string sharedFolderId,
+                               col.IEnumerable<FolderAction> actions = null)
         {
             if (sharedFolderId == null)
             {
@@ -43,7 +45,10 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }
 
+            var actionsList = enc.Util.ToList(actions);
+
             this.SharedFolderId = sharedFolderId;
+            this.Actions = actionsList;
         }
 
         /// <summary>
@@ -61,6 +66,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string SharedFolderId { get; protected set; }
 
+        /// <summary>
+        /// <para>Folder actions to query.</para>
+        /// </summary>
+        public col.IList<FolderAction> Actions { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -76,6 +86,10 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(GetMetadataArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
+                if (value.Actions.Count > 0)
+                {
+                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.FolderAction.Encoder);
+                }
             }
         }
 
@@ -110,6 +124,9 @@ namespace Dropbox.Api.Sharing
                 {
                     case "shared_folder_id":
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "actions":
+                        value.Actions = ReadList<FolderAction>(reader, Dropbox.Api.Sharing.FolderAction.Decoder);
                         break;
                     default:
                         reader.Skip();

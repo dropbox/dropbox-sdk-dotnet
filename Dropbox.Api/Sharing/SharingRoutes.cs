@@ -1060,14 +1060,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="actions">Folder actions to query.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
         /// is an error processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
-        public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(string sharedFolderId)
+        public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(string sharedFolderId,
+                                                                   col.IEnumerable<FolderAction> actions = null)
         {
-            var getMetadataArgs = new GetMetadataArgs(sharedFolderId);
+            var getMetadataArgs = new GetMetadataArgs(sharedFolderId,
+                                                      actions);
 
             return this.GetFolderMetadataAsync(getMetadataArgs);
         }
@@ -1076,16 +1079,19 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the get folder metadata route.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="actions">Folder actions to query.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGetFolderMetadata(string sharedFolderId,
-                                                       sys.AsyncCallback callback,
+                                                       col.IEnumerable<FolderAction> actions = null,
+                                                       sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
-            var getMetadataArgs = new GetMetadataArgs(sharedFolderId);
+            var getMetadataArgs = new GetMetadataArgs(sharedFolderId,
+                                                      actions);
 
             return this.BeginGetFolderMetadata(getMetadataArgs, callback, callbackState);
         }
@@ -1151,14 +1157,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="actions">Member actions to query.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
         /// is an error processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
-        public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId)
+        public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId,
+                                                                  col.IEnumerable<MemberAction> actions = null)
         {
-            var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId);
+            var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
+                                                                  actions);
 
             return this.ListFolderMembersAsync(listFolderMembersArgs);
         }
@@ -1167,16 +1176,19 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the list folder members route.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="actions">Member actions to query.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolderMembers(string sharedFolderId,
-                                                       sys.AsyncCallback callback,
+                                                       col.IEnumerable<MemberAction> actions = null,
+                                                       sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
-            var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId);
+            var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
+                                                                  actions);
 
             return this.BeginListFolderMembers(listFolderMembersArgs, callback, callbackState);
         }
