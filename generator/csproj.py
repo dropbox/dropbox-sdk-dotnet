@@ -15,6 +15,7 @@ COMPILE_INCLUDES = [
     "Babel\\JsonReader.cs",
     "Babel\\JsonWriter.cs",
     "ApiException.cs",
+    "StructuredException.cs",
     "Babel\\Util.cs",
     "DropboxCertHelper.cs",
     "DropboxClient.common.cs",

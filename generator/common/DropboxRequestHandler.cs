@@ -24,8 +24,7 @@ namespace Dropbox.Api
     /// <summary>
     /// The object used to to make requests to the Dropbox API.
     /// </summary>
-    /// <typeparam name="TAuthError">The type for auth error.</typeparam>
-    internal sealed class DropboxRequestHandler<TAuthError> : ITransport
+    internal sealed class DropboxRequestHandler: ITransport
     {
         /// <summary>
         /// The API version
@@ -53,19 +52,12 @@ namespace Dropbox.Api
         private readonly DropboxRequestHandlerOptions options;
 
         /// <summary>
-        /// The auth error decoder.
-        /// </summary>
-        private readonly IDecoder<TAuthError> authErrorDecoder;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxRequestHandler"/> class.
         /// </summary>
         /// <param name="options">The configuration options for dropbox client.</param>
-        /// <param name="authErrorDecoder">The auth error decoder.</param>
         /// <param name="selectUser">The member id of the selected user.</param>
         public DropboxRequestHandler(
             DropboxRequestHandlerOptions options,
-            IDecoder<TAuthError> authErrorDecoder,
             string selectUser = null)
         {
             if (options == null)
@@ -73,13 +65,7 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("options");
             }
 
-            if (authErrorDecoder == null)
-            {
-                throw new ArgumentNullException("authErrorDecoder");
-            }
-
             this.options = options;
-            this.authErrorDecoder = authErrorDecoder;
             this.selectUser = selectUser;
         }
 
@@ -138,7 +124,7 @@ namespace Dropbox.Api
 
             if (res.IsError)
             {
-                throw ApiException<TError>.Decode(res.ObjectResult, errorDecoder);
+                throw StructuredException<TError>.Decode<ApiException<TError>>(res.ObjectResult, errorDecoder);
             }
 
             return JsonReader.Read(res.ObjectResult, resposneDecoder);
@@ -175,7 +161,7 @@ namespace Dropbox.Api
             
             if (res.IsError)
             {
-                throw ApiException<TError>.Decode(res.ObjectResult, errorDecoder);
+                throw StructuredException<TError>.Decode<ApiException<TError>>(res.ObjectResult, errorDecoder);
             }
 
             return JsonReader.Read(res.ObjectResult, resposneDecoder);
@@ -210,7 +196,7 @@ namespace Dropbox.Api
 
             if (res.IsError)
             {
-                throw ApiException<TError>.Decode(res.ObjectResult, errorDecoder);
+                throw StructuredException<TError>.Decode<ApiException<TError>>(res.ObjectResult, errorDecoder);
             }
 
             var response = JsonReader.Read(res.ObjectResult, resposneDecoder);
@@ -414,7 +400,7 @@ namespace Dropbox.Api
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     var reason = await response.Content.ReadAsStringAsync();
-                    throw ApiException<TAuthError>.Decode(reason, this.authErrorDecoder);
+                    throw AuthException.Decode(reason);
                 }
                 else if ((int)response.StatusCode == 429)
                 {

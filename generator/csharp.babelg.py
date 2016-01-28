@@ -114,7 +114,7 @@ class CSharpGenerator(CodeGenerator):
 
         self._generate_dropbox_client(api, 'DropboxClient', 'user')
         self._generate_dropbox_client(api, 'DropboxTeamClient', 'team')
-        self._generate_dropbox_request_handler_factory(api)
+        self._generate_dropbox_auth_exception(api)
 
         self._generate_xml_doc(api)
         self._generate_csproj()
@@ -965,35 +965,39 @@ class CSharpGenerator(CodeGenerator):
                     with self.cs_block(before='private void InitializeRoutes(ITransport transport)'):
                         for ns_name in ns_names:
                             self.emit('this.{0} = new {0}Routes(transport);'.format(ns_name))
-    
-    def _generate_dropbox_request_handler_factory(self, api):
+        
+    def _generate_dropbox_auth_exception(self, api):
         """
-        Generates the request handler factory based on auth error babel union.
+        Generates the auth exception class 
 
         Args:
             api (babelapi.api.Api): The API specification.
         """
         ns = api.namespaces['auth']
-        auth_error = ns.data_type_by_name['AuthError']
-        
-        with self.output_to_relative_path('DropboxRequestHandlerFactory.cs'):
+        auth_error = self._public_name(ns.data_type_by_name['AuthError'].name)
+        ns_name = self._public_name(ns.name)
+
+        with self.output_to_relative_path('AuthException.cs'):
             self.auto_generated()
             with self.cs_block(before='namespace {}'.format(self.DEFAULT_NAMESPACE[:-1])):
                 self.emit('using sys = System;')
                 self.emit()
-                self.emit('using Dropbox.Api.Babel;')
-                self.emit('using Dropbox.Api.{0};'.format(self._public_name(ns.name)))
+                self.emit('using Dropbox.Api.{0};'.format(ns_name))
                 self.emit()
 
-                with self.class_('DropboxRequestHandlerFactory', access='internal static'):
+                with self.doc_comment():
+                    self.emit_summary('An HTTP exception that is caused by the server reporting an authentication problem.')
+                with self.class_('AuthException', access='public sealed partial',
+                                 inherits=['StructuredException<{0}>'.format(auth_error)]):
+                    with self.doc_comment():
+                        self.emit_summary('Initializes a new instance of the <see cref="AuthException"/> class.')
+                    with self.cs_block(before='public AuthException()'):
+                        pass
                     self.emit()
                     with self.doc_comment():
-                        self.emit_summary('Creates a <see cref="DropboxRequestHandler{T}"/> instance.')
-                        self.emit_xml('The request handler options.', 'param', name='options')
-                        self.emit_xml('The select user id.', 'param', name='selectUser')
-                    with self.cs_block(before='public static ITransport Create(DropboxRequestHandlerOptions options, string selectUser = null)'):
-                            self.emit('return new DropboxRequestHandler<{0}>(options, {0}.Decoder, selectUser);'
-                                      .format(self._public_name(auth_error.name)))
+                        self.emit_summary('Decode from given json.')
+                    with self.cs_block(before='internal static AuthException Decode(string json)'):
+                        self.emit('return StructuredException<{0}>.Decode<AuthException>(json, {0}.Decoder);'.format(auth_error))
 
     def _compute_related_types(self, ns): 
         """
