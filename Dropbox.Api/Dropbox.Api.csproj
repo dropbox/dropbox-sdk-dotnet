@@ -83,6 +83,7 @@
     <Compile Include="Babel\JsonReader.cs" />
     <Compile Include="Babel\JsonWriter.cs" />
     <Compile Include="ApiException.cs" />
+    <Compile Include="StructuredException.cs" />
     <Compile Include="Babel\Util.cs" />
     <Compile Include="DropboxCertHelper.cs" />
     <Compile Include="DropboxClient.common.cs" />
@@ -97,9 +98,9 @@
     <Compile Include="Async\PollEmptyResult.cs" />
     <Compile Include="Async\PollError.cs" />
     <Compile Include="Async\PollResultBase.cs" />
+    <Compile Include="AuthException.cs" />
     <Compile Include="Auth\AuthError.cs" />
     <Compile Include="DropboxClient.cs" />
-    <Compile Include="DropboxRequestHandlerFactory.cs" />
     <Compile Include="DropboxTeamClient.cs" />
     <Compile Include="Files\CommitInfo.cs" />
     <Compile Include="Files\CreateFolderArg.cs" />

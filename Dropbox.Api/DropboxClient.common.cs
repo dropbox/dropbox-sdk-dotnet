@@ -48,7 +48,7 @@ namespace Dropbox.Api
         /// a team access token, actions will be performed on this this user's Dropbox.</param>
         internal DropboxClient(DropboxRequestHandlerOptions options, string selectUser = null)
         {
-            this.InitializeRoutes(DropboxRequestHandlerFactory.Create(options, selectUser));
+            this.InitializeRoutes(new DropboxRequestHandler(options, selectUser));
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Dropbox.Api
             }
 
             this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient);
-            this.InitializeRoutes(DropboxRequestHandlerFactory.Create(this.options));
+            this.InitializeRoutes(new DropboxRequestHandler(this.options));
         }
 
         /// <summary>
@@ -163,18 +163,37 @@ namespace Dropbox.Api
     /// <summary>
     /// An HTTP exception that is caused by the server reporting an authentication problem.
     /// </summary>
-    [Obsolete("This exception is no longer thrown. Please catch ApiException<AuthError> instead.")]
-    public class AuthException : HttpException
+    public partial class AuthException
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthException"/> class.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="uri">The request URI</param>
-        public AuthException(string message, Uri uri = null)
-            : base(401, message, uri)
+        [Obsolete("This constructor will be removed soon.")] 
+        public AuthException(string message, Uri uri = null) : base(null, message)
         {
+            this.StatusCode = 401;
+            this.RequestUri = uri;
         }
+
+        /// <summary>
+        /// Gets the HTTP status code that prompted this exception
+        /// </summary>
+        /// <value>
+        /// The status code.
+        /// </value>
+        [Obsolete("This field will be removed soon.")]
+        public int StatusCode { get; private set; }
+
+        /// <summary>
+        /// Gets the URI for the request that prompted this exception.
+        /// </summary>
+        /// <value>
+        /// The request URI.
+        /// </value>
+        [Obsolete("This field will be removed soon.")]
+        public Uri RequestUri { get; private set; }
     }
 
     /// <summary>
