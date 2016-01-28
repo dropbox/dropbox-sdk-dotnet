@@ -525,23 +525,27 @@ class CSharpGenerator(CodeGenerator):
         if tag == 'field':
             if '.' in value:
                 parts = map(self._public_name, value.split('.'))
-                return '<see cref="{0}" />'.format('.'.join(parts))
+                return '<see cref="{0}{1}.{2}" />'.format(self.DEFAULT_NAMESPACE, self._ns, '.'.join(parts))
             elif self._tag_context:
                 data_type, is_constructor = self._tag_context
                 if is_constructor:
-                    return '<paramref name="{0}" />'.format(self._arg_name(value))
+                    return '<paramref name="{0}" />'.format(self._arg_name(value, is_doc=True))
                 else:
                     return '<see cref="{0}" />'.format(self._public_name(value))
             else:
-                return '<paramref name="{0}" />'.format(self._arg_name(value))
+                return '<paramref name="{0}" />'.format(self._arg_name(value, is_doc=True))
         elif tag == 'link':
             parts = value.split(' ')
             uri = parts[-1]
             text = ' '.join(parts[:-1])
             return '<a href="{0}">{1}</a>'.format(uri, text)
         elif tag == 'route':
+            if '.' in value:
+                ns_name, route_name = map(self._public_name, value.split('.'))
+            else:
+                ns_name, route_name = self._ns, self._public_name(value)
             return ('<see cref="{0}{1}.Routes.{1}Routes.{2}Async" />'.format(
-                    self.DEFAULT_NAMESPACE, self._ns, self._public_name(value)))
+                    self.DEFAULT_NAMESPACE, ns_name, route_name))
         elif tag == 'type':
             return '<see cref="{0}" />'.format(self._public_name(value))
         elif tag == 'val':
@@ -789,6 +793,25 @@ class CSharpGenerator(CodeGenerator):
         if need_emit:
             self.emit()
 
+    def _arg_name(self, name, is_doc=False):
+        """
+        Creates an initial lowercase camelCase representation of name.
+    
+        This performs the following transformations.
+            foo_bar -> fooBar
+            fooBar -> fooBar
+            FooBar -> fooBar
+
+        Args:
+            name (str): The name to transform
+            is_doc (bool): If the arg name is in doc.
+        """
+        public = self._public_name(name)
+        arg_name = public[0].lower() + public[1:]
+        if arg_name in CSharpGenerator._CSHARP_KEYWORDS and not is_doc:
+            return '@' + arg_name
+        return arg_name
+
     @memo_one
     def _segment_name(self, name):
         """
@@ -817,26 +840,7 @@ class CSharpGenerator(CodeGenerator):
             name (str): The name to transform
         """
         return ''.join(x.capitalize() for x in self._segment_name(name))
-
-    @memo_one
-    def _arg_name(self, name):
-        """
-        Creates an initial lowercase camelCase representation of name.
     
-        This performs the following transformations.
-            foo_bar -> fooBar
-            fooBar -> fooBar
-            FooBar -> fooBar
-
-        Args:
-            name (str): The name to transform
-        """
-        public = self._public_name(name)
-        arg_name = public[0].lower() + public[1:]
-        if arg_name in CSharpGenerator._CSHARP_KEYWORDS:
-            return '@' + arg_name
-        return arg_name
-
     @memo_one
     def _name_words(self, name):
         """
@@ -1016,7 +1020,7 @@ class CSharpGenerator(CodeGenerator):
 
             if data_type.parent_type:
                 related_types[data_type.parent_type.name].add(struct_name)
-                related_types[struct_name].add(data_type.parent_type.name)
+                related_types[struct_name].add(self._typename(data_type.parent_type))
 
             for field in data_type.all_fields:
                 if not is_struct_type(field.data_type):
@@ -1145,6 +1149,20 @@ class CSharpGenerator(CodeGenerator):
         """
 
         return 'NullableInstance' if is_nullable else 'Instance'
+
+    def _get_union_fields(self, union):
+        """
+        Get all fields including fields in parent union type.
+
+        Args:
+            union (babelapi.data_type.Union): The union in question.
+        """
+
+        fields = list(union.fields)
+        if union.parent_type:
+            fields.extend(union.parent_type.fields)
+
+        return fields
 
     def _get_decoder(self, data_type):
         """
@@ -1587,7 +1605,7 @@ class CSharpGenerator(CodeGenerator):
 
             # Emit private decoder class.
             self._generate_struct_decoder(struct)
-
+    
     def _generate_union_is_as_properties(self, union):
         """
         Generates this IsFoo AsFoo properties for the union fields.
@@ -1597,7 +1615,7 @@ class CSharpGenerator(CodeGenerator):
         Args:
             union (babelapi.data_type.Union): The union in question.
         """
-        for field in union.fields:
+        for field in self._get_union_fields(union):
             field_type = self._public_name(field.name)
             self.emit();
             with self.doc_comment():
@@ -1622,7 +1640,7 @@ class CSharpGenerator(CodeGenerator):
             class_name (str): The C# class name of the union.
         """
         with self.encoder_block(class_name=class_name):
-            for field in union.fields:
+            for field in self._get_union_fields(union):
                 self._emit_encoder_subtype(field.name, self._public_name(field.name))
             self.emit('throw new sys.InvalidOperationException();')
 
@@ -1638,7 +1656,7 @@ class CSharpGenerator(CodeGenerator):
         with self.decoder_block(class_name=class_name, inherit='UnionDecoder'):
             with self.decoder_tag_block(class_name=class_name):
                 with self.switch('tag'):
-                    for field in union.fields:
+                    for field in self._get_union_fields(union):
                         constant = None if union.catch_all_field == field else '"{0}"'.format(field.name)
                         with self.case(constant, needs_break=False):
                             self.emit('return {0}.Decoder.DecodeFields(reader);'.format(self._public_name(field.name)))
@@ -1770,7 +1788,7 @@ class CSharpGenerator(CodeGenerator):
         Args:
             union (babelapi.data_type.Union): The union in question.
         """
-        union_field_names = [self._public_name(f.name) for f in union.fields]
+        union_field_names = [self._public_name(f.name) for f in self._get_union_fields(union)]
         with self._local_names(union_field_names):
             with self.doc_comment():
                 self.emit_summary(union.doc or 'The {0} object'.format(self._name_words(union.name)))
@@ -1792,8 +1810,8 @@ class CSharpGenerator(CodeGenerator):
                 # Emit private decoder class for the union.
                 self._generate_union_decoder(union, class_name)
 
-                # generate j types for each union field
-                for field in union.fields:
+                # generate types for each union field
+                for field in self._get_union_fields(union):
                     self._generate_union_field_type(field, class_name)
 
     def _generate_routes(self, ns, routes):
@@ -1920,7 +1938,7 @@ class CSharpGenerator(CodeGenerator):
             if not error_is_void:
                 self.emit_xml('Thrown if there is an error processing the request; '
                               'This will contain a <see cref="{0}"/>.'.format(error_type),
-                              'exception', cref='Dropbox.Api.ApiException{{{0}}}'.format(error_type))
+                              'exception', cref='Dropbox.Api.ApiException{{TError}}'.format(error_type))
 
         self._generate_obsolete_attribute(route.deprecated, suffix='Async')
         with self.cs_block(before=async_fn):
@@ -1984,7 +2002,7 @@ class CSharpGenerator(CodeGenerator):
                 if not error_is_void:
                     self.emit_xml('Thrown if there is an error processing the request; '
                                   'This will contain a <see cref="{0}"/>.'.format(error_type),
-                                  'exception', cref='Dropbox.Api.ApiException{{{0}}}'.format(error_type))
+                                  'exception', cref='Dropbox.Api.ApiException{{TError}}'.format(error_type))
 
             self._generate_obsolete_attribute(route.deprecated, suffix='Async')
             self.generate_multiline_list(
@@ -2054,7 +2072,7 @@ class CSharpGenerator(CodeGenerator):
             if not error_is_void:
                 self.emit_xml('Thrown if there is an error processing the request; '
                               'This will contain a <see cref="{0}"/>.'.format(error_type),
-                              'exception', cref='Dropbox.Api.ApiException{{{0}}}'.format(error_type))
+                              'exception', cref='Dropbox.Api.ApiException{{TError}}'.format(error_type))
 
         self._generate_obsolete_attribute(route.deprecated, prefix='End')
         with self.cs_block(before='public {0} End{1}(sys.IAsyncResult asyncResult)'.format(

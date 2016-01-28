@@ -3,6 +3,7 @@
 //  Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
+
 namespace Dropbox.Api.Babel
 {
     using System;
@@ -490,7 +491,6 @@ namespace Dropbox.Api.Babel
         /// <summary>
         /// Decoder for struct type.
         /// </summary>
-        /// <typeparam name="T">The struct type.</typeparam>
         public Empty Decode(IJsonReader reader)
         {
             reader.Skip();
