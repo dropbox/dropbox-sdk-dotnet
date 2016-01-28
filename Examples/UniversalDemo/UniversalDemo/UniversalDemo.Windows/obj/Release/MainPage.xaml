@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="UniversalDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:src="using:UniversalDemo"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <src:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <Style TargetType="ContentControl" x:Key="ImageBox">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        </Style>
+        <DataTemplate x:Key="ImageTemplate">
+            <Grid>
+                <Border Margin="20" CornerRadius="20" Background="#2FFF">
+                    <ProgressBar Grid.Row="0" VerticalAlignment="Top" IsIndeterminate="True" Margin="20,0"
+                                 Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}" />
+                </Border>
+                <Border Margin="20" CornerRadius="20">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding Image}" Stretch="Uniform" />
+                    </Border.Background>
+                </Border>
+                <TextBlock Text="{Binding Name}" Margin="25" Style="{StaticResource SubheaderTextBlockStyle}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>    
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Name="RootGrid">
+        <Grid Name="ImageHolder">
+            <Grid.RenderTransform>
+                <TranslateTransform />
+            </Grid.RenderTransform>
+            <ContentControl Name="CurrHolder"
+                            Content="{Binding CurrentImage}"
+                            ContentTemplate="{StaticResource ImageTemplate}"
+                            Style="{StaticResource ImageBox}"/>
+            <ContentControl Name="NextHolder"
+                            Content="{Binding NextImage}"
+                            ContentTemplate="{StaticResource ImageTemplate}"
+                            Style="{StaticResource ImageBox}">
+                <ContentControl.RenderTransform>
+                    <TranslateTransform />
+                </ContentControl.RenderTransform>
+            </ContentControl>
+            <ContentControl Name="PrevHolder"
+                            Content="{Binding PreviousImage}"
+                            ContentTemplate="{StaticResource ImageTemplate}"
+                            Style="{StaticResource ImageBox}">
+                <ContentControl.RenderTransform>
+                    <TranslateTransform />
+                </ContentControl.RenderTransform>
+            </ContentControl>
+      </Grid>
+    </Grid>
+</Page>
+

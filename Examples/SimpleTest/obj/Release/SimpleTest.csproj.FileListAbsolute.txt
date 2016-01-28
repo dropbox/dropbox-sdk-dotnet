@@ -1,0 +1,6 @@
+C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\SimpleTest\obj\Release\SimpleTest.csproj.App.config
+C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\SimpleTest\obj\Release\SimpleTest.csprojResolveAssemblyReference.cache
+C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\SimpleTest\obj\Release\LoginForm.baml
+C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\SimpleTest\obj\Release\LoginForm.g.cs
+C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\SimpleTest\obj\Release\SimpleTest_MarkupCompile.cache
+C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\SimpleTest\obj\Release\SimpleTest.g.resources

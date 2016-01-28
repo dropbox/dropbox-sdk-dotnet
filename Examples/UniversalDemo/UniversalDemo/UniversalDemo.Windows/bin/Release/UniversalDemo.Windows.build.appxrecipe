@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DEVPLAT-SURFACE</Machine>
+    <WindowsUser>Qiming</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>ac89417a-7704-455a-a5a2-94f7b8b84144</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\obj\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\UniversalDemo.Windows.exe">
+      <PackagePath>UniversalDemo.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Dropbox.Api\bin\Release\Dropbox.Api.dll">
+      <PackagePath>Dropbox.Api.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Dropbox.Api\bin\Release\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\DropboxSettings.xbf">
+      <PackagePath>DropboxSettings.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\UniversalDemo.Windows.xr.xml">
+      <PackagePath>UniversalDemo.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
