@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace Dropbox.Api.Babel
+namespace <Namespace>.Babel
 {
     using System;
 

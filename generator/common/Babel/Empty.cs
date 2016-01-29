@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace Dropbox.Api.Babel
+namespace <Namespace>.Babel
 {
     /// <summary>
     /// An empty object used when a route doesn't have one or more of the

@@ -196,31 +196,24 @@ DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
 </Project>
 """
 
-LINK_PREFIX = "..\\..\\generator\\common\\"
-
-def _include_items(buffer, item_type, paths, link):
-    prefix =  LINK_PREFIX if link else ""
+def _include_items(buffer, item_type, paths):
     buffer.write('  <ItemGroup>\n')
     for path in paths:
-    	buffer.write('    <{0} Include="{1}{2}"'.format(item_type, prefix, path))
-    	if link:
-            buffer.write('>\n      <Link>{0}</Link>\n'.format(path))
-            buffer.write('    </{0}>\n'.format(item_type))
-        else:
-            buffer.write(' />\n')
+    	buffer.write('    <{0} Include="{1}" />'.format(item_type, path))
     buffer.write('  </ItemGroup>\n')
 
-def make_csproj_file(files, is_doc=False, link=False):
+def make_csproj_file(files, is_doc=False):
     compile = []
     compile.extend(COMPILE_INCLUDES)
     
     buffer = StringIO()
     buffer.write(DOC_CSPROJ_START_BLOCK if is_doc else CSPROJ_START_BLOCK)
     
-    _include_items(buffer, 'Compile', COMPILE_INCLUDES, link)
-    _include_items(buffer, 'Compile', sorted(files), False)
-    _include_items(buffer, 'None', NONE_INCLUDES, link)
+    _include_items(buffer, 'Compile', COMPILE_INCLUDES)
+    _include_items(buffer, 'Compile', sorted(files))
+    _include_items(buffer, 'None', NONE_INCLUDES)
  
     buffer.write(DOC_CSPROJ_END_BLOCK if is_doc else CSPROJ_END_BLOCK)
 
     return buffer.getvalue()
+
