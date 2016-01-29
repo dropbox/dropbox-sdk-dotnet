@@ -18,8 +18,8 @@ except ImportError:
     _CSharpGenerator = csharp_module._CSharpGenerator
 
 class DropboxCSharpGenerator(_CSharpGenerator):
-    DEFAULT_NAMESPACE = 'Qiming.Api'
-    DEFAULT_APP_NAME = 'Qiming'
+    DEFAULT_NAMESPACE = 'Dropbox.Api'
+    DEFAULT_APP_NAME = 'Dropbox'
 
     def __init__(self, *args, **kwargs):
         super(DropboxCSharpGenerator, self).__init__(self.DEFAULT_NAMESPACE, self.DEFAULT_APP_NAME, *args, **kwargs)

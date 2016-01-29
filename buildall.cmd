@@ -31,7 +31,7 @@ SET BABEL_LIST=
 
 FOR %%f IN (spec\*.babel) DO SET BABEL_LIST=!BABEL_LIST! %%f
 
-%PRE% python -m babelapi.cli generator\csharp.babelg.py !BABEL_LIST! dropbox-sdk-dotnet\Dropbox.Api --clean-build -- -l
+%PRE% python -m babelapi.cli generator\csharp.babelg.py !BABEL_LIST! dropbox-sdk-dotnet\Dropbox.Api --clean-build 
 
 SET SOLUTION_DIR="dropbox-sdk-dotnet"
 
