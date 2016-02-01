@@ -381,7 +381,9 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.options.HttpClient.SendAsync(request, completionOption);
+            var response = await this.options.HttpClient
+                .SendAsync(request, completionOption)
+                .ConfigureAwait(false);
 
             try
             {
