@@ -120,7 +120,8 @@ namespace Dropbox.Api
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder);
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Rpc, serializedArg);
+            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Rpc, serializedArg)
+                .ConfigureAwait(false);
 
             if (res.IsError)
             {
@@ -157,7 +158,8 @@ namespace Dropbox.Api
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Upload, serializedArg, body);
+            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Upload, serializedArg, body)
+                .ConfigureAwait(false);
             
             if (res.IsError)
             {
@@ -192,7 +194,8 @@ namespace Dropbox.Api
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Download, serializedArg);
+            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Download, serializedArg)
+                .ConfigureAwait(false);
 
             if (res.IsError)
             {
@@ -245,7 +248,7 @@ namespace Dropbox.Api
                     cachedStreamStart = body.Position;
                     using (var mem = new MemoryStream())
                     {
-                        await body.CopyToAsync(mem);
+                        await body.CopyToAsync(mem).ConfigureAwait(false);
                         cachedBody = mem.ToArray();
                     }
                 }
@@ -257,14 +260,16 @@ namespace Dropbox.Api
                 {
                     if (cachedBody == null)
                     {
-                        return await this.RequestJsonString(host, routeName, routeStyle, requestArg, body);
+                        return await this.RequestJsonString(host, routeName, routeStyle, requestArg, body)
+                            .ConfigureAwait(false);
                     }
                     else
                     {
                         using (var mem = new MemoryStream(cachedBody, writable: false))
                         {
                             mem.Position = cachedStreamStart;
-                            return await this.RequestJsonString(host, routeName, routeStyle, requestArg, mem);
+                            return await this.RequestJsonString(host, routeName, routeStyle, requestArg, mem)
+                                .ConfigureAwait(false);
                         }
                     }
                 }
