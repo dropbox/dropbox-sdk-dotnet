@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 
-import argparse
 import itertools
 import os
 import re
@@ -35,12 +34,6 @@ from babelapi.data_type import (
 )
 from babelapi.generator import CodeGenerator
 
-cmdline_desc = """\
-Generate .NET source files for given babel spec.
-"""
-
-_cmdline_parser = argparse.ArgumentParser(description=cmdline_desc)
-
 def memo_one(fn):
     """
     Memoize a single argument instance method.
@@ -56,7 +49,6 @@ def memo_one(fn):
     return wrapper
 
 ConstructorArg = namedtuple('ConstructorArg', ('type', 'name', 'arg', 'doc'))
-
 
 class _CSharpGenerator(CodeGenerator):
     _CAMEL_CASE_RE = re.compile('((?<=[a-z0-9])[A-Z]|(?!^)[A-Z](?=[a-z]))')
@@ -76,8 +68,6 @@ class _CSharpGenerator(CodeGenerator):
         'uint', 'ulong', 'unchecked', 'unsafe', 'ushort', 'using', 'value',
         'var', 'virtual', 'void', 'volatile', 'where', 'while', 'yield',
     })
-
-    cmdline_parser = _cmdline_parser
 
     def __init__(self, namespace_name, app_name, *args, **kwargs):
         '''
