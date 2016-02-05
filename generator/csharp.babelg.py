@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+import argparse
 import imp
 import os
 
@@ -17,9 +18,23 @@ except ImportError:
     csharp_module = imp.load_source('csharp_module', csharp)
     _CSharpGenerator = csharp_module._CSharpGenerator
 
+cmdline_desc = """\
+Generate .NET project for Dropbox Api.
+"""
+
+_cmdline_parser = argparse.ArgumentParser(description=cmdline_desc)
+_cmdline_parser.add_argument(
+    '-p',
+    '--private',
+    action='store_true',
+    help='Generate private build.',
+)
+
 class DropboxCSharpGenerator(_CSharpGenerator):
     DEFAULT_NAMESPACE = 'Dropbox.Api'
     DEFAULT_APP_NAME = 'Dropbox'
+
+    cmdline_parser = _cmdline_parser
 
     def __init__(self, *args, **kwargs):
         super(DropboxCSharpGenerator, self).__init__(self.DEFAULT_NAMESPACE, self.DEFAULT_APP_NAME, *args, **kwargs)
@@ -29,6 +44,9 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         self._generate_xml_doc(api)
         self._generate_csproj()
         self._copy_files('dropbox')
+
+        if self.args.private:
+            self._copy_files('private')
 
     def _generate_xml_doc(self, api):
         """
@@ -71,7 +89,7 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         """
         files = [f for f in self._generated_files if f.endswith('.cs')]
         with self.output_to_relative_path('{0}.csproj'.format(self.DEFAULT_NAMESPACE)):
-            self.emit_raw(make_csproj_file(files, is_doc=False))
+            self.emit_raw(make_csproj_file(files, is_doc=False, is_private=self.args.private))
         with self.output_to_relative_path('{0}.Doc.csproj'.format(self.DEFAULT_NAMESPACE)):
             self.emit_raw(make_csproj_file(files, is_doc=True))
 

@@ -39,7 +39,7 @@ namespace <Namespace>.Babel
         private readonly IDecoder<T> decoder;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="NullableDecoder{T}"/>
+        /// Initializes a new instance of the <see cref="NullableDecoder{T}"/> class.
         /// </summary>
         /// <param name="decoder">The decoder.</param>
         public NullableDecoder(IDecoder<T> decoder)
@@ -452,7 +452,7 @@ namespace <Namespace>.Babel
         {
             string fieldName;
 
-            if (!TryReadPropertyName(reader, out fieldName))
+            if (!StructDecoder<T>.TryReadPropertyName(reader, out fieldName))
             {
                 throw new InvalidOperationException("Not property found.");
             }
@@ -491,6 +491,8 @@ namespace <Namespace>.Babel
         /// <summary>
         /// Decoder for struct type.
         /// </summary>
+        /// <param name="reader">The reader.</param>
+        /// <returns>The empty instance.</returns>
         public Empty Decode(IJsonReader reader)
         {
             reader.Skip();

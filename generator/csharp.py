@@ -4,6 +4,8 @@ import argparse
 import itertools
 import os
 import re
+import shutil
+
 from collections import defaultdict, namedtuple
 from contextlib import contextmanager
 
@@ -108,7 +110,7 @@ class _CSharpGenerator(CodeGenerator):
 
         self._generate_client(api, '{0}Client'.format(self._app_name), 'user')
         self._generate_client(api, '{0}TeamClient'.format(self._app_name), 'team')
-        self._copy_files('common', lambda x: x.replace('<Namespace>', self._namespace_name))
+        self._copy_and_update_files('common', lambda x: x.replace('<Namespace>', self._namespace_name))
 
         self._generate(api)
 
@@ -859,14 +861,31 @@ class _CSharpGenerator(CodeGenerator):
             name (str): The name to transform
         """
         return ' '.join(self._segment_name(name))
-
-    def _copy_files(self, dir, process_func=None):
+    
+    def _copy_files(self, dir):
         """
         Copies all the files in the given subdirectory into the target dir.
 
         Args:
             dir (str): The source dir to be copied from.
-            process_func: (callable) A function which can process the file content.
+        """
+        dir = os.path.join(os.path.dirname(__file__), dir)
+        for item in os.listdir(dir):
+            src_path = os.path.join(dir, item)
+            dest_path = os.path.join(self.target_folder_path, item)
+            if os.path.isdir(src_path):
+                shutil.copytree(src_path, dest_path)
+            else:
+                shutil.copy2(src_path, dest_path)
+
+    def _copy_and_update_files(self, dir, update_func):
+        """
+        Copies all the files in the given subdirectory into the target dir and also update file content.
+
+        Args:
+            dir (str): The source dir to be copied from.
+            decod
+            update_func: (callable) A function which updates the file content.
         """
         dir = os.path.join(os.path.dirname(__file__), dir)
         dir_len = len(dir)
@@ -881,9 +900,7 @@ class _CSharpGenerator(CodeGenerator):
                         doc = f.read().decode('utf-8')
                         if not doc.endswith('\n'):
                             doc += '\n'
-                        if process_func:
-                            doc = process_func(doc)
-                        self.emit_raw(doc)
+                        self.emit_raw(update_func(doc))
 
     def _generate_client(self, api, client_name, auth_type):
         """

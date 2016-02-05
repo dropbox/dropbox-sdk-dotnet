@@ -22,7 +22,7 @@ namespace <Namespace>
         /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
         /// </summary>
         /// <remarks>This constructor is only used when decoded from JSON.</remarks>
-        internal protected StructuredException()
+        protected internal StructuredException()
             : this(default(TError))
         {
         }
@@ -31,7 +31,7 @@ namespace <Namespace>
         /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
         /// </summary>
         /// <param name="errorResponse">The error response.</param>
-        internal protected StructuredException(TError errorResponse)
+        protected internal StructuredException(TError errorResponse)
             : this(errorResponse, null, null)
         {
         }
@@ -41,7 +41,7 @@ namespace <Namespace>
         /// </summary>
         /// <param name="errorResponse">The error response.</param>
         /// <param name="message">The message.</param>
-        internal protected StructuredException(TError errorResponse, string message)
+        protected internal StructuredException(TError errorResponse, string message)
             : this(errorResponse, message, null)
         {
         }
@@ -52,7 +52,7 @@ namespace <Namespace>
         /// <param name="errorResponse">The error response.</param>
         /// <param name="message">The message.</param>
         /// <param name="inner">The inner.</param>
-        internal protected StructuredException(TError errorResponse, string message, Exception inner)
+        protected internal StructuredException(TError errorResponse, string message, Exception inner)
             : base(message, inner)
         {
             this.ErrorResponse = errorResponse;
@@ -83,6 +83,7 @@ namespace <Namespace>
         /// <summary>
         /// Decode from given json using given decoder.
         /// </summary>
+        /// <typeparam name="TException">The type of the exception.</typeparam>
         /// <param name="json">The json.</param>
         /// <param name="errorDecoder">The error json.</param>
         /// <returns>The <see cref="ApiException{TError}"/></returns>
@@ -95,6 +96,7 @@ namespace <Namespace>
         /// <summary>
         /// The exception decoder.
         /// </summary>
+        /// <typeparam name="TException">The type of the exception.</typeparam>
         private class StructuredExceptionDecoder<TException> : StructDecoder<TException>
             where TException : StructuredException<TError>, new()
         {

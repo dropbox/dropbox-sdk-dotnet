@@ -196,19 +196,30 @@ DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
 </Project>
 """
 
+CSPROJ_SIGNING_BLOCK = r"""  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>dropbox_api_key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+"""
+
 def _include_items(buffer, item_type, paths):
     buffer.write('  <ItemGroup>\n')
     for path in paths:
-    	buffer.write('    <{0} Include="{1}" />'.format(item_type, path))
+    	buffer.write('    <{0} Include="{1}" />\n'.format(item_type, path))
     buffer.write('  </ItemGroup>\n')
 
-def make_csproj_file(files, is_doc=False):
+def make_csproj_file(files, is_doc=False, is_private=False):
     compile = []
     compile.extend(COMPILE_INCLUDES)
     
     buffer = StringIO()
     buffer.write(DOC_CSPROJ_START_BLOCK if is_doc else CSPROJ_START_BLOCK)
     
+    if not is_doc and is_private:
+        buffer.write(CSPROJ_SIGNING_BLOCK)
+
     _include_items(buffer, 'Compile', COMPILE_INCLUDES)
     _include_items(buffer, 'Compile', sorted(files))
     _include_items(buffer, 'None', NONE_INCLUDES)
@@ -216,4 +227,3 @@ def make_csproj_file(files, is_doc=False):
     buffer.write(DOC_CSPROJ_END_BLOCK if is_doc else CSPROJ_END_BLOCK)
 
     return buffer.getvalue()
-
