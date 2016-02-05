@@ -57,6 +57,28 @@ namespace Dropbox.Api.Sharing
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is AsyncJobId</para>
+        /// </summary>
+        public bool IsAsyncJobId
+        {
+            get
+            {
+                return this is AsyncJobId;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AsyncJobId, or <c>null</c>.</para>
+        /// </summary>
+        public AsyncJobId AsAsyncJobId
+        {
+            get
+            {
+                return this as AsyncJobId;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +97,12 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty(".tag", "complete", writer, enc.StringEncoder.Instance);
                     Complete.Encoder.EncodeFields((Complete)value, writer);
+                    return;
+                }
+                if (value is AsyncJobId)
+                {
+                    WriteProperty(".tag", "async_job_id", writer, enc.StringEncoder.Instance);
+                    AsyncJobId.Encoder.EncodeFields((AsyncJobId)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -111,6 +139,8 @@ namespace Dropbox.Api.Sharing
                 {
                     case "complete":
                         return Complete.Decoder.DecodeFields(reader);
+                    case "async_job_id":
+                        return AsyncJobId.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -200,6 +230,103 @@ namespace Dropbox.Api.Sharing
                 public override Complete DecodeFields(enc.IJsonReader reader)
                 {
                     return new Complete(Dropbox.Api.Sharing.SharedFolderMetadata.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This response indicates that the processing is asynchronous. The string is an
+        /// id that can be used to obtain the status of the asynchronous job.</para>
+        /// </summary>
+        public sealed class AsyncJobId : ShareFolderLaunch
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AsyncJobId> Encoder = new AsyncJobIdEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AsyncJobId> Decoder = new AsyncJobIdDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AsyncJobId" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AsyncJobId(string value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AsyncJobId" /> class.</para>
+            /// </summary>
+            private AsyncJobId()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public string Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AsyncJobId" />.</para>
+            /// </summary>
+            private class AsyncJobIdEncoder : enc.StructEncoder<AsyncJobId>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AsyncJobId value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("async_job_id", value.Value, writer, enc.StringEncoder.Instance);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AsyncJobId" />.</para>
+            /// </summary>
+            private class AsyncJobIdDecoder : enc.StructDecoder<AsyncJobId>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AsyncJobId" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AsyncJobId Create()
+                {
+                    return new AsyncJobId();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(AsyncJobId value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "async_job_id":
+                            value.Value = enc.StringDecoder.Instance.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

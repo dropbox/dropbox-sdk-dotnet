@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Profile of a user as a member of a team.</para>
     /// </summary>
-    /// <seealso cref="MemberProfile" />
+    /// <seealso cref="Dropbox.Api.Team.MemberProfile" />
     /// <seealso cref="TeamMemberInfo" />
     public class TeamMemberProfile : MemberProfile
     {

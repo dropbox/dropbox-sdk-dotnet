@@ -476,7 +476,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para><see cref="TransferFolderArg.ToDropboxId" /> is invalid.</para>
+        /// <para><see cref="Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId" /> is
+        /// invalid.</para>
         /// </summary>
         public sealed class InvalidDropboxId : TransferFolderError
         {

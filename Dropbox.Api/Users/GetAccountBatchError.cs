@@ -149,7 +149,8 @@ namespace Dropbox.Api.Users
 
         /// <summary>
         /// <para>The value is an account ID specified in <see
-        /// cref="GetAccountBatchArg.AccountIds" /> that does not exist.</para>
+        /// cref="Dropbox.Api.Users.GetAccountBatchArg.AccountIds" /> that does not
+        /// exist.</para>
         /// </summary>
         public sealed class NoAccount : GetAccountBatchError
         {

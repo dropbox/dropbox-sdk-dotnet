@@ -113,7 +113,7 @@ namespace Dropbox.Api.Babel
         /// </summary>
         /// <typeparam name="T">The item type.</typeparam>
         /// <param name="items">The item.</param>
-        /// <returns></returns>
+        /// <returns>The list.</returns>
         public static IList<T> ToList<T>(IEnumerable<T> items)
         {
             return items != null ? new List<T>(items) : new List<T>();
@@ -124,7 +124,7 @@ namespace Dropbox.Api.Babel
         /// </summary>
         /// <typeparam name="T">The item type.</typeparam>
         /// <param name="items">The item.</param>
-        /// <returns></returns>
+        /// <returns>The list.</returns>
         public static IList<IList<T>> ToList<T>(IEnumerable<IEnumerable<T>> items)
         {
             var ret = new List<IList<T>>();

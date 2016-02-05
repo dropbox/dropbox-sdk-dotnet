@@ -33,7 +33,8 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="member">The member to add to the shared folder.</param>
         /// <param name="accessLevel">The access level to grant <paramref name="member" /> to
-        /// the shared folder.  <see cref="AccessLevel.Owner" /> is disallowed.</param>
+        /// the shared folder.  <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is
+        /// disallowed.</param>
         public AddMember(MemberSelector member,
                          AccessLevel accessLevel = null)
         {
@@ -68,7 +69,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The access level to grant <see cref="Member" /> to the shared folder.  <see
-        /// cref="AccessLevel.Owner" /> is disallowed.</para>
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is disallowed.</para>
         /// </summary>
         public AccessLevel AccessLevel { get; protected set; }
 

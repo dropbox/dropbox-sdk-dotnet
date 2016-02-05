@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Information on active web sessions</para>
     /// </summary>
-    /// <seealso cref="DeviceSession" />
+    /// <seealso cref="Dropbox.Api.Team.DeviceSession" />
     public class ActiveWebSession : DeviceSession
     {
         #pragma warning disable 108

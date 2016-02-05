@@ -153,9 +153,10 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The given settings are invalid (for example, all attributes of the <see
         /// cref="SharedLinkSettings" /> are empty, the requested visibility is <see
-        /// cref="RequestedVisibility.Password" /> but the <see
-        /// cref="SharedLinkSettings.LinkPassword" /> is missing, <see
-        /// cref="SharedLinkSettings.Expires" /> is set to the past, etc.)</para>
+        /// cref="Dropbox.Api.Sharing.RequestedVisibility.Password" /> but the <see
+        /// cref="Dropbox.Api.Sharing.SharedLinkSettings.LinkPassword" /> is missing, <see
+        /// cref="Dropbox.Api.Sharing.SharedLinkSettings.Expires" /> is set to the past,
+        /// etc.)</para>
         /// </summary>
         public sealed class InvalidSettings : SharedLinkSettingsError
         {
@@ -235,9 +236,9 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>User is not allowed to modify the settings of this link. Note that basic
-        /// users can only set <see cref="RequestedVisibility.Public" /> as the <see
-        /// cref="SharedLinkSettings.RequestedVisibility" /> and cannot set <see
-        /// cref="SharedLinkSettings.Expires" /></para>
+        /// users can only set <see cref="Dropbox.Api.Sharing.RequestedVisibility.Public" /> as
+        /// the <see cref="Dropbox.Api.Sharing.SharedLinkSettings.RequestedVisibility" /> and
+        /// cannot set <see cref="Dropbox.Api.Sharing.SharedLinkSettings.Expires" /></para>
         /// </summary>
         public sealed class NotAuthorized : SharedLinkSettingsError
         {

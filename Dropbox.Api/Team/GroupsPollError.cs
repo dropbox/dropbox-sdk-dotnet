@@ -57,6 +57,72 @@ namespace Dropbox.Api.Team
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidAsyncJobId</para>
+        /// </summary>
+        public bool IsInvalidAsyncJobId
+        {
+            get
+            {
+                return this is InvalidAsyncJobId;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidAsyncJobId, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidAsyncJobId AsInvalidAsyncJobId
+        {
+            get
+            {
+                return this as InvalidAsyncJobId;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InternalError</para>
+        /// </summary>
+        public bool IsInternalError
+        {
+            get
+            {
+                return this is InternalError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InternalError, or <c>null</c>.</para>
+        /// </summary>
+        public InternalError AsInternalError
+        {
+            get
+            {
+                return this as InternalError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Other</para>
+        /// </summary>
+        public bool IsOther
+        {
+            get
+            {
+                return this is Other;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
+        /// </summary>
+        public Other AsOther
+        {
+            get
+            {
+                return this as Other;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +141,24 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "access_denied", writer, enc.StringEncoder.Instance);
                     AccessDenied.Encoder.EncodeFields((AccessDenied)value, writer);
+                    return;
+                }
+                if (value is InvalidAsyncJobId)
+                {
+                    WriteProperty(".tag", "invalid_async_job_id", writer, enc.StringEncoder.Instance);
+                    InvalidAsyncJobId.Encoder.EncodeFields((InvalidAsyncJobId)value, writer);
+                    return;
+                }
+                if (value is InternalError)
+                {
+                    WriteProperty(".tag", "internal_error", writer, enc.StringEncoder.Instance);
+                    InternalError.Encoder.EncodeFields((InternalError)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -111,6 +195,12 @@ namespace Dropbox.Api.Team
                 {
                     case "access_denied":
                         return AccessDenied.Decoder.DecodeFields(reader);
+                    case "invalid_async_job_id":
+                        return InvalidAsyncJobId.Decoder.DecodeFields(reader);
+                    case "internal_error":
+                        return InternalError.Decoder.DecodeFields(reader);
+                    case "other":
+                        return Other.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -192,6 +282,245 @@ namespace Dropbox.Api.Team
                 public override AccessDenied DecodeFields(enc.IJsonReader reader)
                 {
                     return AccessDenied.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The job ID is invalid.</para>
+        /// </summary>
+        public sealed class InvalidAsyncJobId : GroupsPollError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidAsyncJobId> Encoder = new InvalidAsyncJobIdEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidAsyncJobId> Decoder = new InvalidAsyncJobIdDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidAsyncJobId" />
+            /// class.</para>
+            /// </summary>
+            private InvalidAsyncJobId()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidAsyncJobId</para>
+            /// </summary>
+            public static readonly InvalidAsyncJobId Instance = new InvalidAsyncJobId();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidAsyncJobId" />.</para>
+            /// </summary>
+            private class InvalidAsyncJobIdEncoder : enc.StructEncoder<InvalidAsyncJobId>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidAsyncJobId value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidAsyncJobId" />.</para>
+            /// </summary>
+            private class InvalidAsyncJobIdDecoder : enc.StructDecoder<InvalidAsyncJobId>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidAsyncJobId"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidAsyncJobId Create()
+                {
+                    return new InvalidAsyncJobId();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InvalidAsyncJobId DecodeFields(enc.IJsonReader reader)
+                {
+                    return InvalidAsyncJobId.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Something went wrong with the job on Dropbox's end. You'll need to verify
+        /// that the action you were taking succeeded, and if not, try again. This should
+        /// happen very rarely.</para>
+        /// </summary>
+        public sealed class InternalError : GroupsPollError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InternalError> Encoder = new InternalErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InternalError> Decoder = new InternalErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InternalError" />
+            /// class.</para>
+            /// </summary>
+            private InternalError()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InternalError</para>
+            /// </summary>
+            public static readonly InternalError Instance = new InternalError();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InternalError" />.</para>
+            /// </summary>
+            private class InternalErrorEncoder : enc.StructEncoder<InternalError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InternalError value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InternalError" />.</para>
+            /// </summary>
+            private class InternalErrorDecoder : enc.StructDecoder<InternalError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InternalError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InternalError Create()
+                {
+                    return new InternalError();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InternalError DecodeFields(enc.IJsonReader reader)
+                {
+                    return InternalError.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>An unspecified error.</para>
+        /// </summary>
+        public sealed class Other : GroupsPollError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
+            /// </summary>
+            private Other()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Other</para>
+            /// </summary>
+            public static readonly Other Instance = new Other();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherEncoder : enc.StructEncoder<Other>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherDecoder : enc.StructDecoder<Other>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return new Other();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Other DecodeFields(enc.IJsonReader reader)
+                {
+                    return Other.Instance;
                 }
             }
 

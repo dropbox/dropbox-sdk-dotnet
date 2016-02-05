@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>2.3.3</version>
+    <version>2.3.4</version>
     <title>Dropbox v2 API Beta</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -15,11 +15,11 @@
     <releaseNotes>Preview Release. 
 
 What's new:
--Include Dropbox Business endpoints. 
+- Assembly is now strongly named. 
 
 Bug fixes:
--AuthException now has a deserialized ErrorResponse field.</releaseNotes>
-    <copyright>Copyright (c) Dropbox Inc. 2015</copyright>
+- Add ConfigureAwait(false) to async tasks.</releaseNotes>
+    <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
   </metadata>
 </package>

@@ -38,6 +38,7 @@ namespace Dropbox.Api.Babel
         /// <typeparam name="T">The type of the object to write.</typeparam>
         /// <param name="encodable">The object to write.</param>
         /// <param name="encoder">The encoder.</param>
+        /// <param name="escapeNonAscii">If escape non-ascii characters.</param>
         /// <returns>The encoded object as a JSON string.</returns>
         public static string Write<T>(T encodable, IEncoder<T> encoder, bool escapeNonAscii = false)
         {

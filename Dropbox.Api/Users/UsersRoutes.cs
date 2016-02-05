@@ -35,8 +35,8 @@ namespace Dropbox.Api.Users.Routes
         /// <param name="getAccountArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetAccountError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetAccountError"/>.</exception>
         public t.Task<BasicAccount> GetAccountAsync(GetAccountArg getAccountArg)
         {
@@ -65,8 +65,8 @@ namespace Dropbox.Api.Users.Routes
         /// <param name="accountId">A user's account identifier.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetAccountError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetAccountError"/>.</exception>
         public t.Task<BasicAccount> GetAccountAsync(string accountId)
         {
@@ -100,8 +100,8 @@ namespace Dropbox.Api.Users.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetAccountError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetAccountError"/>.</exception>
         public BasicAccount EndGetAccount(sys.IAsyncResult asyncResult)
         {
@@ -207,8 +207,8 @@ namespace Dropbox.Api.Users.Routes
         /// <param name="getAccountBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetAccountBatchError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetAccountBatchError"/>.</exception>
         public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(GetAccountBatchArg getAccountBatchArg)
         {
@@ -239,8 +239,8 @@ namespace Dropbox.Api.Users.Routes
         /// duplicate account IDs.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetAccountBatchError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetAccountBatchError"/>.</exception>
         public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(col.IEnumerable<string> accountIds)
         {
@@ -275,8 +275,8 @@ namespace Dropbox.Api.Users.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetAccountBatchError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetAccountBatchError"/>.</exception>
         public col.List<BasicAccount> EndGetAccountBatch(sys.IAsyncResult asyncResult)
         {

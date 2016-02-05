@@ -13,7 +13,7 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The information about a group member of the shared folder.</para>
     /// </summary>
-    /// <seealso cref="MembershipInfo" />
+    /// <seealso cref="Dropbox.Api.Sharing.MembershipInfo" />
     public class GroupMembershipInfo : MembershipInfo
     {
         #pragma warning disable 108

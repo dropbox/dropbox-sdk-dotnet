@@ -14,8 +14,8 @@ namespace Dropbox.Api.Sharing
     /// <para>The information about a group. Groups is a way to manage a list of users  who
     /// need same access permission to the shared folder.</para>
     /// </summary>
+    /// <seealso cref="Dropbox.Api.Team.GroupSummary" />
     /// <seealso cref="GroupMembershipInfo" />
-    /// <seealso cref="GroupSummary" />
     public class GroupInfo : Dropbox.Api.Team.GroupSummary
     {
         #pragma warning disable 108

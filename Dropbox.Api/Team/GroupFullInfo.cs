@@ -13,8 +13,8 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Full description of a group.</para>
     /// </summary>
+    /// <seealso cref="Dropbox.Api.Team.GroupSummary" />
     /// <seealso cref="GroupMembersChangeResult" />
-    /// <seealso cref="GroupSummary" />
     public class GroupFullInfo : GroupSummary
     {
         #pragma warning disable 108

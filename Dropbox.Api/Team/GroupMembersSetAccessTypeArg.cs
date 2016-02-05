@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group members set access type arg object</para>
     /// </summary>
-    /// <seealso cref="GroupMemberSelector" />
+    /// <seealso cref="Dropbox.Api.Team.GroupMemberSelector" />
     public class GroupMembersSetAccessTypeArg : GroupMemberSelector
     {
         #pragma warning disable 108
@@ -33,7 +33,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
-        /// <param name="user">Identity of a user that is a member of <paramref name="@group"
+        /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
         public GroupMembersSetAccessTypeArg(GroupSelector @group,

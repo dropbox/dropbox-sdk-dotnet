@@ -14,7 +14,7 @@ namespace Dropbox.Api.Sharing
     /// <para>The information about a user invited to become a member of a shared
     /// folder.</para>
     /// </summary>
-    /// <seealso cref="MembershipInfo" />
+    /// <seealso cref="Dropbox.Api.Sharing.MembershipInfo" />
     public class InviteeMembershipInfo : MembershipInfo
     {
         #pragma warning disable 108

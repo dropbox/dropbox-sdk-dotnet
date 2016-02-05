@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The file metadata object</para>
     /// </summary>
-    /// <seealso cref="Metadata" />
+    /// <seealso cref="Dropbox.Api.Files.Metadata" />
     public class FileMetadata : Metadata
     {
         #pragma warning disable 108

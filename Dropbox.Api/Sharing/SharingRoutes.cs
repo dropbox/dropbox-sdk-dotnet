@@ -35,8 +35,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="getSharedLinkMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedLinkError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedLinkError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
         {
@@ -70,8 +70,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// used.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedLinkError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedLinkError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(string url,
                                                                      string path = null,
@@ -118,8 +118,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedLinkError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedLinkError"/>.</exception>
         public SharedLinkMetadata EndGetSharedLinkMetadata(sys.IAsyncResult asyncResult)
         {
@@ -143,8 +143,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="listSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListSharedLinksError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListSharedLinksError"/>.</exception>
         public t.Task<ListSharedLinksResult> ListSharedLinksAsync(ListSharedLinksArg listSharedLinksArg)
         {
@@ -182,8 +182,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListSharedLinksError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListSharedLinksError"/>.</exception>
         public t.Task<ListSharedLinksResult> ListSharedLinksAsync(string path = null,
                                                                   string cursor = null)
@@ -225,8 +225,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListSharedLinksError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListSharedLinksError"/>.</exception>
         public ListSharedLinksResult EndListSharedLinks(sys.IAsyncResult asyncResult)
         {
@@ -243,16 +243,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Modify the shared link's settings.</para>
         /// <para>If the requested visibility conflict with the shared links policy of the team
         /// or the shared folder (in case the linked file is part of a shared folder) then the
-        /// <see cref="LinkPermissions.ResolvedVisibility" /> of the returned <see
-        /// cref="SharedLinkMetadata" /> will reflect the actual visibility of the shared link
-        /// and the <see cref="LinkPermissions.RequestedVisibility" /> will reflect the
+        /// <see cref="Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility" /> of the
+        /// returned <see cref="SharedLinkMetadata" /> will reflect the actual visibility of
+        /// the shared link and the <see
+        /// cref="Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility" /> will reflect the
         /// requested visibility.</para>
         /// </summary>
         /// <param name="modifySharedLinkSettingsArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ModifySharedLinkSettingsError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(ModifySharedLinkSettingsArgs modifySharedLinkSettingsArgs)
         {
@@ -279,17 +280,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Modify the shared link's settings.</para>
         /// <para>If the requested visibility conflict with the shared links policy of the team
         /// or the shared folder (in case the linked file is part of a shared folder) then the
-        /// <see cref="LinkPermissions.ResolvedVisibility" /> of the returned <see
-        /// cref="SharedLinkMetadata" /> will reflect the actual visibility of the shared link
-        /// and the <see cref="LinkPermissions.RequestedVisibility" /> will reflect the
+        /// <see cref="Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility" /> of the
+        /// returned <see cref="SharedLinkMetadata" /> will reflect the actual visibility of
+        /// the shared link and the <see
+        /// cref="Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility" /> will reflect the
         /// requested visibility.</para>
         /// </summary>
         /// <param name="url">URL of the shared link to change its settings</param>
         /// <param name="settings">Set of settings for the shared link.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ModifySharedLinkSettingsError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(string url,
                                                                         SharedLinkSettings settings)
@@ -328,8 +330,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ModifySharedLinkSettingsError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
         public SharedLinkMetadata EndModifySharedLinkSettings(sys.IAsyncResult asyncResult)
         {
@@ -344,16 +346,15 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Create a shared link with custom settings. If no settings are given then the
-        /// default visibility is <see cref="RequestedVisibility.Public" /> (The resolved
-        /// visibility, though, may depend on other aspects such as team and shared folder
-        /// settings).</para>
+        /// default visibility is <see cref="Dropbox.Api.Sharing.RequestedVisibility.Public" />
+        /// (The resolved visibility, though, may depend on other aspects such as team and
+        /// shared folder settings).</para>
         /// </summary>
         /// <param name="createSharedLinkWithSettingsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception
-        /// cref="Dropbox.Api.ApiException{CreateSharedLinkWithSettingsError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkWithSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> CreateSharedLinkWithSettingsAsync(CreateSharedLinkWithSettingsArg createSharedLinkWithSettingsArg)
         {
@@ -379,18 +380,17 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Create a shared link with custom settings. If no settings are given then the
-        /// default visibility is <see cref="RequestedVisibility.Public" /> (The resolved
-        /// visibility, though, may depend on other aspects such as team and shared folder
-        /// settings).</para>
+        /// default visibility is <see cref="Dropbox.Api.Sharing.RequestedVisibility.Public" />
+        /// (The resolved visibility, though, may depend on other aspects such as team and
+        /// shared folder settings).</para>
         /// </summary>
         /// <param name="path">The path to be shared by the shared link</param>
         /// <param name="settings">The requested settings for the newly created shared
         /// link</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception
-        /// cref="Dropbox.Api.ApiException{CreateSharedLinkWithSettingsError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkWithSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> CreateSharedLinkWithSettingsAsync(string path,
                                                                             SharedLinkSettings settings = null)
@@ -431,9 +431,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception
-        /// cref="Dropbox.Api.ApiException{CreateSharedLinkWithSettingsError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkWithSettingsError"/>.</exception>
         public SharedLinkMetadata EndCreateSharedLinkWithSettings(sys.IAsyncResult asyncResult)
         {
@@ -452,12 +451,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// accessible if there are shared links leading to any of the file parent folders. To
         /// list all shared links that enable access to a specific file, you can use the <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> with the
-        /// file as the <see cref="ListSharedLinksArg.Path" /> argument.</para>
+        /// file as the <see cref="Dropbox.Api.Sharing.ListSharedLinksArg.Path" />
+        /// argument.</para>
         /// </summary>
         /// <param name="revokeSharedLinkArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeSharedLinkError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeSharedLinkError"/>.</exception>
         public t.Task RevokeSharedLinkAsync(RevokeSharedLinkArg revokeSharedLinkArg)
         {
@@ -486,12 +486,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// accessible if there are shared links leading to any of the file parent folders. To
         /// list all shared links that enable access to a specific file, you can use the <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> with the
-        /// file as the <see cref="ListSharedLinksArg.Path" /> argument.</para>
+        /// file as the <see cref="Dropbox.Api.Sharing.ListSharedLinksArg.Path" />
+        /// argument.</para>
         /// </summary>
         /// <param name="url">URL of the shared link.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeSharedLinkError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeSharedLinkError"/>.</exception>
         public t.Task RevokeSharedLinkAsync(string url)
         {
@@ -524,8 +525,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeSharedLinkError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeSharedLinkError"/>.</exception>
         public void EndRevokeSharedLink(sys.IAsyncResult asyncResult)
         {
@@ -542,8 +543,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="getSharedLinkMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinkFileError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetSharedLinkFileError"/>.</exception>
         public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
         {
@@ -577,8 +578,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// used.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinkFileError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetSharedLinkFileError"/>.</exception>
         public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(string url,
                                                                                         string path = null,
@@ -625,8 +626,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinkFileError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetSharedLinkFileError"/>.</exception>
         public enc.IDownloadResponse<SharedLinkMetadata> EndGetSharedLinkFile(sys.IAsyncResult asyncResult)
         {
@@ -651,8 +652,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="getSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
@@ -691,8 +692,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// description.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(string path = null)
@@ -730,8 +731,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetSharedLinksError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use EndListSharedLinks instead.")]
         public GetSharedLinksResult EndGetSharedLinks(sys.IAsyncResult asyncResult)
@@ -750,8 +751,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>If a shared link already exists for the given path, that link is
         /// returned.</para>
         /// <para>Note that in the returned <see cref="PathLinkMetadata" />, the <see
-        /// cref="PathLinkMetadata.Url" /> field is the shortened URL if <see
-        /// cref="CreateSharedLinkArg.ShortUrl" /> argument is set to <c>true</c>.</para>
+        /// cref="Dropbox.Api.Sharing.PathLinkMetadata.Url" /> field is the shortened URL if
+        /// <see cref="Dropbox.Api.Sharing.CreateSharedLinkArg.ShortUrl" /> argument is set to
+        /// <c>true</c>.</para>
         /// <para>Previously, it was technically possible to break a shared link by moving or
         /// renaming the corresponding file or folder. In the future, this will no longer be
         /// the case, so your app shouldn't rely on this behavior. Instead, if your app needs
@@ -761,8 +763,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="createSharedLinkArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
@@ -792,8 +794,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>If a shared link already exists for the given path, that link is
         /// returned.</para>
         /// <para>Note that in the returned <see cref="PathLinkMetadata" />, the <see
-        /// cref="PathLinkMetadata.Url" /> field is the shortened URL if <see
-        /// cref="CreateSharedLinkArg.ShortUrl" /> argument is set to <c>true</c>.</para>
+        /// cref="Dropbox.Api.Sharing.PathLinkMetadata.Url" /> field is the shortened URL if
+        /// <see cref="Dropbox.Api.Sharing.CreateSharedLinkArg.ShortUrl" /> argument is set to
+        /// <c>true</c>.</para>
         /// <para>Previously, it was technically possible to break a shared link by moving or
         /// renaming the corresponding file or folder. In the future, this will no longer be
         /// the case, so your app shouldn't rely on this behavior. Instead, if your app needs
@@ -803,13 +806,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="path">The path to share.</param>
         /// <param name="shortUrl">Whether to return a shortened URL.</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
-        /// set this to either <see cref="PendingUploadMode.File" /> or <see
-        /// cref="PendingUploadMode.Folder" /> to indicate whether to assume it's a file or
-        /// folder.</param>
+        /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
+        /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
+        /// assume it's a file or folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(string path,
@@ -829,9 +832,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="path">The path to share.</param>
         /// <param name="shortUrl">Whether to return a shortened URL.</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
-        /// set this to either <see cref="PendingUploadMode.File" /> or <see
-        /// cref="PendingUploadMode.Folder" /> to indicate whether to assume it's a file or
-        /// folder.</param>
+        /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
+        /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
+        /// assume it's a file or folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -858,8 +861,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{CreateSharedLinkError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use EndCreateSharedLinkWithSettings instead.")]
         public PathLinkMetadata EndCreateSharedLink(sys.IAsyncResult asyncResult)
@@ -930,8 +933,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="listFoldersContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFoldersContinueError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
         public t.Task<ListFoldersResult> ListFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg)
         {
@@ -968,8 +971,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFoldersContinueError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
         public t.Task<ListFoldersResult> ListFoldersContinueAsync(string cursor)
         {
@@ -1006,8 +1009,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFoldersContinueError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
         public ListFoldersResult EndListFoldersContinue(sys.IAsyncResult asyncResult)
         {
@@ -1029,8 +1032,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="getMetadataArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(GetMetadataArgs getMetadataArgs)
         {
@@ -1063,8 +1066,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="actions">Folder actions to query.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(string sharedFolderId,
                                                                    col.IEnumerable<FolderAction> actions = null)
@@ -1103,8 +1106,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public SharedFolderMetadata EndGetFolderMetadata(sys.IAsyncResult asyncResult)
         {
@@ -1126,8 +1129,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="listFolderMembersArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(ListFolderMembersArgs listFolderMembersArgs)
         {
@@ -1160,8 +1163,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="actions">Member actions to query.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId,
                                                                   col.IEnumerable<MemberAction> actions = null)
@@ -1200,8 +1203,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SharedFolderAccessError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public SharedFolderMembers EndListFolderMembers(sys.IAsyncResult asyncResult)
         {
@@ -1225,8 +1228,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="listFolderMembersContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderMembersContinueError}">Thrown
-        /// if there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderMembersContinueError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(ListFolderMembersContinueArg listFolderMembersContinueArg)
         {
@@ -1263,8 +1266,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderMembersContinueError}">Thrown
-        /// if there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderMembersContinueError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(string cursor)
         {
@@ -1301,8 +1304,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderMembersContinueError}">Thrown
-        /// if there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderMembersContinueError"/>.</exception>
         public SharedFolderMembers EndListFolderMembersContinue(sys.IAsyncResult asyncResult)
         {
@@ -1320,9 +1323,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Most sharing will be completed synchronously. Large folders will be completed
         /// asynchronously. To make testing the async case repeatable, set
         /// `ShareFolderArg.force_async`.</para>
-        /// <para>If a <see cref="ShareFolderLaunch.AsyncJobId" /> is returned, you'll need to
-        /// call <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync"
-        /// /> until the action completes to get the metadata for the folder.</para>
+        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
+        /// returned, you'll need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync" /> until
+        /// the action completes to get the metadata for the folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
         /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
         /// backwards-incompatible changes.</para>
@@ -1330,8 +1334,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="shareFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ShareFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ShareFolderError"/>.</exception>
         public t.Task<ShareFolderLaunch> ShareFolderAsync(ShareFolderArg shareFolderArg)
         {
@@ -1359,9 +1363,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Most sharing will be completed synchronously. Large folders will be completed
         /// asynchronously. To make testing the async case repeatable, set
         /// `ShareFolderArg.force_async`.</para>
-        /// <para>If a <see cref="ShareFolderLaunch.AsyncJobId" /> is returned, you'll need to
-        /// call <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync"
-        /// /> until the action completes to get the metadata for the folder.</para>
+        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
+        /// returned, you'll need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync" /> until
+        /// the action completes to get the metadata for the folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
         /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
         /// backwards-incompatible changes.</para>
@@ -1377,8 +1382,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// asynchronously.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ShareFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ShareFolderError"/>.</exception>
         public t.Task<ShareFolderLaunch> ShareFolderAsync(string path,
                                                           MemberPolicy memberPolicy = null,
@@ -1436,8 +1441,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ShareFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ShareFolderError"/>.</exception>
         public ShareFolderLaunch EndShareFolder(sys.IAsyncResult asyncResult)
         {
@@ -1459,8 +1464,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(Dropbox.Api.Async.PollArg pollArg)
         {
@@ -1493,8 +1498,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(string asyncJobId)
         {
@@ -1529,8 +1534,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public ShareFolderJobStatus EndCheckShareJobStatus(sys.IAsyncResult asyncResult)
         {
@@ -1552,8 +1557,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<JobStatus> CheckJobStatusAsync(Dropbox.Api.Async.PollArg pollArg)
         {
@@ -1586,8 +1591,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<JobStatus> CheckJobStatusAsync(string asyncJobId)
         {
@@ -1622,8 +1627,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public JobStatus EndCheckJobStatus(sys.IAsyncResult asyncResult)
         {
@@ -1648,8 +1653,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="unshareFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UnshareFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(UnshareFolderArg unshareFolderArg)
         {
@@ -1687,8 +1692,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// The current user, who is an owner, will always retain their copy.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UnshareFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(string sharedFolderId,
                                                                               bool leaveACopy)
@@ -1729,8 +1734,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UnshareFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
         public Dropbox.Api.Async.LaunchEmptyResult EndUnshareFolder(sys.IAsyncResult asyncResult)
         {
@@ -1752,8 +1757,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="transferFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TransferFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="TransferFolderError"/>.</exception>
         public t.Task TransferFolderAsync(TransferFolderArg transferFolderArg)
         {
@@ -1787,8 +1792,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="toDropboxId">A account or team member ID to transfer ownership
         /// to.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TransferFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="TransferFolderError"/>.</exception>
         public t.Task TransferFolderAsync(string sharedFolderId,
                                           string toDropboxId)
@@ -1827,8 +1832,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{TransferFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="TransferFolderError"/>.</exception>
         public void EndTransferFolder(sys.IAsyncResult asyncResult)
         {
@@ -1848,8 +1853,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="updateFolderPolicyArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderPolicyError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UpdateFolderPolicyError"/>.</exception>
         public t.Task<SharedFolderMetadata> UpdateFolderPolicyAsync(UpdateFolderPolicyArg updateFolderPolicyArg)
         {
@@ -1887,8 +1892,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// content inside this shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderPolicyError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UpdateFolderPolicyError"/>.</exception>
         public t.Task<SharedFolderMetadata> UpdateFolderPolicyAsync(string sharedFolderId,
                                                                     MemberPolicy memberPolicy = null,
@@ -1940,8 +1945,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderPolicyError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UpdateFolderPolicyError"/>.</exception>
         public SharedFolderMetadata EndUpdateFolderPolicy(sys.IAsyncResult asyncResult)
         {
@@ -1967,8 +1972,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="addFolderMemberArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{AddFolderMemberError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="AddFolderMemberError"/>.</exception>
         public t.Task AddFolderMemberAsync(AddFolderMemberArg addFolderMemberArg)
         {
@@ -2010,8 +2015,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{AddFolderMemberError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="AddFolderMemberError"/>.</exception>
         public t.Task AddFolderMemberAsync(string sharedFolderId,
                                            col.IEnumerable<AddMember> members,
@@ -2062,8 +2067,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{AddFolderMemberError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="AddFolderMemberError"/>.</exception>
         public void EndAddFolderMember(sys.IAsyncResult asyncResult)
         {
@@ -2084,8 +2089,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="removeFolderMemberArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RemoveFolderMemberError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> RemoveFolderMemberAsync(RemoveFolderMemberArg removeFolderMemberArg)
         {
@@ -2122,8 +2127,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RemoveFolderMemberError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> RemoveFolderMemberAsync(string sharedFolderId,
                                                                                    MemberSelector member,
@@ -2169,8 +2174,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RemoveFolderMemberError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
         public Dropbox.Api.Async.LaunchEmptyResult EndRemoveFolderMember(sys.IAsyncResult asyncResult)
         {
@@ -2192,8 +2197,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="updateFolderMemberArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderMemberError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UpdateFolderMemberError"/>.</exception>
         public t.Task UpdateFolderMemberAsync(UpdateFolderMemberArg updateFolderMemberArg)
         {
@@ -2225,12 +2230,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="member">The member of the shared folder to update.  Only the <see
-        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// cref="Dropbox.Api.Sharing.MemberSelector.DropboxId" /> may be set at this
+        /// time.</param>
         /// <param name="accessLevel">The new access level for <paramref name="member" />. <see
-        /// cref="AccessLevel.Owner" /> is disallowed.</param>
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is disallowed.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderMemberError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UpdateFolderMemberError"/>.</exception>
         public t.Task UpdateFolderMemberAsync(string sharedFolderId,
                                               MemberSelector member,
@@ -2248,9 +2254,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="member">The member of the shared folder to update.  Only the <see
-        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// cref="Dropbox.Api.Sharing.MemberSelector.DropboxId" /> may be set at this
+        /// time.</param>
         /// <param name="accessLevel">The new access level for <paramref name="member" />. <see
-        /// cref="AccessLevel.Owner" /> is disallowed.</param>
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is disallowed.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2275,8 +2282,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{UpdateFolderMemberError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UpdateFolderMemberError"/>.</exception>
         public void EndUpdateFolderMember(sys.IAsyncResult asyncResult)
         {
@@ -2298,8 +2305,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="mountFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MountFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MountFolderError"/>.</exception>
         public t.Task<SharedFolderMetadata> MountFolderAsync(MountFolderArg mountFolderArg)
         {
@@ -2333,8 +2340,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MountFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MountFolderError"/>.</exception>
         public t.Task<SharedFolderMetadata> MountFolderAsync(string sharedFolderId)
         {
@@ -2368,8 +2375,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MountFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MountFolderError"/>.</exception>
         public SharedFolderMetadata EndMountFolder(sys.IAsyncResult asyncResult)
         {
@@ -2392,8 +2399,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="unmountFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UnmountFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UnmountFolderError"/>.</exception>
         public t.Task UnmountFolderAsync(UnmountFolderArg unmountFolderArg)
         {
@@ -2426,8 +2433,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UnmountFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UnmountFolderError"/>.</exception>
         public t.Task UnmountFolderAsync(string sharedFolderId)
         {
@@ -2460,8 +2467,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{UnmountFolderError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UnmountFolderError"/>.</exception>
         public void EndUnmountFolder(sys.IAsyncResult asyncResult)
         {
@@ -2482,8 +2489,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="relinquishFolderMembershipArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelinquishFolderMembershipError}">Thrown
-        /// if there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
         public t.Task RelinquishFolderMembershipAsync(RelinquishFolderMembershipArg relinquishFolderMembershipArg)
         {
@@ -2516,8 +2523,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelinquishFolderMembershipError}">Thrown
-        /// if there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
         public t.Task RelinquishFolderMembershipAsync(string sharedFolderId)
         {
@@ -2550,8 +2557,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{RelinquishFolderMembershipError}">Thrown
-        /// if there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
         public void EndRelinquishFolderMembership(sys.IAsyncResult asyncResult)
         {

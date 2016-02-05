@@ -277,7 +277,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para><see cref="ListFolderMembersContinueArg.Cursor" /> is invalid.</para>
+        /// <para><see cref="Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor" /> is
+        /// invalid.</para>
         /// </summary>
         public sealed class InvalidCursor : ListFolderMembersContinueError
         {

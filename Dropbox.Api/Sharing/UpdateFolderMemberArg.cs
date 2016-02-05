@@ -33,9 +33,10 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="member">The member of the shared folder to update.  Only the <see
-        /// cref="MemberSelector.DropboxId" /> may be set at this time.</param>
+        /// cref="Dropbox.Api.Sharing.MemberSelector.DropboxId" /> may be set at this
+        /// time.</param>
         /// <param name="accessLevel">The new access level for <paramref name="member" />. <see
-        /// cref="AccessLevel.Owner" /> is disallowed.</param>
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is disallowed.</param>
         public UpdateFolderMemberArg(string sharedFolderId,
                                      MemberSelector member,
                                      AccessLevel accessLevel)
@@ -81,13 +82,14 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The member of the shared folder to update.  Only the <see
-        /// cref="MemberSelector.DropboxId" /> may be set at this time.</para>
+        /// cref="Dropbox.Api.Sharing.MemberSelector.DropboxId" /> may be set at this
+        /// time.</para>
         /// </summary>
         public MemberSelector Member { get; protected set; }
 
         /// <summary>
-        /// <para>The new access level for <see cref="Member" />. <see cref="AccessLevel.Owner"
-        /// /> is disallowed.</para>
+        /// <para>The new access level for <see cref="Member" />. <see
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is disallowed.</para>
         /// </summary>
         public AccessLevel AccessLevel { get; protected set; }
 

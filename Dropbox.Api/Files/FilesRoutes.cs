@@ -35,8 +35,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="getMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetMetadataError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetMetadataError"/>.</exception>
         public t.Task<Metadata> GetMetadataAsync(GetMetadataArg getMetadataArg)
         {
@@ -67,8 +67,8 @@ namespace Dropbox.Api.Files.Routes
         /// photo and video.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetMetadataError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetMetadataError"/>.</exception>
         public t.Task<Metadata> GetMetadataAsync(string path,
                                                  bool includeMediaInfo = false)
@@ -108,8 +108,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GetMetadataError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GetMetadataError"/>.</exception>
         public Metadata EndGetMetadata(sys.IAsyncResult asyncResult)
         {
@@ -135,8 +135,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="listFolderLongpollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderLongpollError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderLongpollError"/>.</exception>
         public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(ListFolderLongpollArg listFolderLongpollArg)
         {
@@ -178,8 +178,8 @@ namespace Dropbox.Api.Files.Routes
         /// network infrastructure does not support long timeouts.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderLongpollError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderLongpollError"/>.</exception>
         public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(string cursor,
                                                                         ulong timeout = 30)
@@ -223,8 +223,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderLongpollError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderLongpollError"/>.</exception>
         public ListFolderLongpollResult EndListFolderLongpoll(sys.IAsyncResult asyncResult)
         {
@@ -243,8 +243,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="listFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(ListFolderArg listFolderArg)
         {
@@ -280,8 +280,8 @@ namespace Dropbox.Api.Files.Routes
         /// and folders that used to exist but were deleted.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(string path,
                                                         bool recursive = false,
@@ -334,8 +334,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public ListFolderResult EndListFolder(sys.IAsyncResult asyncResult)
         {
@@ -356,8 +356,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="listFolderContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderContinueError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderContinueError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderContinueAsync(ListFolderContinueArg listFolderContinueArg)
         {
@@ -390,8 +390,8 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderContinueError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderContinueError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderContinueAsync(string cursor)
         {
@@ -427,8 +427,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderContinueError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderContinueError"/>.</exception>
         public ListFolderResult EndListFolderContinue(sys.IAsyncResult asyncResult)
         {
@@ -452,8 +452,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="listFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(ListFolderArg listFolderArg)
         {
@@ -495,8 +495,8 @@ namespace Dropbox.Api.Files.Routes
         /// and folders that used to exist but were deleted.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(string path,
                                                                                       bool recursive = false,
@@ -550,8 +550,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public ListFolderGetLatestCursorResult EndListFolderGetLatestCursor(sys.IAsyncResult asyncResult)
         {
@@ -570,8 +570,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="downloadArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DownloadError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DownloadError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(DownloadArg downloadArg)
         {
@@ -602,8 +602,8 @@ namespace Dropbox.Api.Files.Routes
         /// instead</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DownloadError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DownloadError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(string path,
                                                                          string rev = null)
@@ -643,8 +643,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DownloadError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DownloadError"/>.</exception>
         public enc.IDownloadResponse<FileMetadata> EndDownload(sys.IAsyncResult asyncResult)
         {
@@ -714,8 +714,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="uploadSessionCursor">The request parameters</param>
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadSessionLookupError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
         public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
         {
@@ -750,8 +750,8 @@ namespace Dropbox.Api.Files.Routes
         /// error.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadSessionLookupError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
         public t.Task UploadSessionAppendAsync(string sessionId,
                                                ulong offset,
@@ -795,8 +795,8 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{UploadSessionLookupError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
         public void EndUploadSessionAppend(sys.IAsyncResult asyncResult)
         {
@@ -816,8 +816,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadSessionFinishError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UploadSessionFinishError"/>.</exception>
         public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionFinishArg uploadSessionFinishArg, io.Stream body)
         {
@@ -852,8 +852,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadSessionFinishError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UploadSessionFinishError"/>.</exception>
         public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionCursor cursor,
                                                              CommitInfo commit,
@@ -896,8 +896,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadSessionFinishError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="UploadSessionFinishError"/>.</exception>
         public FileMetadata EndUploadSessionFinish(sys.IAsyncResult asyncResult)
         {
@@ -920,7 +920,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
         public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
         {
@@ -967,7 +967,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
         public t.Task<FileMetadata> UploadAsync(string path,
                                                 WriteMode mode = null,
@@ -1033,7 +1033,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{UploadError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
         public FileMetadata EndUpload(sys.IAsyncResult asyncResult)
         {
@@ -1052,7 +1052,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="searchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SearchError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
         public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
         {
@@ -1091,7 +1091,7 @@ namespace Dropbox.Api.Files.Routes
         /// Business accounts.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SearchError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
         public t.Task<SearchResult> SearchAsync(string path,
                                                 string query,
@@ -1151,7 +1151,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{SearchError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
         public SearchResult EndSearch(sys.IAsyncResult asyncResult)
         {
@@ -1170,8 +1170,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="createFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{CreateFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
         public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
         {
@@ -1200,8 +1200,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">Path in the user's Dropbox to create.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{CreateFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
         public t.Task<FolderMetadata> CreateFolderAsync(string path)
         {
@@ -1235,8 +1235,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{CreateFolderError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
         public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
         {
@@ -1256,7 +1256,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="deleteArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DeleteError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
         {
@@ -1286,7 +1286,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">Path in the user's Dropbox to delete.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DeleteError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task<Metadata> DeleteAsync(string path)
         {
@@ -1320,7 +1320,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DeleteError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public Metadata EndDelete(sys.IAsyncResult asyncResult)
         {
@@ -1340,7 +1340,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="deleteArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DeleteError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task PermanentlyDeleteAsync(DeleteArg deleteArg)
         {
@@ -1370,7 +1370,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DeleteError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task PermanentlyDeleteAsync(string path)
         {
@@ -1403,7 +1403,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{DeleteError}">Thrown if there is an error
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public void EndPermanentlyDelete(sys.IAsyncResult asyncResult)
         {
@@ -1421,8 +1421,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelocationError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
         {
@@ -1453,8 +1453,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelocationError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> CopyAsync(string fromPath,
                                           string toPath)
@@ -1492,8 +1492,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelocationError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public Metadata EndCopy(sys.IAsyncResult asyncResult)
         {
@@ -1513,8 +1513,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelocationError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
         {
@@ -1545,8 +1545,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelocationError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> MoveAsync(string fromPath,
                                           string toPath)
@@ -1584,8 +1584,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RelocationError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public Metadata EndMove(sys.IAsyncResult asyncResult)
         {
@@ -1607,8 +1607,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="thumbnailArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ThumbnailError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ThumbnailError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(ThumbnailArg thumbnailArg)
         {
@@ -1644,8 +1644,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ThumbnailError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ThumbnailError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(string path,
                                                                              ThumbnailFormat format = null,
@@ -1691,8 +1691,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ThumbnailError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ThumbnailError"/>.</exception>
         public enc.IDownloadResponse<FileMetadata> EndGetThumbnail(sys.IAsyncResult asyncResult)
         {
@@ -1713,9 +1713,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="previewArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{PreviewError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="PreviewError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(PreviewArg previewArg)
         {
             return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", Dropbox.Api.Files.PreviewArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.PreviewError.Decoder);
@@ -1747,9 +1746,8 @@ namespace Dropbox.Api.Files.Routes
         /// instead</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{PreviewError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="PreviewError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(string path,
                                                                            string rev = null)
         {
@@ -1788,9 +1786,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{PreviewError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="PreviewError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
         public enc.IDownloadResponse<FileMetadata> EndGetPreview(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
@@ -1808,8 +1805,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="listRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListRevisionsError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(ListRevisionsArg listRevisionsArg)
         {
@@ -1839,8 +1836,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="limit">The maximum number of revision entries returned.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListRevisionsError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
                                                               ulong limit = 10)
@@ -1879,8 +1876,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListRevisionsError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListRevisionsError"/>.</exception>
         public ListRevisionsResult EndListRevisions(sys.IAsyncResult asyncResult)
         {
@@ -1899,9 +1896,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="restoreArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RestoreError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="RestoreError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
         public t.Task<FileMetadata> RestoreAsync(RestoreArg restoreArg)
         {
             return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", Dropbox.Api.Files.RestoreArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.RestoreError.Decoder);
@@ -1930,9 +1926,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="rev">The revision to restore for the file.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RestoreError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="RestoreError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
         public t.Task<FileMetadata> RestoreAsync(string path,
                                                  string rev)
         {
@@ -1970,9 +1965,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RestoreError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
-        /// cref="RestoreError"/>.</exception>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
         public FileMetadata EndRestore(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FileMetadata>;

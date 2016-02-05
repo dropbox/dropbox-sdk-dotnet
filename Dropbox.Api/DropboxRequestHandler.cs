@@ -24,7 +24,7 @@ namespace Dropbox.Api
     /// <summary>
     /// The object used to to make requests to the Dropbox API.
     /// </summary>
-    internal sealed class DropboxRequestHandler: ITransport
+    internal sealed class DropboxRequestHandler : ITransport
     {
         /// <summary>
         /// The API version
@@ -381,7 +381,9 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.options.HttpClient.SendAsync(request, completionOption);
+            var response = await this.options.HttpClient
+                .SendAsync(request, completionOption)
+                .ConfigureAwait(false);
 
             try
             {
@@ -620,7 +622,7 @@ namespace Dropbox.Api
         private static readonly HttpClient DefaultHttpClient = new HttpClient();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DrpoboxRequestHandlerOptions"/> class.
+        /// Initializes a new instance of the <see cref="DropboxRequestHandlerOptions"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>

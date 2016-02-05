@@ -13,7 +13,7 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The metadata of a folder shared link</para>
     /// </summary>
-    /// <seealso cref="SharedLinkMetadata" />
+    /// <seealso cref="Dropbox.Api.Sharing.SharedLinkMetadata" />
     public class FolderLinkMetadata : SharedLinkMetadata
     {
         #pragma warning disable 108

@@ -340,8 +340,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para><see cref="UpdateFolderPolicyArg.MemberPolicy" /> was set even though user is
-        /// not on a team.</para>
+        /// <para><see cref="Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy" /> was set
+        /// even though user is not on a team.</para>
         /// </summary>
         public sealed class NotOnTeam : UpdateFolderPolicyError
         {
@@ -419,8 +419,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Team policy is more restrictive than <see cref="ShareFolderArg.MemberPolicy"
-        /// />.</para>
+        /// <para>Team policy is more restrictive than <see
+        /// cref="Dropbox.Api.Sharing.ShareFolderArg.MemberPolicy" />.</para>
         /// </summary>
         public sealed class TeamPolicyDisallowsMemberPolicy : UpdateFolderPolicyError
         {
@@ -501,7 +501,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The current account is not allowed to select the specified <see
-        /// cref="ShareFolderArg.SharedLinkPolicy" />.</para>
+        /// cref="Dropbox.Api.Sharing.ShareFolderArg.SharedLinkPolicy" />.</para>
         /// </summary>
         public sealed class DisallowedSharedLinkPolicy : UpdateFolderPolicyError
         {

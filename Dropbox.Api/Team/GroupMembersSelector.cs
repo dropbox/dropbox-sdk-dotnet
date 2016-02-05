@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
-        /// <param name="users">A list of users that are members of <paramref name="@group"
+        /// <param name="users">A list of users that are members of <paramref name="group"
         /// />.</param>
         public GroupMembersSelector(GroupSelector @group,
                                     UsersSelectorArg users)

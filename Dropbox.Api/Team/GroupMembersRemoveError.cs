@@ -57,6 +57,28 @@ namespace Dropbox.Api.Team
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is MemberNotInGroup</para>
+        /// </summary>
+        public bool IsMemberNotInGroup
+        {
+            get
+            {
+                return this is MemberNotInGroup;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberNotInGroup, or <c>null</c>.</para>
+        /// </summary>
+        public MemberNotInGroup AsMemberNotInGroup
+        {
+            get
+            {
+                return this as MemberNotInGroup;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +97,12 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "group_not_in_team", writer, enc.StringEncoder.Instance);
                     GroupNotInTeam.Encoder.EncodeFields((GroupNotInTeam)value, writer);
+                    return;
+                }
+                if (value is MemberNotInGroup)
+                {
+                    WriteProperty(".tag", "member_not_in_group", writer, enc.StringEncoder.Instance);
+                    MemberNotInGroup.Encoder.EncodeFields((MemberNotInGroup)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -112,6 +140,8 @@ namespace Dropbox.Api.Team
                 {
                     case "group_not_in_team":
                         return GroupNotInTeam.Decoder.DecodeFields(reader);
+                    case "member_not_in_group":
+                        return MemberNotInGroup.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -194,6 +224,85 @@ namespace Dropbox.Api.Team
                 public override GroupNotInTeam DecodeFields(enc.IJsonReader reader)
                 {
                     return GroupNotInTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>At least one of the specified users is not a member of the group.</para>
+        /// </summary>
+        public sealed class MemberNotInGroup : GroupMembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberNotInGroup> Encoder = new MemberNotInGroupEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberNotInGroup> Decoder = new MemberNotInGroupDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberNotInGroup" />
+            /// class.</para>
+            /// </summary>
+            private MemberNotInGroup()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MemberNotInGroup</para>
+            /// </summary>
+            public static readonly MemberNotInGroup Instance = new MemberNotInGroup();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberNotInGroup" />.</para>
+            /// </summary>
+            private class MemberNotInGroupEncoder : enc.StructEncoder<MemberNotInGroup>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberNotInGroup value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberNotInGroup" />.</para>
+            /// </summary>
+            private class MemberNotInGroupDecoder : enc.StructDecoder<MemberNotInGroup>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MemberNotInGroup" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberNotInGroup Create()
+                {
+                    return new MemberNotInGroup();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MemberNotInGroup DecodeFields(enc.IJsonReader reader)
+                {
+                    return MemberNotInGroup.Instance;
                 }
             }
 

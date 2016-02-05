@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Information about linked Dropbox mobile client sessions</para>
     /// </summary>
-    /// <seealso cref="DeviceSession" />
+    /// <seealso cref="Dropbox.Api.Team.DeviceSession" />
     public class MobileClientSession : DeviceSession
     {
         #pragma warning disable 108

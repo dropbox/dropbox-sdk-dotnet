@@ -13,7 +13,7 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>Basic information about any account.</para>
     /// </summary>
-    /// <seealso cref="Account" />
+    /// <seealso cref="Dropbox.Api.Users.Account" />
     public class BasicAccount : Account
     {
         #pragma warning disable 108

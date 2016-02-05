@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>Sharing info for a file which is contained by a shared folder.</para>
     /// </summary>
-    /// <seealso cref="SharingInfo" />
+    /// <seealso cref="Dropbox.Api.Files.SharingInfo" />
     public class FileSharingInfo : SharingInfo
     {
         #pragma warning disable 108

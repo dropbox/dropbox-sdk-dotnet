@@ -14,7 +14,7 @@ namespace Dropbox.Api.Sharing
     /// <para>Result for <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync"
     /// />.</para>
     /// <para>Unmounted shared folders can be identified by the absence of <see
-    /// cref="SharedFolderMetadata.PathLower" />.</para>
+    /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.PathLower" />.</para>
     /// </summary>
     public class ListFoldersResult
     {

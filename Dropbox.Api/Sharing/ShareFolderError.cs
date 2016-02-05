@@ -350,7 +350,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para><see cref="ShareFolderArg.Path" /> is invalid.</para>
+        /// <para><see cref="Dropbox.Api.Sharing.ShareFolderArg.Path" /> is invalid.</para>
         /// </summary>
         public sealed class BadPath : ShareFolderError
         {
@@ -446,8 +446,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Team policy is more restrictive than <see cref="ShareFolderArg.MemberPolicy"
-        /// />.</para>
+        /// <para>Team policy is more restrictive than <see
+        /// cref="Dropbox.Api.Sharing.ShareFolderArg.MemberPolicy" />.</para>
         /// </summary>
         public sealed class TeamPolicyDisallowsMemberPolicy : ShareFolderError
         {
@@ -528,7 +528,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The current account is not allowed to select the specified <see
-        /// cref="ShareFolderArg.SharedLinkPolicy" />.</para>
+        /// cref="Dropbox.Api.Sharing.ShareFolderArg.SharedLinkPolicy" />.</para>
         /// </summary>
         public sealed class DisallowedSharedLinkPolicy : ShareFolderError
         {

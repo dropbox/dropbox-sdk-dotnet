@@ -35,8 +35,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="requestedVisibility">The requested access for this shared
         /// link.</param>
         /// <param name="linkPassword">If <paramref name="requestedVisibility" /> is <see
-        /// cref="RequestedVisibility.Password" /> this is needed to specify the password to
-        /// access the link.</param>
+        /// cref="Dropbox.Api.Sharing.RequestedVisibility.Password" /> this is needed to
+        /// specify the password to access the link.</param>
         /// <param name="expires">Expiration time of the shared link. By default the link won't
         /// expire.</param>
         public SharedLinkSettings(RequestedVisibility requestedVisibility = null,
@@ -65,8 +65,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>If <see cref="RequestedVisibility" /> is <see
-        /// cref="RequestedVisibility.Password" /> this is needed to specify the password to
-        /// access the link.</para>
+        /// cref="Dropbox.Api.Sharing.RequestedVisibility.Password" /> this is needed to
+        /// specify the password to access the link.</para>
         /// </summary>
         public string LinkPassword { get; protected set; }
 

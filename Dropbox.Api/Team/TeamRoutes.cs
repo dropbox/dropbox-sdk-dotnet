@@ -78,8 +78,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="listMemberDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListMemberDevicesError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListMemberDevicesError"/>.</exception>
         public t.Task<ListMemberDevicesResult> DevicesListMemberDevicesAsync(ListMemberDevicesArg listMemberDevicesArg)
         {
@@ -114,8 +114,8 @@ namespace Dropbox.Api.Team.Routes
         /// team's member</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListMemberDevicesError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListMemberDevicesError"/>.</exception>
         public t.Task<ListMemberDevicesResult> DevicesListMemberDevicesAsync(string teamMemberId,
                                                                              bool includeWebSessions = true,
@@ -167,8 +167,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListMemberDevicesError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListMemberDevicesError"/>.</exception>
         public ListMemberDevicesResult EndDevicesListMemberDevices(sys.IAsyncResult asyncResult)
         {
@@ -187,8 +187,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="listTeamDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListTeamDevicesError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(ListTeamDevicesArg listTeamDevicesArg)
         {
@@ -227,8 +227,8 @@ namespace Dropbox.Api.Team.Routes
         /// members</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListTeamDevicesError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(string cursor = null,
                                                                          bool includeWebSessions = true,
@@ -284,8 +284,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListTeamDevicesError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
         public ListTeamDevicesResult EndDevicesListTeamDevices(sys.IAsyncResult asyncResult)
         {
@@ -303,8 +303,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="revokeDeviceSessionArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeDeviceSessionError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionError"/>.</exception>
         public t.Task DevicesRevokeDeviceSessionAsync(RevokeDeviceSessionArg revokeDeviceSessionArg)
         {
@@ -334,8 +334,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeDeviceSessionError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionError"/>.</exception>
         public void EndDevicesRevokeDeviceSession(sys.IAsyncResult asyncResult)
         {
@@ -352,8 +352,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="revokeDeviceSessionBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeDeviceSessionBatchError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionBatchError"/>.</exception>
         public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(RevokeDeviceSessionBatchArg revokeDeviceSessionBatchArg)
         {
@@ -383,8 +383,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="revokeDevices">The revoke devices</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeDeviceSessionBatchError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionBatchError"/>.</exception>
         public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(col.IEnumerable<RevokeDeviceSessionArg> revokeDevices)
         {
@@ -419,8 +419,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeDeviceSessionBatchError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionBatchError"/>.</exception>
         public RevokeDeviceSessionBatchResult EndDevicesRevokeDeviceSessionBatch(sys.IAsyncResult asyncResult)
         {
@@ -520,8 +520,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupsListContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsListContinueError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsListContinueError"/>.</exception>
         public t.Task<GroupsListResult> GroupsListContinueAsync(GroupsListContinueArg groupsListContinueArg)
         {
@@ -554,8 +554,8 @@ namespace Dropbox.Api.Team.Routes
         /// groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsListContinueError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsListContinueError"/>.</exception>
         public t.Task<GroupsListResult> GroupsListContinueAsync(string cursor)
         {
@@ -590,8 +590,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsListContinueError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsListContinueError"/>.</exception>
         public GroupsListResult EndGroupsListContinue(sys.IAsyncResult asyncResult)
         {
@@ -611,8 +611,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupsSelector">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsGetInfoError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsGetInfoError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsGetInfoAsync(GroupsSelector groupsSelector)
         {
@@ -642,8 +642,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsGetInfoError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsGetInfoError"/>.</exception>
         public col.List<GroupsGetInfoItem> EndGroupsGetInfo(sys.IAsyncResult asyncResult)
         {
@@ -663,8 +663,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupCreateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupCreateError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupCreateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsCreateAsync(GroupCreateArg groupCreateArg)
         {
@@ -696,8 +696,8 @@ namespace Dropbox.Api.Team.Routes
         /// associate an arbitrary external ID to the group.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupCreateError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupCreateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsCreateAsync(string groupName,
                                                        string groupExternalId = null)
@@ -737,8 +737,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupCreateError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupCreateError"/>.</exception>
         public GroupFullInfo EndGroupsCreate(sys.IAsyncResult asyncResult)
         {
@@ -762,8 +762,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupSelector">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupDeleteError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupDeleteError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> GroupsDeleteAsync(GroupSelector groupSelector)
         {
@@ -793,8 +793,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupDeleteError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupDeleteError"/>.</exception>
         public Dropbox.Api.Async.LaunchEmptyResult EndGroupsDelete(sys.IAsyncResult asyncResult)
         {
@@ -814,8 +814,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupUpdateArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupUpdateError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupUpdateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsUpdateAsync(GroupUpdateArgs groupUpdateArgs)
         {
@@ -850,8 +850,8 @@ namespace Dropbox.Api.Team.Routes
         /// empty string, the group's external id will be cleared.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupUpdateError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupUpdateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsUpdateAsync(GroupSelector @group,
                                                        string newGroupName = null,
@@ -898,8 +898,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupUpdateError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupUpdateError"/>.</exception>
         public GroupFullInfo EndGroupsUpdate(sys.IAsyncResult asyncResult)
         {
@@ -923,8 +923,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupMembersAddArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMembersAddError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMembersAddError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupMembersAddArg groupMembersAddArg)
         {
@@ -959,8 +959,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="members">List of users to be added to the group.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMembersAddError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMembersAddError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupSelector @group,
                                                                       col.IEnumerable<MemberAccess> members)
@@ -999,8 +999,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMembersAddError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMembersAddError"/>.</exception>
         public GroupMembersChangeResult EndGroupsMembersAdd(sys.IAsyncResult asyncResult)
         {
@@ -1024,8 +1024,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupMembersRemoveArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMembersRemoveError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMembersRemoveError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupMembersRemoveArg groupMembersRemoveArg)
         {
@@ -1060,8 +1060,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="users">The users</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMembersRemoveError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMembersRemoveError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupSelector @group,
                                                                          col.IEnumerable<UserSelectorArg> users)
@@ -1100,8 +1100,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMembersRemoveError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMembersRemoveError"/>.</exception>
         public GroupMembersChangeResult EndGroupsMembersRemove(sys.IAsyncResult asyncResult)
         {
@@ -1121,8 +1121,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="groupMembersSetAccessTypeArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMemberSelectorError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMemberSelectorError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupMembersSetAccessTypeArg groupMembersSetAccessTypeArg)
         {
@@ -1151,13 +1151,13 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
-        /// <param name="user">Identity of a user that is a member of <paramref name="@group"
+        /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMemberSelectorError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMemberSelectorError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupSelector @group,
                                                                                    UserSelectorArg user,
@@ -1175,7 +1175,7 @@ namespace Dropbox.Api.Team.Routes
         /// route.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
-        /// <param name="user">Identity of a user that is a member of <paramref name="@group"
+        /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
@@ -1203,8 +1203,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupMemberSelectorError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupMemberSelectorError"/>.</exception>
         public col.List<GroupsGetInfoItem> EndGroupsMembersSetAccessType(sys.IAsyncResult asyncResult)
         {
@@ -1229,8 +1229,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsPollError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
         public t.Task<Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(Dropbox.Api.Async.PollArg pollArg)
         {
@@ -1266,8 +1266,8 @@ namespace Dropbox.Api.Team.Routes
         /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsPollError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
         public t.Task<Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(string asyncJobId)
         {
@@ -1302,8 +1302,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{GroupsPollError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
         public Dropbox.Api.Async.PollEmptyResult EndGroupsJobStatusGet(sys.IAsyncResult asyncResult)
         {
@@ -1323,8 +1323,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="listMemberAppsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListMemberAppsError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListMemberAppsError"/>.</exception>
         public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(ListMemberAppsArg listMemberAppsArg)
         {
@@ -1355,8 +1355,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="teamMemberId">The team member id</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListMemberAppsError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListMemberAppsError"/>.</exception>
         public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(string teamMemberId)
         {
@@ -1391,8 +1391,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListMemberAppsError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListMemberAppsError"/>.</exception>
         public ListMemberAppsResult EndLinkedAppsListMemberLinkedApps(sys.IAsyncResult asyncResult)
         {
@@ -1412,8 +1412,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="listTeamAppsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListTeamAppsError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(ListTeamAppsArg listTeamAppsArg)
         {
@@ -1448,8 +1448,8 @@ namespace Dropbox.Api.Team.Routes
         /// sub list of the team applications</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListTeamAppsError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(string cursor = null)
         {
@@ -1488,8 +1488,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{ListTeamAppsError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
         public ListTeamAppsResult EndLinkedAppsListTeamLinkedApps(sys.IAsyncResult asyncResult)
         {
@@ -1507,8 +1507,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="revokeLinkedApiAppArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeLinkedAppError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppError"/>.</exception>
         public t.Task LinkedAppsRevokeLinkedAppAsync(RevokeLinkedApiAppArg revokeLinkedApiAppArg)
         {
@@ -1540,8 +1540,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="keepAppFolder">Whether to keep the application dedicated folder (in
         /// case the application uses  one)</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeLinkedAppError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppError"/>.</exception>
         public t.Task LinkedAppsRevokeLinkedAppAsync(string appId,
                                                      string teamMemberId,
@@ -1586,8 +1586,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeLinkedAppError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppError"/>.</exception>
         public void EndLinkedAppsRevokeLinkedApp(sys.IAsyncResult asyncResult)
         {
@@ -1604,8 +1604,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="revokeLinkedApiAppBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeLinkedAppBatchError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppBatchError"/>.</exception>
         public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(RevokeLinkedApiAppBatchArg revokeLinkedApiAppBatchArg)
         {
@@ -1635,8 +1635,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="revokeLinkedApp">The revoke linked app</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeLinkedAppBatchError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppBatchError"/>.</exception>
         public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(col.IEnumerable<RevokeLinkedApiAppArg> revokeLinkedApp)
         {
@@ -1671,8 +1671,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{RevokeLinkedAppBatchError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppBatchError"/>.</exception>
         public RevokeLinkedAppBatchResult EndLinkedAppsRevokeLinkedAppBatch(sys.IAsyncResult asyncResult)
         {
@@ -1692,8 +1692,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="membersListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersListError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
         public t.Task<MembersListResult> MembersListAsync(MembersListArg membersListArg)
         {
@@ -1723,8 +1723,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="limit">Number of results to return per call.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersListError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
         public t.Task<MembersListResult> MembersListAsync(uint limit = 1000)
         {
@@ -1758,8 +1758,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersListError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
         public MembersListResult EndMembersList(sys.IAsyncResult asyncResult)
         {
@@ -1781,8 +1781,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="membersListContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersListContinueError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersListContinueError"/>.</exception>
         public t.Task<MembersListResult> MembersListContinueAsync(MembersListContinueArg membersListContinueArg)
         {
@@ -1815,8 +1815,8 @@ namespace Dropbox.Api.Team.Routes
         /// members.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersListContinueError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersListContinueError"/>.</exception>
         public t.Task<MembersListResult> MembersListContinueAsync(string cursor)
         {
@@ -1851,8 +1851,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersListContinueError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersListContinueError"/>.</exception>
         public MembersListResult EndMembersListContinue(sys.IAsyncResult asyncResult)
         {
@@ -1874,8 +1874,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="membersGetInfoArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersGetInfoError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersGetInfoError"/>.</exception>
         public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(MembersGetInfoArgs membersGetInfoArgs)
         {
@@ -1907,8 +1907,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="members">List of team members.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersGetInfoError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersGetInfoError"/>.</exception>
         public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(col.IEnumerable<UserSelectorArg> members)
         {
@@ -1942,8 +1942,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersGetInfoError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersGetInfoError"/>.</exception>
         public col.List<MembersGetInfoItem> EndMembersGetInfo(sys.IAsyncResult asyncResult)
         {
@@ -2071,8 +2071,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(Dropbox.Api.Async.PollArg pollArg)
         {
@@ -2105,8 +2105,8 @@ namespace Dropbox.Api.Team.Routes
         /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(string asyncJobId)
         {
@@ -2141,8 +2141,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public MembersAddJobStatus EndMembersAddJobStatusGet(sys.IAsyncResult asyncResult)
         {
@@ -2162,8 +2162,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="membersSetProfileArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSetProfileError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSetProfileError"/>.</exception>
         public t.Task<TeamMemberInfo> MembersSetProfileAsync(MembersSetProfileArg membersSetProfileArg)
         {
@@ -2197,8 +2197,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="newSurname">New surname for member.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSetProfileError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSetProfileError"/>.</exception>
         public t.Task<TeamMemberInfo> MembersSetProfileAsync(UserSelectorArg user,
                                                              string newEmail = null,
@@ -2252,8 +2252,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSetProfileError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSetProfileError"/>.</exception>
         public TeamMemberInfo EndMembersSetProfile(sys.IAsyncResult asyncResult)
         {
@@ -2273,8 +2273,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="membersSetPermissionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSetPermissionsError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSetPermissionsError"/>.</exception>
         public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(MembersSetPermissionsArg membersSetPermissionsArg)
         {
@@ -2306,8 +2306,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="newRole">The new role of the member.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSetPermissionsError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSetPermissionsError"/>.</exception>
         public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(UserSelectorArg user,
                                                                                    AdminTier newRole)
@@ -2347,8 +2347,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSetPermissionsError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSetPermissionsError"/>.</exception>
         public MembersSetPermissionsResult EndMembersSetAdminPermissions(sys.IAsyncResult asyncResult)
         {
@@ -2370,8 +2370,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="userSelectorArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSendWelcomeError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSendWelcomeError"/>.</exception>
         public t.Task MembersSendWelcomeEmailAsync(UserSelectorArg userSelectorArg)
         {
@@ -2400,8 +2400,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSendWelcomeError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSendWelcomeError"/>.</exception>
         public void EndMembersSendWelcomeEmail(sys.IAsyncResult asyncResult)
         {
@@ -2431,8 +2431,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="membersRemoveArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersRemoveError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(MembersRemoveArg membersRemoveArg)
         {
@@ -2481,8 +2481,8 @@ namespace Dropbox.Api.Team.Routes
         /// this argument must be provided as well.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersRemoveError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
         public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(UserSelectorArg user,
                                                                               bool wipeData = true,
@@ -2535,8 +2535,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersRemoveError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
         public Dropbox.Api.Async.LaunchEmptyResult EndMembersRemove(sys.IAsyncResult asyncResult)
         {
@@ -2558,8 +2558,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(Dropbox.Api.Async.PollArg pollArg)
         {
@@ -2593,8 +2593,8 @@ namespace Dropbox.Api.Team.Routes
         /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(string asyncJobId)
         {
@@ -2630,8 +2630,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{Dropbox.Api.Async.PollError}">Thrown if
-        /// there is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="Dropbox.Api.Async.PollError"/>.</exception>
         public Dropbox.Api.Async.PollEmptyResult EndMembersRemoveJobStatusGet(sys.IAsyncResult asyncResult)
         {
@@ -2652,8 +2652,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="membersDeactivateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSuspendError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSuspendError"/>.</exception>
         public t.Task MembersSuspendAsync(MembersDeactivateArg membersDeactivateArg)
         {
@@ -2686,8 +2686,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSuspendError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSuspendError"/>.</exception>
         public t.Task MembersSuspendAsync(UserSelectorArg user,
                                           bool wipeData = true)
@@ -2726,8 +2726,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{MembersSuspendError}">Thrown if there is
-        /// an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersSuspendError"/>.</exception>
         public void EndMembersSuspend(sys.IAsyncResult asyncResult)
         {
@@ -2746,8 +2746,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="membersUnsuspendArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersUnsuspendError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersUnsuspendError"/>.</exception>
         public t.Task MembersUnsuspendAsync(MembersUnsuspendArg membersUnsuspendArg)
         {
@@ -2778,8 +2778,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="user">Identity of user to unsuspend.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{MembersUnsuspendError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersUnsuspendError"/>.</exception>
         public t.Task MembersUnsuspendAsync(UserSelectorArg user)
         {
@@ -2812,8 +2812,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{MembersUnsuspendError}">Thrown if there
-        /// is an error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="MembersUnsuspendError"/>.</exception>
         public void EndMembersUnsuspend(sys.IAsyncResult asyncResult)
         {
@@ -2830,8 +2830,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetStorageReport> ReportsGetStorageAsync(DateRange dateRange)
         {
@@ -2861,8 +2861,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="endDate">Optional ending date (exclusive)</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetStorageReport> ReportsGetStorageAsync(sys.DateTime? startDate = null,
                                                                sys.DateTime? endDate = null)
@@ -2901,8 +2901,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public GetStorageReport EndReportsGetStorage(sys.IAsyncResult asyncResult)
         {
@@ -2921,8 +2921,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetActivityReport> ReportsGetActivityAsync(DateRange dateRange)
         {
@@ -2952,8 +2952,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="endDate">Optional ending date (exclusive)</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetActivityReport> ReportsGetActivityAsync(sys.DateTime? startDate = null,
                                                                  sys.DateTime? endDate = null)
@@ -2992,8 +2992,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public GetActivityReport EndReportsGetActivity(sys.IAsyncResult asyncResult)
         {
@@ -3012,8 +3012,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetMembershipReport> ReportsGetMembershipAsync(DateRange dateRange)
         {
@@ -3043,8 +3043,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="endDate">Optional ending date (exclusive)</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetMembershipReport> ReportsGetMembershipAsync(sys.DateTime? startDate = null,
                                                                      sys.DateTime? endDate = null)
@@ -3083,8 +3083,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public GetMembershipReport EndReportsGetMembership(sys.IAsyncResult asyncResult)
         {
@@ -3103,8 +3103,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetDevicesReport> ReportsGetDevicesAsync(DateRange dateRange)
         {
@@ -3134,8 +3134,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="endDate">Optional ending date (exclusive)</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetDevicesReport> ReportsGetDevicesAsync(sys.DateTime? startDate = null,
                                                                sys.DateTime? endDate = null)
@@ -3174,8 +3174,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{DateRangeError}">Thrown if there is an
-        /// error processing the request; This will contain a <see
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         public GetDevicesReport EndReportsGetDevices(sys.IAsyncResult asyncResult)
         {

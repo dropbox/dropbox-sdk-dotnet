@@ -12,9 +12,9 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Basic information about a user. Use <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.Users.getAccountAsync" /> and <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.Users.getAccountBatchAsync" />` to
-    /// obtain more detailed information.</para>
+    /// cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountAsync" /> and <see
+    /// cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountBatchAsync" />` to obtain more
+    /// detailed information.</para>
     /// </summary>
     /// <seealso cref="UserMembershipInfo" />
     public class UserInfo

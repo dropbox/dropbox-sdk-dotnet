@@ -149,7 +149,8 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para><see cref="ListFoldersContinueArg.Cursor" /> is invalid.</para>
+        /// <para><see cref="Dropbox.Api.Sharing.ListFoldersContinueArg.Cursor" /> is
+        /// invalid.</para>
         /// </summary>
         public sealed class InvalidCursor : ListFoldersContinueError
         {

@@ -566,7 +566,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>At least one of the specified groups in <see
-        /// cref="AddFolderMemberArg.Members" /> is deleted.</para>
+        /// cref="Dropbox.Api.Sharing.AddFolderMemberArg.Members" /> is deleted.</para>
         /// </summary>
         public sealed class GroupDeleted : AddMemberSelectorError
         {

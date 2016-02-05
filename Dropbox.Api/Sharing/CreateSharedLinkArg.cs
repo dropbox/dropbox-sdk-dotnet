@@ -34,9 +34,9 @@ namespace Dropbox.Api.Sharing
         /// <param name="path">The path to share.</param>
         /// <param name="shortUrl">Whether to return a shortened URL.</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
-        /// set this to either <see cref="PendingUploadMode.File" /> or <see
-        /// cref="PendingUploadMode.Folder" /> to indicate whether to assume it's a file or
-        /// folder.</param>
+        /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
+        /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
+        /// assume it's a file or folder.</param>
         public CreateSharedLinkArg(string path,
                                    bool shortUrl = false,
                                    PendingUploadMode pendingUpload = null)
@@ -74,8 +74,9 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>If it's okay to share a path that does not yet exist, set this to either <see
-        /// cref="PendingUploadMode.File" /> or <see cref="PendingUploadMode.Folder" /> to
-        /// indicate whether to assume it's a file or folder.</para>
+        /// cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or <see
+        /// cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
+        /// assume it's a file or folder.</para>
         /// </summary>
         public PendingUploadMode PendingUpload { get; protected set; }
 

@@ -8,6 +8,8 @@ namespace Dropbox.Api
 {
     using System;
 
+    using Dropbox.Api.Babel;
+
     /// <summary>
     /// The exception type that will be raised by an <see cref="ITransport" />
     /// implementation if there is an error processing the request which is caused by

@@ -565,8 +565,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para><see cref="AddFolderMemberArg.Members" /> contains a bad invitation
-        /// recipient.</para>
+        /// <para><see cref="Dropbox.Api.Sharing.AddFolderMemberArg.Members" /> contains a bad
+        /// invitation recipient.</para>
         /// </summary>
         public sealed class BadMember : AddFolderMemberError
         {

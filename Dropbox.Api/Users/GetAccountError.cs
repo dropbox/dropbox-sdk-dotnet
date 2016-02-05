@@ -148,7 +148,8 @@ namespace Dropbox.Api.Users
         #endregion
 
         /// <summary>
-        /// <para>The specified <see cref="GetAccountArg.AccountId" /> does not exist.</para>
+        /// <para>The specified <see cref="Dropbox.Api.Users.GetAccountArg.AccountId" /> does
+        /// not exist.</para>
         /// </summary>
         public sealed class NoAccount : GetAccountError
         {

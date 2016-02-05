@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The members remove arg object</para>
     /// </summary>
-    /// <seealso cref="MembersDeactivateArg" />
+    /// <seealso cref="Dropbox.Api.Team.MembersDeactivateArg" />
     public class MembersRemoveArg : MembersDeactivateArg
     {
         #pragma warning disable 108

@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>Metadata for a video.</para>
     /// </summary>
-    /// <seealso cref="MediaMetadata" />
+    /// <seealso cref="Dropbox.Api.Files.MediaMetadata" />
     public class VideoMetadata : MediaMetadata
     {
         #pragma warning disable 108

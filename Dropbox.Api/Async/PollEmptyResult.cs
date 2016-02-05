@@ -58,6 +58,28 @@ namespace Dropbox.Api.Async
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InProgress</para>
+        /// </summary>
+        public bool IsInProgress
+        {
+            get
+            {
+                return this is InProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InProgress, or <c>null</c>.</para>
+        /// </summary>
+        public InProgress AsInProgress
+        {
+            get
+            {
+                return this as InProgress;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -76,6 +98,12 @@ namespace Dropbox.Api.Async
                 {
                     WriteProperty(".tag", "complete", writer, enc.StringEncoder.Instance);
                     Complete.Encoder.EncodeFields((Complete)value, writer);
+                    return;
+                }
+                if (value is InProgress)
+                {
+                    WriteProperty(".tag", "in_progress", writer, enc.StringEncoder.Instance);
+                    InProgress.Encoder.EncodeFields((InProgress)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -112,6 +140,8 @@ namespace Dropbox.Api.Async
                 {
                     case "complete":
                         return Complete.Decoder.DecodeFields(reader);
+                    case "in_progress":
+                        return InProgress.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -192,6 +222,84 @@ namespace Dropbox.Api.Async
                 public override Complete DecodeFields(enc.IJsonReader reader)
                 {
                     return Complete.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The asynchronous job is still in progress.</para>
+        /// </summary>
+        public sealed class InProgress : PollEmptyResult
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InProgress> Encoder = new InProgressEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InProgress> Decoder = new InProgressDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InProgress" /> class.</para>
+            /// </summary>
+            private InProgress()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InProgress</para>
+            /// </summary>
+            public static readonly InProgress Instance = new InProgress();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InProgress" />.</para>
+            /// </summary>
+            private class InProgressEncoder : enc.StructEncoder<InProgress>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InProgress value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InProgress" />.</para>
+            /// </summary>
+            private class InProgressDecoder : enc.StructDecoder<InProgress>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InProgress" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InProgress Create()
+                {
+                    return new InProgress();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InProgress DecodeFields(enc.IJsonReader reader)
+                {
+                    return InProgress.Instance;
                 }
             }
 
