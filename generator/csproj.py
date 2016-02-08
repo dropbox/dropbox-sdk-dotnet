@@ -25,7 +25,6 @@ COMPILE_INCLUDES = [
 ]
 
 NONE_INCLUDES = [
-    "babel_summaries.xml",
     "app.config",
     "packages.config",        
 ]
@@ -106,10 +105,7 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 """
 
 
-CSPROJ_END_BLOCK = r"""  <ItemGroup>
-    <None Include="namespace_summaries.xml" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
@@ -183,6 +179,7 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 
 
 DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
+    <None Include="babal_summaries.xml" />
     <None Include="namespace_summaries.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -196,7 +193,7 @@ DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
 </Project>
 """
 
-CSPROJ_SIGNING_BLOCK = r"""  <PropertyGroup>
+CSPROJ_PRIVATE_BLOCK = r"""  <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
@@ -217,8 +214,8 @@ def make_csproj_file(files, is_doc=False, is_private=False):
     buffer = StringIO()
     buffer.write(DOC_CSPROJ_START_BLOCK if is_doc else CSPROJ_START_BLOCK)
     
-    if not is_doc and is_private:
-        buffer.write(CSPROJ_SIGNING_BLOCK)
+    if is_private:
+        buffer.write(CSPROJ_PRIVATE_BLOCK)
 
     _include_items(buffer, 'Compile', COMPILE_INCLUDES)
     _include_items(buffer, 'Compile', sorted(files))

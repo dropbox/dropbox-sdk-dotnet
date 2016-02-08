@@ -41,11 +41,11 @@ class DropboxCSharpGenerator(_CSharpGenerator):
 
     def _generate(self, api):
         self._generate_dropbox_auth_exception(api)
-        self._generate_xml_doc(api)
         self._generate_csproj()
         self._copy_files('dropbox')
 
         if self.args.private:
+            self._generate_xml_doc(api)
             self._copy_files('private')
 
     def _generate_xml_doc(self, api):
@@ -90,8 +90,11 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         files = [f for f in self._generated_files if f.endswith('.cs')]
         with self.output_to_relative_path('{0}.csproj'.format(self.DEFAULT_NAMESPACE)):
             self.emit_raw(make_csproj_file(files, is_doc=False, is_private=self.args.private))
-        with self.output_to_relative_path('{0}.Doc.csproj'.format(self.DEFAULT_NAMESPACE)):
-            self.emit_raw(make_csproj_file(files, is_doc=True))
+
+        # Only generate SandCastle csproj for private build.
+        if self.args.private:
+            with self.output_to_relative_path('{0}.Doc.csproj'.format(self.DEFAULT_NAMESPACE)):
+                self.emit_raw(make_csproj_file(files, is_doc=True))
 
     def _generate_dropbox_auth_exception(self, api):
         """
