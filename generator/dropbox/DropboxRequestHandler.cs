@@ -160,7 +160,7 @@ namespace Dropbox.Api
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
             var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Upload, serializedArg, body)
                 .ConfigureAwait(false);
-            
+
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(res.ObjectResult, errorDecoder);
@@ -273,16 +273,15 @@ namespace Dropbox.Api
                         }
                     }
                 }
-                catch (RetryException re)
+                catch (RateLimitException)
                 {
-                    if (!re.IsRateLimit)
-                    {
-                        // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
-                        // do not count a rate limiting error as an attempt
-                        attempt++;
-                    }
-
-                    if (attempt > maxRetries)
+                    throw;
+                }
+                catch (RetryException)
+                {
+                    // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
+                    // do not count a rate limiting error as an attempt
+                    if (++attempt > maxRetries)
                     {
                         throw;
                     }
@@ -306,7 +305,7 @@ namespace Dropbox.Api
         /// <returns>The contents of the error field if present, otherwise <paramref name="text" />.</returns>
         private string CheckForError(string text)
         {
-            try 
+            try
             {
                 var obj = JObject.Parse(text);
                 JToken error;
@@ -411,7 +410,11 @@ namespace Dropbox.Api
                 }
                 else if ((int)response.StatusCode == 429)
                 {
-                    throw new RetryException(429, uri: uri, isRateLimit: true);
+                    var text = await response.Content.ReadAsStringAsync();
+                    text = this.CheckForError(text);
+                    var retryAfter = response.Headers.GetValues("Retry-After");
+
+                    throw new RateLimitException(int.Parse(retryAfter.First()), message: text, uri: uri);
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
                     response.StatusCode == HttpStatusCode.Forbidden ||

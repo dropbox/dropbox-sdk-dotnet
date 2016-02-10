@@ -8,6 +8,9 @@
       <Value>int</Value>
       <Value>json</Value>
       <Value>uid</Value>
+      <Value>nullable</Value>
+      <Value>non-ascii</Value>
+      <Value>backoff</Value>
     </CollectionProperty>
   </GlobalSettings>
   <Analyzers>
