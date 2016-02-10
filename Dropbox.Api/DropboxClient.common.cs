@@ -120,7 +120,7 @@ namespace Dropbox.Api
         /// <param name="message">The message.</param>
         /// <param name="uri">The request uri.</param>
         /// <param name="inner">The inner.</param>
-        public HttpException(int statusCode, string message = null, Uri uri = null, Exception inner = null)
+        internal HttpException(int statusCode, string message = null, Uri uri = null, Exception inner = null)
             : base(message, inner)
         {
             this.StatusCode = statusCode;
@@ -154,7 +154,7 @@ namespace Dropbox.Api
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="uri">The request URI.</param>
-        public BadInputException(string message, Uri uri = null)
+        internal BadInputException(string message, Uri uri = null)
             : base(400, message, uri)
         {
         }
@@ -170,7 +170,7 @@ namespace Dropbox.Api
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="uri">The request URI</param>
-        [Obsolete("This constructor will be removed soon.")] 
+        [Obsolete("This constructor will be removed soon.")]
         public AuthException(string message, Uri uri = null) : base(null, message)
         {
             this.StatusCode = 401;
@@ -197,7 +197,9 @@ namespace Dropbox.Api
     }
 
     /// <summary>
-    /// An HTTP Exception that will cause a retry
+    /// An HTTP Exception that will cause a retry due to transient failure. The SDK will perform
+    /// a certain number of retries which is configurable in <see cref="DropboxClient"/>. If the client
+    /// still gets this exception, it's up to the client to decide whether to continue retrying or not.
     /// </summary>
     public class RetryException : HttpException
     {
@@ -205,15 +207,12 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="RetryException"/> class.
         /// </summary>
         /// <param name="statusCode">The status code.</param>
-        /// <param name="isRateLimit">if set to <c>true</c> the server responded with
-        /// an error indicating rate limiting.</param>
         /// <param name="message">The message.</param>
         /// <param name="uri">The request URI.</param>
         /// <param name="inner">The inner.</param>
-        public RetryException(int statusCode, bool isRateLimit = false, string message = null, Uri uri = null, Exception inner = null)
+        internal RetryException(int statusCode, string message = null, Uri uri = null, Exception inner = null)
             : base(statusCode, message, uri, inner)
         {
-            this.IsRateLimit = isRateLimit;
         }
 
         /// <summary>
@@ -222,6 +221,48 @@ namespace Dropbox.Api
         /// <value>
         /// <c>true</c> if this response is a rate limit; otherwise, <c>false</c>.
         /// </value>
-        public bool IsRateLimit { get; private set; }
+        [Obsolete("This field will be removed soon. Please catch RateLimitException separately.")]
+        public virtual bool IsRateLimit
+        {
+            get { return false; }
+        }
+    }
+
+    /// <summary>
+    /// An HTTP Exception that will cause a retry due to rate limiting. The SDK will not do auto-retry for
+    /// this type of exception. The client should do proper backoff based on the value of
+    /// <see cref="RateLimitException.RetryAfter"/> field.
+    /// </summary>
+    public class RateLimitException : RetryException
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RateLimitException"/> class.
+        /// </summary>
+        /// <param name="retryAfter">The time in second which the client should retry after.</param>
+        /// <param name="message">The message.</param>
+        /// <param name="uri">The request URI.</param>
+        /// <param name="inner">The inner.</param>
+        internal RateLimitException(int retryAfter, string message = null, Uri uri = null, Exception inner = null)
+            : base(429, message, uri, inner)
+        {
+            this.RetryAfter = retryAfter;
+        }
+
+        /// <summary>
+        /// Gets the value in second which the client should backoff and retry after.
+        /// </summary>
+        public int RetryAfter { get; private set; }
+
+        /// <summary>
+        /// Gets a value indicating whether this error represents a rate limiting response from the server.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this response is a rate limit; otherwise, <c>false</c>.
+        /// </value>
+        [Obsolete("This field will be removed soon.")]
+        public override bool IsRateLimit
+        {
+            get { return true; }
+        }
     }
 }
