@@ -73,8 +73,14 @@ namespace UniversalDemo.ViewModel
                 using (var download = await client.Files.DownloadAsync("/" + this.Name))
                 {
                     var stream = await download.GetContentAsStreamAsync();
+
+                    // Convert the stream to the memory stream, because a memory stream supports seeking.
+                    var memStream = new MemoryStream();
+                    await stream.CopyToAsync(memStream);
+                    memStream.Position = 0;
+
                     var bitmap = new BitmapImage();
-                    await bitmap.SetSourceAsync(stream.AsRandomAccessStream());
+                    await bitmap.SetSourceAsync(memStream.AsRandomAccessStream());
                     this.Image = bitmap;
                     this.NotifyPropertyChanged("Image");
 
