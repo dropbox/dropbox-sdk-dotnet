@@ -50,7 +50,7 @@ namespace Dropbox.Api.Team
             {
                 throw new sys.ArgumentNullException("memberEmail");
             }
-            else if (!re.Regex.IsMatch(memberEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
+            else if (memberEmail.Length > 255 || !re.Regex.IsMatch(memberEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("memberEmail");
             }
@@ -59,7 +59,7 @@ namespace Dropbox.Api.Team
             {
                 throw new sys.ArgumentNullException("memberGivenName");
             }
-            else if (memberGivenName.Length < 1 || !re.Regex.IsMatch(memberGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
+            else if (memberGivenName.Length < 1 || memberGivenName.Length > 100 || !re.Regex.IsMatch(memberGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("memberGivenName");
             }
@@ -68,7 +68,7 @@ namespace Dropbox.Api.Team
             {
                 throw new sys.ArgumentNullException("memberSurname");
             }
-            else if (memberSurname.Length < 1 || !re.Regex.IsMatch(memberSurname, @"\A(?:[^/:?*<>""|]*)\z"))
+            else if (memberSurname.Length < 1 || memberSurname.Length > 100 || !re.Regex.IsMatch(memberSurname, @"\A(?:[^/:?*<>""|]*)\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("memberSurname");
             }

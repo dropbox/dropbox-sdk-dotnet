@@ -35,6 +35,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MakeEditor</para>
+        /// </summary>
+        public bool IsMakeEditor
+        {
+            get
+            {
+                return this is MakeEditor;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MakeEditor, or <c>null</c>.</para>
+        /// </summary>
+        public MakeEditor AsMakeEditor
+        {
+            get
+            {
+                return this as MakeEditor;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is MakeOwner</para>
         /// </summary>
         public bool IsMakeOwner
@@ -53,6 +75,28 @@ namespace Dropbox.Api.Sharing
             get
             {
                 return this as MakeOwner;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is MakeViewer</para>
+        /// </summary>
+        public bool IsMakeViewer
+        {
+            get
+            {
+                return this is MakeViewer;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MakeViewer, or <c>null</c>.</para>
+        /// </summary>
+        public MakeViewer AsMakeViewer
+        {
+            get
+            {
+                return this as MakeViewer;
             }
         }
 
@@ -114,10 +158,22 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberAction value, enc.IJsonWriter writer)
             {
+                if (value is MakeEditor)
+                {
+                    WriteProperty(".tag", "make_editor", writer, enc.StringEncoder.Instance);
+                    MakeEditor.Encoder.EncodeFields((MakeEditor)value, writer);
+                    return;
+                }
                 if (value is MakeOwner)
                 {
                     WriteProperty(".tag", "make_owner", writer, enc.StringEncoder.Instance);
                     MakeOwner.Encoder.EncodeFields((MakeOwner)value, writer);
+                    return;
+                }
+                if (value is MakeViewer)
+                {
+                    WriteProperty(".tag", "make_viewer", writer, enc.StringEncoder.Instance);
+                    MakeViewer.Encoder.EncodeFields((MakeViewer)value, writer);
                     return;
                 }
                 if (value is Remove)
@@ -164,8 +220,12 @@ namespace Dropbox.Api.Sharing
             {
                 switch (tag)
                 {
+                    case "make_editor":
+                        return MakeEditor.Decoder.DecodeFields(reader);
                     case "make_owner":
                         return MakeOwner.Decoder.DecodeFields(reader);
+                    case "make_viewer":
+                        return MakeViewer.Decoder.DecodeFields(reader);
                     case "remove":
                         return Remove.Decoder.DecodeFields(reader);
                     default:
@@ -175,6 +235,84 @@ namespace Dropbox.Api.Sharing
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Make the member an editor of the folder.</para>
+        /// </summary>
+        public sealed class MakeEditor : MemberAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MakeEditor> Encoder = new MakeEditorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MakeEditor> Decoder = new MakeEditorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MakeEditor" /> class.</para>
+            /// </summary>
+            private MakeEditor()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MakeEditor</para>
+            /// </summary>
+            public static readonly MakeEditor Instance = new MakeEditor();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MakeEditor" />.</para>
+            /// </summary>
+            private class MakeEditorEncoder : enc.StructEncoder<MakeEditor>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MakeEditor value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MakeEditor" />.</para>
+            /// </summary>
+            private class MakeEditorDecoder : enc.StructDecoder<MakeEditor>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MakeEditor" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MakeEditor Create()
+                {
+                    return new MakeEditor();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MakeEditor DecodeFields(enc.IJsonReader reader)
+                {
+                    return MakeEditor.Instance;
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>Make the member an owner of the folder.</para>
@@ -248,6 +386,84 @@ namespace Dropbox.Api.Sharing
                 public override MakeOwner DecodeFields(enc.IJsonReader reader)
                 {
                     return MakeOwner.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Make the member a viewer of the folder.</para>
+        /// </summary>
+        public sealed class MakeViewer : MemberAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MakeViewer> Encoder = new MakeViewerEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MakeViewer> Decoder = new MakeViewerDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MakeViewer" /> class.</para>
+            /// </summary>
+            private MakeViewer()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MakeViewer</para>
+            /// </summary>
+            public static readonly MakeViewer Instance = new MakeViewer();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MakeViewer" />.</para>
+            /// </summary>
+            private class MakeViewerEncoder : enc.StructEncoder<MakeViewer>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MakeViewer value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MakeViewer" />.</para>
+            /// </summary>
+            private class MakeViewerDecoder : enc.StructDecoder<MakeViewer>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MakeViewer" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MakeViewer Create()
+                {
+                    return new MakeViewer();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MakeViewer DecodeFields(enc.IJsonReader reader)
+                {
+                    return MakeViewer.Instance;
                 }
             }
 

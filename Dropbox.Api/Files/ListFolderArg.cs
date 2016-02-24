@@ -34,8 +34,9 @@ namespace Dropbox.Api.Files
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         public ListFolderArg(string path,
@@ -82,7 +83,8 @@ namespace Dropbox.Api.Files
         public bool Recursive { get; protected set; }
 
         /// <summary>
-        /// <para>If true, :field:'FileMetadata.media_info' is set for photo and video.</para>
+        /// <para>If true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for
+        /// photo and video.</para>
         /// </summary>
         public bool IncludeMediaInfo { get; protected set; }
 

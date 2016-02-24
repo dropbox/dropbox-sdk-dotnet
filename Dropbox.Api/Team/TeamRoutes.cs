@@ -2422,8 +2422,6 @@ namespace Dropbox.Api.Team.Routes
         /// removed user's email address will create a new account with a new team_member_id
         /// that will not have access to any content that was shared with the initial
         /// account.</para>
-        /// <para>This endpoint can also be used to cancel a pending invite to join the
-        /// team.</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersRemoveJobStatusGetAsync" />.</para>
@@ -2465,8 +2463,6 @@ namespace Dropbox.Api.Team.Routes
         /// removed user's email address will create a new account with a new team_member_id
         /// that will not have access to any content that was shared with the initial
         /// account.</para>
-        /// <para>This endpoint can also be used to cancel a pending invite to join the
-        /// team.</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersRemoveJobStatusGetAsync" />.</para>

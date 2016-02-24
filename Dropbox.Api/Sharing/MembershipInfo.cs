@@ -36,8 +36,13 @@ namespace Dropbox.Api.Sharing
         /// <param name="accessType">The access type for this member.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
+        /// <param name="initials">Suggested name initials for a member.</param>
+        /// <param name="isInherited">True if the member's access to the file is inherited from
+        /// a parent folder.</param>
         public MembershipInfo(AccessLevel accessType,
-                              col.IEnumerable<MemberPermission> permissions = null)
+                              col.IEnumerable<MemberPermission> permissions = null,
+                              string initials = null,
+                              bool isInherited = false)
         {
             if (accessType == null)
             {
@@ -48,6 +53,8 @@ namespace Dropbox.Api.Sharing
 
             this.AccessType = accessType;
             this.Permissions = permissionsList;
+            this.Initials = initials;
+            this.IsInherited = isInherited;
         }
 
         /// <summary>
@@ -57,6 +64,7 @@ namespace Dropbox.Api.Sharing
         /// deserializing.</remarks>
         public MembershipInfo()
         {
+            this.IsInherited = false;
         }
 
         /// <summary>
@@ -69,6 +77,17 @@ namespace Dropbox.Api.Sharing
         /// permissions corresponds to the MemberActions in the request.</para>
         /// </summary>
         public col.IList<MemberPermission> Permissions { get; protected set; }
+
+        /// <summary>
+        /// <para>Suggested name initials for a member.</para>
+        /// </summary>
+        public string Initials { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the member's access to the file is inherited from a parent
+        /// folder.</para>
+        /// </summary>
+        public bool IsInherited { get; protected set; }
 
         #region Encoder class
 
@@ -89,6 +108,11 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
                 }
+                if (value.Initials != null)
+                {
+                    WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
+                }
+                WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -126,6 +150,12 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "permissions":
                         value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
+                        break;
+                    case "initials":
+                        value.Initials = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_inherited":
+                        value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

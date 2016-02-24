@@ -35,8 +35,18 @@ namespace Dropbox.Api.Users
         /// </summary>
         /// <param name="accountId">The user's unique Dropbox ID.</param>
         /// <param name="name">Details of a user's name.</param>
+        /// <param name="email">The user's e-mail address. Do not rely on this without checking
+        /// the <paramref name="emailVerified" /> field. Even then, it's possible that the user
+        /// has since lost access to their e-mail.</param>
+        /// <param name="emailVerified">Whether the user has verified their e-mail
+        /// address.</param>
+        /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
+        /// set.</param>
         public Account(string accountId,
-                       Name name)
+                       Name name,
+                       string email,
+                       bool emailVerified,
+                       string profilePhotoUrl = null)
         {
             if (accountId == null)
             {
@@ -52,8 +62,16 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentNullException("name");
             }
 
+            if (email == null)
+            {
+                throw new sys.ArgumentNullException("email");
+            }
+
             this.AccountId = accountId;
             this.Name = name;
+            this.Email = email;
+            this.EmailVerified = emailVerified;
+            this.ProfilePhotoUrl = profilePhotoUrl;
         }
 
         /// <summary>
@@ -75,6 +93,23 @@ namespace Dropbox.Api.Users
         /// </summary>
         public Name Name { get; protected set; }
 
+        /// <summary>
+        /// <para>The user's e-mail address. Do not rely on this without checking the <see
+        /// cref="EmailVerified" /> field. Even then, it's possible that the user has since
+        /// lost access to their e-mail.</para>
+        /// </summary>
+        public string Email { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user has verified their e-mail address.</para>
+        /// </summary>
+        public bool EmailVerified { get; protected set; }
+
+        /// <summary>
+        /// <para>URL for the photo representing the user, if one is set.</para>
+        /// </summary>
+        public string ProfilePhotoUrl { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -91,6 +126,12 @@ namespace Dropbox.Api.Users
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
+                WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
+                WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
+                if (value.ProfilePhotoUrl != null)
+                {
+                    WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -128,6 +169,15 @@ namespace Dropbox.Api.Users
                         break;
                     case "name":
                         value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
+                        break;
+                    case "email":
+                        value.Email = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "email_verified":
+                        value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "profile_photo_url":
+                        value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

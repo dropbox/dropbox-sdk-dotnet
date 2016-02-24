@@ -33,14 +33,29 @@ namespace Dropbox.Api.Users
         /// </summary>
         /// <param name="accountId">The user's unique Dropbox ID.</param>
         /// <param name="name">Details of a user's name.</param>
+        /// <param name="email">The user's e-mail address. Do not rely on this without checking
+        /// the <paramref name="emailVerified" /> field. Even then, it's possible that the user
+        /// has since lost access to their e-mail.</param>
+        /// <param name="emailVerified">Whether the user has verified their e-mail
+        /// address.</param>
         /// <param name="isTeammate">Whether this user is a teammate of the current user. If
         /// this account is the current user's account, then this will be <c>true</c>.</param>
+        /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
+        /// set.</param>
+        /// <param name="teamMemberId">The user's unique team member id. This field will only
+        /// be present if the user is part of a team and <paramref name="isTeammate" /> is
+        /// <c>true</c>.</param>
         public BasicAccount(string accountId,
                             Name name,
-                            bool isTeammate)
-            : base(accountId, name)
+                            string email,
+                            bool emailVerified,
+                            bool isTeammate,
+                            string profilePhotoUrl = null,
+                            string teamMemberId = null)
+            : base(accountId, name, email, emailVerified, profilePhotoUrl)
         {
             this.IsTeammate = isTeammate;
+            this.TeamMemberId = teamMemberId;
         }
 
         /// <summary>
@@ -58,6 +73,12 @@ namespace Dropbox.Api.Users
         /// </summary>
         public bool IsTeammate { get; protected set; }
 
+        /// <summary>
+        /// <para>The user's unique team member id. This field will only be present if the user
+        /// is part of a team and <see cref="IsTeammate" /> is <c>true</c>.</para>
+        /// </summary>
+        public string TeamMemberId { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -74,7 +95,17 @@ namespace Dropbox.Api.Users
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
+                WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
+                WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_teammate", value.IsTeammate, writer, enc.BooleanEncoder.Instance);
+                if (value.ProfilePhotoUrl != null)
+                {
+                    WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
+                }
+                if (value.TeamMemberId != null)
+                {
+                    WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -113,8 +144,20 @@ namespace Dropbox.Api.Users
                     case "name":
                         value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
                         break;
+                    case "email":
+                        value.Email = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "email_verified":
+                        value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
                     case "is_teammate":
                         value.IsTeammate = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "profile_photo_url":
+                        value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "team_member_id":
+                        value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

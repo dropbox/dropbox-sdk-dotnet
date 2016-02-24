@@ -124,6 +124,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoPermission</para>
+        /// </summary>
+        public bool IsNoPermission
+        {
+            get
+            {
+                return this is NoPermission;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoPermission, or <c>null</c>.</para>
+        /// </summary>
+        public NoPermission AsNoPermission
+        {
+            get
+            {
+                return this as NoPermission;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -183,6 +205,12 @@ namespace Dropbox.Api.Sharing
                     AlreadyMounted.Encoder.EncodeFields((AlreadyMounted)value, writer);
                     return;
                 }
+                if (value is NoPermission)
+                {
+                    WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
+                    NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -229,6 +257,8 @@ namespace Dropbox.Api.Sharing
                         return InsufficientQuota.Decoder.DecodeFields(reader);
                     case "already_mounted":
                         return AlreadyMounted.Decoder.DecodeFields(reader);
+                    case "no_permission":
+                        return NoPermission.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -570,6 +600,85 @@ namespace Dropbox.Api.Sharing
                 public override AlreadyMounted DecodeFields(enc.IJsonReader reader)
                 {
                     return AlreadyMounted.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current user does not have permission to perform this action.</para>
+        /// </summary>
+        public sealed class NoPermission : MountFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoPermission> Encoder = new NoPermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoPermission> Decoder = new NoPermissionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoPermission" />
+            /// class.</para>
+            /// </summary>
+            private NoPermission()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NoPermission</para>
+            /// </summary>
+            public static readonly NoPermission Instance = new NoPermission();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionEncoder : enc.StructEncoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoPermission value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionDecoder : enc.StructDecoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoPermission" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoPermission Create()
+                {
+                    return new NoPermission();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoPermission DecodeFields(enc.IJsonReader reader)
+                {
+                    return NoPermission.Instance;
                 }
             }
 

@@ -79,6 +79,72 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InviteEditor</para>
+        /// </summary>
+        public bool IsInviteEditor
+        {
+            get
+            {
+                return this is InviteEditor;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InviteEditor, or <c>null</c>.</para>
+        /// </summary>
+        public InviteEditor AsInviteEditor
+        {
+            get
+            {
+                return this as InviteEditor;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InviteViewer</para>
+        /// </summary>
+        public bool IsInviteViewer
+        {
+            get
+            {
+                return this is InviteViewer;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InviteViewer, or <c>null</c>.</para>
+        /// </summary>
+        public InviteViewer AsInviteViewer
+        {
+            get
+            {
+                return this as InviteViewer;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is RelinquishMembership</para>
+        /// </summary>
+        public bool IsRelinquishMembership
+        {
+            get
+            {
+                return this is RelinquishMembership;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RelinquishMembership, or <c>null</c>.</para>
+        /// </summary>
+        public RelinquishMembership AsRelinquishMembership
+        {
+            get
+            {
+                return this as RelinquishMembership;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Unmount</para>
         /// </summary>
         public bool IsUnmount
@@ -170,6 +236,24 @@ namespace Dropbox.Api.Sharing
                     EditContents.Encoder.EncodeFields((EditContents)value, writer);
                     return;
                 }
+                if (value is InviteEditor)
+                {
+                    WriteProperty(".tag", "invite_editor", writer, enc.StringEncoder.Instance);
+                    InviteEditor.Encoder.EncodeFields((InviteEditor)value, writer);
+                    return;
+                }
+                if (value is InviteViewer)
+                {
+                    WriteProperty(".tag", "invite_viewer", writer, enc.StringEncoder.Instance);
+                    InviteViewer.Encoder.EncodeFields((InviteViewer)value, writer);
+                    return;
+                }
+                if (value is RelinquishMembership)
+                {
+                    WriteProperty(".tag", "relinquish_membership", writer, enc.StringEncoder.Instance);
+                    RelinquishMembership.Encoder.EncodeFields((RelinquishMembership)value, writer);
+                    return;
+                }
                 if (value is Unmount)
                 {
                     WriteProperty(".tag", "unmount", writer, enc.StringEncoder.Instance);
@@ -224,6 +308,12 @@ namespace Dropbox.Api.Sharing
                         return ChangeOptions.Decoder.DecodeFields(reader);
                     case "edit_contents":
                         return EditContents.Decoder.DecodeFields(reader);
+                    case "invite_editor":
+                        return InviteEditor.Decoder.DecodeFields(reader);
+                    case "invite_viewer":
+                        return InviteViewer.Decoder.DecodeFields(reader);
+                    case "relinquish_membership":
+                        return RelinquishMembership.Decoder.DecodeFields(reader);
                     case "unmount":
                         return Unmount.Decoder.DecodeFields(reader);
                     case "unshare":
@@ -388,6 +478,245 @@ namespace Dropbox.Api.Sharing
                 public override EditContents DecodeFields(enc.IJsonReader reader)
                 {
                     return EditContents.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Invite a user or group to join the folder with read and write
+        /// permission.</para>
+        /// </summary>
+        public sealed class InviteEditor : FolderAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InviteEditor> Encoder = new InviteEditorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InviteEditor> Decoder = new InviteEditorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InviteEditor" />
+            /// class.</para>
+            /// </summary>
+            private InviteEditor()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InviteEditor</para>
+            /// </summary>
+            public static readonly InviteEditor Instance = new InviteEditor();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InviteEditor" />.</para>
+            /// </summary>
+            private class InviteEditorEncoder : enc.StructEncoder<InviteEditor>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InviteEditor value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InviteEditor" />.</para>
+            /// </summary>
+            private class InviteEditorDecoder : enc.StructDecoder<InviteEditor>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InviteEditor" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InviteEditor Create()
+                {
+                    return new InviteEditor();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InviteEditor DecodeFields(enc.IJsonReader reader)
+                {
+                    return InviteEditor.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Invite a user or group to join the folder with read permission.</para>
+        /// </summary>
+        public sealed class InviteViewer : FolderAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InviteViewer> Encoder = new InviteViewerEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InviteViewer> Decoder = new InviteViewerDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InviteViewer" />
+            /// class.</para>
+            /// </summary>
+            private InviteViewer()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InviteViewer</para>
+            /// </summary>
+            public static readonly InviteViewer Instance = new InviteViewer();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InviteViewer" />.</para>
+            /// </summary>
+            private class InviteViewerEncoder : enc.StructEncoder<InviteViewer>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InviteViewer value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InviteViewer" />.</para>
+            /// </summary>
+            private class InviteViewerDecoder : enc.StructDecoder<InviteViewer>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InviteViewer" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InviteViewer Create()
+                {
+                    return new InviteViewer();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InviteViewer DecodeFields(enc.IJsonReader reader)
+                {
+                    return InviteViewer.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Relinquish one's own membership in the folder.</para>
+        /// </summary>
+        public sealed class RelinquishMembership : FolderAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RelinquishMembership> Encoder = new RelinquishMembershipEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RelinquishMembership> Decoder = new RelinquishMembershipDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RelinquishMembership" />
+            /// class.</para>
+            /// </summary>
+            private RelinquishMembership()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RelinquishMembership</para>
+            /// </summary>
+            public static readonly RelinquishMembership Instance = new RelinquishMembership();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RelinquishMembership" />.</para>
+            /// </summary>
+            private class RelinquishMembershipEncoder : enc.StructEncoder<RelinquishMembership>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RelinquishMembership value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RelinquishMembership" />.</para>
+            /// </summary>
+            private class RelinquishMembershipDecoder : enc.StructDecoder<RelinquishMembership>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RelinquishMembership"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RelinquishMembership Create()
+                {
+                    return new RelinquishMembership();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RelinquishMembership DecodeFields(enc.IJsonReader reader)
+                {
+                    return RelinquishMembership.Instance;
                 }
             }
 

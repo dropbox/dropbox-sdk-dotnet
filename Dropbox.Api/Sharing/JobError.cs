@@ -11,7 +11,9 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The job error object</para>
+    /// <para>Error occurred while performing an asynchronous job from <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.UnshareFolderAsync" /> or <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RemoveFolderMemberAsync" />.</para>
     /// </summary>
     public class JobError
     {
@@ -35,46 +37,47 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AccessError</para>
+        /// <para>Gets a value indicating whether this instance is UnshareFolderError</para>
         /// </summary>
-        public bool IsAccessError
+        public bool IsUnshareFolderError
         {
             get
             {
-                return this is AccessError;
+                return this is UnshareFolderError;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a AccessError, or <c>null</c>.</para>
+        /// <para>Gets this instance as a UnshareFolderError, or <c>null</c>.</para>
         /// </summary>
-        public AccessError AsAccessError
+        public UnshareFolderError AsUnshareFolderError
         {
             get
             {
-                return this as AccessError;
+                return this as UnshareFolderError;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberError</para>
+        /// <para>Gets a value indicating whether this instance is
+        /// RemoveFolderMemberError</para>
         /// </summary>
-        public bool IsMemberError
+        public bool IsRemoveFolderMemberError
         {
             get
             {
-                return this is MemberError;
+                return this is RemoveFolderMemberError;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a MemberError, or <c>null</c>.</para>
+        /// <para>Gets this instance as a RemoveFolderMemberError, or <c>null</c>.</para>
         /// </summary>
-        public MemberError AsMemberError
+        public RemoveFolderMemberError AsRemoveFolderMemberError
         {
             get
             {
-                return this as MemberError;
+                return this as RemoveFolderMemberError;
             }
         }
 
@@ -114,16 +117,16 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(JobError value, enc.IJsonWriter writer)
             {
-                if (value is AccessError)
+                if (value is UnshareFolderError)
                 {
-                    WriteProperty(".tag", "access_error", writer, enc.StringEncoder.Instance);
-                    AccessError.Encoder.EncodeFields((AccessError)value, writer);
+                    WriteProperty(".tag", "unshare_folder_error", writer, enc.StringEncoder.Instance);
+                    UnshareFolderError.Encoder.EncodeFields((UnshareFolderError)value, writer);
                     return;
                 }
-                if (value is MemberError)
+                if (value is RemoveFolderMemberError)
                 {
-                    WriteProperty(".tag", "member_error", writer, enc.StringEncoder.Instance);
-                    MemberError.Encoder.EncodeFields((MemberError)value, writer);
+                    WriteProperty(".tag", "remove_folder_member_error", writer, enc.StringEncoder.Instance);
+                    RemoveFolderMemberError.Encoder.EncodeFields((RemoveFolderMemberError)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -164,10 +167,10 @@ namespace Dropbox.Api.Sharing
             {
                 switch (tag)
                 {
-                    case "access_error":
-                        return AccessError.Decoder.DecodeFields(reader);
-                    case "member_error":
-                        return MemberError.Decoder.DecodeFields(reader);
+                    case "unshare_folder_error":
+                        return UnshareFolderError.Decoder.DecodeFields(reader);
+                    case "remove_folder_member_error":
+                        return RemoveFolderMemberError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -177,59 +180,61 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>The access error object</para>
+        /// <para>Error occurred while performing <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.UnshareFolderAsync" />
+        /// action.</para>
         /// </summary>
-        public sealed class AccessError : JobError
+        public sealed class UnshareFolderError : JobError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<AccessError> Encoder = new AccessErrorEncoder();
+            internal static enc.StructEncoder<UnshareFolderError> Encoder = new UnshareFolderErrorEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<AccessError> Decoder = new AccessErrorDecoder();
+            internal static enc.StructDecoder<UnshareFolderError> Decoder = new UnshareFolderErrorDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// <para>Initializes a new instance of the <see cref="UnshareFolderError" />
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public AccessError(SharedFolderAccessError value)
+            public UnshareFolderError(Dropbox.Api.Sharing.UnshareFolderError value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// <para>Initializes a new instance of the <see cref="UnshareFolderError" />
             /// class.</para>
             /// </summary>
-            private AccessError()
+            private UnshareFolderError()
             {
             }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public SharedFolderAccessError Value { get; private set; }
+            public Dropbox.Api.Sharing.UnshareFolderError Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="AccessError" />.</para>
+            /// <para>Encoder for  <see cref="UnshareFolderError" />.</para>
             /// </summary>
-            private class AccessErrorEncoder : enc.StructEncoder<AccessError>
+            private class UnshareFolderErrorEncoder : enc.StructEncoder<UnshareFolderError>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
+                public override void EncodeFields(UnshareFolderError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharedFolderAccessError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Sharing.UnshareFolderError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -238,17 +243,18 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="AccessError" />.</para>
+            /// <para>Decoder for  <see cref="UnshareFolderError" />.</para>
             /// </summary>
-            private class AccessErrorDecoder : enc.StructDecoder<AccessError>
+            private class UnshareFolderErrorDecoder : enc.StructDecoder<UnshareFolderError>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="AccessError" />.</para>
+                /// <para>Create a new instance of type <see cref="UnshareFolderError"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override AccessError Create()
+                protected override UnshareFolderError Create()
                 {
-                    return new AccessError();
+                    return new UnshareFolderError();
                 }
 
                 /// <summary>
@@ -257,12 +263,12 @@ namespace Dropbox.Api.Sharing
                 /// <param name="value">The field value.</param>
                 /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(AccessError value, string fieldName, enc.IJsonReader reader)
+                protected override void SetField(UnshareFolderError value, string fieldName, enc.IJsonReader reader)
                 {
                     switch (fieldName)
                     {
-                        case "access_error":
-                            value.Value = Dropbox.Api.Sharing.SharedFolderAccessError.Decoder.Decode(reader);
+                        case "unshare_folder_error":
+                            value.Value = Dropbox.Api.Sharing.UnshareFolderError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -275,59 +281,61 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The member error object</para>
+        /// <para>Error occurred while performing <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RemoveFolderMemberAsync" />
+        /// action.</para>
         /// </summary>
-        public sealed class MemberError : JobError
+        public sealed class RemoveFolderMemberError : JobError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<MemberError> Encoder = new MemberErrorEncoder();
+            internal static enc.StructEncoder<RemoveFolderMemberError> Encoder = new RemoveFolderMemberErrorEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<MemberError> Decoder = new MemberErrorDecoder();
+            internal static enc.StructDecoder<RemoveFolderMemberError> Decoder = new RemoveFolderMemberErrorDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberError" />
+            /// <para>Initializes a new instance of the <see cref="RemoveFolderMemberError" />
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public MemberError(SharedFolderMemberError value)
+            public RemoveFolderMemberError(Dropbox.Api.Sharing.RemoveFolderMemberError value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberError" />
+            /// <para>Initializes a new instance of the <see cref="RemoveFolderMemberError" />
             /// class.</para>
             /// </summary>
-            private MemberError()
+            private RemoveFolderMemberError()
             {
             }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public SharedFolderMemberError Value { get; private set; }
+            public Dropbox.Api.Sharing.RemoveFolderMemberError Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="MemberError" />.</para>
+            /// <para>Encoder for  <see cref="RemoveFolderMemberError" />.</para>
             /// </summary>
-            private class MemberErrorEncoder : enc.StructEncoder<MemberError>
+            private class RemoveFolderMemberErrorEncoder : enc.StructEncoder<RemoveFolderMemberError>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberError value, enc.IJsonWriter writer)
+                public override void EncodeFields(RemoveFolderMemberError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharedFolderMemberError.Encoder.EncodeFields(value.Value, writer);
+                    Dropbox.Api.Sharing.RemoveFolderMemberError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -336,17 +344,18 @@ namespace Dropbox.Api.Sharing
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="MemberError" />.</para>
+            /// <para>Decoder for  <see cref="RemoveFolderMemberError" />.</para>
             /// </summary>
-            private class MemberErrorDecoder : enc.StructDecoder<MemberError>
+            private class RemoveFolderMemberErrorDecoder : enc.StructDecoder<RemoveFolderMemberError>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberError" />.</para>
+                /// <para>Create a new instance of type <see cref="RemoveFolderMemberError"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override MemberError Create()
+                protected override RemoveFolderMemberError Create()
                 {
-                    return new MemberError();
+                    return new RemoveFolderMemberError();
                 }
 
                 /// <summary>
@@ -355,12 +364,12 @@ namespace Dropbox.Api.Sharing
                 /// <param name="value">The field value.</param>
                 /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(MemberError value, string fieldName, enc.IJsonReader reader)
+                protected override void SetField(RemoveFolderMemberError value, string fieldName, enc.IJsonReader reader)
                 {
                     switch (fieldName)
                     {
-                        case "member_error":
-                            value.Value = Dropbox.Api.Sharing.SharedFolderMemberError.Decoder.Decode(reader);
+                        case "remove_folder_member_error":
+                            value.Value = Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

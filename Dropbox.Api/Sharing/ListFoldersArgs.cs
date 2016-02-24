@@ -11,60 +11,57 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The get metadata args object</para>
+    /// <para>The list folders args object</para>
     /// </summary>
-    public class GetMetadataArgs
+    public class ListFoldersArgs
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<GetMetadataArgs> Encoder = new GetMetadataArgsEncoder();
+        internal static enc.StructEncoder<ListFoldersArgs> Encoder = new ListFoldersArgsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<GetMetadataArgs> Decoder = new GetMetadataArgsDecoder();
+        internal static enc.StructDecoder<ListFoldersArgs> Decoder = new ListFoldersArgsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GetMetadataArgs" />
+        /// <para>Initializes a new instance of the <see cref="ListFoldersArgs" />
         /// class.</para>
         /// </summary>
-        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="limit">The maximum number of results to return per request.</param>
         /// <param name="actions">Folder actions to query. This field is optional.</param>
-        public GetMetadataArgs(string sharedFolderId,
+        public ListFoldersArgs(uint limit = 1000,
                                col.IEnumerable<FolderAction> actions = null)
         {
-            if (sharedFolderId == null)
+            if (limit < 1U || limit > 1000U)
             {
-                throw new sys.ArgumentNullException("sharedFolderId");
-            }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
-            {
-                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+                throw new sys.ArgumentOutOfRangeException("limit");
             }
 
             var actionsList = enc.Util.ToList(actions);
 
-            this.SharedFolderId = sharedFolderId;
+            this.Limit = limit;
             this.Actions = actionsList;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GetMetadataArgs" />
+        /// <para>Initializes a new instance of the <see cref="ListFoldersArgs" />
         /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public GetMetadataArgs()
+        public ListFoldersArgs()
         {
+            this.Limit = 1000;
         }
 
         /// <summary>
-        /// <para>The ID for the shared folder.</para>
+        /// <para>The maximum number of results to return per request.</para>
         /// </summary>
-        public string SharedFolderId { get; protected set; }
+        public uint Limit { get; protected set; }
 
         /// <summary>
         /// <para>Folder actions to query. This field is optional.</para>
@@ -74,18 +71,18 @@ namespace Dropbox.Api.Sharing
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="GetMetadataArgs" />.</para>
+        /// <para>Encoder for  <see cref="ListFoldersArgs" />.</para>
         /// </summary>
-        private class GetMetadataArgsEncoder : enc.StructEncoder<GetMetadataArgs>
+        private class ListFoldersArgsEncoder : enc.StructEncoder<ListFoldersArgs>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(GetMetadataArgs value, enc.IJsonWriter writer)
+            public override void EncodeFields(ListFoldersArgs value, enc.IJsonWriter writer)
             {
-                WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
+                WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
                 if (value.Actions.Count > 0)
                 {
                     WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.FolderAction.Encoder);
@@ -99,17 +96,17 @@ namespace Dropbox.Api.Sharing
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="GetMetadataArgs" />.</para>
+        /// <para>Decoder for  <see cref="ListFoldersArgs" />.</para>
         /// </summary>
-        private class GetMetadataArgsDecoder : enc.StructDecoder<GetMetadataArgs>
+        private class ListFoldersArgsDecoder : enc.StructDecoder<ListFoldersArgs>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="GetMetadataArgs" />.</para>
+            /// <para>Create a new instance of type <see cref="ListFoldersArgs" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override GetMetadataArgs Create()
+            protected override ListFoldersArgs Create()
             {
-                return new GetMetadataArgs();
+                return new ListFoldersArgs();
             }
 
             /// <summary>
@@ -118,12 +115,12 @@ namespace Dropbox.Api.Sharing
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(GetMetadataArgs value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(ListFoldersArgs value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "shared_folder_id":
-                        value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                    case "limit":
+                        value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     case "actions":
                         value.Actions = ReadList<FolderAction>(reader, Dropbox.Api.Sharing.FolderAction.Decoder);

@@ -734,7 +734,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>New  new_email, new_given_name or new_surname value cannot be empty.</para>
+        /// <para>Parameter new_email cannot be empty.</para>
         /// </summary>
         public sealed class ParamCannotBeEmpty : MembersSetProfileError
         {

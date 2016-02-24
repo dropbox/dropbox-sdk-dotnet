@@ -645,7 +645,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Sharing to a group that is not on the current account's team.</para>
+        /// <para>Sharing to a group that is not on the current user's team.</para>
         /// </summary>
         public sealed class GroupNotOnTeam : AddMemberSelectorError
         {

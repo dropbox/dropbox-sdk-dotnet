@@ -19,24 +19,26 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\Debug\portable40</OutputPath>
+    <IntermediateOutputPath>obj\Debug\portable40</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;PORTABLE40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\Dropbox.Api.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\portable40\Dropbox.Api.XML</DocumentationFile>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>bin\Release\portable40</OutputPath>
+    <IntermediateOutputPath>obj\Release\portable40</IntermediateOutputPath>
+    <DefineConstants>TRACE;PORTABLE40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\Dropbox.Api.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\portable40\Dropbox.Api.XML</DocumentationFile>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <ItemGroup>
@@ -198,6 +200,7 @@
     <Compile Include="Sharing\ListFolderMembersArgs.cs" />
     <Compile Include="Sharing\ListFolderMembersContinueArg.cs" />
     <Compile Include="Sharing\ListFolderMembersContinueError.cs" />
+    <Compile Include="Sharing\ListFoldersArgs.cs" />
     <Compile Include="Sharing\ListFoldersContinueArg.cs" />
     <Compile Include="Sharing\ListFoldersContinueError.cs" />
     <Compile Include="Sharing\ListFoldersResult.cs" />
@@ -233,6 +236,7 @@
     <Compile Include="Sharing\SharedFolderMemberError.cs" />
     <Compile Include="Sharing\SharedFolderMembers.cs" />
     <Compile Include="Sharing\SharedFolderMetadata.cs" />
+    <Compile Include="Sharing\SharedFolderMetadataBase.cs" />
     <Compile Include="Sharing\SharedLinkAccessFailureReason.cs" />
     <Compile Include="Sharing\SharedLinkError.cs" />
     <Compile Include="Sharing\SharedLinkMetadata.cs" />
@@ -388,7 +392,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.Dropbox.Api.Portable40.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

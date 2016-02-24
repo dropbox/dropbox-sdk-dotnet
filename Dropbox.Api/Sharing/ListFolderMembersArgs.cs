@@ -32,9 +32,12 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Member actions to query.</param>
+        /// <param name="actions">Member actions to query. This field is optional.</param>
+        /// <param name="limit">The maximum number of results that include members, groups and
+        /// invitees to return per request.</param>
         public ListFolderMembersArgs(string sharedFolderId,
-                                     col.IEnumerable<MemberAction> actions = null)
+                                     col.IEnumerable<MemberAction> actions = null,
+                                     uint limit = 1000)
         {
             if (sharedFolderId == null)
             {
@@ -47,8 +50,14 @@ namespace Dropbox.Api.Sharing
 
             var actionsList = enc.Util.ToList(actions);
 
+            if (limit < 1U || limit > 1000U)
+            {
+                throw new sys.ArgumentOutOfRangeException("limit");
+            }
+
             this.SharedFolderId = sharedFolderId;
             this.Actions = actionsList;
+            this.Limit = limit;
         }
 
         /// <summary>
@@ -59,6 +68,7 @@ namespace Dropbox.Api.Sharing
         /// deserializing.</remarks>
         public ListFolderMembersArgs()
         {
+            this.Limit = 1000;
         }
 
         /// <summary>
@@ -67,9 +77,15 @@ namespace Dropbox.Api.Sharing
         public string SharedFolderId { get; protected set; }
 
         /// <summary>
-        /// <para>Member actions to query.</para>
+        /// <para>Member actions to query. This field is optional.</para>
         /// </summary>
         public col.IList<MemberAction> Actions { get; protected set; }
+
+        /// <summary>
+        /// <para>The maximum number of results that include members, groups and invitees to
+        /// return per request.</para>
+        /// </summary>
+        public uint Limit { get; protected set; }
 
         #region Encoder class
 
@@ -90,6 +106,7 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.MemberAction.Encoder);
                 }
+                WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
             }
         }
 
@@ -128,6 +145,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "actions":
                         value.Actions = ReadList<MemberAction>(reader, Dropbox.Api.Sharing.MemberAction.Decoder);
+                        break;
+                    case "limit":
+                        value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

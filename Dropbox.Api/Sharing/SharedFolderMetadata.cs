@@ -13,7 +13,8 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The metadata which includes basic information about the shared folder.</para>
     /// </summary>
-    public class SharedFolderMetadata
+    /// <seealso cref="Dropbox.Api.Sharing.SharedFolderMetadataBase" />
+    public class SharedFolderMetadata : SharedFolderMetadataBase
     {
         #pragma warning disable 108
 
@@ -31,25 +32,26 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="SharedFolderMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="name">The name of the this shared folder.</param>
-        /// <param name="sharedFolderId">The ID of the shared folder.</param>
         /// <param name="accessType">The current user's access level for this shared
         /// folder.</param>
         /// <param name="isTeamFolder">Whether this folder is a <a
         /// href="https://www.dropbox.com/en/help/986">team folder</a>.</param>
         /// <param name="policy">Policies governing this shared folder.</param>
+        /// <param name="name">The name of the this shared folder.</param>
+        /// <param name="sharedFolderId">The ID of the shared folder.</param>
+        /// <param name="permissions">Actions the current user may perform on the folder and
+        /// its contents. The set of permissions corresponds to the FolderActions in the
+        /// request.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
-        /// <param name="permissions">Actions the current user may perform on the folder and
-        /// its contents. The set of permissions corresponds to the MemberActions in the
-        /// request.</param>
-        public SharedFolderMetadata(string name,
-                                    string sharedFolderId,
-                                    AccessLevel accessType,
+        public SharedFolderMetadata(AccessLevel accessType,
                                     bool isTeamFolder,
                                     FolderPolicy policy,
-                                    string pathLower = null,
-                                    col.IEnumerable<FolderPermission> permissions = null)
+                                    string name,
+                                    string sharedFolderId,
+                                    col.IEnumerable<FolderPermission> permissions = null,
+                                    string pathLower = null)
+            : base(accessType, isTeamFolder, policy, permissions)
         {
             if (name == null)
             {
@@ -65,25 +67,9 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId");
             }
 
-            if (accessType == null)
-            {
-                throw new sys.ArgumentNullException("accessType");
-            }
-
-            if (policy == null)
-            {
-                throw new sys.ArgumentNullException("policy");
-            }
-
-            var permissionsList = enc.Util.ToList(permissions);
-
             this.Name = name;
             this.SharedFolderId = sharedFolderId;
-            this.AccessType = accessType;
-            this.IsTeamFolder = isTeamFolder;
-            this.Policy = policy;
             this.PathLower = pathLower;
-            this.Permissions = permissionsList;
         }
 
         /// <summary>
@@ -107,32 +93,10 @@ namespace Dropbox.Api.Sharing
         public string SharedFolderId { get; protected set; }
 
         /// <summary>
-        /// <para>The current user's access level for this shared folder.</para>
-        /// </summary>
-        public AccessLevel AccessType { get; protected set; }
-
-        /// <summary>
-        /// <para>Whether this folder is a <a href="https://www.dropbox.com/en/help/986">team
-        /// folder</a>.</para>
-        /// </summary>
-        public bool IsTeamFolder { get; protected set; }
-
-        /// <summary>
-        /// <para>Policies governing this shared folder.</para>
-        /// </summary>
-        public FolderPolicy Policy { get; protected set; }
-
-        /// <summary>
         /// <para>The lower-cased full path of this shared folder. Absent for unmounted
         /// folders.</para>
         /// </summary>
         public string PathLower { get; protected set; }
-
-        /// <summary>
-        /// <para>Actions the current user may perform on the folder and its contents. The set
-        /// of permissions corresponds to the MemberActions in the request.</para>
-        /// </summary>
-        public col.IList<FolderPermission> Permissions { get; protected set; }
 
         #region Encoder class
 
@@ -148,18 +112,18 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderMetadata value, enc.IJsonWriter writer)
             {
-                WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("policy", value.Policy, writer, Dropbox.Api.Sharing.FolderPolicy.Encoder);
-                if (value.PathLower != null)
-                {
-                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
-                }
+                WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
+                WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 if (value.Permissions.Count > 0)
                 {
                     WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.FolderPermission.Encoder);
+                }
+                if (value.PathLower != null)
+                {
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -193,12 +157,6 @@ namespace Dropbox.Api.Sharing
             {
                 switch (fieldName)
                 {
-                    case "name":
-                        value.Name = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "shared_folder_id":
-                        value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "access_type":
                         value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
@@ -208,11 +166,17 @@ namespace Dropbox.Api.Sharing
                     case "policy":
                         value.Policy = Dropbox.Api.Sharing.FolderPolicy.Decoder.Decode(reader);
                         break;
-                    case "path_lower":
-                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                    case "name":
+                        value.Name = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "shared_folder_id":
+                        value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "permissions":
                         value.Permissions = ReadList<FolderPermission>(reader, Dropbox.Api.Sharing.FolderPermission.Decoder);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

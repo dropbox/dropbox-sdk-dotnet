@@ -37,10 +37,15 @@ namespace Dropbox.Api.Sharing
         /// <param name="invitee">The information for the invited user.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
+        /// <param name="initials">Suggested name initials for a member.</param>
+        /// <param name="isInherited">True if the member's access to the file is inherited from
+        /// a parent folder.</param>
         public InviteeMembershipInfo(AccessLevel accessType,
                                      InviteeInfo invitee,
-                                     col.IEnumerable<MemberPermission> permissions = null)
-            : base(accessType, permissions)
+                                     col.IEnumerable<MemberPermission> permissions = null,
+                                     string initials = null,
+                                     bool isInherited = false)
+            : base(accessType, permissions, initials, isInherited)
         {
             if (invitee == null)
             {
@@ -85,6 +90,11 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
                 }
+                if (value.Initials != null)
+                {
+                    WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
+                }
+                WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -126,6 +136,12 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "permissions":
                         value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
+                        break;
+                    case "initials":
+                        value.Initials = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_inherited":
+                        value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

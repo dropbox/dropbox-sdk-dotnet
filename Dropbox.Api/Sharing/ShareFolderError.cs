@@ -271,7 +271,7 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>The current account's e-mail address is unverified.</para>
+        /// <para>The current user's e-mail address is unverified.</para>
         /// </summary>
         public sealed class EmailUnverified : ShareFolderError
         {
@@ -527,7 +527,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The current account is not allowed to select the specified <see
+        /// <para>The current user's account is not allowed to select the specified <see
         /// cref="Dropbox.Api.Sharing.ShareFolderArg.SharedLinkPolicy" />.</para>
         /// </summary>
         public sealed class DisallowedSharedLinkPolicy : ShareFolderError
@@ -608,7 +608,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The current account does not have permission to perform this action.</para>
+        /// <para>The current user does not have permission to perform this action.</para>
         /// </summary>
         public sealed class NoPermission : ShareFolderError
         {

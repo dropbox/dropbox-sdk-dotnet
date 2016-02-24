@@ -36,8 +36,12 @@ namespace Dropbox.Api.Sharing
         /// description.</param>
         /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />.</param>
+        /// <param name="directOnly">See <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />
+        /// description.</param>
         public ListSharedLinksArg(string path = null,
-                                  string cursor = null)
+                                  string cursor = null,
+                                  bool? directOnly = null)
         {
             if (path != null && (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z")))
             {
@@ -46,6 +50,7 @@ namespace Dropbox.Api.Sharing
 
             this.Path = path;
             this.Cursor = cursor;
+            this.DirectOnly = directOnly;
         }
 
         /// <summary>
@@ -70,6 +75,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string Cursor { get; protected set; }
 
+        /// <summary>
+        /// <para>See <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync"
+        /// /> description.</para>
+        /// </summary>
+        public bool? DirectOnly { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -91,6 +102,10 @@ namespace Dropbox.Api.Sharing
                 if (value.Cursor != null)
                 {
                     WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
+                }
+                if (value.DirectOnly != null)
+                {
+                    WriteProperty("direct_only", value.DirectOnly.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -129,6 +144,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "cursor":
                         value.Cursor = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "direct_only":
+                        value.DirectOnly = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -138,7 +138,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// for the current user.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path - direct links to the given path and links to parent
-        /// folders of the given path.</para>
+        /// folders of the given path. Links to parent folders can be suppressed by setting
+        /// direct_only to true.</para>
         /// </summary>
         /// <param name="listSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -173,23 +174,29 @@ namespace Dropbox.Api.Sharing.Routes
         /// for the current user.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path - direct links to the given path and links to parent
-        /// folders of the given path.</para>
+        /// folders of the given path. Links to parent folders can be suppressed by setting
+        /// direct_only to true.</para>
         /// </summary>
         /// <param name="path">See <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />
         /// description.</param>
         /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />.</param>
+        /// <param name="directOnly">See <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />
+        /// description.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListSharedLinksError"/>.</exception>
         public t.Task<ListSharedLinksResult> ListSharedLinksAsync(string path = null,
-                                                                  string cursor = null)
+                                                                  string cursor = null,
+                                                                  bool? directOnly = null)
         {
             var listSharedLinksArg = new ListSharedLinksArg(path,
-                                                            cursor);
+                                                            cursor,
+                                                            directOnly);
 
             return this.ListSharedLinksAsync(listSharedLinksArg);
         }
@@ -202,6 +209,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// description.</param>
         /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />.</param>
+        /// <param name="directOnly">See <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />
+        /// description.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -209,11 +219,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListSharedLinks(string path = null,
                                                      string cursor = null,
+                                                     bool? directOnly = null,
                                                      sys.AsyncCallback callback = null,
                                                      object callbackState = null)
         {
             var listSharedLinksArg = new ListSharedLinksArg(path,
-                                                            cursor);
+                                                            cursor,
+                                                            directOnly);
 
             return this.BeginListSharedLinks(listSharedLinksArg, callback, callbackState);
         }
@@ -882,26 +894,68 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
         /// backwards-incompatible changes.</para>
         /// </summary>
+        /// <param name="listFoldersArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListFoldersResult> ListFoldersAsync()
+        public t.Task<ListFoldersResult> ListFoldersAsync(ListFoldersArgs listFoldersArgs)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, ListFoldersResult, enc.Empty>(enc.Empty.Instance, "api", "/sharing/list_folders", enc.EmptyEncoder.Instance, Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_folders", Dropbox.Api.Sharing.ListFoldersArgs.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the list folders route.</para>
         /// </summary>
+        /// <param name="listFoldersArgs">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListFolders(sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginListFolders(ListFoldersArgs listFoldersArgs, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.ListFoldersAsync();
+            var task = this.ListFoldersAsync(listFoldersArgs);
 
             return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Return the list of all shared folders the current user has access to.</para>
+        /// <para>Apps must have full Dropbox access to use this endpoint.</para>
+        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
+        /// backwards-incompatible changes.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <param name="actions">Folder actions to query. This field is optional.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ListFoldersResult> ListFoldersAsync(uint limit = 1000,
+                                                          col.IEnumerable<FolderAction> actions = null)
+        {
+            var listFoldersArgs = new ListFoldersArgs(limit,
+                                                      actions);
+
+            return this.ListFoldersAsync(listFoldersArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list folders route.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <param name="actions">Folder actions to query. This field is optional.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListFolders(uint limit = 1000,
+                                                 col.IEnumerable<FolderAction> actions = null,
+                                                 sys.AsyncCallback callback = null,
+                                                 object callbackState = null)
+        {
+            var listFoldersArgs = new ListFoldersArgs(limit,
+                                                      actions);
+
+            return this.BeginListFolders(listFoldersArgs, callback, callbackState);
         }
 
         /// <summary>
@@ -1024,6 +1078,191 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
+        /// <para>Return the list of all shared folders the current user can mount or
+        /// unmount.</para>
+        /// <para>Apps must have full Dropbox access to use this endpoint.</para>
+        /// </summary>
+        /// <param name="listFoldersArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ListFoldersResult> ListMountableFoldersAsync(ListFoldersArgs listFoldersArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_mountable_folders", Dropbox.Api.Sharing.ListFoldersArgs.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list mountable folders route.</para>
+        /// </summary>
+        /// <param name="listFoldersArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListMountableFolders(ListFoldersArgs listFoldersArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListMountableFoldersAsync(listFoldersArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Return the list of all shared folders the current user can mount or
+        /// unmount.</para>
+        /// <para>Apps must have full Dropbox access to use this endpoint.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <param name="actions">Folder actions to query. This field is optional.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ListFoldersResult> ListMountableFoldersAsync(uint limit = 1000,
+                                                                   col.IEnumerable<FolderAction> actions = null)
+        {
+            var listFoldersArgs = new ListFoldersArgs(limit,
+                                                      actions);
+
+            return this.ListMountableFoldersAsync(listFoldersArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list mountable folders route.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <param name="actions">Folder actions to query. This field is optional.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListMountableFolders(uint limit = 1000,
+                                                          col.IEnumerable<FolderAction> actions = null,
+                                                          sys.AsyncCallback callback = null,
+                                                          object callbackState = null)
+        {
+            var listFoldersArgs = new ListFoldersArgs(limit,
+                                                      actions);
+
+            return this.BeginListMountableFolders(listFoldersArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list mountable folders route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public ListFoldersResult EndListMountableFolders(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListFoldersResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersAsync" />, use
+        /// this to paginate through all mountable shared folders.</para>
+        /// <para>Apps must have full Dropbox access to use this endpoint.</para>
+        /// </summary>
+        /// <param name="listFoldersContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFoldersContinueError"/>.</exception>
+        public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_mountable_folders/continue", Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list mountable folders continue
+        /// route.</para>
+        /// </summary>
+        /// <param name="listFoldersContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListMountableFoldersContinue(ListFoldersContinueArg listFoldersContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListMountableFoldersContinueAsync(listFoldersContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersAsync" />, use
+        /// this to paginate through all mountable shared folders.</para>
+        /// <para>Apps must have full Dropbox access to use this endpoint.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync" /> or <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFoldersContinueError"/>.</exception>
+        public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(string cursor)
+        {
+            var listFoldersContinueArg = new ListFoldersContinueArg(cursor);
+
+            return this.ListMountableFoldersContinueAsync(listFoldersContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list mountable folders continue
+        /// route.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync" /> or <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListMountableFoldersContinue(string cursor,
+                                                                  sys.AsyncCallback callback,
+                                                                  object callbackState = null)
+        {
+            var listFoldersContinueArg = new ListFoldersContinueArg(cursor);
+
+            return this.BeginListMountableFoldersContinue(listFoldersContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list mountable folders
+        /// continue route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFoldersContinueError"/>.</exception>
+        public ListFoldersResult EndListMountableFoldersContinue(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListFoldersResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns shared folder metadata by its folder ID.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
         /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
@@ -1063,7 +1302,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Folder actions to query.</param>
+        /// <param name="actions">Folder actions to query. This field is optional.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1082,7 +1321,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the get folder metadata route.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Folder actions to query.</param>
+        /// <param name="actions">Folder actions to query. This field is optional.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1160,17 +1399,21 @@ namespace Dropbox.Api.Sharing.Routes
         /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Member actions to query.</param>
+        /// <param name="actions">Member actions to query. This field is optional.</param>
+        /// <param name="limit">The maximum number of results that include members, groups and
+        /// invitees to return per request.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId,
-                                                                  col.IEnumerable<MemberAction> actions = null)
+                                                                  col.IEnumerable<MemberAction> actions = null,
+                                                                  uint limit = 1000)
         {
             var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
-                                                                  actions);
+                                                                  actions,
+                                                                  limit);
 
             return this.ListFolderMembersAsync(listFolderMembersArgs);
         }
@@ -1179,7 +1422,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the list folder members route.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Member actions to query.</param>
+        /// <param name="actions">Member actions to query. This field is optional.</param>
+        /// <param name="limit">The maximum number of results that include members, groups and
+        /// invitees to return per request.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1187,11 +1432,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolderMembers(string sharedFolderId,
                                                        col.IEnumerable<MemberAction> actions = null,
+                                                       uint limit = 1000,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
             var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
-                                                                  actions);
+                                                                  actions,
+                                                                  limit);
 
             return this.BeginListFolderMembers(listFolderMembersArgs, callback, callbackState);
         }

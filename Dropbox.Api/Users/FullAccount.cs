@@ -48,11 +48,15 @@ namespace Dropbox.Api.Users
         /// <c>null</c>, but <paramref name="isPaired" /> will indicate if a work account is
         /// linked.</param>
         /// <param name="accountType">What type of account this user has.</param>
+        /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
+        /// set.</param>
         /// <param name="country">The user's two-letter country code, if available. Country
         /// codes are based on <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO
         /// 3166-1</a>.</param>
         /// <param name="team">If this account is a member of a team, information about that
         /// team.</param>
+        /// <param name="teamMemberId">This account's unique team member id. This field will
+        /// only be present if <paramref name="team" /> is present.</param>
         public FullAccount(string accountId,
                            Name name,
                            string email,
@@ -61,15 +65,12 @@ namespace Dropbox.Api.Users
                            string referralLink,
                            bool isPaired,
                            AccountType accountType,
+                           string profilePhotoUrl = null,
                            string country = null,
-                           Team team = null)
-            : base(accountId, name)
+                           Team team = null,
+                           string teamMemberId = null)
+            : base(accountId, name, email, emailVerified, profilePhotoUrl)
         {
-            if (email == null)
-            {
-                throw new sys.ArgumentNullException("email");
-            }
-
             if (locale == null)
             {
                 throw new sys.ArgumentNullException("locale");
@@ -94,14 +95,13 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentOutOfRangeException("country");
             }
 
-            this.Email = email;
-            this.EmailVerified = emailVerified;
             this.Locale = locale;
             this.ReferralLink = referralLink;
             this.IsPaired = isPaired;
             this.AccountType = accountType;
             this.Country = country;
             this.Team = team;
+            this.TeamMemberId = teamMemberId;
         }
 
         /// <summary>
@@ -112,18 +112,6 @@ namespace Dropbox.Api.Users
         public FullAccount()
         {
         }
-
-        /// <summary>
-        /// <para>The user's e-mail address. Do not rely on this without checking the <see
-        /// cref="EmailVerified" /> field. Even then, it's possible that the user has since
-        /// lost access to their e-mail.</para>
-        /// </summary>
-        public string Email { get; protected set; }
-
-        /// <summary>
-        /// <para>Whether the user has verified their e-mail address.</para>
-        /// </summary>
-        public bool EmailVerified { get; protected set; }
 
         /// <summary>
         /// <para>The language that the user specified. Locale tags will be <a
@@ -161,6 +149,12 @@ namespace Dropbox.Api.Users
         /// </summary>
         public Team Team { get; protected set; }
 
+        /// <summary>
+        /// <para>This account's unique team member id. This field will only be present if <see
+        /// cref="Team" /> is present.</para>
+        /// </summary>
+        public string TeamMemberId { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -183,6 +177,10 @@ namespace Dropbox.Api.Users
                 WriteProperty("referral_link", value.ReferralLink, writer, enc.StringEncoder.Instance);
                 WriteProperty("is_paired", value.IsPaired, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("account_type", value.AccountType, writer, Dropbox.Api.Users.AccountType.Encoder);
+                if (value.ProfilePhotoUrl != null)
+                {
+                    WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
+                }
                 if (value.Country != null)
                 {
                     WriteProperty("country", value.Country, writer, enc.StringEncoder.Instance);
@@ -190,6 +188,10 @@ namespace Dropbox.Api.Users
                 if (value.Team != null)
                 {
                     WriteProperty("team", value.Team, writer, Dropbox.Api.Users.Team.Encoder);
+                }
+                if (value.TeamMemberId != null)
+                {
+                    WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -247,11 +249,17 @@ namespace Dropbox.Api.Users
                     case "account_type":
                         value.AccountType = Dropbox.Api.Users.AccountType.Decoder.Decode(reader);
                         break;
+                    case "profile_photo_url":
+                        value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     case "country":
                         value.Country = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "team":
                         value.Team = Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        break;
+                    case "team_member_id":
+                        value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -58,28 +58,6 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NoPermission</para>
-        /// </summary>
-        public bool IsNoPermission
-        {
-            get
-            {
-                return this is NoPermission;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a NoPermission, or <c>null</c>.</para>
-        /// </summary>
-        public NoPermission AsNoPermission
-        {
-            get
-            {
-                return this as NoPermission;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is InvalidDropboxId</para>
         /// </summary>
         public bool IsInvalidDropboxId
@@ -169,6 +147,50 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamFolder</para>
+        /// </summary>
+        public bool IsTeamFolder
+        {
+            get
+            {
+                return this is TeamFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolder, or <c>null</c>.</para>
+        /// </summary>
+        public TeamFolder AsTeamFolder
+        {
+            get
+            {
+                return this as TeamFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoPermission</para>
+        /// </summary>
+        public bool IsNoPermission
+        {
+            get
+            {
+                return this is NoPermission;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoPermission, or <c>null</c>.</para>
+        /// </summary>
+        public NoPermission AsNoPermission
+        {
+            get
+            {
+                return this as NoPermission;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,12 +232,6 @@ namespace Dropbox.Api.Sharing
                     AccessError.Encoder.EncodeFields((AccessError)value, writer);
                     return;
                 }
-                if (value is NoPermission)
-                {
-                    WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
-                    NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
-                    return;
-                }
                 if (value is InvalidDropboxId)
                 {
                     WriteProperty(".tag", "invalid_dropbox_id", writer, enc.StringEncoder.Instance);
@@ -238,6 +254,18 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty(".tag", "new_owner_email_unverified", writer, enc.StringEncoder.Instance);
                     NewOwnerEmailUnverified.Encoder.EncodeFields((NewOwnerEmailUnverified)value, writer);
+                    return;
+                }
+                if (value is TeamFolder)
+                {
+                    WriteProperty(".tag", "team_folder", writer, enc.StringEncoder.Instance);
+                    TeamFolder.Encoder.EncodeFields((TeamFolder)value, writer);
+                    return;
+                }
+                if (value is NoPermission)
+                {
+                    WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
+                    NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -280,8 +308,6 @@ namespace Dropbox.Api.Sharing
                 {
                     case "access_error":
                         return AccessError.Decoder.DecodeFields(reader);
-                    case "no_permission":
-                        return NoPermission.Decoder.DecodeFields(reader);
                     case "invalid_dropbox_id":
                         return InvalidDropboxId.Decoder.DecodeFields(reader);
                     case "new_owner_not_a_member":
@@ -290,6 +316,10 @@ namespace Dropbox.Api.Sharing
                         return NewOwnerUnmounted.Decoder.DecodeFields(reader);
                     case "new_owner_email_unverified":
                         return NewOwnerEmailUnverified.Decoder.DecodeFields(reader);
+                    case "team_folder":
+                        return TeamFolder.Decoder.DecodeFields(reader);
+                    case "no_permission":
+                        return NoPermission.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -390,85 +420,6 @@ namespace Dropbox.Api.Sharing
                             reader.Skip();
                             break;
                     }
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The current account does not have permission to perform this action.</para>
-        /// </summary>
-        public sealed class NoPermission : TransferFolderError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<NoPermission> Encoder = new NoPermissionEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<NoPermission> Decoder = new NoPermissionDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NoPermission" />
-            /// class.</para>
-            /// </summary>
-            private NoPermission()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of NoPermission</para>
-            /// </summary>
-            public static readonly NoPermission Instance = new NoPermission();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="NoPermission" />.</para>
-            /// </summary>
-            private class NoPermissionEncoder : enc.StructEncoder<NoPermission>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(NoPermission value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="NoPermission" />.</para>
-            /// </summary>
-            private class NoPermissionDecoder : enc.StructDecoder<NoPermission>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="NoPermission" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override NoPermission Create()
-                {
-                    return new NoPermission();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NoPermission DecodeFields(enc.IJsonReader reader)
-                {
-                    return NoPermission.Instance;
                 }
             }
 
@@ -637,7 +588,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The new desginated owner does not have the shared folder mounted.</para>
+        /// <para>The new designated owner does not have the shared folder mounted.</para>
         /// </summary>
         public sealed class NewOwnerUnmounted : TransferFolderError
         {
@@ -790,6 +741,163 @@ namespace Dropbox.Api.Sharing
                 public override NewOwnerEmailUnverified DecodeFields(enc.IJsonReader reader)
                 {
                     return NewOwnerEmailUnverified.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This action cannot be performed on a team shared folder.</para>
+        /// </summary>
+        public sealed class TeamFolder : TransferFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolder> Encoder = new TeamFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolder> Decoder = new TeamFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamFolder" /> class.</para>
+            /// </summary>
+            private TeamFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamFolder</para>
+            /// </summary>
+            public static readonly TeamFolder Instance = new TeamFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFolder" />.</para>
+            /// </summary>
+            private class TeamFolderEncoder : enc.StructEncoder<TeamFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFolder" />.</para>
+            /// </summary>
+            private class TeamFolderDecoder : enc.StructDecoder<TeamFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamFolder" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolder Create()
+                {
+                    return new TeamFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return TeamFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current user does not have permission to perform this action.</para>
+        /// </summary>
+        public sealed class NoPermission : TransferFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoPermission> Encoder = new NoPermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoPermission> Decoder = new NoPermissionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoPermission" />
+            /// class.</para>
+            /// </summary>
+            private NoPermission()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NoPermission</para>
+            /// </summary>
+            public static readonly NoPermission Instance = new NoPermission();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionEncoder : enc.StructEncoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoPermission value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionDecoder : enc.StructDecoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoPermission" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoPermission Create()
+                {
+                    return new NoPermission();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoPermission DecodeFields(enc.IJsonReader reader)
+                {
+                    return NoPermission.Instance;
                 }
             }
 

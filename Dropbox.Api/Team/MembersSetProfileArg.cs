@@ -50,6 +50,16 @@ namespace Dropbox.Api.Team
                 throw new sys.ArgumentNullException("user");
             }
 
+            if (newGivenName != null && (newGivenName.Length < 1 || newGivenName.Length > 100 || !re.Regex.IsMatch(newGivenName, @"\A(?:[^/:?*<>""|]*)\z")))
+            {
+                throw new sys.ArgumentOutOfRangeException("newGivenName");
+            }
+
+            if (newSurname != null && (newSurname.Length < 1 || newSurname.Length > 100 || !re.Regex.IsMatch(newSurname, @"\A(?:[^/:?*<>""|]*)\z")))
+            {
+                throw new sys.ArgumentOutOfRangeException("newSurname");
+            }
+
             this.User = user;
             this.NewEmail = newEmail;
             this.NewExternalId = newExternalId;

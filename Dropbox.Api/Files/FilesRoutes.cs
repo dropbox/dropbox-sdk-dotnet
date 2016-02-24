@@ -31,6 +31,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
+        /// <para>Note: Metadata for the root folder is unsupported.</para>
         /// </summary>
         /// <param name="getMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -61,10 +62,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
+        /// <para>Note: Metadata for the root folder is unsupported.</para>
         /// </summary>
-        /// <param name="path">The path of a file or folder on Dropbox</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="path">The path of a file or folder on Dropbox.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -82,9 +85,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the get metadata route.</para>
         /// </summary>
-        /// <param name="path">The path of a file or folder on Dropbox</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="path">The path of a file or folder on Dropbox.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -274,8 +278,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -303,8 +308,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
@@ -489,8 +495,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -519,8 +526,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
@@ -598,7 +606,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Download a file from a user's Dropbox.</para>
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Deprecated. Please specify revision in :field:'path'
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
         /// instead</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -618,7 +626,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the download route.</para>
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Deprecated. Please specify revision in :field:'path'
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
         /// instead</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -1742,7 +1750,7 @@ namespace Dropbox.Api.Files.Routes
         /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Deprecated. Please specify revision in :field:'path'
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
         /// instead</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -1761,7 +1769,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the get preview route.</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Deprecated. Please specify revision in :field:'path'
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
         /// instead</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>

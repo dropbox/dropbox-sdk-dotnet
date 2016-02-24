@@ -30,9 +30,10 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="GetMetadataArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path of a file or folder on Dropbox</param>
-        /// <param name="includeMediaInfo">If true, :field:'FileMetadata.media_info' is set for
-        /// photo and video.</param>
+        /// <param name="path">The path of a file or folder on Dropbox.</param>
+        /// <param name="includeMediaInfo">If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
+        /// video.</param>
         public GetMetadataArg(string path,
                               bool includeMediaInfo = false)
         {
@@ -60,12 +61,13 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The path of a file or folder on Dropbox</para>
+        /// <para>The path of a file or folder on Dropbox.</para>
         /// </summary>
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>If true, :field:'FileMetadata.media_info' is set for photo and video.</para>
+        /// <para>If true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for
+        /// photo and video.</para>
         /// </summary>
         public bool IncludeMediaInfo { get; protected set; }
 
