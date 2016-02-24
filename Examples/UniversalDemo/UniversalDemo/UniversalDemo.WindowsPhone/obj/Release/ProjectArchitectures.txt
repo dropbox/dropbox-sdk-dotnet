@@ -1,2 +1,0 @@
-C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj;neutral
-C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.WindowsPhone\UniversalDemo.WindowsPhone.csproj;neutral

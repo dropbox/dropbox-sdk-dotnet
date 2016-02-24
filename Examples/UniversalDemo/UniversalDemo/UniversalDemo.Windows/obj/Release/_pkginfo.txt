@@ -1,1 +1,0 @@
-C:\Users\Qiming\Documents\GitHub\dropbox-sdk-dotnet-private\dropbox-sdk-dotnet\Examples\UniversalDemo\UniversalDemo\UniversalDemo.Windows\AppPackages\UniversalDemo.Windows_1.0.0.0_AnyCPU_Test\UniversalDemo.Windows_1.0.0.0_AnyCPU.appx
