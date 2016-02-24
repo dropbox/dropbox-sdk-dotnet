@@ -59,7 +59,7 @@ echo Building...
 
 echo Creating nuget package...
 
-%PRE% %NUGET_COMMAND% pack %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.csproj -Prop Configuration=RELEASE
+%PRE% %NUGET_COMMAND% pack %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.nuspec
 
 :eof
     ENDLOCAL

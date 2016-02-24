@@ -289,10 +289,10 @@ namespace Dropbox.Api
 
                 // use exponential backoff
                 var backoff = TimeSpan.FromSeconds(Math.Pow(2, attempt) * r.NextDouble());
-#if DOCUMENTATION_BUILD
-                await Task.Delay(backoff);
-#else
+#if PORTABLE40
                 await TaskEx.Delay(backoff);
+#else
+                await Task.Delay(backoff);
 #endif
             }
         }
@@ -652,7 +652,13 @@ namespace Dropbox.Api
             string apiNotifyHostname = DefaultApiNotifyDomain,
             HttpClient httpClient = null)
         {
-            var name = new AssemblyName(typeof(DropboxRequestHandlerOptions).Assembly.FullName);
+            var type = typeof(DropboxRequestHandlerOptions);
+#if PORTABLE40
+            var assembly = type.Assembly;
+#else
+            var assembly = type.GetTypeInfo().Assembly;
+#endif
+            var name = new AssemblyName(assembly.FullName);
             var sdkVersion = name.Version.ToString();
 
             this.UserAgent = userAgent == null

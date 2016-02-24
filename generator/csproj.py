@@ -26,10 +26,21 @@ COMPILE_INCLUDES = [
 
 NONE_INCLUDES = [
     "app.config",
+]
+
+PORTABLE40_NONE_INCLUDES = [
+    "packages.Dropbox.Api.Portable40.config",        
+]
+
+PORTABLE_NONE_INCLUDES = [
+    "packages.Dropbox.Api.Portable.config",        
+]
+
+DOC_NONE_INCLUDES = [
     "packages.config",        
 ]
 
-CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
+PORTABLE40_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -50,24 +61,26 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\Debug\portable40</OutputPath>
+    <IntermediateOutputPath>obj\Debug\portable40</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;PORTABLE40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\Dropbox.Api.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\portable40\Dropbox.Api.XML</DocumentationFile>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>bin\Release\portable40</OutputPath>
+    <IntermediateOutputPath>obj\Release\portable40</IntermediateOutputPath>
+    <DefineConstants>TRACE;PORTABLE40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\Dropbox.Api.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\portable40\Dropbox.Api.XML</DocumentationFile>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <ItemGroup>
@@ -104,8 +117,7 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
   </ItemGroup>
 """
 
-
-CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+PORTABLE40_CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
@@ -121,6 +133,70 @@ CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\P
 </Project>
 """
 
+PORTABLE_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{786C830F-07A1-408B-BD7F-6EE04809D6DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dropbox.Api</RootNamespace>
+    <AssemblyName>Dropbox.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\portable</OutputPath>
+    <IntermediateOutputPath>obj\Debug\portable</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\portable\Dropbox.Api.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <NoWarn>419</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\portable</OutputPath>
+    <IntermediateOutputPath>obj\Release\portable</IntermediateOutputPath>
+    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\portable\Dropbox.Api.XML</DocumentationFile>
+    <NoWarn>419</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+"""
+
+PORTABLE_CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
+"""
 
 DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -144,7 +220,7 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Optimize>false</Optimize>
     <OutputPath>docbin\Debug\</OutputPath>
     <IntermediateOutputPath>docobj\Debug\</IntermediateOutputPath>
-    <DefineConstants>TRACE;DEBUG;DOCUMENTATION_BUILD</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;DOC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>docbin\Debug\Dropbox.Api.XML</DocumentationFile>
@@ -155,7 +231,7 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Optimize>true</Optimize>
     <OutputPath>docbin\Release\</OutputPath>
     <IntermediateOutputPath>docobj\Release\</IntermediateOutputPath>
-    <DefineConstants>TRACE;DOCUMENTATION_BUILD</DefineConstants>
+    <DefineConstants>TRACE;DOC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>docbin\Release\Dropbox.Api.XML</DocumentationFile>
@@ -169,14 +245,12 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="Newtonsoft.Json" />
     <Reference Include="System.Xml" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
    </ItemGroup>
 """
-
 
 DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
     <None Include="babal_summaries.xml" />
@@ -207,20 +281,34 @@ def _include_items(buffer, item_type, paths):
     	buffer.write('    <{0} Include="{1}" />\n'.format(item_type, path))
     buffer.write('  </ItemGroup>\n')
 
-def make_csproj_file(files, is_doc=False, is_private=False):
+def make_csproj_file(files, mode, is_private=False):
     compile = []
     compile.extend(COMPILE_INCLUDES)
-    
+    mode = mode.lower()
+
+    if mode == 'doc':
+        start = DOC_CSPROJ_START_BLOCK
+        end = DOC_CSPROJ_END_BLOCK
+        none_includes = DOC_NONE_INCLUDES
+    elif mode == 'portable40':
+        start = PORTABLE40_CSPROJ_START_BLOCK
+        end = PORTABLE40_CSPROJ_END_BLOCK
+        none_includes = PORTABLE40_NONE_INCLUDES
+    else:
+        start = PORTABLE_CSPROJ_START_BLOCK
+        end = PORTABLE_CSPROJ_END_BLOCK
+        none_includes = PORTABLE_NONE_INCLUDES
+
     buffer = StringIO()
-    buffer.write(DOC_CSPROJ_START_BLOCK if is_doc else CSPROJ_START_BLOCK)
+    buffer.write(start)
     
     if is_private:
         buffer.write(CSPROJ_PRIVATE_BLOCK)
 
     _include_items(buffer, 'Compile', COMPILE_INCLUDES)
     _include_items(buffer, 'Compile', sorted(files))
-    _include_items(buffer, 'None', NONE_INCLUDES)
- 
-    buffer.write(DOC_CSPROJ_END_BLOCK if is_doc else CSPROJ_END_BLOCK)
+    _include_items(buffer, 'None', NONE_INCLUDES + none_includes)
+
+    buffer.write(end)
 
     return buffer.getvalue()
