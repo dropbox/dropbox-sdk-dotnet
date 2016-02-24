@@ -2,8 +2,8 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>2.3.6</version>
-    <title>Dropbox v2 API Beta</title>
+    <version>3.0.0</version>
+    <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
     <licenseUrl>https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE</licenseUrl>
@@ -12,13 +12,15 @@
     <iconUrl>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
-    <releaseNotes>Preview Release. 
-
+    <releaseNotes> 
 What's new:
-- Assembly is now strongly named. 
-- Introduce RateLimitException with RetryAfter field. Client can handle rate limit error by doing proper backoff.
-Bug fixes:
-- Add ConfigureAwait(false) to async tasks.</releaseNotes>
+- Changes in sharing endpoints. See https://blogs.dropbox.com/developers/2016/02/more-breaking-changes-to-beta-sharing-endpoints/ for more details.
+- Nuget package now contains separate assemblies for different frameworks. Projects target at .NET 4.5 or newer no longer need to depend on Bcl libraries.
+- ID is now a required field in Metadata.
+- Add PathDisplay to Metadata. 
+- Add ListMountableFolders endpoint in Sharing.
+- Add DirectOnly falg to ListSharedLinks endpoint.
+    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
     <dependencies>
