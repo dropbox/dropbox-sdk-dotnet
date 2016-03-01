@@ -86,6 +86,7 @@ namespace SimpleTest
             await GetCurrentAccount(client);
 
             var path = "/DotNetApi/Help";
+            var folder = await CreateFolder(client, path);
             var list = await ListFolder(client, path);
 
             var firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
@@ -245,9 +246,27 @@ namespace SimpleTest
         }
 
         /// <summary>
+        /// Creates the specified folder.
+        /// </summary>
+        /// <remarks>This demonstrates calling an rpc style api in the Files namespace.</remarks>
+        /// <param name="path">The path of the folder to create.</param>
+        /// <param name="client">The Dropbox client.</param>
+        /// <returns>The result from the ListFolderAsync call.</returns>
+        private async Task<FolderMetadata> CreateFolder(DropboxClient client, string path)
+        {
+            Console.WriteLine("--- Creating Folder ---");
+            var folderArg = new CreateFolderArg(path);
+            var folder = await client.Files.CreateFolderAsync(folderArg);
+
+            Console.WriteLine("Folder: " + path + " created!");
+
+            return folder;
+        }
+
+        /// <summary>
         /// Lists the items within a folder.
         /// </summary>
-        /// <remarks>This is a demonstrates calling an rpc style api in the Files namespace.</remarks>
+        /// <remarks>This demonstrates calling an rpc style api in the Files namespace.</remarks>
         /// <param name="path">The path to list.</param>
         /// <param name="client">The Dropbox client.</param>
         /// <returns>The result from the ListFolderAsync call.</returns>
