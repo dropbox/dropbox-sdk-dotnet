@@ -24,11 +24,8 @@ COMPILE_INCLUDES = [
     "Properties\\AssemblyInfo.cs",
 ]
 
-NONE_INCLUDES = [
-    "app.config",
-]
-
 PORTABLE40_NONE_INCLUDES = [
+    "app.config",
     "packages.Dropbox.Api.Portable40.config",        
 ]
 
@@ -90,9 +87,6 @@ PORTABLE40_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.IO">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
     </Reference>
@@ -177,10 +171,6 @@ PORTABLE_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -307,7 +297,7 @@ def make_csproj_file(files, mode, is_private=False):
 
     _include_items(buffer, 'Compile', COMPILE_INCLUDES)
     _include_items(buffer, 'Compile', sorted(files))
-    _include_items(buffer, 'None', NONE_INCLUDES + none_includes)
+    _include_items(buffer, 'None', none_includes)
 
     buffer.write(end)
 

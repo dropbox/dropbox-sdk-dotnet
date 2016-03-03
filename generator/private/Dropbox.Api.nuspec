@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -19,7 +19,9 @@ What's new:
 - ID is now a required field in Metadata.
 - Add PathDisplay to Metadata. 
 - Add ListMountableFolders endpoint in Sharing.
-- Add DirectOnly falg to ListSharedLinks endpoint.
+- Add DirectOnly flag to ListSharedLinks endpoint.
+Bug fixes:
+- Fix library reference issue.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
@@ -35,9 +37,9 @@ What's new:
    </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\portable40\Dropbox.Api.dll" target="lib\portable-net45+wp80+win8+wpa81+dnxcore50\Dropbox.Api.dll" />
-    <file src="bin\Release\portable40\Dropbox.Api.xml" target="lib\portable-net45+wp80+win8+wpa81+dnxcore50\Dropbox.Api.xml" />
-    <file src="bin\Release\portable\Dropbox.Api.dll" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.dll" />
-    <file src="bin\Release\portable\Dropbox.Api.xml" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.xml" />
+    <file src="bin\Release\portable\Dropbox.Api.dll" target="lib\portable-net45+wp80+win8+wpa81+dnxcore50\Dropbox.Api.dll" />
+    <file src="bin\Release\portable\Dropbox.Api.xml" target="lib\portable-net45+wp80+win8+wpa81+dnxcore50\Dropbox.Api.xml" />
+    <file src="bin\Release\portable40\Dropbox.Api.dll" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.dll" />
+    <file src="bin\Release\portable40\Dropbox.Api.xml" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.xml" />
   </files>
 </package>
