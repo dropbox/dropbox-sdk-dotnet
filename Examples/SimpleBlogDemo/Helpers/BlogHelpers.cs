@@ -174,7 +174,7 @@ namespace SimpleBlogDemo.Helpers
                 return null;
             }
 
-            using (var client = new DropboxClient(user.DropboxAccessToken, userAgent: "SimpleBlogDemo"))
+            using (var client = new DropboxClient(user.DropboxAccessToken, new DropboxClientConfig("SimpleBlogDemo")))
             {
                 return new Blog
                 {

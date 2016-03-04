@@ -242,9 +242,7 @@ namespace UniversalDemo
         /// </summary>
         private void SetNewDropboxClient()
         {
-            this.DropboxClient = new DropboxClient(
-                oauth2AccessToken: this.AccessToken,
-                userAgent: "WindowsUniversalAppDemo");
+            this.DropboxClient = new DropboxClient(this.AccessToken, new DropboxClientConfig("WindowsUniversalAppDemo"));
         }
 
 #if WINDOWS_PHONE_APP

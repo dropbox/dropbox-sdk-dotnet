@@ -51,7 +51,12 @@ namespace SimpleTest
 
             try
             {
-                var client = new DropboxClient(accessToken, userAgent: "SimpleTestApp", httpClient: httpClient);
+                var config = new DropboxClientConfig("SimpleTestApp")
+                {
+                    HttpClient = httpClient
+                };
+
+                var client = new DropboxClient(accessToken, config);
                 await RunUserTests(client);
 
                 // Tests below are for Dropbox Business endpoints. To run these tests, make sure the ApiKey is for
