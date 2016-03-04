@@ -88,13 +88,15 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         cannot reliably generate documentation from a portable assembly.
         """
         files = [f for f in self._generated_files if f.endswith('.cs')]
-        modes = ['Portable', 'Portable40']
+        modes = [('Portable', '.Portable'),
+                 ('Portable40', '.Portable40'), 
+                 ('Net45', '')]
         if self.args.private:
             # Only generate SandCastle csproj for private build.
-            modes.append('Doc')
+            modes.append(('Doc', '.Doc'))
 
-        for mode in ('Portable', 'Portable40', 'Doc'):
-            with self.output_to_relative_path('{0}.{1}.csproj'.format(self.DEFAULT_NAMESPACE, mode)):
+        for mode, suffix in modes:
+            with self.output_to_relative_path('{0}{1}.csproj'.format(self.DEFAULT_NAMESPACE, suffix)):
                 self.emit_raw(make_csproj_file(files, mode=mode, is_private=self.args.private))
 
     def _generate_dropbox_auth_exception(self, api):

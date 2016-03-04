@@ -10,6 +10,72 @@ namespace Dropbox.Api
     using System.Net.Http;
 
     /// <summary>
+    /// The class which contains all configurations for Dropbox client.
+    /// </summary>
+    public sealed class DropboxClientConfig
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClientConfig"/> class.
+        /// </summary>
+        public DropboxClientConfig()
+            : this(null)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClientConfig"/> class.
+        /// </summary>
+        /// <param name="userAgent">The user agent to use when making requests.</param>
+        public DropboxClientConfig(string userAgent)
+            : this(userAgent, 4)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClientConfig"/> class.
+        /// </summary>
+        /// <param name="userAgent">The user agent to use when making requests.</param>
+        /// <param name="maxRetriesOnError">The max number retries on error.</param>
+        public DropboxClientConfig(string userAgent, int maxRetriesOnError)
+            : this(userAgent, maxRetriesOnError, null)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClientConfig"/> class.
+        /// </summary>
+        /// <param name="userAgent">The user agent to use when making requests.</param>
+        /// <param name="maxRetriesOnError">The max number retries on error.</param>
+        /// <param name="httpClient">The custom http client.</param>
+        internal DropboxClientConfig(string userAgent, int maxRetriesOnError, HttpClient httpClient)
+        {
+            this.UserAgent = userAgent;
+            this.MaxRetriesOnError = maxRetriesOnError;
+            this.HttpClient = httpClient;
+        }
+
+        /// <summary>
+        /// Gets or sets the max number retries on error. Default value is 4.
+        /// </summary>
+        public int MaxRetriesOnError { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user agent to use when making requests.
+        /// </summary>
+        /// <remarks>
+        /// This value helps Dropbox to identify requests coming from your application.
+        /// We recommend that you use the format <c>"AppName/Version"</c>; if a value is supplied, the string
+        /// <c>"/OfficialDropboxDotNetV2SDK/__version__"</c> is appended to the user agent.
+        /// </remarks>
+        public string UserAgent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the custom http client. If not set, a default http client will be created.
+        /// </summary>
+        public HttpClient HttpClient { get; set; }
+    }
+
+    /// <summary>
     /// The client which contains endpoints which perform user-level actions.
     /// </summary>
     public sealed partial class DropboxClient : IDisposable
@@ -18,21 +84,29 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
+        public DropboxClient(string oauth2AccessToken)
+            : this(oauth2AccessToken, new DropboxClientConfig())
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// </summary>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="httpClient">The custom http client. If not provided, a default 
-        /// http client will be created.</param>
-        /// <remarks>
-        /// The <paramref name="userAgent"/> helps Dropbox to identify requests coming from your application.
-        /// We recommend that you use the format <c>"AppName/Version"</c>; if a value is supplied, the string
-        /// <c>"/OfficialDropboxDotNetV2SDK/__version__"</c> is appended to the user agent.
-        /// </remarks>
-        public DropboxClient(
-            string oauth2AccessToken,
-            int maxRetriesOnError = 4,
-            string userAgent = null,
-            HttpClient httpClient = null)
-            : this(new DropboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient))
+        [Obsolete("This constructor is deprecated, please use DropboxClientConfig instead.")]
+        public DropboxClient(string oauth2AccessToken, string userAgent)
+            : this(oauth2AccessToken, new DropboxClientConfig(userAgent))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// </summary>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
+        public DropboxClient(string oauth2AccessToken, DropboxClientConfig config)
+            : this(new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient))
         {
             if (oauth2AccessToken == null)
             {
@@ -72,28 +146,36 @@ namespace Dropbox.Api
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxTeamClient"/> class.
         /// </summary>
-        /// <param name="oauth2AccessToken">The team oauth2 access token for making client requests.</param>
-        /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        public DropboxTeamClient(string oauth2AccessToken)
+            : this(oauth2AccessToken, new DropboxClientConfig())
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxTeamClient"/> class.
+        /// </summary>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="httpClient">The custom http client. If not provided, a default 
-        /// http client will be created.</param>
-        /// <remarks>
-        /// The <paramref name="userAgent"/> helps Dropbox to identify requests coming from your application.
-        /// We recommend that you use the format <c>"AppName/Version"</c>; if a value is supplied, the string
-        /// <c>"/OfficialDropboxDotNetV2SDK/__version__"</c> is appended to the user agent.
-        /// </remarks>
-        public DropboxTeamClient(
-            string oauth2AccessToken,
-            int maxRetriesOnError = 4,
-            string userAgent = null,
-            HttpClient httpClient = null)
+        [Obsolete("This constructor is deprecated, please use DropboxClientConfig instead.")]
+        public DropboxTeamClient(string oauth2AccessToken, string userAgent)
+            : this(oauth2AccessToken, new DropboxClientConfig(userAgent))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxTeamClient"/> class.
+        /// </summary>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
+        public DropboxTeamClient(string oauth2AccessToken, DropboxClientConfig config)
         {
             if (oauth2AccessToken == null)
             {
                 throw new ArgumentNullException("oauth2AccessToken");
             }
 
-            this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, maxRetriesOnError, userAgent, httpClient: httpClient);
+            this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient);
             this.InitializeRoutes(new DropboxRequestHandler(this.options));
         }
 
@@ -171,7 +253,8 @@ namespace Dropbox.Api
         /// <param name="message">The message that describes the error.</param>
         /// <param name="uri">The request URI</param>
         [Obsolete("This constructor will be removed soon.")]
-        public AuthException(string message, Uri uri = null) : base(null, message)
+        public AuthException(string message, Uri uri = null)
+            : base(null, message)
         {
             this.StatusCode = 401;
             this.RequestUri = uri;

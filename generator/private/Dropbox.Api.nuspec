@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.0.1</version>
+    <version>3.0.2</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,29 +14,33 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
+- Update constructor for DropboxClient. Additional parameters other than access token are now wrapped in DropboxClientConfig object.
 - Changes in sharing endpoints. See https://blogs.dropbox.com/developers/2016/02/more-breaking-changes-to-beta-sharing-endpoints/ for more details.
 - Nuget package now contains separate assemblies for different frameworks. Projects target at .NET 4.5 or newer no longer need to depend on Bcl libraries.
 - ID is now a required field in Metadata.
 - Add PathDisplay to Metadata. 
 - Add ListMountableFolders endpoint in Sharing.
 - Add DirectOnly flag to ListSharedLinks endpoint.
-Bug fixes:
-- Fix library reference issue.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
     <dependencies>
+      <group targetFramework="net45" >
+        <dependency id="Newtonsoft.Json" version="7.0.1" />
+      </group>
       <group targetFramework="portable-net45+wp80+win8+wpa81+dnxcore50" >
         <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
       <group targetFramework="portable-net40+sl5+wp80+win8+wpa81" >
         <dependency id="Newtonsoft.Json" version="7.0.1" />
-	<dependency id="Microsoft.Bcl.Async" version="1.0.168" />
-	<dependency id="Microsoft.Net.Http" version="2.2.29" />
+	      <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+	      <dependency id="Microsoft.Net.Http" version="2.2.29" />
       </group>
    </dependencies>
   </metadata>
   <files>
+    <file src="bin\Release\net45\Dropbox.Api.dll" target="lib\net45\Dropbox.Api.dll" />
+    <file src="bin\Release\net45\Dropbox.Api.xml" target="lib\net45\Dropbox.Api.xml" />
     <file src="bin\Release\portable\Dropbox.Api.dll" target="lib\portable-net45+wp80+win8+wpa81+dnxcore50\Dropbox.Api.dll" />
     <file src="bin\Release\portable\Dropbox.Api.xml" target="lib\portable-net45+wp80+win8+wpa81+dnxcore50\Dropbox.Api.xml" />
     <file src="bin\Release\portable40\Dropbox.Api.dll" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.dll" />

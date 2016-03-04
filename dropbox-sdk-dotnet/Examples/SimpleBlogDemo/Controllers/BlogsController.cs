@@ -85,7 +85,7 @@ namespace SimpleBlogDemo.Controllers
                 return null;
             }
 
-            return new DropboxClient(user.DropboxAccessToken, userAgent: "SimpleBlogDemo");
+            return new DropboxClient(user.DropboxAccessToken, new DropboxClientConfig("SimpleBlogDemo"));
         }
     }
 }

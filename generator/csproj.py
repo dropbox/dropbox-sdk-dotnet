@@ -24,6 +24,10 @@ COMPILE_INCLUDES = [
     "Properties\\AssemblyInfo.cs",
 ]
 
+NONE_INCLUDES = [
+    "packages.config",        
+]
+
 PORTABLE40_NONE_INCLUDES = [
     "app.config",
     "packages.Dropbox.Api.Portable40.config",        
@@ -36,6 +40,72 @@ PORTABLE_NONE_INCLUDES = [
 DOC_NONE_INCLUDES = [
     "packages.config",        
 ]
+
+CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68180B54-4724-4CD1-BAA6-EE7BC309797C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dropbox.Api</RootNamespace>
+    <AssemblyName>Dropbox.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\net45</OutputPath>
+    <IntermediateOutputPath>obj\Debug\net45</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\net45\Dropbox.Api.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <NoWarn>419</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net45</OutputPath>
+    <IntermediateOutputPath>obj\Release\net45</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\net45\Dropbox.Api.XML</DocumentationFile>
+    <NoWarn>419</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+"""
+
+CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
+"""
 
 PORTABLE40_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -284,10 +354,14 @@ def make_csproj_file(files, mode, is_private=False):
         start = PORTABLE40_CSPROJ_START_BLOCK
         end = PORTABLE40_CSPROJ_END_BLOCK
         none_includes = PORTABLE40_NONE_INCLUDES
-    else:
+    elif mode == 'portable':
         start = PORTABLE_CSPROJ_START_BLOCK
         end = PORTABLE_CSPROJ_END_BLOCK
         none_includes = PORTABLE_NONE_INCLUDES
+    else:
+        start = CSPROJ_START_BLOCK
+        end = CSPROJ_END_BLOCK
+        none_includes = NONE_INCLUDES
 
     buffer = StringIO()
     buffer.write(start)
