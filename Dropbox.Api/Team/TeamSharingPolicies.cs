@@ -36,8 +36,11 @@ namespace Dropbox.Api.Team
         /// members.</param>
         /// <param name="sharedFolderJoinPolicy">Which shared folders team members can
         /// join.</param>
+        /// <param name="sharedLinkCreatePolicy">What is the visibility of newly created shared
+        /// links.</param>
         public TeamSharingPolicies(SharedFolderMemberPolicy sharedFolderMemberPolicy,
-                                   SharedFolderJoinPolicy sharedFolderJoinPolicy)
+                                   SharedFolderJoinPolicy sharedFolderJoinPolicy,
+                                   SharedLinkCreatePolicy sharedLinkCreatePolicy)
         {
             if (sharedFolderMemberPolicy == null)
             {
@@ -49,8 +52,14 @@ namespace Dropbox.Api.Team
                 throw new sys.ArgumentNullException("sharedFolderJoinPolicy");
             }
 
+            if (sharedLinkCreatePolicy == null)
+            {
+                throw new sys.ArgumentNullException("sharedLinkCreatePolicy");
+            }
+
             this.SharedFolderMemberPolicy = sharedFolderMemberPolicy;
             this.SharedFolderJoinPolicy = sharedFolderJoinPolicy;
+            this.SharedLinkCreatePolicy = sharedLinkCreatePolicy;
         }
 
         /// <summary>
@@ -73,6 +82,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public SharedFolderJoinPolicy SharedFolderJoinPolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>What is the visibility of newly created shared links.</para>
+        /// </summary>
+        public SharedLinkCreatePolicy SharedLinkCreatePolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -89,6 +103,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("shared_folder_member_policy", value.SharedFolderMemberPolicy, writer, Dropbox.Api.Team.SharedFolderMemberPolicy.Encoder);
                 WriteProperty("shared_folder_join_policy", value.SharedFolderJoinPolicy, writer, Dropbox.Api.Team.SharedFolderJoinPolicy.Encoder);
+                WriteProperty("shared_link_create_policy", value.SharedLinkCreatePolicy, writer, Dropbox.Api.Team.SharedLinkCreatePolicy.Encoder);
             }
         }
 
@@ -126,6 +141,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "shared_folder_join_policy":
                         value.SharedFolderJoinPolicy = Dropbox.Api.Team.SharedFolderJoinPolicy.Decoder.Decode(reader);
+                        break;
+                    case "shared_link_create_policy":
+                        value.SharedLinkCreatePolicy = Dropbox.Api.Team.SharedLinkCreatePolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

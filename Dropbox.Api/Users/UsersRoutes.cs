@@ -115,92 +115,6 @@ namespace Dropbox.Api.Users.Routes
         }
 
         /// <summary>
-        /// <para>Get information about the current user's account.</para>
-        /// </summary>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        public t.Task<FullAccount> GetCurrentAccountAsync()
-        {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", enc.EmptyEncoder.Instance, Dropbox.Api.Users.FullAccount.Decoder, enc.EmptyDecoder.Instance);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the get current account route.</para>
-        /// </summary>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetCurrentAccount(sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.GetCurrentAccountAsync();
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the get current account route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        public FullAccount EndGetCurrentAccount(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<FullAccount>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Get the space usage information for the current user's account.</para>
-        /// </summary>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        public t.Task<SpaceUsage> GetSpaceUsageAsync()
-        {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", enc.EmptyEncoder.Instance, Dropbox.Api.Users.SpaceUsage.Decoder, enc.EmptyDecoder.Instance);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the get space usage route.</para>
-        /// </summary>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetSpaceUsage(sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.GetSpaceUsageAsync();
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the get space usage route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        public SpaceUsage EndGetSpaceUsage(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<SpaceUsage>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
         /// <para>Get information about multiple user accounts.  At most 300 accounts may be
         /// queried per request.</para>
         /// </summary>
@@ -281,6 +195,92 @@ namespace Dropbox.Api.Users.Routes
         public col.List<BasicAccount> EndGetAccountBatch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<col.List<BasicAccount>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get information about the current user's account.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<FullAccount> GetCurrentAccountAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", enc.EmptyEncoder.Instance, Dropbox.Api.Users.FullAccount.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get current account route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetCurrentAccount(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetCurrentAccountAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get current account route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public FullAccount EndGetCurrentAccount(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<FullAccount>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get the space usage information for the current user's account.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<SpaceUsage> GetSpaceUsageAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", enc.EmptyEncoder.Instance, Dropbox.Api.Users.SpaceUsage.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get space usage route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetSpaceUsage(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetSpaceUsageAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get space usage route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public SpaceUsage EndGetSpaceUsage(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SpaceUsage>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

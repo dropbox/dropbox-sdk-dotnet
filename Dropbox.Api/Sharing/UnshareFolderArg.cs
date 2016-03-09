@@ -36,7 +36,7 @@ namespace Dropbox.Api.Sharing
         /// this folder after it's unshared. Otherwise, it will be removed from their Dropbox.
         /// The current user, who is an owner, will always retain their copy.</param>
         public UnshareFolderArg(string sharedFolderId,
-                                bool leaveACopy)
+                                bool leaveACopy = false)
         {
             if (sharedFolderId == null)
             {
@@ -59,6 +59,7 @@ namespace Dropbox.Api.Sharing
         /// deserializing.</remarks>
         public UnshareFolderArg()
         {
+            this.LeaveACopy = false;
         }
 
         /// <summary>

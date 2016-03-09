@@ -33,7 +33,9 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></param>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. Cursors
+        /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
+        /// /> to <c>true</c> are not supported.</param>
         /// <param name="timeout">A timeout in seconds. The request will block for at most this
         /// length of time, plus up to 90 seconds of random jitter added to avoid the
         /// thundering herd problem. Care should be taken when using this parameter, as some
@@ -73,7 +75,9 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>A cursor as returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></para>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. Cursors
+        /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
+        /// /> to <c>true</c> are not supported.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

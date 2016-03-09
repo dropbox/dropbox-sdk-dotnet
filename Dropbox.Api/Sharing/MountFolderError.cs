@@ -146,6 +146,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NotMountable</para>
+        /// </summary>
+        public bool IsNotMountable
+        {
+            get
+            {
+                return this is NotMountable;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NotMountable, or <c>null</c>.</para>
+        /// </summary>
+        public NotMountable AsNotMountable
+        {
+            get
+            {
+                return this as NotMountable;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -211,6 +233,12 @@ namespace Dropbox.Api.Sharing
                     NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
                     return;
                 }
+                if (value is NotMountable)
+                {
+                    WriteProperty(".tag", "not_mountable", writer, enc.StringEncoder.Instance);
+                    NotMountable.Encoder.EncodeFields((NotMountable)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -259,6 +287,8 @@ namespace Dropbox.Api.Sharing
                         return AlreadyMounted.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
+                    case "not_mountable":
+                        return NotMountable.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -679,6 +709,86 @@ namespace Dropbox.Api.Sharing
                 public override NoPermission DecodeFields(enc.IJsonReader reader)
                 {
                     return NoPermission.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The shared folder is not mountable. One example where this can occur is when
+        /// the shared folder belongs within a team folder in the user's Dropbox.</para>
+        /// </summary>
+        public sealed class NotMountable : MountFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NotMountable> Encoder = new NotMountableEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NotMountable> Decoder = new NotMountableDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NotMountable" />
+            /// class.</para>
+            /// </summary>
+            private NotMountable()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NotMountable</para>
+            /// </summary>
+            public static readonly NotMountable Instance = new NotMountable();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NotMountable" />.</para>
+            /// </summary>
+            private class NotMountableEncoder : enc.StructEncoder<NotMountable>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NotMountable value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NotMountable" />.</para>
+            /// </summary>
+            private class NotMountableDecoder : enc.StructDecoder<NotMountable>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NotMountable" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NotMountable Create()
+                {
+                    return new NotMountable();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NotMountable DecodeFields(enc.IJsonReader reader)
+                {
+                    return NotMountable.Instance;
                 }
             }
 

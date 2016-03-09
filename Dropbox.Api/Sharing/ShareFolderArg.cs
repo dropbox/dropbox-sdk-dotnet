@@ -32,11 +32,13 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="path">The path to the folder to share. If it does not exist, then a
         /// new one is created.</param>
-        /// <param name="memberPolicy">Who can be a member of this shared folder.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
+        /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
-        /// content inside this shared folder.</param>
+        /// content inside this shared folder.  The current user must be on a team to set this
+        /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="forceAsync">Whether to force the share to happen
         /// asynchronously.</param>
         public ShareFolderArg(string path,
@@ -96,7 +98,8 @@ namespace Dropbox.Api.Sharing
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Who can be a member of this shared folder.</para>
+        /// <para>Who can be a member of this shared folder. Only applicable if the current
+        /// user is on a team.</para>
         /// </summary>
         public MemberPolicy MemberPolicy { get; protected set; }
 
@@ -107,7 +110,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The policy to apply to shared links created for content inside this shared
-        /// folder.</para>
+        /// folder.  The current user must be on a team to set this policy to <see
+        /// cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</para>
         /// </summary>
         public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
 

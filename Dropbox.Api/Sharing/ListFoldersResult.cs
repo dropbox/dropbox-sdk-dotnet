@@ -12,7 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Result for <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync"
-    /// />.</para>
+    /// /> or <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersAsync"
+    /// />, depending on which endpoint was requested.</para>
     /// <para>Unmounted shared folders can be identified by the absence of <see
     /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.PathLower" />.</para>
     /// </summary>
@@ -37,9 +38,11 @@ namespace Dropbox.Api.Sharing
         /// <param name="entries">List of all shared folders the authenticated user has access
         /// to.</param>
         /// <param name="cursor">Present if there are additional shared folders that have not
-        /// been returned yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> to list
-        /// additional folders.</param>
+        /// been returned yet. Pass the cursor into the corresponding continue endpoint (either
+        /// <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> or
+        /// <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersContinueAsync"
+        /// />) to list additional folders.</param>
         public ListFoldersResult(col.IEnumerable<SharedFolderMetadata> entries,
                                  string cursor = null)
         {
@@ -71,9 +74,10 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>Present if there are additional shared folders that have not been returned
-        /// yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> to list
-        /// additional folders.</para>
+        /// yet. Pass the cursor into the corresponding continue endpoint (either <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> or <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersContinueAsync"
+        /// />) to list additional folders.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

@@ -32,12 +32,13 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="memberPolicy">Who can be a member of this shared folder. Only set this
-        /// if the current user is on a team.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
+        /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
-        /// content inside this shared folder.</param>
+        /// content inside this shared folder. The current user must be on a team to set this
+        /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         public UpdateFolderPolicyArg(string sharedFolderId,
                                      MemberPolicy memberPolicy = null,
                                      AclUpdatePolicy aclUpdatePolicy = null,
@@ -74,8 +75,8 @@ namespace Dropbox.Api.Sharing
         public string SharedFolderId { get; protected set; }
 
         /// <summary>
-        /// <para>Who can be a member of this shared folder. Only set this if the current user
-        /// is on a team.</para>
+        /// <para>Who can be a member of this shared folder. Only applicable if the current
+        /// user is on a team.</para>
         /// </summary>
         public MemberPolicy MemberPolicy { get; protected set; }
 
@@ -86,7 +87,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The policy to apply to shared links created for content inside this shared
-        /// folder.</para>
+        /// folder. The current user must be on a team to set this policy to <see
+        /// cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</para>
         /// </summary>
         public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
 

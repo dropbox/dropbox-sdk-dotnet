@@ -11,78 +11,80 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The list folder members args object</para>
+    /// <para>The list folder members cursor arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Sharing.ListFolderMembersCursorArg" />
-    public class ListFolderMembersArgs : ListFolderMembersCursorArg
+    /// <seealso cref="ListFolderMembersArgs" />
+    public class ListFolderMembersCursorArg
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<ListFolderMembersArgs> Encoder = new ListFolderMembersArgsEncoder();
+        internal static enc.StructEncoder<ListFolderMembersCursorArg> Encoder = new ListFolderMembersCursorArgEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<ListFolderMembersArgs> Decoder = new ListFolderMembersArgsDecoder();
+        internal static enc.StructDecoder<ListFolderMembersCursorArg> Decoder = new ListFolderMembersCursorArgDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="ListFolderMembersArgs" />
+        /// <para>Initializes a new instance of the <see cref="ListFolderMembersCursorArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="actions">Member actions to query.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
-        public ListFolderMembersArgs(string sharedFolderId,
-                                     col.IEnumerable<MemberAction> actions = null,
-                                     uint limit = 1000)
-            : base(actions, limit)
+        public ListFolderMembersCursorArg(col.IEnumerable<MemberAction> actions = null,
+                                          uint limit = 1000)
         {
-            if (sharedFolderId == null)
+            var actionsList = enc.Util.ToList(actions);
+
+            if (limit < 1U || limit > 1000U)
             {
-                throw new sys.ArgumentNullException("sharedFolderId");
-            }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
-            {
-                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+                throw new sys.ArgumentOutOfRangeException("limit");
             }
 
-            this.SharedFolderId = sharedFolderId;
+            this.Actions = actionsList;
+            this.Limit = limit;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="ListFolderMembersArgs" />
+        /// <para>Initializes a new instance of the <see cref="ListFolderMembersCursorArg" />
         /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public ListFolderMembersArgs()
+        public ListFolderMembersCursorArg()
         {
+            this.Limit = 1000;
         }
 
         /// <summary>
-        /// <para>The ID for the shared folder.</para>
+        /// <para>Member actions to query.</para>
         /// </summary>
-        public string SharedFolderId { get; protected set; }
+        public col.IList<MemberAction> Actions { get; protected set; }
+
+        /// <summary>
+        /// <para>The maximum number of results that include members, groups and invitees to
+        /// return per request.</para>
+        /// </summary>
+        public uint Limit { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="ListFolderMembersArgs" />.</para>
+        /// <para>Encoder for  <see cref="ListFolderMembersCursorArg" />.</para>
         /// </summary>
-        private class ListFolderMembersArgsEncoder : enc.StructEncoder<ListFolderMembersArgs>
+        private class ListFolderMembersCursorArgEncoder : enc.StructEncoder<ListFolderMembersCursorArg>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(ListFolderMembersArgs value, enc.IJsonWriter writer)
+            public override void EncodeFields(ListFolderMembersCursorArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 if (value.Actions.Count > 0)
                 {
                     WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.MemberAction.Encoder);
@@ -97,18 +99,18 @@ namespace Dropbox.Api.Sharing
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="ListFolderMembersArgs" />.</para>
+        /// <para>Decoder for  <see cref="ListFolderMembersCursorArg" />.</para>
         /// </summary>
-        private class ListFolderMembersArgsDecoder : enc.StructDecoder<ListFolderMembersArgs>
+        private class ListFolderMembersCursorArgDecoder : enc.StructDecoder<ListFolderMembersCursorArg>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="ListFolderMembersArgs"
+            /// <para>Create a new instance of type <see cref="ListFolderMembersCursorArg"
             /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override ListFolderMembersArgs Create()
+            protected override ListFolderMembersCursorArg Create()
             {
-                return new ListFolderMembersArgs();
+                return new ListFolderMembersCursorArg();
             }
 
             /// <summary>
@@ -117,13 +119,10 @@ namespace Dropbox.Api.Sharing
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(ListFolderMembersArgs value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(ListFolderMembersCursorArg value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "shared_folder_id":
-                        value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "actions":
                         value.Actions = ReadList<MemberAction>(reader, Dropbox.Api.Sharing.MemberAction.Decoder);
                         break;

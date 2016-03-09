@@ -35,7 +35,7 @@ namespace Dropbox.Api.Sharing
         /// folder.</param>
         /// <param name="allow">True if the user is allowed to take the action.</param>
         /// <param name="reason">The reason why the user is denied the permission. Not present
-        /// if the action is allowed</param>
+        /// if the action is allowed, or if no reason is available.</param>
         public FolderPermission(FolderAction action,
                                 bool allow,
                                 PermissionDeniedReason reason = null)
@@ -72,7 +72,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The reason why the user is denied the permission. Not present if the action
-        /// is allowed</para>
+        /// is allowed, or if no reason is available.</para>
         /// </summary>
         public PermissionDeniedReason Reason { get; protected set; }
 

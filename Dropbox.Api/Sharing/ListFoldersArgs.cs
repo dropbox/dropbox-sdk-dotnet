@@ -32,7 +32,7 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
-        /// <param name="actions">Folder actions to query. This field is optional.</param>
+        /// <param name="actions">Folder actions to query.</param>
         public ListFoldersArgs(uint limit = 1000,
                                col.IEnumerable<FolderAction> actions = null)
         {
@@ -64,7 +64,7 @@ namespace Dropbox.Api.Sharing
         public uint Limit { get; protected set; }
 
         /// <summary>
-        /// <para>Folder actions to query. This field is optional.</para>
+        /// <para>Folder actions to query.</para>
         /// </summary>
         public col.IList<FolderAction> Actions { get; protected set; }
 

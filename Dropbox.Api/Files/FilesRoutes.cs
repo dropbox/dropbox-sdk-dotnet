@@ -30,6 +30,368 @@ namespace Dropbox.Api.Files.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
+        /// <para>If the source path is a folder all its contents will be copied.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy route.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCopy(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CopyAsync(relocationArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
+        /// <para>If the source path is a folder all its contents will be copied.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        public t.Task<Metadata> CopyAsync(string fromPath,
+                                          string toPath)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath);
+
+            return this.CopyAsync(relocationArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy route.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCopy(string fromPath,
+                                          string toPath,
+                                          sys.AsyncCallback callback,
+                                          object callbackState = null)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath);
+
+            return this.BeginCopy(relocationArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the copy route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        public Metadata EndCopy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Create a folder at a given path.</para>
+        /// </summary>
+        /// <param name="createFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CreateFolderError"/>.</exception>
+        public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", Dropbox.Api.Files.CreateFolderArg.Encoder, Dropbox.Api.Files.FolderMetadata.Decoder, Dropbox.Api.Files.CreateFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder route.</para>
+        /// </summary>
+        /// <param name="createFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCreateFolder(CreateFolderArg createFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CreateFolderAsync(createFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Create a folder at a given path.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to create.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CreateFolderError"/>.</exception>
+        public t.Task<FolderMetadata> CreateFolderAsync(string path)
+        {
+            var createFolderArg = new CreateFolderArg(path);
+
+            return this.CreateFolderAsync(createFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to create.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCreateFolder(string path,
+                                                  sys.AsyncCallback callback,
+                                                  object callbackState = null)
+        {
+            var createFolderArg = new CreateFolderArg(path);
+
+            return this.BeginCreateFolder(createFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the create folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CreateFolderError"/>.</exception>
+        public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<FolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Delete the file or folder at a given path.</para>
+        /// <para>If the path is a folder, all its contents will be deleted too.</para>
+        /// <para>A successful response indicates that the file or folder was deleted. The
+        /// returned metadata will be the corresponding <see cref="FileMetadata" /> or <see
+        /// cref="FolderMetadata" /> for the item at time of deletion, and not a <see
+        /// cref="DeletedMetadata" /> object.</para>
+        /// </summary>
+        /// <param name="deleteArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", Dropbox.Api.Files.DeleteArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.DeleteError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete route.</para>
+        /// </summary>
+        /// <param name="deleteArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteAsync(deleteArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Delete the file or folder at a given path.</para>
+        /// <para>If the path is a folder, all its contents will be deleted too.</para>
+        /// <para>A successful response indicates that the file or folder was deleted. The
+        /// returned metadata will be the corresponding <see cref="FileMetadata" /> or <see
+        /// cref="FolderMetadata" /> for the item at time of deletion, and not a <see
+        /// cref="DeletedMetadata" /> object.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        public t.Task<Metadata> DeleteAsync(string path)
+        {
+            var deleteArg = new DeleteArg(path);
+
+            return this.DeleteAsync(deleteArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDelete(string path,
+                                            sys.AsyncCallback callback,
+                                            object callbackState = null)
+        {
+            var deleteArg = new DeleteArg(path);
+
+            return this.BeginDelete(deleteArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        public Metadata EndDelete(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Download a file from a user's Dropbox.</para>
+        /// </summary>
+        /// <param name="downloadArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DownloadError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(DownloadArg downloadArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<DownloadArg, FileMetadata, DownloadError>(downloadArg, "content", "/files/download", Dropbox.Api.Files.DownloadArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.DownloadError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the download route.</para>
+        /// </summary>
+        /// <param name="downloadArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDownload(DownloadArg downloadArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DownloadAsync(downloadArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Download a file from a user's Dropbox.</para>
+        /// </summary>
+        /// <param name="path">The path of the file to download.</param>
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
+        /// instead</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DownloadError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(string path,
+                                                                         string rev = null)
+        {
+            var downloadArg = new DownloadArg(path,
+                                              rev);
+
+            return this.DownloadAsync(downloadArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the download route.</para>
+        /// </summary>
+        /// <param name="path">The path of the file to download.</param>
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
+        /// instead</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDownload(string path,
+                                              string rev = null,
+                                              sys.AsyncCallback callback = null,
+                                              object callbackState = null)
+        {
+            var downloadArg = new DownloadArg(path,
+                                              rev);
+
+            return this.BeginDownload(downloadArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the download route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DownloadError"/>.</exception>
+        public enc.IDownloadResponse<FileMetadata> EndDownload(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
         /// <para>Note: Metadata for the root folder is unsupported.</para>
         /// </summary>
@@ -127,101 +489,187 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, this call
-        /// gives you a low-latency way to monitor an account for file changes. The connection
-        /// will block until there are changes available or a timeout occurs. This endpoint is
-        /// useful mostly for client-side apps. If you're looking for server-side
-        /// notifications, check out our <a
-        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
-        /// documentation</a>.</para>
+        /// <para>Get a preview for a file. Currently previews are only generated for the files
+        /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
+        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
         /// </summary>
-        /// <param name="listFolderLongpollArg">The request parameters</param>
+        /// <param name="previewArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ListFolderLongpollError"/>.</exception>
-        public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(ListFolderLongpollArg listFolderLongpollArg)
+        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(PreviewArg previewArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderLongpollArg, ListFolderLongpollResult, ListFolderLongpollError>(listFolderLongpollArg, "notify", "/files/list_folder/longpoll", Dropbox.Api.Files.ListFolderLongpollArg.Encoder, Dropbox.Api.Files.ListFolderLongpollResult.Decoder, Dropbox.Api.Files.ListFolderLongpollError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", Dropbox.Api.Files.PreviewArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.PreviewError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
+        /// <para>Begins an asynchronous send to the get preview route.</para>
         /// </summary>
-        /// <param name="listFolderLongpollArg">The request parameters.</param>
+        /// <param name="previewArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListFolderLongpoll(ListFolderLongpollArg listFolderLongpollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginGetPreview(PreviewArg previewArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.ListFolderLongpollAsync(listFolderLongpollArg);
+            var task = this.GetPreviewAsync(previewArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, this call
-        /// gives you a low-latency way to monitor an account for file changes. The connection
-        /// will block until there are changes available or a timeout occurs. This endpoint is
-        /// useful mostly for client-side apps. If you're looking for server-side
-        /// notifications, check out our <a
-        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
-        /// documentation</a>.</para>
+        /// <para>Get a preview for a file. Currently previews are only generated for the files
+        /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
+        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
         /// </summary>
-        /// <param name="cursor">A cursor as returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></param>
-        /// <param name="timeout">A timeout in seconds. The request will block for at most this
-        /// length of time, plus up to 90 seconds of random jitter added to avoid the
-        /// thundering herd problem. Care should be taken when using this parameter, as some
-        /// network infrastructure does not support long timeouts.</param>
+        /// <param name="path">The path of the file to preview.</param>
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
+        /// instead</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ListFolderLongpollError"/>.</exception>
-        public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(string cursor,
-                                                                        ulong timeout = 30)
+        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(string path,
+                                                                           string rev = null)
         {
-            var listFolderLongpollArg = new ListFolderLongpollArg(cursor,
-                                                                  timeout);
+            var previewArg = new PreviewArg(path,
+                                            rev);
 
-            return this.ListFolderLongpollAsync(listFolderLongpollArg);
+            return this.GetPreviewAsync(previewArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
+        /// <para>Begins an asynchronous send to the get preview route.</para>
         /// </summary>
-        /// <param name="cursor">A cursor as returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></param>
-        /// <param name="timeout">A timeout in seconds. The request will block for at most this
-        /// length of time, plus up to 90 seconds of random jitter added to avoid the
-        /// thundering herd problem. Care should be taken when using this parameter, as some
-        /// network infrastructure does not support long timeouts.</param>
+        /// <param name="path">The path of the file to preview.</param>
+        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
+        /// instead</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListFolderLongpoll(string cursor,
-                                                        ulong timeout = 30,
-                                                        sys.AsyncCallback callback = null,
-                                                        object callbackState = null)
+        public sys.IAsyncResult BeginGetPreview(string path,
+                                                string rev = null,
+                                                sys.AsyncCallback callback = null,
+                                                object callbackState = null)
         {
-            var listFolderLongpollArg = new ListFolderLongpollArg(cursor,
-                                                                  timeout);
+            var previewArg = new PreviewArg(path,
+                                            rev);
 
-            return this.BeginListFolderLongpoll(listFolderLongpollArg, callback, callbackState);
+            return this.BeginGetPreview(previewArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the list folder longpoll route to
+        /// <para>Waits for the pending asynchronous send to the get preview route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
+        public enc.IDownloadResponse<FileMetadata> EndGetPreview(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get a thumbnail for an image.</para>
+        /// <para>This method currently supports files with the following file extensions: jpg,
+        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
+        /// be converted to a thumbnail.</para>
+        /// </summary>
+        /// <param name="thumbnailArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ThumbnailError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(ThumbnailArg thumbnailArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<ThumbnailArg, FileMetadata, ThumbnailError>(thumbnailArg, "content", "/files/get_thumbnail", Dropbox.Api.Files.ThumbnailArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.ThumbnailError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get thumbnail route.</para>
+        /// </summary>
+        /// <param name="thumbnailArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetThumbnail(ThumbnailArg thumbnailArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetThumbnailAsync(thumbnailArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get a thumbnail for an image.</para>
+        /// <para>This method currently supports files with the following file extensions: jpg,
+        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
+        /// be converted to a thumbnail.</para>
+        /// </summary>
+        /// <param name="path">The path to the image file you want to thumbnail.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
+        /// images that are photos, jpeg should be preferred, while png is  better for
+        /// screenshots and digital arts.</param>
+        /// <param name="size">The size for the thumbnail image.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ThumbnailError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(string path,
+                                                                             ThumbnailFormat format = null,
+                                                                             ThumbnailSize size = null)
+        {
+            var thumbnailArg = new ThumbnailArg(path,
+                                                format,
+                                                size);
+
+            return this.GetThumbnailAsync(thumbnailArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get thumbnail route.</para>
+        /// </summary>
+        /// <param name="path">The path to the image file you want to thumbnail.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
+        /// images that are photos, jpeg should be preferred, while png is  better for
+        /// screenshots and digital arts.</param>
+        /// <param name="size">The size for the thumbnail image.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetThumbnail(string path,
+                                                  ThumbnailFormat format = null,
+                                                  ThumbnailSize size = null,
+                                                  sys.AsyncCallback callback = null,
+                                                  object callbackState = null)
+        {
+            var thumbnailArg = new ThumbnailArg(path,
+                                                format,
+                                                size);
+
+            return this.BeginGetThumbnail(thumbnailArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get thumbnail route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
@@ -229,10 +677,10 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="ListFolderLongpollError"/>.</exception>
-        public ListFolderLongpollResult EndListFolderLongpoll(sys.IAsyncResult asyncResult)
+        /// cref="ThumbnailError"/>.</exception>
+        public enc.IDownloadResponse<FileMetadata> EndGetThumbnail(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<ListFolderLongpollResult>;
+            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -573,79 +1021,105 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Download a file from a user's Dropbox.</para>
+        /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, this call
+        /// gives you a low-latency way to monitor an account for file changes. The connection
+        /// will block until there are changes available or a timeout occurs. This endpoint is
+        /// useful mostly for client-side apps. If you're looking for server-side
+        /// notifications, check out our <a
+        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
+        /// documentation</a>.</para>
         /// </summary>
-        /// <param name="downloadArg">The request parameters</param>
+        /// <param name="listFolderLongpollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="DownloadError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(DownloadArg downloadArg)
+        /// cref="ListFolderLongpollError"/>.</exception>
+        public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(ListFolderLongpollArg listFolderLongpollArg)
         {
-            return this.Transport.SendDownloadRequestAsync<DownloadArg, FileMetadata, DownloadError>(downloadArg, "content", "/files/download", Dropbox.Api.Files.DownloadArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.DownloadError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderLongpollArg, ListFolderLongpollResult, ListFolderLongpollError>(listFolderLongpollArg, "notify", "/files/list_folder/longpoll", Dropbox.Api.Files.ListFolderLongpollArg.Encoder, Dropbox.Api.Files.ListFolderLongpollResult.Decoder, Dropbox.Api.Files.ListFolderLongpollError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the download route.</para>
+        /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
         /// </summary>
-        /// <param name="downloadArg">The request parameters.</param>
+        /// <param name="listFolderLongpollArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDownload(DownloadArg downloadArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginListFolderLongpoll(ListFolderLongpollArg listFolderLongpollArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.DownloadAsync(downloadArg);
+            var task = this.ListFolderLongpollAsync(listFolderLongpollArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Download a file from a user's Dropbox.</para>
+        /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, this call
+        /// gives you a low-latency way to monitor an account for file changes. The connection
+        /// will block until there are changes available or a timeout occurs. This endpoint is
+        /// useful mostly for client-side apps. If you're looking for server-side
+        /// notifications, check out our <a
+        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
+        /// documentation</a>.</para>
         /// </summary>
-        /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// <param name="cursor">A cursor as returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. Cursors
+        /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
+        /// /> to <c>true</c> are not supported.</param>
+        /// <param name="timeout">A timeout in seconds. The request will block for at most this
+        /// length of time, plus up to 90 seconds of random jitter added to avoid the
+        /// thundering herd problem. Care should be taken when using this parameter, as some
+        /// network infrastructure does not support long timeouts.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="DownloadError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(string path,
-                                                                         string rev = null)
+        /// cref="ListFolderLongpollError"/>.</exception>
+        public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(string cursor,
+                                                                        ulong timeout = 30)
         {
-            var downloadArg = new DownloadArg(path,
-                                              rev);
+            var listFolderLongpollArg = new ListFolderLongpollArg(cursor,
+                                                                  timeout);
 
-            return this.DownloadAsync(downloadArg);
+            return this.ListFolderLongpollAsync(listFolderLongpollArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the download route.</para>
+        /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
         /// </summary>
-        /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// <param name="cursor">A cursor as returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. Cursors
+        /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
+        /// /> to <c>true</c> are not supported.</param>
+        /// <param name="timeout">A timeout in seconds. The request will block for at most this
+        /// length of time, plus up to 90 seconds of random jitter added to avoid the
+        /// thundering herd problem. Care should be taken when using this parameter, as some
+        /// network infrastructure does not support long timeouts.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDownload(string path,
-                                              string rev = null,
-                                              sys.AsyncCallback callback = null,
-                                              object callbackState = null)
+        public sys.IAsyncResult BeginListFolderLongpoll(string cursor,
+                                                        ulong timeout = 30,
+                                                        sys.AsyncCallback callback = null,
+                                                        object callbackState = null)
         {
-            var downloadArg = new DownloadArg(path,
-                                              rev);
+            var listFolderLongpollArg = new ListFolderLongpollArg(cursor,
+                                                                  timeout);
 
-            return this.BeginDownload(downloadArg, callback, callbackState);
+            return this.BeginListFolderLongpoll(listFolderLongpollArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the download route to
+        /// <para>Waits for the pending asynchronous send to the list folder longpoll route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
@@ -653,10 +1127,10 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="DownloadError"/>.</exception>
-        public enc.IDownloadResponse<FileMetadata> EndDownload(sys.IAsyncResult asyncResult)
+        /// cref="ListFolderLongpollError"/>.</exception>
+        public ListFolderLongpollResult EndListFolderLongpoll(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
+            var task = asyncResult as t.Task<ListFolderLongpollResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -666,47 +1140,603 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Upload sessions allow you to upload a single file using multiple requests.
-        /// This call starts a new upload session with the given data.  You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> to add more
-        /// data and <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
-        /// /> to save all the data to a file in Dropbox.</para>
-        /// <para>A single request should not upload more than 150 MB of file contents.</para>
+        /// <para>Return revisions of a file</para>
         /// </summary>
-        /// <param name="body">The content to upload.</param>
+        /// <param name="listRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<UploadSessionStartResult> UploadSessionStartAsync(io.Stream body)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListRevisionsError"/>.</exception>
+        public t.Task<ListRevisionsResult> ListRevisionsAsync(ListRevisionsArg listRevisionsArg)
         {
-            return this.Transport.SendUploadRequestAsync<enc.Empty, UploadSessionStartResult, enc.Empty>(enc.Empty.Instance, body, "content", "/files/upload_session/start", enc.EmptyEncoder.Instance, Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions", Dropbox.Api.Files.ListRevisionsArg.Encoder, Dropbox.Api.Files.ListRevisionsResult.Decoder, Dropbox.Api.Files.ListRevisionsError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the upload session start route.</para>
+        /// <para>Begins an asynchronous send to the list revisions route.</para>
         /// </summary>
+        /// <param name="listRevisionsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListRevisions(ListRevisionsArg listRevisionsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListRevisionsAsync(listRevisionsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Return revisions of a file</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListRevisionsError"/>.</exception>
+        public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
+                                                              ulong limit = 10)
+        {
+            var listRevisionsArg = new ListRevisionsArg(path,
+                                                        limit);
+
+            return this.ListRevisionsAsync(listRevisionsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list revisions route.</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListRevisions(string path,
+                                                   ulong limit = 10,
+                                                   sys.AsyncCallback callback = null,
+                                                   object callbackState = null)
+        {
+            var listRevisionsArg = new ListRevisionsArg(path,
+                                                        limit);
+
+            return this.BeginListRevisions(listRevisionsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list revisions route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListRevisionsError"/>.</exception>
+        public ListRevisionsResult EndListRevisions(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListRevisionsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
+        /// <para>If the source path is a folder all its contents will be moved.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move route.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMove(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MoveAsync(relocationArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
+        /// <para>If the source path is a folder all its contents will be moved.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        public t.Task<Metadata> MoveAsync(string fromPath,
+                                          string toPath)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath);
+
+            return this.MoveAsync(relocationArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move route.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMove(string fromPath,
+                                          string toPath,
+                                          sys.AsyncCallback callback,
+                                          object callbackState = null)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath);
+
+            return this.BeginMove(relocationArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the move route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        public Metadata EndMove(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Permanently delete the file or folder at a given path (see
+        /// https://www.dropbox.com/en/help/40).</para>
+        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
+        /// </summary>
+        /// <param name="deleteArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        public t.Task PermanentlyDeleteAsync(DeleteArg deleteArg)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteArg, enc.Empty, DeleteError>(deleteArg, "api", "/files/permanently_delete", Dropbox.Api.Files.DeleteArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.DeleteError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the permanently delete route.</para>
+        /// </summary>
+        /// <param name="deleteArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPermanentlyDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PermanentlyDeleteAsync(deleteArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Permanently delete the file or folder at a given path (see
+        /// https://www.dropbox.com/en/help/40).</para>
+        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        public t.Task PermanentlyDeleteAsync(string path)
+        {
+            var deleteArg = new DeleteArg(path);
+
+            return this.PermanentlyDeleteAsync(deleteArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the permanently delete route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPermanentlyDelete(string path,
+                                                       sys.AsyncCallback callback,
+                                                       object callbackState = null)
+        {
+            var deleteArg = new DeleteArg(path);
+
+            return this.BeginPermanentlyDelete(deleteArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the permanently delete route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        public void EndPermanentlyDelete(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Restore a file to a specific revision</para>
+        /// </summary>
+        /// <param name="restoreArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
+        public t.Task<FileMetadata> RestoreAsync(RestoreArg restoreArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", Dropbox.Api.Files.RestoreArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.RestoreError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the restore route.</para>
+        /// </summary>
+        /// <param name="restoreArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRestore(RestoreArg restoreArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.RestoreAsync(restoreArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Restore a file to a specific revision</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to restore.</param>
+        /// <param name="rev">The revision to restore for the file.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
+        public t.Task<FileMetadata> RestoreAsync(string path,
+                                                 string rev)
+        {
+            var restoreArg = new RestoreArg(path,
+                                            rev);
+
+            return this.RestoreAsync(restoreArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the restore route.</para>
+        /// </summary>
+        /// <param name="path">The path to the file you want to restore.</param>
+        /// <param name="rev">The revision to restore for the file.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRestore(string path,
+                                             string rev,
+                                             sys.AsyncCallback callback,
+                                             object callbackState = null)
+        {
+            var restoreArg = new RestoreArg(path,
+                                            rev);
+
+            return this.BeginRestore(restoreArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the restore route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
+        public FileMetadata EndRestore(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<FileMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Searches for files and folders.</para>
+        /// </summary>
+        /// <param name="searchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", Dropbox.Api.Files.SearchArg.Encoder, Dropbox.Api.Files.SearchResult.Decoder, Dropbox.Api.Files.SearchError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the search route.</para>
+        /// </summary>
+        /// <param name="searchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSearch(SearchArg searchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SearchAsync(searchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Searches for files and folders.</para>
+        /// </summary>
+        /// <param name="path">The path in the user's Dropbox to search. Should probably be a
+        /// folder.</param>
+        /// <param name="query">The string to search for. The search string is split on spaces
+        /// into multiple tokens. For file name searching, the last token is used for prefix
+        /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
+        /// <param name="start">The starting index within the search results (used for
+        /// paging).</param>
+        /// <param name="maxResults">The maximum number of search results to return.</param>
+        /// <param name="mode">The search mode (filename, filename_and_content, or
+        /// deleted_filename). Note that searching file content is only available for Dropbox
+        /// Business accounts.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public t.Task<SearchResult> SearchAsync(string path,
+                                                string query,
+                                                ulong start = 0,
+                                                ulong maxResults = 100,
+                                                SearchMode mode = null)
+        {
+            var searchArg = new SearchArg(path,
+                                          query,
+                                          start,
+                                          maxResults,
+                                          mode);
+
+            return this.SearchAsync(searchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the search route.</para>
+        /// </summary>
+        /// <param name="path">The path in the user's Dropbox to search. Should probably be a
+        /// folder.</param>
+        /// <param name="query">The string to search for. The search string is split on spaces
+        /// into multiple tokens. For file name searching, the last token is used for prefix
+        /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
+        /// <param name="start">The starting index within the search results (used for
+        /// paging).</param>
+        /// <param name="maxResults">The maximum number of search results to return.</param>
+        /// <param name="mode">The search mode (filename, filename_and_content, or
+        /// deleted_filename). Note that searching file content is only available for Dropbox
+        /// Business accounts.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSearch(string path,
+                                            string query,
+                                            ulong start = 0,
+                                            ulong maxResults = 100,
+                                            SearchMode mode = null,
+                                            sys.AsyncCallback callback = null,
+                                            object callbackState = null)
+        {
+            var searchArg = new SearchArg(path,
+                                          query,
+                                          start,
+                                          maxResults,
+                                          mode);
+
+            return this.BeginSearch(searchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the search route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public SearchResult EndSearch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SearchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Create a new file with the contents provided in the request.</para>
+        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
+        /// upload session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// </summary>
+        /// <param name="commitInfo">The request parameters</param>
+        /// <param name="body">The content to upload.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
+        public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
+        {
+            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", Dropbox.Api.Files.CommitInfo.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload route.</para>
+        /// </summary>
+        /// <param name="commitInfo">The request parameters.</param>
         /// <param name="body">The content to upload.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUploadSessionStart(io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUpload(CommitInfo commitInfo, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.UploadSessionStartAsync(body);
+            var task = this.UploadAsync(commitInfo, body);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the upload session start route to
+        /// <para>Create a new file with the contents provided in the request.</para>
+        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
+        /// upload session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to save the file.</param>
+        /// <param name="mode">Selects what to do if the file already exists.</param>
+        /// <param name="autorename">If there's a conflict, as determined by <paramref
+        /// name="mode" />, have the Dropbox server try to autorename the file to avoid
+        /// conflict.</param>
+        /// <param name="clientModified">The value to store as the <paramref
+        /// name="clientModified" /> timestamp. Dropbox automatically records the time at which
+        /// the file was written to the Dropbox servers. It can also record an additional
+        /// timestamp, provided by Dropbox desktop clients, mobile clients, and API apps of
+        /// when the file was actually created or modified.</param>
+        /// <param name="mute">Normally, users are made aware of any file modifications in
+        /// their Dropbox account via notifications in the client software. If <c>true</c>,
+        /// this tells the clients that this modification shouldn't result in a user
+        /// notification.</param>
+        /// <param name="body">The document to upload</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
+        public t.Task<FileMetadata> UploadAsync(string path,
+                                                WriteMode mode = null,
+                                                bool autorename = false,
+                                                sys.DateTime? clientModified = null,
+                                                bool mute = false,
+                                                io.Stream body = null)
+        {
+            var commitInfo = new CommitInfo(path,
+                                            mode,
+                                            autorename,
+                                            clientModified,
+                                            mute);
+
+            return this.UploadAsync(commitInfo, body);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to save the file.</param>
+        /// <param name="mode">Selects what to do if the file already exists.</param>
+        /// <param name="autorename">If there's a conflict, as determined by <paramref
+        /// name="mode" />, have the Dropbox server try to autorename the file to avoid
+        /// conflict.</param>
+        /// <param name="clientModified">The value to store as the <paramref
+        /// name="clientModified" /> timestamp. Dropbox automatically records the time at which
+        /// the file was written to the Dropbox servers. It can also record an additional
+        /// timestamp, provided by Dropbox desktop clients, mobile clients, and API apps of
+        /// when the file was actually created or modified.</param>
+        /// <param name="mute">Normally, users are made aware of any file modifications in
+        /// their Dropbox account via notifications in the client software. If <c>true</c>,
+        /// this tells the clients that this modification shouldn't result in a user
+        /// notification.</param>
+        /// <param name="body">The document to upload</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpload(string path,
+                                            WriteMode mode = null,
+                                            bool autorename = false,
+                                            sys.DateTime? clientModified = null,
+                                            bool mute = false,
+                                            io.Stream body = null,
+                                            sys.AsyncCallback callback = null,
+                                            object callbackState = null)
+        {
+            var commitInfo = new CommitInfo(path,
+                                            mode,
+                                            autorename,
+                                            clientModified,
+                                            mute);
+
+            return this.BeginUpload(commitInfo, body, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the upload route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        public UploadSessionStartResult EndUploadSessionStart(sys.IAsyncResult asyncResult)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
+        public FileMetadata EndUpload(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<UploadSessionStartResult>;
+            var task = asyncResult as t.Task<FileMetadata>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -919,1065 +1949,47 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Create a new file with the contents provided in the request.</para>
-        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
-        /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// <para>Upload sessions allow you to upload a single file using multiple requests.
+        /// This call starts a new upload session with the given data.  You can then use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> to add more
+        /// data and <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
+        /// /> to save all the data to a file in Dropbox.</para>
+        /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
-        /// <param name="commitInfo">The request parameters</param>
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
+        public t.Task<UploadSessionStartResult> UploadSessionStartAsync(io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", Dropbox.Api.Files.CommitInfo.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadError.Decoder);
+            return this.Transport.SendUploadRequestAsync<enc.Empty, UploadSessionStartResult, enc.Empty>(enc.Empty.Instance, body, "content", "/files/upload_session/start", enc.EmptyEncoder.Instance, Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the upload route.</para>
+        /// <para>Begins an asynchronous send to the upload session start route.</para>
         /// </summary>
-        /// <param name="commitInfo">The request parameters.</param>
         /// <param name="body">The content to upload.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUpload(CommitInfo commitInfo, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionStart(io.Stream body, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.UploadAsync(commitInfo, body);
+            var task = this.UploadSessionStartAsync(body);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Create a new file with the contents provided in the request.</para>
-        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
-        /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to save the file.</param>
-        /// <param name="mode">Selects what to do if the file already exists.</param>
-        /// <param name="autorename">If there's a conflict, as determined by <paramref
-        /// name="mode" />, have the Dropbox server try to autorename the file to avoid
-        /// conflict.</param>
-        /// <param name="clientModified">The value to store as the <paramref
-        /// name="clientModified" /> timestamp. Dropbox automatically records the time at which
-        /// the file was written to the Dropbox servers. It can also record an additional
-        /// timestamp, provided by Dropbox desktop clients, mobile clients, and API apps of
-        /// when the file was actually created or modified.</param>
-        /// <param name="mute">Normally, users are made aware of any file modifications in
-        /// their Dropbox account via notifications in the client software. If <c>true</c>,
-        /// this tells the clients that this modification shouldn't result in a user
-        /// notification.</param>
-        /// <param name="body">The document to upload</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        public t.Task<FileMetadata> UploadAsync(string path,
-                                                WriteMode mode = null,
-                                                bool autorename = false,
-                                                sys.DateTime? clientModified = null,
-                                                bool mute = false,
-                                                io.Stream body = null)
-        {
-            var commitInfo = new CommitInfo(path,
-                                            mode,
-                                            autorename,
-                                            clientModified,
-                                            mute);
-
-            return this.UploadAsync(commitInfo, body);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the upload route.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to save the file.</param>
-        /// <param name="mode">Selects what to do if the file already exists.</param>
-        /// <param name="autorename">If there's a conflict, as determined by <paramref
-        /// name="mode" />, have the Dropbox server try to autorename the file to avoid
-        /// conflict.</param>
-        /// <param name="clientModified">The value to store as the <paramref
-        /// name="clientModified" /> timestamp. Dropbox automatically records the time at which
-        /// the file was written to the Dropbox servers. It can also record an additional
-        /// timestamp, provided by Dropbox desktop clients, mobile clients, and API apps of
-        /// when the file was actually created or modified.</param>
-        /// <param name="mute">Normally, users are made aware of any file modifications in
-        /// their Dropbox account via notifications in the client software. If <c>true</c>,
-        /// this tells the clients that this modification shouldn't result in a user
-        /// notification.</param>
-        /// <param name="body">The document to upload</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUpload(string path,
-                                            WriteMode mode = null,
-                                            bool autorename = false,
-                                            sys.DateTime? clientModified = null,
-                                            bool mute = false,
-                                            io.Stream body = null,
-                                            sys.AsyncCallback callback = null,
-                                            object callbackState = null)
-        {
-            var commitInfo = new CommitInfo(path,
-                                            mode,
-                                            autorename,
-                                            clientModified,
-                                            mute);
-
-            return this.BeginUpload(commitInfo, body, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the upload route to
+        /// <para>Waits for the pending asynchronous send to the upload session start route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        public FileMetadata EndUpload(sys.IAsyncResult asyncResult)
+        public UploadSessionStartResult EndUploadSessionStart(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<FileMetadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Searches for files and folders.</para>
-        /// </summary>
-        /// <param name="searchArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
-        {
-            return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", Dropbox.Api.Files.SearchArg.Encoder, Dropbox.Api.Files.SearchResult.Decoder, Dropbox.Api.Files.SearchError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the search route.</para>
-        /// </summary>
-        /// <param name="searchArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginSearch(SearchArg searchArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.SearchAsync(searchArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Searches for files and folders.</para>
-        /// </summary>
-        /// <param name="path">The path in the user's Dropbox to search. Should probably be a
-        /// folder.</param>
-        /// <param name="query">The string to search for. The search string is split on spaces
-        /// into multiple tokens. For file name searching, the last token is used for prefix
-        /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
-        /// <param name="start">The starting index within the search results (used for
-        /// paging).</param>
-        /// <param name="maxResults">The maximum number of search results to return.</param>
-        /// <param name="mode">The search mode (filename, filename_and_content, or
-        /// deleted_filename). Note that searching file content is only available for Dropbox
-        /// Business accounts.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        public t.Task<SearchResult> SearchAsync(string path,
-                                                string query,
-                                                ulong start = 0,
-                                                ulong maxResults = 100,
-                                                SearchMode mode = null)
-        {
-            var searchArg = new SearchArg(path,
-                                          query,
-                                          start,
-                                          maxResults,
-                                          mode);
-
-            return this.SearchAsync(searchArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the search route.</para>
-        /// </summary>
-        /// <param name="path">The path in the user's Dropbox to search. Should probably be a
-        /// folder.</param>
-        /// <param name="query">The string to search for. The search string is split on spaces
-        /// into multiple tokens. For file name searching, the last token is used for prefix
-        /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
-        /// <param name="start">The starting index within the search results (used for
-        /// paging).</param>
-        /// <param name="maxResults">The maximum number of search results to return.</param>
-        /// <param name="mode">The search mode (filename, filename_and_content, or
-        /// deleted_filename). Note that searching file content is only available for Dropbox
-        /// Business accounts.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginSearch(string path,
-                                            string query,
-                                            ulong start = 0,
-                                            ulong maxResults = 100,
-                                            SearchMode mode = null,
-                                            sys.AsyncCallback callback = null,
-                                            object callbackState = null)
-        {
-            var searchArg = new SearchArg(path,
-                                          query,
-                                          start,
-                                          maxResults,
-                                          mode);
-
-            return this.BeginSearch(searchArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the search route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        public SearchResult EndSearch(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<SearchResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Create a folder at a given path.</para>
-        /// </summary>
-        /// <param name="createFolderArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="CreateFolderError"/>.</exception>
-        public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
-        {
-            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", Dropbox.Api.Files.CreateFolderArg.Encoder, Dropbox.Api.Files.FolderMetadata.Decoder, Dropbox.Api.Files.CreateFolderError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the create folder route.</para>
-        /// </summary>
-        /// <param name="createFolderArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCreateFolder(CreateFolderArg createFolderArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.CreateFolderAsync(createFolderArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Create a folder at a given path.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to create.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="CreateFolderError"/>.</exception>
-        public t.Task<FolderMetadata> CreateFolderAsync(string path)
-        {
-            var createFolderArg = new CreateFolderArg(path);
-
-            return this.CreateFolderAsync(createFolderArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the create folder route.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to create.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCreateFolder(string path,
-                                                  sys.AsyncCallback callback,
-                                                  object callbackState = null)
-        {
-            var createFolderArg = new CreateFolderArg(path);
-
-            return this.BeginCreateFolder(createFolderArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the create folder route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="CreateFolderError"/>.</exception>
-        public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<FolderMetadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Delete the file or folder at a given path.</para>
-        /// <para>If the path is a folder, all its contents will be deleted too.</para>
-        /// </summary>
-        /// <param name="deleteArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
-        {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", Dropbox.Api.Files.DeleteArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.DeleteError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the delete route.</para>
-        /// </summary>
-        /// <param name="deleteArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.DeleteAsync(deleteArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Delete the file or folder at a given path.</para>
-        /// <para>If the path is a folder, all its contents will be deleted too.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to delete.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public t.Task<Metadata> DeleteAsync(string path)
-        {
-            var deleteArg = new DeleteArg(path);
-
-            return this.DeleteAsync(deleteArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the delete route.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to delete.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDelete(string path,
-                                            sys.AsyncCallback callback,
-                                            object callbackState = null)
-        {
-            var deleteArg = new DeleteArg(path);
-
-            return this.BeginDelete(deleteArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the delete route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public Metadata EndDelete(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<Metadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Permanently delete the file or folder at a given path (see
-        /// https://www.dropbox.com/en/help/40).</para>
-        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
-        /// </summary>
-        /// <param name="deleteArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public t.Task PermanentlyDeleteAsync(DeleteArg deleteArg)
-        {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, enc.Empty, DeleteError>(deleteArg, "api", "/files/permanently_delete", Dropbox.Api.Files.DeleteArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.DeleteError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the permanently delete route.</para>
-        /// </summary>
-        /// <param name="deleteArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPermanentlyDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.PermanentlyDeleteAsync(deleteArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Permanently delete the file or folder at a given path (see
-        /// https://www.dropbox.com/en/help/40).</para>
-        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to delete.</param>
-        /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public t.Task PermanentlyDeleteAsync(string path)
-        {
-            var deleteArg = new DeleteArg(path);
-
-            return this.PermanentlyDeleteAsync(deleteArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the permanently delete route.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to delete.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPermanentlyDelete(string path,
-                                                       sys.AsyncCallback callback,
-                                                       object callbackState = null)
-        {
-            var deleteArg = new DeleteArg(path);
-
-            return this.BeginPermanentlyDelete(deleteArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the permanently delete route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public void EndPermanentlyDelete(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-        }
-
-        /// <summary>
-        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be copied.</para>
-        /// </summary>
-        /// <param name="relocationArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
-        {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the copy route.</para>
-        /// </summary>
-        /// <param name="relocationArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCopy(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.CopyAsync(relocationArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be copied.</para>
-        /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        public t.Task<Metadata> CopyAsync(string fromPath,
-                                          string toPath)
-        {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
-
-            return this.CopyAsync(relocationArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the copy route.</para>
-        /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCopy(string fromPath,
-                                          string toPath,
-                                          sys.AsyncCallback callback,
-                                          object callbackState = null)
-        {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
-
-            return this.BeginCopy(relocationArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the copy route to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        public Metadata EndCopy(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<Metadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be moved.</para>
-        /// </summary>
-        /// <param name="relocationArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
-        {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the move route.</para>
-        /// </summary>
-        /// <param name="relocationArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMove(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.MoveAsync(relocationArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be moved.</para>
-        /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        public t.Task<Metadata> MoveAsync(string fromPath,
-                                          string toPath)
-        {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
-
-            return this.MoveAsync(relocationArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the move route.</para>
-        /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMove(string fromPath,
-                                          string toPath,
-                                          sys.AsyncCallback callback,
-                                          object callbackState = null)
-        {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
-
-            return this.BeginMove(relocationArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the move route to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        public Metadata EndMove(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<Metadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
-        /// be converted to a thumbnail.</para>
-        /// </summary>
-        /// <param name="thumbnailArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ThumbnailError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(ThumbnailArg thumbnailArg)
-        {
-            return this.Transport.SendDownloadRequestAsync<ThumbnailArg, FileMetadata, ThumbnailError>(thumbnailArg, "content", "/files/get_thumbnail", Dropbox.Api.Files.ThumbnailArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.ThumbnailError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the get thumbnail route.</para>
-        /// </summary>
-        /// <param name="thumbnailArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetThumbnail(ThumbnailArg thumbnailArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.GetThumbnailAsync(thumbnailArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
-        /// be converted to a thumbnail.</para>
-        /// </summary>
-        /// <param name="path">The path to the image file you want to thumbnail.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
-        /// <param name="size">The size for the thumbnail image.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ThumbnailError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(string path,
-                                                                             ThumbnailFormat format = null,
-                                                                             ThumbnailSize size = null)
-        {
-            var thumbnailArg = new ThumbnailArg(path,
-                                                format,
-                                                size);
-
-            return this.GetThumbnailAsync(thumbnailArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the get thumbnail route.</para>
-        /// </summary>
-        /// <param name="path">The path to the image file you want to thumbnail.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
-        /// <param name="size">The size for the thumbnail image.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetThumbnail(string path,
-                                                  ThumbnailFormat format = null,
-                                                  ThumbnailSize size = null,
-                                                  sys.AsyncCallback callback = null,
-                                                  object callbackState = null)
-        {
-            var thumbnailArg = new ThumbnailArg(path,
-                                                format,
-                                                size);
-
-            return this.BeginGetThumbnail(thumbnailArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the get thumbnail route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ThumbnailError"/>.</exception>
-        public enc.IDownloadResponse<FileMetadata> EndGetThumbnail(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Get a preview for a file. Currently previews are only generated for the files
-        /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
-        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
-        /// </summary>
-        /// <param name="previewArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(PreviewArg previewArg)
-        {
-            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", Dropbox.Api.Files.PreviewArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.PreviewError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the get preview route.</para>
-        /// </summary>
-        /// <param name="previewArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetPreview(PreviewArg previewArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.GetPreviewAsync(previewArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Get a preview for a file. Currently previews are only generated for the files
-        /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
-        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
-        /// </summary>
-        /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(string path,
-                                                                           string rev = null)
-        {
-            var previewArg = new PreviewArg(path,
-                                            rev);
-
-            return this.GetPreviewAsync(previewArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the get preview route.</para>
-        /// </summary>
-        /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetPreview(string path,
-                                                string rev = null,
-                                                sys.AsyncCallback callback = null,
-                                                object callbackState = null)
-        {
-            var previewArg = new PreviewArg(path,
-                                            rev);
-
-            return this.BeginGetPreview(previewArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the get preview route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
-        public enc.IDownloadResponse<FileMetadata> EndGetPreview(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Return revisions of a file</para>
-        /// </summary>
-        /// <param name="listRevisionsArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ListRevisionsError"/>.</exception>
-        public t.Task<ListRevisionsResult> ListRevisionsAsync(ListRevisionsArg listRevisionsArg)
-        {
-            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions", Dropbox.Api.Files.ListRevisionsArg.Encoder, Dropbox.Api.Files.ListRevisionsResult.Decoder, Dropbox.Api.Files.ListRevisionsError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the list revisions route.</para>
-        /// </summary>
-        /// <param name="listRevisionsArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListRevisions(ListRevisionsArg listRevisionsArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.ListRevisionsAsync(listRevisionsArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Return revisions of a file</para>
-        /// </summary>
-        /// <param name="path">The path to the file you want to see the revisions of.</param>
-        /// <param name="limit">The maximum number of revision entries returned.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ListRevisionsError"/>.</exception>
-        public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
-                                                              ulong limit = 10)
-        {
-            var listRevisionsArg = new ListRevisionsArg(path,
-                                                        limit);
-
-            return this.ListRevisionsAsync(listRevisionsArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the list revisions route.</para>
-        /// </summary>
-        /// <param name="path">The path to the file you want to see the revisions of.</param>
-        /// <param name="limit">The maximum number of revision entries returned.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListRevisions(string path,
-                                                   ulong limit = 10,
-                                                   sys.AsyncCallback callback = null,
-                                                   object callbackState = null)
-        {
-            var listRevisionsArg = new ListRevisionsArg(path,
-                                                        limit);
-
-            return this.BeginListRevisions(listRevisionsArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the list revisions route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="ListRevisionsError"/>.</exception>
-        public ListRevisionsResult EndListRevisions(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<ListRevisionsResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Restore a file to a specific revision</para>
-        /// </summary>
-        /// <param name="restoreArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
-        public t.Task<FileMetadata> RestoreAsync(RestoreArg restoreArg)
-        {
-            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", Dropbox.Api.Files.RestoreArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.RestoreError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the restore route.</para>
-        /// </summary>
-        /// <param name="restoreArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginRestore(RestoreArg restoreArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.RestoreAsync(restoreArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Restore a file to a specific revision</para>
-        /// </summary>
-        /// <param name="path">The path to the file you want to restore.</param>
-        /// <param name="rev">The revision to restore for the file.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
-        public t.Task<FileMetadata> RestoreAsync(string path,
-                                                 string rev)
-        {
-            var restoreArg = new RestoreArg(path,
-                                            rev);
-
-            return this.RestoreAsync(restoreArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the restore route.</para>
-        /// </summary>
-        /// <param name="path">The path to the file you want to restore.</param>
-        /// <param name="rev">The revision to restore for the file.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginRestore(string path,
-                                             string rev,
-                                             sys.AsyncCallback callback,
-                                             object callbackState = null)
-        {
-            var restoreArg = new RestoreArg(path,
-                                            rev);
-
-            return this.BeginRestore(restoreArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the restore route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
-        public FileMetadata EndRestore(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<FileMetadata>;
+            var task = asyncResult as t.Task<UploadSessionStartResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

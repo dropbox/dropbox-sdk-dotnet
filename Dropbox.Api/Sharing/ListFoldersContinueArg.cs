@@ -31,10 +31,8 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="ListFoldersContinueArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync" /> or <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync"
-        /// />.</param>
+        /// <param name="cursor">The cursor returned by the previous API call specified in the
+        /// endpoint description.</param>
         public ListFoldersContinueArg(string cursor)
         {
             if (cursor == null)
@@ -56,9 +54,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync" /> or <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" />.</para>
+        /// <para>The cursor returned by the previous API call specified in the endpoint
+        /// description.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

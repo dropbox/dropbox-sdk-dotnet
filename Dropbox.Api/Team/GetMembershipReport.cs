@@ -41,7 +41,7 @@ namespace Dropbox.Api.Team
         /// day.</param>
         /// <param name="membersJoined">The number of members that joined the team, for each
         /// day.</param>
-        /// <param name="suspendedMembers">The number of members that joined the team, for each
+        /// <param name="suspendedMembers">The number of suspended team members, for each
         /// day.</param>
         /// <param name="licenses">The total number of licenses the team has, for each
         /// day.</param>
@@ -121,7 +121,7 @@ namespace Dropbox.Api.Team
         public col.IList<ulong?> MembersJoined { get; protected set; }
 
         /// <summary>
-        /// <para>The number of members that joined the team, for each day.</para>
+        /// <para>The number of suspended team members, for each day.</para>
         /// </summary>
         public col.IList<ulong?> SuspendedMembers { get; protected set; }
 

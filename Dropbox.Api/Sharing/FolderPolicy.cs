@@ -35,11 +35,17 @@ namespace Dropbox.Api.Sharing
         /// <param name="aclUpdatePolicy">Who can add and remove members from this shared
         /// folder.</param>
         /// <param name="sharedLinkPolicy">Who links can be shared with.</param>
-        /// <param name="memberPolicy">Who can be a member of this shared folder. Only set if
-        /// the user is a member of a team.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder, as set on the
+        /// folder itself. The effective policy may differ from this value if the team-wide
+        /// policy is more restrictive. Present only if the folder is owned by a team.</param>
+        /// <param name="resolvedMemberPolicy">Who can be a member of this shared folder,
+        /// taking into account both the folder and the team-wide policy. This value may differ
+        /// from that of member_policy if the team-wide policy is more restrictive than the
+        /// folder policy. Present only if the folder is owned by a team.</param>
         public FolderPolicy(AclUpdatePolicy aclUpdatePolicy,
                             SharedLinkPolicy sharedLinkPolicy,
-                            MemberPolicy memberPolicy = null)
+                            MemberPolicy memberPolicy = null,
+                            MemberPolicy resolvedMemberPolicy = null)
         {
             if (aclUpdatePolicy == null)
             {
@@ -54,6 +60,7 @@ namespace Dropbox.Api.Sharing
             this.AclUpdatePolicy = aclUpdatePolicy;
             this.SharedLinkPolicy = sharedLinkPolicy;
             this.MemberPolicy = memberPolicy;
+            this.ResolvedMemberPolicy = resolvedMemberPolicy;
         }
 
         /// <summary>
@@ -76,10 +83,19 @@ namespace Dropbox.Api.Sharing
         public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
 
         /// <summary>
-        /// <para>Who can be a member of this shared folder. Only set if the user is a member
-        /// of a team.</para>
+        /// <para>Who can be a member of this shared folder, as set on the folder itself. The
+        /// effective policy may differ from this value if the team-wide policy is more
+        /// restrictive. Present only if the folder is owned by a team.</para>
         /// </summary>
         public MemberPolicy MemberPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>Who can be a member of this shared folder, taking into account both the
+        /// folder and the team-wide policy. This value may differ from that of member_policy
+        /// if the team-wide policy is more restrictive than the folder policy. Present only if
+        /// the folder is owned by a team.</para>
+        /// </summary>
+        public MemberPolicy ResolvedMemberPolicy { get; protected set; }
 
         #region Encoder class
 
@@ -100,6 +116,10 @@ namespace Dropbox.Api.Sharing
                 if (value.MemberPolicy != null)
                 {
                     WriteProperty("member_policy", value.MemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
+                }
+                if (value.ResolvedMemberPolicy != null)
+                {
+                    WriteProperty("resolved_member_policy", value.ResolvedMemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
                 }
             }
         }
@@ -141,6 +161,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "member_policy":
                         value.MemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
+                        break;
+                    case "resolved_member_policy":
+                        value.ResolvedMemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -197,6 +197,7 @@
     <Compile Include="Sharing\ListFolderMembersArgs.cs" />
     <Compile Include="Sharing\ListFolderMembersContinueArg.cs" />
     <Compile Include="Sharing\ListFolderMembersContinueError.cs" />
+    <Compile Include="Sharing\ListFolderMembersCursorArg.cs" />
     <Compile Include="Sharing\ListFoldersArgs.cs" />
     <Compile Include="Sharing\ListFoldersContinueArg.cs" />
     <Compile Include="Sharing\ListFoldersContinueError.cs" />
@@ -290,6 +291,7 @@
     <Compile Include="Team\GroupSelector.cs" />
     <Compile Include="Team\GroupSelectorError.cs" />
     <Compile Include="Team\GroupSummary.cs" />
+    <Compile Include="Team\GroupType.cs" />
     <Compile Include="Team\GroupUpdateArgs.cs" />
     <Compile Include="Team\GroupUpdateError.cs" />
     <Compile Include="Team\GroupsGetInfoError.cs" />
@@ -360,6 +362,7 @@
     <Compile Include="Team\RevokeLinkedAppStatus.cs" />
     <Compile Include="Team\SharedFolderJoinPolicy.cs" />
     <Compile Include="Team\SharedFolderMemberPolicy.cs" />
+    <Compile Include="Team\SharedLinkCreatePolicy.cs" />
     <Compile Include="Team\StorageBucket.cs" />
     <Compile Include="Team\TeamGetInfoResult.cs" />
     <Compile Include="Team\TeamMemberInfo.cs" />
