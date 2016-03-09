@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,13 +14,15 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-- Update constructor for DropboxClient. Additional parameters other than access token are now wrapped in DropboxClientConfig object.
-- Changes in sharing endpoints. See https://blogs.dropbox.com/developers/2016/02/more-breaking-changes-to-beta-sharing-endpoints/ for more details.
-- Nuget package now contains separate assemblies for different frameworks. Projects target at .NET 4.5 or newer no longer need to depend on Bcl libraries.
-- ID is now a required field in Metadata.
-- Add PathDisplay to Metadata. 
-- Add ListMountableFolders endpoint in Sharing.
-- Add DirectOnly flag to ListSharedLinks endpoint.
+- Update to latest API specs:
+  - Add ResolvedMemberPolicy property to FolderPolicy.
+  - Add GroupType property to GroupInfo.
+  - Add OwnerTeam and ParentSharedFolderId property to SharedFolderMetadataBase.
+  - Add IsNotMountable to MountFolderError.
+  - Add IsUnmountable to UnmountFolderError.
+  - Add validation for member external id and email address.
+  - Add SharedLinkCreatePolicy to TeamSharingPolicies.
+  - Add IsTeamLicenseLimit to MemberSuspendError and MemberUnsuspendError. 
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

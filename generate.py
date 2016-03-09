@@ -84,7 +84,7 @@ def main():
     shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
     subprocess.check_output(
         (['python', '-m', 'babelapi.cli', 'generator/csharp.babelg.py'] +
-         glob.glob('spec/*.babel') + [os.path.join(repo_path, 'Dropbox.Api')]),
+         [os.path.join(repo_path, 'Dropbox.Api')] + glob.glob('spec/*.babel')),
 	 env={'PYTHONPATH': 'babel'})
 
     if verbose:

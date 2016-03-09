@@ -16,7 +16,7 @@ from babelapi.data_type import (
     UInt32,
     UInt64,
     Void,
-    is_binary_type,
+    is_bytes_type,
     is_boolean_type,
     is_composite_type,
     is_float_type,
@@ -597,7 +597,7 @@ class _CSharpGenerator(CodeGenerator):
                 return 'col.IEnumerable<{0}>'.format(self._typename(data_type.data_type))
         elif is_string_type(data_type):
             return 'string'
-        elif is_binary_type(data_type):
+        elif is_bytes_type(data_type):
             return 'byte[]'
         else:
             suffix = '?' if nullable else ''
@@ -1056,7 +1056,7 @@ class _CSharpGenerator(CodeGenerator):
         """
         if is_string_type(data_type):
             return 'String'
-        elif is_binary_type(data_type):
+        elif is_bytes_type(data_type):
             return 'Bytes'
         elif is_boolean_type(data_type):
             return 'Boolean'
@@ -1820,31 +1820,31 @@ class _CSharpGenerator(CodeGenerator):
         route_host = route.attrs.get('host', 'api')
         route_style = route.attrs.get('style', 'rpc')
 
-        request_type = self._typename(route.request_data_type, void='enc.Empty')
-        request_is_void = is_void_type(route.request_data_type)
-        request_arg = (self._arg_name(route.request_data_type.name) if
-                is_composite_type(route.request_data_type) else 'request')
-        response_type = self._typename(route.response_data_type, void='enc.Empty', is_response=True)
-        response_is_void = is_void_type(route.response_data_type)
+        arg_type = self._typename(route.arg_data_type, void='enc.Empty')
+        arg_is_void = is_void_type(route.arg_data_type)
+        arg_name = (self._arg_name(route.arg_data_type.name) if
+                is_composite_type(route.arg_data_type) else 'request')
+        result_type = self._typename(route.result_data_type, void='enc.Empty', is_response=True)
+        result_is_void = is_void_type(route.result_data_type)
         error_type = self._typename(route.error_data_type, void='enc.Empty')
         error_is_void = is_void_type(route.error_data_type)
 
-        if response_is_void:
+        if result_is_void:
             task_type = 't.Task'
-            apm_response_type = 'void'
+            apm_result_type = 'void'
         elif route_style == 'download':
-            task_type = 't.Task<enc.IDownloadResponse<{0}>>'.format(response_type)
-            apm_response_type = 'enc.IDownloadResponse<{0}>'.format(response_type)
+            task_type = 't.Task<enc.IDownloadResponse<{0}>>'.format(result_type)
+            apm_result_type = 'enc.IDownloadResponse<{0}>'.format(result_type)
         else:
-            task_type = 't.Task<{0}>'.format(response_type)
-            apm_response_type = response_type
+            task_type = 't.Task<{0}>'.format(result_type)
+            apm_result_type = result_type
 
         ctor_args = []
         route_args = []
-        if not request_is_void:
-            route_args.append("{0} {1}".format(request_type, request_arg))
-            if is_struct_type(route.request_data_type):
-                ctor_args = self._make_struct_constructor_args(route.request_data_type)
+        if not arg_is_void:
+            route_args.append("{0} {1}".format(arg_type, arg_name))
+            if is_struct_type(route.arg_data_type):
+                ctor_args = self._make_struct_constructor_args(route.arg_data_type)
         if route_style == 'upload':
             route_args.append("io.Stream body")
             if next((c.arg for c in ctor_args if '=' in c.arg), False):
@@ -1858,16 +1858,16 @@ class _CSharpGenerator(CodeGenerator):
         apm_args = route_args + ['sys.AsyncCallback callback', 'object state = null']
         apm_fn = 'public sys.IAsyncResult Begin{0}({1})'.format(public_name, ', '.join(apm_args))
 
-        type_args = (request_type, response_type, error_type)
+        type_args = (arg_type, result_type, error_type)
 
         self.emit()
         with self.doc_comment():
             self.emit_summary(route.doc or 'The {0} route'.format(self._name_words(route.name)))
-            if not request_is_void:
-                self.emit_xml('The request parameters', 'param', name=request_arg)
+            if not arg_is_void:
+                self.emit_xml('The request parameters', 'param', name=arg_name)
             if route_style == 'upload':
                 self.emit_xml('The content to upload.', 'param', name='body')
-            if response_is_void:
+            if result_is_void:
                 self.emit_xml('The task that represents the asynchronous send operation.',
                         'returns')
             else:
@@ -1881,14 +1881,14 @@ class _CSharpGenerator(CodeGenerator):
 
         self._generate_obsolete_attribute(route.deprecated, suffix='Async')
         with self.cs_block(before=async_fn):
-            args = ['enc.Empty.Instance' if request_is_void else request_arg]
+            args = ['enc.Empty.Instance' if arg_is_void else arg_name]
             if route_style == 'upload':
                 args.append('body')
             args.extend([
                 '"{0}"'.format(route_host),
                 '"/{0}/{1}"'.format(ns.name, route.name),
-                self._get_encoder(route.request_data_type),
-                self._get_decoder(route.response_data_type),
+                self._get_encoder(route.arg_data_type),
+                self._get_decoder(route.result_data_type),
                 self._get_decoder(route.error_data_type),
             ])
 
@@ -1900,8 +1900,8 @@ class _CSharpGenerator(CodeGenerator):
         self.emit()
         with self.doc_comment():
             self.emit_summary('Begins an asynchronous send to the {0} route.'.format(self._name_words(route.name)))
-            if not request_is_void:
-                self.emit_xml('The request parameters.', 'param', name=request_arg)
+            if not arg_is_void:
+                self.emit_xml('The request parameters.', 'param', name=arg_name)
             if route_style == 'upload':
                 self.emit_xml('The content to upload.', 'param', name='body')
             self.emit_xml('The method to be called when the asynchronous send is completed.',
@@ -1913,8 +1913,8 @@ class _CSharpGenerator(CodeGenerator):
         self._generate_obsolete_attribute(route.deprecated, prefix='Begin')
         with self.cs_block(before=apm_fn):
             async_args = []
-            if not request_is_void:
-                async_args.append(request_arg)
+            if not arg_is_void:
+                async_args.append(arg_name)
             if route_style == 'upload':
                 async_args.append('body')
 
@@ -1931,7 +1931,7 @@ class _CSharpGenerator(CodeGenerator):
                 self.emit_summary(route.doc or 'The {0} route'.format(self._name_words(route.name)))
                 for arg in ctor_args:
                     self.emit_wrapped_text(arg.doc)
-                if response_is_void:
+                if result_is_void:
                     self.emit_xml('The task that represents the asynchronous send operation.',
                             'returns')
                 else:
@@ -1952,12 +1952,12 @@ class _CSharpGenerator(CodeGenerator):
             with self.cs_block():
                 self.generate_multiline_list(
                     arg_name_list[:-1] if route_style == 'upload' else arg_name_list,
-                    before='var {0} = new {1}'.format(request_arg, request_type),
+                    before='var {0} = new {1}'.format(arg_name, arg_type),
                     after=';',
                     skip_last_sep=True
                 )
                 self.emit()
-                async_args = [request_arg]
+                async_args = [arg_name]
                 if route_style == 'upload':
                     async_args.append('body')
                 self.emit('return this.{0}({1});'.format(async_name, ', '.join(async_args)))
@@ -1989,12 +1989,12 @@ class _CSharpGenerator(CodeGenerator):
             with self.cs_block():
                 self.generate_multiline_list(
                     arg_name_list[:-1] if route_style == 'upload' else arg_name_list,
-                    before='var {0} = new {1}'.format(request_arg, request_type),
+                    before='var {0} = new {1}'.format(arg_name, arg_type),
                     after=';',
                     skip_last_sep=True
                 )
                 self.emit()
-                args = [request_arg]
+                args = [arg_name]
                 if route_style == 'upload':
                     args.append('body')
                 args.extend(['callback', 'callbackState'])
@@ -2006,7 +2006,7 @@ class _CSharpGenerator(CodeGenerator):
                     self._name_words(route.name)))
             self.emit_xml('The reference to the pending asynchronous send request', 'param',
                     name='asyncResult')
-            if not response_is_void:
+            if not result_is_void:
                 self.emit_xml('The response to the send request', 'returns')
             if not error_is_void:
                 self.emit_xml('Thrown if there is an error processing the request; '
@@ -2015,11 +2015,11 @@ class _CSharpGenerator(CodeGenerator):
 
         self._generate_obsolete_attribute(route.deprecated, prefix='End')
         with self.cs_block(before='public {0} End{1}(sys.IAsyncResult asyncResult)'.format(
-                apm_response_type, public_name)):
+                apm_result_type, public_name)):
             self.emit('var task = asyncResult as {0};'.format(task_type))
             with self.if_('task == null'):
                 self.emit('throw new sys.InvalidOperationException();')
-            if not response_is_void:
+            if not result_is_void:
                 self.emit()
                 self.emit('return task.Result;')
     
