@@ -1,0 +1,177 @@
+body {
+    background:url(../images/body-bg.png);
+    min-height: 100%;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.body-content {
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+    background-color: white;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.highlight {
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+#nav-bar-blue {
+    background:url(../images/blue-bg.png);
+    border-color: transparent;
+    width: 960px;
+    margin: 0 auto;
+    min-height: 0;
+    height: 20px;
+}
+
+#nav-bar {
+    background:url(../images/white-bg.png);
+    border-color: transparent;
+    width: 960px;
+    margin: 0 auto;
+    min-height: 0;
+    height: 60px;
+    padding-top: 9px;
+}
+
+#main-display {
+    width: 960px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+
+#heading-1 {
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    color: #636363;
+    padding-left: 145px;
+    font-weight: bold;
+}
+
+.dbx-logo {
+  float: right;
+  padding-top: 17px;
+  padding-right: 18px;
+}
+
+.dbx-logo-img {
+  width: 25px;
+  height: 25px;
+}
+
+.dbx-logo-img-small {
+  width: 20px;
+  height: 20px;
+}
+
+.dbx-logo-txt {
+  width: 90px;
+  height: 22px;
+}
+
+.custom-glyph {
+    margin-top: 50%;
+    font-size: 40px;
+}
+
+#main-content-form {
+    text-align: center;
+}
+
+.custom-btn {
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    border-color: #e6e6e6;
+    
+    font-family: "Lucida Grande", "Segoe UI", "Tahoma", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #636363;
+    text-decoration: none;
+
+    padding-left: 7px;
+    padding-right: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.custom-btn:hover {
+    text-decoration: none;
+    background-color: #e6e6e6;
+    color: #636363;
+}
+
+.custom-alert {
+    max-width: 930px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+input#img-btn {
+    background: #f2f2f2 url('../images/dropbox-logo.png') no-repeat 5% 50%;
+    background-size: 20px 20px;
+    padding-left: 36px;
+}
+
+input#img-btn:hover {
+    background: #e6e6e6 url('../images/dropbox-logo.png') no-repeat 5% 50%;
+    background-size: 20px 20px;
+    padding-left: 36px;
+}
+
+.graph-header {
+    font-weight: bold;
+}
+
+.boxhead a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#main-header {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    color: #636363;
+    text-align: left;
+}
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}

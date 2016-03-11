@@ -27,6 +27,8 @@ token for your own Dropbox account.
 Several examples can be found in the examples directory:
 * SimpleBlogDemo — An ASP.NET MVC application that creates a simple blogging
   platform, this shows how to upload and download files.
+* SimpleBusinessDashboard — An ASP.NET MVC application that creates a simple business
+  dashboard, showcasing the Dropbox Business endpoints.
 * SimpleTest — A windows console application that demonstrates basic use of the SDK;
   this also contains code that connects with OAuth2 using WPF.
 * UniversalDemo — A slide show app for both Windows Store and
