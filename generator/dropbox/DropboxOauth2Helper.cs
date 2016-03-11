@@ -488,7 +488,7 @@ namespace Dropbox.Api
         /// <param name="tokenType">The token_type.</param>
         internal OAuth2Response(string accessToken, string uid, string state, string tokenType)
         {
-            if (string.IsNullOrEmpty(accessToken) || string.IsNullOrEmpty(uid))
+            if (string.IsNullOrEmpty(accessToken) || uid == null)
             {
                 throw new ArgumentException("Invalid OAuth 2.0 response, missing access_token and/or uid.");
             }

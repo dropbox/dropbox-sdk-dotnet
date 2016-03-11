@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.0.3</version>
+    <version>3.0.4</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -13,16 +13,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
-What's new:
-- Update to latest API specs:
-  - Add ResolvedMemberPolicy property to FolderPolicy.
-  - Add GroupType property to GroupInfo.
-  - Add OwnerTeam and ParentSharedFolderId property to SharedFolderMetadataBase.
-  - Add IsNotMountable to MountFolderError.
-  - Add IsUnmountable to UnmountFolderError.
-  - Add validation for member external id and email address.
-  - Add SharedLinkCreatePolicy to TeamSharingPolicies.
-  - Add IsTeamLicenseLimit to MemberSuspendError and MemberUnsuspendError. 
+Bug fixes:
+- Fix bug when doing OAuth2 code flow with team-linked app.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
