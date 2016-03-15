@@ -744,18 +744,23 @@ class _CSharpGenerator(CodeGenerator):
         if is_numeric_type(data_type):
             suffix = self._type_literal_suffix(data_type)
             if data_type.min_value is not None:
-                checks.append('{0} < {1}{2}'.format(name, data_type.min_value, suffix))
+                checks.append(('{0} < {1}{2}'.format(name, data_type.min_value, suffix),
+                               '"Value should be greater or equal than {0}"'.format(data_type.min_value)))
             if data_type.max_value is not None:
-                checks.append('{0} > {1}{2}'.format(name, data_type.max_value, suffix))
+                checks.append(('{0} > {1}{2}'.format(name, data_type.max_value, suffix),
+                               '"Value should be less of equal than {0}"'.format(data_type.max_value)))
         elif is_string_type(data_type):
             if data_type.min_length is not None:
-                checks.append('{0}.Length < {1}'.format(name, data_type.min_length))
+                checks.append(('{0}.Length < {1}'.format(name, data_type.min_length),
+                               '"Length should be at least {0}"'.format(data_type.min_length)))
             if data_type.max_length is not None:
-                checks.append('{0}.Length > {1}'.format(name, data_type.max_length))
+                checks.append(('{0}.Length > {1}'.format(name, data_type.max_length),
+                               '"Length should be at most {0}"'.format(data_type.max_length)))
             if data_type.pattern is not None:
                 # patterns must match entire input sequence:
-                verbatim_pattern = self._verbatim_string('\\A(?:{0})\\z'.format(data_type.pattern))
-                checks.append('!re.Regex.IsMatch({0}, {1})'.format(name, verbatim_pattern))
+                pattern = '\\A(?:{0})\\z'.format(data_type.pattern)
+                checks.append(('!re.Regex.IsMatch({0}, {1})'.format(name, self._verbatim_string(pattern)),
+                               self._verbatim_string("Value should match pattern '{0}'".format(pattern))))
         elif is_list_type(data_type):
             listName = name + 'List'
             element_type = self._typename(data_type.data_type, is_property=True)
@@ -763,30 +768,29 @@ class _CSharpGenerator(CodeGenerator):
             self.emit()
 
             if data_type.min_items is not None:
-                checks.append('{0}.Count < {1}'.format(listName, data_type.min_items))
+                checks.append(('{0}.Count < {1}'.format(listName, data_type.min_items),
+                               '"List should at at least {0} items"'.format(data_type.min_items)))
             if data_type.max_items is not None:
-                checks.append('{0}.Count > {1}'.format(listName, data_type.max_items))
-
-        pre_check = post_check = ''
-        control = self.if_
-        need_emit = False
-
+                checks.append(('{0}.Count > {1}'.format(listName, data_type.max_items),
+                               '"List should at at most {0} items"'.format(data_type.max_items)))
+        
+        has_checks = len(checks) > 0
+        def apply_checks():
+            for check, message in checks:
+                with self.if_('{0}'.format(check)):
+                    self.emit('throw new sys.ArgumentOutOfRangeException("{0}", {1});'.format(name, message))
         if nullable:
-            pre_check = '{0} != null && ('.format(name)
-            post_check = ')'
-        elif self._could_be_null(data_type):
-            if not has_null_check:
+	    if has_checks: 
+                with self.if_('{0} != null'.format(name)):
+                    apply_checks()
+        else:
+            if self._could_be_null(data_type) and not has_null_check:
                 with self.if_('{0} == null'.format(name)):
                     self.emit('throw new sys.ArgumentNullException("{0}");'.format(name))
-            need_emit = True
-            control = self.else_if
-
-        if checks:
-            with control('{0}{1}{2}'.format(pre_check, ' || '.join(checks), post_check)):
-                self.emit('throw new sys.ArgumentOutOfRangeException("{0}");'.format(name))
-                need_emit = True
-
-        if need_emit:
+                has_checks = True
+            apply_checks()
+        
+        if has_checks:
             self.emit()
 
     def _arg_name(self, name, is_doc=False):
