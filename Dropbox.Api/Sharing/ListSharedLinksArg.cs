@@ -43,9 +43,12 @@ namespace Dropbox.Api.Sharing
                                   string cursor = null,
                                   bool? directOnly = null)
         {
-            if (path != null && (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z")))
+            if (path != null)
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                if (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z'");
+                }
             }
 
             this.Path = path;

@@ -44,14 +44,20 @@ namespace Dropbox.Api.Files
                                  string sharedFolderId = null)
             : base(readOnly)
         {
-            if (parentSharedFolderId != null && (!re.Regex.IsMatch(parentSharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z")))
+            if (parentSharedFolderId != null)
             {
-                throw new sys.ArgumentOutOfRangeException("parentSharedFolderId");
+                if (!re.Regex.IsMatch(parentSharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("parentSharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
+                }
             }
 
-            if (sharedFolderId != null && (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z")))
+            if (sharedFolderId != null)
             {
-                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+                if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("sharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
+                }
             }
 
             this.ParentSharedFolderId = parentSharedFolderId;

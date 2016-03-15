@@ -72,9 +72,12 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("linkPermissions");
             }
 
-            if (id != null && (id.Length < 1))
+            if (id != null)
             {
-                throw new sys.ArgumentOutOfRangeException("id");
+                if (id.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("id", "Length should be at least 1");
+                }
             }
 
             this.Url = url;

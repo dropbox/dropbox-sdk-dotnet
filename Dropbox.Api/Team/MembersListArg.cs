@@ -33,9 +33,13 @@ namespace Dropbox.Api.Team
         /// <param name="limit">Number of results to return per call.</param>
         public MembersListArg(uint limit = 1000)
         {
-            if (limit < 1U || limit > 1000U)
+            if (limit < 1U)
             {
-                throw new sys.ArgumentOutOfRangeException("limit");
+                throw new sys.ArgumentOutOfRangeException("limit", "Value should be greater or equal than 1");
+            }
+            if (limit > 1000U)
+            {
+                throw new sys.ArgumentOutOfRangeException("limit", "Value should be less of equal than 1000");
             }
 
             this.Limit = limit;

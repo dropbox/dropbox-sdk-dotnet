@@ -51,26 +51,23 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"\A(?:/.*)\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:/.*)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/.*)\z'");
             }
 
             if (memberPolicy == null)
             {
                 memberPolicy = MemberPolicy.Anyone.Instance;
             }
-
             if (aclUpdatePolicy == null)
             {
                 aclUpdatePolicy = AclUpdatePolicy.Owner.Instance;
             }
-
             if (sharedLinkPolicy == null)
             {
                 sharedLinkPolicy = SharedLinkPolicy.Anyone.Instance;
             }
-
             this.Path = path;
             this.MemberPolicy = memberPolicy;
             this.AclUpdatePolicy = aclUpdatePolicy;

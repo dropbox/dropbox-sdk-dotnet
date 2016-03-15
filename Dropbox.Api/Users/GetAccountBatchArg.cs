@@ -41,9 +41,9 @@ namespace Dropbox.Api.Users
             {
                 throw new sys.ArgumentNullException("accountIds");
             }
-            else if (accountIdsList.Count < 1)
+            if (accountIdsList.Count < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("accountIds");
+                throw new sys.ArgumentOutOfRangeException("accountIds", "List should at at least 1 items");
             }
 
             this.AccountIds = accountIdsList;

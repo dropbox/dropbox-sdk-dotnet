@@ -40,14 +40,21 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z'");
             }
 
-            if (rev != null && (rev.Length < 9 || !re.Regex.IsMatch(rev, @"\A(?:[0-9a-f]+)\z")))
+            if (rev != null)
             {
-                throw new sys.ArgumentOutOfRangeException("rev");
+                if (rev.Length < 9)
+                {
+                    throw new sys.ArgumentOutOfRangeException("rev", "Length should be at least 9");
+                }
+                if (!re.Regex.IsMatch(rev, @"\A(?:[0-9a-f]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("rev", @"Value should match pattern '\A(?:[0-9a-f]+)\z'");
+                }
             }
 
             this.Path = path;

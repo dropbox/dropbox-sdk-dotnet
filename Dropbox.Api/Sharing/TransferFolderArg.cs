@@ -41,18 +41,18 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("sharedFolderId");
             }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+            if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+                throw new sys.ArgumentOutOfRangeException("sharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
             }
 
             if (toDropboxId == null)
             {
                 throw new sys.ArgumentNullException("toDropboxId");
             }
-            else if (toDropboxId.Length < 1)
+            if (toDropboxId.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("toDropboxId");
+                throw new sys.ArgumentOutOfRangeException("toDropboxId", "Length should be at least 1");
             }
 
             this.SharedFolderId = sharedFolderId;

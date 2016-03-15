@@ -47,7 +47,6 @@ namespace Dropbox.Api.Sharing
             {
                 accessLevel = AccessLevel.Viewer.Instance;
             }
-
             this.Member = member;
             this.AccessLevel = accessLevel;
         }

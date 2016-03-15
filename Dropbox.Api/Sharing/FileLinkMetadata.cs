@@ -76,9 +76,13 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("rev");
             }
-            else if (rev.Length < 9 || !re.Regex.IsMatch(rev, @"\A(?:[0-9a-f]+)\z"))
+            if (rev.Length < 9)
             {
-                throw new sys.ArgumentOutOfRangeException("rev");
+                throw new sys.ArgumentOutOfRangeException("rev", "Length should be at least 9");
+            }
+            if (!re.Regex.IsMatch(rev, @"\A(?:[0-9a-f]+)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("rev", @"Value should match pattern '\A(?:[0-9a-f]+)\z'");
             }
 
             this.ClientModified = clientModified;

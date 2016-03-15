@@ -63,9 +63,12 @@ namespace Dropbox.Api.Sharing
 
             var permissionsList = enc.Util.ToList(permissions);
 
-            if (parentSharedFolderId != null && (!re.Regex.IsMatch(parentSharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z")))
+            if (parentSharedFolderId != null)
             {
-                throw new sys.ArgumentOutOfRangeException("parentSharedFolderId");
+                if (!re.Regex.IsMatch(parentSharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("parentSharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
+                }
             }
 
             this.AccessType = accessType;

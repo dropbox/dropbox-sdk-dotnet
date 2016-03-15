@@ -51,9 +51,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"\A(?:(/.*)?)\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/.*)?)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/.*)?)\z'");
             }
 
             if (query == null)
@@ -61,16 +61,19 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentNullException("query");
             }
 
-            if (maxResults < 1UL || maxResults > 1000UL)
+            if (maxResults < 1UL)
             {
-                throw new sys.ArgumentOutOfRangeException("maxResults");
+                throw new sys.ArgumentOutOfRangeException("maxResults", "Value should be greater or equal than 1");
+            }
+            if (maxResults > 1000UL)
+            {
+                throw new sys.ArgumentOutOfRangeException("maxResults", "Value should be less of equal than 1000");
             }
 
             if (mode == null)
             {
                 mode = SearchMode.Filename.Instance;
             }
-
             this.Path = path;
             this.Query = query;
             this.Start = start;

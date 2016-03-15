@@ -38,9 +38,9 @@ namespace Dropbox.Api.Async
             {
                 throw new sys.ArgumentNullException("asyncJobId");
             }
-            else if (asyncJobId.Length < 1)
+            if (asyncJobId.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("asyncJobId");
+                throw new sys.ArgumentOutOfRangeException("asyncJobId", "Length should be at least 1");
             }
 
             this.AsyncJobId = asyncJobId;

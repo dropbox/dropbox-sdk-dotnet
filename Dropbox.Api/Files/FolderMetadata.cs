@@ -61,14 +61,17 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("id");
             }
-            else if (id.Length < 1)
+            if (id.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("id");
+                throw new sys.ArgumentOutOfRangeException("id", "Length should be at least 1");
             }
 
-            if (sharedFolderId != null && (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z")))
+            if (sharedFolderId != null)
             {
-                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+                if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("sharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
+                }
             }
 
             this.Id = id;

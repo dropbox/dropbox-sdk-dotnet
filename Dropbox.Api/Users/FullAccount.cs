@@ -75,9 +75,9 @@ namespace Dropbox.Api.Users
             {
                 throw new sys.ArgumentNullException("locale");
             }
-            else if (locale.Length < 2)
+            if (locale.Length < 2)
             {
-                throw new sys.ArgumentOutOfRangeException("locale");
+                throw new sys.ArgumentOutOfRangeException("locale", "Length should be at least 2");
             }
 
             if (referralLink == null)
@@ -90,9 +90,16 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentNullException("accountType");
             }
 
-            if (country != null && (country.Length < 2 || country.Length > 2))
+            if (country != null)
             {
-                throw new sys.ArgumentOutOfRangeException("country");
+                if (country.Length < 2)
+                {
+                    throw new sys.ArgumentOutOfRangeException("country", "Length should be at least 2");
+                }
+                if (country.Length > 2)
+                {
+                    throw new sys.ArgumentOutOfRangeException("country", "Length should be at most 2");
+                }
             }
 
             this.Locale = locale;

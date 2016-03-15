@@ -40,14 +40,18 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"\A(?:/.*)\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:/.*)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/.*)\z'");
             }
 
-            if (limit < 1UL || limit > 100UL)
+            if (limit < 1UL)
             {
-                throw new sys.ArgumentOutOfRangeException("limit");
+                throw new sys.ArgumentOutOfRangeException("limit", "Value should be greater or equal than 1");
+            }
+            if (limit > 100UL)
+            {
+                throw new sys.ArgumentOutOfRangeException("limit", "Value should be less of equal than 100");
             }
 
             this.Path = path;

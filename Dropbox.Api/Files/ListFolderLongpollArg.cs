@@ -47,14 +47,18 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("cursor");
             }
-            else if (cursor.Length < 1)
+            if (cursor.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("cursor");
+                throw new sys.ArgumentOutOfRangeException("cursor", "Length should be at least 1");
             }
 
-            if (timeout < 30UL || timeout > 480UL)
+            if (timeout < 30UL)
             {
-                throw new sys.ArgumentOutOfRangeException("timeout");
+                throw new sys.ArgumentOutOfRangeException("timeout", "Value should be greater or equal than 30");
+            }
+            if (timeout > 480UL)
+            {
+                throw new sys.ArgumentOutOfRangeException("timeout", "Value should be less of equal than 480");
             }
 
             this.Cursor = cursor;

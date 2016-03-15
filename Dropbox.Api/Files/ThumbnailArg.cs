@@ -43,21 +43,19 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            else if (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:((/|id:).*)|(rev:[0-9a-f]{9,}))\z'");
             }
 
             if (format == null)
             {
                 format = ThumbnailFormat.Jpeg.Instance;
             }
-
             if (size == null)
             {
                 size = ThumbnailSize.W64h64.Instance;
             }
-
             this.Path = path;
             this.Format = format;
             this.Size = size;

@@ -50,39 +50,61 @@ namespace Dropbox.Api.Team
             {
                 throw new sys.ArgumentNullException("memberEmail");
             }
-            else if (memberEmail.Length > 255 || !re.Regex.IsMatch(memberEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
+            if (memberEmail.Length > 255)
             {
-                throw new sys.ArgumentOutOfRangeException("memberEmail");
+                throw new sys.ArgumentOutOfRangeException("memberEmail", "Length should be at most 255");
+            }
+            if (!re.Regex.IsMatch(memberEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("memberEmail", @"Value should match pattern '\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z'");
             }
 
             if (memberGivenName == null)
             {
                 throw new sys.ArgumentNullException("memberGivenName");
             }
-            else if (memberGivenName.Length < 1 || memberGivenName.Length > 100 || !re.Regex.IsMatch(memberGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
+            if (memberGivenName.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("memberGivenName");
+                throw new sys.ArgumentOutOfRangeException("memberGivenName", "Length should be at least 1");
+            }
+            if (memberGivenName.Length > 100)
+            {
+                throw new sys.ArgumentOutOfRangeException("memberGivenName", "Length should be at most 100");
+            }
+            if (!re.Regex.IsMatch(memberGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("memberGivenName", @"Value should match pattern '\A(?:[^/:?*<>""|]*)\z'");
             }
 
             if (memberSurname == null)
             {
                 throw new sys.ArgumentNullException("memberSurname");
             }
-            else if (memberSurname.Length < 1 || memberSurname.Length > 100 || !re.Regex.IsMatch(memberSurname, @"\A(?:[^/:?*<>""|]*)\z"))
+            if (memberSurname.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("memberSurname");
+                throw new sys.ArgumentOutOfRangeException("memberSurname", "Length should be at least 1");
+            }
+            if (memberSurname.Length > 100)
+            {
+                throw new sys.ArgumentOutOfRangeException("memberSurname", "Length should be at most 100");
+            }
+            if (!re.Regex.IsMatch(memberSurname, @"\A(?:[^/:?*<>""|]*)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("memberSurname", @"Value should match pattern '\A(?:[^/:?*<>""|]*)\z'");
             }
 
-            if (memberExternalId != null && (memberExternalId.Length > 64))
+            if (memberExternalId != null)
             {
-                throw new sys.ArgumentOutOfRangeException("memberExternalId");
+                if (memberExternalId.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("memberExternalId", "Length should be at most 64");
+                }
             }
 
             if (role == null)
             {
                 role = AdminTier.MemberOnly.Instance;
             }
-
             this.MemberEmail = memberEmail;
             this.MemberGivenName = memberGivenName;
             this.MemberSurname = memberSurname;

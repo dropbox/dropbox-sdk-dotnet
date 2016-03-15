@@ -46,9 +46,12 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("url");
             }
 
-            if (path != null && (!re.Regex.IsMatch(path, @"\A(?:/.*)\z")))
+            if (path != null)
             {
-                throw new sys.ArgumentOutOfRangeException("path");
+                if (!re.Regex.IsMatch(path, @"\A(?:/.*)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/.*)\z'");
+                }
             }
 
             this.Url = url;

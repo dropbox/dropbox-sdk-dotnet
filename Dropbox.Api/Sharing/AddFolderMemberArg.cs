@@ -47,9 +47,9 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("sharedFolderId");
             }
-            else if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+            if (!re.Regex.IsMatch(sharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("sharedFolderId");
+                throw new sys.ArgumentOutOfRangeException("sharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
             }
 
             var membersList = enc.Util.ToList(members);
@@ -59,9 +59,12 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("members");
             }
 
-            if (customMessage != null && (customMessage.Length < 1))
+            if (customMessage != null)
             {
-                throw new sys.ArgumentOutOfRangeException("customMessage");
+                if (customMessage.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("customMessage", "Length should be at least 1");
+                }
             }
 
             this.SharedFolderId = sharedFolderId;

@@ -39,18 +39,18 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("fromPath");
             }
-            else if (!re.Regex.IsMatch(fromPath, @"\A(?:/.*)\z"))
+            if (!re.Regex.IsMatch(fromPath, @"\A(?:/.*)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("fromPath");
+                throw new sys.ArgumentOutOfRangeException("fromPath", @"Value should match pattern '\A(?:/.*)\z'");
             }
 
             if (toPath == null)
             {
                 throw new sys.ArgumentNullException("toPath");
             }
-            else if (!re.Regex.IsMatch(toPath, @"\A(?:/.*)\z"))
+            if (!re.Regex.IsMatch(toPath, @"\A(?:/.*)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("toPath");
+                throw new sys.ArgumentOutOfRangeException("toPath", @"Value should match pattern '\A(?:/.*)\z'");
             }
 
             this.FromPath = fromPath;

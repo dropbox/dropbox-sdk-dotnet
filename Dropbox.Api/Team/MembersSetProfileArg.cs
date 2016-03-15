@@ -50,24 +50,56 @@ namespace Dropbox.Api.Team
                 throw new sys.ArgumentNullException("user");
             }
 
-            if (newEmail != null && (newEmail.Length > 255 || !re.Regex.IsMatch(newEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z")))
+            if (newEmail != null)
             {
-                throw new sys.ArgumentOutOfRangeException("newEmail");
+                if (newEmail.Length > 255)
+                {
+                    throw new sys.ArgumentOutOfRangeException("newEmail", "Length should be at most 255");
+                }
+                if (!re.Regex.IsMatch(newEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("newEmail", @"Value should match pattern '\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z'");
+                }
             }
 
-            if (newExternalId != null && (newExternalId.Length > 64))
+            if (newExternalId != null)
             {
-                throw new sys.ArgumentOutOfRangeException("newExternalId");
+                if (newExternalId.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("newExternalId", "Length should be at most 64");
+                }
             }
 
-            if (newGivenName != null && (newGivenName.Length < 1 || newGivenName.Length > 100 || !re.Regex.IsMatch(newGivenName, @"\A(?:[^/:?*<>""|]*)\z")))
+            if (newGivenName != null)
             {
-                throw new sys.ArgumentOutOfRangeException("newGivenName");
+                if (newGivenName.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("newGivenName", "Length should be at least 1");
+                }
+                if (newGivenName.Length > 100)
+                {
+                    throw new sys.ArgumentOutOfRangeException("newGivenName", "Length should be at most 100");
+                }
+                if (!re.Regex.IsMatch(newGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("newGivenName", @"Value should match pattern '\A(?:[^/:?*<>""|]*)\z'");
+                }
             }
 
-            if (newSurname != null && (newSurname.Length < 1 || newSurname.Length > 100 || !re.Regex.IsMatch(newSurname, @"\A(?:[^/:?*<>""|]*)\z")))
+            if (newSurname != null)
             {
-                throw new sys.ArgumentOutOfRangeException("newSurname");
+                if (newSurname.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("newSurname", "Length should be at least 1");
+                }
+                if (newSurname.Length > 100)
+                {
+                    throw new sys.ArgumentOutOfRangeException("newSurname", "Length should be at most 100");
+                }
+                if (!re.Regex.IsMatch(newSurname, @"\A(?:[^/:?*<>""|]*)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("newSurname", @"Value should match pattern '\A(?:[^/:?*<>""|]*)\z'");
+                }
             }
 
             this.User = user;

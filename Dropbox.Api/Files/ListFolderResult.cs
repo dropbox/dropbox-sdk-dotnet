@@ -53,9 +53,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("cursor");
             }
-            else if (cursor.Length < 1)
+            if (cursor.Length < 1)
             {
-                throw new sys.ArgumentOutOfRangeException("cursor");
+                throw new sys.ArgumentOutOfRangeException("cursor", "Length should be at least 1");
             }
 
             this.Entries = entriesList;

@@ -37,9 +37,13 @@ namespace Dropbox.Api.Users
             {
                 throw new sys.ArgumentNullException("accountId");
             }
-            else if (accountId.Length < 40 || accountId.Length > 40)
+            if (accountId.Length < 40)
             {
-                throw new sys.ArgumentOutOfRangeException("accountId");
+                throw new sys.ArgumentOutOfRangeException("accountId", "Length should be at least 40");
+            }
+            if (accountId.Length > 40)
+            {
+                throw new sys.ArgumentOutOfRangeException("accountId", "Length should be at most 40");
             }
 
             this.AccountId = accountId;
