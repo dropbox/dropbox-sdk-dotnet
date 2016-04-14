@@ -43,7 +43,7 @@ namespace <Namespace>.Babel
         public static string Write<T>(T encodable, IEncoder<T> encoder, bool escapeNonAscii = false)
         {
             var builder = new StringBuilder();
-            var textWriter = new JsonTextWriter(new StringWriter(builder));
+            var textWriter = new JsonTextWriter(new StringWriter(builder)) { DateFormatString = "yyyy-MM-ddTHH:mm:ssZ" };
 
             if (escapeNonAscii)
             {
@@ -118,7 +118,7 @@ namespace <Namespace>.Babel
         /// <param name="value">The value.</param>
         void IJsonWriter.WriteDateTime(DateTime value)
         {
-            this.writer.WriteValue(value);
+            this.writer.WriteValue(value.ToUniversalTime());
         }
 
         /// <summary>
