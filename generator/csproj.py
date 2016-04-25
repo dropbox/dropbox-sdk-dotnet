@@ -21,7 +21,7 @@ COMPILE_INCLUDES = [
     "DropboxClient.common.cs",
     "DropboxOauth2Helper.cs",
     "DropboxRequestHandler.cs",
-    "Properties\\AssemblyInfo.cs",
+    "AppProperties\\AssemblyInfo.cs",
 ]
 
 NONE_INCLUDES = [
@@ -49,7 +49,7 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68180B54-4724-4CD1-BAA6-EE7BC309797C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -115,7 +115,7 @@ PORTABLE40_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D7B167CE-3AF8-478E-82F2-684D38F1DF98}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -205,7 +205,7 @@ PORTABLE_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{786C830F-07A1-408B-BD7F-6EE04809D6DB}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -266,7 +266,7 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E57A534-F4CA-402B-88F4-0B43E55264BA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>

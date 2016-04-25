@@ -377,7 +377,7 @@ namespace SimpleTest
                     {
                         if (idx == 0)
                         {
-                            var result = await client.Files.UploadSessionStartAsync(memStream);
+                            var result = await client.Files.UploadSessionStartAsync(body: memStream);
                             sessionId = result.SessionId;
                         }
 
@@ -392,7 +392,7 @@ namespace SimpleTest
 
                             else
                             {
-                                await client.Files.UploadSessionAppendAsync(cursor, memStream);
+                                await client.Files.UploadSessionAppendV2Async(cursor, body: memStream);
                             }
                         }
                     }

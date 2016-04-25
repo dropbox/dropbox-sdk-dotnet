@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.0.6</version>
+    <version>3.1.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -13,8 +13,28 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
-Bug fixes:
-- Fix bugs related to date time serialization.
+What's new:
+- Authentication
+  - Add Token.Revoke endpoint.
+- Account
+  - Add Disabled field to Account.
+- Files
+  - Add IncludeDeleted and IncludeHasExplicitSharedMembers parameter to GetMetadata and ListFolder endpoint.
+  - Add Close parameter to UploadSessionStart endpoint to support explicitly close an upload session.
+  - Add UploadSessionAppendV2 endpoint which provides explicit session close support. UploadSessionAppend endpoint is now deprecated.
+  - Add CopyReference endpoint.
+  - Add GetTemporaryLink endpoint.
+- Shared links
+  - Add RemoveExpiration parameter to ModifySharedLinkSettings endpoint.
+- Shared folders
+  - Add LeaveACopy to FolderAction.
+  - Add TimeInvited to SharedFolderMetadata.
+  - Return IsOsxPackage or InsideOsxPackage error when user attempts to share an OS X package or folder inside OS X package.
+- Business endpoints
+  - MemberCount is now optional in GroupSummary.
+  - DevicesListTeamDevices endpoint is now deprecated by DevicesListMemberDevices.
+  - LinkedAppsListTeamLinkedApps is now deprecated by LinkedAppsListMembersLinkedApps endpoint.
+  - Add ReturnMembers parameter to GroupsMembersSetAccessType endpoint.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
