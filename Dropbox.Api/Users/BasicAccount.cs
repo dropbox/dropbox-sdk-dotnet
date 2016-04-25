@@ -38,6 +38,7 @@ namespace Dropbox.Api.Users
         /// has since lost access to their e-mail.</param>
         /// <param name="emailVerified">Whether the user has verified their e-mail
         /// address.</param>
+        /// <param name="disabled">Whether the user has been disabled.</param>
         /// <param name="isTeammate">Whether this user is a teammate of the current user. If
         /// this account is the current user's account, then this will be <c>true</c>.</param>
         /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
@@ -49,10 +50,11 @@ namespace Dropbox.Api.Users
                             Name name,
                             string email,
                             bool emailVerified,
+                            bool disabled,
                             bool isTeammate,
                             string profilePhotoUrl = null,
                             string teamMemberId = null)
-            : base(accountId, name, email, emailVerified, profilePhotoUrl)
+            : base(accountId, name, email, emailVerified, disabled, profilePhotoUrl)
         {
             this.IsTeammate = isTeammate;
             this.TeamMemberId = teamMemberId;
@@ -97,6 +99,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
                 WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("disabled", value.Disabled, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_teammate", value.IsTeammate, writer, enc.BooleanEncoder.Instance);
                 if (value.ProfilePhotoUrl != null)
                 {
@@ -149,6 +152,9 @@ namespace Dropbox.Api.Users
                         break;
                     case "email_verified":
                         value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "disabled":
+                        value.Disabled = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "is_teammate":
                         value.IsTeammate = enc.BooleanDecoder.Instance.Decode(reader);

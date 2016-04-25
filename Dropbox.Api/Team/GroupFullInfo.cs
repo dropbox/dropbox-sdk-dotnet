@@ -34,29 +34,24 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="groupName">The group name</param>
         /// <param name="groupId">The group id</param>
-        /// <param name="memberCount">The number of members in the group.</param>
-        /// <param name="members">List of group members.</param>
         /// <param name="created">The group creation time as a UTC timestamp in milliseconds
         /// since the Unix epoch.</param>
         /// <param name="groupExternalId">External ID of group. This is an arbitrary ID that an
         /// admin can attach to a group.</param>
+        /// <param name="memberCount">The number of members in the group.</param>
+        /// <param name="members">List of group members.</param>
         public GroupFullInfo(string groupName,
                              string groupId,
-                             uint memberCount,
-                             col.IEnumerable<GroupMemberInfo> members,
                              ulong created,
-                             string groupExternalId = null)
-            : base(groupName, groupId, memberCount, groupExternalId)
+                             string groupExternalId = null,
+                             uint? memberCount = null,
+                             col.IEnumerable<GroupMemberInfo> members = null)
+            : base(groupName, groupId, groupExternalId, memberCount)
         {
             var membersList = enc.Util.ToList(members);
 
-            if (members == null)
-            {
-                throw new sys.ArgumentNullException("members");
-            }
-
-            this.Members = membersList;
             this.Created = created;
+            this.Members = membersList;
         }
 
         /// <summary>
@@ -69,15 +64,15 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>List of group members.</para>
-        /// </summary>
-        public col.IList<GroupMemberInfo> Members { get; protected set; }
-
-        /// <summary>
         /// <para>The group creation time as a UTC timestamp in milliseconds since the Unix
         /// epoch.</para>
         /// </summary>
         public ulong Created { get; protected set; }
+
+        /// <summary>
+        /// <para>List of group members.</para>
+        /// </summary>
+        public col.IList<GroupMemberInfo> Members { get; protected set; }
 
         #region Encoder class
 
@@ -95,12 +90,18 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
-                WriteProperty("member_count", value.MemberCount, writer, enc.UInt32Encoder.Instance);
-                WriteListProperty("members", value.Members, writer, Dropbox.Api.Team.GroupMemberInfo.Encoder);
                 WriteProperty("created", value.Created, writer, enc.UInt64Encoder.Instance);
                 if (value.GroupExternalId != null)
                 {
                     WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.MemberCount != null)
+                {
+                    WriteProperty("member_count", value.MemberCount.Value, writer, enc.UInt32Encoder.Instance);
+                }
+                if (value.Members.Count > 0)
+                {
+                    WriteListProperty("members", value.Members, writer, Dropbox.Api.Team.GroupMemberInfo.Encoder);
                 }
             }
         }
@@ -140,17 +141,17 @@ namespace Dropbox.Api.Team
                     case "group_id":
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "member_count":
-                        value.MemberCount = enc.UInt32Decoder.Instance.Decode(reader);
-                        break;
-                    case "members":
-                        value.Members = ReadList<GroupMemberInfo>(reader, Dropbox.Api.Team.GroupMemberInfo.Decoder);
-                        break;
                     case "created":
                         value.Created = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "group_external_id":
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "member_count":
+                        value.MemberCount = enc.UInt32Decoder.Instance.Decode(reader);
+                        break;
+                    case "members":
+                        value.Members = ReadList<GroupMemberInfo>(reader, Dropbox.Api.Team.GroupMemberInfo.Decoder);
                         break;
                     default:
                         reader.Skip();

@@ -37,8 +37,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" /> on their
         /// behalf.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="addFolderMemberArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -74,8 +72,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" /> on their
         /// behalf.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="members">The intended list of members to add.  Added members will
@@ -152,8 +148,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns the status of an asynchronous job.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -185,8 +179,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns the status of an asynchronous job.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -245,8 +237,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns the status of an asynchronous job for sharing a folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -278,8 +268,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns the status of an asynchronous job for sharing a folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -569,8 +557,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns shared folder metadata by its folder ID.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="getMetadataArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -602,8 +588,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns shared folder metadata by its folder ID.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="actions">Folder actions to query.</param>
@@ -978,8 +962,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns shared folder membership by its folder ID.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="listFolderMembersArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1011,8 +993,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns shared folder membership by its folder ID.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="actions">Member actions to query.</param>
@@ -1085,8 +1065,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersAsync" />, use this
         /// to paginate through all shared folder members.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="listFolderMembersContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1120,8 +1098,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersAsync" />, use this
         /// to paginate through all shared folder members.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersAsync" /> or <see
@@ -1184,8 +1160,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Return the list of all shared folders the current user has access to.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="listFoldersArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1214,8 +1188,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Return the list of all shared folders the current user has access to.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
         /// <param name="actions">Folder actions to query.</param>
@@ -1276,8 +1248,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync" /> or <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" />.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="listFoldersContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1313,8 +1283,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync" /> or <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" />.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by the previous API call specified in the
         /// endpoint description.</param>
@@ -1729,16 +1697,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="url">URL of the shared link to change its settings</param>
         /// <param name="settings">Set of settings for the shared link.</param>
+        /// <param name="removeExpiration">If set to true, removes the expiration of the shared
+        /// link.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(string url,
-                                                                        SharedLinkSettings settings)
+                                                                        SharedLinkSettings settings,
+                                                                        bool removeExpiration = false)
         {
             var modifySharedLinkSettingsArgs = new ModifySharedLinkSettingsArgs(url,
-                                                                                settings);
+                                                                                settings,
+                                                                                removeExpiration);
 
             return this.ModifySharedLinkSettingsAsync(modifySharedLinkSettingsArgs);
         }
@@ -1748,6 +1720,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="url">URL of the shared link to change its settings</param>
         /// <param name="settings">Set of settings for the shared link.</param>
+        /// <param name="removeExpiration">If set to true, removes the expiration of the shared
+        /// link.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1755,11 +1729,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginModifySharedLinkSettings(string url,
                                                               SharedLinkSettings settings,
-                                                              sys.AsyncCallback callback,
+                                                              bool removeExpiration = false,
+                                                              sys.AsyncCallback callback = null,
                                                               object callbackState = null)
         {
             var modifySharedLinkSettingsArgs = new ModifySharedLinkSettingsArgs(url,
-                                                                                settings);
+                                                                                settings,
+                                                                                removeExpiration);
 
             return this.BeginModifySharedLinkSettings(modifySharedLinkSettingsArgs, callback, callbackState);
         }
@@ -1790,8 +1766,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Mount a shared folder for a user after they have been added as a member. Once
         /// mounted, the shared folder will appear in their Dropbox.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="mountFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1825,8 +1799,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Mount a shared folder for a user after they have been added as a member. Once
         /// mounted, the shared folder will appear in their Dropbox.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1885,8 +1857,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// folder and will no longer have access to the folder.  A folder owner cannot
         /// relinquish membership in their own folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="relinquishFolderMembershipArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -1919,8 +1889,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// folder and will no longer have access to the folder.  A folder owner cannot
         /// relinquish membership in their own folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -1974,8 +1942,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
         /// folder to remove another member.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="removeFolderMemberArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2008,8 +1974,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
         /// folder to remove another member.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="member">The member to remove from the folder.</param>
@@ -2181,8 +2145,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync" /> until
         /// the action completes to get the metadata for the folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="shareFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2221,8 +2183,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckShareJobStatusAsync" /> until
         /// the action completes to get the metadata for the folder.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="path">The path to the folder to share. If it does not exist, then a
         /// new one is created.</param>
@@ -2318,8 +2278,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
         /// the shared folder to perform a transfer.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="transferFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2353,8 +2311,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
         /// the shared folder to perform a transfer.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="toDropboxId">A account or team member ID to transfer ownership
@@ -2417,8 +2373,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// at a later time using <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" />.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="unmountFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2451,8 +2405,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// at a later time using <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.MountFolderAsync" />.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2508,8 +2460,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckJobStatusAsync" /> to determine
         /// if the action has completed successfully.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="unshareFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2544,8 +2494,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.CheckJobStatusAsync" /> to determine
         /// if the action has completed successfully.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="leaveACopy">If true, members of this shared folder will get a copy of
@@ -2613,8 +2561,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Allows an owner or editor of a shared folder to update another member's
         /// permissions.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="updateFolderMemberArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2646,8 +2592,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Allows an owner or editor of a shared folder to update another member's
         /// permissions.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="member">The member of the shared folder to update.  Only the <see
@@ -2720,8 +2664,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
         /// the shared folder to update its policies.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="updateFolderPolicyArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2755,8 +2697,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
         /// the shared folder to update its policies.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
-        /// <para>Warning: This endpoint is in beta and is subject to minor but possibly
-        /// backwards-incompatible changes.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="memberPolicy">Who can be a member of this shared folder. Only

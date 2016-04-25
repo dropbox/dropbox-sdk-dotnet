@@ -39,10 +39,14 @@ namespace Dropbox.Api.Files
         /// video.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
+        /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
+        /// flag for each file indicating whether or not  that file has any explicit
+        /// members.</param>
         public ListFolderArg(string path,
                              bool recursive = false,
                              bool includeMediaInfo = false,
-                             bool includeDeleted = false)
+                             bool includeDeleted = false,
+                             bool includeHasExplicitSharedMembers = false)
         {
             if (path == null)
             {
@@ -57,6 +61,7 @@ namespace Dropbox.Api.Files
             this.Recursive = recursive;
             this.IncludeMediaInfo = includeMediaInfo;
             this.IncludeDeleted = includeDeleted;
+            this.IncludeHasExplicitSharedMembers = includeHasExplicitSharedMembers;
         }
 
         /// <summary>
@@ -69,6 +74,7 @@ namespace Dropbox.Api.Files
             this.Recursive = false;
             this.IncludeMediaInfo = false;
             this.IncludeDeleted = false;
+            this.IncludeHasExplicitSharedMembers = false;
         }
 
         /// <summary>
@@ -94,6 +100,12 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool IncludeDeleted { get; protected set; }
 
+        /// <summary>
+        /// <para>If true, the results will include a flag for each file indicating whether or
+        /// not  that file has any explicit members.</para>
+        /// </summary>
+        public bool IncludeHasExplicitSharedMembers { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -112,6 +124,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("recursive", value.Recursive, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_deleted", value.IncludeDeleted, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_has_explicit_shared_members", value.IncludeHasExplicitSharedMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -155,6 +168,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_deleted":
                         value.IncludeDeleted = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_has_explicit_shared_members":
+                        value.IncludeHasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

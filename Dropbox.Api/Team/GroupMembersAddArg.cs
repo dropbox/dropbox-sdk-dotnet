@@ -13,7 +13,8 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group members add arg object</para>
     /// </summary>
-    public class GroupMembersAddArg
+    /// <seealso cref="Dropbox.Api.Team.IncludeMembersArg" />
+    public class GroupMembersAddArg : IncludeMembersArg
     {
         #pragma warning disable 108
 
@@ -33,8 +34,13 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="group">Group to which users will be added.</param>
         /// <param name="members">List of users to be added to the group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         public GroupMembersAddArg(GroupSelector @group,
-                                  col.IEnumerable<MemberAccess> members)
+                                  col.IEnumerable<MemberAccess> members,
+                                  bool returnMembers = true)
+            : base(returnMembers)
         {
             if (@group == null)
             {
@@ -88,6 +94,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
                 WriteListProperty("members", value.Members, writer, Dropbox.Api.Team.MemberAccess.Encoder);
+                WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -125,6 +132,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "members":
                         value.Members = ReadList<MemberAccess>(reader, Dropbox.Api.Team.MemberAccess.Decoder);
+                        break;
+                    case "return_members":
+                        value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

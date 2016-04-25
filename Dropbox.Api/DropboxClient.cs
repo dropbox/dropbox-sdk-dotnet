@@ -7,12 +7,18 @@ namespace Dropbox.Api
     using sys = System;
 
     using Dropbox.Api.Babel;
+    using Dropbox.Api.Auth.Routes;
     using Dropbox.Api.Files.Routes;
     using Dropbox.Api.Sharing.Routes;
     using Dropbox.Api.Users.Routes;
 
     public sealed partial class DropboxClient
     {
+        /// <summary>
+        /// <para>Gets the Auth routes.</para>
+        /// </summary>
+        public AuthRoutes Auth { get; private set; }
+
         /// <summary>
         /// <para>Gets the Files routes.</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace Dropbox.Api
         /// <returns>The transport.</returns>
         private void InitializeRoutes(ITransport transport)
         {
+            this.Auth = new AuthRoutes(transport);
             this.Files = new FilesRoutes(transport);
             this.Sharing = new SharingRoutes(transport);
             this.Users = new UsersRoutes(transport);

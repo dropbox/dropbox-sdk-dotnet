@@ -147,6 +147,30 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UserCannotBeManagerOfCompanyManagedGroup</para>
+        /// </summary>
+        public bool IsUserCannotBeManagerOfCompanyManagedGroup
+        {
+            get
+            {
+                return this is UserCannotBeManagerOfCompanyManagedGroup;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserCannotBeManagerOfCompanyManagedGroup, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public UserCannotBeManagerOfCompanyManagedGroup AsUserCannotBeManagerOfCompanyManagedGroup
+        {
+            get
+            {
+                return this as UserCannotBeManagerOfCompanyManagedGroup;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is GroupNotFound</para>
         /// </summary>
         public bool IsGroupNotFound
@@ -234,6 +258,12 @@ namespace Dropbox.Api.Team
                     UserMustBeActiveToBeOwner.Encoder.EncodeFields((UserMustBeActiveToBeOwner)value, writer);
                     return;
                 }
+                if (value is UserCannotBeManagerOfCompanyManagedGroup)
+                {
+                    WriteProperty(".tag", "user_cannot_be_manager_of_company_managed_group", writer, enc.StringEncoder.Instance);
+                    UserCannotBeManagerOfCompanyManagedGroup.Encoder.EncodeFields((UserCannotBeManagerOfCompanyManagedGroup)value, writer);
+                    return;
+                }
                 if (value is GroupNotFound)
                 {
                     WriteProperty(".tag", "group_not_found", writer, enc.StringEncoder.Instance);
@@ -288,6 +318,8 @@ namespace Dropbox.Api.Team
                         return UsersNotFound.Decoder.DecodeFields(reader);
                     case "user_must_be_active_to_be_owner":
                         return UserMustBeActiveToBeOwner.Decoder.DecodeFields(reader);
+                    case "user_cannot_be_manager_of_company_managed_group":
+                        return UserCannotBeManagerOfCompanyManagedGroup.Decoder.DecodeFields(reader);
                     case "group_not_found":
                         return GroupNotFound.Decoder.DecodeFields(reader);
                     case "other":
@@ -733,6 +765,107 @@ namespace Dropbox.Api.Team
                 public override UserMustBeActiveToBeOwner DecodeFields(enc.IJsonReader reader)
                 {
                     return UserMustBeActiveToBeOwner.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>A company managed group cannot be managed by a user.</para>
+        /// </summary>
+        public sealed class UserCannotBeManagerOfCompanyManagedGroup : GroupMembersAddError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserCannotBeManagerOfCompanyManagedGroup> Encoder = new UserCannotBeManagerOfCompanyManagedGroupEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserCannotBeManagerOfCompanyManagedGroup> Decoder = new UserCannotBeManagerOfCompanyManagedGroupDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="UserCannotBeManagerOfCompanyManagedGroup" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public UserCannotBeManagerOfCompanyManagedGroup(col.IEnumerable<string> value)
+            {
+                this.Value = new col.List<string>(value);
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="UserCannotBeManagerOfCompanyManagedGroup" /> class.</para>
+            /// </summary>
+            private UserCannotBeManagerOfCompanyManagedGroup()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public col.IList<string> Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserCannotBeManagerOfCompanyManagedGroup"
+            /// />.</para>
+            /// </summary>
+            private class UserCannotBeManagerOfCompanyManagedGroupEncoder : enc.StructEncoder<UserCannotBeManagerOfCompanyManagedGroup>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserCannotBeManagerOfCompanyManagedGroup value, enc.IJsonWriter writer)
+                {
+                    WriteListProperty("user_cannot_be_manager_of_company_managed_group", value.Value, writer, enc.StringEncoder.Instance);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserCannotBeManagerOfCompanyManagedGroup"
+            /// />.</para>
+            /// </summary>
+            private class UserCannotBeManagerOfCompanyManagedGroupDecoder : enc.StructDecoder<UserCannotBeManagerOfCompanyManagedGroup>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="UserCannotBeManagerOfCompanyManagedGroup" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserCannotBeManagerOfCompanyManagedGroup Create()
+                {
+                    return new UserCannotBeManagerOfCompanyManagedGroup();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(UserCannotBeManagerOfCompanyManagedGroup value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "user_cannot_be_manager_of_company_managed_group":
+                            value.Value = ReadList<string>(reader, enc.StringDecoder.Instance);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

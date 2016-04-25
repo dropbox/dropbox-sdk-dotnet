@@ -14,6 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>The file metadata object</para>
     /// </summary>
     /// <seealso cref="Dropbox.Api.Files.Metadata" />
+    /// <seealso cref="GetTemporaryLinkResult" />
     public class FileMetadata : Metadata
     {
         #pragma warning disable 108
@@ -58,6 +59,15 @@ namespace Dropbox.Api.Files
         /// <param name="mediaInfo">Additional information if the file is a photo or
         /// video.</param>
         /// <param name="sharingInfo">Set if this file is contained in a shared folder.</param>
+        /// <param name="propertyGroups">Additional information if the file has custom
+        /// properties with the property template specified.</param>
+        /// <param name="hasExplicitSharedMembers">This flag will only be present if
+        /// include_has_explicit_shared_members  is true in <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync" />. If this  flag is
+        /// present, it will be true if this file has any explicit shared  members. This is
+        /// different from sharing_info in that this could be true  in the case where a file
+        /// has explicit members but is not contained within  a shared folder.</param>
         public FileMetadata(string name,
                             string pathLower,
                             string pathDisplay,
@@ -68,7 +78,9 @@ namespace Dropbox.Api.Files
                             ulong size,
                             string parentSharedFolderId = null,
                             MediaInfo mediaInfo = null,
-                            FileSharingInfo sharingInfo = null)
+                            FileSharingInfo sharingInfo = null,
+                            col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
+                            bool? hasExplicitSharedMembers = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
         {
             if (id == null)
@@ -93,6 +105,8 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentOutOfRangeException("rev", @"Value should match pattern '\A(?:[0-9a-f]+)\z'");
             }
 
+            var propertyGroupsList = enc.Util.ToList(propertyGroups);
+
             this.Id = id;
             this.ClientModified = clientModified;
             this.ServerModified = serverModified;
@@ -100,6 +114,8 @@ namespace Dropbox.Api.Files
             this.Size = size;
             this.MediaInfo = mediaInfo;
             this.SharingInfo = sharingInfo;
+            this.PropertyGroups = propertyGroupsList;
+            this.HasExplicitSharedMembers = hasExplicitSharedMembers;
         }
 
         /// <summary>
@@ -152,6 +168,22 @@ namespace Dropbox.Api.Files
         /// </summary>
         public FileSharingInfo SharingInfo { get; protected set; }
 
+        /// <summary>
+        /// <para>Additional information if the file has custom properties with the property
+        /// template specified.</para>
+        /// </summary>
+        public col.IList<Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
+
+        /// <summary>
+        /// <para>This flag will only be present if include_has_explicit_shared_members  is
+        /// true in <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync" />. If this  flag is
+        /// present, it will be true if this file has any explicit shared  members. This is
+        /// different from sharing_info in that this could be true  in the case where a file
+        /// has explicit members but is not contained within  a shared folder.</para>
+        /// </summary>
+        public bool? HasExplicitSharedMembers { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -185,6 +217,14 @@ namespace Dropbox.Api.Files
                 if (value.SharingInfo != null)
                 {
                     WriteProperty("sharing_info", value.SharingInfo, writer, Dropbox.Api.Files.FileSharingInfo.Encoder);
+                }
+                if (value.PropertyGroups.Count > 0)
+                {
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, Dropbox.Api.Properties.PropertyGroup.Encoder);
+                }
+                if (value.HasExplicitSharedMembers != null)
+                {
+                    WriteProperty("has_explicit_shared_members", value.HasExplicitSharedMembers.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -250,6 +290,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "sharing_info":
                         value.SharingInfo = Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);
+                        break;
+                    case "property_groups":
+                        value.PropertyGroups = ReadList<Dropbox.Api.Properties.PropertyGroup>(reader, Dropbox.Api.Properties.PropertyGroup.Decoder);
+                        break;
+                    case "has_explicit_shared_members":
+                        value.HasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

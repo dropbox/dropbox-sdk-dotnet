@@ -16,6 +16,8 @@ namespace Dropbox.Api.Files
     /// <seealso cref="DeletedMetadata" />
     /// <seealso cref="FileMetadata" />
     /// <seealso cref="FolderMetadata" />
+    /// <seealso cref="GetCopyReferenceResult" />
+    /// <seealso cref="SaveCopyReferenceResult" />
     /// <seealso cref="SearchMatch" />
     public class Metadata
     {

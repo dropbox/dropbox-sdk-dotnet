@@ -33,11 +33,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="groups">The groups</param>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> to obtain the
-        /// additional members.</param>
-        /// <param name="hasMore">Is true if there are additional team members that have not
-        /// been returned yet. An additional call to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> can retrieve
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsListContinueAsync" /> to obtain the
+        /// additional groups.</param>
+        /// <param name="hasMore">Is true if there are additional groups that have not been
+        /// returned yet. An additional call to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsListContinueAsync" /> can retrieve
         /// them.</param>
         public GroupsListResult(col.IEnumerable<GroupSummary> groups,
                                 string cursor,
@@ -77,15 +77,15 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> to obtain the
-        /// additional members.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsListContinueAsync" /> to obtain the
+        /// additional groups.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
         /// <summary>
-        /// <para>Is true if there are additional team members that have not been returned yet.
-        /// An additional call to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> can retrieve
+        /// <para>Is true if there are additional groups that have not been returned yet. An
+        /// additional call to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsListContinueAsync" /> can retrieve
         /// them.</para>
         /// </summary>
         public bool HasMore { get; protected set; }

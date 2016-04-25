@@ -80,6 +80,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TooManySharedFolderTargets</para>
+        /// </summary>
+        public bool IsTooManySharedFolderTargets
+        {
+            get
+            {
+                return this is TooManySharedFolderTargets;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManySharedFolderTargets, or <c>null</c>.</para>
+        /// </summary>
+        public TooManySharedFolderTargets AsTooManySharedFolderTargets
+        {
+            get
+            {
+                return this as TooManySharedFolderTargets;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +150,12 @@ namespace Dropbox.Api.Files
                     Path.Encoder.EncodeFields((Path)value, writer);
                     return;
                 }
+                if (value is TooManySharedFolderTargets)
+                {
+                    WriteProperty(".tag", "too_many_shared_folder_targets", writer, enc.StringEncoder.Instance);
+                    TooManySharedFolderTargets.Encoder.EncodeFields((TooManySharedFolderTargets)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +199,8 @@ namespace Dropbox.Api.Files
                         return LookupFailed.Decoder.DecodeFields(reader);
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "too_many_shared_folder_targets":
+                        return TooManySharedFolderTargets.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -366,6 +397,88 @@ namespace Dropbox.Api.Files
                             reader.Skip();
                             break;
                     }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The batch request commits files into too many different shared folders.
+        /// Please limit your batch request to files contained in a single shared
+        /// folder.</para>
+        /// </summary>
+        public sealed class TooManySharedFolderTargets : UploadSessionFinishError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManySharedFolderTargets> Encoder = new TooManySharedFolderTargetsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManySharedFolderTargets> Decoder = new TooManySharedFolderTargetsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManySharedFolderTargets"
+            /// /> class.</para>
+            /// </summary>
+            private TooManySharedFolderTargets()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooManySharedFolderTargets</para>
+            /// </summary>
+            public static readonly TooManySharedFolderTargets Instance = new TooManySharedFolderTargets();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManySharedFolderTargets" />.</para>
+            /// </summary>
+            private class TooManySharedFolderTargetsEncoder : enc.StructEncoder<TooManySharedFolderTargets>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManySharedFolderTargets value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManySharedFolderTargets" />.</para>
+            /// </summary>
+            private class TooManySharedFolderTargetsDecoder : enc.StructDecoder<TooManySharedFolderTargets>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManySharedFolderTargets"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManySharedFolderTargets Create()
+                {
+                    return new TooManySharedFolderTargets();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TooManySharedFolderTargets DecodeFields(enc.IJsonReader reader)
+                {
+                    return TooManySharedFolderTargets.Instance;
                 }
             }
 

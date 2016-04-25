@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68180B54-4724-4CD1-BAA6-EE7BC309797C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -69,7 +69,7 @@
     <Compile Include="DropboxClient.common.cs" />
     <Compile Include="DropboxOauth2Helper.cs" />
     <Compile Include="DropboxRequestHandler.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppProperties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async\LaunchEmptyResult.cs" />
@@ -80,9 +80,14 @@
     <Compile Include="Async\PollResultBase.cs" />
     <Compile Include="AuthException.cs" />
     <Compile Include="Auth\AuthError.cs" />
+    <Compile Include="Auth\AuthRoutes.cs" />
     <Compile Include="DropboxClient.cs" />
     <Compile Include="DropboxTeamClient.cs" />
+    <Compile Include="Files\AddPropertiesError.cs" />
+    <Compile Include="Files\AlphaGetMetadataArg.cs" />
+    <Compile Include="Files\AlphaGetMetadataError.cs" />
     <Compile Include="Files\CommitInfo.cs" />
+    <Compile Include="Files\CommitInfoWithProperties.cs" />
     <Compile Include="Files\CreateFolderArg.cs" />
     <Compile Include="Files\CreateFolderError.cs" />
     <Compile Include="Files\DeleteArg.cs" />
@@ -96,9 +101,16 @@
     <Compile Include="Files\FilesRoutes.cs" />
     <Compile Include="Files\FolderMetadata.cs" />
     <Compile Include="Files\FolderSharingInfo.cs" />
+    <Compile Include="Files\GetCopyReferenceArg.cs" />
+    <Compile Include="Files\GetCopyReferenceError.cs" />
+    <Compile Include="Files\GetCopyReferenceResult.cs" />
     <Compile Include="Files\GetMetadataArg.cs" />
     <Compile Include="Files\GetMetadataError.cs" />
+    <Compile Include="Files\GetTemporaryLinkArg.cs" />
+    <Compile Include="Files\GetTemporaryLinkError.cs" />
+    <Compile Include="Files\GetTemporaryLinkResult.cs" />
     <Compile Include="Files\GpsCoordinates.cs" />
+    <Compile Include="Files\InvalidPropertyGroupError.cs" />
     <Compile Include="Files\ListFolderArg.cs" />
     <Compile Include="Files\ListFolderContinueArg.cs" />
     <Compile Include="Files\ListFolderContinueError.cs" />
@@ -111,6 +123,7 @@
     <Compile Include="Files\ListRevisionsArg.cs" />
     <Compile Include="Files\ListRevisionsError.cs" />
     <Compile Include="Files\ListRevisionsResult.cs" />
+    <Compile Include="Files\LookUpPropertiesError.cs" />
     <Compile Include="Files\LookupError.cs" />
     <Compile Include="Files\MediaInfo.cs" />
     <Compile Include="Files\MediaMetadata.cs" />
@@ -118,10 +131,18 @@
     <Compile Include="Files\PhotoMetadata.cs" />
     <Compile Include="Files\PreviewArg.cs" />
     <Compile Include="Files\PreviewError.cs" />
+    <Compile Include="Files\PropertiesError.cs" />
+    <Compile Include="Files\PropertyGroupUpdate.cs" />
+    <Compile Include="Files\PropertyGroupWithPath.cs" />
     <Compile Include="Files\RelocationArg.cs" />
     <Compile Include="Files\RelocationError.cs" />
+    <Compile Include="Files\RemovePropertiesArg.cs" />
+    <Compile Include="Files\RemovePropertiesError.cs" />
     <Compile Include="Files\RestoreArg.cs" />
     <Compile Include="Files\RestoreError.cs" />
+    <Compile Include="Files\SaveCopyReferenceArg.cs" />
+    <Compile Include="Files\SaveCopyReferenceError.cs" />
+    <Compile Include="Files\SaveCopyReferenceResult.cs" />
     <Compile Include="Files\SearchArg.cs" />
     <Compile Include="Files\SearchError.cs" />
     <Compile Include="Files\SearchMatch.cs" />
@@ -133,18 +154,33 @@
     <Compile Include="Files\ThumbnailError.cs" />
     <Compile Include="Files\ThumbnailFormat.cs" />
     <Compile Include="Files\ThumbnailSize.cs" />
+    <Compile Include="Files\UpdatePropertiesError.cs" />
+    <Compile Include="Files\UpdatePropertyGroupArg.cs" />
     <Compile Include="Files\UploadError.cs" />
+    <Compile Include="Files\UploadErrorWithProperties.cs" />
+    <Compile Include="Files\UploadSessionAppendArg.cs" />
     <Compile Include="Files\UploadSessionCursor.cs" />
     <Compile Include="Files\UploadSessionFinishArg.cs" />
     <Compile Include="Files\UploadSessionFinishError.cs" />
     <Compile Include="Files\UploadSessionLookupError.cs" />
     <Compile Include="Files\UploadSessionOffsetError.cs" />
+    <Compile Include="Files\UploadSessionStartArg.cs" />
     <Compile Include="Files\UploadSessionStartResult.cs" />
     <Compile Include="Files\UploadWriteFailed.cs" />
     <Compile Include="Files\VideoMetadata.cs" />
     <Compile Include="Files\WriteConflictError.cs" />
     <Compile Include="Files\WriteError.cs" />
     <Compile Include="Files\WriteMode.cs" />
+    <Compile Include="Properties\GetPropertyTemplateArg.cs" />
+    <Compile Include="Properties\GetPropertyTemplateResult.cs" />
+    <Compile Include="Properties\ListPropertyTemplateIds.cs" />
+    <Compile Include="Properties\ModifyPropertyTemplateError.cs" />
+    <Compile Include="Properties\PropertyField.cs" />
+    <Compile Include="Properties\PropertyFieldTemplate.cs" />
+    <Compile Include="Properties\PropertyGroup.cs" />
+    <Compile Include="Properties\PropertyGroupTemplate.cs" />
+    <Compile Include="Properties\PropertyTemplateError.cs" />
+    <Compile Include="Properties\PropertyType.cs" />
     <Compile Include="Sharing\AccessLevel.cs" />
     <Compile Include="Sharing\AclUpdatePolicy.cs" />
     <Compile Include="Sharing\AddFolderMemberArg.cs" />
@@ -237,7 +273,15 @@
     <Compile Include="Sharing\UserInfo.cs" />
     <Compile Include="Sharing\UserMembershipInfo.cs" />
     <Compile Include="Sharing\Visibility.cs" />
+    <Compile Include="TeamPolicies\EmmState.cs" />
+    <Compile Include="TeamPolicies\SharedFolderJoinPolicy.cs" />
+    <Compile Include="TeamPolicies\SharedFolderMemberPolicy.cs" />
+    <Compile Include="TeamPolicies\SharedLinkCreatePolicy.cs" />
+    <Compile Include="TeamPolicies\TeamPolicies.cs" />
+    <Compile Include="TeamPolicies\TeamSharingPolicies.cs" />
     <Compile Include="Team\ActiveWebSession.cs" />
+    <Compile Include="Team\AddPropertyTemplateArg.cs" />
+    <Compile Include="Team\AddPropertyTemplateResult.cs" />
     <Compile Include="Team\AdminTier.cs" />
     <Compile Include="Team\ApiApp.cs" />
     <Compile Include="Team\BaseDfbReport.cs" />
@@ -248,7 +292,6 @@
     <Compile Include="Team\DeviceSession.cs" />
     <Compile Include="Team\DeviceSessionArg.cs" />
     <Compile Include="Team\DevicesActive.cs" />
-    <Compile Include="Team\EmmState.cs" />
     <Compile Include="Team\GetActivityReport.cs" />
     <Compile Include="Team\GetDevicesReport.cs" />
     <Compile Include="Team\GetMembershipReport.cs" />
@@ -261,6 +304,7 @@
     <Compile Include="Team\GroupMemberInfo.cs" />
     <Compile Include="Team\GroupMemberSelector.cs" />
     <Compile Include="Team\GroupMemberSelectorError.cs" />
+    <Compile Include="Team\GroupMemberSetAccessTypeError.cs" />
     <Compile Include="Team\GroupMembersAddArg.cs" />
     <Compile Include="Team\GroupMembersAddError.cs" />
     <Compile Include="Team\GroupMembersChangeResult.cs" />
@@ -283,12 +327,19 @@
     <Compile Include="Team\GroupsListResult.cs" />
     <Compile Include="Team\GroupsPollError.cs" />
     <Compile Include="Team\GroupsSelector.cs" />
+    <Compile Include="Team\IncludeMembersArg.cs" />
     <Compile Include="Team\ListMemberAppsArg.cs" />
     <Compile Include="Team\ListMemberAppsError.cs" />
     <Compile Include="Team\ListMemberAppsResult.cs" />
     <Compile Include="Team\ListMemberDevicesArg.cs" />
     <Compile Include="Team\ListMemberDevicesError.cs" />
     <Compile Include="Team\ListMemberDevicesResult.cs" />
+    <Compile Include="Team\ListMembersAppsArg.cs" />
+    <Compile Include="Team\ListMembersAppsError.cs" />
+    <Compile Include="Team\ListMembersAppsResult.cs" />
+    <Compile Include="Team\ListMembersDevicesArg.cs" />
+    <Compile Include="Team\ListMembersDevicesError.cs" />
+    <Compile Include="Team\ListMembersDevicesResult.cs" />
     <Compile Include="Team\ListTeamAppsArg.cs" />
     <Compile Include="Team\ListTeamAppsError.cs" />
     <Compile Include="Team\ListTeamAppsResult.cs" />
@@ -341,17 +392,14 @@
     <Compile Include="Team\RevokeLinkedAppBatchResult.cs" />
     <Compile Include="Team\RevokeLinkedAppError.cs" />
     <Compile Include="Team\RevokeLinkedAppStatus.cs" />
-    <Compile Include="Team\SharedFolderJoinPolicy.cs" />
-    <Compile Include="Team\SharedFolderMemberPolicy.cs" />
-    <Compile Include="Team\SharedLinkCreatePolicy.cs" />
     <Compile Include="Team\StorageBucket.cs" />
     <Compile Include="Team\TeamGetInfoResult.cs" />
     <Compile Include="Team\TeamMemberInfo.cs" />
     <Compile Include="Team\TeamMemberProfile.cs" />
     <Compile Include="Team\TeamMemberStatus.cs" />
-    <Compile Include="Team\TeamPolicies.cs" />
     <Compile Include="Team\TeamRoutes.cs" />
-    <Compile Include="Team\TeamSharingPolicies.cs" />
+    <Compile Include="Team\UpdatePropertyTemplateArg.cs" />
+    <Compile Include="Team\UpdatePropertyTemplateResult.cs" />
     <Compile Include="Team\UserSelectorArg.cs" />
     <Compile Include="Team\UserSelectorError.cs" />
     <Compile Include="Team\UsersSelectorArg.cs" />
@@ -359,6 +407,7 @@
     <Compile Include="Users\AccountType.cs" />
     <Compile Include="Users\BasicAccount.cs" />
     <Compile Include="Users\FullAccount.cs" />
+    <Compile Include="Users\FullTeam.cs" />
     <Compile Include="Users\GetAccountArg.cs" />
     <Compile Include="Users\GetAccountBatchArg.cs" />
     <Compile Include="Users\GetAccountBatchError.cs" />

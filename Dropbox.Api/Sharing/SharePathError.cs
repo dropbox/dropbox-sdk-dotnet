@@ -145,6 +145,50 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is IsPublicFolder</para>
+        /// </summary>
+        public bool IsIsPublicFolder
+        {
+            get
+            {
+                return this is IsPublicFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a IsPublicFolder, or <c>null</c>.</para>
+        /// </summary>
+        public IsPublicFolder AsIsPublicFolder
+        {
+            get
+            {
+                return this as IsPublicFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InsidePublicFolder</para>
+        /// </summary>
+        public bool IsInsidePublicFolder
+        {
+            get
+            {
+                return this is InsidePublicFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InsidePublicFolder, or <c>null</c>.</para>
+        /// </summary>
+        public InsidePublicFolder AsInsidePublicFolder
+        {
+            get
+            {
+                return this as InsidePublicFolder;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is AlreadyShared</para>
         /// </summary>
         public bool IsAlreadyShared
@@ -185,6 +229,50 @@ namespace Dropbox.Api.Sharing
             get
             {
                 return this as InvalidPath;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is IsOsxPackage</para>
+        /// </summary>
+        public bool IsIsOsxPackage
+        {
+            get
+            {
+                return this is IsOsxPackage;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a IsOsxPackage, or <c>null</c>.</para>
+        /// </summary>
+        public IsOsxPackage AsIsOsxPackage
+        {
+            get
+            {
+                return this as IsOsxPackage;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InsideOsxPackage</para>
+        /// </summary>
+        public bool IsInsideOsxPackage
+        {
+            get
+            {
+                return this is InsideOsxPackage;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InsideOsxPackage, or <c>null</c>.</para>
+        /// </summary>
+        public InsideOsxPackage AsInsideOsxPackage
+        {
+            get
+            {
+                return this as InsideOsxPackage;
             }
         }
 
@@ -254,6 +342,18 @@ namespace Dropbox.Api.Sharing
                     InsideAppFolder.Encoder.EncodeFields((InsideAppFolder)value, writer);
                     return;
                 }
+                if (value is IsPublicFolder)
+                {
+                    WriteProperty(".tag", "is_public_folder", writer, enc.StringEncoder.Instance);
+                    IsPublicFolder.Encoder.EncodeFields((IsPublicFolder)value, writer);
+                    return;
+                }
+                if (value is InsidePublicFolder)
+                {
+                    WriteProperty(".tag", "inside_public_folder", writer, enc.StringEncoder.Instance);
+                    InsidePublicFolder.Encoder.EncodeFields((InsidePublicFolder)value, writer);
+                    return;
+                }
                 if (value is AlreadyShared)
                 {
                     WriteProperty(".tag", "already_shared", writer, enc.StringEncoder.Instance);
@@ -264,6 +364,18 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty(".tag", "invalid_path", writer, enc.StringEncoder.Instance);
                     InvalidPath.Encoder.EncodeFields((InvalidPath)value, writer);
+                    return;
+                }
+                if (value is IsOsxPackage)
+                {
+                    WriteProperty(".tag", "is_osx_package", writer, enc.StringEncoder.Instance);
+                    IsOsxPackage.Encoder.EncodeFields((IsOsxPackage)value, writer);
+                    return;
+                }
+                if (value is InsideOsxPackage)
+                {
+                    WriteProperty(".tag", "inside_osx_package", writer, enc.StringEncoder.Instance);
+                    InsideOsxPackage.Encoder.EncodeFields((InsideOsxPackage)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -314,10 +426,18 @@ namespace Dropbox.Api.Sharing
                         return IsAppFolder.Decoder.DecodeFields(reader);
                     case "inside_app_folder":
                         return InsideAppFolder.Decoder.DecodeFields(reader);
+                    case "is_public_folder":
+                        return IsPublicFolder.Decoder.DecodeFields(reader);
+                    case "inside_public_folder":
+                        return InsidePublicFolder.Decoder.DecodeFields(reader);
                     case "already_shared":
                         return AlreadyShared.Decoder.DecodeFields(reader);
                     case "invalid_path":
                         return InvalidPath.Decoder.DecodeFields(reader);
+                    case "is_osx_package":
+                        return IsOsxPackage.Decoder.DecodeFields(reader);
+                    case "inside_osx_package":
+                        return InsideOsxPackage.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -723,6 +843,166 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>A public folder can't be shared this way. Use a public link instead.</para>
+        /// </summary>
+        public sealed class IsPublicFolder : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IsPublicFolder> Encoder = new IsPublicFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IsPublicFolder> Decoder = new IsPublicFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IsPublicFolder" />
+            /// class.</para>
+            /// </summary>
+            private IsPublicFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of IsPublicFolder</para>
+            /// </summary>
+            public static readonly IsPublicFolder Instance = new IsPublicFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="IsPublicFolder" />.</para>
+            /// </summary>
+            private class IsPublicFolderEncoder : enc.StructEncoder<IsPublicFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IsPublicFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="IsPublicFolder" />.</para>
+            /// </summary>
+            private class IsPublicFolderDecoder : enc.StructDecoder<IsPublicFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IsPublicFolder" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IsPublicFolder Create()
+                {
+                    return new IsPublicFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override IsPublicFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return IsPublicFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>A folder inside a public folder can't be shared this way. Use a public link
+        /// instead.</para>
+        /// </summary>
+        public sealed class InsidePublicFolder : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InsidePublicFolder> Encoder = new InsidePublicFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InsidePublicFolder> Decoder = new InsidePublicFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsidePublicFolder" />
+            /// class.</para>
+            /// </summary>
+            private InsidePublicFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InsidePublicFolder</para>
+            /// </summary>
+            public static readonly InsidePublicFolder Instance = new InsidePublicFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InsidePublicFolder" />.</para>
+            /// </summary>
+            private class InsidePublicFolderEncoder : enc.StructEncoder<InsidePublicFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InsidePublicFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InsidePublicFolder" />.</para>
+            /// </summary>
+            private class InsidePublicFolderDecoder : enc.StructDecoder<InsidePublicFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InsidePublicFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InsidePublicFolder Create()
+                {
+                    return new InsidePublicFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InsidePublicFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return InsidePublicFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Folder is already shared.</para>
         /// </summary>
         public sealed class AlreadyShared : SharePathError
@@ -874,6 +1154,164 @@ namespace Dropbox.Api.Sharing
                 public override InvalidPath DecodeFields(enc.IJsonReader reader)
                 {
                     return InvalidPath.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support sharing a Mac OS X package.</para>
+        /// </summary>
+        public sealed class IsOsxPackage : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IsOsxPackage> Encoder = new IsOsxPackageEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IsOsxPackage> Decoder = new IsOsxPackageDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IsOsxPackage" />
+            /// class.</para>
+            /// </summary>
+            private IsOsxPackage()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of IsOsxPackage</para>
+            /// </summary>
+            public static readonly IsOsxPackage Instance = new IsOsxPackage();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="IsOsxPackage" />.</para>
+            /// </summary>
+            private class IsOsxPackageEncoder : enc.StructEncoder<IsOsxPackage>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IsOsxPackage value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="IsOsxPackage" />.</para>
+            /// </summary>
+            private class IsOsxPackageDecoder : enc.StructDecoder<IsOsxPackage>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IsOsxPackage" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IsOsxPackage Create()
+                {
+                    return new IsOsxPackage();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override IsOsxPackage DecodeFields(enc.IJsonReader reader)
+                {
+                    return IsOsxPackage.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support sharing a folder inside a Mac OS X package.</para>
+        /// </summary>
+        public sealed class InsideOsxPackage : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InsideOsxPackage> Encoder = new InsideOsxPackageEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InsideOsxPackage> Decoder = new InsideOsxPackageDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsideOsxPackage" />
+            /// class.</para>
+            /// </summary>
+            private InsideOsxPackage()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InsideOsxPackage</para>
+            /// </summary>
+            public static readonly InsideOsxPackage Instance = new InsideOsxPackage();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InsideOsxPackage" />.</para>
+            /// </summary>
+            private class InsideOsxPackageEncoder : enc.StructEncoder<InsideOsxPackage>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InsideOsxPackage value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InsideOsxPackage" />.</para>
+            /// </summary>
+            private class InsideOsxPackageDecoder : enc.StructDecoder<InsideOsxPackage>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InsideOsxPackage" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InsideOsxPackage Create()
+                {
+                    return new InsideOsxPackage();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InsideOsxPackage DecodeFields(enc.IJsonReader reader)
+                {
+                    return InsideOsxPackage.Instance;
                 }
             }
 

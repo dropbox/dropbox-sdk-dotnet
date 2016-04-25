@@ -11,71 +11,49 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>Policy governing who can be a member of a folder shared by a team member.</para>
+    /// <para>The list members devices error object</para>
     /// </summary>
-    public class SharedFolderMemberPolicy
+    public class ListMembersDevicesError
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<SharedFolderMemberPolicy> Encoder = new SharedFolderMemberPolicyEncoder();
+        internal static enc.StructEncoder<ListMembersDevicesError> Encoder = new ListMembersDevicesErrorEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<SharedFolderMemberPolicy> Decoder = new SharedFolderMemberPolicyDecoder();
+        internal static enc.StructDecoder<ListMembersDevicesError> Decoder = new ListMembersDevicesErrorDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SharedFolderMemberPolicy" />
+        /// <para>Initializes a new instance of the <see cref="ListMembersDevicesError" />
         /// class.</para>
         /// </summary>
-        public SharedFolderMemberPolicy()
+        public ListMembersDevicesError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Team</para>
+        /// <para>Gets a value indicating whether this instance is Reset</para>
         /// </summary>
-        public bool IsTeam
+        public bool IsReset
         {
             get
             {
-                return this is Team;
+                return this is Reset;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Team, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Reset, or <c>null</c>.</para>
         /// </summary>
-        public Team AsTeam
+        public Reset AsReset
         {
             get
             {
-                return this as Team;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Anyone</para>
-        /// </summary>
-        public bool IsAnyone
-        {
-            get
-            {
-                return this is Anyone;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Anyone, or <c>null</c>.</para>
-        /// </summary>
-        public Anyone AsAnyone
-        {
-            get
-            {
-                return this as Anyone;
+                return this as Reset;
             }
         }
 
@@ -104,27 +82,21 @@ namespace Dropbox.Api.Team
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="SharedFolderMemberPolicy" />.</para>
+        /// <para>Encoder for  <see cref="ListMembersDevicesError" />.</para>
         /// </summary>
-        private class SharedFolderMemberPolicyEncoder : enc.StructEncoder<SharedFolderMemberPolicy>
+        private class ListMembersDevicesErrorEncoder : enc.StructEncoder<ListMembersDevicesError>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(SharedFolderMemberPolicy value, enc.IJsonWriter writer)
+            public override void EncodeFields(ListMembersDevicesError value, enc.IJsonWriter writer)
             {
-                if (value is Team)
+                if (value is Reset)
                 {
-                    WriteProperty(".tag", "team", writer, enc.StringEncoder.Instance);
-                    Team.Encoder.EncodeFields((Team)value, writer);
-                    return;
-                }
-                if (value is Anyone)
-                {
-                    WriteProperty(".tag", "anyone", writer, enc.StringEncoder.Instance);
-                    Anyone.Encoder.EncodeFields((Anyone)value, writer);
+                    WriteProperty(".tag", "reset", writer, enc.StringEncoder.Instance);
+                    Reset.Encoder.EncodeFields((Reset)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -142,18 +114,18 @@ namespace Dropbox.Api.Team
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="SharedFolderMemberPolicy" />.</para>
+        /// <para>Decoder for  <see cref="ListMembersDevicesError" />.</para>
         /// </summary>
-        private class SharedFolderMemberPolicyDecoder : enc.UnionDecoder<SharedFolderMemberPolicy>
+        private class ListMembersDevicesErrorDecoder : enc.UnionDecoder<ListMembersDevicesError>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="SharedFolderMemberPolicy"
+            /// <para>Create a new instance of type <see cref="ListMembersDevicesError"
             /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override SharedFolderMemberPolicy Create()
+            protected override ListMembersDevicesError Create()
             {
-                return new SharedFolderMemberPolicy();
+                return new ListMembersDevicesError();
             }
 
             /// <summary>
@@ -162,14 +134,12 @@ namespace Dropbox.Api.Team
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override SharedFolderMemberPolicy Decode(string tag, enc.IJsonReader reader)
+            protected override ListMembersDevicesError Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "team":
-                        return Team.Decoder.DecodeFields(reader);
-                    case "anyone":
-                        return Anyone.Decoder.DecodeFields(reader);
+                    case "reset":
+                        return Reset.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -179,47 +149,49 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>Only a teammate can be a member of a folder shared by a team member.</para>
+        /// <para>Indicates that the cursor has been invalidated. Call <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> again
+        /// with an empty cursor to obtain a new cursor.</para>
         /// </summary>
-        public sealed class Team : SharedFolderMemberPolicy
+        public sealed class Reset : ListMembersDevicesError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Team> Encoder = new TeamEncoder();
+            internal static enc.StructEncoder<Reset> Encoder = new ResetEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Team> Decoder = new TeamDecoder();
+            internal static enc.StructDecoder<Reset> Decoder = new ResetDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Reset" /> class.</para>
             /// </summary>
-            private Team()
+            private Reset()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Team</para>
+            /// <para>A singleton instance of Reset</para>
             /// </summary>
-            public static readonly Team Instance = new Team();
+            public static readonly Reset Instance = new Reset();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Team" />.</para>
+            /// <para>Encoder for  <see cref="Reset" />.</para>
             /// </summary>
-            private class TeamEncoder : enc.StructEncoder<Team>
+            private class ResetEncoder : enc.StructEncoder<Reset>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Team value, enc.IJsonWriter writer)
+                public override void EncodeFields(Reset value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -229,17 +201,17 @@ namespace Dropbox.Api.Team
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Team" />.</para>
+            /// <para>Decoder for  <see cref="Reset" />.</para>
             /// </summary>
-            private class TeamDecoder : enc.StructDecoder<Team>
+            private class ResetDecoder : enc.StructDecoder<Reset>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Team" />.</para>
+                /// <para>Create a new instance of type <see cref="Reset" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Team Create()
+                protected override Reset Create()
                 {
-                    return new Team();
+                    return new Reset();
                 }
 
                 /// <summary>
@@ -247,9 +219,9 @@ namespace Dropbox.Api.Team
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override Team DecodeFields(enc.IJsonReader reader)
+                public override Reset DecodeFields(enc.IJsonReader reader)
                 {
-                    return Team.Instance;
+                    return Reset.Instance;
                 }
             }
 
@@ -257,87 +229,9 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Anyone can be a member of a folder shared by a team member.</para>
+        /// <para>An unspecified error.</para>
         /// </summary>
-        public sealed class Anyone : SharedFolderMemberPolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Anyone> Encoder = new AnyoneEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Anyone> Decoder = new AnyoneDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Anyone" /> class.</para>
-            /// </summary>
-            private Anyone()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Anyone</para>
-            /// </summary>
-            public static readonly Anyone Instance = new Anyone();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Anyone" />.</para>
-            /// </summary>
-            private class AnyoneEncoder : enc.StructEncoder<Anyone>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Anyone value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Anyone" />.</para>
-            /// </summary>
-            private class AnyoneDecoder : enc.StructDecoder<Anyone>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Anyone" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Anyone Create()
-                {
-                    return new Anyone();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Anyone DecodeFields(enc.IJsonReader reader)
-                {
-                    return Anyone.Instance;
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The other object</para>
-        /// </summary>
-        public sealed class Other : SharedFolderMemberPolicy
+        public sealed class Other : ListMembersDevicesError
         {
             #pragma warning disable 108
 

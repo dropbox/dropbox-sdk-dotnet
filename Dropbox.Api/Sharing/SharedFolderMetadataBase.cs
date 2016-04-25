@@ -37,9 +37,6 @@ namespace Dropbox.Api.Sharing
         /// <param name="isTeamFolder">Whether this folder is a <a
         /// href="https://www.dropbox.com/en/help/986">team folder</a>.</param>
         /// <param name="policy">Policies governing this shared folder.</param>
-        /// <param name="permissions">Actions the current user may perform on the folder and
-        /// its contents. The set of permissions corresponds to the FolderActions in the
-        /// request.</param>
         /// <param name="ownerTeam">The team that owns the folder. This field is not present if
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
@@ -47,7 +44,6 @@ namespace Dropbox.Api.Sharing
         public SharedFolderMetadataBase(AccessLevel accessType,
                                         bool isTeamFolder,
                                         FolderPolicy policy,
-                                        col.IEnumerable<FolderPermission> permissions = null,
                                         Dropbox.Api.Users.Team ownerTeam = null,
                                         string parentSharedFolderId = null)
         {
@@ -61,8 +57,6 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("policy");
             }
 
-            var permissionsList = enc.Util.ToList(permissions);
-
             if (parentSharedFolderId != null)
             {
                 if (!re.Regex.IsMatch(parentSharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
@@ -74,7 +68,6 @@ namespace Dropbox.Api.Sharing
             this.AccessType = accessType;
             this.IsTeamFolder = isTeamFolder;
             this.Policy = policy;
-            this.Permissions = permissionsList;
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
         }
@@ -106,12 +99,6 @@ namespace Dropbox.Api.Sharing
         public FolderPolicy Policy { get; protected set; }
 
         /// <summary>
-        /// <para>Actions the current user may perform on the folder and its contents. The set
-        /// of permissions corresponds to the FolderActions in the request.</para>
-        /// </summary>
-        public col.IList<FolderPermission> Permissions { get; protected set; }
-
-        /// <summary>
         /// <para>The team that owns the folder. This field is not present if the folder is not
         /// owned by a team.</para>
         /// </summary>
@@ -140,10 +127,6 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("policy", value.Policy, writer, Dropbox.Api.Sharing.FolderPolicy.Encoder);
-                if (value.Permissions.Count > 0)
-                {
-                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.FolderPermission.Encoder);
-                }
                 if (value.OwnerTeam != null)
                 {
                     WriteProperty("owner_team", value.OwnerTeam, writer, Dropbox.Api.Users.Team.Encoder);
@@ -193,9 +176,6 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "policy":
                         value.Policy = Dropbox.Api.Sharing.FolderPolicy.Decoder.Decode(reader);
-                        break;
-                    case "permissions":
-                        value.Permissions = ReadList<FolderPermission>(reader, Dropbox.Api.Sharing.FolderPermission.Decoder);
                         break;
                     case "owner_team":
                         value.OwnerTeam = Dropbox.Api.Users.Team.Decoder.Decode(reader);

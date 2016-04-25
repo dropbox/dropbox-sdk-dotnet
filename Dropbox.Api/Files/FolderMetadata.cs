@@ -48,13 +48,16 @@ namespace Dropbox.Api.Files
         /// instead.</param>
         /// <param name="sharingInfo">Set if the folder is contained in a shared folder or is a
         /// shared folder mount point.</param>
+        /// <param name="propertyGroups">Additional information if the file has custom
+        /// properties with the property template specified.</param>
         public FolderMetadata(string name,
                               string pathLower,
                               string pathDisplay,
                               string id,
                               string parentSharedFolderId = null,
                               string sharedFolderId = null,
-                              FolderSharingInfo sharingInfo = null)
+                              FolderSharingInfo sharingInfo = null,
+                              col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
         {
             if (id == null)
@@ -74,9 +77,12 @@ namespace Dropbox.Api.Files
                 }
             }
 
+            var propertyGroupsList = enc.Util.ToList(propertyGroups);
+
             this.Id = id;
             this.SharedFolderId = sharedFolderId;
             this.SharingInfo = sharingInfo;
+            this.PropertyGroups = propertyGroupsList;
         }
 
         /// <summary>
@@ -103,6 +109,12 @@ namespace Dropbox.Api.Files
         /// point.</para>
         /// </summary>
         public FolderSharingInfo SharingInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>Additional information if the file has custom properties with the property
+        /// template specified.</para>
+        /// </summary>
+        public col.IList<Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
 
         #region Encoder class
 
@@ -133,6 +145,10 @@ namespace Dropbox.Api.Files
                 if (value.SharingInfo != null)
                 {
                     WriteProperty("sharing_info", value.SharingInfo, writer, Dropbox.Api.Files.FolderSharingInfo.Encoder);
+                }
+                if (value.PropertyGroups.Count > 0)
+                {
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, Dropbox.Api.Properties.PropertyGroup.Encoder);
                 }
             }
         }
@@ -186,6 +202,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "sharing_info":
                         value.SharingInfo = Dropbox.Api.Files.FolderSharingInfo.Decoder.Decode(reader);
+                        break;
+                    case "property_groups":
+                        value.PropertyGroups = ReadList<Dropbox.Api.Properties.PropertyGroup>(reader, Dropbox.Api.Properties.PropertyGroup.Decoder);
                         break;
                     default:
                         reader.Skip();

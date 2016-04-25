@@ -102,6 +102,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NotClosed</para>
+        /// </summary>
+        public bool IsNotClosed
+        {
+            get
+            {
+                return this is NotClosed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NotClosed, or <c>null</c>.</para>
+        /// </summary>
+        public NotClosed AsNotClosed
+        {
+            get
+            {
+                return this as NotClosed;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.Files
                     Closed.Encoder.EncodeFields((Closed)value, writer);
                     return;
                 }
+                if (value is NotClosed)
+                {
+                    WriteProperty(".tag", "not_closed", writer, enc.StringEncoder.Instance);
+                    NotClosed.Encoder.EncodeFields((NotClosed)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +228,8 @@ namespace Dropbox.Api.Files
                         return IncorrectOffset.Decoder.DecodeFields(reader);
                     case "closed":
                         return Closed.Decoder.DecodeFields(reader);
+                    case "not_closed":
+                        return NotClosed.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -451,6 +481,84 @@ namespace Dropbox.Api.Files
                 public override Closed DecodeFields(enc.IJsonReader reader)
                 {
                     return Closed.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The session must be closed before calling upload_session/finish_batch.</para>
+        /// </summary>
+        public sealed class NotClosed : UploadSessionLookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NotClosed> Encoder = new NotClosedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NotClosed> Decoder = new NotClosedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NotClosed" /> class.</para>
+            /// </summary>
+            private NotClosed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NotClosed</para>
+            /// </summary>
+            public static readonly NotClosed Instance = new NotClosed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NotClosed" />.</para>
+            /// </summary>
+            private class NotClosedEncoder : enc.StructEncoder<NotClosed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NotClosed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NotClosed" />.</para>
+            /// </summary>
+            private class NotClosedDecoder : enc.StructDecoder<NotClosed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NotClosed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NotClosed Create()
+                {
+                    return new NotClosed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NotClosed DecodeFields(enc.IJsonReader reader)
+                {
+                    return NotClosed.Instance;
                 }
             }
 

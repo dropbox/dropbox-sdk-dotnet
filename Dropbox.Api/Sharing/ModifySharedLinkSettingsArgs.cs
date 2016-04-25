@@ -33,8 +33,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="url">URL of the shared link to change its settings</param>
         /// <param name="settings">Set of settings for the shared link.</param>
+        /// <param name="removeExpiration">If set to true, removes the expiration of the shared
+        /// link.</param>
         public ModifySharedLinkSettingsArgs(string url,
-                                            SharedLinkSettings settings)
+                                            SharedLinkSettings settings,
+                                            bool removeExpiration = false)
         {
             if (url == null)
             {
@@ -48,6 +51,7 @@ namespace Dropbox.Api.Sharing
 
             this.Url = url;
             this.Settings = settings;
+            this.RemoveExpiration = removeExpiration;
         }
 
         /// <summary>
@@ -58,6 +62,7 @@ namespace Dropbox.Api.Sharing
         /// deserializing.</remarks>
         public ModifySharedLinkSettingsArgs()
         {
+            this.RemoveExpiration = false;
         }
 
         /// <summary>
@@ -69,6 +74,11 @@ namespace Dropbox.Api.Sharing
         /// <para>Set of settings for the shared link.</para>
         /// </summary>
         public SharedLinkSettings Settings { get; protected set; }
+
+        /// <summary>
+        /// <para>If set to true, removes the expiration of the shared link.</para>
+        /// </summary>
+        public bool RemoveExpiration { get; protected set; }
 
         #region Encoder class
 
@@ -86,6 +96,7 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
                 WriteProperty("settings", value.Settings, writer, Dropbox.Api.Sharing.SharedLinkSettings.Encoder);
+                WriteProperty("remove_expiration", value.RemoveExpiration, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -124,6 +135,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "settings":
                         value.Settings = Dropbox.Api.Sharing.SharedLinkSettings.Decoder.Decode(reader);
+                        break;
+                    case "remove_expiration":
+                        value.RemoveExpiration = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

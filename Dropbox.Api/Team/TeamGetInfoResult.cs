@@ -42,7 +42,7 @@ namespace Dropbox.Api.Team
                                  string teamId,
                                  uint numLicensedUsers,
                                  uint numProvisionedUsers,
-                                 TeamPolicies policies)
+                                 Dropbox.Api.TeamPolicies.TeamPolicies policies)
         {
             if (name == null)
             {
@@ -100,7 +100,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Gets the policies of the team get info result</para>
         /// </summary>
-        public TeamPolicies Policies { get; protected set; }
+        public Dropbox.Api.TeamPolicies.TeamPolicies Policies { get; protected set; }
 
         #region Encoder class
 
@@ -120,7 +120,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("team_id", value.TeamId, writer, enc.StringEncoder.Instance);
                 WriteProperty("num_licensed_users", value.NumLicensedUsers, writer, enc.UInt32Encoder.Instance);
                 WriteProperty("num_provisioned_users", value.NumProvisionedUsers, writer, enc.UInt32Encoder.Instance);
-                WriteProperty("policies", value.Policies, writer, Dropbox.Api.Team.TeamPolicies.Encoder);
+                WriteProperty("policies", value.Policies, writer, Dropbox.Api.TeamPolicies.TeamPolicies.Encoder);
             }
         }
 
@@ -166,7 +166,7 @@ namespace Dropbox.Api.Team
                         value.NumProvisionedUsers = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     case "policies":
-                        value.Policies = Dropbox.Api.Team.TeamPolicies.Decoder.Decode(reader);
+                        value.Policies = Dropbox.Api.TeamPolicies.TeamPolicies.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

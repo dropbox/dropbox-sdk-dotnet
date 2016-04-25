@@ -13,7 +13,8 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group update args object</para>
     /// </summary>
-    public class GroupUpdateArgs
+    /// <seealso cref="Dropbox.Api.Team.IncludeMembersArg" />
+    public class GroupUpdateArgs : IncludeMembersArg
     {
         #pragma warning disable 108
 
@@ -32,14 +33,19 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <param name="newGroupName">Optional argument. Set group name to this if
         /// provided.</param>
         /// <param name="newGroupExternalId">Optional argument. New group external ID. If the
         /// argument is None, the group's external_id won't be updated. If the argument is
         /// empty string, the group's external id will be cleared.</param>
         public GroupUpdateArgs(GroupSelector @group,
+                               bool returnMembers = true,
                                string newGroupName = null,
                                string newGroupExternalId = null)
+            : base(returnMembers)
         {
             if (@group == null)
             {
@@ -93,6 +99,7 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(GroupUpdateArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
+                WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
                 if (value.NewGroupName != null)
                 {
                     WriteProperty("new_group_name", value.NewGroupName, writer, enc.StringEncoder.Instance);
@@ -135,6 +142,9 @@ namespace Dropbox.Api.Team
                 {
                     case "group":
                         value.Group = Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
+                        break;
+                    case "return_members":
+                        value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "new_group_name":
                         value.NewGroupName = enc.StringDecoder.Instance.Decode(reader);

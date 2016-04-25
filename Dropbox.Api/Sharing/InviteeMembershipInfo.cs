@@ -11,8 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Babel;
 
     /// <summary>
-    /// <para>The information about a user invited to become a member of a shared
-    /// folder.</para>
+    /// <para>Information about an invited member of a shared folder.</para>
     /// </summary>
     /// <seealso cref="Dropbox.Api.Sharing.MembershipInfo" />
     public class InviteeMembershipInfo : MembershipInfo
@@ -34,17 +33,19 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="accessType">The access type for this member.</param>
-        /// <param name="invitee">The information for the invited user.</param>
+        /// <param name="invitee">Recipient of the invitation.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Suggested name initials for a member.</param>
         /// <param name="isInherited">True if the member's access to the file is inherited from
         /// a parent folder.</param>
+        /// <param name="user">The user this invitation is tied to, if available.</param>
         public InviteeMembershipInfo(AccessLevel accessType,
                                      InviteeInfo invitee,
                                      col.IEnumerable<MemberPermission> permissions = null,
                                      string initials = null,
-                                     bool isInherited = false)
+                                     bool isInherited = false,
+                                     UserInfo user = null)
             : base(accessType, permissions, initials, isInherited)
         {
             if (invitee == null)
@@ -53,6 +54,7 @@ namespace Dropbox.Api.Sharing
             }
 
             this.Invitee = invitee;
+            this.User = user;
         }
 
         /// <summary>
@@ -66,9 +68,14 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The information for the invited user.</para>
+        /// <para>Recipient of the invitation.</para>
         /// </summary>
         public InviteeInfo Invitee { get; protected set; }
+
+        /// <summary>
+        /// <para>The user this invitation is tied to, if available.</para>
+        /// </summary>
+        public UserInfo User { get; protected set; }
 
         #region Encoder class
 
@@ -95,6 +102,10 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
+                if (value.User != null)
+                {
+                    WriteProperty("user", value.User, writer, Dropbox.Api.Sharing.UserInfo.Encoder);
+                }
             }
         }
 
@@ -142,6 +153,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "is_inherited":
                         value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "user":
+                        value.User = Dropbox.Api.Sharing.UserInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

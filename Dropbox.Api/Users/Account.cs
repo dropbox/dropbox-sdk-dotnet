@@ -40,12 +40,14 @@ namespace Dropbox.Api.Users
         /// has since lost access to their e-mail.</param>
         /// <param name="emailVerified">Whether the user has verified their e-mail
         /// address.</param>
+        /// <param name="disabled">Whether the user has been disabled.</param>
         /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
         /// set.</param>
         public Account(string accountId,
                        Name name,
                        string email,
                        bool emailVerified,
+                       bool disabled,
                        string profilePhotoUrl = null)
         {
             if (accountId == null)
@@ -75,6 +77,7 @@ namespace Dropbox.Api.Users
             this.Name = name;
             this.Email = email;
             this.EmailVerified = emailVerified;
+            this.Disabled = disabled;
             this.ProfilePhotoUrl = profilePhotoUrl;
         }
 
@@ -110,6 +113,11 @@ namespace Dropbox.Api.Users
         public bool EmailVerified { get; protected set; }
 
         /// <summary>
+        /// <para>Whether the user has been disabled.</para>
+        /// </summary>
+        public bool Disabled { get; protected set; }
+
+        /// <summary>
         /// <para>URL for the photo representing the user, if one is set.</para>
         /// </summary>
         public string ProfilePhotoUrl { get; protected set; }
@@ -132,6 +140,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
                 WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("disabled", value.Disabled, writer, enc.BooleanEncoder.Instance);
                 if (value.ProfilePhotoUrl != null)
                 {
                     WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
@@ -179,6 +188,9 @@ namespace Dropbox.Api.Users
                         break;
                     case "email_verified":
                         value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "disabled":
+                        value.Disabled = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "profile_photo_url":
                         value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);

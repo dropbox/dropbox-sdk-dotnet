@@ -33,13 +33,13 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="groupName">The group name</param>
         /// <param name="groupId">The group id</param>
-        /// <param name="memberCount">The number of members in the group.</param>
         /// <param name="groupExternalId">External ID of group. This is an arbitrary ID that an
         /// admin can attach to a group.</param>
+        /// <param name="memberCount">The number of members in the group.</param>
         public GroupSummary(string groupName,
                             string groupId,
-                            uint memberCount,
-                            string groupExternalId = null)
+                            string groupExternalId = null,
+                            uint? memberCount = null)
         {
             if (groupName == null)
             {
@@ -53,8 +53,8 @@ namespace Dropbox.Api.Team
 
             this.GroupName = groupName;
             this.GroupId = groupId;
-            this.MemberCount = memberCount;
             this.GroupExternalId = groupExternalId;
+            this.MemberCount = memberCount;
         }
 
         /// <summary>
@@ -77,15 +77,15 @@ namespace Dropbox.Api.Team
         public string GroupId { get; protected set; }
 
         /// <summary>
-        /// <para>The number of members in the group.</para>
-        /// </summary>
-        public uint MemberCount { get; protected set; }
-
-        /// <summary>
         /// <para>External ID of group. This is an arbitrary ID that an admin can attach to a
         /// group.</para>
         /// </summary>
         public string GroupExternalId { get; protected set; }
+
+        /// <summary>
+        /// <para>The number of members in the group.</para>
+        /// </summary>
+        public uint? MemberCount { get; protected set; }
 
         #region Encoder class
 
@@ -103,10 +103,13 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
-                WriteProperty("member_count", value.MemberCount, writer, enc.UInt32Encoder.Instance);
                 if (value.GroupExternalId != null)
                 {
                     WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.MemberCount != null)
+                {
+                    WriteProperty("member_count", value.MemberCount.Value, writer, enc.UInt32Encoder.Instance);
                 }
             }
         }
@@ -146,11 +149,11 @@ namespace Dropbox.Api.Team
                     case "group_id":
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "member_count":
-                        value.MemberCount = enc.UInt32Decoder.Instance.Decode(reader);
-                        break;
                     case "group_external_id":
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "member_count":
+                        value.MemberCount = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

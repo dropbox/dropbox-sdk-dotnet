@@ -33,9 +33,7 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="users">The list of user members of the shared folder.</param>
         /// <param name="groups">The list of group members of the shared folder.</param>
-        /// <param name="invitees">The list of invited members of the shared folder. This list
-        /// will not include invitees that have already accepted or declined to join the shared
-        /// folder.</param>
+        /// <param name="invitees">The list of invitees to the shared folder.</param>
         /// <param name="cursor">Present if there are additional shared folder members that
         /// have not been returned yet. Pass the cursor into <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersContinueAsync" />
@@ -93,8 +91,7 @@ namespace Dropbox.Api.Sharing
         public col.IList<GroupMembershipInfo> Groups { get; protected set; }
 
         /// <summary>
-        /// <para>The list of invited members of the shared folder. This list will not include
-        /// invitees that have already accepted or declined to join the shared folder.</para>
+        /// <para>The list of invitees to the shared folder.</para>
         /// </summary>
         public col.IList<InviteeMembershipInfo> Invitees { get; protected set; }
 

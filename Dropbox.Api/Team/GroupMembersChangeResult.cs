@@ -33,8 +33,8 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="GroupMembersChangeResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Lists the group members after the member change operation
-        /// has been performed.</param>
+        /// <param name="groupInfo">The group info after member change operation has been
+        /// performed.</param>
         /// <param name="asyncJobId">An ID that can be used to obtain the status of
         /// granting/revoking group-owned resources.</param>
         public GroupMembersChangeResult(GroupFullInfo groupInfo,
@@ -69,8 +69,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Lists the group members after the member change operation has been
-        /// performed.</para>
+        /// <para>The group info after member change operation has been performed.</para>
         /// </summary>
         public GroupFullInfo GroupInfo { get; protected set; }
 

@@ -13,6 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The get metadata arg object</para>
     /// </summary>
+    /// <seealso cref="AlphaGetMetadataArg" />
     public class GetMetadataArg
     {
         #pragma warning disable 108
@@ -34,8 +35,16 @@ namespace Dropbox.Api.Files
         /// <param name="includeMediaInfo">If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
         /// video.</param>
+        /// <param name="includeDeleted">If true, <see cref="DeletedMetadata" /> will be
+        /// returned for deleted file or folder, otherwise <see
+        /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
+        /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
+        /// flag for each file indicating whether or not  that file has any explicit
+        /// members.</param>
         public GetMetadataArg(string path,
-                              bool includeMediaInfo = false)
+                              bool includeMediaInfo = false,
+                              bool includeDeleted = false,
+                              bool includeHasExplicitSharedMembers = false)
         {
             if (path == null)
             {
@@ -48,6 +57,8 @@ namespace Dropbox.Api.Files
 
             this.Path = path;
             this.IncludeMediaInfo = includeMediaInfo;
+            this.IncludeDeleted = includeDeleted;
+            this.IncludeHasExplicitSharedMembers = includeHasExplicitSharedMembers;
         }
 
         /// <summary>
@@ -58,6 +69,8 @@ namespace Dropbox.Api.Files
         public GetMetadataArg()
         {
             this.IncludeMediaInfo = false;
+            this.IncludeDeleted = false;
+            this.IncludeHasExplicitSharedMembers = false;
         }
 
         /// <summary>
@@ -70,6 +83,19 @@ namespace Dropbox.Api.Files
         /// photo and video.</para>
         /// </summary>
         public bool IncludeMediaInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>If true, <see cref="DeletedMetadata" /> will be returned for deleted file or
+        /// folder, otherwise <see cref="Dropbox.Api.Files.LookupError.NotFound" /> will be
+        /// returned.</para>
+        /// </summary>
+        public bool IncludeDeleted { get; protected set; }
+
+        /// <summary>
+        /// <para>If true, the results will include a flag for each file indicating whether or
+        /// not  that file has any explicit members.</para>
+        /// </summary>
+        public bool IncludeHasExplicitSharedMembers { get; protected set; }
 
         #region Encoder class
 
@@ -87,6 +113,8 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_deleted", value.IncludeDeleted, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_has_explicit_shared_members", value.IncludeHasExplicitSharedMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -124,6 +152,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_media_info":
                         value.IncludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_deleted":
+                        value.IncludeDeleted = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_has_explicit_shared_members":
+                        value.IncludeHasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -38,6 +38,7 @@ namespace Dropbox.Api.Users
         /// has since lost access to their e-mail.</param>
         /// <param name="emailVerified">Whether the user has verified their e-mail
         /// address.</param>
+        /// <param name="disabled">Whether the user has been disabled.</param>
         /// <param name="locale">The language that the user specified. Locale tags will be <a
         /// href="http://en.wikipedia.org/wiki/IETF_language_tag">IETF language
         /// tags</a>.</param>
@@ -61,15 +62,16 @@ namespace Dropbox.Api.Users
                            Name name,
                            string email,
                            bool emailVerified,
+                           bool disabled,
                            string locale,
                            string referralLink,
                            bool isPaired,
                            AccountType accountType,
                            string profilePhotoUrl = null,
                            string country = null,
-                           Team team = null,
+                           FullTeam team = null,
                            string teamMemberId = null)
-            : base(accountId, name, email, emailVerified, profilePhotoUrl)
+            : base(accountId, name, email, emailVerified, disabled, profilePhotoUrl)
         {
             if (locale == null)
             {
@@ -154,7 +156,7 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>If this account is a member of a team, information about that team.</para>
         /// </summary>
-        public Team Team { get; protected set; }
+        public FullTeam Team { get; protected set; }
 
         /// <summary>
         /// <para>This account's unique team member id. This field will only be present if <see
@@ -180,6 +182,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
                 WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("disabled", value.Disabled, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("locale", value.Locale, writer, enc.StringEncoder.Instance);
                 WriteProperty("referral_link", value.ReferralLink, writer, enc.StringEncoder.Instance);
                 WriteProperty("is_paired", value.IsPaired, writer, enc.BooleanEncoder.Instance);
@@ -194,7 +197,7 @@ namespace Dropbox.Api.Users
                 }
                 if (value.Team != null)
                 {
-                    WriteProperty("team", value.Team, writer, Dropbox.Api.Users.Team.Encoder);
+                    WriteProperty("team", value.Team, writer, Dropbox.Api.Users.FullTeam.Encoder);
                 }
                 if (value.TeamMemberId != null)
                 {
@@ -244,6 +247,9 @@ namespace Dropbox.Api.Users
                     case "email_verified":
                         value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
+                    case "disabled":
+                        value.Disabled = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
                     case "locale":
                         value.Locale = enc.StringDecoder.Instance.Decode(reader);
                         break;
@@ -263,7 +269,7 @@ namespace Dropbox.Api.Users
                         value.Country = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "team":
-                        value.Team = Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        value.Team = Dropbox.Api.Users.FullTeam.Decoder.Decode(reader);
                         break;
                     case "team_member_id":
                         value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);

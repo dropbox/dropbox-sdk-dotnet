@@ -13,7 +13,8 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group members remove arg object</para>
     /// </summary>
-    public class GroupMembersRemoveArg
+    /// <seealso cref="Dropbox.Api.Team.IncludeMembersArg" />
+    public class GroupMembersRemoveArg : IncludeMembersArg
     {
         #pragma warning disable 108
 
@@ -31,10 +32,15 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="GroupMembersRemoveArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="group">The group</param>
-        /// <param name="users">The users</param>
+        /// <param name="group">Group from which users will be removed.</param>
+        /// <param name="users">List of users to be removed from the group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         public GroupMembersRemoveArg(GroupSelector @group,
-                                     col.IEnumerable<UserSelectorArg> users)
+                                     col.IEnumerable<UserSelectorArg> users,
+                                     bool returnMembers = true)
+            : base(returnMembers)
         {
             if (@group == null)
             {
@@ -63,12 +69,12 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Gets the group of the group members remove arg</para>
+        /// <para>Group from which users will be removed.</para>
         /// </summary>
         public GroupSelector Group { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the users of the group members remove arg</para>
+        /// <para>List of users to be removed from the group.</para>
         /// </summary>
         public col.IList<UserSelectorArg> Users { get; protected set; }
 
@@ -88,6 +94,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
                 WriteListProperty("users", value.Users, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -126,6 +133,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "users":
                         value.Users = ReadList<UserSelectorArg>(reader, Dropbox.Api.Team.UserSelectorArg.Decoder);
+                        break;
+                    case "return_members":
+                        value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -13,6 +13,7 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>Information about a team.</para>
     /// </summary>
+    /// <seealso cref="FullTeam" />
     public class Team
     {
         #pragma warning disable 108

@@ -36,9 +36,13 @@ namespace Dropbox.Api.Team
         /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         public GroupMembersSetAccessTypeArg(GroupSelector @group,
                                             UserSelectorArg user,
-                                            GroupAccessType accessType)
+                                            GroupAccessType accessType,
+                                            bool returnMembers = true)
             : base(@group, user)
         {
             if (accessType == null)
@@ -47,6 +51,7 @@ namespace Dropbox.Api.Team
             }
 
             this.AccessType = accessType;
+            this.ReturnMembers = returnMembers;
         }
 
         /// <summary>
@@ -57,12 +62,20 @@ namespace Dropbox.Api.Team
         /// deserializing.</remarks>
         public GroupMembersSetAccessTypeArg()
         {
+            this.ReturnMembers = true;
         }
 
         /// <summary>
         /// <para>New group access type the user will have.</para>
         /// </summary>
         public GroupAccessType AccessType { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether to return the list of members in the group.  Note that the default
+        /// value will cause all the group members  to be returned in the response. This may
+        /// take a long time for large groups.</para>
+        /// </summary>
+        public bool ReturnMembers { get; protected set; }
 
         #region Encoder class
 
@@ -81,6 +94,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
                 WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Team.GroupAccessType.Encoder);
+                WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -122,6 +136,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "access_type":
                         value.AccessType = Dropbox.Api.Team.GroupAccessType.Decoder.Decode(reader);
+                        break;
+                    case "return_members":
+                        value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

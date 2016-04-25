@@ -141,12 +141,130 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>List all device sessions of a team.</para>
         /// </summary>
+        /// <param name="listMembersDevicesArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListMembersDevicesError"/>.</exception>
+        public t.Task<ListMembersDevicesResult> DevicesListMembersDevicesAsync(ListMembersDevicesArg listMembersDevicesArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListMembersDevicesArg, ListMembersDevicesResult, ListMembersDevicesError>(listMembersDevicesArg, "api", "/team/devices/list_members_devices", Dropbox.Api.Team.ListMembersDevicesArg.Encoder, Dropbox.Api.Team.ListMembersDevicesResult.Decoder, Dropbox.Api.Team.ListMembersDevicesError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the devices list members devices route.</para>
+        /// </summary>
+        /// <param name="listMembersDevicesArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDevicesListMembersDevices(ListMembersDevicesArg listMembersDevicesArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DevicesListMembersDevicesAsync(listMembersDevicesArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>List all device sessions of a team.</para>
+        /// </summary>
+        /// <param name="cursor">At the first call to the <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> the
+        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
+        /// following requests should include the received cursors in order to receive the next
+        /// sub list of team devices</param>
+        /// <param name="includeWebSessions">Whether to list web sessions of the team
+        /// members</param>
+        /// <param name="includeDesktopClients">Whether to list desktop clients of the team
+        /// members</param>
+        /// <param name="includeMobileClients">Whether to list mobile clients of the team
+        /// members</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListMembersDevicesError"/>.</exception>
+        public t.Task<ListMembersDevicesResult> DevicesListMembersDevicesAsync(string cursor = null,
+                                                                               bool includeWebSessions = true,
+                                                                               bool includeDesktopClients = true,
+                                                                               bool includeMobileClients = true)
+        {
+            var listMembersDevicesArg = new ListMembersDevicesArg(cursor,
+                                                                  includeWebSessions,
+                                                                  includeDesktopClients,
+                                                                  includeMobileClients);
+
+            return this.DevicesListMembersDevicesAsync(listMembersDevicesArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the devices list members devices route.</para>
+        /// </summary>
+        /// <param name="cursor">At the first call to the <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> the
+        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
+        /// following requests should include the received cursors in order to receive the next
+        /// sub list of team devices</param>
+        /// <param name="includeWebSessions">Whether to list web sessions of the team
+        /// members</param>
+        /// <param name="includeDesktopClients">Whether to list desktop clients of the team
+        /// members</param>
+        /// <param name="includeMobileClients">Whether to list mobile clients of the team
+        /// members</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDevicesListMembersDevices(string cursor = null,
+                                                               bool includeWebSessions = true,
+                                                               bool includeDesktopClients = true,
+                                                               bool includeMobileClients = true,
+                                                               sys.AsyncCallback callback = null,
+                                                               object callbackState = null)
+        {
+            var listMembersDevicesArg = new ListMembersDevicesArg(cursor,
+                                                                  includeWebSessions,
+                                                                  includeDesktopClients,
+                                                                  includeMobileClients);
+
+            return this.BeginDevicesListMembersDevices(listMembersDevicesArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the devices list members devices
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListMembersDevicesError"/>.</exception>
+        public ListMembersDevicesResult EndDevicesListMembersDevices(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListMembersDevicesResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>List all device sessions of a team.</para>
+        /// </summary>
         /// <param name="listTeamDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use DevicesListMembersDevicesAsync instead.")]
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(ListTeamDevicesArg listTeamDevicesArg)
         {
             return this.Transport.SendRpcRequestAsync<ListTeamDevicesArg, ListTeamDevicesResult, ListTeamDevicesError>(listTeamDevicesArg, "api", "/team/devices/list_team_devices", Dropbox.Api.Team.ListTeamDevicesArg.Encoder, Dropbox.Api.Team.ListTeamDevicesResult.Decoder, Dropbox.Api.Team.ListTeamDevicesError.Decoder);
@@ -161,6 +279,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginDevicesListMembersDevices instead.")]
         public sys.IAsyncResult BeginDevicesListTeamDevices(ListTeamDevicesArg listTeamDevicesArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DevicesListTeamDevicesAsync(listTeamDevicesArg);
@@ -187,6 +306,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use DevicesListMembersDevicesAsync instead.")]
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(string cursor = null,
                                                                          bool includeWebSessions = true,
                                                                          bool includeDesktopClients = true,
@@ -219,6 +339,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginDevicesListMembersDevices instead.")]
         public sys.IAsyncResult BeginDevicesListTeamDevices(string cursor = null,
                                                             bool includeWebSessions = true,
                                                             bool includeDesktopClients = true,
@@ -244,6 +365,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndDevicesListMembersDevices instead.")]
         public ListTeamDevicesResult EndDevicesListTeamDevices(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListTeamDevicesResult>;
@@ -951,16 +1073,21 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="group">Group to which users will be added.</param>
         /// <param name="members">List of users to be added to the group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupMembersAddError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupSelector @group,
-                                                                      col.IEnumerable<MemberAccess> members)
+                                                                      col.IEnumerable<MemberAccess> members,
+                                                                      bool returnMembers = true)
         {
             var groupMembersAddArg = new GroupMembersAddArg(@group,
-                                                            members);
+                                                            members,
+                                                            returnMembers);
 
             return this.GroupsMembersAddAsync(groupMembersAddArg);
         }
@@ -970,6 +1097,9 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="group">Group to which users will be added.</param>
         /// <param name="members">List of users to be added to the group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -977,11 +1107,13 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGroupsMembersAdd(GroupSelector @group,
                                                       col.IEnumerable<MemberAccess> members,
-                                                      sys.AsyncCallback callback,
+                                                      bool returnMembers = true,
+                                                      sys.AsyncCallback callback = null,
                                                       object callbackState = null)
         {
             var groupMembersAddArg = new GroupMembersAddArg(@group,
-                                                            members);
+                                                            members,
+                                                            returnMembers);
 
             return this.BeginGroupsMembersAdd(groupMembersAddArg, callback, callbackState);
         }
@@ -1050,18 +1182,23 @@ namespace Dropbox.Api.Team.Routes
         /// whether this process has completed.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
-        /// <param name="group">The group</param>
-        /// <param name="users">The users</param>
+        /// <param name="group">Group from which users will be removed.</param>
+        /// <param name="users">List of users to be removed from the group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupMembersRemoveError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupSelector @group,
-                                                                         col.IEnumerable<UserSelectorArg> users)
+                                                                         col.IEnumerable<UserSelectorArg> users,
+                                                                         bool returnMembers = true)
         {
             var groupMembersRemoveArg = new GroupMembersRemoveArg(@group,
-                                                                  users);
+                                                                  users,
+                                                                  returnMembers);
 
             return this.GroupsMembersRemoveAsync(groupMembersRemoveArg);
         }
@@ -1069,8 +1206,11 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the groups members remove route.</para>
         /// </summary>
-        /// <param name="group">The group</param>
-        /// <param name="users">The users</param>
+        /// <param name="group">Group from which users will be removed.</param>
+        /// <param name="users">List of users to be removed from the group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1078,11 +1218,13 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGroupsMembersRemove(GroupSelector @group,
                                                          col.IEnumerable<UserSelectorArg> users,
-                                                         sys.AsyncCallback callback,
+                                                         bool returnMembers = true,
+                                                         sys.AsyncCallback callback = null,
                                                          object callbackState = null)
         {
             var groupMembersRemoveArg = new GroupMembersRemoveArg(@group,
-                                                                  users);
+                                                                  users,
+                                                                  returnMembers);
 
             return this.BeginGroupsMembersRemove(groupMembersRemoveArg, callback, callbackState);
         }
@@ -1117,10 +1259,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="GroupMemberSelectorError"/>.</exception>
+        /// cref="GroupMemberSetAccessTypeError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupMembersSetAccessTypeArg groupMembersSetAccessTypeArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersSetAccessTypeArg, col.List<GroupsGetInfoItem>, GroupMemberSelectorError>(groupMembersSetAccessTypeArg, "api", "/team/groups/members/set_access_type", Dropbox.Api.Team.GroupMembersSetAccessTypeArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.GroupsGetInfoItem.Decoder), Dropbox.Api.Team.GroupMemberSelectorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersSetAccessTypeArg, col.List<GroupsGetInfoItem>, GroupMemberSetAccessTypeError>(groupMembersSetAccessTypeArg, "api", "/team/groups/members/set_access_type", Dropbox.Api.Team.GroupMembersSetAccessTypeArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.GroupsGetInfoItem.Decoder), Dropbox.Api.Team.GroupMemberSetAccessTypeError.Decoder);
         }
 
         /// <summary>
@@ -1148,18 +1290,23 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="GroupMemberSelectorError"/>.</exception>
+        /// cref="GroupMemberSetAccessTypeError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupSelector @group,
                                                                                    UserSelectorArg user,
-                                                                                   GroupAccessType accessType)
+                                                                                   GroupAccessType accessType,
+                                                                                   bool returnMembers = true)
         {
             var groupMembersSetAccessTypeArg = new GroupMembersSetAccessTypeArg(@group,
                                                                                 user,
-                                                                                accessType);
+                                                                                accessType,
+                                                                                returnMembers);
 
             return this.GroupsMembersSetAccessTypeAsync(groupMembersSetAccessTypeArg);
         }
@@ -1172,6 +1319,9 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1180,12 +1330,14 @@ namespace Dropbox.Api.Team.Routes
         public sys.IAsyncResult BeginGroupsMembersSetAccessType(GroupSelector @group,
                                                                 UserSelectorArg user,
                                                                 GroupAccessType accessType,
-                                                                sys.AsyncCallback callback,
+                                                                bool returnMembers = true,
+                                                                sys.AsyncCallback callback = null,
                                                                 object callbackState = null)
         {
             var groupMembersSetAccessTypeArg = new GroupMembersSetAccessTypeArg(@group,
                                                                                 user,
-                                                                                accessType);
+                                                                                accessType,
+                                                                                returnMembers);
 
             return this.BeginGroupsMembersSetAccessType(groupMembersSetAccessTypeArg, callback, callbackState);
         }
@@ -1199,7 +1351,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="GroupMemberSelectorError"/>.</exception>
+        /// cref="GroupMemberSetAccessTypeError"/>.</exception>
         public col.List<GroupsGetInfoItem> EndGroupsMembersSetAccessType(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<col.List<GroupsGetInfoItem>>;
@@ -1247,6 +1399,9 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <param name="newGroupName">Optional argument. Set group name to this if
         /// provided.</param>
         /// <param name="newGroupExternalId">Optional argument. New group external ID. If the
@@ -1258,10 +1413,12 @@ namespace Dropbox.Api.Team.Routes
         /// processing the request; This will contain a <see
         /// cref="GroupUpdateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsUpdateAsync(GroupSelector @group,
+                                                       bool returnMembers = true,
                                                        string newGroupName = null,
                                                        string newGroupExternalId = null)
         {
             var groupUpdateArgs = new GroupUpdateArgs(@group,
+                                                      returnMembers,
                                                       newGroupName,
                                                       newGroupExternalId);
 
@@ -1272,6 +1429,9 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the groups update route.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
+        /// <param name="returnMembers">Whether to return the list of members in the group.
+        /// Note that the default value will cause all the group members  to be returned in the
+        /// response. This may take a long time for large groups.</param>
         /// <param name="newGroupName">Optional argument. Set group name to this if
         /// provided.</param>
         /// <param name="newGroupExternalId">Optional argument. New group external ID. If the
@@ -1283,12 +1443,14 @@ namespace Dropbox.Api.Team.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGroupsUpdate(GroupSelector @group,
+                                                  bool returnMembers = true,
                                                   string newGroupName = null,
                                                   string newGroupExternalId = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
             var groupUpdateArgs = new GroupUpdateArgs(@group,
+                                                      returnMembers,
                                                       newGroupName,
                                                       newGroupExternalId);
 
@@ -1318,7 +1480,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all linked applications of the team member.</para>
-        /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
+        /// <para>Note, this endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="listMemberAppsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1350,7 +1512,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all linked applications of the team member.</para>
-        /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
+        /// <para>Note, this endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="teamMemberId">The team member id</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1407,6 +1569,103 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all applications linked to the team members' accounts.</para>
+        /// <para>Note, this endpoint does not list any team-linked applications.</para>
+        /// </summary>
+        /// <param name="listMembersAppsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListMembersAppsError"/>.</exception>
+        public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(ListMembersAppsArg listMembersAppsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListMembersAppsArg, ListMembersAppsResult, ListMembersAppsError>(listMembersAppsArg, "api", "/team/linked_apps/list_members_linked_apps", Dropbox.Api.Team.ListMembersAppsArg.Encoder, Dropbox.Api.Team.ListMembersAppsResult.Decoder, Dropbox.Api.Team.ListMembersAppsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the linked apps list members linked apps
+        /// route.</para>
+        /// </summary>
+        /// <param name="listMembersAppsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLinkedAppsListMembersLinkedApps(ListMembersAppsArg listMembersAppsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LinkedAppsListMembersLinkedAppsAsync(listMembersAppsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>List all applications linked to the team members' accounts.</para>
+        /// <para>Note, this endpoint does not list any team-linked applications.</para>
+        /// </summary>
+        /// <param name="cursor">At the first call to the <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListMembersLinkedAppsAsync" />
+        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
+        /// the following requests should include the received cursors in order to receive the
+        /// next sub list of the team applications</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListMembersAppsError"/>.</exception>
+        public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(string cursor = null)
+        {
+            var listMembersAppsArg = new ListMembersAppsArg(cursor);
+
+            return this.LinkedAppsListMembersLinkedAppsAsync(listMembersAppsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the linked apps list members linked apps
+        /// route.</para>
+        /// </summary>
+        /// <param name="cursor">At the first call to the <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListMembersLinkedAppsAsync" />
+        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
+        /// the following requests should include the received cursors in order to receive the
+        /// next sub list of the team applications</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLinkedAppsListMembersLinkedApps(string cursor = null,
+                                                                     sys.AsyncCallback callback = null,
+                                                                     object callbackState = null)
+        {
+            var listMembersAppsArg = new ListMembersAppsArg(cursor);
+
+            return this.BeginLinkedAppsListMembersLinkedApps(listMembersAppsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the linked apps list members
+        /// linked apps route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListMembersAppsError"/>.</exception>
+        public ListMembersAppsResult EndLinkedAppsListMembersLinkedApps(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListMembersAppsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>List all applications linked to the team members' accounts.</para>
         /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
         /// </summary>
         /// <param name="listTeamAppsArg">The request parameters</param>
@@ -1415,6 +1674,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(ListTeamAppsArg listTeamAppsArg)
         {
             return this.Transport.SendRpcRequestAsync<ListTeamAppsArg, ListTeamAppsResult, ListTeamAppsError>(listTeamAppsArg, "api", "/team/linked_apps/list_team_linked_apps", Dropbox.Api.Team.ListTeamAppsArg.Encoder, Dropbox.Api.Team.ListTeamAppsResult.Decoder, Dropbox.Api.Team.ListTeamAppsError.Decoder);
@@ -1430,6 +1690,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginLinkedAppsListMembersLinkedApps instead.")]
         public sys.IAsyncResult BeginLinkedAppsListTeamLinkedApps(ListTeamAppsArg listTeamAppsArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.LinkedAppsListTeamLinkedAppsAsync(listTeamAppsArg);
@@ -1451,6 +1712,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(string cursor = null)
         {
             var listTeamAppsArg = new ListTeamAppsArg(cursor);
@@ -1472,6 +1734,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginLinkedAppsListMembersLinkedApps instead.")]
         public sys.IAsyncResult BeginLinkedAppsListTeamLinkedApps(string cursor = null,
                                                                   sys.AsyncCallback callback = null,
                                                                   object callbackState = null)
@@ -1491,6 +1754,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndLinkedAppsListMembersLinkedApps instead.")]
         public ListTeamAppsResult EndLinkedAppsListTeamLinkedApps(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListTeamAppsResult>;
@@ -1887,7 +2151,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Returns information about multiple team members.</para>
         /// <para>Permission : Team information</para>
-        /// <para>This endpoint will return an empty member_info item, for IDs (or emails) that
+        /// <para>This endpoint will return <see
+        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
         /// cannot be matched to a valid team member.</para>
         /// </summary>
         /// <param name="membersGetInfoArgs">The request parameters</param>
@@ -1920,7 +2185,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Returns information about multiple team members.</para>
         /// <para>Permission : Team information</para>
-        /// <para>This endpoint will return an empty member_info item, for IDs (or emails) that
+        /// <para>This endpoint will return <see
+        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
         /// cannot be matched to a valid team member.</para>
         /// </summary>
         /// <param name="members">List of team members.</param>
@@ -2818,6 +3084,362 @@ namespace Dropbox.Api.Team.Routes
             {
                 throw new sys.InvalidOperationException();
             }
+        }
+
+        /// <summary>
+        /// <para>Add a property template. See route files/properties/add to add properties to
+        /// a file.</para>
+        /// </summary>
+        /// <param name="addPropertyTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(AddPropertyTemplateArg addPropertyTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<AddPropertyTemplateArg, AddPropertyTemplateResult, Dropbox.Api.Properties.ModifyPropertyTemplateError>(addPropertyTemplateArg, "api", "/team/properties/template/add", Dropbox.Api.Team.AddPropertyTemplateArg.Encoder, Dropbox.Api.Team.AddPropertyTemplateResult.Decoder, Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template add route.</para>
+        /// </summary>
+        /// <param name="addPropertyTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateAdd(AddPropertyTemplateArg addPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateAddAsync(addPropertyTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Add a property template. See route files/properties/add to add properties to
+        /// a file.</para>
+        /// </summary>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="fields">This is a list of custom properties associated with a property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(string name,
+                                                                            string description,
+                                                                            col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields)
+        {
+            var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
+                                                                    description,
+                                                                    fields);
+
+            return this.PropertiesTemplateAddAsync(addPropertyTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template add route.</para>
+        /// </summary>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="fields">This is a list of custom properties associated with a property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateAdd(string name,
+                                                           string description,
+                                                           col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
+                                                                    description,
+                                                                    fields);
+
+            return this.BeginPropertiesTemplateAdd(addPropertyTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template add route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public AddPropertyTemplateResult EndPropertiesTemplateAdd(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<AddPropertyTemplateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get the schema for a specified template.</para>
+        /// </summary>
+        /// <param name="getPropertyTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Properties.GetPropertyTemplateArg, Dropbox.Api.Properties.GetPropertyTemplateResult, Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/team/properties/template/get", Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template get route.</para>
+        /// </summary>
+        /// <param name="getPropertyTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateGet(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get the schema for a specified template.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by route
+        /// properties/template/add.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
+        {
+            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+
+            return this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template get route.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by route
+        /// properties/template/add.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateGet(string templateId,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+
+            return this.BeginPropertiesTemplateGet(getPropertyTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template get route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get the property template identifiers for a team. To get the schema of each
+        /// template use <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateGetAsync" />.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, Dropbox.Api.Properties.ListPropertyTemplateIds, Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", enc.EmptyEncoder.Instance, Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template list route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateList(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateListAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template list route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Update a property template. This route can update the template name, the
+        /// template description and add optional properties to templates.</para>
+        /// </summary>
+        /// <param name="updatePropertyTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(UpdatePropertyTemplateArg updatePropertyTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UpdatePropertyTemplateArg, UpdatePropertyTemplateResult, Dropbox.Api.Properties.ModifyPropertyTemplateError>(updatePropertyTemplateArg, "api", "/team/properties/template/update", Dropbox.Api.Team.UpdatePropertyTemplateArg.Encoder, Dropbox.Api.Team.UpdatePropertyTemplateResult.Decoder, Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template update route.</para>
+        /// </summary>
+        /// <param name="updatePropertyTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateUpdate(UpdatePropertyTemplateArg updatePropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateUpdateAsync(updatePropertyTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Update a property template. This route can update the template name, the
+        /// template description and add optional properties to templates.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="addFields">This is a list of custom properties to add to the property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
+                                                                                  string name = null,
+                                                                                  string description = null,
+                                                                                  col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
+        {
+            var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
+                                                                          name,
+                                                                          description,
+                                                                          addFields);
+
+            return this.PropertiesTemplateUpdateAsync(updatePropertyTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template update route.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="addFields">This is a list of custom properties to add to the property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateUpdate(string templateId,
+                                                              string name = null,
+                                                              string description = null,
+                                                              col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null,
+                                                              sys.AsyncCallback callback = null,
+                                                              object callbackState = null)
+        {
+            var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
+                                                                          name,
+                                                                          description,
+                                                                          addFields);
+
+            return this.BeginPropertiesTemplateUpdate(updatePropertyTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template update
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public UpdatePropertyTemplateResult EndPropertiesTemplateUpdate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<UpdatePropertyTemplateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
         }
 
         /// <summary>
