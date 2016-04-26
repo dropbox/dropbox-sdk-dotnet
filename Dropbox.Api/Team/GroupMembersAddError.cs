@@ -772,7 +772,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>A company managed group cannot be managed by a user.</para>
+        /// <para>A company-managed group cannot be managed by a user.</para>
         /// </summary>
         public sealed class UserCannotBeManagerOfCompanyManagedGroup : GroupMembersAddError
         {

@@ -13,7 +13,6 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The get metadata arg object</para>
     /// </summary>
-    /// <seealso cref="AlphaGetMetadataArg" />
     public class GetMetadataArg
     {
         #pragma warning disable 108

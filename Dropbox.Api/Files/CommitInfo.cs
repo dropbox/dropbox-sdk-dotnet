@@ -13,7 +13,6 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The commit info object</para>
     /// </summary>
-    /// <seealso cref="CommitInfoWithProperties" />
     /// <seealso cref="UploadSessionFinishArg" />
     public class CommitInfo
     {
