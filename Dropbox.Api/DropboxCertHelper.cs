@@ -18,8 +18,9 @@ namespace Dropbox.Api
     /// </summary>
     /// <remarks>
     /// <para>
-    /// Dropbox recommends that all clients implement certificate pinning, unfortunately it isn't currently
-    /// possible to implement this in a portable assembly, so this class is provided to help implement this.</para>
+    /// Dropbox recommends that all clients implement certificate pinning and this class provides implementation for desktop
+    /// and server application as <see cref="DropboxCertHelper.InitializeCertPinning"/>. Unfortunately it isn't currently
+    /// possible to implement this in a portable assembly, so this class also provides methods to help implement this.</para>
     /// <para>
     /// For more information about certificate pinning see
     /// <a href="https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning">Certificate and Public Key Pinning</a>.
@@ -27,28 +28,10 @@ namespace Dropbox.Api
     /// <para>
     /// These helper methods allow client code to check if the certificate used by a Dropbox server
     /// was issued with a certificate chain that originates with a root certificate that Dropbox
-    /// either currently uses, or may use in the future.
+    /// either currently uses, or may use in the future. These methods would be called before calling 
+    /// the <see cref="DropboxClient"/> constructor.
     /// </para>
     /// </remarks>
-    /// <example>
-    /// <para>The following code demonstrates how to implement certificate pinning on a desktop or
-    /// server application.</para>
-    /// <code>
-    /// private void InitializeCertPinning()
-    /// {
-    ///     ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) =&gt;
-    ///     {
-    ///         var root = chain.ChainElements[chain.ChainElements.Count - 1];
-    ///         var publicKey = root.Certificate.GetPublicKeyString();
-    ///
-    ///         return DropboxCertHelper.IsKnownRootCertPublicKey(publicKey);
-    ///     };
-    /// }
-    /// </code>
-    /// <para>This code would be called before calling the <see cref="DropboxClient"/> constructor.</para>
-    /// <para><strong>Note:</strong> If your application is communicating with other web services you may need
-    /// to perform different pinning checks for different services.</para>
-    /// </example>
     public static class DropboxCertHelper
     {
         /// <summary>
