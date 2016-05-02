@@ -10,6 +10,7 @@ namespace Dropbox.Api
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
+    using System.Net;
     using System.Text;
 
     /// <summary>
@@ -224,5 +225,29 @@ namespace Dropbox.Api
 
             return ValidRoots.Contains(publicKeyString);
         }
+
+# if PORTABLE
+# elif PORTABLE40
+# else
+        /// <summary>
+        /// Initializes ssl certificate pinning.
+        /// </summary>
+        public static void InitializeCertPinning()
+        {
+            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) =>
+            {
+                if (sslPolicyErrors != System.Net.Security.SslPolicyErrors.None)
+                {
+                    return false;
+                }
+
+                var root = chain.ChainElements[chain.ChainElements.Count - 1];
+                var publicKey = root.Certificate.GetPublicKeyString();
+
+                return DropboxCertHelper.IsKnownRootCertPublicKey(publicKey);
+            };
+        }
+#endif
+
     }
 }

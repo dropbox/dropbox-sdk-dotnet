@@ -32,7 +32,7 @@ namespace SimpleTest
 
         private async Task<int> Run()
         {
-            InitializeCertPinning();
+            DropboxCertHelper.InitializeCertPinning();
 
             var accessToken = await this.GetAccessToken();
             if (string.IsNullOrEmpty(accessToken))
@@ -124,20 +124,6 @@ namespace SimpleTest
                 var userClient = client.AsMember(member.Profile.TeamMemberId);
                 await RunUserTests(userClient);
             }
-        }
-
-        /// <summary>
-        /// Initializes ssl certificate pinning.
-        /// </summary>
-        private void InitializeCertPinning()
-        {
-            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) =>
-            {
-                var root = chain.ChainElements[chain.ChainElements.Count - 1];
-                var publicKey = root.Certificate.GetPublicKeyString();
-
-                return DropboxCertHelper.IsKnownRootCertPublicKey(publicKey);
-            };
         }
 
         /// <summary>
