@@ -91,9 +91,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Dropbox.Api\Dropbox.Api.Portable.csproj">
-      <Project>{786c830f-07a1-408b-bd7f-6ee04809d6db}</Project>
-      <Name>Dropbox.Api.Portable</Name>
+    <ProjectReference Include="..\..\Dropbox.Api\Dropbox.Api.csproj">
+      <Project>{68180b54-4724-4cd1-baa6-ee7bc309797c}</Project>
+      <Name>Dropbox.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.1.1</version>
+    <version>3.1.2</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -15,6 +15,7 @@
     <releaseNotes> 
 What's new:
 - Authentication
+  - Integrate cert pinning into DropboxCertHelper for .NET 4.5.
   - Add Token.Revoke endpoint.
 - Account
   - Add Disabled field to Account.
