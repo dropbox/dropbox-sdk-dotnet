@@ -1,6 +1,6 @@
 # Dropbox.NET
 
-A .NET SDK for integrating with the Dropbox API v2 (preview version).
+A .NET SDK for integrating with the Dropbox API v2.
 
 ## Setup
 
