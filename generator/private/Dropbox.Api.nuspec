@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.1.2</version>
+    <version>3.2.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,28 +14,19 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-- Authentication
-  - Integrate cert pinning into DropboxCertHelper for .NET 4.5.
-  - Add Token.Revoke endpoint.
-- Account
-  - Add Disabled field to Account.
 - Files
-  - Add IncludeDeleted and IncludeHasExplicitSharedMembers parameter to GetMetadata and ListFolder endpoint.
-  - Add Close parameter to UploadSessionStart endpoint to support explicitly close an upload session.
-  - Add UploadSessionAppendV2 endpoint which provides explicit session close support. UploadSessionAppend endpoint is now deprecated.
-  - Add CopyReference endpoint.
-  - Add GetTemporaryLink endpoint.
-- Shared links
-  - Add RemoveExpiration parameter to ModifySharedLinkSettings endpoint.
+  - Add SaveUrl endpoint for saving online content to your Dropbox.
 - Shared folders
-  - Add LeaveACopy to FolderAction.
-  - Add TimeInvited to SharedFolderMetadata.
-  - Return IsOsxPackage or InsideOsxPackage error when user attempts to share an OS X package or folder inside OS X package.
+  - Add ViewerNoComment to AccessLevel.
+  - Add IsOwner to GroupInfo.
+  - Change return type of SharePathError.AlreadyShared from Void to SharedFolderMetadata.
+  - Add LeaveACopy parameter to RelinquishFolderMembership endpoint.
+  - Change RelinquishFolderMembership to return async job ID when leaving a copy.
+  - Add RelinquishFolderMembershipError to JobError.
 - Business endpoints
-  - MemberCount is now optional in GroupSummary.
-  - DevicesListTeamDevices endpoint is now deprecated by DevicesListMemberDevices.
-  - LinkedAppsListTeamLinkedApps is now deprecated by LinkedAppsListMembersLinkedApps endpoint.
-  - Add ReturnMembers parameter to GroupsMembersSetAccessType endpoint.
+  - Add MembershipType to MemberProfile.
+  - Add KeepAccount parameter to Members.Remove endpoint.
+  - Add CannotKeepAccountAndTransfer and CannotKeepAccountAndDeleteData to MembersRemoveError.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
