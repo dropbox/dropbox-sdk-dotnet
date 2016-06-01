@@ -71,19 +71,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Babel\Decoder.cs" />
-    <Compile Include="Babel\Empty.cs" />
-    <Compile Include="Babel\Encoder.cs" />
-    <Compile Include="Babel\IEncoder.cs" />
-    <Compile Include="Babel\IDecoder.cs" />
-    <Compile Include="Babel\IJsonReader.cs" />
-    <Compile Include="Babel\IJsonWriter.cs" />
-    <Compile Include="Babel\ITransport.cs" />
-    <Compile Include="Babel\JsonReader.cs" />
-    <Compile Include="Babel\JsonWriter.cs" />
+    <Compile Include="Stone\Decoder.cs" />
+    <Compile Include="Stone\Empty.cs" />
+    <Compile Include="Stone\Encoder.cs" />
+    <Compile Include="Stone\IEncoder.cs" />
+    <Compile Include="Stone\IDecoder.cs" />
+    <Compile Include="Stone\IJsonReader.cs" />
+    <Compile Include="Stone\IJsonWriter.cs" />
+    <Compile Include="Stone\ITransport.cs" />
+    <Compile Include="Stone\JsonReader.cs" />
+    <Compile Include="Stone\JsonWriter.cs" />
     <Compile Include="ApiException.cs" />
     <Compile Include="StructuredException.cs" />
-    <Compile Include="Babel\Util.cs" />
+    <Compile Include="Stone\Util.cs" />
     <Compile Include="DropboxCertHelper.cs" />
     <Compile Include="DropboxClient.common.cs" />
     <Compile Include="DropboxOauth2Helper.cs" />
@@ -151,6 +151,10 @@
     <Compile Include="Files\SaveCopyReferenceArg.cs" />
     <Compile Include="Files\SaveCopyReferenceError.cs" />
     <Compile Include="Files\SaveCopyReferenceResult.cs" />
+    <Compile Include="Files\SaveUrlArg.cs" />
+    <Compile Include="Files\SaveUrlError.cs" />
+    <Compile Include="Files\SaveUrlJobStatus.cs" />
+    <Compile Include="Files\SaveUrlResult.cs" />
     <Compile Include="Files\SearchArg.cs" />
     <Compile Include="Files\SearchError.cs" />
     <Compile Include="Files\SearchMatch.cs" />
@@ -278,6 +282,10 @@
     <Compile Include="Sharing\UserInfo.cs" />
     <Compile Include="Sharing\UserMembershipInfo.cs" />
     <Compile Include="Sharing\Visibility.cs" />
+    <Compile Include="TeamCommon\AlphaGroupSummary.cs" />
+    <Compile Include="TeamCommon\GroupManagementType.cs" />
+    <Compile Include="TeamCommon\GroupSummary.cs" />
+    <Compile Include="TeamCommon\GroupType.cs" />
     <Compile Include="TeamPolicies\EmmState.cs" />
     <Compile Include="TeamPolicies\SharedFolderJoinPolicy.cs" />
     <Compile Include="TeamPolicies\SharedFolderMemberPolicy.cs" />
@@ -288,6 +296,11 @@
     <Compile Include="Team\AddPropertyTemplateArg.cs" />
     <Compile Include="Team\AddPropertyTemplateResult.cs" />
     <Compile Include="Team\AdminTier.cs" />
+    <Compile Include="Team\AlphaGroupCreateArg.cs" />
+    <Compile Include="Team\AlphaGroupFullInfo.cs" />
+    <Compile Include="Team\AlphaGroupUpdateArgs.cs" />
+    <Compile Include="Team\AlphaGroupsGetInfoItem.cs" />
+    <Compile Include="Team\AlphaGroupsListResult.cs" />
     <Compile Include="Team\ApiApp.cs" />
     <Compile Include="Team\BaseDfbReport.cs" />
     <Compile Include="Team\DateRange.cs" />
@@ -320,8 +333,6 @@
     <Compile Include="Team\GroupMembersSetAccessTypeArg.cs" />
     <Compile Include="Team\GroupSelector.cs" />
     <Compile Include="Team\GroupSelectorError.cs" />
-    <Compile Include="Team\GroupSummary.cs" />
-    <Compile Include="Team\GroupType.cs" />
     <Compile Include="Team\GroupUpdateArgs.cs" />
     <Compile Include="Team\GroupUpdateError.cs" />
     <Compile Include="Team\GroupsGetInfoError.cs" />
@@ -330,6 +341,10 @@
     <Compile Include="Team\GroupsListContinueArg.cs" />
     <Compile Include="Team\GroupsListContinueError.cs" />
     <Compile Include="Team\GroupsListResult.cs" />
+    <Compile Include="Team\GroupsMembersListArg.cs" />
+    <Compile Include="Team\GroupsMembersListContinueArg.cs" />
+    <Compile Include="Team\GroupsMembersListContinueError.cs" />
+    <Compile Include="Team\GroupsMembersListResult.cs" />
     <Compile Include="Team\GroupsPollError.cs" />
     <Compile Include="Team\GroupsSelector.cs" />
     <Compile Include="Team\IncludeMembersArg.cs" />
@@ -402,6 +417,7 @@
     <Compile Include="Team\TeamMemberInfo.cs" />
     <Compile Include="Team\TeamMemberProfile.cs" />
     <Compile Include="Team\TeamMemberStatus.cs" />
+    <Compile Include="Team\TeamMembershipType.cs" />
     <Compile Include="Team\TeamRoutes.cs" />
     <Compile Include="Team\UpdatePropertyTemplateArg.cs" />
     <Compile Include="Team\UpdatePropertyTemplateResult.cs" />

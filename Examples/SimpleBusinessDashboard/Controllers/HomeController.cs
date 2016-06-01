@@ -152,15 +152,15 @@ namespace SimpleBusinessDashboard.Controllers
             /* sample data */
             var teamMemInfoList = new List<TeamMemberInfo>();
             teamMemInfoList.Add(new TeamMemberInfo(new TeamMemberProfile("id#", "john@company.org", true, new TeamMemberStatus(),
-                                new Name("", "", "", "John Smith"), new List<string>()), new AdminTier()));
+                                new Name("", "", "", "John Smith"), TeamMembershipType.Full.Instance, new List<string>()), new AdminTier()));
             teamMemInfoList.Add(new TeamMemberInfo(new TeamMemberProfile("id#", "akhil@company.org", true, new TeamMemberStatus(),
-                                new Name("", "", "", "Akhil Goel"), new List<string>()), new AdminTier()));
+                                new Name("", "", "", "Akhil Goel"), TeamMembershipType.Full.Instance, new List<string>()), new AdminTier()));
             teamMemInfoList.Add(new TeamMemberInfo(new TeamMemberProfile("id#", "lisa@company.org", true, new TeamMemberStatus(),
-                                new Name("", "", "", "Lisa Reynolds"), new List<string>()), new AdminTier()));
+                                new Name("", "", "", "Lisa Reynolds"), TeamMembershipType.Full.Instance, new List<string>()), new AdminTier()));
             teamMemInfoList.Add(new TeamMemberInfo(new TeamMemberProfile("id#", "emory@company.org", true, new TeamMemberStatus(),
-                                new Name("", "", "", "Emory Lee"), new List<string>()), new AdminTier()));
+                                new Name("", "", "", "Emory Lee"), TeamMembershipType.Full.Instance, new List<string>()), new AdminTier()));
             teamMemInfoList.Add(new TeamMemberInfo(new TeamMemberProfile("id#", "ian@company.org", true, new TeamMemberStatus(),
-                                new Name("", "", "", "Ian Webber"), new List<string>()), new AdminTier()));
+                                new Name("", "", "", "Ian Webber"), TeamMembershipType.Full.Instance, new List<string>()), new AdminTier()));
 
             return teamMemInfoList;
         }

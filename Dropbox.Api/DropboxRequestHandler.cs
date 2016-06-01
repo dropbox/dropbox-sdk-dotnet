@@ -18,7 +18,7 @@ namespace Dropbox.Api
     using System.Text;
     using System.Threading.Tasks;
 
-    using Dropbox.Api.Babel;
+    using Dropbox.Api.Stone;
     using Newtonsoft.Json.Linq;
 
     /// <summary>
@@ -511,7 +511,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// An implementation of the <see cref="T:Dropbox.Api.Babel.IDownloadResponse`1"/> interface.
+        /// An implementation of the <see cref="T:Dropbox.Api.Stone.IDownloadResponse`1"/> interface.
         /// </summary>
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         private class DownloadResponse<TResponse> : IDownloadResponse<TResponse>
