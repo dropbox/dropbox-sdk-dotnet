@@ -8,7 +8,7 @@ namespace <Namespace>
 {
     using System;
 
-    using <Namespace>.Babel;
+    using <Namespace>.Stone;
 
     /// <summary>
     /// The exception type that will be raised by an <see cref="ITransport" />

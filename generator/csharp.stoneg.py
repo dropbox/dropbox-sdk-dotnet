@@ -8,7 +8,7 @@ try:
     from csproj import make_csproj_file
     from csharp import _CSharpGenerator
 except ImportError:
-    # The babel generate calls imp.load_source on this file, which precludes
+    # The stone generate calls imp.load_source on this file, which precludes
     # referencing csproj as if it was part of a module, so we have to jump
     # through this hoop...
     csproj = os.path.join(os.path.dirname(__file__), 'csproj.py')
@@ -54,7 +54,7 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         documentation for the API specification being generated.
 
         Args:
-            api (babelapi.api.Api): The API specification.
+            api (stone.api.Api): The API specification.
         """
         with self.output_to_relative_path('namespace_summaries.xml'):
             self.emit('<?xml version="1.0"?>')
@@ -104,7 +104,7 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         Generates the auth exception class
 
         Args:
-            api (babelapi.api.Api): The API specification.
+            api (stone.api.Api): The API specification.
         """
         ns = api.namespaces['auth']
         auth_error = self._public_name(ns.data_type_by_name['AuthError'].name)

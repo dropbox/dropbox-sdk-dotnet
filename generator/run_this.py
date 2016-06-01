@@ -5,17 +5,17 @@ import os
 import os.path
 import sys
 
-from babelapi.compiler import Compiler, GeneratorException
-from babelapi.babel.tower import InvalidSpec, TowerOfBabel
+from stone.compiler import Compiler, GeneratorException
+from stone.stone.tower import InvalidSpec, TowerOfStone
 
 SPECS = [
-#    'dfb.babel',
-#    'feed_chat.babel',
-    'common.babel',
-    'files.babel',
-    'sharing.babel',
-#    'resellers.babel',
-    'users.babel',
+#    'dfb.stone',
+#    'feed_chat.stone',
+    'common.stone',
+    'files.stone',
+    'sharing.stone',
+#    'resellers.stone',
+    'users.stone',
     ]
 
 SPEC_DIR = os.path.join('c:\\','Users','Dropbox','Dropbox (Dropbox)','ApiSpec')
@@ -29,7 +29,7 @@ if __name__ == '__main__':
         with open(spec_path) as f:
             specs.append((spec_path, f.read()))
 
-    tower = TowerOfBabel(specs)
+    tower = TowerOfStone(specs)
     try:
         api = tower.parse()
     except InvalidSpec as e:
@@ -41,9 +41,9 @@ if __name__ == '__main__':
               file = sys.stderr)
         sys.exit(1)
 
-    generator = os.path.join(SOURCE_DIR, 'csharp.babelg.py')
-    if not Compiler.is_babel_generator(generator):
-        print("%s: error: Generator '%s' must have a .babelg.py extension." %
+    generator = os.path.join(SOURCE_DIR, 'csharp.stoneg.py')
+    if not Compiler.is_stone_generator(generator):
+        print("%s: error: Generator '%s' must have a .stoneg.py extension." %
               generator, file=sys.stderr)
         sys.exit(1)
     else:

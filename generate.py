@@ -83,9 +83,9 @@ def main():
         print('Generating code')
     shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
     subprocess.check_output(
-        (['python', '-m', 'babelapi.cli', 'generator/csharp.babelg.py'] +
-         [os.path.join(repo_path, 'Dropbox.Api')] + glob.glob('spec/*.babel')),
-	 env={'PYTHONPATH': 'babel'})
+        (['python', '-m', 'stone.cli', '--filter-by-route-attr', '"alpah_group=null and beta_group=null"', 'generator/csharp.stoneg.py'] +
+         [os.path.join(repo_path, 'Dropbox.Api')] + glob.glob('spec/*.stone')),
+	 env={'PYTHONPATH': 'stone'})
 
     if verbose:
         print('Copying Dropbox.Api.sln, examples, license, and readme')

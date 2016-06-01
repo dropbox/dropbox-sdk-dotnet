@@ -12,7 +12,7 @@ Basic Setup
 1. Clone the public and private SDK repo into `~/src`.
 
 2. In the private SDK repo, run ``git submodule init`` followed by a
-   ``git submodule update`` to pull in the ``spec`` and ``babel`` sub repos.
+   ``git submodule update`` to pull in the ``spec`` and ``stone`` sub repos.
 
 Updating the SDK for a new spec
 -------------------------------

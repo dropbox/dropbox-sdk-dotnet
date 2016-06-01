@@ -3,7 +3,7 @@
 SETLOCAL EnableDelayedExpansion
 
 SET PRE=
-SET PYTHONPATH=babel
+SET PYTHONPATH=stone
 
 :run
 
@@ -27,11 +27,11 @@ IF NOT "%ERRORLEVEL%" == "0" (
 
 echo Generating Dropbox.Api...
 
-SET BABEL_LIST=
+SET STONE_LIST=
 
-FOR %%f IN (spec\*.babel) DO SET BABEL_LIST=!BABEL_LIST! %%f
+FOR %%f IN (spec\*.stone) DO SET STONE_LIST=!STONE_LIST! %%f
 
-%PRE% python -m babelapi.cli generator\csharp.babelg.py dropbox-sdk-dotnet\Dropbox.Api !BABEL_LIST! --clean-build -- -p
+%PRE% python -m stone.cli --filter-by-route-attr "alpha_group=null and beta_group=null" generator\csharp.stoneg.py dropbox-sdk-dotnet\Dropbox.Api !STONE_LIST! --clean-build -- -p
 
 SET SOLUTION_DIR="dropbox-sdk-dotnet"
 
@@ -55,7 +55,7 @@ IF EXIST %SOLUTION_DIR%\.nuget\nuget.exe (
 echo Building...
 %PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api.sln /p:Configuration=Release
 %PRE% msbuild /verbosity:minimal /m %SOLUTION_DIR%\Dropbox.Api\Dropbox.Api.Doc.csproj
-%PRE% msbuild /verbosity:minimal /m doc\BabelDocs.shfbproj
+%PRE% msbuild /verbosity:minimal /m doc\StoneDocs.shfbproj
 
 echo Creating nuget package...
 

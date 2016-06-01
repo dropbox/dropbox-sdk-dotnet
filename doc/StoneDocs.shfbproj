@@ -11,14 +11,14 @@
     <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
     <AssemblyName>Documentation</AssemblyName>
     <RootNamespace>Documentation</RootNamespace>
-    <Name>BabelDocs</Name>
+    <Name>StoneDocs</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>DotNetApiDocumentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\babel_summaries.xml" />
+      <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\stone_summaries.xml" />
       <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\docbin\Debug\Dropbox.Api.dll" />
       <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\docbin\Debug\Dropbox.Api.XML" />
       <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\namespace_summaries.xml" />

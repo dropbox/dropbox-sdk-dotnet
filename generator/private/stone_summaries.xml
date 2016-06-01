@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>_DropboxApiBabelNamespaceSummaries_</name>
+        <name>_DropboxApiStoneNamespaceSummaries_</name>
     </assembly>
     <members>
-        <member name="N:Dropbox.Api.Babel">
+        <member name="N:Dropbox.Api.Stone">
             <summary>
-              Contains the definitions for the interfaces used for encoding and transporting babel
+              Contains the definitions for the interfaces used for encoding and transporting stone
               api objects. This also includes concrete implementations of those interfaces.
             </summary>
         </member>

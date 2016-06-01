@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace <Namespace>.Babel
+namespace <Namespace>.Stone
 {
     /// <summary>
     /// An empty object used when a route doesn't have one or more of the

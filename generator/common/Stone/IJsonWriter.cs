@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace <Namespace>.Babel
+namespace <Namespace>.Stone
 {
     using System;
 
