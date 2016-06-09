@@ -1,6 +1,6 @@
 # Dropbox.NET
 
-A .NET SDK for integrating with the Dropbox API v2 (preview version).
+A .NET SDK for integrating with the Dropbox API v2.
 
 ## Setup
 
@@ -8,7 +8,7 @@ To get started with Dropbox.NET, we recommend you add it to your project using N
 
 To install `Dropbox.Api`, run the following command in the Package Manager Console:
 
-```PM> Install-Package Dropbox.Api -Pre```
+```PM> Install-Package Dropbox.Api```
 
 ## Creating an application
 
