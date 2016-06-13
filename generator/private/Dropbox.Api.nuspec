@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.2.0</version>
+    <version>3.2.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -13,20 +13,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
-What's new:
-- Files
-  - Add SaveUrl endpoint for saving online content to your Dropbox.
-- Shared folders
-  - Add ViewerNoComment to AccessLevel.
-  - Add IsOwner to GroupInfo.
-  - Change return type of SharePathError.AlreadyShared from Void to SharedFolderMetadata.
-  - Add LeaveACopy parameter to RelinquishFolderMembership endpoint.
-  - Change RelinquishFolderMembership to return async job ID when leaving a copy.
-  - Add RelinquishFolderMembershipError to JobError.
-- Business endpoints
-  - Add MembershipType to MemberProfile.
-  - Add KeepAccount parameter to Members.Remove endpoint.
-  - Add CannotKeepAccountAndTransfer and CannotKeepAccountAndDeleteData to MembersRemoveError.
+Bug fixes:
+- Fix bug when parsing OAuth2 response.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
