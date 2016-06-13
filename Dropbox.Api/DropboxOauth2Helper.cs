@@ -321,8 +321,6 @@ namespace Dropbox.Api
                     case "token_type":
                         tokenType = Uri.UnescapeDataString(elements[1]);
                         break;
-                    default:
-                        throw new ArgumentException("Unexpected values in fragment", "redirectedUri");
                 }
             }
 
@@ -460,8 +458,6 @@ namespace Dropbox.Api
                         }
 
                         break;
-                    default:
-                        throw new ArgumentException("The responseUri contains unexpected values in the query component.", "responseUri");
                 }
             }
 
