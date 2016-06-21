@@ -80,6 +80,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoExplicitAccess</para>
+        /// </summary>
+        public bool IsNoExplicitAccess
+        {
+            get
+            {
+                return this is NoExplicitAccess;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoExplicitAccess, or <c>null</c>.</para>
+        /// </summary>
+        public NoExplicitAccess AsNoExplicitAccess
+        {
+            get
+            {
+                return this as NoExplicitAccess;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is InsufficientPlan</para>
         /// </summary>
         public bool IsInsufficientPlan
@@ -171,6 +193,12 @@ namespace Dropbox.Api.Sharing
                     MemberError.Encoder.EncodeFields((MemberError)value, writer);
                     return;
                 }
+                if (value is NoExplicitAccess)
+                {
+                    WriteProperty(".tag", "no_explicit_access", writer, enc.StringEncoder.Instance);
+                    NoExplicitAccess.Encoder.EncodeFields((NoExplicitAccess)value, writer);
+                    return;
+                }
                 if (value is InsufficientPlan)
                 {
                     WriteProperty(".tag", "insufficient_plan", writer, enc.StringEncoder.Instance);
@@ -226,6 +254,8 @@ namespace Dropbox.Api.Sharing
                         return AccessError.Decoder.DecodeFields(reader);
                     case "member_error":
                         return MemberError.Decoder.DecodeFields(reader);
+                    case "no_explicit_access":
+                        return NoExplicitAccess.Decoder.DecodeFields(reader);
                     case "insufficient_plan":
                         return InsufficientPlan.Decoder.DecodeFields(reader);
                     case "no_permission":
@@ -423,6 +453,105 @@ namespace Dropbox.Api.Sharing
                     {
                         case "member_error":
                             value.Value = Dropbox.Api.Sharing.SharedFolderMemberError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>If updating the access type required the member to be added to the shared
+        /// folder and there was an error when adding the member.</para>
+        /// </summary>
+        public sealed class NoExplicitAccess : UpdateFolderMemberError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoExplicitAccess> Encoder = new NoExplicitAccessEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoExplicitAccess> Decoder = new NoExplicitAccessDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoExplicitAccess" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public NoExplicitAccess(AddFolderMemberError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoExplicitAccess" />
+            /// class.</para>
+            /// </summary>
+            private NoExplicitAccess()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public AddFolderMemberError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoExplicitAccess" />.</para>
+            /// </summary>
+            private class NoExplicitAccessEncoder : enc.StructEncoder<NoExplicitAccess>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoExplicitAccess value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Sharing.AddFolderMemberError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoExplicitAccess" />.</para>
+            /// </summary>
+            private class NoExplicitAccessDecoder : enc.StructDecoder<NoExplicitAccess>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoExplicitAccess" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoExplicitAccess Create()
+                {
+                    return new NoExplicitAccess();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(NoExplicitAccess value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "no_explicit_access":
+                            value.Value = Dropbox.Api.Sharing.AddFolderMemberError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

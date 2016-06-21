@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Information about the recipient of a shared folder invitation.</para>
+    /// <para>Information about the recipient of a shared content invitation.</para>
     /// </summary>
     public class InviteeInfo
     {

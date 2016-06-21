@@ -32,7 +32,10 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="ListFolderMembersCursorArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="actions">Member actions to query.</param>
+        /// <param name="actions">This is a list indicating whether each returned member will
+        /// include a boolean value <see cref="Dropbox.Api.Sharing.MemberPermission.Allow" />
+        /// that describes whether the current user can perform the MemberAction on the
+        /// member.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
         public ListFolderMembersCursorArg(col.IEnumerable<MemberAction> actions = null,
@@ -65,7 +68,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Member actions to query.</para>
+        /// <para>This is a list indicating whether each returned member will include a boolean
+        /// value <see cref="Dropbox.Api.Sharing.MemberPermission.Allow" /> that describes
+        /// whether the current user can perform the MemberAction on the member.</para>
         /// </summary>
         public col.IList<MemberAction> Actions { get; protected set; }
 

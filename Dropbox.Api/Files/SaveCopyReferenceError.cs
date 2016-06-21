@@ -445,7 +445,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The app has no permission to access another user's Dropbox.</para>
+        /// <para>You don't have permission to save the given copy reference. Please make sure
+        /// this app is same app which created the copy reference and the source user is still
+        /// linked to the app.</para>
         /// </summary>
         public sealed class NoPermission : SaveCopyReferenceError
         {

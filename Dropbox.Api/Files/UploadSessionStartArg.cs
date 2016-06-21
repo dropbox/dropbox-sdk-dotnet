@@ -31,9 +31,10 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadSessionStartArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="close">If true, current session will be closed. You cannot do <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> any more to
-        /// current session</param>
+        /// <param name="close">If true, the current session will be closed, at which point you
+        /// won't be able to call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
+        /// with the current session.</param>
         public UploadSessionStartArg(bool close = false)
         {
             this.Close = close;
@@ -51,9 +52,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>If true, current session will be closed. You cannot do <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> any more to
-        /// current session</para>
+        /// <para>If true, the current session will be closed, at which point you won't be able
+        /// to call <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async"
+        /// /> anymore with the current session.</para>
         /// </summary>
         public bool Close { get; protected set; }
 

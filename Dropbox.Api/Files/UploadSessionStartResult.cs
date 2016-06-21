@@ -32,7 +32,7 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="sessionId">A unique identifier for the upload session. Pass this to
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> and
         /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
         /// />.</param>
         public UploadSessionStartResult(string sessionId)
@@ -57,7 +57,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>A unique identifier for the upload session. Pass this to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> and <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> and <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />.</para>
         /// </summary>
         public string SessionId { get; protected set; }

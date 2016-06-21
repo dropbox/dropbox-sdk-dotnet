@@ -39,33 +39,25 @@ namespace Dropbox.Api.Files
         /// <param name="name">The last component of the path (including extension). This never
         /// contains a slash.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
-        /// starts with a slash.</param>
+        /// starts with a slash. This field will be null if the file or folder is not
+        /// mounted.</param>
         /// <param name="pathDisplay">The cased path to be used for display purposes only. In
         /// rare instances the casing will not correctly match the user's filesystem, but this
         /// behavior will match the path provided in the Core API v1. Changes to the casing of
         /// paths won't be returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></param>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. This field
+        /// will be null if the file or folder is not mounted.</param>
         /// <param name="parentSharedFolderId">Deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         protected Metadata(string name,
-                           string pathLower,
-                           string pathDisplay,
+                           string pathLower = null,
+                           string pathDisplay = null,
                            string parentSharedFolderId = null)
         {
             if (name == null)
             {
                 throw new sys.ArgumentNullException("name");
-            }
-
-            if (pathLower == null)
-            {
-                throw new sys.ArgumentNullException("pathLower");
-            }
-
-            if (pathDisplay == null)
-            {
-                throw new sys.ArgumentNullException("pathDisplay");
             }
 
             if (parentSharedFolderId != null)
@@ -166,7 +158,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The lowercased full path in the user's Dropbox. This always starts with a
-        /// slash.</para>
+        /// slash. This field will be null if the file or folder is not mounted.</para>
         /// </summary>
         public string PathLower { get; protected set; }
 
@@ -175,7 +167,8 @@ namespace Dropbox.Api.Files
         /// casing will not correctly match the user's filesystem, but this behavior will match
         /// the path provided in the Core API v1. Changes to the casing of paths won't be
         /// returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></para>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. This field
+        /// will be null if the file or folder is not mounted.</para>
         /// </summary>
         public string PathDisplay { get; protected set; }
 
@@ -219,8 +212,14 @@ namespace Dropbox.Api.Files
                     return;
                 }
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
-                WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
+                if (value.PathLower != null)
+                {
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PathDisplay != null)
+                {
+                    WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
+                }
                 if (value.ParentSharedFolderId != null)
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);

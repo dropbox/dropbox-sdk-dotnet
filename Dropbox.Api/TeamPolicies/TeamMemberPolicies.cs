@@ -13,22 +13,23 @@ namespace Dropbox.Api.TeamPolicies
     /// <summary>
     /// <para>Policies governing team members.</para>
     /// </summary>
-    public class TeamPolicies
+    public class TeamMemberPolicies
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<TeamPolicies> Encoder = new TeamPoliciesEncoder();
+        internal static enc.StructEncoder<TeamMemberPolicies> Encoder = new TeamMemberPoliciesEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<TeamPolicies> Decoder = new TeamPoliciesDecoder();
+        internal static enc.StructDecoder<TeamMemberPolicies> Decoder = new TeamMemberPoliciesDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="TeamPolicies" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="TeamMemberPolicies" />
+        /// class.</para>
         /// </summary>
         /// <param name="sharing">Policies governing sharing.</param>
         /// <param name="emmState">This describes the Enterprise Mobility Management (EMM)
@@ -37,8 +38,8 @@ namespace Dropbox.Api.TeamPolicies
         /// restrictions upon the team's Dropbox usage on mobile devices. This is a new feature
         /// and in the future we'll be adding more new fields and additional
         /// documentation.</param>
-        public TeamPolicies(TeamSharingPolicies sharing,
-                            EmmState emmState)
+        public TeamMemberPolicies(TeamSharingPolicies sharing,
+                                  EmmState emmState)
         {
             if (sharing == null)
             {
@@ -55,11 +56,12 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="TeamPolicies" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="TeamMemberPolicies" />
+        /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
-        public TeamPolicies()
+        public TeamMemberPolicies()
         {
         }
 
@@ -80,16 +82,16 @@ namespace Dropbox.Api.TeamPolicies
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="TeamPolicies" />.</para>
+        /// <para>Encoder for  <see cref="TeamMemberPolicies" />.</para>
         /// </summary>
-        private class TeamPoliciesEncoder : enc.StructEncoder<TeamPolicies>
+        private class TeamMemberPoliciesEncoder : enc.StructEncoder<TeamMemberPolicies>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(TeamPolicies value, enc.IJsonWriter writer)
+            public override void EncodeFields(TeamMemberPolicies value, enc.IJsonWriter writer)
             {
                 WriteProperty("sharing", value.Sharing, writer, Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
                 WriteProperty("emm_state", value.EmmState, writer, Dropbox.Api.TeamPolicies.EmmState.Encoder);
@@ -102,17 +104,17 @@ namespace Dropbox.Api.TeamPolicies
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="TeamPolicies" />.</para>
+        /// <para>Decoder for  <see cref="TeamMemberPolicies" />.</para>
         /// </summary>
-        private class TeamPoliciesDecoder : enc.StructDecoder<TeamPolicies>
+        private class TeamMemberPoliciesDecoder : enc.StructDecoder<TeamMemberPolicies>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="TeamPolicies" />.</para>
+            /// <para>Create a new instance of type <see cref="TeamMemberPolicies" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override TeamPolicies Create()
+            protected override TeamMemberPolicies Create()
             {
-                return new TeamPolicies();
+                return new TeamMemberPolicies();
             }
 
             /// <summary>
@@ -121,7 +123,7 @@ namespace Dropbox.Api.TeamPolicies
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(TeamPolicies value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(TeamMemberPolicies value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {

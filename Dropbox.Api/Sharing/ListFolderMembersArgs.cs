@@ -33,7 +33,10 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Member actions to query.</param>
+        /// <param name="actions">This is a list indicating whether each returned member will
+        /// include a boolean value <see cref="Dropbox.Api.Sharing.MemberPermission.Allow" />
+        /// that describes whether the current user can perform the MemberAction on the
+        /// member.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
         public ListFolderMembersArgs(string sharedFolderId,

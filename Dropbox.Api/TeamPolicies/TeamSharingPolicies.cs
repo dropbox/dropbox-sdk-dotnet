@@ -13,7 +13,7 @@ namespace Dropbox.Api.TeamPolicies
     /// <summary>
     /// <para>Policies governing sharing within and outside of the team.</para>
     /// </summary>
-    /// <seealso cref="TeamPolicies" />
+    /// <seealso cref="TeamMemberPolicies" />
     public class TeamSharingPolicies
     {
         #pragma warning disable 108

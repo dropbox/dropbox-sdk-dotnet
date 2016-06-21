@@ -45,6 +45,7 @@ namespace Dropbox.Api.Team
         /// <param name="externalId">External ID that a team can attach to the user. An
         /// application using the API may find it easier to use their own IDs instead of
         /// Dropbox IDs like account_id or team_member_id.</param>
+        /// <param name="accountId">A user's account identifier.</param>
         public TeamMemberProfile(string teamMemberId,
                                  string email,
                                  bool emailVerified,
@@ -52,8 +53,9 @@ namespace Dropbox.Api.Team
                                  Dropbox.Api.Users.Name name,
                                  TeamMembershipType membershipType,
                                  col.IEnumerable<string> groups,
-                                 string externalId = null)
-            : base(teamMemberId, email, emailVerified, status, name, membershipType, externalId)
+                                 string externalId = null,
+                                 string accountId = null)
+            : base(teamMemberId, email, emailVerified, status, name, membershipType, externalId, accountId)
         {
             var groupsList = enc.Util.ToList(groups);
 
@@ -104,6 +106,10 @@ namespace Dropbox.Api.Team
                 if (value.ExternalId != null)
                 {
                     WriteProperty("external_id", value.ExternalId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.AccountId != null)
+                {
+                    WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -160,6 +166,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "external_id":
                         value.ExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "account_id":
+                        value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

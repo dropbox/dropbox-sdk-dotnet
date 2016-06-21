@@ -2391,9 +2391,10 @@ namespace Dropbox.Api.Files.Routes
         /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
-        /// <param name="close">If true, current session will be closed. You cannot do <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> any more to
-        /// current session</param>
+        /// <param name="close">If true, the current session will be closed, at which point you
+        /// won't be able to call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
+        /// with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2413,9 +2414,10 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the upload session append v2 route.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
-        /// <param name="close">If true, current session will be closed. You cannot do <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> any more to
-        /// current session</param>
+        /// <param name="close">If true, the current session will be closed, at which point you
+        /// won't be able to call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
+        /// with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -2558,9 +2560,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Upload sessions allow you to upload a single file using multiple requests.
         /// This call starts a new upload session with the given data.  You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> to add more
-        /// data and <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
-        /// /> to save all the data to a file in Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to add
+        /// more data and <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" /> to save all
+        /// the data to a file in Dropbox.</para>
         /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="uploadSessionStartArg">The request parameters</param>
@@ -2592,14 +2595,16 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Upload sessions allow you to upload a single file using multiple requests.
         /// This call starts a new upload session with the given data.  You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> to add more
-        /// data and <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync"
-        /// /> to save all the data to a file in Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to add
+        /// more data and <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" /> to save all
+        /// the data to a file in Dropbox.</para>
         /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
-        /// <param name="close">If true, current session will be closed. You cannot do <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> any more to
-        /// current session</param>
+        /// <param name="close">If true, the current session will be closed, at which point you
+        /// won't be able to call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
+        /// with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -2614,9 +2619,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the upload session start route.</para>
         /// </summary>
-        /// <param name="close">If true, current session will be closed. You cannot do <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendAsync" /> any more to
-        /// current session</param>
+        /// <param name="close">If true, the current session will be closed, at which point you
+        /// won't be able to call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
+        /// with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>

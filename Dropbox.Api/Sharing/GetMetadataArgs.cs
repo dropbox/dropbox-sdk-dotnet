@@ -32,7 +32,10 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
-        /// <param name="actions">Folder actions to query.</param>
+        /// <param name="actions">This is a list indicating whether the returned folder data
+        /// will include a boolean value  <see
+        /// cref="Dropbox.Api.Sharing.FolderPermission.Allow" /> that describes whether the
+        /// current user can perform the  FolderAction on the folder.</param>
         public GetMetadataArgs(string sharedFolderId,
                                col.IEnumerable<FolderAction> actions = null)
         {
@@ -67,7 +70,10 @@ namespace Dropbox.Api.Sharing
         public string SharedFolderId { get; protected set; }
 
         /// <summary>
-        /// <para>Folder actions to query.</para>
+        /// <para>This is a list indicating whether the returned folder data will include a
+        /// boolean value  <see cref="Dropbox.Api.Sharing.FolderPermission.Allow" /> that
+        /// describes whether the current user can perform the  FolderAction on the
+        /// folder.</para>
         /// </summary>
         public col.IList<FolderAction> Actions { get; protected set; }
 

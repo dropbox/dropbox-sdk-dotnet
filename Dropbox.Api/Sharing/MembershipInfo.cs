@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The information about a member of the shared folder.</para>
+    /// <para>The information about a member of the shared content.</para>
     /// </summary>
     /// <seealso cref="GroupMembershipInfo" />
     /// <seealso cref="InviteeMembershipInfo" />
@@ -37,8 +37,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Suggested name initials for a member.</param>
-        /// <param name="isInherited">True if the member's access to the file is inherited from
-        /// a parent folder.</param>
+        /// <param name="isInherited">True if the member has access from a parent
+        /// folder.</param>
         public MembershipInfo(AccessLevel accessType,
                               col.IEnumerable<MemberPermission> permissions = null,
                               string initials = null,
@@ -84,8 +84,7 @@ namespace Dropbox.Api.Sharing
         public string Initials { get; protected set; }
 
         /// <summary>
-        /// <para>True if the member's access to the file is inherited from a parent
-        /// folder.</para>
+        /// <para>True if the member has access from a parent folder.</para>
         /// </summary>
         public bool IsInherited { get; protected set; }
 

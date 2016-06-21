@@ -13,6 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The get metadata arg object</para>
     /// </summary>
+    /// <seealso cref="AlphaGetMetadataArg" />
     public class GetMetadataArg
     {
         #pragma warning disable 108
@@ -49,9 +50,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,}))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/.*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,}))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/.*)?))\z'");
             }
 
             this.Path = path;

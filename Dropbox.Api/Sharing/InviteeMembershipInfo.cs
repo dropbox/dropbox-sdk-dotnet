@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Information about an invited member of a shared folder.</para>
+    /// <para>Information about an invited member of a shared content.</para>
     /// </summary>
     /// <seealso cref="Dropbox.Api.Sharing.MembershipInfo" />
     public class InviteeMembershipInfo : MembershipInfo
@@ -37,8 +37,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Suggested name initials for a member.</param>
-        /// <param name="isInherited">True if the member's access to the file is inherited from
-        /// a parent folder.</param>
+        /// <param name="isInherited">True if the member has access from a parent
+        /// folder.</param>
         /// <param name="user">The user this invitation is tied to, if available.</param>
         public InviteeMembershipInfo(AccessLevel accessType,
                                      InviteeInfo invitee,

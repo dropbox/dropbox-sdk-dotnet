@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The information about a user member of the shared folder.</para>
+    /// <para>The information about a user member of the shared content.</para>
     /// </summary>
     /// <seealso cref="Dropbox.Api.Sharing.MembershipInfo" />
     public class UserMembershipInfo : MembershipInfo
@@ -37,8 +37,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Suggested name initials for a member.</param>
-        /// <param name="isInherited">True if the member's access to the file is inherited from
-        /// a parent folder.</param>
+        /// <param name="isInherited">True if the member has access from a parent
+        /// folder.</param>
         public UserMembershipInfo(AccessLevel accessType,
                                   UserInfo user,
                                   col.IEnumerable<MemberPermission> permissions = null,

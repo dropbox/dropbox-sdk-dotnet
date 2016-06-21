@@ -34,13 +34,6 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="name">The last component of the path (including extension). This never
         /// contains a slash.</param>
-        /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
-        /// starts with a slash.</param>
-        /// <param name="pathDisplay">The cased path to be used for display purposes only. In
-        /// rare instances the casing will not correctly match the user's filesystem, but this
-        /// behavior will match the path provided in the Core API v1. Changes to the casing of
-        /// paths won't be returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></param>
         /// <param name="id">A unique identifier for the file.</param>
         /// <param name="clientModified">For files, this is the modification time set by the
         /// desktop client when the file was added to Dropbox. Since this time is not verified
@@ -53,6 +46,15 @@ namespace Dropbox.Api.Files
         /// field is the same rev as elsewhere in the API and can be used to detect changes and
         /// avoid conflicts.</param>
         /// <param name="size">The file size in bytes.</param>
+        /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
+        /// starts with a slash. This field will be null if the file or folder is not
+        /// mounted.</param>
+        /// <param name="pathDisplay">The cased path to be used for display purposes only. In
+        /// rare instances the casing will not correctly match the user's filesystem, but this
+        /// behavior will match the path provided in the Core API v1. Changes to the casing of
+        /// paths won't be returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. This field
+        /// will be null if the file or folder is not mounted.</param>
         /// <param name="parentSharedFolderId">Deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
@@ -69,13 +71,13 @@ namespace Dropbox.Api.Files
         /// different from sharing_info in that this could be true  in the case where a file
         /// has explicit members but is not contained within  a shared folder.</param>
         public FileMetadata(string name,
-                            string pathLower,
-                            string pathDisplay,
                             string id,
                             sys.DateTime clientModified,
                             sys.DateTime serverModified,
                             string rev,
                             ulong size,
+                            string pathLower = null,
+                            string pathDisplay = null,
                             string parentSharedFolderId = null,
                             MediaInfo mediaInfo = null,
                             FileSharingInfo sharingInfo = null,
@@ -199,13 +201,19 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(FileMetadata value, enc.IJsonWriter writer)
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
-                WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
                 WriteProperty("client_modified", value.ClientModified, writer, enc.DateTimeEncoder.Instance);
                 WriteProperty("server_modified", value.ServerModified, writer, enc.DateTimeEncoder.Instance);
                 WriteProperty("rev", value.Rev, writer, enc.StringEncoder.Instance);
                 WriteProperty("size", value.Size, writer, enc.UInt64Encoder.Instance);
+                if (value.PathLower != null)
+                {
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PathDisplay != null)
+                {
+                    WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
+                }
                 if (value.ParentSharedFolderId != null)
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
@@ -261,12 +269,6 @@ namespace Dropbox.Api.Files
                     case "name":
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "path_lower":
-                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "path_display":
-                        value.PathDisplay = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "id":
                         value.Id = enc.StringDecoder.Instance.Decode(reader);
                         break;
@@ -281,6 +283,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "size":
                         value.Size = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "path_display":
+                        value.PathDisplay = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);

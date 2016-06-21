@@ -33,14 +33,16 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="name">The last component of the path (including extension). This never
         /// contains a slash.</param>
+        /// <param name="id">A unique identifier for the folder.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
-        /// starts with a slash.</param>
+        /// starts with a slash. This field will be null if the file or folder is not
+        /// mounted.</param>
         /// <param name="pathDisplay">The cased path to be used for display purposes only. In
         /// rare instances the casing will not correctly match the user's filesystem, but this
         /// behavior will match the path provided in the Core API v1. Changes to the casing of
         /// paths won't be returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /></param>
-        /// <param name="id">A unique identifier for the folder.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. This field
+        /// will be null if the file or folder is not mounted.</param>
         /// <param name="parentSharedFolderId">Deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
@@ -51,9 +53,9 @@ namespace Dropbox.Api.Files
         /// <param name="propertyGroups">Additional information if the file has custom
         /// properties with the property template specified.</param>
         public FolderMetadata(string name,
-                              string pathLower,
-                              string pathDisplay,
                               string id,
+                              string pathLower = null,
+                              string pathDisplay = null,
                               string parentSharedFolderId = null,
                               string sharedFolderId = null,
                               FolderSharingInfo sharingInfo = null,
@@ -131,9 +133,15 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(FolderMetadata value, enc.IJsonWriter writer)
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
-                WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                if (value.PathLower != null)
+                {
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PathDisplay != null)
+                {
+                    WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
+                }
                 if (value.ParentSharedFolderId != null)
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
@@ -185,14 +193,14 @@ namespace Dropbox.Api.Files
                     case "name":
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
+                    case "id":
+                        value.Id = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "path_display":
                         value.PathDisplay = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "id":
-                        value.Id = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);

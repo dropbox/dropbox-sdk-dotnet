@@ -35,6 +35,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is LeaveACopy</para>
+        /// </summary>
+        public bool IsLeaveACopy
+        {
+            get
+            {
+                return this is LeaveACopy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LeaveACopy, or <c>null</c>.</para>
+        /// </summary>
+        public LeaveACopy AsLeaveACopy
+        {
+            get
+            {
+                return this as LeaveACopy;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is MakeEditor</para>
         /// </summary>
         public bool IsMakeEditor
@@ -158,6 +180,12 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberAction value, enc.IJsonWriter writer)
             {
+                if (value is LeaveACopy)
+                {
+                    WriteProperty(".tag", "leave_a_copy", writer, enc.StringEncoder.Instance);
+                    LeaveACopy.Encoder.EncodeFields((LeaveACopy)value, writer);
+                    return;
+                }
                 if (value is MakeEditor)
                 {
                     WriteProperty(".tag", "make_editor", writer, enc.StringEncoder.Instance);
@@ -220,6 +248,8 @@ namespace Dropbox.Api.Sharing
             {
                 switch (tag)
                 {
+                    case "leave_a_copy":
+                        return LeaveACopy.Decoder.DecodeFields(reader);
                     case "make_editor":
                         return MakeEditor.Decoder.DecodeFields(reader);
                     case "make_owner":
@@ -235,6 +265,84 @@ namespace Dropbox.Api.Sharing
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Allow the member to keep a copy of the folder when removing.</para>
+        /// </summary>
+        public sealed class LeaveACopy : MemberAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LeaveACopy> Encoder = new LeaveACopyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LeaveACopy> Decoder = new LeaveACopyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LeaveACopy" /> class.</para>
+            /// </summary>
+            private LeaveACopy()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LeaveACopy</para>
+            /// </summary>
+            public static readonly LeaveACopy Instance = new LeaveACopy();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LeaveACopy" />.</para>
+            /// </summary>
+            private class LeaveACopyEncoder : enc.StructEncoder<LeaveACopy>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LeaveACopy value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LeaveACopy" />.</para>
+            /// </summary>
+            private class LeaveACopyDecoder : enc.StructDecoder<LeaveACopy>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LeaveACopy" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LeaveACopy Create()
+                {
+                    return new LeaveACopy();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override LeaveACopy DecodeFields(enc.IJsonReader reader)
+                {
+                    return LeaveACopy.Instance;
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>Make the member an editor of the folder.</para>

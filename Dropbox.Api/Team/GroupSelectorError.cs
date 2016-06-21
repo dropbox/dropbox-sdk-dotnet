@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Error that can be raised when <see cref="GroupSelector" />is used.</para>
+    /// <para>Error that can be raised when <see cref="GroupSelector" /> is used.</para>
     /// </summary>
     public class GroupSelectorError
     {
