@@ -31,7 +31,7 @@ SET STONE_LIST=
 
 FOR %%f IN (spec\*.stone) DO SET STONE_LIST=!STONE_LIST! %%f
 
-%PRE% python -m stone.cli --filter-by-route-attr "alpha_group=null and beta_group=null" generator\csharp.stoneg.py dropbox-sdk-dotnet\Dropbox.Api !STONE_LIST! --clean-build -- -p
+%PRE% python -m stone.cli --filter-by-route-attr "alpha_group=null" generator\csharp.stoneg.py dropbox-sdk-dotnet\Dropbox.Api !STONE_LIST! --clean-build -- -p
 
 SET SOLUTION_DIR="dropbox-sdk-dotnet"
 

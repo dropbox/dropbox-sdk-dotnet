@@ -83,7 +83,7 @@ def main():
         print('Generating code')
     shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
     subprocess.check_output(
-        (['python', '-m', 'stone.cli', '--filter-by-route-attr', 'alpah_group=null and beta_group=null', 'generator/csharp.stoneg.py'] +
+        (['python', '-m', 'stone.cli', '--filter-by-route-attr', 'alpah_group=null', 'generator/csharp.stoneg.py'] +
          [os.path.join(repo_path, 'Dropbox.Api')] + glob.glob('spec/*.stone')),
 	 env={'PYTHONPATH': 'stone'})
 

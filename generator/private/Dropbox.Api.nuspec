@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.3.0</version>
+    <version>3.4.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,12 +14,7 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-  - Added file sharing endpoints.
-  - Sharing
-    - Sharing/RemoveFolderMember only ever returns an AsyncJobId.
-    - Sharing/CheckRemoveMemberJobStatus returns a MemberAccessLevelResult on completion.
-    - Sharing/UpdateFolderMember returns a MemberAccessLevelResult on completion.
-    - NoExplicitAccess information added to UpdateFolderMemberError.
+  - Added file properties endpoints.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
