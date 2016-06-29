@@ -3732,6 +3732,362 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Add a property template. See route files/properties/add to add properties to
+        /// a file.</para>
+        /// </summary>
+        /// <param name="addPropertyTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(AddPropertyTemplateArg addPropertyTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<AddPropertyTemplateArg, AddPropertyTemplateResult, Dropbox.Api.Properties.ModifyPropertyTemplateError>(addPropertyTemplateArg, "api", "/team/properties/template/add", Dropbox.Api.Team.AddPropertyTemplateArg.Encoder, Dropbox.Api.Team.AddPropertyTemplateResult.Decoder, Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template add route.</para>
+        /// </summary>
+        /// <param name="addPropertyTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateAdd(AddPropertyTemplateArg addPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateAddAsync(addPropertyTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Add a property template. See route files/properties/add to add properties to
+        /// a file.</para>
+        /// </summary>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="fields">This is a list of custom properties associated with a property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(string name,
+                                                                            string description,
+                                                                            col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields)
+        {
+            var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
+                                                                    description,
+                                                                    fields);
+
+            return this.PropertiesTemplateAddAsync(addPropertyTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template add route.</para>
+        /// </summary>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="fields">This is a list of custom properties associated with a property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateAdd(string name,
+                                                           string description,
+                                                           col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
+                                                                    description,
+                                                                    fields);
+
+            return this.BeginPropertiesTemplateAdd(addPropertyTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template add route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public AddPropertyTemplateResult EndPropertiesTemplateAdd(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<AddPropertyTemplateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get the schema for a specified template.</para>
+        /// </summary>
+        /// <param name="getPropertyTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Properties.GetPropertyTemplateArg, Dropbox.Api.Properties.GetPropertyTemplateResult, Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/team/properties/template/get", Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template get route.</para>
+        /// </summary>
+        /// <param name="getPropertyTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateGet(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get the schema for a specified template.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by route
+        /// properties/template/add.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
+        {
+            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+
+            return this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template get route.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by route
+        /// properties/template/add.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateGet(string templateId,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+
+            return this.BeginPropertiesTemplateGet(getPropertyTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template get route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get the property template identifiers for a team. To get the schema of each
+        /// template use <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateGetAsync" />.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, Dropbox.Api.Properties.ListPropertyTemplateIds, Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", enc.EmptyEncoder.Instance, Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template list route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateList(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateListAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template list route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Update a property template. This route can update the template name, the
+        /// template description and add optional properties to templates.</para>
+        /// </summary>
+        /// <param name="updatePropertyTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(UpdatePropertyTemplateArg updatePropertyTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UpdatePropertyTemplateArg, UpdatePropertyTemplateResult, Dropbox.Api.Properties.ModifyPropertyTemplateError>(updatePropertyTemplateArg, "api", "/team/properties/template/update", Dropbox.Api.Team.UpdatePropertyTemplateArg.Encoder, Dropbox.Api.Team.UpdatePropertyTemplateResult.Decoder, Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template update route.</para>
+        /// </summary>
+        /// <param name="updatePropertyTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateUpdate(UpdatePropertyTemplateArg updatePropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesTemplateUpdateAsync(updatePropertyTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Update a property template. This route can update the template name, the
+        /// template description and add optional properties to templates.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="addFields">This is a list of custom properties to add to the property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
+                                                                                  string name = null,
+                                                                                  string description = null,
+                                                                                  col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
+        {
+            var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
+                                                                          name,
+                                                                          description,
+                                                                          addFields);
+
+            return this.PropertiesTemplateUpdateAsync(updatePropertyTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties template update route.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for property template added by <see
+        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// <param name="name">A display name for the property template. Property template
+        /// names can be up to 256 bytes.</param>
+        /// <param name="description">Description for new property template. Property template
+        /// descriptions can be up to 1024 bytes.</param>
+        /// <param name="addFields">This is a list of custom properties to add to the property
+        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesTemplateUpdate(string templateId,
+                                                              string name = null,
+                                                              string description = null,
+                                                              col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null,
+                                                              sys.AsyncCallback callback = null,
+                                                              object callbackState = null)
+        {
+            var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
+                                                                          name,
+                                                                          description,
+                                                                          addFields);
+
+            return this.BeginPropertiesTemplateUpdate(updatePropertyTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties template update
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        public UpdatePropertyTemplateResult EndPropertiesTemplateUpdate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<UpdatePropertyTemplateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Retrieves reporting data about a team's user activity.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>

@@ -10,7 +10,7 @@ namespace Dropbox.Api.Stone
     /// An empty object used when a route doesn't have one or more of the
     /// request, response, or error types specified.
     /// </summary>
-    public sealed class Empty
+    internal sealed class Empty
     {
         /// <summary>
         /// A static instance of the <see cref="Empty"/> class.
