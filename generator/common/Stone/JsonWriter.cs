@@ -55,7 +55,7 @@ namespace <Namespace>.Stone
 
             var json = builder.ToString();
 
-            return !string.IsNullOrEmpty(json) ? json : "null";
+            return !string.IsNullOrEmpty(json) ? json .Replace("\x7f", "\\u007f"): "null";
         }
 
         /// <summary>
