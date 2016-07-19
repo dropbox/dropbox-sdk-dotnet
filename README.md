@@ -2,6 +2,12 @@
 
 A .NET SDK for integrating with the Dropbox API v2.
 
+## Support Platforms
+ - .NET Framework 4+
+ - Windows Store Apps
+ - Windows Phone 8 and 8.1 Apps
+ - Silverlight 5.0
+
 ## Setup
 
 To get started with Dropbox.NET, we recommend you add it to your project using NuGet.
