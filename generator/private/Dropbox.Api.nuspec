@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.4.0</version>
+    <version>3.5.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,7 +14,22 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-  - Added file properties endpoints.
+- Files
+  - Added UploadSessionFinishBatch route.
+- Sharing
+  - Added ChangeFileMemberAccess route.
+  - Added InviteViewerNoComment and ShareLink to FolderAction.
+  - Added MakeViewerNoComment to MemberAction.
+  - Added PreviewUrl to SharedFolderMetadata.
+  - Added AccessDetails to MemberAccessLevelResult, which is the parent folders that a member has access to.
+  - Added TooManyInvitees error to AddFolderMemberError.
+  - Added AutomaticGroup to AddMemberSelectorError.
+  - Added InsufficientQuota to MountFolderError.
+  - Added Removed to TeamMemberStatus.
+ - Team
+   - Added NewGroupManagementType to Group
+   - Added IncludeRemoved flag to MemberListArg
+   - Added MembersRecover route.
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
