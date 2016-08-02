@@ -13,7 +13,8 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>Per-member result for <see
     /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RemoveFileMember2Async" /> or <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.AddFileMemberAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.AddFileMemberAsync" /> or <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ChangeFileMemberAccessAsync" />.</para>
     /// </summary>
     public class FileMemberActionResult
     {

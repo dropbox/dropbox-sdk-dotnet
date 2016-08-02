@@ -41,9 +41,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:/(.|[\r\n])*|id:.*)\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/.*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/(.|[\r\n])*|id:.*)\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/.*)?))\z'");
             }
 
             var propertyTemplateIdsList = enc.Util.ToList(propertyTemplateIds);

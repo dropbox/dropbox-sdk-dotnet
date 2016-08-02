@@ -13,7 +13,6 @@ namespace Dropbox.Api.TeamCommon
     /// <summary>
     /// <para>Information about a group.</para>
     /// </summary>
-    /// <seealso cref="AlphaGroupSummary" />
     public class GroupSummary
     {
         #pragma warning disable 108
@@ -33,11 +32,13 @@ namespace Dropbox.Api.TeamCommon
         /// </summary>
         /// <param name="groupName">The group name</param>
         /// <param name="groupId">The group id</param>
+        /// <param name="groupManagementType">Who is allowed to manage the group.</param>
         /// <param name="groupExternalId">External ID of group. This is an arbitrary ID that an
         /// admin can attach to a group.</param>
         /// <param name="memberCount">The number of members in the group.</param>
         public GroupSummary(string groupName,
                             string groupId,
+                            GroupManagementType groupManagementType,
                             string groupExternalId = null,
                             uint? memberCount = null)
         {
@@ -51,8 +52,14 @@ namespace Dropbox.Api.TeamCommon
                 throw new sys.ArgumentNullException("groupId");
             }
 
+            if (groupManagementType == null)
+            {
+                throw new sys.ArgumentNullException("groupManagementType");
+            }
+
             this.GroupName = groupName;
             this.GroupId = groupId;
+            this.GroupManagementType = groupManagementType;
             this.GroupExternalId = groupExternalId;
             this.MemberCount = memberCount;
         }
@@ -75,6 +82,11 @@ namespace Dropbox.Api.TeamCommon
         /// <para>Gets the group id of the group summary</para>
         /// </summary>
         public string GroupId { get; protected set; }
+
+        /// <summary>
+        /// <para>Who is allowed to manage the group.</para>
+        /// </summary>
+        public GroupManagementType GroupManagementType { get; protected set; }
 
         /// <summary>
         /// <para>External ID of group. This is an arbitrary ID that an admin can attach to a
@@ -103,6 +115,7 @@ namespace Dropbox.Api.TeamCommon
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
+                WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 if (value.GroupExternalId != null)
                 {
                     WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
@@ -148,6 +161,9 @@ namespace Dropbox.Api.TeamCommon
                         break;
                     case "group_id":
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "group_management_type":
+                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     case "group_external_id":
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);

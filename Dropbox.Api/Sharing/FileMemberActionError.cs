@@ -337,7 +337,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Unknown error when applying action to member.</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : FileMemberActionError
         {

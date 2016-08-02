@@ -170,6 +170,29 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FolderIsLimitedTeamFolder</para>
+        /// </summary>
+        public bool IsFolderIsLimitedTeamFolder
+        {
+            get
+            {
+                return this is FolderIsLimitedTeamFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderIsLimitedTeamFolder, or <c>null</c>.</para>
+        /// </summary>
+        public FolderIsLimitedTeamFolder AsFolderIsLimitedTeamFolder
+        {
+            get
+            {
+                return this as FolderIsLimitedTeamFolder;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -241,6 +264,12 @@ namespace Dropbox.Api.Sharing
                     TargetNotActive.Encoder.EncodeFields((TargetNotActive)value, writer);
                     return;
                 }
+                if (value is FolderIsLimitedTeamFolder)
+                {
+                    WriteProperty(".tag", "folder_is_limited_team_folder", writer, enc.StringEncoder.Instance);
+                    FolderIsLimitedTeamFolder.Encoder.EncodeFields((FolderIsLimitedTeamFolder)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -292,6 +321,8 @@ namespace Dropbox.Api.Sharing
                         return TargetIsSelf.Decoder.DecodeFields(reader);
                     case "target_not_active":
                         return TargetNotActive.Decoder.DecodeFields(reader);
+                    case "folder_is_limited_team_folder":
+                        return FolderIsLimitedTeamFolder.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -772,6 +803,86 @@ namespace Dropbox.Api.Sharing
                 public override TargetNotActive DecodeFields(enc.IJsonReader reader)
                 {
                     return TargetNotActive.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Folder is team folder for a limited team.</para>
+        /// </summary>
+        public sealed class FolderIsLimitedTeamFolder : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderIsLimitedTeamFolder> Encoder = new FolderIsLimitedTeamFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderIsLimitedTeamFolder> Decoder = new FolderIsLimitedTeamFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FolderIsLimitedTeamFolder"
+            /// /> class.</para>
+            /// </summary>
+            private FolderIsLimitedTeamFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderIsLimitedTeamFolder</para>
+            /// </summary>
+            public static readonly FolderIsLimitedTeamFolder Instance = new FolderIsLimitedTeamFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderIsLimitedTeamFolder" />.</para>
+            /// </summary>
+            private class FolderIsLimitedTeamFolderEncoder : enc.StructEncoder<FolderIsLimitedTeamFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderIsLimitedTeamFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderIsLimitedTeamFolder" />.</para>
+            /// </summary>
+            private class FolderIsLimitedTeamFolderDecoder : enc.StructDecoder<FolderIsLimitedTeamFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FolderIsLimitedTeamFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderIsLimitedTeamFolder Create()
+                {
+                    return new FolderIsLimitedTeamFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FolderIsLimitedTeamFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return FolderIsLimitedTeamFolder.Instance;
                 }
             }
 

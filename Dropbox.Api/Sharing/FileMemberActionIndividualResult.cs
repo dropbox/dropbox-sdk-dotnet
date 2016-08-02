@@ -251,7 +251,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>User was not able to remove this member.</para>
+        /// <para>User was not able to perform this action.</para>
         /// </summary>
         public sealed class MemberError : FileMemberActionIndividualResult
         {

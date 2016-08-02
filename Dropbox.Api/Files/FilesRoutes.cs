@@ -3342,6 +3342,211 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>This route helps you commit many files at once into a user's Dropbox. Use
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to
+        /// upload file contents. We recommend uploading many files in parallel to increase
+        /// throughput. Once the file contents have been uploaded, rather than calling <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />, use this
+        /// route to finish all your upload sessions in a single request.</para>
+        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for last
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" />
+        /// call.</para>
+        /// <para>This route will return job_id immediately and do the async commit job in
+        /// background. We have another route <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchCheckAsync" />
+        /// to check the job status.</para>
+        /// <para>For the same account, this route should be executed serially. That means you
+        /// should not start next job before current job finishes. Also we only allow up to
+        /// 1000 entries in a single request</para>
+        /// </summary>
+        /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UploadSessionFinishBatchAsync(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session finish batch route.</para>
+        /// </summary>
+        /// <param name="uploadSessionFinishBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionFinishBatch(UploadSessionFinishBatchArg uploadSessionFinishBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UploadSessionFinishBatchAsync(uploadSessionFinishBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>This route helps you commit many files at once into a user's Dropbox. Use
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to
+        /// upload file contents. We recommend uploading many files in parallel to increase
+        /// throughput. Once the file contents have been uploaded, rather than calling <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />, use this
+        /// route to finish all your upload sessions in a single request.</para>
+        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for last
+        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" />
+        /// call.</para>
+        /// <para>This route will return job_id immediately and do the async commit job in
+        /// background. We have another route <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchCheckAsync" />
+        /// to check the job status.</para>
+        /// <para>For the same account, this route should be executed serially. That means you
+        /// should not start next job before current job finishes. Also we only allow up to
+        /// 1000 entries in a single request</para>
+        /// </summary>
+        /// <param name="entries">Commit information for each file in the batch.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UploadSessionFinishBatchAsync(col.IEnumerable<UploadSessionFinishArg> entries)
+        {
+            var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
+
+            return this.UploadSessionFinishBatchAsync(uploadSessionFinishBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session finish batch route.</para>
+        /// </summary>
+        /// <param name="entries">Commit information for each file in the batch.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionFinishBatch(col.IEnumerable<UploadSessionFinishArg> entries,
+                                                              sys.AsyncCallback callback,
+                                                              object callbackState = null)
+        {
+            var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
+
+            return this.BeginUploadSessionFinishBatch(uploadSessionFinishBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the upload session finish batch
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public Dropbox.Api.Async.LaunchEmptyResult EndUploadSessionFinishBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchAsync" />. If
+        /// success, it returns list of result for each entry</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<UploadSessionFinishBatchJobStatus> UploadSessionFinishBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, UploadSessionFinishBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/upload_session/finish_batch/check", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.UploadSessionFinishBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session finish batch check
+        /// route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionFinishBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UploadSessionFinishBatchCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchAsync" />. If
+        /// success, it returns list of result for each entry</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<UploadSessionFinishBatchJobStatus> UploadSessionFinishBatchCheckAsync(string asyncJobId)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.UploadSessionFinishBatchCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session finish batch check
+        /// route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionFinishBatchCheck(string asyncJobId,
+                                                                   sys.AsyncCallback callback,
+                                                                   object callbackState = null)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginUploadSessionFinishBatchCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the upload session finish batch
+        /// check route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public UploadSessionFinishBatchJobStatus EndUploadSessionFinishBatchCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<UploadSessionFinishBatchJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Upload sessions allow you to upload a single file using multiple requests.
         /// This call starts a new upload session with the given data.  You can then use <see
         /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to add

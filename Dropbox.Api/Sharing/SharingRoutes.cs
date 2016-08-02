@@ -273,6 +273,103 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
+        /// <para>Changes a member's access on a shared file.</para>
+        /// </summary>
+        /// <param name="changeFileMemberAccessArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="FileMemberActionError"/>.</exception>
+        public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(ChangeFileMemberAccessArgs changeFileMemberAccessArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<ChangeFileMemberAccessArgs, FileMemberActionResult, FileMemberActionError>(changeFileMemberAccessArgs, "api", "/sharing/change_file_member_access", Dropbox.Api.Sharing.ChangeFileMemberAccessArgs.Encoder, Dropbox.Api.Sharing.FileMemberActionResult.Decoder, Dropbox.Api.Sharing.FileMemberActionError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the change file member access route.</para>
+        /// </summary>
+        /// <param name="changeFileMemberAccessArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginChangeFileMemberAccess(ChangeFileMemberAccessArgs changeFileMemberAccessArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ChangeFileMemberAccessAsync(changeFileMemberAccessArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Changes a member's access on a shared file.</para>
+        /// </summary>
+        /// <param name="file">File for which we are changing a member's access.</param>
+        /// <param name="member">The member whose access we are changing.</param>
+        /// <param name="accessLevel">The new access level for the member.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="FileMemberActionError"/>.</exception>
+        public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(string file,
+                                                                          MemberSelector member,
+                                                                          AccessLevel accessLevel)
+        {
+            var changeFileMemberAccessArgs = new ChangeFileMemberAccessArgs(file,
+                                                                            member,
+                                                                            accessLevel);
+
+            return this.ChangeFileMemberAccessAsync(changeFileMemberAccessArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the change file member access route.</para>
+        /// </summary>
+        /// <param name="file">File for which we are changing a member's access.</param>
+        /// <param name="member">The member whose access we are changing.</param>
+        /// <param name="accessLevel">The new access level for the member.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginChangeFileMemberAccess(string file,
+                                                            MemberSelector member,
+                                                            AccessLevel accessLevel,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var changeFileMemberAccessArgs = new ChangeFileMemberAccessArgs(file,
+                                                                            member,
+                                                                            accessLevel);
+
+            return this.BeginChangeFileMemberAccess(changeFileMemberAccessArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the change file member access
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="FileMemberActionError"/>.</exception>
+        public FileMemberActionResult EndChangeFileMemberAccess(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<FileMemberActionResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the status of an asynchronous job.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
         /// </summary>

@@ -79,6 +79,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InviteViewerNoComment</para>
+        /// </summary>
+        public bool IsInviteViewerNoComment
+        {
+            get
+            {
+                return this is InviteViewerNoComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InviteViewerNoComment, or <c>null</c>.</para>
+        /// </summary>
+        public InviteViewerNoComment AsInviteViewerNoComment
+        {
+            get
+            {
+                return this as InviteViewerNoComment;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Unshare</para>
         /// </summary>
         public bool IsUnshare
@@ -119,6 +141,28 @@ namespace Dropbox.Api.Sharing
             get
             {
                 return this as RelinquishMembership;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ShareLink</para>
+        /// </summary>
+        public bool IsShareLink
+        {
+            get
+            {
+                return this is ShareLink;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ShareLink, or <c>null</c>.</para>
+        /// </summary>
+        public ShareLink AsShareLink
+        {
+            get
+            {
+                return this as ShareLink;
             }
         }
 
@@ -170,6 +214,12 @@ namespace Dropbox.Api.Sharing
                     InviteViewer.Encoder.EncodeFields((InviteViewer)value, writer);
                     return;
                 }
+                if (value is InviteViewerNoComment)
+                {
+                    WriteProperty(".tag", "invite_viewer_no_comment", writer, enc.StringEncoder.Instance);
+                    InviteViewerNoComment.Encoder.EncodeFields((InviteViewerNoComment)value, writer);
+                    return;
+                }
                 if (value is Unshare)
                 {
                     WriteProperty(".tag", "unshare", writer, enc.StringEncoder.Instance);
@@ -180,6 +230,12 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty(".tag", "relinquish_membership", writer, enc.StringEncoder.Instance);
                     RelinquishMembership.Encoder.EncodeFields((RelinquishMembership)value, writer);
+                    return;
+                }
+                if (value is ShareLink)
+                {
+                    WriteProperty(".tag", "share_link", writer, enc.StringEncoder.Instance);
+                    ShareLink.Encoder.EncodeFields((ShareLink)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -224,10 +280,14 @@ namespace Dropbox.Api.Sharing
                         return EditContents.Decoder.DecodeFields(reader);
                     case "invite_viewer":
                         return InviteViewer.Decoder.DecodeFields(reader);
+                    case "invite_viewer_no_comment":
+                        return InviteViewerNoComment.Decoder.DecodeFields(reader);
                     case "unshare":
                         return Unshare.Decoder.DecodeFields(reader);
                     case "relinquish_membership":
                         return RelinquishMembership.Decoder.DecodeFields(reader);
+                    case "share_link":
+                        return ShareLink.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -395,6 +455,86 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Add a member with view permissions but no comment permissions.</para>
+        /// </summary>
+        public sealed class InviteViewerNoComment : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InviteViewerNoComment> Encoder = new InviteViewerNoCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InviteViewerNoComment> Decoder = new InviteViewerNoCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InviteViewerNoComment" />
+            /// class.</para>
+            /// </summary>
+            private InviteViewerNoComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InviteViewerNoComment</para>
+            /// </summary>
+            public static readonly InviteViewerNoComment Instance = new InviteViewerNoComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InviteViewerNoComment" />.</para>
+            /// </summary>
+            private class InviteViewerNoCommentEncoder : enc.StructEncoder<InviteViewerNoComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InviteViewerNoComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InviteViewerNoComment" />.</para>
+            /// </summary>
+            private class InviteViewerNoCommentDecoder : enc.StructDecoder<InviteViewerNoComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InviteViewerNoComment"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InviteViewerNoComment Create()
+                {
+                    return new InviteViewerNoComment();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InviteViewerNoComment DecodeFields(enc.IJsonReader reader)
+                {
+                    return InviteViewerNoComment.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Stop sharing this file.</para>
         /// </summary>
         public sealed class Unshare : FileAction
@@ -546,6 +686,84 @@ namespace Dropbox.Api.Sharing
                 public override RelinquishMembership DecodeFields(enc.IJsonReader reader)
                 {
                     return RelinquishMembership.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Create a shared link to the file.</para>
+        /// </summary>
+        public sealed class ShareLink : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ShareLink> Encoder = new ShareLinkEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ShareLink> Decoder = new ShareLinkDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ShareLink" /> class.</para>
+            /// </summary>
+            private ShareLink()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ShareLink</para>
+            /// </summary>
+            public static readonly ShareLink Instance = new ShareLink();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ShareLink" />.</para>
+            /// </summary>
+            private class ShareLinkEncoder : enc.StructEncoder<ShareLink>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ShareLink value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ShareLink" />.</para>
+            /// </summary>
+            private class ShareLinkDecoder : enc.StructDecoder<ShareLink>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ShareLink" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ShareLink Create()
+                {
+                    return new ShareLink();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ShareLink DecodeFields(enc.IJsonReader reader)
+                {
+                    return ShareLink.Instance;
                 }
             }
 

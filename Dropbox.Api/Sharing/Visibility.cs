@@ -664,7 +664,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>An unknown restriction is in place.</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : Visibility
         {

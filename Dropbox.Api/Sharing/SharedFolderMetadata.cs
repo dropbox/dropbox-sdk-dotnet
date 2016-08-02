@@ -41,6 +41,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="sharedFolderId">The ID of the shared folder.</param>
         /// <param name="timeInvited">Timestamp indicating when the current user was invited to
         /// this shared folder.</param>
+        /// <param name="previewUrl">URL for displaying a web preview of the shared
+        /// folder.</param>
         /// <param name="ownerTeam">The team that owns the folder. This field is not present if
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
@@ -56,6 +58,7 @@ namespace Dropbox.Api.Sharing
                                     string name,
                                     string sharedFolderId,
                                     sys.DateTime timeInvited,
+                                    string previewUrl,
                                     Dropbox.Api.Users.Team ownerTeam = null,
                                     string parentSharedFolderId = null,
                                     string pathLower = null,
@@ -76,11 +79,17 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("sharedFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
             }
 
+            if (previewUrl == null)
+            {
+                throw new sys.ArgumentNullException("previewUrl");
+            }
+
             var permissionsList = enc.Util.ToList(permissions);
 
             this.Name = name;
             this.SharedFolderId = sharedFolderId;
             this.TimeInvited = timeInvited;
+            this.PreviewUrl = previewUrl;
             this.PathLower = pathLower;
             this.Permissions = permissionsList;
         }
@@ -110,6 +119,11 @@ namespace Dropbox.Api.Sharing
         /// folder.</para>
         /// </summary>
         public sys.DateTime TimeInvited { get; protected set; }
+
+        /// <summary>
+        /// <para>URL for displaying a web preview of the shared folder.</para>
+        /// </summary>
+        public string PreviewUrl { get; protected set; }
 
         /// <summary>
         /// <para>The lower-cased full path of this shared folder. Absent for unmounted
@@ -143,6 +157,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 WriteProperty("time_invited", value.TimeInvited, writer, enc.DateTimeEncoder.Instance);
+                WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
                 if (value.OwnerTeam != null)
                 {
                     WriteProperty("owner_team", value.OwnerTeam, writer, Dropbox.Api.Users.Team.Encoder);
@@ -208,6 +223,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "time_invited":
                         value.TimeInvited = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "preview_url":
+                        value.PreviewUrl = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "owner_team":
                         value.OwnerTeam = Dropbox.Api.Users.Team.Decoder.Decode(reader);

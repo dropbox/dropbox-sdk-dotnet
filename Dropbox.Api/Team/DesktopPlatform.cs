@@ -442,7 +442,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Dropbox desktop client for another platform</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : DesktopPlatform
         {

@@ -35,6 +35,7 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="groupName">The group name</param>
         /// <param name="groupId">The group id</param>
+        /// <param name="groupManagementType">Who is allowed to manage the group.</param>
         /// <param name="groupType">The type of group.</param>
         /// <param name="isOwner">If the current user is an owner of the group.</param>
         /// <param name="sameTeam">If the group is owned by the current user's team.</param>
@@ -43,12 +44,13 @@ namespace Dropbox.Api.Sharing
         /// <param name="memberCount">The number of members in the group.</param>
         public GroupInfo(string groupName,
                          string groupId,
+                         Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
                          Dropbox.Api.TeamCommon.GroupType groupType,
                          bool isOwner,
                          bool sameTeam,
                          string groupExternalId = null,
                          uint? memberCount = null)
-            : base(groupName, groupId, groupExternalId, memberCount)
+            : base(groupName, groupId, groupManagementType, groupExternalId, memberCount)
         {
             if (groupType == null)
             {
@@ -100,6 +102,7 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
+                WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 WriteProperty("group_type", value.GroupType, writer, Dropbox.Api.TeamCommon.GroupType.Encoder);
                 WriteProperty("is_owner", value.IsOwner, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("same_team", value.SameTeam, writer, enc.BooleanEncoder.Instance);
@@ -148,6 +151,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "group_id":
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "group_management_type":
+                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     case "group_type":
                         value.GroupType = Dropbox.Api.TeamCommon.GroupType.Decoder.Decode(reader);

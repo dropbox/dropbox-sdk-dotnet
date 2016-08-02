@@ -334,7 +334,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>An unknown shared link policy.</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : SharedLinkPolicy
         {

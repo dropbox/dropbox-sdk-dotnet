@@ -118,7 +118,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>An unspecified error.</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : MembersListError
         {

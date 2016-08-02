@@ -34,6 +34,7 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="groupName">The group name</param>
         /// <param name="groupId">The group id</param>
+        /// <param name="groupManagementType">Who is allowed to manage the group.</param>
         /// <param name="created">The group creation time as a UTC timestamp in milliseconds
         /// since the Unix epoch.</param>
         /// <param name="groupExternalId">External ID of group. This is an arbitrary ID that an
@@ -42,11 +43,12 @@ namespace Dropbox.Api.Team
         /// <param name="members">List of group members.</param>
         public GroupFullInfo(string groupName,
                              string groupId,
+                             Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
                              ulong created,
                              string groupExternalId = null,
                              uint? memberCount = null,
                              col.IEnumerable<GroupMemberInfo> members = null)
-            : base(groupName, groupId, groupExternalId, memberCount)
+            : base(groupName, groupId, groupManagementType, groupExternalId, memberCount)
         {
             var membersList = enc.Util.ToList(members);
 
@@ -90,6 +92,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
+                WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 WriteProperty("created", value.Created, writer, enc.UInt64Encoder.Instance);
                 if (value.GroupExternalId != null)
                 {
@@ -140,6 +143,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "group_id":
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "group_management_type":
+                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     case "created":
                         value.Created = enc.UInt64Decoder.Instance.Decode(reader);

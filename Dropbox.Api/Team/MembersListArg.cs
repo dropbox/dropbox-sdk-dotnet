@@ -31,7 +31,9 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="MembersListArg" /> class.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
-        public MembersListArg(uint limit = 1000)
+        /// <param name="includeRemoved">Whether to return removed members.</param>
+        public MembersListArg(uint limit = 1000,
+                              bool includeRemoved = false)
         {
             if (limit < 1U)
             {
@@ -43,6 +45,7 @@ namespace Dropbox.Api.Team
             }
 
             this.Limit = limit;
+            this.IncludeRemoved = includeRemoved;
         }
 
         /// <summary>
@@ -53,12 +56,18 @@ namespace Dropbox.Api.Team
         public MembersListArg()
         {
             this.Limit = 1000;
+            this.IncludeRemoved = false;
         }
 
         /// <summary>
         /// <para>Number of results to return per call.</para>
         /// </summary>
         public uint Limit { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether to return removed members.</para>
+        /// </summary>
+        public bool IncludeRemoved { get; protected set; }
 
         #region Encoder class
 
@@ -75,6 +84,7 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(MembersListArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
+                WriteProperty("include_removed", value.IncludeRemoved, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -109,6 +119,9 @@ namespace Dropbox.Api.Team
                 {
                     case "limit":
                         value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
+                        break;
+                    case "include_removed":
+                        value.IncludeRemoved = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

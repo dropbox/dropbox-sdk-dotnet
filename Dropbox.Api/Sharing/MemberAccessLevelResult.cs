@@ -36,11 +36,18 @@ namespace Dropbox.Api.Sharing
         /// through a parent folder.</param>
         /// <param name="warning">A localized string with additional information about why the
         /// user has this access level to the content.</param>
+        /// <param name="accessDetails">The parent folders that a member has access to. The
+        /// field is present if the user has access to the first parent folder where the member
+        /// gains access.</param>
         public MemberAccessLevelResult(AccessLevel accessLevel = null,
-                                       string warning = null)
+                                       string warning = null,
+                                       col.IEnumerable<ParentFolderAccessInfo> accessDetails = null)
         {
+            var accessDetailsList = enc.Util.ToList(accessDetails);
+
             this.AccessLevel = accessLevel;
             this.Warning = warning;
+            this.AccessDetails = accessDetailsList;
         }
 
         /// <summary>
@@ -65,6 +72,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string Warning { get; protected set; }
 
+        /// <summary>
+        /// <para>The parent folders that a member has access to. The field is present if the
+        /// user has access to the first parent folder where the member gains access.</para>
+        /// </summary>
+        public col.IList<ParentFolderAccessInfo> AccessDetails { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -86,6 +99,10 @@ namespace Dropbox.Api.Sharing
                 if (value.Warning != null)
                 {
                     WriteProperty("warning", value.Warning, writer, enc.StringEncoder.Instance);
+                }
+                if (value.AccessDetails.Count > 0)
+                {
+                    WriteListProperty("access_details", value.AccessDetails, writer, Dropbox.Api.Sharing.ParentFolderAccessInfo.Encoder);
                 }
             }
         }
@@ -125,6 +142,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "warning":
                         value.Warning = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "access_details":
+                        value.AccessDetails = ReadList<ParentFolderAccessInfo>(reader, Dropbox.Api.Sharing.ParentFolderAccessInfo.Decoder);
                         break;
                     default:
                         reader.Skip();

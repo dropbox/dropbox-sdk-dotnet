@@ -405,7 +405,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>This member does not have explicit access to the file and therefore cannot be
-        /// removed.</para>
+        /// removed. The return value is the access that a user might have to the file from a
+        /// parent folder.</para>
         /// </summary>
         public sealed class NoExplicitAccess : RemoveFileMemberError
         {
@@ -425,14 +426,23 @@ namespace Dropbox.Api.Sharing
             /// <para>Initializes a new instance of the <see cref="NoExplicitAccess" />
             /// class.</para>
             /// </summary>
+            /// <param name="value">The value</param>
+            public NoExplicitAccess(MemberAccessLevelResult value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoExplicitAccess" />
+            /// class.</para>
+            /// </summary>
             private NoExplicitAccess()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of NoExplicitAccess</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly NoExplicitAccess Instance = new NoExplicitAccess();
+            public MemberAccessLevelResult Value { get; private set; }
 
             #region Encoder class
 
@@ -448,6 +458,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoExplicitAccess value, enc.IJsonWriter writer)
                 {
+                    Dropbox.Api.Sharing.MemberAccessLevelResult.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -476,7 +487,7 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The decoded object.</returns>
                 public override NoExplicitAccess DecodeFields(enc.IJsonReader reader)
                 {
-                    return NoExplicitAccess.Instance;
+                    return new NoExplicitAccess(Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -13,7 +13,6 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group create arg object</para>
     /// </summary>
-    /// <seealso cref="AlphaGroupCreateArg" />
     public class GroupCreateArg
     {
         #pragma warning disable 108
@@ -34,8 +33,11 @@ namespace Dropbox.Api.Team
         /// <param name="groupName">Group name.</param>
         /// <param name="groupExternalId">The creator of a team can associate an arbitrary
         /// external ID to the group.</param>
+        /// <param name="groupManagementType">Whether the team can be managed by selected
+        /// users, or only by team admins</param>
         public GroupCreateArg(string groupName,
-                              string groupExternalId = null)
+                              string groupExternalId = null,
+                              Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
         {
             if (groupName == null)
             {
@@ -44,6 +46,7 @@ namespace Dropbox.Api.Team
 
             this.GroupName = groupName;
             this.GroupExternalId = groupExternalId;
+            this.GroupManagementType = groupManagementType;
         }
 
         /// <summary>
@@ -66,6 +69,12 @@ namespace Dropbox.Api.Team
         /// </summary>
         public string GroupExternalId { get; protected set; }
 
+        /// <summary>
+        /// <para>Whether the team can be managed by selected users, or only by team
+        /// admins</para>
+        /// </summary>
+        public Dropbox.Api.TeamCommon.GroupManagementType GroupManagementType { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -84,6 +93,10 @@ namespace Dropbox.Api.Team
                 if (value.GroupExternalId != null)
                 {
                     WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.GroupManagementType != null)
+                {
+                    WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 }
             }
         }
@@ -122,6 +135,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "group_external_id":
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "group_management_type":
+                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -579,7 +579,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>An unspecified error</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : ModifySharedLinkSettingsError
         {

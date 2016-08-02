@@ -100,6 +100,8 @@
     <Compile Include="AuthException.cs" />
     <Compile Include="Auth\AuthError.cs" />
     <Compile Include="Auth\AuthRoutes.cs" />
+    <Compile Include="Auth\RateLimitError.cs" />
+    <Compile Include="Auth\RateLimitReason.cs" />
     <Compile Include="DropboxClient.cs" />
     <Compile Include="DropboxTeamClient.cs" />
     <Compile Include="Files\AddPropertiesError.cs" />
@@ -184,6 +186,10 @@
     <Compile Include="Files\UploadSessionAppendArg.cs" />
     <Compile Include="Files\UploadSessionCursor.cs" />
     <Compile Include="Files\UploadSessionFinishArg.cs" />
+    <Compile Include="Files\UploadSessionFinishBatchArg.cs" />
+    <Compile Include="Files\UploadSessionFinishBatchJobStatus.cs" />
+    <Compile Include="Files\UploadSessionFinishBatchResult.cs" />
+    <Compile Include="Files\UploadSessionFinishBatchResultEntry.cs" />
     <Compile Include="Files\UploadSessionFinishError.cs" />
     <Compile Include="Files\UploadSessionLookupError.cs" />
     <Compile Include="Files\UploadSessionOffsetError.cs" />
@@ -212,6 +218,7 @@
     <Compile Include="Sharing\AddFolderMemberError.cs" />
     <Compile Include="Sharing\AddMember.cs" />
     <Compile Include="Sharing\AddMemberSelectorError.cs" />
+    <Compile Include="Sharing\ChangeFileMemberAccessArgs.cs" />
     <Compile Include="Sharing\CollectionLinkMetadata.cs" />
     <Compile Include="Sharing\CreateSharedLinkArg.cs" />
     <Compile Include="Sharing\CreateSharedLinkError.cs" />
@@ -242,6 +249,7 @@
     <Compile Include="Sharing\GetSharedLinksResult.cs" />
     <Compile Include="Sharing\GroupInfo.cs" />
     <Compile Include="Sharing\GroupMembershipInfo.cs" />
+    <Compile Include="Sharing\InsufficientQuotaAmounts.cs" />
     <Compile Include="Sharing\InviteeInfo.cs" />
     <Compile Include="Sharing\InviteeMembershipInfo.cs" />
     <Compile Include="Sharing\JobError.cs" />
@@ -281,6 +289,7 @@
     <Compile Include="Sharing\ModifySharedLinkSettingsError.cs" />
     <Compile Include="Sharing\MountFolderArg.cs" />
     <Compile Include="Sharing\MountFolderError.cs" />
+    <Compile Include="Sharing\ParentFolderAccessInfo.cs" />
     <Compile Include="Sharing\PathLinkMetadata.cs" />
     <Compile Include="Sharing\PendingUploadMode.cs" />
     <Compile Include="Sharing\PermissionDeniedReason.cs" />
@@ -335,7 +344,6 @@
     <Compile Include="Sharing\UserInfo.cs" />
     <Compile Include="Sharing\UserMembershipInfo.cs" />
     <Compile Include="Sharing\Visibility.cs" />
-    <Compile Include="TeamCommon\AlphaGroupSummary.cs" />
     <Compile Include="TeamCommon\GroupManagementType.cs" />
     <Compile Include="TeamCommon\GroupSummary.cs" />
     <Compile Include="TeamCommon\GroupType.cs" />
@@ -349,11 +357,6 @@
     <Compile Include="Team\AddPropertyTemplateArg.cs" />
     <Compile Include="Team\AddPropertyTemplateResult.cs" />
     <Compile Include="Team\AdminTier.cs" />
-    <Compile Include="Team\AlphaGroupCreateArg.cs" />
-    <Compile Include="Team\AlphaGroupFullInfo.cs" />
-    <Compile Include="Team\AlphaGroupUpdateArgs.cs" />
-    <Compile Include="Team\AlphaGroupsGetInfoItem.cs" />
-    <Compile Include="Team\AlphaGroupsListResult.cs" />
     <Compile Include="Team\ApiApp.cs" />
     <Compile Include="Team\BaseDfbReport.cs" />
     <Compile Include="Team\DateRange.cs" />
@@ -439,6 +442,8 @@
     <Compile Include="Team\MembersListContinueError.cs" />
     <Compile Include="Team\MembersListError.cs" />
     <Compile Include="Team\MembersListResult.cs" />
+    <Compile Include="Team\MembersRecoverArg.cs" />
+    <Compile Include="Team\MembersRecoverError.cs" />
     <Compile Include="Team\MembersRemoveArg.cs" />
     <Compile Include="Team\MembersRemoveError.cs" />
     <Compile Include="Team\MembersSendWelcomeError.cs" />
@@ -452,6 +457,7 @@
     <Compile Include="Team\MembersUnsuspendError.cs" />
     <Compile Include="Team\MobileClientPlatform.cs" />
     <Compile Include="Team\MobileClientSession.cs" />
+    <Compile Include="Team\RemovedStatus.cs" />
     <Compile Include="Team\RevokeDesktopClientArg.cs" />
     <Compile Include="Team\RevokeDeviceSessionArg.cs" />
     <Compile Include="Team\RevokeDeviceSessionBatchArg.cs" />

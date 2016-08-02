@@ -291,6 +291,30 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EmailAddressTooLongToBeDisabled</para>
+        /// </summary>
+        public bool IsEmailAddressTooLongToBeDisabled
+        {
+            get
+            {
+                return this is EmailAddressTooLongToBeDisabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EmailAddressTooLongToBeDisabled, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EmailAddressTooLongToBeDisabled AsEmailAddressTooLongToBeDisabled
+        {
+            get
+            {
+                return this as EmailAddressTooLongToBeDisabled;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserNotInTeam</para>
         /// </summary>
         public bool IsUserNotInTeam
@@ -414,6 +438,12 @@ namespace Dropbox.Api.Team
                     CannotKeepAccountAndDeleteData.Encoder.EncodeFields((CannotKeepAccountAndDeleteData)value, writer);
                     return;
                 }
+                if (value is EmailAddressTooLongToBeDisabled)
+                {
+                    WriteProperty(".tag", "email_address_too_long_to_be_disabled", writer, enc.StringEncoder.Instance);
+                    EmailAddressTooLongToBeDisabled.Encoder.EncodeFields((EmailAddressTooLongToBeDisabled)value, writer);
+                    return;
+                }
                 if (value is UserNotInTeam)
                 {
                     WriteProperty(".tag", "user_not_in_team", writer, enc.StringEncoder.Instance);
@@ -480,6 +510,8 @@ namespace Dropbox.Api.Team
                         return CannotKeepAccountAndTransfer.Decoder.DecodeFields(reader);
                     case "cannot_keep_account_and_delete_data":
                         return CannotKeepAccountAndDeleteData.Decoder.DecodeFields(reader);
+                    case "email_address_too_long_to_be_disabled":
+                        return EmailAddressTooLongToBeDisabled.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
                         return UserNotInTeam.Decoder.DecodeFields(reader);
                     case "other":
@@ -1375,6 +1407,86 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>The email address of the user is too long to be disabled.</para>
+        /// </summary>
+        public sealed class EmailAddressTooLongToBeDisabled : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EmailAddressTooLongToBeDisabled> Encoder = new EmailAddressTooLongToBeDisabledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EmailAddressTooLongToBeDisabled> Decoder = new EmailAddressTooLongToBeDisabledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EmailAddressTooLongToBeDisabled" /> class.</para>
+            /// </summary>
+            private EmailAddressTooLongToBeDisabled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of EmailAddressTooLongToBeDisabled</para>
+            /// </summary>
+            public static readonly EmailAddressTooLongToBeDisabled Instance = new EmailAddressTooLongToBeDisabled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EmailAddressTooLongToBeDisabled" />.</para>
+            /// </summary>
+            private class EmailAddressTooLongToBeDisabledEncoder : enc.StructEncoder<EmailAddressTooLongToBeDisabled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EmailAddressTooLongToBeDisabled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EmailAddressTooLongToBeDisabled" />.</para>
+            /// </summary>
+            private class EmailAddressTooLongToBeDisabledDecoder : enc.StructDecoder<EmailAddressTooLongToBeDisabled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EmailAddressTooLongToBeDisabled" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EmailAddressTooLongToBeDisabled Create()
+                {
+                    return new EmailAddressTooLongToBeDisabled();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EmailAddressTooLongToBeDisabled DecodeFields(enc.IJsonReader reader)
+                {
+                    return EmailAddressTooLongToBeDisabled.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The user is not a member of the team.</para>
         /// </summary>
         public sealed class UserNotInTeam : MembersRemoveError
@@ -1454,7 +1566,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>An unspecified error.</para>
+        /// <para>The other object</para>
         /// </summary>
         public sealed class Other : MembersRemoveError
         {

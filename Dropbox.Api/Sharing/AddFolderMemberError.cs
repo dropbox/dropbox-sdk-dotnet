@@ -190,6 +190,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TooManyInvitees</para>
+        /// </summary>
+        public bool IsTooManyInvitees
+        {
+            get
+            {
+                return this is TooManyInvitees;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManyInvitees, or <c>null</c>.</para>
+        /// </summary>
+        public TooManyInvitees AsTooManyInvitees
+        {
+            get
+            {
+                return this as TooManyInvitees;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is InsufficientPlan</para>
         /// </summary>
         public bool IsInsufficientPlan
@@ -333,6 +355,12 @@ namespace Dropbox.Api.Sharing
                     RateLimit.Encoder.EncodeFields((RateLimit)value, writer);
                     return;
                 }
+                if (value is TooManyInvitees)
+                {
+                    WriteProperty(".tag", "too_many_invitees", writer, enc.StringEncoder.Instance);
+                    TooManyInvitees.Encoder.EncodeFields((TooManyInvitees)value, writer);
+                    return;
+                }
                 if (value is InsufficientPlan)
                 {
                     WriteProperty(".tag", "insufficient_plan", writer, enc.StringEncoder.Instance);
@@ -403,6 +431,8 @@ namespace Dropbox.Api.Sharing
                         return TooManyPendingInvites.Decoder.DecodeFields(reader);
                     case "rate_limit":
                         return RateLimit.Decoder.DecodeFields(reader);
+                    case "too_many_invitees":
+                        return TooManyInvitees.Decoder.DecodeFields(reader);
                     case "insufficient_plan":
                         return InsufficientPlan.Decoder.DecodeFields(reader);
                     case "team_folder":
@@ -969,7 +999,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The user has reached the rate limit for invitations.</para>
+        /// <para>The current user has hit the limit of invites they can send per day. Try
+        /// again in 24 hours.</para>
         /// </summary>
         public sealed class RateLimit : AddFolderMemberError
         {
@@ -1040,6 +1071,85 @@ namespace Dropbox.Api.Sharing
                 public override RateLimit DecodeFields(enc.IJsonReader reader)
                 {
                     return RateLimit.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current user is trying to share with too many people at once.</para>
+        /// </summary>
+        public sealed class TooManyInvitees : AddFolderMemberError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManyInvitees> Encoder = new TooManyInviteesEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManyInvitees> Decoder = new TooManyInviteesDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManyInvitees" />
+            /// class.</para>
+            /// </summary>
+            private TooManyInvitees()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooManyInvitees</para>
+            /// </summary>
+            public static readonly TooManyInvitees Instance = new TooManyInvitees();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManyInvitees" />.</para>
+            /// </summary>
+            private class TooManyInviteesEncoder : enc.StructEncoder<TooManyInvitees>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManyInvitees value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManyInvitees" />.</para>
+            /// </summary>
+            private class TooManyInviteesDecoder : enc.StructDecoder<TooManyInvitees>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManyInvitees" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManyInvitees Create()
+                {
+                    return new TooManyInvitees();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TooManyInvitees DecodeFields(enc.IJsonReader reader)
+                {
+                    return TooManyInvitees.Instance;
                 }
             }
 

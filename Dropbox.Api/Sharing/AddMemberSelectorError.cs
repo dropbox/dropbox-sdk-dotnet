@@ -36,6 +36,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AutomaticGroup</para>
+        /// </summary>
+        public bool IsAutomaticGroup
+        {
+            get
+            {
+                return this is AutomaticGroup;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AutomaticGroup, or <c>null</c>.</para>
+        /// </summary>
+        public AutomaticGroup AsAutomaticGroup
+        {
+            get
+            {
+                return this as AutomaticGroup;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is InvalidDropboxId</para>
         /// </summary>
         public bool IsInvalidDropboxId
@@ -181,6 +203,12 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AddMemberSelectorError value, enc.IJsonWriter writer)
             {
+                if (value is AutomaticGroup)
+                {
+                    WriteProperty(".tag", "automatic_group", writer, enc.StringEncoder.Instance);
+                    AutomaticGroup.Encoder.EncodeFields((AutomaticGroup)value, writer);
+                    return;
+                }
                 if (value is InvalidDropboxId)
                 {
                     WriteProperty(".tag", "invalid_dropbox_id", writer, enc.StringEncoder.Instance);
@@ -250,6 +278,8 @@ namespace Dropbox.Api.Sharing
             {
                 switch (tag)
                 {
+                    case "automatic_group":
+                        return AutomaticGroup.Decoder.DecodeFields(reader);
                     case "invalid_dropbox_id":
                         return InvalidDropboxId.Decoder.DecodeFields(reader);
                     case "invalid_email":
@@ -267,6 +297,85 @@ namespace Dropbox.Api.Sharing
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Automatically created groups can only be added to team folders.</para>
+        /// </summary>
+        public sealed class AutomaticGroup : AddMemberSelectorError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AutomaticGroup> Encoder = new AutomaticGroupEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AutomaticGroup> Decoder = new AutomaticGroupDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AutomaticGroup" />
+            /// class.</para>
+            /// </summary>
+            private AutomaticGroup()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AutomaticGroup</para>
+            /// </summary>
+            public static readonly AutomaticGroup Instance = new AutomaticGroup();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AutomaticGroup" />.</para>
+            /// </summary>
+            private class AutomaticGroupEncoder : enc.StructEncoder<AutomaticGroup>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AutomaticGroup value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AutomaticGroup" />.</para>
+            /// </summary>
+            private class AutomaticGroupDecoder : enc.StructDecoder<AutomaticGroup>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AutomaticGroup" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AutomaticGroup Create()
+                {
+                    return new AutomaticGroup();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AutomaticGroup DecodeFields(enc.IJsonReader reader)
+                {
+                    return AutomaticGroup.Instance;
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The value is the ID that could not be identified.</para>

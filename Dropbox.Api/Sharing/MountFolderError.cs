@@ -498,14 +498,23 @@ namespace Dropbox.Api.Sharing
             /// <para>Initializes a new instance of the <see cref="InsufficientQuota" />
             /// class.</para>
             /// </summary>
+            /// <param name="value">The value</param>
+            public InsufficientQuota(InsufficientQuotaAmounts value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsufficientQuota" />
+            /// class.</para>
+            /// </summary>
             private InsufficientQuota()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of InsufficientQuota</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly InsufficientQuota Instance = new InsufficientQuota();
+            public InsufficientQuotaAmounts Value { get; private set; }
 
             #region Encoder class
 
@@ -521,6 +530,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InsufficientQuota value, enc.IJsonWriter writer)
                 {
+                    Dropbox.Api.Sharing.InsufficientQuotaAmounts.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -550,7 +560,7 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The decoded object.</returns>
                 public override InsufficientQuota DecodeFields(enc.IJsonReader reader)
                 {
-                    return InsufficientQuota.Instance;
+                    return new InsufficientQuota(Dropbox.Api.Sharing.InsufficientQuotaAmounts.Decoder.DecodeFields(reader));
                 }
             }
 

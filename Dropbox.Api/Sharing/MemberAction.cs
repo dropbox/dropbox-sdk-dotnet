@@ -123,6 +123,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MakeViewerNoComment</para>
+        /// </summary>
+        public bool IsMakeViewerNoComment
+        {
+            get
+            {
+                return this is MakeViewerNoComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MakeViewerNoComment, or <c>null</c>.</para>
+        /// </summary>
+        public MakeViewerNoComment AsMakeViewerNoComment
+        {
+            get
+            {
+                return this as MakeViewerNoComment;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Remove</para>
         /// </summary>
         public bool IsRemove
@@ -204,6 +226,12 @@ namespace Dropbox.Api.Sharing
                     MakeViewer.Encoder.EncodeFields((MakeViewer)value, writer);
                     return;
                 }
+                if (value is MakeViewerNoComment)
+                {
+                    WriteProperty(".tag", "make_viewer_no_comment", writer, enc.StringEncoder.Instance);
+                    MakeViewerNoComment.Encoder.EncodeFields((MakeViewerNoComment)value, writer);
+                    return;
+                }
                 if (value is Remove)
                 {
                     WriteProperty(".tag", "remove", writer, enc.StringEncoder.Instance);
@@ -256,6 +284,8 @@ namespace Dropbox.Api.Sharing
                         return MakeOwner.Decoder.DecodeFields(reader);
                     case "make_viewer":
                         return MakeViewer.Decoder.DecodeFields(reader);
+                    case "make_viewer_no_comment":
+                        return MakeViewerNoComment.Decoder.DecodeFields(reader);
                     case "remove":
                         return Remove.Decoder.DecodeFields(reader);
                     default:
@@ -572,6 +602,86 @@ namespace Dropbox.Api.Sharing
                 public override MakeViewer DecodeFields(enc.IJsonReader reader)
                 {
                     return MakeViewer.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Make the member a viewer of the folder without commenting permissions.</para>
+        /// </summary>
+        public sealed class MakeViewerNoComment : MemberAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MakeViewerNoComment> Encoder = new MakeViewerNoCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MakeViewerNoComment> Decoder = new MakeViewerNoCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MakeViewerNoComment" />
+            /// class.</para>
+            /// </summary>
+            private MakeViewerNoComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MakeViewerNoComment</para>
+            /// </summary>
+            public static readonly MakeViewerNoComment Instance = new MakeViewerNoComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MakeViewerNoComment" />.</para>
+            /// </summary>
+            private class MakeViewerNoCommentEncoder : enc.StructEncoder<MakeViewerNoComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MakeViewerNoComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MakeViewerNoComment" />.</para>
+            /// </summary>
+            private class MakeViewerNoCommentDecoder : enc.StructDecoder<MakeViewerNoComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MakeViewerNoComment"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MakeViewerNoComment Create()
+                {
+                    return new MakeViewerNoComment();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MakeViewerNoComment DecodeFields(enc.IJsonReader reader)
+                {
+                    return MakeViewerNoComment.Instance;
                 }
             }
 

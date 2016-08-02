@@ -38,24 +38,24 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Unspecified</para>
+        /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
-        public bool IsUnspecified
+        public bool IsOther
         {
             get
             {
-                return this is Unspecified;
+                return this is Other;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Unspecified, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
         /// </summary>
-        public Unspecified AsUnspecified
+        public Other AsOther
         {
             get
             {
-                return this as Unspecified;
+                return this as Other;
             }
         }
 
@@ -73,10 +73,10 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RevokeLinkedAppBatchError value, enc.IJsonWriter writer)
             {
-                if (value is Unspecified)
+                if (value is Other)
                 {
-                    WriteProperty(".tag", "unspecified", writer, enc.StringEncoder.Instance);
-                    Unspecified.Encoder.EncodeFields((Unspecified)value, writer);
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Team
                 switch (tag)
                 {
                     default:
-                        return Unspecified.Decoder.DecodeFields(reader);
+                        return Other.Decoder.DecodeFields(reader);
                 }
             }
         }
@@ -121,48 +121,47 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>An unspecified error.</para>
+        /// <para>The other object</para>
         /// </summary>
-        public sealed class Unspecified : RevokeLinkedAppBatchError
+        public sealed class Other : RevokeLinkedAppBatchError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Unspecified> Encoder = new UnspecifiedEncoder();
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Unspecified> Decoder = new UnspecifiedDecoder();
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Unspecified" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
-            private Unspecified()
+            private Other()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Unspecified</para>
+            /// <para>A singleton instance of Other</para>
             /// </summary>
-            public static readonly Unspecified Instance = new Unspecified();
+            public static readonly Other Instance = new Other();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Unspecified" />.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            private class UnspecifiedEncoder : enc.StructEncoder<Unspecified>
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Unspecified value, enc.IJsonWriter writer)
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -172,17 +171,17 @@ namespace Dropbox.Api.Team
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Unspecified" />.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            private class UnspecifiedDecoder : enc.StructDecoder<Unspecified>
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Unspecified" />.</para>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Unspecified Create()
+                protected override Other Create()
                 {
-                    return new Unspecified();
+                    return new Other();
                 }
 
                 /// <summary>
@@ -190,9 +189,9 @@ namespace Dropbox.Api.Team
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override Unspecified DecodeFields(enc.IJsonReader reader)
+                public override Other DecodeFields(enc.IJsonReader reader)
                 {
-                    return Unspecified.Instance;
+                    return Other.Instance;
                 }
             }
 

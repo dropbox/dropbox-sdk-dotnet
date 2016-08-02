@@ -58,24 +58,24 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Unknown</para>
+        /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
-        public bool IsUnknown
+        public bool IsOther
         {
             get
             {
-                return this is Unknown;
+                return this is Other;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Unknown, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
         /// </summary>
-        public Unknown AsUnknown
+        public Other AsOther
         {
             get
             {
-                return this as Unknown;
+                return this as Other;
             }
         }
 
@@ -99,10 +99,10 @@ namespace Dropbox.Api.Users
                     NoAccount.Encoder.EncodeFields((NoAccount)value, writer);
                     return;
                 }
-                if (value is Unknown)
+                if (value is Other)
                 {
-                    WriteProperty(".tag", "unknown", writer, enc.StringEncoder.Instance);
-                    Unknown.Encoder.EncodeFields((Unknown)value, writer);
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -140,7 +140,7 @@ namespace Dropbox.Api.Users
                     case "no_account":
                         return NoAccount.Decoder.DecodeFields(reader);
                     default:
-                        return Unknown.Decoder.DecodeFields(reader);
+                        return Other.Decoder.DecodeFields(reader);
                 }
             }
         }
@@ -227,47 +227,47 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The unknown object</para>
+        /// <para>The other object</para>
         /// </summary>
-        public sealed class Unknown : GetAccountError
+        public sealed class Other : GetAccountError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Unknown> Encoder = new UnknownEncoder();
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Unknown> Decoder = new UnknownDecoder();
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Unknown" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
             /// </summary>
-            private Unknown()
+            private Other()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Unknown</para>
+            /// <para>A singleton instance of Other</para>
             /// </summary>
-            public static readonly Unknown Instance = new Unknown();
+            public static readonly Other Instance = new Other();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Unknown" />.</para>
+            /// <para>Encoder for  <see cref="Other" />.</para>
             /// </summary>
-            private class UnknownEncoder : enc.StructEncoder<Unknown>
+            private class OtherEncoder : enc.StructEncoder<Other>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Unknown value, enc.IJsonWriter writer)
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -277,17 +277,17 @@ namespace Dropbox.Api.Users
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Unknown" />.</para>
+            /// <para>Decoder for  <see cref="Other" />.</para>
             /// </summary>
-            private class UnknownDecoder : enc.StructDecoder<Unknown>
+            private class OtherDecoder : enc.StructDecoder<Other>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Unknown" />.</para>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Unknown Create()
+                protected override Other Create()
                 {
-                    return new Unknown();
+                    return new Other();
                 }
 
                 /// <summary>
@@ -295,9 +295,9 @@ namespace Dropbox.Api.Users
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override Unknown DecodeFields(enc.IJsonReader reader)
+                public override Other DecodeFields(enc.IJsonReader reader)
                 {
-                    return Unknown.Instance;
+                    return Other.Instance;
                 }
             }
 

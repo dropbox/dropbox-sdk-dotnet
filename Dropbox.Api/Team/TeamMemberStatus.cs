@@ -101,6 +101,28 @@ namespace Dropbox.Api.Team
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Removed</para>
+        /// </summary>
+        public bool IsRemoved
+        {
+            get
+            {
+                return this is Removed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Removed, or <c>null</c>.</para>
+        /// </summary>
+        public Removed AsRemoved
+        {
+            get
+            {
+                return this as Removed;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -131,6 +153,12 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "suspended", writer, enc.StringEncoder.Instance);
                     Suspended.Encoder.EncodeFields((Suspended)value, writer);
+                    return;
+                }
+                if (value is Removed)
+                {
+                    WriteProperty(".tag", "removed", writer, enc.StringEncoder.Instance);
+                    Removed.Encoder.EncodeFields((Removed)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -171,6 +199,8 @@ namespace Dropbox.Api.Team
                         return Invited.Decoder.DecodeFields(reader);
                     case "suspended":
                         return Suspended.Decoder.DecodeFields(reader);
+                    case "removed":
+                        return Removed.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -408,6 +438,94 @@ namespace Dropbox.Api.Team
                 public override Suspended DecodeFields(enc.IJsonReader reader)
                 {
                     return Suspended.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>User is no longer a member of the team. Removed users are only listed when
+        /// include_removed is true in members/list.</para>
+        /// </summary>
+        public sealed class Removed : TeamMemberStatus
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Removed> Encoder = new RemovedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Removed> Decoder = new RemovedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Removed" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public Removed(RemovedStatus value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Removed" /> class.</para>
+            /// </summary>
+            private Removed()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public RemovedStatus Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Removed" />.</para>
+            /// </summary>
+            private class RemovedEncoder : enc.StructEncoder<Removed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Removed value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Team.RemovedStatus.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Removed" />.</para>
+            /// </summary>
+            private class RemovedDecoder : enc.StructDecoder<Removed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Removed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Removed Create()
+                {
+                    return new Removed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Removed DecodeFields(enc.IJsonReader reader)
+                {
+                    return new Removed(Dropbox.Api.Team.RemovedStatus.Decoder.DecodeFields(reader));
                 }
             }
 
