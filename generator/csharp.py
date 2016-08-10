@@ -15,16 +15,12 @@ from stone.data_type import (
     Int64,
     UInt32,
     UInt64,
-    Void,
     is_bytes_type,
     is_boolean_type,
     is_user_defined_type,
-    is_float_type,
-    is_integer_type,
     is_list_type,
     is_nullable_type,
     is_numeric_type,
-    is_primitive_type,
     is_string_type,
     is_struct_type,
     is_tag_ref,
@@ -34,11 +30,13 @@ from stone.data_type import (
 )
 from stone.generator import CodeGenerator
 
+
 def memo_one(fn):
     """
     Memoize a single argument instance method.
     """
     cache = {}
+
     def wrapper(self, arg):
         value = cache.get(arg)
         if value is not None:
@@ -49,6 +47,7 @@ def memo_one(fn):
     return wrapper
 
 ConstructorArg = namedtuple('ConstructorArg', ('type', 'name', 'arg', 'doc'))
+
 
 class _CSharpGenerator(CodeGenerator):
     _CAMEL_CASE_RE = re.compile('((?<=[a-z0-9])[A-Z]|(?!^)[A-Z](?=[a-z]))')
@@ -70,7 +69,7 @@ class _CSharpGenerator(CodeGenerator):
     })
 
     def __init__(self, namespace_name, app_name, *args, **kwargs):
-        '''
+        """
         Initializes a new instance of CSharpGenerator.
         Args:
             namespace_name: The namespace name for all generated files.
@@ -80,8 +79,7 @@ class _CSharpGenerator(CodeGenerator):
             **kwargs:
 
         Returns:
-
-        '''
+        """
         super(_CSharpGenerator, self).__init__(*args, **kwargs)
         self._prefixes = []
         self._prefix = ''
@@ -92,8 +90,10 @@ class _CSharpGenerator(CodeGenerator):
 
         self._namespace_name = namespace_name
         self._app_name = app_name
-	
-    def generate(self, api):        
+
+    def generate(self, api):
+        self._generate_route_auth_map(api)
+
         for namespace in api.namespaces.itervalues():
             self._compute_related_types(namespace)
             self._generate_namespace(namespace)
@@ -105,7 +105,7 @@ class _CSharpGenerator(CodeGenerator):
         self._generate(api)
 
     def _generate(self, api, generated_files):
-        '''
+        """
         Override by derived generator to handle project specific logic.
 
         Args:
@@ -113,7 +113,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Returns:
 
-        '''
+        """
         pass
 
     @contextmanager
@@ -133,7 +133,7 @@ class _CSharpGenerator(CodeGenerator):
         is within the region.
 
         Args:
-            label (str): The region label
+            label (Union[str, unicode]): The region label
         """
         self.emit('#region {0}'.format(label))
         self.emit()
@@ -147,7 +147,7 @@ class _CSharpGenerator(CodeGenerator):
         is within the if statement.
 
         Args:
-            condition (str): The if condition
+            condition (Union[str, unicode]): The if condition
         """
             
         return self.cs_block(before='if ({0})'.format(condition))
@@ -165,7 +165,7 @@ class _CSharpGenerator(CodeGenerator):
         context is within the `else if` statement.
 
         Args:
-            condition (str): The else if condition.
+            condition (Union[str, unicode]): The else if condition.
         """
         return self.cs_block(before='else if ({0})'.format(condition))
 
@@ -184,11 +184,11 @@ class _CSharpGenerator(CodeGenerator):
         the class.
 
         Args:
-            name (str): The name of the class.
+            name (Union[str, unicode]): The name of the class.
             inherits (str|iterable): The base types for the class, if any. If
                 this is a string it is added to the code verbatim, if an 
                 iterable, then joined with ', '
-            access (str): The access modifierd of the class.
+            access (Union[str, unicode]): The access modifierd of the class.
         """
 
         elements = []
@@ -210,7 +210,7 @@ class _CSharpGenerator(CodeGenerator):
         is within the using block.
 
         Args:
-            declaration (str): The using declaration.
+            declaration (Union[str, unicode]): The using declaration.
         """
         return self.cs_block(before='using ({0})'.format(declaration))
 
@@ -222,7 +222,7 @@ class _CSharpGenerator(CodeGenerator):
         fixed string to each line emitted within those contexts.
 
         Args:
-            text (str): The text to emit
+            text (Union[str, unicode]): The text to emit
         """
         if text and self._prefix:
             super(_CSharpGenerator, self).emit(self._prefix + text)
@@ -236,7 +236,7 @@ class _CSharpGenerator(CodeGenerator):
         This is used to keep track of the set of all files that are generated.
 
         Args:
-            filename (str): The name of the file to generate.
+            filename (Union[str, unicode]): The name of the file to generate.
         """
         self._generated_files.append(filename)
         return super(_CSharpGenerator, self).output_to_relative_path(filename)
@@ -248,7 +248,7 @@ class _CSharpGenerator(CodeGenerator):
         that is emitted within the context.
 
         Args:
-            prefix (str): The prefix to prepend to every line.
+            prefix (Union[str, unicode]): The prefix to prepend to every line.
         """
         self._prefixes.append(prefix)
         self._prefix = ''.join(self._prefixes)
@@ -296,7 +296,7 @@ class _CSharpGenerator(CodeGenerator):
             is present
 
         Args:
-            s (str): The string to emit and wrap.
+            s (Union[str, unicode]): The string to emit and wrap.
             process (callable): The function to handle tags in the emitted text.
         """
         kwargs['prefix'] = self._prefix + kwargs.get('prefix', '')
@@ -314,7 +314,7 @@ class _CSharpGenerator(CodeGenerator):
         Context manager for a `switch` statement.
 
         Args:
-            expression (str): The expression to switch on.
+            expression (Union[str, unicode]): The expression to switch on.
         """
         self.emit('switch ({0})'.format(expression))
         self.emit('{')
@@ -327,7 +327,7 @@ class _CSharpGenerator(CodeGenerator):
         Context manager for a `case` statement.
 
         Args:
-            constant (str): If this is not provided, then this is generated as
+            constant (Union[str, unicode]): If this is not provided, then this is generated as
                 the default case. 
             need_break (bool): Indicates whether a break statement should 
                 automatically be appended with the case statement ends.
@@ -360,9 +360,9 @@ class _CSharpGenerator(CodeGenerator):
         Emits an xml element.
 
         Args:
-            doc (str): The contents of the xml element, if this is `None` then
+            doc (Union[str, unicode]): The contents of the xml element, if this is `None` then
                 the element is emitted in self closed form
-            tag (str): The xml element tag name.
+            tag (Union[str, unicode]): The xml element tag name.
             attrs (dict): The attributes (if any) for the elemen
         """
         tag_start = '<' + tag
@@ -381,7 +381,7 @@ class _CSharpGenerator(CodeGenerator):
         Context manager that includes all emitted code within an xml element
 
         Args:
-            tag (str): The xml element tag name
+            tag (Union[str, unicode]): The xml element tag name
             attrs (dict): The xml element attributes, if any.
         """
         if attrs:
@@ -402,14 +402,15 @@ class _CSharpGenerator(CodeGenerator):
         Context manager that emit the private decoder class
 
         Args:
-            class_name (str): The class name for this decoder.
-            inherit (str): The base type for this decoder.
+            class_name (Union[str, unicode]): The class name for this decoder.
+            inherit (Union[str, unicode]): The base type for this decoder.
         """
         self.emit()
         with self.region('Encoder class'):
             with self.doc_comment():
                 self.emit_summary('Encoder for  <see cref="{0}" />.'.format(class_name))
-            with self.class_(class_name + 'Encoder', inherits=['enc.StructEncoder<{0}>'.format(class_name)], access = 'private'):
+            with self.class_(class_name + 'Encoder', inherits=['enc.StructEncoder<{0}>'.format(class_name)],
+                             access='private'):
                 with self.doc_comment():
                     self.emit_summary('Encode fields of given value.')
                     self.emit_xml('The value.', 'param', name='value')
@@ -423,14 +424,15 @@ class _CSharpGenerator(CodeGenerator):
         Context manager that emit the private decoder class
 
         Args:
-            class_name (str): The class name for this decoder.
-            inherit (str): The base type for this decoder.
+            class_name (Union[str, unicode]): The class name for this decoder.
+            inherit (Union[str, unicode]): The base type for this decoder.
         """
         self.emit()
         with self.region('Decoder class'):
             with self.doc_comment():
                 self.emit_summary('Decoder for  <see cref="{0}" />.'.format(class_name))
-            with self.class_(class_name + 'Decoder', inherits=['enc.{0}<{1}>'.format(inherit, class_name)], access = 'private'):
+            with self.class_(class_name + 'Decoder', inherits=['enc.{0}<{1}>'.format(inherit, class_name)],
+                             access='private'):
                 with self.doc_comment():
                     self.emit_summary('Create a new instance of type <see cref="{0}" />.'.format(class_name))
                     self.emit_xml('The struct instance.', 'returns')
@@ -445,7 +447,7 @@ class _CSharpGenerator(CodeGenerator):
         Context manager that emit the DecodeFields override.
 
         Args:
-            class_name (str): The class name for this decoder.
+            class_name (Union[str, unicode]): The class name for this decoder.
         """
         with self.doc_comment():
             self.emit_summary('Decode fields without ensuring start and end object.')
@@ -460,7 +462,7 @@ class _CSharpGenerator(CodeGenerator):
         Context manager that emit the SetField override block for struct decoder.
 
         Args:
-            class_name (str): The class name for this decoder.
+            class_name (Union[str, unicode]): The class name for this decoder.
         """
         with self.doc_comment():
             self.emit_summary('Set given field.')
@@ -481,7 +483,7 @@ class _CSharpGenerator(CodeGenerator):
         Context manager that emit the Decode(tag) override block for union decoder.
 
         Args:
-            class_name (str): The class name for this decoder.
+            class_name (Union[str, unicode]): The class name for this decoder.
         """
         with self.doc_comment():
             self.emit_summary('Decode based on given tag.')
@@ -496,7 +498,7 @@ class _CSharpGenerator(CodeGenerator):
         Emits the supplied documentation as a summary element.
 
         Args:
-            doc (str): The documentation to emit, if this is multi-line, then
+            doc (Union[str, unicode]): The documentation to emit, if this is multi-line, then
                 each line is wrapped in a `para` element.
         """
         lines = doc.splitlines()
@@ -517,8 +519,8 @@ class _CSharpGenerator(CodeGenerator):
         the documentation string
 
         Args:
-            tag (str): The tag type, one of 'field|link|route|type|val'
-            value (str): The value of the tag.
+            tag (Union[str, unicode]): The tag type, one of 'field|link|route|type|val'
+            value (Union[str, unicode]): The value of the tag.
         """
         if tag == 'field':
             if '.' in value:
@@ -542,8 +544,10 @@ class _CSharpGenerator(CodeGenerator):
                 ns_name, route_name = map(self._public_name, value.split('.'))
             else:
                 ns_name, route_name = self._ns, self._public_name(value)
-            return ('<see cref="{0}.{1}.Routes.{1}Routes.{2}Async" />'.format(
-                    self._namespace_name, ns_name, route_name))
+            auth_type = self._route_auth_map[(ns_name, route_name)]
+
+            return ('<see cref="{0}.{1}.Routes.{1}{2}Routes.{3}Async" />'.format(
+                    self._namespace_name, ns_name, auth_type, route_name))
         elif tag == 'type':
             return '<see cref="{0}" />'.format(self._public_name(value))
         elif tag == 'val':
@@ -563,13 +567,13 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             data_type (stone.data_type.DataType): The type to translate.
-            void (str): If supplied, this is the value to return if data_type
+            void (Union[str, unicode]): If supplied, this is the value to return if data_type
                 is void.
             is_property (bool): Indicates whether the type translation is for
                 a property type. Lists have different types expressed for
                 properties than in other places.
             is_response (bool): Indicates whether the type translation is for
-                a resposne type. Lists need to concrete list class in order to
+                a response type. Lists need to concrete list class in order to
                 be created by Apm.
             include_namespace (bool): Indicates wheather the type translation includes
                 namespace. Sometimes this needs to be true to avoild colliding with property name.
@@ -625,7 +629,8 @@ class _CSharpGenerator(CodeGenerator):
 
             return typename + suffix
 
-    def _process_literal(self, literal):
+    @staticmethod
+    def _process_literal(literal):
         """
         Translate literal values used in defaults
 
@@ -636,7 +641,8 @@ class _CSharpGenerator(CodeGenerator):
             return 'true' if literal else 'false'
         return literal
 
-    def _type_literal_suffix(self, data_type):
+    @staticmethod
+    def _type_literal_suffix(data_type):
         """
         Returns the suffix needed to make a numeric literal values type explicit.
 
@@ -658,7 +664,8 @@ class _CSharpGenerator(CodeGenerator):
         else:
             assert False, 'Unknown numeric data type %r' % data_type
 
-    def _could_be_null(self, data_type):
+    @staticmethod
+    def _could_be_null(data_type):
         """
         Returns true if 'data_type' could be null, i.e. if it is not a value type
 
@@ -667,12 +674,13 @@ class _CSharpGenerator(CodeGenerator):
         """
         return is_user_defined_type(data_type) or is_string_type(data_type) or is_list_type(data_type)
 
-    def _verbatim_string(self, string):
+    @staticmethod
+    def _verbatim_string(string):
         """
         Creates a C# verbatim string (way easier than dealing with escapes)
 
         Args:
-            string (str): The string to represent.
+            string (Union[str, unicode]): The string to represent.
         """
         return '@"{0}"'.format(string.replace('"', '""'))
 
@@ -730,7 +738,7 @@ class _CSharpGenerator(CodeGenerator):
         object. 
 
         Args:
-            name (str): The field name.
+            name (Union[str, unicode]): The field name.
             data_type (stone.data_type.DataType): The type of the field
             has_null_check (bool): Indicates whether prior code has already
                 generated a null check for this field - this happens if a
@@ -764,25 +772,25 @@ class _CSharpGenerator(CodeGenerator):
                 checks.append(('!re.Regex.IsMatch({0}, {1})'.format(name, self._verbatim_string(pattern)),
                                self._verbatim_string("Value should match pattern '{0}'".format(pattern))))
         elif is_list_type(data_type):
-            listName = name + 'List'
-            element_type = self._typename(data_type.data_type, is_property=True)
-            self.emit('var {0} = enc.Util.ToList({1});'.format(listName, name))
+            list_name = name + 'List'
+            self.emit('var {0} = enc.Util.ToList({1});'.format(list_name, name))
             self.emit()
 
             if data_type.min_items is not None:
-                checks.append(('{0}.Count < {1}'.format(listName, data_type.min_items),
+                checks.append(('{0}.Count < {1}'.format(list_name, data_type.min_items),
                                '"List should at at least {0} items"'.format(data_type.min_items)))
             if data_type.max_items is not None:
-                checks.append(('{0}.Count > {1}'.format(listName, data_type.max_items),
+                checks.append(('{0}.Count > {1}'.format(list_name, data_type.max_items),
                                '"List should at at most {0} items"'.format(data_type.max_items)))
         
         has_checks = len(checks) > 0
+
         def apply_checks():
             for check, message in checks:
                 with self.if_('{0}'.format(check)):
                     self.emit('throw new sys.ArgumentOutOfRangeException("{0}", {1});'.format(name, message))
         if nullable:
-	    if has_checks: 
+            if has_checks:
                 with self.if_('{0} != null'.format(name)):
                     apply_checks()
         else:
@@ -805,7 +813,7 @@ class _CSharpGenerator(CodeGenerator):
             FooBar -> fooBar
 
         Args:
-            name (str): The name to transform
+            name (Union[str, unicode]): The name to transform
             is_doc (bool): If the arg name is in doc.
         """
         public = self._public_name(name)
@@ -822,7 +830,7 @@ class _CSharpGenerator(CodeGenerator):
         Names are segmented on '/' or '_' characters and also on CamelCase boundaries.
 
         Args:
-            name (str): The name to segment.
+            name (Union[str, unicode]): The name to segment.
         """
         name = name.replace('/', '_')
         name = _CSharpGenerator._CAMEL_CASE_RE.sub(r'_\1', name).lower()
@@ -839,7 +847,7 @@ class _CSharpGenerator(CodeGenerator):
             FooBar -> FooBar
 
         Args:
-            name (str): The name to transform
+            name (Union[str, unicode]): The name to transform
         """
         return ''.join(x.capitalize() for x in self._segment_name(name))
     
@@ -854,40 +862,39 @@ class _CSharpGenerator(CodeGenerator):
             FooBar -> 'foo bar'
 
         Args:
-            name (str): The name to transform
+            name (Union[str, unicode]): The name to transform
         """
         return ' '.join(self._segment_name(name))
     
-    def _copy_files(self, dir):
+    def _copy_files(self, dir_path):
         """
         Copies all the files in the given subdirectory into the target dir.
 
         Args:
-            dir (str): The source dir to be copied from.
+            dir (Union[str, unicode]): The source dir to be copied from.
         """
-        dir = os.path.join(os.path.dirname(__file__), dir)
-        for item in os.listdir(dir):
-            src_path = os.path.join(dir, item)
+        dir_path = os.path.join(os.path.dirname(__file__), dir_path)
+        for item in os.listdir(dir_path):
+            src_path = os.path.join(dir_path, item)
             dest_path = os.path.join(self.target_folder_path, item)
             if os.path.isdir(src_path):
                 shutil.copytree(src_path, dest_path)
             else:
                 shutil.copy2(src_path, dest_path)
 
-    def _copy_and_update_files(self, dir, update_func):
+    def _copy_and_update_files(self, dir_path, update_func):
         """
         Copies all the files in the given subdirectory into the target dir and also update file content.
 
         Args:
-            dir (str): The source dir to be copied from.
-            decod
+            dir_path (Union[str, unicode]): The source dir to be copied from.
             update_func: (callable) A function which updates the file content.
         """
-        dir = os.path.join(os.path.dirname(__file__), dir)
-        dir_len = len(dir)
-        for dirpath, _, filenames in os.walk(dir):
-            for filename in filenames:
-                src_path = os.path.join(dirpath, filename)
+        dir_path = os.path.join(os.path.dirname(__file__), dir_path)
+        dir_len = len(dir_path)
+        for path, _, file_names in os.walk(dir_path):
+            for file_name in file_names:
+                src_path = os.path.join(path, file_name)
                 dest_path = src_path[dir_len + 1:]
 
                 with super(_CSharpGenerator, self).output_to_relative_path(dest_path):
@@ -906,31 +913,32 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             api (stone.api.Api): The API specification.
-            client_name (str): The name of the client. e.g. XXXClient, XXXTeamClient
-            auth_type (str): The expected auth type for the client. e.g. User, Team
+            client_name (Union[str, unicode]): The name of the client. e.g. XXXClient, XXXTeamClient
+            auth_type (Union[str, unicode]): The expected auth type for the client. e.g. User, Team
         """
-        def get_auth_type(ns):
-            routes = ns.routes
-            if not routes:
-                return None
-            return routes[0].attrs.get('auth', 'user')
-            
-        ns_names = [self._public_name(ns.name) for ns in api.namespaces.itervalues()
-                    if get_auth_type(ns) == auth_type]
-
         with self.output_to_relative_path('{0}.cs'.format(client_name)):
             self.auto_generated()
             with self.namespace():
                 self.emit('using sys = System;')
                 self.emit()
                 self.emit('using {0}.Stone;'.format(self._namespace_name))
-                for ns_name in ns_names:
-                    self.emit('using {0}.{1}.Routes;'.format(self._namespace_name, ns_name))
+
+                def enumerate_ns():
+                    for ns in api.namespaces.itervalues():
+                        name = self._public_name(ns.name)
+                        for auth, _ in self._get_routes(ns).iteritems():
+                            if auth == auth_type:
+                                yield name
+
+                for ns_name in enumerate_ns():
+                    self.emit('using {0}.{1}.Routes;'.format(self._namespace_name,
+                                                             self._public_name(ns_name)))
                 self.emit()
 
+                auth_name = self._public_name(auth_type)
                 with self.class_(client_name, access='public sealed partial'):
                     first = True
-                    for ns_name in ns_names:
+                    for ns_name in enumerate_ns():
                         if first:
                             first = False
                         else:
@@ -938,15 +946,16 @@ class _CSharpGenerator(CodeGenerator):
 
                         with self.doc_comment():
                             self.emit_summary('Gets the {0} routes.'.format(ns_name))
-                        self.emit('public {0}Routes {0} {{ get; private set; }}'.format(ns_name))
+                        self.emit('public {0}{1}Routes {0} {{ get; private set; }}'
+                                  .format(ns_name, auth_name))
 
                     self.emit()
                     with self.doc_comment():
                         self.emit_summary('Initializes the routes.')
                         self.emit_xml('The transport.', 'returns')
                     with self.cs_block(before='private void InitializeRoutes(ITransport transport)'):
-                        for ns_name in ns_names:
-                            self.emit('this.{0} = new {0}Routes(transport);'.format(ns_name))
+                        for ns_name in enumerate_ns():
+                            self.emit('this.{0} = new {0}{1}Routes(transport);'.format(ns_name, auth_name))
 
     def _compute_related_types(self, ns): 
         """
@@ -975,6 +984,16 @@ class _CSharpGenerator(CodeGenerator):
 
         self._related_types = related_types
 
+    def _generate_route_auth_map(self, api):
+        d = dict()
+
+        for ns in api.namespaces.itervalues():
+            for route in ns.routes:
+                key = (self._public_name(ns.name), self._public_name(route.name))
+                d[key] = self._public_name(self._get_auth_type(route))
+
+        self._route_auth_map = d
+
     def _generate_namespace(self, ns):
         """
         Perform code generation for the namespace.
@@ -991,7 +1010,7 @@ class _CSharpGenerator(CodeGenerator):
         for data_type in ns.data_types:
             self._generate_data_type(ns_name, data_type)
         if ns.routes:
-            self._generate_routes(ns, ns.routes)
+            self._generate_routes(ns)
 
     def _generate_data_type(self, ns_name, data_type):
         """
@@ -1001,7 +1020,7 @@ class _CSharpGenerator(CodeGenerator):
         method for structs and unions to generate the type itself.
 
         Args:
-            ns_name (str): The name of the namespace.
+            ns_name (Union[str, unicode]): The name of the namespace.
             data_type (stone.data_type.DataType): The type to generate.
         """
         assert is_user_defined_type(data_type)
@@ -1036,8 +1055,9 @@ class _CSharpGenerator(CodeGenerator):
         self.emit('[System.Diagnostics.CodeAnalysis.SuppressMessage('
                   '"Microsoft.Design", '
                   '"CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]')
-    
-    def _parse_data_type(self, data_type):
+
+    @staticmethod
+    def _parse_data_type(data_type):
         """
         Parse the data data type and get its core type.
 
@@ -1053,7 +1073,8 @@ class _CSharpGenerator(CodeGenerator):
 
         return data_type, is_nullable, is_list
 
-    def _get_primitive_prefix(self, data_type):
+    @staticmethod
+    def _get_primitive_prefix(data_type):
         """
         Get encoder/decoder name prefix for primitive types.
 
@@ -1084,8 +1105,9 @@ class _CSharpGenerator(CodeGenerator):
             return 'Empty'
         else:
             assert False, 'Unknown data type %r' % data_type
-    
-    def _get_primitive_instance_name(self, is_nullable):
+
+    @staticmethod
+    def _get_primitive_instance_name(is_nullable):
         """
         Get encoder/decoder instance name.
 
@@ -1095,7 +1117,8 @@ class _CSharpGenerator(CodeGenerator):
 
         return 'NullableInstance' if is_nullable else 'Instance'
 
-    def _get_union_fields(self, union):
+    @staticmethod
+    def _get_union_fields(union):
         """
         Get all fields including fields in parent union type.
 
@@ -1108,6 +1131,23 @@ class _CSharpGenerator(CodeGenerator):
             fields.extend(union.parent_type.fields)
 
         return fields
+
+    @staticmethod
+    def _get_auth_type(route):
+        auth_type = route.attrs.get('auth', 'user')
+        if auth_type == 'noauth':
+            return 'user'
+        else:
+            return auth_type
+
+    @classmethod
+    def _get_routes(cls, ns):
+        ret = defaultdict(list)
+
+        for r in ns.routes:
+            ret[cls._get_auth_type(r)].append(r)
+
+        return ret
 
     def _get_decoder(self, data_type):
         """
@@ -1153,7 +1193,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             field (stone.data_type.Field): The field to be decoded.
-            field_public_name (str): Optional field public name.
+            field_public_name (Union[str, unicode]): Optional field public name.
         """
         field_public_name = field_public_name or self._public_name(field.name)
         data_type, is_nullable, is_list = self._parse_data_type(field.data_type)
@@ -1171,7 +1211,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             field (stone.data_type.Field): The field to generate the encoder for.
-            field_public_name (str): Optional field_public_name.
+            field_public_name (Union[str, unicode]): Optional field_public_name.
             inline_composite_type (bool): If True, composite type will be inline instead
             of encoded as field.
         """
@@ -1198,7 +1238,7 @@ class _CSharpGenerator(CodeGenerator):
                     self.emit('{0}.EncodeFields(value.Value, writer);'.format(self._get_encoder(data_type)))
                     return
             elif nullable and not is_string_type(data_type):
-                field_public_name = field_public_name + '.Value'
+                field_public_name += '.Value'
 
             self.emit('{0}("{1}", value.{2}, writer, {3});'.format(
                 method, field.name, field_public_name, self._get_encoder(data_type)))
@@ -1262,7 +1302,7 @@ class _CSharpGenerator(CodeGenerator):
         Emits the encoder and decoder instance.
 
         Args:
-            class_name (str): The C# class name of the struct.
+            class_name (Union[str, unicode]): The C# class name of the struct.
         """
 
         self.emit('#pragma warning disable 108')
@@ -1288,7 +1328,7 @@ class _CSharpGenerator(CodeGenerator):
         Args:
             struct (stone.data_type.Struct): The struct for which we are
                 generating a constructor.
-            class_name (str): The C# class name of the struct.
+            class_name (Union[str, unicode]): The C# class name of the struct.
             parent_type (stone.data_type.Struct): The parent type of this
                 struct, if any.
             parent_type_fields (set): A set containing the names of fields
@@ -1339,7 +1379,6 @@ class _CSharpGenerator(CodeGenerator):
                 else:
                     self.emit('this.{0} = {1};'.format(field_public_name, field_arg_name))
 
-
     def _generate_struct_default_ctor(self, struct, class_name, parent_type_fields):
         """
         Generates the default constructor for a struct.
@@ -1354,18 +1393,18 @@ class _CSharpGenerator(CodeGenerator):
         Args:
             struct (stone.data_type.Struct): The struct to generate a
                 constructor for.
-            class_name (str): The C# class name for the struct.
+            class_name (Union[str, unicode]): The C# class name for the struct.
             parent_type_fields (set): A set containing the names of fields
                 that are implemented by this struct's parent type hierarchy.
         """
         assert len(struct.all_fields), ('Only generate a default ctor when '
-                'the struct {0} has fields'.format(struct.name))
+                                        'the struct {0} has fields'.format(struct.name))
 
         self.emit()
         with self.doc_comment():
             self.emit_ctor_summary(class_name)
             self.emit_xml('This is to construct an instance of the object when '
-                    'deserializing.', 'remarks')
+                          'deserializing.', 'remarks')
         with self.cs_block(before='public {0}()'.format(class_name)):
             # initialize fields to their default values, where necessary
             for field in struct.all_fields:
@@ -1389,8 +1428,8 @@ class _CSharpGenerator(CodeGenerator):
             struct (stone.data_type.Struct): The struct in question.
         """
         assert struct.has_enumerated_subtypes(), ('Only generate is/as '
-                'properties when the struct {0} has enumerated '
-                'subtypes'.format(struct.name))
+                                                  'properties when the struct {0} has enumerated '
+                                                  'subtypes'.format(struct.name))
 
         for subtype in struct.get_enumerated_subtypes():
             subtype_type = self._typename(subtype.data_type)
@@ -1428,7 +1467,6 @@ class _CSharpGenerator(CodeGenerator):
                 self.emit_summary(doc)
 
             fieldtype = self._typename(field.data_type, is_property=True)
-            setter_access = 'protected' if struct.has_enumerated_subtypes() else 'private'
             self.emit('public {0} {1} {{ get; {2} set; }}'.format(fieldtype,
                                                                   self._public_name(field.name),
                                                                   'protected'))
@@ -1562,14 +1600,14 @@ class _CSharpGenerator(CodeGenerator):
         """
         for field in self._get_union_fields(union):
             field_type = self._public_name(field.name)
-            self.emit();
+            self.emit()
             with self.doc_comment():
                 self.emit_summary('Gets a value indicating whether this instance is {0}'.format(field_type))
             with self.cs_block(before='public bool Is{0}'.format(field_type)):
                 with self.cs_block(before='get'):
                     self.emit('return this is {0};'.format(field_type))
 
-            self.emit();
+            self.emit()
             with self.doc_comment():
                 self.emit_summary('Gets this instance as a {0}, or <c>null</c>.'.format(field_type))
             with self.cs_block(before='public {0} As{0}'.format(field_type)):
@@ -1582,7 +1620,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             union (stone.data_type.Union): The union in question.
-            class_name (str): The C# class name of the union.
+            class_name (Union[str, unicode]): The C# class name of the union.
         """
         with self.encoder_block(class_name=class_name):
             for field in self._get_union_fields(union):
@@ -1595,7 +1633,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             union (stone.data_type.Union): The union in question.
-            class_name (str): The C# class name of the union.
+            class_name (Union[str, unicode]): The C# class name of the union.
         """
 
         with self.decoder_block(class_name=class_name, inherit='UnionDecoder'):
@@ -1619,7 +1657,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             field (stone.data_type.UnionField): The union field in question.
-            field_type (str): The C# type name of the union field.
+            field_type (Union[str, unicode]): The C# type name of the union field.
         """
         # constructor
         with self.doc_comment():
@@ -1650,7 +1688,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             field (stone.data_type.UnionField): The union field in question.
-            field_type (str): The C# type name of the union field.
+            field_type (Union[str, unicode]): The C# type name of the union field.
         """
         with self.doc_comment():
             self.emit_ctor_summary(field_type)
@@ -1701,7 +1739,7 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             field (stone.data_type.UnionField): The union field in question.
-            class_name (str): The C# type name of the parent union.
+            class_name (Union[str, unicode]): The C# type name of the parent union.
         """
         field_type = self._public_name(field.name)
         self.emit()
@@ -1759,7 +1797,7 @@ class _CSharpGenerator(CodeGenerator):
                 for field in self._get_union_fields(union):
                     self._generate_union_field_type(field, class_name)
 
-    def _generate_routes(self, ns, routes):
+    def _generate_routes(self, ns):
         """
         Generates the class that encapsulates the routes in this namespace.
 
@@ -1772,36 +1810,38 @@ class _CSharpGenerator(CodeGenerator):
                 namespace.
         """
         ns_name = self._public_name(ns.name)
-        class_name = ns_name + 'Routes'
-        with self.output_to_relative_path(os.path.join(ns_name, class_name +  '.cs')):
-            # this stops stylecop from analyzing the file
-            self.auto_generated()
-            with self.namespace('.'.join([ns_name, 'Routes'])):
-                self.emit('using sys = System;')
-                self.emit('using io = System.IO;')
-                self.emit('using col = System.Collections.Generic;')
-                self.emit('using t = System.Threading.Tasks;')
-                self.emit('using enc = {0}.Stone;'.format(self._namespace_name))
-                self.emit()
 
-                with self.doc_comment():
-                    self.emit_summary('The routes for the <see cref="N:{0}.{1}"/> namespace'.format(
-                        self._namespace_name, ns_name))
-                with self.class_(class_name, access='public'):
-                    with self.doc_comment():
-                        self.emit_ctor_summary(class_name)
-                        self.emit_xml('The transport to use', 'param', name='transport')
-                    with self.cs_block(before='internal {0}(enc.ITransport transport)'.format(
-                            class_name)):
-                        self.emit('this.Transport = transport;')
-
+        for auth_type, routes in self._get_routes(ns).iteritems():
+            class_name = '{}{}{}'.format(ns_name, self._public_name(auth_type), 'Routes')
+            with self.output_to_relative_path(os.path.join(ns_name, class_name + '.cs')):
+                # this stops stylecop from analyzing the file
+                self.auto_generated()
+                with self.namespace('.'.join([ns_name, 'Routes'])):
+                    self.emit('using sys = System;')
+                    self.emit('using io = System.IO;')
+                    self.emit('using col = System.Collections.Generic;')
+                    self.emit('using t = System.Threading.Tasks;')
+                    self.emit('using enc = {0}.Stone;'.format(self._namespace_name))
                     self.emit()
-                    with self.doc_comment():
-                        self.emit_summary('Gets the transport used for these routes')
-                    self.emit('internal enc.ITransport Transport { get; private set; }')
 
-                    for route in routes:
-                        self._generate_route(ns, route)
+                    with self.doc_comment():
+                        self.emit_summary('The routes for the <see cref="N:{0}.{1}"/> namespace'.format(
+                            self._namespace_name, ns_name))
+                    with self.class_(class_name, access='public'):
+                        with self.doc_comment():
+                            self.emit_ctor_summary(class_name)
+                            self.emit_xml('The transport to use', 'param', name='transport')
+                        with self.cs_block(before='internal {0}(enc.ITransport transport)'.format(
+                                class_name)):
+                            self.emit('this.Transport = transport;')
+
+                        self.emit()
+                        with self.doc_comment():
+                            self.emit_summary('Gets the transport used for these routes')
+                        self.emit('internal enc.ITransport Transport { get; private set; }')
+
+                        for route in routes:
+                            self._generate_route(ns, route)
 
     def _generate_route(self, ns, route):
         """
@@ -1829,7 +1869,7 @@ class _CSharpGenerator(CodeGenerator):
         arg_type = self._typename(route.arg_data_type, void='enc.Empty')
         arg_is_void = is_void_type(route.arg_data_type)
         arg_name = (self._arg_name(route.arg_data_type.name) if
-                is_user_defined_type(route.arg_data_type) else 'request')
+                    is_user_defined_type(route.arg_data_type) else 'request')
         result_type = self._typename(route.result_data_type, void='enc.Empty', is_response=True)
         result_is_void = is_void_type(route.result_data_type)
         error_type = self._typename(route.error_data_type, void='enc.Empty')
@@ -1857,7 +1897,8 @@ class _CSharpGenerator(CodeGenerator):
                 body_arg = 'io.Stream body = null'
             else:
                 body_arg = 'io.Stream body'
-            ctor_args.append(ConstructorArg('io.Stream', 'body', body_arg, '<param name="body">The document to upload</param>'))
+            ctor_args.append(ConstructorArg('io.Stream', 'body', body_arg,
+                                            '<param name="body">The document to upload</param>'))
        
         async_fn = 'public {0} {1}({2})'.format(task_type, async_name, ', '.join(route_args)) 
 
@@ -1875,11 +1916,11 @@ class _CSharpGenerator(CodeGenerator):
                 self.emit_xml('The content to upload.', 'param', name='body')
             if result_is_void:
                 self.emit_xml('The task that represents the asynchronous send operation.',
-                        'returns')
+                              'returns')
             else:
                 self.emit_xml('The task that represents the asynchronous send operation. '
-                        'The TResult parameter contains the response from the server.',
-                        'returns')
+                              'The TResult parameter contains the response from the server.',
+                              'returns')
             if not error_is_void:
                 self.emit_xml('Thrown if there is an error processing the request; '
                               'This will contain a <see cref="{0}"/>.'.format(error_type),
@@ -1911,9 +1952,9 @@ class _CSharpGenerator(CodeGenerator):
             if route_style == 'upload':
                 self.emit_xml('The content to upload.', 'param', name='body')
             self.emit_xml('The method to be called when the asynchronous send is completed.',
-                    'param', name='callback')
+                          'param', name='callback')
             self.emit_xml('A user provided object that distinguished this send from other send '
-                    'requests.', 'param', name='state')
+                          'requests.', 'param', name='state')
             self.emit_xml('An object that represents the asynchronous send request.', 'returns')
 
         self._generate_obsolete_attribute(route.deprecated, prefix='Begin')
@@ -1939,11 +1980,11 @@ class _CSharpGenerator(CodeGenerator):
                     self.emit_wrapped_text(arg.doc)
                 if result_is_void:
                     self.emit_xml('The task that represents the asynchronous send operation.',
-                            'returns')
+                                  'returns')
                 else:
                     self.emit_xml('The task that represents the asynchronous send operation. '
-                            'The TResult parameter contains the response from the server.',
-                            'returns')
+                                  'The TResult parameter contains the response from the server.',
+                                  'returns')
                 if not error_is_void:
                     self.emit_xml('Thrown if there is an error processing the request; '
                                   'This will contain a <see cref="{0}"/>.'.format(error_type),
@@ -1975,11 +2016,11 @@ class _CSharpGenerator(CodeGenerator):
                 for arg in ctor_args:
                     self.emit_wrapped_text(arg.doc)
                 self.emit_xml('The method to be called when the asynchronous send is completed.',
-                    'param', name='callback')
+                              'param', name='callback')
                 self.emit_xml('A user provided object that distinguished this send from other '
-                    'send requests.', 'param', name='callbackState')
+                              'send requests.', 'param', name='callbackState')
                 self.emit_xml('An object that represents the asynchronous send request.',
-                        'returns')
+                              'returns')
 
             if next((arg for arg in arg_list if '=' in arg), False):
                 arg_list.append('sys.AsyncCallback callback = null')
@@ -2011,7 +2052,7 @@ class _CSharpGenerator(CodeGenerator):
             self.emit_summary('Waits for the pending asynchronous send to the {0} route to complete'.format(
                     self._name_words(route.name)))
             self.emit_xml('The reference to the pending asynchronous send request', 'param',
-                    name='asyncResult')
+                          name='asyncResult')
             if not result_is_void:
                 self.emit_xml('The response to the send request', 'returns')
             if not error_is_void:
@@ -2031,16 +2072,15 @@ class _CSharpGenerator(CodeGenerator):
     
     def _generate_obsolete_attribute(self, deprecated, prefix='', suffix=''):
         """
-        Generate obsolete attribute for depreated route.
+        Generate obsolete attribute for deprecated route.
 
         Args:
             deprecated (stone.api.DeprecationInfo): The route which deprecates.
-            prefix (str): The prefix for the route function.
-            suffix (str): The suffix for the route function.
+            prefix (Union[str, unicode]): The prefix for the route function.
+            suffix (Union[str, unicode]): The suffix for the route function.
         """
         if not deprecated:
             return
 
-        self.cs_block
         self.emit('[sys.Obsolete("This function is deprecated, please use {0}{1}{2} instead.")]'
                   .format(prefix, self._public_name(deprecated.by.name), suffix))
