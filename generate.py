@@ -92,16 +92,17 @@ def main():
     shutil.copy('dropbox-sdk-dotnet/Dropbox.Api.sln', repo_path)
     shutil.copy('dropbox-sdk-dotnet/LICENSE', repo_path)
     shutil.copy('dropbox-sdk-dotnet/README.md', repo_path)
-
-    if verbose:
-        print('Removing examples and copying new ones')
-    try:
-        shutil.rmtree(os.path.join(repo_path, 'Examples'))
-    except OSError as e:
-        if e.errno != errno.ENOENT:
-            raise
-    shutil.copytree('dropbox-sdk-dotnet/Examples',
-                    os.path.join(repo_path, 'Examples'))
+    
+    for path in ('Examples', 'Dropbox.Api.Tests'):
+        if verbose:
+            print('Removing {} and copying new ones'.format(path))
+        try:
+            shutil.rmtree(os.path.join(repo_path, path))
+        except OSError as e:
+            if e.errno != errno.ENOENT:
+                raise
+        shutil.copytree('dropbox-sdk-dotnet/' + path,
+                        os.path.join(repo_path, path))
 
 if __name__ == '__main__':
     main()
