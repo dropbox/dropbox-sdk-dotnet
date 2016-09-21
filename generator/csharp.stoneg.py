@@ -30,6 +30,7 @@ _cmdline_parser.add_argument(
     help='Generate private build.',
 )
 
+
 class DropboxCSharpGenerator(_CSharpGenerator):
     DEFAULT_NAMESPACE = 'Dropbox.Api'
     DEFAULT_APP_NAME = 'Dropbox'
@@ -64,7 +65,8 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                 with self.xml_block('members'):
                     with self.xml_block('member', name='N:{0}'.format(self.DEFAULT_NAMESPACE)):
                         self.emit_summary('Contains the dropbox client - '
-                                '<see cref="T:{0}.{1}Client"/>.'.format(self.DEFAULT_NAMESPACE, self.DEFAULT_APP_NAME))
+                                          '<see cref="T:{0}.{1}Client"/>.'.format(self.DEFAULT_NAMESPACE,
+                                                                                  self.DEFAULT_APP_NAME))
                     for namespace in api.namespaces.itervalues():
                         ns_name = self._public_name(namespace.name)
                         with self.xml_block('member', name='N:{0}.{1}'.format(
@@ -76,7 +78,7 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                         with self.xml_block('member', name='N:{0}.{1}.Routes'.format(
                                 self.DEFAULT_NAMESPACE, ns_name)):
                             self.emit_summary('Contains the routes for the <see cref="N:{0}.{1}" /> '
-                                    'namespace.'.format(self.DEFAULT_NAMESPACE, ns_name))
+                                              'namespace.'.format(self.DEFAULT_NAMESPACE, ns_name))
 
     def _generate_csproj(self):
         """
@@ -119,7 +121,8 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                 self.emit()
 
                 with self.doc_comment():
-                    self.emit_summary('An HTTP exception that is caused by the server reporting an authentication problem.')
+                    self.emit_summary('An HTTP exception that is caused by the server '
+                                      'reporting an authentication problem.')
                 with self.class_('AuthException', access='public sealed partial',
                                  inherits=['StructuredException<{0}>'.format(auth_error)]):
                     with self.doc_comment():
@@ -130,6 +133,7 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                     with self.doc_comment():
                         self.emit_summary('Decode from given json.')
                     with self.cs_block(before='internal static AuthException Decode(string json)'):
-                        self.emit('return StructuredException<{0}>.Decode<AuthException>(json, {0}.Decoder);'.format(auth_error))
+                        self.emit('return StructuredException<{0}>.Decode<AuthException>(json, {0}.Decoder);'
+                                  .format(auth_error))
 
 del _CSharpGenerator

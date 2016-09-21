@@ -335,15 +335,15 @@ CSPROJ_PRIVATE_BLOCK = r"""  <PropertyGroup>
   </PropertyGroup>
 """
 
-def _include_items(buffer, item_type, paths):
-    buffer.write('  <ItemGroup>\n')
+
+def _include_items(buf, item_type, paths):
+    buf.write('  <ItemGroup>\n')
     for path in paths:
-    	buffer.write('    <{0} Include="{1}" />\n'.format(item_type, path))
-    buffer.write('  </ItemGroup>\n')
+        buf.write('    <{0} Include="{1}" />\n'.format(item_type, path))
+    buf.write('  </ItemGroup>\n')
+
 
 def make_csproj_file(files, mode, is_private=False):
-    compile = []
-    compile.extend(COMPILE_INCLUDES)
     mode = mode.lower()
 
     if mode == 'doc':
@@ -363,16 +363,16 @@ def make_csproj_file(files, mode, is_private=False):
         end = CSPROJ_END_BLOCK
         none_includes = NONE_INCLUDES
 
-    buffer = StringIO()
-    buffer.write(start)
+    buf = StringIO()
+    buf.write(start)
     
     if is_private:
-        buffer.write(CSPROJ_PRIVATE_BLOCK)
+        buf.write(CSPROJ_PRIVATE_BLOCK)
 
-    _include_items(buffer, 'Compile', COMPILE_INCLUDES)
-    _include_items(buffer, 'Compile', sorted(files))
-    _include_items(buffer, 'None', none_includes)
+    _include_items(buf, 'Compile', COMPILE_INCLUDES)
+    _include_items(buf, 'Compile', sorted(files))
+    _include_items(buf, 'None', none_includes)
 
-    buffer.write(end)
+    buf.write(end)
 
-    return buffer.getvalue()
+    return buf.getvalue()
