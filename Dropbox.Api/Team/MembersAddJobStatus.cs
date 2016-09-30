@@ -182,8 +182,8 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>The asynchronous job has finished. For each member that was specified in the
         /// parameter <see cref="MembersAddArg" /> that was provided to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersAddAsync" />, a corresponding item
-        /// is returned in this list.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" />, a corresponding
+        /// item is returned in this list.</para>
         /// </summary>
         public sealed class Complete : MembersAddJobStatus
         {

@@ -12,7 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersContinueAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync"
+    /// />.</para>
     /// </summary>
     public class ListFileMembersContinueArg
     {
@@ -33,9 +34,10 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersAsync" />, <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersContinueAsync" />, or
-        /// <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersBatchAsync"
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync" />, <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync"
+        /// />, or <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync"
         /// />.</param>
         public ListFileMembersContinueArg(string cursor)
         {
@@ -59,9 +61,10 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersAsync" />, <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersContinueAsync" />, or
-        /// <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersBatchAsync"
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync" />, <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync"
+        /// />, or <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync"
         /// />.</para>
         /// </summary>
         public string Cursor { get; protected set; }

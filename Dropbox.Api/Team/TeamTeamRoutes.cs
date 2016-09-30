@@ -13,13 +13,13 @@ namespace Dropbox.Api.Team.Routes
     /// <summary>
     /// <para>The routes for the <see cref="N:Dropbox.Api.Team"/> namespace</para>
     /// </summary>
-    public class TeamRoutes
+    public class TeamTeamRoutes
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="TeamRoutes" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="TeamTeamRoutes" /> class.</para>
         /// </summary>
         /// <param name="transport">The transport to use</param>
-        internal TeamRoutes(enc.ITransport transport)
+        internal TeamTeamRoutes(enc.ITransport transport)
         {
             this.Transport = transport;
         }
@@ -264,7 +264,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.AlphaGroupsListAsync" />, use this to
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.AlphaGroupsListAsync" />, use this to
         /// paginate through all groups.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
@@ -297,7 +297,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.AlphaGroupsListAsync" />, use this to
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.AlphaGroupsListAsync" />, use this to
         /// paginate through all groups.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
@@ -621,7 +621,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>List all device sessions of a team.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> the
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> the
         /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
         /// sub list of team devices</param>
@@ -653,7 +653,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the devices list members devices route.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> the
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> the
         /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
         /// sub list of team devices</param>
@@ -740,8 +740,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>List all device sessions of a team.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListTeamDevicesAsync" /> the cursor
-        /// shouldn't be passed. Then, if the result of the call includes a cursor, the
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> the
+        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
         /// sub list of team devices</param>
         /// <param name="includeWebSessions">Whether to list web sessions of the team
@@ -773,8 +773,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the devices list team devices route.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListTeamDevicesAsync" /> the cursor
-        /// shouldn't be passed. Then, if the result of the call includes a cursor, the
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> the
+        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
         /// sub list of team devices</param>
         /// <param name="includeWebSessions">Whether to list web sessions of the team
@@ -1111,8 +1111,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Deletes a group.</para>
         /// <para>The group is deleted immediately. However the revoking of group-owned
         /// resources may take additional time. Use the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsJobStatusGetAsync" /> to determine
-        /// whether this process has completed.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
+        /// determine whether this process has completed.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="groupSelector">The request parameters</param>
@@ -1217,9 +1217,9 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsDeleteAsync" />, <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersAddAsync" /> , or <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersRemoveAsync" /> use this
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsDeleteAsync" />, <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync" /> , or <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync" /> use this
         /// method to poll the status of granting/revoking group members' access to group-owned
         /// resources.</para>
         /// <para>Permission : Team member management</para>
@@ -1253,9 +1253,9 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsDeleteAsync" />, <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersAddAsync" /> , or <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersRemoveAsync" /> use this
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsDeleteAsync" />, <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync" /> , or <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync" /> use this
         /// method to poll the status of granting/revoking group members' access to group-owned
         /// resources.</para>
         /// <para>Permission : Team member management</para>
@@ -1394,8 +1394,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsListAsync" />, use this to paginate
-        /// through all groups.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListAsync" />, use this to
+        /// paginate through all groups.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
         /// <param name="groupsListContinueArg">The request parameters</param>
@@ -1427,8 +1427,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsListAsync" />, use this to paginate
-        /// through all groups.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListAsync" />, use this to
+        /// paginate through all groups.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
@@ -1489,8 +1489,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Adds members to a group.</para>
         /// <para>The members are added immediately. However the granting of group-owned
         /// resources may take additional time. Use the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsJobStatusGetAsync" /> to determine
-        /// whether this process has completed.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
+        /// determine whether this process has completed.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="groupMembersAddArg">The request parameters</param>
@@ -1524,8 +1524,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Adds members to a group.</para>
         /// <para>The members are added immediately. However the granting of group-owned
         /// resources may take additional time. Use the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsJobStatusGetAsync" /> to determine
-        /// whether this process has completed.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
+        /// determine whether this process has completed.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="group">Group to which users will be added.</param>
@@ -1691,8 +1691,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersListAsync" />, use this to
-        /// paginate through all members of the group.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersListAsync" />, use this
+        /// to paginate through all members of the group.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
         /// <param name="groupsMembersListContinueArg">The request parameters</param>
@@ -1724,8 +1724,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersListAsync" />, use this to
-        /// paginate through all members of the group.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersListAsync" />, use this
+        /// to paginate through all members of the group.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
@@ -1786,8 +1786,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Removes members from a group.</para>
         /// <para>The members are removed immediately. However the revoking of group-owned
         /// resources may take additional time. Use the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsJobStatusGetAsync" /> to determine
-        /// whether this process has completed.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
+        /// determine whether this process has completed.</para>
         /// <para>This method permits removing the only owner of a group, even in cases where
         /// this is not possible via the web client.</para>
         /// <para>Permission : Team member management</para>
@@ -1823,8 +1823,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Removes members from a group.</para>
         /// <para>The members are removed immediately. However the revoking of group-owned
         /// resources may take additional time. Use the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsJobStatusGetAsync" /> to determine
-        /// whether this process has completed.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
+        /// determine whether this process has completed.</para>
         /// <para>This method permits removing the only owner of a group, even in cases where
         /// this is not possible via the web client.</para>
         /// <para>Permission : Team member management</para>
@@ -2259,10 +2259,10 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Note, this endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListMembersLinkedAppsAsync" />
-        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
-        /// the following requests should include the received cursors in order to receive the
-        /// next sub list of the team applications</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
+        /// /> the cursor shouldn't be passed. Then, if the result of the call includes a
+        /// cursor, the following requests should include the received cursors in order to
+        /// receive the next sub list of the team applications</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2280,10 +2280,10 @@ namespace Dropbox.Api.Team.Routes
         /// route.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListMembersLinkedAppsAsync" />
-        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
-        /// the following requests should include the received cursors in order to receive the
-        /// next sub list of the team applications</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
+        /// /> the cursor shouldn't be passed. Then, if the result of the call includes a
+        /// cursor, the following requests should include the received cursors in order to
+        /// receive the next sub list of the team applications</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2358,10 +2358,10 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> the
-        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
-        /// following requests should include the received cursors in order to receive the next
-        /// sub list of the team applications</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
+        /// the following requests should include the received cursors in order to receive the
+        /// next sub list of the team applications</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2380,10 +2380,10 @@ namespace Dropbox.Api.Team.Routes
         /// route.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> the
-        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
-        /// following requests should include the received cursors in order to receive the next
-        /// sub list of the team applications</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
+        /// the following requests should include the received cursors in order to receive the
+        /// next sub list of the team applications</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2712,8 +2712,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersAddAsync" /> , use this to poll the
-        /// status of the asynchronous request.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> , use this to poll
+        /// the status of the asynchronous request.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
@@ -2745,8 +2745,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersAddAsync" /> , use this to poll the
-        /// status of the asynchronous request.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> , use this to poll
+        /// the status of the asynchronous request.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
@@ -2991,8 +2991,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListAsync" />, use this to paginate
-        /// through all team members.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListAsync" />, use this to
+        /// paginate through all team members.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
         /// <param name="membersListContinueArg">The request parameters</param>
@@ -3024,8 +3024,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListAsync" />, use this to paginate
-        /// through all team members.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListAsync" />, use this to
+        /// paginate through all team members.</para>
         /// <para>Permission : Team information</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
@@ -3174,13 +3174,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Exactly one of team_member_id, email, or external_id must be provided to
         /// identify the user account.</para>
         /// <para>This is not a deactivation where the account can be re-activated again.
-        /// Calling <see cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersAddAsync" /> with the
-        /// removed user's email address will create a new account with a new team_member_id
-        /// that will not have access to any content that was shared with the initial
-        /// account.</para>
+        /// Calling <see cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> with
+        /// the removed user's email address will create a new account with a new
+        /// team_member_id that will not have access to any content that was shared with the
+        /// initial account.</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersRemoveJobStatusGetAsync" />.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
+        /// />.</para>
         /// </summary>
         /// <param name="membersRemoveArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3215,13 +3216,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Exactly one of team_member_id, email, or external_id must be provided to
         /// identify the user account.</para>
         /// <para>This is not a deactivation where the account can be re-activated again.
-        /// Calling <see cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersAddAsync" /> with the
-        /// removed user's email address will create a new account with a new team_member_id
-        /// that will not have access to any content that was shared with the initial
-        /// account.</para>
+        /// Calling <see cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> with
+        /// the removed user's email address will create a new account with a new
+        /// team_member_id that will not have access to any content that was shared with the
+        /// initial account.</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersRemoveJobStatusGetAsync" />.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
+        /// />.</para>
         /// </summary>
         /// <param name="user">Identity of user to remove/suspend.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
@@ -3313,8 +3315,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersRemoveAsync" /> , use this to poll
-        /// the status of the asynchronous request.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveAsync" /> , use this to
+        /// poll the status of the asynchronous request.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
@@ -3347,8 +3349,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersRemoveAsync" /> , use this to poll
-        /// the status of the asynchronous request.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveAsync" /> , use this to
+        /// poll the status of the asynchronous request.</para>
         /// <para>Permission : Team member management</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
@@ -4038,7 +4040,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Get the property template identifiers for a team. To get the schema of each
         /// template use <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateGetAsync" />.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateGetAsync" />.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -4122,7 +4124,8 @@ namespace Dropbox.Api.Team.Routes
         /// template description and add optional properties to templates.</para>
         /// </summary>
         /// <param name="templateId">An identifier for property template added by <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateAddAsync"
+        /// />.</param>
         /// <param name="name">A display name for the property template. Property template
         /// names can be up to 256 bytes.</param>
         /// <param name="description">Description for new property template. Property template
@@ -4151,7 +4154,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the properties template update route.</para>
         /// </summary>
         /// <param name="templateId">An identifier for property template added by <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateAddAsync"
+        /// />.</param>
         /// <param name="name">A display name for the property template. Property template
         /// names can be up to 256 bytes.</param>
         /// <param name="description">Description for new property template. Property template

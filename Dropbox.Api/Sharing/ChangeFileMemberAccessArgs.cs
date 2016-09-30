@@ -12,7 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ChangeFileMemberAccessAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ChangeFileMemberAccessAsync"
+    /// />.</para>
     /// </summary>
     public class ChangeFileMemberAccessArgs
     {

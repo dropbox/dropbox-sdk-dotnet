@@ -12,7 +12,7 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Error result for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.GetFileMetadataAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataAsync" />.</para>
     /// </summary>
     public class GetFileMetadataError
     {

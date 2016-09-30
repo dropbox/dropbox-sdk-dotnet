@@ -12,7 +12,8 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Information returned by <see
-    /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />.</para>
+    /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync"
+    /// />.</para>
     /// </summary>
     public class ListTeamAppsResult
     {
@@ -34,11 +35,12 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="apps">The linked applications of each member of the team</param>
         /// <param name="hasMore">If true, then there are more apps available. Pass the cursor
-        /// to <see cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync"
-        /// /> to retrieve the rest.</param>
+        /// to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// to retrieve the rest.</param>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> to
-        /// receive the next sub list of team's applications.</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// to receive the next sub list of team's applications.</param>
         public ListTeamAppsResult(col.IEnumerable<MemberLinkedApps> apps,
                                   bool hasMore,
                                   string cursor = null)
@@ -72,15 +74,15 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>If true, then there are more apps available. Pass the cursor to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> to
-        /// retrieve the rest.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// to retrieve the rest.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> to
-        /// receive the next sub list of team's applications.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// to receive the next sub list of team's applications.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

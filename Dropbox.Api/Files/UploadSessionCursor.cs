@@ -34,7 +34,8 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="sessionId">The upload session ID (returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// />).</param>
         /// <param name="offset">The amount of data that has been uploaded so far. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
@@ -62,7 +63,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The upload session ID (returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />).</para>
         /// </summary>
         public string SessionId { get; protected set; }
 

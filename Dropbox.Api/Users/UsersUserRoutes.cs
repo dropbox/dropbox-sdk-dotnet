@@ -13,13 +13,14 @@ namespace Dropbox.Api.Users.Routes
     /// <summary>
     /// <para>The routes for the <see cref="N:Dropbox.Api.Users"/> namespace</para>
     /// </summary>
-    public class UsersRoutes
+    public class UsersUserRoutes
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="UsersRoutes" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="UsersUserRoutes" />
+        /// class.</para>
         /// </summary>
         /// <param name="transport">The transport to use</param>
-        internal UsersRoutes(enc.ITransport transport)
+        internal UsersUserRoutes(enc.ITransport transport)
         {
             this.Transport = transport;
         }

@@ -12,7 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersBatchAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync"
+    /// />.</para>
     /// </summary>
     public class ListFileMembersBatchArg
     {

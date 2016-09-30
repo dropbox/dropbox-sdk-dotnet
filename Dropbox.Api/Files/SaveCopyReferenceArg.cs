@@ -32,7 +32,7 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="copyReference">A copy reference returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceGetAsync" />.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync" />.</param>
         /// <param name="path">Path in the user's Dropbox that is the destination.</param>
         public SaveCopyReferenceArg(string copyReference,
                                     string path)
@@ -67,7 +67,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>A copy reference returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceGetAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync" />.</para>
         /// </summary>
         public string CopyReference { get; protected set; }
 

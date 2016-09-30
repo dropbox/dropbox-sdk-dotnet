@@ -12,7 +12,7 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RemoveFileMember2Async" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.RemoveFileMember2Async" />.</para>
     /// </summary>
     public class RemoveFileMemberArg
     {

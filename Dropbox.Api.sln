@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api", "Dropbox.Api\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBusinessDashboard", "Examples\SimpleBusinessDashboard\SimpleBusinessDashboard.csproj", "{B762DE35-E606-4B57-8860-1A662DF5624C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Tests", "Dropbox.Api.Tests\Dropbox.Api.Tests.csproj", "{0FDF769B-43F8-4907-98D5-A413BD9DE62D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Examples\UniversalDemo\UniversalDemo\UniversalDemo.Shared\UniversalDemo.Shared.projitems*{51d9899c-31d6-4c22-b894-e9498cb90577}*SharedItemsImports = 4
@@ -141,6 +143,16 @@ Global
 		{B762DE35-E606-4B57-8860-1A662DF5624C}.Release|ARM.ActiveCfg = Release|Any CPU
 		{B762DE35-E606-4B57-8860-1A662DF5624C}.Release|x64.ActiveCfg = Release|Any CPU
 		{B762DE35-E606-4B57-8860-1A662DF5624C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Release|x64.ActiveCfg = Release|Any CPU
+		{0FDF769B-43F8-4907-98D5-A413BD9DE62D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

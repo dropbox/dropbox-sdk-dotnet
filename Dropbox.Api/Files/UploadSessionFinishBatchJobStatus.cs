@@ -152,8 +152,8 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchAsync" /> has
-        /// finished.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchAsync" />
+        /// has finished.</para>
         /// </summary>
         public sealed class Complete : UploadSessionFinishBatchJobStatus
         {

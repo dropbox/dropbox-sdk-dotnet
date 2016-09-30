@@ -14,7 +14,7 @@ namespace Dropbox.Api
         /// <summary>
         /// <para>Gets the Team routes.</para>
         /// </summary>
-        public TeamRoutes Team { get; private set; }
+        public TeamTeamRoutes Team { get; private set; }
 
         /// <summary>
         /// <para>Initializes the routes.</para>
@@ -22,7 +22,7 @@ namespace Dropbox.Api
         /// <returns>The transport.</returns>
         private void InitializeRoutes(ITransport transport)
         {
-            this.Team = new TeamRoutes(transport);
+            this.Team = new TeamTeamRoutes(transport);
         }
     }
 }

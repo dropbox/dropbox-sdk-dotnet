@@ -12,7 +12,8 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Arguments for <see
-    /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />.</para>
+    /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync"
+    /// />.</para>
     /// </summary>
     public class ListTeamAppsArg
     {
@@ -33,10 +34,10 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> the
-        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
-        /// following requests should include the received cursors in order to receive the next
-        /// sub list of the team applications</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
+        /// the following requests should include the received cursors in order to receive the
+        /// next sub list of the team applications</param>
         public ListTeamAppsArg(string cursor = null)
         {
             this.Cursor = cursor;
@@ -54,10 +55,10 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /> the
-        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
-        /// following requests should include the received cursors in order to receive the next
-        /// sub list of the team applications</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
+        /// the following requests should include the received cursors in order to receive the
+        /// next sub list of the team applications</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

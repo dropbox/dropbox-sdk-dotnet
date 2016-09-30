@@ -32,12 +32,13 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="path">See <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />
         /// description.</param>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />.</param>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync"
+        /// />.</param>
         /// <param name="directOnly">See <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />
         /// description.</param>
         public ListSharedLinksArg(string path = null,
                                   string cursor = null,
@@ -67,20 +68,22 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>See <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync"
-        /// /> description.</para>
+        /// <para>See <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />
+        /// description.</para>
         /// </summary>
         public string Path { get; protected set; }
 
         /// <summary>
         /// <para>The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" />.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
         /// <summary>
-        /// <para>See <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync"
-        /// /> description.</para>
+        /// <para>See <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />
+        /// description.</para>
         /// </summary>
         public bool? DirectOnly { get; protected set; }
 

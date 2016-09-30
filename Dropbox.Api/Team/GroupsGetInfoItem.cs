@@ -151,9 +151,9 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>An ID that was provided as a parameter to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsGetInfoAsync" />, and did not match
-        /// a corresponding group. The ID can be a group ID, or an external ID, depending on
-        /// how the method was called.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsGetInfoAsync" />, and did not
+        /// match a corresponding group. The ID can be a group ID, or an external ID, depending
+        /// on how the method was called.</para>
         /// </summary>
         public sealed class IdNotFound : GroupsGetInfoItem
         {

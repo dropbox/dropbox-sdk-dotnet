@@ -13,13 +13,14 @@ namespace Dropbox.Api.Files.Routes
     /// <summary>
     /// <para>The routes for the <see cref="N:Dropbox.Api.Files"/> namespace</para>
     /// </summary>
-    public class FilesRoutes
+    public class FilesUserRoutes
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="FilesRoutes" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="FilesUserRoutes" />
+        /// class.</para>
         /// </summary>
         /// <param name="transport">The transport to use</param>
-        internal FilesRoutes(enc.ITransport transport)
+        internal FilesUserRoutes(enc.ITransport transport)
         {
             this.Transport = transport;
         }
@@ -161,10 +162,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Create a new file with the contents provided in the request. Note that this
         /// endpoint is part of the properties API alpha and is slightly different from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</para>
         /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
         /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="commitInfoWithProperties">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -198,10 +199,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Create a new file with the contents provided in the request. Note that this
         /// endpoint is part of the properties API alpha and is slightly different from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</para>
         /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
         /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
         /// <param name="mode">Selects what to do if the file already exists.</param>
@@ -402,7 +403,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a copy reference to a file or folder. This reference string can be used
         /// to save that file or folder to another user's Dropbox by passing it to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceSaveAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceSaveAsync" />.</para>
         /// </summary>
         /// <param name="getCopyReferenceArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -434,7 +435,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a copy reference to a file or folder. This reference string can be used
         /// to save that file or folder to another user's Dropbox by passing it to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceSaveAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceSaveAsync" />.</para>
         /// </summary>
         /// <param name="path">The path to the file or folder you want to get a copy reference
         /// to.</param>
@@ -492,8 +493,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Save a copy reference returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceGetAsync" /> to the user's
-        /// Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync" /> to the
+        /// user's Dropbox.</para>
         /// </summary>
         /// <param name="saveCopyReferenceArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -524,11 +525,11 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Save a copy reference returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceGetAsync" /> to the user's
-        /// Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync" /> to the
+        /// user's Dropbox.</para>
         /// </summary>
         /// <param name="copyReference">A copy reference returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceGetAsync" />.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync" />.</param>
         /// <param name="path">Path in the user's Dropbox that is the destination.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -548,7 +549,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the copy reference save route.</para>
         /// </summary>
         /// <param name="copyReference">A copy reference returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.CopyReferenceGetAsync" />.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync" />.</param>
         /// <param name="path">Path in the user's Dropbox that is the destination.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -1389,7 +1390,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, use this to
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
         /// paginate through all files and retrieve updates to the folder.</para>
         /// </summary>
         /// <param name="listFolderContinueArg">The request parameters</param>
@@ -1421,12 +1422,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, use this to
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
         /// paginate through all files and retrieve updates to the folder.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1443,8 +1444,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder continue route.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1482,8 +1483,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderGetLatestCursorAsync" />
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync" />
         /// doesn't return any entries. This endpoint is for app which only needs to know about
         /// new files and modifications and doesn't need to know about files that already exist
         /// in Dropbox.</para>
@@ -1518,8 +1519,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderGetLatestCursorAsync" />
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync" />
         /// doesn't return any entries. This endpoint is for app which only needs to know about
         /// new files and modifications and doesn't need to know about files that already exist
         /// in Dropbox.</para>
@@ -1617,8 +1618,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />, this
-        /// call gives you a low-latency way to monitor an account for file changes. The
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />,
+        /// this call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
         /// endpoint is useful mostly for client-side apps. If you're looking for server-side
         /// notifications, check out our <a
@@ -1654,8 +1655,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />, this
-        /// call gives you a low-latency way to monitor an account for file changes. The
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />,
+        /// this call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
         /// endpoint is useful mostly for client-side apps. If you're looking for server-side
         /// notifications, check out our <a
@@ -1663,8 +1664,8 @@ namespace Dropbox.Api.Files.Routes
         /// documentation</a>.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. Cursors
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. Cursors
         /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
         /// /> to <c>true</c> are not supported.</param>
         /// <param name="timeout">A timeout in seconds. The request will block for at most this
@@ -1689,8 +1690,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. Cursors
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. Cursors
         /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
         /// /> to <c>true</c> are not supported.</param>
         /// <param name="timeout">A timeout in seconds. The request will block for at most this
@@ -2181,8 +2182,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Remove all custom properties from a specified template associated with a
         /// file. To remove specific property key value pairs, see <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.PropertiesUpdateAsync" />. To update a
-        /// property template, see properties/template/update. Property templates can't be
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.PropertiesUpdateAsync" />. To update
+        /// a property template, see properties/template/update. Property templates can't be
         /// removed once created.</para>
         /// </summary>
         /// <param name="removePropertiesArg">The request parameters</param>
@@ -2214,8 +2215,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Remove all custom properties from a specified template associated with a
         /// file. To remove specific property key value pairs, see <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.PropertiesUpdateAsync" />. To update a
-        /// property template, see properties/template/update. Property templates can't be
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.PropertiesUpdateAsync" />. To update
+        /// a property template, see properties/template/update. Property templates can't be
         /// removed once created.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
@@ -2364,7 +2365,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get the property template identifiers for a user. To get the schema of each
         /// template use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.PropertiesTemplateGetAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.PropertiesTemplateGetAsync"
+        /// />.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -2686,7 +2688,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Check the status of a <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SaveUrlAsync" /> job.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SaveUrlAsync" /> job.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2717,7 +2719,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Check the status of a <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SaveUrlAsync" /> job.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SaveUrlAsync" /> job.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -2899,7 +2901,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Create a new file with the contents provided in the request.</para>
         /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
         /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="commitInfo">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -2933,7 +2935,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Create a new file with the contents provided in the request.</para>
         /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
         /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
         /// <param name="mode">Selects what to do if the file already exists.</param>
@@ -3070,7 +3072,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="sessionId">The upload session ID (returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// />).</param>
         /// <param name="offset">The amount of data that has been uploaded so far. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
@@ -3094,7 +3097,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the upload session append route.</para>
         /// </summary>
         /// <param name="sessionId">The upload session ID (returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" />).</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// />).</param>
         /// <param name="offset">The amount of data that has been uploaded so far. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
@@ -3177,8 +3181,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
-        /// with the current session.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// anymore with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3200,8 +3204,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
-        /// with the current session.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// anymore with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -3343,21 +3347,21 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>This route helps you commit many files at once into a user's Dropbox. Use
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> and
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to
-        /// upload file contents. We recommend uploading many files in parallel to increase
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// to upload file contents. We recommend uploading many files in parallel to increase
         /// throughput. Once the file contents have been uploaded, rather than calling <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />, use this
-        /// route to finish all your upload sessions in a single request.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
+        /// this route to finish all your upload sessions in a single request.</para>
         /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for last
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" />
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// call.</para>
         /// <para>This route will return job_id immediately and do the async commit job in
         /// background. We have another route <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchCheckAsync" />
-        /// to check the job status.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
+        /// /> to check the job status.</para>
         /// <para>For the same account, this route should be executed serially. That means you
         /// should not start next job before current job finishes. Also we only allow up to
         /// 1000 entries in a single request</para>
@@ -3388,21 +3392,21 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>This route helps you commit many files at once into a user's Dropbox. Use
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> and
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to
-        /// upload file contents. We recommend uploading many files in parallel to increase
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// to upload file contents. We recommend uploading many files in parallel to increase
         /// throughput. Once the file contents have been uploaded, rather than calling <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" />, use this
-        /// route to finish all your upload sessions in a single request.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
+        /// this route to finish all your upload sessions in a single request.</para>
         /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for last
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionStartAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" />
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// call.</para>
         /// <para>This route will return job_id immediately and do the async commit job in
         /// background. We have another route <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchCheckAsync" />
-        /// to check the job status.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
+        /// /> to check the job status.</para>
         /// <para>For the same account, this route should be executed serially. That means you
         /// should not start next job before current job finishes. Also we only allow up to
         /// 1000 entries in a single request</para>
@@ -3455,8 +3459,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Returns the status of an asynchronous job for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchAsync" />. If
-        /// success, it returns list of result for each entry</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchAsync" />.
+        /// If success, it returns list of result for each entry</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3488,8 +3492,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Returns the status of an asynchronous job for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishBatchAsync" />. If
-        /// success, it returns list of result for each entry</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchAsync" />.
+        /// If success, it returns list of result for each entry</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -3549,10 +3553,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Upload sessions allow you to upload a single file using multiple requests.
         /// This call starts a new upload session with the given data.  You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to add
-        /// more data and <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" /> to save all
-        /// the data to a file in Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> to
+        /// add more data and <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
+        /// all the data to a file in Dropbox.</para>
         /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="uploadSessionStartArg">The request parameters</param>
@@ -3584,16 +3588,16 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Upload sessions allow you to upload a single file using multiple requests.
         /// This call starts a new upload session with the given data.  You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> to add
-        /// more data and <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionFinishAsync" /> to save all
-        /// the data to a file in Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> to
+        /// add more data and <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
+        /// all the data to a file in Dropbox.</para>
         /// <para>A single request should not upload more than 150 MB of file contents.</para>
         /// </summary>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
-        /// with the current session.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// anymore with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -3610,8 +3614,8 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
-        /// with the current session.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// anymore with the current session.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>

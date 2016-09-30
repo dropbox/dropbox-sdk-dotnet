@@ -32,7 +32,8 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="templateId">An identifier for property template added by <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateAddAsync"
+        /// />.</param>
         /// <param name="name">A display name for the property template. Property template
         /// names can be up to 256 bytes.</param>
         /// <param name="description">Description for new property template. Property template
@@ -77,7 +78,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>An identifier for property template added by <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.PropertiesTemplateAddAsync" />.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateAddAsync" />.</para>
         /// </summary>
         public string TemplateId { get; protected set; }
 

@@ -34,8 +34,8 @@ namespace Dropbox.Api.Files
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async" /> anymore
-        /// with the current session.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// anymore with the current session.</param>
         public UploadSessionAppendArg(UploadSessionCursor cursor,
                                       bool close = false)
         {
@@ -66,8 +66,9 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>If true, the current session will be closed, at which point you won't be able
-        /// to call <see cref="Dropbox.Api.Files.Routes.FilesRoutes.UploadSessionAppendV2Async"
-        /// /> anymore with the current session.</para>
+        /// to call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// anymore with the current session.</para>
         /// </summary>
         public bool Close { get; protected set; }
 

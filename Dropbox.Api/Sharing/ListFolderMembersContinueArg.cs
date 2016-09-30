@@ -32,8 +32,9 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersAsync" /> or <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersContinueAsync"
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersAsync" /> or
+        /// <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync"
         /// />.</param>
         public ListFolderMembersContinueArg(string cursor)
         {
@@ -57,8 +58,9 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersAsync" /> or <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersContinueAsync"
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersAsync" /> or
+        /// <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync"
         /// />.</para>
         /// </summary>
         public string Cursor { get; protected set; }

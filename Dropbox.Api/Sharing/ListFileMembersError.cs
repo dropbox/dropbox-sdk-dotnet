@@ -12,7 +12,7 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Error for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync" />.</para>
     /// </summary>
     public class ListFileMembersError
     {

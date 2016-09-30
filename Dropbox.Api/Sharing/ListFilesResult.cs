@@ -12,7 +12,7 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Success results for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListReceivedFilesAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesAsync" />.</para>
     /// </summary>
     public class ListFilesResult
     {

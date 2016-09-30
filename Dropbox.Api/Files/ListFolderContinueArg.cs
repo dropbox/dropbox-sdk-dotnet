@@ -32,8 +32,8 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         public ListFolderContinueArg(string cursor)
         {
             if (cursor == null)
@@ -60,8 +60,8 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

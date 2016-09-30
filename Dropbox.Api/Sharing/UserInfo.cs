@@ -12,8 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Basic information about a user. Use <see
-    /// cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountAsync" /> and <see
-    /// cref="Dropbox.Api.Users.Routes.UsersRoutes.GetAccountBatchAsync" /> to obtain more
+    /// cref="Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync" /> and <see
+    /// cref="Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync" /> to obtain more
     /// detailed information.</para>
     /// </summary>
     /// <seealso cref="UserMembershipInfo" />

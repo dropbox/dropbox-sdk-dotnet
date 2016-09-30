@@ -11,9 +11,10 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Result for <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersAsync"
-    /// /> or <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersAsync"
-    /// />, depending on which endpoint was requested.</para>
+    /// <para>Result for <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFoldersAsync" /> or <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListMountableFoldersAsync" />,
+    /// depending on which endpoint was requested.</para>
     /// <para>Unmounted shared folders can be identified by the absence of <see
     /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.PathLower" />.</para>
     /// </summary>
@@ -39,9 +40,9 @@ namespace Dropbox.Api.Sharing
         /// to.</param>
         /// <param name="cursor">Present if there are additional shared folders that have not
         /// been returned yet. Pass the cursor into the corresponding continue endpoint (either
-        /// <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> or
-        /// <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersContinueAsync"
+        /// <see cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFoldersContinueAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListMountableFoldersContinueAsync"
         /// />) to list additional folders.</param>
         public ListFoldersResult(col.IEnumerable<SharedFolderMetadata> entries,
                                  string cursor = null)
@@ -75,8 +76,9 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Present if there are additional shared folders that have not been returned
         /// yet. Pass the cursor into the corresponding continue endpoint (either <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFoldersContinueAsync" /> or <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListMountableFoldersContinueAsync"
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFoldersContinueAsync" /> or
+        /// <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListMountableFoldersContinueAsync"
         /// />) to list additional folders.</para>
         /// </summary>
         public string Cursor { get; protected set; }

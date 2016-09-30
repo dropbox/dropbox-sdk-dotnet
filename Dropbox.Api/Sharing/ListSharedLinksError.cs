@@ -275,8 +275,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>Indicates that the cursor has been invalidated. Call <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> to obtain a
-        /// new cursor.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
+        /// obtain a new cursor.</para>
         /// </summary>
         public sealed class Reset : ListSharedLinksError
         {

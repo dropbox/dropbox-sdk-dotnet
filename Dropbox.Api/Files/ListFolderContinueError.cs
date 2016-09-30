@@ -276,7 +276,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Indicates that the cursor has been invalidated. Call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> to obtain a new
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> to obtain a new
         /// cursor.</para>
         /// </summary>
         public sealed class Reset : ListFolderContinueError

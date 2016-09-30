@@ -41,8 +41,8 @@ namespace Dropbox.Api.Files
         /// rare instances the casing will not correctly match the user's filesystem, but this
         /// behavior will match the path provided in the Core API v1. Changes to the casing of
         /// paths won't be returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. This field
-        /// will be null if the file or folder is not mounted.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
+        /// field will be null if the file or folder is not mounted.</param>
         /// <param name="parentSharedFolderId">Deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>

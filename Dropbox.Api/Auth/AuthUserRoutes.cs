@@ -13,13 +13,13 @@ namespace Dropbox.Api.Auth.Routes
     /// <summary>
     /// <para>The routes for the <see cref="N:Dropbox.Api.Auth"/> namespace</para>
     /// </summary>
-    public class AuthRoutes
+    public class AuthUserRoutes
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="AuthRoutes" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="AuthUserRoutes" /> class.</para>
         /// </summary>
         /// <param name="transport">The transport to use</param>
-        internal AuthRoutes(enc.ITransport transport)
+        internal AuthUserRoutes(enc.ITransport transport)
         {
             this.Transport = transport;
         }

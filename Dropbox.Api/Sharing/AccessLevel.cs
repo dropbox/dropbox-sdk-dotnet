@@ -239,7 +239,8 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The collaborator is the owner of the shared folder. Owners can view and edit
         /// the shared folder as well as set the folder's policies using <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.UpdateFolderPolicyAsync" />.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.UpdateFolderPolicyAsync"
+        /// />.</para>
         /// </summary>
         public sealed class Owner : AccessLevel
         {

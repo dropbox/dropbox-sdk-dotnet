@@ -32,7 +32,7 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="path">See <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.GetSharedLinksAsync" />
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync" />
         /// description.</param>
         public GetSharedLinksArg(string path = null)
         {
@@ -50,8 +50,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>See <see cref="Dropbox.Api.Sharing.Routes.SharingRoutes.GetSharedLinksAsync"
-        /// /> description.</para>
+        /// <para>See <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync" />
+        /// description.</para>
         /// </summary>
         public string Path { get; protected set; }
 

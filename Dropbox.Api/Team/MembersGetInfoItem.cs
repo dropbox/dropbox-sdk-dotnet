@@ -12,7 +12,7 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Describes a result obtained for a single user whose id was specified in the
-    /// parameter of <see cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersGetInfoAsync"
+    /// parameter of <see cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync"
     /// />.</para>
     /// </summary>
     public class MembersGetInfoItem
@@ -153,9 +153,9 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>An ID that was provided as a parameter to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersGetInfoAsync" />, and did not match
-        /// a corresponding user. This might be a team_member_id, an email, or an external ID,
-        /// depending on how the method was called.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync" />, and did not
+        /// match a corresponding user. This might be a team_member_id, an email, or an
+        /// external ID, depending on how the method was called.</para>
         /// </summary>
         public sealed class IdNotFound : MembersGetInfoItem
         {

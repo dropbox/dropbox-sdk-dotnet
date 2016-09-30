@@ -36,8 +36,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="invitees">The list of invitees to the shared folder.</param>
         /// <param name="cursor">Present if there are additional shared folder members that
         /// have not been returned yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersContinueAsync" />
-        /// to list additional members.</param>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync"
+        /// /> to list additional members.</param>
         public SharedFolderMembers(col.IEnumerable<UserMembershipInfo> users,
                                    col.IEnumerable<GroupMembershipInfo> groups,
                                    col.IEnumerable<InviteeMembershipInfo> invitees,
@@ -98,8 +98,8 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Present if there are additional shared folder members that have not been
         /// returned yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFolderMembersContinueAsync" />
-        /// to list additional members.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync"
+        /// /> to list additional members.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

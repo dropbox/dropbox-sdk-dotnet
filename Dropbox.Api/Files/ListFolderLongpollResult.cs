@@ -32,10 +32,11 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="changes">Indicates whether new changes are available. If true, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
         /// retrieve the changes.</param>
         /// <param name="backoff">If present, backoff for at least this many seconds before
-        /// calling <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderLongpollAsync" />
+        /// calling <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderLongpollAsync" />
         /// again.</param>
         public ListFolderLongpollResult(bool changes,
                                         ulong? backoff = null)
@@ -56,14 +57,14 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Indicates whether new changes are available. If true, call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to retrieve
-        /// the changes.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
+        /// retrieve the changes.</para>
         /// </summary>
         public bool Changes { get; protected set; }
 
         /// <summary>
         /// <para>If present, backoff for at least this many seconds before calling <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderLongpollAsync" />
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderLongpollAsync" />
         /// again.</para>
         /// </summary>
         public ulong? Backoff { get; protected set; }

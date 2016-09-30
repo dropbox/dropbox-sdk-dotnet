@@ -33,10 +33,10 @@ namespace Dropbox.Api.Files
         /// <param name="matches">A list (possibly empty) of matches for the query.</param>
         /// <param name="more">Used for paging. If true, indicates there is another page of
         /// results available that can be fetched by calling <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" /> again.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchAsync" /> again.</param>
         /// <param name="start">Used for paging. Value to set the start argument to when
-        /// calling <see cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" /> to fetch
-        /// the next page of results.</param>
+        /// calling <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchAsync" /> to
+        /// fetch the next page of results.</param>
         public SearchResult(col.IEnumerable<SearchMatch> matches,
                             bool more,
                             ulong start)
@@ -70,14 +70,14 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Used for paging. If true, indicates there is another page of results
         /// available that can be fetched by calling <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" /> again.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchAsync" /> again.</para>
         /// </summary>
         public bool More { get; protected set; }
 
         /// <summary>
         /// <para>Used for paging. Value to set the start argument to when calling <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.SearchAsync" /> to fetch the next page
-        /// of results.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchAsync" /> to fetch the next
+        /// page of results.</para>
         /// </summary>
         public ulong Start { get; protected set; }
 

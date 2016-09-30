@@ -53,8 +53,8 @@ namespace Dropbox.Api.Files
         /// rare instances the casing will not correctly match the user's filesystem, but this
         /// behavior will match the path provided in the Core API v1. Changes to the casing of
         /// paths won't be returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" />. This field
-        /// will be null if the file or folder is not mounted.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
+        /// field will be null if the file or folder is not mounted.</param>
         /// <param name="parentSharedFolderId">Deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
@@ -65,9 +65,9 @@ namespace Dropbox.Api.Files
         /// properties with the property template specified.</param>
         /// <param name="hasExplicitSharedMembers">This flag will only be present if
         /// include_has_explicit_shared_members  is true in <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync" />. If this  flag is
-        /// present, it will be true if this file has any explicit shared  members. This is
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this  flag
+        /// is present, it will be true if this file has any explicit shared  members. This is
         /// different from sharing_info in that this could be true  in the case where a file
         /// has explicit members but is not contained within  a shared folder.</param>
         public FileMetadata(string name,
@@ -178,11 +178,11 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>This flag will only be present if include_has_explicit_shared_members  is
-        /// true in <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.GetMetadataAsync" />. If this  flag is
-        /// present, it will be true if this file has any explicit shared  members. This is
-        /// different from sharing_info in that this could be true  in the case where a file
-        /// has explicit members but is not contained within  a shared folder.</para>
+        /// true in <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this
+        /// flag is present, it will be true if this file has any explicit shared  members.
+        /// This is different from sharing_info in that this could be true  in the case where a
+        /// file has explicit members but is not contained within  a shared folder.</para>
         /// </summary>
         public bool? HasExplicitSharedMembers { get; protected set; }
 

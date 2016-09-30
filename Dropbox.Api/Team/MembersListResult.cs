@@ -33,12 +33,12 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="members">List of team members.</param>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> to obtain the
-        /// additional members.</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListContinueAsync" /> to obtain
+        /// the additional members.</param>
         /// <param name="hasMore">Is true if there are additional team members that have not
         /// been returned yet. An additional call to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> can retrieve
-        /// them.</param>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListContinueAsync" /> can
+        /// retrieve them.</param>
         public MembersListResult(col.IEnumerable<TeamMemberInfo> members,
                                  string cursor,
                                  bool hasMore)
@@ -77,16 +77,16 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> to obtain the
-        /// additional members.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListContinueAsync" /> to obtain
+        /// the additional members.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
         /// <summary>
         /// <para>Is true if there are additional team members that have not been returned yet.
         /// An additional call to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersListContinueAsync" /> can retrieve
-        /// them.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListContinueAsync" /> can
+        /// retrieve them.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 

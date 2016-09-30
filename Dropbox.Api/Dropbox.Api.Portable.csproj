@@ -75,7 +75,7 @@
     <Compile Include="Async\PollResultBase.cs" />
     <Compile Include="AuthException.cs" />
     <Compile Include="Auth\AuthError.cs" />
-    <Compile Include="Auth\AuthRoutes.cs" />
+    <Compile Include="Auth\AuthUserRoutes.cs" />
     <Compile Include="Auth\RateLimitError.cs" />
     <Compile Include="Auth\RateLimitReason.cs" />
     <Compile Include="DropboxClient.cs" />
@@ -95,7 +95,7 @@
     <Compile Include="Files\DownloadError.cs" />
     <Compile Include="Files\FileMetadata.cs" />
     <Compile Include="Files\FileSharingInfo.cs" />
-    <Compile Include="Files\FilesRoutes.cs" />
+    <Compile Include="Files\FilesUserRoutes.cs" />
     <Compile Include="Files\FolderMetadata.cs" />
     <Compile Include="Files\FolderSharingInfo.cs" />
     <Compile Include="Files\GetCopyReferenceArg.cs" />
@@ -302,8 +302,8 @@
     <Compile Include="Sharing\SharedLinkSettings.cs" />
     <Compile Include="Sharing\SharedLinkSettingsError.cs" />
     <Compile Include="Sharing\SharingFileAccessError.cs" />
-    <Compile Include="Sharing\SharingRoutes.cs" />
     <Compile Include="Sharing\SharingUserError.cs" />
+    <Compile Include="Sharing\SharingUserRoutes.cs" />
     <Compile Include="Sharing\TeamMemberInfo.cs" />
     <Compile Include="Sharing\TransferFolderArg.cs" />
     <Compile Include="Sharing\TransferFolderError.cs" />
@@ -453,7 +453,7 @@
     <Compile Include="Team\TeamMemberProfile.cs" />
     <Compile Include="Team\TeamMemberStatus.cs" />
     <Compile Include="Team\TeamMembershipType.cs" />
-    <Compile Include="Team\TeamRoutes.cs" />
+    <Compile Include="Team\TeamTeamRoutes.cs" />
     <Compile Include="Team\UpdatePropertyTemplateArg.cs" />
     <Compile Include="Team\UpdatePropertyTemplateResult.cs" />
     <Compile Include="Team\UserSelectorArg.cs" />
@@ -474,7 +474,7 @@
     <Compile Include="Users\SpaceUsage.cs" />
     <Compile Include="Users\Team.cs" />
     <Compile Include="Users\TeamSpaceAllocation.cs" />
-    <Compile Include="Users\UsersRoutes.cs" />
+    <Compile Include="Users\UsersUserRoutes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.Dropbox.Api.Portable.config" />

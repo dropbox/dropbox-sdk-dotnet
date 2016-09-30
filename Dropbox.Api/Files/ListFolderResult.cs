@@ -33,11 +33,12 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="entries">The files and (direct) subfolders in the folder.</param>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to see
         /// what's changed in the folder since your previous query.</param>
         /// <param name="hasMore">If true, then there are more entries available. Pass the
-        /// cursor to <see cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync"
-        /// /> to retrieve the rest.</param>
+        /// cursor to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
+        /// retrieve the rest.</param>
         public ListFolderResult(col.IEnumerable<Metadata> entries,
                                 string cursor,
                                 bool hasMore)
@@ -80,15 +81,15 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to see
         /// what's changed in the folder since your previous query.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
         /// <summary>
         /// <para>If true, then there are more entries available. Pass the cursor to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesRoutes.ListFolderContinueAsync" /> to retrieve
-        /// the rest.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
+        /// retrieve the rest.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 

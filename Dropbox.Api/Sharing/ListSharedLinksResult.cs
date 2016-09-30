@@ -34,12 +34,12 @@ namespace Dropbox.Api.Sharing
         /// <param name="links">Shared links applicable to the path argument.</param>
         /// <param name="hasMore">Is true if there are additional shared links that have not
         /// been returned yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> to retrieve
-        /// them.</param>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
+        /// retrieve them.</param>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> to obtain
-        /// the additional links. Cursor is returned only if no path is given or the path is
-        /// empty.</param>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
+        /// obtain the additional links. Cursor is returned only if no path is given or the
+        /// path is empty.</param>
         public ListSharedLinksResult(col.IEnumerable<SharedLinkMetadata> links,
                                      bool hasMore,
                                      string cursor = null)
@@ -74,16 +74,16 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Is true if there are additional shared links that have not been returned yet.
         /// Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> to retrieve
-        /// them.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
+        /// retrieve them.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListSharedLinksAsync" /> to obtain
-        /// the additional links. Cursor is returned only if no path is given or the path is
-        /// empty.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
+        /// obtain the additional links. Cursor is returned only if no path is given or the
+        /// path is empty.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

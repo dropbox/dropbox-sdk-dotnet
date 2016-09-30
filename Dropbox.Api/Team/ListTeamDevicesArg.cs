@@ -32,8 +32,8 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListTeamDevicesAsync" /> the cursor
-        /// shouldn't be passed. Then, if the result of the call includes a cursor, the
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> the
+        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
         /// sub list of team devices</param>
         /// <param name="includeWebSessions">Whether to list web sessions of the team
@@ -68,8 +68,8 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>At the first call to the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListTeamDevicesAsync" /> the cursor
-        /// shouldn't be passed. Then, if the result of the call includes a cursor, the
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> the
+        /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
         /// sub list of team devices</para>
         /// </summary>

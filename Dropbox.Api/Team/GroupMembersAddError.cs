@@ -496,7 +496,7 @@ namespace Dropbox.Api.Team
         /// <para>These members are not part of your team. Currently, you cannot add members to
         /// a group if they are not part of your team, though this may change in a subsequent
         /// version. To add new members to your Dropbox Business team, use the <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.MembersAddAsync" /> endpoint.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> endpoint.</para>
         /// </summary>
         public sealed class MembersNotInTeam : GroupMembersAddError
         {

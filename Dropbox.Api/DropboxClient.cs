@@ -17,22 +17,22 @@ namespace Dropbox.Api
         /// <summary>
         /// <para>Gets the Auth routes.</para>
         /// </summary>
-        public AuthRoutes Auth { get; private set; }
+        public AuthUserRoutes Auth { get; private set; }
 
         /// <summary>
         /// <para>Gets the Files routes.</para>
         /// </summary>
-        public FilesRoutes Files { get; private set; }
+        public FilesUserRoutes Files { get; private set; }
 
         /// <summary>
         /// <para>Gets the Sharing routes.</para>
         /// </summary>
-        public SharingRoutes Sharing { get; private set; }
+        public SharingUserRoutes Sharing { get; private set; }
 
         /// <summary>
         /// <para>Gets the Users routes.</para>
         /// </summary>
-        public UsersRoutes Users { get; private set; }
+        public UsersUserRoutes Users { get; private set; }
 
         /// <summary>
         /// <para>Initializes the routes.</para>
@@ -40,10 +40,10 @@ namespace Dropbox.Api
         /// <returns>The transport.</returns>
         private void InitializeRoutes(ITransport transport)
         {
-            this.Auth = new AuthRoutes(transport);
-            this.Files = new FilesRoutes(transport);
-            this.Sharing = new SharingRoutes(transport);
-            this.Users = new UsersRoutes(transport);
+            this.Auth = new AuthUserRoutes(transport);
+            this.Files = new FilesUserRoutes(transport);
+            this.Sharing = new SharingUserRoutes(transport);
+            this.Users = new UsersUserRoutes(transport);
         }
     }
 }

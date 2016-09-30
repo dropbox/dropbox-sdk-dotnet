@@ -34,10 +34,10 @@ namespace Dropbox.Api.Team
         /// <param name="devices">The devices of each member of the team</param>
         /// <param name="hasMore">If true, then there are more devices available. Pass the
         /// cursor to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> to
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> to
         /// retrieve the rest.</param>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> to
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> to
         /// receive the next sub list of team's devices.</param>
         public ListMembersDevicesResult(col.IEnumerable<MemberDevices> devices,
                                         bool hasMore,
@@ -72,14 +72,14 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>If true, then there are more devices available. Pass the cursor to <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> to
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> to
         /// retrieve the rest.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> to
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> to
         /// receive the next sub list of team's devices.</para>
         /// </summary>
         public string Cursor { get; protected set; }

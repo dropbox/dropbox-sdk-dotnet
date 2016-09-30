@@ -150,8 +150,8 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Indicates that the cursor has been invalidated. Call <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.DevicesListMembersDevicesAsync" /> again
-        /// with an empty cursor to obtain a new cursor.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" />
+        /// again with an empty cursor to obtain a new cursor.</para>
         /// </summary>
         public sealed class Reset : ListMembersDevicesError
         {

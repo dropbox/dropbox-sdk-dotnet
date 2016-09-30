@@ -12,8 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Error occurred while performing an asynchronous job from <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.UnshareFolderAsync" /> or <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RemoveFolderMemberAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFolderAsync" /> or <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.RemoveFolderMemberAsync" />.</para>
     /// </summary>
     public class JobError
     {
@@ -213,7 +213,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>Error occurred while performing <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.UnshareFolderAsync" />
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFolderAsync" />
         /// action.</para>
         /// </summary>
         public sealed class UnshareFolderError : JobError
@@ -314,7 +314,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>Error occurred while performing <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RemoveFolderMemberAsync" />
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.RemoveFolderMemberAsync" />
         /// action.</para>
         /// </summary>
         public sealed class RemoveFolderMemberError : JobError
@@ -415,8 +415,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>Error occurred while performing <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.RelinquishFolderMembershipAsync" />
-        /// action.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.RelinquishFolderMembershipAsync"
+        /// /> action.</para>
         /// </summary>
         public sealed class RelinquishFolderMembershipError : JobError
         {

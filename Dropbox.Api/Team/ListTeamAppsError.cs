@@ -12,7 +12,8 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Error returned by <see
-    /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" /></para>
+    /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync"
+    /// /></para>
     /// </summary>
     public class ListTeamAppsError
     {
@@ -150,7 +151,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Indicates that the cursor has been invalidated. Call <see
-        /// cref="Dropbox.Api.Team.Routes.TeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
         /// again with an empty cursor to obtain a new cursor.</para>
         /// </summary>
         public sealed class Reset : ListTeamAppsError

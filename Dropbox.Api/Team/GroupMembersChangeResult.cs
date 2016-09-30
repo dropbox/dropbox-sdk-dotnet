@@ -12,8 +12,8 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Result returned by <see
-    /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersAddAsync" /> and <see
-    /// cref="Dropbox.Api.Team.Routes.TeamRoutes.GroupsMembersRemoveAsync" />.</para>
+    /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync" /> and <see
+    /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync" />.</para>
     /// </summary>
     public class GroupMembersChangeResult
     {

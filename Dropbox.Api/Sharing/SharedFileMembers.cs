@@ -13,10 +13,11 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>Shared file user, group, and invitee membership.</para>
     /// <para>Used for the results of <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersAsync" /> and <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersContinueAsync" />, and
-    /// used as part of the results for <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersBatchAsync" />.</para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync" /> and <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync" />,
+    /// and used as part of the results for <see
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync"
+    /// />.</para>
     /// </summary>
     /// <seealso cref="ListFileMembersCountResult" />
     public class SharedFileMembers
@@ -43,8 +44,8 @@ namespace Dropbox.Api.Sharing
         /// in and claimed this.</param>
         /// <param name="cursor">Present if there are additional shared file members that have
         /// not been returned yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersContinueAsync" /> to
-        /// list additional members.</param>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync" />
+        /// to list additional members.</param>
         public SharedFileMembers(col.IEnumerable<UserMembershipInfo> users,
                                  col.IEnumerable<GroupMembershipInfo> groups,
                                  col.IEnumerable<InviteeMembershipInfo> invitees,
@@ -106,8 +107,8 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Present if there are additional shared file members that have not been
         /// returned yet. Pass the cursor into <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingRoutes.ListFileMembersContinueAsync" /> to
-        /// list additional members.</para>
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync" />
+        /// to list additional members.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
