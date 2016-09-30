@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.5.0</version>
+    <version>3.6.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,23 +14,21 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-- Files
-  - Added UploadSessionFinishBatch route.
-- Sharing
-  - Added ChangeFileMemberAccess route.
-  - Added InviteViewerNoComment and ShareLink to FolderAction.
-  - Added MakeViewerNoComment to MemberAction.
-  - Added PreviewUrl to SharedFolderMetadata.
-  - Added AccessDetails to MemberAccessLevelResult, which is the parent folders that a member has access to.
-  - Added TooManyInvitees error to AddFolderMemberError.
-  - Added AutomaticGroup to AddMemberSelectorError.
-  - Added InsufficientQuota to MountFolderError.
-  - Added Removed to TeamMemberStatus.
- - Team
-   - Added NewGroupManagementType to Group
-   - Added IncludeRemoved flag to MemberListArg
-   - Added MembersRecover route.
-    </releaseNotes>
+  - Auth
+    - Added UserSuspended to AuthError.
+  - Files
+    - Added PathRootError.
+    - Added Autorename to CreateFolderArg.
+    - Added DeleteBatchAsync
+    - Added CopyBatchAsync
+    - Added MoveBatchAsync
+    - Added AllowSharedFolder and Autorename to RelocationArg
+    - Added DeleteBatchArg, DeleteBatchResultEntry, DeleteResult,
+  - Sharing
+    - Added ContainsAppFolder, ContainsTeamFolder to ShareFolderArg.
+  - Team
+    - Added TeamLicenseLimit to MembersRecoverError.
+   </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
     <dependencies>
