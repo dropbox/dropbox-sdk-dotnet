@@ -21,7 +21,7 @@ namespace SimpleBusinessDashboard.Controllers
             {
                 if (this.Request.Url.Host.ToLowerInvariant() == "localhost")
                 {
-                    return "http://localhost:5000/Home/Auth";
+                    return string.Format("http://{0}:{1}/Home/Auth", this.Request.Url.Host, this.Request.Url.Port);
                 }
 
                 var builder = new UriBuilder(
