@@ -1362,8 +1362,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns a list of <see cref="LinkMetadata" /> objects for this user,
         /// including collection links.</para>
-        /// <para>If no path is given or the path is empty, returns a list of all shared links
-        /// for the current user, including collection links.</para>
+        /// <para>If no path is given, returns a list of all shared links for the current user,
+        /// including collection links.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path.  Collection links are never returned in this case.</para>
         /// <para>Note that the url field in the response is never the shortened URL.</para>
@@ -1400,8 +1400,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns a list of <see cref="LinkMetadata" /> objects for this user,
         /// including collection links.</para>
-        /// <para>If no path is given or the path is empty, returns a list of all shared links
-        /// for the current user, including collection links.</para>
+        /// <para>If no path is given, returns a list of all shared links for the current user,
+        /// including collection links.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path.  Collection links are never returned in this case.</para>
         /// <para>Note that the url field in the response is never the shortened URL.</para>
@@ -2560,8 +2560,8 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>List shared links of this user.</para>
-        /// <para>If no path is given or the path is empty, returns a list of all shared links
-        /// for the current user.</para>
+        /// <para>If no path is given, returns a list of all shared links for the current
+        /// user.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path - direct links to the given path and links to parent
         /// folders of the given path. Links to parent folders can be suppressed by setting
@@ -2596,8 +2596,8 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>List shared links of this user.</para>
-        /// <para>If no path is given or the path is empty, returns a list of all shared links
-        /// for the current user.</para>
+        /// <para>If no path is given, returns a list of all shared links for the current
+        /// user.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path - direct links to the given path and links to parent
         /// folders of the given path. Links to parent folders can be suppressed by setting

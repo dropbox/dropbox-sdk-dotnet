@@ -32,7 +32,10 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to create.</param>
-        public CreateFolderArg(string path)
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
+        public CreateFolderArg(string path,
+                               bool autorename = false)
         {
             if (path == null)
             {
@@ -44,6 +47,7 @@ namespace Dropbox.Api.Files
             }
 
             this.Path = path;
+            this.Autorename = autorename;
         }
 
         /// <summary>
@@ -54,12 +58,19 @@ namespace Dropbox.Api.Files
         /// deserializing.</remarks>
         public CreateFolderArg()
         {
+            this.Autorename = false;
         }
 
         /// <summary>
         /// <para>Path in the user's Dropbox to create.</para>
         /// </summary>
         public string Path { get; protected set; }
+
+        /// <summary>
+        /// <para>If there's a conflict, have the Dropbox server try to autorename the folder
+        /// to avoid the conflict.</para>
+        /// </summary>
+        public bool Autorename { get; protected set; }
 
         #region Encoder class
 
@@ -76,6 +87,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(CreateFolderArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -110,6 +122,9 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "autorename":
+                        value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

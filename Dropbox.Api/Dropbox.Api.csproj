@@ -93,7 +93,13 @@
     <Compile Include="Files\CreateFolderArg.cs" />
     <Compile Include="Files\CreateFolderError.cs" />
     <Compile Include="Files\DeleteArg.cs" />
+    <Compile Include="Files\DeleteBatchArg.cs" />
+    <Compile Include="Files\DeleteBatchError.cs" />
+    <Compile Include="Files\DeleteBatchJobStatus.cs" />
+    <Compile Include="Files\DeleteBatchResult.cs" />
+    <Compile Include="Files\DeleteBatchResultEntry.cs" />
     <Compile Include="Files\DeleteError.cs" />
+    <Compile Include="Files\DeleteResult.cs" />
     <Compile Include="Files\DeletedMetadata.cs" />
     <Compile Include="Files\Dimensions.cs" />
     <Compile Include="Files\DownloadArg.cs" />
@@ -130,6 +136,7 @@
     <Compile Include="Files\MediaInfo.cs" />
     <Compile Include="Files\MediaMetadata.cs" />
     <Compile Include="Files\Metadata.cs" />
+    <Compile Include="Files\PathRootError.cs" />
     <Compile Include="Files\PhotoMetadata.cs" />
     <Compile Include="Files\PreviewArg.cs" />
     <Compile Include="Files\PreviewError.cs" />
@@ -137,7 +144,13 @@
     <Compile Include="Files\PropertyGroupUpdate.cs" />
     <Compile Include="Files\PropertyGroupWithPath.cs" />
     <Compile Include="Files\RelocationArg.cs" />
+    <Compile Include="Files\RelocationBatchArg.cs" />
+    <Compile Include="Files\RelocationBatchError.cs" />
+    <Compile Include="Files\RelocationBatchJobStatus.cs" />
+    <Compile Include="Files\RelocationBatchResult.cs" />
     <Compile Include="Files\RelocationError.cs" />
+    <Compile Include="Files\RelocationPath.cs" />
+    <Compile Include="Files\RelocationResult.cs" />
     <Compile Include="Files\RemovePropertiesArg.cs" />
     <Compile Include="Files\RemovePropertiesError.cs" />
     <Compile Include="Files\RestoreArg.cs" />

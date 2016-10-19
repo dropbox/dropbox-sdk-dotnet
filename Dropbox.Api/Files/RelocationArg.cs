@@ -13,7 +13,8 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The relocation arg object</para>
     /// </summary>
-    public class RelocationArg
+    /// <seealso cref="Dropbox.Api.Files.RelocationPath" />
+    public class RelocationArg : RelocationPath
     {
         #pragma warning disable 108
 
@@ -32,29 +33,22 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" /> will copy contents in
+        /// shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <paramref name="fromPath" /> contains shared folder. This field is always true
+        /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
         public RelocationArg(string fromPath,
-                             string toPath)
+                             string toPath,
+                             bool allowSharedFolder = false,
+                             bool autorename = false)
+            : base(fromPath, toPath)
         {
-            if (fromPath == null)
-            {
-                throw new sys.ArgumentNullException("fromPath");
-            }
-            if (!re.Regex.IsMatch(fromPath, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
-            {
-                throw new sys.ArgumentOutOfRangeException("fromPath", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
-            }
-
-            if (toPath == null)
-            {
-                throw new sys.ArgumentNullException("toPath");
-            }
-            if (!re.Regex.IsMatch(toPath, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
-            {
-                throw new sys.ArgumentOutOfRangeException("toPath", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
-            }
-
-            this.FromPath = fromPath;
-            this.ToPath = toPath;
+            this.AllowSharedFolder = allowSharedFolder;
+            this.Autorename = autorename;
         }
 
         /// <summary>
@@ -64,17 +58,24 @@ namespace Dropbox.Api.Files
         /// deserializing.</remarks>
         public RelocationArg()
         {
+            this.AllowSharedFolder = false;
+            this.Autorename = false;
         }
 
         /// <summary>
-        /// <para>Path in the user's Dropbox to be copied or moved.</para>
+        /// <para>If true, <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" />
+        /// will copy contents in shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <see cref="FromPath" /> contains shared folder. This field is always true for
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</para>
         /// </summary>
-        public string FromPath { get; protected set; }
+        public bool AllowSharedFolder { get; protected set; }
 
         /// <summary>
-        /// <para>Path in the user's Dropbox that is the destination.</para>
+        /// <para>If there's a conflict, have the Dropbox server try to autorename the file to
+        /// avoid the conflict.</para>
         /// </summary>
-        public string ToPath { get; protected set; }
+        public bool Autorename { get; protected set; }
 
         #region Encoder class
 
@@ -92,6 +93,8 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("from_path", value.FromPath, writer, enc.StringEncoder.Instance);
                 WriteProperty("to_path", value.ToPath, writer, enc.StringEncoder.Instance);
+                WriteProperty("allow_shared_folder", value.AllowSharedFolder, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -129,6 +132,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "to_path":
                         value.ToPath = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "allow_shared_folder":
+                        value.AllowSharedFolder = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "autorename":
+                        value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

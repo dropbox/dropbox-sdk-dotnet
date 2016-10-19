@@ -39,9 +39,17 @@ namespace Dropbox.Api.Files
         /// folder.</param>
         /// <param name="sharedFolderId">If this folder is a shared folder mount point, the ID
         /// of the shared folder mounted at this location.</param>
+        /// <param name="traverseOnly">Specifies that the folder can only be traversed and the
+        /// user can only see a limited subset of the contents of this folder because they
+        /// don't have read access to this folder. They do, however, have access to some sub
+        /// folder.</param>
+        /// <param name="noAccess">Specifies that the folder cannot be accessed by the
+        /// user.</param>
         public FolderSharingInfo(bool readOnly,
                                  string parentSharedFolderId = null,
-                                 string sharedFolderId = null)
+                                 string sharedFolderId = null,
+                                 bool traverseOnly = false,
+                                 bool noAccess = false)
             : base(readOnly)
         {
             if (parentSharedFolderId != null)
@@ -62,6 +70,8 @@ namespace Dropbox.Api.Files
 
             this.ParentSharedFolderId = parentSharedFolderId;
             this.SharedFolderId = sharedFolderId;
+            this.TraverseOnly = traverseOnly;
+            this.NoAccess = noAccess;
         }
 
         /// <summary>
@@ -72,6 +82,8 @@ namespace Dropbox.Api.Files
         /// deserializing.</remarks>
         public FolderSharingInfo()
         {
+            this.TraverseOnly = false;
+            this.NoAccess = false;
         }
 
         /// <summary>
@@ -84,6 +96,18 @@ namespace Dropbox.Api.Files
         /// mounted at this location.</para>
         /// </summary>
         public string SharedFolderId { get; protected set; }
+
+        /// <summary>
+        /// <para>Specifies that the folder can only be traversed and the user can only see a
+        /// limited subset of the contents of this folder because they don't have read access
+        /// to this folder. They do, however, have access to some sub folder.</para>
+        /// </summary>
+        public bool TraverseOnly { get; protected set; }
+
+        /// <summary>
+        /// <para>Specifies that the folder cannot be accessed by the user.</para>
+        /// </summary>
+        public bool NoAccess { get; protected set; }
 
         #region Encoder class
 
@@ -108,6 +132,8 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 }
+                WriteProperty("traverse_only", value.TraverseOnly, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("no_access", value.NoAccess, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -148,6 +174,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "shared_folder_id":
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "traverse_only":
+                        value.TraverseOnly = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "no_access":
+                        value.NoAccess = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

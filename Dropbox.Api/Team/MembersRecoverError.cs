@@ -80,6 +80,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamLicenseLimit</para>
+        /// </summary>
+        public bool IsTeamLicenseLimit
+        {
+            get
+            {
+                return this is TeamLicenseLimit;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamLicenseLimit, or <c>null</c>.</para>
+        /// </summary>
+        public TeamLicenseLimit AsTeamLicenseLimit
+        {
+            get
+            {
+                return this as TeamLicenseLimit;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -149,6 +171,12 @@ namespace Dropbox.Api.Team
                     UserNotInTeam.Encoder.EncodeFields((UserNotInTeam)value, writer);
                     return;
                 }
+                if (value is TeamLicenseLimit)
+                {
+                    WriteProperty(".tag", "team_license_limit", writer, enc.StringEncoder.Instance);
+                    TeamLicenseLimit.Encoder.EncodeFields((TeamLicenseLimit)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -197,6 +225,8 @@ namespace Dropbox.Api.Team
                         return UserUnrecoverable.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
                         return UserNotInTeam.Decoder.DecodeFields(reader);
+                    case "team_license_limit":
+                        return TeamLicenseLimit.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                     case "user_not_found":
@@ -360,6 +390,85 @@ namespace Dropbox.Api.Team
                 public override UserNotInTeam DecodeFields(enc.IJsonReader reader)
                 {
                     return UserNotInTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Team is full. The organization has no available licenses.</para>
+        /// </summary>
+        public sealed class TeamLicenseLimit : MembersRecoverError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamLicenseLimit> Encoder = new TeamLicenseLimitEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamLicenseLimit> Decoder = new TeamLicenseLimitDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamLicenseLimit" />
+            /// class.</para>
+            /// </summary>
+            private TeamLicenseLimit()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamLicenseLimit</para>
+            /// </summary>
+            public static readonly TeamLicenseLimit Instance = new TeamLicenseLimit();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamLicenseLimit" />.</para>
+            /// </summary>
+            private class TeamLicenseLimitEncoder : enc.StructEncoder<TeamLicenseLimit>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamLicenseLimit value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamLicenseLimit" />.</para>
+            /// </summary>
+            private class TeamLicenseLimitDecoder : enc.StructDecoder<TeamLicenseLimit>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamLicenseLimit" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamLicenseLimit Create()
+                {
+                    return new TeamLicenseLimit();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamLicenseLimit DecodeFields(enc.IJsonReader reader)
+                {
+                    return TeamLicenseLimit.Instance;
                 }
             }
 

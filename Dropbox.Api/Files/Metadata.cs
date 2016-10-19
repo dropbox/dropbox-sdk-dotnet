@@ -13,10 +13,12 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>Metadata for a file or folder.</para>
     /// </summary>
+    /// <seealso cref="DeleteResult" />
     /// <seealso cref="DeletedMetadata" />
     /// <seealso cref="FileMetadata" />
     /// <seealso cref="FolderMetadata" />
     /// <seealso cref="GetCopyReferenceResult" />
+    /// <seealso cref="RelocationResult" />
     /// <seealso cref="SaveCopyReferenceResult" />
     /// <seealso cref="SearchMatch" />
     public class Metadata

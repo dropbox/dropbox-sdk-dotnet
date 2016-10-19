@@ -41,10 +41,13 @@ namespace Dropbox.Api.Users
         /// name="surname" />.</param>
         /// <param name="displayName">A name that can be used directly to represent the name of
         /// a user's Dropbox account.</param>
+        /// <param name="abbreviatedName">An abbreviated form of the person's name. Their
+        /// initials in most locales.</param>
         public Name(string givenName,
                     string surname,
                     string familiarName,
-                    string displayName)
+                    string displayName,
+                    string abbreviatedName)
         {
             if (givenName == null)
             {
@@ -66,10 +69,16 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentNullException("displayName");
             }
 
+            if (abbreviatedName == null)
+            {
+                throw new sys.ArgumentNullException("abbreviatedName");
+            }
+
             this.GivenName = givenName;
             this.Surname = surname;
             this.FamiliarName = familiarName;
             this.DisplayName = displayName;
+            this.AbbreviatedName = abbreviatedName;
         }
 
         /// <summary>
@@ -104,6 +113,12 @@ namespace Dropbox.Api.Users
         /// </summary>
         public string DisplayName { get; protected set; }
 
+        /// <summary>
+        /// <para>An abbreviated form of the person's name. Their initials in most
+        /// locales.</para>
+        /// </summary>
+        public string AbbreviatedName { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -122,6 +137,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("surname", value.Surname, writer, enc.StringEncoder.Instance);
                 WriteProperty("familiar_name", value.FamiliarName, writer, enc.StringEncoder.Instance);
                 WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
+                WriteProperty("abbreviated_name", value.AbbreviatedName, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -165,6 +181,9 @@ namespace Dropbox.Api.Users
                         break;
                     case "display_name":
                         value.DisplayName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "abbreviated_name":
+                        value.AbbreviatedName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

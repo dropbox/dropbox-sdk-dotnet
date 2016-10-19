@@ -101,6 +101,50 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ContainsAppFolder</para>
+        /// </summary>
+        public bool IsContainsAppFolder
+        {
+            get
+            {
+                return this is ContainsAppFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContainsAppFolder, or <c>null</c>.</para>
+        /// </summary>
+        public ContainsAppFolder AsContainsAppFolder
+        {
+            get
+            {
+                return this as ContainsAppFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ContainsTeamFolder</para>
+        /// </summary>
+        public bool IsContainsTeamFolder
+        {
+            get
+            {
+                return this is ContainsTeamFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContainsTeamFolder, or <c>null</c>.</para>
+        /// </summary>
+        public ContainsTeamFolder AsContainsTeamFolder
+        {
+            get
+            {
+                return this as ContainsTeamFolder;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is IsAppFolder</para>
         /// </summary>
         public bool IsIsAppFolder
@@ -277,6 +321,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidPathRoot</para>
+        /// </summary>
+        public bool IsInvalidPathRoot
+        {
+            get
+            {
+                return this is InvalidPathRoot;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidPathRoot, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidPathRoot AsInvalidPathRoot
+        {
+            get
+            {
+                return this as InvalidPathRoot;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -330,6 +396,18 @@ namespace Dropbox.Api.Sharing
                     ContainsSharedFolder.Encoder.EncodeFields((ContainsSharedFolder)value, writer);
                     return;
                 }
+                if (value is ContainsAppFolder)
+                {
+                    WriteProperty(".tag", "contains_app_folder", writer, enc.StringEncoder.Instance);
+                    ContainsAppFolder.Encoder.EncodeFields((ContainsAppFolder)value, writer);
+                    return;
+                }
+                if (value is ContainsTeamFolder)
+                {
+                    WriteProperty(".tag", "contains_team_folder", writer, enc.StringEncoder.Instance);
+                    ContainsTeamFolder.Encoder.EncodeFields((ContainsTeamFolder)value, writer);
+                    return;
+                }
                 if (value is IsAppFolder)
                 {
                     WriteProperty(".tag", "is_app_folder", writer, enc.StringEncoder.Instance);
@@ -378,6 +456,12 @@ namespace Dropbox.Api.Sharing
                     InsideOsxPackage.Encoder.EncodeFields((InsideOsxPackage)value, writer);
                     return;
                 }
+                if (value is InvalidPathRoot)
+                {
+                    WriteProperty(".tag", "invalid_path_root", writer, enc.StringEncoder.Instance);
+                    InvalidPathRoot.Encoder.EncodeFields((InvalidPathRoot)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -422,6 +506,10 @@ namespace Dropbox.Api.Sharing
                         return InsideSharedFolder.Decoder.DecodeFields(reader);
                     case "contains_shared_folder":
                         return ContainsSharedFolder.Decoder.DecodeFields(reader);
+                    case "contains_app_folder":
+                        return ContainsAppFolder.Decoder.DecodeFields(reader);
+                    case "contains_team_folder":
+                        return ContainsTeamFolder.Decoder.DecodeFields(reader);
                     case "is_app_folder":
                         return IsAppFolder.Decoder.DecodeFields(reader);
                     case "inside_app_folder":
@@ -438,6 +526,8 @@ namespace Dropbox.Api.Sharing
                         return IsOsxPackage.Decoder.DecodeFields(reader);
                     case "inside_osx_package":
                         return InsideOsxPackage.Decoder.DecodeFields(reader);
+                    case "invalid_path_root":
+                        return InvalidPathRoot.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -678,6 +768,166 @@ namespace Dropbox.Api.Sharing
                 public override ContainsSharedFolder DecodeFields(enc.IJsonReader reader)
                 {
                     return ContainsSharedFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support shared folders that contain app folders.</para>
+        /// </summary>
+        public sealed class ContainsAppFolder : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContainsAppFolder> Encoder = new ContainsAppFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContainsAppFolder> Decoder = new ContainsAppFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContainsAppFolder" />
+            /// class.</para>
+            /// </summary>
+            private ContainsAppFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ContainsAppFolder</para>
+            /// </summary>
+            public static readonly ContainsAppFolder Instance = new ContainsAppFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContainsAppFolder" />.</para>
+            /// </summary>
+            private class ContainsAppFolderEncoder : enc.StructEncoder<ContainsAppFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContainsAppFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContainsAppFolder" />.</para>
+            /// </summary>
+            private class ContainsAppFolderDecoder : enc.StructDecoder<ContainsAppFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ContainsAppFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContainsAppFolder Create()
+                {
+                    return new ContainsAppFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ContainsAppFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return ContainsAppFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support shared folders that contain team folders.</para>
+        /// </summary>
+        public sealed class ContainsTeamFolder : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContainsTeamFolder> Encoder = new ContainsTeamFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContainsTeamFolder> Decoder = new ContainsTeamFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContainsTeamFolder" />
+            /// class.</para>
+            /// </summary>
+            private ContainsTeamFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ContainsTeamFolder</para>
+            /// </summary>
+            public static readonly ContainsTeamFolder Instance = new ContainsTeamFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContainsTeamFolder" />.</para>
+            /// </summary>
+            private class ContainsTeamFolderEncoder : enc.StructEncoder<ContainsTeamFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContainsTeamFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContainsTeamFolder" />.</para>
+            /// </summary>
+            private class ContainsTeamFolderDecoder : enc.StructDecoder<ContainsTeamFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ContainsTeamFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContainsTeamFolder Create()
+                {
+                    return new ContainsTeamFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ContainsTeamFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return ContainsTeamFolder.Instance;
                 }
             }
 
@@ -1323,6 +1573,95 @@ namespace Dropbox.Api.Sharing
                 public override InsideOsxPackage DecodeFields(enc.IJsonReader reader)
                 {
                     return InsideOsxPackage.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The path root parameter provided is invalid.</para>
+        /// </summary>
+        public sealed class InvalidPathRoot : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidPathRoot> Encoder = new InvalidPathRootEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidPathRoot> Decoder = new InvalidPathRootDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidPathRoot" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public InvalidPathRoot(Dropbox.Api.Files.PathRootError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidPathRoot" />
+            /// class.</para>
+            /// </summary>
+            private InvalidPathRoot()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public Dropbox.Api.Files.PathRootError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidPathRoot" />.</para>
+            /// </summary>
+            private class InvalidPathRootEncoder : enc.StructEncoder<InvalidPathRoot>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidPathRoot value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Files.PathRootError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidPathRoot" />.</para>
+            /// </summary>
+            private class InvalidPathRootDecoder : enc.StructDecoder<InvalidPathRoot>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidPathRoot" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidPathRoot Create()
+                {
+                    return new InvalidPathRoot();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InvalidPathRoot DecodeFields(enc.IJsonReader reader)
+                {
+                    return new InvalidPathRoot(Dropbox.Api.Files.PathRootError.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -101,6 +101,28 @@ namespace Dropbox.Api.Auth
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserSuspended</para>
+        /// </summary>
+        public bool IsUserSuspended
+        {
+            get
+            {
+                return this is UserSuspended;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserSuspended, or <c>null</c>.</para>
+        /// </summary>
+        public UserSuspended AsUserSuspended
+        {
+            get
+            {
+                return this as UserSuspended;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -154,6 +176,12 @@ namespace Dropbox.Api.Auth
                     InvalidSelectAdmin.Encoder.EncodeFields((InvalidSelectAdmin)value, writer);
                     return;
                 }
+                if (value is UserSuspended)
+                {
+                    WriteProperty(".tag", "user_suspended", writer, enc.StringEncoder.Instance);
+                    UserSuspended.Encoder.EncodeFields((UserSuspended)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -198,6 +226,8 @@ namespace Dropbox.Api.Auth
                         return InvalidSelectUser.Decoder.DecodeFields(reader);
                     case "invalid_select_admin":
                         return InvalidSelectAdmin.Decoder.DecodeFields(reader);
+                    case "user_suspended":
+                        return UserSuspended.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -442,6 +472,85 @@ namespace Dropbox.Api.Auth
                 public override InvalidSelectAdmin DecodeFields(enc.IJsonReader reader)
                 {
                     return InvalidSelectAdmin.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user has been suspended.</para>
+        /// </summary>
+        public sealed class UserSuspended : AuthError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserSuspended> Encoder = new UserSuspendedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserSuspended> Decoder = new UserSuspendedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserSuspended" />
+            /// class.</para>
+            /// </summary>
+            private UserSuspended()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserSuspended</para>
+            /// </summary>
+            public static readonly UserSuspended Instance = new UserSuspended();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserSuspended" />.</para>
+            /// </summary>
+            private class UserSuspendedEncoder : enc.StructEncoder<UserSuspended>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserSuspended value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserSuspended" />.</para>
+            /// </summary>
+            private class UserSuspendedDecoder : enc.StructDecoder<UserSuspended>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserSuspended" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserSuspended Create()
+                {
+                    return new UserSuspended();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserSuspended DecodeFields(enc.IJsonReader reader)
+                {
+                    return UserSuspended.Instance;
                 }
             }
 

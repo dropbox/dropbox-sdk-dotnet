@@ -145,6 +145,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidPathRoot</para>
+        /// </summary>
+        public bool IsInvalidPathRoot
+        {
+            get
+            {
+                return this is InvalidPathRoot;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidPathRoot, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidPathRoot AsInvalidPathRoot
+        {
+            get
+            {
+                return this as InvalidPathRoot;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,6 +232,12 @@ namespace Dropbox.Api.Files
                     RestrictedContent.Encoder.EncodeFields((RestrictedContent)value, writer);
                     return;
                 }
+                if (value is InvalidPathRoot)
+                {
+                    WriteProperty(".tag", "invalid_path_root", writer, enc.StringEncoder.Instance);
+                    InvalidPathRoot.Encoder.EncodeFields((InvalidPathRoot)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -258,6 +286,8 @@ namespace Dropbox.Api.Files
                         return NotFolder.Decoder.DecodeFields(reader);
                     case "restricted_content":
                         return RestrictedContent.Decoder.DecodeFields(reader);
+                    case "invalid_path_root":
+                        return InvalidPathRoot.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -678,6 +708,95 @@ namespace Dropbox.Api.Files
                 public override RestrictedContent DecodeFields(enc.IJsonReader reader)
                 {
                     return RestrictedContent.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The path root parameter provided is invalid.</para>
+        /// </summary>
+        public sealed class InvalidPathRoot : LookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidPathRoot> Encoder = new InvalidPathRootEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidPathRoot> Decoder = new InvalidPathRootDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidPathRoot" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public InvalidPathRoot(PathRootError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidPathRoot" />
+            /// class.</para>
+            /// </summary>
+            private InvalidPathRoot()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public PathRootError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidPathRoot" />.</para>
+            /// </summary>
+            private class InvalidPathRootEncoder : enc.StructEncoder<InvalidPathRoot>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidPathRoot value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Files.PathRootError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidPathRoot" />.</para>
+            /// </summary>
+            private class InvalidPathRootDecoder : enc.StructDecoder<InvalidPathRoot>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidPathRoot" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidPathRoot Create()
+                {
+                    return new InvalidPathRoot();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InvalidPathRoot DecodeFields(enc.IJsonReader reader)
+                {
+                    return new InvalidPathRoot(Dropbox.Api.Files.PathRootError.Decoder.DecodeFields(reader));
                 }
             }
 

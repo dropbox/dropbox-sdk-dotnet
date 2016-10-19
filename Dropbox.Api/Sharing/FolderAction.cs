@@ -255,6 +255,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CreateLink</para>
+        /// </summary>
+        public bool IsCreateLink
+        {
+            get
+            {
+                return this is CreateLink;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CreateLink, or <c>null</c>.</para>
+        /// </summary>
+        public CreateLink AsCreateLink
+        {
+            get
+            {
+                return this as CreateLink;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -350,6 +372,12 @@ namespace Dropbox.Api.Sharing
                     ShareLink.Encoder.EncodeFields((ShareLink)value, writer);
                     return;
                 }
+                if (value is CreateLink)
+                {
+                    WriteProperty(".tag", "create_link", writer, enc.StringEncoder.Instance);
+                    CreateLink.Encoder.EncodeFields((CreateLink)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -408,6 +436,8 @@ namespace Dropbox.Api.Sharing
                         return LeaveACopy.Decoder.DecodeFields(reader);
                     case "share_link":
                         return ShareLink.Decoder.DecodeFields(reader);
+                    case "create_link":
+                        return CreateLink.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1130,7 +1160,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Create a shared link for folder.</para>
+        /// <para>This action is deprecated. Use create_link instead.</para>
         /// </summary>
         public sealed class ShareLink : FolderAction
         {
@@ -1201,6 +1231,84 @@ namespace Dropbox.Api.Sharing
                 public override ShareLink DecodeFields(enc.IJsonReader reader)
                 {
                     return ShareLink.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Create a shared link for folder.</para>
+        /// </summary>
+        public sealed class CreateLink : FolderAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CreateLink> Encoder = new CreateLinkEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CreateLink> Decoder = new CreateLinkDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CreateLink" /> class.</para>
+            /// </summary>
+            private CreateLink()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CreateLink</para>
+            /// </summary>
+            public static readonly CreateLink Instance = new CreateLink();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CreateLink" />.</para>
+            /// </summary>
+            private class CreateLinkEncoder : enc.StructEncoder<CreateLink>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CreateLink value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CreateLink" />.</para>
+            /// </summary>
+            private class CreateLinkDecoder : enc.StructDecoder<CreateLink>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CreateLink" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CreateLink Create()
+                {
+                    return new CreateLink();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CreateLink DecodeFields(enc.IJsonReader reader)
+                {
+                    return CreateLink.Instance;
                 }
             }
 

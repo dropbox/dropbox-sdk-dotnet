@@ -48,9 +48,9 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentOutOfRangeException("file", "Length should be at least 1");
             }
-            if (!re.Regex.IsMatch(file, @"\A(?:((/|id:).*|nspath:[^:]*:[^:]*))\z"))
+            if (!re.Regex.IsMatch(file, @"\A(?:((/|id:).*|nspath:[0-9]+:.*)|ns:[0-9]+(/.*)?)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("file", @"Value should match pattern '\A(?:((/|id:).*|nspath:[^:]*:[^:]*))\z'");
+                throw new sys.ArgumentOutOfRangeException("file", @"Value should match pattern '\A(?:((/|id:).*|nspath:[0-9]+:.*)|ns:[0-9]+(/.*)?)\z'");
             }
 
             if (member == null)

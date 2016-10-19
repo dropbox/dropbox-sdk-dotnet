@@ -551,7 +551,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>1024 by 768</para>
+        /// <para>1024 by 768.</para>
         /// </summary>
         public sealed class W1024h768 : ThumbnailSize
         {

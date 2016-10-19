@@ -42,7 +42,7 @@ namespace Dropbox.Api.Files
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
-        /// <param name="includePropertyTemplates">If true, <see
+        /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</param>
         public AlphaGetMetadataArg(string path,
@@ -68,8 +68,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>If true, <see cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set
-        /// for files with custom properties.</para>
+        /// <para>If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
+        /// custom properties.</para>
         /// </summary>
         public col.IList<string> IncludePropertyTemplates { get; protected set; }
 

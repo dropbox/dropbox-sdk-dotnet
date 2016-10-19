@@ -8,7 +8,7 @@ To run this web app, load Dropbox.Api.sln in Visual Studio and set SimpleBusines
 
 In appSettings section of Web.config, set DropboxAppKey and DropboxAppSecret to be your app key and secret. You can find them from the App Console at https://www.dropbox.com/developers/apps
 
-Add http://localhost:5000/Home/Auth to the redirect URL list in the app console.
+Add http://localhost:5001/Home/Auth to the redirect URL list in the app console.
 
 ## Run
 

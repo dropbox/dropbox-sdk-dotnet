@@ -318,9 +318,9 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The specified offset was incorrect. See the value for the correct offset.
-        /// (This error may occur when a previous request was received and processed
+        /// This error may occur when a previous request was received and processed
         /// successfully but the client did not receive the response, e.g. due to a network
-        /// error.)</para>
+        /// error.</para>
         /// </summary>
         public sealed class IncorrectOffset : UploadSessionLookupError
         {

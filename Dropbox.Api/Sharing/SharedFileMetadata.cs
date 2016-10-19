@@ -50,6 +50,10 @@ namespace Dropbox.Api.Sharing
         /// rare instances the casing will not correctly match the user's filesystem, but this
         /// behavior will match the path provided in the Core API v1. Absent for unmounted
         /// files.</param>
+        /// <param name="timeInvited">Timestamp indicating when the current user was invited to
+        /// this shared file. If the user was not invited to the shared file, the timestamp
+        /// will indicate when the user was invited to the parent shared folder. This value may
+        /// be absent.</param>
         public SharedFileMetadata(FolderPolicy policy,
                                   string previewUrl,
                                   string name,
@@ -58,7 +62,8 @@ namespace Dropbox.Api.Sharing
                                   Dropbox.Api.Users.Team ownerTeam = null,
                                   string parentSharedFolderId = null,
                                   string pathLower = null,
-                                  string pathDisplay = null)
+                                  string pathDisplay = null,
+                                  sys.DateTime? timeInvited = null)
         {
             if (policy == null)
             {
@@ -107,6 +112,7 @@ namespace Dropbox.Api.Sharing
             this.ParentSharedFolderId = parentSharedFolderId;
             this.PathLower = pathLower;
             this.PathDisplay = pathDisplay;
+            this.TimeInvited = timeInvited;
         }
 
         /// <summary>
@@ -171,6 +177,13 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string PathDisplay { get; protected set; }
 
+        /// <summary>
+        /// <para>Timestamp indicating when the current user was invited to this shared file.
+        /// If the user was not invited to the shared file, the timestamp will indicate when
+        /// the user was invited to the parent shared folder. This value may be absent.</para>
+        /// </summary>
+        public sys.DateTime? TimeInvited { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -208,6 +221,10 @@ namespace Dropbox.Api.Sharing
                 if (value.PathDisplay != null)
                 {
                     WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
+                }
+                if (value.TimeInvited != null)
+                {
+                    WriteProperty("time_invited", value.TimeInvited.Value, writer, enc.DateTimeEncoder.Instance);
                 }
             }
         }
@@ -267,6 +284,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "path_display":
                         value.PathDisplay = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "time_invited":
+                        value.TimeInvited = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

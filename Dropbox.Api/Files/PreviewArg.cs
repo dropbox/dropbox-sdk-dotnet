@@ -32,7 +32,7 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
         /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// instead.</param>
         public PreviewArg(string path,
                           string rev = null)
         {
@@ -76,7 +76,7 @@ namespace Dropbox.Api.Files
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Deprecated. Please specify revision in <see cref="Path" /> instead</para>
+        /// <para>Deprecated. Please specify revision in <see cref="Path" /> instead.</para>
         /// </summary>
         public string Rev { get; protected set; }
 

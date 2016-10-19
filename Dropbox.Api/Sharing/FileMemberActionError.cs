@@ -80,6 +80,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AccessError</para>
+        /// </summary>
+        public bool IsAccessError
+        {
+            get
+            {
+                return this is AccessError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AccessError, or <c>null</c>.</para>
+        /// </summary>
+        public AccessError AsAccessError
+        {
+            get
+            {
+                return this as AccessError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Sharing
                     NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
                     return;
                 }
+                if (value is AccessError)
+                {
+                    WriteProperty(".tag", "access_error", writer, enc.StringEncoder.Instance);
+                    AccessError.Encoder.EncodeFields((AccessError)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.Sharing
                         return InvalidMember.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
+                    case "access_error":
+                        return AccessError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -330,6 +360,104 @@ namespace Dropbox.Api.Sharing
                 public override NoPermission DecodeFields(enc.IJsonReader reader)
                 {
                     return NoPermission.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Specified file was invalid or user does not have access.</para>
+        /// </summary>
+        public sealed class AccessError : FileMemberActionError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AccessError> Encoder = new AccessErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AccessError> Decoder = new AccessErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AccessError(SharingFileAccessError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// class.</para>
+            /// </summary>
+            private AccessError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public SharingFileAccessError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AccessError" />.</para>
+            /// </summary>
+            private class AccessErrorEncoder : enc.StructEncoder<AccessError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Sharing.SharingFileAccessError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AccessError" />.</para>
+            /// </summary>
+            private class AccessErrorDecoder : enc.StructDecoder<AccessError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AccessError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AccessError Create()
+                {
+                    return new AccessError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(AccessError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "access_error":
+                            value.Value = Dropbox.Api.Sharing.SharingFileAccessError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

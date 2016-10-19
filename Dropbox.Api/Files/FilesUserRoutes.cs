@@ -77,7 +77,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
-        /// <param name="includePropertyTemplates">If true, <see
+        /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
-        /// <param name="includePropertyTemplates">If true, <see
+        /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
@@ -345,16 +345,28 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" /> will copy contents in
+        /// shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <paramref name="fromPath" /> contains shared folder. This field is always true
+        /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> CopyAsync(string fromPath,
-                                          string toPath)
+                                          string toPath,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false)
         {
             var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename);
 
             return this.CopyAsync(relocationArg);
         }
@@ -364,6 +376,14 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" /> will copy contents in
+        /// shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <paramref name="fromPath" /> contains shared folder. This field is always true
+        /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -371,11 +391,15 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginCopy(string fromPath,
                                           string toPath,
-                                          sys.AsyncCallback callback,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false,
+                                          sys.AsyncCallback callback = null,
                                           object callbackState = null)
         {
             var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename);
 
             return this.BeginCopy(relocationArg, callback, callbackState);
         }
@@ -392,6 +416,221 @@ namespace Dropbox.Api.Files.Routes
         public Metadata EndCopy(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Copy multiple files or folders to different locations at once in the user's
+        /// Dropbox.</para>
+        /// <para>If <see cref="Dropbox.Api.Files.RelocationBatchArg.AllowSharedFolder" /> is
+        /// false, this route is atomic. If on entry failes, the whole transaction will abort.
+        /// If <see cref="Dropbox.Api.Files.RelocationBatchArg.AllowSharedFolder" /> is true,
+        /// not atomicity is guaranteed, but you will be able to copy the contents of shared
+        /// folders to new locations.</para>
+        /// <para>This route will return job ID immediately and do the async copy job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckAsync" /> to check the
+        /// job status.</para>
+        /// </summary>
+        /// <param name="relocationBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy batch route.</para>
+        /// </summary>
+        /// <param name="relocationBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCopyBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CopyBatchAsync(relocationBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Copy multiple files or folders to different locations at once in the user's
+        /// Dropbox.</para>
+        /// <para>If <see cref="Dropbox.Api.Files.RelocationBatchArg.AllowSharedFolder" /> is
+        /// false, this route is atomic. If on entry failes, the whole transaction will abort.
+        /// If <see cref="Dropbox.Api.Files.RelocationBatchArg.AllowSharedFolder" /> is true,
+        /// not atomicity is guaranteed, but you will be able to copy the contents of shared
+        /// folders to new locations.</para>
+        /// <para>This route will return job ID immediately and do the async copy job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckAsync" /> to check the
+        /// job status.</para>
+        /// </summary>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> will copy
+        /// contents in shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
+        /// This field is always true for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> CopyBatchAsync(col.IEnumerable<RelocationPath> entries,
+                                                                          bool allowSharedFolder = false,
+                                                                          bool autorename = false)
+        {
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            allowSharedFolder,
+                                                            autorename);
+
+            return this.CopyBatchAsync(relocationBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy batch route.</para>
+        /// </summary>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> will copy
+        /// contents in shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
+        /// This field is always true for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCopyBatch(col.IEnumerable<RelocationPath> entries,
+                                               bool allowSharedFolder = false,
+                                               bool autorename = false,
+                                               sys.AsyncCallback callback = null,
+                                               object callbackState = null)
+        {
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            allowSharedFolder,
+                                                            autorename);
+
+            return this.BeginCopyBatch(relocationBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the copy batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public Dropbox.Api.Async.LaunchEmptyResult EndCopyBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/copy_batch/check", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy batch check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCopyBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CopyBatchCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(string asyncJobId)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.CopyBatchCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy batch check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCopyBatchCheck(string asyncJobId,
+                                                    sys.AsyncCallback callback,
+                                                    object callbackState = null)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginCopyBatchCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the copy batch check route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public RelocationBatchJobStatus EndCopyBatchCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<RelocationBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -622,14 +861,18 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Create a folder at a given path.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to create.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        public t.Task<FolderMetadata> CreateFolderAsync(string path)
+        public t.Task<FolderMetadata> CreateFolderAsync(string path,
+                                                        bool autorename = false)
         {
-            var createFolderArg = new CreateFolderArg(path);
+            var createFolderArg = new CreateFolderArg(path,
+                                                      autorename);
 
             return this.CreateFolderAsync(createFolderArg);
         }
@@ -638,16 +881,20 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the create folder route.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to create.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginCreateFolder(string path,
-                                                  sys.AsyncCallback callback,
+                                                  bool autorename = false,
+                                                  sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
-            var createFolderArg = new CreateFolderArg(path);
+            var createFolderArg = new CreateFolderArg(path,
+                                                      autorename);
 
             return this.BeginCreateFolder(createFolderArg, callback, callbackState);
         }
@@ -766,6 +1013,181 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Delete multiple files/folders at once.</para>
+        /// <para>This route is asynchronous, which returns a job ID immediately and runs the
+        /// delete batch asynchronously. Use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchCheckAsync" /> to check
+        /// the job status.</para>
+        /// </summary>
+        /// <param name="deleteBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> DeleteBatchAsync(DeleteBatchArg deleteBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(deleteBatchArg, "api", "/files/delete_batch", Dropbox.Api.Files.DeleteBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete batch route.</para>
+        /// </summary>
+        /// <param name="deleteBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDeleteBatch(DeleteBatchArg deleteBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteBatchAsync(deleteBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Delete multiple files/folders at once.</para>
+        /// <para>This route is asynchronous, which returns a job ID immediately and runs the
+        /// delete batch asynchronously. Use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchCheckAsync" /> to check
+        /// the job status.</para>
+        /// </summary>
+        /// <param name="entries">The entries</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> DeleteBatchAsync(col.IEnumerable<DeleteArg> entries)
+        {
+            var deleteBatchArg = new DeleteBatchArg(entries);
+
+            return this.DeleteBatchAsync(deleteBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete batch route.</para>
+        /// </summary>
+        /// <param name="entries">The entries</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDeleteBatch(col.IEnumerable<DeleteArg> entries,
+                                                 sys.AsyncCallback callback,
+                                                 object callbackState = null)
+        {
+            var deleteBatchArg = new DeleteBatchArg(entries);
+
+            return this.BeginDeleteBatch(deleteBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public Dropbox.Api.Async.LaunchEmptyResult EndDeleteBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchAsync" />. If success, it
+        /// returns list of result for each entry.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<DeleteBatchJobStatus> DeleteBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, DeleteBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/delete_batch/check", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.DeleteBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete batch check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDeleteBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteBatchCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchAsync" />. If success, it
+        /// returns list of result for each entry.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<DeleteBatchJobStatus> DeleteBatchCheckAsync(string asyncJobId)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.DeleteBatchCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete batch check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDeleteBatchCheck(string asyncJobId,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginDeleteBatchCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete batch check route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public DeleteBatchJobStatus EndDeleteBatchCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<DeleteBatchJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Download a file from a user's Dropbox.</para>
         /// </summary>
         /// <param name="downloadArg">The request parameters</param>
@@ -800,7 +1222,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
         /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// instead.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -820,7 +1242,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
         /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// instead.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -978,7 +1400,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a preview for a file. Currently previews are only generated for the files
         /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
-        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
+        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf.</para>
         /// </summary>
         /// <param name="previewArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1009,11 +1431,11 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a preview for a file. Currently previews are only generated for the files
         /// with  the following extensions: .doc, .docx, .docm, .ppt, .pps, .ppsx, .ppsm,
-        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf</para>
+        /// .pptx, .pptm,  .xls, .xlsx, .xlsm, .rtf.</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
         /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// instead.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1032,7 +1454,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
         /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
-        /// instead</param>
+        /// instead.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1266,7 +1688,28 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Returns the contents of a folder.</para>
+        /// <para>Starts returning the contents of a folder. If the result's <see
+        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />
+        /// with the returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to
+        /// retrieve more entries.</para>
+        /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
+        /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
+        /// through each entry in order and process them as follows to keep your local state in
+        /// sync:</para>
+        /// <para>For each <see cref="FileMetadata" />, store the new entry at the given path
+        /// in your local state. If the required parent folders don't exist yet, create them.
+        /// If there's already something else at the given path, replace it and remove all its
+        /// children.</para>
+        /// <para>For each <see cref="FolderMetadata" />, store the new entry at the given path
+        /// in your local state. If the required parent folders don't exist yet, create them.
+        /// If there's already something else at the given path, replace it but leave the
+        /// children as they are. Check the new entry's <see
+        /// cref="Dropbox.Api.Files.FolderSharingInfo.ReadOnly" /> and set all its children's
+        /// read-only statuses to match.</para>
+        /// <para>For each <see cref="DeletedMetadata" />, if your local state has something at
+        /// the given path, remove it and all its children. If there's nothing at the given
+        /// path, ignore this entry.</para>
         /// </summary>
         /// <param name="listFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1296,7 +1739,28 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Returns the contents of a folder.</para>
+        /// <para>Starts returning the contents of a folder. If the result's <see
+        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />
+        /// with the returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to
+        /// retrieve more entries.</para>
+        /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
+        /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
+        /// through each entry in order and process them as follows to keep your local state in
+        /// sync:</para>
+        /// <para>For each <see cref="FileMetadata" />, store the new entry at the given path
+        /// in your local state. If the required parent folders don't exist yet, create them.
+        /// If there's already something else at the given path, replace it and remove all its
+        /// children.</para>
+        /// <para>For each <see cref="FolderMetadata" />, store the new entry at the given path
+        /// in your local state. If the required parent folders don't exist yet, create them.
+        /// If there's already something else at the given path, replace it but leave the
+        /// children as they are. Check the new entry's <see
+        /// cref="Dropbox.Api.Files.FolderSharingInfo.ReadOnly" /> and set all its children's
+        /// read-only statuses to match.</para>
+        /// <para>For each <see cref="DeletedMetadata" />, if your local state has something at
+        /// the given path, remove it and all its children. If there's nothing at the given
+        /// path, ignore this entry.</para>
         /// </summary>
         /// <param name="path">The path to the folder you want to see the contents of.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
@@ -1391,7 +1855,9 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
-        /// paginate through all files and retrieve updates to the folder.</para>
+        /// paginate through all files and retrieve updates to the folder, following the same
+        /// rules as documented for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />.</para>
         /// </summary>
         /// <param name="listFolderContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1423,7 +1889,9 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
-        /// paginate through all files and retrieve updates to the folder.</para>
+        /// paginate through all files and retrieve updates to the folder, following the same
+        /// rules as documented for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
@@ -1736,7 +2204,7 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Return revisions of a file</para>
+        /// <para>Return revisions of a file.</para>
         /// </summary>
         /// <param name="listRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1766,7 +2234,7 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Return revisions of a file</para>
+        /// <para>Return revisions of a file.</para>
         /// </summary>
         /// <param name="path">The path to the file you want to see the revisions of.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
@@ -1863,16 +2331,28 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" /> will copy contents in
+        /// shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <paramref name="fromPath" /> contains shared folder. This field is always true
+        /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> MoveAsync(string fromPath,
-                                          string toPath)
+                                          string toPath,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false)
         {
             var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename);
 
             return this.MoveAsync(relocationArg);
         }
@@ -1882,6 +2362,14 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" /> will copy contents in
+        /// shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <paramref name="fromPath" /> contains shared folder. This field is always true
+        /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1889,11 +2377,15 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginMove(string fromPath,
                                           string toPath,
-                                          sys.AsyncCallback callback,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false,
+                                          sys.AsyncCallback callback = null,
                                           object callbackState = null)
         {
             var relocationArg = new RelocationArg(fromPath,
-                                                  toPath);
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename);
 
             return this.BeginMove(relocationArg, callback, callbackState);
         }
@@ -1910,6 +2402,215 @@ namespace Dropbox.Api.Files.Routes
         public Metadata EndMove(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Move multiple files or folders to different locations at once in the user's
+        /// Dropbox.</para>
+        /// <para>This route is 'all or nothing', which means if one entry fails, the whole
+        /// transaction will abort.</para>
+        /// <para>This route will return job ID immediately and do the async moving job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
+        /// job status.</para>
+        /// </summary>
+        /// <param name="relocationBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move batch route.</para>
+        /// </summary>
+        /// <param name="relocationBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMoveBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MoveBatchAsync(relocationBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Move multiple files or folders to different locations at once in the user's
+        /// Dropbox.</para>
+        /// <para>This route is 'all or nothing', which means if one entry fails, the whole
+        /// transaction will abort.</para>
+        /// <para>This route will return job ID immediately and do the async moving job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
+        /// job status.</para>
+        /// </summary>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> will copy
+        /// contents in shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
+        /// This field is always true for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
+                                                                          bool allowSharedFolder = false,
+                                                                          bool autorename = false)
+        {
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            allowSharedFolder,
+                                                            autorename);
+
+            return this.MoveBatchAsync(relocationBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move batch route.</para>
+        /// </summary>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="allowSharedFolder">If true, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> will copy
+        /// contents in shared folder, otherwise <see
+        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
+        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
+        /// This field is always true for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMoveBatch(col.IEnumerable<RelocationPath> entries,
+                                               bool allowSharedFolder = false,
+                                               bool autorename = false,
+                                               sys.AsyncCallback callback = null,
+                                               object callbackState = null)
+        {
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            allowSharedFolder,
+                                                            autorename);
+
+            return this.BeginMoveBatch(relocationBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the move batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public Dropbox.Api.Async.LaunchEmptyResult EndMoveBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move batch check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMoveBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MoveBatchCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(string asyncJobId)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.MoveBatchCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move batch check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMoveBatchCheck(string asyncJobId,
+                                                    sys.AsyncCallback callback,
+                                                    object callbackState = null)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginMoveBatchCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the move batch check route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public RelocationBatchJobStatus EndMoveBatchCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<RelocationBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -2507,7 +3208,7 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Restore a file to a specific revision</para>
+        /// <para>Restore a file to a specific revision.</para>
         /// </summary>
         /// <param name="restoreArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2536,7 +3237,7 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Restore a file to a specific revision</para>
+        /// <para>Restore a file to a specific revision.</para>
         /// </summary>
         /// <param name="path">The path to the file you want to restore.</param>
         /// <param name="rev">The revision to restore for the file.</param>
@@ -3354,17 +4055,18 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
         /// this route to finish all your upload sessions in a single request.</para>
         /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
-        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for last
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
+        /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// call.</para>
-        /// <para>This route will return job_id immediately and do the async commit job in
-        /// background. We have another route <see
+        /// <para>This route will return a job_id immediately and do the async commit job in
+        /// background. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
         /// /> to check the job status.</para>
         /// <para>For the same account, this route should be executed serially. That means you
-        /// should not start next job before current job finishes. Also we only allow up to
-        /// 1000 entries in a single request</para>
+        /// should not start the next job before current job finishes. We allow up to 1000
+        /// entries in a single request.</para>
         /// </summary>
         /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3399,17 +4101,18 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
         /// this route to finish all your upload sessions in a single request.</para>
         /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
-        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for last
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
+        /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// call.</para>
-        /// <para>This route will return job_id immediately and do the async commit job in
-        /// background. We have another route <see
+        /// <para>This route will return a job_id immediately and do the async commit job in
+        /// background. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
         /// /> to check the job status.</para>
         /// <para>For the same account, this route should be executed serially. That means you
-        /// should not start next job before current job finishes. Also we only allow up to
-        /// 1000 entries in a single request</para>
+        /// should not start the next job before current job finishes. We allow up to 1000
+        /// entries in a single request.</para>
         /// </summary>
         /// <param name="entries">Commit information for each file in the batch.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3460,7 +4163,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Returns the status of an asynchronous job for <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchAsync" />.
-        /// If success, it returns list of result for each entry</para>
+        /// If success, it returns list of result for each entry.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3493,7 +4196,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Returns the status of an asynchronous job for <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchAsync" />.
-        /// If success, it returns list of result for each entry</para>
+        /// If success, it returns list of result for each entry.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -3551,8 +4254,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Upload sessions allow you to upload a single file using multiple requests.
-        /// This call starts a new upload session with the given data.  You can then use <see
+        /// <para>Upload sessions allow you to upload a single file in one or more requests,
+        /// for example where the size of the file is greater than 150 MB.  This call starts a
+        /// new upload session with the given data. You can then use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> to
         /// add more data and <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
@@ -3586,8 +4290,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Upload sessions allow you to upload a single file using multiple requests.
-        /// This call starts a new upload session with the given data.  You can then use <see
+        /// <para>Upload sessions allow you to upload a single file in one or more requests,
+        /// for example where the size of the file is greater than 150 MB.  This call starts a
+        /// new upload session with the given data. You can then use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> to
         /// add more data and <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save

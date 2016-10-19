@@ -650,7 +650,8 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>User is already on this team. The provided email address is associated with a
-        /// user who is already a member of or invited to the team.</para>
+        /// user who is already a member of (including in recoverable state) or invited to the
+        /// team.</para>
         /// </summary>
         public sealed class UserAlreadyOnTeam : MemberAddResult
         {
@@ -1047,7 +1048,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>A user with the given external member ID already exists on the team.</para>
+        /// <para>A user with the given external member ID already exists on the team
+        /// (including in recoverable state).</para>
         /// </summary>
         public sealed class DuplicateExternalMemberId : MemberAddResult
         {

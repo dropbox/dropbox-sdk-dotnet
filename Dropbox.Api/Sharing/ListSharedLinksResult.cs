@@ -38,8 +38,7 @@ namespace Dropbox.Api.Sharing
         /// retrieve them.</param>
         /// <param name="cursor">Pass the cursor into <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
-        /// obtain the additional links. Cursor is returned only if no path is given or the
-        /// path is empty.</param>
+        /// obtain the additional links. Cursor is returned only if no path is given.</param>
         public ListSharedLinksResult(col.IEnumerable<SharedLinkMetadata> links,
                                      bool hasMore,
                                      string cursor = null)
@@ -82,8 +81,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Pass the cursor into <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to
-        /// obtain the additional links. Cursor is returned only if no path is given or the
-        /// path is empty.</para>
+        /// obtain the additional links. Cursor is returned only if no path is given.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
