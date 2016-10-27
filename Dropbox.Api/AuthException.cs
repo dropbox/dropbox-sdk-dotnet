@@ -15,18 +15,11 @@ namespace Dropbox.Api
     public sealed partial class AuthException : StructuredException<AuthError>
     {
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="AuthException"/> class.</para>
-        /// </summary>
-        public AuthException()
-        {
-        }
-
-        /// <summary>
         /// <para>Decode from given json.</para>
         /// </summary>
-        internal static AuthException Decode(string json)
+        internal static AuthException Decode(string json, sys.Func<AuthException> exceptionFunc)
         {
-            return StructuredException<AuthError>.Decode<AuthException>(json, AuthError.Decoder);
+            return StructuredException<AuthError>.Decode<AuthException>(json, AuthError.Decoder, exceptionFunc);
         }
     }
 }

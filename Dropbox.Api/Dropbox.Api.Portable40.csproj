@@ -223,6 +223,7 @@
     <Compile Include="Properties\PropertyGroupTemplate.cs" />
     <Compile Include="Properties\PropertyTemplateError.cs" />
     <Compile Include="Properties\PropertyType.cs" />
+    <Compile Include="RateLimitException.cs" />
     <Compile Include="Sharing\AccessLevel.cs" />
     <Compile Include="Sharing\AclUpdatePolicy.cs" />
     <Compile Include="Sharing\AddFileMemberArgs.cs" />

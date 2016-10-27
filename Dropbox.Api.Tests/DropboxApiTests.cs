@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// <copyright file="ApiException.cs" company="Dropbox Inc">
+// <copyright file="DropboxApiTests.cs" company="Dropbox Inc">
 //  Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
@@ -9,6 +9,8 @@ namespace Dropbox.Api.Tests
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Net;
+    using System.Net.Http;
     using System.Text;
     using System.Threading.Tasks;
 
@@ -116,6 +118,60 @@ namespace Dropbox.Api.Tests
             Assert.AreEqual(response.Name, "Foo.txt");
             Assert.AreEqual(response.PathLower, "/foo.txt");
             Assert.AreEqual(response.PathDisplay, "/Foo.txt");
+        }
+
+        /// Test rate limit error handling.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestRateLimit()
+        {
+            var body = "{\"error_summary\": \"too_many_requests/..\", \"error\": {\"reason\": {\".tag\": \"too_many_requests\"}, \"retry_after\": 100}}";
+            var mockResponse = new HttpResponseMessage((HttpStatusCode)429)
+            {
+                Content = new StringContent(body, Encoding.UTF8, "application/json")
+            };
+
+            mockResponse.Headers.Add("X-Dropbox-Request-Id", "123");
+
+            var mockHandler = new MockHttpMessageHandler(mockResponse);
+            var mockClient = new HttpClient(mockHandler);
+            var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient });
+            try
+            {
+                await client.Files.GetMetadataAsync("/a.txt");
+            }
+            catch (RateLimitException ex)
+            {
+                Assert.AreEqual((int)ex.ErrorResponse.RetryAfter, 100);
+                Assert.AreEqual(ex.RetryAfter, 100);
+                Assert.IsTrue(ex.ErrorResponse.Reason.IsTooManyRequests);
+            }
+        }
+
+        /// Test request id handling.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestRequestId()
+        {
+            var funcs = new List<Func<Task>>
+            {
+                () => Client.Files.GetMetadataAsync("/noob"), // 409
+                () => Client.Files.GetMetadataAsync("/"), // 400
+            };
+
+            foreach (var func in funcs)
+            {
+                try
+                {
+                    await func();
+                }
+                catch (DropboxException ex)
+                {
+                    Assert.IsTrue(ex.ToString().Contains("Request Id"));
+                }
+            }
         }
 
         /// <summary>

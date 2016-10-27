@@ -21,39 +21,10 @@ namespace Dropbox.Api
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiException{TError}"/> class.
         /// </summary>
+        /// <param name="requestId">The Dropbox request id.</param>
         /// <remarks>This constructor is only used when decoded from JSON.</remarks>
-        public ApiException()
-            : this(default(TError))
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException{TError}"/> class.
-        /// </summary>
-        /// <param name="errorResponse">The error response.</param>
-        public ApiException(TError errorResponse)
-            : this(errorResponse, null, null)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException{TError}"/> class.
-        /// </summary>
-        /// <param name="errorResponse">The error response.</param>
-        /// <param name="message">The message.</param>
-        public ApiException(TError errorResponse, string message)
-            : this(errorResponse, message, null)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException{TError}"/> class.
-        /// </summary>
-        /// <param name="errorResponse">The error response.</param>
-        /// <param name="message">The message.</param>
-        /// <param name="inner">The inner.</param>
-        public ApiException(TError errorResponse, string message, Exception inner)
-            : base(errorResponse, message, inner)
+        internal ApiException(string requestId)
+            : base(requestId)
         {
         }
     }
