@@ -487,8 +487,14 @@ namespace Dropbox.Api
         /// <returns>The request id.</returns>
         private string GetRequestId(HttpResponseMessage response)
         {
-            var requestId = response.Headers.GetValues("X-Dropbox-Request-Id");
-            return requestId.FirstOrDefault();
+            IEnumerable<string> requestId;
+
+            if (response.Headers.TryGetValues("X-Dropbox-Request-Id", out requestId))
+            {
+                return requestId.FirstOrDefault();
+            }
+
+            return null;
         }
 
         /// <summary>
