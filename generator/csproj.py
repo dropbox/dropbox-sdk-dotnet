@@ -339,7 +339,8 @@ CSPROJ_PRIVATE_BLOCK = r"""  <PropertyGroup>
 def _include_items(buf, item_type, paths):
     buf.write('  <ItemGroup>\n')
     for path in paths:
-        buf.write('    <{0} Include="{1}" />\n'.format(item_type, path))
+        file_path = path.replace('/', '\\')
+        buf.write('    <{0} Include="{1}" />\n'.format(item_type, file_path))
     buf.write('  </ItemGroup>\n')
 
 

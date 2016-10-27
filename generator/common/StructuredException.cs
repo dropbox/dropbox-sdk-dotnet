@@ -16,47 +16,16 @@ namespace <Namespace>
     /// a json body.
     /// </summary>
     /// <typeparam name="TError">The type of the error.</typeparam>
-    public abstract class StructuredException<TError> : Exception
+    public abstract class StructuredException<TError> : DropboxException
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
         /// </summary>
+        /// <param name="requestId">The Dropbox request id.</param>
         /// <remarks>This constructor is only used when decoded from JSON.</remarks>
-        protected internal StructuredException()
-            : this(default(TError))
+        protected internal StructuredException(string requestId)
+            : base(requestId, null)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
-        /// </summary>
-        /// <param name="errorResponse">The error response.</param>
-        protected internal StructuredException(TError errorResponse)
-            : this(errorResponse, null, null)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
-        /// </summary>
-        /// <param name="errorResponse">The error response.</param>
-        /// <param name="message">The message.</param>
-        protected internal StructuredException(TError errorResponse, string message)
-            : this(errorResponse, message, null)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
-        /// </summary>
-        /// <param name="errorResponse">The error response.</param>
-        /// <param name="message">The message.</param>
-        /// <param name="inner">The inner.</param>
-        protected internal StructuredException(TError errorResponse, string message, Exception inner)
-            : base(message, inner)
-        {
-            this.ErrorResponse = errorResponse;
-            this.ErrorMessage = message;
         }
 
         /// <summary>
@@ -86,11 +55,12 @@ namespace <Namespace>
         /// <typeparam name="TException">The type of the exception.</typeparam>
         /// <param name="json">The json.</param>
         /// <param name="errorDecoder">The error json.</param>
-        /// <returns>The <see cref="ApiException{TError}"/></returns>
-        internal static TException Decode<TException>(string json, IDecoder<TError> errorDecoder)
-            where TException : StructuredException<TError>, new()
+        /// <param name="exceptionFunc">The function to create exception.</param>
+        /// <returns>The structured exception.</returns>
+        internal static TException Decode<TException>(string json, IDecoder<TError> errorDecoder, Func<TException> exceptionFunc)
+            where TException : StructuredException<TError>
         {
-            return JsonReader.Read(json, new StructuredExceptionDecoder<TException>(errorDecoder));
+            return JsonReader.Read(json, new StructuredExceptionDecoder<TException>(errorDecoder, exceptionFunc));
         }
 
         /// <summary>
@@ -98,7 +68,7 @@ namespace <Namespace>
         /// </summary>
         /// <typeparam name="TException">The type of the exception.</typeparam>
         private class StructuredExceptionDecoder<TException> : StructDecoder<TException>
-            where TException : StructuredException<TError>, new()
+            where TException : StructuredException<TError>
         {
             /// <summary>
             /// The error decoder.
@@ -106,12 +76,20 @@ namespace <Namespace>
             private readonly IDecoder<TError> errorDecoder;
 
             /// <summary>
+            /// The function which creates the exception.
+            /// </summary>
+            private readonly Func<TException> execptionFunc;
+
+
+            /// <summary>
             /// Initializes a new instance of the <see cref="StructuredExceptionDecoder{TException}"/> class.
             /// </summary>
             /// <param name="errorDecoder">The error decoder.</param>
-            public StructuredExceptionDecoder(IDecoder<TError> errorDecoder)
+            /// <param name="execptionFunc">The function which creates the exception.</param>
+            public StructuredExceptionDecoder(IDecoder<TError> errorDecoder, Func<TException> execptionFunc)
             {
                 this.errorDecoder = errorDecoder;
+                this.execptionFunc = execptionFunc;
             }
 
             /// <summary>
@@ -120,7 +98,7 @@ namespace <Namespace>
             /// <returns>The struct instance.</returns>
             protected override TException Create()
             {
-                return new TException();
+                return this.execptionFunc();
             }
 
             /// <summary>

@@ -41,7 +41,15 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         super(DropboxCSharpGenerator, self).__init__(self.DEFAULT_NAMESPACE, self.DEFAULT_APP_NAME, *args, **kwargs)
 
     def _generate(self, api):
-        self._generate_dropbox_auth_exception(api)
+        self.emit_summary('An HTTP exception that is caused by the server '
+                          'reporting an authentication problem.')
+        self._generate_dropbox_exception(api, 'auth', 'AuthError', 'AuthException',
+                                         'An HTTP exception that is caused by the server '
+                                         'reporting an authentication problem.')
+
+        self._generate_dropbox_exception(api, 'auth', 'RateLimitError', 'RateLimitException',
+                                         'An HTTP exception that is caused by the client '
+                                         'being rate limited by the server.')
         self._generate_csproj()
         self._copy_files('dropbox')
 
@@ -101,18 +109,23 @@ class DropboxCSharpGenerator(_CSharpGenerator):
             with self.output_to_relative_path('{0}{1}.csproj'.format(self.DEFAULT_NAMESPACE, suffix)):
                 self.emit_raw(make_csproj_file(files, mode=mode, is_private=self.args.private))
 
-    def _generate_dropbox_auth_exception(self, api):
+    def _generate_dropbox_exception(self, api, namespace, error_type, exception_type,
+                                    doc_string):
         """
-        Generates the auth exception class
+        Generates a Dropbox global exception class
 
         Args:
             api (stone.api.Api): The API specification.
+            namespace (str): The namespace name for the error type.
+            error_type (str): The name of the error type.
+            exception_type (str): The exception name in .NET.
+            doc_string (str): The doc string for the exception.
         """
-        ns = api.namespaces['auth']
-        auth_error = self._public_name(ns.data_type_by_name['AuthError'].name)
+        ns = api.namespaces[namespace]
+        error_name = self._public_name(ns.data_type_by_name[error_type].name)
         ns_name = self._public_name(ns.name)
 
-        with self.output_to_relative_path('AuthException.cs'):
+        with self.output_to_relative_path('{0}.cs'.format(exception_type)):
             self.auto_generated()
             with self.namespace():
                 self.emit('using sys = System;')
@@ -121,19 +134,14 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                 self.emit()
 
                 with self.doc_comment():
-                    self.emit_summary('An HTTP exception that is caused by the server '
-                                      'reporting an authentication problem.')
-                with self.class_('AuthException', access='public sealed partial',
-                                 inherits=['StructuredException<{0}>'.format(auth_error)]):
-                    with self.doc_comment():
-                        self.emit_summary('Initializes a new instance of the <see cref="AuthException"/> class.')
-                    with self.cs_block(before='public AuthException()'):
-                        pass
-                    self.emit()
+                    self.emit_summary(doc_string)
+                with self.class_(exception_type, access='public sealed partial',
+                                 inherits=['StructuredException<{0}>'.format(error_name)]):
                     with self.doc_comment():
                         self.emit_summary('Decode from given json.')
-                    with self.cs_block(before='internal static AuthException Decode(string json)'):
-                        self.emit('return StructuredException<{0}>.Decode<AuthException>(json, {0}.Decoder);'
-                                  .format(auth_error))
+                    with self.cs_block(before='internal static {0} Decode(string json, sys.Func<{0}> exceptionFunc)'
+                            .format(exception_type)):
+                        self.emit('return StructuredException<{0}>.Decode<{1}>(json, {0}.Decoder, exceptionFunc);'
+                                  .format(error_name, exception_type))
 
 del _CSharpGenerator
