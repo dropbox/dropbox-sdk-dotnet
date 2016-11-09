@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>3.6.0</version>
+    <version>4.0.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -15,19 +15,21 @@
     <releaseNotes> 
 What's new:
   - Auth
-    - Added UserSuspended to AuthError.
+    - Added TokenFromOAuth1Asyn.
   - Files
-    - Added PathRootError.
-    - Added Autorename to CreateFolderArg.
-    - Added DeleteBatchAsync
-    - Added CopyBatchAsync
-    - Added MoveBatchAsync
-    - Added AllowSharedFolder and Autorename to RelocationArg
-    - Added DeleteBatchArg, DeleteBatchResultEntry, DeleteResult,
+    - UploadSessionFinishBatchAsync now returns UploadSessionFinishBatchLaunch.
+    - DeleteBatchAsync now returns DeleteBatchLaunch.
+    - CopyBatchAsync and MoveBatchAsync now returns RelocatonBatchLaunch.
   - Sharing
-    - Added ContainsAppFolder, ContainsTeamFolder to ShareFolderArg.
+    - Added UnsupportedLinkType to SharedLinkError.
+    - Added IsMember to GroundInfo.
+    - Added TooManyFiles to UnshareFolderError.
+    - Added NoExplicitAccess to RelinquishFolderMembershipError.
   - Team
-    - Added TeamLicenseLimit to MembersRecoverError.
+    - Added GroupNameAlreadyUsed and GroupNameInvalid to GroupUpdateError.
+  - Others
+    - RateLimitException is now a StructuredException with a RateLimitError body.
+    - Added request id to string representation of Dropbox exceptions.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
