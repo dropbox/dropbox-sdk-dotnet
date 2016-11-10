@@ -417,8 +417,12 @@ namespace Dropbox.Api
                     var reason = await response.Content.ReadAsStringAsync();
                     throw RateLimitException.Decode(reason, () => new RateLimitException(GetRequestId(response)));
                 }
+                else if (response.StatusCode == HttpStatusCode.Forbidden)
+                {
+                    var reason = await response.Content.ReadAsStringAsync();
+                    throw AccessException.Decode(reason, () => new AccessException(GetRequestId(response)));
+                }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
-                    response.StatusCode == HttpStatusCode.Forbidden ||
                     response.StatusCode == HttpStatusCode.NotFound)
                 {
                     var reason = await response.Content.ReadAsStringAsync();

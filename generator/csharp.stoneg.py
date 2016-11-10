@@ -50,6 +50,10 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         self._generate_dropbox_exception(api, 'auth', 'RateLimitError', 'RateLimitException',
                                          'An HTTP exception that is caused by the client '
                                          'being rate limited by the server.')
+
+        self._generate_dropbox_exception(api, 'auth', 'AccessError', 'AccessException',
+                                         'An HTTP exception that is caused by the account not'
+                                         'not having access to the endpoint.')
         self._generate_csproj()
         self._copy_files('dropbox')
 
