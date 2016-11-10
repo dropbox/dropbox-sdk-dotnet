@@ -42,7 +42,8 @@ namespace Dropbox.Api.Team
         /// this argument must be provided as well.</param>
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
         /// retain the email address associated with their Dropbox  account and data in their
-        /// account that is not restricted to team members.</param>
+        /// account that is not restricted to team members. In order to keep the account the
+        /// argument wipe_data should be set to False.</param>
         public MembersRemoveArg(UserSelectorArg user,
                                 bool wipeData = true,
                                 UserSelectorArg transferDestId = null,
@@ -82,7 +83,8 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Downgrade the member to a Basic account. The user will retain the email
         /// address associated with their Dropbox  account and data in their account that is
-        /// not restricted to team members.</para>
+        /// not restricted to team members. In order to keep the account the argument wipe_data
+        /// should be set to False.</para>
         /// </summary>
         public bool KeepAccount { get; protected set; }
 

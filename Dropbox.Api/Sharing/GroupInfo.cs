@@ -37,6 +37,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="groupId">The group id</param>
         /// <param name="groupManagementType">Who is allowed to manage the group.</param>
         /// <param name="groupType">The type of group.</param>
+        /// <param name="isMember">If the current user is a member of the group.</param>
         /// <param name="isOwner">If the current user is an owner of the group.</param>
         /// <param name="sameTeam">If the group is owned by the current user's team.</param>
         /// <param name="groupExternalId">External ID of group. This is an arbitrary ID that an
@@ -46,6 +47,7 @@ namespace Dropbox.Api.Sharing
                          string groupId,
                          Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
                          Dropbox.Api.TeamCommon.GroupType groupType,
+                         bool isMember,
                          bool isOwner,
                          bool sameTeam,
                          string groupExternalId = null,
@@ -58,6 +60,7 @@ namespace Dropbox.Api.Sharing
             }
 
             this.GroupType = groupType;
+            this.IsMember = isMember;
             this.IsOwner = isOwner;
             this.SameTeam = sameTeam;
         }
@@ -75,6 +78,11 @@ namespace Dropbox.Api.Sharing
         /// <para>The type of group.</para>
         /// </summary>
         public Dropbox.Api.TeamCommon.GroupType GroupType { get; protected set; }
+
+        /// <summary>
+        /// <para>If the current user is a member of the group.</para>
+        /// </summary>
+        public bool IsMember { get; protected set; }
 
         /// <summary>
         /// <para>If the current user is an owner of the group.</para>
@@ -104,6 +112,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 WriteProperty("group_type", value.GroupType, writer, Dropbox.Api.TeamCommon.GroupType.Encoder);
+                WriteProperty("is_member", value.IsMember, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_owner", value.IsOwner, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("same_team", value.SameTeam, writer, enc.BooleanEncoder.Instance);
                 if (value.GroupExternalId != null)
@@ -157,6 +166,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "group_type":
                         value.GroupType = Dropbox.Api.TeamCommon.GroupType.Decoder.Decode(reader);
+                        break;
+                    case "is_member":
+                        value.IsMember = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "is_owner":
                         value.IsOwner = enc.BooleanDecoder.Instance.Decode(reader);

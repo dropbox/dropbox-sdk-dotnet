@@ -3235,7 +3235,8 @@ namespace Dropbox.Api.Team.Routes
         /// this argument must be provided as well.</param>
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
         /// retain the email address associated with their Dropbox  account and data in their
-        /// account that is not restricted to team members.</param>
+        /// account that is not restricted to team members. In order to keep the account the
+        /// argument wipe_data should be set to False.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3269,7 +3270,8 @@ namespace Dropbox.Api.Team.Routes
         /// this argument must be provided as well.</param>
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
         /// retain the email address associated with their Dropbox  account and data in their
-        /// account that is not restricted to team members.</param>
+        /// account that is not restricted to team members. In order to keep the account the
+        /// argument wipe_data should be set to False.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -4559,6 +4561,726 @@ namespace Dropbox.Api.Team.Routes
         public GetStorageReport EndReportsGetStorage(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetStorageReport>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Sets an archived team folder's status to active. This endpoint is only
+        /// available to teams with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderActivateError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(TeamFolderIdArg teamFolderIdArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderMetadata, TeamFolderActivateError>(teamFolderIdArg, "api", "/team/team_folder/activate", Dropbox.Api.Team.TeamFolderIdArg.Encoder, Dropbox.Api.Team.TeamFolderMetadata.Decoder, Dropbox.Api.Team.TeamFolderActivateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder activate route.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderActivate(TeamFolderIdArg teamFolderIdArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderActivateAsync(teamFolderIdArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Sets an archived team folder's status to active. This endpoint is only
+        /// available to teams with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderActivateError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(string teamFolderId)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.TeamFolderActivateAsync(teamFolderIdArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder activate route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderActivate(string teamFolderId,
+                                                        sys.AsyncCallback callback,
+                                                        object callbackState = null)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.BeginTeamFolderActivate(teamFolderIdArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder activate route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderActivateError"/>.</exception>
+        public TeamFolderMetadata EndTeamFolderActivate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Sets an active team folder's status to archived and removes all folder and
+        /// file members. This endpoint is only available to teams with <a
+        /// href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderArchiveArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderArchiveError"/>.</exception>
+        public t.Task<TeamFolderArchiveLaunch> TeamFolderArchiveAsync(TeamFolderArchiveArg teamFolderArchiveArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderArchiveArg, TeamFolderArchiveLaunch, TeamFolderArchiveError>(teamFolderArchiveArg, "api", "/team/team_folder/archive", Dropbox.Api.Team.TeamFolderArchiveArg.Encoder, Dropbox.Api.Team.TeamFolderArchiveLaunch.Decoder, Dropbox.Api.Team.TeamFolderArchiveError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder archive route.</para>
+        /// </summary>
+        /// <param name="teamFolderArchiveArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderArchive(TeamFolderArchiveArg teamFolderArchiveArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderArchiveAsync(teamFolderArchiveArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Sets an active team folder's status to archived and removes all folder and
+        /// file members. This endpoint is only available to teams with <a
+        /// href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="forceAsyncOff">Whether to force the archive to happen
+        /// synchronously.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderArchiveError"/>.</exception>
+        public t.Task<TeamFolderArchiveLaunch> TeamFolderArchiveAsync(string teamFolderId,
+                                                                      bool forceAsyncOff = false)
+        {
+            var teamFolderArchiveArg = new TeamFolderArchiveArg(teamFolderId,
+                                                                forceAsyncOff);
+
+            return this.TeamFolderArchiveAsync(teamFolderArchiveArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder archive route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="forceAsyncOff">Whether to force the archive to happen
+        /// synchronously.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderArchive(string teamFolderId,
+                                                       bool forceAsyncOff = false,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var teamFolderArchiveArg = new TeamFolderArchiveArg(teamFolderId,
+                                                                forceAsyncOff);
+
+            return this.BeginTeamFolderArchive(teamFolderArchiveArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder archive route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderArchiveError"/>.</exception>
+        public TeamFolderArchiveLaunch EndTeamFolderArchive(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderArchiveLaunch>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for archiving a team folder. This
+        /// endpoint is only available to teams with <a href="/help/986">improved team
+        /// folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, TeamFolderArchiveJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/team/team_folder/archive/check", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Team.TeamFolderArchiveJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder archive check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderArchiveCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderArchiveCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for archiving a team folder. This
+        /// endpoint is only available to teams with <a href="/help/986">improved team
+        /// folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(string asyncJobId)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.TeamFolderArchiveCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder archive check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderArchiveCheck(string asyncJobId,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginTeamFolderArchiveCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder archive check
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        public TeamFolderArchiveJobStatus EndTeamFolderArchiveCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderArchiveJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Creates a new, active, team folder. This endpoint is only available to teams
+        /// with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderCreateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderCreateError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(TeamFolderCreateArg teamFolderCreateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderCreateArg, TeamFolderMetadata, TeamFolderCreateError>(teamFolderCreateArg, "api", "/team/team_folder/create", Dropbox.Api.Team.TeamFolderCreateArg.Encoder, Dropbox.Api.Team.TeamFolderMetadata.Decoder, Dropbox.Api.Team.TeamFolderCreateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder create route.</para>
+        /// </summary>
+        /// <param name="teamFolderCreateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderCreate(TeamFolderCreateArg teamFolderCreateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderCreateAsync(teamFolderCreateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Creates a new, active, team folder. This endpoint is only available to teams
+        /// with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="name">Name for the new team folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderCreateError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(string name)
+        {
+            var teamFolderCreateArg = new TeamFolderCreateArg(name);
+
+            return this.TeamFolderCreateAsync(teamFolderCreateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder create route.</para>
+        /// </summary>
+        /// <param name="name">Name for the new team folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderCreate(string name,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var teamFolderCreateArg = new TeamFolderCreateArg(name);
+
+            return this.BeginTeamFolderCreate(teamFolderCreateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder create route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderCreateError"/>.</exception>
+        public TeamFolderMetadata EndTeamFolderCreate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Retrieves metadata for team folders. This endpoint is only available to teams
+        /// with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderIdListArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(TeamFolderIdListArg teamFolderIdListArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdListArg, col.List<TeamFolderGetInfoItem>, enc.Empty>(teamFolderIdListArg, "api", "/team/team_folder/get_info", Dropbox.Api.Team.TeamFolderIdListArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.TeamFolderGetInfoItem.Decoder), enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder get info route.</para>
+        /// </summary>
+        /// <param name="teamFolderIdListArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderGetInfo(TeamFolderIdListArg teamFolderIdListArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderGetInfoAsync(teamFolderIdListArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Retrieves metadata for team folders. This endpoint is only available to teams
+        /// with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderIds">The list of team folder IDs.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(col.IEnumerable<string> teamFolderIds)
+        {
+            var teamFolderIdListArg = new TeamFolderIdListArg(teamFolderIds);
+
+            return this.TeamFolderGetInfoAsync(teamFolderIdListArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder get info route.</para>
+        /// </summary>
+        /// <param name="teamFolderIds">The list of team folder IDs.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderGetInfo(col.IEnumerable<string> teamFolderIds,
+                                                       sys.AsyncCallback callback,
+                                                       object callbackState = null)
+        {
+            var teamFolderIdListArg = new TeamFolderIdListArg(teamFolderIds);
+
+            return this.BeginTeamFolderGetInfo(teamFolderIdListArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder get info route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public col.List<TeamFolderGetInfoItem> EndTeamFolderGetInfo(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<col.List<TeamFolderGetInfoItem>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Lists all team folders. This endpoint is only available to teams with <a
+        /// href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderListArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderListError"/>.</exception>
+        public t.Task<TeamFolderListResult> TeamFolderListAsync(TeamFolderListArg teamFolderListArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderListArg, TeamFolderListResult, TeamFolderListError>(teamFolderListArg, "api", "/team/team_folder/list", Dropbox.Api.Team.TeamFolderListArg.Encoder, Dropbox.Api.Team.TeamFolderListResult.Decoder, Dropbox.Api.Team.TeamFolderListError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder list route.</para>
+        /// </summary>
+        /// <param name="teamFolderListArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderList(TeamFolderListArg teamFolderListArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderListAsync(teamFolderListArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Lists all team folders. This endpoint is only available to teams with <a
+        /// href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderListError"/>.</exception>
+        public t.Task<TeamFolderListResult> TeamFolderListAsync(uint limit = 1000)
+        {
+            var teamFolderListArg = new TeamFolderListArg(limit);
+
+            return this.TeamFolderListAsync(teamFolderListArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder list route.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderList(uint limit = 1000,
+                                                    sys.AsyncCallback callback = null,
+                                                    object callbackState = null)
+        {
+            var teamFolderListArg = new TeamFolderListArg(limit);
+
+            return this.BeginTeamFolderList(teamFolderListArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder list route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderListError"/>.</exception>
+        public TeamFolderListResult EndTeamFolderList(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderListResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Permanently deletes an archived team folder. This endpoint is only available
+        /// to teams with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderPermanentlyDeleteError"/>.</exception>
+        public t.Task TeamFolderPermanentlyDeleteAsync(TeamFolderIdArg teamFolderIdArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, enc.Empty, TeamFolderPermanentlyDeleteError>(teamFolderIdArg, "api", "/team/team_folder/permanently_delete", Dropbox.Api.Team.TeamFolderIdArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder permanently delete
+        /// route.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderPermanentlyDelete(TeamFolderIdArg teamFolderIdArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderPermanentlyDeleteAsync(teamFolderIdArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Permanently deletes an archived team folder. This endpoint is only available
+        /// to teams with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderPermanentlyDeleteError"/>.</exception>
+        public t.Task TeamFolderPermanentlyDeleteAsync(string teamFolderId)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.TeamFolderPermanentlyDeleteAsync(teamFolderIdArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder permanently delete
+        /// route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderPermanentlyDelete(string teamFolderId,
+                                                                 sys.AsyncCallback callback,
+                                                                 object callbackState = null)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.BeginTeamFolderPermanentlyDelete(teamFolderIdArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder permanently delete
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderPermanentlyDeleteError"/>.</exception>
+        public void EndTeamFolderPermanentlyDelete(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Changes an active team folder's name. This endpoint is only available to
+        /// teams with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderRenameArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderRenameError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderRenameAsync(TeamFolderRenameArg teamFolderRenameArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderRenameArg, TeamFolderMetadata, TeamFolderRenameError>(teamFolderRenameArg, "api", "/team/team_folder/rename", Dropbox.Api.Team.TeamFolderRenameArg.Encoder, Dropbox.Api.Team.TeamFolderMetadata.Decoder, Dropbox.Api.Team.TeamFolderRenameError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder rename route.</para>
+        /// </summary>
+        /// <param name="teamFolderRenameArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderRename(TeamFolderRenameArg teamFolderRenameArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderRenameAsync(teamFolderRenameArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Changes an active team folder's name. This endpoint is only available to
+        /// teams with <a href="/help/986">improved team folders</a>.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="name">New team folder name.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderRenameError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderRenameAsync(string teamFolderId,
+                                                                string name)
+        {
+            var teamFolderRenameArg = new TeamFolderRenameArg(teamFolderId,
+                                                              name);
+
+            return this.TeamFolderRenameAsync(teamFolderRenameArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder rename route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="name">New team folder name.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderRename(string teamFolderId,
+                                                      string name,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var teamFolderRenameArg = new TeamFolderRenameArg(teamFolderId,
+                                                              name);
+
+            return this.BeginTeamFolderRename(teamFolderRenameArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder rename route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderRenameError"/>.</exception>
+        public TeamFolderMetadata EndTeamFolderRename(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderMetadata>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

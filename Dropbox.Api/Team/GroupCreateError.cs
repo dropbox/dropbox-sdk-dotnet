@@ -209,7 +209,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>There is already an existing group with the requested name.</para>
+        /// <para>The requested group name is already being used by another group.</para>
         /// </summary>
         public sealed class GroupNameAlreadyUsed : GroupCreateError
         {
@@ -368,7 +368,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The new external ID is already being used by another group.</para>
+        /// <para>The requested external ID is already being used by another group.</para>
         /// </summary>
         public sealed class ExternalIdAlreadyInUse : GroupCreateError
         {

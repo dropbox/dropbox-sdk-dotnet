@@ -440,9 +440,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
+        public t.Task<RelocationBatchLaunch> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -487,9 +487,9 @@ namespace Dropbox.Api.Files.Routes
         /// server try to autorename that file to avoid the conflict.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> CopyBatchAsync(col.IEnumerable<RelocationPath> entries,
-                                                                          bool allowSharedFolder = false,
-                                                                          bool autorename = false)
+        public t.Task<RelocationBatchLaunch> CopyBatchAsync(col.IEnumerable<RelocationPath> entries,
+                                                            bool allowSharedFolder = false,
+                                                            bool autorename = false)
         {
             var relocationBatchArg = new RelocationBatchArg(entries,
                                                             allowSharedFolder,
@@ -537,9 +537,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        public Dropbox.Api.Async.LaunchEmptyResult EndCopyBatch(sys.IAsyncResult asyncResult)
+        public RelocationBatchLaunch EndCopyBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<RelocationBatchLaunch>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -1022,9 +1022,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="deleteBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> DeleteBatchAsync(DeleteBatchArg deleteBatchArg)
+        public t.Task<DeleteBatchLaunch> DeleteBatchAsync(DeleteBatchArg deleteBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(deleteBatchArg, "api", "/files/delete_batch", Dropbox.Api.Files.DeleteBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<DeleteBatchArg, DeleteBatchLaunch, enc.Empty>(deleteBatchArg, "api", "/files/delete_batch", Dropbox.Api.Files.DeleteBatchArg.Encoder, Dropbox.Api.Files.DeleteBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -1053,7 +1053,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="entries">The entries</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> DeleteBatchAsync(col.IEnumerable<DeleteArg> entries)
+        public t.Task<DeleteBatchLaunch> DeleteBatchAsync(col.IEnumerable<DeleteArg> entries)
         {
             var deleteBatchArg = new DeleteBatchArg(entries);
 
@@ -1085,9 +1085,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        public Dropbox.Api.Async.LaunchEmptyResult EndDeleteBatch(sys.IAsyncResult asyncResult)
+        public DeleteBatchLaunch EndDeleteBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<DeleteBatchLaunch>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -2423,9 +2423,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
+        public t.Task<RelocationBatchLaunch> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -2467,9 +2467,9 @@ namespace Dropbox.Api.Files.Routes
         /// server try to autorename that file to avoid the conflict.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
-                                                                          bool allowSharedFolder = false,
-                                                                          bool autorename = false)
+        public t.Task<RelocationBatchLaunch> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
+                                                            bool allowSharedFolder = false,
+                                                            bool autorename = false)
         {
             var relocationBatchArg = new RelocationBatchArg(entries,
                                                             allowSharedFolder,
@@ -2517,9 +2517,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        public Dropbox.Api.Async.LaunchEmptyResult EndMoveBatch(sys.IAsyncResult asyncResult)
+        public RelocationBatchLaunch EndMoveBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<RelocationBatchLaunch>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4071,9 +4071,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UploadSessionFinishBatchAsync(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
+        public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, Dropbox.Api.Async.LaunchEmptyResult, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, UploadSessionFinishBatchLaunch, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -4117,7 +4117,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="entries">Commit information for each file in the batch.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UploadSessionFinishBatchAsync(col.IEnumerable<UploadSessionFinishArg> entries)
+        public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(col.IEnumerable<UploadSessionFinishArg> entries)
         {
             var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
 
@@ -4149,9 +4149,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        public Dropbox.Api.Async.LaunchEmptyResult EndUploadSessionFinishBatch(sys.IAsyncResult asyncResult)
+        public UploadSessionFinishBatchLaunch EndUploadSessionFinishBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<UploadSessionFinishBatchLaunch>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

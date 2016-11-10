@@ -125,6 +125,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UnsupportedLinkType</para>
+        /// </summary>
+        public bool IsUnsupportedLinkType
+        {
+            get
+            {
+                return this is UnsupportedLinkType;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnsupportedLinkType, or <c>null</c>.</para>
+        /// </summary>
+        public UnsupportedLinkType AsUnsupportedLinkType
+        {
+            get
+            {
+                return this as UnsupportedLinkType;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -184,6 +206,12 @@ namespace Dropbox.Api.Sharing
                     SharedLinkAccessDenied.Encoder.EncodeFields((SharedLinkAccessDenied)value, writer);
                     return;
                 }
+                if (value is UnsupportedLinkType)
+                {
+                    WriteProperty(".tag", "unsupported_link_type", writer, enc.StringEncoder.Instance);
+                    UnsupportedLinkType.Encoder.EncodeFields((UnsupportedLinkType)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -231,6 +259,8 @@ namespace Dropbox.Api.Sharing
                         return SharedLinkNotFound.Decoder.DecodeFields(reader);
                     case "shared_link_access_denied":
                         return SharedLinkAccessDenied.Decoder.DecodeFields(reader);
+                    case "unsupported_link_type":
+                        return UnsupportedLinkType.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -419,7 +449,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The shared link wasn't found</para>
+        /// <para>The shared link wasn't found.</para>
         /// </summary>
         public sealed class SharedLinkNotFound : ModifySharedLinkSettingsError
         {
@@ -499,7 +529,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The caller is not allowed to access this shared link</para>
+        /// <para>The caller is not allowed to access this shared link.</para>
         /// </summary>
         public sealed class SharedLinkAccessDenied : ModifySharedLinkSettingsError
         {
@@ -572,6 +602,86 @@ namespace Dropbox.Api.Sharing
                 public override SharedLinkAccessDenied DecodeFields(enc.IJsonReader reader)
                 {
                     return SharedLinkAccessDenied.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This type of link is not supported.</para>
+        /// </summary>
+        public sealed class UnsupportedLinkType : ModifySharedLinkSettingsError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedLinkType> Encoder = new UnsupportedLinkTypeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedLinkType> Decoder = new UnsupportedLinkTypeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnsupportedLinkType" />
+            /// class.</para>
+            /// </summary>
+            private UnsupportedLinkType()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnsupportedLinkType</para>
+            /// </summary>
+            public static readonly UnsupportedLinkType Instance = new UnsupportedLinkType();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnsupportedLinkType" />.</para>
+            /// </summary>
+            private class UnsupportedLinkTypeEncoder : enc.StructEncoder<UnsupportedLinkType>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedLinkType value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnsupportedLinkType" />.</para>
+            /// </summary>
+            private class UnsupportedLinkTypeDecoder : enc.StructDecoder<UnsupportedLinkType>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedLinkType"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedLinkType Create()
+                {
+                    return new UnsupportedLinkType();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UnsupportedLinkType DecodeFields(enc.IJsonReader reader)
+                {
+                    return UnsupportedLinkType.Instance;
                 }
             }
 

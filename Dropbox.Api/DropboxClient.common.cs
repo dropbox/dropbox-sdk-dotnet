@@ -285,7 +285,7 @@ namespace Dropbox.Api
     }
 
     /// <summary>
-    /// An HTTP exception that is caused by the server reporting an authentication problem.
+    /// An exception that is caused by the server reporting an authentication problem.
     /// </summary>
     public partial class AuthException
     {
@@ -318,6 +318,20 @@ namespace Dropbox.Api
         public Uri RequestUri { get; private set; }
     }
 
+    /// <summary>
+    /// An exception which is caused by account not having access to this endpoint.
+    /// </summary>
+    public partial class AccessException
+    {
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="AccessException"/> class.</para>
+        /// </summary>
+        internal AccessException(string requestId)
+            : base(requestId)
+        {
+        }
+    }
+    
     /// <summary>
     /// An HTTP Exception that will cause a retry due to transient failure. The SDK will perform
     /// a certain number of retries which is configurable in <see cref="DropboxClient"/>. If the client
@@ -352,7 +366,7 @@ namespace Dropbox.Api
     }
 
     /// <summary>
-    /// An HTTP Exception that will cause a retry due to rate limiting. The SDK will not do auto-retry for
+    /// An exception that will cause a retry due to rate limiting. The SDK will not do auto-retry for
     /// this type of exception. The client should do proper backoff based on the value of
     /// <see cref="RateLimitException.RetryAfter"/> field.
     /// </summary>

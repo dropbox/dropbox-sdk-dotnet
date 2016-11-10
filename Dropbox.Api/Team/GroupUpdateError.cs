@@ -36,6 +36,50 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is GroupNameAlreadyUsed</para>
+        /// </summary>
+        public bool IsGroupNameAlreadyUsed
+        {
+            get
+            {
+                return this is GroupNameAlreadyUsed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GroupNameAlreadyUsed, or <c>null</c>.</para>
+        /// </summary>
+        public GroupNameAlreadyUsed AsGroupNameAlreadyUsed
+        {
+            get
+            {
+                return this as GroupNameAlreadyUsed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is GroupNameInvalid</para>
+        /// </summary>
+        public bool IsGroupNameInvalid
+        {
+            get
+            {
+                return this is GroupNameInvalid;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GroupNameInvalid, or <c>null</c>.</para>
+        /// </summary>
+        public GroupNameInvalid AsGroupNameInvalid
+        {
+            get
+            {
+                return this as GroupNameInvalid;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is
         /// ExternalIdAlreadyInUse</para>
         /// </summary>
@@ -116,6 +160,18 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupUpdateError value, enc.IJsonWriter writer)
             {
+                if (value is GroupNameAlreadyUsed)
+                {
+                    WriteProperty(".tag", "group_name_already_used", writer, enc.StringEncoder.Instance);
+                    GroupNameAlreadyUsed.Encoder.EncodeFields((GroupNameAlreadyUsed)value, writer);
+                    return;
+                }
+                if (value is GroupNameInvalid)
+                {
+                    WriteProperty(".tag", "group_name_invalid", writer, enc.StringEncoder.Instance);
+                    GroupNameInvalid.Encoder.EncodeFields((GroupNameInvalid)value, writer);
+                    return;
+                }
                 if (value is ExternalIdAlreadyInUse)
                 {
                     WriteProperty(".tag", "external_id_already_in_use", writer, enc.StringEncoder.Instance);
@@ -166,6 +222,10 @@ namespace Dropbox.Api.Team
             {
                 switch (tag)
                 {
+                    case "group_name_already_used":
+                        return GroupNameAlreadyUsed.Decoder.DecodeFields(reader);
+                    case "group_name_invalid":
+                        return GroupNameInvalid.Decoder.DecodeFields(reader);
                     case "external_id_already_in_use":
                         return ExternalIdAlreadyInUse.Decoder.DecodeFields(reader);
                     case "group_not_found":
@@ -181,7 +241,166 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>The new external ID is already being used by another group.</para>
+        /// <para>The requested group name is already being used by another group.</para>
+        /// </summary>
+        public sealed class GroupNameAlreadyUsed : GroupUpdateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GroupNameAlreadyUsed> Encoder = new GroupNameAlreadyUsedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GroupNameAlreadyUsed> Decoder = new GroupNameAlreadyUsedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GroupNameAlreadyUsed" />
+            /// class.</para>
+            /// </summary>
+            private GroupNameAlreadyUsed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GroupNameAlreadyUsed</para>
+            /// </summary>
+            public static readonly GroupNameAlreadyUsed Instance = new GroupNameAlreadyUsed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GroupNameAlreadyUsed" />.</para>
+            /// </summary>
+            private class GroupNameAlreadyUsedEncoder : enc.StructEncoder<GroupNameAlreadyUsed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GroupNameAlreadyUsed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GroupNameAlreadyUsed" />.</para>
+            /// </summary>
+            private class GroupNameAlreadyUsedDecoder : enc.StructDecoder<GroupNameAlreadyUsed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GroupNameAlreadyUsed"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GroupNameAlreadyUsed Create()
+                {
+                    return new GroupNameAlreadyUsed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GroupNameAlreadyUsed DecodeFields(enc.IJsonReader reader)
+                {
+                    return GroupNameAlreadyUsed.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Group name is empty or has invalid characters.</para>
+        /// </summary>
+        public sealed class GroupNameInvalid : GroupUpdateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GroupNameInvalid> Encoder = new GroupNameInvalidEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GroupNameInvalid> Decoder = new GroupNameInvalidDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GroupNameInvalid" />
+            /// class.</para>
+            /// </summary>
+            private GroupNameInvalid()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GroupNameInvalid</para>
+            /// </summary>
+            public static readonly GroupNameInvalid Instance = new GroupNameInvalid();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GroupNameInvalid" />.</para>
+            /// </summary>
+            private class GroupNameInvalidEncoder : enc.StructEncoder<GroupNameInvalid>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GroupNameInvalid value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GroupNameInvalid" />.</para>
+            /// </summary>
+            private class GroupNameInvalidDecoder : enc.StructDecoder<GroupNameInvalid>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GroupNameInvalid" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GroupNameInvalid Create()
+                {
+                    return new GroupNameInvalid();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GroupNameInvalid DecodeFields(enc.IJsonReader reader)
+                {
+                    return GroupNameInvalid.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The requested external ID is already being used by another group.</para>
         /// </summary>
         public sealed class ExternalIdAlreadyInUse : GroupUpdateError
         {

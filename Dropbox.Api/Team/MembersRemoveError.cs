@@ -1327,7 +1327,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Cannot keep account and delete the data at the same time.</para>
+        /// <para>Cannot keep account and delete the data at the same time. To keep the account
+        /// the argument wipe_data should be set to False.</para>
         /// </summary>
         public sealed class CannotKeepAccountAndDeleteData : MembersRemoveError
         {

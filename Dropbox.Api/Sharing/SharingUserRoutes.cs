@@ -1580,8 +1580,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Get members of multiple files at once. The arguments to this route are more
         /// limited, and the limit on query result size per file is more strict. To customize
         /// the results more, use the individual file endpoint.</para>
-        /// <para>Inherited users are not included in the result, and permissions are not
-        /// returned for this endpoint.</para>
+        /// <para>Inherited users and groups are not included in the result, and permissions
+        /// are not returned for this endpoint.</para>
         /// </summary>
         /// <param name="listFileMembersBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1614,8 +1614,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Get members of multiple files at once. The arguments to this route are more
         /// limited, and the limit on query result size per file is more strict. To customize
         /// the results more, use the individual file endpoint.</para>
-        /// <para>Inherited users are not included in the result, and permissions are not
-        /// returned for this endpoint.</para>
+        /// <para>Inherited users and groups are not included in the result, and permissions
+        /// are not returned for this endpoint.</para>
         /// </summary>
         /// <param name="files">Files for which to return members.</param>
         /// <param name="limit">Number of members to return max per query. Defaults to 10 if no

@@ -186,9 +186,9 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>Never overwrite the existing file. The autorename strategy is to append a
-        /// number to the file name. For example, "document.txt" might become "document
-        /// (2).txt".</para>
+        /// <para>Do not overwrite an existing file if there is a conflict. The autorename
+        /// strategy is to append a number to the file name. For example, "document.txt" might
+        /// become "document (2).txt".</para>
         /// </summary>
         public sealed class Add : WriteMode
         {
