@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.0.1</version>
+    <version>4.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,32 +14,7 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-  - Auth
-    - Added TokenFromOAuth1Asyn.
-  - Files
-    - UploadSessionFinishBatchAsync now returns UploadSessionFinishBatchLaunch.
-    - DeleteBatchAsync now returns DeleteBatchLaunch.
-    - CopyBatchAsync and MoveBatchAsync now returns RelocatonBatchLaunch.
-  - Sharing
-    - Added UnsupportedLinkType to SharedLinkError.
-    - Added IsMember to GroundInfo.
-    - Added TooManyFiles to UnshareFolderError.
-    - Added NoExplicitAccess to RelinquishFolderMembershipError.
-  - Team
-    - Added GroupNameAlreadyUsed and GroupNameInvalid to GroupUpdateError.
-    - Added API support for team folder actions (See https://www.dropbox.com/en/help/986 for details about team folder).
-      - Added TeamFolderCreateAsync.
-      - Added TeamFolderRenameAsync.
-      - Added TeamFolderListAsync.
-      - Added TeamFolderGetInfoAsync.
-      - Added TeamFolderActivateAsync.
-      - Added TeamFolderArchiveAsync.
-      - Added TeamFolderArchiveCheckAsync.
-      - Added TeamFolderPermanentlyDeleteAsync.
-  - Others
-    - RateLimitException is now a StructuredException with a RateLimitError body.
-    - Added request id to string representation of Dropbox exceptions.
-    - Added new structured exception AccessError.
+  - Added DropboxAppClient which can use app auth API endpoints.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

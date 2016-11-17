@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
   <TestRunParameters>
-    <Parameter name="accessToken" value="" />
+    <Parameter name="userAccessToken" value="" />
+    <Parameter name="teamAccessToken" value="" />
+    <Parameter name="appKey" value="" />
+    <Parameter name="appSecret" value="" />
   </TestRunParameters>
 </RunSettings>
