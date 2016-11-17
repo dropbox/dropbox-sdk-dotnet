@@ -110,6 +110,7 @@
     <Compile Include="Auth\TokenFromOAuth1Error.cs" />
     <Compile Include="Auth\TokenFromOAuth1Result.cs" />
     <Compile Include="AuthException.cs" />
+    <Compile Include="DropboxAppClient.cs" />
     <Compile Include="DropboxClient.cs" />
     <Compile Include="DropboxTeamClient.cs" />
     <Compile Include="Files\AddPropertiesError.cs" />

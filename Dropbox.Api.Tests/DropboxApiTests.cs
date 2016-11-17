@@ -16,6 +16,8 @@ namespace Dropbox.Api.Tests
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    using Dropbox.Api.Auth;
+
     /// <summary>
     /// The test class for Dropbox API.
     /// </summary>
@@ -27,11 +29,29 @@ namespace Dropbox.Api.Tests
         /// </summary>
         public static DropboxClient Client;
 
+        /// <summary>
+        /// The Dropbox team client.
+        /// </summary>
+        public static DropboxTeamClient TeamClient;
+
+        /// <summary>
+        /// The Dropbox app client.
+        /// </summary>
+        public static DropboxAppClient AppClient;
+
         [ClassInitialize]
         public static void Initialize(TestContext context)
         {
-            var token = context.Properties["accessToken"].ToString();
-            Client = new DropboxClient(token);
+            var userToken = context.Properties["userAccessToken"].ToString();
+            Client = new DropboxClient(userToken);
+
+            var teamToken = context.Properties["teamAccessToken"].ToString();
+            TeamClient = new DropboxTeamClient(teamToken);
+
+            var appKey = context.Properties["appKey"].ToString();
+            var appSecret = context.Properties["appSecret"].ToString();
+
+            AppClient = new DropboxAppClient(appKey, appSecret);
         }
 
 
@@ -172,6 +192,61 @@ namespace Dropbox.Api.Tests
                     Assert.IsTrue(ex.ToString().Contains("Request Id"));
                 }
             }
+        }
+
+        /// Test team auth.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestTeamAuth()
+        {
+            var result = await TeamClient.Team.GetInfoAsync();
+            Assert.IsNotNull(result.TeamId);
+            Assert.IsNotNull(result.Name);
+        }
+
+        /// Test team auth select user.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestTeamAuthSelectUser()
+        {
+            var result = await TeamClient.Team.MembersListAsync();
+            var memberId = result.Members[0].Profile.TeamMemberId;
+
+            var userClient = TeamClient.AsMember(memberId);
+            var account = await userClient.Users.GetCurrentAccountAsync();
+            Assert.AreEqual(account.TeamMemberId, memberId);
+        }
+
+        /// Test app auth.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestAppAuth()
+        {
+            try
+            {
+                var result = await AppClient.Auth.TokenFromOauth1Async("foo", "bar");
+            }
+            catch (ApiException<TokenFromOAuth1Error>)
+            {
+            }
+        }
+
+        /// Test no auth.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestNoAuth()
+        {
+            var result = await Client.Files.ListFolderAsync("", recursive: true);
+            var cursor = result.Cursor;
+
+            var task = Client.Files.ListFolderLongpollAsync(cursor);
+            await Client.Files.UploadAsync("/foo.txt", body: GetStream("abc"));
+            var response = await task;
+            Assert.IsTrue(response.Changes);
         }
 
         /// <summary>

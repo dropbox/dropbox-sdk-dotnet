@@ -104,6 +104,7 @@ namespace Dropbox.Api
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="resposneDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
@@ -115,12 +116,13 @@ namespace Dropbox.Api
             TRequest request,
             string host,
             string route,
+            string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder);
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Rpc, serializedArg)
+            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Rpc, serializedArg)
                 .ConfigureAwait(false);
 
             if (res.IsError)
@@ -142,6 +144,7 @@ namespace Dropbox.Api
         /// <param name="body">The content to be uploaded.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="resposneDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
@@ -154,12 +157,13 @@ namespace Dropbox.Api
             Stream body,
             string host,
             string route,
+            string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Upload, serializedArg, body)
+            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Upload, serializedArg, body)
                 .ConfigureAwait(false);
 
             if (res.IsError)
@@ -180,6 +184,7 @@ namespace Dropbox.Api
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="resposneDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
@@ -191,12 +196,13 @@ namespace Dropbox.Api
             TRequest request,
             string host,
             string route,
+            string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
-            var res = await this.RequestJsonStringWithRetry(host, route, RouteStyle.Download, serializedArg)
+            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Download, serializedArg)
                 .ConfigureAwait(false);
 
             if (res.IsError)
@@ -213,6 +219,7 @@ namespace Dropbox.Api
         /// Requests the JSON string with retry.
         /// </summary>
         /// <param name="host">The host.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="routeName">Name of the route.</param>
         /// <param name="routeStyle">The route style.</param>
         /// <param name="requestArg">The request argument.</param>
@@ -222,6 +229,7 @@ namespace Dropbox.Api
         private async Task<Result> RequestJsonStringWithRetry(
             string host,
             string routeName,
+            string auth,
             RouteStyle routeStyle,
             string requestArg,
             Stream body = null)
@@ -263,7 +271,7 @@ namespace Dropbox.Api
                 {
                     if (cachedBody == null)
                     {
-                        return await this.RequestJsonString(host, routeName, routeStyle, requestArg, body)
+                        return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body)
                             .ConfigureAwait(false);
                     }
                     else
@@ -271,7 +279,7 @@ namespace Dropbox.Api
                         using (var mem = new MemoryStream(cachedBody, writable: false))
                         {
                             mem.Position = cachedStreamStart;
-                            return await this.RequestJsonString(host, routeName, routeStyle, requestArg, mem)
+                            return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, mem)
                                 .ConfigureAwait(false);
                         }
                     }
@@ -330,6 +338,7 @@ namespace Dropbox.Api
         /// </summary>
         /// <param name="host">The host.</param>
         /// <param name="routeName">Name of the route.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="routeStyle">The route style.</param>
         /// <param name="requestArg">The request argument.</param>
         /// <param name="body">The body to upload if <paramref name="routeStyle"/>
@@ -338,6 +347,7 @@ namespace Dropbox.Api
         private async Task<Result> RequestJsonString(
             string host,
             string routeName,
+            string auth,
             RouteStyle routeStyle,
             string requestArg,
             Stream body = null)
@@ -347,9 +357,20 @@ namespace Dropbox.Api
 
             var request = new HttpRequestMessage(HttpMethod.Post, uri);
 
-            if (host != HostType.ApiNotify)
+            if (auth == AuthType.User || auth == AuthType.Team) 
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.options.OAuth2AccessToken);
+            } 
+            else if (auth == AuthType.App)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Basic", this.options.OAuth2AccessToken);
+            } 
+            else if (auth == AuthType.NoAuth)
+            {
+            }
+            else
+            {
+                throw new ArgumentException("Invalid auth type", auth);
             }
 
             request.Headers.TryAddWithoutValidation("User-Agent", this.options.UserAgent);
@@ -626,6 +647,32 @@ namespace Dropbox.Api
         /// Host type for api notify.
         /// </summary>
         public const string ApiNotify = "notify";
+    }
+
+    /// <summary>
+    /// The type of api auth.
+    /// </summary>
+    internal class AuthType
+    {
+        /// <summary>
+        /// Auth type for user auth.
+        /// </summary>
+        public const string User = "user";
+
+        /// <summary>
+        /// Auth type for team auth.
+        /// </summary>
+        public const string Team = "team";
+
+        /// <summary>
+        /// Host type for app auth.
+        /// </summary>
+        public const string App = "app";
+
+        /// <summary>
+        /// Host type for no auth.
+        /// </summary>
+        public const string NoAuth = "noauth";
     }
 
     /// <summary>

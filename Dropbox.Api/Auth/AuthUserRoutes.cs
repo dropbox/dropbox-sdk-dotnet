@@ -35,7 +35,7 @@ namespace Dropbox.Api.Auth.Routes
         /// <returns>The task that represents the asynchronous send operation.</returns>
         public t.Task TokenRevokeAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, enc.Empty, enc.Empty>(enc.Empty.Instance, "api", "/auth/token/revoke", enc.EmptyEncoder.Instance, enc.EmptyDecoder.Instance, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, enc.Empty, enc.Empty>(enc.Empty.Instance, "api", "/auth/token/revoke", "user", enc.EmptyEncoder.Instance, enc.EmptyDecoder.Instance, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
