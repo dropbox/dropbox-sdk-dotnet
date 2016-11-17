@@ -60,6 +60,7 @@ namespace <Namespace>.Stone
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="resposneDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
@@ -68,6 +69,7 @@ namespace <Namespace>.Stone
             TRequest request,
             string host,
             string route,
+            string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
@@ -83,6 +85,7 @@ namespace <Namespace>.Stone
         /// <param name="body">The content to be uploaded.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="resposneDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
@@ -92,6 +95,7 @@ namespace <Namespace>.Stone
             Stream body,
             string host,
             string route,
+            string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)
@@ -106,6 +110,7 @@ namespace <Namespace>.Stone
         /// <param name="request">The request.</param>
         /// <param name="host">The server host to send the request to.</param>
         /// <param name="route">The route name.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="resposneDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
@@ -114,6 +119,7 @@ namespace <Namespace>.Stone
             TRequest request,
             string host,
             string route,
+            string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
             IDecoder<TError> errorDecoder)

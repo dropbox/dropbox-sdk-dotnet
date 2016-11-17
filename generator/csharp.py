@@ -100,6 +100,7 @@ class _CSharpGenerator(CodeGenerator):
 
         self._generate_client(api, '{0}Client'.format(self._app_name), 'user')
         self._generate_client(api, '{0}TeamClient'.format(self._app_name), 'team')
+        self._generate_client(api, '{0}AppClient'.format(self._app_name), 'app')
         self._copy_and_update_files('common', lambda x: x.replace('<Namespace>', self._namespace_name))
 
         self._generate(api)
@@ -1865,6 +1866,7 @@ class _CSharpGenerator(CodeGenerator):
         async_name = '{0}Async'.format(public_name)
         route_host = route.attrs.get('host', 'api')
         route_style = route.attrs.get('style', 'rpc')
+        auth_type = route.attrs.get('auth', 'user')
 
         arg_type = self._typename(route.arg_data_type, void='enc.Empty')
         arg_is_void = is_void_type(route.arg_data_type)
@@ -1934,6 +1936,7 @@ class _CSharpGenerator(CodeGenerator):
             args.extend([
                 '"{0}"'.format(route_host),
                 '"/{0}/{1}"'.format(ns.name, route.name),
+                '"{0}"'.format(auth_type),
                 self._get_encoder(route.arg_data_type),
                 self._get_decoder(route.result_data_type),
                 self._get_decoder(route.error_data_type),

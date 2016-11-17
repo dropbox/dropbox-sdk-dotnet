@@ -136,6 +136,62 @@ namespace Dropbox.Api
     }
 
     /// <summary>
+    /// The client which contains endpoints which perform app-auth actions.
+    /// </summary>
+    public sealed partial class DropboxAppClient
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
+        /// </summary>
+        /// <param name="appKey">The Dropbox app key (e.g. consumer key in OAuth).</param>
+        /// <param name="appSecret">The Dropbox app secret (e.g. consumer secret in OAuth).</param>
+        public DropboxAppClient(string appKey, string appSecret)
+            : this(appKey, appSecret, new DropboxClientConfig())
+        {
+        }
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// </summary>
+        /// <param name="appKey">The Dropbox app key (e.g. consumer key in OAuth).</param>
+        /// <param name="appSecret">The Dropbox app secret (e.g. consumer secret in OAuth).</param>
+        /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
+        public DropboxAppClient(string appKey, string appSecret, DropboxClientConfig config)
+        {
+            if (appKey == null)
+            {
+                throw new ArgumentNullException("appKey");
+            }
+
+            if (appSecret == null)
+            {
+                throw new ArgumentNullException("appSecret");
+            }
+
+            var options = new DropboxRequestHandlerOptions(
+                GetBasicAuthHeader(appKey, appSecret), 
+                config.MaxRetriesOnError, 
+                config.UserAgent, 
+                httpClient: config.HttpClient);
+
+            this.InitializeRoutes(new DropboxRequestHandler(options));
+        }
+
+        /// <summary>
+        /// Gets the basic auth header from app key and app secret.
+        /// </summary>
+        /// <param name="appKey">The app key.</param>
+        /// <param name="appSecret">The app secret.</param>
+        /// <returns>The basic auth header.</returns>
+        private static string GetBasicAuthHeader(string appKey, string appSecret) 
+        {
+            var rawValue = string.Format("{0}:{1}", appKey, appSecret);
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawValue));
+        }
+    }
+
+    /// <summary>
     /// The client which contains endpoints which perform team-level actions.
     /// </summary>
     public sealed partial class DropboxTeamClient
