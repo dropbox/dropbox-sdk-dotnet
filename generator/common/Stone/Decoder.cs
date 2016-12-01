@@ -441,7 +441,7 @@ namespace <Namespace>.Stone
     /// Decoder for union type.
     /// </summary>
     /// <typeparam name="T">The union type.</typeparam>
-    internal abstract class UnionDecoder<T> : StructDecoder<T> where T : class, new()
+    internal abstract class UnionDecoder<T> : StructDecoder<T> where T : class
     {
         /// <summary>
         /// Decode fields without ensuring start and end object.

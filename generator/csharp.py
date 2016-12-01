@@ -1406,6 +1406,8 @@ class _CSharpGenerator(CodeGenerator):
             self.emit_ctor_summary(class_name)
             self.emit_xml('This is to construct an instance of the object when '
                           'deserializing.', 'remarks')
+
+        self.emit('[sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]')
         with self.cs_block(before='public {0}()'.format(class_name)):
             # initialize fields to their default values, where necessary
             for field in struct.all_fields:

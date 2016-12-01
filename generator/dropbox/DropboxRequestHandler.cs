@@ -565,7 +565,6 @@ namespace Dropbox.Api
         /// </summary>
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         private class DownloadResponse<TResponse> : IDownloadResponse<TResponse>
-            where TResponse : new()
         {
             /// <summary>
             /// The HTTP response containing the body content.
