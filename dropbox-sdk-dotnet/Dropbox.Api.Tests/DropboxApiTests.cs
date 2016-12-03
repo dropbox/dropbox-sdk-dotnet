@@ -249,6 +249,22 @@ namespace Dropbox.Api.Tests
             Assert.IsTrue(response.Changes);
         }
 
+        /// Test APM flow.
+        /// </summary>
+        [TestMethod]
+        public void TaskAPM()
+        {
+            var result = Client.Users.BeginGetCurrentAccount(null);
+            var account = Client.Users.EndGetCurrentAccount(result);
+            var accountId = account.AccountId;
+
+            result = Client.Users.BeginGetAccountBatch(new string[] { accountId }, null);
+            var accounts = Client.Users.EndGetAccountBatch(result);
+
+            Assert.AreEqual(accounts.Count, 1);
+            Assert.AreEqual(accounts[0].AccountId, accountId);
+        }
+
         /// <summary>
         /// Converts string to a memory stream.
         /// </summary>
