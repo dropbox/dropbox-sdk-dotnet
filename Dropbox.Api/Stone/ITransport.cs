@@ -17,7 +17,6 @@ namespace Dropbox.Api.Stone
     /// </summary>
     /// <typeparam name="TResponse">The type of the response.</typeparam>
     public interface IDownloadResponse<TResponse> : IDisposable
-        where TResponse : new()
     {
         /// <summary>
         /// Gets the response.
@@ -72,8 +71,7 @@ namespace Dropbox.Api.Stone
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
-            IDecoder<TError> errorDecoder)
-                where TResponse : new();
+            IDecoder<TError> errorDecoder);
 
         /// <summary>
         /// Sends the upload request asynchronously.
@@ -98,8 +96,7 @@ namespace Dropbox.Api.Stone
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
-            IDecoder<TError> errorDecoder)
-                where TResponse : new();
+            IDecoder<TError> errorDecoder);
 
         /// <summary>
         /// Sends the download request asynchronously.
@@ -122,7 +119,6 @@ namespace Dropbox.Api.Stone
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> resposneDecoder,
-            IDecoder<TError> errorDecoder)
-                where TResponse : new();
+            IDecoder<TError> errorDecoder);
     }
 }

@@ -77,6 +77,7 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public CommitInfo()
         {
             this.Mode = Dropbox.Api.Files.WriteMode.Add.Instance;

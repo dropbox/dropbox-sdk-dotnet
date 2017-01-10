@@ -243,11 +243,20 @@ namespace Dropbox.Api
 
             if (routeStyle == RouteStyle.Upload)
             {
+                if (body == null)
+                {
+                    throw new ArgumentNullException("body");
+                }
+
                 // to support retry logic, the body stream must be seekable
                 // if it isn't we won't retry
                 if (!body.CanSeek)
                 {
                     maxRetries = 0;
+                }
+                else if (maxRetries == 0)
+                {
+                    // Do not copy the stream
                 }
                 else if (body is MemoryStream)
                 {
@@ -565,7 +574,6 @@ namespace Dropbox.Api
         /// </summary>
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         private class DownloadResponse<TResponse> : IDownloadResponse<TResponse>
-            where TResponse : new()
         {
             /// <summary>
             /// The HTTP response containing the body content.

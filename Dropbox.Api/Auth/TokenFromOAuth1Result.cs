@@ -53,6 +53,7 @@ namespace Dropbox.Api.Auth
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public TokenFromOAuth1Result()
         {
         }
