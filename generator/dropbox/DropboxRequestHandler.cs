@@ -243,11 +243,20 @@ namespace Dropbox.Api
 
             if (routeStyle == RouteStyle.Upload)
             {
+                if (body == null)
+                {
+                    throw new ArgumentNullException("body");
+                }
+
                 // to support retry logic, the body stream must be seekable
                 // if it isn't we won't retry
                 if (!body.CanSeek)
                 {
                     maxRetries = 0;
+                }
+                else if (maxRetries == 0)
+                {
+                    // Do not copy the stream
                 }
                 else if (body is MemoryStream)
                 {
@@ -389,6 +398,11 @@ namespace Dropbox.Api
                     break;
                 case RouteStyle.Download:
                     request.Headers.Add(DropboxApiArgHeader, requestArg);
+
+                    // This is required to force libcurl remove default content type header.
+                    request.Content = new StringContent("");
+                    request.Content.Headers.ContentType = null;
+
                     completionOption = HttpCompletionOption.ResponseHeadersRead;
                     break;
                 case RouteStyle.Upload:
