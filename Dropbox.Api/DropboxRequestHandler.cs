@@ -398,6 +398,11 @@ namespace Dropbox.Api
                     break;
                 case RouteStyle.Download:
                     request.Headers.Add(DropboxApiArgHeader, requestArg);
+
+                    // This is required to force libcurl remove default content type header.
+                    request.Content = new StringContent("");
+                    request.Content.Headers.ContentType = null;
+
                     completionOption = HttpCompletionOption.ResponseHeadersRead;
                     break;
                 case RouteStyle.Upload:
