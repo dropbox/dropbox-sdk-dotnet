@@ -752,7 +752,7 @@ namespace Dropbox.Api
 
             this.UserAgent = userAgent == null
                 ? string.Join("/", BaseUserAgent, sdkVersion)
-                : string.Join("/", this.UserAgent, BaseUserAgent, sdkVersion);
+                : string.Join("/", userAgent, BaseUserAgent, sdkVersion);
 
             this.HttpClient = httpClient ?? DefaultHttpClient;
             this.OAuth2AccessToken = oauth2AccessToken;
