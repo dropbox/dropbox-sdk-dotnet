@@ -275,5 +275,43 @@ namespace Dropbox.Api.Tests
             var buffer = Encoding.UTF8.GetBytes(content);
             return new MemoryStream(buffer);
         }
+        
+        /// Test User-Agent header is set with default values.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestUserAgentDefault()
+        {
+            var body = "{ \".tag\": \"folder\", \"name\": \"aFolder\", \"path_lower\": \"/afolder\", \"path_display\": \"/aFolder\",  \"id\": \"id:6OmM3kbXdOAAAAAAAAxAAw\" }";
+            var mockResponse = new HttpResponseMessage((HttpStatusCode)200)
+            {
+                Content = new StringContent(body, Encoding.UTF8, "application/json")
+            };
+            var mockHandler = new MockHttpMessageHandler(mockResponse);
+            var mockClient = new HttpClient(mockHandler);
+            var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient });
+            await client.Files.GetMetadataAsync("/aFolder");
+            Assert.IsTrue(mockHandler.lastRequest.Headers.UserAgent.ToString().Contains("OfficialDropboxDotNetSDKv2"));
+        }
+
+        /// Test User-Agent header is populated with user supplied value in DropboxClientConfig.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestUserAgentUserSupplied()
+        {
+            var body = "{ \".tag\": \"folder\", \"name\": \"aFolder\", \"path_lower\": \"/afolder\", \"path_display\": \"/aFolder\",  \"id\": \"id:6OmM3kbXdOAAAAAAAAxAAw\" }";
+            var mockResponse = new HttpResponseMessage((HttpStatusCode)200)
+            {
+                Content = new StringContent(body, Encoding.UTF8, "application/json")
+            };
+
+            var mockHandler = new MockHttpMessageHandler(mockResponse);
+            var mockClient = new HttpClient(mockHandler);
+            var userAgent = "UserAgentTest";
+            var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient, UserAgent = userAgent });
+            await client.Files.GetMetadataAsync("/aFolder");
+            Assert.IsTrue(mockHandler.lastRequest.Headers.UserAgent.ToString().Contains(userAgent));
+        }
     }
 }

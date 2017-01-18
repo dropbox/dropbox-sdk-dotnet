@@ -13,6 +13,11 @@ namespace Dropbox.Api.Tests
     public class MockHttpMessageHandler : HttpMessageHandler
     {
         /// <summary>
+        /// The request as it would be sent to the server.
+        /// </summary>
+        public HttpRequestMessage lastRequest { get; set; }
+
+        /// <summary>
         /// The fake response.
         /// </summary>
         private readonly HttpResponseMessage response;
@@ -34,6 +39,7 @@ namespace Dropbox.Api.Tests
         /// <returns>The response.</returns>
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
+            this.lastRequest = request;
             return Task.FromResult(this.response);
         }
     }
