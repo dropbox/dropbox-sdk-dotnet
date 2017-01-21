@@ -25,6 +25,11 @@ namespace Dropbox.Api.Tests
     public class DropboxApiTests
     {
         /// <summary>
+        /// The user access token.
+        /// </summary>
+        public static string UserAccessToken;
+
+        /// <summary>
         /// The Dropbox client.
         /// </summary>
         public static DropboxClient Client;
@@ -39,11 +44,12 @@ namespace Dropbox.Api.Tests
         /// </summary>
         public static DropboxAppClient AppClient;
 
+
         [ClassInitialize]
         public static void Initialize(TestContext context)
         {
-            var userToken = context.Properties["userAccessToken"].ToString();
-            Client = new DropboxClient(userToken);
+            UserAccessToken = context.Properties["userAccessToken"].ToString();
+            Client = new DropboxClient(UserAccessToken);
 
             var teamToken = context.Properties["teamAccessToken"].ToString();
             TeamClient = new DropboxTeamClient(teamToken);
@@ -124,6 +130,42 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Test upload with retry.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestUploadRetry()
+        {
+            var count = 0;
+
+            var mockHandler = new MockHttpMessageHandler((r, s) =>
+            {
+                if (count++ < 2)
+                {
+                    var error = new HttpResponseMessage(HttpStatusCode.InternalServerError)
+                    {
+                        Content = new StringContent("Error")
+                    };
+
+                    return Task.FromResult(error);
+                }
+
+                return s(r);
+            });
+
+            var mockClient = new HttpClient(mockHandler);
+            var client = new DropboxClient(
+                UserAccessToken,
+                new DropboxClientConfig { HttpClient = mockClient, MaxRetriesOnError = 10 });
+
+            var response = await client.Files.UploadAsync("/Foo.txt", body: GetStream("abc"));
+            var downloadResponse = await Client.Files.DownloadAsync("/Foo.txt");
+            var content = await downloadResponse.GetContentAsStringAsync();
+            Assert.AreEqual("abc", content);
+        }
+
+
+        /// <summary>
         /// Test upload.
         /// </summary>
         /// <returns>The <see cref="Task"/></returns>
@@ -154,7 +196,7 @@ namespace Dropbox.Api.Tests
 
             mockResponse.Headers.Add("X-Dropbox-Request-Id", "123");
 
-            var mockHandler = new MockHttpMessageHandler(mockResponse);
+            var mockHandler = new MockHttpMessageHandler((r, s) => Task.FromResult(mockResponse));
             var mockClient = new HttpClient(mockHandler);
             var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient });
             try
@@ -282,16 +324,17 @@ namespace Dropbox.Api.Tests
         [TestMethod]
         public async Task TestUserAgentDefault()
         {
-            var body = "{ \".tag\": \"folder\", \"name\": \"aFolder\", \"path_lower\": \"/afolder\", \"path_display\": \"/aFolder\",  \"id\": \"id:6OmM3kbXdOAAAAAAAAxAAw\" }";
-            var mockResponse = new HttpResponseMessage((HttpStatusCode)200)
+            HttpRequestMessage lastRequest = null;
+            var mockHandler = new MockHttpMessageHandler((r, s) =>
             {
-                Content = new StringContent(body, Encoding.UTF8, "application/json")
-            };
-            var mockHandler = new MockHttpMessageHandler(mockResponse);
+                lastRequest = r;
+                return s(r);
+            });
+
             var mockClient = new HttpClient(mockHandler);
-            var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient });
-            await client.Files.GetMetadataAsync("/aFolder");
-            Assert.IsTrue(mockHandler.lastRequest.Headers.UserAgent.ToString().Contains("OfficialDropboxDotNetSDKv2"));
+            var client = new DropboxClient(UserAccessToken, new DropboxClientConfig { HttpClient = mockClient });
+            await client.Users.GetCurrentAccountAsync();
+            Assert.IsTrue(lastRequest.Headers.UserAgent.ToString().Contains("OfficialDropboxDotNetSDKv2"));
         }
 
         /// Test User-Agent header is populated with user supplied value in DropboxClientConfig.
@@ -300,18 +343,18 @@ namespace Dropbox.Api.Tests
         [TestMethod]
         public async Task TestUserAgentUserSupplied()
         {
-            var body = "{ \".tag\": \"folder\", \"name\": \"aFolder\", \"path_lower\": \"/afolder\", \"path_display\": \"/aFolder\",  \"id\": \"id:6OmM3kbXdOAAAAAAAAxAAw\" }";
-            var mockResponse = new HttpResponseMessage((HttpStatusCode)200)
+            HttpRequestMessage lastRequest = null;
+            var mockHandler = new MockHttpMessageHandler((r, s) =>
             {
-                Content = new StringContent(body, Encoding.UTF8, "application/json")
-            };
+                lastRequest = r;
+                return s(r);
+            });
 
-            var mockHandler = new MockHttpMessageHandler(mockResponse);
             var mockClient = new HttpClient(mockHandler);
             var userAgent = "UserAgentTest";
-            var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient, UserAgent = userAgent });
-            await client.Files.GetMetadataAsync("/aFolder");
-            Assert.IsTrue(mockHandler.lastRequest.Headers.UserAgent.ToString().Contains(userAgent));
+            var client = new DropboxClient(UserAccessToken, new DropboxClientConfig { HttpClient = mockClient, UserAgent = userAgent });
+            await client.Users.GetCurrentAccountAsync();
+            Assert.IsTrue(lastRequest.Headers.UserAgent.ToString().Contains(userAgent));
         }
     }
 }

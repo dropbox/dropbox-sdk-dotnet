@@ -6,29 +6,27 @@
 
 namespace Dropbox.Api.Tests
 {
+    using System;
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
 
-    public class MockHttpMessageHandler : HttpMessageHandler
+    public class MockHttpMessageHandler : HttpClientHandler
     {
-        /// <summary>
-        /// The request as it would be sent to the server.
-        /// </summary>
-        public HttpRequestMessage lastRequest { get; set; }
+        public delegate Task<HttpResponseMessage> Sender(HttpRequestMessage message);
 
         /// <summary>
-        /// The fake response.
+        /// The mock handler.
         /// </summary>
-        private readonly HttpResponseMessage response;
-        
+        Func<HttpRequestMessage, Sender, Task<HttpResponseMessage>> handler;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MockHttpMessageHandler"/> class.
         /// </summary>
         /// <param name="response">The mock response.</param>
-        public MockHttpMessageHandler(HttpResponseMessage response)
+        public MockHttpMessageHandler(Func<HttpRequestMessage, Sender, Task<HttpResponseMessage>> handler)
         {
-            this.response = response;
+            this.handler = handler;
         }
 
         /// <summary>
@@ -39,8 +37,7 @@ namespace Dropbox.Api.Tests
         /// <returns>The response.</returns>
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            this.lastRequest = request;
-            return Task.FromResult(this.response);
+            return this.handler(request, r => base.SendAsync(r, cancellationToken));
         }
     }
 }
