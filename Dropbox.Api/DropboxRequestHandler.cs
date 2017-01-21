@@ -238,9 +238,6 @@ namespace Dropbox.Api
             var maxRetries = this.options.MaxClientRetries;
             var r = new Random();
 
-            byte[] cachedBody = null;
-            long cachedStreamStart = 0;
-
             if (routeStyle == RouteStyle.Upload)
             {
                 if (body == null)
@@ -254,66 +251,50 @@ namespace Dropbox.Api
                 {
                     maxRetries = 0;
                 }
-                else if (maxRetries == 0)
-                {
-                    // Do not copy the stream
-                }
-                else if (body is MemoryStream)
-                {
-                    cachedStreamStart = body.Position;
-                    cachedBody = ((MemoryStream)body).ToArray();
-                }
-                else
-                {
-                    cachedStreamStart = body.Position;
-                    using (var mem = new MemoryStream())
-                    {
-                        await body.CopyToAsync(mem).ConfigureAwait(false);
-                        cachedBody = mem.ToArray();
-                    }
-                }
             }
 
-            while (true)
+            try
             {
-                try
+                while (true)
                 {
-                    if (cachedBody == null)
+                    try
                     {
                         return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body)
                             .ConfigureAwait(false);
                     }
-                    else
-                    {
-                        using (var mem = new MemoryStream(cachedBody, writable: false))
-                        {
-                            mem.Position = cachedStreamStart;
-                            return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, mem)
-                                .ConfigureAwait(false);
-                        }
-                    }
-                }
-                catch (RateLimitException)
-                {
-                    throw;
-                }
-                catch (RetryException)
-                {
-                    // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
-                    // do not count a rate limiting error as an attempt
-                    if (++attempt > maxRetries)
+                    catch (RateLimitException)
                     {
                         throw;
                     }
-                }
+                    catch (RetryException)
+                    {
+                        // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
+                        // do not count a rate limiting error as an attempt
+                        if (++attempt > maxRetries)
+                        {
+                            throw;
+                        }
+                    }
 
-                // use exponential backoff
-                var backoff = TimeSpan.FromSeconds(Math.Pow(2, attempt) * r.NextDouble());
+                    // use exponential backoff
+                    var backoff = TimeSpan.FromSeconds(Math.Pow(2, attempt) * r.NextDouble());
 #if PORTABLE40
-                await TaskEx.Delay(backoff);
+                    await TaskEx.Delay(backoff);
 #else
-                await Task.Delay(backoff);
+                    await Task.Delay(backoff);
 #endif
+                    if (body != null)
+                    {
+                        body.Position = 0;
+                    }
+                }
+            }
+            finally
+            {
+                if (body != null)
+                {
+                    body.Dispose();
+                }
             }
         }
 
@@ -412,7 +393,7 @@ namespace Dropbox.Api
                         throw new ArgumentNullException("body");
                     }
 
-                    request.Content = new StreamContent(body);
+                    request.Content = new CustomStreamContent(body);
                     request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                     break;
                 default:
@@ -642,6 +623,26 @@ namespace Dropbox.Api
     }
 
     /// <summary>
+    /// The stream content which doesn't dispose the underlying stream. This
+    /// is useful for retry.
+    /// </summary>
+    internal class CustomStreamContent : StreamContent
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomStreamContent"/> class.
+        /// </summary>
+        /// <param name="content">The stream content.</param>
+        public CustomStreamContent(Stream content) : base(content)
+        {
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            // Do not dispose the stream.
+        }
+    }
+
+    /// <summary>
     /// The type of api hosts.
     /// </summary>
     internal class HostType
@@ -752,7 +753,7 @@ namespace Dropbox.Api
 
             this.UserAgent = userAgent == null
                 ? string.Join("/", BaseUserAgent, sdkVersion)
-                : string.Join("/", this.UserAgent, BaseUserAgent, sdkVersion);
+                : string.Join("/", userAgent, BaseUserAgent, sdkVersion);
 
             this.HttpClient = httpClient ?? DefaultHttpClient;
             this.OAuth2AccessToken = oauth2AccessToken;
