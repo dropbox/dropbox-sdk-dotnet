@@ -60,6 +60,13 @@ namespace Dropbox.Api.Tests
             AppClient = new DropboxAppClient(appKey, appSecret);
         }
 
+        [TestInitialize]
+        public void Initialize()
+        {
+            var result = Client.Files.ListFolderAsync("").Result;
+            Assert.AreEqual(result.Entries.Count, 0);
+        }
+
 
         [TestCleanup]
         public void Cleanup()
