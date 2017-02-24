@@ -58,6 +58,50 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MembersNotInTeam</para>
+        /// </summary>
+        public bool IsMembersNotInTeam
+        {
+            get
+            {
+                return this is MembersNotInTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MembersNotInTeam, or <c>null</c>.</para>
+        /// </summary>
+        public MembersNotInTeam AsMembersNotInTeam
+        {
+            get
+            {
+                return this as MembersNotInTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UsersNotFound</para>
+        /// </summary>
+        public bool IsUsersNotFound
+        {
+            get
+            {
+                return this is UsersNotFound;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UsersNotFound, or <c>null</c>.</para>
+        /// </summary>
+        public UsersNotFound AsUsersNotFound
+        {
+            get
+            {
+                return this as UsersNotFound;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is MemberNotInGroup</para>
         /// </summary>
         public bool IsMemberNotInGroup
@@ -97,6 +141,18 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "group_not_in_team", writer, enc.StringEncoder.Instance);
                     GroupNotInTeam.Encoder.EncodeFields((GroupNotInTeam)value, writer);
+                    return;
+                }
+                if (value is MembersNotInTeam)
+                {
+                    WriteProperty(".tag", "members_not_in_team", writer, enc.StringEncoder.Instance);
+                    MembersNotInTeam.Encoder.EncodeFields((MembersNotInTeam)value, writer);
+                    return;
+                }
+                if (value is UsersNotFound)
+                {
+                    WriteProperty(".tag", "users_not_found", writer, enc.StringEncoder.Instance);
+                    UsersNotFound.Encoder.EncodeFields((UsersNotFound)value, writer);
                     return;
                 }
                 if (value is MemberNotInGroup)
@@ -140,6 +196,10 @@ namespace Dropbox.Api.Team
                 {
                     case "group_not_in_team":
                         return GroupNotInTeam.Decoder.DecodeFields(reader);
+                    case "members_not_in_team":
+                        return MembersNotInTeam.Decoder.DecodeFields(reader);
+                    case "users_not_found":
+                        return UsersNotFound.Decoder.DecodeFields(reader);
                     case "member_not_in_group":
                         return MemberNotInGroup.Decoder.DecodeFields(reader);
                     default:
@@ -224,6 +284,202 @@ namespace Dropbox.Api.Team
                 public override GroupNotInTeam DecodeFields(enc.IJsonReader reader)
                 {
                     return GroupNotInTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>These members are not part of your team.</para>
+        /// </summary>
+        public sealed class MembersNotInTeam : GroupMembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MembersNotInTeam> Encoder = new MembersNotInTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MembersNotInTeam> Decoder = new MembersNotInTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MembersNotInTeam" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MembersNotInTeam(col.IEnumerable<string> value)
+            {
+                this.Value = new col.List<string>(value);
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MembersNotInTeam" />
+            /// class.</para>
+            /// </summary>
+            private MembersNotInTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public col.IList<string> Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MembersNotInTeam" />.</para>
+            /// </summary>
+            private class MembersNotInTeamEncoder : enc.StructEncoder<MembersNotInTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MembersNotInTeam value, enc.IJsonWriter writer)
+                {
+                    WriteListProperty("members_not_in_team", value.Value, writer, enc.StringEncoder.Instance);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MembersNotInTeam" />.</para>
+            /// </summary>
+            private class MembersNotInTeamDecoder : enc.StructDecoder<MembersNotInTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MembersNotInTeam" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MembersNotInTeam Create()
+                {
+                    return new MembersNotInTeam();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(MembersNotInTeam value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "members_not_in_team":
+                            value.Value = ReadList<string>(reader, enc.StringDecoder.Instance);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>These users were not found in Dropbox.</para>
+        /// </summary>
+        public sealed class UsersNotFound : GroupMembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UsersNotFound> Encoder = new UsersNotFoundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UsersNotFound> Decoder = new UsersNotFoundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UsersNotFound" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public UsersNotFound(col.IEnumerable<string> value)
+            {
+                this.Value = new col.List<string>(value);
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UsersNotFound" />
+            /// class.</para>
+            /// </summary>
+            private UsersNotFound()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public col.IList<string> Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UsersNotFound" />.</para>
+            /// </summary>
+            private class UsersNotFoundEncoder : enc.StructEncoder<UsersNotFound>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UsersNotFound value, enc.IJsonWriter writer)
+                {
+                    WriteListProperty("users_not_found", value.Value, writer, enc.StringEncoder.Instance);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UsersNotFound" />.</para>
+            /// </summary>
+            private class UsersNotFoundDecoder : enc.StructDecoder<UsersNotFound>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UsersNotFound" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UsersNotFound Create()
+                {
+                    return new UsersNotFound();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(UsersNotFound value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "users_not_found":
+                            value.Value = ReadList<string>(reader, enc.StringDecoder.Instance);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

@@ -80,6 +80,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ArchiveInProgress</para>
+        /// </summary>
+        public bool IsArchiveInProgress
+        {
+            get
+            {
+                return this is ArchiveInProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ArchiveInProgress, or <c>null</c>.</para>
+        /// </summary>
+        public ArchiveInProgress AsArchiveInProgress
+        {
+            get
+            {
+                return this as ArchiveInProgress;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Team
                     Archived.Encoder.EncodeFields((Archived)value, writer);
                     return;
                 }
+                if (value is ArchiveInProgress)
+                {
+                    WriteProperty(".tag", "archive_in_progress", writer, enc.StringEncoder.Instance);
+                    ArchiveInProgress.Encoder.EncodeFields((ArchiveInProgress)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.Team
                         return Active.Decoder.DecodeFields(reader);
                     case "archived":
                         return Archived.Decoder.DecodeFields(reader);
+                    case "archive_in_progress":
+                        return ArchiveInProgress.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -328,6 +358,86 @@ namespace Dropbox.Api.Team
                 public override Archived DecodeFields(enc.IJsonReader reader)
                 {
                     return Archived.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The folder is being archived and the operation did not succeed.</para>
+        /// </summary>
+        public sealed class ArchiveInProgress : TeamFolderInvalidStatusError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ArchiveInProgress> Encoder = new ArchiveInProgressEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ArchiveInProgress> Decoder = new ArchiveInProgressDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ArchiveInProgress" />
+            /// class.</para>
+            /// </summary>
+            private ArchiveInProgress()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ArchiveInProgress</para>
+            /// </summary>
+            public static readonly ArchiveInProgress Instance = new ArchiveInProgress();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ArchiveInProgress" />.</para>
+            /// </summary>
+            private class ArchiveInProgressEncoder : enc.StructEncoder<ArchiveInProgress>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ArchiveInProgress value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ArchiveInProgress" />.</para>
+            /// </summary>
+            private class ArchiveInProgressDecoder : enc.StructDecoder<ArchiveInProgress>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ArchiveInProgress"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ArchiveInProgress Create()
+                {
+                    return new ArchiveInProgress();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ArchiveInProgress DecodeFields(enc.IJsonReader reader)
+                {
+                    return ArchiveInProgress.Instance;
                 }
             }
 

@@ -41,11 +41,21 @@ namespace Dropbox.Api.Sharing
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="forceAsync">Whether to force the share to happen
         /// asynchronously.</param>
+        /// <param name="actions">This is a list indicating whether each returned folder data
+        /// entry will include a boolean field <see
+        /// cref="Dropbox.Api.Sharing.FolderPermission.Allow" /> that describes whether the
+        /// current user can perform the `FolderAction` on the folder.</param>
+        /// <param name="linkSettings">Settings on the link for this folder.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         public ShareFolderArg(string path,
                               MemberPolicy memberPolicy = null,
                               AclUpdatePolicy aclUpdatePolicy = null,
                               SharedLinkPolicy sharedLinkPolicy = null,
-                              bool forceAsync = false)
+                              bool forceAsync = false,
+                              col.IEnumerable<FolderAction> actions = null,
+                              LinkSettings linkSettings = null,
+                              ViewerInfoPolicy viewerInfoPolicy = null)
         {
             if (path == null)
             {
@@ -56,23 +66,16 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
             }
 
-            if (memberPolicy == null)
-            {
-                memberPolicy = Dropbox.Api.Sharing.MemberPolicy.Anyone.Instance;
-            }
-            if (aclUpdatePolicy == null)
-            {
-                aclUpdatePolicy = Dropbox.Api.Sharing.AclUpdatePolicy.Owner.Instance;
-            }
-            if (sharedLinkPolicy == null)
-            {
-                sharedLinkPolicy = Dropbox.Api.Sharing.SharedLinkPolicy.Anyone.Instance;
-            }
+            var actionsList = enc.Util.ToList(actions);
+
             this.Path = path;
             this.MemberPolicy = memberPolicy;
             this.AclUpdatePolicy = aclUpdatePolicy;
             this.SharedLinkPolicy = sharedLinkPolicy;
             this.ForceAsync = forceAsync;
+            this.Actions = actionsList;
+            this.LinkSettings = linkSettings;
+            this.ViewerInfoPolicy = viewerInfoPolicy;
         }
 
         /// <summary>
@@ -83,9 +86,6 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ShareFolderArg()
         {
-            this.MemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Anyone.Instance;
-            this.AclUpdatePolicy = Dropbox.Api.Sharing.AclUpdatePolicy.Owner.Instance;
-            this.SharedLinkPolicy = Dropbox.Api.Sharing.SharedLinkPolicy.Anyone.Instance;
             this.ForceAsync = false;
         }
 
@@ -118,6 +118,24 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public bool ForceAsync { get; protected set; }
 
+        /// <summary>
+        /// <para>This is a list indicating whether each returned folder data entry will
+        /// include a boolean field <see cref="Dropbox.Api.Sharing.FolderPermission.Allow" />
+        /// that describes whether the current user can perform the `FolderAction` on the
+        /// folder.</para>
+        /// </summary>
+        public col.IList<FolderAction> Actions { get; protected set; }
+
+        /// <summary>
+        /// <para>Settings on the link for this folder.</para>
+        /// </summary>
+        public LinkSettings LinkSettings { get; protected set; }
+
+        /// <summary>
+        /// <para>Who can enable/disable viewer info for this shared folder.</para>
+        /// </summary>
+        public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -133,10 +151,31 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ShareFolderArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteProperty("member_policy", value.MemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
-                WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
-                WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
+                if (value.MemberPolicy != null)
+                {
+                    WriteProperty("member_policy", value.MemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
+                }
+                if (value.AclUpdatePolicy != null)
+                {
+                    WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
+                }
+                if (value.SharedLinkPolicy != null)
+                {
+                    WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
+                }
                 WriteProperty("force_async", value.ForceAsync, writer, enc.BooleanEncoder.Instance);
+                if (value.Actions.Count > 0)
+                {
+                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.FolderAction.Encoder);
+                }
+                if (value.LinkSettings != null)
+                {
+                    WriteProperty("link_settings", value.LinkSettings, writer, Dropbox.Api.Sharing.LinkSettings.Encoder);
+                }
+                if (value.ViewerInfoPolicy != null)
+                {
+                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
+                }
             }
         }
 
@@ -183,6 +222,15 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "force_async":
                         value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "actions":
+                        value.Actions = ReadList<FolderAction>(reader, Dropbox.Api.Sharing.FolderAction.Decoder);
+                        break;
+                    case "link_settings":
+                        value.LinkSettings = Dropbox.Api.Sharing.LinkSettings.Decoder.Decode(reader);
+                        break;
+                    case "viewer_info_policy":
+                        value.ViewerInfoPolicy = Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

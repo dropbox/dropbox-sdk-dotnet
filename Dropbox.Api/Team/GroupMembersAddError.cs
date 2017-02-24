@@ -171,46 +171,25 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is GroupNotFound</para>
+        /// <para>Gets a value indicating whether this instance is
+        /// SystemManagedGroupDisallowed</para>
         /// </summary>
-        public bool IsGroupNotFound
+        public bool IsSystemManagedGroupDisallowed
         {
             get
             {
-                return this is GroupNotFound;
+                return this is SystemManagedGroupDisallowed;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a GroupNotFound, or <c>null</c>.</para>
+        /// <para>Gets this instance as a SystemManagedGroupDisallowed, or <c>null</c>.</para>
         /// </summary>
-        public GroupNotFound AsGroupNotFound
+        public SystemManagedGroupDisallowed AsSystemManagedGroupDisallowed
         {
             get
             {
-                return this as GroupNotFound;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Other</para>
-        /// </summary>
-        public bool IsOther
-        {
-            get
-            {
-                return this is Other;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
-        /// </summary>
-        public Other AsOther
-        {
-            get
-            {
-                return this as Other;
+                return this as SystemManagedGroupDisallowed;
             }
         }
 
@@ -264,16 +243,10 @@ namespace Dropbox.Api.Team
                     UserCannotBeManagerOfCompanyManagedGroup.Encoder.EncodeFields((UserCannotBeManagerOfCompanyManagedGroup)value, writer);
                     return;
                 }
-                if (value is GroupNotFound)
+                if (value is SystemManagedGroupDisallowed)
                 {
-                    WriteProperty(".tag", "group_not_found", writer, enc.StringEncoder.Instance);
-                    GroupNotFound.Encoder.EncodeFields((GroupNotFound)value, writer);
-                    return;
-                }
-                if (value is Other)
-                {
-                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
-                    Other.Encoder.EncodeFields((Other)value, writer);
+                    WriteProperty(".tag", "system_managed_group_disallowed", writer, enc.StringEncoder.Instance);
+                    SystemManagedGroupDisallowed.Encoder.EncodeFields((SystemManagedGroupDisallowed)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -320,10 +293,8 @@ namespace Dropbox.Api.Team
                         return UserMustBeActiveToBeOwner.Decoder.DecodeFields(reader);
                     case "user_cannot_be_manager_of_company_managed_group":
                         return UserCannotBeManagerOfCompanyManagedGroup.Decoder.DecodeFields(reader);
-                    case "group_not_found":
-                        return GroupNotFound.Decoder.DecodeFields(reader);
-                    case "other":
-                        return Other.Decoder.DecodeFields(reader);
+                    case "system_managed_group_disallowed":
+                        return SystemManagedGroupDisallowed.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -874,48 +845,48 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>No matching group found. No groups match the specified group ID.</para>
+        /// <para>This operation is not supported on system-managed groups.</para>
         /// </summary>
-        public sealed class GroupNotFound : GroupMembersAddError
+        public sealed class SystemManagedGroupDisallowed : GroupMembersAddError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<GroupNotFound> Encoder = new GroupNotFoundEncoder();
+            internal static enc.StructEncoder<SystemManagedGroupDisallowed> Encoder = new SystemManagedGroupDisallowedEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<GroupNotFound> Decoder = new GroupNotFoundDecoder();
+            internal static enc.StructDecoder<SystemManagedGroupDisallowed> Decoder = new SystemManagedGroupDisallowedDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="GroupNotFound" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SystemManagedGroupDisallowed" /> class.</para>
             /// </summary>
-            private GroupNotFound()
+            private SystemManagedGroupDisallowed()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of GroupNotFound</para>
+            /// <para>A singleton instance of SystemManagedGroupDisallowed</para>
             /// </summary>
-            public static readonly GroupNotFound Instance = new GroupNotFound();
+            public static readonly SystemManagedGroupDisallowed Instance = new SystemManagedGroupDisallowed();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="GroupNotFound" />.</para>
+            /// <para>Encoder for  <see cref="SystemManagedGroupDisallowed" />.</para>
             /// </summary>
-            private class GroupNotFoundEncoder : enc.StructEncoder<GroupNotFound>
+            private class SystemManagedGroupDisallowedEncoder : enc.StructEncoder<SystemManagedGroupDisallowed>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(GroupNotFound value, enc.IJsonWriter writer)
+                public override void EncodeFields(SystemManagedGroupDisallowed value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -925,17 +896,18 @@ namespace Dropbox.Api.Team
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="GroupNotFound" />.</para>
+            /// <para>Decoder for  <see cref="SystemManagedGroupDisallowed" />.</para>
             /// </summary>
-            private class GroupNotFoundDecoder : enc.StructDecoder<GroupNotFound>
+            private class SystemManagedGroupDisallowedDecoder : enc.StructDecoder<SystemManagedGroupDisallowed>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="GroupNotFound" />.</para>
+                /// <para>Create a new instance of type <see
+                /// cref="SystemManagedGroupDisallowed" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override GroupNotFound Create()
+                protected override SystemManagedGroupDisallowed Create()
                 {
-                    return new GroupNotFound();
+                    return new SystemManagedGroupDisallowed();
                 }
 
                 /// <summary>
@@ -943,87 +915,9 @@ namespace Dropbox.Api.Team
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override GroupNotFound DecodeFields(enc.IJsonReader reader)
+                public override SystemManagedGroupDisallowed DecodeFields(enc.IJsonReader reader)
                 {
-                    return GroupNotFound.Instance;
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The other object</para>
-        /// </summary>
-        public sealed class Other : GroupMembersAddError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
-            /// </summary>
-            private Other()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Other</para>
-            /// </summary>
-            public static readonly Other Instance = new Other();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Other" />.</para>
-            /// </summary>
-            private class OtherEncoder : enc.StructEncoder<Other>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Other value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Other" />.</para>
-            /// </summary>
-            private class OtherDecoder : enc.StructDecoder<Other>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Other" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Other Create()
-                {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
-                    return Other.Instance;
+                    return SystemManagedGroupDisallowed.Instance;
                 }
             }
 

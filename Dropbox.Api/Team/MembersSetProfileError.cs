@@ -172,6 +172,51 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is PersistentIdDisabled</para>
+        /// </summary>
+        public bool IsPersistentIdDisabled
+        {
+            get
+            {
+                return this is PersistentIdDisabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PersistentIdDisabled, or <c>null</c>.</para>
+        /// </summary>
+        public PersistentIdDisabled AsPersistentIdDisabled
+        {
+            get
+            {
+                return this as PersistentIdDisabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// PersistentIdUsedByOtherUser</para>
+        /// </summary>
+        public bool IsPersistentIdUsedByOtherUser
+        {
+            get
+            {
+                return this is PersistentIdUsedByOtherUser;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PersistentIdUsedByOtherUser, or <c>null</c>.</para>
+        /// </summary>
+        public PersistentIdUsedByOtherUser AsPersistentIdUsedByOtherUser
+        {
+            get
+            {
+                return this as PersistentIdUsedByOtherUser;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -265,6 +310,18 @@ namespace Dropbox.Api.Team
                     ParamCannotBeEmpty.Encoder.EncodeFields((ParamCannotBeEmpty)value, writer);
                     return;
                 }
+                if (value is PersistentIdDisabled)
+                {
+                    WriteProperty(".tag", "persistent_id_disabled", writer, enc.StringEncoder.Instance);
+                    PersistentIdDisabled.Encoder.EncodeFields((PersistentIdDisabled)value, writer);
+                    return;
+                }
+                if (value is PersistentIdUsedByOtherUser)
+                {
+                    WriteProperty(".tag", "persistent_id_used_by_other_user", writer, enc.StringEncoder.Instance);
+                    PersistentIdUsedByOtherUser.Encoder.EncodeFields((PersistentIdUsedByOtherUser)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -322,6 +379,10 @@ namespace Dropbox.Api.Team
                         return SetProfileDisallowed.Decoder.DecodeFields(reader);
                     case "param_cannot_be_empty":
                         return ParamCannotBeEmpty.Decoder.DecodeFields(reader);
+                    case "persistent_id_disabled":
+                        return PersistentIdDisabled.Decoder.DecodeFields(reader);
+                    case "persistent_id_used_by_other_user":
+                        return PersistentIdUsedByOtherUser.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
@@ -654,7 +715,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Setting profile disallowed</para>
+        /// <para>Pending team member's email cannot be modified.</para>
         /// </summary>
         public sealed class SetProfileDisallowed : MembersSetProfileError
         {
@@ -807,6 +868,167 @@ namespace Dropbox.Api.Team
                 public override ParamCannotBeEmpty DecodeFields(enc.IJsonReader reader)
                 {
                     return ParamCannotBeEmpty.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Persistent ID is only available to teams with persistent ID SAML
+        /// configuration. Please contact Dropbox for more information.</para>
+        /// </summary>
+        public sealed class PersistentIdDisabled : MembersSetProfileError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PersistentIdDisabled> Encoder = new PersistentIdDisabledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PersistentIdDisabled> Decoder = new PersistentIdDisabledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PersistentIdDisabled" />
+            /// class.</para>
+            /// </summary>
+            private PersistentIdDisabled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PersistentIdDisabled</para>
+            /// </summary>
+            public static readonly PersistentIdDisabled Instance = new PersistentIdDisabled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PersistentIdDisabled" />.</para>
+            /// </summary>
+            private class PersistentIdDisabledEncoder : enc.StructEncoder<PersistentIdDisabled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PersistentIdDisabled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PersistentIdDisabled" />.</para>
+            /// </summary>
+            private class PersistentIdDisabledDecoder : enc.StructDecoder<PersistentIdDisabled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PersistentIdDisabled"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PersistentIdDisabled Create()
+                {
+                    return new PersistentIdDisabled();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PersistentIdDisabled DecodeFields(enc.IJsonReader reader)
+                {
+                    return PersistentIdDisabled.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The persistent ID is already in use by another team member.</para>
+        /// </summary>
+        public sealed class PersistentIdUsedByOtherUser : MembersSetProfileError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PersistentIdUsedByOtherUser> Encoder = new PersistentIdUsedByOtherUserEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PersistentIdUsedByOtherUser> Decoder = new PersistentIdUsedByOtherUserDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PersistentIdUsedByOtherUser"
+            /// /> class.</para>
+            /// </summary>
+            private PersistentIdUsedByOtherUser()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PersistentIdUsedByOtherUser</para>
+            /// </summary>
+            public static readonly PersistentIdUsedByOtherUser Instance = new PersistentIdUsedByOtherUser();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PersistentIdUsedByOtherUser" />.</para>
+            /// </summary>
+            private class PersistentIdUsedByOtherUserEncoder : enc.StructEncoder<PersistentIdUsedByOtherUser>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PersistentIdUsedByOtherUser value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PersistentIdUsedByOtherUser" />.</para>
+            /// </summary>
+            private class PersistentIdUsedByOtherUserDecoder : enc.StructDecoder<PersistentIdUsedByOtherUser>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PersistentIdUsedByOtherUser"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PersistentIdUsedByOtherUser Create()
+                {
+                    return new PersistentIdUsedByOtherUser();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PersistentIdUsedByOtherUser DecodeFields(enc.IJsonReader reader)
+                {
+                    return PersistentIdUsedByOtherUser.Instance;
                 }
             }
 

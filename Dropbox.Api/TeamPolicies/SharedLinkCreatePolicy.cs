@@ -11,7 +11,8 @@ namespace Dropbox.Api.TeamPolicies
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Policy governing the visibility of newly created shared links.</para>
+    /// <para>Policy governing the visibility of shared links. This policy can apply to newly
+    /// created shared links, or all shared links.</para>
     /// </summary>
     public class SharedLinkCreatePolicy
     {
@@ -369,8 +370,8 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
-        /// <para>Only members of the same team can access newly created shared links. Login
-        /// will be required to access the shared links.</para>
+        /// <para>Only members of the same team can access all shared links. Login will be
+        /// required to access all shared links.</para>
         /// </summary>
         public sealed class TeamOnly : SharedLinkCreatePolicy
         {

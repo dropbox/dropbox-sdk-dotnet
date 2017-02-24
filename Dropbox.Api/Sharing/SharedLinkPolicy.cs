@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Policy governing who can view shared links.</para>
+    /// <para>Who can view shared links in this folder.</para>
     /// </summary>
     public class SharedLinkPolicy
     {
@@ -54,6 +54,28 @@ namespace Dropbox.Api.Sharing
             get
             {
                 return this as Anyone;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Team</para>
+        /// </summary>
+        public bool IsTeam
+        {
+            get
+            {
+                return this is Team;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Team, or <c>null</c>.</para>
+        /// </summary>
+        public Team AsTeam
+        {
+            get
+            {
+                return this as Team;
             }
         }
 
@@ -121,6 +143,12 @@ namespace Dropbox.Api.Sharing
                     Anyone.Encoder.EncodeFields((Anyone)value, writer);
                     return;
                 }
+                if (value is Team)
+                {
+                    WriteProperty(".tag", "team", writer, enc.StringEncoder.Instance);
+                    Team.Encoder.EncodeFields((Team)value, writer);
+                    return;
+                }
                 if (value is Members)
                 {
                     WriteProperty(".tag", "members", writer, enc.StringEncoder.Instance);
@@ -167,6 +195,8 @@ namespace Dropbox.Api.Sharing
                 {
                     case "anyone":
                         return Anyone.Decoder.DecodeFields(reader);
+                    case "team":
+                        return Team.Decoder.DecodeFields(reader);
                     case "members":
                         return Members.Decoder.DecodeFields(reader);
                     default:
@@ -249,6 +279,84 @@ namespace Dropbox.Api.Sharing
                 public override Anyone DecodeFields(enc.IJsonReader reader)
                 {
                     return Anyone.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Links can be shared with anyone on the same team as the owner.</para>
+        /// </summary>
+        public sealed class Team : SharedLinkPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Team> Encoder = new TeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Team> Decoder = new TeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
+            /// </summary>
+            private Team()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Team</para>
+            /// </summary>
+            public static readonly Team Instance = new Team();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Team" />.</para>
+            /// </summary>
+            private class TeamEncoder : enc.StructEncoder<Team>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Team value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Team" />.</para>
+            /// </summary>
+            private class TeamDecoder : enc.StructDecoder<Team>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Team" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Team Create()
+                {
+                    return new Team();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Team DecodeFields(enc.IJsonReader reader)
+                {
+                    return Team.Instance;
                 }
             }
 

@@ -34,7 +34,7 @@ namespace Dropbox.Api.Team
         /// <param name="groupExternalId">The creator of a team can associate an arbitrary
         /// external ID to the group.</param>
         /// <param name="groupManagementType">Whether the team can be managed by selected
-        /// users, or only by team admins</param>
+        /// users, or only by team admins.</param>
         public GroupCreateArg(string groupName,
                               string groupExternalId = null,
                               Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
@@ -72,7 +72,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Whether the team can be managed by selected users, or only by team
-        /// admins</para>
+        /// admins.</para>
         /// </summary>
         public Dropbox.Api.TeamCommon.GroupManagementType GroupManagementType { get; protected set; }
 

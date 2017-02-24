@@ -71,6 +71,9 @@ namespace Dropbox.Api.Files
         /// is present, it will be true if this file has any explicit shared  members. This is
         /// different from sharing_info in that this could be true  in the case where a file
         /// has explicit members but is not contained within  a shared folder.</param>
+        /// <param name="contentHash">A hash of the file content. This field can be used to
+        /// verify data integrity. For more information see our <a
+        /// href="/developers/reference/content-hash">Content hash</a> page.</param>
         public FileMetadata(string name,
                             string id,
                             sys.DateTime clientModified,
@@ -83,7 +86,8 @@ namespace Dropbox.Api.Files
                             MediaInfo mediaInfo = null,
                             FileSharingInfo sharingInfo = null,
                             col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
-                            bool? hasExplicitSharedMembers = null)
+                            bool? hasExplicitSharedMembers = null,
+                            string contentHash = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
         {
             if (id == null)
@@ -110,6 +114,18 @@ namespace Dropbox.Api.Files
 
             var propertyGroupsList = enc.Util.ToList(propertyGroups);
 
+            if (contentHash != null)
+            {
+                if (contentHash.Length < 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at least 64");
+                }
+                if (contentHash.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at most 64");
+                }
+            }
+
             this.Id = id;
             this.ClientModified = clientModified;
             this.ServerModified = serverModified;
@@ -119,6 +135,7 @@ namespace Dropbox.Api.Files
             this.SharingInfo = sharingInfo;
             this.PropertyGroups = propertyGroupsList;
             this.HasExplicitSharedMembers = hasExplicitSharedMembers;
+            this.ContentHash = contentHash;
         }
 
         /// <summary>
@@ -188,6 +205,13 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool? HasExplicitSharedMembers { get; protected set; }
 
+        /// <summary>
+        /// <para>A hash of the file content. This field can be used to verify data integrity.
+        /// For more information see our <a href="/developers/reference/content-hash">Content
+        /// hash</a> page.</para>
+        /// </summary>
+        public string ContentHash { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -235,6 +259,10 @@ namespace Dropbox.Api.Files
                 if (value.HasExplicitSharedMembers != null)
                 {
                     WriteProperty("has_explicit_shared_members", value.HasExplicitSharedMembers.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.ContentHash != null)
+                {
+                    WriteProperty("content_hash", value.ContentHash, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -306,6 +334,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "has_explicit_shared_members":
                         value.HasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "content_hash":
+                        value.ContentHash = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

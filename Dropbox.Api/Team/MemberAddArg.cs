@@ -34,6 +34,8 @@ namespace Dropbox.Api.Team
         /// <param name="memberGivenName">Member's first name.</param>
         /// <param name="memberSurname">Member's last name.</param>
         /// <param name="memberExternalId">External ID for member.</param>
+        /// <param name="memberPersistentId">Persistent ID for member. This field is only
+        /// available to teams using persistent ID SAML configuration.</param>
         /// <param name="sendWelcomeEmail">Whether to send a welcome email to the member. If
         /// send_welcome_email is false, no email invitation will be sent to the user. This may
         /// be useful for apps using single sign-on (SSO) flows for onboarding that want to
@@ -43,6 +45,7 @@ namespace Dropbox.Api.Team
                             string memberGivenName,
                             string memberSurname,
                             string memberExternalId = null,
+                            string memberPersistentId = null,
                             bool sendWelcomeEmail = true,
                             AdminTier role = null)
         {
@@ -109,6 +112,7 @@ namespace Dropbox.Api.Team
             this.MemberGivenName = memberGivenName;
             this.MemberSurname = memberSurname;
             this.MemberExternalId = memberExternalId;
+            this.MemberPersistentId = memberPersistentId;
             this.SendWelcomeEmail = sendWelcomeEmail;
             this.Role = role;
         }
@@ -146,6 +150,12 @@ namespace Dropbox.Api.Team
         public string MemberExternalId { get; protected set; }
 
         /// <summary>
+        /// <para>Persistent ID for member. This field is only available to teams using
+        /// persistent ID SAML configuration.</para>
+        /// </summary>
+        public string MemberPersistentId { get; protected set; }
+
+        /// <summary>
         /// <para>Whether to send a welcome email to the member. If send_welcome_email is
         /// false, no email invitation will be sent to the user. This may be useful for apps
         /// using single sign-on (SSO) flows for onboarding that want to handle announcements
@@ -178,6 +188,10 @@ namespace Dropbox.Api.Team
                 if (value.MemberExternalId != null)
                 {
                     WriteProperty("member_external_id", value.MemberExternalId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.MemberPersistentId != null)
+                {
+                    WriteProperty("member_persistent_id", value.MemberPersistentId, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("send_welcome_email", value.SendWelcomeEmail, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("role", value.Role, writer, Dropbox.Api.Team.AdminTier.Encoder);
@@ -224,6 +238,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "member_external_id":
                         value.MemberExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "member_persistent_id":
+                        value.MemberPersistentId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "send_welcome_email":
                         value.SendWelcomeEmail = enc.BooleanDecoder.Instance.Decode(reader);

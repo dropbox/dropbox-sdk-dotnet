@@ -34,7 +34,7 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="file">The file for which you want to see members.</param>
         /// <param name="actions">The actions for which to return permissions on a
-        /// member</param>
+        /// member.</param>
         /// <param name="includeInherited">Whether to include members who only have access from
         /// a parent shared folder.</param>
         /// <param name="limit">Number of members to return max per query. Defaults to 100 if
@@ -93,7 +93,7 @@ namespace Dropbox.Api.Sharing
         public string File { get; protected set; }
 
         /// <summary>
-        /// <para>The actions for which to return permissions on a member</para>
+        /// <para>The actions for which to return permissions on a member.</para>
         /// </summary>
         public col.IList<MemberAction> Actions { get; protected set; }
 

@@ -170,8 +170,10 @@ namespace Dropbox.Api.Team
                         return AccessError.Decoder.DecodeFields(reader);
                     case "status_error":
                         return StatusError.Decoder.DecodeFields(reader);
-                    default:
+                    case "other":
                         return Other.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
                 }
             }
         }

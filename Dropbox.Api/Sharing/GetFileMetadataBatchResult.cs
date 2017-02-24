@@ -12,7 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Per file results of <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync" /></para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync"
+    /// />.</para>
     /// </summary>
     public class GetFileMetadataBatchResult
     {
@@ -34,7 +35,7 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="file">This is the input file identifier corresponding to one of <see
         /// cref="Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files" />.</param>
-        /// <param name="result">The result for this particular file</param>
+        /// <param name="result">The result for this particular file.</param>
         public GetFileMetadataBatchResult(string file,
                                           GetFileMetadataIndividualResult result)
         {
@@ -78,7 +79,7 @@ namespace Dropbox.Api.Sharing
         public string File { get; protected set; }
 
         /// <summary>
-        /// <para>The result for this particular file</para>
+        /// <para>The result for this particular file.</para>
         /// </summary>
         public GetFileMetadataIndividualResult Result { get; protected set; }
 

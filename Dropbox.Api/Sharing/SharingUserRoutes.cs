@@ -274,7 +274,7 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Changes a member's access on a shared file.</para>
+        /// <para>Identical to update_file_member but with less information returned.</para>
         /// </summary>
         /// <param name="changeFileMemberAccessArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -282,6 +282,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FileMemberActionError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use UpdateFileMemberAsync instead.")]
         public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(ChangeFileMemberAccessArgs changeFileMemberAccessArgs)
         {
             return this.Transport.SendRpcRequestAsync<ChangeFileMemberAccessArgs, FileMemberActionResult, FileMemberActionError>(changeFileMemberAccessArgs, "api", "/sharing/change_file_member_access", "user", Dropbox.Api.Sharing.ChangeFileMemberAccessArgs.Encoder, Dropbox.Api.Sharing.FileMemberActionResult.Decoder, Dropbox.Api.Sharing.FileMemberActionError.Decoder);
@@ -296,6 +297,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginUpdateFileMember instead.")]
         public sys.IAsyncResult BeginChangeFileMemberAccess(ChangeFileMemberAccessArgs changeFileMemberAccessArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.ChangeFileMemberAccessAsync(changeFileMemberAccessArgs);
@@ -304,7 +306,7 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Changes a member's access on a shared file.</para>
+        /// <para>Identical to update_file_member but with less information returned.</para>
         /// </summary>
         /// <param name="file">File for which we are changing a member's access.</param>
         /// <param name="member">The member whose access we are changing.</param>
@@ -314,6 +316,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FileMemberActionError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use UpdateFileMemberAsync instead.")]
         public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(string file,
                                                                           MemberSelector member,
                                                                           AccessLevel accessLevel)
@@ -336,6 +339,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginUpdateFileMember instead.")]
         public sys.IAsyncResult BeginChangeFileMemberAccess(string file,
                                                             MemberSelector member,
                                                             AccessLevel accessLevel,
@@ -359,6 +363,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FileMemberActionError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndUpdateFileMember instead.")]
         public FileMemberActionResult EndChangeFileMemberAccess(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FileMemberActionResult>;
@@ -1502,7 +1507,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="file">The file for which you want to see members.</param>
         /// <param name="actions">The actions for which to return permissions on a
-        /// member</param>
+        /// member.</param>
         /// <param name="includeInherited">Whether to include members who only have access from
         /// a parent shared folder.</param>
         /// <param name="limit">Number of members to return max per query. Defaults to 100 if
@@ -1530,7 +1535,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="file">The file for which you want to see members.</param>
         /// <param name="actions">The actions for which to return permissions on a
-        /// member</param>
+        /// member.</param>
         /// <param name="includeInherited">Whether to include members who only have access from
         /// a parent shared folder.</param>
         /// <param name="limit">Number of members to return max per query. Defaults to 100 if
@@ -2505,7 +2510,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</para>
         /// </summary>
         /// <param name="cursor">Cursor in <see
-        /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" /></param>
+        /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2522,7 +2527,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the list received files continue route.</para>
         /// </summary>
         /// <param name="cursor">Cursor in <see
-        /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" /></param>
+        /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" />.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3524,6 +3529,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="forceAsync">Whether to force the share to happen
         /// asynchronously.</param>
+        /// <param name="actions">This is a list indicating whether each returned folder data
+        /// entry will include a boolean field <see
+        /// cref="Dropbox.Api.Sharing.FolderPermission.Allow" /> that describes whether the
+        /// current user can perform the `FolderAction` on the folder.</param>
+        /// <param name="linkSettings">Settings on the link for this folder.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3533,13 +3545,19 @@ namespace Dropbox.Api.Sharing.Routes
                                                           MemberPolicy memberPolicy = null,
                                                           AclUpdatePolicy aclUpdatePolicy = null,
                                                           SharedLinkPolicy sharedLinkPolicy = null,
-                                                          bool forceAsync = false)
+                                                          bool forceAsync = false,
+                                                          col.IEnumerable<FolderAction> actions = null,
+                                                          LinkSettings linkSettings = null,
+                                                          ViewerInfoPolicy viewerInfoPolicy = null)
         {
             var shareFolderArg = new ShareFolderArg(path,
                                                     memberPolicy,
                                                     aclUpdatePolicy,
                                                     sharedLinkPolicy,
-                                                    forceAsync);
+                                                    forceAsync,
+                                                    actions,
+                                                    linkSettings,
+                                                    viewerInfoPolicy);
 
             return this.ShareFolderAsync(shareFolderArg);
         }
@@ -3558,6 +3576,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="forceAsync">Whether to force the share to happen
         /// asynchronously.</param>
+        /// <param name="actions">This is a list indicating whether each returned folder data
+        /// entry will include a boolean field <see
+        /// cref="Dropbox.Api.Sharing.FolderPermission.Allow" /> that describes whether the
+        /// current user can perform the `FolderAction` on the folder.</param>
+        /// <param name="linkSettings">Settings on the link for this folder.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3568,6 +3593,9 @@ namespace Dropbox.Api.Sharing.Routes
                                                  AclUpdatePolicy aclUpdatePolicy = null,
                                                  SharedLinkPolicy sharedLinkPolicy = null,
                                                  bool forceAsync = false,
+                                                 col.IEnumerable<FolderAction> actions = null,
+                                                 LinkSettings linkSettings = null,
+                                                 ViewerInfoPolicy viewerInfoPolicy = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
         {
@@ -3575,7 +3603,10 @@ namespace Dropbox.Api.Sharing.Routes
                                                     memberPolicy,
                                                     aclUpdatePolicy,
                                                     sharedLinkPolicy,
-                                                    forceAsync);
+                                                    forceAsync,
+                                                    actions,
+                                                    linkSettings,
+                                                    viewerInfoPolicy);
 
             return this.BeginShareFolder(shareFolderArg, callback, callbackState);
         }
@@ -3967,6 +3998,103 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
+        /// <para>Changes a member's access on a shared file.</para>
+        /// </summary>
+        /// <param name="updateFileMemberArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="FileMemberActionError"/>.</exception>
+        public t.Task<MemberAccessLevelResult> UpdateFileMemberAsync(UpdateFileMemberArgs updateFileMemberArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<UpdateFileMemberArgs, MemberAccessLevelResult, FileMemberActionError>(updateFileMemberArgs, "api", "/sharing/update_file_member", "user", Dropbox.Api.Sharing.UpdateFileMemberArgs.Encoder, Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, Dropbox.Api.Sharing.FileMemberActionError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update file member route.</para>
+        /// </summary>
+        /// <param name="updateFileMemberArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFileMember(UpdateFileMemberArgs updateFileMemberArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UpdateFileMemberAsync(updateFileMemberArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Changes a member's access on a shared file.</para>
+        /// </summary>
+        /// <param name="file">File for which we are changing a member's access.</param>
+        /// <param name="member">The member whose access we are changing.</param>
+        /// <param name="accessLevel">The new access level for the member.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="FileMemberActionError"/>.</exception>
+        public t.Task<MemberAccessLevelResult> UpdateFileMemberAsync(string file,
+                                                                     MemberSelector member,
+                                                                     AccessLevel accessLevel)
+        {
+            var updateFileMemberArgs = new UpdateFileMemberArgs(file,
+                                                                member,
+                                                                accessLevel);
+
+            return this.UpdateFileMemberAsync(updateFileMemberArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update file member route.</para>
+        /// </summary>
+        /// <param name="file">File for which we are changing a member's access.</param>
+        /// <param name="member">The member whose access we are changing.</param>
+        /// <param name="accessLevel">The new access level for the member.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFileMember(string file,
+                                                      MemberSelector member,
+                                                      AccessLevel accessLevel,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var updateFileMemberArgs = new UpdateFileMemberArgs(file,
+                                                                member,
+                                                                accessLevel);
+
+            return this.BeginUpdateFileMember(updateFileMemberArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the update file member route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="FileMemberActionError"/>.</exception>
+        public MemberAccessLevelResult EndUpdateFileMember(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MemberAccessLevelResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Allows an owner or editor of a shared folder to update another member's
         /// permissions.</para>
         /// <para>Apps must have full Dropbox access to use this endpoint.</para>
@@ -4117,9 +4245,12 @@ namespace Dropbox.Api.Sharing.Routes
         /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
         /// content inside this shared folder. The current user must be on a team to set this
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
+        /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4128,12 +4259,16 @@ namespace Dropbox.Api.Sharing.Routes
         public t.Task<SharedFolderMetadata> UpdateFolderPolicyAsync(string sharedFolderId,
                                                                     MemberPolicy memberPolicy = null,
                                                                     AclUpdatePolicy aclUpdatePolicy = null,
-                                                                    SharedLinkPolicy sharedLinkPolicy = null)
+                                                                    ViewerInfoPolicy viewerInfoPolicy = null,
+                                                                    SharedLinkPolicy sharedLinkPolicy = null,
+                                                                    LinkSettings linkSettings = null)
         {
             var updateFolderPolicyArg = new UpdateFolderPolicyArg(sharedFolderId,
                                                                   memberPolicy,
                                                                   aclUpdatePolicy,
-                                                                  sharedLinkPolicy);
+                                                                  viewerInfoPolicy,
+                                                                  sharedLinkPolicy,
+                                                                  linkSettings);
 
             return this.UpdateFolderPolicyAsync(updateFolderPolicyArg);
         }
@@ -4146,9 +4281,12 @@ namespace Dropbox.Api.Sharing.Routes
         /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
         /// content inside this shared folder. The current user must be on a team to set this
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
+        /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -4157,14 +4295,18 @@ namespace Dropbox.Api.Sharing.Routes
         public sys.IAsyncResult BeginUpdateFolderPolicy(string sharedFolderId,
                                                         MemberPolicy memberPolicy = null,
                                                         AclUpdatePolicy aclUpdatePolicy = null,
+                                                        ViewerInfoPolicy viewerInfoPolicy = null,
                                                         SharedLinkPolicy sharedLinkPolicy = null,
+                                                        LinkSettings linkSettings = null,
                                                         sys.AsyncCallback callback = null,
                                                         object callbackState = null)
         {
             var updateFolderPolicyArg = new UpdateFolderPolicyArg(sharedFolderId,
                                                                   memberPolicy,
                                                                   aclUpdatePolicy,
-                                                                  sharedLinkPolicy);
+                                                                  viewerInfoPolicy,
+                                                                  sharedLinkPolicy,
+                                                                  linkSettings);
 
             return this.BeginUpdateFolderPolicy(updateFolderPolicyArg, callback, callbackState);
         }

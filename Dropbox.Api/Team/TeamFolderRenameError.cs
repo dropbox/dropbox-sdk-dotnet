@@ -36,28 +36,6 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AccessError</para>
-        /// </summary>
-        public bool IsAccessError
-        {
-            get
-            {
-                return this is AccessError;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a AccessError, or <c>null</c>.</para>
-        /// </summary>
-        public AccessError AsAccessError
-        {
-            get
-            {
-                return this as AccessError;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is InvalidFolderName</para>
         /// </summary>
         public bool IsInvalidFolderName
@@ -102,6 +80,72 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is FolderNameReserved</para>
+        /// </summary>
+        public bool IsFolderNameReserved
+        {
+            get
+            {
+                return this is FolderNameReserved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderNameReserved, or <c>null</c>.</para>
+        /// </summary>
+        public FolderNameReserved AsFolderNameReserved
+        {
+            get
+            {
+                return this as FolderNameReserved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is AccessError</para>
+        /// </summary>
+        public bool IsAccessError
+        {
+            get
+            {
+                return this is AccessError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AccessError, or <c>null</c>.</para>
+        /// </summary>
+        public AccessError AsAccessError
+        {
+            get
+            {
+                return this as AccessError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is StatusError</para>
+        /// </summary>
+        public bool IsStatusError
+        {
+            get
+            {
+                return this is StatusError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a StatusError, or <c>null</c>.</para>
+        /// </summary>
+        public StatusError AsStatusError
+        {
+            get
+            {
+                return this as StatusError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -137,12 +181,6 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderRenameError value, enc.IJsonWriter writer)
             {
-                if (value is AccessError)
-                {
-                    WriteProperty(".tag", "access_error", writer, enc.StringEncoder.Instance);
-                    AccessError.Encoder.EncodeFields((AccessError)value, writer);
-                    return;
-                }
                 if (value is InvalidFolderName)
                 {
                     WriteProperty(".tag", "invalid_folder_name", writer, enc.StringEncoder.Instance);
@@ -153,6 +191,24 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "folder_name_already_used", writer, enc.StringEncoder.Instance);
                     FolderNameAlreadyUsed.Encoder.EncodeFields((FolderNameAlreadyUsed)value, writer);
+                    return;
+                }
+                if (value is FolderNameReserved)
+                {
+                    WriteProperty(".tag", "folder_name_reserved", writer, enc.StringEncoder.Instance);
+                    FolderNameReserved.Encoder.EncodeFields((FolderNameReserved)value, writer);
+                    return;
+                }
+                if (value is AccessError)
+                {
+                    WriteProperty(".tag", "access_error", writer, enc.StringEncoder.Instance);
+                    AccessError.Encoder.EncodeFields((AccessError)value, writer);
+                    return;
+                }
+                if (value is StatusError)
+                {
+                    WriteProperty(".tag", "status_error", writer, enc.StringEncoder.Instance);
+                    StatusError.Encoder.EncodeFields((StatusError)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -194,117 +250,25 @@ namespace Dropbox.Api.Team
             {
                 switch (tag)
                 {
-                    case "access_error":
-                        return AccessError.Decoder.DecodeFields(reader);
                     case "invalid_folder_name":
                         return InvalidFolderName.Decoder.DecodeFields(reader);
                     case "folder_name_already_used":
                         return FolderNameAlreadyUsed.Decoder.DecodeFields(reader);
-                    default:
+                    case "folder_name_reserved":
+                        return FolderNameReserved.Decoder.DecodeFields(reader);
+                    case "access_error":
+                        return AccessError.Decoder.DecodeFields(reader);
+                    case "status_error":
+                        return StatusError.Decoder.DecodeFields(reader);
+                    case "other":
                         return Other.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
                 }
             }
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The access error object</para>
-        /// </summary>
-        public sealed class AccessError : TeamFolderRenameError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<AccessError> Encoder = new AccessErrorEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<AccessError> Decoder = new AccessErrorDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AccessError" />
-            /// class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public AccessError(TeamFolderAccessError value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AccessError" />
-            /// class.</para>
-            /// </summary>
-            private AccessError()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public TeamFolderAccessError Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="AccessError" />.</para>
-            /// </summary>
-            private class AccessErrorEncoder : enc.StructEncoder<AccessError>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
-                {
-                    Dropbox.Api.Team.TeamFolderAccessError.Encoder.EncodeFields(value.Value, writer);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="AccessError" />.</para>
-            /// </summary>
-            private class AccessErrorDecoder : enc.StructDecoder<AccessError>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="AccessError" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override AccessError Create()
-                {
-                    return new AccessError();
-                }
-
-                /// <summary>
-                /// <para>Set given field.</para>
-                /// </summary>
-                /// <param name="value">The field value.</param>
-                /// <param name="fieldName">The field name.</param>
-                /// <param name="reader">The json reader.</param>
-                protected override void SetField(AccessError value, string fieldName, enc.IJsonReader reader)
-                {
-                    switch (fieldName)
-                    {
-                        case "access_error":
-                            value.Value = Dropbox.Api.Team.TeamFolderAccessError.Decoder.Decode(reader);
-                            break;
-                        default:
-                            reader.Skip();
-                            break;
-                    }
-                }
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The provided folder name cannot be used.</para>
@@ -460,6 +424,282 @@ namespace Dropbox.Api.Team
                 public override FolderNameAlreadyUsed DecodeFields(enc.IJsonReader reader)
                 {
                     return FolderNameAlreadyUsed.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The provided name cannot be used because it is reserved.</para>
+        /// </summary>
+        public sealed class FolderNameReserved : TeamFolderRenameError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderNameReserved> Encoder = new FolderNameReservedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderNameReserved> Decoder = new FolderNameReservedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FolderNameReserved" />
+            /// class.</para>
+            /// </summary>
+            private FolderNameReserved()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderNameReserved</para>
+            /// </summary>
+            public static readonly FolderNameReserved Instance = new FolderNameReserved();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderNameReserved" />.</para>
+            /// </summary>
+            private class FolderNameReservedEncoder : enc.StructEncoder<FolderNameReserved>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderNameReserved value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderNameReserved" />.</para>
+            /// </summary>
+            private class FolderNameReservedDecoder : enc.StructDecoder<FolderNameReserved>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FolderNameReserved"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderNameReserved Create()
+                {
+                    return new FolderNameReserved();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FolderNameReserved DecodeFields(enc.IJsonReader reader)
+                {
+                    return FolderNameReserved.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The access error object</para>
+        /// </summary>
+        public sealed class AccessError : TeamFolderRenameError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AccessError> Encoder = new AccessErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AccessError> Decoder = new AccessErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AccessError(TeamFolderAccessError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AccessError" />
+            /// class.</para>
+            /// </summary>
+            private AccessError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamFolderAccessError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AccessError" />.</para>
+            /// </summary>
+            private class AccessErrorEncoder : enc.StructEncoder<AccessError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Team.TeamFolderAccessError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AccessError" />.</para>
+            /// </summary>
+            private class AccessErrorDecoder : enc.StructDecoder<AccessError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AccessError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AccessError Create()
+                {
+                    return new AccessError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(AccessError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "access_error":
+                            value.Value = Dropbox.Api.Team.TeamFolderAccessError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The status error object</para>
+        /// </summary>
+        public sealed class StatusError : TeamFolderRenameError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<StatusError> Encoder = new StatusErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<StatusError> Decoder = new StatusErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="StatusError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public StatusError(TeamFolderInvalidStatusError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="StatusError" />
+            /// class.</para>
+            /// </summary>
+            private StatusError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamFolderInvalidStatusError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="StatusError" />.</para>
+            /// </summary>
+            private class StatusErrorEncoder : enc.StructEncoder<StatusError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(StatusError value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Team.TeamFolderInvalidStatusError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="StatusError" />.</para>
+            /// </summary>
+            private class StatusErrorDecoder : enc.StructDecoder<StatusError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="StatusError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override StatusError Create()
+                {
+                    return new StatusError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(StatusError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "status_error":
+                            value.Value = Dropbox.Api.Team.TeamFolderInvalidStatusError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

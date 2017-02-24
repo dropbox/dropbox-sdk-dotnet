@@ -34,7 +34,7 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="cursor">Cursor in <see
-        /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" /></param>
+        /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" />.</param>
         public ListFilesContinueArg(string cursor)
         {
             if (cursor == null)
@@ -57,7 +57,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Cursor in <see cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" /></para>
+        /// <para>Cursor in <see cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" />.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

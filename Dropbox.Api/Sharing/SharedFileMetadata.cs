@@ -36,6 +36,8 @@ namespace Dropbox.Api.Sharing
         /// file.</param>
         /// <param name="name">The name of this file.</param>
         /// <param name="id">The ID of the file.</param>
+        /// <param name="linkMetadata">The metadata of the link associated for the
+        /// file.</param>
         /// <param name="permissions">The sharing permissions that requesting user has on this
         /// file. This corresponds to the entries given in <see
         /// cref="Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions" /> or <see
@@ -58,6 +60,7 @@ namespace Dropbox.Api.Sharing
                                   string previewUrl,
                                   string name,
                                   string id,
+                                  SharedContentLinkMetadata linkMetadata = null,
                                   col.IEnumerable<FilePermission> permissions = null,
                                   Dropbox.Api.Users.Team ownerTeam = null,
                                   string parentSharedFolderId = null,
@@ -107,6 +110,7 @@ namespace Dropbox.Api.Sharing
             this.PreviewUrl = previewUrl;
             this.Name = name;
             this.Id = id;
+            this.LinkMetadata = linkMetadata;
             this.Permissions = permissionsList;
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
@@ -145,6 +149,11 @@ namespace Dropbox.Api.Sharing
         /// <para>The ID of the file.</para>
         /// </summary>
         public string Id { get; protected set; }
+
+        /// <summary>
+        /// <para>The metadata of the link associated for the file.</para>
+        /// </summary>
+        public SharedContentLinkMetadata LinkMetadata { get; protected set; }
 
         /// <summary>
         /// <para>The sharing permissions that requesting user has on this file. This
@@ -203,6 +212,10 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
+                if (value.LinkMetadata != null)
+                {
+                    WriteProperty("link_metadata", value.LinkMetadata, writer, Dropbox.Api.Sharing.SharedContentLinkMetadata.Encoder);
+                }
                 if (value.Permissions.Count > 0)
                 {
                     WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.FilePermission.Encoder);
@@ -270,6 +283,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "id":
                         value.Id = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "link_metadata":
+                        value.LinkMetadata = Dropbox.Api.Sharing.SharedContentLinkMetadata.Decoder.Decode(reader);
                         break;
                     case "permissions":
                         value.Permissions = ReadList<FilePermission>(reader, Dropbox.Api.Sharing.FilePermission.Decoder);

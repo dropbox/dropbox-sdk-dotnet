@@ -36,6 +36,28 @@ namespace Dropbox.Api.TeamCommon
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserManaged</para>
+        /// </summary>
+        public bool IsUserManaged
+        {
+            get
+            {
+                return this is UserManaged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserManaged, or <c>null</c>.</para>
+        /// </summary>
+        public UserManaged AsUserManaged
+        {
+            get
+            {
+                return this as UserManaged;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is CompanyManaged</para>
         /// </summary>
         public bool IsCompanyManaged
@@ -58,24 +80,24 @@ namespace Dropbox.Api.TeamCommon
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is UserManaged</para>
+        /// <para>Gets a value indicating whether this instance is SystemManaged</para>
         /// </summary>
-        public bool IsUserManaged
+        public bool IsSystemManaged
         {
             get
             {
-                return this is UserManaged;
+                return this is SystemManaged;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a UserManaged, or <c>null</c>.</para>
+        /// <para>Gets this instance as a SystemManaged, or <c>null</c>.</para>
         /// </summary>
-        public UserManaged AsUserManaged
+        public SystemManaged AsSystemManaged
         {
             get
             {
-                return this as UserManaged;
+                return this as SystemManaged;
             }
         }
 
@@ -115,16 +137,22 @@ namespace Dropbox.Api.TeamCommon
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupManagementType value, enc.IJsonWriter writer)
             {
+                if (value is UserManaged)
+                {
+                    WriteProperty(".tag", "user_managed", writer, enc.StringEncoder.Instance);
+                    UserManaged.Encoder.EncodeFields((UserManaged)value, writer);
+                    return;
+                }
                 if (value is CompanyManaged)
                 {
                     WriteProperty(".tag", "company_managed", writer, enc.StringEncoder.Instance);
                     CompanyManaged.Encoder.EncodeFields((CompanyManaged)value, writer);
                     return;
                 }
-                if (value is UserManaged)
+                if (value is SystemManaged)
                 {
-                    WriteProperty(".tag", "user_managed", writer, enc.StringEncoder.Instance);
-                    UserManaged.Encoder.EncodeFields((UserManaged)value, writer);
+                    WriteProperty(".tag", "system_managed", writer, enc.StringEncoder.Instance);
+                    SystemManaged.Encoder.EncodeFields((SystemManaged)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -165,10 +193,12 @@ namespace Dropbox.Api.TeamCommon
             {
                 switch (tag)
                 {
-                    case "company_managed":
-                        return CompanyManaged.Decoder.DecodeFields(reader);
                     case "user_managed":
                         return UserManaged.Decoder.DecodeFields(reader);
+                    case "company_managed":
+                        return CompanyManaged.Decoder.DecodeFields(reader);
+                    case "system_managed":
+                        return SystemManaged.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -176,6 +206,85 @@ namespace Dropbox.Api.TeamCommon
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>A group which is managed by selected users.</para>
+        /// </summary>
+        public sealed class UserManaged : GroupManagementType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserManaged> Encoder = new UserManagedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserManaged> Decoder = new UserManagedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserManaged" />
+            /// class.</para>
+            /// </summary>
+            private UserManaged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserManaged</para>
+            /// </summary>
+            public static readonly UserManaged Instance = new UserManaged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserManaged" />.</para>
+            /// </summary>
+            private class UserManagedEncoder : enc.StructEncoder<UserManaged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserManaged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserManaged" />.</para>
+            /// </summary>
+            private class UserManagedDecoder : enc.StructDecoder<UserManaged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserManaged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserManaged Create()
+                {
+                    return new UserManaged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserManaged DecodeFields(enc.IJsonReader reader)
+                {
+                    return UserManaged.Instance;
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>A group which is managed by team admins only.</para>
@@ -257,48 +366,48 @@ namespace Dropbox.Api.TeamCommon
         }
 
         /// <summary>
-        /// <para>A group which is managed by selected users.</para>
+        /// <para>A group which is managed automatically by Dropbox.</para>
         /// </summary>
-        public sealed class UserManaged : GroupManagementType
+        public sealed class SystemManaged : GroupManagementType
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<UserManaged> Encoder = new UserManagedEncoder();
+            internal static enc.StructEncoder<SystemManaged> Encoder = new SystemManagedEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<UserManaged> Decoder = new UserManagedDecoder();
+            internal static enc.StructDecoder<SystemManaged> Decoder = new SystemManagedDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="UserManaged" />
+            /// <para>Initializes a new instance of the <see cref="SystemManaged" />
             /// class.</para>
             /// </summary>
-            private UserManaged()
+            private SystemManaged()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of UserManaged</para>
+            /// <para>A singleton instance of SystemManaged</para>
             /// </summary>
-            public static readonly UserManaged Instance = new UserManaged();
+            public static readonly SystemManaged Instance = new SystemManaged();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="UserManaged" />.</para>
+            /// <para>Encoder for  <see cref="SystemManaged" />.</para>
             /// </summary>
-            private class UserManagedEncoder : enc.StructEncoder<UserManaged>
+            private class SystemManagedEncoder : enc.StructEncoder<SystemManaged>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(UserManaged value, enc.IJsonWriter writer)
+                public override void EncodeFields(SystemManaged value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -308,17 +417,17 @@ namespace Dropbox.Api.TeamCommon
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="UserManaged" />.</para>
+            /// <para>Decoder for  <see cref="SystemManaged" />.</para>
             /// </summary>
-            private class UserManagedDecoder : enc.StructDecoder<UserManaged>
+            private class SystemManagedDecoder : enc.StructDecoder<SystemManaged>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="UserManaged" />.</para>
+                /// <para>Create a new instance of type <see cref="SystemManaged" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override UserManaged Create()
+                protected override SystemManaged Create()
                 {
-                    return new UserManaged();
+                    return new SystemManaged();
                 }
 
                 /// <summary>
@@ -326,9 +435,9 @@ namespace Dropbox.Api.TeamCommon
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override UserManaged DecodeFields(enc.IJsonReader reader)
+                public override SystemManaged DecodeFields(enc.IJsonReader reader)
                 {
-                    return UserManaged.Instance;
+                    return SystemManaged.Instance;
                 }
             }
 

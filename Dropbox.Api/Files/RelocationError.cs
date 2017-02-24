@@ -191,6 +191,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DuplicatedOrNestedPaths</para>
+        /// </summary>
+        public bool IsDuplicatedOrNestedPaths
+        {
+            get
+            {
+                return this is DuplicatedOrNestedPaths;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DuplicatedOrNestedPaths, or <c>null</c>.</para>
+        /// </summary>
+        public DuplicatedOrNestedPaths AsDuplicatedOrNestedPaths
+        {
+            get
+            {
+                return this as DuplicatedOrNestedPaths;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -268,6 +291,12 @@ namespace Dropbox.Api.Files
                     TooManyFiles.Encoder.EncodeFields((TooManyFiles)value, writer);
                     return;
                 }
+                if (value is DuplicatedOrNestedPaths)
+                {
+                    WriteProperty(".tag", "duplicated_or_nested_paths", writer, enc.StringEncoder.Instance);
+                    DuplicatedOrNestedPaths.Encoder.EncodeFields((DuplicatedOrNestedPaths)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -320,6 +349,8 @@ namespace Dropbox.Api.Files
                         return CantMoveFolderIntoItself.Decoder.DecodeFields(reader);
                     case "too_many_files":
                         return TooManyFiles.Decoder.DecodeFields(reader);
+                    case "duplicated_or_nested_paths":
+                        return DuplicatedOrNestedPaths.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -930,6 +961,88 @@ namespace Dropbox.Api.Files
                 public override TooManyFiles DecodeFields(enc.IJsonReader reader)
                 {
                     return TooManyFiles.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>There are duplicated/nested paths among <see
+        /// cref="Dropbox.Api.Files.RelocationArg.FromPath" /> and <see
+        /// cref="Dropbox.Api.Files.RelocationArg.ToPath" />.</para>
+        /// </summary>
+        public sealed class DuplicatedOrNestedPaths : RelocationError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DuplicatedOrNestedPaths> Encoder = new DuplicatedOrNestedPathsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DuplicatedOrNestedPaths> Decoder = new DuplicatedOrNestedPathsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DuplicatedOrNestedPaths" />
+            /// class.</para>
+            /// </summary>
+            private DuplicatedOrNestedPaths()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DuplicatedOrNestedPaths</para>
+            /// </summary>
+            public static readonly DuplicatedOrNestedPaths Instance = new DuplicatedOrNestedPaths();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DuplicatedOrNestedPaths" />.</para>
+            /// </summary>
+            private class DuplicatedOrNestedPathsEncoder : enc.StructEncoder<DuplicatedOrNestedPaths>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DuplicatedOrNestedPaths value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DuplicatedOrNestedPaths" />.</para>
+            /// </summary>
+            private class DuplicatedOrNestedPathsDecoder : enc.StructDecoder<DuplicatedOrNestedPaths>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DuplicatedOrNestedPaths"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DuplicatedOrNestedPaths Create()
+                {
+                    return new DuplicatedOrNestedPaths();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DuplicatedOrNestedPaths DecodeFields(enc.IJsonReader reader)
+                {
+                    return DuplicatedOrNestedPaths.Instance;
                 }
             }
 

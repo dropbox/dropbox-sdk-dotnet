@@ -33,7 +33,7 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="members">A list of members on this file.</param>
         /// <param name="memberCount">The number of members on this file. This does not include
-        /// inherited members</param>
+        /// inherited members.</param>
         public ListFileMembersCountResult(SharedFileMembers members,
                                           uint memberCount)
         {
@@ -64,7 +64,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The number of members on this file. This does not include inherited
-        /// members</para>
+        /// members.</para>
         /// </summary>
         public uint MemberCount { get; protected set; }
 

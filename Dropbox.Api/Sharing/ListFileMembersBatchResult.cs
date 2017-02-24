@@ -35,7 +35,7 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="file">This is the input file identifier, whether an ID or a
         /// path.</param>
-        /// <param name="result">The result for this particular file</param>
+        /// <param name="result">The result for this particular file.</param>
         public ListFileMembersBatchResult(string file,
                                           ListFileMembersIndividualResult result)
         {
@@ -78,7 +78,7 @@ namespace Dropbox.Api.Sharing
         public string File { get; protected set; }
 
         /// <summary>
-        /// <para>The result for this particular file</para>
+        /// <para>The result for this particular file.</para>
         /// </summary>
         public ListFileMembersIndividualResult Result { get; protected set; }
 

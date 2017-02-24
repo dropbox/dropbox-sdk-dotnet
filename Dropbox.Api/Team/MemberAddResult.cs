@@ -217,6 +217,51 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DuplicateMemberPersistentId</para>
+        /// </summary>
+        public bool IsDuplicateMemberPersistentId
+        {
+            get
+            {
+                return this is DuplicateMemberPersistentId;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DuplicateMemberPersistentId, or <c>null</c>.</para>
+        /// </summary>
+        public DuplicateMemberPersistentId AsDuplicateMemberPersistentId
+        {
+            get
+            {
+                return this as DuplicateMemberPersistentId;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PersistentIdDisabled</para>
+        /// </summary>
+        public bool IsPersistentIdDisabled
+        {
+            get
+            {
+                return this is PersistentIdDisabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PersistentIdDisabled, or <c>null</c>.</para>
+        /// </summary>
+        public PersistentIdDisabled AsPersistentIdDisabled
+        {
+            get
+            {
+                return this as PersistentIdDisabled;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserCreationFailed</para>
         /// </summary>
         public bool IsUserCreationFailed
@@ -300,6 +345,18 @@ namespace Dropbox.Api.Team
                     DuplicateExternalMemberId.Encoder.EncodeFields((DuplicateExternalMemberId)value, writer);
                     return;
                 }
+                if (value is DuplicateMemberPersistentId)
+                {
+                    WriteProperty(".tag", "duplicate_member_persistent_id", writer, enc.StringEncoder.Instance);
+                    DuplicateMemberPersistentId.Encoder.EncodeFields((DuplicateMemberPersistentId)value, writer);
+                    return;
+                }
+                if (value is PersistentIdDisabled)
+                {
+                    WriteProperty(".tag", "persistent_id_disabled", writer, enc.StringEncoder.Instance);
+                    PersistentIdDisabled.Encoder.EncodeFields((PersistentIdDisabled)value, writer);
+                    return;
+                }
                 if (value is UserCreationFailed)
                 {
                     WriteProperty(".tag", "user_creation_failed", writer, enc.StringEncoder.Instance);
@@ -354,6 +411,10 @@ namespace Dropbox.Api.Team
                         return UserMigrationFailed.Decoder.DecodeFields(reader);
                     case "duplicate_external_member_id":
                         return DuplicateExternalMemberId.Decoder.DecodeFields(reader);
+                    case "duplicate_member_persistent_id":
+                        return DuplicateMemberPersistentId.Decoder.DecodeFields(reader);
+                    case "persistent_id_disabled":
+                        return PersistentIdDisabled.Decoder.DecodeFields(reader);
                     case "user_creation_failed":
                         return UserCreationFailed.Decoder.DecodeFields(reader);
                     default:
@@ -1135,6 +1196,206 @@ namespace Dropbox.Api.Team
                     switch (fieldName)
                     {
                         case "duplicate_external_member_id":
+                            value.Value = enc.StringDecoder.Instance.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>A user with the given persistent ID already exists on the team (including in
+        /// recoverable state).</para>
+        /// </summary>
+        public sealed class DuplicateMemberPersistentId : MemberAddResult
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DuplicateMemberPersistentId> Encoder = new DuplicateMemberPersistentIdEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DuplicateMemberPersistentId> Decoder = new DuplicateMemberPersistentIdDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DuplicateMemberPersistentId"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DuplicateMemberPersistentId(string value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DuplicateMemberPersistentId"
+            /// /> class.</para>
+            /// </summary>
+            private DuplicateMemberPersistentId()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public string Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DuplicateMemberPersistentId" />.</para>
+            /// </summary>
+            private class DuplicateMemberPersistentIdEncoder : enc.StructEncoder<DuplicateMemberPersistentId>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DuplicateMemberPersistentId value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("duplicate_member_persistent_id", value.Value, writer, enc.StringEncoder.Instance);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DuplicateMemberPersistentId" />.</para>
+            /// </summary>
+            private class DuplicateMemberPersistentIdDecoder : enc.StructDecoder<DuplicateMemberPersistentId>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DuplicateMemberPersistentId"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DuplicateMemberPersistentId Create()
+                {
+                    return new DuplicateMemberPersistentId();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(DuplicateMemberPersistentId value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "duplicate_member_persistent_id":
+                            value.Value = enc.StringDecoder.Instance.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Persistent ID is only available to teams with persistent ID SAML
+        /// configuration. Please contact Dropbox for more information.</para>
+        /// </summary>
+        public sealed class PersistentIdDisabled : MemberAddResult
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PersistentIdDisabled> Encoder = new PersistentIdDisabledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PersistentIdDisabled> Decoder = new PersistentIdDisabledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PersistentIdDisabled" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PersistentIdDisabled(string value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PersistentIdDisabled" />
+            /// class.</para>
+            /// </summary>
+            private PersistentIdDisabled()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public string Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PersistentIdDisabled" />.</para>
+            /// </summary>
+            private class PersistentIdDisabledEncoder : enc.StructEncoder<PersistentIdDisabled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PersistentIdDisabled value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("persistent_id_disabled", value.Value, writer, enc.StringEncoder.Instance);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PersistentIdDisabled" />.</para>
+            /// </summary>
+            private class PersistentIdDisabledDecoder : enc.StructDecoder<PersistentIdDisabled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PersistentIdDisabled"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PersistentIdDisabled Create()
+                {
+                    return new PersistentIdDisabled();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(PersistentIdDisabled value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "persistent_id_disabled":
                             value.Value = enc.StringDecoder.Instance.Decode(reader);
                             break;
                         default:

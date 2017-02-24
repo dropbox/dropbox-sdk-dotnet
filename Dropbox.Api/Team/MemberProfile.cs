@@ -44,6 +44,10 @@ namespace Dropbox.Api.Team
         /// application using the API may find it easier to use their own IDs instead of
         /// Dropbox IDs like account_id or team_member_id.</param>
         /// <param name="accountId">A user's account identifier.</param>
+        /// <param name="joinedOn">The date and time the user joined as a member of a specific
+        /// team.</param>
+        /// <param name="persistentId">Persistent ID that a team can attach to the user. The
+        /// persistent ID is unique ID to be used for SAML authentication.</param>
         public MemberProfile(string teamMemberId,
                              string email,
                              bool emailVerified,
@@ -51,7 +55,9 @@ namespace Dropbox.Api.Team
                              Dropbox.Api.Users.Name name,
                              TeamMembershipType membershipType,
                              string externalId = null,
-                             string accountId = null)
+                             string accountId = null,
+                             sys.DateTime? joinedOn = null,
+                             string persistentId = null)
         {
             if (teamMemberId == null)
             {
@@ -98,6 +104,8 @@ namespace Dropbox.Api.Team
             this.MembershipType = membershipType;
             this.ExternalId = externalId;
             this.AccountId = accountId;
+            this.JoinedOn = joinedOn;
+            this.PersistentId = persistentId;
         }
 
         /// <summary>
@@ -153,6 +161,17 @@ namespace Dropbox.Api.Team
         /// </summary>
         public string AccountId { get; protected set; }
 
+        /// <summary>
+        /// <para>The date and time the user joined as a member of a specific team.</para>
+        /// </summary>
+        public sys.DateTime? JoinedOn { get; protected set; }
+
+        /// <summary>
+        /// <para>Persistent ID that a team can attach to the user. The persistent ID is unique
+        /// ID to be used for SAML authentication.</para>
+        /// </summary>
+        public string PersistentId { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -180,6 +199,14 @@ namespace Dropbox.Api.Team
                 if (value.AccountId != null)
                 {
                     WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.JoinedOn != null)
+                {
+                    WriteProperty("joined_on", value.JoinedOn.Value, writer, enc.DateTimeEncoder.Instance);
+                }
+                if (value.PersistentId != null)
+                {
+                    WriteProperty("persistent_id", value.PersistentId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -236,6 +263,12 @@ namespace Dropbox.Api.Team
                         break;
                     case "account_id":
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "joined_on":
+                        value.JoinedOn = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "persistent_id":
+                        value.PersistentId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

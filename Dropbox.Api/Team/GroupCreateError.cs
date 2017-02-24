@@ -103,6 +103,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SystemManagedGroupDisallowed</para>
+        /// </summary>
+        public bool IsSystemManagedGroupDisallowed
+        {
+            get
+            {
+                return this is SystemManagedGroupDisallowed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SystemManagedGroupDisallowed, or <c>null</c>.</para>
+        /// </summary>
+        public SystemManagedGroupDisallowed AsSystemManagedGroupDisallowed
+        {
+            get
+            {
+                return this as SystemManagedGroupDisallowed;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -156,6 +179,12 @@ namespace Dropbox.Api.Team
                     ExternalIdAlreadyInUse.Encoder.EncodeFields((ExternalIdAlreadyInUse)value, writer);
                     return;
                 }
+                if (value is SystemManagedGroupDisallowed)
+                {
+                    WriteProperty(".tag", "system_managed_group_disallowed", writer, enc.StringEncoder.Instance);
+                    SystemManagedGroupDisallowed.Encoder.EncodeFields((SystemManagedGroupDisallowed)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +229,8 @@ namespace Dropbox.Api.Team
                         return GroupNameInvalid.Decoder.DecodeFields(reader);
                     case "external_id_already_in_use":
                         return ExternalIdAlreadyInUse.Decoder.DecodeFields(reader);
+                    case "system_managed_group_disallowed":
+                        return SystemManagedGroupDisallowed.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -441,6 +472,86 @@ namespace Dropbox.Api.Team
                 public override ExternalIdAlreadyInUse DecodeFields(enc.IJsonReader reader)
                 {
                     return ExternalIdAlreadyInUse.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>System-managed group cannot be manually created.</para>
+        /// </summary>
+        public sealed class SystemManagedGroupDisallowed : GroupCreateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SystemManagedGroupDisallowed> Encoder = new SystemManagedGroupDisallowedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SystemManagedGroupDisallowed> Decoder = new SystemManagedGroupDisallowedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SystemManagedGroupDisallowed" /> class.</para>
+            /// </summary>
+            private SystemManagedGroupDisallowed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SystemManagedGroupDisallowed</para>
+            /// </summary>
+            public static readonly SystemManagedGroupDisallowed Instance = new SystemManagedGroupDisallowed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SystemManagedGroupDisallowed" />.</para>
+            /// </summary>
+            private class SystemManagedGroupDisallowedEncoder : enc.StructEncoder<SystemManagedGroupDisallowed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SystemManagedGroupDisallowed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SystemManagedGroupDisallowed" />.</para>
+            /// </summary>
+            private class SystemManagedGroupDisallowedDecoder : enc.StructDecoder<SystemManagedGroupDisallowed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SystemManagedGroupDisallowed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SystemManagedGroupDisallowed Create()
+                {
+                    return new SystemManagedGroupDisallowed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SystemManagedGroupDisallowed DecodeFields(enc.IJsonReader reader)
+                {
+                    return SystemManagedGroupDisallowed.Instance;
                 }
             }
 

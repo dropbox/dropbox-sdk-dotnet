@@ -102,6 +102,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoExplicitAccess</para>
+        /// </summary>
+        public bool IsNoExplicitAccess
+        {
+            get
+            {
+                return this is NoExplicitAccess;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoExplicitAccess, or <c>null</c>.</para>
+        /// </summary>
+        public NoExplicitAccess AsNoExplicitAccess
+        {
+            get
+            {
+                return this as NoExplicitAccess;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.Sharing
                     AccessError.Encoder.EncodeFields((AccessError)value, writer);
                     return;
                 }
+                if (value is NoExplicitAccess)
+                {
+                    WriteProperty(".tag", "no_explicit_access", writer, enc.StringEncoder.Instance);
+                    NoExplicitAccess.Encoder.EncodeFields((NoExplicitAccess)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +228,8 @@ namespace Dropbox.Api.Sharing
                         return NoPermission.Decoder.DecodeFields(reader);
                     case "access_error":
                         return AccessError.Decoder.DecodeFields(reader);
+                    case "no_explicit_access":
+                        return NoExplicitAccess.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -458,6 +488,97 @@ namespace Dropbox.Api.Sharing
                             reader.Skip();
                             break;
                     }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The action cannot be completed because the target member does not have
+        /// explicit access to the file. The return value is the access that the member has to
+        /// the file from a parent folder.</para>
+        /// </summary>
+        public sealed class NoExplicitAccess : FileMemberActionError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoExplicitAccess> Encoder = new NoExplicitAccessEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoExplicitAccess> Decoder = new NoExplicitAccessDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoExplicitAccess" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public NoExplicitAccess(MemberAccessLevelResult value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoExplicitAccess" />
+            /// class.</para>
+            /// </summary>
+            private NoExplicitAccess()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public MemberAccessLevelResult Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoExplicitAccess" />.</para>
+            /// </summary>
+            private class NoExplicitAccessEncoder : enc.StructEncoder<NoExplicitAccess>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoExplicitAccess value, enc.IJsonWriter writer)
+                {
+                    Dropbox.Api.Sharing.MemberAccessLevelResult.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoExplicitAccess" />.</para>
+            /// </summary>
+            private class NoExplicitAccessDecoder : enc.StructDecoder<NoExplicitAccess>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoExplicitAccess" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoExplicitAccess Create()
+                {
+                    return new NoExplicitAccess();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override NoExplicitAccess DecodeFields(enc.IJsonReader reader)
+                {
+                    return new NoExplicitAccess(Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -12,7 +12,8 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>Arguments of <see
-    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync" /></para>
+    /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync"
+    /// />.</para>
     /// </summary>
     public class GetFileMetadataBatchArg
     {

@@ -15,6 +15,7 @@ namespace Dropbox.Api.Sharing
     /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ChangeFileMemberAccessAsync"
     /// />.</para>
     /// </summary>
+    /// <seealso cref="UpdateFileMemberArgs" />
     public class ChangeFileMemberAccessArgs
     {
         #pragma warning disable 108

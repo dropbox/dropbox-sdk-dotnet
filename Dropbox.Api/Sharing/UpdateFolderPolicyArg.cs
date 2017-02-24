@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>If any of the policy's are unset, then they retain their current setting.</para>
+    /// <para>If any of the policies are unset, then they retain their current setting.</para>
     /// </summary>
     public class UpdateFolderPolicyArg
     {
@@ -36,13 +36,18 @@ namespace Dropbox.Api.Sharing
         /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
         /// content inside this shared folder. The current user must be on a team to set this
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
+        /// <param name="linkSettings">Settings on the link for this folder.</param>
         public UpdateFolderPolicyArg(string sharedFolderId,
                                      MemberPolicy memberPolicy = null,
                                      AclUpdatePolicy aclUpdatePolicy = null,
-                                     SharedLinkPolicy sharedLinkPolicy = null)
+                                     ViewerInfoPolicy viewerInfoPolicy = null,
+                                     SharedLinkPolicy sharedLinkPolicy = null,
+                                     LinkSettings linkSettings = null)
         {
             if (sharedFolderId == null)
             {
@@ -56,7 +61,9 @@ namespace Dropbox.Api.Sharing
             this.SharedFolderId = sharedFolderId;
             this.MemberPolicy = memberPolicy;
             this.AclUpdatePolicy = aclUpdatePolicy;
+            this.ViewerInfoPolicy = viewerInfoPolicy;
             this.SharedLinkPolicy = sharedLinkPolicy;
+            this.LinkSettings = linkSettings;
         }
 
         /// <summary>
@@ -87,11 +94,21 @@ namespace Dropbox.Api.Sharing
         public AclUpdatePolicy AclUpdatePolicy { get; protected set; }
 
         /// <summary>
+        /// <para>Who can enable/disable viewer info for this shared folder.</para>
+        /// </summary>
+        public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
+
+        /// <summary>
         /// <para>The policy to apply to shared links created for content inside this shared
         /// folder. The current user must be on a team to set this policy to <see
         /// cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</para>
         /// </summary>
         public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>Settings on the link for this folder.</para>
+        /// </summary>
+        public LinkSettings LinkSettings { get; protected set; }
 
         #region Encoder class
 
@@ -116,9 +133,17 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
                 }
+                if (value.ViewerInfoPolicy != null)
+                {
+                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
+                }
                 if (value.SharedLinkPolicy != null)
                 {
                     WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
+                }
+                if (value.LinkSettings != null)
+                {
+                    WriteProperty("link_settings", value.LinkSettings, writer, Dropbox.Api.Sharing.LinkSettings.Encoder);
                 }
             }
         }
@@ -162,8 +187,14 @@ namespace Dropbox.Api.Sharing
                     case "acl_update_policy":
                         value.AclUpdatePolicy = Dropbox.Api.Sharing.AclUpdatePolicy.Decoder.Decode(reader);
                         break;
+                    case "viewer_info_policy":
+                        value.ViewerInfoPolicy = Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
+                        break;
                     case "shared_link_policy":
                         value.SharedLinkPolicy = Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
+                        break;
+                    case "link_settings":
+                        value.LinkSettings = Dropbox.Api.Sharing.LinkSettings.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

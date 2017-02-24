@@ -34,27 +34,26 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="accessType">The current user's access level for this shared
         /// folder.</param>
+        /// <param name="isInsideTeamFolder">Whether this folder is inside of a team
+        /// folder.</param>
         /// <param name="isTeamFolder">Whether this folder is a <a
         /// href="https://www.dropbox.com/en/help/986">team folder</a>.</param>
-        /// <param name="policy">Policies governing this shared folder.</param>
         /// <param name="ownerTeam">The team that owns the folder. This field is not present if
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
         /// is present only if the folder is contained within another shared folder.</param>
+        /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
+        /// unmounted folders.</param>
         public SharedFolderMetadataBase(AccessLevel accessType,
+                                        bool isInsideTeamFolder,
                                         bool isTeamFolder,
-                                        FolderPolicy policy,
                                         Dropbox.Api.Users.Team ownerTeam = null,
-                                        string parentSharedFolderId = null)
+                                        string parentSharedFolderId = null,
+                                        string pathLower = null)
         {
             if (accessType == null)
             {
                 throw new sys.ArgumentNullException("accessType");
-            }
-
-            if (policy == null)
-            {
-                throw new sys.ArgumentNullException("policy");
             }
 
             if (parentSharedFolderId != null)
@@ -66,10 +65,11 @@ namespace Dropbox.Api.Sharing
             }
 
             this.AccessType = accessType;
+            this.IsInsideTeamFolder = isInsideTeamFolder;
             this.IsTeamFolder = isTeamFolder;
-            this.Policy = policy;
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
+            this.PathLower = pathLower;
         }
 
         /// <summary>
@@ -89,15 +89,15 @@ namespace Dropbox.Api.Sharing
         public AccessLevel AccessType { get; protected set; }
 
         /// <summary>
+        /// <para>Whether this folder is inside of a team folder.</para>
+        /// </summary>
+        public bool IsInsideTeamFolder { get; protected set; }
+
+        /// <summary>
         /// <para>Whether this folder is a <a href="https://www.dropbox.com/en/help/986">team
         /// folder</a>.</para>
         /// </summary>
         public bool IsTeamFolder { get; protected set; }
-
-        /// <summary>
-        /// <para>Policies governing this shared folder.</para>
-        /// </summary>
-        public FolderPolicy Policy { get; protected set; }
 
         /// <summary>
         /// <para>The team that owns the folder. This field is not present if the folder is not
@@ -110,6 +110,12 @@ namespace Dropbox.Api.Sharing
         /// is contained within another shared folder.</para>
         /// </summary>
         public string ParentSharedFolderId { get; protected set; }
+
+        /// <summary>
+        /// <para>The lower-cased full path of this shared folder. Absent for unmounted
+        /// folders.</para>
+        /// </summary>
+        public string PathLower { get; protected set; }
 
         #region Encoder class
 
@@ -126,8 +132,8 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(SharedFolderMetadataBase value, enc.IJsonWriter writer)
             {
                 WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("is_inside_team_folder", value.IsInsideTeamFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("policy", value.Policy, writer, Dropbox.Api.Sharing.FolderPolicy.Encoder);
                 if (value.OwnerTeam != null)
                 {
                     WriteProperty("owner_team", value.OwnerTeam, writer, Dropbox.Api.Users.Team.Encoder);
@@ -135,6 +141,10 @@ namespace Dropbox.Api.Sharing
                 if (value.ParentSharedFolderId != null)
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PathLower != null)
+                {
+                    WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -172,17 +182,20 @@ namespace Dropbox.Api.Sharing
                     case "access_type":
                         value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
+                    case "is_inside_team_folder":
+                        value.IsInsideTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
                     case "is_team_folder":
                         value.IsTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
-                        break;
-                    case "policy":
-                        value.Policy = Dropbox.Api.Sharing.FolderPolicy.Decoder.Decode(reader);
                         break;
                     case "owner_team":
                         value.OwnerTeam = Dropbox.Api.Users.Team.Decoder.Decode(reader);
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "path_lower":
+                        value.PathLower = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

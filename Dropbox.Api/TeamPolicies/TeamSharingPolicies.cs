@@ -36,8 +36,8 @@ namespace Dropbox.Api.TeamPolicies
         /// members.</param>
         /// <param name="sharedFolderJoinPolicy">Which shared folders team members can
         /// join.</param>
-        /// <param name="sharedLinkCreatePolicy">What is the visibility of newly created shared
-        /// links.</param>
+        /// <param name="sharedLinkCreatePolicy">Who can view shared links owned by team
+        /// members.</param>
         public TeamSharingPolicies(SharedFolderMemberPolicy sharedFolderMemberPolicy,
                                    SharedFolderJoinPolicy sharedFolderJoinPolicy,
                                    SharedLinkCreatePolicy sharedLinkCreatePolicy)
@@ -84,7 +84,7 @@ namespace Dropbox.Api.TeamPolicies
         public SharedFolderJoinPolicy SharedFolderJoinPolicy { get; protected set; }
 
         /// <summary>
-        /// <para>What is the visibility of newly created shared links.</para>
+        /// <para>Who can view shared links owned by team members.</para>
         /// </summary>
         public SharedLinkCreatePolicy SharedLinkCreatePolicy { get; protected set; }
 

@@ -179,7 +179,7 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>The results of the query for this file if it was successful</para>
+        /// <para>The results of the query for this file if it was successful.</para>
         /// </summary>
         public sealed class Result : ListFileMembersIndividualResult
         {

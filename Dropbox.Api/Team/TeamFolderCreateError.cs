@@ -80,6 +80,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is FolderNameReserved</para>
+        /// </summary>
+        public bool IsFolderNameReserved
+        {
+            get
+            {
+                return this is FolderNameReserved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderNameReserved, or <c>null</c>.</para>
+        /// </summary>
+        public FolderNameReserved AsFolderNameReserved
+        {
+            get
+            {
+                return this as FolderNameReserved;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Team
                     FolderNameAlreadyUsed.Encoder.EncodeFields((FolderNameAlreadyUsed)value, writer);
                     return;
                 }
+                if (value is FolderNameReserved)
+                {
+                    WriteProperty(".tag", "folder_name_reserved", writer, enc.StringEncoder.Instance);
+                    FolderNameReserved.Encoder.EncodeFields((FolderNameReserved)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.Team
                         return InvalidFolderName.Decoder.DecodeFields(reader);
                     case "folder_name_already_used":
                         return FolderNameAlreadyUsed.Decoder.DecodeFields(reader);
+                    case "folder_name_reserved":
+                        return FolderNameReserved.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -332,6 +362,86 @@ namespace Dropbox.Api.Team
                 public override FolderNameAlreadyUsed DecodeFields(enc.IJsonReader reader)
                 {
                     return FolderNameAlreadyUsed.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The provided name cannot be used because it is reserved.</para>
+        /// </summary>
+        public sealed class FolderNameReserved : TeamFolderCreateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderNameReserved> Encoder = new FolderNameReservedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderNameReserved> Decoder = new FolderNameReservedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FolderNameReserved" />
+            /// class.</para>
+            /// </summary>
+            private FolderNameReserved()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderNameReserved</para>
+            /// </summary>
+            public static readonly FolderNameReserved Instance = new FolderNameReserved();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderNameReserved" />.</para>
+            /// </summary>
+            private class FolderNameReservedEncoder : enc.StructEncoder<FolderNameReserved>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderNameReserved value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderNameReserved" />.</para>
+            /// </summary>
+            private class FolderNameReservedDecoder : enc.StructDecoder<FolderNameReserved>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FolderNameReserved"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderNameReserved Create()
+                {
+                    return new FolderNameReserved();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FolderNameReserved DecodeFields(enc.IJsonReader reader)
+                {
+                    return FolderNameReserved.Instance;
                 }
             }
 

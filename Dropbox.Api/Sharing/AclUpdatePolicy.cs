@@ -11,8 +11,8 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Policy governing who can change a shared folder's access control list (ACL). In
-    /// other words, who can add, remove, or change the privileges of members.</para>
+    /// <para>Who can change a shared folder's access control list (ACL). In other words, who
+    /// can add, remove, or change the privileges of members.</para>
     /// </summary>
     public class AclUpdatePolicy
     {

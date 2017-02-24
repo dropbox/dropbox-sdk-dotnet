@@ -193,6 +193,139 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is OwnerNotOnTeam</para>
+        /// </summary>
+        public bool IsOwnerNotOnTeam
+        {
+            get
+            {
+                return this is OwnerNotOnTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a OwnerNotOnTeam, or <c>null</c>.</para>
+        /// </summary>
+        public OwnerNotOnTeam AsOwnerNotOnTeam
+        {
+            get
+            {
+                return this as OwnerNotOnTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PermissionDenied</para>
+        /// </summary>
+        public bool IsPermissionDenied
+        {
+            get
+            {
+                return this is PermissionDenied;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PermissionDenied, or <c>null</c>.</para>
+        /// </summary>
+        public PermissionDenied AsPermissionDenied
+        {
+            get
+            {
+                return this as PermissionDenied;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is RestrictedByTeam</para>
+        /// </summary>
+        public bool IsRestrictedByTeam
+        {
+            get
+            {
+                return this is RestrictedByTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RestrictedByTeam, or <c>null</c>.</para>
+        /// </summary>
+        public RestrictedByTeam AsRestrictedByTeam
+        {
+            get
+            {
+                return this as RestrictedByTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserAccountType</para>
+        /// </summary>
+        public bool IsUserAccountType
+        {
+            get
+            {
+                return this is UserAccountType;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserAccountType, or <c>null</c>.</para>
+        /// </summary>
+        public UserAccountType AsUserAccountType
+        {
+            get
+            {
+                return this as UserAccountType;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserNotOnTeam</para>
+        /// </summary>
+        public bool IsUserNotOnTeam
+        {
+            get
+            {
+                return this is UserNotOnTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserNotOnTeam, or <c>null</c>.</para>
+        /// </summary>
+        public UserNotOnTeam AsUserNotOnTeam
+        {
+            get
+            {
+                return this as UserNotOnTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FolderIsInsideSharedFolder</para>
+        /// </summary>
+        public bool IsFolderIsInsideSharedFolder
+        {
+            get
+            {
+                return this is FolderIsInsideSharedFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderIsInsideSharedFolder, or <c>null</c>.</para>
+        /// </summary>
+        public FolderIsInsideSharedFolder AsFolderIsInsideSharedFolder
+        {
+            get
+            {
+                return this as FolderIsInsideSharedFolder;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -270,6 +403,42 @@ namespace Dropbox.Api.Sharing
                     FolderIsLimitedTeamFolder.Encoder.EncodeFields((FolderIsLimitedTeamFolder)value, writer);
                     return;
                 }
+                if (value is OwnerNotOnTeam)
+                {
+                    WriteProperty(".tag", "owner_not_on_team", writer, enc.StringEncoder.Instance);
+                    OwnerNotOnTeam.Encoder.EncodeFields((OwnerNotOnTeam)value, writer);
+                    return;
+                }
+                if (value is PermissionDenied)
+                {
+                    WriteProperty(".tag", "permission_denied", writer, enc.StringEncoder.Instance);
+                    PermissionDenied.Encoder.EncodeFields((PermissionDenied)value, writer);
+                    return;
+                }
+                if (value is RestrictedByTeam)
+                {
+                    WriteProperty(".tag", "restricted_by_team", writer, enc.StringEncoder.Instance);
+                    RestrictedByTeam.Encoder.EncodeFields((RestrictedByTeam)value, writer);
+                    return;
+                }
+                if (value is UserAccountType)
+                {
+                    WriteProperty(".tag", "user_account_type", writer, enc.StringEncoder.Instance);
+                    UserAccountType.Encoder.EncodeFields((UserAccountType)value, writer);
+                    return;
+                }
+                if (value is UserNotOnTeam)
+                {
+                    WriteProperty(".tag", "user_not_on_team", writer, enc.StringEncoder.Instance);
+                    UserNotOnTeam.Encoder.EncodeFields((UserNotOnTeam)value, writer);
+                    return;
+                }
+                if (value is FolderIsInsideSharedFolder)
+                {
+                    WriteProperty(".tag", "folder_is_inside_shared_folder", writer, enc.StringEncoder.Instance);
+                    FolderIsInsideSharedFolder.Encoder.EncodeFields((FolderIsInsideSharedFolder)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -323,6 +492,18 @@ namespace Dropbox.Api.Sharing
                         return TargetNotActive.Decoder.DecodeFields(reader);
                     case "folder_is_limited_team_folder":
                         return FolderIsLimitedTeamFolder.Decoder.DecodeFields(reader);
+                    case "owner_not_on_team":
+                        return OwnerNotOnTeam.Decoder.DecodeFields(reader);
+                    case "permission_denied":
+                        return PermissionDenied.Decoder.DecodeFields(reader);
+                    case "restricted_by_team":
+                        return RestrictedByTeam.Decoder.DecodeFields(reader);
+                    case "user_account_type":
+                        return UserAccountType.Decoder.DecodeFields(reader);
+                    case "user_not_on_team":
+                        return UserNotOnTeam.Decoder.DecodeFields(reader);
+                    case "folder_is_inside_shared_folder":
+                        return FolderIsInsideSharedFolder.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -883,6 +1064,482 @@ namespace Dropbox.Api.Sharing
                 public override FolderIsLimitedTeamFolder DecodeFields(enc.IJsonReader reader)
                 {
                     return FolderIsLimitedTeamFolder.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The content owner needs to be on a Dropbox team to perform this
+        /// action.</para>
+        /// </summary>
+        public sealed class OwnerNotOnTeam : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<OwnerNotOnTeam> Encoder = new OwnerNotOnTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<OwnerNotOnTeam> Decoder = new OwnerNotOnTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="OwnerNotOnTeam" />
+            /// class.</para>
+            /// </summary>
+            private OwnerNotOnTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of OwnerNotOnTeam</para>
+            /// </summary>
+            public static readonly OwnerNotOnTeam Instance = new OwnerNotOnTeam();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="OwnerNotOnTeam" />.</para>
+            /// </summary>
+            private class OwnerNotOnTeamEncoder : enc.StructEncoder<OwnerNotOnTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(OwnerNotOnTeam value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="OwnerNotOnTeam" />.</para>
+            /// </summary>
+            private class OwnerNotOnTeamDecoder : enc.StructDecoder<OwnerNotOnTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="OwnerNotOnTeam" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override OwnerNotOnTeam Create()
+                {
+                    return new OwnerNotOnTeam();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override OwnerNotOnTeam DecodeFields(enc.IJsonReader reader)
+                {
+                    return OwnerNotOnTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user does not have permission to perform this action on the link.</para>
+        /// </summary>
+        public sealed class PermissionDenied : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PermissionDenied> Encoder = new PermissionDeniedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PermissionDenied> Decoder = new PermissionDeniedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PermissionDenied" />
+            /// class.</para>
+            /// </summary>
+            private PermissionDenied()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PermissionDenied</para>
+            /// </summary>
+            public static readonly PermissionDenied Instance = new PermissionDenied();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PermissionDenied" />.</para>
+            /// </summary>
+            private class PermissionDeniedEncoder : enc.StructEncoder<PermissionDenied>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PermissionDenied value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PermissionDenied" />.</para>
+            /// </summary>
+            private class PermissionDeniedDecoder : enc.StructDecoder<PermissionDenied>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PermissionDenied" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PermissionDenied Create()
+                {
+                    return new PermissionDenied();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PermissionDenied DecodeFields(enc.IJsonReader reader)
+                {
+                    return PermissionDenied.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user's team policy prevents performing this action on the link.</para>
+        /// </summary>
+        public sealed class RestrictedByTeam : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RestrictedByTeam> Encoder = new RestrictedByTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RestrictedByTeam> Decoder = new RestrictedByTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RestrictedByTeam" />
+            /// class.</para>
+            /// </summary>
+            private RestrictedByTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RestrictedByTeam</para>
+            /// </summary>
+            public static readonly RestrictedByTeam Instance = new RestrictedByTeam();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RestrictedByTeam" />.</para>
+            /// </summary>
+            private class RestrictedByTeamEncoder : enc.StructEncoder<RestrictedByTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RestrictedByTeam value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RestrictedByTeam" />.</para>
+            /// </summary>
+            private class RestrictedByTeamDecoder : enc.StructDecoder<RestrictedByTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RestrictedByTeam" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RestrictedByTeam Create()
+                {
+                    return new RestrictedByTeam();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RestrictedByTeam DecodeFields(enc.IJsonReader reader)
+                {
+                    return RestrictedByTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user's account type does not support this action.</para>
+        /// </summary>
+        public sealed class UserAccountType : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserAccountType> Encoder = new UserAccountTypeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserAccountType> Decoder = new UserAccountTypeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserAccountType" />
+            /// class.</para>
+            /// </summary>
+            private UserAccountType()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserAccountType</para>
+            /// </summary>
+            public static readonly UserAccountType Instance = new UserAccountType();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserAccountType" />.</para>
+            /// </summary>
+            private class UserAccountTypeEncoder : enc.StructEncoder<UserAccountType>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserAccountType value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserAccountType" />.</para>
+            /// </summary>
+            private class UserAccountTypeDecoder : enc.StructDecoder<UserAccountType>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserAccountType" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserAccountType Create()
+                {
+                    return new UserAccountType();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserAccountType DecodeFields(enc.IJsonReader reader)
+                {
+                    return UserAccountType.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user needs to be on a Dropbox team to perform this action.</para>
+        /// </summary>
+        public sealed class UserNotOnTeam : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserNotOnTeam> Encoder = new UserNotOnTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserNotOnTeam> Decoder = new UserNotOnTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserNotOnTeam" />
+            /// class.</para>
+            /// </summary>
+            private UserNotOnTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserNotOnTeam</para>
+            /// </summary>
+            public static readonly UserNotOnTeam Instance = new UserNotOnTeam();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserNotOnTeam" />.</para>
+            /// </summary>
+            private class UserNotOnTeamEncoder : enc.StructEncoder<UserNotOnTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserNotOnTeam value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserNotOnTeam" />.</para>
+            /// </summary>
+            private class UserNotOnTeamDecoder : enc.StructDecoder<UserNotOnTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserNotOnTeam" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserNotOnTeam Create()
+                {
+                    return new UserNotOnTeam();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserNotOnTeam DecodeFields(enc.IJsonReader reader)
+                {
+                    return UserNotOnTeam.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Folder is inside of another shared folder.</para>
+        /// </summary>
+        public sealed class FolderIsInsideSharedFolder : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderIsInsideSharedFolder> Encoder = new FolderIsInsideSharedFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderIsInsideSharedFolder> Decoder = new FolderIsInsideSharedFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FolderIsInsideSharedFolder"
+            /// /> class.</para>
+            /// </summary>
+            private FolderIsInsideSharedFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderIsInsideSharedFolder</para>
+            /// </summary>
+            public static readonly FolderIsInsideSharedFolder Instance = new FolderIsInsideSharedFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderIsInsideSharedFolder" />.</para>
+            /// </summary>
+            private class FolderIsInsideSharedFolderEncoder : enc.StructEncoder<FolderIsInsideSharedFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderIsInsideSharedFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderIsInsideSharedFolder" />.</para>
+            /// </summary>
+            private class FolderIsInsideSharedFolderDecoder : enc.StructDecoder<FolderIsInsideSharedFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FolderIsInsideSharedFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderIsInsideSharedFolder Create()
+                {
+                    return new FolderIsInsideSharedFolder();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FolderIsInsideSharedFolder DecodeFields(enc.IJsonReader reader)
+                {
+                    return FolderIsInsideSharedFolder.Instance;
                 }
             }
 

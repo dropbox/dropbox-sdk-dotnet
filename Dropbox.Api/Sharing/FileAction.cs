@@ -35,6 +35,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is DisableViewerInfo</para>
+        /// </summary>
+        public bool IsDisableViewerInfo
+        {
+            get
+            {
+                return this is DisableViewerInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DisableViewerInfo, or <c>null</c>.</para>
+        /// </summary>
+        public DisableViewerInfo AsDisableViewerInfo
+        {
+            get
+            {
+                return this as DisableViewerInfo;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is EditContents</para>
         /// </summary>
         public bool IsEditContents
@@ -53,6 +75,28 @@ namespace Dropbox.Api.Sharing
             get
             {
                 return this as EditContents;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is EnableViewerInfo</para>
+        /// </summary>
+        public bool IsEnableViewerInfo
+        {
+            get
+            {
+                return this is EnableViewerInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EnableViewerInfo, or <c>null</c>.</para>
+        /// </summary>
+        public EnableViewerInfo AsEnableViewerInfo
+        {
+            get
+            {
+                return this as EnableViewerInfo;
             }
         }
 
@@ -224,10 +268,22 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileAction value, enc.IJsonWriter writer)
             {
+                if (value is DisableViewerInfo)
+                {
+                    WriteProperty(".tag", "disable_viewer_info", writer, enc.StringEncoder.Instance);
+                    DisableViewerInfo.Encoder.EncodeFields((DisableViewerInfo)value, writer);
+                    return;
+                }
                 if (value is EditContents)
                 {
                     WriteProperty(".tag", "edit_contents", writer, enc.StringEncoder.Instance);
                     EditContents.Encoder.EncodeFields((EditContents)value, writer);
+                    return;
+                }
+                if (value is EnableViewerInfo)
+                {
+                    WriteProperty(".tag", "enable_viewer_info", writer, enc.StringEncoder.Instance);
+                    EnableViewerInfo.Encoder.EncodeFields((EnableViewerInfo)value, writer);
                     return;
                 }
                 if (value is InviteViewer)
@@ -304,8 +360,12 @@ namespace Dropbox.Api.Sharing
             {
                 switch (tag)
                 {
+                    case "disable_viewer_info":
+                        return DisableViewerInfo.Decoder.DecodeFields(reader);
                     case "edit_contents":
                         return EditContents.Decoder.DecodeFields(reader);
+                    case "enable_viewer_info":
+                        return EnableViewerInfo.Decoder.DecodeFields(reader);
                     case "invite_viewer":
                         return InviteViewer.Decoder.DecodeFields(reader);
                     case "invite_viewer_no_comment":
@@ -325,6 +385,86 @@ namespace Dropbox.Api.Sharing
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Disable viewer information on the file.</para>
+        /// </summary>
+        public sealed class DisableViewerInfo : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DisableViewerInfo> Encoder = new DisableViewerInfoEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DisableViewerInfo> Decoder = new DisableViewerInfoDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DisableViewerInfo" />
+            /// class.</para>
+            /// </summary>
+            private DisableViewerInfo()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DisableViewerInfo</para>
+            /// </summary>
+            public static readonly DisableViewerInfo Instance = new DisableViewerInfo();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DisableViewerInfo" />.</para>
+            /// </summary>
+            private class DisableViewerInfoEncoder : enc.StructEncoder<DisableViewerInfo>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DisableViewerInfo value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DisableViewerInfo" />.</para>
+            /// </summary>
+            private class DisableViewerInfoDecoder : enc.StructDecoder<DisableViewerInfo>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DisableViewerInfo"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DisableViewerInfo Create()
+                {
+                    return new DisableViewerInfo();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DisableViewerInfo DecodeFields(enc.IJsonReader reader)
+                {
+                    return DisableViewerInfo.Instance;
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>Change or edit contents of the file.</para>
@@ -399,6 +539,85 @@ namespace Dropbox.Api.Sharing
                 public override EditContents DecodeFields(enc.IJsonReader reader)
                 {
                     return EditContents.Instance;
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Enable viewer information on the file.</para>
+        /// </summary>
+        public sealed class EnableViewerInfo : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EnableViewerInfo> Encoder = new EnableViewerInfoEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EnableViewerInfo> Decoder = new EnableViewerInfoDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EnableViewerInfo" />
+            /// class.</para>
+            /// </summary>
+            private EnableViewerInfo()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of EnableViewerInfo</para>
+            /// </summary>
+            public static readonly EnableViewerInfo Instance = new EnableViewerInfo();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EnableViewerInfo" />.</para>
+            /// </summary>
+            private class EnableViewerInfoEncoder : enc.StructEncoder<EnableViewerInfo>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EnableViewerInfo value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EnableViewerInfo" />.</para>
+            /// </summary>
+            private class EnableViewerInfoDecoder : enc.StructDecoder<EnableViewerInfo>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EnableViewerInfo" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EnableViewerInfo Create()
+                {
+                    return new EnableViewerInfo();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EnableViewerInfo DecodeFields(enc.IJsonReader reader)
+                {
+                    return EnableViewerInfo.Instance;
                 }
             }
 

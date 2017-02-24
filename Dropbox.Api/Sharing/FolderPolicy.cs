@@ -15,7 +15,6 @@ namespace Dropbox.Api.Sharing
     /// </summary>
     /// <seealso cref="SharedFileMetadata" />
     /// <seealso cref="SharedFolderMetadata" />
-    /// <seealso cref="SharedFolderMetadataBase" />
     public class FolderPolicy
     {
         #pragma warning disable 108
@@ -43,10 +42,13 @@ namespace Dropbox.Api.Sharing
         /// taking into account both the folder and the team-wide policy. This value may differ
         /// from that of member_policy if the team-wide policy is more restrictive than the
         /// folder policy. Present only if the folder is owned by a team.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         public FolderPolicy(AclUpdatePolicy aclUpdatePolicy,
                             SharedLinkPolicy sharedLinkPolicy,
                             MemberPolicy memberPolicy = null,
-                            MemberPolicy resolvedMemberPolicy = null)
+                            MemberPolicy resolvedMemberPolicy = null,
+                            ViewerInfoPolicy viewerInfoPolicy = null)
         {
             if (aclUpdatePolicy == null)
             {
@@ -62,6 +64,7 @@ namespace Dropbox.Api.Sharing
             this.SharedLinkPolicy = sharedLinkPolicy;
             this.MemberPolicy = memberPolicy;
             this.ResolvedMemberPolicy = resolvedMemberPolicy;
+            this.ViewerInfoPolicy = viewerInfoPolicy;
         }
 
         /// <summary>
@@ -99,6 +102,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public MemberPolicy ResolvedMemberPolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>Who can enable/disable viewer info for this shared folder.</para>
+        /// </summary>
+        public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -122,6 +130,10 @@ namespace Dropbox.Api.Sharing
                 if (value.ResolvedMemberPolicy != null)
                 {
                     WriteProperty("resolved_member_policy", value.ResolvedMemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
+                }
+                if (value.ViewerInfoPolicy != null)
+                {
+                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
                 }
             }
         }
@@ -166,6 +178,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "resolved_member_policy":
                         value.ResolvedMemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
+                        break;
+                    case "viewer_info_policy":
+                        value.ViewerInfoPolicy = Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();
