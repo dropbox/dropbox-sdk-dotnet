@@ -8,10 +8,13 @@ This repository contains no auto-generated code.
 
 Basic Setup
 -----------
+1. Prerequisites:
+  - Visual Studio 2013 or above.
+  - Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases).
+  - Nuget.exe in environment Path (https://dist.nuget.org/index.html).
+2. Clone the public and private SDK repo into `~/src`.
 
-1. Clone the public and private SDK repo into `~/src`.
-
-2. In the private SDK repo, run ``git submodule init`` followed by a
+3. In the private SDK repo, run ``git submodule init`` followed by a
    ``git submodule update`` to pull in the ``spec`` and ``stone`` sub repos.
 
 Updating the SDK for a new spec
