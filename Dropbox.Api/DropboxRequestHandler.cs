@@ -16,6 +16,7 @@ namespace Dropbox.Api
     using System.Net.Http.Headers;
     using System.Reflection;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
 
     using Dropbox.Api.Stone;
@@ -52,6 +53,16 @@ namespace Dropbox.Api
         private readonly DropboxRequestHandlerOptions options;
 
         /// <summary>
+        /// The CancellationTokenSource for cancellation request the Dispose
+        /// </summary>
+        private CancellationTokenSource pendingRequestsCts;
+
+        /// <summary>
+        /// The flag for disposed
+        /// </summary>
+        private volatile bool disposed;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxRequestHandler"/> class.
         /// </summary>
         /// <param name="options">The configuration options for dropbox client.</param>
@@ -67,6 +78,15 @@ namespace Dropbox.Api
 
             this.options = options;
             this.selectUser = selectUser;
+            this.pendingRequestsCts = new CancellationTokenSource();
+        }
+
+        /// <summary>
+        /// Destructor
+        /// </summary>
+        ~DropboxRequestHandler()
+        {
+            Dispose(false);
         }
 
         /// <summary>
@@ -215,6 +235,28 @@ namespace Dropbox.Api
             return new DownloadResponse<TResponse>(response, res.HttpResponse);
         }
 
+        /// <summary>
+        /// Dispose method.
+        /// </summary>
+        void IDisposable.Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Releases the unmanaged resources and optionally disposes of the managed resources.
+        /// </summary>
+        /// <param name="disposing">true to release both managed and unmanaged resources; false to releases only unmanaged resources.</param>
+        private void Dispose(bool disposing)
+        {
+            if (disposing && !this.disposed)
+            {
+                this.disposed = true;
+                this.pendingRequestsCts.Cancel();
+                this.pendingRequestsCts.Dispose();
+            }
+        }
         /// <summary>
         /// Requests the JSON string with retry.
         /// </summary>
@@ -405,7 +447,7 @@ namespace Dropbox.Api
 
             var disposeResponse = true;
             var response = await this.options.HttpClient
-                .SendAsync(request, completionOption)
+                .SendAsync(request, completionOption, pendingRequestsCts.Token)
                 .ConfigureAwait(false);
 
             var requestId = GetRequestId(response);

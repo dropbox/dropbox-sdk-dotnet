@@ -6,6 +6,7 @@
 
 namespace Dropbox.Api
 {
+    using Dropbox.Api.Stone;
     using System;
     using System.Globalization;
     using System.Net.Http;
@@ -83,6 +84,11 @@ namespace Dropbox.Api
     public sealed partial class DropboxClient : IDisposable
     {
         /// <summary>
+        /// Transport
+        /// </summary>
+        private ITransport transport;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
@@ -124,22 +130,29 @@ namespace Dropbox.Api
         /// a team access token, actions will be performed on this this user's Dropbox.</param>
         internal DropboxClient(DropboxRequestHandlerOptions options, string selectUser = null)
         {
-            this.InitializeRoutes(new DropboxRequestHandler(options, selectUser));
+            this.transport = new DropboxRequestHandler(options, selectUser);
+            this.InitializeRoutes(transport);
         }
 
         /// <summary>
-        /// Dummy dispose method.
+        /// Dispose method.
         /// </summary>
         public void Dispose()
         {
+            transport.Dispose();
         }
     }
 
     /// <summary>
     /// The client which contains endpoints which perform app-auth actions.
     /// </summary>
-    public sealed partial class DropboxAppClient
+    public sealed partial class DropboxAppClient : IDisposable
     {
+        /// <summary>
+        /// Transport
+        /// </summary>
+        private ITransport transport;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
         /// </summary>
@@ -175,7 +188,8 @@ namespace Dropbox.Api
                 config.UserAgent, 
                 httpClient: config.HttpClient);
 
-            this.InitializeRoutes(new DropboxRequestHandler(options));
+            this.transport = new DropboxRequestHandler(options);
+            this.InitializeRoutes(this.transport);
         }
 
         /// <summary>
@@ -189,13 +203,26 @@ namespace Dropbox.Api
             var rawValue = string.Format("{0}:{1}", appKey, appSecret);
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawValue));
         }
+
+        /// <summary>
+        /// Dispose method.
+        /// </summary>
+        public void Dispose()
+        {
+            transport.Dispose();
+        }
     }
 
     /// <summary>
     /// The client which contains endpoints which perform team-level actions.
     /// </summary>
-    public sealed partial class DropboxTeamClient
+    public sealed partial class DropboxTeamClient : IDisposable
     {
+        /// <summary>
+        /// Transport
+        /// </summary>
+        private ITransport transport;
+
         /// <summary>
         /// The request handler options.
         /// </summary>
@@ -234,7 +261,8 @@ namespace Dropbox.Api
             }
 
             this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient);
-            this.InitializeRoutes(new DropboxRequestHandler(this.options));
+            this.transport = new DropboxRequestHandler(options);
+            this.InitializeRoutes(this.transport);
         }
 
         /// <summary>
@@ -245,6 +273,14 @@ namespace Dropbox.Api
         public DropboxClient AsMember(string memberId)
         {
             return new DropboxClient(this.options, memberId);
+        }
+
+        /// <summary>
+        /// Dispose method.
+        /// </summary>
+        public void Dispose()
+        {
+            transport.Dispose();
         }
     }
 
