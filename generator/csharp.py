@@ -954,7 +954,7 @@ class _CSharpGenerator(CodeGenerator):
                     with self.doc_comment():
                         self.emit_summary('Initializes the routes.')
                         self.emit_xml('The transport.', 'returns')
-                    with self.cs_block(before='private void InitializeRoutes(ITransport transport)'):
+                    with self.cs_block(before='internal override void InitializeRoutes(ITransport transport)'):
                         for ns_name in enumerate_ns():
                             self.emit('this.{0} = new {0}{1}Routes(transport);'.format(ns_name, auth_name))
 

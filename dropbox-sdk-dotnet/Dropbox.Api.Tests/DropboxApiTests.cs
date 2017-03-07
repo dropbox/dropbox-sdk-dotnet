@@ -17,6 +17,7 @@ namespace Dropbox.Api.Tests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Dropbox.Api.Auth;
+    using Dropbox.Api.Users;
 
     /// <summary>
     /// The test class for Dropbox API.
@@ -362,6 +363,30 @@ namespace Dropbox.Api.Tests
             var client = new DropboxClient(UserAccessToken, new DropboxClientConfig { HttpClient = mockClient, UserAgent = userAgent });
             await client.Users.GetCurrentAccountAsync();
             Assert.IsTrue(lastRequest.Headers.UserAgent.ToString().Contains(userAgent));
+        }
+
+        /// <summary>
+        /// Test cancel request of Dispose DropboxClient
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        public async Task TestDropboxClientDispose()
+        {
+            var canceled = false;
+            Task<FullAccount> task;
+            using (var client = new DropboxClient(UserAccessToken))
+            {
+                task = client.Users.GetCurrentAccountAsync();
+            }
+            try
+            {
+                await task;
+            }
+            catch (TaskCanceledException)
+            {
+                canceled = true;
+            }
+            Assert.IsTrue(canceled);
         }
     }
 }

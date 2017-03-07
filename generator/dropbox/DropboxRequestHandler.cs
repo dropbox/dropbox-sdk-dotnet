@@ -52,6 +52,16 @@ namespace Dropbox.Api
         private readonly DropboxRequestHandlerOptions options;
 
         /// <summary>
+        /// The default http client instance.
+        /// </summary>
+        private readonly HttpClient defaultHttpClient = new HttpClient();
+
+        /// <summary>
+        /// The default long poll http client instance.
+        /// </summary>
+        private readonly HttpClient defaultLongPollHttpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(480) };
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxRequestHandler"/> class.
         /// </summary>
         /// <param name="options">The configuration options for dropbox client.</param>
@@ -404,8 +414,7 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var client = hostname == HostType.ApiNotify ? this.options.LongPollHttpClient : this.options.HttpClient;
-            var response = await client.SendAsync(request, completionOption).ConfigureAwait(false);
+            var response = await this.getHttpClient(hostname).SendAsync(request, completionOption).ConfigureAwait(false);
 
             var requestId = GetRequestId(response);
             try
@@ -514,6 +523,46 @@ namespace Dropbox.Api
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Get http client for given host.
+        /// </summary>
+        /// <param name="hostname">The host name.</param>
+        /// <returns>The <see cref="HttpClient"/>.</returns>
+        private HttpClient getHttpClient(string hostname)
+        {
+            if (hostname == HostType.ApiNotify)
+            {
+                return this.options.LongPollHttpClient ?? this.defaultLongPollHttpClient;
+            }
+            else
+            {
+                return this.options.HttpClient ?? this.defaultHttpClient;
+            }
+        }
+
+        /// <summary>
+        /// The actual disposing logic.
+        /// </summary>
+        /// <param name="disposing">If is disposing.</param>
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // HttpClient is safe for multiple disposal.
+                this.defaultHttpClient.Dispose();
+                this.defaultLongPollHttpClient.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// The public dispose.
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -714,16 +763,6 @@ namespace Dropbox.Api
         /// </summary>
         private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
 
-        /// <summary>
-        /// The default http client instance.
-        /// </summary>
-        private static readonly HttpClient DefaultHttpClient = new HttpClient();
-
-        /// <summary>
-        /// The default long poll http client instance.
-        /// </summary>
-        private static readonly HttpClient DefaultLongPollHttpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(480) };
-
         public DropboxRequestHandlerOptions(DropboxClientConfig config, string oauth2AccessToken)
             : this(
             oauth2AccessToken,
@@ -752,7 +791,7 @@ namespace Dropbox.Api
         /// this is for internal Dropbox use only.</param>
         /// <param name="httpClient">The custom http client. If not provided, a default 
         /// http client will be created.</param>
-        /// <param name="httpClient">The custom http client for long poll. If not provided, a default 
+        /// <param name="longPollHttpClient">The custom http client for long poll. If not provided, a default 
         /// http client with longer timeout will be created.</param>
         public DropboxRequestHandlerOptions(
             string oauth2AccessToken,
@@ -777,8 +816,8 @@ namespace Dropbox.Api
                 ? string.Join("/", BaseUserAgent, sdkVersion)
                 : string.Join("/", userAgent, BaseUserAgent, sdkVersion);
 
-            this.HttpClient = httpClient ?? DefaultHttpClient;
-            this.LongPollHttpClient = longPollHttpClient ?? DefaultLongPollHttpClient;
+            this.HttpClient = httpClient;
+            this.LongPollHttpClient = longPollHttpClient;
             this.OAuth2AccessToken = oauth2AccessToken;
             this.MaxClientRetries = maxRetriesOnError;
             this.HostMap = new Dictionary<string, string>

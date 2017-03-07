@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.2.1</version>
+    <version>4.2.2</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -16,6 +16,8 @@
 What's new:
 - Increase default timeout for long poll requests.
 - Allow providing custom http client for long poll requests.
+Bug fixes:
+- Properly dispose http client when a Dropbox client is disposed.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

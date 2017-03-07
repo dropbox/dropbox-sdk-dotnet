@@ -48,7 +48,7 @@ namespace <Namespace>.Stone
     /// <summary>
     /// An interface that abstracts route transports
     /// </summary>
-    internal interface ITransport
+    internal interface ITransport : IDisposable
     {
         /// <summary>
         /// Sends the RPC request asynchronously.
