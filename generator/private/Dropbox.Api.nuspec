@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.2.0</version>
+    <version>4.2.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,36 +14,8 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-- Files:
-  - Added ContentHash to FileMetadata.
-  - Added DuplicatedOrNestedPaths to RelocationError and removed from RelocationBatchError.
-  - Added DisableViewerFnfo and EnableViewerInfo to CommitInfoWithProperties.
-  - Added LinkMetadata to SharedFileMetadata.
-  - Added ViewerInfoPolicy union.
-  - Added NoExplicitAccess to MemberSelector.
-  - Deprecated ChangeFileMemberAccess route.
-  - Added UpdateFileMember route.
-
-- Sharing:
-  - Added ViewerInfoPolicy, DisableViewerInfo, EnableViewerInfo to FolderPolicy.
-  - Added Team, IsInsideTeamFolder, PathLower to SharedLinkPolicy.
-  - Added LinkMetadata, Policy, SharedFolderId, TimeInvited to SharedFolderMetadata.
-  - Added actions, LinkSettings, ViewerInfoPolicy to ShareFolderArg and removed default values from policies in ShareFolderArg.
-  - Added ViewerInfoPolicy, LinkSettings to UpdateFolderPolicyArg.
-
-- Team:
-  - Added JoinedOn, PersistentId to MemberProfile.
-  - Added TeamMemberId, ExternalId to UserSelectorArg.
-  - Added CompanyManaged, SystemManaged to GroupManagementType.
-  - Added TimeRange.
-  - Added ArchiveInProgress to TeamFolderStatus, TeamFolderIdArg.
-  - Added BaseTeamFolderError.
-  - Added FolderNameReserved to TeamFolderCreateError.
-  - Added FolderNameReserved to TeamFolderRenameError.
-  - Added GroupSelectorWithTeamGroupError.
-  - Added MembersNotInTeam, UsersNotFound to GroupMembersAddError.
-  - Added JoinedOn to TeamMemberProfile.
-  - Added MemberPersistentId, DuplicateMemberPersistentId, PersistentIdDisabled, NewPersistentId, PersistentIdDisabled, PersistentIdUsedByOtherUser to MemberSelectorError.
+- Increase default timeout for long poll requests.
+- Allow providing custom http client for long poll requests.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

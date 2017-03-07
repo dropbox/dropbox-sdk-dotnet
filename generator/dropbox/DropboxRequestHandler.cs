@@ -347,14 +347,14 @@ namespace Dropbox.Api
 
             var request = new HttpRequestMessage(HttpMethod.Post, uri);
 
-            if (auth == AuthType.User || auth == AuthType.Team) 
+            if (auth == AuthType.User || auth == AuthType.Team)
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.options.OAuth2AccessToken);
-            } 
+            }
             else if (auth == AuthType.App)
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue("Basic", this.options.OAuth2AccessToken);
-            } 
+            }
             else if (auth == AuthType.NoAuth)
             {
             }
@@ -404,9 +404,8 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.options.HttpClient
-                .SendAsync(request, completionOption)
-                .ConfigureAwait(false);
+            var client = hostname == HostType.ApiNotify ? this.options.LongPollHttpClient : this.options.HttpClient;
+            var response = await client.SendAsync(request, completionOption).ConfigureAwait(false);
 
             var requestId = GetRequestId(response);
             try
@@ -632,7 +631,8 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="CustomStreamContent"/> class.
         /// </summary>
         /// <param name="content">The stream content.</param>
-        public CustomStreamContent(Stream content) : base(content)
+        public CustomStreamContent(Stream content)
+            : base(content)
         {
         }
 
@@ -720,6 +720,25 @@ namespace Dropbox.Api
         private static readonly HttpClient DefaultHttpClient = new HttpClient();
 
         /// <summary>
+        /// The default long poll http client instance.
+        /// </summary>
+        private static readonly HttpClient DefaultLongPollHttpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(480) };
+
+        public DropboxRequestHandlerOptions(DropboxClientConfig config, string oauth2AccessToken)
+            : this(
+            oauth2AccessToken,
+            config.MaxRetriesOnError,
+            config.UserAgent,
+            DefaultApiDomain,
+            DefaultApiContentDomain,
+            DefaultApiNotifyDomain,
+            config.HttpClient,
+            config.LongPollHttpClient)
+        {
+        }
+
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="DropboxRequestHandlerOptions"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
@@ -733,14 +752,17 @@ namespace Dropbox.Api
         /// this is for internal Dropbox use only.</param>
         /// <param name="httpClient">The custom http client. If not provided, a default 
         /// http client will be created.</param>
+        /// <param name="httpClient">The custom http client for long poll. If not provided, a default 
+        /// http client with longer timeout will be created.</param>
         public DropboxRequestHandlerOptions(
-            string oauth2AccessToken = null,
-            int maxRetriesOnError = 4,
-            string userAgent = null,
-            string apiHostname = DefaultApiDomain,
-            string apiContentHostname = DefaultApiContentDomain,
-            string apiNotifyHostname = DefaultApiNotifyDomain,
-            HttpClient httpClient = null)
+            string oauth2AccessToken,
+            int maxRetriesOnError,
+            string userAgent,
+            string apiHostname,
+            string apiContentHostname,
+            string apiNotifyHostname,
+            HttpClient httpClient,
+            HttpClient longPollHttpClient)
         {
             var type = typeof(DropboxRequestHandlerOptions);
 #if PORTABLE40
@@ -756,6 +778,7 @@ namespace Dropbox.Api
                 : string.Join("/", userAgent, BaseUserAgent, sdkVersion);
 
             this.HttpClient = httpClient ?? DefaultHttpClient;
+            this.LongPollHttpClient = longPollHttpClient ?? DefaultLongPollHttpClient;
             this.OAuth2AccessToken = oauth2AccessToken;
             this.MaxClientRetries = maxRetriesOnError;
             this.HostMap = new Dictionary<string, string>
@@ -780,6 +803,11 @@ namespace Dropbox.Api
         /// Gets the HTTP client use to send requests to the server.
         /// </summary>
         public HttpClient HttpClient { get; private set; }
+
+        /// <summary>
+        /// Gets the HTTP client use to send long poll requests to the server.
+        /// </summary>
+        public HttpClient LongPollHttpClient { get; private set; }
 
         /// <summary>
         /// Gets the user agent string.

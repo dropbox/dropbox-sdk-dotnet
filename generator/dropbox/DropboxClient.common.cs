@@ -39,21 +39,9 @@ namespace Dropbox.Api
         /// <param name="userAgent">The user agent to use when making requests.</param>
         /// <param name="maxRetriesOnError">The max number retries on error.</param>
         public DropboxClientConfig(string userAgent, int maxRetriesOnError)
-            : this(userAgent, maxRetriesOnError, null)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DropboxClientConfig"/> class.
-        /// </summary>
-        /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="maxRetriesOnError">The max number retries on error.</param>
-        /// <param name="httpClient">The custom http client.</param>
-        internal DropboxClientConfig(string userAgent, int maxRetriesOnError, HttpClient httpClient)
         {
             this.UserAgent = userAgent;
             this.MaxRetriesOnError = maxRetriesOnError;
-            this.HttpClient = httpClient;
         }
 
         /// <summary>
@@ -75,6 +63,12 @@ namespace Dropbox.Api
         /// Gets or sets the custom http client. If not set, a default http client will be created.
         /// </summary>
         public HttpClient HttpClient { get; set; }
+
+        /// <summary>
+        /// Gets or sets the custom http client for long poll request. If not set, a default
+        /// http client with a longer timeout (480 seconds) will be created.
+        /// </summary>
+        public HttpClient LongPollHttpClient { get; set; }
     }
 
     /// <summary>
@@ -108,7 +102,7 @@ namespace Dropbox.Api
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2AccessToken, DropboxClientConfig config)
-            : this(new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient))
+            : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken))
         {
             if (oauth2AccessToken == null)
             {
@@ -169,11 +163,7 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("appSecret");
             }
 
-            var options = new DropboxRequestHandlerOptions(
-                GetBasicAuthHeader(appKey, appSecret), 
-                config.MaxRetriesOnError, 
-                config.UserAgent, 
-                httpClient: config.HttpClient);
+            var options = new DropboxRequestHandlerOptions(config, GetBasicAuthHeader(appKey, appSecret));
 
             this.InitializeRoutes(new DropboxRequestHandler(options));
         }
@@ -184,7 +174,7 @@ namespace Dropbox.Api
         /// <param name="appKey">The app key.</param>
         /// <param name="appSecret">The app secret.</param>
         /// <returns>The basic auth header.</returns>
-        private static string GetBasicAuthHeader(string appKey, string appSecret) 
+        private static string GetBasicAuthHeader(string appKey, string appSecret)
         {
             var rawValue = string.Format("{0}:{1}", appKey, appSecret);
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawValue));
@@ -233,7 +223,8 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("oauth2AccessToken");
             }
 
-            this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient);
+            this.options = new DropboxRequestHandlerOptions(config, oauth2AccessToken);
+
             this.InitializeRoutes(new DropboxRequestHandler(this.options));
         }
 
@@ -277,7 +268,7 @@ namespace Dropbox.Api
         public override string ToString()
         {
             var builder = new StringBuilder(base.ToString());
-            if (this.requestId != null) 
+            if (this.requestId != null)
             {
                 builder.AppendFormat(CultureInfo.InvariantCulture, "; Request Id: {0}", this.requestId);
             }
@@ -387,7 +378,7 @@ namespace Dropbox.Api
         {
         }
     }
-    
+
     /// <summary>
     /// An HTTP Exception that will cause a retry due to transient failure. The SDK will perform
     /// a certain number of retries which is configurable in <see cref="DropboxClient"/>. If the client
@@ -459,7 +450,7 @@ namespace Dropbox.Api
         /// <summary>
         /// Gets the value in second which the client should backoff and retry after.
         /// </summary>
-        public int RetryAfter 
+        public int RetryAfter
         {
             get { return (int)this.ErrorResponse.RetryAfter; }
         }
