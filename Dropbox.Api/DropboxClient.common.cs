@@ -11,6 +11,8 @@ namespace Dropbox.Api
     using System.Net.Http;
     using System.Text;
 
+    using Dropbox.Api.Stone;
+
     /// <summary>
     /// The class which contains all configurations for Dropbox client.
     /// </summary>
@@ -39,21 +41,9 @@ namespace Dropbox.Api
         /// <param name="userAgent">The user agent to use when making requests.</param>
         /// <param name="maxRetriesOnError">The max number retries on error.</param>
         public DropboxClientConfig(string userAgent, int maxRetriesOnError)
-            : this(userAgent, maxRetriesOnError, null)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DropboxClientConfig"/> class.
-        /// </summary>
-        /// <param name="userAgent">The user agent to use when making requests.</param>
-        /// <param name="maxRetriesOnError">The max number retries on error.</param>
-        /// <param name="httpClient">The custom http client.</param>
-        internal DropboxClientConfig(string userAgent, int maxRetriesOnError, HttpClient httpClient)
         {
             this.UserAgent = userAgent;
             this.MaxRetriesOnError = maxRetriesOnError;
-            this.HttpClient = httpClient;
         }
 
         /// <summary>
@@ -75,12 +65,67 @@ namespace Dropbox.Api
         /// Gets or sets the custom http client. If not set, a default http client will be created.
         /// </summary>
         public HttpClient HttpClient { get; set; }
+
+        /// <summary>
+        /// Gets or sets the custom http client for long poll request. If not set, a default
+        /// http client with a longer timeout (480 seconds) will be created.
+        /// </summary>
+        public HttpClient LongPollHttpClient { get; set; }
+    }
+
+    /// <summary>
+    /// The base class for all Dropbox clients.
+    /// </summary>
+    public abstract class DropboxClientBase : IDisposable
+    {
+        /// <summary>
+        /// The transport.
+        /// </summary>
+        private readonly ITransport transport;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClientBase"/> class.
+        /// </summary>
+        /// <param name="transport">The transport.</param>
+        internal DropboxClientBase(ITransport transport)
+        {
+            this.transport = transport;
+            this.InitializeRoutes(this.transport);
+        }
+
+        /// <summary>
+        /// Initializes routes.
+        /// </summary>
+        /// <param name="transport"></param>
+        internal abstract void InitializeRoutes(ITransport transport);
+
+        /// <summary>
+        /// The public dispose.
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// The actual disposing logic.
+        /// </summary>
+        /// <param name="disposing">If is disposing.</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // ITransport is safe for multiple disposal.
+                this.transport.Dispose();
+            }
+        }
     }
 
     /// <summary>
     /// The client which contains endpoints which perform user-level actions.
     /// </summary>
-    public sealed partial class DropboxClient : IDisposable
+    public sealed partial class DropboxClient : DropboxClientBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
@@ -108,7 +153,7 @@ namespace Dropbox.Api
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2AccessToken, DropboxClientConfig config)
-            : this(new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient))
+            : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken))
         {
             if (oauth2AccessToken == null)
             {
@@ -123,14 +168,7 @@ namespace Dropbox.Api
         /// <param name="selectUser">The member id of the selected user. If provided together with
         /// a team access token, actions will be performed on this this user's Dropbox.</param>
         internal DropboxClient(DropboxRequestHandlerOptions options, string selectUser = null)
-        {
-            this.InitializeRoutes(new DropboxRequestHandler(options, selectUser));
-        }
-
-        /// <summary>
-        /// Dummy dispose method.
-        /// </summary>
-        public void Dispose()
+            : base(new DropboxRequestHandler(options, selectUser))
         {
         }
     }
@@ -138,7 +176,7 @@ namespace Dropbox.Api
     /// <summary>
     /// The client which contains endpoints which perform app-auth actions.
     /// </summary>
-    public sealed partial class DropboxAppClient
+    public sealed partial class DropboxAppClient : DropboxClientBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
@@ -152,12 +190,32 @@ namespace Dropbox.Api
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
         /// </summary>
         /// <param name="appKey">The Dropbox app key (e.g. consumer key in OAuth).</param>
         /// <param name="appSecret">The Dropbox app secret (e.g. consumer secret in OAuth).</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxAppClient(string appKey, string appSecret, DropboxClientConfig config)
+            : this(new DropboxRequestHandlerOptions(config, GetBasicAuthHeader(appKey, appSecret)))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
+        /// </summary>
+        /// <param name="options">The request handler options.</param>
+        private DropboxAppClient(DropboxRequestHandlerOptions options)
+            : base(new DropboxRequestHandler(options))
+        {
+        }
+
+        /// <summary>
+        /// Gets the basic auth header from app key and app secret.
+        /// </summary>
+        /// <param name="appKey">The app key.</param>
+        /// <param name="appSecret">The app secret.</param>
+        /// <returns>The basic auth header.</returns>
+        private static string GetBasicAuthHeader(string appKey, string appSecret)
         {
             if (appKey == null)
             {
@@ -169,23 +227,6 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("appSecret");
             }
 
-            var options = new DropboxRequestHandlerOptions(
-                GetBasicAuthHeader(appKey, appSecret), 
-                config.MaxRetriesOnError, 
-                config.UserAgent, 
-                httpClient: config.HttpClient);
-
-            this.InitializeRoutes(new DropboxRequestHandler(options));
-        }
-
-        /// <summary>
-        /// Gets the basic auth header from app key and app secret.
-        /// </summary>
-        /// <param name="appKey">The app key.</param>
-        /// <param name="appSecret">The app secret.</param>
-        /// <returns>The basic auth header.</returns>
-        private static string GetBasicAuthHeader(string appKey, string appSecret) 
-        {
             var rawValue = string.Format("{0}:{1}", appKey, appSecret);
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawValue));
         }
@@ -194,7 +235,7 @@ namespace Dropbox.Api
     /// <summary>
     /// The client which contains endpoints which perform team-level actions.
     /// </summary>
-    public sealed partial class DropboxTeamClient
+    public sealed partial class DropboxTeamClient : DropboxClientBase
     {
         /// <summary>
         /// The request handler options.
@@ -227,14 +268,22 @@ namespace Dropbox.Api
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxTeamClient(string oauth2AccessToken, DropboxClientConfig config)
+            : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken))
         {
             if (oauth2AccessToken == null)
             {
                 throw new ArgumentNullException("oauth2AccessToken");
             }
+        }
 
-            this.options = new DropboxRequestHandlerOptions(oauth2AccessToken, config.MaxRetriesOnError, config.UserAgent, httpClient: config.HttpClient);
-            this.InitializeRoutes(new DropboxRequestHandler(this.options));
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxTeamClient"/> class.
+        /// </summary>
+        /// <param name="options">The request handler options.</param>
+        private DropboxTeamClient(DropboxRequestHandlerOptions options)
+            : base(new DropboxRequestHandler(options))
+        {
+            this.options = options;
         }
 
         /// <summary>
@@ -277,7 +326,7 @@ namespace Dropbox.Api
         public override string ToString()
         {
             var builder = new StringBuilder(base.ToString());
-            if (this.requestId != null) 
+            if (this.requestId != null)
             {
                 builder.AppendFormat(CultureInfo.InvariantCulture, "; Request Id: {0}", this.requestId);
             }
@@ -387,7 +436,7 @@ namespace Dropbox.Api
         {
         }
     }
-    
+
     /// <summary>
     /// An HTTP Exception that will cause a retry due to transient failure. The SDK will perform
     /// a certain number of retries which is configurable in <see cref="DropboxClient"/>. If the client
@@ -459,7 +508,7 @@ namespace Dropbox.Api
         /// <summary>
         /// Gets the value in second which the client should backoff and retry after.
         /// </summary>
-        public int RetryAfter 
+        public int RetryAfter
         {
             get { return (int)this.ErrorResponse.RetryAfter; }
         }

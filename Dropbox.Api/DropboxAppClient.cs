@@ -20,7 +20,7 @@ namespace Dropbox.Api
         /// <para>Initializes the routes.</para>
         /// </summary>
         /// <returns>The transport.</returns>
-        private void InitializeRoutes(ITransport transport)
+        internal override void InitializeRoutes(ITransport transport)
         {
             this.Auth = new AuthAppRoutes(transport);
         }
