@@ -39,7 +39,9 @@ namespace Dropbox.Api.Files
         /// <param name="timeout">A timeout in seconds. The request will block for at most this
         /// length of time, plus up to 90 seconds of random jitter added to avoid the
         /// thundering herd problem. Care should be taken when using this parameter, as some
-        /// network infrastructure does not support long timeouts.</param>
+        /// network infrastructure does not support long timeouts. The value must be between 30
+        /// and 480 seconds. See <see cref="Dropbox.Api.DropboxClientConfig.HttpClient" /> to
+        /// configure a HttpClient with a longer timeout value if required.</param>
         public ListFolderLongpollArg(string cursor,
                                      ulong timeout = 30)
         {
