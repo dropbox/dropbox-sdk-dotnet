@@ -414,7 +414,7 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.getHttpClient(hostname).SendAsync(request, completionOption).ConfigureAwait(false);
+            var response = await this.getHttpClient(host).SendAsync(request, completionOption).ConfigureAwait(false);
 
             var requestId = GetRequestId(response);
             try
@@ -528,11 +528,11 @@ namespace Dropbox.Api
         /// <summary>
         /// Get http client for given host.
         /// </summary>
-        /// <param name="hostname">The host name.</param>
+        /// <param name="host">The host type.</param>
         /// <returns>The <see cref="HttpClient"/>.</returns>
-        private HttpClient getHttpClient(string hostname)
+        private HttpClient getHttpClient(string host)
         {
-            if (hostname == HostType.ApiNotify)
+            if (host == HostType.ApiNotify)
             {
                 return this.options.LongPollHttpClient ?? this.defaultLongPollHttpClient;
             }
