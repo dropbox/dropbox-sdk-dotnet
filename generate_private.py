@@ -13,7 +13,9 @@ def main():
     repo_path = 'dropbox-sdk-dotnet'
     print('Generating code')
     try:
-        shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
+        for path in glob.glob(os.path.join(repo_path, 'Dropbox.Api/*.csproj')):
+            os.remove(path)
+        shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api', 'Generated'))
     except OSError:
         pass
     try:

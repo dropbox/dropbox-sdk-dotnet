@@ -33,7 +33,7 @@ from stone.generator import CodeGenerator
 
 def memo_one(fn):
     """
-    Memoize a single argument instance method.
+    Memorize a single argument instance method.
     """
     cache = {}
 
@@ -101,7 +101,6 @@ class _CSharpGenerator(CodeGenerator):
         self._generate_client(api, '{0}Client'.format(self._app_name), 'user')
         self._generate_client(api, '{0}TeamClient'.format(self._app_name), 'team')
         self._generate_client(api, '{0}AppClient'.format(self._app_name), 'app')
-        self._copy_and_update_files('common', lambda x: x.replace('<Namespace>', self._namespace_name))
 
         self._generate(api)
 
@@ -115,14 +114,14 @@ class _CSharpGenerator(CodeGenerator):
         Returns:
 
         """
-        pass
+        raise NotImplementedError
 
     @contextmanager
     def cs_block(self, **kwargs):
         """
         Context manager for an allman style block, which is more common
         style for c#
-        """ 
+        """
         kwargs['allman'] = True
         with self.block(**kwargs):
             yield
@@ -150,7 +149,7 @@ class _CSharpGenerator(CodeGenerator):
         Args:
             condition (Union[str, unicode]): The if condition
         """
-            
+
         return self.cs_block(before='if ({0})'.format(condition))
 
     def else_(self):
@@ -187,7 +186,7 @@ class _CSharpGenerator(CodeGenerator):
         Args:
             name (Union[str, unicode]): The name of the class.
             inherits (str|iterable): The base types for the class, if any. If
-                this is a string it is added to the code verbatim, if an 
+                this is a string it is added to the code verbatim, if an
                 iterable, then joined with ', '
             access (Union[str, unicode]): The access modifierd of the class.
         """
@@ -217,7 +216,7 @@ class _CSharpGenerator(CodeGenerator):
 
     def emit(self, text=''):
         """
-        Wraps the regular generator emit() method. 
+        Wraps the regular generator emit() method.
 
         This is used by the prefix() and doc_comment() methods to prepend a
         fixed string to each line emitted within those contexts.
@@ -230,7 +229,7 @@ class _CSharpGenerator(CodeGenerator):
         else:
             super(_CSharpGenerator, self).emit(text)
 
-    def output_to_relative_path(self, filename):
+    def output_to_relative_path(self, filename, folder='Generated'):
         """
         Wraps the regular generator output_to_relative_path() method.
 
@@ -238,7 +237,10 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             filename (Union[str, unicode]): The name of the file to generate.
+            folder (unicode): The folder for output files.
         """
+
+        filename = os.path.join(folder, filename)
         self._generated_files.append(filename)
         return super(_CSharpGenerator, self).output_to_relative_path(filename)
 
@@ -288,7 +290,7 @@ class _CSharpGenerator(CodeGenerator):
 
     def emit_wrapped_text(self, s, **kwargs):
         """
-        Wraps the regular generator emit_wrapped_text() method. 
+        Wraps the regular generator emit_wrapped_text() method.
 
         This does three things.
         1. It ensures consistend prefix behavior with the modified emit method
@@ -329,8 +331,8 @@ class _CSharpGenerator(CodeGenerator):
 
         Args:
             constant (Union[str, unicode]): If this is not provided, then this is generated as
-                the default case. 
-            need_break (bool): Indicates whether a break statement should 
+                the default case.
+            need_break (bool): Indicates whether a break statement should
                 automatically be appended with the case statement ends.
         """
         with self.indent():
@@ -441,7 +443,7 @@ class _CSharpGenerator(CodeGenerator):
                     self.emit('return new {0}();'.format(class_name))
                 self.emit()
                 yield
-    
+
     @contextmanager
     def decoder_decode_fields_block(self, class_name):
         """
@@ -562,7 +564,7 @@ class _CSharpGenerator(CodeGenerator):
 
         The translations for the primitive types are the exact equivalent
         C# value types. For composite types, the type name is represented using
-        CamelCase. The list type is handled slightly differently for the 
+        CamelCase. The list type is handled slightly differently for the
         property and constructor cases where it is an IList or IEnumerable
         respectively.j
 
@@ -722,21 +724,21 @@ class _CSharpGenerator(CodeGenerator):
 
         arg_name = (self._arg_name(field.name) if include_null_check else
                     'this.{0}'.format(self._public_name(field.name)))
-      
+
         assign_default = '{0} = {1}.{2}.Instance;'.format(
             arg_name, self._typename(union, include_namespace=True),
             self._public_name(default))
 
-        if include_null_check: 
+        if include_null_check:
             with self.if_('{0} == null'.format(arg_name)):
                 self.emit(assign_default)
         else:
             self.emit(assign_default)
-    
+
     def _check_constraints(self, name, data_type, has_null_check):
         """
         Emits code to checks the validity of a field when constructing an
-        object. 
+        object.
 
         Args:
             name (Union[str, unicode]): The field name.
@@ -783,7 +785,7 @@ class _CSharpGenerator(CodeGenerator):
             if data_type.max_items is not None:
                 checks.append(('{0}.Count > {1}'.format(list_name, data_type.max_items),
                                '"List should at at most {0} items"'.format(data_type.max_items)))
-        
+
         has_checks = len(checks) > 0
 
         def apply_checks():
@@ -800,14 +802,14 @@ class _CSharpGenerator(CodeGenerator):
                     self.emit('throw new sys.ArgumentNullException("{0}");'.format(name))
                 has_checks = True
             apply_checks()
-        
+
         if has_checks:
             self.emit()
 
     def _arg_name(self, name, is_doc=False):
         """
         Creates an initial lowercase camelCase representation of name.
-    
+
         This performs the following transformations.
             foo_bar -> fooBar
             fooBar -> fooBar
@@ -841,7 +843,7 @@ class _CSharpGenerator(CodeGenerator):
     def _public_name(self, name):
         """
         Creates an initial capitalize CamelCase representation of name.
-    
+
         This performs the following transformations.
             foo_bar -> FooBar
             fooBar -> FooBar
@@ -851,7 +853,7 @@ class _CSharpGenerator(CodeGenerator):
             name (Union[str, unicode]): The name to transform
         """
         return ''.join(x.capitalize() for x in self._segment_name(name))
-    
+
     @memo_one
     def _name_words(self, name):
         """
@@ -866,45 +868,6 @@ class _CSharpGenerator(CodeGenerator):
             name (Union[str, unicode]): The name to transform
         """
         return ' '.join(self._segment_name(name))
-    
-    def _copy_files(self, dir_path):
-        """
-        Copies all the files in the given subdirectory into the target dir.
-
-        Args:
-            dir (Union[str, unicode]): The source dir to be copied from.
-        """
-        dir_path = os.path.join(os.path.dirname(__file__), dir_path)
-        for item in os.listdir(dir_path):
-            src_path = os.path.join(dir_path, item)
-            dest_path = os.path.join(self.target_folder_path, item)
-            if os.path.isdir(src_path):
-                shutil.copytree(src_path, dest_path)
-            else:
-                shutil.copy2(src_path, dest_path)
-
-    def _copy_and_update_files(self, dir_path, update_func):
-        """
-        Copies all the files in the given subdirectory into the target dir and also update file content.
-
-        Args:
-            dir_path (Union[str, unicode]): The source dir to be copied from.
-            update_func: (callable) A function which updates the file content.
-        """
-        dir_path = os.path.join(os.path.dirname(__file__), dir_path)
-        dir_len = len(dir_path)
-        for path, _, file_names in os.walk(dir_path):
-            for file_name in file_names:
-                src_path = os.path.join(path, file_name)
-                dest_path = src_path[dir_len + 1:]
-
-                with super(_CSharpGenerator, self).output_to_relative_path(dest_path):
-                    print("Copying {0}".format(dest_path))
-                    with open(src_path, 'r') as f:
-                        doc = f.read().decode('utf-8')
-                        if not doc.endswith('\n'):
-                            doc += '\n'
-                        self.emit_raw(update_func(doc))
 
     def _generate_client(self, api, client_name, auth_type):
         """

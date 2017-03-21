@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.2.3</version>
+    <version>4.2.4</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
     <licenseUrl>https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE</licenseUrl>
-
     <projectUrl>https://www.dropbox.com/developers</projectUrl>
     <iconUrl>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,18 +21,18 @@ Bug fixes:
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
     <dependencies>
-      <group targetFramework="net45" >
+      <group targetFramework="net45">
         <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
-      <group targetFramework="portable-net45+wp80+win8+wpa81+dnxcore50" >
+      <group targetFramework="portable-net45+wp80+win8+wpa81+dnxcore50">
         <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
-      <group targetFramework="portable-net40+sl5+wp80+win8+wpa81" >
+      <group targetFramework="portable-net40+sl5+wp80+win8+wpa81">
         <dependency id="Newtonsoft.Json" version="7.0.1" />
-	      <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
-	      <dependency id="Microsoft.Net.Http" version="2.2.29" />
+        <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+        <dependency id="Microsoft.Net.Http" version="2.2.29" />
       </group>
-   </dependencies>
+    </dependencies>
   </metadata>
   <files>
     <file src="bin\Release\net45\Dropbox.Api.dll" target="lib\net45\Dropbox.Api.dll" />

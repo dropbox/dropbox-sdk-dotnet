@@ -34,10 +34,13 @@ App_Data/
 [Ss]tyle[Cc]op.[Cc]ache
 
 ## Generated output
-/dropbox-sdk-dotnet/Dropbox.Api
+/dropbox-sdk-dotnet/Dropbox.Api/Generated
 
 ## Generated docs
 /doc/Help
 
 ## App Packages
 AppPackages/
+
+# IntelliJ stuff
+.idea/

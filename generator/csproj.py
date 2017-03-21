@@ -313,8 +313,8 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
 """
 
 DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
-    <None Include="babal_summaries.xml" />
-    <None Include="namespace_summaries.xml" />
+    <None Include="stone_summaries.xml" />
+    <None Include="Generated\namespace_summaries.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -327,15 +327,6 @@ DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
 </Project>
 """
 
-CSPROJ_PRIVATE_BLOCK = r"""  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>dropbox_api_key.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-"""
-
-
 def _include_items(buf, item_type, paths):
     buf.write('  <ItemGroup>\n')
     for path in paths:
@@ -344,7 +335,7 @@ def _include_items(buf, item_type, paths):
     buf.write('  </ItemGroup>\n')
 
 
-def make_csproj_file(files, mode, is_private=False):
+def make_csproj_file(files, mode):
     mode = mode.lower()
 
     if mode == 'doc':
@@ -366,12 +357,9 @@ def make_csproj_file(files, mode, is_private=False):
 
     buf = StringIO()
     buf.write(start)
-    
-    if is_private:
-        buf.write(CSPROJ_PRIVATE_BLOCK)
 
     _include_items(buf, 'Compile', COMPILE_INCLUDES)
-    _include_items(buf, 'Compile', sorted(files))
+    _include_items(buf, 'Compile', sorted(files, key=lambda x: x.replace('\\', '/')))
     _include_items(buf, 'None', none_includes)
 
     buf.write(end)

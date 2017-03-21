@@ -23,12 +23,6 @@ Generate .NET project for Dropbox Api.
 """
 
 _cmdline_parser = argparse.ArgumentParser(description=cmdline_desc)
-_cmdline_parser.add_argument(
-    '-p',
-    '--private',
-    action='store_true',
-    help='Generate private build.',
-)
 
 
 class DropboxCSharpGenerator(_CSharpGenerator):
@@ -55,11 +49,8 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                                          'An HTTP exception that is caused by the account not'
                                          'not having access to the endpoint.')
         self._generate_csproj()
-        self._copy_files('dropbox')
 
-        if self.args.private:
-            self._generate_xml_doc(api)
-            self._copy_files('private')
+        self._generate_xml_doc(api)
 
     def _generate_xml_doc(self, api):
         """
@@ -103,15 +94,14 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         """
         files = [f for f in self._generated_files if f.endswith('.cs')]
         modes = [('Portable', '.Portable'),
-                 ('Portable40', '.Portable40'), 
-                 ('Net45', '')]
-        if self.args.private:
-            # Only generate SandCastle csproj for private build.
-            modes.append(('Doc', '.Doc'))
+                 ('Portable40', '.Portable40'),
+                 ('Net45', ''),
+                 ('Doc', '.Doc')]
 
         for mode, suffix in modes:
-            with self.output_to_relative_path('{0}{1}.csproj'.format(self.DEFAULT_NAMESPACE, suffix)):
-                self.emit_raw(make_csproj_file(files, mode=mode, is_private=self.args.private))
+            with self.output_to_relative_path(
+                    '{0}{1}.csproj'.format(self.DEFAULT_NAMESPACE, suffix), folder=''):
+                self.emit_raw(make_csproj_file(files, mode=mode))
 
     def _generate_dropbox_exception(self, api, namespace, error_type, exception_type,
                                     doc_string):

@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace <Namespace>.Stone
+namespace Dropbox.Api.Stone
 {
     using System;
 

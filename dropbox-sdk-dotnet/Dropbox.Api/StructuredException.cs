@@ -4,11 +4,11 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace <Namespace>
+namespace Dropbox.Api
 {
     using System;
 
-    using <Namespace>.Stone;
+	using Dropbox.Api.Stone;
 
     /// <summary>
     /// The exception type that will be raised by an <see cref="ITransport" />
