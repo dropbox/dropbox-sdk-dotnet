@@ -13,10 +13,8 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
-- Increase default timeout for long poll requests.
-- Allow providing custom http client for long poll requests.
-Bug fixes:
-- Properly dispose http client when a Dropbox client is disposed.
+- Update DropboxOauth2Helper to use versionless oauth2 endpoints.
+- Use semantic versioning for AssemblyInfo.cs.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
