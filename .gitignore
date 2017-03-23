@@ -45,3 +45,6 @@ AppPackages/
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
+
+# Signing key
+*.snk

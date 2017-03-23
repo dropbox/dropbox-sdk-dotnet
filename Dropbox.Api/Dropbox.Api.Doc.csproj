@@ -4,48 +4,52 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{786C830F-07A1-408B-BD7F-6EE04809D6DB}</ProjectGuid>
+    <ProjectGuid>{0E57A534-F4CA-402B-88F4-0B43E55264BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\portable</OutputPath>
-    <IntermediateOutputPath>obj\Debug\portable</IntermediateOutputPath>
-    <DefineConstants>DEBUG;TRACE;PORTABLE</DefineConstants>
+    <OutputPath>docbin\Debug\</OutputPath>
+    <IntermediateOutputPath>docobj\Debug\</IntermediateOutputPath>
+    <DefineConstants>TRACE;DEBUG;DOC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\portable\Dropbox.Api.XML</DocumentationFile>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>docbin\Debug\Dropbox.Api.XML</DocumentationFile>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\portable</OutputPath>
-    <IntermediateOutputPath>obj\Release\portable</IntermediateOutputPath>
-    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <OutputPath>docbin\Release\</OutputPath>
+    <IntermediateOutputPath>docobj\Release\</IntermediateOutputPath>
+    <DefineConstants>TRACE;DOC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\portable\Dropbox.Api.XML</DocumentationFile>
+    <DocumentationFile>docbin\Release\Dropbox.Api.XML</DocumentationFile>
     <NoWarn>419</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-  </ItemGroup>
+   </ItemGroup>
   <ItemGroup>
     <Compile Include="Stone\Decoder.cs" />
     <Compile Include="Stone\Empty.cs" />
@@ -577,9 +581,13 @@
     <Compile Include="Generated\Users\UsersUserRoutes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.Dropbox.Api.Portable.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <None Include="stone_summaries.xml" />
+    <None Include="Generated\namespace_summaries.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -251,7 +251,7 @@ namespace Dropbox.Api
                 queryBuilder.Append("&disable_signup=true");
             }
 
-            var uriBuilder = new UriBuilder("https://www.dropbox.com/1/oauth2/authorize")
+            var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")
             {
                 Query = queryBuilder.ToString()
             };
@@ -372,7 +372,7 @@ namespace Dropbox.Api
                 }
 
                 var content = new FormUrlEncodedContent(parameters);
-                var response = await httpClient.PostAsync("https://api.dropbox.com/1/oauth2/token", content);
+                var response = await httpClient.PostAsync("https://api.dropbox.com/oauth2/token", content);
 
                 var raw = await response.Content.ReadAsStringAsync();
                 var json = JObject.Parse(raw);
