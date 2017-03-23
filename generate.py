@@ -9,6 +9,8 @@ import shutil
 import subprocess
 import sys
 
+from distutils.dir_util import copy_tree
+
 REMOTE_ORIGIN_URLS = (
     'git@github.com:dropbox/dropbox-sdk-dotnet.git',
     'ssh://git@github.com/dropbox/dropbox-sdk-dotnet.git',
@@ -54,6 +56,13 @@ def check_remote_origin_url(repo_path, accepted_remote_origin_urls):
             print('    %s' % url, file=sys.stderr)
         sys.exit(1)
 
+def clear_repo(repo_path):
+    for path in glob.glob(os.path.join(repo_path, '*')):
+        if os.path.isdir(path):
+            shutil.rmtree(path)
+        else:
+            os.remove(path)
+
 def main():
     """The entry point for the program."""
 
@@ -79,30 +88,20 @@ def main():
 
     check_remote_origin_url(repo_path, REMOTE_ORIGIN_URLS)
 
+    clear_repo(repo_path)
+
+    if verbose:
+        print('Copying from private repo')
+    copy_tree('dropbox-sdk-dotnet', repo_path)
+
     if verbose:
         print('Generating code')
-    shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api'))
+
+    shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api/Generated'))
     subprocess.check_output(
         (['python', '-m', 'stone.cli', '--filter-by-route-attr', 'alpah_group=null', '-a:all', 'generator/csharp.stoneg.py'] +
          [os.path.join(repo_path, 'Dropbox.Api')] + glob.glob('spec/*.stone')),
 	 env={'PYTHONPATH': 'stone'})
-
-    if verbose:
-        print('Copying Dropbox.Api.sln, examples, license, and readme')
-    shutil.copy('dropbox-sdk-dotnet/Dropbox.Api.sln', repo_path)
-    shutil.copy('dropbox-sdk-dotnet/LICENSE', repo_path)
-    shutil.copy('dropbox-sdk-dotnet/README.md', repo_path)
-    
-    for path in ('Examples', 'Dropbox.Api.Tests'):
-        if verbose:
-            print('Removing {} and copying new ones'.format(path))
-        try:
-            shutil.rmtree(os.path.join(repo_path, path))
-        except OSError as e:
-            if e.errno != errno.ENOENT:
-                raise
-        shutil.copytree('dropbox-sdk-dotnet/' + path,
-                        os.path.join(repo_path, path))
 
 if __name__ == '__main__':
     main()
