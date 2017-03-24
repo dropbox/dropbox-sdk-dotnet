@@ -47,6 +47,11 @@ namespace Dropbox.Api
         private readonly string selectUser;
 
         /// <summary>
+        /// The member id of the selected admin.
+        /// </summary>
+        private readonly string selectAdmin;
+
+        /// <summary>
         /// The configuration options for dropbox client.
         /// </summary>
         private readonly DropboxRequestHandlerOptions options;
@@ -66,9 +71,11 @@ namespace Dropbox.Api
         /// </summary>
         /// <param name="options">The configuration options for dropbox client.</param>
         /// <param name="selectUser">The member id of the selected user.</param>
+        /// <param name="selectAdmin">The member id of the selected admin.</param>
         public DropboxRequestHandler(
             DropboxRequestHandlerOptions options,
-            string selectUser = null)
+            string selectUser = null,
+            string selectAdmin = null)
         {
             if (options == null)
             {
@@ -77,6 +84,7 @@ namespace Dropbox.Api
 
             this.options = options;
             this.selectUser = selectUser;
+            this.selectAdmin = selectAdmin;
         }
 
         /// <summary>
@@ -378,6 +386,11 @@ namespace Dropbox.Api
             if (this.selectUser != null)
             {
                 request.Headers.TryAddWithoutValidation("Dropbox-Api-Select-User", this.selectUser);
+            }
+
+            if (this.selectAdmin != null)
+            {
+                request.Headers.TryAddWithoutValidation("Dropbox-Api-Select-Admin", this.selectAdmin);
             }
 
             var completionOption = HttpCompletionOption.ResponseContentRead;

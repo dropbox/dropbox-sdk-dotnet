@@ -9,6 +9,7 @@ namespace Dropbox.Api.Tests
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Net;
     using System.Net.Http;
     using System.Text;
@@ -267,6 +268,23 @@ namespace Dropbox.Api.Tests
             var userClient = TeamClient.AsMember(memberId);
             var account = await userClient.Users.GetCurrentAccountAsync();
             Assert.AreEqual(account.TeamMemberId, memberId);
+        }
+
+
+        /// Test team auth select admin.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestTeamAuthSelectAdmin()
+        {
+            var result = await TeamClient.Team.MembersListAsync();
+            var adminId = result.Members.Where(m => m.Role.IsTeamAdmin).First().Profile.TeamMemberId;
+
+            var userClient = TeamClient.AsAdmin(adminId);
+            var account = await userClient.Users.GetCurrentAccountAsync();
+            Assert.AreEqual(account.TeamMemberId, adminId);
+
+            // TODO: Add permission specific tests.
         }
 
         /// Test app auth.
