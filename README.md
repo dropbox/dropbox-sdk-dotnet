@@ -10,12 +10,18 @@ Basic Setup
 -----------
 1. Prerequisites:
   - Visual Studio 2013 or above.
+  - Python 2.7 or above.
   - Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases).
-  - Nuget.exe in environment Path (https://dist.nuget.org/index.html).
 2. Clone the public and private SDK repo into `~/src`.
 
 3. In the private SDK repo, run ``git submodule init`` followed by a
    ``git submodule update`` to pull in the ``spec`` and ``stone`` sub repos.
+
+4. In the private SDK repo, run
+   ```
+   cd stone
+   python setup.py install
+   ```
 
 Updating the SDK for a new spec
 -------------------------------
@@ -50,13 +56,20 @@ Updating the SDK for a new spec
 
 Publishing a new SDK (This needs to be done on Windows)
 --------------------
-1. From the private repo, edit `generator/common/Dropbox.Api.nuspec` by updating version and release note.
-2. Run `buildall.cmd`.
+1. From the private repo, edit `dropbox-sdk-dotnet/Dropbox.Api/Dropbox.Api.nuspec` and update release note.
+2. Edit buildall.ps1 and update major version and release version.
+3. In Visual Studio Developer Command Prompt run
+   ```
+   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings:<PATH_TO_TEST_SETTINGS> -signKeyPath:<PATH_TO_SIGNING_KEY>
+   ```
    A .nukpg file will be generated in `Dropbox.Api` directory.
 3. Go to nuget.org to publish the package. Please ask around for the account credentials.
 
 Generating Docs
 ---------------
-1. Run `buildall.cmd`.
+1. In Visual Studio Developer Command Prompt, run
+   ```
+   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings:<PATH_TO_TEST_SETTINGS> -signKeyPath:<PATH_TO_SIGNING_KEY> -doc:True
+   ```
 2. Push generated code in doc/Help to public homepage branch.
 
