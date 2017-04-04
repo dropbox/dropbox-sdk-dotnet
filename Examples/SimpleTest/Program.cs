@@ -40,11 +40,11 @@ namespace SimpleTest
                 return 1;
             }
 
-            // Specify socket level timeout which decides maximum waiting time when on bytes are
+            // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
             var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
             {
-                // Specify request level timeout which decides maximum time taht can be spent on
+                // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
                 Timeout = TimeSpan.FromMinutes(20)
             };
