@@ -592,7 +592,7 @@ class _CSharpGenerator(CodeGenerator):
             public = self._public_name(name)
             type_ns = self._public_name(data_type.namespace.name)
             if type_ns != self._ns or public in self._prevent_collisions or include_namespace:
-                return '{0}.{1}.{2}'.format(self._namespace_name, type_ns, public)
+                return 'global::{0}.{1}.{2}'.format(self._namespace_name, type_ns, public)
             else:
                 return public
         elif is_list_type(data_type):
