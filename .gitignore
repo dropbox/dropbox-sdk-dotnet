@@ -36,6 +36,9 @@ App_Data/
 ## Generated output
 /dropbox-sdk-dotnet/Dropbox.Api/Generated
 
+## Generated csproj files.
+/dropbox-sdk-dotnet/Dropbox.Api/*.csproj
+
 ## Generated docs
 /doc/Help
 
