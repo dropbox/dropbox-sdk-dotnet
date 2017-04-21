@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The relocation arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.RelocationPath" />
+    /// <seealso cref="Global::Dropbox.Api.Files.RelocationPath" />
     public class RelocationArg : RelocationPath
     {
         #pragma warning disable 108

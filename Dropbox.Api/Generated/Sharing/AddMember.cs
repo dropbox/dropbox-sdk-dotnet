@@ -45,7 +45,7 @@ namespace Dropbox.Api.Sharing
 
             if (accessLevel == null)
             {
-                accessLevel = Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
+                accessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
             }
             this.Member = member;
             this.AccessLevel = accessLevel;
@@ -59,7 +59,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public AddMember()
         {
-            this.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
+            this.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
         }
 
         /// <summary>
@@ -87,8 +87,8 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AddMember value, enc.IJsonWriter writer)
             {
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("access_level", value.AccessLevel, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
             }
         }
 
@@ -122,10 +122,10 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     case "access_level":
-                        value.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

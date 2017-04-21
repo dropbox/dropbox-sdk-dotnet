@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The members remove arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.MembersDeactivateArg" />
+    /// <seealso cref="Global::Dropbox.Api.Team.MembersDeactivateArg" />
     public class MembersRemoveArg : MembersDeactivateArg
     {
         #pragma warning disable 108
@@ -103,15 +103,15 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersRemoveArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 WriteProperty("wipe_data", value.WipeData, writer, enc.BooleanEncoder.Instance);
                 if (value.TransferDestId != null)
                 {
-                    WriteProperty("transfer_dest_id", value.TransferDestId, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                    WriteProperty("transfer_dest_id", value.TransferDestId, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 }
                 if (value.TransferAdminId != null)
                 {
-                    WriteProperty("transfer_admin_id", value.TransferAdminId, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                    WriteProperty("transfer_admin_id", value.TransferAdminId, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 }
                 WriteProperty("keep_account", value.KeepAccount, writer, enc.BooleanEncoder.Instance);
             }
@@ -147,16 +147,16 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "user":
-                        value.User = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "wipe_data":
                         value.WipeData = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "transfer_dest_id":
-                        value.TransferDestId = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.TransferDestId = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "transfer_admin_id":
-                        value.TransferAdminId = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.TransferAdminId = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "keep_account":
                         value.KeepAccount = enc.BooleanDecoder.Instance.Decode(reader);

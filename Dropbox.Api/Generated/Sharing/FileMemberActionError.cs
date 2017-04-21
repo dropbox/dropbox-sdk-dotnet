@@ -449,7 +449,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharingFileAccessError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.SharingFileAccessError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -482,7 +482,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "access_error":
-                            value.Value = Dropbox.Api.Sharing.SharingFileAccessError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.SharingFileAccessError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -549,7 +549,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoExplicitAccess value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.MemberAccessLevelResult.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.MemberAccessLevelResult.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -578,7 +578,7 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The decoded object.</returns>
                 public override NoExplicitAccess DecodeFields(enc.IJsonReader reader)
                 {
-                    return new NoExplicitAccess(Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder.DecodeFields(reader));
+                    return new NoExplicitAccess(global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder.DecodeFields(reader));
                 }
             }
 

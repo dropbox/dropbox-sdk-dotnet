@@ -106,7 +106,7 @@ namespace Dropbox.Api.Team
 
             if (role == null)
             {
-                role = Dropbox.Api.Team.AdminTier.MemberOnly.Instance;
+                role = global::Dropbox.Api.Team.AdminTier.MemberOnly.Instance;
             }
             this.MemberEmail = memberEmail;
             this.MemberGivenName = memberGivenName;
@@ -126,7 +126,7 @@ namespace Dropbox.Api.Team
         public MemberAddArg()
         {
             this.SendWelcomeEmail = true;
-            this.Role = Dropbox.Api.Team.AdminTier.MemberOnly.Instance;
+            this.Role = global::Dropbox.Api.Team.AdminTier.MemberOnly.Instance;
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace Dropbox.Api.Team
                     WriteProperty("member_persistent_id", value.MemberPersistentId, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("send_welcome_email", value.SendWelcomeEmail, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("role", value.Role, writer, Dropbox.Api.Team.AdminTier.Encoder);
+                WriteProperty("role", value.Role, writer, global::Dropbox.Api.Team.AdminTier.Encoder);
             }
         }
 
@@ -246,7 +246,7 @@ namespace Dropbox.Api.Team
                         value.SendWelcomeEmail = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "role":
-                        value.Role = Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
+                        value.Role = global::Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

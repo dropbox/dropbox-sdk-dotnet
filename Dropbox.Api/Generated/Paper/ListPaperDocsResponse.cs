@@ -119,7 +119,7 @@ namespace Dropbox.Api.Paper
             public override void EncodeFields(ListPaperDocsResponse value, enc.IJsonWriter writer)
             {
                 WriteListProperty("doc_ids", value.DocIds, writer, enc.StringEncoder.Instance);
-                WriteProperty("cursor", value.Cursor, writer, Dropbox.Api.Paper.Cursor.Encoder);
+                WriteProperty("cursor", value.Cursor, writer, global::Dropbox.Api.Paper.Cursor.Encoder);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -158,7 +158,7 @@ namespace Dropbox.Api.Paper
                         value.DocIds = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     case "cursor":
-                        value.Cursor = Dropbox.Api.Paper.Cursor.Decoder.Decode(reader);
+                        value.Cursor = global::Dropbox.Api.Paper.Cursor.Decoder.Decode(reader);
                         break;
                     case "has_more":
                         value.HasMore = enc.BooleanDecoder.Instance.Decode(reader);

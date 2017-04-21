@@ -13,7 +13,7 @@ namespace Dropbox.Api.Paper
     /// <summary>
     /// <para>The remove paper doc user object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Paper.RefPaperDoc" />
+    /// <seealso cref="Global::Dropbox.Api.Paper.RefPaperDoc" />
     public class RemovePaperDocUser : RefPaperDoc
     {
         #pragma warning disable 108
@@ -36,7 +36,7 @@ namespace Dropbox.Api.Paper
         /// <param name="member">User which should be removed from the Paper doc. Specify only
         /// email or Dropbox account id.</param>
         public RemovePaperDocUser(string docId,
-                                  Dropbox.Api.Sharing.MemberSelector member)
+                                  global::Dropbox.Api.Sharing.MemberSelector member)
             : base(docId)
         {
             if (member == null)
@@ -62,7 +62,7 @@ namespace Dropbox.Api.Paper
         /// <para>User which should be removed from the Paper doc. Specify only email or
         /// Dropbox account id.</para>
         /// </summary>
-        public Dropbox.Api.Sharing.MemberSelector Member { get; protected set; }
+        public global::Dropbox.Api.Sharing.MemberSelector Member { get; protected set; }
 
         #region Encoder class
 
@@ -79,7 +79,7 @@ namespace Dropbox.Api.Paper
             public override void EncodeFields(RemovePaperDocUser value, enc.IJsonWriter writer)
             {
                 WriteProperty("doc_id", value.DocId, writer, enc.StringEncoder.Instance);
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
             }
         }
 
@@ -116,7 +116,7 @@ namespace Dropbox.Api.Paper
                         value.DocId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

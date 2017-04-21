@@ -74,7 +74,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RevokeDeviceSessionBatchArg value, enc.IJsonWriter writer)
             {
-                WriteListProperty("revoke_devices", value.RevokeDevices, writer, Dropbox.Api.Team.RevokeDeviceSessionArg.Encoder);
+                WriteListProperty("revoke_devices", value.RevokeDevices, writer, global::Dropbox.Api.Team.RevokeDeviceSessionArg.Encoder);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "revoke_devices":
-                        value.RevokeDevices = ReadList<RevokeDeviceSessionArg>(reader, Dropbox.Api.Team.RevokeDeviceSessionArg.Decoder);
+                        value.RevokeDevices = ReadList<RevokeDeviceSessionArg>(reader, global::Dropbox.Api.Team.RevokeDeviceSessionArg.Decoder);
                         break;
                     default:
                         reader.Skip();

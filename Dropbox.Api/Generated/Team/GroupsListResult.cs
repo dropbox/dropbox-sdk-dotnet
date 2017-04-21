@@ -39,7 +39,7 @@ namespace Dropbox.Api.Team
         /// returned yet. An additional call to <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync" /> can
         /// retrieve them.</param>
-        public GroupsListResult(col.IEnumerable<Dropbox.Api.TeamCommon.GroupSummary> groups,
+        public GroupsListResult(col.IEnumerable<global::Dropbox.Api.TeamCommon.GroupSummary> groups,
                                 string cursor,
                                 bool hasMore)
         {
@@ -74,7 +74,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Gets the groups of the groups list result</para>
         /// </summary>
-        public col.IList<Dropbox.Api.TeamCommon.GroupSummary> Groups { get; protected set; }
+        public col.IList<global::Dropbox.Api.TeamCommon.GroupSummary> Groups { get; protected set; }
 
         /// <summary>
         /// <para>Pass the cursor into <see
@@ -105,7 +105,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupsListResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("groups", value.Groups, writer, Dropbox.Api.TeamCommon.GroupSummary.Encoder);
+                WriteListProperty("groups", value.Groups, writer, global::Dropbox.Api.TeamCommon.GroupSummary.Encoder);
                 WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
             }
@@ -141,7 +141,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "groups":
-                        value.Groups = ReadList<Dropbox.Api.TeamCommon.GroupSummary>(reader, Dropbox.Api.TeamCommon.GroupSummary.Decoder);
+                        value.Groups = ReadList<global::Dropbox.Api.TeamCommon.GroupSummary>(reader, global::Dropbox.Api.TeamCommon.GroupSummary.Decoder);
                         break;
                     case "cursor":
                         value.Cursor = enc.StringDecoder.Instance.Decode(reader);

@@ -15,7 +15,7 @@ namespace Dropbox.Api.Team
     /// values, one value per day. If there is no data for a day, then the value will be
     /// None.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.BaseDfbReport" />
+    /// <seealso cref="Global::Dropbox.Api.Team.BaseDfbReport" />
     public class GetActivityReport : BaseDfbReport
     {
         #pragma warning disable 108

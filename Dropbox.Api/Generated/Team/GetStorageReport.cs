@@ -15,7 +15,7 @@ namespace Dropbox.Api.Team
     /// values, one value per day. If there is no data for a day, then the value will be
     /// None.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.BaseDfbReport" />
+    /// <seealso cref="Global::Dropbox.Api.Team.BaseDfbReport" />
     public class GetStorageReport : BaseDfbReport
     {
         #pragma warning disable 108
@@ -161,7 +161,7 @@ namespace Dropbox.Api.Team
                 WriteListProperty("shared_usage", value.SharedUsage, writer, enc.UInt64Encoder.NullableInstance);
                 WriteListProperty("unshared_usage", value.UnsharedUsage, writer, enc.UInt64Encoder.NullableInstance);
                 WriteListProperty("shared_folders", value.SharedFolders, writer, enc.UInt64Encoder.NullableInstance);
-                WriteListProperty("member_storage_map", value.MemberStorageMap, writer, enc.Encoder.CreateListEncoder(Dropbox.Api.Team.StorageBucket.Encoder));
+                WriteListProperty("member_storage_map", value.MemberStorageMap, writer, enc.Encoder.CreateListEncoder(global::Dropbox.Api.Team.StorageBucket.Encoder));
             }
         }
 
@@ -210,7 +210,7 @@ namespace Dropbox.Api.Team
                         value.SharedFolders = ReadList<ulong?>(reader, enc.UInt64Decoder.NullableInstance);
                         break;
                     case "member_storage_map":
-                        value.MemberStorageMap = ReadList<col.IList<StorageBucket>>(reader, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.StorageBucket.Decoder));
+                        value.MemberStorageMap = ReadList<col.IList<StorageBucket>>(reader, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.StorageBucket.Decoder));
                         break;
                     default:
                         reader.Skip();

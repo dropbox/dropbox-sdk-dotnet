@@ -228,7 +228,7 @@ namespace Dropbox.Api.Users
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Individual value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Users.IndividualSpaceAllocation.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Users.IndividualSpaceAllocation.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -257,7 +257,7 @@ namespace Dropbox.Api.Users
                 /// <returns>The decoded object.</returns>
                 public override Individual DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Individual(Dropbox.Api.Users.IndividualSpaceAllocation.Decoder.DecodeFields(reader));
+                    return new Individual(global::Dropbox.Api.Users.IndividualSpaceAllocation.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -315,7 +315,7 @@ namespace Dropbox.Api.Users
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Team value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Users.TeamSpaceAllocation.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Users.TeamSpaceAllocation.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -344,7 +344,7 @@ namespace Dropbox.Api.Users
                 /// <returns>The decoded object.</returns>
                 public override Team DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Team(Dropbox.Api.Users.TeamSpaceAllocation.Decoder.DecodeFields(reader));
+                    return new Team(global::Dropbox.Api.Users.TeamSpaceAllocation.Decoder.DecodeFields(reader));
                 }
             }
 

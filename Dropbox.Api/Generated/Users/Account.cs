@@ -138,7 +138,7 @@ namespace Dropbox.Api.Users
             public override void EncodeFields(Account value, enc.IJsonWriter writer)
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
-                WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
+                WriteProperty("name", value.Name, writer, global::Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
                 WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("disabled", value.Disabled, writer, enc.BooleanEncoder.Instance);
@@ -182,7 +182,7 @@ namespace Dropbox.Api.Users
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "name":
-                        value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
+                        value.Name = global::Dropbox.Api.Users.Name.Decoder.Decode(reader);
                         break;
                     case "email":
                         value.Email = enc.StringDecoder.Instance.Decode(reader);

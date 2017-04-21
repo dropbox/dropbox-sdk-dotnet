@@ -100,7 +100,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ListSharedLinksResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("links", value.Links, writer, Dropbox.Api.Sharing.SharedLinkMetadata.Encoder);
+                WriteListProperty("links", value.Links, writer, global::Dropbox.Api.Sharing.SharedLinkMetadata.Encoder);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
                 if (value.Cursor != null)
                 {
@@ -140,7 +140,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "links":
-                        value.Links = ReadList<SharedLinkMetadata>(reader, Dropbox.Api.Sharing.SharedLinkMetadata.Decoder);
+                        value.Links = ReadList<SharedLinkMetadata>(reader, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder);
                         break;
                     case "has_more":
                         value.HasMore = enc.BooleanDecoder.Instance.Decode(reader);

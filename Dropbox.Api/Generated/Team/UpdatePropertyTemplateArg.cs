@@ -43,7 +43,7 @@ namespace Dropbox.Api.Team
         public UpdatePropertyTemplateArg(string templateId,
                                          string name = null,
                                          string description = null,
-                                         col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
+                                         col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
         {
             if (templateId == null)
             {
@@ -99,7 +99,7 @@ namespace Dropbox.Api.Team
         /// <para>This is a list of custom properties to add to the property template. There
         /// can be up to 64 properties in a single property template.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Properties.PropertyFieldTemplate> AddFields { get; protected set; }
+        public col.IList<global::Dropbox.Api.Properties.PropertyFieldTemplate> AddFields { get; protected set; }
 
         #region Encoder class
 
@@ -126,7 +126,7 @@ namespace Dropbox.Api.Team
                 }
                 if (value.AddFields.Count > 0)
                 {
-                    WriteListProperty("add_fields", value.AddFields, writer, Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
+                    WriteListProperty("add_fields", value.AddFields, writer, global::Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
                 }
             }
         }
@@ -171,7 +171,7 @@ namespace Dropbox.Api.Team
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "add_fields":
-                        value.AddFields = ReadList<Dropbox.Api.Properties.PropertyFieldTemplate>(reader, Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
+                        value.AddFields = ReadList<global::Dropbox.Api.Properties.PropertyFieldTemplate>(reader, global::Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
                         break;
                     default:
                         reader.Skip();

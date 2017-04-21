@@ -96,7 +96,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SearchResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("matches", value.Matches, writer, Dropbox.Api.Files.SearchMatch.Encoder);
+                WriteListProperty("matches", value.Matches, writer, global::Dropbox.Api.Files.SearchMatch.Encoder);
                 WriteProperty("more", value.More, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("start", value.Start, writer, enc.UInt64Encoder.Instance);
             }
@@ -132,7 +132,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "matches":
-                        value.Matches = ReadList<SearchMatch>(reader, Dropbox.Api.Files.SearchMatch.Decoder);
+                        value.Matches = ReadList<SearchMatch>(reader, global::Dropbox.Api.Files.SearchMatch.Decoder);
                         break;
                     case "more":
                         value.More = enc.BooleanDecoder.Instance.Decode(reader);

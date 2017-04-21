@@ -81,11 +81,11 @@ namespace Dropbox.Api.Paper
             {
                 if (value.FolderSharingPolicyType != null)
                 {
-                    WriteProperty("folder_sharing_policy_type", value.FolderSharingPolicyType, writer, Dropbox.Api.Paper.FolderSharingPolicyType.Encoder);
+                    WriteProperty("folder_sharing_policy_type", value.FolderSharingPolicyType, writer, global::Dropbox.Api.Paper.FolderSharingPolicyType.Encoder);
                 }
                 if (value.Folders.Count > 0)
                 {
-                    WriteListProperty("folders", value.Folders, writer, Dropbox.Api.Paper.Folder.Encoder);
+                    WriteListProperty("folders", value.Folders, writer, global::Dropbox.Api.Paper.Folder.Encoder);
                 }
             }
         }
@@ -121,10 +121,10 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "folder_sharing_policy_type":
-                        value.FolderSharingPolicyType = Dropbox.Api.Paper.FolderSharingPolicyType.Decoder.Decode(reader);
+                        value.FolderSharingPolicyType = global::Dropbox.Api.Paper.FolderSharingPolicyType.Decoder.Decode(reader);
                         break;
                     case "folders":
-                        value.Folders = ReadList<Folder>(reader, Dropbox.Api.Paper.Folder.Decoder);
+                        value.Folders = ReadList<Folder>(reader, global::Dropbox.Api.Paper.Folder.Decoder);
                         break;
                     default:
                         reader.Skip();

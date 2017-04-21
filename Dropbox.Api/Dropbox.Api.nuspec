@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.2.4</version>
+    <version>4.2.5</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -12,9 +12,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
-What's new:
-- Update DropboxOauth2Helper to use versionless oauth2 endpoints.
-- Use semantic versioning for AssemblyInfo.cs.
+Bug fixes:
+  - Fixed deadlock issue for DropboxOauth2Helper.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

@@ -37,7 +37,7 @@ namespace Dropbox.Api.Team
         /// users, or only by team admins.</param>
         public GroupCreateArg(string groupName,
                               string groupExternalId = null,
-                              Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
+                              global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
         {
             if (groupName == null)
             {
@@ -74,7 +74,7 @@ namespace Dropbox.Api.Team
         /// <para>Whether the team can be managed by selected users, or only by team
         /// admins.</para>
         /// </summary>
-        public Dropbox.Api.TeamCommon.GroupManagementType GroupManagementType { get; protected set; }
+        public global::Dropbox.Api.TeamCommon.GroupManagementType GroupManagementType { get; protected set; }
 
         #region Encoder class
 
@@ -97,7 +97,7 @@ namespace Dropbox.Api.Team
                 }
                 if (value.GroupManagementType != null)
                 {
-                    WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
+                    WriteProperty("group_management_type", value.GroupManagementType, writer, global::Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 }
             }
         }
@@ -138,7 +138,7 @@ namespace Dropbox.Api.Team
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "group_management_type":
-                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
+                        value.GroupManagementType = global::Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

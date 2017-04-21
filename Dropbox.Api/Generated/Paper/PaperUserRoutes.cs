@@ -43,7 +43,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task DocsArchiveAsync(RefPaperDoc refPaperDoc)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/archive", "user", Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/archive", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(PaperDocExport paperDocExport)
         {
-            return this.Transport.SendDownloadRequestAsync<PaperDocExport, PaperDocExportResult, DocLookupError>(paperDocExport, "api", "/paper/docs/download", "user", Dropbox.Api.Paper.PaperDocExport.Encoder, Dropbox.Api.Paper.PaperDocExportResult.Decoder, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<PaperDocExport, PaperDocExportResult, DocLookupError>(paperDocExport, "api", "/paper/docs/download", "user", global::Dropbox.Api.Paper.PaperDocExport.Encoder, global::Dropbox.Api.Paper.PaperDocExportResult.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListAsync(ListUsersOnFolderArgs listUsersOnFolderArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderArgs, ListUsersOnFolderResponse, DocLookupError>(listUsersOnFolderArgs, "api", "/paper/docs/folder_users/list", "user", Dropbox.Api.Paper.ListUsersOnFolderArgs.Encoder, Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderArgs, ListUsersOnFolderResponse, DocLookupError>(listUsersOnFolderArgs, "api", "/paper/docs/folder_users/list", "user", global::Dropbox.Api.Paper.ListUsersOnFolderArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="ListUsersCursorError"/>.</exception>
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListContinueAsync(ListUsersOnFolderContinueArgs listUsersOnFolderContinueArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderContinueArgs, ListUsersOnFolderResponse, ListUsersCursorError>(listUsersOnFolderContinueArgs, "api", "/paper/docs/folder_users/list/continue", "user", Dropbox.Api.Paper.ListUsersOnFolderContinueArgs.Encoder, Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, Dropbox.Api.Paper.ListUsersCursorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderContinueArgs, ListUsersOnFolderResponse, ListUsersCursorError>(listUsersOnFolderContinueArgs, "api", "/paper/docs/folder_users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnFolderContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder);
         }
 
         /// <summary>
@@ -429,7 +429,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(RefPaperDoc refPaperDoc)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, FoldersContainingPaperDoc, DocLookupError>(refPaperDoc, "api", "/paper/docs/get_folder_info", "user", Dropbox.Api.Paper.RefPaperDoc.Encoder, Dropbox.Api.Paper.FoldersContainingPaperDoc.Decoder, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, FoldersContainingPaperDoc, DocLookupError>(refPaperDoc, "api", "/paper/docs/get_folder_info", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.FoldersContainingPaperDoc.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -520,7 +520,7 @@ namespace Dropbox.Api.Paper.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsArgs listPaperDocsArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListPaperDocsArgs, ListPaperDocsResponse, enc.Empty>(listPaperDocsArgs, "api", "/paper/docs/list", "user", Dropbox.Api.Paper.ListPaperDocsArgs.Encoder, Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListPaperDocsArgs, ListPaperDocsResponse, enc.Empty>(listPaperDocsArgs, "api", "/paper/docs/list", "user", global::Dropbox.Api.Paper.ListPaperDocsArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -631,7 +631,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="ListDocsCursorError"/>.</exception>
         public t.Task<ListPaperDocsResponse> DocsListContinueAsync(ListPaperDocsContinueArgs listPaperDocsContinueArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListPaperDocsContinueArgs, ListPaperDocsResponse, ListDocsCursorError>(listPaperDocsContinueArgs, "api", "/paper/docs/list/continue", "user", Dropbox.Api.Paper.ListPaperDocsContinueArgs.Encoder, Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, Dropbox.Api.Paper.ListDocsCursorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListPaperDocsContinueArgs, ListPaperDocsResponse, ListDocsCursorError>(listPaperDocsContinueArgs, "api", "/paper/docs/list/continue", "user", global::Dropbox.Api.Paper.ListPaperDocsContinueArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, global::Dropbox.Api.Paper.ListDocsCursorError.Decoder);
         }
 
         /// <summary>
@@ -726,7 +726,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task DocsPermanentlyDeleteAsync(RefPaperDoc refPaperDoc)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/permanently_delete", "user", Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/permanently_delete", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -810,7 +810,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(RefPaperDoc refPaperDoc)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, SharingPolicy, DocLookupError>(refPaperDoc, "api", "/paper/docs/sharing_policy/get", "user", Dropbox.Api.Paper.RefPaperDoc.Encoder, Dropbox.Api.Paper.SharingPolicy.Decoder, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, SharingPolicy, DocLookupError>(refPaperDoc, "api", "/paper/docs/sharing_policy/get", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.SharingPolicy.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -899,7 +899,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task DocsSharingPolicySetAsync(PaperDocSharingPolicy paperDocSharingPolicy)
         {
-            return this.Transport.SendRpcRequestAsync<PaperDocSharingPolicy, enc.Empty, DocLookupError>(paperDocSharingPolicy, "api", "/paper/docs/sharing_policy/set", "user", Dropbox.Api.Paper.PaperDocSharingPolicy.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PaperDocSharingPolicy, enc.Empty, DocLookupError>(paperDocSharingPolicy, "api", "/paper/docs/sharing_policy/set", "user", global::Dropbox.Api.Paper.PaperDocSharingPolicy.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -996,7 +996,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task<col.List<AddPaperDocUserMemberResult>> DocsUsersAddAsync(AddPaperDocUser addPaperDocUser)
         {
-            return this.Transport.SendRpcRequestAsync<AddPaperDocUser, col.List<AddPaperDocUserMemberResult>, DocLookupError>(addPaperDocUser, "api", "/paper/docs/users/add", "user", Dropbox.Api.Paper.AddPaperDocUser.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Paper.AddPaperDocUserMemberResult.Decoder), Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddPaperDocUser, col.List<AddPaperDocUserMemberResult>, DocLookupError>(addPaperDocUser, "api", "/paper/docs/users/add", "user", global::Dropbox.Api.Paper.AddPaperDocUser.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Paper.AddPaperDocUserMemberResult.Decoder), global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -1112,7 +1112,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListAsync(ListUsersOnPaperDocArgs listUsersOnPaperDocArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocArgs, ListUsersOnPaperDocResponse, DocLookupError>(listUsersOnPaperDocArgs, "api", "/paper/docs/users/list", "user", Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Encoder, Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocArgs, ListUsersOnPaperDocResponse, DocLookupError>(listUsersOnPaperDocArgs, "api", "/paper/docs/users/list", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -1221,7 +1221,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="ListUsersCursorError"/>.</exception>
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListContinueAsync(ListUsersOnPaperDocContinueArgs listUsersOnPaperDocContinueArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocContinueArgs, ListUsersOnPaperDocResponse, ListUsersCursorError>(listUsersOnPaperDocContinueArgs, "api", "/paper/docs/users/list/continue", "user", Dropbox.Api.Paper.ListUsersOnPaperDocContinueArgs.Encoder, Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, Dropbox.Api.Paper.ListUsersCursorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocContinueArgs, ListUsersOnPaperDocResponse, ListUsersCursorError>(listUsersOnPaperDocContinueArgs, "api", "/paper/docs/users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder);
         }
 
         /// <summary>
@@ -1322,7 +1322,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         public t.Task DocsUsersRemoveAsync(RemovePaperDocUser removePaperDocUser)
         {
-            return this.Transport.SendRpcRequestAsync<RemovePaperDocUser, enc.Empty, DocLookupError>(removePaperDocUser, "api", "/paper/docs/users/remove", "user", Dropbox.Api.Paper.RemovePaperDocUser.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemovePaperDocUser, enc.Empty, DocLookupError>(removePaperDocUser, "api", "/paper/docs/users/remove", "user", global::Dropbox.Api.Paper.RemovePaperDocUser.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
         }
 
         /// <summary>
@@ -1355,7 +1355,7 @@ namespace Dropbox.Api.Paper.Routes
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         public t.Task DocsUsersRemoveAsync(string docId,
-                                           Dropbox.Api.Sharing.MemberSelector member)
+                                           global::Dropbox.Api.Sharing.MemberSelector member)
         {
             var removePaperDocUser = new RemovePaperDocUser(docId,
                                                             member);
@@ -1375,7 +1375,7 @@ namespace Dropbox.Api.Paper.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginDocsUsersRemove(string docId,
-                                                     Dropbox.Api.Sharing.MemberSelector member,
+                                                     global::Dropbox.Api.Sharing.MemberSelector member,
                                                      sys.AsyncCallback callback,
                                                      object callbackState = null)
         {

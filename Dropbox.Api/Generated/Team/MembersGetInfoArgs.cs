@@ -74,7 +74,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersGetInfoArgs value, enc.IJsonWriter writer)
             {
-                WriteListProperty("members", value.Members, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteListProperty("members", value.Members, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
             }
         }
 
@@ -108,7 +108,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "members":
-                        value.Members = ReadList<UserSelectorArg>(reader, Dropbox.Api.Team.UserSelectorArg.Decoder);
+                        value.Members = ReadList<UserSelectorArg>(reader, global::Dropbox.Api.Team.UserSelectorArg.Decoder);
                         break;
                     default:
                         reader.Skip();

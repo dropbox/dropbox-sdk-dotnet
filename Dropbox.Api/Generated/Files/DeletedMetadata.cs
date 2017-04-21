@@ -14,7 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>Indicates that there used to be a file or folder at this path, but it no longer
     /// exists.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.Metadata" />
+    /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
     public class DeletedMetadata : Metadata
     {
         #pragma warning disable 108

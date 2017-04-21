@@ -73,7 +73,7 @@ namespace Dropbox.Api.Sharing
 
             if (accessLevel == null)
             {
-                accessLevel = Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
+                accessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
             }
             this.File = file;
             this.Members = membersList;
@@ -93,7 +93,7 @@ namespace Dropbox.Api.Sharing
         public AddFileMemberArgs()
         {
             this.Quiet = false;
-            this.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
+            this.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
             this.AddMessageAsComment = false;
         }
 
@@ -146,13 +146,13 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(AddFileMemberArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("file", value.File, writer, enc.StringEncoder.Instance);
-                WriteListProperty("members", value.Members, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteListProperty("members", value.Members, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
                 if (value.CustomMessage != null)
                 {
                     WriteProperty("custom_message", value.CustomMessage, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("quiet", value.Quiet, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("access_level", value.AccessLevel, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("add_message_as_comment", value.AddMessageAsComment, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -190,7 +190,7 @@ namespace Dropbox.Api.Sharing
                         value.File = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "members":
-                        value.Members = ReadList<MemberSelector>(reader, Dropbox.Api.Sharing.MemberSelector.Decoder);
+                        value.Members = ReadList<MemberSelector>(reader, global::Dropbox.Api.Sharing.MemberSelector.Decoder);
                         break;
                     case "custom_message":
                         value.CustomMessage = enc.StringDecoder.Instance.Decode(reader);
@@ -199,7 +199,7 @@ namespace Dropbox.Api.Sharing
                         value.Quiet = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "access_level":
-                        value.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "add_message_as_comment":
                         value.AddMessageAsComment = enc.BooleanDecoder.Instance.Decode(reader);

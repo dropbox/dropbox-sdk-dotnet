@@ -307,7 +307,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Failed value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.JobError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.JobError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -340,7 +340,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "failed":
-                            value.Value = Dropbox.Api.Sharing.JobError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.JobError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

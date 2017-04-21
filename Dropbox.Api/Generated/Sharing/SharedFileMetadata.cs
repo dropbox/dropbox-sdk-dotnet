@@ -62,7 +62,7 @@ namespace Dropbox.Api.Sharing
                                   string id,
                                   SharedContentLinkMetadata linkMetadata = null,
                                   col.IEnumerable<FilePermission> permissions = null,
-                                  Dropbox.Api.Users.Team ownerTeam = null,
+                                  global::Dropbox.Api.Users.Team ownerTeam = null,
                                   string parentSharedFolderId = null,
                                   string pathLower = null,
                                   string pathDisplay = null,
@@ -167,7 +167,7 @@ namespace Dropbox.Api.Sharing
         /// <para>The team that owns the file. This field is not present if the file is not
         /// owned by a team.</para>
         /// </summary>
-        public Dropbox.Api.Users.Team OwnerTeam { get; protected set; }
+        public global::Dropbox.Api.Users.Team OwnerTeam { get; protected set; }
 
         /// <summary>
         /// <para>The ID of the parent shared folder. This field is present only if the file is
@@ -208,21 +208,21 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFileMetadata value, enc.IJsonWriter writer)
             {
-                WriteProperty("policy", value.Policy, writer, Dropbox.Api.Sharing.FolderPolicy.Encoder);
+                WriteProperty("policy", value.Policy, writer, global::Dropbox.Api.Sharing.FolderPolicy.Encoder);
                 WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
                 if (value.LinkMetadata != null)
                 {
-                    WriteProperty("link_metadata", value.LinkMetadata, writer, Dropbox.Api.Sharing.SharedContentLinkMetadata.Encoder);
+                    WriteProperty("link_metadata", value.LinkMetadata, writer, global::Dropbox.Api.Sharing.SharedContentLinkMetadata.Encoder);
                 }
                 if (value.Permissions.Count > 0)
                 {
-                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.FilePermission.Encoder);
+                    WriteListProperty("permissions", value.Permissions, writer, global::Dropbox.Api.Sharing.FilePermission.Encoder);
                 }
                 if (value.OwnerTeam != null)
                 {
-                    WriteProperty("owner_team", value.OwnerTeam, writer, Dropbox.Api.Users.Team.Encoder);
+                    WriteProperty("owner_team", value.OwnerTeam, writer, global::Dropbox.Api.Users.Team.Encoder);
                 }
                 if (value.ParentSharedFolderId != null)
                 {
@@ -273,7 +273,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "policy":
-                        value.Policy = Dropbox.Api.Sharing.FolderPolicy.Decoder.Decode(reader);
+                        value.Policy = global::Dropbox.Api.Sharing.FolderPolicy.Decoder.Decode(reader);
                         break;
                     case "preview_url":
                         value.PreviewUrl = enc.StringDecoder.Instance.Decode(reader);
@@ -285,13 +285,13 @@ namespace Dropbox.Api.Sharing
                         value.Id = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "link_metadata":
-                        value.LinkMetadata = Dropbox.Api.Sharing.SharedContentLinkMetadata.Decoder.Decode(reader);
+                        value.LinkMetadata = global::Dropbox.Api.Sharing.SharedContentLinkMetadata.Decoder.Decode(reader);
                         break;
                     case "permissions":
-                        value.Permissions = ReadList<FilePermission>(reader, Dropbox.Api.Sharing.FilePermission.Decoder);
+                        value.Permissions = ReadList<FilePermission>(reader, global::Dropbox.Api.Sharing.FilePermission.Decoder);
                         break;
                     case "owner_team":
-                        value.OwnerTeam = Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        value.OwnerTeam = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);

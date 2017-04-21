@@ -94,7 +94,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("file", value.File, writer, enc.StringEncoder.Instance);
                 if (value.Actions.Count > 0)
                 {
-                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.FileAction.Encoder);
+                    WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.FileAction.Encoder);
                 }
             }
         }
@@ -132,7 +132,7 @@ namespace Dropbox.Api.Sharing
                         value.File = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "actions":
-                        value.Actions = ReadList<FileAction>(reader, Dropbox.Api.Sharing.FileAction.Decoder);
+                        value.Actions = ReadList<FileAction>(reader, global::Dropbox.Api.Sharing.FileAction.Decoder);
                         break;
                     default:
                         reader.Skip();

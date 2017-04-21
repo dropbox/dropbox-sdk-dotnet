@@ -372,9 +372,9 @@ namespace Dropbox.Api
                 }
 
                 var content = new FormUrlEncodedContent(parameters);
-                var response = await httpClient.PostAsync("https://api.dropbox.com/oauth2/token", content);
+                var response = await httpClient.PostAsync("https://api.dropbox.com/oauth2/token", content).ConfigureAwait(false);
 
-                var raw = await response.Content.ReadAsStringAsync();
+                var raw = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                 var json = JObject.Parse(raw);
 
                 if (response.StatusCode != HttpStatusCode.OK)

@@ -235,7 +235,7 @@ namespace Dropbox.Api.Sharing
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public UnshareFolderError(Dropbox.Api.Sharing.UnshareFolderError value)
+            public UnshareFolderError(global::Dropbox.Api.Sharing.UnshareFolderError value)
             {
                 this.Value = value;
             }
@@ -250,7 +250,7 @@ namespace Dropbox.Api.Sharing
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Sharing.UnshareFolderError Value { get; private set; }
+            public global::Dropbox.Api.Sharing.UnshareFolderError Value { get; private set; }
 
             #region Encoder class
 
@@ -266,7 +266,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(UnshareFolderError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.UnshareFolderError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.UnshareFolderError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -300,7 +300,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "unshare_folder_error":
-                            value.Value = Dropbox.Api.Sharing.UnshareFolderError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.UnshareFolderError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -336,7 +336,7 @@ namespace Dropbox.Api.Sharing
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public RemoveFolderMemberError(Dropbox.Api.Sharing.RemoveFolderMemberError value)
+            public RemoveFolderMemberError(global::Dropbox.Api.Sharing.RemoveFolderMemberError value)
             {
                 this.Value = value;
             }
@@ -351,7 +351,7 @@ namespace Dropbox.Api.Sharing
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Sharing.RemoveFolderMemberError Value { get; private set; }
+            public global::Dropbox.Api.Sharing.RemoveFolderMemberError Value { get; private set; }
 
             #region Encoder class
 
@@ -367,7 +367,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(RemoveFolderMemberError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.RemoveFolderMemberError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.RemoveFolderMemberError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -401,7 +401,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "remove_folder_member_error":
-                            value.Value = Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -437,7 +437,7 @@ namespace Dropbox.Api.Sharing
             /// cref="RelinquishFolderMembershipError" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public RelinquishFolderMembershipError(Dropbox.Api.Sharing.RelinquishFolderMembershipError value)
+            public RelinquishFolderMembershipError(global::Dropbox.Api.Sharing.RelinquishFolderMembershipError value)
             {
                 this.Value = value;
             }
@@ -452,7 +452,7 @@ namespace Dropbox.Api.Sharing
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Sharing.RelinquishFolderMembershipError Value { get; private set; }
+            public global::Dropbox.Api.Sharing.RelinquishFolderMembershipError Value { get; private set; }
 
             #region Encoder class
 
@@ -468,7 +468,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(RelinquishFolderMembershipError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.RelinquishFolderMembershipError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -502,7 +502,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "relinquish_folder_membership_error":
-                            value.Value = Dropbox.Api.Sharing.RelinquishFolderMembershipError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

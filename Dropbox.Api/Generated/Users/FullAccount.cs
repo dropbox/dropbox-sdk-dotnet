@@ -13,7 +13,7 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>Detailed information about the current user's account.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Users.Account" />
+    /// <seealso cref="Global::Dropbox.Api.Users.Account" />
     public class FullAccount : Account
     {
         #pragma warning disable 108
@@ -180,14 +180,14 @@ namespace Dropbox.Api.Users
             public override void EncodeFields(FullAccount value, enc.IJsonWriter writer)
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
-                WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
+                WriteProperty("name", value.Name, writer, global::Dropbox.Api.Users.Name.Encoder);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
                 WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("disabled", value.Disabled, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("locale", value.Locale, writer, enc.StringEncoder.Instance);
                 WriteProperty("referral_link", value.ReferralLink, writer, enc.StringEncoder.Instance);
                 WriteProperty("is_paired", value.IsPaired, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("account_type", value.AccountType, writer, Dropbox.Api.Users.AccountType.Encoder);
+                WriteProperty("account_type", value.AccountType, writer, global::Dropbox.Api.Users.AccountType.Encoder);
                 if (value.ProfilePhotoUrl != null)
                 {
                     WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
@@ -198,7 +198,7 @@ namespace Dropbox.Api.Users
                 }
                 if (value.Team != null)
                 {
-                    WriteProperty("team", value.Team, writer, Dropbox.Api.Users.FullTeam.Encoder);
+                    WriteProperty("team", value.Team, writer, global::Dropbox.Api.Users.FullTeam.Encoder);
                 }
                 if (value.TeamMemberId != null)
                 {
@@ -240,7 +240,7 @@ namespace Dropbox.Api.Users
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "name":
-                        value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
+                        value.Name = global::Dropbox.Api.Users.Name.Decoder.Decode(reader);
                         break;
                     case "email":
                         value.Email = enc.StringDecoder.Instance.Decode(reader);
@@ -261,7 +261,7 @@ namespace Dropbox.Api.Users
                         value.IsPaired = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "account_type":
-                        value.AccountType = Dropbox.Api.Users.AccountType.Decoder.Decode(reader);
+                        value.AccountType = global::Dropbox.Api.Users.AccountType.Decoder.Decode(reader);
                         break;
                     case "profile_photo_url":
                         value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);
@@ -270,7 +270,7 @@ namespace Dropbox.Api.Users
                         value.Country = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "team":
-                        value.Team = Dropbox.Api.Users.FullTeam.Decoder.Decode(reader);
+                        value.Team = global::Dropbox.Api.Users.FullTeam.Decoder.Decode(reader);
                         break;
                     case "team_member_id":
                         value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);

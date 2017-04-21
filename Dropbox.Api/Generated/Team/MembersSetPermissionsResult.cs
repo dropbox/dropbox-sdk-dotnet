@@ -87,7 +87,7 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(MembersSetPermissionsResult value, enc.IJsonWriter writer)
             {
                 WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
-                WriteProperty("role", value.Role, writer, Dropbox.Api.Team.AdminTier.Encoder);
+                WriteProperty("role", value.Role, writer, global::Dropbox.Api.Team.AdminTier.Encoder);
             }
         }
 
@@ -125,7 +125,7 @@ namespace Dropbox.Api.Team
                         value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "role":
-                        value.Role = Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
+                        value.Role = global::Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

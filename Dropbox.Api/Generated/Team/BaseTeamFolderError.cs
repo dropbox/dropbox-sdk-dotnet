@@ -230,7 +230,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.TeamFolderAccessError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.TeamFolderAccessError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -263,7 +263,7 @@ namespace Dropbox.Api.Team
                     switch (fieldName)
                     {
                         case "access_error":
-                            value.Value = Dropbox.Api.Team.TeamFolderAccessError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Team.TeamFolderAccessError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -328,7 +328,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(StatusError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.TeamFolderInvalidStatusError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.TeamFolderInvalidStatusError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -361,7 +361,7 @@ namespace Dropbox.Api.Team
                     switch (fieldName)
                     {
                         case "status_error":
-                            value.Value = Dropbox.Api.Team.TeamFolderInvalidStatusError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Team.TeamFolderInvalidStatusError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

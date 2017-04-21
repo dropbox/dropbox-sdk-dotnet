@@ -496,7 +496,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Removed value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.RemovedStatus.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.RemovedStatus.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -525,7 +525,7 @@ namespace Dropbox.Api.Team
                 /// <returns>The decoded object.</returns>
                 public override Removed DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Removed(Dropbox.Api.Team.RemovedStatus.Decoder.DecodeFields(reader));
+                    return new Removed(global::Dropbox.Api.Team.RemovedStatus.Decoder.DecodeFields(reader));
                 }
             }
 

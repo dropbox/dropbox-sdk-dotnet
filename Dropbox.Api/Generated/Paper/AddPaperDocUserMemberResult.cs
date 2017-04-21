@@ -34,7 +34,7 @@ namespace Dropbox.Api.Paper
         /// </summary>
         /// <param name="member">One of specified input members.</param>
         /// <param name="result">The outcome of the action on this member.</param>
-        public AddPaperDocUserMemberResult(Dropbox.Api.Sharing.MemberSelector member,
+        public AddPaperDocUserMemberResult(global::Dropbox.Api.Sharing.MemberSelector member,
                                            AddPaperDocUserResult result)
         {
             if (member == null)
@@ -65,7 +65,7 @@ namespace Dropbox.Api.Paper
         /// <summary>
         /// <para>One of specified input members.</para>
         /// </summary>
-        public Dropbox.Api.Sharing.MemberSelector Member { get; protected set; }
+        public global::Dropbox.Api.Sharing.MemberSelector Member { get; protected set; }
 
         /// <summary>
         /// <para>The outcome of the action on this member.</para>
@@ -86,8 +86,8 @@ namespace Dropbox.Api.Paper
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AddPaperDocUserMemberResult value, enc.IJsonWriter writer)
             {
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("result", value.Result, writer, Dropbox.Api.Paper.AddPaperDocUserResult.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("result", value.Result, writer, global::Dropbox.Api.Paper.AddPaperDocUserResult.Encoder);
             }
         }
 
@@ -122,10 +122,10 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     case "result":
-                        value.Result = Dropbox.Api.Paper.AddPaperDocUserResult.Decoder.Decode(reader);
+                        value.Result = global::Dropbox.Api.Paper.AddPaperDocUserResult.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -40,7 +40,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="ListMemberDevicesError"/>.</exception>
         public t.Task<ListMemberDevicesResult> DevicesListMemberDevicesAsync(ListMemberDevicesArg listMemberDevicesArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListMemberDevicesArg, ListMemberDevicesResult, ListMemberDevicesError>(listMemberDevicesArg, "api", "/team/devices/list_member_devices", "team", Dropbox.Api.Team.ListMemberDevicesArg.Encoder, Dropbox.Api.Team.ListMemberDevicesResult.Decoder, Dropbox.Api.Team.ListMemberDevicesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMemberDevicesArg, ListMemberDevicesResult, ListMemberDevicesError>(listMemberDevicesArg, "api", "/team/devices/list_member_devices", "team", global::Dropbox.Api.Team.ListMemberDevicesArg.Encoder, global::Dropbox.Api.Team.ListMemberDevicesResult.Decoder, global::Dropbox.Api.Team.ListMemberDevicesError.Decoder);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="ListMembersDevicesError"/>.</exception>
         public t.Task<ListMembersDevicesResult> DevicesListMembersDevicesAsync(ListMembersDevicesArg listMembersDevicesArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListMembersDevicesArg, ListMembersDevicesResult, ListMembersDevicesError>(listMembersDevicesArg, "api", "/team/devices/list_members_devices", "team", Dropbox.Api.Team.ListMembersDevicesArg.Encoder, Dropbox.Api.Team.ListMembersDevicesResult.Decoder, Dropbox.Api.Team.ListMembersDevicesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMembersDevicesArg, ListMembersDevicesResult, ListMembersDevicesError>(listMembersDevicesArg, "api", "/team/devices/list_members_devices", "team", global::Dropbox.Api.Team.ListMembersDevicesArg.Encoder, global::Dropbox.Api.Team.ListMembersDevicesResult.Decoder, global::Dropbox.Api.Team.ListMembersDevicesError.Decoder);
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace Dropbox.Api.Team.Routes
         [sys.Obsolete("This function is deprecated, please use DevicesListMembersDevicesAsync instead.")]
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(ListTeamDevicesArg listTeamDevicesArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListTeamDevicesArg, ListTeamDevicesResult, ListTeamDevicesError>(listTeamDevicesArg, "api", "/team/devices/list_team_devices", "team", Dropbox.Api.Team.ListTeamDevicesArg.Encoder, Dropbox.Api.Team.ListTeamDevicesResult.Decoder, Dropbox.Api.Team.ListTeamDevicesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListTeamDevicesArg, ListTeamDevicesResult, ListTeamDevicesError>(listTeamDevicesArg, "api", "/team/devices/list_team_devices", "team", global::Dropbox.Api.Team.ListTeamDevicesArg.Encoder, global::Dropbox.Api.Team.ListTeamDevicesResult.Decoder, global::Dropbox.Api.Team.ListTeamDevicesError.Decoder);
         }
 
         /// <summary>
@@ -387,7 +387,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="RevokeDeviceSessionError"/>.</exception>
         public t.Task DevicesRevokeDeviceSessionAsync(RevokeDeviceSessionArg revokeDeviceSessionArg)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionArg, enc.Empty, RevokeDeviceSessionError>(revokeDeviceSessionArg, "api", "/team/devices/revoke_device_session", "team", Dropbox.Api.Team.RevokeDeviceSessionArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.RevokeDeviceSessionError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionArg, enc.Empty, RevokeDeviceSessionError>(revokeDeviceSessionArg, "api", "/team/devices/revoke_device_session", "team", global::Dropbox.Api.Team.RevokeDeviceSessionArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.RevokeDeviceSessionError.Decoder);
         }
 
         /// <summary>
@@ -436,7 +436,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="RevokeDeviceSessionBatchError"/>.</exception>
         public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(RevokeDeviceSessionBatchArg revokeDeviceSessionBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionBatchArg, RevokeDeviceSessionBatchResult, RevokeDeviceSessionBatchError>(revokeDeviceSessionBatchArg, "api", "/team/devices/revoke_device_session_batch", "team", Dropbox.Api.Team.RevokeDeviceSessionBatchArg.Encoder, Dropbox.Api.Team.RevokeDeviceSessionBatchResult.Decoder, Dropbox.Api.Team.RevokeDeviceSessionBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionBatchArg, RevokeDeviceSessionBatchResult, RevokeDeviceSessionBatchError>(revokeDeviceSessionBatchArg, "api", "/team/devices/revoke_device_session_batch", "team", global::Dropbox.Api.Team.RevokeDeviceSessionBatchArg.Encoder, global::Dropbox.Api.Team.RevokeDeviceSessionBatchResult.Decoder, global::Dropbox.Api.Team.RevokeDeviceSessionBatchError.Decoder);
         }
 
         /// <summary>
@@ -519,7 +519,7 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<TeamGetInfoResult> GetInfoAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, TeamGetInfoResult, enc.Empty>(enc.Empty.Instance, "api", "/team/get_info", "team", enc.EmptyEncoder.Instance, Dropbox.Api.Team.TeamGetInfoResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, TeamGetInfoResult, enc.Empty>(enc.Empty.Instance, "api", "/team/get_info", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Team.TeamGetInfoResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -567,7 +567,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupCreateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsCreateAsync(GroupCreateArg groupCreateArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupCreateArg, GroupFullInfo, GroupCreateError>(groupCreateArg, "api", "/team/groups/create", "team", Dropbox.Api.Team.GroupCreateArg.Encoder, Dropbox.Api.Team.GroupFullInfo.Decoder, Dropbox.Api.Team.GroupCreateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupCreateArg, GroupFullInfo, GroupCreateError>(groupCreateArg, "api", "/team/groups/create", "team", global::Dropbox.Api.Team.GroupCreateArg.Encoder, global::Dropbox.Api.Team.GroupFullInfo.Decoder, global::Dropbox.Api.Team.GroupCreateError.Decoder);
         }
 
         /// <summary>
@@ -602,7 +602,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupCreateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsCreateAsync(string groupName,
                                                        string groupExternalId = null,
-                                                       Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
+                                                       global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
         {
             var groupCreateArg = new GroupCreateArg(groupName,
                                                     groupExternalId,
@@ -626,7 +626,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGroupsCreate(string groupName,
                                                   string groupExternalId = null,
-                                                  Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null,
+                                                  global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
@@ -672,9 +672,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupDeleteError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> GroupsDeleteAsync(GroupSelector groupSelector)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> GroupsDeleteAsync(GroupSelector groupSelector)
         {
-            return this.Transport.SendRpcRequestAsync<GroupSelector, Dropbox.Api.Async.LaunchEmptyResult, GroupDeleteError>(groupSelector, "api", "/team/groups/delete", "team", Dropbox.Api.Team.GroupSelector.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, Dropbox.Api.Team.GroupDeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupSelector, global::Dropbox.Api.Async.LaunchEmptyResult, GroupDeleteError>(groupSelector, "api", "/team/groups/delete", "team", global::Dropbox.Api.Team.GroupSelector.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.GroupDeleteError.Decoder);
         }
 
         /// <summary>
@@ -703,9 +703,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupDeleteError"/>.</exception>
-        public Dropbox.Api.Async.LaunchEmptyResult EndGroupsDelete(sys.IAsyncResult asyncResult)
+        public global::Dropbox.Api.Async.LaunchEmptyResult EndGroupsDelete(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchEmptyResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -728,7 +728,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupsGetInfoError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsGetInfoAsync(GroupsSelector groupsSelector)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsSelector, col.List<GroupsGetInfoItem>, GroupsGetInfoError>(groupsSelector, "api", "/team/groups/get_info", "team", Dropbox.Api.Team.GroupsSelector.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.GroupsGetInfoItem.Decoder), Dropbox.Api.Team.GroupsGetInfoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsSelector, col.List<GroupsGetInfoItem>, GroupsGetInfoError>(groupsSelector, "api", "/team/groups/get_info", "team", global::Dropbox.Api.Team.GroupsSelector.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.GroupsGetInfoItem.Decoder), global::Dropbox.Api.Team.GroupsGetInfoError.Decoder);
         }
 
         /// <summary>
@@ -783,9 +783,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, Dropbox.Api.Async.PollEmptyResult, GroupsPollError>(pollArg, "api", "/team/groups/job_status/get", "team", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Async.PollEmptyResult.Decoder, Dropbox.Api.Team.GroupsPollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, GroupsPollError>(pollArg, "api", "/team/groups/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Team.GroupsPollError.Decoder);
         }
 
         /// <summary>
@@ -797,7 +797,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGroupsJobStatusGet(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginGroupsJobStatusGet(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GroupsJobStatusGetAsync(pollArg);
 
@@ -820,9 +820,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(string asyncJobId)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.GroupsJobStatusGetAsync(pollArg);
         }
@@ -841,7 +841,7 @@ namespace Dropbox.Api.Team.Routes
                                                         sys.AsyncCallback callback,
                                                         object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginGroupsJobStatusGet(pollArg, callback, callbackState);
         }
@@ -856,9 +856,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
-        public Dropbox.Api.Async.PollEmptyResult EndGroupsJobStatusGet(sys.IAsyncResult asyncResult)
+        public global::Dropbox.Api.Async.PollEmptyResult EndGroupsJobStatusGet(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.PollEmptyResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.PollEmptyResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -876,7 +876,7 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<GroupsListResult> GroupsListAsync(GroupsListArg groupsListArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsListArg, GroupsListResult, enc.Empty>(groupsListArg, "api", "/team/groups/list", "team", Dropbox.Api.Team.GroupsListArg.Encoder, Dropbox.Api.Team.GroupsListResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<GroupsListArg, GroupsListResult, enc.Empty>(groupsListArg, "api", "/team/groups/list", "team", global::Dropbox.Api.Team.GroupsListArg.Encoder, global::Dropbox.Api.Team.GroupsListResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -959,7 +959,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupsListContinueError"/>.</exception>
         public t.Task<GroupsListResult> GroupsListContinueAsync(GroupsListContinueArg groupsListContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsListContinueArg, GroupsListResult, GroupsListContinueError>(groupsListContinueArg, "api", "/team/groups/list/continue", "team", Dropbox.Api.Team.GroupsListContinueArg.Encoder, Dropbox.Api.Team.GroupsListResult.Decoder, Dropbox.Api.Team.GroupsListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsListContinueArg, GroupsListResult, GroupsListContinueError>(groupsListContinueArg, "api", "/team/groups/list/continue", "team", global::Dropbox.Api.Team.GroupsListContinueArg.Encoder, global::Dropbox.Api.Team.GroupsListResult.Decoder, global::Dropbox.Api.Team.GroupsListContinueError.Decoder);
         }
 
         /// <summary>
@@ -1054,7 +1054,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupMembersAddError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupMembersAddArg groupMembersAddArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersAddArg, GroupMembersChangeResult, GroupMembersAddError>(groupMembersAddArg, "api", "/team/groups/members/add", "team", Dropbox.Api.Team.GroupMembersAddArg.Encoder, Dropbox.Api.Team.GroupMembersChangeResult.Decoder, Dropbox.Api.Team.GroupMembersAddError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersAddArg, GroupMembersChangeResult, GroupMembersAddError>(groupMembersAddArg, "api", "/team/groups/members/add", "team", global::Dropbox.Api.Team.GroupMembersAddArg.Encoder, global::Dropbox.Api.Team.GroupMembersChangeResult.Decoder, global::Dropbox.Api.Team.GroupMembersAddError.Decoder);
         }
 
         /// <summary>
@@ -1161,7 +1161,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupSelectorError"/>.</exception>
         public t.Task<GroupsMembersListResult> GroupsMembersListAsync(GroupsMembersListArg groupsMembersListArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsMembersListArg, GroupsMembersListResult, GroupSelectorError>(groupsMembersListArg, "api", "/team/groups/members/list", "team", Dropbox.Api.Team.GroupsMembersListArg.Encoder, Dropbox.Api.Team.GroupsMembersListResult.Decoder, Dropbox.Api.Team.GroupSelectorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsMembersListArg, GroupsMembersListResult, GroupSelectorError>(groupsMembersListArg, "api", "/team/groups/members/list", "team", global::Dropbox.Api.Team.GroupsMembersListArg.Encoder, global::Dropbox.Api.Team.GroupsMembersListResult.Decoder, global::Dropbox.Api.Team.GroupSelectorError.Decoder);
         }
 
         /// <summary>
@@ -1256,7 +1256,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupsMembersListContinueError"/>.</exception>
         public t.Task<GroupsMembersListResult> GroupsMembersListContinueAsync(GroupsMembersListContinueArg groupsMembersListContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsMembersListContinueArg, GroupsMembersListResult, GroupsMembersListContinueError>(groupsMembersListContinueArg, "api", "/team/groups/members/list/continue", "team", Dropbox.Api.Team.GroupsMembersListContinueArg.Encoder, Dropbox.Api.Team.GroupsMembersListResult.Decoder, Dropbox.Api.Team.GroupsMembersListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsMembersListContinueArg, GroupsMembersListResult, GroupsMembersListContinueError>(groupsMembersListContinueArg, "api", "/team/groups/members/list/continue", "team", global::Dropbox.Api.Team.GroupsMembersListContinueArg.Encoder, global::Dropbox.Api.Team.GroupsMembersListResult.Decoder, global::Dropbox.Api.Team.GroupsMembersListContinueError.Decoder);
         }
 
         /// <summary>
@@ -1353,7 +1353,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupMembersRemoveError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupMembersRemoveArg groupMembersRemoveArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersRemoveArg, GroupMembersChangeResult, GroupMembersRemoveError>(groupMembersRemoveArg, "api", "/team/groups/members/remove", "team", Dropbox.Api.Team.GroupMembersRemoveArg.Encoder, Dropbox.Api.Team.GroupMembersChangeResult.Decoder, Dropbox.Api.Team.GroupMembersRemoveError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersRemoveArg, GroupMembersChangeResult, GroupMembersRemoveError>(groupMembersRemoveArg, "api", "/team/groups/members/remove", "team", global::Dropbox.Api.Team.GroupMembersRemoveArg.Encoder, global::Dropbox.Api.Team.GroupMembersChangeResult.Decoder, global::Dropbox.Api.Team.GroupMembersRemoveError.Decoder);
         }
 
         /// <summary>
@@ -1462,7 +1462,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupMemberSetAccessTypeError"/>.</exception>
         public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupMembersSetAccessTypeArg groupMembersSetAccessTypeArg)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersSetAccessTypeArg, col.List<GroupsGetInfoItem>, GroupMemberSetAccessTypeError>(groupMembersSetAccessTypeArg, "api", "/team/groups/members/set_access_type", "team", Dropbox.Api.Team.GroupMembersSetAccessTypeArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.GroupsGetInfoItem.Decoder), Dropbox.Api.Team.GroupMemberSetAccessTypeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersSetAccessTypeArg, col.List<GroupsGetInfoItem>, GroupMemberSetAccessTypeError>(groupMembersSetAccessTypeArg, "api", "/team/groups/members/set_access_type", "team", global::Dropbox.Api.Team.GroupMembersSetAccessTypeArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.GroupsGetInfoItem.Decoder), global::Dropbox.Api.Team.GroupMemberSetAccessTypeError.Decoder);
         }
 
         /// <summary>
@@ -1575,7 +1575,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupUpdateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsUpdateAsync(GroupUpdateArgs groupUpdateArgs)
         {
-            return this.Transport.SendRpcRequestAsync<GroupUpdateArgs, GroupFullInfo, GroupUpdateError>(groupUpdateArgs, "api", "/team/groups/update", "team", Dropbox.Api.Team.GroupUpdateArgs.Encoder, Dropbox.Api.Team.GroupFullInfo.Decoder, Dropbox.Api.Team.GroupUpdateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupUpdateArgs, GroupFullInfo, GroupUpdateError>(groupUpdateArgs, "api", "/team/groups/update", "team", global::Dropbox.Api.Team.GroupUpdateArgs.Encoder, global::Dropbox.Api.Team.GroupFullInfo.Decoder, global::Dropbox.Api.Team.GroupUpdateError.Decoder);
         }
 
         /// <summary>
@@ -1618,7 +1618,7 @@ namespace Dropbox.Api.Team.Routes
                                                        bool returnMembers = true,
                                                        string newGroupName = null,
                                                        string newGroupExternalId = null,
-                                                       Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null)
+                                                       global::Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null)
         {
             var groupUpdateArgs = new GroupUpdateArgs(@group,
                                                       returnMembers,
@@ -1652,7 +1652,7 @@ namespace Dropbox.Api.Team.Routes
                                                   bool returnMembers = true,
                                                   string newGroupName = null,
                                                   string newGroupExternalId = null,
-                                                  Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null,
+                                                  global::Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
@@ -1698,7 +1698,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="ListMemberAppsError"/>.</exception>
         public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(ListMemberAppsArg listMemberAppsArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListMemberAppsArg, ListMemberAppsResult, ListMemberAppsError>(listMemberAppsArg, "api", "/team/linked_apps/list_member_linked_apps", "team", Dropbox.Api.Team.ListMemberAppsArg.Encoder, Dropbox.Api.Team.ListMemberAppsResult.Decoder, Dropbox.Api.Team.ListMemberAppsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMemberAppsArg, ListMemberAppsResult, ListMemberAppsError>(listMemberAppsArg, "api", "/team/linked_apps/list_member_linked_apps", "team", global::Dropbox.Api.Team.ListMemberAppsArg.Encoder, global::Dropbox.Api.Team.ListMemberAppsResult.Decoder, global::Dropbox.Api.Team.ListMemberAppsError.Decoder);
         }
 
         /// <summary>
@@ -1787,7 +1787,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="ListMembersAppsError"/>.</exception>
         public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(ListMembersAppsArg listMembersAppsArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListMembersAppsArg, ListMembersAppsResult, ListMembersAppsError>(listMembersAppsArg, "api", "/team/linked_apps/list_members_linked_apps", "team", Dropbox.Api.Team.ListMembersAppsArg.Encoder, Dropbox.Api.Team.ListMembersAppsResult.Decoder, Dropbox.Api.Team.ListMembersAppsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMembersAppsArg, ListMembersAppsResult, ListMembersAppsError>(listMembersAppsArg, "api", "/team/linked_apps/list_members_linked_apps", "team", global::Dropbox.Api.Team.ListMembersAppsArg.Encoder, global::Dropbox.Api.Team.ListMembersAppsResult.Decoder, global::Dropbox.Api.Team.ListMembersAppsError.Decoder);
         }
 
         /// <summary>
@@ -1885,7 +1885,7 @@ namespace Dropbox.Api.Team.Routes
         [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(ListTeamAppsArg listTeamAppsArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListTeamAppsArg, ListTeamAppsResult, ListTeamAppsError>(listTeamAppsArg, "api", "/team/linked_apps/list_team_linked_apps", "team", Dropbox.Api.Team.ListTeamAppsArg.Encoder, Dropbox.Api.Team.ListTeamAppsResult.Decoder, Dropbox.Api.Team.ListTeamAppsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListTeamAppsArg, ListTeamAppsResult, ListTeamAppsError>(listTeamAppsArg, "api", "/team/linked_apps/list_team_linked_apps", "team", global::Dropbox.Api.Team.ListTeamAppsArg.Encoder, global::Dropbox.Api.Team.ListTeamAppsResult.Decoder, global::Dropbox.Api.Team.ListTeamAppsError.Decoder);
         }
 
         /// <summary>
@@ -1984,7 +1984,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="RevokeLinkedAppError"/>.</exception>
         public t.Task LinkedAppsRevokeLinkedAppAsync(RevokeLinkedApiAppArg revokeLinkedApiAppArg)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppArg, enc.Empty, RevokeLinkedAppError>(revokeLinkedApiAppArg, "api", "/team/linked_apps/revoke_linked_app", "team", Dropbox.Api.Team.RevokeLinkedApiAppArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.RevokeLinkedAppError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppArg, enc.Empty, RevokeLinkedAppError>(revokeLinkedApiAppArg, "api", "/team/linked_apps/revoke_linked_app", "team", global::Dropbox.Api.Team.RevokeLinkedApiAppArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.RevokeLinkedAppError.Decoder);
         }
 
         /// <summary>
@@ -2081,7 +2081,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="RevokeLinkedAppBatchError"/>.</exception>
         public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(RevokeLinkedApiAppBatchArg revokeLinkedApiAppBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppBatchArg, RevokeLinkedAppBatchResult, RevokeLinkedAppBatchError>(revokeLinkedApiAppBatchArg, "api", "/team/linked_apps/revoke_linked_app_batch", "team", Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.Encoder, Dropbox.Api.Team.RevokeLinkedAppBatchResult.Decoder, Dropbox.Api.Team.RevokeLinkedAppBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppBatchArg, RevokeLinkedAppBatchResult, RevokeLinkedAppBatchError>(revokeLinkedApiAppBatchArg, "api", "/team/linked_apps/revoke_linked_app_batch", "team", global::Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.Encoder, global::Dropbox.Api.Team.RevokeLinkedAppBatchResult.Decoder, global::Dropbox.Api.Team.RevokeLinkedAppBatchError.Decoder);
         }
 
         /// <summary>
@@ -2177,7 +2177,7 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<MembersAddLaunch> MembersAddAsync(MembersAddArg membersAddArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersAddArg, MembersAddLaunch, enc.Empty>(membersAddArg, "api", "/team/members/add", "team", Dropbox.Api.Team.MembersAddArg.Encoder, Dropbox.Api.Team.MembersAddLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<MembersAddArg, MembersAddLaunch, enc.Empty>(membersAddArg, "api", "/team/members/add", "team", global::Dropbox.Api.Team.MembersAddArg.Encoder, global::Dropbox.Api.Team.MembersAddLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -2274,10 +2274,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, MembersAddJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get", "team", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Team.MembersAddJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersAddJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersAddJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -2289,7 +2289,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersAddJobStatusGet(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersAddJobStatusGet(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MembersAddJobStatusGetAsync(pollArg);
 
@@ -2308,10 +2308,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.MembersAddJobStatusGetAsync(pollArg);
         }
@@ -2330,7 +2330,7 @@ namespace Dropbox.Api.Team.Routes
                                                             sys.AsyncCallback callback,
                                                             object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginMembersAddJobStatusGet(pollArg, callback, callbackState);
         }
@@ -2344,7 +2344,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public MembersAddJobStatus EndMembersAddJobStatusGet(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<MembersAddJobStatus>;
@@ -2371,7 +2371,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersGetInfoError"/>.</exception>
         public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(MembersGetInfoArgs membersGetInfoArgs)
         {
-            return this.Transport.SendRpcRequestAsync<MembersGetInfoArgs, col.List<MembersGetInfoItem>, MembersGetInfoError>(membersGetInfoArgs, "api", "/team/members/get_info", "team", Dropbox.Api.Team.MembersGetInfoArgs.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.MembersGetInfoItem.Decoder), Dropbox.Api.Team.MembersGetInfoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersGetInfoArgs, col.List<MembersGetInfoItem>, MembersGetInfoError>(membersGetInfoArgs, "api", "/team/members/get_info", "team", global::Dropbox.Api.Team.MembersGetInfoArgs.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.MembersGetInfoItem.Decoder), global::Dropbox.Api.Team.MembersGetInfoError.Decoder);
         }
 
         /// <summary>
@@ -2461,7 +2461,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersListError"/>.</exception>
         public t.Task<MembersListResult> MembersListAsync(MembersListArg membersListArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListResult, MembersListError>(membersListArg, "api", "/team/members/list", "team", Dropbox.Api.Team.MembersListArg.Encoder, Dropbox.Api.Team.MembersListResult.Decoder, Dropbox.Api.Team.MembersListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListResult, MembersListError>(membersListArg, "api", "/team/members/list", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder);
         }
 
         /// <summary>
@@ -2556,7 +2556,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersListContinueError"/>.</exception>
         public t.Task<MembersListResult> MembersListContinueAsync(MembersListContinueArg membersListContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListResult, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue", "team", Dropbox.Api.Team.MembersListContinueArg.Encoder, Dropbox.Api.Team.MembersListResult.Decoder, Dropbox.Api.Team.MembersListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListResult, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue", "team", global::Dropbox.Api.Team.MembersListContinueArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListContinueError.Decoder);
         }
 
         /// <summary>
@@ -2648,7 +2648,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersRecoverError"/>.</exception>
         public t.Task MembersRecoverAsync(MembersRecoverArg membersRecoverArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersRecoverArg, enc.Empty, MembersRecoverError>(membersRecoverArg, "api", "/team/members/recover", "team", Dropbox.Api.Team.MembersRecoverArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.MembersRecoverError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersRecoverArg, enc.Empty, MembersRecoverError>(membersRecoverArg, "api", "/team/members/recover", "team", global::Dropbox.Api.Team.MembersRecoverArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersRecoverError.Decoder);
         }
 
         /// <summary>
@@ -2744,9 +2744,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(MembersRemoveArg membersRemoveArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(MembersRemoveArg membersRemoveArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersRemoveArg, Dropbox.Api.Async.LaunchEmptyResult, MembersRemoveError>(membersRemoveArg, "api", "/team/members/remove", "team", Dropbox.Api.Team.MembersRemoveArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, Dropbox.Api.Team.MembersRemoveError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersRemoveArg, global::Dropbox.Api.Async.LaunchEmptyResult, MembersRemoveError>(membersRemoveArg, "api", "/team/members/remove", "team", global::Dropbox.Api.Team.MembersRemoveArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.MembersRemoveError.Decoder);
         }
 
         /// <summary>
@@ -2799,11 +2799,11 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(UserSelectorArg user,
-                                                                              bool wipeData = true,
-                                                                              UserSelectorArg transferDestId = null,
-                                                                              UserSelectorArg transferAdminId = null,
-                                                                              bool keepAccount = false)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(UserSelectorArg user,
+                                                                                      bool wipeData = true,
+                                                                                      UserSelectorArg transferDestId = null,
+                                                                                      UserSelectorArg transferAdminId = null,
+                                                                                      bool keepAccount = false)
         {
             var membersRemoveArg = new MembersRemoveArg(user,
                                                         wipeData,
@@ -2861,9 +2861,9 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
-        public Dropbox.Api.Async.LaunchEmptyResult EndMembersRemove(sys.IAsyncResult asyncResult)
+        public global::Dropbox.Api.Async.LaunchEmptyResult EndMembersRemove(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchEmptyResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -2883,10 +2883,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, Dropbox.Api.Async.PollEmptyResult, Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/remove/job_status/get", "team", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Async.PollEmptyResult.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/remove/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -2899,7 +2899,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersRemoveJobStatusGet(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersRemoveJobStatusGet(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MembersRemoveJobStatusGetAsync(pollArg);
 
@@ -2918,10 +2918,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(string asyncJobId)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.MembersRemoveJobStatusGetAsync(pollArg);
         }
@@ -2941,7 +2941,7 @@ namespace Dropbox.Api.Team.Routes
                                                                sys.AsyncCallback callback,
                                                                object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginMembersRemoveJobStatusGet(pollArg, callback, callbackState);
         }
@@ -2955,10 +2955,10 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public Dropbox.Api.Async.PollEmptyResult EndMembersRemoveJobStatusGet(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public global::Dropbox.Api.Async.PollEmptyResult EndMembersRemoveJobStatusGet(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.PollEmptyResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.PollEmptyResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -2981,7 +2981,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersSendWelcomeError"/>.</exception>
         public t.Task MembersSendWelcomeEmailAsync(UserSelectorArg userSelectorArg)
         {
-            return this.Transport.SendRpcRequestAsync<UserSelectorArg, enc.Empty, MembersSendWelcomeError>(userSelectorArg, "api", "/team/members/send_welcome_email", "team", Dropbox.Api.Team.UserSelectorArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.MembersSendWelcomeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UserSelectorArg, enc.Empty, MembersSendWelcomeError>(userSelectorArg, "api", "/team/members/send_welcome_email", "team", global::Dropbox.Api.Team.UserSelectorArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersSendWelcomeError.Decoder);
         }
 
         /// <summary>
@@ -3030,7 +3030,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersSetPermissionsError"/>.</exception>
         public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(MembersSetPermissionsArg membersSetPermissionsArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersSetPermissionsArg, MembersSetPermissionsResult, MembersSetPermissionsError>(membersSetPermissionsArg, "api", "/team/members/set_admin_permissions", "team", Dropbox.Api.Team.MembersSetPermissionsArg.Encoder, Dropbox.Api.Team.MembersSetPermissionsResult.Decoder, Dropbox.Api.Team.MembersSetPermissionsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSetPermissionsArg, MembersSetPermissionsResult, MembersSetPermissionsError>(membersSetPermissionsArg, "api", "/team/members/set_admin_permissions", "team", global::Dropbox.Api.Team.MembersSetPermissionsArg.Encoder, global::Dropbox.Api.Team.MembersSetPermissionsResult.Decoder, global::Dropbox.Api.Team.MembersSetPermissionsError.Decoder);
         }
 
         /// <summary>
@@ -3125,7 +3125,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersSetProfileError"/>.</exception>
         public t.Task<TeamMemberInfo> MembersSetProfileAsync(MembersSetProfileArg membersSetProfileArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfo, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile", "team", Dropbox.Api.Team.MembersSetProfileArg.Encoder, Dropbox.Api.Team.TeamMemberInfo.Decoder, Dropbox.Api.Team.MembersSetProfileError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfo, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder);
         }
 
         /// <summary>
@@ -3245,7 +3245,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersSuspendError"/>.</exception>
         public t.Task MembersSuspendAsync(MembersDeactivateArg membersDeactivateArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersDeactivateArg, enc.Empty, MembersSuspendError>(membersDeactivateArg, "api", "/team/members/suspend", "team", Dropbox.Api.Team.MembersDeactivateArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.MembersSuspendError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersDeactivateArg, enc.Empty, MembersSuspendError>(membersDeactivateArg, "api", "/team/members/suspend", "team", global::Dropbox.Api.Team.MembersDeactivateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersSuspendError.Decoder);
         }
 
         /// <summary>
@@ -3339,7 +3339,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersUnsuspendError"/>.</exception>
         public t.Task MembersUnsuspendAsync(MembersUnsuspendArg membersUnsuspendArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersUnsuspendArg, enc.Empty, MembersUnsuspendError>(membersUnsuspendArg, "api", "/team/members/unsuspend", "team", Dropbox.Api.Team.MembersUnsuspendArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.MembersUnsuspendError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersUnsuspendArg, enc.Empty, MembersUnsuspendError>(membersUnsuspendArg, "api", "/team/members/unsuspend", "team", global::Dropbox.Api.Team.MembersUnsuspendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersUnsuspendError.Decoder);
         }
 
         /// <summary>
@@ -3421,10 +3421,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
         public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(AddPropertyTemplateArg addPropertyTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<AddPropertyTemplateArg, AddPropertyTemplateResult, Dropbox.Api.Properties.ModifyPropertyTemplateError>(addPropertyTemplateArg, "api", "/team/properties/template/add", "team", Dropbox.Api.Team.AddPropertyTemplateArg.Encoder, Dropbox.Api.Team.AddPropertyTemplateResult.Decoder, Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddPropertyTemplateArg, AddPropertyTemplateResult, global::Dropbox.Api.Properties.ModifyPropertyTemplateError>(addPropertyTemplateArg, "api", "/team/properties/template/add", "team", global::Dropbox.Api.Team.AddPropertyTemplateArg.Encoder, global::Dropbox.Api.Team.AddPropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
         }
 
         /// <summary>
@@ -3457,10 +3457,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
         public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(string name,
                                                                             string description,
-                                                                            col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields)
+                                                                            col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> fields)
         {
             var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
                                                                     description,
@@ -3485,7 +3485,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginPropertiesTemplateAdd(string name,
                                                            string description,
-                                                           col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields,
+                                                           col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> fields,
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
         {
@@ -3505,7 +3505,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
         public AddPropertyTemplateResult EndPropertiesTemplateAdd(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<AddPropertyTemplateResult>;
@@ -3525,10 +3525,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Properties.GetPropertyTemplateArg, Dropbox.Api.Properties.GetPropertyTemplateResult, Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/team/properties/template/get", "team", Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Properties.GetPropertyTemplateArg, global::Dropbox.Api.Properties.GetPropertyTemplateResult, global::Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/team/properties/template/get", "team", global::Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, global::Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.PropertyTemplateError.Decoder);
         }
 
         /// <summary>
@@ -3540,7 +3540,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPropertiesTemplateGet(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginPropertiesTemplateGet(global::Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
 
@@ -3556,10 +3556,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
         {
-            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+            var getPropertyTemplateArg = new global::Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
 
             return this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
         }
@@ -3578,7 +3578,7 @@ namespace Dropbox.Api.Team.Routes
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
         {
-            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+            var getPropertyTemplateArg = new global::Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
 
             return this.BeginPropertiesTemplateGet(getPropertyTemplateArg, callback, callbackState);
         }
@@ -3592,10 +3592,10 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public global::Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3613,10 +3613,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, Dropbox.Api.Properties.ListPropertyTemplateIds, Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.Properties.ListPropertyTemplateIds, global::Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, global::Dropbox.Api.Properties.PropertyTemplateError.Decoder);
         }
 
         /// <summary>
@@ -3643,10 +3643,10 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public global::Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Properties.ListPropertyTemplateIds>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3664,10 +3664,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
         public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(UpdatePropertyTemplateArg updatePropertyTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<UpdatePropertyTemplateArg, UpdatePropertyTemplateResult, Dropbox.Api.Properties.ModifyPropertyTemplateError>(updatePropertyTemplateArg, "api", "/team/properties/template/update", "team", Dropbox.Api.Team.UpdatePropertyTemplateArg.Encoder, Dropbox.Api.Team.UpdatePropertyTemplateResult.Decoder, Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdatePropertyTemplateArg, UpdatePropertyTemplateResult, global::Dropbox.Api.Properties.ModifyPropertyTemplateError>(updatePropertyTemplateArg, "api", "/team/properties/template/update", "team", global::Dropbox.Api.Team.UpdatePropertyTemplateArg.Encoder, global::Dropbox.Api.Team.UpdatePropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
         }
 
         /// <summary>
@@ -3703,11 +3703,11 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
         public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
                                                                                   string name = null,
                                                                                   string description = null,
-                                                                                  col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
+                                                                                  col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
         {
             var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
                                                                           name,
@@ -3737,7 +3737,7 @@ namespace Dropbox.Api.Team.Routes
         public sys.IAsyncResult BeginPropertiesTemplateUpdate(string templateId,
                                                               string name = null,
                                                               string description = null,
-                                                              col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null,
+                                                              col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null,
                                                               sys.AsyncCallback callback = null,
                                                               object callbackState = null)
         {
@@ -3758,7 +3758,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
+        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
         public UpdatePropertyTemplateResult EndPropertiesTemplateUpdate(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<UpdatePropertyTemplateResult>;
@@ -3781,7 +3781,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetActivityReport> ReportsGetActivityAsync(DateRange dateRange)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetActivityReport, DateRangeError>(dateRange, "api", "/team/reports/get_activity", "team", Dropbox.Api.Team.DateRange.Encoder, Dropbox.Api.Team.GetActivityReport.Decoder, Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetActivityReport, DateRangeError>(dateRange, "api", "/team/reports/get_activity", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetActivityReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
         }
 
         /// <summary>
@@ -3872,7 +3872,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetDevicesReport> ReportsGetDevicesAsync(DateRange dateRange)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetDevicesReport, DateRangeError>(dateRange, "api", "/team/reports/get_devices", "team", Dropbox.Api.Team.DateRange.Encoder, Dropbox.Api.Team.GetDevicesReport.Decoder, Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetDevicesReport, DateRangeError>(dateRange, "api", "/team/reports/get_devices", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetDevicesReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
         }
 
         /// <summary>
@@ -3963,7 +3963,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetMembershipReport> ReportsGetMembershipAsync(DateRange dateRange)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetMembershipReport, DateRangeError>(dateRange, "api", "/team/reports/get_membership", "team", Dropbox.Api.Team.DateRange.Encoder, Dropbox.Api.Team.GetMembershipReport.Decoder, Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetMembershipReport, DateRangeError>(dateRange, "api", "/team/reports/get_membership", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetMembershipReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
         }
 
         /// <summary>
@@ -4054,7 +4054,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         public t.Task<GetStorageReport> ReportsGetStorageAsync(DateRange dateRange)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetStorageReport, DateRangeError>(dateRange, "api", "/team/reports/get_storage", "team", Dropbox.Api.Team.DateRange.Encoder, Dropbox.Api.Team.GetStorageReport.Decoder, Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetStorageReport, DateRangeError>(dateRange, "api", "/team/reports/get_storage", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetStorageReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
         }
 
         /// <summary>
@@ -4146,7 +4146,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderActivateError"/>.</exception>
         public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(TeamFolderIdArg teamFolderIdArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderMetadata, TeamFolderActivateError>(teamFolderIdArg, "api", "/team/team_folder/activate", "team", Dropbox.Api.Team.TeamFolderIdArg.Encoder, Dropbox.Api.Team.TeamFolderMetadata.Decoder, Dropbox.Api.Team.TeamFolderActivateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderMetadata, TeamFolderActivateError>(teamFolderIdArg, "api", "/team/team_folder/activate", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderActivateError.Decoder);
         }
 
         /// <summary>
@@ -4234,7 +4234,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderArchiveError"/>.</exception>
         public t.Task<TeamFolderArchiveLaunch> TeamFolderArchiveAsync(TeamFolderArchiveArg teamFolderArchiveArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderArchiveArg, TeamFolderArchiveLaunch, TeamFolderArchiveError>(teamFolderArchiveArg, "api", "/team/team_folder/archive", "team", Dropbox.Api.Team.TeamFolderArchiveArg.Encoder, Dropbox.Api.Team.TeamFolderArchiveLaunch.Decoder, Dropbox.Api.Team.TeamFolderArchiveError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderArchiveArg, TeamFolderArchiveLaunch, TeamFolderArchiveError>(teamFolderArchiveArg, "api", "/team/team_folder/archive", "team", global::Dropbox.Api.Team.TeamFolderArchiveArg.Encoder, global::Dropbox.Api.Team.TeamFolderArchiveLaunch.Decoder, global::Dropbox.Api.Team.TeamFolderArchiveError.Decoder);
         }
 
         /// <summary>
@@ -4327,10 +4327,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, TeamFolderArchiveJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/team/team_folder/archive/check", "team", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Team.TeamFolderArchiveJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, TeamFolderArchiveJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/team_folder/archive/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.TeamFolderArchiveJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -4342,7 +4342,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginTeamFolderArchiveCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginTeamFolderArchiveCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.TeamFolderArchiveCheckAsync(pollArg);
 
@@ -4359,10 +4359,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.TeamFolderArchiveCheckAsync(pollArg);
         }
@@ -4381,7 +4381,7 @@ namespace Dropbox.Api.Team.Routes
                                                             sys.AsyncCallback callback,
                                                             object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginTeamFolderArchiveCheck(pollArg, callback, callbackState);
         }
@@ -4395,7 +4395,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public TeamFolderArchiveJobStatus EndTeamFolderArchiveCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamFolderArchiveJobStatus>;
@@ -4419,7 +4419,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderCreateError"/>.</exception>
         public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(TeamFolderCreateArg teamFolderCreateArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderCreateArg, TeamFolderMetadata, TeamFolderCreateError>(teamFolderCreateArg, "api", "/team/team_folder/create", "team", Dropbox.Api.Team.TeamFolderCreateArg.Encoder, Dropbox.Api.Team.TeamFolderMetadata.Decoder, Dropbox.Api.Team.TeamFolderCreateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderCreateArg, TeamFolderMetadata, TeamFolderCreateError>(teamFolderCreateArg, "api", "/team/team_folder/create", "team", global::Dropbox.Api.Team.TeamFolderCreateArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderCreateError.Decoder);
         }
 
         /// <summary>
@@ -4503,7 +4503,7 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(TeamFolderIdListArg teamFolderIdListArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderIdListArg, col.List<TeamFolderGetInfoItem>, enc.Empty>(teamFolderIdListArg, "api", "/team/team_folder/get_info", "team", Dropbox.Api.Team.TeamFolderIdListArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Team.TeamFolderGetInfoItem.Decoder), enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdListArg, col.List<TeamFolderGetInfoItem>, enc.Empty>(teamFolderIdListArg, "api", "/team/team_folder/get_info", "team", global::Dropbox.Api.Team.TeamFolderIdListArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.TeamFolderGetInfoItem.Decoder), enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -4584,7 +4584,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderListError"/>.</exception>
         public t.Task<TeamFolderListResult> TeamFolderListAsync(TeamFolderListArg teamFolderListArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderListArg, TeamFolderListResult, TeamFolderListError>(teamFolderListArg, "api", "/team/team_folder/list", "team", Dropbox.Api.Team.TeamFolderListArg.Encoder, Dropbox.Api.Team.TeamFolderListResult.Decoder, Dropbox.Api.Team.TeamFolderListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderListArg, TeamFolderListResult, TeamFolderListError>(teamFolderListArg, "api", "/team/team_folder/list", "team", global::Dropbox.Api.Team.TeamFolderListArg.Encoder, global::Dropbox.Api.Team.TeamFolderListResult.Decoder, global::Dropbox.Api.Team.TeamFolderListError.Decoder);
         }
 
         /// <summary>
@@ -4670,7 +4670,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderPermanentlyDeleteError"/>.</exception>
         public t.Task TeamFolderPermanentlyDeleteAsync(TeamFolderIdArg teamFolderIdArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, enc.Empty, TeamFolderPermanentlyDeleteError>(teamFolderIdArg, "api", "/team/team_folder/permanently_delete", "team", Dropbox.Api.Team.TeamFolderIdArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, enc.Empty, TeamFolderPermanentlyDeleteError>(teamFolderIdArg, "api", "/team/team_folder/permanently_delete", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Decoder);
         }
 
         /// <summary>
@@ -4755,7 +4755,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderRenameError"/>.</exception>
         public t.Task<TeamFolderMetadata> TeamFolderRenameAsync(TeamFolderRenameArg teamFolderRenameArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderRenameArg, TeamFolderMetadata, TeamFolderRenameError>(teamFolderRenameArg, "api", "/team/team_folder/rename", "team", Dropbox.Api.Team.TeamFolderRenameArg.Encoder, Dropbox.Api.Team.TeamFolderMetadata.Decoder, Dropbox.Api.Team.TeamFolderRenameError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderRenameArg, TeamFolderMetadata, TeamFolderRenameError>(teamFolderRenameArg, "api", "/team/team_folder/rename", "team", global::Dropbox.Api.Team.TeamFolderRenameArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderRenameError.Decoder);
         }
 
         /// <summary>

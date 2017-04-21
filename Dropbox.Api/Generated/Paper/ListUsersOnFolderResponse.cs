@@ -47,8 +47,8 @@ namespace Dropbox.Api.Paper
         /// before making another call to <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync"
         /// />.</param>
-        public ListUsersOnFolderResponse(col.IEnumerable<Dropbox.Api.Sharing.InviteeInfo> invitees,
-                                         col.IEnumerable<Dropbox.Api.Sharing.UserInfo> users,
+        public ListUsersOnFolderResponse(col.IEnumerable<global::Dropbox.Api.Sharing.InviteeInfo> invitees,
+                                         col.IEnumerable<global::Dropbox.Api.Sharing.UserInfo> users,
                                          Cursor cursor,
                                          bool hasMore)
         {
@@ -91,12 +91,12 @@ namespace Dropbox.Api.Paper
         /// <summary>
         /// <para>List of email addresses that are invited on the Paper folder.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Sharing.InviteeInfo> Invitees { get; protected set; }
+        public col.IList<global::Dropbox.Api.Sharing.InviteeInfo> Invitees { get; protected set; }
 
         /// <summary>
         /// <para>List of users that are invited on the Paper folder.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Sharing.UserInfo> Users { get; protected set; }
+        public col.IList<global::Dropbox.Api.Sharing.UserInfo> Users { get; protected set; }
 
         /// <summary>
         /// <para>Pass the cursor into <see
@@ -131,9 +131,9 @@ namespace Dropbox.Api.Paper
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ListUsersOnFolderResponse value, enc.IJsonWriter writer)
             {
-                WriteListProperty("invitees", value.Invitees, writer, Dropbox.Api.Sharing.InviteeInfo.Encoder);
-                WriteListProperty("users", value.Users, writer, Dropbox.Api.Sharing.UserInfo.Encoder);
-                WriteProperty("cursor", value.Cursor, writer, Dropbox.Api.Paper.Cursor.Encoder);
+                WriteListProperty("invitees", value.Invitees, writer, global::Dropbox.Api.Sharing.InviteeInfo.Encoder);
+                WriteListProperty("users", value.Users, writer, global::Dropbox.Api.Sharing.UserInfo.Encoder);
+                WriteProperty("cursor", value.Cursor, writer, global::Dropbox.Api.Paper.Cursor.Encoder);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -169,13 +169,13 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "invitees":
-                        value.Invitees = ReadList<Dropbox.Api.Sharing.InviteeInfo>(reader, Dropbox.Api.Sharing.InviteeInfo.Decoder);
+                        value.Invitees = ReadList<global::Dropbox.Api.Sharing.InviteeInfo>(reader, global::Dropbox.Api.Sharing.InviteeInfo.Decoder);
                         break;
                     case "users":
-                        value.Users = ReadList<Dropbox.Api.Sharing.UserInfo>(reader, Dropbox.Api.Sharing.UserInfo.Decoder);
+                        value.Users = ReadList<global::Dropbox.Api.Sharing.UserInfo>(reader, global::Dropbox.Api.Sharing.UserInfo.Decoder);
                         break;
                     case "cursor":
-                        value.Cursor = Dropbox.Api.Paper.Cursor.Decoder.Decode(reader);
+                        value.Cursor = global::Dropbox.Api.Paper.Cursor.Decoder.Decode(reader);
                         break;
                     case "has_more":
                         value.HasMore = enc.BooleanDecoder.Instance.Decode(reader);

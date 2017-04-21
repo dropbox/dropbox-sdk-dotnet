@@ -114,15 +114,15 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("can_revoke", value.CanRevoke, writer, enc.BooleanEncoder.Instance);
                 if (value.ResolvedVisibility != null)
                 {
-                    WriteProperty("resolved_visibility", value.ResolvedVisibility, writer, Dropbox.Api.Sharing.ResolvedVisibility.Encoder);
+                    WriteProperty("resolved_visibility", value.ResolvedVisibility, writer, global::Dropbox.Api.Sharing.ResolvedVisibility.Encoder);
                 }
                 if (value.RequestedVisibility != null)
                 {
-                    WriteProperty("requested_visibility", value.RequestedVisibility, writer, Dropbox.Api.Sharing.RequestedVisibility.Encoder);
+                    WriteProperty("requested_visibility", value.RequestedVisibility, writer, global::Dropbox.Api.Sharing.RequestedVisibility.Encoder);
                 }
                 if (value.RevokeFailureReason != null)
                 {
-                    WriteProperty("revoke_failure_reason", value.RevokeFailureReason, writer, Dropbox.Api.Sharing.SharedLinkAccessFailureReason.Encoder);
+                    WriteProperty("revoke_failure_reason", value.RevokeFailureReason, writer, global::Dropbox.Api.Sharing.SharedLinkAccessFailureReason.Encoder);
                 }
             }
         }
@@ -160,13 +160,13 @@ namespace Dropbox.Api.Sharing
                         value.CanRevoke = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "resolved_visibility":
-                        value.ResolvedVisibility = Dropbox.Api.Sharing.ResolvedVisibility.Decoder.Decode(reader);
+                        value.ResolvedVisibility = global::Dropbox.Api.Sharing.ResolvedVisibility.Decoder.Decode(reader);
                         break;
                     case "requested_visibility":
-                        value.RequestedVisibility = Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
+                        value.RequestedVisibility = global::Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
                         break;
                     case "revoke_failure_reason":
-                        value.RevokeFailureReason = Dropbox.Api.Sharing.SharedLinkAccessFailureReason.Decoder.Decode(reader);
+                        value.RevokeFailureReason = global::Dropbox.Api.Sharing.SharedLinkAccessFailureReason.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

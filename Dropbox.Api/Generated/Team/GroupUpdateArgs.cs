@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group update args object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.IncludeMembersArg" />
+    /// <seealso cref="Global::Dropbox.Api.Team.IncludeMembersArg" />
     public class GroupUpdateArgs : IncludeMembersArg
     {
         #pragma warning disable 108
@@ -47,7 +47,7 @@ namespace Dropbox.Api.Team
                                bool returnMembers = true,
                                string newGroupName = null,
                                string newGroupExternalId = null,
-                               Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null)
+                               global::Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null)
             : base(returnMembers)
         {
             if (@group == null)
@@ -92,7 +92,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Set new group management type, if provided.</para>
         /// </summary>
-        public Dropbox.Api.TeamCommon.GroupManagementType NewGroupManagementType { get; protected set; }
+        public global::Dropbox.Api.TeamCommon.GroupManagementType NewGroupManagementType { get; protected set; }
 
         #region Encoder class
 
@@ -108,7 +108,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupUpdateArgs value, enc.IJsonWriter writer)
             {
-                WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
+                WriteProperty("group", value.Group, writer, global::Dropbox.Api.Team.GroupSelector.Encoder);
                 WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
                 if (value.NewGroupName != null)
                 {
@@ -120,7 +120,7 @@ namespace Dropbox.Api.Team
                 }
                 if (value.NewGroupManagementType != null)
                 {
-                    WriteProperty("new_group_management_type", value.NewGroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
+                    WriteProperty("new_group_management_type", value.NewGroupManagementType, writer, global::Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 }
             }
         }
@@ -155,7 +155,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "group":
-                        value.Group = Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
+                        value.Group = global::Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
                         break;
                     case "return_members":
                         value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);
@@ -167,7 +167,7 @@ namespace Dropbox.Api.Team
                         value.NewGroupExternalId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "new_group_management_type":
-                        value.NewGroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
+                        value.NewGroupManagementType = global::Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

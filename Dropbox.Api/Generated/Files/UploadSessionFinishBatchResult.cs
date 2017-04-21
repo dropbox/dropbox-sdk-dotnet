@@ -74,7 +74,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UploadSessionFinishBatchResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Files.UploadSessionFinishBatchResultEntry.Encoder);
+                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.UploadSessionFinishBatchResultEntry.Encoder);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList<UploadSessionFinishBatchResultEntry>(reader, Dropbox.Api.Files.UploadSessionFinishBatchResultEntry.Decoder);
+                        value.Entries = ReadList<UploadSessionFinishBatchResultEntry>(reader, global::Dropbox.Api.Files.UploadSessionFinishBatchResultEntry.Decoder);
                         break;
                     default:
                         reader.Skip();

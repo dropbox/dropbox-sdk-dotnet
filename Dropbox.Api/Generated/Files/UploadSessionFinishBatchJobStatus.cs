@@ -203,7 +203,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Complete value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.UploadSessionFinishBatchResult.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.UploadSessionFinishBatchResult.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -232,7 +232,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override Complete DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Complete(Dropbox.Api.Files.UploadSessionFinishBatchResult.Decoder.DecodeFields(reader));
+                    return new Complete(global::Dropbox.Api.Files.UploadSessionFinishBatchResult.Decoder.DecodeFields(reader));
                 }
             }
 

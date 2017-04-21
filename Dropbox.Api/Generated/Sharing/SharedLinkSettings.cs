@@ -92,7 +92,7 @@ namespace Dropbox.Api.Sharing
             {
                 if (value.RequestedVisibility != null)
                 {
-                    WriteProperty("requested_visibility", value.RequestedVisibility, writer, Dropbox.Api.Sharing.RequestedVisibility.Encoder);
+                    WriteProperty("requested_visibility", value.RequestedVisibility, writer, global::Dropbox.Api.Sharing.RequestedVisibility.Encoder);
                 }
                 if (value.LinkPassword != null)
                 {
@@ -135,7 +135,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "requested_visibility":
-                        value.RequestedVisibility = Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
+                        value.RequestedVisibility = global::Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
                         break;
                     case "link_password":
                         value.LinkPassword = enc.StringDecoder.Instance.Decode(reader);

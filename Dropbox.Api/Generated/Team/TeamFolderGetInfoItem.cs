@@ -270,7 +270,7 @@ namespace Dropbox.Api.Team
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public TeamFolderMetadata(Dropbox.Api.Team.TeamFolderMetadata value)
+            public TeamFolderMetadata(global::Dropbox.Api.Team.TeamFolderMetadata value)
             {
                 this.Value = value;
             }
@@ -285,7 +285,7 @@ namespace Dropbox.Api.Team
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Team.TeamFolderMetadata Value { get; private set; }
+            public global::Dropbox.Api.Team.TeamFolderMetadata Value { get; private set; }
 
             #region Encoder class
 
@@ -301,7 +301,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamFolderMetadata value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.TeamFolderMetadata.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.TeamFolderMetadata.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -331,7 +331,7 @@ namespace Dropbox.Api.Team
                 /// <returns>The decoded object.</returns>
                 public override TeamFolderMetadata DecodeFields(enc.IJsonReader reader)
                 {
-                    return new TeamFolderMetadata(Dropbox.Api.Team.TeamFolderMetadata.Decoder.DecodeFields(reader));
+                    return new TeamFolderMetadata(global::Dropbox.Api.Team.TeamFolderMetadata.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -767,7 +767,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InvalidPathRoot value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.PathRootError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.PathRootError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -796,7 +796,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override InvalidPathRoot DecodeFields(enc.IJsonReader reader)
                 {
-                    return new InvalidPathRoot(Dropbox.Api.Files.PathRootError.Decoder.DecodeFields(reader));
+                    return new InvalidPathRoot(global::Dropbox.Api.Files.PathRootError.Decoder.DecodeFields(reader));
                 }
             }
 

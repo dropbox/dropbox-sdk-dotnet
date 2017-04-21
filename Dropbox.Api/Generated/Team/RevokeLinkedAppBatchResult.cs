@@ -75,7 +75,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RevokeLinkedAppBatchResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("revoke_linked_app_status", value.RevokeLinkedAppStatus, writer, Dropbox.Api.Team.RevokeLinkedAppStatus.Encoder);
+                WriteListProperty("revoke_linked_app_status", value.RevokeLinkedAppStatus, writer, global::Dropbox.Api.Team.RevokeLinkedAppStatus.Encoder);
             }
         }
 
@@ -110,7 +110,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "revoke_linked_app_status":
-                        value.RevokeLinkedAppStatus = ReadList<RevokeLinkedAppStatus>(reader, Dropbox.Api.Team.RevokeLinkedAppStatus.Decoder);
+                        value.RevokeLinkedAppStatus = ReadList<RevokeLinkedAppStatus>(reader, global::Dropbox.Api.Team.RevokeLinkedAppStatus.Decoder);
                         break;
                     default:
                         reader.Skip();

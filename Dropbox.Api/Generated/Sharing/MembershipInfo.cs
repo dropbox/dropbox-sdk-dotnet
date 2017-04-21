@@ -103,10 +103,10 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembershipInfo value, enc.IJsonWriter writer)
             {
-                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 if (value.Permissions.Count > 0)
                 {
-                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
+                    WriteListProperty("permissions", value.Permissions, writer, global::Dropbox.Api.Sharing.MemberPermission.Encoder);
                 }
                 if (value.Initials != null)
                 {
@@ -146,10 +146,10 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "access_type":
-                        value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessType = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "permissions":
-                        value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
+                        value.Permissions = ReadList<MemberPermission>(reader, global::Dropbox.Api.Sharing.MemberPermission.Decoder);
                         break;
                     case "initials":
                         value.Initials = enc.StringDecoder.Instance.Decode(reader);

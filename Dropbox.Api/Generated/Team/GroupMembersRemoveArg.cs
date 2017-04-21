@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group members remove arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.IncludeMembersArg" />
+    /// <seealso cref="Global::Dropbox.Api.Team.IncludeMembersArg" />
     public class GroupMembersRemoveArg : IncludeMembersArg
     {
         #pragma warning disable 108
@@ -93,8 +93,8 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupMembersRemoveArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
-                WriteListProperty("users", value.Users, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("group", value.Group, writer, global::Dropbox.Api.Team.GroupSelector.Encoder);
+                WriteListProperty("users", value.Users, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -130,10 +130,10 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "group":
-                        value.Group = Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
+                        value.Group = global::Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
                         break;
                     case "users":
-                        value.Users = ReadList<UserSelectorArg>(reader, Dropbox.Api.Team.UserSelectorArg.Decoder);
+                        value.Users = ReadList<UserSelectorArg>(reader, global::Dropbox.Api.Team.UserSelectorArg.Decoder);
                         break;
                     case "return_members":
                         value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);

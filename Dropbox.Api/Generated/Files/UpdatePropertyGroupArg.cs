@@ -93,7 +93,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(UpdatePropertyGroupArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteListProperty("update_property_groups", value.UpdatePropertyGroups, writer, Dropbox.Api.Files.PropertyGroupUpdate.Encoder);
+                WriteListProperty("update_property_groups", value.UpdatePropertyGroups, writer, global::Dropbox.Api.Files.PropertyGroupUpdate.Encoder);
             }
         }
 
@@ -131,7 +131,7 @@ namespace Dropbox.Api.Files
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "update_property_groups":
-                        value.UpdatePropertyGroups = ReadList<PropertyGroupUpdate>(reader, Dropbox.Api.Files.PropertyGroupUpdate.Decoder);
+                        value.UpdatePropertyGroups = ReadList<PropertyGroupUpdate>(reader, global::Dropbox.Api.Files.PropertyGroupUpdate.Decoder);
                         break;
                     default:
                         reader.Skip();

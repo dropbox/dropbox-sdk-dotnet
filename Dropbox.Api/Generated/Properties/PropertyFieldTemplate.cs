@@ -107,7 +107,7 @@ namespace Dropbox.Api.Properties
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
-                WriteProperty("type", value.Type, writer, Dropbox.Api.Properties.PropertyType.Encoder);
+                WriteProperty("type", value.Type, writer, global::Dropbox.Api.Properties.PropertyType.Encoder);
             }
         }
 
@@ -148,7 +148,7 @@ namespace Dropbox.Api.Properties
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "type":
-                        value.Type = Dropbox.Api.Properties.PropertyType.Decoder.Decode(reader);
+                        value.Type = global::Dropbox.Api.Properties.PropertyType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

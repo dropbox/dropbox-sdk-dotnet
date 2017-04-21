@@ -201,7 +201,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Success value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.FileMetadata.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.FileMetadata.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -230,7 +230,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override Success DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Success(Dropbox.Api.Files.FileMetadata.Decoder.DecodeFields(reader));
+                    return new Success(global::Dropbox.Api.Files.FileMetadata.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -288,7 +288,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Failure value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.UploadSessionFinishError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.UploadSessionFinishError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -321,7 +321,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "failure":
-                            value.Value = Dropbox.Api.Files.UploadSessionFinishError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.UploadSessionFinishError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

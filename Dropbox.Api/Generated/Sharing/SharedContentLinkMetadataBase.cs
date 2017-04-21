@@ -130,9 +130,9 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentLinkMetadataBase value, enc.IJsonWriter writer)
             {
-                WriteListProperty("audience_options", value.AudienceOptions, writer, Dropbox.Api.Sharing.LinkAudience.Encoder);
-                WriteProperty("current_audience", value.CurrentAudience, writer, Dropbox.Api.Sharing.LinkAudience.Encoder);
-                WriteListProperty("link_permissions", value.LinkPermissions, writer, Dropbox.Api.Sharing.LinkPermission.Encoder);
+                WriteListProperty("audience_options", value.AudienceOptions, writer, global::Dropbox.Api.Sharing.LinkAudience.Encoder);
+                WriteProperty("current_audience", value.CurrentAudience, writer, global::Dropbox.Api.Sharing.LinkAudience.Encoder);
+                WriteListProperty("link_permissions", value.LinkPermissions, writer, global::Dropbox.Api.Sharing.LinkPermission.Encoder);
                 WriteProperty("password_protected", value.PasswordProtected, writer, enc.BooleanEncoder.Instance);
                 if (value.Expiry != null)
                 {
@@ -172,13 +172,13 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "audience_options":
-                        value.AudienceOptions = ReadList<LinkAudience>(reader, Dropbox.Api.Sharing.LinkAudience.Decoder);
+                        value.AudienceOptions = ReadList<LinkAudience>(reader, global::Dropbox.Api.Sharing.LinkAudience.Decoder);
                         break;
                     case "current_audience":
-                        value.CurrentAudience = Dropbox.Api.Sharing.LinkAudience.Decoder.Decode(reader);
+                        value.CurrentAudience = global::Dropbox.Api.Sharing.LinkAudience.Decoder.Decode(reader);
                         break;
                     case "link_permissions":
-                        value.LinkPermissions = ReadList<LinkPermission>(reader, Dropbox.Api.Sharing.LinkPermission.Decoder);
+                        value.LinkPermissions = ReadList<LinkPermission>(reader, global::Dropbox.Api.Sharing.LinkPermission.Decoder);
                         break;
                     case "password_protected":
                         value.PasswordProtected = enc.BooleanDecoder.Instance.Decode(reader);

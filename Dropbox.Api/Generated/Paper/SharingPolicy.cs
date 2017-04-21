@@ -79,11 +79,11 @@ namespace Dropbox.Api.Paper
             {
                 if (value.PublicSharingPolicy != null)
                 {
-                    WriteProperty("public_sharing_policy", value.PublicSharingPolicy, writer, Dropbox.Api.Paper.SharingPublicPolicyType.Encoder);
+                    WriteProperty("public_sharing_policy", value.PublicSharingPolicy, writer, global::Dropbox.Api.Paper.SharingPublicPolicyType.Encoder);
                 }
                 if (value.TeamSharingPolicy != null)
                 {
-                    WriteProperty("team_sharing_policy", value.TeamSharingPolicy, writer, Dropbox.Api.Paper.SharingTeamPolicyType.Encoder);
+                    WriteProperty("team_sharing_policy", value.TeamSharingPolicy, writer, global::Dropbox.Api.Paper.SharingTeamPolicyType.Encoder);
                 }
             }
         }
@@ -118,10 +118,10 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "public_sharing_policy":
-                        value.PublicSharingPolicy = Dropbox.Api.Paper.SharingPublicPolicyType.Decoder.Decode(reader);
+                        value.PublicSharingPolicy = global::Dropbox.Api.Paper.SharingPublicPolicyType.Decoder.Decode(reader);
                         break;
                     case "team_sharing_policy":
-                        value.TeamSharingPolicy = Dropbox.Api.Paper.SharingTeamPolicyType.Decoder.Decode(reader);
+                        value.TeamSharingPolicy = global::Dropbox.Api.Paper.SharingTeamPolicyType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

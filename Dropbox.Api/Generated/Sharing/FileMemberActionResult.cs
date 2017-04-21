@@ -88,8 +88,8 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileMemberActionResult value, enc.IJsonWriter writer)
             {
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("result", value.Result, writer, Dropbox.Api.Sharing.FileMemberActionIndividualResult.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("result", value.Result, writer, global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Encoder);
             }
         }
 
@@ -124,10 +124,10 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     case "result":
-                        value.Result = Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder.Decode(reader);
+                        value.Result = global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -41,7 +41,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="AddFileMemberError"/>.</exception>
         public t.Task<col.List<FileMemberActionResult>> AddFileMemberAsync(AddFileMemberArgs addFileMemberArgs)
         {
-            return this.Transport.SendRpcRequestAsync<AddFileMemberArgs, col.List<FileMemberActionResult>, AddFileMemberError>(addFileMemberArgs, "api", "/sharing/add_file_member", "user", Dropbox.Api.Sharing.AddFileMemberArgs.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Sharing.FileMemberActionResult.Decoder), Dropbox.Api.Sharing.AddFileMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddFileMemberArgs, col.List<FileMemberActionResult>, AddFileMemberError>(addFileMemberArgs, "api", "/sharing/add_file_member", "user", global::Dropbox.Api.Sharing.AddFileMemberArgs.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.FileMemberActionResult.Decoder), global::Dropbox.Api.Sharing.AddFileMemberError.Decoder);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="AddFolderMemberError"/>.</exception>
         public t.Task AddFolderMemberAsync(AddFolderMemberArg addFolderMemberArg)
         {
-            return this.Transport.SendRpcRequestAsync<AddFolderMemberArg, enc.Empty, AddFolderMemberError>(addFolderMemberArg, "api", "/sharing/add_folder_member", "user", Dropbox.Api.Sharing.AddFolderMemberArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Sharing.AddFolderMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddFolderMemberArg, enc.Empty, AddFolderMemberError>(addFolderMemberArg, "api", "/sharing/add_folder_member", "user", global::Dropbox.Api.Sharing.AddFolderMemberArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.AddFolderMemberError.Decoder);
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace Dropbox.Api.Sharing.Routes
         [sys.Obsolete("This function is deprecated, please use UpdateFileMemberAsync instead.")]
         public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(ChangeFileMemberAccessArgs changeFileMemberAccessArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ChangeFileMemberAccessArgs, FileMemberActionResult, FileMemberActionError>(changeFileMemberAccessArgs, "api", "/sharing/change_file_member_access", "user", Dropbox.Api.Sharing.ChangeFileMemberAccessArgs.Encoder, Dropbox.Api.Sharing.FileMemberActionResult.Decoder, Dropbox.Api.Sharing.FileMemberActionError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ChangeFileMemberAccessArgs, FileMemberActionResult, FileMemberActionError>(changeFileMemberAccessArgs, "api", "/sharing/change_file_member_access", "user", global::Dropbox.Api.Sharing.ChangeFileMemberAccessArgs.Encoder, global::Dropbox.Api.Sharing.FileMemberActionResult.Decoder, global::Dropbox.Api.Sharing.FileMemberActionError.Decoder);
         }
 
         /// <summary>
@@ -384,10 +384,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<JobStatus> CheckJobStatusAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<JobStatus> CheckJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, JobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_job_status", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Sharing.JobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, JobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.JobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -399,7 +399,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCheckJobStatus(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginCheckJobStatus(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CheckJobStatusAsync(pollArg);
 
@@ -416,10 +416,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<JobStatus> CheckJobStatusAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.CheckJobStatusAsync(pollArg);
         }
@@ -438,7 +438,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                     sys.AsyncCallback callback,
                                                     object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginCheckJobStatus(pollArg, callback, callbackState);
         }
@@ -452,7 +452,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public JobStatus EndCheckJobStatus(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<JobStatus>;
@@ -473,10 +473,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, RemoveMemberJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_remove_member_job_status", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Sharing.RemoveMemberJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RemoveMemberJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_remove_member_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.RemoveMemberJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -489,7 +489,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCheckRemoveMemberJobStatus(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginCheckRemoveMemberJobStatus(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CheckRemoveMemberJobStatusAsync(pollArg);
 
@@ -506,10 +506,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.CheckRemoveMemberJobStatusAsync(pollArg);
         }
@@ -529,7 +529,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                                 sys.AsyncCallback callback,
                                                                 object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginCheckRemoveMemberJobStatus(pollArg, callback, callbackState);
         }
@@ -543,7 +543,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public RemoveMemberJobStatus EndCheckRemoveMemberJobStatus(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RemoveMemberJobStatus>;
@@ -564,10 +564,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, ShareFolderJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_share_job_status", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Sharing.ShareFolderJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, ShareFolderJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_share_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -579,7 +579,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCheckShareJobStatus(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginCheckShareJobStatus(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CheckShareJobStatusAsync(pollArg);
 
@@ -596,10 +596,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.CheckShareJobStatusAsync(pollArg);
         }
@@ -618,7 +618,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                          sys.AsyncCallback callback,
                                                          object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginCheckShareJobStatus(pollArg, callback, callbackState);
         }
@@ -632,7 +632,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public ShareFolderJobStatus EndCheckShareJobStatus(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ShareFolderJobStatus>;
@@ -668,7 +668,7 @@ namespace Dropbox.Api.Sharing.Routes
         [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
         {
-            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", "user", Dropbox.Api.Sharing.CreateSharedLinkArg.Encoder, Dropbox.Api.Sharing.PathLinkMetadata.Decoder, Dropbox.Api.Sharing.CreateSharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", "user", global::Dropbox.Api.Sharing.CreateSharedLinkArg.Encoder, global::Dropbox.Api.Sharing.PathLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkError.Decoder);
         }
 
         /// <summary>
@@ -790,7 +790,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="CreateSharedLinkWithSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> CreateSharedLinkWithSettingsAsync(CreateSharedLinkWithSettingsArg createSharedLinkWithSettingsArg)
         {
-            return this.Transport.SendRpcRequestAsync<CreateSharedLinkWithSettingsArg, SharedLinkMetadata, CreateSharedLinkWithSettingsError>(createSharedLinkWithSettingsArg, "api", "/sharing/create_shared_link_with_settings", "user", Dropbox.Api.Sharing.CreateSharedLinkWithSettingsArg.Encoder, Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateSharedLinkWithSettingsArg, SharedLinkMetadata, CreateSharedLinkWithSettingsError>(createSharedLinkWithSettingsArg, "api", "/sharing/create_shared_link_with_settings", "user", global::Dropbox.Api.Sharing.CreateSharedLinkWithSettingsArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.Decoder);
         }
 
         /// <summary>
@@ -888,7 +888,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="GetFileMetadataError"/>.</exception>
         public t.Task<SharedFileMetadata> GetFileMetadataAsync(GetFileMetadataArg getFileMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetFileMetadataArg, SharedFileMetadata, GetFileMetadataError>(getFileMetadataArg, "api", "/sharing/get_file_metadata", "user", Dropbox.Api.Sharing.GetFileMetadataArg.Encoder, Dropbox.Api.Sharing.SharedFileMetadata.Decoder, Dropbox.Api.Sharing.GetFileMetadataError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetFileMetadataArg, SharedFileMetadata, GetFileMetadataError>(getFileMetadataArg, "api", "/sharing/get_file_metadata", "user", global::Dropbox.Api.Sharing.GetFileMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMetadata.Decoder, global::Dropbox.Api.Sharing.GetFileMetadataError.Decoder);
         }
 
         /// <summary>
@@ -979,7 +979,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharingUserError"/>.</exception>
         public t.Task<col.List<GetFileMetadataBatchResult>> GetFileMetadataBatchAsync(GetFileMetadataBatchArg getFileMetadataBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetFileMetadataBatchArg, col.List<GetFileMetadataBatchResult>, SharingUserError>(getFileMetadataBatchArg, "api", "/sharing/get_file_metadata/batch", "user", Dropbox.Api.Sharing.GetFileMetadataBatchArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Sharing.GetFileMetadataBatchResult.Decoder), Dropbox.Api.Sharing.SharingUserError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetFileMetadataBatchArg, col.List<GetFileMetadataBatchResult>, SharingUserError>(getFileMetadataBatchArg, "api", "/sharing/get_file_metadata/batch", "user", global::Dropbox.Api.Sharing.GetFileMetadataBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.GetFileMetadataBatchResult.Decoder), global::Dropbox.Api.Sharing.SharingUserError.Decoder);
         }
 
         /// <summary>
@@ -1071,7 +1071,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(GetMetadataArgs getMetadataArgs)
         {
-            return this.Transport.SendRpcRequestAsync<GetMetadataArgs, SharedFolderMetadata, SharedFolderAccessError>(getMetadataArgs, "api", "/sharing/get_folder_metadata", "user", Dropbox.Api.Sharing.GetMetadataArgs.Encoder, Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, Dropbox.Api.Sharing.SharedFolderAccessError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetMetadataArgs, SharedFolderMetadata, SharedFolderAccessError>(getMetadataArgs, "api", "/sharing/get_folder_metadata", "user", global::Dropbox.Api.Sharing.GetMetadataArgs.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.SharedFolderAccessError.Decoder);
         }
 
         /// <summary>
@@ -1169,7 +1169,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="GetSharedLinkFileError"/>.</exception>
         public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
         {
-            return this.Transport.SendDownloadRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, GetSharedLinkFileError>(getSharedLinkMetadataArg, "content", "/sharing/get_shared_link_file", "user", Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, Dropbox.Api.Sharing.GetSharedLinkFileError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, GetSharedLinkFileError>(getSharedLinkMetadataArg, "content", "/sharing/get_shared_link_file", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.GetSharedLinkFileError.Decoder);
         }
 
         /// <summary>
@@ -1272,7 +1272,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedLinkError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "user", Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, Dropbox.Api.Sharing.SharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkError.Decoder);
         }
 
         /// <summary>
@@ -1382,7 +1382,7 @@ namespace Dropbox.Api.Sharing.Routes
         [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", "user", Dropbox.Api.Sharing.GetSharedLinksArg.Encoder, Dropbox.Api.Sharing.GetSharedLinksResult.Decoder, Dropbox.Api.Sharing.GetSharedLinksError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", "user", global::Dropbox.Api.Sharing.GetSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.GetSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.GetSharedLinksError.Decoder);
         }
 
         /// <summary>
@@ -1482,7 +1482,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListFileMembersError"/>.</exception>
         public t.Task<SharedFileMembers> ListFileMembersAsync(ListFileMembersArg listFileMembersArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileMembersArg, SharedFileMembers, ListFileMembersError>(listFileMembersArg, "api", "/sharing/list_file_members", "user", Dropbox.Api.Sharing.ListFileMembersArg.Encoder, Dropbox.Api.Sharing.SharedFileMembers.Decoder, Dropbox.Api.Sharing.ListFileMembersError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileMembersArg, SharedFileMembers, ListFileMembersError>(listFileMembersArg, "api", "/sharing/list_file_members", "user", global::Dropbox.Api.Sharing.ListFileMembersArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMembers.Decoder, global::Dropbox.Api.Sharing.ListFileMembersError.Decoder);
         }
 
         /// <summary>
@@ -1596,7 +1596,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharingUserError"/>.</exception>
         public t.Task<col.List<ListFileMembersBatchResult>> ListFileMembersBatchAsync(ListFileMembersBatchArg listFileMembersBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileMembersBatchArg, col.List<ListFileMembersBatchResult>, SharingUserError>(listFileMembersBatchArg, "api", "/sharing/list_file_members/batch", "user", Dropbox.Api.Sharing.ListFileMembersBatchArg.Encoder, enc.Decoder.CreateListDecoder(Dropbox.Api.Sharing.ListFileMembersBatchResult.Decoder), Dropbox.Api.Sharing.SharingUserError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileMembersBatchArg, col.List<ListFileMembersBatchResult>, SharingUserError>(listFileMembersBatchArg, "api", "/sharing/list_file_members/batch", "user", global::Dropbox.Api.Sharing.ListFileMembersBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.ListFileMembersBatchResult.Decoder), global::Dropbox.Api.Sharing.SharingUserError.Decoder);
         }
 
         /// <summary>
@@ -1696,7 +1696,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListFileMembersContinueError"/>.</exception>
         public t.Task<SharedFileMembers> ListFileMembersContinueAsync(ListFileMembersContinueArg listFileMembersContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileMembersContinueArg, SharedFileMembers, ListFileMembersContinueError>(listFileMembersContinueArg, "api", "/sharing/list_file_members/continue", "user", Dropbox.Api.Sharing.ListFileMembersContinueArg.Encoder, Dropbox.Api.Sharing.SharedFileMembers.Decoder, Dropbox.Api.Sharing.ListFileMembersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileMembersContinueArg, SharedFileMembers, ListFileMembersContinueError>(listFileMembersContinueArg, "api", "/sharing/list_file_members/continue", "user", global::Dropbox.Api.Sharing.ListFileMembersContinueArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMembers.Decoder, global::Dropbox.Api.Sharing.ListFileMembersContinueError.Decoder);
         }
 
         /// <summary>
@@ -1795,7 +1795,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(ListFolderMembersArgs listFolderMembersArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderMembersArgs, SharedFolderMembers, SharedFolderAccessError>(listFolderMembersArgs, "api", "/sharing/list_folder_members", "user", Dropbox.Api.Sharing.ListFolderMembersArgs.Encoder, Dropbox.Api.Sharing.SharedFolderMembers.Decoder, Dropbox.Api.Sharing.SharedFolderAccessError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderMembersArgs, SharedFolderMembers, SharedFolderAccessError>(listFolderMembersArgs, "api", "/sharing/list_folder_members", "user", global::Dropbox.Api.Sharing.ListFolderMembersArgs.Encoder, global::Dropbox.Api.Sharing.SharedFolderMembers.Decoder, global::Dropbox.Api.Sharing.SharedFolderAccessError.Decoder);
         }
 
         /// <summary>
@@ -1904,7 +1904,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListFolderMembersContinueError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(ListFolderMembersContinueArg listFolderMembersContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderMembersContinueArg, SharedFolderMembers, ListFolderMembersContinueError>(listFolderMembersContinueArg, "api", "/sharing/list_folder_members/continue", "user", Dropbox.Api.Sharing.ListFolderMembersContinueArg.Encoder, Dropbox.Api.Sharing.SharedFolderMembers.Decoder, Dropbox.Api.Sharing.ListFolderMembersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderMembersContinueArg, SharedFolderMembers, ListFolderMembersContinueError>(listFolderMembersContinueArg, "api", "/sharing/list_folder_members/continue", "user", global::Dropbox.Api.Sharing.ListFolderMembersContinueArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMembers.Decoder, global::Dropbox.Api.Sharing.ListFolderMembersContinueError.Decoder);
         }
 
         /// <summary>
@@ -1998,7 +1998,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<ListFoldersResult> ListFoldersAsync(ListFoldersArgs listFoldersArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_folders", "user", Dropbox.Api.Sharing.ListFoldersArgs.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_folders", "user", global::Dropbox.Api.Sharing.ListFoldersArgs.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -2096,7 +2096,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListFoldersContinueError"/>.</exception>
         public t.Task<ListFoldersResult> ListFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_folders/continue", "user", Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_folders/continue", "user", global::Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, global::Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
         }
 
         /// <summary>
@@ -2188,7 +2188,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<ListFoldersResult> ListMountableFoldersAsync(ListFoldersArgs listFoldersArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_mountable_folders", "user", Dropbox.Api.Sharing.ListFoldersArgs.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_mountable_folders", "user", global::Dropbox.Api.Sharing.ListFoldersArgs.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -2289,7 +2289,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListFoldersContinueError"/>.</exception>
         public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_mountable_folders/continue", "user", Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, Dropbox.Api.Sharing.ListFoldersResult.Decoder, Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_mountable_folders/continue", "user", global::Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, global::Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
         }
 
         /// <summary>
@@ -2388,7 +2388,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharingUserError"/>.</exception>
         public t.Task<ListFilesResult> ListReceivedFilesAsync(ListFilesArg listFilesArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFilesArg, ListFilesResult, SharingUserError>(listFilesArg, "api", "/sharing/list_received_files", "user", Dropbox.Api.Sharing.ListFilesArg.Encoder, Dropbox.Api.Sharing.ListFilesResult.Decoder, Dropbox.Api.Sharing.SharingUserError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFilesArg, ListFilesResult, SharingUserError>(listFilesArg, "api", "/sharing/list_received_files", "user", global::Dropbox.Api.Sharing.ListFilesArg.Encoder, global::Dropbox.Api.Sharing.ListFilesResult.Decoder, global::Dropbox.Api.Sharing.SharingUserError.Decoder);
         }
 
         /// <summary>
@@ -2485,7 +2485,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListFilesContinueError"/>.</exception>
         public t.Task<ListFilesResult> ListReceivedFilesContinueAsync(ListFilesContinueArg listFilesContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFilesContinueArg, ListFilesResult, ListFilesContinueError>(listFilesContinueArg, "api", "/sharing/list_received_files/continue", "user", Dropbox.Api.Sharing.ListFilesContinueArg.Encoder, Dropbox.Api.Sharing.ListFilesResult.Decoder, Dropbox.Api.Sharing.ListFilesContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFilesContinueArg, ListFilesResult, ListFilesContinueError>(listFilesContinueArg, "api", "/sharing/list_received_files/continue", "user", global::Dropbox.Api.Sharing.ListFilesContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFilesResult.Decoder, global::Dropbox.Api.Sharing.ListFilesContinueError.Decoder);
         }
 
         /// <summary>
@@ -2580,7 +2580,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListSharedLinksError"/>.</exception>
         public t.Task<ListSharedLinksResult> ListSharedLinksAsync(ListSharedLinksArg listSharedLinksArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListSharedLinksArg, ListSharedLinksResult, ListSharedLinksError>(listSharedLinksArg, "api", "/sharing/list_shared_links", "user", Dropbox.Api.Sharing.ListSharedLinksArg.Encoder, Dropbox.Api.Sharing.ListSharedLinksResult.Decoder, Dropbox.Api.Sharing.ListSharedLinksError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListSharedLinksArg, ListSharedLinksResult, ListSharedLinksError>(listSharedLinksArg, "api", "/sharing/list_shared_links", "user", global::Dropbox.Api.Sharing.ListSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.ListSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.ListSharedLinksError.Decoder);
         }
 
         /// <summary>
@@ -2702,7 +2702,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(ModifySharedLinkSettingsArgs modifySharedLinkSettingsArgs)
         {
-            return this.Transport.SendRpcRequestAsync<ModifySharedLinkSettingsArgs, SharedLinkMetadata, ModifySharedLinkSettingsError>(modifySharedLinkSettingsArgs, "api", "/sharing/modify_shared_link_settings", "user", Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Encoder, Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ModifySharedLinkSettingsArgs, SharedLinkMetadata, ModifySharedLinkSettingsError>(modifySharedLinkSettingsArgs, "api", "/sharing/modify_shared_link_settings", "user", global::Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Decoder);
         }
 
         /// <summary>
@@ -2811,7 +2811,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="MountFolderError"/>.</exception>
         public t.Task<SharedFolderMetadata> MountFolderAsync(MountFolderArg mountFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<MountFolderArg, SharedFolderMetadata, MountFolderError>(mountFolderArg, "api", "/sharing/mount_folder", "user", Dropbox.Api.Sharing.MountFolderArg.Encoder, Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, Dropbox.Api.Sharing.MountFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MountFolderArg, SharedFolderMetadata, MountFolderError>(mountFolderArg, "api", "/sharing/mount_folder", "user", global::Dropbox.Api.Sharing.MountFolderArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.MountFolderError.Decoder);
         }
 
         /// <summary>
@@ -2901,7 +2901,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="RelinquishFileMembershipError"/>.</exception>
         public t.Task RelinquishFileMembershipAsync(RelinquishFileMembershipArg relinquishFileMembershipArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelinquishFileMembershipArg, enc.Empty, RelinquishFileMembershipError>(relinquishFileMembershipArg, "api", "/sharing/relinquish_file_membership", "user", Dropbox.Api.Sharing.RelinquishFileMembershipArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Sharing.RelinquishFileMembershipError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelinquishFileMembershipArg, enc.Empty, RelinquishFileMembershipError>(relinquishFileMembershipArg, "api", "/sharing/relinquish_file_membership", "user", global::Dropbox.Api.Sharing.RelinquishFileMembershipArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.RelinquishFileMembershipError.Decoder);
         }
 
         /// <summary>
@@ -2988,9 +2988,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(RelinquishFolderMembershipArg relinquishFolderMembershipArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(RelinquishFolderMembershipArg relinquishFolderMembershipArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelinquishFolderMembershipArg, Dropbox.Api.Async.LaunchEmptyResult, RelinquishFolderMembershipError>(relinquishFolderMembershipArg, "api", "/sharing/relinquish_folder_membership", "user", Dropbox.Api.Sharing.RelinquishFolderMembershipArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, Dropbox.Api.Sharing.RelinquishFolderMembershipError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelinquishFolderMembershipArg, global::Dropbox.Api.Async.LaunchEmptyResult, RelinquishFolderMembershipError>(relinquishFolderMembershipArg, "api", "/sharing/relinquish_folder_membership", "user", global::Dropbox.Api.Sharing.RelinquishFolderMembershipArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Decoder);
         }
 
         /// <summary>
@@ -3025,8 +3025,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(string sharedFolderId,
-                                                                                           bool leaveACopy = false)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(string sharedFolderId,
+                                                                                                   bool leaveACopy = false)
         {
             var relinquishFolderMembershipArg = new RelinquishFolderMembershipArg(sharedFolderId,
                                                                                   leaveACopy);
@@ -3066,9 +3066,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
-        public Dropbox.Api.Async.LaunchEmptyResult EndRelinquishFolderMembership(sys.IAsyncResult asyncResult)
+        public global::Dropbox.Api.Async.LaunchEmptyResult EndRelinquishFolderMembership(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchEmptyResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3089,7 +3089,7 @@ namespace Dropbox.Api.Sharing.Routes
         [sys.Obsolete("This function is deprecated, please use RemoveFileMember2Async instead.")]
         public t.Task<FileMemberActionIndividualResult> RemoveFileMemberAsync(RemoveFileMemberArg removeFileMemberArg)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberActionIndividualResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member", "user", Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder, Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberActionIndividualResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
         }
 
         /// <summary>
@@ -3188,7 +3188,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="RemoveFileMemberError"/>.</exception>
         public t.Task<FileMemberRemoveActionResult> RemoveFileMember2Async(RemoveFileMemberArg removeFileMemberArg)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberRemoveActionResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member_2", "user", Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, Dropbox.Api.Sharing.FileMemberRemoveActionResult.Decoder, Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberRemoveActionResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member_2", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberRemoveActionResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
         }
 
         /// <summary>
@@ -3283,9 +3283,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(RemoveFolderMemberArg removeFolderMemberArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(RemoveFolderMemberArg removeFolderMemberArg)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveFolderMemberArg, Dropbox.Api.Async.LaunchResultBase, RemoveFolderMemberError>(removeFolderMemberArg, "api", "/sharing/remove_folder_member", "user", Dropbox.Api.Sharing.RemoveFolderMemberArg.Encoder, Dropbox.Api.Async.LaunchResultBase.Decoder, Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveFolderMemberArg, global::Dropbox.Api.Async.LaunchResultBase, RemoveFolderMemberError>(removeFolderMemberArg, "api", "/sharing/remove_folder_member", "user", global::Dropbox.Api.Sharing.RemoveFolderMemberArg.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, global::Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder);
         }
 
         /// <summary>
@@ -3319,9 +3319,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(string sharedFolderId,
-                                                                                  MemberSelector member,
-                                                                                  bool leaveACopy)
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(string sharedFolderId,
+                                                                                          MemberSelector member,
+                                                                                          bool leaveACopy)
         {
             var removeFolderMemberArg = new RemoveFolderMemberArg(sharedFolderId,
                                                                   member,
@@ -3366,9 +3366,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
-        public Dropbox.Api.Async.LaunchResultBase EndRemoveFolderMember(sys.IAsyncResult asyncResult)
+        public global::Dropbox.Api.Async.LaunchResultBase EndRemoveFolderMember(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchResultBase>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3393,7 +3393,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="RevokeSharedLinkError"/>.</exception>
         public t.Task RevokeSharedLinkAsync(RevokeSharedLinkArg revokeSharedLinkArg)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeSharedLinkArg, enc.Empty, RevokeSharedLinkError>(revokeSharedLinkArg, "api", "/sharing/revoke_shared_link", "user", Dropbox.Api.Sharing.RevokeSharedLinkArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Sharing.RevokeSharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeSharedLinkArg, enc.Empty, RevokeSharedLinkError>(revokeSharedLinkArg, "api", "/sharing/revoke_shared_link", "user", global::Dropbox.Api.Sharing.RevokeSharedLinkArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.RevokeSharedLinkError.Decoder);
         }
 
         /// <summary>
@@ -3488,7 +3488,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ShareFolderError"/>.</exception>
         public t.Task<ShareFolderLaunch> ShareFolderAsync(ShareFolderArg shareFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<ShareFolderArg, ShareFolderLaunch, ShareFolderError>(shareFolderArg, "api", "/sharing/share_folder", "user", Dropbox.Api.Sharing.ShareFolderArg.Encoder, Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, Dropbox.Api.Sharing.ShareFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ShareFolderArg, ShareFolderLaunch, ShareFolderError>(shareFolderArg, "api", "/sharing/share_folder", "user", global::Dropbox.Api.Sharing.ShareFolderArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, global::Dropbox.Api.Sharing.ShareFolderError.Decoder);
         }
 
         /// <summary>
@@ -3646,7 +3646,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="TransferFolderError"/>.</exception>
         public t.Task TransferFolderAsync(TransferFolderArg transferFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<TransferFolderArg, enc.Empty, TransferFolderError>(transferFolderArg, "api", "/sharing/transfer_folder", "user", Dropbox.Api.Sharing.TransferFolderArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Sharing.TransferFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TransferFolderArg, enc.Empty, TransferFolderError>(transferFolderArg, "api", "/sharing/transfer_folder", "user", global::Dropbox.Api.Sharing.TransferFolderArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.TransferFolderError.Decoder);
         }
 
         /// <summary>
@@ -3741,7 +3741,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="UnmountFolderError"/>.</exception>
         public t.Task UnmountFolderAsync(UnmountFolderArg unmountFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<UnmountFolderArg, enc.Empty, UnmountFolderError>(unmountFolderArg, "api", "/sharing/unmount_folder", "user", Dropbox.Api.Sharing.UnmountFolderArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Sharing.UnmountFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UnmountFolderArg, enc.Empty, UnmountFolderError>(unmountFolderArg, "api", "/sharing/unmount_folder", "user", global::Dropbox.Api.Sharing.UnmountFolderArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.UnmountFolderError.Decoder);
         }
 
         /// <summary>
@@ -3824,7 +3824,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="UnshareFileError"/>.</exception>
         public t.Task UnshareFileAsync(UnshareFileArg unshareFileArg)
         {
-            return this.Transport.SendRpcRequestAsync<UnshareFileArg, enc.Empty, UnshareFileError>(unshareFileArg, "api", "/sharing/unshare_file", "user", Dropbox.Api.Sharing.UnshareFileArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Sharing.UnshareFileError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UnshareFileArg, enc.Empty, UnshareFileError>(unshareFileArg, "api", "/sharing/unshare_file", "user", global::Dropbox.Api.Sharing.UnshareFileArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.UnshareFileError.Decoder);
         }
 
         /// <summary>
@@ -3907,9 +3907,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(UnshareFolderArg unshareFolderArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(UnshareFolderArg unshareFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<UnshareFolderArg, Dropbox.Api.Async.LaunchEmptyResult, UnshareFolderError>(unshareFolderArg, "api", "/sharing/unshare_folder", "user", Dropbox.Api.Sharing.UnshareFolderArg.Encoder, Dropbox.Api.Async.LaunchEmptyResult.Decoder, Dropbox.Api.Sharing.UnshareFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UnshareFolderArg, global::Dropbox.Api.Async.LaunchEmptyResult, UnshareFolderError>(unshareFolderArg, "api", "/sharing/unshare_folder", "user", global::Dropbox.Api.Sharing.UnshareFolderArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Sharing.UnshareFolderError.Decoder);
         }
 
         /// <summary>
@@ -3944,8 +3944,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
-        public t.Task<Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(string sharedFolderId,
-                                                                              bool leaveACopy = false)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(string sharedFolderId,
+                                                                                      bool leaveACopy = false)
         {
             var unshareFolderArg = new UnshareFolderArg(sharedFolderId,
                                                         leaveACopy);
@@ -3986,9 +3986,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
-        public Dropbox.Api.Async.LaunchEmptyResult EndUnshareFolder(sys.IAsyncResult asyncResult)
+        public global::Dropbox.Api.Async.LaunchEmptyResult EndUnshareFolder(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Async.LaunchEmptyResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchEmptyResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4008,7 +4008,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="FileMemberActionError"/>.</exception>
         public t.Task<MemberAccessLevelResult> UpdateFileMemberAsync(UpdateFileMemberArgs updateFileMemberArgs)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFileMemberArgs, MemberAccessLevelResult, FileMemberActionError>(updateFileMemberArgs, "api", "/sharing/update_file_member", "user", Dropbox.Api.Sharing.UpdateFileMemberArgs.Encoder, Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, Dropbox.Api.Sharing.FileMemberActionError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFileMemberArgs, MemberAccessLevelResult, FileMemberActionError>(updateFileMemberArgs, "api", "/sharing/update_file_member", "user", global::Dropbox.Api.Sharing.UpdateFileMemberArgs.Encoder, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, global::Dropbox.Api.Sharing.FileMemberActionError.Decoder);
         }
 
         /// <summary>
@@ -4107,7 +4107,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="UpdateFolderMemberError"/>.</exception>
         public t.Task<MemberAccessLevelResult> UpdateFolderMemberAsync(UpdateFolderMemberArg updateFolderMemberArg)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFolderMemberArg, MemberAccessLevelResult, UpdateFolderMemberError>(updateFolderMemberArg, "api", "/sharing/update_folder_member", "user", Dropbox.Api.Sharing.UpdateFolderMemberArg.Encoder, Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, Dropbox.Api.Sharing.UpdateFolderMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFolderMemberArg, MemberAccessLevelResult, UpdateFolderMemberError>(updateFolderMemberArg, "api", "/sharing/update_folder_member", "user", global::Dropbox.Api.Sharing.UpdateFolderMemberArg.Encoder, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, global::Dropbox.Api.Sharing.UpdateFolderMemberError.Decoder);
         }
 
         /// <summary>
@@ -4215,7 +4215,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="UpdateFolderPolicyError"/>.</exception>
         public t.Task<SharedFolderMetadata> UpdateFolderPolicyAsync(UpdateFolderPolicyArg updateFolderPolicyArg)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFolderPolicyArg, SharedFolderMetadata, UpdateFolderPolicyError>(updateFolderPolicyArg, "api", "/sharing/update_folder_policy", "user", Dropbox.Api.Sharing.UpdateFolderPolicyArg.Encoder, Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, Dropbox.Api.Sharing.UpdateFolderPolicyError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFolderPolicyArg, SharedFolderMetadata, UpdateFolderPolicyError>(updateFolderPolicyArg, "api", "/sharing/update_folder_policy", "user", global::Dropbox.Api.Sharing.UpdateFolderPolicyArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.UpdateFolderPolicyError.Decoder);
         }
 
         /// <summary>

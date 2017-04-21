@@ -110,7 +110,7 @@ namespace Dropbox.Api.Properties
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
-                WriteListProperty("fields", value.Fields, writer, Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
+                WriteListProperty("fields", value.Fields, writer, global::Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
             }
         }
 
@@ -151,7 +151,7 @@ namespace Dropbox.Api.Properties
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "fields":
-                        value.Fields = ReadList<PropertyFieldTemplate>(reader, Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
+                        value.Fields = ReadList<PropertyFieldTemplate>(reader, global::Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
                         break;
                     default:
                         reader.Skip();

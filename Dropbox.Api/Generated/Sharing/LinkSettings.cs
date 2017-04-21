@@ -83,15 +83,15 @@ namespace Dropbox.Api.Sharing
             {
                 if (value.Audience != null)
                 {
-                    WriteProperty("audience", value.Audience, writer, Dropbox.Api.Sharing.LinkAudience.Encoder);
+                    WriteProperty("audience", value.Audience, writer, global::Dropbox.Api.Sharing.LinkAudience.Encoder);
                 }
                 if (value.Expiry != null)
                 {
-                    WriteProperty("expiry", value.Expiry, writer, Dropbox.Api.Sharing.LinkExpiry.Encoder);
+                    WriteProperty("expiry", value.Expiry, writer, global::Dropbox.Api.Sharing.LinkExpiry.Encoder);
                 }
                 if (value.Password != null)
                 {
-                    WriteProperty("password", value.Password, writer, Dropbox.Api.Sharing.LinkPassword.Encoder);
+                    WriteProperty("password", value.Password, writer, global::Dropbox.Api.Sharing.LinkPassword.Encoder);
                 }
             }
         }
@@ -126,13 +126,13 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "audience":
-                        value.Audience = Dropbox.Api.Sharing.LinkAudience.Decoder.Decode(reader);
+                        value.Audience = global::Dropbox.Api.Sharing.LinkAudience.Decoder.Decode(reader);
                         break;
                     case "expiry":
-                        value.Expiry = Dropbox.Api.Sharing.LinkExpiry.Decoder.Decode(reader);
+                        value.Expiry = global::Dropbox.Api.Sharing.LinkExpiry.Decoder.Decode(reader);
                         break;
                     case "password":
-                        value.Password = Dropbox.Api.Sharing.LinkPassword.Decoder.Decode(reader);
+                        value.Password = global::Dropbox.Api.Sharing.LinkPassword.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

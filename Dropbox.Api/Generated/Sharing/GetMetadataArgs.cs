@@ -95,7 +95,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 if (value.Actions.Count > 0)
                 {
-                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.FolderAction.Encoder);
+                    WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.FolderAction.Encoder);
                 }
             }
         }
@@ -133,7 +133,7 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "actions":
-                        value.Actions = ReadList<FolderAction>(reader, Dropbox.Api.Sharing.FolderAction.Decoder);
+                        value.Actions = ReadList<FolderAction>(reader, global::Dropbox.Api.Sharing.FolderAction.Decoder);
                         break;
                     default:
                         reader.Skip();

@@ -1306,7 +1306,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AlreadyShared value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharedFolderMetadata.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.SharedFolderMetadata.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -1335,7 +1335,7 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The decoded object.</returns>
                 public override AlreadyShared DecodeFields(enc.IJsonReader reader)
                 {
-                    return new AlreadyShared(Dropbox.Api.Sharing.SharedFolderMetadata.Decoder.DecodeFields(reader));
+                    return new AlreadyShared(global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -1601,7 +1601,7 @@ namespace Dropbox.Api.Sharing
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public InvalidPathRoot(Dropbox.Api.Files.PathRootError value)
+            public InvalidPathRoot(global::Dropbox.Api.Files.PathRootError value)
             {
                 this.Value = value;
             }
@@ -1616,7 +1616,7 @@ namespace Dropbox.Api.Sharing
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Files.PathRootError Value { get; private set; }
+            public global::Dropbox.Api.Files.PathRootError Value { get; private set; }
 
             #region Encoder class
 
@@ -1632,7 +1632,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InvalidPathRoot value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.PathRootError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.PathRootError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -1661,7 +1661,7 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The decoded object.</returns>
                 public override InvalidPathRoot DecodeFields(enc.IJsonReader reader)
                 {
-                    return new InvalidPathRoot(Dropbox.Api.Files.PathRootError.Decoder.DecodeFields(reader));
+                    return new InvalidPathRoot(global::Dropbox.Api.Files.PathRootError.Decoder.DecodeFields(reader));
                 }
             }
 

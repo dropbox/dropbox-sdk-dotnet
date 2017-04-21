@@ -83,8 +83,8 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberAccess value, enc.IJsonWriter writer)
             {
-                WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
-                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Team.GroupAccessType.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Team.GroupAccessType.Encoder);
             }
         }
 
@@ -118,10 +118,10 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "user":
-                        value.User = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "access_type":
-                        value.AccessType = Dropbox.Api.Team.GroupAccessType.Decoder.Decode(reader);
+                        value.AccessType = global::Dropbox.Api.Team.GroupAccessType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

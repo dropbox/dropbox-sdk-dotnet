@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Information about linked Dropbox mobile client sessions</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.DeviceSession" />
+    /// <seealso cref="Global::Dropbox.Api.Team.DeviceSession" />
     public class MobileClientSession : DeviceSession
     {
         #pragma warning disable 108
@@ -125,7 +125,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("session_id", value.SessionId, writer, enc.StringEncoder.Instance);
                 WriteProperty("device_name", value.DeviceName, writer, enc.StringEncoder.Instance);
-                WriteProperty("client_type", value.ClientType, writer, Dropbox.Api.Team.MobileClientPlatform.Encoder);
+                WriteProperty("client_type", value.ClientType, writer, global::Dropbox.Api.Team.MobileClientPlatform.Encoder);
                 if (value.IpAddress != null)
                 {
                     WriteProperty("ip_address", value.IpAddress, writer, enc.StringEncoder.Instance);
@@ -193,7 +193,7 @@ namespace Dropbox.Api.Team
                         value.DeviceName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "client_type":
-                        value.ClientType = Dropbox.Api.Team.MobileClientPlatform.Decoder.Decode(reader);
+                        value.ClientType = global::Dropbox.Api.Team.MobileClientPlatform.Decoder.Decode(reader);
                         break;
                     case "ip_address":
                         value.IpAddress = enc.StringDecoder.Instance.Decode(reader);

@@ -203,7 +203,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PropertyGroupLookup value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.LookUpPropertiesError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.LookUpPropertiesError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -237,7 +237,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "property_group_lookup":
-                            value.Value = Dropbox.Api.Files.LookUpPropertiesError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.LookUpPropertiesError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -300,7 +300,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -333,7 +333,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "path":
-                            value.Value = Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

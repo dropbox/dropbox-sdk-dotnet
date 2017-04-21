@@ -79,7 +79,7 @@ namespace Dropbox.Api.Users
             public override void EncodeFields(SpaceUsage value, enc.IJsonWriter writer)
             {
                 WriteProperty("used", value.Used, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("allocation", value.Allocation, writer, Dropbox.Api.Users.SpaceAllocation.Encoder);
+                WriteProperty("allocation", value.Allocation, writer, global::Dropbox.Api.Users.SpaceAllocation.Encoder);
             }
         }
 
@@ -116,7 +116,7 @@ namespace Dropbox.Api.Users
                         value.Used = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "allocation":
-                        value.Allocation = Dropbox.Api.Users.SpaceAllocation.Decoder.Decode(reader);
+                        value.Allocation = global::Dropbox.Api.Users.SpaceAllocation.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

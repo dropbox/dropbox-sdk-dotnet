@@ -410,7 +410,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FromLookup value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -443,7 +443,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "from_lookup":
-                            value.Value = Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -506,7 +506,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FromWrite value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -539,7 +539,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "from_write":
-                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -602,7 +602,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(To value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -635,7 +635,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "to":
-                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

@@ -104,7 +104,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("team_folder_id", value.TeamFolderId, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("status", value.Status, writer, Dropbox.Api.Team.TeamFolderStatus.Encoder);
+                WriteProperty("status", value.Status, writer, global::Dropbox.Api.Team.TeamFolderStatus.Encoder);
             }
         }
 
@@ -144,7 +144,7 @@ namespace Dropbox.Api.Team
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "status":
-                        value.Status = Dropbox.Api.Team.TeamFolderStatus.Decoder.Decode(reader);
+                        value.Status = global::Dropbox.Api.Team.TeamFolderStatus.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -35,7 +35,7 @@ namespace Dropbox.Api.Files
         /// <param name="propertyGroups">Filled custom property templates associated with a
         /// file.</param>
         public PropertyGroupWithPath(string path,
-                                     col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups)
+                                     col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups)
         {
             if (path == null)
             {
@@ -76,7 +76,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Filled custom property templates associated with a file.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
+        public col.IList<global::Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
 
         #region Encoder class
 
@@ -93,7 +93,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(PropertyGroupWithPath value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteListProperty("property_groups", value.PropertyGroups, writer, Dropbox.Api.Properties.PropertyGroup.Encoder);
+                WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.Properties.PropertyGroup.Encoder);
             }
         }
 
@@ -131,7 +131,7 @@ namespace Dropbox.Api.Files
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "property_groups":
-                        value.PropertyGroups = ReadList<Dropbox.Api.Properties.PropertyGroup>(reader, Dropbox.Api.Properties.PropertyGroup.Decoder);
+                        value.PropertyGroups = ReadList<global::Dropbox.Api.Properties.PropertyGroup>(reader, global::Dropbox.Api.Properties.PropertyGroup.Decoder);
                         break;
                     default:
                         reader.Skip();

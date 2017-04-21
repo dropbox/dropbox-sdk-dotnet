@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The group members set access type arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.GroupMemberSelector" />
+    /// <seealso cref="Global::Dropbox.Api.Team.GroupMemberSelector" />
     public class GroupMembersSetAccessTypeArg : GroupMemberSelector
     {
         #pragma warning disable 108
@@ -92,9 +92,9 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupMembersSetAccessTypeArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("group", value.Group, writer, Dropbox.Api.Team.GroupSelector.Encoder);
-                WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
-                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Team.GroupAccessType.Encoder);
+                WriteProperty("group", value.Group, writer, global::Dropbox.Api.Team.GroupSelector.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Team.GroupAccessType.Encoder);
                 WriteProperty("return_members", value.ReturnMembers, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -130,13 +130,13 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "group":
-                        value.Group = Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
+                        value.Group = global::Dropbox.Api.Team.GroupSelector.Decoder.Decode(reader);
                         break;
                     case "user":
-                        value.User = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "access_type":
-                        value.AccessType = Dropbox.Api.Team.GroupAccessType.Decoder.Decode(reader);
+                        value.AccessType = global::Dropbox.Api.Team.GroupAccessType.Decoder.Decode(reader);
                         break;
                     case "return_members":
                         value.ReturnMembers = enc.BooleanDecoder.Instance.Decode(reader);

@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The folder metadata object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.Metadata" />
+    /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
     public class FolderMetadata : Metadata
     {
         #pragma warning disable 108
@@ -60,7 +60,7 @@ namespace Dropbox.Api.Files
                               string parentSharedFolderId = null,
                               string sharedFolderId = null,
                               FolderSharingInfo sharingInfo = null,
-                              col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null)
+                              col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
         {
             if (id == null)
@@ -118,7 +118,7 @@ namespace Dropbox.Api.Files
         /// <para>Additional information if the file has custom properties with the property
         /// template specified.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
+        public col.IList<global::Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
 
         #region Encoder class
 
@@ -154,11 +154,11 @@ namespace Dropbox.Api.Files
                 }
                 if (value.SharingInfo != null)
                 {
-                    WriteProperty("sharing_info", value.SharingInfo, writer, Dropbox.Api.Files.FolderSharingInfo.Encoder);
+                    WriteProperty("sharing_info", value.SharingInfo, writer, global::Dropbox.Api.Files.FolderSharingInfo.Encoder);
                 }
                 if (value.PropertyGroups.Count > 0)
                 {
-                    WriteListProperty("property_groups", value.PropertyGroups, writer, Dropbox.Api.Properties.PropertyGroup.Encoder);
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.Properties.PropertyGroup.Encoder);
                 }
             }
         }
@@ -211,10 +211,10 @@ namespace Dropbox.Api.Files
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "sharing_info":
-                        value.SharingInfo = Dropbox.Api.Files.FolderSharingInfo.Decoder.Decode(reader);
+                        value.SharingInfo = global::Dropbox.Api.Files.FolderSharingInfo.Decoder.Decode(reader);
                         break;
                     case "property_groups":
-                        value.PropertyGroups = ReadList<Dropbox.Api.Properties.PropertyGroup>(reader, Dropbox.Api.Properties.PropertyGroup.Decoder);
+                        value.PropertyGroups = ReadList<global::Dropbox.Api.Properties.PropertyGroup>(reader, global::Dropbox.Api.Properties.PropertyGroup.Decoder);
                         break;
                     default:
                         reader.Skip();

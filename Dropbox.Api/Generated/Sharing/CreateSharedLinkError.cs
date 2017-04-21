@@ -169,7 +169,7 @@ namespace Dropbox.Api.Sharing
             /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Path(Dropbox.Api.Files.LookupError value)
+            public Path(global::Dropbox.Api.Files.LookupError value)
             {
                 this.Value = value;
             }
@@ -183,7 +183,7 @@ namespace Dropbox.Api.Sharing
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public Dropbox.Api.Files.LookupError Value { get; private set; }
+            public global::Dropbox.Api.Files.LookupError Value { get; private set; }
 
             #region Encoder class
 
@@ -199,7 +199,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -232,7 +232,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "path":
-                            value.Value = Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

@@ -392,7 +392,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -425,7 +425,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "path":
-                            value.Value = Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

@@ -13,7 +13,7 @@ namespace Dropbox.Api.Paper
     /// <summary>
     /// <para>The paper doc sharing policy object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Paper.RefPaperDoc" />
+    /// <seealso cref="Global::Dropbox.Api.Paper.RefPaperDoc" />
     public class PaperDocSharingPolicy : RefPaperDoc
     {
         #pragma warning disable 108
@@ -78,7 +78,7 @@ namespace Dropbox.Api.Paper
             public override void EncodeFields(PaperDocSharingPolicy value, enc.IJsonWriter writer)
             {
                 WriteProperty("doc_id", value.DocId, writer, enc.StringEncoder.Instance);
-                WriteProperty("sharing_policy", value.SharingPolicy, writer, Dropbox.Api.Paper.SharingPolicy.Encoder);
+                WriteProperty("sharing_policy", value.SharingPolicy, writer, global::Dropbox.Api.Paper.SharingPolicy.Encoder);
             }
         }
 
@@ -116,7 +116,7 @@ namespace Dropbox.Api.Paper
                         value.DocId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "sharing_policy":
-                        value.SharingPolicy = Dropbox.Api.Paper.SharingPolicy.Decoder.Decode(reader);
+                        value.SharingPolicy = global::Dropbox.Api.Paper.SharingPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

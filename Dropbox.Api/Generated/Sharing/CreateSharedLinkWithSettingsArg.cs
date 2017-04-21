@@ -88,7 +88,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 if (value.Settings != null)
                 {
-                    WriteProperty("settings", value.Settings, writer, Dropbox.Api.Sharing.SharedLinkSettings.Encoder);
+                    WriteProperty("settings", value.Settings, writer, global::Dropbox.Api.Sharing.SharedLinkSettings.Encoder);
                 }
             }
         }
@@ -127,7 +127,7 @@ namespace Dropbox.Api.Sharing
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "settings":
-                        value.Settings = Dropbox.Api.Sharing.SharedLinkSettings.Decoder.Decode(reader);
+                        value.Settings = global::Dropbox.Api.Sharing.SharedLinkSettings.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

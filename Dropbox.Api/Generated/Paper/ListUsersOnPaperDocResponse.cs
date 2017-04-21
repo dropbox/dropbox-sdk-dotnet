@@ -51,7 +51,7 @@ namespace Dropbox.Api.Paper
         /// />.</param>
         public ListUsersOnPaperDocResponse(col.IEnumerable<InviteeInfoWithPermissionLevel> invitees,
                                            col.IEnumerable<UserInfoWithPermissionLevel> users,
-                                           Dropbox.Api.Sharing.UserInfo docOwner,
+                                           global::Dropbox.Api.Sharing.UserInfo docOwner,
                                            Cursor cursor,
                                            bool hasMore)
         {
@@ -112,7 +112,7 @@ namespace Dropbox.Api.Paper
         /// <summary>
         /// <para>The Paper doc owner. This field is populated on every single response.</para>
         /// </summary>
-        public Dropbox.Api.Sharing.UserInfo DocOwner { get; protected set; }
+        public global::Dropbox.Api.Sharing.UserInfo DocOwner { get; protected set; }
 
         /// <summary>
         /// <para>Pass the cursor into <see
@@ -147,10 +147,10 @@ namespace Dropbox.Api.Paper
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ListUsersOnPaperDocResponse value, enc.IJsonWriter writer)
             {
-                WriteListProperty("invitees", value.Invitees, writer, Dropbox.Api.Paper.InviteeInfoWithPermissionLevel.Encoder);
-                WriteListProperty("users", value.Users, writer, Dropbox.Api.Paper.UserInfoWithPermissionLevel.Encoder);
-                WriteProperty("doc_owner", value.DocOwner, writer, Dropbox.Api.Sharing.UserInfo.Encoder);
-                WriteProperty("cursor", value.Cursor, writer, Dropbox.Api.Paper.Cursor.Encoder);
+                WriteListProperty("invitees", value.Invitees, writer, global::Dropbox.Api.Paper.InviteeInfoWithPermissionLevel.Encoder);
+                WriteListProperty("users", value.Users, writer, global::Dropbox.Api.Paper.UserInfoWithPermissionLevel.Encoder);
+                WriteProperty("doc_owner", value.DocOwner, writer, global::Dropbox.Api.Sharing.UserInfo.Encoder);
+                WriteProperty("cursor", value.Cursor, writer, global::Dropbox.Api.Paper.Cursor.Encoder);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -186,16 +186,16 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "invitees":
-                        value.Invitees = ReadList<InviteeInfoWithPermissionLevel>(reader, Dropbox.Api.Paper.InviteeInfoWithPermissionLevel.Decoder);
+                        value.Invitees = ReadList<InviteeInfoWithPermissionLevel>(reader, global::Dropbox.Api.Paper.InviteeInfoWithPermissionLevel.Decoder);
                         break;
                     case "users":
-                        value.Users = ReadList<UserInfoWithPermissionLevel>(reader, Dropbox.Api.Paper.UserInfoWithPermissionLevel.Decoder);
+                        value.Users = ReadList<UserInfoWithPermissionLevel>(reader, global::Dropbox.Api.Paper.UserInfoWithPermissionLevel.Decoder);
                         break;
                     case "doc_owner":
-                        value.DocOwner = Dropbox.Api.Sharing.UserInfo.Decoder.Decode(reader);
+                        value.DocOwner = global::Dropbox.Api.Sharing.UserInfo.Decoder.Decode(reader);
                         break;
                     case "cursor":
-                        value.Cursor = Dropbox.Api.Paper.Cursor.Decoder.Decode(reader);
+                        value.Cursor = global::Dropbox.Api.Paper.Cursor.Decoder.Decode(reader);
                         break;
                     case "has_more":
                         value.HasMore = enc.BooleanDecoder.Instance.Decode(reader);

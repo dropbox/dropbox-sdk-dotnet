@@ -33,7 +33,7 @@ namespace Dropbox.Api.Paper
         /// <param name="member">User which should be added to the Paper doc. Specify only
         /// email or Dropbox account id.</param>
         /// <param name="permissionLevel">Permission for the user.</param>
-        public AddMember(Dropbox.Api.Sharing.MemberSelector member,
+        public AddMember(global::Dropbox.Api.Sharing.MemberSelector member,
                          PaperDocPermissionLevel permissionLevel = null)
         {
             if (member == null)
@@ -43,7 +43,7 @@ namespace Dropbox.Api.Paper
 
             if (permissionLevel == null)
             {
-                permissionLevel = Dropbox.Api.Paper.PaperDocPermissionLevel.Edit.Instance;
+                permissionLevel = global::Dropbox.Api.Paper.PaperDocPermissionLevel.Edit.Instance;
             }
             this.Member = member;
             this.PermissionLevel = permissionLevel;
@@ -57,14 +57,14 @@ namespace Dropbox.Api.Paper
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public AddMember()
         {
-            this.PermissionLevel = Dropbox.Api.Paper.PaperDocPermissionLevel.Edit.Instance;
+            this.PermissionLevel = global::Dropbox.Api.Paper.PaperDocPermissionLevel.Edit.Instance;
         }
 
         /// <summary>
         /// <para>User which should be added to the Paper doc. Specify only email or Dropbox
         /// account id.</para>
         /// </summary>
-        public Dropbox.Api.Sharing.MemberSelector Member { get; protected set; }
+        public global::Dropbox.Api.Sharing.MemberSelector Member { get; protected set; }
 
         /// <summary>
         /// <para>Permission for the user.</para>
@@ -85,8 +85,8 @@ namespace Dropbox.Api.Paper
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AddMember value, enc.IJsonWriter writer)
             {
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("permission_level", value.PermissionLevel, writer, Dropbox.Api.Paper.PaperDocPermissionLevel.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("permission_level", value.PermissionLevel, writer, global::Dropbox.Api.Paper.PaperDocPermissionLevel.Encoder);
             }
         }
 
@@ -120,10 +120,10 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     case "permission_level":
-                        value.PermissionLevel = Dropbox.Api.Paper.PaperDocPermissionLevel.Decoder.Decode(reader);
+                        value.PermissionLevel = global::Dropbox.Api.Paper.PaperDocPermissionLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

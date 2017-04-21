@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The team folder rename arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.TeamFolderIdArg" />
+    /// <seealso cref="Global::Dropbox.Api.Team.TeamFolderIdArg" />
     public class TeamFolderRenameArg : TeamFolderIdArg
     {
         #pragma warning disable 108

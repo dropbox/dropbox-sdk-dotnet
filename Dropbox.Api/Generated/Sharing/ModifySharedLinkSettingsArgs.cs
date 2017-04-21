@@ -96,7 +96,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ModifySharedLinkSettingsArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
-                WriteProperty("settings", value.Settings, writer, Dropbox.Api.Sharing.SharedLinkSettings.Encoder);
+                WriteProperty("settings", value.Settings, writer, global::Dropbox.Api.Sharing.SharedLinkSettings.Encoder);
                 WriteProperty("remove_expiration", value.RemoveExpiration, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -135,7 +135,7 @@ namespace Dropbox.Api.Sharing
                         value.Url = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "settings":
-                        value.Settings = Dropbox.Api.Sharing.SharedLinkSettings.Decoder.Decode(reader);
+                        value.Settings = global::Dropbox.Api.Sharing.SharedLinkSettings.Decoder.Decode(reader);
                         break;
                     case "remove_expiration":
                         value.RemoveExpiration = enc.BooleanDecoder.Instance.Decode(reader);

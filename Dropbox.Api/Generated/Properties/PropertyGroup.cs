@@ -96,7 +96,7 @@ namespace Dropbox.Api.Properties
             public override void EncodeFields(PropertyGroup value, enc.IJsonWriter writer)
             {
                 WriteProperty("template_id", value.TemplateId, writer, enc.StringEncoder.Instance);
-                WriteListProperty("fields", value.Fields, writer, Dropbox.Api.Properties.PropertyField.Encoder);
+                WriteListProperty("fields", value.Fields, writer, global::Dropbox.Api.Properties.PropertyField.Encoder);
             }
         }
 
@@ -133,7 +133,7 @@ namespace Dropbox.Api.Properties
                         value.TemplateId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "fields":
-                        value.Fields = ReadList<PropertyField>(reader, Dropbox.Api.Properties.PropertyField.Decoder);
+                        value.Fields = ReadList<PropertyField>(reader, global::Dropbox.Api.Properties.PropertyField.Decoder);
                         break;
                     default:
                         reader.Skip();

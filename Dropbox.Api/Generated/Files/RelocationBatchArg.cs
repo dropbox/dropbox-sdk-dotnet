@@ -107,7 +107,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RelocationBatchArg value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Files.RelocationPath.Encoder);
+                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.RelocationPath.Encoder);
                 WriteProperty("allow_shared_folder", value.AllowSharedFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
             }
@@ -143,7 +143,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList<RelocationPath>(reader, Dropbox.Api.Files.RelocationPath.Decoder);
+                        value.Entries = ReadList<RelocationPath>(reader, global::Dropbox.Api.Files.RelocationPath.Decoder);
                         break;
                     case "allow_shared_folder":
                         value.AllowSharedFolder = enc.BooleanDecoder.Instance.Decode(reader);

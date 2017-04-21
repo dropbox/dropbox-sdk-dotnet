@@ -74,7 +74,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RelocationBatchResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Files.RelocationResult.Encoder);
+                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.RelocationResult.Encoder);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList<RelocationResult>(reader, Dropbox.Api.Files.RelocationResult.Decoder);
+                        value.Entries = ReadList<RelocationResult>(reader, global::Dropbox.Api.Files.RelocationResult.Decoder);
                         break;
                     default:
                         reader.Skip();

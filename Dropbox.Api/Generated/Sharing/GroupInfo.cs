@@ -14,9 +14,9 @@ namespace Dropbox.Api.Sharing
     /// <para>The information about a group. Groups is a way to manage a list of users  who
     /// need same access permission to the shared folder.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.TeamCommon.GroupSummary" />
     /// <seealso cref="GroupMembershipInfo" />
-    public class GroupInfo : Dropbox.Api.TeamCommon.GroupSummary
+    /// <seealso cref="Global::Dropbox.Api.TeamCommon.GroupSummary" />
+    public class GroupInfo : global::Dropbox.Api.TeamCommon.GroupSummary
     {
         #pragma warning disable 108
 
@@ -45,8 +45,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="memberCount">The number of members in the group.</param>
         public GroupInfo(string groupName,
                          string groupId,
-                         Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
-                         Dropbox.Api.TeamCommon.GroupType groupType,
+                         global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
+                         global::Dropbox.Api.TeamCommon.GroupType groupType,
                          bool isMember,
                          bool isOwner,
                          bool sameTeam,
@@ -78,7 +78,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The type of group.</para>
         /// </summary>
-        public Dropbox.Api.TeamCommon.GroupType GroupType { get; protected set; }
+        public global::Dropbox.Api.TeamCommon.GroupType GroupType { get; protected set; }
 
         /// <summary>
         /// <para>If the current user is a member of the group.</para>
@@ -111,8 +111,8 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
-                WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
-                WriteProperty("group_type", value.GroupType, writer, Dropbox.Api.TeamCommon.GroupType.Encoder);
+                WriteProperty("group_management_type", value.GroupManagementType, writer, global::Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
+                WriteProperty("group_type", value.GroupType, writer, global::Dropbox.Api.TeamCommon.GroupType.Encoder);
                 WriteProperty("is_member", value.IsMember, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_owner", value.IsOwner, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("same_team", value.SameTeam, writer, enc.BooleanEncoder.Instance);
@@ -163,10 +163,10 @@ namespace Dropbox.Api.Sharing
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "group_management_type":
-                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
+                        value.GroupManagementType = global::Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     case "group_type":
-                        value.GroupType = Dropbox.Api.TeamCommon.GroupType.Decoder.Decode(reader);
+                        value.GroupType = global::Dropbox.Api.TeamCommon.GroupType.Decoder.Decode(reader);
                         break;
                     case "is_member":
                         value.IsMember = enc.BooleanDecoder.Instance.Decode(reader);

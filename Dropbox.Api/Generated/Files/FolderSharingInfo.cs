@@ -14,7 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>Sharing info for a folder which is contained in a shared folder or is a shared
     /// folder mount point.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.SharingInfo" />
+    /// <seealso cref="Global::Dropbox.Api.Files.SharingInfo" />
     public class FolderSharingInfo : SharingInfo
     {
         #pragma warning disable 108

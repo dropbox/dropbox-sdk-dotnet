@@ -70,7 +70,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeleteResult value, enc.IJsonWriter writer)
             {
-                WriteProperty("metadata", value.Metadata, writer, Dropbox.Api.Files.Metadata.Encoder);
+                WriteProperty("metadata", value.Metadata, writer, global::Dropbox.Api.Files.Metadata.Encoder);
             }
         }
 
@@ -104,7 +104,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "metadata":
-                        value.Metadata = Dropbox.Api.Files.Metadata.Decoder.Decode(reader);
+                        value.Metadata = global::Dropbox.Api.Files.Metadata.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

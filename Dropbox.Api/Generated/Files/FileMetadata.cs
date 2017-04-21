@@ -13,8 +13,8 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The file metadata object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.Metadata" />
     /// <seealso cref="GetTemporaryLinkResult" />
+    /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
     public class FileMetadata : Metadata
     {
         #pragma warning disable 108
@@ -85,7 +85,7 @@ namespace Dropbox.Api.Files
                             string parentSharedFolderId = null,
                             MediaInfo mediaInfo = null,
                             FileSharingInfo sharingInfo = null,
-                            col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
+                            col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
                             bool? hasExplicitSharedMembers = null,
                             string contentHash = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
@@ -193,7 +193,7 @@ namespace Dropbox.Api.Files
         /// <para>Additional information if the file has custom properties with the property
         /// template specified.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
+        public col.IList<global::Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
 
         /// <summary>
         /// <para>This flag will only be present if include_has_explicit_shared_members  is
@@ -246,15 +246,15 @@ namespace Dropbox.Api.Files
                 }
                 if (value.MediaInfo != null)
                 {
-                    WriteProperty("media_info", value.MediaInfo, writer, Dropbox.Api.Files.MediaInfo.Encoder);
+                    WriteProperty("media_info", value.MediaInfo, writer, global::Dropbox.Api.Files.MediaInfo.Encoder);
                 }
                 if (value.SharingInfo != null)
                 {
-                    WriteProperty("sharing_info", value.SharingInfo, writer, Dropbox.Api.Files.FileSharingInfo.Encoder);
+                    WriteProperty("sharing_info", value.SharingInfo, writer, global::Dropbox.Api.Files.FileSharingInfo.Encoder);
                 }
                 if (value.PropertyGroups.Count > 0)
                 {
-                    WriteListProperty("property_groups", value.PropertyGroups, writer, Dropbox.Api.Properties.PropertyGroup.Encoder);
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.Properties.PropertyGroup.Encoder);
                 }
                 if (value.HasExplicitSharedMembers != null)
                 {
@@ -324,13 +324,13 @@ namespace Dropbox.Api.Files
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "media_info":
-                        value.MediaInfo = Dropbox.Api.Files.MediaInfo.Decoder.Decode(reader);
+                        value.MediaInfo = global::Dropbox.Api.Files.MediaInfo.Decoder.Decode(reader);
                         break;
                     case "sharing_info":
-                        value.SharingInfo = Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);
+                        value.SharingInfo = global::Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);
                         break;
                     case "property_groups":
-                        value.PropertyGroups = ReadList<Dropbox.Api.Properties.PropertyGroup>(reader, Dropbox.Api.Properties.PropertyGroup.Decoder);
+                        value.PropertyGroups = ReadList<global::Dropbox.Api.Properties.PropertyGroup>(reader, global::Dropbox.Api.Properties.PropertyGroup.Decoder);
                         break;
                     case "has_explicit_shared_members":
                         value.HasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);

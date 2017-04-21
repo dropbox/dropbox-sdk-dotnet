@@ -126,7 +126,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("file", value.File, writer, enc.StringEncoder.Instance);
                 if (value.Actions.Count > 0)
                 {
-                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.MemberAction.Encoder);
+                    WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.MemberAction.Encoder);
                 }
                 WriteProperty("include_inherited", value.IncludeInherited, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
@@ -166,7 +166,7 @@ namespace Dropbox.Api.Sharing
                         value.File = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "actions":
-                        value.Actions = ReadList<MemberAction>(reader, Dropbox.Api.Sharing.MemberAction.Decoder);
+                        value.Actions = ReadList<MemberAction>(reader, global::Dropbox.Api.Sharing.MemberAction.Decoder);
                         break;
                     case "include_inherited":
                         value.IncludeInherited = enc.BooleanDecoder.Instance.Decode(reader);

@@ -13,8 +13,8 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Arguments for adding property templates.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Properties.PropertyGroupTemplate" />
-    public class AddPropertyTemplateArg : Dropbox.Api.Properties.PropertyGroupTemplate
+    /// <seealso cref="Global::Dropbox.Api.Properties.PropertyGroupTemplate" />
+    public class AddPropertyTemplateArg : global::Dropbox.Api.Properties.PropertyGroupTemplate
     {
         #pragma warning disable 108
 
@@ -40,7 +40,7 @@ namespace Dropbox.Api.Team
         /// template. There can be up to 64 properties in a single property template.</param>
         public AddPropertyTemplateArg(string name,
                                       string description,
-                                      col.IEnumerable<Dropbox.Api.Properties.PropertyFieldTemplate> fields)
+                                      col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> fields)
             : base(name, description, fields)
         {
         }
@@ -72,7 +72,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
-                WriteListProperty("fields", value.Fields, writer, Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
+                WriteListProperty("fields", value.Fields, writer, global::Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
             }
         }
 
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Team
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "fields":
-                        value.Fields = ReadList<Dropbox.Api.Properties.PropertyFieldTemplate>(reader, Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
+                        value.Fields = ReadList<global::Dropbox.Api.Properties.PropertyFieldTemplate>(reader, global::Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
                         break;
                     default:
                         reader.Skip();

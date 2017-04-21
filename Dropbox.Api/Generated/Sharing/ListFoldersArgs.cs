@@ -96,7 +96,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
                 if (value.Actions.Count > 0)
                 {
-                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.FolderAction.Encoder);
+                    WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.FolderAction.Encoder);
                 }
             }
         }
@@ -134,7 +134,7 @@ namespace Dropbox.Api.Sharing
                         value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     case "actions":
-                        value.Actions = ReadList<FolderAction>(reader, Dropbox.Api.Sharing.FolderAction.Decoder);
+                        value.Actions = ReadList<FolderAction>(reader, global::Dropbox.Api.Sharing.FolderAction.Decoder);
                         break;
                     default:
                         reader.Skip();

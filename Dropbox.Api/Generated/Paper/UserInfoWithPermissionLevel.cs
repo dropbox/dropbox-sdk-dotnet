@@ -33,7 +33,7 @@ namespace Dropbox.Api.Paper
         /// </summary>
         /// <param name="user">User shared on the Paper doc.</param>
         /// <param name="permissionLevel">Permission level for the user.</param>
-        public UserInfoWithPermissionLevel(Dropbox.Api.Sharing.UserInfo user,
+        public UserInfoWithPermissionLevel(global::Dropbox.Api.Sharing.UserInfo user,
                                            PaperDocPermissionLevel permissionLevel)
         {
             if (user == null)
@@ -64,7 +64,7 @@ namespace Dropbox.Api.Paper
         /// <summary>
         /// <para>User shared on the Paper doc.</para>
         /// </summary>
-        public Dropbox.Api.Sharing.UserInfo User { get; protected set; }
+        public global::Dropbox.Api.Sharing.UserInfo User { get; protected set; }
 
         /// <summary>
         /// <para>Permission level for the user.</para>
@@ -85,8 +85,8 @@ namespace Dropbox.Api.Paper
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UserInfoWithPermissionLevel value, enc.IJsonWriter writer)
             {
-                WriteProperty("user", value.User, writer, Dropbox.Api.Sharing.UserInfo.Encoder);
-                WriteProperty("permission_level", value.PermissionLevel, writer, Dropbox.Api.Paper.PaperDocPermissionLevel.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Sharing.UserInfo.Encoder);
+                WriteProperty("permission_level", value.PermissionLevel, writer, global::Dropbox.Api.Paper.PaperDocPermissionLevel.Encoder);
             }
         }
 
@@ -121,10 +121,10 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "user":
-                        value.User = Dropbox.Api.Sharing.UserInfo.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Sharing.UserInfo.Decoder.Decode(reader);
                         break;
                     case "permission_level":
-                        value.PermissionLevel = Dropbox.Api.Paper.PaperDocPermissionLevel.Decoder.Decode(reader);
+                        value.PermissionLevel = global::Dropbox.Api.Paper.PaperDocPermissionLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -88,11 +88,11 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FilePermission value, enc.IJsonWriter writer)
             {
-                WriteProperty("action", value.Action, writer, Dropbox.Api.Sharing.FileAction.Encoder);
+                WriteProperty("action", value.Action, writer, global::Dropbox.Api.Sharing.FileAction.Encoder);
                 WriteProperty("allow", value.Allow, writer, enc.BooleanEncoder.Instance);
                 if (value.Reason != null)
                 {
-                    WriteProperty("reason", value.Reason, writer, Dropbox.Api.Sharing.PermissionDeniedReason.Encoder);
+                    WriteProperty("reason", value.Reason, writer, global::Dropbox.Api.Sharing.PermissionDeniedReason.Encoder);
                 }
             }
         }
@@ -127,13 +127,13 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "action":
-                        value.Action = Dropbox.Api.Sharing.FileAction.Decoder.Decode(reader);
+                        value.Action = global::Dropbox.Api.Sharing.FileAction.Decoder.Decode(reader);
                         break;
                     case "allow":
                         value.Allow = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "reason":
-                        value.Reason = Dropbox.Api.Sharing.PermissionDeniedReason.Decoder.Decode(reader);
+                        value.Reason = global::Dropbox.Api.Sharing.PermissionDeniedReason.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

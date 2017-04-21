@@ -102,9 +102,9 @@ namespace Dropbox.Api.TeamPolicies
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamSharingPolicies value, enc.IJsonWriter writer)
             {
-                WriteProperty("shared_folder_member_policy", value.SharedFolderMemberPolicy, writer, Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Encoder);
-                WriteProperty("shared_folder_join_policy", value.SharedFolderJoinPolicy, writer, Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Encoder);
-                WriteProperty("shared_link_create_policy", value.SharedLinkCreatePolicy, writer, Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Encoder);
+                WriteProperty("shared_folder_member_policy", value.SharedFolderMemberPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Encoder);
+                WriteProperty("shared_folder_join_policy", value.SharedFolderJoinPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Encoder);
+                WriteProperty("shared_link_create_policy", value.SharedLinkCreatePolicy, writer, global::Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Encoder);
             }
         }
 
@@ -138,13 +138,13 @@ namespace Dropbox.Api.TeamPolicies
                 switch (fieldName)
                 {
                     case "shared_folder_member_policy":
-                        value.SharedFolderMemberPolicy = Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Decoder.Decode(reader);
+                        value.SharedFolderMemberPolicy = global::Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Decoder.Decode(reader);
                         break;
                     case "shared_folder_join_policy":
-                        value.SharedFolderJoinPolicy = Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Decoder.Decode(reader);
+                        value.SharedFolderJoinPolicy = global::Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Decoder.Decode(reader);
                         break;
                     case "shared_link_create_policy":
-                        value.SharedLinkCreatePolicy = Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Decoder.Decode(reader);
+                        value.SharedLinkCreatePolicy = global::Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -73,7 +73,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersUnsuspendArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
             }
         }
 
@@ -107,7 +107,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "user":
-                        value.User = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

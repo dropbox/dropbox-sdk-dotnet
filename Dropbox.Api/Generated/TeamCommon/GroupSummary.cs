@@ -116,7 +116,7 @@ namespace Dropbox.Api.TeamCommon
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
-                WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
+                WriteProperty("group_management_type", value.GroupManagementType, writer, global::Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 if (value.GroupExternalId != null)
                 {
                     WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
@@ -164,7 +164,7 @@ namespace Dropbox.Api.TeamCommon
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "group_management_type":
-                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
+                        value.GroupManagementType = global::Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     case "group_external_id":
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);

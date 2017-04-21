@@ -41,7 +41,7 @@ namespace Dropbox.Api.Auth.Routes
         /// cref="TokenFromOAuth1Error"/>.</exception>
         public t.Task<TokenFromOAuth1Result> TokenFromOauth1Async(TokenFromOAuth1Arg tokenFromOAuth1Arg)
         {
-            return this.Transport.SendRpcRequestAsync<TokenFromOAuth1Arg, TokenFromOAuth1Result, TokenFromOAuth1Error>(tokenFromOAuth1Arg, "api", "/auth/token/from_oauth1", "app", Dropbox.Api.Auth.TokenFromOAuth1Arg.Encoder, Dropbox.Api.Auth.TokenFromOAuth1Result.Decoder, Dropbox.Api.Auth.TokenFromOAuth1Error.Decoder);
+            return this.Transport.SendRpcRequestAsync<TokenFromOAuth1Arg, TokenFromOAuth1Result, TokenFromOAuth1Error>(tokenFromOAuth1Arg, "api", "/auth/token/from_oauth1", "app", global::Dropbox.Api.Auth.TokenFromOAuth1Arg.Encoder, global::Dropbox.Api.Auth.TokenFromOAuth1Result.Decoder, global::Dropbox.Api.Auth.TokenFromOAuth1Error.Decoder);
         }
 
         /// <summary>

@@ -109,8 +109,8 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(UpdateFolderMemberArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("access_level", value.AccessLevel, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
             }
         }
 
@@ -148,10 +148,10 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     case "access_level":
-                        value.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

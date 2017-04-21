@@ -72,7 +72,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeleteBatchArg value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, Dropbox.Api.Files.DeleteArg.Encoder);
+                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.DeleteArg.Encoder);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList<DeleteArg>(reader, Dropbox.Api.Files.DeleteArg.Decoder);
+                        value.Entries = ReadList<DeleteArg>(reader, global::Dropbox.Api.Files.DeleteArg.Decoder);
                         break;
                     default:
                         reader.Skip();

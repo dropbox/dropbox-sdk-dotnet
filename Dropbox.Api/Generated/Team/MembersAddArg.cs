@@ -81,7 +81,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersAddArg value, enc.IJsonWriter writer)
             {
-                WriteListProperty("new_members", value.NewMembers, writer, Dropbox.Api.Team.MemberAddArg.Encoder);
+                WriteListProperty("new_members", value.NewMembers, writer, global::Dropbox.Api.Team.MemberAddArg.Encoder);
                 WriteProperty("force_async", value.ForceAsync, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -116,7 +116,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "new_members":
-                        value.NewMembers = ReadList<MemberAddArg>(reader, Dropbox.Api.Team.MemberAddArg.Decoder);
+                        value.NewMembers = ReadList<MemberAddArg>(reader, global::Dropbox.Api.Team.MemberAddArg.Decoder);
                         break;
                     case "force_async":
                         value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);

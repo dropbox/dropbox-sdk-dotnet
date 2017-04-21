@@ -94,8 +94,8 @@ namespace Dropbox.Api.TeamPolicies
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamMemberPolicies value, enc.IJsonWriter writer)
             {
-                WriteProperty("sharing", value.Sharing, writer, Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
-                WriteProperty("emm_state", value.EmmState, writer, Dropbox.Api.TeamPolicies.EmmState.Encoder);
+                WriteProperty("sharing", value.Sharing, writer, global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
+                WriteProperty("emm_state", value.EmmState, writer, global::Dropbox.Api.TeamPolicies.EmmState.Encoder);
             }
         }
 
@@ -129,10 +129,10 @@ namespace Dropbox.Api.TeamPolicies
                 switch (fieldName)
                 {
                     case "sharing":
-                        value.Sharing = Dropbox.Api.TeamPolicies.TeamSharingPolicies.Decoder.Decode(reader);
+                        value.Sharing = global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Decoder.Decode(reader);
                         break;
                     case "emm_state":
-                        value.EmmState = Dropbox.Api.TeamPolicies.EmmState.Decoder.Decode(reader);
+                        value.EmmState = global::Dropbox.Api.TeamPolicies.EmmState.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

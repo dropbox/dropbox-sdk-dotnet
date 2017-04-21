@@ -13,7 +13,7 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The information about a group member of the shared content.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Sharing.MembershipInfo" />
+    /// <seealso cref="Global::Dropbox.Api.Sharing.MembershipInfo" />
     public class GroupMembershipInfo : MembershipInfo
     {
         #pragma warning disable 108
@@ -84,11 +84,11 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupMembershipInfo value, enc.IJsonWriter writer)
             {
-                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
-                WriteProperty("group", value.Group, writer, Dropbox.Api.Sharing.GroupInfo.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("group", value.Group, writer, global::Dropbox.Api.Sharing.GroupInfo.Encoder);
                 if (value.Permissions.Count > 0)
                 {
-                    WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
+                    WriteListProperty("permissions", value.Permissions, writer, global::Dropbox.Api.Sharing.MemberPermission.Encoder);
                 }
                 if (value.Initials != null)
                 {
@@ -128,13 +128,13 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "access_type":
-                        value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessType = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "group":
-                        value.Group = Dropbox.Api.Sharing.GroupInfo.Decoder.Decode(reader);
+                        value.Group = global::Dropbox.Api.Sharing.GroupInfo.Decoder.Decode(reader);
                         break;
                     case "permissions":
-                        value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
+                        value.Permissions = ReadList<MemberPermission>(reader, global::Dropbox.Api.Sharing.MemberPermission.Decoder);
                         break;
                     case "initials":
                         value.Initials = enc.StringDecoder.Instance.Decode(reader);

@@ -47,15 +47,15 @@ namespace Dropbox.Api.Paper
         {
             if (filterBy == null)
             {
-                filterBy = Dropbox.Api.Paper.ListPaperDocsFilterBy.DocsAccessed.Instance;
+                filterBy = global::Dropbox.Api.Paper.ListPaperDocsFilterBy.DocsAccessed.Instance;
             }
             if (sortBy == null)
             {
-                sortBy = Dropbox.Api.Paper.ListPaperDocsSortBy.Accessed.Instance;
+                sortBy = global::Dropbox.Api.Paper.ListPaperDocsSortBy.Accessed.Instance;
             }
             if (sortOrder == null)
             {
-                sortOrder = Dropbox.Api.Paper.ListPaperDocsSortOrder.Ascending.Instance;
+                sortOrder = global::Dropbox.Api.Paper.ListPaperDocsSortOrder.Ascending.Instance;
             }
             if (limit < 1)
             {
@@ -81,9 +81,9 @@ namespace Dropbox.Api.Paper
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListPaperDocsArgs()
         {
-            this.FilterBy = Dropbox.Api.Paper.ListPaperDocsFilterBy.DocsAccessed.Instance;
-            this.SortBy = Dropbox.Api.Paper.ListPaperDocsSortBy.Accessed.Instance;
-            this.SortOrder = Dropbox.Api.Paper.ListPaperDocsSortOrder.Ascending.Instance;
+            this.FilterBy = global::Dropbox.Api.Paper.ListPaperDocsFilterBy.DocsAccessed.Instance;
+            this.SortBy = global::Dropbox.Api.Paper.ListPaperDocsSortBy.Accessed.Instance;
+            this.SortOrder = global::Dropbox.Api.Paper.ListPaperDocsSortOrder.Ascending.Instance;
             this.Limit = 1000;
         }
 
@@ -122,9 +122,9 @@ namespace Dropbox.Api.Paper
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ListPaperDocsArgs value, enc.IJsonWriter writer)
             {
-                WriteProperty("filter_by", value.FilterBy, writer, Dropbox.Api.Paper.ListPaperDocsFilterBy.Encoder);
-                WriteProperty("sort_by", value.SortBy, writer, Dropbox.Api.Paper.ListPaperDocsSortBy.Encoder);
-                WriteProperty("sort_order", value.SortOrder, writer, Dropbox.Api.Paper.ListPaperDocsSortOrder.Encoder);
+                WriteProperty("filter_by", value.FilterBy, writer, global::Dropbox.Api.Paper.ListPaperDocsFilterBy.Encoder);
+                WriteProperty("sort_by", value.SortBy, writer, global::Dropbox.Api.Paper.ListPaperDocsSortBy.Encoder);
+                WriteProperty("sort_order", value.SortOrder, writer, global::Dropbox.Api.Paper.ListPaperDocsSortOrder.Encoder);
                 WriteProperty("limit", value.Limit, writer, enc.Int32Encoder.Instance);
             }
         }
@@ -159,13 +159,13 @@ namespace Dropbox.Api.Paper
                 switch (fieldName)
                 {
                     case "filter_by":
-                        value.FilterBy = Dropbox.Api.Paper.ListPaperDocsFilterBy.Decoder.Decode(reader);
+                        value.FilterBy = global::Dropbox.Api.Paper.ListPaperDocsFilterBy.Decoder.Decode(reader);
                         break;
                     case "sort_by":
-                        value.SortBy = Dropbox.Api.Paper.ListPaperDocsSortBy.Decoder.Decode(reader);
+                        value.SortBy = global::Dropbox.Api.Paper.ListPaperDocsSortBy.Decoder.Decode(reader);
                         break;
                     case "sort_order":
-                        value.SortOrder = Dropbox.Api.Paper.ListPaperDocsSortOrder.Decoder.Decode(reader);
+                        value.SortOrder = global::Dropbox.Api.Paper.ListPaperDocsSortOrder.Decoder.Decode(reader);
                         break;
                     case "limit":
                         value.Limit = enc.Int32Decoder.Instance.Decode(reader);

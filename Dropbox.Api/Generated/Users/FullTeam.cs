@@ -13,7 +13,7 @@ namespace Dropbox.Api.Users
     /// <summary>
     /// <para>Detailed information about a team.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Users.Team" />
+    /// <seealso cref="Global::Dropbox.Api.Users.Team" />
     public class FullTeam : Team
     {
         #pragma warning disable 108
@@ -36,7 +36,7 @@ namespace Dropbox.Api.Users
         /// <param name="sharingPolicies">Team policies governing sharing.</param>
         public FullTeam(string id,
                         string name,
-                        Dropbox.Api.TeamPolicies.TeamSharingPolicies sharingPolicies)
+                        global::Dropbox.Api.TeamPolicies.TeamSharingPolicies sharingPolicies)
             : base(id, name)
         {
             if (sharingPolicies == null)
@@ -60,7 +60,7 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>Team policies governing sharing.</para>
         /// </summary>
-        public Dropbox.Api.TeamPolicies.TeamSharingPolicies SharingPolicies { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.TeamSharingPolicies SharingPolicies { get; protected set; }
 
         #region Encoder class
 
@@ -78,7 +78,7 @@ namespace Dropbox.Api.Users
             {
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("sharing_policies", value.SharingPolicies, writer, Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
+                WriteProperty("sharing_policies", value.SharingPolicies, writer, global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
             }
         }
 
@@ -118,7 +118,7 @@ namespace Dropbox.Api.Users
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "sharing_policies":
-                        value.SharingPolicies = Dropbox.Api.TeamPolicies.TeamSharingPolicies.Decoder.Decode(reader);
+                        value.SharingPolicies = global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -13,7 +13,7 @@ namespace Dropbox.Api.Properties
     /// <summary>
     /// <para>The Property template for the specified template.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Properties.PropertyGroupTemplate" />
+    /// <seealso cref="Global::Dropbox.Api.Properties.PropertyGroupTemplate" />
     public class GetPropertyTemplateResult : PropertyGroupTemplate
     {
         #pragma warning disable 108
@@ -72,7 +72,7 @@ namespace Dropbox.Api.Properties
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
-                WriteListProperty("fields", value.Fields, writer, Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
+                WriteListProperty("fields", value.Fields, writer, global::Dropbox.Api.Properties.PropertyFieldTemplate.Encoder);
             }
         }
 
@@ -113,7 +113,7 @@ namespace Dropbox.Api.Properties
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "fields":
-                        value.Fields = ReadList<PropertyFieldTemplate>(reader, Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
+                        value.Fields = ReadList<PropertyFieldTemplate>(reader, global::Dropbox.Api.Properties.PropertyFieldTemplate.Decoder);
                         break;
                     default:
                         reader.Skip();

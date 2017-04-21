@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>Metadata for a video.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.MediaMetadata" />
+    /// <seealso cref="Global::Dropbox.Api.Files.MediaMetadata" />
     public class VideoMetadata : MediaMetadata
     {
         #pragma warning disable 108
@@ -75,11 +75,11 @@ namespace Dropbox.Api.Files
             {
                 if (value.Dimensions != null)
                 {
-                    WriteProperty("dimensions", value.Dimensions, writer, Dropbox.Api.Files.Dimensions.Encoder);
+                    WriteProperty("dimensions", value.Dimensions, writer, global::Dropbox.Api.Files.Dimensions.Encoder);
                 }
                 if (value.Location != null)
                 {
-                    WriteProperty("location", value.Location, writer, Dropbox.Api.Files.GpsCoordinates.Encoder);
+                    WriteProperty("location", value.Location, writer, global::Dropbox.Api.Files.GpsCoordinates.Encoder);
                 }
                 if (value.TimeTaken != null)
                 {
@@ -122,10 +122,10 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "dimensions":
-                        value.Dimensions = Dropbox.Api.Files.Dimensions.Decoder.Decode(reader);
+                        value.Dimensions = global::Dropbox.Api.Files.Dimensions.Decoder.Decode(reader);
                         break;
                     case "location":
-                        value.Location = Dropbox.Api.Files.GpsCoordinates.Decoder.Decode(reader);
+                        value.Location = global::Dropbox.Api.Files.GpsCoordinates.Decoder.Decode(reader);
                         break;
                     case "time_taken":
                         value.TimeTaken = enc.DateTimeDecoder.Instance.Decode(reader);

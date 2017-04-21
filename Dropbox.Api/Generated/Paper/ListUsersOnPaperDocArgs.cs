@@ -13,7 +13,7 @@ namespace Dropbox.Api.Paper
     /// <summary>
     /// <para>The list users on paper doc args object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Paper.RefPaperDoc" />
+    /// <seealso cref="Global::Dropbox.Api.Paper.RefPaperDoc" />
     public class ListUsersOnPaperDocArgs : RefPaperDoc
     {
         #pragma warning disable 108
@@ -54,7 +54,7 @@ namespace Dropbox.Api.Paper
 
             if (filterBy == null)
             {
-                filterBy = Dropbox.Api.Paper.UserOnPaperDocFilter.Shared.Instance;
+                filterBy = global::Dropbox.Api.Paper.UserOnPaperDocFilter.Shared.Instance;
             }
             this.Limit = limit;
             this.FilterBy = filterBy;
@@ -70,7 +70,7 @@ namespace Dropbox.Api.Paper
         public ListUsersOnPaperDocArgs()
         {
             this.Limit = 1000;
-            this.FilterBy = Dropbox.Api.Paper.UserOnPaperDocFilter.Shared.Instance;
+            this.FilterBy = global::Dropbox.Api.Paper.UserOnPaperDocFilter.Shared.Instance;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Dropbox.Api.Paper
             {
                 WriteProperty("doc_id", value.DocId, writer, enc.StringEncoder.Instance);
                 WriteProperty("limit", value.Limit, writer, enc.Int32Encoder.Instance);
-                WriteProperty("filter_by", value.FilterBy, writer, Dropbox.Api.Paper.UserOnPaperDocFilter.Encoder);
+                WriteProperty("filter_by", value.FilterBy, writer, global::Dropbox.Api.Paper.UserOnPaperDocFilter.Encoder);
             }
         }
 
@@ -142,7 +142,7 @@ namespace Dropbox.Api.Paper
                         value.Limit = enc.Int32Decoder.Instance.Decode(reader);
                         break;
                     case "filter_by":
-                        value.FilterBy = Dropbox.Api.Paper.UserOnPaperDocFilter.Decoder.Decode(reader);
+                        value.FilterBy = global::Dropbox.Api.Paper.UserOnPaperDocFilter.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

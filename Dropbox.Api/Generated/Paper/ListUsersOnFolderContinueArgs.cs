@@ -13,7 +13,7 @@ namespace Dropbox.Api.Paper
     /// <summary>
     /// <para>The list users on folder continue args object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Paper.RefPaperDoc" />
+    /// <seealso cref="Global::Dropbox.Api.Paper.RefPaperDoc" />
     public class ListUsersOnFolderContinueArgs : RefPaperDoc
     {
         #pragma warning disable 108

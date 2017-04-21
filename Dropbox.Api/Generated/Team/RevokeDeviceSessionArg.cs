@@ -231,7 +231,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(WebSession value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.DeviceSessionArg.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.DeviceSessionArg.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -260,7 +260,7 @@ namespace Dropbox.Api.Team
                 /// <returns>The decoded object.</returns>
                 public override WebSession DecodeFields(enc.IJsonReader reader)
                 {
-                    return new WebSession(Dropbox.Api.Team.DeviceSessionArg.Decoder.DecodeFields(reader));
+                    return new WebSession(global::Dropbox.Api.Team.DeviceSessionArg.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -320,7 +320,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DesktopClient value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.RevokeDesktopClientArg.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.RevokeDesktopClientArg.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -349,7 +349,7 @@ namespace Dropbox.Api.Team
                 /// <returns>The decoded object.</returns>
                 public override DesktopClient DecodeFields(enc.IJsonReader reader)
                 {
-                    return new DesktopClient(Dropbox.Api.Team.RevokeDesktopClientArg.Decoder.DecodeFields(reader));
+                    return new DesktopClient(global::Dropbox.Api.Team.RevokeDesktopClientArg.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -409,7 +409,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MobileClient value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.DeviceSessionArg.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.DeviceSessionArg.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -438,7 +438,7 @@ namespace Dropbox.Api.Team
                 /// <returns>The decoded object.</returns>
                 public override MobileClient DecodeFields(enc.IJsonReader reader)
                 {
-                    return new MobileClient(Dropbox.Api.Team.DeviceSessionArg.Decoder.DecodeFields(reader));
+                    return new MobileClient(global::Dropbox.Api.Team.DeviceSessionArg.Decoder.DecodeFields(reader));
                 }
             }
 

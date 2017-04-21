@@ -13,9 +13,9 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Full description of a group.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.TeamCommon.GroupSummary" />
     /// <seealso cref="GroupMembersChangeResult" />
-    public class GroupFullInfo : Dropbox.Api.TeamCommon.GroupSummary
+    /// <seealso cref="Global::Dropbox.Api.TeamCommon.GroupSummary" />
+    public class GroupFullInfo : global::Dropbox.Api.TeamCommon.GroupSummary
     {
         #pragma warning disable 108
 
@@ -43,7 +43,7 @@ namespace Dropbox.Api.Team
         /// <param name="members">List of group members.</param>
         public GroupFullInfo(string groupName,
                              string groupId,
-                             Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
+                             global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType,
                              ulong created,
                              string groupExternalId = null,
                              uint? memberCount = null,
@@ -93,7 +93,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
                 WriteProperty("group_id", value.GroupId, writer, enc.StringEncoder.Instance);
-                WriteProperty("group_management_type", value.GroupManagementType, writer, Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
+                WriteProperty("group_management_type", value.GroupManagementType, writer, global::Dropbox.Api.TeamCommon.GroupManagementType.Encoder);
                 WriteProperty("created", value.Created, writer, enc.UInt64Encoder.Instance);
                 if (value.GroupExternalId != null)
                 {
@@ -105,7 +105,7 @@ namespace Dropbox.Api.Team
                 }
                 if (value.Members.Count > 0)
                 {
-                    WriteListProperty("members", value.Members, writer, Dropbox.Api.Team.GroupMemberInfo.Encoder);
+                    WriteListProperty("members", value.Members, writer, global::Dropbox.Api.Team.GroupMemberInfo.Encoder);
                 }
             }
         }
@@ -146,7 +146,7 @@ namespace Dropbox.Api.Team
                         value.GroupId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "group_management_type":
-                        value.GroupManagementType = Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
+                        value.GroupManagementType = global::Dropbox.Api.TeamCommon.GroupManagementType.Decoder.Decode(reader);
                         break;
                     case "created":
                         value.Created = enc.UInt64Decoder.Instance.Decode(reader);
@@ -158,7 +158,7 @@ namespace Dropbox.Api.Team
                         value.MemberCount = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     case "members":
-                        value.Members = ReadList<GroupMemberInfo>(reader, Dropbox.Api.Team.GroupMemberInfo.Decoder);
+                        value.Members = ReadList<GroupMemberInfo>(reader, global::Dropbox.Api.Team.GroupMemberInfo.Decoder);
                         break;
                     default:
                         reader.Skip();

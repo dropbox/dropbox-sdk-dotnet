@@ -43,7 +43,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="AlphaGetMetadataError"/>.</exception>
         public t.Task<Metadata> AlphaGetMetadataAsync(AlphaGetMetadataArg alphaGetMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<AlphaGetMetadataArg, Metadata, AlphaGetMetadataError>(alphaGetMetadataArg, "api", "/files/alpha/get_metadata", "user", Dropbox.Api.Files.AlphaGetMetadataArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.AlphaGetMetadataError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AlphaGetMetadataArg, Metadata, AlphaGetMetadataError>(alphaGetMetadataArg, "api", "/files/alpha/get_metadata", "user", global::Dropbox.Api.Files.AlphaGetMetadataArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.AlphaGetMetadataError.Decoder);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadErrorWithProperties"/>.</exception>
         public t.Task<FileMetadata> AlphaUploadAsync(CommitInfoWithProperties commitInfoWithProperties, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<CommitInfoWithProperties, FileMetadata, UploadErrorWithProperties>(commitInfoWithProperties, body, "content", "/files/alpha/upload", "user", Dropbox.Api.Files.CommitInfoWithProperties.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadErrorWithProperties.Decoder);
+            return this.Transport.SendUploadRequestAsync<CommitInfoWithProperties, FileMetadata, UploadErrorWithProperties>(commitInfoWithProperties, body, "content", "/files/alpha/upload", "user", global::Dropbox.Api.Files.CommitInfoWithProperties.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadErrorWithProperties.Decoder);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace Dropbox.Api.Files.Routes
                                                      bool autorename = false,
                                                      sys.DateTime? clientModified = null,
                                                      bool mute = false,
-                                                     col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
+                                                     col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
                                                      io.Stream body = null)
         {
             var commitInfoWithProperties = new CommitInfoWithProperties(path,
@@ -272,7 +272,7 @@ namespace Dropbox.Api.Files.Routes
                                                  bool autorename = false,
                                                  sys.DateTime? clientModified = null,
                                                  bool mute = false,
-                                                 col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
+                                                 col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
                                                  io.Stream body = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
@@ -320,7 +320,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", "user", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
         }
 
         /// <summary>
@@ -442,7 +442,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<RelocationBatchLaunch> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", "user", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -558,10 +558,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/copy_batch/check", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/copy_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -573,7 +573,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginCopyBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginCopyBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CopyBatchCheckAsync(pollArg);
 
@@ -591,10 +591,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.CopyBatchCheckAsync(pollArg);
         }
@@ -613,7 +613,7 @@ namespace Dropbox.Api.Files.Routes
                                                     sys.AsyncCallback callback,
                                                     object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginCopyBatchCheck(pollArg, callback, callbackState);
         }
@@ -627,7 +627,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public RelocationBatchJobStatus EndCopyBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchJobStatus>;
@@ -652,7 +652,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="GetCopyReferenceError"/>.</exception>
         public t.Task<GetCopyReferenceResult> CopyReferenceGetAsync(GetCopyReferenceArg getCopyReferenceArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetCopyReferenceArg, GetCopyReferenceResult, GetCopyReferenceError>(getCopyReferenceArg, "api", "/files/copy_reference/get", "user", Dropbox.Api.Files.GetCopyReferenceArg.Encoder, Dropbox.Api.Files.GetCopyReferenceResult.Decoder, Dropbox.Api.Files.GetCopyReferenceError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetCopyReferenceArg, GetCopyReferenceResult, GetCopyReferenceError>(getCopyReferenceArg, "api", "/files/copy_reference/get", "user", global::Dropbox.Api.Files.GetCopyReferenceArg.Encoder, global::Dropbox.Api.Files.GetCopyReferenceResult.Decoder, global::Dropbox.Api.Files.GetCopyReferenceError.Decoder);
         }
 
         /// <summary>
@@ -743,7 +743,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="SaveCopyReferenceError"/>.</exception>
         public t.Task<SaveCopyReferenceResult> CopyReferenceSaveAsync(SaveCopyReferenceArg saveCopyReferenceArg)
         {
-            return this.Transport.SendRpcRequestAsync<SaveCopyReferenceArg, SaveCopyReferenceResult, SaveCopyReferenceError>(saveCopyReferenceArg, "api", "/files/copy_reference/save", "user", Dropbox.Api.Files.SaveCopyReferenceArg.Encoder, Dropbox.Api.Files.SaveCopyReferenceResult.Decoder, Dropbox.Api.Files.SaveCopyReferenceError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SaveCopyReferenceArg, SaveCopyReferenceResult, SaveCopyReferenceError>(saveCopyReferenceArg, "api", "/files/copy_reference/save", "user", global::Dropbox.Api.Files.SaveCopyReferenceArg.Encoder, global::Dropbox.Api.Files.SaveCopyReferenceResult.Decoder, global::Dropbox.Api.Files.SaveCopyReferenceError.Decoder);
         }
 
         /// <summary>
@@ -838,7 +838,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="CreateFolderError"/>.</exception>
         public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", "user", Dropbox.Api.Files.CreateFolderArg.Encoder, Dropbox.Api.Files.FolderMetadata.Decoder, Dropbox.Api.Files.CreateFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", "user", global::Dropbox.Api.Files.CreateFolderArg.Encoder, global::Dropbox.Api.Files.FolderMetadata.Decoder, global::Dropbox.Api.Files.CreateFolderError.Decoder);
         }
 
         /// <summary>
@@ -935,7 +935,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", "user", Dropbox.Api.Files.DeleteArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.DeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", "user", global::Dropbox.Api.Files.DeleteArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.DeleteError.Decoder);
         }
 
         /// <summary>
@@ -1024,7 +1024,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<DeleteBatchLaunch> DeleteBatchAsync(DeleteBatchArg deleteBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteBatchArg, DeleteBatchLaunch, enc.Empty>(deleteBatchArg, "api", "/files/delete_batch", "user", Dropbox.Api.Files.DeleteBatchArg.Encoder, Dropbox.Api.Files.DeleteBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<DeleteBatchArg, DeleteBatchLaunch, enc.Empty>(deleteBatchArg, "api", "/files/delete_batch", "user", global::Dropbox.Api.Files.DeleteBatchArg.Encoder, global::Dropbox.Api.Files.DeleteBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -1106,10 +1106,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<DeleteBatchJobStatus> DeleteBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<DeleteBatchJobStatus> DeleteBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, DeleteBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/delete_batch/check", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.DeleteBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, DeleteBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/delete_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.DeleteBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -1121,7 +1121,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDeleteBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginDeleteBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DeleteBatchCheckAsync(pollArg);
 
@@ -1139,10 +1139,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<DeleteBatchJobStatus> DeleteBatchCheckAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.DeleteBatchCheckAsync(pollArg);
         }
@@ -1161,7 +1161,7 @@ namespace Dropbox.Api.Files.Routes
                                                       sys.AsyncCallback callback,
                                                       object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginDeleteBatchCheck(pollArg, callback, callbackState);
         }
@@ -1175,7 +1175,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public DeleteBatchJobStatus EndDeleteBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<DeleteBatchJobStatus>;
@@ -1198,7 +1198,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="DownloadError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> DownloadAsync(DownloadArg downloadArg)
         {
-            return this.Transport.SendDownloadRequestAsync<DownloadArg, FileMetadata, DownloadError>(downloadArg, "content", "/files/download", "user", Dropbox.Api.Files.DownloadArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.DownloadError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<DownloadArg, FileMetadata, DownloadError>(downloadArg, "content", "/files/download", "user", global::Dropbox.Api.Files.DownloadArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.DownloadError.Decoder);
         }
 
         /// <summary>
@@ -1292,7 +1292,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="GetMetadataError"/>.</exception>
         public t.Task<Metadata> GetMetadataAsync(GetMetadataArg getMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetMetadataArg, Metadata, GetMetadataError>(getMetadataArg, "api", "/files/get_metadata", "user", Dropbox.Api.Files.GetMetadataArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.GetMetadataError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetMetadataArg, Metadata, GetMetadataError>(getMetadataArg, "api", "/files/get_metadata", "user", global::Dropbox.Api.Files.GetMetadataArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.GetMetadataError.Decoder);
         }
 
         /// <summary>
@@ -1409,7 +1409,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="PreviewError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetPreviewAsync(PreviewArg previewArg)
         {
-            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", "user", Dropbox.Api.Files.PreviewArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.PreviewError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<PreviewArg, FileMetadata, PreviewError>(previewArg, "content", "/files/get_preview", "user", global::Dropbox.Api.Files.PreviewArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.PreviewError.Decoder);
         }
 
         /// <summary>
@@ -1504,7 +1504,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="GetTemporaryLinkError"/>.</exception>
         public t.Task<GetTemporaryLinkResult> GetTemporaryLinkAsync(GetTemporaryLinkArg getTemporaryLinkArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetTemporaryLinkArg, GetTemporaryLinkResult, GetTemporaryLinkError>(getTemporaryLinkArg, "api", "/files/get_temporary_link", "user", Dropbox.Api.Files.GetTemporaryLinkArg.Encoder, Dropbox.Api.Files.GetTemporaryLinkResult.Decoder, Dropbox.Api.Files.GetTemporaryLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetTemporaryLinkArg, GetTemporaryLinkResult, GetTemporaryLinkError>(getTemporaryLinkArg, "api", "/files/get_temporary_link", "user", global::Dropbox.Api.Files.GetTemporaryLinkArg.Encoder, global::Dropbox.Api.Files.GetTemporaryLinkResult.Decoder, global::Dropbox.Api.Files.GetTemporaryLinkError.Decoder);
         }
 
         /// <summary>
@@ -1594,7 +1594,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ThumbnailError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(ThumbnailArg thumbnailArg)
         {
-            return this.Transport.SendDownloadRequestAsync<ThumbnailArg, FileMetadata, ThumbnailError>(thumbnailArg, "content", "/files/get_thumbnail", "user", Dropbox.Api.Files.ThumbnailArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.ThumbnailError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<ThumbnailArg, FileMetadata, ThumbnailError>(thumbnailArg, "content", "/files/get_thumbnail", "user", global::Dropbox.Api.Files.ThumbnailArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.ThumbnailError.Decoder);
         }
 
         /// <summary>
@@ -1719,7 +1719,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(ListFolderArg listFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderResult, ListFolderError>(listFolderArg, "api", "/files/list_folder", "user", Dropbox.Api.Files.ListFolderArg.Encoder, Dropbox.Api.Files.ListFolderResult.Decoder, Dropbox.Api.Files.ListFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderResult, ListFolderError>(listFolderArg, "api", "/files/list_folder", "user", global::Dropbox.Api.Files.ListFolderArg.Encoder, global::Dropbox.Api.Files.ListFolderResult.Decoder, global::Dropbox.Api.Files.ListFolderError.Decoder);
         }
 
         /// <summary>
@@ -1867,7 +1867,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderContinueError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderContinueAsync(ListFolderContinueArg listFolderContinueArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderContinueArg, ListFolderResult, ListFolderContinueError>(listFolderContinueArg, "api", "/files/list_folder/continue", "user", Dropbox.Api.Files.ListFolderContinueArg.Encoder, Dropbox.Api.Files.ListFolderResult.Decoder, Dropbox.Api.Files.ListFolderContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderContinueArg, ListFolderResult, ListFolderContinueError>(listFolderContinueArg, "api", "/files/list_folder/continue", "user", global::Dropbox.Api.Files.ListFolderContinueArg.Encoder, global::Dropbox.Api.Files.ListFolderResult.Decoder, global::Dropbox.Api.Files.ListFolderContinueError.Decoder);
         }
 
         /// <summary>
@@ -1965,7 +1965,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(ListFolderArg listFolderArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderGetLatestCursorResult, ListFolderError>(listFolderArg, "api", "/files/list_folder/get_latest_cursor", "user", Dropbox.Api.Files.ListFolderArg.Encoder, Dropbox.Api.Files.ListFolderGetLatestCursorResult.Decoder, Dropbox.Api.Files.ListFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderArg, ListFolderGetLatestCursorResult, ListFolderError>(listFolderArg, "api", "/files/list_folder/get_latest_cursor", "user", global::Dropbox.Api.Files.ListFolderArg.Encoder, global::Dropbox.Api.Files.ListFolderGetLatestCursorResult.Decoder, global::Dropbox.Api.Files.ListFolderError.Decoder);
         }
 
         /// <summary>
@@ -2102,7 +2102,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListFolderLongpollError"/>.</exception>
         public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(ListFolderLongpollArg listFolderLongpollArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderLongpollArg, ListFolderLongpollResult, ListFolderLongpollError>(listFolderLongpollArg, "notify", "/files/list_folder/longpoll", "noauth", Dropbox.Api.Files.ListFolderLongpollArg.Encoder, Dropbox.Api.Files.ListFolderLongpollResult.Decoder, Dropbox.Api.Files.ListFolderLongpollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderLongpollArg, ListFolderLongpollResult, ListFolderLongpollError>(listFolderLongpollArg, "notify", "/files/list_folder/longpoll", "noauth", global::Dropbox.Api.Files.ListFolderLongpollArg.Encoder, global::Dropbox.Api.Files.ListFolderLongpollResult.Decoder, global::Dropbox.Api.Files.ListFolderLongpollError.Decoder);
         }
 
         /// <summary>
@@ -2214,7 +2214,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(ListRevisionsArg listRevisionsArg)
         {
-            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions", "user", Dropbox.Api.Files.ListRevisionsArg.Encoder, Dropbox.Api.Files.ListRevisionsResult.Decoder, Dropbox.Api.Files.ListRevisionsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListRevisionsArg, ListRevisionsResult, ListRevisionsError>(listRevisionsArg, "api", "/files/list_revisions", "user", global::Dropbox.Api.Files.ListRevisionsArg.Encoder, global::Dropbox.Api.Files.ListRevisionsResult.Decoder, global::Dropbox.Api.Files.ListRevisionsError.Decoder);
         }
 
         /// <summary>
@@ -2306,7 +2306,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="RelocationError"/>.</exception>
         public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", "user", Dropbox.Api.Files.RelocationArg.Encoder, Dropbox.Api.Files.Metadata.Decoder, Dropbox.Api.Files.RelocationError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
         }
 
         /// <summary>
@@ -2425,7 +2425,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<RelocationBatchLaunch> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", "user", Dropbox.Api.Files.RelocationBatchArg.Encoder, Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -2538,10 +2538,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -2553,7 +2553,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMoveBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMoveBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MoveBatchCheckAsync(pollArg);
 
@@ -2571,10 +2571,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.MoveBatchCheckAsync(pollArg);
         }
@@ -2593,7 +2593,7 @@ namespace Dropbox.Api.Files.Routes
                                                     sys.AsyncCallback callback,
                                                     object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginMoveBatchCheck(pollArg, callback, callbackState);
         }
@@ -2607,7 +2607,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public RelocationBatchJobStatus EndMoveBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchJobStatus>;
@@ -2630,7 +2630,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         public t.Task PermanentlyDeleteAsync(DeleteArg deleteArg)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, enc.Empty, DeleteError>(deleteArg, "api", "/files/permanently_delete", "user", Dropbox.Api.Files.DeleteArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.DeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DeleteArg, enc.Empty, DeleteError>(deleteArg, "api", "/files/permanently_delete", "user", global::Dropbox.Api.Files.DeleteArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.DeleteError.Decoder);
         }
 
         /// <summary>
@@ -2711,7 +2711,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="AddPropertiesError"/>.</exception>
         public t.Task PropertiesAddAsync(PropertyGroupWithPath propertyGroupWithPath)
         {
-            return this.Transport.SendRpcRequestAsync<PropertyGroupWithPath, enc.Empty, AddPropertiesError>(propertyGroupWithPath, "api", "/files/properties/add", "user", Dropbox.Api.Files.PropertyGroupWithPath.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.AddPropertiesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PropertyGroupWithPath, enc.Empty, AddPropertiesError>(propertyGroupWithPath, "api", "/files/properties/add", "user", global::Dropbox.Api.Files.PropertyGroupWithPath.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.AddPropertiesError.Decoder);
         }
 
         /// <summary>
@@ -2742,7 +2742,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="AddPropertiesError"/>.</exception>
         public t.Task PropertiesAddAsync(string path,
-                                         col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups)
+                                         col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups)
         {
             var propertyGroupWithPath = new PropertyGroupWithPath(path,
                                                                   propertyGroups);
@@ -2762,7 +2762,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginPropertiesAdd(string path,
-                                                   col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups,
+                                                   col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups,
                                                    sys.AsyncCallback callback,
                                                    object callbackState = null)
         {
@@ -2801,7 +2801,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="InvalidPropertyGroupError"/>.</exception>
         public t.Task PropertiesOverwriteAsync(PropertyGroupWithPath propertyGroupWithPath)
         {
-            return this.Transport.SendRpcRequestAsync<PropertyGroupWithPath, enc.Empty, InvalidPropertyGroupError>(propertyGroupWithPath, "api", "/files/properties/overwrite", "user", Dropbox.Api.Files.PropertyGroupWithPath.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.InvalidPropertyGroupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PropertyGroupWithPath, enc.Empty, InvalidPropertyGroupError>(propertyGroupWithPath, "api", "/files/properties/overwrite", "user", global::Dropbox.Api.Files.PropertyGroupWithPath.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.InvalidPropertyGroupError.Decoder);
         }
 
         /// <summary>
@@ -2832,7 +2832,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="InvalidPropertyGroupError"/>.</exception>
         public t.Task PropertiesOverwriteAsync(string path,
-                                               col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups)
+                                               col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups)
         {
             var propertyGroupWithPath = new PropertyGroupWithPath(path,
                                                                   propertyGroups);
@@ -2852,7 +2852,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginPropertiesOverwrite(string path,
-                                                         col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups,
+                                                         col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups,
                                                          sys.AsyncCallback callback,
                                                          object callbackState = null)
         {
@@ -2894,7 +2894,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="RemovePropertiesError"/>.</exception>
         public t.Task PropertiesRemoveAsync(RemovePropertiesArg removePropertiesArg)
         {
-            return this.Transport.SendRpcRequestAsync<RemovePropertiesArg, enc.Empty, RemovePropertiesError>(removePropertiesArg, "api", "/files/properties/remove", "user", Dropbox.Api.Files.RemovePropertiesArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.RemovePropertiesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemovePropertiesArg, enc.Empty, RemovePropertiesError>(removePropertiesArg, "api", "/files/properties/remove", "user", global::Dropbox.Api.Files.RemovePropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.RemovePropertiesError.Decoder);
         }
 
         /// <summary>
@@ -2984,10 +2984,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Properties.GetPropertyTemplateArg, Dropbox.Api.Properties.GetPropertyTemplateResult, Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/files/properties/template/get", "user", Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Properties.GetPropertyTemplateArg, global::Dropbox.Api.Properties.GetPropertyTemplateResult, global::Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/files/properties/template/get", "user", global::Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, global::Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.PropertyTemplateError.Decoder);
         }
 
         /// <summary>
@@ -2999,7 +2999,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPropertiesTemplateGet(Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginPropertiesTemplateGet(global::Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
 
@@ -3015,10 +3015,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
         {
-            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+            var getPropertyTemplateArg = new global::Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
 
             return this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
         }
@@ -3037,7 +3037,7 @@ namespace Dropbox.Api.Files.Routes
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
         {
-            var getPropertyTemplateArg = new Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+            var getPropertyTemplateArg = new global::Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
 
             return this.BeginPropertiesTemplateGet(getPropertyTemplateArg, callback, callbackState);
         }
@@ -3051,10 +3051,10 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public global::Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Properties.GetPropertyTemplateResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3073,10 +3073,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, Dropbox.Api.Properties.ListPropertyTemplateIds, Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/files/properties/template/list", "user", enc.EmptyEncoder.Instance, Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.Properties.ListPropertyTemplateIds, global::Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/files/properties/template/list", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, global::Dropbox.Api.Properties.PropertyTemplateError.Decoder);
         }
 
         /// <summary>
@@ -3103,10 +3103,10 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
+        public global::Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Dropbox.Api.Properties.ListPropertyTemplateIds>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.Properties.ListPropertyTemplateIds>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3127,7 +3127,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UpdatePropertiesError"/>.</exception>
         public t.Task PropertiesUpdateAsync(UpdatePropertyGroupArg updatePropertyGroupArg)
         {
-            return this.Transport.SendRpcRequestAsync<UpdatePropertyGroupArg, enc.Empty, UpdatePropertiesError>(updatePropertyGroupArg, "api", "/files/properties/update", "user", Dropbox.Api.Files.UpdatePropertyGroupArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.UpdatePropertiesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdatePropertyGroupArg, enc.Empty, UpdatePropertiesError>(updatePropertyGroupArg, "api", "/files/properties/update", "user", global::Dropbox.Api.Files.UpdatePropertyGroupArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UpdatePropertiesError.Decoder);
         }
 
         /// <summary>
@@ -3217,7 +3217,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="RestoreError"/>.</exception>
         public t.Task<FileMetadata> RestoreAsync(RestoreArg restoreArg)
         {
-            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", "user", Dropbox.Api.Files.RestoreArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.RestoreError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RestoreArg, FileMetadata, RestoreError>(restoreArg, "api", "/files/restore", "user", global::Dropbox.Api.Files.RestoreArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.RestoreError.Decoder);
         }
 
         /// <summary>
@@ -3307,7 +3307,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="SaveUrlError"/>.</exception>
         public t.Task<SaveUrlResult> SaveUrlAsync(SaveUrlArg saveUrlArg)
         {
-            return this.Transport.SendRpcRequestAsync<SaveUrlArg, SaveUrlResult, SaveUrlError>(saveUrlArg, "api", "/files/save_url", "user", Dropbox.Api.Files.SaveUrlArg.Encoder, Dropbox.Api.Files.SaveUrlResult.Decoder, Dropbox.Api.Files.SaveUrlError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SaveUrlArg, SaveUrlResult, SaveUrlError>(saveUrlArg, "api", "/files/save_url", "user", global::Dropbox.Api.Files.SaveUrlArg.Encoder, global::Dropbox.Api.Files.SaveUrlResult.Decoder, global::Dropbox.Api.Files.SaveUrlError.Decoder);
         }
 
         /// <summary>
@@ -3396,10 +3396,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<SaveUrlJobStatus> SaveUrlCheckJobStatusAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<SaveUrlJobStatus> SaveUrlCheckJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, SaveUrlJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/save_url/check_job_status", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.SaveUrlJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, SaveUrlJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/save_url/check_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.SaveUrlJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -3411,7 +3411,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginSaveUrlCheckJobStatus(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginSaveUrlCheckJobStatus(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.SaveUrlCheckJobStatusAsync(pollArg);
 
@@ -3428,10 +3428,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<SaveUrlJobStatus> SaveUrlCheckJobStatusAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.SaveUrlCheckJobStatusAsync(pollArg);
         }
@@ -3450,7 +3450,7 @@ namespace Dropbox.Api.Files.Routes
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginSaveUrlCheckJobStatus(pollArg, callback, callbackState);
         }
@@ -3464,7 +3464,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public SaveUrlJobStatus EndSaveUrlCheckJobStatus(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SaveUrlJobStatus>;
@@ -3488,7 +3488,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
         public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
         {
-            return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", "user", Dropbox.Api.Files.SearchArg.Encoder, Dropbox.Api.Files.SearchResult.Decoder, Dropbox.Api.Files.SearchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", "user", global::Dropbox.Api.Files.SearchArg.Encoder, global::Dropbox.Api.Files.SearchResult.Decoder, global::Dropbox.Api.Files.SearchError.Decoder);
         }
 
         /// <summary>
@@ -3612,7 +3612,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
         public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", "user", Dropbox.Api.Files.CommitInfo.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadError.Decoder);
+            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", "user", global::Dropbox.Api.Files.CommitInfo.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadError.Decoder);
         }
 
         /// <summary>
@@ -3747,7 +3747,7 @@ namespace Dropbox.Api.Files.Routes
         [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
         public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.UploadSessionLookupError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
         }
 
         /// <summary>
@@ -3854,7 +3854,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionLookupError"/>.</exception>
         public t.Task UploadSessionAppendV2Async(UploadSessionAppendArg uploadSessionAppendArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionAppendArg, enc.Empty, UploadSessionLookupError>(uploadSessionAppendArg, body, "content", "/files/upload_session/append_v2", "user", Dropbox.Api.Files.UploadSessionAppendArg.Encoder, enc.EmptyDecoder.Instance, Dropbox.Api.Files.UploadSessionLookupError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionAppendArg, enc.Empty, UploadSessionLookupError>(uploadSessionAppendArg, body, "content", "/files/upload_session/append_v2", "user", global::Dropbox.Api.Files.UploadSessionAppendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
         }
 
         /// <summary>
@@ -3957,7 +3957,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionFinishError"/>.</exception>
         public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionFinishArg uploadSessionFinishArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionFinishArg, FileMetadata, UploadSessionFinishError>(uploadSessionFinishArg, body, "content", "/files/upload_session/finish", "user", Dropbox.Api.Files.UploadSessionFinishArg.Encoder, Dropbox.Api.Files.FileMetadata.Decoder, Dropbox.Api.Files.UploadSessionFinishError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionFinishArg, FileMetadata, UploadSessionFinishError>(uploadSessionFinishArg, body, "content", "/files/upload_session/finish", "user", global::Dropbox.Api.Files.UploadSessionFinishArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadSessionFinishError.Decoder);
         }
 
         /// <summary>
@@ -4073,7 +4073,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, UploadSessionFinishBatchLaunch, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", "user", Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, UploadSessionFinishBatchLaunch, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", "user", global::Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, global::Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
@@ -4170,10 +4170,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<UploadSessionFinishBatchJobStatus> UploadSessionFinishBatchCheckAsync(Dropbox.Api.Async.PollArg pollArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<UploadSessionFinishBatchJobStatus> UploadSessionFinishBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<Dropbox.Api.Async.PollArg, UploadSessionFinishBatchJobStatus, Dropbox.Api.Async.PollError>(pollArg, "api", "/files/upload_session/finish_batch/check", "user", Dropbox.Api.Async.PollArg.Encoder, Dropbox.Api.Files.UploadSessionFinishBatchJobStatus.Decoder, Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, UploadSessionFinishBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/upload_session/finish_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.UploadSessionFinishBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -4186,7 +4186,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUploadSessionFinishBatchCheck(Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionFinishBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionFinishBatchCheckAsync(pollArg);
 
@@ -4204,10 +4204,10 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public t.Task<UploadSessionFinishBatchJobStatus> UploadSessionFinishBatchCheckAsync(string asyncJobId)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.UploadSessionFinishBatchCheckAsync(pollArg);
         }
@@ -4227,7 +4227,7 @@ namespace Dropbox.Api.Files.Routes
                                                                    sys.AsyncCallback callback,
                                                                    object callbackState = null)
         {
-            var pollArg = new Dropbox.Api.Async.PollArg(asyncJobId);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
             return this.BeginUploadSessionFinishBatchCheck(pollArg, callback, callbackState);
         }
@@ -4241,7 +4241,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="Dropbox.Api.Async.PollError"/>.</exception>
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
         public UploadSessionFinishBatchJobStatus EndUploadSessionFinishBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<UploadSessionFinishBatchJobStatus>;
@@ -4269,7 +4269,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         public t.Task<UploadSessionStartResult> UploadSessionStartAsync(UploadSessionStartArg uploadSessionStartArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionStartArg, UploadSessionStartResult, enc.Empty>(uploadSessionStartArg, body, "content", "/files/upload_session/start", "user", Dropbox.Api.Files.UploadSessionStartArg.Encoder, Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendUploadRequestAsync<UploadSessionStartArg, UploadSessionStartResult, enc.Empty>(uploadSessionStartArg, body, "content", "/files/upload_session/start", "user", global::Dropbox.Api.Files.UploadSessionStartArg.Encoder, global::Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>

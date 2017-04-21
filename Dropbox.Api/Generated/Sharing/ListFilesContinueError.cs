@@ -231,7 +231,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(UserError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharingUserError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.SharingUserError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -264,7 +264,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "user_error":
-                            value.Value = Dropbox.Api.Sharing.SharingUserError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.SharingUserError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

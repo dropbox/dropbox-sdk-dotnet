@@ -89,7 +89,7 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(MemberLinkedApps value, enc.IJsonWriter writer)
             {
                 WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
-                WriteListProperty("linked_api_apps", value.LinkedApiApps, writer, Dropbox.Api.Team.ApiApp.Encoder);
+                WriteListProperty("linked_api_apps", value.LinkedApiApps, writer, global::Dropbox.Api.Team.ApiApp.Encoder);
             }
         }
 
@@ -126,7 +126,7 @@ namespace Dropbox.Api.Team
                         value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "linked_api_apps":
-                        value.LinkedApiApps = ReadList<ApiApp>(reader, Dropbox.Api.Team.ApiApp.Decoder);
+                        value.LinkedApiApps = ReadList<ApiApp>(reader, global::Dropbox.Api.Team.ApiApp.Decoder);
                         break;
                     default:
                         reader.Skip();

@@ -154,7 +154,7 @@ namespace Dropbox.Api.Sharing
                     return;
                 }
                 WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
-                WriteProperty("visibility", value.Visibility, writer, Dropbox.Api.Sharing.Visibility.Encoder);
+                WriteProperty("visibility", value.Visibility, writer, global::Dropbox.Api.Sharing.Visibility.Encoder);
                 if (value.Expires != null)
                 {
                     WriteProperty("expires", value.Expires.Value, writer, enc.DateTimeEncoder.Instance);
@@ -213,7 +213,7 @@ namespace Dropbox.Api.Sharing
                         value.Url = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "visibility":
-                        value.Visibility = Dropbox.Api.Sharing.Visibility.Decoder.Decode(reader);
+                        value.Visibility = global::Dropbox.Api.Sharing.Visibility.Decoder.Decode(reader);
                         break;
                     case "expires":
                         value.Expires = enc.DateTimeDecoder.Instance.Decode(reader);

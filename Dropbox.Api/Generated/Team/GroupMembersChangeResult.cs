@@ -94,7 +94,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupMembersChangeResult value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, Dropbox.Api.Team.GroupFullInfo.Encoder);
+                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.Team.GroupFullInfo.Encoder);
                 WriteProperty("async_job_id", value.AsyncJobId, writer, enc.StringEncoder.Instance);
             }
         }
@@ -130,7 +130,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "group_info":
-                        value.GroupInfo = Dropbox.Api.Team.GroupFullInfo.Decoder.Decode(reader);
+                        value.GroupInfo = global::Dropbox.Api.Team.GroupFullInfo.Decoder.Decode(reader);
                         break;
                     case "async_job_id":
                         value.AsyncJobId = enc.StringDecoder.Instance.Decode(reader);

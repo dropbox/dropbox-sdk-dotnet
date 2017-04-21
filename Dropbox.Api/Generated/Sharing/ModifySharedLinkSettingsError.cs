@@ -324,7 +324,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SettingsError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharedLinkSettingsError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.SharedLinkSettingsError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -357,7 +357,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "settings_error":
-                            value.Value = Dropbox.Api.Sharing.SharedLinkSettingsError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.SharedLinkSettingsError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

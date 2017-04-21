@@ -14,7 +14,7 @@ namespace Dropbox.Api.Sharing
     /// <para>Arguments for <see
     /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.UpdateFileMemberAsync" />.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Sharing.ChangeFileMemberAccessArgs" />
+    /// <seealso cref="Global::Dropbox.Api.Sharing.ChangeFileMemberAccessArgs" />
     public class UpdateFileMemberArgs : ChangeFileMemberAccessArgs
     {
         #pragma warning disable 108
@@ -69,8 +69,8 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(UpdateFileMemberArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("file", value.File, writer, enc.StringEncoder.Instance);
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("access_level", value.AccessLevel, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
             }
         }
 
@@ -107,10 +107,10 @@ namespace Dropbox.Api.Sharing
                         value.File = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     case "access_level":
-                        value.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

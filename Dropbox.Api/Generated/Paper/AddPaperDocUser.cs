@@ -13,7 +13,7 @@ namespace Dropbox.Api.Paper
     /// <summary>
     /// <para>The add paper doc user object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Paper.RefPaperDoc" />
+    /// <seealso cref="Global::Dropbox.Api.Paper.RefPaperDoc" />
     public class AddPaperDocUser : RefPaperDoc
     {
         #pragma warning disable 108
@@ -106,7 +106,7 @@ namespace Dropbox.Api.Paper
             public override void EncodeFields(AddPaperDocUser value, enc.IJsonWriter writer)
             {
                 WriteProperty("doc_id", value.DocId, writer, enc.StringEncoder.Instance);
-                WriteListProperty("members", value.Members, writer, Dropbox.Api.Paper.AddMember.Encoder);
+                WriteListProperty("members", value.Members, writer, global::Dropbox.Api.Paper.AddMember.Encoder);
                 if (value.CustomMessage != null)
                 {
                     WriteProperty("custom_message", value.CustomMessage, writer, enc.StringEncoder.Instance);
@@ -148,7 +148,7 @@ namespace Dropbox.Api.Paper
                         value.DocId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "members":
-                        value.Members = ReadList<AddMember>(reader, Dropbox.Api.Paper.AddMember.Decoder);
+                        value.Members = ReadList<AddMember>(reader, global::Dropbox.Api.Paper.AddMember.Decoder);
                         break;
                     case "custom_message":
                         value.CustomMessage = enc.StringDecoder.Instance.Decode(reader);

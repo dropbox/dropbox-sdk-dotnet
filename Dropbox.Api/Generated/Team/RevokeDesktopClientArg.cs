@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The revoke desktop client arg object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.DeviceSessionArg" />
+    /// <seealso cref="Global::Dropbox.Api.Team.DeviceSessionArg" />
     public class RevokeDesktopClientArg : DeviceSessionArg
     {
         #pragma warning disable 108

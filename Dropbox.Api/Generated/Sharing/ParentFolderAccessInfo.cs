@@ -107,7 +107,7 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("folder_name", value.FolderName, writer, enc.StringEncoder.Instance);
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
-                WriteListProperty("permissions", value.Permissions, writer, Dropbox.Api.Sharing.MemberPermission.Encoder);
+                WriteListProperty("permissions", value.Permissions, writer, global::Dropbox.Api.Sharing.MemberPermission.Encoder);
             }
         }
 
@@ -148,7 +148,7 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "permissions":
-                        value.Permissions = ReadList<MemberPermission>(reader, Dropbox.Api.Sharing.MemberPermission.Decoder);
+                        value.Permissions = ReadList<MemberPermission>(reader, global::Dropbox.Api.Sharing.MemberPermission.Decoder);
                         break;
                     default:
                         reader.Skip();

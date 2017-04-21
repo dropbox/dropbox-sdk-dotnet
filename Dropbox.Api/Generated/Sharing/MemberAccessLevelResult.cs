@@ -95,7 +95,7 @@ namespace Dropbox.Api.Sharing
             {
                 if (value.AccessLevel != null)
                 {
-                    WriteProperty("access_level", value.AccessLevel, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                    WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 }
                 if (value.Warning != null)
                 {
@@ -103,7 +103,7 @@ namespace Dropbox.Api.Sharing
                 }
                 if (value.AccessDetails.Count > 0)
                 {
-                    WriteListProperty("access_details", value.AccessDetails, writer, Dropbox.Api.Sharing.ParentFolderAccessInfo.Encoder);
+                    WriteListProperty("access_details", value.AccessDetails, writer, global::Dropbox.Api.Sharing.ParentFolderAccessInfo.Encoder);
                 }
             }
         }
@@ -139,13 +139,13 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "access_level":
-                        value.AccessLevel = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "warning":
                         value.Warning = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "access_details":
-                        value.AccessDetails = ReadList<ParentFolderAccessInfo>(reader, Dropbox.Api.Sharing.ParentFolderAccessInfo.Decoder);
+                        value.AccessDetails = ReadList<ParentFolderAccessInfo>(reader, global::Dropbox.Api.Sharing.ParentFolderAccessInfo.Decoder);
                         break;
                     default:
                         reader.Skip();

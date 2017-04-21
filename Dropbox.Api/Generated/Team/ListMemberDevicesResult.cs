@@ -94,15 +94,15 @@ namespace Dropbox.Api.Team
             {
                 if (value.ActiveWebSessions.Count > 0)
                 {
-                    WriteListProperty("active_web_sessions", value.ActiveWebSessions, writer, Dropbox.Api.Team.ActiveWebSession.Encoder);
+                    WriteListProperty("active_web_sessions", value.ActiveWebSessions, writer, global::Dropbox.Api.Team.ActiveWebSession.Encoder);
                 }
                 if (value.DesktopClientSessions.Count > 0)
                 {
-                    WriteListProperty("desktop_client_sessions", value.DesktopClientSessions, writer, Dropbox.Api.Team.DesktopClientSession.Encoder);
+                    WriteListProperty("desktop_client_sessions", value.DesktopClientSessions, writer, global::Dropbox.Api.Team.DesktopClientSession.Encoder);
                 }
                 if (value.MobileClientSessions.Count > 0)
                 {
-                    WriteListProperty("mobile_client_sessions", value.MobileClientSessions, writer, Dropbox.Api.Team.MobileClientSession.Encoder);
+                    WriteListProperty("mobile_client_sessions", value.MobileClientSessions, writer, global::Dropbox.Api.Team.MobileClientSession.Encoder);
                 }
             }
         }
@@ -138,13 +138,13 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "active_web_sessions":
-                        value.ActiveWebSessions = ReadList<ActiveWebSession>(reader, Dropbox.Api.Team.ActiveWebSession.Decoder);
+                        value.ActiveWebSessions = ReadList<ActiveWebSession>(reader, global::Dropbox.Api.Team.ActiveWebSession.Decoder);
                         break;
                     case "desktop_client_sessions":
-                        value.DesktopClientSessions = ReadList<DesktopClientSession>(reader, Dropbox.Api.Team.DesktopClientSession.Decoder);
+                        value.DesktopClientSessions = ReadList<DesktopClientSession>(reader, global::Dropbox.Api.Team.DesktopClientSession.Decoder);
                         break;
                     case "mobile_client_sessions":
-                        value.MobileClientSessions = ReadList<MobileClientSession>(reader, Dropbox.Api.Team.MobileClientSession.Decoder);
+                        value.MobileClientSessions = ReadList<MobileClientSession>(reader, global::Dropbox.Api.Team.MobileClientSession.Decoder);
                         break;
                     default:
                         reader.Skip();

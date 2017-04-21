@@ -16,7 +16,7 @@ namespace Dropbox.Api.Team
     /// values, one value per day. If there is no data for a day, then the value will be
     /// None.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.BaseDfbReport" />
+    /// <seealso cref="Global::Dropbox.Api.Team.BaseDfbReport" />
     public class GetDevicesReport : BaseDfbReport
     {
         #pragma warning disable 108
@@ -110,9 +110,9 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(GetDevicesReport value, enc.IJsonWriter writer)
             {
                 WriteProperty("start_date", value.StartDate, writer, enc.StringEncoder.Instance);
-                WriteProperty("active_1_day", value.Active1Day, writer, Dropbox.Api.Team.DevicesActive.Encoder);
-                WriteProperty("active_7_day", value.Active7Day, writer, Dropbox.Api.Team.DevicesActive.Encoder);
-                WriteProperty("active_28_day", value.Active28Day, writer, Dropbox.Api.Team.DevicesActive.Encoder);
+                WriteProperty("active_1_day", value.Active1Day, writer, global::Dropbox.Api.Team.DevicesActive.Encoder);
+                WriteProperty("active_7_day", value.Active7Day, writer, global::Dropbox.Api.Team.DevicesActive.Encoder);
+                WriteProperty("active_28_day", value.Active28Day, writer, global::Dropbox.Api.Team.DevicesActive.Encoder);
             }
         }
 
@@ -149,13 +149,13 @@ namespace Dropbox.Api.Team
                         value.StartDate = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "active_1_day":
-                        value.Active1Day = Dropbox.Api.Team.DevicesActive.Decoder.Decode(reader);
+                        value.Active1Day = global::Dropbox.Api.Team.DevicesActive.Decoder.Decode(reader);
                         break;
                     case "active_7_day":
-                        value.Active7Day = Dropbox.Api.Team.DevicesActive.Decoder.Decode(reader);
+                        value.Active7Day = global::Dropbox.Api.Team.DevicesActive.Decoder.Decode(reader);
                         break;
                     case "active_28_day":
-                        value.Active28Day = Dropbox.Api.Team.DevicesActive.Decoder.Decode(reader);
+                        value.Active28Day = global::Dropbox.Api.Team.DevicesActive.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

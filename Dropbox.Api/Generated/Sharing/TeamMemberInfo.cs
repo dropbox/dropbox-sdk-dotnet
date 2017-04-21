@@ -34,7 +34,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="displayName">The display name of the user.</param>
         /// <param name="memberId">ID of user as a member of a team. This field will only be
         /// present if the member is in the same team as current user.</param>
-        public TeamMemberInfo(Dropbox.Api.Users.Team teamInfo,
+        public TeamMemberInfo(global::Dropbox.Api.Users.Team teamInfo,
                               string displayName,
                               string memberId = null)
         {
@@ -66,7 +66,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Information about the member's team</para>
         /// </summary>
-        public Dropbox.Api.Users.Team TeamInfo { get; protected set; }
+        public global::Dropbox.Api.Users.Team TeamInfo { get; protected set; }
 
         /// <summary>
         /// <para>The display name of the user.</para>
@@ -93,7 +93,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamMemberInfo value, enc.IJsonWriter writer)
             {
-                WriteProperty("team_info", value.TeamInfo, writer, Dropbox.Api.Users.Team.Encoder);
+                WriteProperty("team_info", value.TeamInfo, writer, global::Dropbox.Api.Users.Team.Encoder);
                 WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
                 if (value.MemberId != null)
                 {
@@ -132,7 +132,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "team_info":
-                        value.TeamInfo = Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        value.TeamInfo = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);
                         break;
                     case "display_name":
                         value.DisplayName = enc.StringDecoder.Instance.Decode(reader);

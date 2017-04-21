@@ -200,7 +200,7 @@ namespace Dropbox.Api.Paper
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(CursorError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Paper.PaperApiCursorError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Paper.PaperApiCursorError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -233,7 +233,7 @@ namespace Dropbox.Api.Paper
                     switch (fieldName)
                     {
                         case "cursor_error":
-                            value.Value = Dropbox.Api.Paper.PaperApiCursorError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Paper.PaperApiCursorError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

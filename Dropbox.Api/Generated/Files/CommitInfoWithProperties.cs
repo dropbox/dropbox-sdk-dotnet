@@ -13,7 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The commit info with properties object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Files.CommitInfo" />
+    /// <seealso cref="Global::Dropbox.Api.Files.CommitInfo" />
     public class CommitInfoWithProperties : CommitInfo
     {
         #pragma warning disable 108
@@ -52,7 +52,7 @@ namespace Dropbox.Api.Files
                                         bool autorename = false,
                                         sys.DateTime? clientModified = null,
                                         bool mute = false,
-                                        col.IEnumerable<Dropbox.Api.Properties.PropertyGroup> propertyGroups = null)
+                                        col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups = null)
             : base(path, mode, autorename, clientModified, mute)
         {
             var propertyGroupsList = enc.Util.ToList(propertyGroups);
@@ -74,7 +74,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>List of custom properties to add to file.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
+        public col.IList<global::Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
 
         #region Encoder class
 
@@ -91,7 +91,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(CommitInfoWithProperties value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteProperty("mode", value.Mode, writer, Dropbox.Api.Files.WriteMode.Encoder);
+                WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.WriteMode.Encoder);
                 WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
                 if (value.ClientModified != null)
                 {
@@ -100,7 +100,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("mute", value.Mute, writer, enc.BooleanEncoder.Instance);
                 if (value.PropertyGroups.Count > 0)
                 {
-                    WriteListProperty("property_groups", value.PropertyGroups, writer, Dropbox.Api.Properties.PropertyGroup.Encoder);
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.Properties.PropertyGroup.Encoder);
                 }
             }
         }
@@ -139,7 +139,7 @@ namespace Dropbox.Api.Files
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "mode":
-                        value.Mode = Dropbox.Api.Files.WriteMode.Decoder.Decode(reader);
+                        value.Mode = global::Dropbox.Api.Files.WriteMode.Decoder.Decode(reader);
                         break;
                     case "autorename":
                         value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);
@@ -151,7 +151,7 @@ namespace Dropbox.Api.Files
                         value.Mute = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "property_groups":
-                        value.PropertyGroups = ReadList<Dropbox.Api.Properties.PropertyGroup>(reader, Dropbox.Api.Properties.PropertyGroup.Decoder);
+                        value.PropertyGroups = ReadList<global::Dropbox.Api.Properties.PropertyGroup>(reader, global::Dropbox.Api.Properties.PropertyGroup.Decoder);
                         break;
                     default:
                         reader.Skip();

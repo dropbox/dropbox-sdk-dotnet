@@ -289,7 +289,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(UserError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharingUserError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.SharingUserError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -322,7 +322,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "user_error":
-                            value.Value = Dropbox.Api.Sharing.SharingUserError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.SharingUserError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -387,7 +387,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Sharing.SharingFileAccessError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Sharing.SharingFileAccessError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -420,7 +420,7 @@ namespace Dropbox.Api.Sharing
                     switch (fieldName)
                     {
                         case "access_error":
-                            value.Value = Dropbox.Api.Sharing.SharingFileAccessError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Sharing.SharingFileAccessError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

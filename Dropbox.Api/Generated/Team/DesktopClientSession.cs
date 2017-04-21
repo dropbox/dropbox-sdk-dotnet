@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Information about linked Dropbox desktop client sessions</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Team.DeviceSession" />
+    /// <seealso cref="Global::Dropbox.Api.Team.DeviceSession" />
     public class DesktopClientSession : DeviceSession
     {
         #pragma warning disable 108
@@ -137,7 +137,7 @@ namespace Dropbox.Api.Team
             {
                 WriteProperty("session_id", value.SessionId, writer, enc.StringEncoder.Instance);
                 WriteProperty("host_name", value.HostName, writer, enc.StringEncoder.Instance);
-                WriteProperty("client_type", value.ClientType, writer, Dropbox.Api.Team.DesktopPlatform.Encoder);
+                WriteProperty("client_type", value.ClientType, writer, global::Dropbox.Api.Team.DesktopPlatform.Encoder);
                 WriteProperty("client_version", value.ClientVersion, writer, enc.StringEncoder.Instance);
                 WriteProperty("platform", value.Platform, writer, enc.StringEncoder.Instance);
                 WriteProperty("is_delete_on_unlink_supported", value.IsDeleteOnUnlinkSupported, writer, enc.BooleanEncoder.Instance);
@@ -196,7 +196,7 @@ namespace Dropbox.Api.Team
                         value.HostName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "client_type":
-                        value.ClientType = Dropbox.Api.Team.DesktopPlatform.Decoder.Decode(reader);
+                        value.ClientType = global::Dropbox.Api.Team.DesktopPlatform.Decoder.Decode(reader);
                         break;
                     case "client_version":
                         value.ClientVersion = enc.StringDecoder.Instance.Decode(reader);

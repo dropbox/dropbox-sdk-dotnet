@@ -97,7 +97,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ListFileMembersBatchResult value, enc.IJsonWriter writer)
             {
                 WriteProperty("file", value.File, writer, enc.StringEncoder.Instance);
-                WriteProperty("result", value.Result, writer, Dropbox.Api.Sharing.ListFileMembersIndividualResult.Encoder);
+                WriteProperty("result", value.Result, writer, global::Dropbox.Api.Sharing.ListFileMembersIndividualResult.Encoder);
             }
         }
 
@@ -135,7 +135,7 @@ namespace Dropbox.Api.Sharing
                         value.File = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "result":
-                        value.Result = Dropbox.Api.Sharing.ListFileMembersIndividualResult.Decoder.Decode(reader);
+                        value.Result = global::Dropbox.Api.Sharing.ListFileMembersIndividualResult.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

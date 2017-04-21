@@ -85,7 +85,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersDeactivateArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 WriteProperty("wipe_data", value.WipeData, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -120,7 +120,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "user":
-                        value.User = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "wipe_data":
                         value.WipeData = enc.BooleanDecoder.Instance.Decode(reader);

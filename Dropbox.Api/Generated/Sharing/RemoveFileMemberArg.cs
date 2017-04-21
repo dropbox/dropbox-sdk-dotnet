@@ -99,7 +99,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(RemoveFileMemberArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("file", value.File, writer, enc.StringEncoder.Instance);
-                WriteProperty("member", value.Member, writer, Dropbox.Api.Sharing.MemberSelector.Encoder);
+                WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
             }
         }
 
@@ -136,7 +136,7 @@ namespace Dropbox.Api.Sharing
                         value.File = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member":
-                        value.Member = Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
+                        value.Member = global::Dropbox.Api.Sharing.MemberSelector.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

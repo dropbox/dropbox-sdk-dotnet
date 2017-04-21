@@ -127,23 +127,23 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 if (value.MemberPolicy != null)
                 {
-                    WriteProperty("member_policy", value.MemberPolicy, writer, Dropbox.Api.Sharing.MemberPolicy.Encoder);
+                    WriteProperty("member_policy", value.MemberPolicy, writer, global::Dropbox.Api.Sharing.MemberPolicy.Encoder);
                 }
                 if (value.AclUpdatePolicy != null)
                 {
-                    WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
+                    WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, global::Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
                 }
                 if (value.ViewerInfoPolicy != null)
                 {
-                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
+                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, global::Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
                 }
                 if (value.SharedLinkPolicy != null)
                 {
-                    WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
+                    WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, global::Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
                 }
                 if (value.LinkSettings != null)
                 {
-                    WriteProperty("link_settings", value.LinkSettings, writer, Dropbox.Api.Sharing.LinkSettings.Encoder);
+                    WriteProperty("link_settings", value.LinkSettings, writer, global::Dropbox.Api.Sharing.LinkSettings.Encoder);
                 }
             }
         }
@@ -182,19 +182,19 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "member_policy":
-                        value.MemberPolicy = Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
+                        value.MemberPolicy = global::Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
                         break;
                     case "acl_update_policy":
-                        value.AclUpdatePolicy = Dropbox.Api.Sharing.AclUpdatePolicy.Decoder.Decode(reader);
+                        value.AclUpdatePolicy = global::Dropbox.Api.Sharing.AclUpdatePolicy.Decoder.Decode(reader);
                         break;
                     case "viewer_info_policy":
-                        value.ViewerInfoPolicy = Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
+                        value.ViewerInfoPolicy = global::Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
                         break;
                     case "shared_link_policy":
-                        value.SharedLinkPolicy = Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
+                        value.SharedLinkPolicy = global::Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
                         break;
                     case "link_settings":
-                        value.LinkSettings = Dropbox.Api.Sharing.LinkSettings.Decoder.Decode(reader);
+                        value.LinkSettings = global::Dropbox.Api.Sharing.LinkSettings.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

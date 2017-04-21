@@ -13,7 +13,7 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The metadata of a file shared link</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Sharing.SharedLinkMetadata" />
+    /// <seealso cref="Global::Dropbox.Api.Sharing.SharedLinkMetadata" />
     public class FileLinkMetadata : SharedLinkMetadata
     {
         #pragma warning disable 108
@@ -69,7 +69,7 @@ namespace Dropbox.Api.Sharing
                                 sys.DateTime? expires = null,
                                 string pathLower = null,
                                 TeamMemberInfo teamMemberInfo = null,
-                                Dropbox.Api.Users.Team contentOwnerTeamInfo = null)
+                                global::Dropbox.Api.Users.Team contentOwnerTeamInfo = null)
             : base(url, name, linkPermissions, id, expires, pathLower, teamMemberInfo, contentOwnerTeamInfo)
         {
             if (rev == null)
@@ -143,7 +143,7 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
-                WriteProperty("link_permissions", value.LinkPermissions, writer, Dropbox.Api.Sharing.LinkPermissions.Encoder);
+                WriteProperty("link_permissions", value.LinkPermissions, writer, global::Dropbox.Api.Sharing.LinkPermissions.Encoder);
                 WriteProperty("client_modified", value.ClientModified, writer, enc.DateTimeEncoder.Instance);
                 WriteProperty("server_modified", value.ServerModified, writer, enc.DateTimeEncoder.Instance);
                 WriteProperty("rev", value.Rev, writer, enc.StringEncoder.Instance);
@@ -162,11 +162,11 @@ namespace Dropbox.Api.Sharing
                 }
                 if (value.TeamMemberInfo != null)
                 {
-                    WriteProperty("team_member_info", value.TeamMemberInfo, writer, Dropbox.Api.Sharing.TeamMemberInfo.Encoder);
+                    WriteProperty("team_member_info", value.TeamMemberInfo, writer, global::Dropbox.Api.Sharing.TeamMemberInfo.Encoder);
                 }
                 if (value.ContentOwnerTeamInfo != null)
                 {
-                    WriteProperty("content_owner_team_info", value.ContentOwnerTeamInfo, writer, Dropbox.Api.Users.Team.Encoder);
+                    WriteProperty("content_owner_team_info", value.ContentOwnerTeamInfo, writer, global::Dropbox.Api.Users.Team.Encoder);
                 }
             }
         }
@@ -207,7 +207,7 @@ namespace Dropbox.Api.Sharing
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "link_permissions":
-                        value.LinkPermissions = Dropbox.Api.Sharing.LinkPermissions.Decoder.Decode(reader);
+                        value.LinkPermissions = global::Dropbox.Api.Sharing.LinkPermissions.Decoder.Decode(reader);
                         break;
                     case "client_modified":
                         value.ClientModified = enc.DateTimeDecoder.Instance.Decode(reader);
@@ -231,10 +231,10 @@ namespace Dropbox.Api.Sharing
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "team_member_info":
-                        value.TeamMemberInfo = Dropbox.Api.Sharing.TeamMemberInfo.Decoder.Decode(reader);
+                        value.TeamMemberInfo = global::Dropbox.Api.Sharing.TeamMemberInfo.Decoder.Decode(reader);
                         break;
                     case "content_owner_team_info":
-                        value.ContentOwnerTeamInfo = Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        value.ContentOwnerTeamInfo = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

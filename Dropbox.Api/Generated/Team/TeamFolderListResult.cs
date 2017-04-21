@@ -76,7 +76,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderListResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("team_folders", value.TeamFolders, writer, Dropbox.Api.Team.TeamFolderMetadata.Encoder);
+                WriteListProperty("team_folders", value.TeamFolders, writer, global::Dropbox.Api.Team.TeamFolderMetadata.Encoder);
             }
         }
 
@@ -110,7 +110,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "team_folders":
-                        value.TeamFolders = ReadList<TeamFolderMetadata>(reader, Dropbox.Api.Team.TeamFolderMetadata.Decoder);
+                        value.TeamFolders = ReadList<TeamFolderMetadata>(reader, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder);
                         break;
                     default:
                         reader.Skip();

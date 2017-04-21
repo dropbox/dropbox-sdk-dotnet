@@ -201,7 +201,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Complete value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Team.TeamFolderMetadata.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Team.TeamFolderMetadata.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -230,7 +230,7 @@ namespace Dropbox.Api.Team
                 /// <returns>The decoded object.</returns>
                 public override Complete DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Complete(Dropbox.Api.Team.TeamFolderMetadata.Decoder.DecodeFields(reader));
+                    return new Complete(global::Dropbox.Api.Team.TeamFolderMetadata.Decoder.DecodeFields(reader));
                 }
             }
 

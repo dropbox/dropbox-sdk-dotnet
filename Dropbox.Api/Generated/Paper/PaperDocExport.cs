@@ -13,7 +13,7 @@ namespace Dropbox.Api.Paper
     /// <summary>
     /// <para>The paper doc export object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Paper.RefPaperDoc" />
+    /// <seealso cref="Global::Dropbox.Api.Paper.RefPaperDoc" />
     public class PaperDocExport : RefPaperDoc
     {
         #pragma warning disable 108
@@ -75,7 +75,7 @@ namespace Dropbox.Api.Paper
             public override void EncodeFields(PaperDocExport value, enc.IJsonWriter writer)
             {
                 WriteProperty("doc_id", value.DocId, writer, enc.StringEncoder.Instance);
-                WriteProperty("export_format", value.ExportFormat, writer, Dropbox.Api.Paper.ExportFormat.Encoder);
+                WriteProperty("export_format", value.ExportFormat, writer, global::Dropbox.Api.Paper.ExportFormat.Encoder);
             }
         }
 
@@ -112,7 +112,7 @@ namespace Dropbox.Api.Paper
                         value.DocId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "export_format":
-                        value.ExportFormat = Dropbox.Api.Paper.ExportFormat.Decoder.Decode(reader);
+                        value.ExportFormat = global::Dropbox.Api.Paper.ExportFormat.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

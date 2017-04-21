@@ -86,8 +86,8 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersSetPermissionsArg value, enc.IJsonWriter writer)
             {
-                WriteProperty("user", value.User, writer, Dropbox.Api.Team.UserSelectorArg.Encoder);
-                WriteProperty("new_role", value.NewRole, writer, Dropbox.Api.Team.AdminTier.Encoder);
+                WriteProperty("user", value.User, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
+                WriteProperty("new_role", value.NewRole, writer, global::Dropbox.Api.Team.AdminTier.Encoder);
             }
         }
 
@@ -122,10 +122,10 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "user":
-                        value.User = Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
+                        value.User = global::Dropbox.Api.Team.UserSelectorArg.Decoder.Decode(reader);
                         break;
                     case "new_role":
-                        value.NewRole = Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
+                        value.NewRole = global::Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

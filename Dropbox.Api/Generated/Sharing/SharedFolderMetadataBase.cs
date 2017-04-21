@@ -47,7 +47,7 @@ namespace Dropbox.Api.Sharing
         public SharedFolderMetadataBase(AccessLevel accessType,
                                         bool isInsideTeamFolder,
                                         bool isTeamFolder,
-                                        Dropbox.Api.Users.Team ownerTeam = null,
+                                        global::Dropbox.Api.Users.Team ownerTeam = null,
                                         string parentSharedFolderId = null,
                                         string pathLower = null)
         {
@@ -103,7 +103,7 @@ namespace Dropbox.Api.Sharing
         /// <para>The team that owns the folder. This field is not present if the folder is not
         /// owned by a team.</para>
         /// </summary>
-        public Dropbox.Api.Users.Team OwnerTeam { get; protected set; }
+        public global::Dropbox.Api.Users.Team OwnerTeam { get; protected set; }
 
         /// <summary>
         /// <para>The ID of the parent shared folder. This field is present only if the folder
@@ -131,12 +131,12 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderMetadataBase value, enc.IJsonWriter writer)
             {
-                WriteProperty("access_type", value.AccessType, writer, Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("is_inside_team_folder", value.IsInsideTeamFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
                 if (value.OwnerTeam != null)
                 {
-                    WriteProperty("owner_team", value.OwnerTeam, writer, Dropbox.Api.Users.Team.Encoder);
+                    WriteProperty("owner_team", value.OwnerTeam, writer, global::Dropbox.Api.Users.Team.Encoder);
                 }
                 if (value.ParentSharedFolderId != null)
                 {
@@ -180,7 +180,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "access_type":
-                        value.AccessType = Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
+                        value.AccessType = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "is_inside_team_folder":
                         value.IsInsideTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
@@ -189,7 +189,7 @@ namespace Dropbox.Api.Sharing
                         value.IsTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "owner_team":
-                        value.OwnerTeam = Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        value.OwnerTeam = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);

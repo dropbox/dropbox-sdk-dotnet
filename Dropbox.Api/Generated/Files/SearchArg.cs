@@ -72,7 +72,7 @@ namespace Dropbox.Api.Files
 
             if (mode == null)
             {
-                mode = Dropbox.Api.Files.SearchMode.Filename.Instance;
+                mode = global::Dropbox.Api.Files.SearchMode.Filename.Instance;
             }
             this.Path = path;
             this.Query = query;
@@ -91,7 +91,7 @@ namespace Dropbox.Api.Files
         {
             this.Start = 0;
             this.MaxResults = 100;
-            this.Mode = Dropbox.Api.Files.SearchMode.Filename.Instance;
+            this.Mode = global::Dropbox.Api.Files.SearchMode.Filename.Instance;
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("query", value.Query, writer, enc.StringEncoder.Instance);
                 WriteProperty("start", value.Start, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("max_results", value.MaxResults, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("mode", value.Mode, writer, Dropbox.Api.Files.SearchMode.Encoder);
+                WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.SearchMode.Encoder);
             }
         }
 
@@ -186,7 +186,7 @@ namespace Dropbox.Api.Files
                         value.MaxResults = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "mode":
-                        value.Mode = Dropbox.Api.Files.SearchMode.Decoder.Decode(reader);
+                        value.Mode = global::Dropbox.Api.Files.SearchMode.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

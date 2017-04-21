@@ -52,7 +52,7 @@ namespace Dropbox.Api.Team
                              string email,
                              bool emailVerified,
                              TeamMemberStatus status,
-                             Dropbox.Api.Users.Name name,
+                             global::Dropbox.Api.Users.Name name,
                              TeamMembershipType membershipType,
                              string externalId = null,
                              string accountId = null,
@@ -141,7 +141,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Representations for a person's name.</para>
         /// </summary>
-        public Dropbox.Api.Users.Name Name { get; protected set; }
+        public global::Dropbox.Api.Users.Name Name { get; protected set; }
 
         /// <summary>
         /// <para>The user's membership type: full (normal team member) vs limited (does not
@@ -189,9 +189,9 @@ namespace Dropbox.Api.Team
                 WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
                 WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
                 WriteProperty("email_verified", value.EmailVerified, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("status", value.Status, writer, Dropbox.Api.Team.TeamMemberStatus.Encoder);
-                WriteProperty("name", value.Name, writer, Dropbox.Api.Users.Name.Encoder);
-                WriteProperty("membership_type", value.MembershipType, writer, Dropbox.Api.Team.TeamMembershipType.Encoder);
+                WriteProperty("status", value.Status, writer, global::Dropbox.Api.Team.TeamMemberStatus.Encoder);
+                WriteProperty("name", value.Name, writer, global::Dropbox.Api.Users.Name.Encoder);
+                WriteProperty("membership_type", value.MembershipType, writer, global::Dropbox.Api.Team.TeamMembershipType.Encoder);
                 if (value.ExternalId != null)
                 {
                     WriteProperty("external_id", value.ExternalId, writer, enc.StringEncoder.Instance);
@@ -250,13 +250,13 @@ namespace Dropbox.Api.Team
                         value.EmailVerified = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "status":
-                        value.Status = Dropbox.Api.Team.TeamMemberStatus.Decoder.Decode(reader);
+                        value.Status = global::Dropbox.Api.Team.TeamMemberStatus.Decoder.Decode(reader);
                         break;
                     case "name":
-                        value.Name = Dropbox.Api.Users.Name.Decoder.Decode(reader);
+                        value.Name = global::Dropbox.Api.Users.Name.Decoder.Decode(reader);
                         break;
                     case "membership_type":
-                        value.MembershipType = Dropbox.Api.Team.TeamMembershipType.Decoder.Decode(reader);
+                        value.MembershipType = global::Dropbox.Api.Team.TeamMembershipType.Decoder.Decode(reader);
                         break;
                     case "external_id":
                         value.ExternalId = enc.StringDecoder.Instance.Decode(reader);

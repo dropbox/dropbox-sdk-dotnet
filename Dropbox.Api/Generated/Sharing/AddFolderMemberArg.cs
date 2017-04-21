@@ -122,7 +122,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(AddFolderMemberArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
-                WriteListProperty("members", value.Members, writer, Dropbox.Api.Sharing.AddMember.Encoder);
+                WriteListProperty("members", value.Members, writer, global::Dropbox.Api.Sharing.AddMember.Encoder);
                 WriteProperty("quiet", value.Quiet, writer, enc.BooleanEncoder.Instance);
                 if (value.CustomMessage != null)
                 {
@@ -164,7 +164,7 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "members":
-                        value.Members = ReadList<AddMember>(reader, Dropbox.Api.Sharing.AddMember.Decoder);
+                        value.Members = ReadList<AddMember>(reader, global::Dropbox.Api.Sharing.AddMember.Decoder);
                         break;
                     case "quiet":
                         value.Quiet = enc.BooleanDecoder.Instance.Decode(reader);

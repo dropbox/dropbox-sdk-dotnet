@@ -262,7 +262,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(LookupFailed value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.UploadSessionLookupError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.UploadSessionLookupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -295,7 +295,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "lookup_failed":
-                            value.Value = Dropbox.Api.Files.UploadSessionLookupError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.UploadSessionLookupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -358,7 +358,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -391,7 +391,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "path":
-                            value.Value = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

@@ -38,7 +38,7 @@ namespace Dropbox.Api.Files
         /// <param name="removeFields">List of property field names to remove from property
         /// group if the field exists.</param>
         public PropertyGroupUpdate(string templateId,
-                                   col.IEnumerable<Dropbox.Api.Properties.PropertyField> addOrUpdateFields = null,
+                                   col.IEnumerable<global::Dropbox.Api.Properties.PropertyField> addOrUpdateFields = null,
                                    col.IEnumerable<string> removeFields = null)
         {
             if (templateId == null)
@@ -83,7 +83,7 @@ namespace Dropbox.Api.Files
         /// <para>List of property fields to update if the field already exists. If the field
         /// doesn't exist, add the field to the property group.</para>
         /// </summary>
-        public col.IList<Dropbox.Api.Properties.PropertyField> AddOrUpdateFields { get; protected set; }
+        public col.IList<global::Dropbox.Api.Properties.PropertyField> AddOrUpdateFields { get; protected set; }
 
         /// <summary>
         /// <para>List of property field names to remove from property group if the field
@@ -108,7 +108,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("template_id", value.TemplateId, writer, enc.StringEncoder.Instance);
                 if (value.AddOrUpdateFields.Count > 0)
                 {
-                    WriteListProperty("add_or_update_fields", value.AddOrUpdateFields, writer, Dropbox.Api.Properties.PropertyField.Encoder);
+                    WriteListProperty("add_or_update_fields", value.AddOrUpdateFields, writer, global::Dropbox.Api.Properties.PropertyField.Encoder);
                 }
                 if (value.RemoveFields.Count > 0)
                 {
@@ -150,7 +150,7 @@ namespace Dropbox.Api.Files
                         value.TemplateId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "add_or_update_fields":
-                        value.AddOrUpdateFields = ReadList<Dropbox.Api.Properties.PropertyField>(reader, Dropbox.Api.Properties.PropertyField.Decoder);
+                        value.AddOrUpdateFields = ReadList<global::Dropbox.Api.Properties.PropertyField>(reader, global::Dropbox.Api.Properties.PropertyField.Decoder);
                         break;
                     case "remove_fields":
                         value.RemoveFields = ReadList<string>(reader, enc.StringDecoder.Instance);

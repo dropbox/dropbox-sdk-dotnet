@@ -13,7 +13,7 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>Metadata for a path-based shared link.</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Sharing.LinkMetadata" />
+    /// <seealso cref="Global::Dropbox.Api.Sharing.LinkMetadata" />
     public class PathLinkMetadata : LinkMetadata
     {
         #pragma warning disable 108
@@ -82,7 +82,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(PathLinkMetadata value, enc.IJsonWriter writer)
             {
                 WriteProperty("url", value.Url, writer, enc.StringEncoder.Instance);
-                WriteProperty("visibility", value.Visibility, writer, Dropbox.Api.Sharing.Visibility.Encoder);
+                WriteProperty("visibility", value.Visibility, writer, global::Dropbox.Api.Sharing.Visibility.Encoder);
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 if (value.Expires != null)
                 {
@@ -124,7 +124,7 @@ namespace Dropbox.Api.Sharing
                         value.Url = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "visibility":
-                        value.Visibility = Dropbox.Api.Sharing.Visibility.Decoder.Decode(reader);
+                        value.Visibility = global::Dropbox.Api.Sharing.Visibility.Decoder.Decode(reader);
                         break;
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);

@@ -72,7 +72,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderListError value, enc.IJsonWriter writer)
             {
-                WriteProperty("access_error", value.AccessError, writer, Dropbox.Api.Team.TeamFolderAccessError.Encoder);
+                WriteProperty("access_error", value.AccessError, writer, global::Dropbox.Api.Team.TeamFolderAccessError.Encoder);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "access_error":
-                        value.AccessError = Dropbox.Api.Team.TeamFolderAccessError.Decoder.Decode(reader);
+                        value.AccessError = global::Dropbox.Api.Team.TeamFolderAccessError.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -105,7 +105,7 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MembersListResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("members", value.Members, writer, Dropbox.Api.Team.TeamMemberInfo.Encoder);
+                WriteListProperty("members", value.Members, writer, global::Dropbox.Api.Team.TeamMemberInfo.Encoder);
                 WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
                 WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
             }
@@ -141,7 +141,7 @@ namespace Dropbox.Api.Team
                 switch (fieldName)
                 {
                     case "members":
-                        value.Members = ReadList<TeamMemberInfo>(reader, Dropbox.Api.Team.TeamMemberInfo.Decoder);
+                        value.Members = ReadList<TeamMemberInfo>(reader, global::Dropbox.Api.Team.TeamMemberInfo.Decoder);
                         break;
                     case "cursor":
                         value.Cursor = enc.StringDecoder.Instance.Decode(reader);

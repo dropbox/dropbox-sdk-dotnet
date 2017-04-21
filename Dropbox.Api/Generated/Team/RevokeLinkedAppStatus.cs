@@ -78,7 +78,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("success", value.Success, writer, enc.BooleanEncoder.Instance);
                 if (value.ErrorType != null)
                 {
-                    WriteProperty("error_type", value.ErrorType, writer, Dropbox.Api.Team.RevokeLinkedAppError.Encoder);
+                    WriteProperty("error_type", value.ErrorType, writer, global::Dropbox.Api.Team.RevokeLinkedAppError.Encoder);
                 }
             }
         }
@@ -117,7 +117,7 @@ namespace Dropbox.Api.Team
                         value.Success = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "error_type":
-                        value.ErrorType = Dropbox.Api.Team.RevokeLinkedAppError.Decoder.Decode(reader);
+                        value.ErrorType = global::Dropbox.Api.Team.RevokeLinkedAppError.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

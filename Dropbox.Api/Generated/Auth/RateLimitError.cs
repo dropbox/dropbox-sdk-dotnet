@@ -81,7 +81,7 @@ namespace Dropbox.Api.Auth
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RateLimitError value, enc.IJsonWriter writer)
             {
-                WriteProperty("reason", value.Reason, writer, Dropbox.Api.Auth.RateLimitReason.Encoder);
+                WriteProperty("reason", value.Reason, writer, global::Dropbox.Api.Auth.RateLimitReason.Encoder);
                 WriteProperty("retry_after", value.RetryAfter, writer, enc.UInt64Encoder.Instance);
             }
         }
@@ -116,7 +116,7 @@ namespace Dropbox.Api.Auth
                 switch (fieldName)
                 {
                     case "reason":
-                        value.Reason = Dropbox.Api.Auth.RateLimitReason.Decoder.Decode(reader);
+                        value.Reason = global::Dropbox.Api.Auth.RateLimitReason.Decoder.Decode(reader);
                         break;
                     case "retry_after":
                         value.RetryAfter = enc.UInt64Decoder.Instance.Decode(reader);

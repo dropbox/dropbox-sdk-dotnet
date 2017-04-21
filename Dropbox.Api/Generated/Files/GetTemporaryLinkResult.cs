@@ -86,7 +86,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GetTemporaryLinkResult value, enc.IJsonWriter writer)
             {
-                WriteProperty("metadata", value.Metadata, writer, Dropbox.Api.Files.FileMetadata.Encoder);
+                WriteProperty("metadata", value.Metadata, writer, global::Dropbox.Api.Files.FileMetadata.Encoder);
                 WriteProperty("link", value.Link, writer, enc.StringEncoder.Instance);
             }
         }
@@ -122,7 +122,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "metadata":
-                        value.Metadata = Dropbox.Api.Files.FileMetadata.Decoder.Decode(reader);
+                        value.Metadata = global::Dropbox.Api.Files.FileMetadata.Decoder.Decode(reader);
                         break;
                     case "link":
                         value.Link = enc.StringDecoder.Instance.Decode(reader);

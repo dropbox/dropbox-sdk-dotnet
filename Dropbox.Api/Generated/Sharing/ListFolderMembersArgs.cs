@@ -13,7 +13,7 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The list folder members args object</para>
     /// </summary>
-    /// <seealso cref="Dropbox.Api.Sharing.ListFolderMembersCursorArg" />
+    /// <seealso cref="Global::Dropbox.Api.Sharing.ListFolderMembersCursorArg" />
     public class ListFolderMembersArgs : ListFolderMembersCursorArg
     {
         #pragma warning disable 108
@@ -89,7 +89,7 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 if (value.Actions.Count > 0)
                 {
-                    WriteListProperty("actions", value.Actions, writer, Dropbox.Api.Sharing.MemberAction.Encoder);
+                    WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.MemberAction.Encoder);
                 }
                 WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
             }
@@ -129,7 +129,7 @@ namespace Dropbox.Api.Sharing
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "actions":
-                        value.Actions = ReadList<MemberAction>(reader, Dropbox.Api.Sharing.MemberAction.Decoder);
+                        value.Actions = ReadList<MemberAction>(reader, global::Dropbox.Api.Sharing.MemberAction.Decoder);
                         break;
                     case "limit":
                         value.Limit = enc.UInt32Decoder.Instance.Decode(reader);

@@ -258,7 +258,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Complete value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.DeleteBatchResult.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.DeleteBatchResult.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -287,7 +287,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override Complete DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Complete(Dropbox.Api.Files.DeleteBatchResult.Decoder.DecodeFields(reader));
+                    return new Complete(global::Dropbox.Api.Files.DeleteBatchResult.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -345,7 +345,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Failed value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Files.DeleteBatchError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.DeleteBatchError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -378,7 +378,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "failed":
-                            value.Value = Dropbox.Api.Files.DeleteBatchError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Files.DeleteBatchError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

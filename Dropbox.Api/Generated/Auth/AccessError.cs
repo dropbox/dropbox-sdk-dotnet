@@ -230,7 +230,7 @@ namespace Dropbox.Api.Auth
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InvalidAccountType value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Auth.InvalidAccountTypeError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Auth.InvalidAccountTypeError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -264,7 +264,7 @@ namespace Dropbox.Api.Auth
                     switch (fieldName)
                     {
                         case "invalid_account_type":
-                            value.Value = Dropbox.Api.Auth.InvalidAccountTypeError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Auth.InvalidAccountTypeError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
@@ -329,7 +329,7 @@ namespace Dropbox.Api.Auth
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperAccessDenied value, enc.IJsonWriter writer)
                 {
-                    Dropbox.Api.Auth.PaperAccessError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Auth.PaperAccessError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -363,7 +363,7 @@ namespace Dropbox.Api.Auth
                     switch (fieldName)
                     {
                         case "paper_access_denied":
-                            value.Value = Dropbox.Api.Auth.PaperAccessError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.Auth.PaperAccessError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

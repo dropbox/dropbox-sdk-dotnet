@@ -63,7 +63,7 @@ namespace Dropbox.Api.Files
 
             if (mode == null)
             {
-                mode = Dropbox.Api.Files.WriteMode.Add.Instance;
+                mode = global::Dropbox.Api.Files.WriteMode.Add.Instance;
             }
             this.Path = path;
             this.Mode = mode;
@@ -80,7 +80,7 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public CommitInfo()
         {
-            this.Mode = Dropbox.Api.Files.WriteMode.Add.Instance;
+            this.Mode = global::Dropbox.Api.Files.WriteMode.Add.Instance;
             this.Autorename = false;
             this.Mute = false;
         }
@@ -132,7 +132,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(CommitInfo value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                WriteProperty("mode", value.Mode, writer, Dropbox.Api.Files.WriteMode.Encoder);
+                WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.WriteMode.Encoder);
                 WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
                 if (value.ClientModified != null)
                 {
@@ -175,7 +175,7 @@ namespace Dropbox.Api.Files
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "mode":
-                        value.Mode = Dropbox.Api.Files.WriteMode.Decoder.Decode(reader);
+                        value.Mode = global::Dropbox.Api.Files.WriteMode.Decoder.Decode(reader);
                         break;
                     case "autorename":
                         value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);

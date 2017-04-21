@@ -86,7 +86,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UploadWriteFailed value, enc.IJsonWriter writer)
             {
-                WriteProperty("reason", value.Reason, writer, Dropbox.Api.Files.WriteError.Encoder);
+                WriteProperty("reason", value.Reason, writer, global::Dropbox.Api.Files.WriteError.Encoder);
                 WriteProperty("upload_session_id", value.UploadSessionId, writer, enc.StringEncoder.Instance);
             }
         }
@@ -121,7 +121,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "reason":
-                        value.Reason = Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
+                        value.Reason = global::Dropbox.Api.Files.WriteError.Decoder.Decode(reader);
                         break;
                     case "upload_session_id":
                         value.UploadSessionId = enc.StringDecoder.Instance.Decode(reader);
