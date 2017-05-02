@@ -304,18 +304,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SharedLinkMalformed Create()
                 {
-                    return new SharedLinkMalformed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SharedLinkMalformed DecodeFields(enc.IJsonReader reader)
-                {
                     return SharedLinkMalformed.Instance;
                 }
+
             }
 
             #endregion
@@ -384,18 +375,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SharedLinkNotFound Create()
                 {
-                    return new SharedLinkNotFound();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SharedLinkNotFound DecodeFields(enc.IJsonReader reader)
-                {
                     return SharedLinkNotFound.Instance;
                 }
+
             }
 
             #endregion
@@ -464,18 +446,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SharedLinkAccessDenied Create()
                 {
-                    return new SharedLinkAccessDenied();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SharedLinkAccessDenied DecodeFields(enc.IJsonReader reader)
-                {
                     return SharedLinkAccessDenied.Instance;
                 }
+
             }
 
             #endregion
@@ -544,18 +517,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override UnsupportedLinkType Create()
                 {
-                    return new UnsupportedLinkType();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnsupportedLinkType DecodeFields(enc.IJsonReader reader)
-                {
                     return UnsupportedLinkType.Instance;
                 }
+
             }
 
             #endregion
@@ -622,18 +586,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

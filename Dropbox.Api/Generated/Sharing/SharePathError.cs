@@ -597,18 +597,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override IsFile Create()
                 {
-                    return new IsFile();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override IsFile DecodeFields(enc.IJsonReader reader)
-                {
                     return IsFile.Instance;
                 }
+
             }
 
             #endregion
@@ -677,18 +668,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InsideSharedFolder Create()
                 {
-                    return new InsideSharedFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InsideSharedFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return InsideSharedFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -757,18 +739,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override ContainsSharedFolder Create()
                 {
-                    return new ContainsSharedFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ContainsSharedFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return ContainsSharedFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -837,18 +810,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override ContainsAppFolder Create()
                 {
-                    return new ContainsAppFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ContainsAppFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return ContainsAppFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -917,18 +881,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override ContainsTeamFolder Create()
                 {
-                    return new ContainsTeamFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ContainsTeamFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return ContainsTeamFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -996,18 +951,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override IsAppFolder Create()
                 {
-                    return new IsAppFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override IsAppFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return IsAppFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -1075,18 +1021,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InsideAppFolder Create()
                 {
-                    return new InsideAppFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InsideAppFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return InsideAppFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -1154,18 +1091,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override IsPublicFolder Create()
                 {
-                    return new IsPublicFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override IsPublicFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return IsPublicFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -1235,18 +1163,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InsidePublicFolder Create()
                 {
-                    return new InsidePublicFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InsidePublicFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return InsidePublicFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -1404,18 +1323,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InvalidPath Create()
                 {
-                    return new InvalidPath();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidPath DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidPath.Instance;
                 }
+
             }
 
             #endregion
@@ -1483,18 +1393,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override IsOsxPackage Create()
                 {
-                    return new IsOsxPackage();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override IsOsxPackage DecodeFields(enc.IJsonReader reader)
-                {
                     return IsOsxPackage.Instance;
                 }
+
             }
 
             #endregion
@@ -1562,18 +1463,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InsideOsxPackage Create()
                 {
-                    return new InsideOsxPackage();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InsideOsxPackage DecodeFields(enc.IJsonReader reader)
-                {
                     return InsideOsxPackage.Instance;
                 }
+
             }
 
             #endregion
@@ -1729,18 +1621,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

@@ -710,18 +710,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override CantCopySharedFolder Create()
                 {
-                    return new CantCopySharedFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override CantCopySharedFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return CantCopySharedFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -791,18 +782,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override CantNestSharedFolder Create()
                 {
-                    return new CantNestSharedFolder();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override CantNestSharedFolder DecodeFields(enc.IJsonReader reader)
-                {
                     return CantNestSharedFolder.Instance;
                 }
+
             }
 
             #endregion
@@ -871,18 +853,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override CantMoveFolderIntoItself Create()
                 {
-                    return new CantMoveFolderIntoItself();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override CantMoveFolderIntoItself DecodeFields(enc.IJsonReader reader)
-                {
                     return CantMoveFolderIntoItself.Instance;
                 }
+
             }
 
             #endregion
@@ -950,18 +923,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override TooManyFiles Create()
                 {
-                    return new TooManyFiles();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TooManyFiles DecodeFields(enc.IJsonReader reader)
-                {
                     return TooManyFiles.Instance;
                 }
+
             }
 
             #endregion
@@ -1032,18 +996,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override DuplicatedOrNestedPaths Create()
                 {
-                    return new DuplicatedOrNestedPaths();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DuplicatedOrNestedPaths DecodeFields(enc.IJsonReader reader)
-                {
                     return DuplicatedOrNestedPaths.Instance;
                 }
+
             }
 
             #endregion
@@ -1110,18 +1065,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

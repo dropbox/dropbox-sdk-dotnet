@@ -366,18 +366,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override DuplicateUser Create()
                 {
-                    return new DuplicateUser();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DuplicateUser DecodeFields(enc.IJsonReader reader)
-                {
                     return DuplicateUser.Instance;
                 }
+
             }
 
             #endregion
@@ -446,18 +437,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override GroupNotInTeam Create()
                 {
-                    return new GroupNotInTeam();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override GroupNotInTeam DecodeFields(enc.IJsonReader reader)
-                {
                     return GroupNotInTeam.Instance;
                 }
+
             }
 
             #endregion
@@ -726,18 +708,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override UserMustBeActiveToBeOwner Create()
                 {
-                    return new UserMustBeActiveToBeOwner();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserMustBeActiveToBeOwner DecodeFields(enc.IJsonReader reader)
-                {
                     return UserMustBeActiveToBeOwner.Instance;
                 }
+
             }
 
             #endregion
@@ -907,18 +880,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override SystemManagedGroupDisallowed Create()
                 {
-                    return new SystemManagedGroupDisallowed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SystemManagedGroupDisallowed DecodeFields(enc.IJsonReader reader)
-                {
                     return SystemManagedGroupDisallowed.Instance;
                 }
+
             }
 
             #endregion

@@ -527,18 +527,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override NoWritePermission Create()
                 {
-                    return new NoWritePermission();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NoWritePermission DecodeFields(enc.IJsonReader reader)
-                {
                     return NoWritePermission.Instance;
                 }
+
             }
 
             #endregion
@@ -608,18 +599,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override InsufficientSpace Create()
                 {
-                    return new InsufficientSpace();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InsufficientSpace DecodeFields(enc.IJsonReader reader)
-                {
                     return InsufficientSpace.Instance;
                 }
+
             }
 
             #endregion
@@ -687,18 +669,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override DisallowedName Create()
                 {
-                    return new DisallowedName();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DisallowedName DecodeFields(enc.IJsonReader reader)
-                {
                     return DisallowedName.Instance;
                 }
+
             }
 
             #endregion
@@ -765,18 +738,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

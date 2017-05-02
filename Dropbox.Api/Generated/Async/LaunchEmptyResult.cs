@@ -212,18 +212,9 @@ namespace Dropbox.Api.Async
                 /// <returns>The struct instance.</returns>
                 protected override Complete Create()
                 {
-                    return new Complete();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Complete DecodeFields(enc.IJsonReader reader)
-                {
                     return Complete.Instance;
                 }
+
             }
 
             #endregion

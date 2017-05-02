@@ -213,18 +213,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override GroupAlreadyDeleted Create()
                 {
-                    return new GroupAlreadyDeleted();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override GroupAlreadyDeleted DecodeFields(enc.IJsonReader reader)
-                {
                     return GroupAlreadyDeleted.Instance;
                 }
+
             }
 
             #endregion
@@ -293,18 +284,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override SystemManagedGroupDisallowed Create()
                 {
-                    return new SystemManagedGroupDisallowed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SystemManagedGroupDisallowed DecodeFields(enc.IJsonReader reader)
-                {
                     return SystemManagedGroupDisallowed.Instance;
                 }
+
             }
 
             #endregion

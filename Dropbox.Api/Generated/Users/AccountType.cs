@@ -239,18 +239,9 @@ namespace Dropbox.Api.Users
                 /// <returns>The struct instance.</returns>
                 protected override Basic Create()
                 {
-                    return new Basic();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Basic DecodeFields(enc.IJsonReader reader)
-                {
                     return Basic.Instance;
                 }
+
             }
 
             #endregion
@@ -317,18 +308,9 @@ namespace Dropbox.Api.Users
                 /// <returns>The struct instance.</returns>
                 protected override Pro Create()
                 {
-                    return new Pro();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Pro DecodeFields(enc.IJsonReader reader)
-                {
                     return Pro.Instance;
                 }
+
             }
 
             #endregion
@@ -395,18 +377,9 @@ namespace Dropbox.Api.Users
                 /// <returns>The struct instance.</returns>
                 protected override Business Create()
                 {
-                    return new Business();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Business DecodeFields(enc.IJsonReader reader)
-                {
                     return Business.Instance;
                 }
+
             }
 
             #endregion

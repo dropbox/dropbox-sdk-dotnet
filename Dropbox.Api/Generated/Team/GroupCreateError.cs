@@ -302,18 +302,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override GroupNameAlreadyUsed Create()
                 {
-                    return new GroupNameAlreadyUsed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override GroupNameAlreadyUsed DecodeFields(enc.IJsonReader reader)
-                {
                     return GroupNameAlreadyUsed.Instance;
                 }
+
             }
 
             #endregion
@@ -381,18 +372,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override GroupNameInvalid Create()
                 {
-                    return new GroupNameInvalid();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override GroupNameInvalid DecodeFields(enc.IJsonReader reader)
-                {
                     return GroupNameInvalid.Instance;
                 }
+
             }
 
             #endregion
@@ -461,18 +443,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override ExternalIdAlreadyInUse Create()
                 {
-                    return new ExternalIdAlreadyInUse();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ExternalIdAlreadyInUse DecodeFields(enc.IJsonReader reader)
-                {
                     return ExternalIdAlreadyInUse.Instance;
                 }
+
             }
 
             #endregion
@@ -541,18 +514,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override SystemManagedGroupDisallowed Create()
                 {
-                    return new SystemManagedGroupDisallowed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SystemManagedGroupDisallowed DecodeFields(enc.IJsonReader reader)
-                {
                     return SystemManagedGroupDisallowed.Instance;
                 }
+
             }
 
             #endregion
@@ -619,18 +583,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

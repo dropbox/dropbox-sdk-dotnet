@@ -217,18 +217,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InvalidSettings Create()
                 {
-                    return new InvalidSettings();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidSettings DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidSettings.Instance;
                 }
+
             }
 
             #endregion
@@ -299,18 +290,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override NotAuthorized Create()
                 {
-                    return new NotAuthorized();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NotAuthorized DecodeFields(enc.IJsonReader reader)
-                {
                     return NotAuthorized.Instance;
                 }
+
             }
 
             #endregion

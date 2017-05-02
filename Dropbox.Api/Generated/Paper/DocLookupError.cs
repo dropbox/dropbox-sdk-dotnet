@@ -241,18 +241,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override DocNotFound Create()
                 {
-                    return new DocNotFound();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DocNotFound DecodeFields(enc.IJsonReader reader)
-                {
                     return DocNotFound.Instance;
                 }
+
             }
 
             #endregion
@@ -321,18 +312,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override InsufficientPermissions Create()
                 {
-                    return new InsufficientPermissions();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InsufficientPermissions DecodeFields(enc.IJsonReader reader)
-                {
                     return InsufficientPermissions.Instance;
                 }
+
             }
 
             #endregion
@@ -399,18 +381,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

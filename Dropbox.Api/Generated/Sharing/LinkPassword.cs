@@ -238,18 +238,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override RemovePassword Create()
                 {
-                    return new RemovePassword();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RemovePassword DecodeFields(enc.IJsonReader reader)
-                {
                     return RemovePassword.Instance;
                 }
+
             }
 
             #endregion
@@ -414,18 +405,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

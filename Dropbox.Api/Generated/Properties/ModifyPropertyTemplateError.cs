@@ -365,18 +365,9 @@ namespace Dropbox.Api.Properties
                 /// <returns>The struct instance.</returns>
                 protected override ConflictingPropertyNames Create()
                 {
-                    return new ConflictingPropertyNames();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ConflictingPropertyNames DecodeFields(enc.IJsonReader reader)
-                {
                     return ConflictingPropertyNames.Instance;
                 }
+
             }
 
             #endregion
@@ -446,18 +437,9 @@ namespace Dropbox.Api.Properties
                 /// <returns>The struct instance.</returns>
                 protected override TooManyProperties Create()
                 {
-                    return new TooManyProperties();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TooManyProperties DecodeFields(enc.IJsonReader reader)
-                {
                     return TooManyProperties.Instance;
                 }
+
             }
 
             #endregion
@@ -525,18 +507,9 @@ namespace Dropbox.Api.Properties
                 /// <returns>The struct instance.</returns>
                 protected override TooManyTemplates Create()
                 {
-                    return new TooManyTemplates();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TooManyTemplates DecodeFields(enc.IJsonReader reader)
-                {
                     return TooManyTemplates.Instance;
                 }
+
             }
 
             #endregion
@@ -605,18 +578,9 @@ namespace Dropbox.Api.Properties
                 /// <returns>The struct instance.</returns>
                 protected override TemplateAttributeTooLarge Create()
                 {
-                    return new TemplateAttributeTooLarge();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TemplateAttributeTooLarge DecodeFields(enc.IJsonReader reader)
-                {
                     return TemplateAttributeTooLarge.Instance;
                 }
+
             }
 
             #endregion
@@ -783,18 +747,9 @@ namespace Dropbox.Api.Properties
                 /// <returns>The struct instance.</returns>
                 protected override RestrictedContent Create()
                 {
-                    return new RestrictedContent();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RestrictedContent DecodeFields(enc.IJsonReader reader)
-                {
                     return RestrictedContent.Instance;
                 }
+
             }
 
             #endregion
@@ -861,18 +816,9 @@ namespace Dropbox.Api.Properties
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

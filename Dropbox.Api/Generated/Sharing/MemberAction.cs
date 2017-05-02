@@ -357,18 +357,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override LeaveACopy Create()
                 {
-                    return new LeaveACopy();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override LeaveACopy DecodeFields(enc.IJsonReader reader)
-                {
                     return LeaveACopy.Instance;
                 }
+
             }
 
             #endregion
@@ -435,18 +426,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override MakeEditor Create()
                 {
-                    return new MakeEditor();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MakeEditor DecodeFields(enc.IJsonReader reader)
-                {
                     return MakeEditor.Instance;
                 }
+
             }
 
             #endregion
@@ -513,18 +495,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override MakeOwner Create()
                 {
-                    return new MakeOwner();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MakeOwner DecodeFields(enc.IJsonReader reader)
-                {
                     return MakeOwner.Instance;
                 }
+
             }
 
             #endregion
@@ -591,18 +564,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override MakeViewer Create()
                 {
-                    return new MakeViewer();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MakeViewer DecodeFields(enc.IJsonReader reader)
-                {
                     return MakeViewer.Instance;
                 }
+
             }
 
             #endregion
@@ -671,18 +635,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override MakeViewerNoComment Create()
                 {
-                    return new MakeViewerNoComment();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MakeViewerNoComment DecodeFields(enc.IJsonReader reader)
-                {
                     return MakeViewerNoComment.Instance;
                 }
+
             }
 
             #endregion
@@ -749,18 +704,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Remove Create()
                 {
-                    return new Remove();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Remove DecodeFields(enc.IJsonReader reader)
-                {
                     return Remove.Instance;
                 }
+
             }
 
             #endregion
@@ -827,18 +773,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

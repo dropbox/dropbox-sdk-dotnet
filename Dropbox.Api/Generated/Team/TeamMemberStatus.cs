@@ -270,18 +270,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Active Create()
                 {
-                    return new Active();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Active DecodeFields(enc.IJsonReader reader)
-                {
                     return Active.Instance;
                 }
+
             }
 
             #endregion
@@ -348,18 +339,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Invited Create()
                 {
-                    return new Invited();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Invited DecodeFields(enc.IJsonReader reader)
-                {
                     return Invited.Instance;
                 }
+
             }
 
             #endregion
@@ -427,18 +409,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Suspended Create()
                 {
-                    return new Suspended();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Suspended DecodeFields(enc.IJsonReader reader)
-                {
                     return Suspended.Instance;
                 }
+
             }
 
             #endregion

@@ -214,18 +214,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override Team Create()
                 {
-                    return new Team();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Team DecodeFields(enc.IJsonReader reader)
-                {
                     return Team.Instance;
                 }
+
             }
 
             #endregion
@@ -292,18 +283,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override InviteOnly Create()
                 {
-                    return new InviteOnly();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InviteOnly DecodeFields(enc.IJsonReader reader)
-                {
                     return InviteOnly.Instance;
                 }
+
             }
 
             #endregion

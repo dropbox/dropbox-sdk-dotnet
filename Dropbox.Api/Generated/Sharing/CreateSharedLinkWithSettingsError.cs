@@ -399,18 +399,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override EmailNotVerified Create()
                 {
-                    return new EmailNotVerified();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override EmailNotVerified DecodeFields(enc.IJsonReader reader)
-                {
                     return EmailNotVerified.Instance;
                 }
+
             }
 
             #endregion
@@ -479,18 +470,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SharedLinkAlreadyExists Create()
                 {
-                    return new SharedLinkAlreadyExists();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SharedLinkAlreadyExists DecodeFields(enc.IJsonReader reader)
-                {
                     return SharedLinkAlreadyExists.Instance;
                 }
+
             }
 
             #endregion
@@ -656,18 +638,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override AccessDenied Create()
                 {
-                    return new AccessDenied();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override AccessDenied DecodeFields(enc.IJsonReader reader)
-                {
                     return AccessDenied.Instance;
                 }
+
             }
 
             #endregion

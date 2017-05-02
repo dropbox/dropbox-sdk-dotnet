@@ -271,18 +271,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override InvalidFolderName Create()
                 {
-                    return new InvalidFolderName();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidFolderName DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidFolderName.Instance;
                 }
+
             }
 
             #endregion
@@ -351,18 +342,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override FolderNameAlreadyUsed Create()
                 {
-                    return new FolderNameAlreadyUsed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override FolderNameAlreadyUsed DecodeFields(enc.IJsonReader reader)
-                {
                     return FolderNameAlreadyUsed.Instance;
                 }
+
             }
 
             #endregion
@@ -431,18 +413,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override FolderNameReserved Create()
                 {
-                    return new FolderNameReserved();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override FolderNameReserved DecodeFields(enc.IJsonReader reader)
-                {
                     return FolderNameReserved.Instance;
                 }
+
             }
 
             #endregion
@@ -509,18 +482,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

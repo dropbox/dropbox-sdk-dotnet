@@ -456,18 +456,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override ExternalIdAndNewExternalIdUnsafe Create()
                 {
-                    return new ExternalIdAndNewExternalIdUnsafe();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ExternalIdAndNewExternalIdUnsafe DecodeFields(enc.IJsonReader reader)
-                {
                     return ExternalIdAndNewExternalIdUnsafe.Instance;
                 }
+
             }
 
             #endregion
@@ -537,18 +528,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override NoNewDataSpecified Create()
                 {
-                    return new NoNewDataSpecified();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NoNewDataSpecified DecodeFields(enc.IJsonReader reader)
-                {
                     return NoNewDataSpecified.Instance;
                 }
+
             }
 
             #endregion
@@ -617,18 +599,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override EmailReservedForOtherUser Create()
                 {
-                    return new EmailReservedForOtherUser();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override EmailReservedForOtherUser DecodeFields(enc.IJsonReader reader)
-                {
                     return EmailReservedForOtherUser.Instance;
                 }
+
             }
 
             #endregion
@@ -697,18 +670,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override ExternalIdUsedByOtherUser Create()
                 {
-                    return new ExternalIdUsedByOtherUser();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ExternalIdUsedByOtherUser DecodeFields(enc.IJsonReader reader)
-                {
                     return ExternalIdUsedByOtherUser.Instance;
                 }
+
             }
 
             #endregion
@@ -777,18 +741,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override SetProfileDisallowed Create()
                 {
-                    return new SetProfileDisallowed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SetProfileDisallowed DecodeFields(enc.IJsonReader reader)
-                {
                     return SetProfileDisallowed.Instance;
                 }
+
             }
 
             #endregion
@@ -857,18 +812,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override ParamCannotBeEmpty Create()
                 {
-                    return new ParamCannotBeEmpty();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ParamCannotBeEmpty DecodeFields(enc.IJsonReader reader)
-                {
                     return ParamCannotBeEmpty.Instance;
                 }
+
             }
 
             #endregion
@@ -938,18 +884,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override PersistentIdDisabled Create()
                 {
-                    return new PersistentIdDisabled();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override PersistentIdDisabled DecodeFields(enc.IJsonReader reader)
-                {
                     return PersistentIdDisabled.Instance;
                 }
+
             }
 
             #endregion
@@ -1018,18 +955,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override PersistentIdUsedByOtherUser Create()
                 {
-                    return new PersistentIdUsedByOtherUser();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override PersistentIdUsedByOtherUser DecodeFields(enc.IJsonReader reader)
-                {
                     return PersistentIdUsedByOtherUser.Instance;
                 }
+
             }
 
             #endregion
@@ -1096,18 +1024,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion
@@ -1175,18 +1094,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override UserNotInTeam Create()
                 {
-                    return new UserNotInTeam();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserNotInTeam DecodeFields(enc.IJsonReader reader)
-                {
                     return UserNotInTeam.Instance;
                 }
+
             }
 
             #endregion

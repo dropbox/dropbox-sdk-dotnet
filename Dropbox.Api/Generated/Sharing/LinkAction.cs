@@ -328,18 +328,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override ChangeAudience Create()
                 {
-                    return new ChangeAudience();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ChangeAudience DecodeFields(enc.IJsonReader reader)
-                {
                     return ChangeAudience.Instance;
                 }
+
             }
 
             #endregion
@@ -407,18 +398,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override RemoveExpiry Create()
                 {
-                    return new RemoveExpiry();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RemoveExpiry DecodeFields(enc.IJsonReader reader)
-                {
                     return RemoveExpiry.Instance;
                 }
+
             }
 
             #endregion
@@ -486,18 +468,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override RemovePassword Create()
                 {
-                    return new RemovePassword();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RemovePassword DecodeFields(enc.IJsonReader reader)
-                {
                     return RemovePassword.Instance;
                 }
+
             }
 
             #endregion
@@ -564,18 +537,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SetExpiry Create()
                 {
-                    return new SetExpiry();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SetExpiry DecodeFields(enc.IJsonReader reader)
-                {
                     return SetExpiry.Instance;
                 }
+
             }
 
             #endregion
@@ -643,18 +607,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SetPassword Create()
                 {
-                    return new SetPassword();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SetPassword DecodeFields(enc.IJsonReader reader)
-                {
                     return SetPassword.Instance;
                 }
+
             }
 
             #endregion
@@ -721,18 +676,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

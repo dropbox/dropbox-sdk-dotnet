@@ -328,18 +328,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Iphone Create()
                 {
-                    return new Iphone();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Iphone DecodeFields(enc.IJsonReader reader)
-                {
                     return Iphone.Instance;
                 }
+
             }
 
             #endregion
@@ -406,18 +397,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Ipad Create()
                 {
-                    return new Ipad();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Ipad DecodeFields(enc.IJsonReader reader)
-                {
                     return Ipad.Instance;
                 }
+
             }
 
             #endregion
@@ -484,18 +466,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Android Create()
                 {
-                    return new Android();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Android DecodeFields(enc.IJsonReader reader)
-                {
                     return Android.Instance;
                 }
+
             }
 
             #endregion
@@ -563,18 +536,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override WindowsPhone Create()
                 {
-                    return new WindowsPhone();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override WindowsPhone DecodeFields(enc.IJsonReader reader)
-                {
                     return WindowsPhone.Instance;
                 }
+
             }
 
             #endregion
@@ -641,18 +605,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Blackberry Create()
                 {
-                    return new Blackberry();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Blackberry DecodeFields(enc.IJsonReader reader)
-                {
                     return Blackberry.Instance;
                 }
+
             }
 
             #endregion
@@ -719,18 +674,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

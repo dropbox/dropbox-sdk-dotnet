@@ -183,18 +183,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override UserNotFound Create()
                 {
-                    return new UserNotFound();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserNotFound DecodeFields(enc.IJsonReader reader)
-                {
                     return UserNotFound.Instance;
                 }
+
             }
 
             #endregion

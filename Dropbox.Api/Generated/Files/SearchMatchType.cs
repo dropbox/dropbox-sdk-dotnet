@@ -240,18 +240,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Filename Create()
                 {
-                    return new Filename();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Filename DecodeFields(enc.IJsonReader reader)
-                {
                     return Filename.Instance;
                 }
+
             }
 
             #endregion
@@ -318,18 +309,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Content Create()
                 {
-                    return new Content();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Content DecodeFields(enc.IJsonReader reader)
-                {
                     return Content.Instance;
                 }
+
             }
 
             #endregion
@@ -396,18 +378,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Both Create()
                 {
-                    return new Both();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Both DecodeFields(enc.IJsonReader reader)
-                {
                     return Both.Instance;
                 }
+
             }
 
             #endregion

@@ -587,18 +587,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override RemoveLastAdmin Create()
                 {
-                    return new RemoveLastAdmin();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RemoveLastAdmin DecodeFields(enc.IJsonReader reader)
-                {
                     return RemoveLastAdmin.Instance;
                 }
+
             }
 
             #endregion
@@ -667,18 +658,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override RemovedAndTransferDestShouldDiffer Create()
                 {
-                    return new RemovedAndTransferDestShouldDiffer();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RemovedAndTransferDestShouldDiffer DecodeFields(enc.IJsonReader reader)
-                {
                     return RemovedAndTransferDestShouldDiffer.Instance;
                 }
+
             }
 
             #endregion
@@ -747,18 +729,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override RemovedAndTransferAdminShouldDiffer Create()
                 {
-                    return new RemovedAndTransferAdminShouldDiffer();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override RemovedAndTransferAdminShouldDiffer DecodeFields(enc.IJsonReader reader)
-                {
                     return RemovedAndTransferAdminShouldDiffer.Instance;
                 }
+
             }
 
             #endregion
@@ -827,18 +800,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override TransferDestUserNotFound Create()
                 {
-                    return new TransferDestUserNotFound();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TransferDestUserNotFound DecodeFields(enc.IJsonReader reader)
-                {
                     return TransferDestUserNotFound.Instance;
                 }
+
             }
 
             #endregion
@@ -907,18 +871,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override TransferDestUserNotInTeam Create()
                 {
-                    return new TransferDestUserNotInTeam();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TransferDestUserNotInTeam DecodeFields(enc.IJsonReader reader)
-                {
                     return TransferDestUserNotInTeam.Instance;
                 }
+
             }
 
             #endregion
@@ -987,18 +942,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override TransferAdminUserNotFound Create()
                 {
-                    return new TransferAdminUserNotFound();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TransferAdminUserNotFound DecodeFields(enc.IJsonReader reader)
-                {
                     return TransferAdminUserNotFound.Instance;
                 }
+
             }
 
             #endregion
@@ -1067,18 +1013,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override TransferAdminUserNotInTeam Create()
                 {
-                    return new TransferAdminUserNotInTeam();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TransferAdminUserNotInTeam DecodeFields(enc.IJsonReader reader)
-                {
                     return TransferAdminUserNotInTeam.Instance;
                 }
+
             }
 
             #endregion
@@ -1148,18 +1085,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override UnspecifiedTransferAdminId Create()
                 {
-                    return new UnspecifiedTransferAdminId();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnspecifiedTransferAdminId DecodeFields(enc.IJsonReader reader)
-                {
                     return UnspecifiedTransferAdminId.Instance;
                 }
+
             }
 
             #endregion
@@ -1228,18 +1156,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override TransferAdminIsNotAdmin Create()
                 {
-                    return new TransferAdminIsNotAdmin();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TransferAdminIsNotAdmin DecodeFields(enc.IJsonReader reader)
-                {
                     return TransferAdminIsNotAdmin.Instance;
                 }
+
             }
 
             #endregion
@@ -1309,18 +1228,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override CannotKeepAccountAndTransfer Create()
                 {
-                    return new CannotKeepAccountAndTransfer();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override CannotKeepAccountAndTransfer DecodeFields(enc.IJsonReader reader)
-                {
                     return CannotKeepAccountAndTransfer.Instance;
                 }
+
             }
 
             #endregion
@@ -1390,18 +1300,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override CannotKeepAccountAndDeleteData Create()
                 {
-                    return new CannotKeepAccountAndDeleteData();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override CannotKeepAccountAndDeleteData DecodeFields(enc.IJsonReader reader)
-                {
                     return CannotKeepAccountAndDeleteData.Instance;
                 }
+
             }
 
             #endregion
@@ -1470,18 +1371,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override EmailAddressTooLongToBeDisabled Create()
                 {
-                    return new EmailAddressTooLongToBeDisabled();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override EmailAddressTooLongToBeDisabled DecodeFields(enc.IJsonReader reader)
-                {
                     return EmailAddressTooLongToBeDisabled.Instance;
                 }
+
             }
 
             #endregion
@@ -1549,18 +1441,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override UserNotInTeam Create()
                 {
-                    return new UserNotInTeam();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserNotInTeam DecodeFields(enc.IJsonReader reader)
-                {
                     return UserNotInTeam.Instance;
                 }
+
             }
 
             #endregion
@@ -1627,18 +1510,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

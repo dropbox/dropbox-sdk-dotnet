@@ -239,18 +239,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Filename Create()
                 {
-                    return new Filename();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Filename DecodeFields(enc.IJsonReader reader)
-                {
                     return Filename.Instance;
                 }
+
             }
 
             #endregion
@@ -319,18 +310,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override FilenameAndContent Create()
                 {
-                    return new FilenameAndContent();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override FilenameAndContent DecodeFields(enc.IJsonReader reader)
-                {
                     return FilenameAndContent.Instance;
                 }
+
             }
 
             #endregion
@@ -398,18 +380,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override DeletedFilename Create()
                 {
-                    return new DeletedFilename();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DeletedFilename DecodeFields(enc.IJsonReader reader)
-                {
                     return DeletedFilename.Instance;
                 }
+
             }
 
             #endregion

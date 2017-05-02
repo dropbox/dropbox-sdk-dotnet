@@ -210,18 +210,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Member Create()
                 {
-                    return new Member();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Member DecodeFields(enc.IJsonReader reader)
-                {
                     return Member.Instance;
                 }
+
             }
 
             #endregion
@@ -288,18 +279,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Owner Create()
                 {
-                    return new Owner();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Owner DecodeFields(enc.IJsonReader reader)
-                {
                     return Owner.Instance;
                 }
+
             }
 
             #endregion

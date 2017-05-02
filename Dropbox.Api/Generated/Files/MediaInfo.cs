@@ -210,18 +210,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Pending Create()
                 {
-                    return new Pending();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Pending DecodeFields(enc.IJsonReader reader)
-                {
                     return Pending.Instance;
                 }
+
             }
 
             #endregion

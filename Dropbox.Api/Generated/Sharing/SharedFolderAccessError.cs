@@ -299,18 +299,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override InvalidId Create()
                 {
-                    return new InvalidId();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidId DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidId.Instance;
                 }
+
             }
 
             #endregion
@@ -377,18 +368,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override NotAMember Create()
                 {
-                    return new NotAMember();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NotAMember DecodeFields(enc.IJsonReader reader)
-                {
                     return NotAMember.Instance;
                 }
+
             }
 
             #endregion
@@ -456,18 +438,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override EmailUnverified Create()
                 {
-                    return new EmailUnverified();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override EmailUnverified DecodeFields(enc.IJsonReader reader)
-                {
                     return EmailUnverified.Instance;
                 }
+
             }
 
             #endregion
@@ -534,18 +507,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Unmounted Create()
                 {
-                    return new Unmounted();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Unmounted DecodeFields(enc.IJsonReader reader)
-                {
                     return Unmounted.Instance;
                 }
+
             }
 
             #endregion
@@ -612,18 +576,9 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

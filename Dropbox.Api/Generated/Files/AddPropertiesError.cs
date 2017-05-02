@@ -243,18 +243,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override PropertyGroupAlreadyExists Create()
                 {
-                    return new PropertyGroupAlreadyExists();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override PropertyGroupAlreadyExists DecodeFields(enc.IJsonReader reader)
-                {
                     return PropertyGroupAlreadyExists.Instance;
                 }
+
             }
 
             #endregion
@@ -323,18 +314,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override PropertyFieldTooLarge Create()
                 {
-                    return new PropertyFieldTooLarge();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override PropertyFieldTooLarge DecodeFields(enc.IJsonReader reader)
-                {
                     return PropertyFieldTooLarge.Instance;
                 }
+
             }
 
             #endregion
@@ -404,18 +386,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override DoesNotFitTemplate Create()
                 {
-                    return new DoesNotFitTemplate();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DoesNotFitTemplate DecodeFields(enc.IJsonReader reader)
-                {
                     return DoesNotFitTemplate.Instance;
                 }
+
             }
 
             #endregion

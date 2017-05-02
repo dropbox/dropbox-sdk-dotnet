@@ -210,18 +210,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Jpeg Create()
                 {
-                    return new Jpeg();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Jpeg DecodeFields(enc.IJsonReader reader)
-                {
                     return Jpeg.Instance;
                 }
+
             }
 
             #endregion
@@ -288,18 +279,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override Png Create()
                 {
-                    return new Png();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Png DecodeFields(enc.IJsonReader reader)
-                {
                     return Png.Instance;
                 }
+
             }
 
             #endregion

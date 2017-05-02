@@ -211,18 +211,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Full Create()
                 {
-                    return new Full();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Full DecodeFields(enc.IJsonReader reader)
-                {
                     return Full.Instance;
                 }
+
             }
 
             #endregion
@@ -290,18 +281,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Limited Create()
                 {
-                    return new Limited();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Limited DecodeFields(enc.IJsonReader reader)
-                {
                     return Limited.Instance;
                 }
+
             }
 
             #endregion

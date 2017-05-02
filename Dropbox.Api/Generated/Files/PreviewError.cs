@@ -366,18 +366,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override InProgress Create()
                 {
-                    return new InProgress();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InProgress DecodeFields(enc.IJsonReader reader)
-                {
                     return InProgress.Instance;
                 }
+
             }
 
             #endregion
@@ -446,18 +437,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override UnsupportedExtension Create()
                 {
-                    return new UnsupportedExtension();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnsupportedExtension DecodeFields(enc.IJsonReader reader)
-                {
                     return UnsupportedExtension.Instance;
                 }
+
             }
 
             #endregion
@@ -526,18 +508,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override UnsupportedContent Create()
                 {
-                    return new UnsupportedContent();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnsupportedContent DecodeFields(enc.IJsonReader reader)
-                {
                     return UnsupportedContent.Instance;
                 }
+
             }
 
             #endregion

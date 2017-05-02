@@ -214,18 +214,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override MemberNotInGroup Create()
                 {
-                    return new MemberNotInGroup();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MemberNotInGroup DecodeFields(enc.IJsonReader reader)
-                {
                     return MemberNotInGroup.Instance;
                 }
+
             }
 
             #endregion
@@ -294,18 +285,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override SystemManagedGroupDisallowed Create()
                 {
-                    return new SystemManagedGroupDisallowed();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SystemManagedGroupDisallowed DecodeFields(enc.IJsonReader reader)
-                {
                     return SystemManagedGroupDisallowed.Instance;
                 }
+
             }
 
             #endregion

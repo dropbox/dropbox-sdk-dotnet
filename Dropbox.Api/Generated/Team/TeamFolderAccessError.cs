@@ -241,18 +241,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override InvalidTeamFolderId Create()
                 {
-                    return new InvalidTeamFolderId();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidTeamFolderId DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidTeamFolderId.Instance;
                 }
+
             }
 
             #endregion
@@ -320,18 +311,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override NoAccess Create()
                 {
-                    return new NoAccess();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override NoAccess DecodeFields(enc.IJsonReader reader)
-                {
                     return NoAccess.Instance;
                 }
+
             }
 
             #endregion
@@ -398,18 +380,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

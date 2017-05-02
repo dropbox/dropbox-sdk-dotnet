@@ -436,18 +436,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override InProgress Create()
                 {
-                    return new InProgress();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InProgress DecodeFields(enc.IJsonReader reader)
-                {
                     return InProgress.Instance;
                 }
+
             }
 
             #endregion

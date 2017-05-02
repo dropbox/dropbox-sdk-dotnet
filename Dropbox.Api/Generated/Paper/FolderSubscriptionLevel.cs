@@ -271,18 +271,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override None Create()
                 {
-                    return new None();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override None DecodeFields(enc.IJsonReader reader)
-                {
                     return None.Instance;
                 }
+
             }
 
             #endregion
@@ -350,18 +341,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override ActivityOnly Create()
                 {
-                    return new ActivityOnly();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ActivityOnly DecodeFields(enc.IJsonReader reader)
-                {
                     return ActivityOnly.Instance;
                 }
+
             }
 
             #endregion
@@ -429,18 +411,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override DailyEmails Create()
                 {
-                    return new DailyEmails();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DailyEmails DecodeFields(enc.IJsonReader reader)
-                {
                     return DailyEmails.Instance;
                 }
+
             }
 
             #endregion
@@ -508,18 +481,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override WeeklyEmails Create()
                 {
-                    return new WeeklyEmails();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override WeeklyEmails DecodeFields(enc.IJsonReader reader)
-                {
                     return WeeklyEmails.Instance;
                 }
+
             }
 
             #endregion

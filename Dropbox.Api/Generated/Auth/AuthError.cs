@@ -299,18 +299,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override InvalidAccessToken Create()
                 {
-                    return new InvalidAccessToken();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidAccessToken DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidAccessToken.Instance;
                 }
+
             }
 
             #endregion
@@ -380,18 +371,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override InvalidSelectUser Create()
                 {
-                    return new InvalidSelectUser();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidSelectUser DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidSelectUser.Instance;
                 }
+
             }
 
             #endregion
@@ -461,18 +443,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override InvalidSelectAdmin Create()
                 {
-                    return new InvalidSelectAdmin();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override InvalidSelectAdmin DecodeFields(enc.IJsonReader reader)
-                {
                     return InvalidSelectAdmin.Instance;
                 }
+
             }
 
             #endregion
@@ -540,18 +513,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override UserSuspended Create()
                 {
-                    return new UserSuspended();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserSuspended DecodeFields(enc.IJsonReader reader)
-                {
                     return UserSuspended.Instance;
                 }
+
             }
 
             #endregion
@@ -618,18 +582,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

@@ -367,18 +367,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override UnsupportedExtension Create()
                 {
-                    return new UnsupportedExtension();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnsupportedExtension DecodeFields(enc.IJsonReader reader)
-                {
                     return UnsupportedExtension.Instance;
                 }
+
             }
 
             #endregion
@@ -446,18 +437,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override UnsupportedImage Create()
                 {
-                    return new UnsupportedImage();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnsupportedImage DecodeFields(enc.IJsonReader reader)
-                {
                     return UnsupportedImage.Instance;
                 }
+
             }
 
             #endregion
@@ -525,18 +507,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override ConversionError Create()
                 {
-                    return new ConversionError();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ConversionError DecodeFields(enc.IJsonReader reader)
-                {
                     return ConversionError.Instance;
                 }
+
             }
 
             #endregion

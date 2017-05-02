@@ -299,18 +299,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override W32h32 Create()
                 {
-                    return new W32h32();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override W32h32 DecodeFields(enc.IJsonReader reader)
-                {
                     return W32h32.Instance;
                 }
+
             }
 
             #endregion
@@ -377,18 +368,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override W64h64 Create()
                 {
-                    return new W64h64();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override W64h64 DecodeFields(enc.IJsonReader reader)
-                {
                     return W64h64.Instance;
                 }
+
             }
 
             #endregion
@@ -455,18 +437,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override W128h128 Create()
                 {
-                    return new W128h128();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override W128h128 DecodeFields(enc.IJsonReader reader)
-                {
                     return W128h128.Instance;
                 }
+
             }
 
             #endregion
@@ -533,18 +506,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override W640h480 Create()
                 {
-                    return new W640h480();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override W640h480 DecodeFields(enc.IJsonReader reader)
-                {
                     return W640h480.Instance;
                 }
+
             }
 
             #endregion
@@ -611,18 +575,9 @@ namespace Dropbox.Api.Files
                 /// <returns>The struct instance.</returns>
                 protected override W1024h768 Create()
                 {
-                    return new W1024h768();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override W1024h768 DecodeFields(enc.IJsonReader reader)
-                {
                     return W1024h768.Instance;
                 }
+
             }
 
             #endregion

@@ -269,18 +269,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override TeamAdmin Create()
                 {
-                    return new TeamAdmin();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override TeamAdmin DecodeFields(enc.IJsonReader reader)
-                {
                     return TeamAdmin.Instance;
                 }
+
             }
 
             #endregion
@@ -349,18 +340,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override UserManagementAdmin Create()
                 {
-                    return new UserManagementAdmin();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserManagementAdmin DecodeFields(enc.IJsonReader reader)
-                {
                     return UserManagementAdmin.Instance;
                 }
+
             }
 
             #endregion
@@ -428,18 +410,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override SupportAdmin Create()
                 {
-                    return new SupportAdmin();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SupportAdmin DecodeFields(enc.IJsonReader reader)
-                {
                     return SupportAdmin.Instance;
                 }
+
             }
 
             #endregion
@@ -506,18 +479,9 @@ namespace Dropbox.Api.Team
                 /// <returns>The struct instance.</returns>
                 protected override MemberOnly Create()
                 {
-                    return new MemberOnly();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MemberOnly DecodeFields(enc.IJsonReader reader)
-                {
                     return MemberOnly.Instance;
                 }
+
             }
 
             #endregion

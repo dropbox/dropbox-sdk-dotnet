@@ -405,7 +405,7 @@ namespace Dropbox.Api.Stone
         /// <param name="reader">The json reader.</param>
         protected virtual void SetField(T value, string fieldName, IJsonReader reader)
         {
-            throw new NotImplementedException();
+            reader.Skip();
         }
 
         /// <summary>

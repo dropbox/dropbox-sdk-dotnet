@@ -240,18 +240,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override Endpoint Create()
                 {
-                    return new Endpoint();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Endpoint DecodeFields(enc.IJsonReader reader)
-                {
                     return Endpoint.Instance;
                 }
+
             }
 
             #endregion
@@ -318,18 +309,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override Feature Create()
                 {
-                    return new Feature();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Feature DecodeFields(enc.IJsonReader reader)
-                {
                     return Feature.Instance;
                 }
+
             }
 
             #endregion
@@ -396,18 +378,9 @@ namespace Dropbox.Api.Auth
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion

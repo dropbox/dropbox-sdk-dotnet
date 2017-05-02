@@ -392,18 +392,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override Success Create()
                 {
-                    return new Success();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Success DecodeFields(enc.IJsonReader reader)
-                {
                     return Success.Instance;
                 }
+
             }
 
             #endregion
@@ -472,18 +463,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override UnknownError Create()
                 {
-                    return new UnknownError();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UnknownError DecodeFields(enc.IJsonReader reader)
-                {
                     return UnknownError.Instance;
                 }
+
             }
 
             #endregion
@@ -552,18 +534,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override SharingOutsideTeamDisabled Create()
                 {
-                    return new SharingOutsideTeamDisabled();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SharingOutsideTeamDisabled DecodeFields(enc.IJsonReader reader)
-                {
                     return SharingOutsideTeamDisabled.Instance;
                 }
+
             }
 
             #endregion
@@ -633,18 +606,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override DailyLimitReached Create()
                 {
-                    return new DailyLimitReached();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override DailyLimitReached DecodeFields(enc.IJsonReader reader)
-                {
                     return DailyLimitReached.Instance;
                 }
+
             }
 
             #endregion
@@ -712,18 +676,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override UserIsOwner Create()
                 {
-                    return new UserIsOwner();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override UserIsOwner DecodeFields(enc.IJsonReader reader)
-                {
                     return UserIsOwner.Instance;
                 }
+
             }
 
             #endregion
@@ -792,18 +747,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override FailedUserDataRetrieval Create()
                 {
-                    return new FailedUserDataRetrieval();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override FailedUserDataRetrieval DecodeFields(enc.IJsonReader reader)
-                {
                     return FailedUserDataRetrieval.Instance;
                 }
+
             }
 
             #endregion
@@ -872,18 +818,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override PermissionAlreadyGranted Create()
                 {
-                    return new PermissionAlreadyGranted();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override PermissionAlreadyGranted DecodeFields(enc.IJsonReader reader)
-                {
                     return PermissionAlreadyGranted.Instance;
                 }
+
             }
 
             #endregion
@@ -950,18 +887,9 @@ namespace Dropbox.Api.Paper
                 /// <returns>The struct instance.</returns>
                 protected override Other Create()
                 {
-                    return new Other();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Other DecodeFields(enc.IJsonReader reader)
-                {
                     return Other.Instance;
                 }
+
             }
 
             #endregion
