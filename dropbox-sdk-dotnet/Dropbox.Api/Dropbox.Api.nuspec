@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.2.5</version>
+    <version>4.2.6</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -13,7 +13,7 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 Bug fixes:
-  - Fixed deadlock issue for DropboxOauth2Helper.
+  - Fixed a bug that the SDK may crash when a union field is changed from void to non-void.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

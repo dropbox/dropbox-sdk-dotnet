@@ -422,7 +422,7 @@ class _CSharpGenerator(CodeGenerator):
                     yield
 
     @contextmanager
-    def decoder_block(self, class_name, inherit):
+    def decoder_block(self, class_name, inherit, is_void):
         """
         Context manager that emit the private decoder class
 
@@ -440,7 +440,10 @@ class _CSharpGenerator(CodeGenerator):
                     self.emit_summary('Create a new instance of type <see cref="{0}" />.'.format(class_name))
                     self.emit_xml('The struct instance.', 'returns')
                 with self.cs_block(before='protected override {0} Create()'.format(class_name)):
-                    self.emit('return new {0}();'.format(class_name))
+                    if is_void:
+                        self.emit('return {0}.Instance;'.format(class_name))
+                    else:
+                        self.emit('return new {0}();'.format(class_name))
                 self.emit()
                 yield
 
@@ -1477,7 +1480,7 @@ class _CSharpGenerator(CodeGenerator):
         else:
             inherit = 'StructDecoder'
 
-        with self.decoder_block(class_name=class_name, inherit=inherit):
+        with self.decoder_block(class_name=class_name, inherit=inherit, is_void=False):
             if struct.has_enumerated_subtypes():
                 with self.decoder_tag_block(class_name=class_name):
                     with self.switch('tag'):
@@ -1602,7 +1605,7 @@ class _CSharpGenerator(CodeGenerator):
             class_name (Union[str, unicode]): The C# class name of the union.
         """
 
-        with self.decoder_block(class_name=class_name, inherit='UnionDecoder'):
+        with self.decoder_block(class_name=class_name, inherit='UnionDecoder', is_void=False):
             with self.decoder_tag_block(class_name=class_name):
                 with self.switch('tag'):
                     for field in self._get_union_fields(union):
@@ -1642,9 +1645,8 @@ class _CSharpGenerator(CodeGenerator):
             pass
         
         # Private decoder.
-        with self.decoder_block(class_name=field_type, inherit='StructDecoder'):
-            with self.decoder_decode_fields_block(class_name=field_type):
-                self.emit('return {0}.Instance;'.format(field_type))
+        with self.decoder_block(class_name=field_type, inherit='StructDecoder', is_void=True):
+            pass
 
     def _generate_union_field_value_type(self, field, field_type):
         """
@@ -1689,7 +1691,7 @@ class _CSharpGenerator(CodeGenerator):
             data_type = data_type.data_type
 
         # Private decoder.
-        with self.decoder_block(class_name=field_type, inherit='StructDecoder'):
+        with self.decoder_block(class_name=field_type, inherit='StructDecoder', is_void=False):
             if is_struct_type(data_type) and not data_type.has_enumerated_subtypes():
                 with self.decoder_decode_fields_block(class_name=field_type):
                     self.emit('return new {0}({1}.DecodeFields(reader));'.format(
