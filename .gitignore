@@ -47,3 +47,6 @@ AppPackages/
 
 # IntelliJ stuff
 .idea/
+
+# Visual studio stuff
+/dropbox-sdk-dotnet/UpgradeLog.htm

@@ -73,6 +73,19 @@ function EnsurePythonExists()
     }
 }
 
+function EnsurePipExists()
+{
+    Write-Host "Checking pip..."
+    if (!(Get-Command "pip" -ErrorAction SilentlyContinue)) {
+        Write-Error "Cannot find pip.exe, do you need to check your path?" -ErrorAction Stop
+    }
+}
+
+function InstallStoneDependency()
+{
+    RunCommand { pip "install" "ply>=3.4" "six>=1.3.0" "typing>=3.5.2" }
+}
+
 function GenerateProjectFiles()
 {
     Write-Host "Generating Dropbox.Api..."
@@ -190,6 +203,8 @@ function UpdateNugetSpec()
 
 EnsureNuGetExists
 EnsurePythonExists
+EnsurePipExists
+InstallStoneDependency
 EnsureVisualStudioVersion
 GenerateProjectFiles
 RestoreNugetPackages
