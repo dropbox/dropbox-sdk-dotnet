@@ -3,9 +3,6 @@
     [Parameter(Mandatory=$true)]
     [string]$testSettings,
 
-    [Parameter(Mandatory=$true)]
-    [string]$signKeyPath,
-
     [switch]$doc = $false
  )
 
@@ -26,6 +23,7 @@ $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
 $releaseVersion = "4.2.6"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
+$signKeyPath = "$sourceDir\dropbox_api_key.snk"
 
 $builds = @(
     @{Name = "Dropbox.Api"; Configuration="Release"; SignAssembly=$true; TestsName="Dropbox.Api.Tests"},
