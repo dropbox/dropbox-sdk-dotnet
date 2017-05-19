@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.2.6</version>
+    <version>4.3.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -12,8 +12,33 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
-Bug fixes:
-  - Fixed a bug that the SDK may crash when a union field is changed from void to non-void.
+What's new:
+  - Files:
+	- Added TooManyWriteOperations in UploadSessionFinishError.
+	- Removed PathRootError and InvalidPathRoot in LookupError.
+	- Added TeamFolder to WriteError.
+
+  - Sharing:
+	- Added AccessLevel to LinkSettings.
+	- Added ChangeAccessLevel to LinkAction.
+	- Added AccessLevel and AudienceRestrictingSharedFolder to SharedContentLinkMetadataBase.
+	- Added AcessType and ExpectedLinkMetadata to SharedFileMetadata.
+	- Added Path to ParentFolderAccessInfo.
+	- Added Actions to UpdateFolderPolicyArg.
+	- Added TeamFolder to UpdateFolderPolicyError.
+
+  - Team namespace:
+	- Added route TokenGetAuthenticated_admin.
+	- Added route FeaturesGetValues.
+	- Added Expires to ActiveWebSession.
+	- Added Cursor and HasMore to TeamFolderListResult for pagination.
+	- Added route TeamFolderListContinue.
+	- Made MemberGivenName and MemberSurname optional in MemberAddArg.
+
+  - User namepsace:
+	- Moved AccountType from user namespace to UserCommon namespace.
+
+  - Added TeamLog namespace.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
