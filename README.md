@@ -84,7 +84,7 @@ You can also build the SDK or create local nuget package from source code direct
 2. Edit buildall.ps1 and update major version and release version.
 3. In Visual Studio Developer Command Prompt run
    ```
-   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings:<PATH_TO_TEST_SETTINGS> 
+   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> 
    ```
    A .nukpg file will be generated in `Dropbox.Api` directory. Checkout [here](dropbox-sdk-dotnet/Dropbox.Api.Tests/dropbox.runsettings)
    for the format of test settings file.
@@ -92,5 +92,5 @@ You can also build the SDK or create local nuget package from source code direct
 ### Generating Docs
 1. In Visual Studio Developer Command Prompt, run
    ```
-   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings:<PATH_TO_TEST_SETTINGS> -doc:True
+   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> -doc
    ```
