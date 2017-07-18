@@ -49,34 +49,31 @@ You can also build the SDK or create local nuget package from source code direct
 ### Basic Setup
 
 1. Prerequisites:
-  - Visual Studio 2013 or above.
-  - Python 2.7 or above.
-  - Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases).
+   - Visual Studio 2013 or above.
+   - Python 2.7 or above.
+   - [Optional] Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases). This is only required for doc generation.
 
-2. Run ``git submodule init`` followed by a
-   ``git submodule update`` to pull in the ``spec`` and ``stone`` sub repos.
-
-4. Install stone and its dependencies by running.
+2. Clone the repository and update submodules.
+   ```
+   git clone https://github.com/dropbox/dropbox-sdk-dotnet.git
+   cd dropbox-sdk-dotnet
+   git submodule init    
+   git submodule update # also do this after every "git checkout" and "git pull"
+   ```
+3. Install stone and its dependencies by running
    ```
    cd stone
    python setup.py install
    ```
 
 ### Generate latest source code
-1. Update spec folder to the desired commit. To update to
-   the latest, simply use:
-   ```
-   git submodule update
-   cd spec
-   git pull
-   ```
 
-2. Run `generate.py` script to generatedi class for latest data types.
+1. Inside `dropbox-sdk-dotnet` repo, run `generate.py` script to generate class for latest data types. This will also generate all csproj files.
    ```
    python generate.py
    ```
 
-3. Open up the `Dropbox.Api.sln` in Visual Studio and run
+2. Open up the `Dropbox.Api.sln` in Visual Studio and run
    the included examples as a sanity check.
 
 ### Create nuget package (This needs to be done on Windows)
