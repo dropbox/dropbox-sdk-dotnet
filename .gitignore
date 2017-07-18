@@ -34,10 +34,10 @@ App_Data/
 [Ss]tyle[Cc]op.[Cc]ache
 
 ## Generated output
-/dropbox-sdk-dotnet/Dropbox.Api/Generated
+## /dropbox-sdk-dotnet/Dropbox.Api/Generated
 
 ## Generated csproj files.
-/dropbox-sdk-dotnet/Dropbox.Api/*.csproj
+## /dropbox-sdk-dotnet/Dropbox.Api/*.csproj
 
 ## Generated docs
 /doc/Help
