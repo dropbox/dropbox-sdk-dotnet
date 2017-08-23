@@ -30,14 +30,14 @@ token for your own Dropbox account.
 
 ## Examples
 
-Several examples can be found in the examples directory:
-* SimpleBlogDemo — An ASP.NET MVC application that creates a simple blogging
+Several examples can be found in the [examples](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples) directory:
+* [SimpleBlogDemo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleBlogDemo) — An ASP.NET MVC application that creates a simple blogging
   platform, this shows how to upload and download files.
-* SimpleBusinessDashboard — An ASP.NET MVC application that creates a simple business
+* [SimpleBusinessDashboard](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleBusinessDashboard) — An ASP.NET MVC application that creates a simple business
   dashboard, showcasing the Dropbox Business endpoints.
-* SimpleTest — A windows console application that demonstrates basic use of the SDK;
+* [SimpleTest](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleTest) — A windows console application that demonstrates basic use of the SDK;
   this also contains code that connects with OAuth2 using WPF.
-* UniversalDemo — A slide show app for both Windows Store and
+* [UniversalDemo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/UniversalDemo/UniversalDemo) — A slide show app for both Windows Store and
   Windows Phone 8.1
 
 ## Documentation
