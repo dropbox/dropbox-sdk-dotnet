@@ -12,7 +12,7 @@ namespace Dropbox.Api.TeamLog
 
     /// <summary>
     /// <para>Changed the action taken when a team member is already over the limits (e.g when
-    /// they join the team, an admin lowers limits, etc.).</para>
+    /// they join the team, an admin lowers limits, etc).</para>
     /// </summary>
     public class DeviceApprovalsChangeOverageActionDetails
     {

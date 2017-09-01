@@ -37,7 +37,7 @@ namespace Dropbox.Api.Team
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
         /// /> the cursor shouldn't be passed. Then, if the result of the call includes a
         /// cursor, the following requests should include the received cursors in order to
-        /// receive the next sub list of the team applications</param>
+        /// receive the next sub list of the team applications.</param>
         public ListMembersAppsArg(string cursor = null)
         {
             this.Cursor = cursor;
@@ -59,7 +59,7 @@ namespace Dropbox.Api.Team
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
         /// /> the cursor shouldn't be passed. Then, if the result of the call includes a
         /// cursor, the following requests should include the received cursors in order to
-        /// receive the next sub list of the team applications</para>
+        /// receive the next sub list of the team applications.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

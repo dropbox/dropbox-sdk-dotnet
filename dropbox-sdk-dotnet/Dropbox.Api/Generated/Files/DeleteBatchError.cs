@@ -149,8 +149,9 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>There are too many write operations in user's Dropbox. Please retry this
-        /// request.</para>
+        /// <para>Use <see cref="Dropbox.Api.Files.DeleteError.TooManyWriteOperations" />. <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchAsync" /> now provides
+        /// smaller granularity about which entry has failed because of this.</para>
         /// </summary>
         public sealed class TooManyWriteOperations : DeleteBatchError
         {

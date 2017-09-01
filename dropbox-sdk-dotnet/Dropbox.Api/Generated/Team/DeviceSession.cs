@@ -33,13 +33,13 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="DeviceSession" /> class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
+        /// <param name="sessionId">The session id.</param>
         /// <param name="ipAddress">The IP address of the last activity from this
-        /// session</param>
+        /// session.</param>
         /// <param name="country">The country from which the last activity from this session
-        /// was made</param>
-        /// <param name="created">The time this session was created</param>
-        /// <param name="updated">The time of the last activity from this session</param>
+        /// was made.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
         public DeviceSession(string sessionId,
                              string ipAddress = null,
                              string country = null,
@@ -69,27 +69,27 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The session id</para>
+        /// <para>The session id.</para>
         /// </summary>
         public string SessionId { get; protected set; }
 
         /// <summary>
-        /// <para>The IP address of the last activity from this session</para>
+        /// <para>The IP address of the last activity from this session.</para>
         /// </summary>
         public string IpAddress { get; protected set; }
 
         /// <summary>
-        /// <para>The country from which the last activity from this session was made</para>
+        /// <para>The country from which the last activity from this session was made.</para>
         /// </summary>
         public string Country { get; protected set; }
 
         /// <summary>
-        /// <para>The time this session was created</para>
+        /// <para>The time this session was created.</para>
         /// </summary>
         public sys.DateTime? Created { get; protected set; }
 
         /// <summary>
-        /// <para>The time of the last activity from this session</para>
+        /// <para>The time of the last activity from this session.</para>
         /// </summary>
         public sys.DateTime? Updated { get; protected set; }
 

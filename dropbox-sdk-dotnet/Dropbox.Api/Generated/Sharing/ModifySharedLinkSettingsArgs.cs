@@ -31,7 +31,7 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="ModifySharedLinkSettingsArgs" />
         /// class.</para>
         /// </summary>
-        /// <param name="url">URL of the shared link to change its settings</param>
+        /// <param name="url">URL of the shared link to change its settings.</param>
         /// <param name="settings">Set of settings for the shared link.</param>
         /// <param name="removeExpiration">If set to true, removes the expiration of the shared
         /// link.</param>
@@ -67,7 +67,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>URL of the shared link to change its settings</para>
+        /// <para>URL of the shared link to change its settings.</para>
         /// </summary>
         public string Url { get; protected set; }
 

@@ -35,13 +35,13 @@ namespace Dropbox.Api.Team
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> the
         /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
-        /// sub list of team devices</param>
+        /// sub list of team devices.</param>
         /// <param name="includeWebSessions">Whether to list web sessions of the team
-        /// members</param>
+        /// members.</param>
         /// <param name="includeDesktopClients">Whether to list desktop clients of the team
-        /// members</param>
+        /// members.</param>
         /// <param name="includeMobileClients">Whether to list mobile clients of the team
-        /// members</param>
+        /// members.</param>
         public ListMembersDevicesArg(string cursor = null,
                                      bool includeWebSessions = true,
                                      bool includeDesktopClients = true,
@@ -72,22 +72,22 @@ namespace Dropbox.Api.Team
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> the
         /// cursor shouldn't be passed. Then, if the result of the call includes a cursor, the
         /// following requests should include the received cursors in order to receive the next
-        /// sub list of team devices</para>
+        /// sub list of team devices.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to list web sessions of the team members</para>
+        /// <para>Whether to list web sessions of the team members.</para>
         /// </summary>
         public bool IncludeWebSessions { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to list desktop clients of the team members</para>
+        /// <para>Whether to list desktop clients of the team members.</para>
         /// </summary>
         public bool IncludeDesktopClients { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to list mobile clients of the team members</para>
+        /// <para>Whether to list mobile clients of the team members.</para>
         /// </summary>
         public bool IncludeMobileClients { get; protected set; }
 

@@ -32,23 +32,23 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="MemberSpaceLimitsChangeStatusDetails" /> class.</para>
         /// </summary>
-        /// <param name="previousStatus">Previous storage quota status.</param>
-        /// <param name="newStatus">New storage quota status.</param>
-        public MemberSpaceLimitsChangeStatusDetails(SpaceLimitsStatus previousStatus,
-                                                    SpaceLimitsStatus newStatus)
+        /// <param name="previousValue">Previous storage quota status.</param>
+        /// <param name="newValue">New storage quota status.</param>
+        public MemberSpaceLimitsChangeStatusDetails(SpaceLimitsStatus previousValue,
+                                                    SpaceLimitsStatus newValue)
         {
-            if (previousStatus == null)
+            if (previousValue == null)
             {
-                throw new sys.ArgumentNullException("previousStatus");
+                throw new sys.ArgumentNullException("previousValue");
             }
 
-            if (newStatus == null)
+            if (newValue == null)
             {
-                throw new sys.ArgumentNullException("newStatus");
+                throw new sys.ArgumentNullException("newValue");
             }
 
-            this.PreviousStatus = previousStatus;
-            this.NewStatus = newStatus;
+            this.PreviousValue = previousValue;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -65,12 +65,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Previous storage quota status.</para>
         /// </summary>
-        public SpaceLimitsStatus PreviousStatus { get; protected set; }
+        public SpaceLimitsStatus PreviousValue { get; protected set; }
 
         /// <summary>
         /// <para>New storage quota status.</para>
         /// </summary>
-        public SpaceLimitsStatus NewStatus { get; protected set; }
+        public SpaceLimitsStatus NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -86,8 +86,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberSpaceLimitsChangeStatusDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("previous_status", value.PreviousStatus, writer, global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Encoder);
-                WriteProperty("new_status", value.NewStatus, writer, global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Encoder);
+                WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Encoder);
             }
         }
 
@@ -121,11 +121,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "previous_status":
-                        value.PreviousStatus = global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Decoder.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Decoder.Decode(reader);
                         break;
-                    case "new_status":
-                        value.NewStatus = global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Decoder.Decode(reader);
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.SpaceLimitsStatus.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -31,25 +31,17 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="GroupChangeManagementTypeDetails" /> class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
         /// <param name="newValue">New group management type.</param>
         /// <param name="previousValue">Previous group management type. Might be missing due to
         /// historical data gap.</param>
-        public GroupChangeManagementTypeDetails(GroupLogInfo groupInfo,
-                                                GroupManagementType newValue,
+        public GroupChangeManagementTypeDetails(GroupManagementType newValue,
                                                 GroupManagementType previousValue = null)
         {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.GroupInfo = groupInfo;
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
         }
@@ -64,11 +56,6 @@ namespace Dropbox.Api.TeamLog
         public GroupChangeManagementTypeDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         /// <summary>
         /// <para>New group management type.</para>
@@ -95,7 +82,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupChangeManagementTypeDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
                 WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.GroupManagementType.Encoder);
                 if (value.PreviousValue != null)
                 {
@@ -134,9 +120,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     case "new_value":
                         value.NewValue = global::Dropbox.Api.TeamLog.GroupManagementType.Decoder.Decode(reader);
                         break;

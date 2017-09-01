@@ -13,6 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The folder metadata object</para>
     /// </summary>
+    /// <seealso cref="CreateFolderResult" />
     /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
     public class FolderMetadata : Metadata
     {
@@ -44,10 +45,10 @@ namespace Dropbox.Api.Files
         /// won't be returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
-        /// <param name="parentSharedFolderId">Deprecated. Please use <see
+        /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
-        /// <param name="sharedFolderId">Deprecated. Please use <paramref name="sharingInfo" />
+        /// <param name="sharedFolderId">Please use <paramref name="sharingInfo" />
         /// instead.</param>
         /// <param name="sharingInfo">Set if the folder is contained in a shared folder or is a
         /// shared folder mount point.</param>
@@ -104,7 +105,7 @@ namespace Dropbox.Api.Files
         public string Id { get; protected set; }
 
         /// <summary>
-        /// <para>Deprecated. Please use <see cref="SharingInfo" /> instead.</para>
+        /// <para>Please use <see cref="SharingInfo" /> instead.</para>
         /// </summary>
         public string SharedFolderId { get; protected set; }
 

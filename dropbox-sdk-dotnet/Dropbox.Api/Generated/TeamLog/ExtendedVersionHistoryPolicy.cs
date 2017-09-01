@@ -36,46 +36,68 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Limited</para>
+        /// <para>Gets a value indicating whether this instance is ExplicitlyLimited</para>
         /// </summary>
-        public bool IsLimited
+        public bool IsExplicitlyLimited
         {
             get
             {
-                return this is Limited;
+                return this is ExplicitlyLimited;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Limited, or <c>null</c>.</para>
+        /// <para>Gets this instance as a ExplicitlyLimited, or <c>null</c>.</para>
         /// </summary>
-        public Limited AsLimited
+        public ExplicitlyLimited AsExplicitlyLimited
         {
             get
             {
-                return this as Limited;
+                return this as ExplicitlyLimited;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Unlimited</para>
+        /// <para>Gets a value indicating whether this instance is ExplicitlyUnlimited</para>
         /// </summary>
-        public bool IsUnlimited
+        public bool IsExplicitlyUnlimited
         {
             get
             {
-                return this is Unlimited;
+                return this is ExplicitlyUnlimited;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Unlimited, or <c>null</c>.</para>
+        /// <para>Gets this instance as a ExplicitlyUnlimited, or <c>null</c>.</para>
         /// </summary>
-        public Unlimited AsUnlimited
+        public ExplicitlyUnlimited AsExplicitlyUnlimited
         {
             get
             {
-                return this as Unlimited;
+                return this as ExplicitlyUnlimited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ImplicitlyLimited</para>
+        /// </summary>
+        public bool IsImplicitlyLimited
+        {
+            get
+            {
+                return this is ImplicitlyLimited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ImplicitlyLimited, or <c>null</c>.</para>
+        /// </summary>
+        public ImplicitlyLimited AsImplicitlyLimited
+        {
+            get
+            {
+                return this as ImplicitlyLimited;
             }
         }
 
@@ -115,16 +137,22 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ExtendedVersionHistoryPolicy value, enc.IJsonWriter writer)
             {
-                if (value is Limited)
+                if (value is ExplicitlyLimited)
                 {
-                    WriteProperty(".tag", "limited", writer, enc.StringEncoder.Instance);
-                    Limited.Encoder.EncodeFields((Limited)value, writer);
+                    WriteProperty(".tag", "explicitly_limited", writer, enc.StringEncoder.Instance);
+                    ExplicitlyLimited.Encoder.EncodeFields((ExplicitlyLimited)value, writer);
                     return;
                 }
-                if (value is Unlimited)
+                if (value is ExplicitlyUnlimited)
                 {
-                    WriteProperty(".tag", "unlimited", writer, enc.StringEncoder.Instance);
-                    Unlimited.Encoder.EncodeFields((Unlimited)value, writer);
+                    WriteProperty(".tag", "explicitly_unlimited", writer, enc.StringEncoder.Instance);
+                    ExplicitlyUnlimited.Encoder.EncodeFields((ExplicitlyUnlimited)value, writer);
+                    return;
+                }
+                if (value is ImplicitlyLimited)
+                {
+                    WriteProperty(".tag", "implicitly_limited", writer, enc.StringEncoder.Instance);
+                    ImplicitlyLimited.Encoder.EncodeFields((ImplicitlyLimited)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -166,10 +194,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "limited":
-                        return Limited.Decoder.DecodeFields(reader);
-                    case "unlimited":
-                        return Unlimited.Decoder.DecodeFields(reader);
+                    case "explicitly_limited":
+                        return ExplicitlyLimited.Decoder.DecodeFields(reader);
+                    case "explicitly_unlimited":
+                        return ExplicitlyUnlimited.Decoder.DecodeFields(reader);
+                    case "implicitly_limited":
+                        return ImplicitlyLimited.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -179,47 +209,48 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The limited object</para>
+        /// <para>The explicitly limited object</para>
         /// </summary>
-        public sealed class Limited : ExtendedVersionHistoryPolicy
+        public sealed class ExplicitlyLimited : ExtendedVersionHistoryPolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Limited> Encoder = new LimitedEncoder();
+            internal static enc.StructEncoder<ExplicitlyLimited> Encoder = new ExplicitlyLimitedEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Limited> Decoder = new LimitedDecoder();
+            internal static enc.StructDecoder<ExplicitlyLimited> Decoder = new ExplicitlyLimitedDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Limited" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="ExplicitlyLimited" />
+            /// class.</para>
             /// </summary>
-            private Limited()
+            private ExplicitlyLimited()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Limited</para>
+            /// <para>A singleton instance of ExplicitlyLimited</para>
             /// </summary>
-            public static readonly Limited Instance = new Limited();
+            public static readonly ExplicitlyLimited Instance = new ExplicitlyLimited();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Limited" />.</para>
+            /// <para>Encoder for  <see cref="ExplicitlyLimited" />.</para>
             /// </summary>
-            private class LimitedEncoder : enc.StructEncoder<Limited>
+            private class ExplicitlyLimitedEncoder : enc.StructEncoder<ExplicitlyLimited>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Limited value, enc.IJsonWriter writer)
+                public override void EncodeFields(ExplicitlyLimited value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -229,17 +260,18 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Limited" />.</para>
+            /// <para>Decoder for  <see cref="ExplicitlyLimited" />.</para>
             /// </summary>
-            private class LimitedDecoder : enc.StructDecoder<Limited>
+            private class ExplicitlyLimitedDecoder : enc.StructDecoder<ExplicitlyLimited>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Limited" />.</para>
+                /// <para>Create a new instance of type <see cref="ExplicitlyLimited"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Limited Create()
+                protected override ExplicitlyLimited Create()
                 {
-                    return Limited.Instance;
+                    return ExplicitlyLimited.Instance;
                 }
 
             }
@@ -248,47 +280,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The unlimited object</para>
+        /// <para>The explicitly unlimited object</para>
         /// </summary>
-        public sealed class Unlimited : ExtendedVersionHistoryPolicy
+        public sealed class ExplicitlyUnlimited : ExtendedVersionHistoryPolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Unlimited> Encoder = new UnlimitedEncoder();
+            internal static enc.StructEncoder<ExplicitlyUnlimited> Encoder = new ExplicitlyUnlimitedEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Unlimited> Decoder = new UnlimitedDecoder();
+            internal static enc.StructDecoder<ExplicitlyUnlimited> Decoder = new ExplicitlyUnlimitedDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Unlimited" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="ExplicitlyUnlimited" />
+            /// class.</para>
             /// </summary>
-            private Unlimited()
+            private ExplicitlyUnlimited()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Unlimited</para>
+            /// <para>A singleton instance of ExplicitlyUnlimited</para>
             /// </summary>
-            public static readonly Unlimited Instance = new Unlimited();
+            public static readonly ExplicitlyUnlimited Instance = new ExplicitlyUnlimited();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Unlimited" />.</para>
+            /// <para>Encoder for  <see cref="ExplicitlyUnlimited" />.</para>
             /// </summary>
-            private class UnlimitedEncoder : enc.StructEncoder<Unlimited>
+            private class ExplicitlyUnlimitedEncoder : enc.StructEncoder<ExplicitlyUnlimited>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Unlimited value, enc.IJsonWriter writer)
+                public override void EncodeFields(ExplicitlyUnlimited value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -298,17 +331,89 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Unlimited" />.</para>
+            /// <para>Decoder for  <see cref="ExplicitlyUnlimited" />.</para>
             /// </summary>
-            private class UnlimitedDecoder : enc.StructDecoder<Unlimited>
+            private class ExplicitlyUnlimitedDecoder : enc.StructDecoder<ExplicitlyUnlimited>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Unlimited" />.</para>
+                /// <para>Create a new instance of type <see cref="ExplicitlyUnlimited"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Unlimited Create()
+                protected override ExplicitlyUnlimited Create()
                 {
-                    return Unlimited.Instance;
+                    return ExplicitlyUnlimited.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The implicitly limited object</para>
+        /// </summary>
+        public sealed class ImplicitlyLimited : ExtendedVersionHistoryPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ImplicitlyLimited> Encoder = new ImplicitlyLimitedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ImplicitlyLimited> Decoder = new ImplicitlyLimitedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ImplicitlyLimited" />
+            /// class.</para>
+            /// </summary>
+            private ImplicitlyLimited()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ImplicitlyLimited</para>
+            /// </summary>
+            public static readonly ImplicitlyLimited Instance = new ImplicitlyLimited();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ImplicitlyLimited" />.</para>
+            /// </summary>
+            private class ImplicitlyLimitedEncoder : enc.StructEncoder<ImplicitlyLimited>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ImplicitlyLimited value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ImplicitlyLimited" />.</para>
+            /// </summary>
+            private class ImplicitlyLimitedDecoder : enc.StructDecoder<ImplicitlyLimited>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ImplicitlyLimited"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ImplicitlyLimited Create()
+                {
+                    return ImplicitlyLimited.Instance;
                 }
 
             }

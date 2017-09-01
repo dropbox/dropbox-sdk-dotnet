@@ -31,23 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SsoLoginFailDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="systemMessage">A technical description of the error.</param>
-        /// <param name="adminMessage">A user friendly description of the error.</param>
-        public SsoLoginFailDetails(string systemMessage,
-                                   string adminMessage)
+        /// <param name="errorDetails">Login failure details.</param>
+        public SsoLoginFailDetails(FailureDetailsLogInfo errorDetails)
         {
-            if (systemMessage == null)
+            if (errorDetails == null)
             {
-                throw new sys.ArgumentNullException("systemMessage");
+                throw new sys.ArgumentNullException("errorDetails");
             }
 
-            if (adminMessage == null)
-            {
-                throw new sys.ArgumentNullException("adminMessage");
-            }
-
-            this.SystemMessage = systemMessage;
-            this.AdminMessage = adminMessage;
+            this.ErrorDetails = errorDetails;
         }
 
         /// <summary>
@@ -62,14 +54,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>A technical description of the error.</para>
+        /// <para>Login failure details.</para>
         /// </summary>
-        public string SystemMessage { get; protected set; }
-
-        /// <summary>
-        /// <para>A user friendly description of the error.</para>
-        /// </summary>
-        public string AdminMessage { get; protected set; }
+        public FailureDetailsLogInfo ErrorDetails { get; protected set; }
 
         #region Encoder class
 
@@ -85,8 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SsoLoginFailDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("system_message", value.SystemMessage, writer, enc.StringEncoder.Instance);
-                WriteProperty("admin_message", value.AdminMessage, writer, enc.StringEncoder.Instance);
+                WriteProperty("error_details", value.ErrorDetails, writer, global::Dropbox.Api.TeamLog.FailureDetailsLogInfo.Encoder);
             }
         }
 
@@ -119,11 +105,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "system_message":
-                        value.SystemMessage = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "admin_message":
-                        value.AdminMessage = enc.StringDecoder.Instance.Decode(reader);
+                    case "error_details":
+                        value.ErrorDetails = global::Dropbox.Api.TeamLog.FailureDetailsLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

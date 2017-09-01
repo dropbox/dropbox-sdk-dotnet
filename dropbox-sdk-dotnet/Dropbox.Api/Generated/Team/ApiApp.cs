@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Information on linked third party applications</para>
+    /// <para>Information on linked third party applications.</para>
     /// </summary>
     public class ApiApp
     {
@@ -30,13 +30,13 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ApiApp" /> class.</para>
         /// </summary>
-        /// <param name="appId">The application unique id</param>
-        /// <param name="appName">The application name</param>
+        /// <param name="appId">The application unique id.</param>
+        /// <param name="appName">The application name.</param>
         /// <param name="isAppFolder">Whether the linked application uses a dedicated
-        /// folder</param>
-        /// <param name="publisher">The application publisher name</param>
-        /// <param name="publisherUrl">The publisher's URL</param>
-        /// <param name="linked">The time this application was linked</param>
+        /// folder.</param>
+        /// <param name="publisher">The application publisher name.</param>
+        /// <param name="publisherUrl">The publisher's URL.</param>
+        /// <param name="linked">The time this application was linked.</param>
         public ApiApp(string appId,
                       string appName,
                       bool isAppFolder,
@@ -73,32 +73,32 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The application unique id</para>
+        /// <para>The application unique id.</para>
         /// </summary>
         public string AppId { get; protected set; }
 
         /// <summary>
-        /// <para>The application name</para>
+        /// <para>The application name.</para>
         /// </summary>
         public string AppName { get; protected set; }
 
         /// <summary>
-        /// <para>Whether the linked application uses a dedicated folder</para>
+        /// <para>Whether the linked application uses a dedicated folder.</para>
         /// </summary>
         public bool IsAppFolder { get; protected set; }
 
         /// <summary>
-        /// <para>The application publisher name</para>
+        /// <para>The application publisher name.</para>
         /// </summary>
         public string Publisher { get; protected set; }
 
         /// <summary>
-        /// <para>The publisher's URL</para>
+        /// <para>The publisher's URL.</para>
         /// </summary>
         public string PublisherUrl { get; protected set; }
 
         /// <summary>
-        /// <para>The time this application was linked</para>
+        /// <para>The time this application was linked.</para>
         /// </summary>
         public sys.DateTime? Linked { get; protected set; }
 

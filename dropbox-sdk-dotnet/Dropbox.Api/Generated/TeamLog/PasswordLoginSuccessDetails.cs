@@ -31,28 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="PasswordLoginSuccessDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="isEmmManaged">Tells if the user signed in from an EMM managed
-        /// device.</param>
-        public PasswordLoginSuccessDetails(bool isEmmManaged)
-        {
-            this.IsEmmManaged = isEmmManaged;
-        }
-
-        /// <summary>
-        /// <para>Initializes a new instance of the <see cref="PasswordLoginSuccessDetails" />
-        /// class.</para>
-        /// </summary>
-        /// <remarks>This is to construct an instance of the object when
-        /// deserializing.</remarks>
-        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public PasswordLoginSuccessDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Tells if the user signed in from an EMM managed device.</para>
-        /// </summary>
-        public bool IsEmmManaged { get; protected set; }
 
         #region Encoder class
 
@@ -68,7 +49,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PasswordLoginSuccessDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("is_emm_managed", value.IsEmmManaged, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -102,9 +82,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "is_emm_managed":
-                        value.IsEmmManaged = enc.BooleanDecoder.Instance.Decode(reader);
-                        break;
                     default:
                         reader.Skip();
                         break;

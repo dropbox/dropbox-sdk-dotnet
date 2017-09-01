@@ -32,10 +32,12 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="isDeleted">If the file is deleted.</param>
-        /// <param name="entries">The revisions for the file. Only non-delete revisions will
-        /// show up here.</param>
+        /// <param name="entries">The revisions for the file. Only revisions that are not
+        /// deleted will show up here.</param>
+        /// <param name="serverDeleted">The time of deletion if the file was deleted.</param>
         public ListRevisionsResult(bool isDeleted,
-                                   col.IEnumerable<FileMetadata> entries)
+                                   col.IEnumerable<FileMetadata> entries,
+                                   sys.DateTime? serverDeleted = null)
         {
             var entriesList = enc.Util.ToList(entries);
 
@@ -46,6 +48,7 @@ namespace Dropbox.Api.Files
 
             this.IsDeleted = isDeleted;
             this.Entries = entriesList;
+            this.ServerDeleted = serverDeleted;
         }
 
         /// <summary>
@@ -65,10 +68,15 @@ namespace Dropbox.Api.Files
         public bool IsDeleted { get; protected set; }
 
         /// <summary>
-        /// <para>The revisions for the file. Only non-delete revisions will show up
+        /// <para>The revisions for the file. Only revisions that are not deleted will show up
         /// here.</para>
         /// </summary>
         public col.IList<FileMetadata> Entries { get; protected set; }
+
+        /// <summary>
+        /// <para>The time of deletion if the file was deleted.</para>
+        /// </summary>
+        public sys.DateTime? ServerDeleted { get; protected set; }
 
         #region Encoder class
 
@@ -86,6 +94,10 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("is_deleted", value.IsDeleted, writer, enc.BooleanEncoder.Instance);
                 WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.FileMetadata.Encoder);
+                if (value.ServerDeleted != null)
+                {
+                    WriteProperty("server_deleted", value.ServerDeleted.Value, writer, enc.DateTimeEncoder.Instance);
+                }
             }
         }
 
@@ -123,6 +135,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "entries":
                         value.Entries = ReadList<FileMetadata>(reader, global::Dropbox.Api.Files.FileMetadata.Decoder);
+                        break;
+                    case "server_deleted":
+                        value.ServerDeleted = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

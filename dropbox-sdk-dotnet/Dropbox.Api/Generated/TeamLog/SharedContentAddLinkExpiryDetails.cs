@@ -31,14 +31,14 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentAddLinkExpiryDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="expirationStartDate">Expiration starting date.</param>
         /// <param name="expirationDays">The number of days from the starting expiration date
         /// after which the link will expire.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="sharedFolderType">Shared folder type. Might be missing due to
         /// historical data gap.</param>
-        public SharedContentAddLinkExpiryDetails(long targetIndex,
+        public SharedContentAddLinkExpiryDetails(ulong targetAssetIndex,
                                                  string expirationStartDate,
                                                  long expirationDays,
                                                  string originalFolderName = null,
@@ -49,7 +49,7 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("expirationStartDate");
             }
 
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.ExpirationStartDate = expirationStartDate;
             this.ExpirationDays = expirationDays;
             this.OriginalFolderName = originalFolderName;
@@ -68,9 +68,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Expiration starting date.</para>
@@ -107,7 +107,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentAddLinkExpiryDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("expiration_start_date", value.ExpirationStartDate, writer, enc.StringEncoder.Instance);
                 WriteProperty("expiration_days", value.ExpirationDays, writer, enc.Int64Encoder.Instance);
                 if (value.OriginalFolderName != null)
@@ -151,8 +151,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "expiration_start_date":
                         value.ExpirationStartDate = enc.StringDecoder.Instance.Decode(reader);

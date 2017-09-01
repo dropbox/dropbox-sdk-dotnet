@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The metadata of a folder shared link</para>
+    /// <para>The metadata of a folder shared link.</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Sharing.SharedLinkMetadata" />
     public class FolderLinkMetadata : SharedLinkMetadata

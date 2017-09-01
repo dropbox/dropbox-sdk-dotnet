@@ -48,6 +48,9 @@ namespace Dropbox.Api.Sharing
         /// <param name="expiry">Whether the link has an expiry set on it. A link with an
         /// expiry will have its  audience changed to members when the expiry is
         /// reached.</param>
+        /// <param name="audienceExceptions">The content inside this folder with link audience
+        /// different than this folder's. This is only returned when an endpoint that returns
+        /// metadata for a single shared folder is called, e.g. /get_folder_metadata.</param>
         public SharedContentLinkMetadata(col.IEnumerable<LinkAudience> audienceOptions,
                                          LinkAudience currentAudience,
                                          col.IEnumerable<LinkPermission> linkPermissions,
@@ -55,7 +58,8 @@ namespace Dropbox.Api.Sharing
                                          string url,
                                          AccessLevel accessLevel = null,
                                          AudienceRestrictingSharedFolder audienceRestrictingSharedFolder = null,
-                                         sys.DateTime? expiry = null)
+                                         sys.DateTime? expiry = null,
+                                         AudienceExceptions audienceExceptions = null)
             : base(audienceOptions, currentAudience, linkPermissions, passwordProtected, accessLevel, audienceRestrictingSharedFolder, expiry)
         {
             if (url == null)
@@ -64,6 +68,7 @@ namespace Dropbox.Api.Sharing
             }
 
             this.Url = url;
+            this.AudienceExceptions = audienceExceptions;
         }
 
         /// <summary>
@@ -81,6 +86,13 @@ namespace Dropbox.Api.Sharing
         /// <para>The URL of the link.</para>
         /// </summary>
         public string Url { get; protected set; }
+
+        /// <summary>
+        /// <para>The content inside this folder with link audience different than this
+        /// folder's. This is only returned when an endpoint that returns metadata for a single
+        /// shared folder is called, e.g. /get_folder_metadata.</para>
+        /// </summary>
+        public AudienceExceptions AudienceExceptions { get; protected set; }
 
         #region Encoder class
 
@@ -112,6 +124,10 @@ namespace Dropbox.Api.Sharing
                 if (value.Expiry != null)
                 {
                     WriteProperty("expiry", value.Expiry.Value, writer, enc.DateTimeEncoder.Instance);
+                }
+                if (value.AudienceExceptions != null)
+                {
+                    WriteProperty("audience_exceptions", value.AudienceExceptions, writer, global::Dropbox.Api.Sharing.AudienceExceptions.Encoder);
                 }
             }
         }
@@ -169,6 +185,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "expiry":
                         value.Expiry = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "audience_exceptions":
+                        value.AudienceExceptions = global::Dropbox.Api.Sharing.AudienceExceptions.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -13,7 +13,7 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>Error returned by <see
     /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
-    /// /></para>
+    /// />.</para>
     /// </summary>
     public class ListMembersAppsError
     {

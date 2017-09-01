@@ -31,17 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="AccountCaptureMigrateAccountDetails" /> class.</para>
         /// </summary>
-        /// <param name="domainName">Domain names.</param>
-        public AccountCaptureMigrateAccountDetails(col.IEnumerable<string> domainName)
+        /// <param name="domainName">Domain name.</param>
+        public AccountCaptureMigrateAccountDetails(string domainName)
         {
-            var domainNameList = enc.Util.ToList(domainName);
-
             if (domainName == null)
             {
                 throw new sys.ArgumentNullException("domainName");
             }
 
-            this.DomainName = domainNameList;
+            this.DomainName = domainName;
         }
 
         /// <summary>
@@ -56,9 +54,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Domain names.</para>
+        /// <para>Domain name.</para>
         /// </summary>
-        public col.IList<string> DomainName { get; protected set; }
+        public string DomainName { get; protected set; }
 
         #region Encoder class
 
@@ -74,7 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AccountCaptureMigrateAccountDetails value, enc.IJsonWriter writer)
             {
-                WriteListProperty("domain_name", value.DomainName, writer, enc.StringEncoder.Instance);
+                WriteProperty("domain_name", value.DomainName, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -109,7 +107,7 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "domain_name":
-                        value.DomainName = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        value.DomainName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -37,9 +37,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z'");
             }
 
             this.Path = path;

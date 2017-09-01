@@ -338,7 +338,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>User's email should be verified</para>
+        /// <para>User's email should be verified.</para>
         /// </summary>
         public sealed class EmailNotVerified : CreateSharedLinkWithSettingsError
         {
@@ -408,7 +408,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The shared link already exists</para>
+        /// <para>The shared link already exists. You can call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to get
+        /// the existing link.</para>
         /// </summary>
         public sealed class SharedLinkAlreadyExists : CreateSharedLinkWithSettingsError
         {
@@ -479,7 +481,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>There is an error with the given settings</para>
+        /// <para>There is an error with the given settings.</para>
         /// </summary>
         public sealed class SettingsError : CreateSharedLinkWithSettingsError
         {
@@ -577,7 +579,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Access to the requested path is forbidden</para>
+        /// <para>Access to the requested path is forbidden.</para>
         /// </summary>
         public sealed class AccessDenied : CreateSharedLinkWithSettingsError
         {

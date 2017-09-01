@@ -31,13 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="MemberTransferAccountContentsDetails" /> class.</para>
         /// </summary>
-        /// <param name="srcIndex">Source asset index.</param>
-        /// <param name="destIndex">Destination asset index.</param>
-        public MemberTransferAccountContentsDetails(long srcIndex,
-                                                    long destIndex)
+        /// <param name="srcParticipantIndex">Source participant position in the Participants
+        /// list.</param>
+        /// <param name="destParticipantIndex">Destination participant position in the
+        /// Participants list.</param>
+        public MemberTransferAccountContentsDetails(ulong srcParticipantIndex,
+                                                    ulong destParticipantIndex)
         {
-            this.SrcIndex = srcIndex;
-            this.DestIndex = destIndex;
+            this.SrcParticipantIndex = srcParticipantIndex;
+            this.DestParticipantIndex = destParticipantIndex;
         }
 
         /// <summary>
@@ -52,14 +54,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Source asset index.</para>
+        /// <para>Source participant position in the Participants list.</para>
         /// </summary>
-        public long SrcIndex { get; protected set; }
+        public ulong SrcParticipantIndex { get; protected set; }
 
         /// <summary>
-        /// <para>Destination asset index.</para>
+        /// <para>Destination participant position in the Participants list.</para>
         /// </summary>
-        public long DestIndex { get; protected set; }
+        public ulong DestParticipantIndex { get; protected set; }
 
         #region Encoder class
 
@@ -75,8 +77,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberTransferAccountContentsDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("src_index", value.SrcIndex, writer, enc.Int64Encoder.Instance);
-                WriteProperty("dest_index", value.DestIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("src_participant_index", value.SrcParticipantIndex, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("dest_participant_index", value.DestParticipantIndex, writer, enc.UInt64Encoder.Instance);
             }
         }
 
@@ -110,11 +112,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "src_index":
-                        value.SrcIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "src_participant_index":
+                        value.SrcParticipantIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
-                    case "dest_index":
-                        value.DestIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "dest_participant_index":
+                        value.DestParticipantIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

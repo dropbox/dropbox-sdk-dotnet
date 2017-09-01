@@ -32,18 +32,14 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="newValue">New user's name.</param>
-        /// <param name="previousValue">Previous user's name.</param>
+        /// <param name="previousValue">Previous user's name. Might be missing due to
+        /// historical data gap.</param>
         public MemberChangeNameDetails(UserNameLogInfo newValue,
-                                       UserNameLogInfo previousValue)
+                                       UserNameLogInfo previousValue = null)
         {
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
-            }
-
-            if (previousValue == null)
-            {
-                throw new sys.ArgumentNullException("previousValue");
             }
 
             this.NewValue = newValue;
@@ -67,7 +63,7 @@ namespace Dropbox.Api.TeamLog
         public UserNameLogInfo NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Previous user's name.</para>
+        /// <para>Previous user's name. Might be missing due to historical data gap.</para>
         /// </summary>
         public UserNameLogInfo PreviousValue { get; protected set; }
 
@@ -86,7 +82,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(MemberChangeNameDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
-                WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
+                if (value.PreviousValue != null)
+                {
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
+                }
             }
         }
 

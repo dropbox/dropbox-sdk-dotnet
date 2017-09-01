@@ -31,12 +31,12 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SfAddGroupDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="teamName">Team name.</param>
         /// <param name="sharingPermission">Sharing permission. Might be missing due to
         /// historical data gap.</param>
-        public SfAddGroupDetails(long targetIndex,
+        public SfAddGroupDetails(ulong targetAssetIndex,
                                  string originalFolderName,
                                  string teamName,
                                  string sharingPermission = null)
@@ -51,7 +51,7 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("teamName");
             }
 
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.OriginalFolderName = originalFolderName;
             this.TeamName = teamName;
             this.SharingPermission = sharingPermission;
@@ -69,9 +69,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Original shared folder name.</para>
@@ -102,7 +102,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SfAddGroupDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
                 WriteProperty("team_name", value.TeamName, writer, enc.StringEncoder.Instance);
                 if (value.SharingPermission != null)
@@ -141,8 +141,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "original_folder_name":
                         value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);

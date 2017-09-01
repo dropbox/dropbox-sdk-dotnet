@@ -394,7 +394,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>It is unsafe to use both external_id and new_external_id</para>
+        /// <para>It is unsafe to use both external_id and new_external_id.</para>
         /// </summary>
         public sealed class ExternalIdAndNewExternalIdUnsafe : MembersSetProfileError
         {
@@ -466,7 +466,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>None of new_email, new_given_name, new_surname, or new_external_id are
-        /// specified</para>
+        /// specified.</para>
         /// </summary>
         public sealed class NoNewDataSpecified : MembersSetProfileError
         {
@@ -679,7 +679,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Pending team member's email cannot be modified.</para>
+        /// <para>Modifying deleted users is not allowed.</para>
         /// </summary>
         public sealed class SetProfileDisallowed : MembersSetProfileError
         {

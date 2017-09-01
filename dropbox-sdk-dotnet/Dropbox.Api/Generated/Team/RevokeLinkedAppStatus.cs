@@ -31,8 +31,8 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="RevokeLinkedAppStatus" />
         /// class.</para>
         /// </summary>
-        /// <param name="success">Result of the revoking request</param>
-        /// <param name="errorType">The error cause in case of a failure</param>
+        /// <param name="success">Result of the revoking request.</param>
+        /// <param name="errorType">The error cause in case of a failure.</param>
         public RevokeLinkedAppStatus(bool success,
                                      RevokeLinkedAppError errorType = null)
         {
@@ -52,12 +52,12 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Result of the revoking request</para>
+        /// <para>Result of the revoking request.</para>
         /// </summary>
         public bool Success { get; protected set; }
 
         /// <summary>
-        /// <para>The error cause in case of a failure</para>
+        /// <para>The error cause in case of a failure.</para>
         /// </summary>
         public RevokeLinkedAppError ErrorType { get; protected set; }
 

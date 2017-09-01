@@ -32,10 +32,7 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="deviceInfo">Device information.</param>
-        /// <param name="appVersion">Linking app version. Might be missing due to historical
-        /// data gap.</param>
-        public DeviceLinkSuccessDetails(DeviceLogInfo deviceInfo,
-                                        string appVersion = null)
+        public DeviceLinkSuccessDetails(DeviceLogInfo deviceInfo)
         {
             if (deviceInfo == null)
             {
@@ -43,7 +40,6 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.DeviceInfo = deviceInfo;
-            this.AppVersion = appVersion;
         }
 
         /// <summary>
@@ -62,11 +58,6 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public DeviceLogInfo DeviceInfo { get; protected set; }
 
-        /// <summary>
-        /// <para>Linking app version. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string AppVersion { get; protected set; }
-
         #region Encoder class
 
         /// <summary>
@@ -82,10 +73,6 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(DeviceLinkSuccessDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
-                if (value.AppVersion != null)
-                {
-                    WriteProperty("app_version", value.AppVersion, writer, enc.StringEncoder.Instance);
-                }
             }
         }
 
@@ -121,9 +108,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "device_info":
                         value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
-                        break;
-                    case "app_version":
-                        value.AppVersion = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -34,7 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">The new two factor authentication configuration.</param>
         /// <param name="previousValue">The previous two factor authentication configuration.
         /// Might be missing due to historical data gap.</param>
-        /// <param name="usedRescueCode">Used two factor authentication code.</param>
+        /// <param name="usedRescueCode">Used two factor authentication rescue code. This flag
+        /// is relevant when the two factor authentication configuration is disabled.</param>
         public TfaChangeStatusDetails(TfaConfiguration newValue,
                                       TfaConfiguration previousValue = null,
                                       bool? usedRescueCode = null)
@@ -72,7 +73,8 @@ namespace Dropbox.Api.TeamLog
         public TfaConfiguration PreviousValue { get; protected set; }
 
         /// <summary>
-        /// <para>Used two factor authentication code.</para>
+        /// <para>Used two factor authentication rescue code. This flag is relevant when the
+        /// two factor authentication configuration is disabled.</para>
         /// </summary>
         public bool? UsedRescueCode { get; protected set; }
 

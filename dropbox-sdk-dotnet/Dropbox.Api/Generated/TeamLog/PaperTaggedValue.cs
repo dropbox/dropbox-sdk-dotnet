@@ -32,15 +32,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="PaperTaggedValue" />
         /// class.</para>
         /// </summary>
-        /// <param name="tag">Tag.</param>
-        public PaperTaggedValue(string tag)
+        /// <param name="ptag">Tag.</param>
+        public PaperTaggedValue(string ptag)
         {
-            if (tag == null)
+            if (ptag == null)
             {
-                throw new sys.ArgumentNullException("tag");
+                throw new sys.ArgumentNullException("ptag");
             }
 
-            this.Tag = tag;
+            this.Ptag = ptag;
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Tag.</para>
         /// </summary>
-        public string Tag { get; protected set; }
+        public string Ptag { get; protected set; }
 
         #region Encoder class
 
@@ -73,7 +73,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PaperTaggedValue value, enc.IJsonWriter writer)
             {
-                WriteProperty("tag", value.Tag, writer, enc.StringEncoder.Instance);
+                WriteProperty("ptag", value.Ptag, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -106,8 +106,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "tag":
-                        value.Tag = enc.StringDecoder.Instance.Decode(reader);
+                    case "ptag":
+                        value.Ptag = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

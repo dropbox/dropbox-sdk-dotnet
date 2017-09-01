@@ -13,7 +13,8 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The delete result object</para>
     /// </summary>
-    public class DeleteResult
+    /// <seealso cref="Global::Dropbox.Api.Files.FileOpsResult" />
+    public class DeleteResult : FileOpsResult
     {
         #pragma warning disable 108
 
@@ -30,7 +31,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="DeleteResult" /> class.</para>
         /// </summary>
-        /// <param name="metadata">The metadata</param>
+        /// <param name="metadata">Metadata of the deleted object.</param>
         public DeleteResult(Metadata metadata)
         {
             if (metadata == null)
@@ -52,7 +53,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the metadata of the delete result</para>
+        /// <para>Metadata of the deleted object.</para>
         /// </summary>
         public Metadata Metadata { get; protected set; }
 

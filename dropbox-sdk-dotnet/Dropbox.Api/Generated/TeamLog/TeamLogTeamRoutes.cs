@@ -69,6 +69,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <param name="accountId">Filter the events by account ID. Return ony events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
+        /// <param name="category">Filter the returned events to a single category.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -76,11 +77,13 @@ namespace Dropbox.Api.TeamLog.Routes
         /// cref="GetTeamEventsError"/>.</exception>
         public t.Task<GetTeamEventsResult> GetEventsAsync(uint limit = 1000,
                                                           string accountId = null,
-                                                          global::Dropbox.Api.TeamCommon.TimeRange time = null)
+                                                          global::Dropbox.Api.TeamCommon.TimeRange time = null,
+                                                          EventCategory category = null)
         {
             var getTeamEventsArg = new GetTeamEventsArg(limit,
                                                         accountId,
-                                                        time);
+                                                        time,
+                                                        category);
 
             return this.GetEventsAsync(getTeamEventsArg);
         }
@@ -92,6 +95,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <param name="accountId">Filter the events by account ID. Return ony events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
+        /// <param name="category">Filter the returned events to a single category.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -100,12 +104,14 @@ namespace Dropbox.Api.TeamLog.Routes
         public sys.IAsyncResult BeginGetEvents(uint limit = 1000,
                                                string accountId = null,
                                                global::Dropbox.Api.TeamCommon.TimeRange time = null,
+                                               EventCategory category = null,
                                                sys.AsyncCallback callback = null,
                                                object callbackState = null)
         {
             var getTeamEventsArg = new GetTeamEventsArg(limit,
                                                         accountId,
-                                                        time);
+                                                        time,
+                                                        category);
 
             return this.BeginGetEvents(getTeamEventsArg, callback, callbackState);
         }

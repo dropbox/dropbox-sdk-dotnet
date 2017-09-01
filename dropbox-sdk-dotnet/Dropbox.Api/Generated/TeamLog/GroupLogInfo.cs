@@ -13,19 +13,6 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>Group's logged information.</para>
     /// </summary>
-    /// <seealso cref="GroupAddExternalIdDetails" />
-    /// <seealso cref="GroupAddMemberDetails" />
-    /// <seealso cref="GroupChangeExternalIdDetails" />
-    /// <seealso cref="GroupChangeManagementTypeDetails" />
-    /// <seealso cref="GroupChangeMemberRoleDetails" />
-    /// <seealso cref="GroupCreateDetails" />
-    /// <seealso cref="GroupDeleteDetails" />
-    /// <seealso cref="GroupDescriptionUpdatedDetails" />
-    /// <seealso cref="GroupJoinPolicyUpdatedDetails" />
-    /// <seealso cref="GroupMovedDetails" />
-    /// <seealso cref="GroupRemoveExternalIdDetails" />
-    /// <seealso cref="GroupRemoveMemberDetails" />
-    /// <seealso cref="GroupRenameDetails" />
     public class GroupLogInfo
     {
         #pragma warning disable 108

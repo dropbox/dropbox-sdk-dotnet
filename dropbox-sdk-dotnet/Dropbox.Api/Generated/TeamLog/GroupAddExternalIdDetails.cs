@@ -31,22 +31,14 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupAddExternalIdDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
         /// <param name="newValue">Current external id.</param>
-        public GroupAddExternalIdDetails(GroupLogInfo groupInfo,
-                                         string newValue)
+        public GroupAddExternalIdDetails(string newValue)
         {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.GroupInfo = groupInfo;
             this.NewValue = newValue;
         }
 
@@ -60,11 +52,6 @@ namespace Dropbox.Api.TeamLog
         public GroupAddExternalIdDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         /// <summary>
         /// <para>Current external id.</para>
@@ -85,7 +72,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupAddExternalIdDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
                 WriteProperty("new_value", value.NewValue, writer, enc.StringEncoder.Instance);
             }
         }
@@ -120,9 +106,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     case "new_value":
                         value.NewValue = enc.StringDecoder.Instance.Decode(reader);
                         break;

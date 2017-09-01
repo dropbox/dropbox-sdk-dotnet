@@ -31,10 +31,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SfInviteGroupDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
-        public SfInviteGroupDetails(long targetIndex)
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
+        public SfInviteGroupDetails(ulong targetAssetIndex)
         {
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         #region Encoder class
 
@@ -67,7 +67,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SfInviteGroupDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
             }
         }
 
@@ -100,8 +100,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

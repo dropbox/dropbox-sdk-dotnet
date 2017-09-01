@@ -31,19 +31,18 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="DomainVerificationAddDomainFailDetails" /> class.</para>
         /// </summary>
-        /// <param name="domainNames">Domain names.</param>
-        /// <param name="verificationMethod">Domain name verification method.</param>
-        public DomainVerificationAddDomainFailDetails(col.IEnumerable<string> domainNames,
+        /// <param name="domainName">Domain name.</param>
+        /// <param name="verificationMethod">Domain name verification method. Might be missing
+        /// due to historical data gap.</param>
+        public DomainVerificationAddDomainFailDetails(string domainName,
                                                       string verificationMethod = null)
         {
-            var domainNamesList = enc.Util.ToList(domainNames);
-
-            if (domainNames == null)
+            if (domainName == null)
             {
-                throw new sys.ArgumentNullException("domainNames");
+                throw new sys.ArgumentNullException("domainName");
             }
 
-            this.DomainNames = domainNamesList;
+            this.DomainName = domainName;
             this.VerificationMethod = verificationMethod;
         }
 
@@ -59,12 +58,13 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Domain names.</para>
+        /// <para>Domain name.</para>
         /// </summary>
-        public col.IList<string> DomainNames { get; protected set; }
+        public string DomainName { get; protected set; }
 
         /// <summary>
-        /// <para>Domain name verification method.</para>
+        /// <para>Domain name verification method. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
         public string VerificationMethod { get; protected set; }
 
@@ -82,7 +82,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DomainVerificationAddDomainFailDetails value, enc.IJsonWriter writer)
             {
-                WriteListProperty("domain_names", value.DomainNames, writer, enc.StringEncoder.Instance);
+                WriteProperty("domain_name", value.DomainName, writer, enc.StringEncoder.Instance);
                 if (value.VerificationMethod != null)
                 {
                     WriteProperty("verification_method", value.VerificationMethod, writer, enc.StringEncoder.Instance);
@@ -120,8 +120,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "domain_names":
-                        value.DomainNames = ReadList<string>(reader, enc.StringDecoder.Instance);
+                    case "domain_name":
+                        value.DomainName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "verification_method":
                         value.VerificationMethod = enc.StringDecoder.Instance.Decode(reader);

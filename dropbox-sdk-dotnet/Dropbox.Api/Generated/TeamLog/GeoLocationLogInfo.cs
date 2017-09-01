@@ -44,10 +44,6 @@ namespace Dropbox.Api.TeamLog
             {
                 throw new sys.ArgumentNullException("ipAddress");
             }
-            if (!re.Regex.IsMatch(ipAddress, @"\A(?:^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$)\z"))
-            {
-                throw new sys.ArgumentOutOfRangeException("ipAddress", @"Value should match pattern '\A(?:^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$)\z'");
-            }
 
             this.IpAddress = ipAddress;
             this.City = city;

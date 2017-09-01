@@ -33,7 +33,7 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="ListMembersAppsResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="apps">The linked applications of each member of the team</param>
+        /// <param name="apps">The linked applications of each member of the team.</param>
         /// <param name="hasMore">If true, then there are more apps available. Pass the cursor
         /// to <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
@@ -69,7 +69,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The linked applications of each member of the team</para>
+        /// <para>The linked applications of each member of the team.</para>
         /// </summary>
         public col.IList<MemberLinkedApps> Apps { get; protected set; }
 

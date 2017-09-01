@@ -157,7 +157,7 @@
         <member name="N:Dropbox.Api.UsersCommon">
             <summary>
                 <para>This namespace contains common data types used within the users
-                namespace</para>
+                namespace.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.UsersCommon.Routes">

@@ -31,17 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupAddMemberDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
         /// <param name="isGroupOwner">Is group owner.</param>
-        public GroupAddMemberDetails(GroupLogInfo groupInfo,
-                                     bool isGroupOwner)
+        public GroupAddMemberDetails(bool isGroupOwner)
         {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
-            this.GroupInfo = groupInfo;
             this.IsGroupOwner = isGroupOwner;
         }
 
@@ -55,11 +47,6 @@ namespace Dropbox.Api.TeamLog
         public GroupAddMemberDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         /// <summary>
         /// <para>Is group owner.</para>
@@ -80,7 +67,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupAddMemberDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
                 WriteProperty("is_group_owner", value.IsGroupOwner, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -115,9 +101,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     case "is_group_owner":
                         value.IsGroupOwner = enc.BooleanDecoder.Instance.Decode(reader);
                         break;

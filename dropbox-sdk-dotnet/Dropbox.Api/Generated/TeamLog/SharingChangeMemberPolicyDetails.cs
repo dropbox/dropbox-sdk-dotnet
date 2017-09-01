@@ -35,8 +35,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New external invite policy.</param>
         /// <param name="previousValue">Previous external invite policy. Might be missing due
         /// to historical data gap.</param>
-        public SharingChangeMemberPolicyDetails(ExternalSharingPolicy newValue,
-                                                ExternalSharingPolicy previousValue = null)
+        public SharingChangeMemberPolicyDetails(SharingMemberPolicy newValue,
+                                                SharingMemberPolicy previousValue = null)
         {
             if (newValue == null)
             {
@@ -61,13 +61,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New external invite policy.</para>
         /// </summary>
-        public ExternalSharingPolicy NewValue { get; protected set; }
+        public SharingMemberPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous external invite policy. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public ExternalSharingPolicy PreviousValue { get; protected set; }
+        public SharingMemberPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -83,10 +83,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharingChangeMemberPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.ExternalSharingPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SharingMemberPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.ExternalSharingPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SharingMemberPolicy.Encoder);
                 }
             }
         }
@@ -122,10 +122,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.ExternalSharingPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.SharingMemberPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.ExternalSharingPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.SharingMemberPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

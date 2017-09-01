@@ -45,6 +45,9 @@ namespace Dropbox.Api.Sharing
         /// <param name="sharedFolderId">The ID of the shared folder.</param>
         /// <param name="timeInvited">Timestamp indicating when the current user was invited to
         /// this shared folder.</param>
+        /// <param name="ownerDisplayNames">The display names of the users that own the folder.
+        /// If the folder is part of a team folder, the display names of the team admins are
+        /// also included. Absent if the owner display names cannot be fetched.</param>
         /// <param name="ownerTeam">The team that owns the folder. This field is not present if
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
@@ -65,12 +68,13 @@ namespace Dropbox.Api.Sharing
                                     string previewUrl,
                                     string sharedFolderId,
                                     sys.DateTime timeInvited,
+                                    col.IEnumerable<string> ownerDisplayNames = null,
                                     global::Dropbox.Api.Users.Team ownerTeam = null,
                                     string parentSharedFolderId = null,
                                     string pathLower = null,
                                     SharedContentLinkMetadata linkMetadata = null,
                                     col.IEnumerable<FolderPermission> permissions = null)
-            : base(accessType, isInsideTeamFolder, isTeamFolder, ownerTeam, parentSharedFolderId, pathLower)
+            : base(accessType, isInsideTeamFolder, isTeamFolder, ownerDisplayNames, ownerTeam, parentSharedFolderId, pathLower)
         {
             if (name == null)
             {
@@ -179,6 +183,10 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
                 WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
                 WriteProperty("time_invited", value.TimeInvited, writer, enc.DateTimeEncoder.Instance);
+                if (value.OwnerDisplayNames.Count > 0)
+                {
+                    WriteListProperty("owner_display_names", value.OwnerDisplayNames, writer, enc.StringEncoder.Instance);
+                }
                 if (value.OwnerTeam != null)
                 {
                     WriteProperty("owner_team", value.OwnerTeam, writer, global::Dropbox.Api.Users.Team.Encoder);
@@ -254,6 +262,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "time_invited":
                         value.TimeInvited = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "owner_display_names":
+                        value.OwnerDisplayNames = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     case "owner_team":
                         value.OwnerTeam = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);

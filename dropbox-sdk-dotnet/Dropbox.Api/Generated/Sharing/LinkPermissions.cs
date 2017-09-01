@@ -34,7 +34,7 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="LinkPermissions" />
         /// class.</para>
         /// </summary>
-        /// <param name="canRevoke">Whether the caller can revoke the shared link</param>
+        /// <param name="canRevoke">Whether the caller can revoke the shared link.</param>
         /// <param name="resolvedVisibility">The current visibility of the link after
         /// considering the shared links policies of the the team (in case the link's owner is
         /// part of a team) and the shared folder (in case the linked file is part of a shared
@@ -70,7 +70,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Whether the caller can revoke the shared link</para>
+        /// <para>Whether the caller can revoke the shared link.</para>
         /// </summary>
         public bool CanRevoke { get; protected set; }
 

@@ -31,19 +31,19 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="TeamFolderChangeStatusDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="newStatus">New team folder status.</param>
-        /// <param name="previousStatus">Previous team folder status. Might be missing due to
+        /// <param name="newValue">New team folder status.</param>
+        /// <param name="previousValue">Previous team folder status. Might be missing due to
         /// historical data gap.</param>
-        public TeamFolderChangeStatusDetails(TeamFolderStatus newStatus,
-                                             TeamFolderStatus previousStatus = null)
+        public TeamFolderChangeStatusDetails(TeamFolderStatus newValue,
+                                             TeamFolderStatus previousValue = null)
         {
-            if (newStatus == null)
+            if (newValue == null)
             {
-                throw new sys.ArgumentNullException("newStatus");
+                throw new sys.ArgumentNullException("newValue");
             }
 
-            this.NewStatus = newStatus;
-            this.PreviousStatus = previousStatus;
+            this.NewValue = newValue;
+            this.PreviousValue = previousValue;
         }
 
         /// <summary>
@@ -60,13 +60,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New team folder status.</para>
         /// </summary>
-        public TeamFolderStatus NewStatus { get; protected set; }
+        public TeamFolderStatus NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous team folder status. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public TeamFolderStatus PreviousStatus { get; protected set; }
+        public TeamFolderStatus PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderChangeStatusDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_status", value.NewStatus, writer, global::Dropbox.Api.TeamLog.TeamFolderStatus.Encoder);
-                if (value.PreviousStatus != null)
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.TeamFolderStatus.Encoder);
+                if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_status", value.PreviousStatus, writer, global::Dropbox.Api.TeamLog.TeamFolderStatus.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.TeamFolderStatus.Encoder);
                 }
             }
         }
@@ -120,11 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "new_status":
-                        value.NewStatus = global::Dropbox.Api.TeamLog.TeamFolderStatus.Decoder.Decode(reader);
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.TeamFolderStatus.Decoder.Decode(reader);
                         break;
-                    case "previous_status":
-                        value.PreviousStatus = global::Dropbox.Api.TeamLog.TeamFolderStatus.Decoder.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.TeamFolderStatus.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

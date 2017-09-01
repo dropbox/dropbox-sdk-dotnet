@@ -31,9 +31,9 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="CreateSharedLinkWithSettingsArg"
         /// /> class.</para>
         /// </summary>
-        /// <param name="path">The path to be shared by the shared link</param>
+        /// <param name="path">The path to be shared by the shared link.</param>
         /// <param name="settings">The requested settings for the newly created shared
-        /// link</param>
+        /// link.</param>
         public CreateSharedLinkWithSettingsArg(string path,
                                                SharedLinkSettings settings = null)
         {
@@ -62,12 +62,12 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The path to be shared by the shared link</para>
+        /// <para>The path to be shared by the shared link.</para>
         /// </summary>
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>The requested settings for the newly created shared link</para>
+        /// <para>The requested settings for the newly created shared link.</para>
         /// </summary>
         public SharedLinkSettings Settings { get; protected set; }
 

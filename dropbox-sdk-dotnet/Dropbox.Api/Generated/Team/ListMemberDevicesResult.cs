@@ -32,11 +32,11 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="activeWebSessions">List of web sessions made by this team
-        /// member</param>
+        /// member.</param>
         /// <param name="desktopClientSessions">List of desktop clients used by this team
-        /// member</param>
+        /// member.</param>
         /// <param name="mobileClientSessions">List of mobile client used by this team
-        /// member</param>
+        /// member.</param>
         public ListMemberDevicesResult(col.IEnumerable<ActiveWebSession> activeWebSessions = null,
                                        col.IEnumerable<DesktopClientSession> desktopClientSessions = null,
                                        col.IEnumerable<MobileClientSession> mobileClientSessions = null)
@@ -64,17 +64,17 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>List of web sessions made by this team member</para>
+        /// <para>List of web sessions made by this team member.</para>
         /// </summary>
         public col.IList<ActiveWebSession> ActiveWebSessions { get; protected set; }
 
         /// <summary>
-        /// <para>List of desktop clients used by this team member</para>
+        /// <para>List of desktop clients used by this team member.</para>
         /// </summary>
         public col.IList<DesktopClientSession> DesktopClientSessions { get; protected set; }
 
         /// <summary>
-        /// <para>List of mobile client used by this team member</para>
+        /// <para>List of mobile client used by this team member.</para>
         /// </summary>
         public col.IList<MobileClientSession> MobileClientSessions { get; protected set; }
 

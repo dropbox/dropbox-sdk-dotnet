@@ -214,6 +214,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CantTransferOwnership</para>
+        /// </summary>
+        public bool IsCantTransferOwnership
+        {
+            get
+            {
+                return this is CantTransferOwnership;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CantTransferOwnership, or <c>null</c>.</para>
+        /// </summary>
+        public CantTransferOwnership AsCantTransferOwnership
+        {
+            get
+            {
+                return this as CantTransferOwnership;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -297,6 +319,12 @@ namespace Dropbox.Api.Files
                     DuplicatedOrNestedPaths.Encoder.EncodeFields((DuplicatedOrNestedPaths)value, writer);
                     return;
                 }
+                if (value is CantTransferOwnership)
+                {
+                    WriteProperty(".tag", "cant_transfer_ownership", writer, enc.StringEncoder.Instance);
+                    CantTransferOwnership.Encoder.EncodeFields((CantTransferOwnership)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -351,6 +379,8 @@ namespace Dropbox.Api.Files
                         return TooManyFiles.Decoder.DecodeFields(reader);
                     case "duplicated_or_nested_paths":
                         return DuplicatedOrNestedPaths.Decoder.DecodeFields(reader);
+                    case "cant_transfer_ownership":
+                        return CantTransferOwnership.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -997,6 +1027,79 @@ namespace Dropbox.Api.Files
                 protected override DuplicatedOrNestedPaths Create()
                 {
                     return DuplicatedOrNestedPaths.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Your move operation would result in an ownership transfer. You may reissue
+        /// the request with the field <see
+        /// cref="Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer" /> to true.</para>
+        /// </summary>
+        public sealed class CantTransferOwnership : RelocationError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantTransferOwnership> Encoder = new CantTransferOwnershipEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantTransferOwnership> Decoder = new CantTransferOwnershipDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantTransferOwnership" />
+            /// class.</para>
+            /// </summary>
+            private CantTransferOwnership()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CantTransferOwnership</para>
+            /// </summary>
+            public static readonly CantTransferOwnership Instance = new CantTransferOwnership();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CantTransferOwnership" />.</para>
+            /// </summary>
+            private class CantTransferOwnershipEncoder : enc.StructEncoder<CantTransferOwnership>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantTransferOwnership value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CantTransferOwnership" />.</para>
+            /// </summary>
+            private class CantTransferOwnershipDecoder : enc.StructDecoder<CantTransferOwnership>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantTransferOwnership"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantTransferOwnership Create()
+                {
+                    return CantTransferOwnership.Instance;
                 }
 
             }

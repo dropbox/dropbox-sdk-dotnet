@@ -123,24 +123,24 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is SharedFolder</para>
+        /// <para>Gets a value indicating whether this instance is NamespaceId</para>
         /// </summary>
-        public bool IsSharedFolder
+        public bool IsNamespaceId
         {
             get
             {
-                return this is SharedFolder;
+                return this is NamespaceId;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a SharedFolder, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NamespaceId, or <c>null</c>.</para>
         /// </summary>
-        public SharedFolder AsSharedFolder
+        public NamespaceId AsNamespaceId
         {
             get
             {
-                return this as SharedFolder;
+                return this as NamespaceId;
             }
         }
 
@@ -204,10 +204,10 @@ namespace Dropbox.Api.Common
                     UserHome.Encoder.EncodeFields((UserHome)value, writer);
                     return;
                 }
-                if (value is SharedFolder)
+                if (value is NamespaceId)
                 {
-                    WriteProperty(".tag", "shared_folder", writer, enc.StringEncoder.Instance);
-                    SharedFolder.Encoder.EncodeFields((SharedFolder)value, writer);
+                    WriteProperty(".tag", "namespace_id", writer, enc.StringEncoder.Instance);
+                    NamespaceId.Encoder.EncodeFields((NamespaceId)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -256,8 +256,8 @@ namespace Dropbox.Api.Common
                         return Team.Decoder.DecodeFields(reader);
                     case "user_home":
                         return UserHome.Decoder.DecodeFields(reader);
-                    case "shared_folder":
-                        return SharedFolder.Decoder.DecodeFields(reader);
+                    case "namespace_id":
+                        return NamespaceId.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -577,38 +577,38 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>Paths are relative to given shared folder id (This results in <see
+        /// <para>Paths are relative to given namespace id (This results in <see
         /// cref="Dropbox.Api.Common.PathRootError.NoPermission" /> if you don't have access to
-        /// this shared folder.)</para>
+        /// this namespace.)</para>
         /// </summary>
-        public sealed class SharedFolder : PathRoot
+        public sealed class NamespaceId : PathRoot
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<SharedFolder> Encoder = new SharedFolderEncoder();
+            internal static enc.StructEncoder<NamespaceId> Encoder = new NamespaceIdEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<SharedFolder> Decoder = new SharedFolderDecoder();
+            internal static enc.StructDecoder<NamespaceId> Decoder = new NamespaceIdDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SharedFolder" />
+            /// <para>Initializes a new instance of the <see cref="NamespaceId" />
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public SharedFolder(string value)
+            public NamespaceId(string value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SharedFolder" />
+            /// <para>Initializes a new instance of the <see cref="NamespaceId" />
             /// class.</para>
             /// </summary>
-            private SharedFolder()
+            private NamespaceId()
             {
             }
 
@@ -620,18 +620,18 @@ namespace Dropbox.Api.Common
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="SharedFolder" />.</para>
+            /// <para>Encoder for  <see cref="NamespaceId" />.</para>
             /// </summary>
-            private class SharedFolderEncoder : enc.StructEncoder<SharedFolder>
+            private class NamespaceIdEncoder : enc.StructEncoder<NamespaceId>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(SharedFolder value, enc.IJsonWriter writer)
+                public override void EncodeFields(NamespaceId value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("shared_folder", value.Value, writer, enc.StringEncoder.Instance);
+                    WriteProperty("namespace_id", value.Value, writer, enc.StringEncoder.Instance);
                 }
             }
 
@@ -640,17 +640,17 @@ namespace Dropbox.Api.Common
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="SharedFolder" />.</para>
+            /// <para>Decoder for  <see cref="NamespaceId" />.</para>
             /// </summary>
-            private class SharedFolderDecoder : enc.StructDecoder<SharedFolder>
+            private class NamespaceIdDecoder : enc.StructDecoder<NamespaceId>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="SharedFolder" />.</para>
+                /// <para>Create a new instance of type <see cref="NamespaceId" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override SharedFolder Create()
+                protected override NamespaceId Create()
                 {
-                    return new SharedFolder();
+                    return new NamespaceId();
                 }
 
                 /// <summary>
@@ -659,11 +659,11 @@ namespace Dropbox.Api.Common
                 /// <param name="value">The field value.</param>
                 /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(SharedFolder value, string fieldName, enc.IJsonReader reader)
+                protected override void SetField(NamespaceId value, string fieldName, enc.IJsonReader reader)
                 {
                     switch (fieldName)
                     {
-                        case "shared_folder":
+                        case "namespace_id":
                             value.Value = enc.StringDecoder.Instance.Decode(reader);
                             break;
                         default:

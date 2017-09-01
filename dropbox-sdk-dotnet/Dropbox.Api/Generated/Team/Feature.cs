@@ -57,6 +57,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is HasTeamSharedDropbox</para>
+        /// </summary>
+        public bool IsHasTeamSharedDropbox
+        {
+            get
+            {
+                return this is HasTeamSharedDropbox;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a HasTeamSharedDropbox, or <c>null</c>.</para>
+        /// </summary>
+        public HasTeamSharedDropbox AsHasTeamSharedDropbox
+        {
+            get
+            {
+                return this as HasTeamSharedDropbox;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -96,6 +118,12 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "upload_api_rate_limit", writer, enc.StringEncoder.Instance);
                     UploadApiRateLimit.Encoder.EncodeFields((UploadApiRateLimit)value, writer);
+                    return;
+                }
+                if (value is HasTeamSharedDropbox)
+                {
+                    WriteProperty(".tag", "has_team_shared_dropbox", writer, enc.StringEncoder.Instance);
+                    HasTeamSharedDropbox.Encoder.EncodeFields((HasTeamSharedDropbox)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -138,6 +166,8 @@ namespace Dropbox.Api.Team
                 {
                     case "upload_api_rate_limit":
                         return UploadApiRateLimit.Decoder.DecodeFields(reader);
+                    case "has_team_shared_dropbox":
+                        return HasTeamSharedDropbox.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -210,6 +240,77 @@ namespace Dropbox.Api.Team
                 protected override UploadApiRateLimit Create()
                 {
                     return UploadApiRateLimit.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Does this team have a have a company shared dropbox.</para>
+        /// </summary>
+        public sealed class HasTeamSharedDropbox : Feature
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<HasTeamSharedDropbox> Encoder = new HasTeamSharedDropboxEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<HasTeamSharedDropbox> Decoder = new HasTeamSharedDropboxDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasTeamSharedDropbox" />
+            /// class.</para>
+            /// </summary>
+            private HasTeamSharedDropbox()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of HasTeamSharedDropbox</para>
+            /// </summary>
+            public static readonly HasTeamSharedDropbox Instance = new HasTeamSharedDropbox();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="HasTeamSharedDropbox" />.</para>
+            /// </summary>
+            private class HasTeamSharedDropboxEncoder : enc.StructEncoder<HasTeamSharedDropbox>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(HasTeamSharedDropbox value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="HasTeamSharedDropbox" />.</para>
+            /// </summary>
+            private class HasTeamSharedDropboxDecoder : enc.StructDecoder<HasTeamSharedDropbox>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="HasTeamSharedDropbox"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override HasTeamSharedDropbox Create()
+                {
+                    return HasTeamSharedDropbox.Instance;
                 }
 
             }

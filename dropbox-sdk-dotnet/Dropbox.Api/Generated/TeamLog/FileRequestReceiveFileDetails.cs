@@ -31,16 +31,11 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FileRequestReceiveFileDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="requestTitle">File request title.</param>
         /// <param name="submittedFileNames">Submitted file names.</param>
-        public FileRequestReceiveFileDetails(string requestTitle,
-                                             col.IEnumerable<string> submittedFileNames)
+        /// <param name="requestTitle">File request title.</param>
+        public FileRequestReceiveFileDetails(col.IEnumerable<string> submittedFileNames,
+                                             string requestTitle = null)
         {
-            if (requestTitle == null)
-            {
-                throw new sys.ArgumentNullException("requestTitle");
-            }
-
             var submittedFileNamesList = enc.Util.ToList(submittedFileNames);
 
             if (submittedFileNames == null)
@@ -48,8 +43,8 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("submittedFileNames");
             }
 
-            this.RequestTitle = requestTitle;
             this.SubmittedFileNames = submittedFileNamesList;
+            this.RequestTitle = requestTitle;
         }
 
         /// <summary>
@@ -64,14 +59,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>File request title.</para>
-        /// </summary>
-        public string RequestTitle { get; protected set; }
-
-        /// <summary>
         /// <para>Submitted file names.</para>
         /// </summary>
         public col.IList<string> SubmittedFileNames { get; protected set; }
+
+        /// <summary>
+        /// <para>File request title.</para>
+        /// </summary>
+        public string RequestTitle { get; protected set; }
 
         #region Encoder class
 
@@ -87,8 +82,11 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileRequestReceiveFileDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
                 WriteListProperty("submitted_file_names", value.SubmittedFileNames, writer, enc.StringEncoder.Instance);
+                if (value.RequestTitle != null)
+                {
+                    WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -122,11 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "request_title":
-                        value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "submitted_file_names":
                         value.SubmittedFileNames = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        break;
+                    case "request_title":
+                        value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

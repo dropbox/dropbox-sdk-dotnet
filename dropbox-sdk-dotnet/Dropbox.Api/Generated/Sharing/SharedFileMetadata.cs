@@ -43,6 +43,9 @@ namespace Dropbox.Api.Sharing
         /// unreleased feature so it may not be returned yet.</param>
         /// <param name="linkMetadata">The metadata of the link associated for the file. This
         /// is for an unreleased feature so it may not be returned yet.</param>
+        /// <param name="ownerDisplayNames">The display names of the users that own the file.
+        /// If the file is part of a team folder, the display names of the team admins are also
+        /// included. Absent if the owner display names cannot be fetched.</param>
         /// <param name="ownerTeam">The team that owns the file. This field is not present if
         /// the file is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
@@ -68,6 +71,7 @@ namespace Dropbox.Api.Sharing
                                   AccessLevel accessType = null,
                                   ExpectedSharedContentLinkMetadata expectedLinkMetadata = null,
                                   SharedContentLinkMetadata linkMetadata = null,
+                                  col.IEnumerable<string> ownerDisplayNames = null,
                                   global::Dropbox.Api.Users.Team ownerTeam = null,
                                   string parentSharedFolderId = null,
                                   string pathDisplay = null,
@@ -103,6 +107,8 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("previewUrl");
             }
 
+            var ownerDisplayNamesList = enc.Util.ToList(ownerDisplayNames);
+
             if (parentSharedFolderId != null)
             {
                 if (!re.Regex.IsMatch(parentSharedFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
@@ -120,6 +126,7 @@ namespace Dropbox.Api.Sharing
             this.AccessType = accessType;
             this.ExpectedLinkMetadata = expectedLinkMetadata;
             this.LinkMetadata = linkMetadata;
+            this.OwnerDisplayNames = ownerDisplayNamesList;
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
             this.PathDisplay = pathDisplay;
@@ -176,6 +183,13 @@ namespace Dropbox.Api.Sharing
         /// feature so it may not be returned yet.</para>
         /// </summary>
         public SharedContentLinkMetadata LinkMetadata { get; protected set; }
+
+        /// <summary>
+        /// <para>The display names of the users that own the file. If the file is part of a
+        /// team folder, the display names of the team admins are also included. Absent if the
+        /// owner display names cannot be fetched.</para>
+        /// </summary>
+        public col.IList<string> OwnerDisplayNames { get; protected set; }
 
         /// <summary>
         /// <para>The team that owns the file. This field is not present if the file is not
@@ -245,6 +259,10 @@ namespace Dropbox.Api.Sharing
                 if (value.LinkMetadata != null)
                 {
                     WriteProperty("link_metadata", value.LinkMetadata, writer, global::Dropbox.Api.Sharing.SharedContentLinkMetadata.Encoder);
+                }
+                if (value.OwnerDisplayNames.Count > 0)
+                {
+                    WriteListProperty("owner_display_names", value.OwnerDisplayNames, writer, enc.StringEncoder.Instance);
                 }
                 if (value.OwnerTeam != null)
                 {
@@ -322,6 +340,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "link_metadata":
                         value.LinkMetadata = global::Dropbox.Api.Sharing.SharedContentLinkMetadata.Decoder.Decode(reader);
+                        break;
+                    case "owner_display_names":
+                        value.OwnerDisplayNames = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     case "owner_team":
                         value.OwnerTeam = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);

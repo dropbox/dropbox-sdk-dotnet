@@ -54,6 +54,8 @@ namespace Dropbox.Api.TeamLog
         /// gap.</param>
         /// <param name="lastActivity">Last activity. Might be missing due to historical data
         /// gap.</param>
+        /// <param name="appVersion">Linking app version. Might be missing due to historical
+        /// data gap.</param>
         public DeviceLogInfo(string deviceId = null,
                              string displayName = null,
                              bool? isEmmManaged = null,
@@ -62,16 +64,9 @@ namespace Dropbox.Api.TeamLog
                              string osVersion = null,
                              string deviceType = null,
                              string ipAddress = null,
-                             string lastActivity = null)
+                             string lastActivity = null,
+                             string appVersion = null)
         {
-            if (ipAddress != null)
-            {
-                if (!re.Regex.IsMatch(ipAddress, @"\A(?:^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$)\z"))
-                {
-                    throw new sys.ArgumentOutOfRangeException("ipAddress", @"Value should match pattern '\A(?:^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$)\z'");
-                }
-            }
-
             this.DeviceId = deviceId;
             this.DisplayName = displayName;
             this.IsEmmManaged = isEmmManaged;
@@ -81,6 +76,7 @@ namespace Dropbox.Api.TeamLog
             this.DeviceType = deviceType;
             this.IpAddress = ipAddress;
             this.LastActivity = lastActivity;
+            this.AppVersion = appVersion;
         }
 
         /// <summary>
@@ -139,6 +135,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string LastActivity { get; protected set; }
 
+        /// <summary>
+        /// <para>Linking app version. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string AppVersion { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -188,6 +189,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.LastActivity != null)
                 {
                     WriteProperty("last_activity", value.LastActivity, writer, enc.StringEncoder.Instance);
+                }
+                if (value.AppVersion != null)
+                {
+                    WriteProperty("app_version", value.AppVersion, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -247,6 +252,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "last_activity":
                         value.LastActivity = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "app_version":
+                        value.AppVersion = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

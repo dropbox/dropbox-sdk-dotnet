@@ -31,13 +31,23 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="MemberChangeMembershipTypeDetails" /> class.</para>
         /// </summary>
-        /// <param name="prevMembershipType">Previous membership type.</param>
-        /// <param name="newMembershipType">New membership type.</param>
-        public MemberChangeMembershipTypeDetails(long prevMembershipType,
-                                                 long newMembershipType)
+        /// <param name="prevValue">Previous membership type.</param>
+        /// <param name="newValue">New membership type.</param>
+        public MemberChangeMembershipTypeDetails(TeamMembershipType prevValue,
+                                                 TeamMembershipType newValue)
         {
-            this.PrevMembershipType = prevMembershipType;
-            this.NewMembershipType = newMembershipType;
+            if (prevValue == null)
+            {
+                throw new sys.ArgumentNullException("prevValue");
+            }
+
+            if (newValue == null)
+            {
+                throw new sys.ArgumentNullException("newValue");
+            }
+
+            this.PrevValue = prevValue;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -54,12 +64,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Previous membership type.</para>
         /// </summary>
-        public long PrevMembershipType { get; protected set; }
+        public TeamMembershipType PrevValue { get; protected set; }
 
         /// <summary>
         /// <para>New membership type.</para>
         /// </summary>
-        public long NewMembershipType { get; protected set; }
+        public TeamMembershipType NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -75,8 +85,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberChangeMembershipTypeDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("prev_membership_type", value.PrevMembershipType, writer, enc.Int64Encoder.Instance);
-                WriteProperty("new_membership_type", value.NewMembershipType, writer, enc.Int64Encoder.Instance);
+                WriteProperty("prev_value", value.PrevValue, writer, global::Dropbox.Api.TeamLog.TeamMembershipType.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.TeamMembershipType.Encoder);
             }
         }
 
@@ -110,11 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "prev_membership_type":
-                        value.PrevMembershipType = enc.Int64Decoder.Instance.Decode(reader);
+                    case "prev_value":
+                        value.PrevValue = global::Dropbox.Api.TeamLog.TeamMembershipType.Decoder.Decode(reader);
                         break;
-                    case "new_membership_type":
-                        value.NewMembershipType = enc.Int64Decoder.Instance.Decode(reader);
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.TeamMembershipType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

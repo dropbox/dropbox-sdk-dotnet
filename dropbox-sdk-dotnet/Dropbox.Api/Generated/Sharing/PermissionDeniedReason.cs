@@ -326,6 +326,51 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// RestrictedByParentFolder</para>
+        /// </summary>
+        public bool IsRestrictedByParentFolder
+        {
+            get
+            {
+                return this is RestrictedByParentFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RestrictedByParentFolder, or <c>null</c>.</para>
+        /// </summary>
+        public RestrictedByParentFolder AsRestrictedByParentFolder
+        {
+            get
+            {
+                return this as RestrictedByParentFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InsufficientPlan</para>
+        /// </summary>
+        public bool IsInsufficientPlan
+        {
+            get
+            {
+                return this is InsufficientPlan;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InsufficientPlan, or <c>null</c>.</para>
+        /// </summary>
+        public InsufficientPlan AsInsufficientPlan
+        {
+            get
+            {
+                return this as InsufficientPlan;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -439,6 +484,18 @@ namespace Dropbox.Api.Sharing
                     FolderIsInsideSharedFolder.Encoder.EncodeFields((FolderIsInsideSharedFolder)value, writer);
                     return;
                 }
+                if (value is RestrictedByParentFolder)
+                {
+                    WriteProperty(".tag", "restricted_by_parent_folder", writer, enc.StringEncoder.Instance);
+                    RestrictedByParentFolder.Encoder.EncodeFields((RestrictedByParentFolder)value, writer);
+                    return;
+                }
+                if (value is InsufficientPlan)
+                {
+                    WriteProperty(".tag", "insufficient_plan", writer, enc.StringEncoder.Instance);
+                    InsufficientPlan.Encoder.EncodeFields((InsufficientPlan)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -504,6 +561,10 @@ namespace Dropbox.Api.Sharing
                         return UserNotOnTeam.Decoder.DecodeFields(reader);
                     case "folder_is_inside_shared_folder":
                         return FolderIsInsideSharedFolder.Decoder.DecodeFields(reader);
+                    case "restricted_by_parent_folder":
+                        return RestrictedByParentFolder.Decoder.DecodeFields(reader);
+                    case "insufficient_plan":
+                        return InsufficientPlan.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1424,6 +1485,166 @@ namespace Dropbox.Api.Sharing
                     return FolderIsInsideSharedFolder.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Policy cannot be changed due to restrictions from parent folder.</para>
+        /// </summary>
+        public sealed class RestrictedByParentFolder : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RestrictedByParentFolder> Encoder = new RestrictedByParentFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RestrictedByParentFolder> Decoder = new RestrictedByParentFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RestrictedByParentFolder" />
+            /// class.</para>
+            /// </summary>
+            private RestrictedByParentFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RestrictedByParentFolder</para>
+            /// </summary>
+            public static readonly RestrictedByParentFolder Instance = new RestrictedByParentFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RestrictedByParentFolder" />.</para>
+            /// </summary>
+            private class RestrictedByParentFolderEncoder : enc.StructEncoder<RestrictedByParentFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RestrictedByParentFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RestrictedByParentFolder" />.</para>
+            /// </summary>
+            private class RestrictedByParentFolderDecoder : enc.StructDecoder<RestrictedByParentFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RestrictedByParentFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RestrictedByParentFolder Create()
+                {
+                    return RestrictedByParentFolder.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The insufficient plan object</para>
+        /// </summary>
+        public sealed class InsufficientPlan : PermissionDeniedReason
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InsufficientPlan> Encoder = new InsufficientPlanEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InsufficientPlan> Decoder = new InsufficientPlanDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsufficientPlan" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public InsufficientPlan(global::Dropbox.Api.Sharing.InsufficientPlan value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsufficientPlan" />
+            /// class.</para>
+            /// </summary>
+            private InsufficientPlan()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.Sharing.InsufficientPlan Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InsufficientPlan" />.</para>
+            /// </summary>
+            private class InsufficientPlanEncoder : enc.StructEncoder<InsufficientPlan>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InsufficientPlan value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.Sharing.InsufficientPlan.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InsufficientPlan" />.</para>
+            /// </summary>
+            private class InsufficientPlanDecoder : enc.StructDecoder<InsufficientPlan>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InsufficientPlan" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InsufficientPlan Create()
+                {
+                    return new InsufficientPlan();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InsufficientPlan DecodeFields(enc.IJsonReader reader)
+                {
+                    return new InsufficientPlan(global::Dropbox.Api.Sharing.InsufficientPlan.Decoder.DecodeFields(reader));
+                }
             }
 
             #endregion

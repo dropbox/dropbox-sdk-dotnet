@@ -31,9 +31,9 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="MemberLinkedApps" />
         /// class.</para>
         /// </summary>
-        /// <param name="teamMemberId">The member unique Id</param>
+        /// <param name="teamMemberId">The member unique Id.</param>
         /// <param name="linkedApiApps">List of third party applications linked by this team
-        /// member</param>
+        /// member.</param>
         public MemberLinkedApps(string teamMemberId,
                                 col.IEnumerable<ApiApp> linkedApiApps)
         {
@@ -65,12 +65,12 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The member unique Id</para>
+        /// <para>The member unique Id.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 
         /// <summary>
-        /// <para>List of third party applications linked by this team member</para>
+        /// <para>List of third party applications linked by this team member.</para>
         /// </summary>
         public col.IList<ApiApp> LinkedApiApps { get; protected set; }
 

@@ -272,7 +272,7 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>There is an error with the given settings</para>
+        /// <para>There is an error with the given settings.</para>
         /// </summary>
         public sealed class SettingsError : ModifySharedLinkSettingsError
         {
@@ -370,7 +370,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The caller's email should be verified</para>
+        /// <para>The caller's email should be verified.</para>
         /// </summary>
         public sealed class EmailNotVerified : ModifySharedLinkSettingsError
         {

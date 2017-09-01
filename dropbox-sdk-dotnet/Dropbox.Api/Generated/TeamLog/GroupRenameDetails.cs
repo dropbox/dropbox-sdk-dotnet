@@ -31,22 +31,14 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupRenameDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
         /// <param name="previousValue">Previous display name.</param>
-        public GroupRenameDetails(GroupLogInfo groupInfo,
-                                  string previousValue)
+        public GroupRenameDetails(string previousValue)
         {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
             if (previousValue == null)
             {
                 throw new sys.ArgumentNullException("previousValue");
             }
 
-            this.GroupInfo = groupInfo;
             this.PreviousValue = previousValue;
         }
 
@@ -60,11 +52,6 @@ namespace Dropbox.Api.TeamLog
         public GroupRenameDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         /// <summary>
         /// <para>Previous display name.</para>
@@ -85,7 +72,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupRenameDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
                 WriteProperty("previous_value", value.PreviousValue, writer, enc.StringEncoder.Instance);
             }
         }
@@ -119,9 +105,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     case "previous_value":
                         value.PreviousValue = enc.StringDecoder.Instance.Decode(reader);
                         break;

@@ -596,7 +596,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Expected removed user and transfer_dest user to be different</para>
+        /// <para>Expected removed user and transfer_dest user to be different.</para>
         /// </summary>
         public sealed class RemovedAndTransferDestShouldDiffer : MembersRemoveError
         {

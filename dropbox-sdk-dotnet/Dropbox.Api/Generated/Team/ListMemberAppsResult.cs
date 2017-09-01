@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="linkedApiApps">List of third party applications linked by this team
-        /// member</param>
+        /// member.</param>
         public ListMemberAppsResult(col.IEnumerable<ApiApp> linkedApiApps)
         {
             var linkedApiAppsList = enc.Util.ToList(linkedApiApps);
@@ -57,7 +57,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>List of third party applications linked by this team member</para>
+        /// <para>List of third party applications linked by this team member.</para>
         /// </summary>
         public col.IList<ApiApp> LinkedApiApps { get; protected set; }
 

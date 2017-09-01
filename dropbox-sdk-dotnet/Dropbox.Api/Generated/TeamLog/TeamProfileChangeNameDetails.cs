@@ -31,23 +31,19 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="TeamProfileChangeNameDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="teamDisplayName">Team's display name.</param>
-        /// <param name="teamLegalName">Team's legal name.</param>
-        public TeamProfileChangeNameDetails(string teamDisplayName,
-                                            string teamLegalName)
+        /// <param name="newValue">New team name.</param>
+        /// <param name="previousValue">Previous teams name. Might be missing due to historical
+        /// data gap.</param>
+        public TeamProfileChangeNameDetails(TeamName newValue,
+                                            TeamName previousValue = null)
         {
-            if (teamDisplayName == null)
+            if (newValue == null)
             {
-                throw new sys.ArgumentNullException("teamDisplayName");
+                throw new sys.ArgumentNullException("newValue");
             }
 
-            if (teamLegalName == null)
-            {
-                throw new sys.ArgumentNullException("teamLegalName");
-            }
-
-            this.TeamDisplayName = teamDisplayName;
-            this.TeamLegalName = teamLegalName;
+            this.NewValue = newValue;
+            this.PreviousValue = previousValue;
         }
 
         /// <summary>
@@ -62,14 +58,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Team's display name.</para>
+        /// <para>New team name.</para>
         /// </summary>
-        public string TeamDisplayName { get; protected set; }
+        public TeamName NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Team's legal name.</para>
+        /// <para>Previous teams name. Might be missing due to historical data gap.</para>
         /// </summary>
-        public string TeamLegalName { get; protected set; }
+        public TeamName PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -85,8 +81,11 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamProfileChangeNameDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("team_display_name", value.TeamDisplayName, writer, enc.StringEncoder.Instance);
-                WriteProperty("team_legal_name", value.TeamLegalName, writer, enc.StringEncoder.Instance);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.TeamName.Encoder);
+                if (value.PreviousValue != null)
+                {
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.TeamName.Encoder);
+                }
             }
         }
 
@@ -120,11 +119,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "team_display_name":
-                        value.TeamDisplayName = enc.StringDecoder.Instance.Decode(reader);
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.TeamName.Decoder.Decode(reader);
                         break;
-                    case "team_legal_name":
-                        value.TeamLegalName = enc.StringDecoder.Instance.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.TeamName.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

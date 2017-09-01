@@ -35,28 +35,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Mobile</para>
-        /// </summary>
-        public bool IsMobile
-        {
-            get
-            {
-                return this is Mobile;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Mobile, or <c>null</c>.</para>
-        /// </summary>
-        public Mobile AsMobile
-        {
-            get
-            {
-                return this as Mobile;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Desktop</para>
         /// </summary>
         public bool IsDesktop
@@ -75,6 +53,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Desktop;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Mobile</para>
+        /// </summary>
+        public bool IsMobile
+        {
+            get
+            {
+                return this is Mobile;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Mobile, or <c>null</c>.</para>
+        /// </summary>
+        public Mobile AsMobile
+        {
+            get
+            {
+                return this as Mobile;
             }
         }
 
@@ -114,16 +114,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceType value, enc.IJsonWriter writer)
             {
-                if (value is Mobile)
-                {
-                    WriteProperty(".tag", "mobile", writer, enc.StringEncoder.Instance);
-                    Mobile.Encoder.EncodeFields((Mobile)value, writer);
-                    return;
-                }
                 if (value is Desktop)
                 {
                     WriteProperty(".tag", "desktop", writer, enc.StringEncoder.Instance);
                     Desktop.Encoder.EncodeFields((Desktop)value, writer);
+                    return;
+                }
+                if (value is Mobile)
+                {
+                    WriteProperty(".tag", "mobile", writer, enc.StringEncoder.Instance);
+                    Mobile.Encoder.EncodeFields((Mobile)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -164,10 +164,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "mobile":
-                        return Mobile.Decoder.DecodeFields(reader);
                     case "desktop":
                         return Desktop.Decoder.DecodeFields(reader);
+                    case "mobile":
+                        return Mobile.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -175,75 +175,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The mobile object</para>
-        /// </summary>
-        public sealed class Mobile : DeviceType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Mobile> Encoder = new MobileEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Mobile> Decoder = new MobileDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Mobile" /> class.</para>
-            /// </summary>
-            private Mobile()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Mobile</para>
-            /// </summary>
-            public static readonly Mobile Instance = new Mobile();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Mobile" />.</para>
-            /// </summary>
-            private class MobileEncoder : enc.StructEncoder<Mobile>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Mobile value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Mobile" />.</para>
-            /// </summary>
-            private class MobileDecoder : enc.StructDecoder<Mobile>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Mobile" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Mobile Create()
-                {
-                    return Mobile.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The desktop object</para>
@@ -307,6 +238,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Desktop Create()
                 {
                     return Desktop.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The mobile object</para>
+        /// </summary>
+        public sealed class Mobile : DeviceType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Mobile> Encoder = new MobileEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Mobile> Decoder = new MobileDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Mobile" /> class.</para>
+            /// </summary>
+            private Mobile()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Mobile</para>
+            /// </summary>
+            public static readonly Mobile Instance = new Mobile();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Mobile" />.</para>
+            /// </summary>
+            private class MobileEncoder : enc.StructEncoder<Mobile>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Mobile value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Mobile" />.</para>
+            /// </summary>
+            private class MobileDecoder : enc.StructDecoder<Mobile>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Mobile" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Mobile Create()
+                {
+                    return Mobile.Instance;
                 }
 
             }

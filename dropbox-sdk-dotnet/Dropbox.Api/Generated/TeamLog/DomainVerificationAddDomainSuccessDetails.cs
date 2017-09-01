@@ -32,7 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// cref="DomainVerificationAddDomainSuccessDetails" /> class.</para>
         /// </summary>
         /// <param name="domainNames">Domain names.</param>
-        /// <param name="verificationMethod">Domain name verification method.</param>
+        /// <param name="verificationMethod">Domain name verification method. Might be missing
+        /// due to historical data gap.</param>
         public DomainVerificationAddDomainSuccessDetails(col.IEnumerable<string> domainNames,
                                                          string verificationMethod = null)
         {
@@ -64,7 +65,8 @@ namespace Dropbox.Api.TeamLog
         public col.IList<string> DomainNames { get; protected set; }
 
         /// <summary>
-        /// <para>Domain name verification method.</para>
+        /// <para>Domain name verification method. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
         public string VerificationMethod { get; protected set; }
 

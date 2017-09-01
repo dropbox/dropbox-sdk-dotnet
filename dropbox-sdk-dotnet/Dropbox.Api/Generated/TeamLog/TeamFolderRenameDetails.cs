@@ -31,13 +31,16 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="TeamFolderRenameDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="srcIndex">Source asset index.</param>
-        /// <param name="destIndex">Destination asset index.</param>
-        public TeamFolderRenameDetails(long srcIndex,
-                                       long destIndex)
+        /// <param name="relocateActionDetails">Specifies the source and destination indices in
+        /// the assets list.</param>
+        public TeamFolderRenameDetails(RelocateAssetReferencesLogInfo relocateActionDetails)
         {
-            this.SrcIndex = srcIndex;
-            this.DestIndex = destIndex;
+            if (relocateActionDetails == null)
+            {
+                throw new sys.ArgumentNullException("relocateActionDetails");
+            }
+
+            this.RelocateActionDetails = relocateActionDetails;
         }
 
         /// <summary>
@@ -52,14 +55,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Source asset index.</para>
+        /// <para>Specifies the source and destination indices in the assets list.</para>
         /// </summary>
-        public long SrcIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Destination asset index.</para>
-        /// </summary>
-        public long DestIndex { get; protected set; }
+        public RelocateAssetReferencesLogInfo RelocateActionDetails { get; protected set; }
 
         #region Encoder class
 
@@ -75,8 +73,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderRenameDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("src_index", value.SrcIndex, writer, enc.Int64Encoder.Instance);
-                WriteProperty("dest_index", value.DestIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("relocate_action_details", value.RelocateActionDetails, writer, global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Encoder);
             }
         }
 
@@ -110,11 +107,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "src_index":
-                        value.SrcIndex = enc.Int64Decoder.Instance.Decode(reader);
-                        break;
-                    case "dest_index":
-                        value.DestIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "relocate_action_details":
+                        value.RelocateActionDetails = global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

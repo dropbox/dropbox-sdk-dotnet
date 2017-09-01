@@ -32,11 +32,11 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="sharedContentLink">Shared content link.</param>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="sharingPermission">Sharing permission. Might be missing due to
         /// historical data gap.</param>
         public SharedContentViewDetails(string sharedContentLink,
-                                        long targetIndex,
+                                        ulong targetAssetIndex,
                                         string sharingPermission = null)
         {
             if (sharedContentLink == null)
@@ -45,7 +45,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.SharedContentLink = sharedContentLink;
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.SharingPermission = sharingPermission;
         }
 
@@ -66,9 +66,9 @@ namespace Dropbox.Api.TeamLog
         public string SharedContentLink { get; protected set; }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Sharing permission. Might be missing due to historical data gap.</para>
@@ -90,7 +90,7 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(SharedContentViewDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_content_link", value.SharedContentLink, writer, enc.StringEncoder.Instance);
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 if (value.SharingPermission != null)
                 {
                     WriteProperty("sharing_permission", value.SharingPermission, writer, enc.StringEncoder.Instance);
@@ -131,8 +131,8 @@ namespace Dropbox.Api.TeamLog
                     case "shared_content_link":
                         value.SharedContentLink = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "sharing_permission":
                         value.SharingPermission = enc.StringDecoder.Instance.Decode(reader);

@@ -816,9 +816,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// (The resolved visibility, though, may depend on other aspects such as team and
         /// shared folder settings).</para>
         /// </summary>
-        /// <param name="path">The path to be shared by the shared link</param>
+        /// <param name="path">The path to be shared by the shared link.</param>
         /// <param name="settings">The requested settings for the newly created shared
-        /// link</param>
+        /// link.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -837,9 +837,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the create shared link with settings
         /// route.</para>
         /// </summary>
-        /// <param name="path">The path to be shared by the shared link</param>
+        /// <param name="path">The path to be shared by the shared link.</param>
         /// <param name="settings">The requested settings for the newly created shared
-        /// link</param>
+        /// link.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1380,7 +1380,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns a list of <see cref="LinkMetadata" /> objects for this user,
         /// including collection links.</para>
         /// <para>If no path is given, returns a list of all shared links for the current user,
-        /// including collection links.</para>
+        /// including collection links, up to a maximum of 1000 links.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path.  Collection links are never returned in this case.</para>
         /// <para>Note that the url field in the response is never the shortened URL.</para>
@@ -1418,7 +1418,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns a list of <see cref="LinkMetadata" /> objects for this user,
         /// including collection links.</para>
         /// <para>If no path is given, returns a list of all shared links for the current user,
-        /// including collection links.</para>
+        /// including collection links, up to a maximum of 1000 links.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path.  Collection links are never returned in this case.</para>
         /// <para>Note that the url field in the response is never the shortened URL.</para>
@@ -2749,7 +2749,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility" /> will reflect the
         /// requested visibility.</para>
         /// </summary>
-        /// <param name="url">URL of the shared link to change its settings</param>
+        /// <param name="url">URL of the shared link to change its settings.</param>
         /// <param name="settings">Set of settings for the shared link.</param>
         /// <param name="removeExpiration">If set to true, removes the expiration of the shared
         /// link.</param>
@@ -2772,7 +2772,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the modify shared link settings route.</para>
         /// </summary>
-        /// <param name="url">URL of the shared link to change its settings</param>
+        /// <param name="url">URL of the shared link to change its settings.</param>
         /// <param name="settings">Set of settings for the shared link.</param>
         /// <param name="removeExpiration">If set to true, removes the expiration of the shared
         /// link.</param>
@@ -3538,44 +3538,44 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="path">The path to the folder to share. If it does not exist, then a
         /// new one is created.</param>
-        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
-        /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
+        /// <param name="forceAsync">Whether to force the share to happen
+        /// asynchronously.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
+        /// applicable if the current user is on a team.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
         /// content inside this shared folder.  The current user must be on a team to set this
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
-        /// <param name="forceAsync">Whether to force the share to happen
-        /// asynchronously.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
-        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
-        /// folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ShareFolderError"/>.</exception>
         public t.Task<ShareFolderLaunch> ShareFolderAsync(string path,
-                                                          MemberPolicy memberPolicy = null,
                                                           AclUpdatePolicy aclUpdatePolicy = null,
-                                                          SharedLinkPolicy sharedLinkPolicy = null,
                                                           bool forceAsync = false,
+                                                          MemberPolicy memberPolicy = null,
+                                                          SharedLinkPolicy sharedLinkPolicy = null,
+                                                          ViewerInfoPolicy viewerInfoPolicy = null,
                                                           col.IEnumerable<FolderAction> actions = null,
-                                                          LinkSettings linkSettings = null,
-                                                          ViewerInfoPolicy viewerInfoPolicy = null)
+                                                          LinkSettings linkSettings = null)
         {
             var shareFolderArg = new ShareFolderArg(path,
-                                                    memberPolicy,
                                                     aclUpdatePolicy,
-                                                    sharedLinkPolicy,
                                                     forceAsync,
+                                                    memberPolicy,
+                                                    sharedLinkPolicy,
+                                                    viewerInfoPolicy,
                                                     actions,
-                                                    linkSettings,
-                                                    viewerInfoPolicy);
+                                                    linkSettings);
 
             return this.ShareFolderAsync(shareFolderArg);
         }
@@ -3585,46 +3585,46 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="path">The path to the folder to share. If it does not exist, then a
         /// new one is created.</param>
-        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
-        /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
+        /// <param name="forceAsync">Whether to force the share to happen
+        /// asynchronously.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
+        /// applicable if the current user is on a team.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
         /// content inside this shared folder.  The current user must be on a team to set this
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
-        /// <param name="forceAsync">Whether to force the share to happen
-        /// asynchronously.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
-        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
-        /// folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginShareFolder(string path,
-                                                 MemberPolicy memberPolicy = null,
                                                  AclUpdatePolicy aclUpdatePolicy = null,
-                                                 SharedLinkPolicy sharedLinkPolicy = null,
                                                  bool forceAsync = false,
+                                                 MemberPolicy memberPolicy = null,
+                                                 SharedLinkPolicy sharedLinkPolicy = null,
+                                                 ViewerInfoPolicy viewerInfoPolicy = null,
                                                  col.IEnumerable<FolderAction> actions = null,
                                                  LinkSettings linkSettings = null,
-                                                 ViewerInfoPolicy viewerInfoPolicy = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
         {
             var shareFolderArg = new ShareFolderArg(path,
-                                                    memberPolicy,
                                                     aclUpdatePolicy,
-                                                    sharedLinkPolicy,
                                                     forceAsync,
+                                                    memberPolicy,
+                                                    sharedLinkPolicy,
+                                                    viewerInfoPolicy,
                                                     actions,
-                                                    linkSettings,
-                                                    viewerInfoPolicy);
+                                                    linkSettings);
 
             return this.BeginShareFolder(shareFolderArg, callback, callbackState);
         }

@@ -33,7 +33,10 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="deviceType">A description of the device used while user approval
         /// blocked.</param>
-        public DeviceLinkFailDetails(DeviceType deviceType)
+        /// <param name="deviceInfo">Device information. Might be missing due to historical
+        /// data gap.</param>
+        public DeviceLinkFailDetails(DeviceType deviceType,
+                                     DeviceLogInfo deviceInfo = null)
         {
             if (deviceType == null)
             {
@@ -41,6 +44,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.DeviceType = deviceType;
+            this.DeviceInfo = deviceInfo;
         }
 
         /// <summary>
@@ -59,6 +63,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public DeviceType DeviceType { get; protected set; }
 
+        /// <summary>
+        /// <para>Device information. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public DeviceLogInfo DeviceInfo { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -74,6 +83,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(DeviceLinkFailDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("device_type", value.DeviceType, writer, global::Dropbox.Api.TeamLog.DeviceType.Encoder);
+                if (value.DeviceInfo != null)
+                {
+                    WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
+                }
             }
         }
 
@@ -109,6 +122,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "device_type":
                         value.DeviceType = global::Dropbox.Api.TeamLog.DeviceType.Decoder.Decode(reader);
+                        break;
+                    case "device_info":
+                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

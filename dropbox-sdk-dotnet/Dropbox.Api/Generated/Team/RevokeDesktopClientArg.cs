@@ -32,11 +32,11 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="RevokeDesktopClientArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
-        /// <param name="teamMemberId">The unique id of the member owning the device</param>
+        /// <param name="sessionId">The session id.</param>
+        /// <param name="teamMemberId">The unique id of the member owning the device.</param>
         /// <param name="deleteOnUnlink">Whether to delete all files of the account (this is
         /// possible only if supported by the desktop client and  will be made the next time
-        /// the client access the account)</param>
+        /// the client access the account).</param>
         public RevokeDesktopClientArg(string sessionId,
                                       string teamMemberId,
                                       bool deleteOnUnlink = false)
@@ -60,7 +60,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Whether to delete all files of the account (this is possible only if
         /// supported by the desktop client and  will be made the next time the client access
-        /// the account)</para>
+        /// the account).</para>
         /// </summary>
         public bool DeleteOnUnlink { get; protected set; }
 

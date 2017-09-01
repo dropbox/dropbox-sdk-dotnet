@@ -13,7 +13,8 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The delete batch result object</para>
     /// </summary>
-    public class DeleteBatchResult
+    /// <seealso cref="Global::Dropbox.Api.Files.FileOpsResult" />
+    public class DeleteBatchResult : FileOpsResult
     {
         #pragma warning disable 108
 

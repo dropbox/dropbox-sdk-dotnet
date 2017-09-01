@@ -30,10 +30,10 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="MemberDevices" /> class.</para>
         /// </summary>
-        /// <param name="teamMemberId">The member unique Id</param>
-        /// <param name="webSessions">List of web sessions made by this team member</param>
-        /// <param name="desktopClients">List of desktop clients by this team member</param>
-        /// <param name="mobileClients">List of mobile clients by this team member</param>
+        /// <param name="teamMemberId">The member unique Id.</param>
+        /// <param name="webSessions">List of web sessions made by this team member.</param>
+        /// <param name="desktopClients">List of desktop clients by this team member.</param>
+        /// <param name="mobileClients">List of mobile clients by this team member.</param>
         public MemberDevices(string teamMemberId,
                              col.IEnumerable<ActiveWebSession> webSessions = null,
                              col.IEnumerable<DesktopClientSession> desktopClients = null,
@@ -67,22 +67,22 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The member unique Id</para>
+        /// <para>The member unique Id.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 
         /// <summary>
-        /// <para>List of web sessions made by this team member</para>
+        /// <para>List of web sessions made by this team member.</para>
         /// </summary>
         public col.IList<ActiveWebSession> WebSessions { get; protected set; }
 
         /// <summary>
-        /// <para>List of desktop clients by this team member</para>
+        /// <para>List of desktop clients by this team member.</para>
         /// </summary>
         public col.IList<DesktopClientSession> DesktopClients { get; protected set; }
 
         /// <summary>
-        /// <para>List of mobile clients by this team member</para>
+        /// <para>List of mobile clients by this team member.</para>
         /// </summary>
         public col.IList<MobileClientSession> MobileClients { get; protected set; }
 

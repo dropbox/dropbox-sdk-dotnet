@@ -33,19 +33,9 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="startDate">Report start date.</param>
         /// <param name="endDate">Report end date.</param>
-        public TeamActivityCreateReportDetails(string startDate,
-                                               string endDate)
+        public TeamActivityCreateReportDetails(sys.DateTime startDate,
+                                               sys.DateTime endDate)
         {
-            if (startDate == null)
-            {
-                throw new sys.ArgumentNullException("startDate");
-            }
-
-            if (endDate == null)
-            {
-                throw new sys.ArgumentNullException("endDate");
-            }
-
             this.StartDate = startDate;
             this.EndDate = endDate;
         }
@@ -64,12 +54,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Report start date.</para>
         /// </summary>
-        public string StartDate { get; protected set; }
+        public sys.DateTime StartDate { get; protected set; }
 
         /// <summary>
         /// <para>Report end date.</para>
         /// </summary>
-        public string EndDate { get; protected set; }
+        public sys.DateTime EndDate { get; protected set; }
 
         #region Encoder class
 
@@ -85,8 +75,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamActivityCreateReportDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("start_date", value.StartDate, writer, enc.StringEncoder.Instance);
-                WriteProperty("end_date", value.EndDate, writer, enc.StringEncoder.Instance);
+                WriteProperty("start_date", value.StartDate, writer, enc.DateTimeEncoder.Instance);
+                WriteProperty("end_date", value.EndDate, writer, enc.DateTimeEncoder.Instance);
             }
         }
 
@@ -121,10 +111,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "start_date":
-                        value.StartDate = enc.StringDecoder.Instance.Decode(reader);
+                        value.StartDate = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     case "end_date":
-                        value.EndDate = enc.StringDecoder.Instance.Decode(reader);
+                        value.EndDate = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

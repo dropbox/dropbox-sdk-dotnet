@@ -31,11 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="PasswordLoginFailDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="failureReason">Login failure reason. Might be missing due to
-        /// historical data gap.</param>
-        public PasswordLoginFailDetails(string failureReason = null)
+        /// <param name="errorDetails">Login failure details.</param>
+        public PasswordLoginFailDetails(FailureDetailsLogInfo errorDetails)
         {
-            this.FailureReason = failureReason;
+            if (errorDetails == null)
+            {
+                throw new sys.ArgumentNullException("errorDetails");
+            }
+
+            this.ErrorDetails = errorDetails;
         }
 
         /// <summary>
@@ -50,9 +54,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Login failure reason. Might be missing due to historical data gap.</para>
+        /// <para>Login failure details.</para>
         /// </summary>
-        public string FailureReason { get; protected set; }
+        public FailureDetailsLogInfo ErrorDetails { get; protected set; }
 
         #region Encoder class
 
@@ -68,10 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PasswordLoginFailDetails value, enc.IJsonWriter writer)
             {
-                if (value.FailureReason != null)
-                {
-                    WriteProperty("failure_reason", value.FailureReason, writer, enc.StringEncoder.Instance);
-                }
+                WriteProperty("error_details", value.ErrorDetails, writer, global::Dropbox.Api.TeamLog.FailureDetailsLogInfo.Encoder);
             }
         }
 
@@ -105,8 +106,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "failure_reason":
-                        value.FailureReason = enc.StringDecoder.Instance.Decode(reader);
+                    case "error_details":
+                        value.ErrorDetails = global::Dropbox.Api.TeamLog.FailureDetailsLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

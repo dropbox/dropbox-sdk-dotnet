@@ -41,14 +41,19 @@ namespace Dropbox.Api.Files
         /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
         /// <param name="autorename">If there's a conflict, have the Dropbox server try to
         /// autorename the file to avoid the conflict.</param>
+        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
+        /// in an ownership transfer for the content being moved. This does not apply to
+        /// copies.</param>
         public RelocationArg(string fromPath,
                              string toPath,
                              bool allowSharedFolder = false,
-                             bool autorename = false)
+                             bool autorename = false,
+                             bool allowOwnershipTransfer = false)
             : base(fromPath, toPath)
         {
             this.AllowSharedFolder = allowSharedFolder;
             this.Autorename = autorename;
+            this.AllowOwnershipTransfer = allowOwnershipTransfer;
         }
 
         /// <summary>
@@ -61,6 +66,7 @@ namespace Dropbox.Api.Files
         {
             this.AllowSharedFolder = false;
             this.Autorename = false;
+            this.AllowOwnershipTransfer = false;
         }
 
         /// <summary>
@@ -77,6 +83,12 @@ namespace Dropbox.Api.Files
         /// avoid the conflict.</para>
         /// </summary>
         public bool Autorename { get; protected set; }
+
+        /// <summary>
+        /// <para>Allow moves by owner even if it would result in an ownership transfer for the
+        /// content being moved. This does not apply to copies.</para>
+        /// </summary>
+        public bool AllowOwnershipTransfer { get; protected set; }
 
         #region Encoder class
 
@@ -96,6 +108,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("to_path", value.ToPath, writer, enc.StringEncoder.Instance);
                 WriteProperty("allow_shared_folder", value.AllowSharedFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("allow_ownership_transfer", value.AllowOwnershipTransfer, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -139,6 +152,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "autorename":
                         value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "allow_ownership_transfer":
+                        value.AllowOwnershipTransfer = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

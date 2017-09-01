@@ -879,7 +879,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>This action is deprecated. Use create_link instead.</para>
+        /// <para>Use create_link instead.</para>
         /// </summary>
         public sealed class ShareLink : FileAction
         {

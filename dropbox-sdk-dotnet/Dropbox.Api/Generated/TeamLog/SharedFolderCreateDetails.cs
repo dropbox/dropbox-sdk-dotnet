@@ -31,10 +31,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SharedFolderCreateDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="parentNsId">Parent namespace ID. Might be missing due to historical
         /// data gap.</param>
-        public SharedFolderCreateDetails(long targetIndex,
+        public SharedFolderCreateDetails(ulong targetAssetIndex,
                                          string parentNsId = null)
         {
             if (parentNsId != null)
@@ -45,7 +45,7 @@ namespace Dropbox.Api.TeamLog
                 }
             }
 
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.ParentNsId = parentNsId;
         }
 
@@ -61,9 +61,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Parent namespace ID. Might be missing due to historical data gap.</para>
@@ -84,7 +84,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderCreateDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 if (value.ParentNsId != null)
                 {
                     WriteProperty("parent_ns_id", value.ParentNsId, writer, enc.StringEncoder.Instance);
@@ -122,8 +122,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "parent_ns_id":
                         value.ParentNsId = enc.StringDecoder.Instance.Decode(reader);

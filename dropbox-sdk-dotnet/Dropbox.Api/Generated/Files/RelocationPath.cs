@@ -40,18 +40,18 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("fromPath");
             }
-            if (!re.Regex.IsMatch(fromPath, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(fromPath, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("fromPath", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("fromPath", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z'");
             }
 
             if (toPath == null)
             {
                 throw new sys.ArgumentNullException("toPath");
             }
-            if (!re.Regex.IsMatch(toPath, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(toPath, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("toPath", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("toPath", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z'");
             }
 
             this.FromPath = fromPath;

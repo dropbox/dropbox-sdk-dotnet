@@ -31,23 +31,23 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SsoChangeLoginUrlDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="previousSsoUrl">Previous SSO Url.</param>
-        /// <param name="newSsoUrl">New SSO Url.</param>
-        public SsoChangeLoginUrlDetails(string previousSsoUrl,
-                                        string newSsoUrl)
+        /// <param name="previousValue">Previous single sign-on login URL.</param>
+        /// <param name="newValue">New single sign-on login URL.</param>
+        public SsoChangeLoginUrlDetails(string previousValue,
+                                        string newValue)
         {
-            if (previousSsoUrl == null)
+            if (previousValue == null)
             {
-                throw new sys.ArgumentNullException("previousSsoUrl");
+                throw new sys.ArgumentNullException("previousValue");
             }
 
-            if (newSsoUrl == null)
+            if (newValue == null)
             {
-                throw new sys.ArgumentNullException("newSsoUrl");
+                throw new sys.ArgumentNullException("newValue");
             }
 
-            this.PreviousSsoUrl = previousSsoUrl;
-            this.NewSsoUrl = newSsoUrl;
+            this.PreviousValue = previousValue;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Previous SSO Url.</para>
+        /// <para>Previous single sign-on login URL.</para>
         /// </summary>
-        public string PreviousSsoUrl { get; protected set; }
+        public string PreviousValue { get; protected set; }
 
         /// <summary>
-        /// <para>New SSO Url.</para>
+        /// <para>New single sign-on login URL.</para>
         /// </summary>
-        public string NewSsoUrl { get; protected set; }
+        public string NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -85,8 +85,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SsoChangeLoginUrlDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("previous_sso_url", value.PreviousSsoUrl, writer, enc.StringEncoder.Instance);
-                WriteProperty("new_sso_url", value.NewSsoUrl, writer, enc.StringEncoder.Instance);
+                WriteProperty("previous_value", value.PreviousValue, writer, enc.StringEncoder.Instance);
+                WriteProperty("new_value", value.NewValue, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -120,11 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "previous_sso_url":
-                        value.PreviousSsoUrl = enc.StringDecoder.Instance.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "new_sso_url":
-                        value.NewSsoUrl = enc.StringDecoder.Instance.Decode(reader);
+                    case "new_value":
+                        value.NewValue = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

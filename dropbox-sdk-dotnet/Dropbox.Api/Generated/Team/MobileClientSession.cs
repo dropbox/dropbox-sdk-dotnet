@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Information about linked Dropbox mobile client sessions</para>
+    /// <para>Information about linked Dropbox mobile client sessions.</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Team.DeviceSession" />
     public class MobileClientSession : DeviceSession
@@ -32,18 +32,18 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="MobileClientSession" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
-        /// <param name="deviceName">The device name</param>
-        /// <param name="clientType">The mobile application type</param>
+        /// <param name="sessionId">The session id.</param>
+        /// <param name="deviceName">The device name.</param>
+        /// <param name="clientType">The mobile application type.</param>
         /// <param name="ipAddress">The IP address of the last activity from this
-        /// session</param>
+        /// session.</param>
         /// <param name="country">The country from which the last activity from this session
-        /// was made</param>
-        /// <param name="created">The time this session was created</param>
-        /// <param name="updated">The time of the last activity from this session</param>
-        /// <param name="clientVersion">The dropbox client version</param>
-        /// <param name="osVersion">The hosting OS version</param>
-        /// <param name="lastCarrier">last carrier used by the device</param>
+        /// was made.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
+        /// <param name="clientVersion">The dropbox client version.</param>
+        /// <param name="osVersion">The hosting OS version.</param>
+        /// <param name="lastCarrier">last carrier used by the device.</param>
         public MobileClientSession(string sessionId,
                                    string deviceName,
                                    MobileClientPlatform clientType,
@@ -85,27 +85,27 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The device name</para>
+        /// <para>The device name.</para>
         /// </summary>
         public string DeviceName { get; protected set; }
 
         /// <summary>
-        /// <para>The mobile application type</para>
+        /// <para>The mobile application type.</para>
         /// </summary>
         public MobileClientPlatform ClientType { get; protected set; }
 
         /// <summary>
-        /// <para>The dropbox client version</para>
+        /// <para>The dropbox client version.</para>
         /// </summary>
         public string ClientVersion { get; protected set; }
 
         /// <summary>
-        /// <para>The hosting OS version</para>
+        /// <para>The hosting OS version.</para>
         /// </summary>
         public string OsVersion { get; protected set; }
 
         /// <summary>
-        /// <para>last carrier used by the device</para>
+        /// <para>last carrier used by the device.</para>
         /// </summary>
         public string LastCarrier { get; protected set; }
 

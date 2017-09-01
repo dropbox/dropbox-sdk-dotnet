@@ -207,7 +207,7 @@ namespace Dropbox.Api.TeamPolicies
         #endregion
 
         /// <summary>
-        /// <para>Emm token is disabled</para>
+        /// <para>Emm token is disabled.</para>
         /// </summary>
         public sealed class Disabled : EmmState
         {
@@ -276,7 +276,7 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
-        /// <para>Emm token is optional</para>
+        /// <para>Emm token is optional.</para>
         /// </summary>
         public sealed class Optional : EmmState
         {
@@ -345,7 +345,7 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
-        /// <para>Emm token is required</para>
+        /// <para>Emm token is required.</para>
         /// </summary>
         public sealed class Required : EmmState
         {

@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.3.0</version>
+    <version>4.3.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,31 +14,27 @@
     <releaseNotes> 
 What's new:
   - Files:
-	- Added TooManyWriteOperations in UploadSessionFinishError.
-	- Removed PathRootError and InvalidPathRoot in LookupError.
-	- Added TeamFolder to WriteError.
+	- Added IncludeMountedFolders and Limit parameter to ListFolderArg.
+	- Added GetThumbnailBatch route.
+    - File ID is now supported for ListFolder route.
+	- Default value for AllowOwnershipTransfer is not false.
+	- Added ServerDeleted timestamp to ListRevisions.
+	- Added DeleteAt to DeleteMetadata
+	- Added IncludeDeleted parameter to ListRevisions
+  - Paper:
+    - Added DocsCreate and DocsUpdate routes.
 
   - Sharing:
-	- Added AccessLevel to LinkSettings.
-	- Added ChangeAccessLevel to LinkAction.
-	- Added AccessLevel and AudienceRestrictingSharedFolder to SharedContentLinkMetadataBase.
-	- Added AcessType and ExpectedLinkMetadata to SharedFileMetadata.
-	- Added Path to ParentFolderAccessInfo.
-	- Added Actions to UpdateFolderPolicyArg.
-	- Added TeamFolder to UpdateFolderPolicyError.
+	- Updated PermissionDeniedReason.
+    - GetSharedLinks now returns max results limit of 1000.
+	- Added OwnerDisplayNames to SharedFolderMetadataBase.
 
-  - Team namespace:
-	- Added route TokenGetAuthenticated_admin.
-	- Added route FeaturesGetValues.
-	- Added Expires to ActiveWebSession.
-	- Added Cursor and HasMore to TeamFolderListResult for pagination.
-	- Added route TeamFolderListContinue.
-	- Made MemberGivenName and MemberSurname optional in MemberAddArg.
+  - Team:
+	- Added MemberSpaceLimitsSetCustomQuota route.
+	- Added MemberSpaceLimitsRemoveCustomQuota route.
+	- Added MemberSpaceLimitsGetCustomQuota route.
+    - Added TeamNamespacesList route.
 
-  - User namepsace:
-	- Moved AccountType from user namespace to UserCommon namespace.
-
-  - Added TeamLog namespace.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
@@ -46,7 +42,7 @@ What's new:
       <group targetFramework="net45">
         <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
-      <group targetFramework="portable-net45+wp80+win8+wpa81+dnxcore50">
+      <group targetFramework="portable-net45+wp80+win8+wpa81">
         <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
       <group targetFramework="portable-net40+sl5+wp80+win8+wpa81">

@@ -268,7 +268,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>Official Dropbox iPhone client</para>
+        /// <para>Official Dropbox iPhone client.</para>
         /// </summary>
         public sealed class Iphone : MobileClientPlatform
         {
@@ -337,7 +337,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Dropbox iPad client</para>
+        /// <para>Official Dropbox iPad client.</para>
         /// </summary>
         public sealed class Ipad : MobileClientPlatform
         {
@@ -406,7 +406,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Dropbox Android client</para>
+        /// <para>Official Dropbox Android client.</para>
         /// </summary>
         public sealed class Android : MobileClientPlatform
         {
@@ -475,7 +475,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Dropbox Windows phone client</para>
+        /// <para>Official Dropbox Windows phone client.</para>
         /// </summary>
         public sealed class WindowsPhone : MobileClientPlatform
         {
@@ -545,7 +545,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Dropbox Blackberry client</para>
+        /// <para>Official Dropbox Blackberry client.</para>
         /// </summary>
         public sealed class Blackberry : MobileClientPlatform
         {

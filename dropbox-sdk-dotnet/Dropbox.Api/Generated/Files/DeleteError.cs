@@ -79,6 +79,51 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TooManyWriteOperations</para>
+        /// </summary>
+        public bool IsTooManyWriteOperations
+        {
+            get
+            {
+                return this is TooManyWriteOperations;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManyWriteOperations, or <c>null</c>.</para>
+        /// </summary>
+        public TooManyWriteOperations AsTooManyWriteOperations
+        {
+            get
+            {
+                return this as TooManyWriteOperations;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is TooManyFiles</para>
+        /// </summary>
+        public bool IsTooManyFiles
+        {
+            get
+            {
+                return this is TooManyFiles;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManyFiles, or <c>null</c>.</para>
+        /// </summary>
+        public TooManyFiles AsTooManyFiles
+        {
+            get
+            {
+                return this as TooManyFiles;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -126,6 +171,18 @@ namespace Dropbox.Api.Files
                     PathWrite.Encoder.EncodeFields((PathWrite)value, writer);
                     return;
                 }
+                if (value is TooManyWriteOperations)
+                {
+                    WriteProperty(".tag", "too_many_write_operations", writer, enc.StringEncoder.Instance);
+                    TooManyWriteOperations.Encoder.EncodeFields((TooManyWriteOperations)value, writer);
+                    return;
+                }
+                if (value is TooManyFiles)
+                {
+                    WriteProperty(".tag", "too_many_files", writer, enc.StringEncoder.Instance);
+                    TooManyFiles.Encoder.EncodeFields((TooManyFiles)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -168,6 +225,10 @@ namespace Dropbox.Api.Files
                         return PathLookup.Decoder.DecodeFields(reader);
                     case "path_write":
                         return PathWrite.Decoder.DecodeFields(reader);
+                    case "too_many_write_operations":
+                        return TooManyWriteOperations.Decoder.DecodeFields(reader);
+                    case "too_many_files":
+                        return TooManyFiles.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -363,6 +424,149 @@ namespace Dropbox.Api.Files
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>There are too many write operations in user's Dropbox. Please retry this
+        /// request.</para>
+        /// </summary>
+        public sealed class TooManyWriteOperations : DeleteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManyWriteOperations> Encoder = new TooManyWriteOperationsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManyWriteOperations> Decoder = new TooManyWriteOperationsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManyWriteOperations" />
+            /// class.</para>
+            /// </summary>
+            private TooManyWriteOperations()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooManyWriteOperations</para>
+            /// </summary>
+            public static readonly TooManyWriteOperations Instance = new TooManyWriteOperations();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManyWriteOperations" />.</para>
+            /// </summary>
+            private class TooManyWriteOperationsEncoder : enc.StructEncoder<TooManyWriteOperations>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManyWriteOperations value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManyWriteOperations" />.</para>
+            /// </summary>
+            private class TooManyWriteOperationsDecoder : enc.StructDecoder<TooManyWriteOperations>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManyWriteOperations"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManyWriteOperations Create()
+                {
+                    return TooManyWriteOperations.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>There are too many files in one request. Please retry with fewer
+        /// files.</para>
+        /// </summary>
+        public sealed class TooManyFiles : DeleteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManyFiles> Encoder = new TooManyFilesEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManyFiles> Decoder = new TooManyFilesDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManyFiles" />
+            /// class.</para>
+            /// </summary>
+            private TooManyFiles()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooManyFiles</para>
+            /// </summary>
+            public static readonly TooManyFiles Instance = new TooManyFiles();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManyFiles" />.</para>
+            /// </summary>
+            private class TooManyFilesEncoder : enc.StructEncoder<TooManyFiles>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManyFiles value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManyFiles" />.</para>
+            /// </summary>
+            private class TooManyFilesDecoder : enc.StructDecoder<TooManyFiles>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManyFiles" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManyFiles Create()
+                {
+                    return TooManyFiles.Instance;
+                }
+
             }
 
             #endregion

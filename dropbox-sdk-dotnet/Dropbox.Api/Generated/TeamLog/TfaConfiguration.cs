@@ -11,7 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The tfa configuration object</para>
+    /// <para>Two factor authentication configuration. Note: the enabled option is
+    /// deprecated.</para>
     /// </summary>
     public class TfaConfiguration
     {

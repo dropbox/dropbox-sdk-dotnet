@@ -20,6 +20,7 @@ namespace Dropbox.Api.Paper
     /// <seealso cref="ListUsersOnPaperDocContinueArgs" />
     /// <seealso cref="PaperDocExport" />
     /// <seealso cref="PaperDocSharingPolicy" />
+    /// <seealso cref="PaperDocUpdateArgs" />
     /// <seealso cref="RemovePaperDocUser" />
     public class RefPaperDoc
     {

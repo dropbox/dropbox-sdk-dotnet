@@ -32,15 +32,14 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="sharedContentLink">Shared content link.</param>
-        /// <param name="srcIndex">Source asset index.</param>
-        /// <param name="destIndex">Destination asset index.</param>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
+        /// <param name="relocateActionDetails">Specifies the source and destination indices in
+        /// the assets list.</param>
         /// <param name="sharingPermission">Sharing permission. Might be missing due to
         /// historical data gap.</param>
         public SharedContentCopyDetails(string sharedContentLink,
-                                        long srcIndex,
-                                        long destIndex,
-                                        long targetIndex,
+                                        ulong targetAssetIndex,
+                                        RelocateAssetReferencesLogInfo relocateActionDetails,
                                         string sharingPermission = null)
         {
             if (sharedContentLink == null)
@@ -48,10 +47,14 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("sharedContentLink");
             }
 
+            if (relocateActionDetails == null)
+            {
+                throw new sys.ArgumentNullException("relocateActionDetails");
+            }
+
             this.SharedContentLink = sharedContentLink;
-            this.SrcIndex = srcIndex;
-            this.DestIndex = destIndex;
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
+            this.RelocateActionDetails = relocateActionDetails;
             this.SharingPermission = sharingPermission;
         }
 
@@ -72,19 +75,14 @@ namespace Dropbox.Api.TeamLog
         public string SharedContentLink { get; protected set; }
 
         /// <summary>
-        /// <para>Source asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long SrcIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
-        /// <para>Destination asset index.</para>
+        /// <para>Specifies the source and destination indices in the assets list.</para>
         /// </summary>
-        public long DestIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Target asset index.</para>
-        /// </summary>
-        public long TargetIndex { get; protected set; }
+        public RelocateAssetReferencesLogInfo RelocateActionDetails { get; protected set; }
 
         /// <summary>
         /// <para>Sharing permission. Might be missing due to historical data gap.</para>
@@ -106,9 +104,8 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(SharedContentCopyDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_content_link", value.SharedContentLink, writer, enc.StringEncoder.Instance);
-                WriteProperty("src_index", value.SrcIndex, writer, enc.Int64Encoder.Instance);
-                WriteProperty("dest_index", value.DestIndex, writer, enc.Int64Encoder.Instance);
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("relocate_action_details", value.RelocateActionDetails, writer, global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Encoder);
                 if (value.SharingPermission != null)
                 {
                     WriteProperty("sharing_permission", value.SharingPermission, writer, enc.StringEncoder.Instance);
@@ -149,14 +146,11 @@ namespace Dropbox.Api.TeamLog
                     case "shared_content_link":
                         value.SharedContentLink = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "src_index":
-                        value.SrcIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
-                    case "dest_index":
-                        value.DestIndex = enc.Int64Decoder.Instance.Decode(reader);
-                        break;
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "relocate_action_details":
+                        value.RelocateActionDetails = global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Decoder.Decode(reader);
                         break;
                     case "sharing_permission":
                         value.SharingPermission = enc.StringDecoder.Instance.Decode(reader);

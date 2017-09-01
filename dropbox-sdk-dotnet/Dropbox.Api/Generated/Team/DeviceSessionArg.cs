@@ -32,8 +32,8 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="DeviceSessionArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
-        /// <param name="teamMemberId">The unique id of the member owning the device</param>
+        /// <param name="sessionId">The session id.</param>
+        /// <param name="teamMemberId">The unique id of the member owning the device.</param>
         public DeviceSessionArg(string sessionId,
                                 string teamMemberId)
         {
@@ -63,12 +63,12 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The session id</para>
+        /// <para>The session id.</para>
         /// </summary>
         public string SessionId { get; protected set; }
 
         /// <summary>
-        /// <para>The unique id of the member owning the device</para>
+        /// <para>The unique id of the member owning the device.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 

@@ -32,9 +32,42 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="AccountCaptureChangeAvailabilityDetails" /> class.</para>
         /// </summary>
+        /// <param name="newValue">New account capture availabilty value.</param>
+        /// <param name="previousValue">Previous account capture availabilty value. Might be
+        /// missing due to historical data gap.</param>
+        public AccountCaptureChangeAvailabilityDetails(AccountCaptureAvailability newValue,
+                                                       AccountCaptureAvailability previousValue = null)
+        {
+            if (newValue == null)
+            {
+                throw new sys.ArgumentNullException("newValue");
+            }
+
+            this.NewValue = newValue;
+            this.PreviousValue = previousValue;
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see
+        /// cref="AccountCaptureChangeAvailabilityDetails" /> class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public AccountCaptureChangeAvailabilityDetails()
         {
         }
+
+        /// <summary>
+        /// <para>New account capture availabilty value.</para>
+        /// </summary>
+        public AccountCaptureAvailability NewValue { get; protected set; }
+
+        /// <summary>
+        /// <para>Previous account capture availabilty value. Might be missing due to
+        /// historical data gap.</para>
+        /// </summary>
+        public AccountCaptureAvailability PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -50,6 +83,11 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AccountCaptureChangeAvailabilityDetails value, enc.IJsonWriter writer)
             {
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.AccountCaptureAvailability.Encoder);
+                if (value.PreviousValue != null)
+                {
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.AccountCaptureAvailability.Encoder);
+                }
             }
         }
 
@@ -83,6 +121,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.AccountCaptureAvailability.Decoder.Decode(reader);
+                        break;
+                    case "previous_value":
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.AccountCaptureAvailability.Decoder.Decode(reader);
+                        break;
                     default:
                         reader.Skip();
                         break;

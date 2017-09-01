@@ -32,7 +32,10 @@ namespace Dropbox.Api.TeamLog
         /// cref="DomainVerificationRemoveDomainDetails" /> class.</para>
         /// </summary>
         /// <param name="domainNames">Domain names.</param>
-        public DomainVerificationRemoveDomainDetails(col.IEnumerable<string> domainNames)
+        /// <param name="verificationMethod">Domain name verification method. Might be missing
+        /// due to historical data gap.</param>
+        public DomainVerificationRemoveDomainDetails(col.IEnumerable<string> domainNames,
+                                                     string verificationMethod = null)
         {
             var domainNamesList = enc.Util.ToList(domainNames);
 
@@ -42,6 +45,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.DomainNames = domainNamesList;
+            this.VerificationMethod = verificationMethod;
         }
 
         /// <summary>
@@ -60,6 +64,12 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public col.IList<string> DomainNames { get; protected set; }
 
+        /// <summary>
+        /// <para>Domain name verification method. Might be missing due to historical data
+        /// gap.</para>
+        /// </summary>
+        public string VerificationMethod { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +85,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(DomainVerificationRemoveDomainDetails value, enc.IJsonWriter writer)
             {
                 WriteListProperty("domain_names", value.DomainNames, writer, enc.StringEncoder.Instance);
+                if (value.VerificationMethod != null)
+                {
+                    WriteProperty("verification_method", value.VerificationMethod, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -110,6 +124,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "domain_names":
                         value.DomainNames = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        break;
+                    case "verification_method":
+                        value.VerificationMethod = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

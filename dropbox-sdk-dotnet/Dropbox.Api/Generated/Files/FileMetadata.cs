@@ -14,6 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>The file metadata object</para>
     /// </summary>
     /// <seealso cref="GetTemporaryLinkResult" />
+    /// <seealso cref="GetThumbnailBatchResultData" />
     /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
     public class FileMetadata : Metadata
     {
@@ -56,7 +57,7 @@ namespace Dropbox.Api.Files
         /// won't be returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
-        /// <param name="parentSharedFolderId">Deprecated. Please use <see
+        /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         /// <param name="mediaInfo">Additional information if the file is a photo or

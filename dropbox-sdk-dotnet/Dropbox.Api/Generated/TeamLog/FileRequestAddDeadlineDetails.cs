@@ -32,13 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// /> class.</para>
         /// </summary>
         /// <param name="requestTitle">File request title.</param>
-        public FileRequestAddDeadlineDetails(string requestTitle)
+        public FileRequestAddDeadlineDetails(string requestTitle = null)
         {
-            if (requestTitle == null)
-            {
-                throw new sys.ArgumentNullException("requestTitle");
-            }
-
             this.RequestTitle = requestTitle;
         }
 
@@ -72,7 +67,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileRequestAddDeadlineDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
+                if (value.RequestTitle != null)
+                {
+                    WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 

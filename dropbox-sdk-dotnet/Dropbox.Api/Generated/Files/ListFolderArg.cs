@@ -30,7 +30,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ListFolderArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path to the folder you want to see the contents of.</param>
+        /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -42,19 +42,38 @@ namespace Dropbox.Api.Files
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
+        /// <param name="includeMountedFolders">If true, the results will include entries under
+        /// mounted folders which includes app folder, shared folder and team folder.</param>
+        /// <param name="limit">The maximum number of results to return per request. Note: This
+        /// is an approximate number and there can be slightly more entries returned in some
+        /// cases.</param>
         public ListFolderArg(string path,
                              bool recursive = false,
                              bool includeMediaInfo = false,
                              bool includeDeleted = false,
-                             bool includeHasExplicitSharedMembers = false)
+                             bool includeHasExplicitSharedMembers = false,
+                             bool includeMountedFolders = true,
+                             uint? limit = null)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)?|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/.*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)?|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/.*)?))\z'");
+            }
+
+            if (limit != null)
+            {
+                if (limit < 1U)
+                {
+                    throw new sys.ArgumentOutOfRangeException("limit", "Value should be greater or equal than 1");
+                }
+                if (limit > 2000U)
+                {
+                    throw new sys.ArgumentOutOfRangeException("limit", "Value should be less of equal than 2000");
+                }
             }
 
             this.Path = path;
@@ -62,6 +81,8 @@ namespace Dropbox.Api.Files
             this.IncludeMediaInfo = includeMediaInfo;
             this.IncludeDeleted = includeDeleted;
             this.IncludeHasExplicitSharedMembers = includeHasExplicitSharedMembers;
+            this.IncludeMountedFolders = includeMountedFolders;
+            this.Limit = limit;
         }
 
         /// <summary>
@@ -76,10 +97,11 @@ namespace Dropbox.Api.Files
             this.IncludeMediaInfo = false;
             this.IncludeDeleted = false;
             this.IncludeHasExplicitSharedMembers = false;
+            this.IncludeMountedFolders = true;
         }
 
         /// <summary>
-        /// <para>The path to the folder you want to see the contents of.</para>
+        /// <para>A unique identifier for the file.</para>
         /// </summary>
         public string Path { get; protected set; }
 
@@ -107,6 +129,19 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool IncludeHasExplicitSharedMembers { get; protected set; }
 
+        /// <summary>
+        /// <para>If true, the results will include entries under mounted folders which
+        /// includes app folder, shared folder and team folder.</para>
+        /// </summary>
+        public bool IncludeMountedFolders { get; protected set; }
+
+        /// <summary>
+        /// <para>The maximum number of results to return per request. Note: This is an
+        /// approximate number and there can be slightly more entries returned in some
+        /// cases.</para>
+        /// </summary>
+        public uint? Limit { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -126,6 +161,11 @@ namespace Dropbox.Api.Files
                 WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_deleted", value.IncludeDeleted, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_has_explicit_shared_members", value.IncludeHasExplicitSharedMembers, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_mounted_folders", value.IncludeMountedFolders, writer, enc.BooleanEncoder.Instance);
+                if (value.Limit != null)
+                {
+                    WriteProperty("limit", value.Limit.Value, writer, enc.UInt32Encoder.Instance);
+                }
             }
         }
 
@@ -172,6 +212,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_has_explicit_shared_members":
                         value.IncludeHasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_mounted_folders":
+                        value.IncludeMountedFolders = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "limit":
+                        value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

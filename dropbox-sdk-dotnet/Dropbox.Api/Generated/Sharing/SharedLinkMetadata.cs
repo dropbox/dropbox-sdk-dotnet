@@ -11,7 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The metadata of a shared link</para>
+    /// <para>The metadata of a shared link.</para>
     /// </summary>
     /// <seealso cref="FileLinkMetadata" />
     /// <seealso cref="FolderLinkMetadata" />

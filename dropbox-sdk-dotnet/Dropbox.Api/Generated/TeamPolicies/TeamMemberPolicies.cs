@@ -38,8 +38,11 @@ namespace Dropbox.Api.TeamPolicies
         /// restrictions upon the team's Dropbox usage on mobile devices. This is a new feature
         /// and in the future we'll be adding more new fields and additional
         /// documentation.</param>
+        /// <param name="officeAddin">The admin policy around the Dropbox Office Add-In for
+        /// this team.</param>
         public TeamMemberPolicies(TeamSharingPolicies sharing,
-                                  EmmState emmState)
+                                  EmmState emmState,
+                                  OfficeAddInPolicy officeAddin)
         {
             if (sharing == null)
             {
@@ -51,8 +54,14 @@ namespace Dropbox.Api.TeamPolicies
                 throw new sys.ArgumentNullException("emmState");
             }
 
+            if (officeAddin == null)
+            {
+                throw new sys.ArgumentNullException("officeAddin");
+            }
+
             this.Sharing = sharing;
             this.EmmState = emmState;
+            this.OfficeAddin = officeAddin;
         }
 
         /// <summary>
@@ -80,6 +89,11 @@ namespace Dropbox.Api.TeamPolicies
         /// </summary>
         public EmmState EmmState { get; protected set; }
 
+        /// <summary>
+        /// <para>The admin policy around the Dropbox Office Add-In for this team.</para>
+        /// </summary>
+        public OfficeAddInPolicy OfficeAddin { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -96,6 +110,7 @@ namespace Dropbox.Api.TeamPolicies
             {
                 WriteProperty("sharing", value.Sharing, writer, global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
                 WriteProperty("emm_state", value.EmmState, writer, global::Dropbox.Api.TeamPolicies.EmmState.Encoder);
+                WriteProperty("office_addin", value.OfficeAddin, writer, global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Encoder);
             }
         }
 
@@ -133,6 +148,9 @@ namespace Dropbox.Api.TeamPolicies
                         break;
                     case "emm_state":
                         value.EmmState = global::Dropbox.Api.TeamPolicies.EmmState.Decoder.Decode(reader);
+                        break;
+                    case "office_addin":
+                        value.OfficeAddin = global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

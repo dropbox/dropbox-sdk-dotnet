@@ -34,9 +34,12 @@ namespace Dropbox.Api.Team
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <param name="name">The name of the team folder.</param>
         /// <param name="status">The status of the team folder.</param>
+        /// <param name="isTeamSharedDropbox">True if this team folder is the team shared
+        /// dropbox.</param>
         public TeamFolderMetadata(string teamFolderId,
                                   string name,
-                                  TeamFolderStatus status)
+                                  TeamFolderStatus status,
+                                  bool isTeamSharedDropbox)
         {
             if (teamFolderId == null)
             {
@@ -60,6 +63,7 @@ namespace Dropbox.Api.Team
             this.TeamFolderId = teamFolderId;
             this.Name = name;
             this.Status = status;
+            this.IsTeamSharedDropbox = isTeamSharedDropbox;
         }
 
         /// <summary>
@@ -88,6 +92,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public TeamFolderStatus Status { get; protected set; }
 
+        /// <summary>
+        /// <para>True if this team folder is the team shared dropbox.</para>
+        /// </summary>
+        public bool IsTeamSharedDropbox { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -105,6 +114,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("team_folder_id", value.TeamFolderId, writer, enc.StringEncoder.Instance);
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("status", value.Status, writer, global::Dropbox.Api.Team.TeamFolderStatus.Encoder);
+                WriteProperty("is_team_shared_dropbox", value.IsTeamSharedDropbox, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -145,6 +155,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "status":
                         value.Status = global::Dropbox.Api.Team.TeamFolderStatus.Decoder.Decode(reader);
+                        break;
+                    case "is_team_shared_dropbox":
+                        value.IsTeamSharedDropbox = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -171,7 +171,7 @@ namespace Dropbox.Api.Files
             /// <para>Initializes a new instance of the <see cref="Success" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Success(DeleteResult value)
+            public Success(DeleteBatchResultData value)
             {
                 this.Value = value;
             }
@@ -185,7 +185,7 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public DeleteResult Value { get; private set; }
+            public DeleteBatchResultData Value { get; private set; }
 
             #region Encoder class
 
@@ -201,7 +201,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Success value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.DeleteResult.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Files.DeleteBatchResultData.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -230,7 +230,7 @@ namespace Dropbox.Api.Files
                 /// <returns>The decoded object.</returns>
                 public override Success DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Success(global::Dropbox.Api.Files.DeleteResult.Decoder.DecodeFields(reader));
+                    return new Success(global::Dropbox.Api.Files.DeleteBatchResultData.Decoder.DecodeFields(reader));
                 }
             }
 

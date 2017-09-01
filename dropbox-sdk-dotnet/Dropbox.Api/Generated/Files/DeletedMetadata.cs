@@ -45,7 +45,7 @@ namespace Dropbox.Api.Files
         /// won't be returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
-        /// <param name="parentSharedFolderId">Deprecated. Please use <see
+        /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         public DeletedMetadata(string name,

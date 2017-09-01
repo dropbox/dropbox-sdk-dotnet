@@ -31,14 +31,13 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SsoChangeSamlIdentityModeDetails" /> class.</para>
         /// </summary>
-        /// <param name="previousSamlIdentityMode">Previous single sign-on identity
-        /// mode.</param>
-        /// <param name="newSamlIdentityMode">New single sign-on identity mode.</param>
-        public SsoChangeSamlIdentityModeDetails(long previousSamlIdentityMode,
-                                                long newSamlIdentityMode)
+        /// <param name="previousValue">Previous single sign-on identity mode.</param>
+        /// <param name="newValue">New single sign-on identity mode.</param>
+        public SsoChangeSamlIdentityModeDetails(long previousValue,
+                                                long newValue)
         {
-            this.PreviousSamlIdentityMode = previousSamlIdentityMode;
-            this.NewSamlIdentityMode = newSamlIdentityMode;
+            this.PreviousValue = previousValue;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -55,12 +54,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Previous single sign-on identity mode.</para>
         /// </summary>
-        public long PreviousSamlIdentityMode { get; protected set; }
+        public long PreviousValue { get; protected set; }
 
         /// <summary>
         /// <para>New single sign-on identity mode.</para>
         /// </summary>
-        public long NewSamlIdentityMode { get; protected set; }
+        public long NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -76,8 +75,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SsoChangeSamlIdentityModeDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("previous_saml_identity_mode", value.PreviousSamlIdentityMode, writer, enc.Int64Encoder.Instance);
-                WriteProperty("new_saml_identity_mode", value.NewSamlIdentityMode, writer, enc.Int64Encoder.Instance);
+                WriteProperty("previous_value", value.PreviousValue, writer, enc.Int64Encoder.Instance);
+                WriteProperty("new_value", value.NewValue, writer, enc.Int64Encoder.Instance);
             }
         }
 
@@ -111,11 +110,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "previous_saml_identity_mode":
-                        value.PreviousSamlIdentityMode = enc.Int64Decoder.Instance.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = enc.Int64Decoder.Instance.Decode(reader);
                         break;
-                    case "new_saml_identity_mode":
-                        value.NewSamlIdentityMode = enc.Int64Decoder.Instance.Decode(reader);
+                    case "new_value":
+                        value.NewValue = enc.Int64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

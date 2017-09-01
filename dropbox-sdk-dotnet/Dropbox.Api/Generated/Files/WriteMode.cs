@@ -14,9 +14,9 @@ namespace Dropbox.Api.Files
     /// <para>Your intent when writing a file to some path. This is used to determine what
     /// constitutes a conflict and what the autorename strategy is.</para>
     /// <para>In some situations, the conflict behavior is identical: (a) If the target path
-    /// doesn't contain anything, the file is always written; no conflict. (b) If the target
-    /// path contains a folder, it's always a conflict. (c) If the target path contains a file
-    /// with identical contents, nothing gets written; no conflict.</para>
+    /// doesn't refer to anything, the file is always written; no conflict. (b) If the target
+    /// path refers to a folder, it's always a conflict. (c) If the target path refers to a
+    /// file with identical contents, nothing gets written; no conflict.</para>
     /// <para>The conflict checking differs in the case where there's a file at the target path
     /// with contents different from the contents you're trying to write.</para>
     /// </summary>

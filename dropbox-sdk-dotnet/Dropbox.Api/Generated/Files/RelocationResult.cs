@@ -13,7 +13,8 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The relocation result object</para>
     /// </summary>
-    public class RelocationResult
+    /// <seealso cref="Global::Dropbox.Api.Files.FileOpsResult" />
+    public class RelocationResult : FileOpsResult
     {
         #pragma warning disable 108
 
@@ -31,7 +32,7 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="RelocationResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="metadata">The metadata</param>
+        /// <param name="metadata">Metadata of the relocated object.</param>
         public RelocationResult(Metadata metadata)
         {
             if (metadata == null)
@@ -54,7 +55,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the metadata of the relocation result</para>
+        /// <para>Metadata of the relocated object.</para>
         /// </summary>
         public Metadata Metadata { get; protected set; }
 

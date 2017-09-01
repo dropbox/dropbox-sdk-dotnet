@@ -31,32 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupRemoveMemberDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
-        public GroupRemoveMemberDetails(GroupLogInfo groupInfo)
-        {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
-            this.GroupInfo = groupInfo;
-        }
-
-        /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GroupRemoveMemberDetails" />
-        /// class.</para>
-        /// </summary>
-        /// <remarks>This is to construct an instance of the object when
-        /// deserializing.</remarks>
-        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GroupRemoveMemberDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         #region Encoder class
 
@@ -72,7 +49,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupRemoveMemberDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
             }
         }
 
@@ -106,9 +82,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     default:
                         reader.Skip();
                         break;

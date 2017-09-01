@@ -128,6 +128,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is PaperAdminExportStart</para>
+        /// </summary>
+        public bool IsPaperAdminExportStart
+        {
+            get
+            {
+                return this is PaperAdminExportStart;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperAdminExportStart, or <c>null</c>.</para>
+        /// </summary>
+        public PaperAdminExportStart AsPaperAdminExportStart
+        {
+            get
+            {
+                return this as PaperAdminExportStart;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is
         /// PaperEnabledUsersGroupAddition</para>
         /// </summary>
@@ -266,24 +288,46 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is TeamMerge</para>
+        /// <para>Gets a value indicating whether this instance is TeamMergeFrom</para>
         /// </summary>
-        public bool IsTeamMerge
+        public bool IsTeamMergeFrom
         {
             get
             {
-                return this is TeamMerge;
+                return this is TeamMergeFrom;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a TeamMerge, or <c>null</c>.</para>
+        /// <para>Gets this instance as a TeamMergeFrom, or <c>null</c>.</para>
         /// </summary>
-        public TeamMerge AsTeamMerge
+        public TeamMergeFrom AsTeamMergeFrom
         {
             get
             {
-                return this as TeamMerge;
+                return this as TeamMergeFrom;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamMergeTo</para>
+        /// </summary>
+        public bool IsTeamMergeTo
+        {
+            get
+            {
+                return this is TeamMergeTo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamMergeTo, or <c>null</c>.</para>
+        /// </summary>
+        public TeamMergeTo AsTeamMergeTo
+        {
+            get
+            {
+                return this as TeamMergeTo;
             }
         }
 
@@ -372,6 +416,161 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as AppUnlinkUser;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FileAddComment</para>
+        /// </summary>
+        public bool IsFileAddComment
+        {
+            get
+            {
+                return this is FileAddComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileAddComment, or <c>null</c>.</para>
+        /// </summary>
+        public FileAddComment AsFileAddComment
+        {
+            get
+            {
+                return this as FileAddComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FileChangeCommentSubscription</para>
+        /// </summary>
+        public bool IsFileChangeCommentSubscription
+        {
+            get
+            {
+                return this is FileChangeCommentSubscription;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileChangeCommentSubscription, or <c>null</c>.</para>
+        /// </summary>
+        public FileChangeCommentSubscription AsFileChangeCommentSubscription
+        {
+            get
+            {
+                return this as FileChangeCommentSubscription;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FileDeleteComment</para>
+        /// </summary>
+        public bool IsFileDeleteComment
+        {
+            get
+            {
+                return this is FileDeleteComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileDeleteComment, or <c>null</c>.</para>
+        /// </summary>
+        public FileDeleteComment AsFileDeleteComment
+        {
+            get
+            {
+                return this as FileDeleteComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FileLikeComment</para>
+        /// </summary>
+        public bool IsFileLikeComment
+        {
+            get
+            {
+                return this is FileLikeComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileLikeComment, or <c>null</c>.</para>
+        /// </summary>
+        public FileLikeComment AsFileLikeComment
+        {
+            get
+            {
+                return this as FileLikeComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FileResolveComment</para>
+        /// </summary>
+        public bool IsFileResolveComment
+        {
+            get
+            {
+                return this is FileResolveComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileResolveComment, or <c>null</c>.</para>
+        /// </summary>
+        public FileResolveComment AsFileResolveComment
+        {
+            get
+            {
+                return this as FileResolveComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FileUnlikeComment</para>
+        /// </summary>
+        public bool IsFileUnlikeComment
+        {
+            get
+            {
+                return this is FileUnlikeComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileUnlikeComment, or <c>null</c>.</para>
+        /// </summary>
+        public FileUnlikeComment AsFileUnlikeComment
+        {
+            get
+            {
+                return this as FileUnlikeComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FileUnresolveComment</para>
+        /// </summary>
+        public bool IsFileUnresolveComment
+        {
+            get
+            {
+                return this is FileUnresolveComment;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileUnresolveComment, or <c>null</c>.</para>
+        /// </summary>
+        public FileUnresolveComment AsFileUnresolveComment
+        {
+            get
+            {
+                return this as FileUnresolveComment;
             }
         }
 
@@ -1975,6 +2174,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MemberChangeAdminRole</para>
+        /// </summary>
+        public bool IsMemberChangeAdminRole
+        {
+            get
+            {
+                return this is MemberChangeAdminRole;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberChangeAdminRole, or <c>null</c>.</para>
+        /// </summary>
+        public MemberChangeAdminRole AsMemberChangeAdminRole
+        {
+            get
+            {
+                return this as MemberChangeAdminRole;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is MemberChangeEmail</para>
         /// </summary>
         public bool IsMemberChangeEmail
@@ -2019,112 +2240,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberChangeRole</para>
+        /// <para>Gets a value indicating whether this instance is MemberChangeStatus</para>
         /// </summary>
-        public bool IsMemberChangeRole
+        public bool IsMemberChangeStatus
         {
             get
             {
-                return this is MemberChangeRole;
+                return this is MemberChangeStatus;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a MemberChangeRole, or <c>null</c>.</para>
+        /// <para>Gets this instance as a MemberChangeStatus, or <c>null</c>.</para>
         /// </summary>
-        public MemberChangeRole AsMemberChangeRole
+        public MemberChangeStatus AsMemberChangeStatus
         {
             get
             {
-                return this as MemberChangeRole;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberInvite</para>
-        /// </summary>
-        public bool IsMemberInvite
-        {
-            get
-            {
-                return this is MemberInvite;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberInvite, or <c>null</c>.</para>
-        /// </summary>
-        public MemberInvite AsMemberInvite
-        {
-            get
-            {
-                return this as MemberInvite;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberJoin</para>
-        /// </summary>
-        public bool IsMemberJoin
-        {
-            get
-            {
-                return this is MemberJoin;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberJoin, or <c>null</c>.</para>
-        /// </summary>
-        public MemberJoin AsMemberJoin
-        {
-            get
-            {
-                return this as MemberJoin;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberLeave</para>
-        /// </summary>
-        public bool IsMemberLeave
-        {
-            get
-            {
-                return this is MemberLeave;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberLeave, or <c>null</c>.</para>
-        /// </summary>
-        public MemberLeave AsMemberLeave
-        {
-            get
-            {
-                return this as MemberLeave;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberRecover</para>
-        /// </summary>
-        public bool IsMemberRecover
-        {
-            get
-            {
-                return this is MemberRecover;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberRecover, or <c>null</c>.</para>
-        /// </summary>
-        public MemberRecover AsMemberRecover
-        {
-            get
-            {
-                return this as MemberRecover;
+                return this as MemberChangeStatus;
             }
         }
 
@@ -2147,50 +2280,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as MemberSuggest;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberSuspend</para>
-        /// </summary>
-        public bool IsMemberSuspend
-        {
-            get
-            {
-                return this is MemberSuspend;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberSuspend, or <c>null</c>.</para>
-        /// </summary>
-        public MemberSuspend AsMemberSuspend
-        {
-            get
-            {
-                return this as MemberSuspend;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberUnsuspend</para>
-        /// </summary>
-        public bool IsMemberUnsuspend
-        {
-            get
-            {
-                return this is MemberUnsuspend;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberUnsuspend, or <c>null</c>.</para>
-        /// </summary>
-        public MemberUnsuspend AsMemberUnsuspend
-        {
-            get
-            {
-                return this as MemberUnsuspend;
             }
         }
 
@@ -3041,72 +3130,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as CollectionShare;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is FileAddComment</para>
-        /// </summary>
-        public bool IsFileAddComment
-        {
-            get
-            {
-                return this is FileAddComment;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a FileAddComment, or <c>null</c>.</para>
-        /// </summary>
-        public FileAddComment AsFileAddComment
-        {
-            get
-            {
-                return this as FileAddComment;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is FileLikeComment</para>
-        /// </summary>
-        public bool IsFileLikeComment
-        {
-            get
-            {
-                return this is FileLikeComment;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a FileLikeComment, or <c>null</c>.</para>
-        /// </summary>
-        public FileLikeComment AsFileLikeComment
-        {
-            get
-            {
-                return this as FileLikeComment;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is FileUnlikeComment</para>
-        /// </summary>
-        public bool IsFileUnlikeComment
-        {
-            get
-            {
-                return this is FileUnlikeComment;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a FileUnlikeComment, or <c>null</c>.</para>
-        /// </summary>
-        public FileUnlikeComment AsFileUnlikeComment
-        {
-            get
-            {
-                return this as FileUnlikeComment;
             }
         }
 
@@ -4515,46 +4538,46 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is RemoveLogoutUrl</para>
+        /// <para>Gets a value indicating whether this instance is SsoAddLoginUrl</para>
         /// </summary>
-        public bool IsRemoveLogoutUrl
+        public bool IsSsoAddLoginUrl
         {
             get
             {
-                return this is RemoveLogoutUrl;
+                return this is SsoAddLoginUrl;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a RemoveLogoutUrl, or <c>null</c>.</para>
+        /// <para>Gets this instance as a SsoAddLoginUrl, or <c>null</c>.</para>
         /// </summary>
-        public RemoveLogoutUrl AsRemoveLogoutUrl
+        public SsoAddLoginUrl AsSsoAddLoginUrl
         {
             get
             {
-                return this as RemoveLogoutUrl;
+                return this as SsoAddLoginUrl;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is RemoveSsoUrl</para>
+        /// <para>Gets a value indicating whether this instance is SsoAddLogoutUrl</para>
         /// </summary>
-        public bool IsRemoveSsoUrl
+        public bool IsSsoAddLogoutUrl
         {
             get
             {
-                return this is RemoveSsoUrl;
+                return this is SsoAddLogoutUrl;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a RemoveSsoUrl, or <c>null</c>.</para>
+        /// <para>Gets this instance as a SsoAddLogoutUrl, or <c>null</c>.</para>
         /// </summary>
-        public RemoveSsoUrl AsRemoveSsoUrl
+        public SsoAddLogoutUrl AsSsoAddLogoutUrl
         {
             get
             {
-                return this as RemoveSsoUrl;
+                return this as SsoAddLogoutUrl;
             }
         }
 
@@ -4644,6 +4667,50 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as SsoChangeSamlIdentityMode;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is SsoRemoveLoginUrl</para>
+        /// </summary>
+        public bool IsSsoRemoveLoginUrl
+        {
+            get
+            {
+                return this is SsoRemoveLoginUrl;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SsoRemoveLoginUrl, or <c>null</c>.</para>
+        /// </summary>
+        public SsoRemoveLoginUrl AsSsoRemoveLoginUrl
+        {
+            get
+            {
+                return this as SsoRemoveLoginUrl;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is SsoRemoveLogoutUrl</para>
+        /// </summary>
+        public bool IsSsoRemoveLogoutUrl
+        {
+            get
+            {
+                return this is SsoRemoveLogoutUrl;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SsoRemoveLogoutUrl, or <c>null</c>.</para>
+        /// </summary>
+        public SsoRemoveLogoutUrl AsSsoRemoveLogoutUrl
+        {
+            get
+            {
+                return this as SsoRemoveLogoutUrl;
             }
         }
 
@@ -5545,6 +5612,50 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is SmartSyncNotOptOut</para>
+        /// </summary>
+        public bool IsSmartSyncNotOptOut
+        {
+            get
+            {
+                return this is SmartSyncNotOptOut;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SmartSyncNotOptOut, or <c>null</c>.</para>
+        /// </summary>
+        public SmartSyncNotOptOut AsSmartSyncNotOptOut
+        {
+            get
+            {
+                return this as SmartSyncNotOptOut;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is SmartSyncOptOut</para>
+        /// </summary>
+        public bool IsSmartSyncOptOut
+        {
+            get
+            {
+                return this is SmartSyncOptOut;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SmartSyncOptOut, or <c>null</c>.</para>
+        /// </summary>
+        public SmartSyncOptOut AsSmartSyncOptOut
+        {
+            get
+            {
+                return this as SmartSyncOptOut;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is SsoChangePolicy</para>
         /// </summary>
         public bool IsSsoChangePolicy
@@ -5961,6 +6072,12 @@ namespace Dropbox.Api.TeamLog
                     MemberTransferAccountContents.Encoder.EncodeFields((MemberTransferAccountContents)value, writer);
                     return;
                 }
+                if (value is PaperAdminExportStart)
+                {
+                    WriteProperty(".tag", "paper_admin_export_start", writer, enc.StringEncoder.Instance);
+                    PaperAdminExportStart.Encoder.EncodeFields((PaperAdminExportStart)value, writer);
+                    return;
+                }
                 if (value is PaperEnabledUsersGroupAddition)
                 {
                     WriteProperty(".tag", "paper_enabled_users_group_addition", writer, enc.StringEncoder.Instance);
@@ -5997,10 +6114,16 @@ namespace Dropbox.Api.TeamLog
                     SfExternalInviteWarn.Encoder.EncodeFields((SfExternalInviteWarn)value, writer);
                     return;
                 }
-                if (value is TeamMerge)
+                if (value is TeamMergeFrom)
                 {
-                    WriteProperty(".tag", "team_merge", writer, enc.StringEncoder.Instance);
-                    TeamMerge.Encoder.EncodeFields((TeamMerge)value, writer);
+                    WriteProperty(".tag", "team_merge_from", writer, enc.StringEncoder.Instance);
+                    TeamMergeFrom.Encoder.EncodeFields((TeamMergeFrom)value, writer);
+                    return;
+                }
+                if (value is TeamMergeTo)
+                {
+                    WriteProperty(".tag", "team_merge_to", writer, enc.StringEncoder.Instance);
+                    TeamMergeTo.Encoder.EncodeFields((TeamMergeTo)value, writer);
                     return;
                 }
                 if (value is AppLinkTeam)
@@ -6025,6 +6148,48 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "app_unlink_user", writer, enc.StringEncoder.Instance);
                     AppUnlinkUser.Encoder.EncodeFields((AppUnlinkUser)value, writer);
+                    return;
+                }
+                if (value is FileAddComment)
+                {
+                    WriteProperty(".tag", "file_add_comment", writer, enc.StringEncoder.Instance);
+                    FileAddComment.Encoder.EncodeFields((FileAddComment)value, writer);
+                    return;
+                }
+                if (value is FileChangeCommentSubscription)
+                {
+                    WriteProperty(".tag", "file_change_comment_subscription", writer, enc.StringEncoder.Instance);
+                    FileChangeCommentSubscription.Encoder.EncodeFields((FileChangeCommentSubscription)value, writer);
+                    return;
+                }
+                if (value is FileDeleteComment)
+                {
+                    WriteProperty(".tag", "file_delete_comment", writer, enc.StringEncoder.Instance);
+                    FileDeleteComment.Encoder.EncodeFields((FileDeleteComment)value, writer);
+                    return;
+                }
+                if (value is FileLikeComment)
+                {
+                    WriteProperty(".tag", "file_like_comment", writer, enc.StringEncoder.Instance);
+                    FileLikeComment.Encoder.EncodeFields((FileLikeComment)value, writer);
+                    return;
+                }
+                if (value is FileResolveComment)
+                {
+                    WriteProperty(".tag", "file_resolve_comment", writer, enc.StringEncoder.Instance);
+                    FileResolveComment.Encoder.EncodeFields((FileResolveComment)value, writer);
+                    return;
+                }
+                if (value is FileUnlikeComment)
+                {
+                    WriteProperty(".tag", "file_unlike_comment", writer, enc.StringEncoder.Instance);
+                    FileUnlikeComment.Encoder.EncodeFields((FileUnlikeComment)value, writer);
+                    return;
+                }
+                if (value is FileUnresolveComment)
+                {
+                    WriteProperty(".tag", "file_unresolve_comment", writer, enc.StringEncoder.Instance);
+                    FileUnresolveComment.Encoder.EncodeFields((FileUnresolveComment)value, writer);
                     return;
                 }
                 if (value is DeviceChangeIpDesktop)
@@ -6453,6 +6618,12 @@ namespace Dropbox.Api.TeamLog
                     MemberAddName.Encoder.EncodeFields((MemberAddName)value, writer);
                     return;
                 }
+                if (value is MemberChangeAdminRole)
+                {
+                    WriteProperty(".tag", "member_change_admin_role", writer, enc.StringEncoder.Instance);
+                    MemberChangeAdminRole.Encoder.EncodeFields((MemberChangeAdminRole)value, writer);
+                    return;
+                }
                 if (value is MemberChangeEmail)
                 {
                     WriteProperty(".tag", "member_change_email", writer, enc.StringEncoder.Instance);
@@ -6465,52 +6636,16 @@ namespace Dropbox.Api.TeamLog
                     MemberChangeName.Encoder.EncodeFields((MemberChangeName)value, writer);
                     return;
                 }
-                if (value is MemberChangeRole)
+                if (value is MemberChangeStatus)
                 {
-                    WriteProperty(".tag", "member_change_role", writer, enc.StringEncoder.Instance);
-                    MemberChangeRole.Encoder.EncodeFields((MemberChangeRole)value, writer);
-                    return;
-                }
-                if (value is MemberInvite)
-                {
-                    WriteProperty(".tag", "member_invite", writer, enc.StringEncoder.Instance);
-                    MemberInvite.Encoder.EncodeFields((MemberInvite)value, writer);
-                    return;
-                }
-                if (value is MemberJoin)
-                {
-                    WriteProperty(".tag", "member_join", writer, enc.StringEncoder.Instance);
-                    MemberJoin.Encoder.EncodeFields((MemberJoin)value, writer);
-                    return;
-                }
-                if (value is MemberLeave)
-                {
-                    WriteProperty(".tag", "member_leave", writer, enc.StringEncoder.Instance);
-                    MemberLeave.Encoder.EncodeFields((MemberLeave)value, writer);
-                    return;
-                }
-                if (value is MemberRecover)
-                {
-                    WriteProperty(".tag", "member_recover", writer, enc.StringEncoder.Instance);
-                    MemberRecover.Encoder.EncodeFields((MemberRecover)value, writer);
+                    WriteProperty(".tag", "member_change_status", writer, enc.StringEncoder.Instance);
+                    MemberChangeStatus.Encoder.EncodeFields((MemberChangeStatus)value, writer);
                     return;
                 }
                 if (value is MemberSuggest)
                 {
                     WriteProperty(".tag", "member_suggest", writer, enc.StringEncoder.Instance);
                     MemberSuggest.Encoder.EncodeFields((MemberSuggest)value, writer);
-                    return;
-                }
-                if (value is MemberSuspend)
-                {
-                    WriteProperty(".tag", "member_suspend", writer, enc.StringEncoder.Instance);
-                    MemberSuspend.Encoder.EncodeFields((MemberSuspend)value, writer);
-                    return;
-                }
-                if (value is MemberUnsuspend)
-                {
-                    WriteProperty(".tag", "member_unsuspend", writer, enc.StringEncoder.Instance);
-                    MemberUnsuspend.Encoder.EncodeFields((MemberUnsuspend)value, writer);
                     return;
                 }
                 if (value is PaperContentAddMember)
@@ -6739,24 +6874,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "collection_share", writer, enc.StringEncoder.Instance);
                     CollectionShare.Encoder.EncodeFields((CollectionShare)value, writer);
-                    return;
-                }
-                if (value is FileAddComment)
-                {
-                    WriteProperty(".tag", "file_add_comment", writer, enc.StringEncoder.Instance);
-                    FileAddComment.Encoder.EncodeFields((FileAddComment)value, writer);
-                    return;
-                }
-                if (value is FileLikeComment)
-                {
-                    WriteProperty(".tag", "file_like_comment", writer, enc.StringEncoder.Instance);
-                    FileLikeComment.Encoder.EncodeFields((FileLikeComment)value, writer);
-                    return;
-                }
-                if (value is FileUnlikeComment)
-                {
-                    WriteProperty(".tag", "file_unlike_comment", writer, enc.StringEncoder.Instance);
-                    FileUnlikeComment.Encoder.EncodeFields((FileUnlikeComment)value, writer);
                     return;
                 }
                 if (value is NoteAclInviteOnly)
@@ -7131,16 +7248,16 @@ namespace Dropbox.Api.TeamLog
                     ShmodelVisibilityTeamOnly.Encoder.EncodeFields((ShmodelVisibilityTeamOnly)value, writer);
                     return;
                 }
-                if (value is RemoveLogoutUrl)
+                if (value is SsoAddLoginUrl)
                 {
-                    WriteProperty(".tag", "remove_logout_url", writer, enc.StringEncoder.Instance);
-                    RemoveLogoutUrl.Encoder.EncodeFields((RemoveLogoutUrl)value, writer);
+                    WriteProperty(".tag", "sso_add_login_url", writer, enc.StringEncoder.Instance);
+                    SsoAddLoginUrl.Encoder.EncodeFields((SsoAddLoginUrl)value, writer);
                     return;
                 }
-                if (value is RemoveSsoUrl)
+                if (value is SsoAddLogoutUrl)
                 {
-                    WriteProperty(".tag", "remove_sso_url", writer, enc.StringEncoder.Instance);
-                    RemoveSsoUrl.Encoder.EncodeFields((RemoveSsoUrl)value, writer);
+                    WriteProperty(".tag", "sso_add_logout_url", writer, enc.StringEncoder.Instance);
+                    SsoAddLogoutUrl.Encoder.EncodeFields((SsoAddLogoutUrl)value, writer);
                     return;
                 }
                 if (value is SsoChangeCert)
@@ -7165,6 +7282,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "sso_change_saml_identity_mode", writer, enc.StringEncoder.Instance);
                     SsoChangeSamlIdentityMode.Encoder.EncodeFields((SsoChangeSamlIdentityMode)value, writer);
+                    return;
+                }
+                if (value is SsoRemoveLoginUrl)
+                {
+                    WriteProperty(".tag", "sso_remove_login_url", writer, enc.StringEncoder.Instance);
+                    SsoRemoveLoginUrl.Encoder.EncodeFields((SsoRemoveLoginUrl)value, writer);
+                    return;
+                }
+                if (value is SsoRemoveLogoutUrl)
+                {
+                    WriteProperty(".tag", "sso_remove_logout_url", writer, enc.StringEncoder.Instance);
+                    SsoRemoveLogoutUrl.Encoder.EncodeFields((SsoRemoveLogoutUrl)value, writer);
                     return;
                 }
                 if (value is TeamFolderChangeStatus)
@@ -7401,6 +7530,18 @@ namespace Dropbox.Api.TeamLog
                     SmartSyncChangePolicy.Encoder.EncodeFields((SmartSyncChangePolicy)value, writer);
                     return;
                 }
+                if (value is SmartSyncNotOptOut)
+                {
+                    WriteProperty(".tag", "smart_sync_not_opt_out", writer, enc.StringEncoder.Instance);
+                    SmartSyncNotOptOut.Encoder.EncodeFields((SmartSyncNotOptOut)value, writer);
+                    return;
+                }
+                if (value is SmartSyncOptOut)
+                {
+                    WriteProperty(".tag", "smart_sync_opt_out", writer, enc.StringEncoder.Instance);
+                    SmartSyncOptOut.Encoder.EncodeFields((SmartSyncOptOut)value, writer);
+                    return;
+                }
                 if (value is SsoChangePolicy)
                 {
                     WriteProperty(".tag", "sso_change_policy", writer, enc.StringEncoder.Instance);
@@ -7543,6 +7684,8 @@ namespace Dropbox.Api.TeamLog
                         return MemberSpaceLimitsChangeStatus.Decoder.DecodeFields(reader);
                     case "member_transfer_account_contents":
                         return MemberTransferAccountContents.Decoder.DecodeFields(reader);
+                    case "paper_admin_export_start":
+                        return PaperAdminExportStart.Decoder.DecodeFields(reader);
                     case "paper_enabled_users_group_addition":
                         return PaperEnabledUsersGroupAddition.Decoder.DecodeFields(reader);
                     case "paper_enabled_users_group_removal":
@@ -7555,8 +7698,10 @@ namespace Dropbox.Api.TeamLog
                         return PaperExternalViewForbid.Decoder.DecodeFields(reader);
                     case "sf_external_invite_warn":
                         return SfExternalInviteWarn.Decoder.DecodeFields(reader);
-                    case "team_merge":
-                        return TeamMerge.Decoder.DecodeFields(reader);
+                    case "team_merge_from":
+                        return TeamMergeFrom.Decoder.DecodeFields(reader);
+                    case "team_merge_to":
+                        return TeamMergeTo.Decoder.DecodeFields(reader);
                     case "app_link_team":
                         return AppLinkTeam.Decoder.DecodeFields(reader);
                     case "app_link_user":
@@ -7565,6 +7710,20 @@ namespace Dropbox.Api.TeamLog
                         return AppUnlinkTeam.Decoder.DecodeFields(reader);
                     case "app_unlink_user":
                         return AppUnlinkUser.Decoder.DecodeFields(reader);
+                    case "file_add_comment":
+                        return FileAddComment.Decoder.DecodeFields(reader);
+                    case "file_change_comment_subscription":
+                        return FileChangeCommentSubscription.Decoder.DecodeFields(reader);
+                    case "file_delete_comment":
+                        return FileDeleteComment.Decoder.DecodeFields(reader);
+                    case "file_like_comment":
+                        return FileLikeComment.Decoder.DecodeFields(reader);
+                    case "file_resolve_comment":
+                        return FileResolveComment.Decoder.DecodeFields(reader);
+                    case "file_unlike_comment":
+                        return FileUnlikeComment.Decoder.DecodeFields(reader);
+                    case "file_unresolve_comment":
+                        return FileUnresolveComment.Decoder.DecodeFields(reader);
                     case "device_change_ip_desktop":
                         return DeviceChangeIpDesktop.Decoder.DecodeFields(reader);
                     case "device_change_ip_mobile":
@@ -7707,26 +7866,16 @@ namespace Dropbox.Api.TeamLog
                         return SsoLoginFail.Decoder.DecodeFields(reader);
                     case "member_add_name":
                         return MemberAddName.Decoder.DecodeFields(reader);
+                    case "member_change_admin_role":
+                        return MemberChangeAdminRole.Decoder.DecodeFields(reader);
                     case "member_change_email":
                         return MemberChangeEmail.Decoder.DecodeFields(reader);
                     case "member_change_name":
                         return MemberChangeName.Decoder.DecodeFields(reader);
-                    case "member_change_role":
-                        return MemberChangeRole.Decoder.DecodeFields(reader);
-                    case "member_invite":
-                        return MemberInvite.Decoder.DecodeFields(reader);
-                    case "member_join":
-                        return MemberJoin.Decoder.DecodeFields(reader);
-                    case "member_leave":
-                        return MemberLeave.Decoder.DecodeFields(reader);
-                    case "member_recover":
-                        return MemberRecover.Decoder.DecodeFields(reader);
+                    case "member_change_status":
+                        return MemberChangeStatus.Decoder.DecodeFields(reader);
                     case "member_suggest":
                         return MemberSuggest.Decoder.DecodeFields(reader);
-                    case "member_suspend":
-                        return MemberSuspend.Decoder.DecodeFields(reader);
-                    case "member_unsuspend":
-                        return MemberUnsuspend.Decoder.DecodeFields(reader);
                     case "paper_content_add_member":
                         return PaperContentAddMember.Decoder.DecodeFields(reader);
                     case "paper_content_add_to_folder":
@@ -7803,12 +7952,6 @@ namespace Dropbox.Api.TeamLog
                         return TeamActivityCreateReport.Decoder.DecodeFields(reader);
                     case "collection_share":
                         return CollectionShare.Decoder.DecodeFields(reader);
-                    case "file_add_comment":
-                        return FileAddComment.Decoder.DecodeFields(reader);
-                    case "file_like_comment":
-                        return FileLikeComment.Decoder.DecodeFields(reader);
-                    case "file_unlike_comment":
-                        return FileUnlikeComment.Decoder.DecodeFields(reader);
                     case "note_acl_invite_only":
                         return NoteAclInviteOnly.Decoder.DecodeFields(reader);
                     case "note_acl_link":
@@ -7933,10 +8076,10 @@ namespace Dropbox.Api.TeamLog
                         return ShmodelVisibilityPublic.Decoder.DecodeFields(reader);
                     case "shmodel_visibility_team_only":
                         return ShmodelVisibilityTeamOnly.Decoder.DecodeFields(reader);
-                    case "remove_logout_url":
-                        return RemoveLogoutUrl.Decoder.DecodeFields(reader);
-                    case "remove_sso_url":
-                        return RemoveSsoUrl.Decoder.DecodeFields(reader);
+                    case "sso_add_login_url":
+                        return SsoAddLoginUrl.Decoder.DecodeFields(reader);
+                    case "sso_add_logout_url":
+                        return SsoAddLogoutUrl.Decoder.DecodeFields(reader);
                     case "sso_change_cert":
                         return SsoChangeCert.Decoder.DecodeFields(reader);
                     case "sso_change_login_url":
@@ -7945,6 +8088,10 @@ namespace Dropbox.Api.TeamLog
                         return SsoChangeLogoutUrl.Decoder.DecodeFields(reader);
                     case "sso_change_saml_identity_mode":
                         return SsoChangeSamlIdentityMode.Decoder.DecodeFields(reader);
+                    case "sso_remove_login_url":
+                        return SsoRemoveLoginUrl.Decoder.DecodeFields(reader);
+                    case "sso_remove_logout_url":
+                        return SsoRemoveLogoutUrl.Decoder.DecodeFields(reader);
                     case "team_folder_change_status":
                         return TeamFolderChangeStatus.Decoder.DecodeFields(reader);
                     case "team_folder_create":
@@ -8023,6 +8170,10 @@ namespace Dropbox.Api.TeamLog
                         return SharingChangeMemberPolicy.Decoder.DecodeFields(reader);
                     case "smart_sync_change_policy":
                         return SmartSyncChangePolicy.Decoder.DecodeFields(reader);
+                    case "smart_sync_not_opt_out":
+                        return SmartSyncNotOptOut.Decoder.DecodeFields(reader);
+                    case "smart_sync_opt_out":
+                        return SmartSyncOptOut.Decoder.DecodeFields(reader);
                     case "sso_change_policy":
                         return SsoChangePolicy.Decoder.DecodeFields(reader);
                     case "tfa_change_policy":
@@ -8344,6 +8495,77 @@ namespace Dropbox.Api.TeamLog
                 protected override MemberTransferAccountContents Create()
                 {
                     return MemberTransferAccountContents.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Exported all Paper documents in the team.</para>
+        /// </summary>
+        public sealed class PaperAdminExportStart : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperAdminExportStart> Encoder = new PaperAdminExportStartEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperAdminExportStart> Decoder = new PaperAdminExportStartDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperAdminExportStart" />
+            /// class.</para>
+            /// </summary>
+            private PaperAdminExportStart()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PaperAdminExportStart</para>
+            /// </summary>
+            public static readonly PaperAdminExportStart Instance = new PaperAdminExportStart();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperAdminExportStart" />.</para>
+            /// </summary>
+            private class PaperAdminExportStartEncoder : enc.StructEncoder<PaperAdminExportStart>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperAdminExportStart value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperAdminExportStart" />.</para>
+            /// </summary>
+            private class PaperAdminExportStartDecoder : enc.StructDecoder<PaperAdminExportStart>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PaperAdminExportStart"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperAdminExportStart Create()
+                {
+                    return PaperAdminExportStart.Instance;
                 }
 
             }
@@ -8786,47 +9008,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Merged the team into another team.</para>
+        /// <para>Merged another team into this team.</para>
         /// </summary>
-        public sealed class TeamMerge : EventType
+        public sealed class TeamMergeFrom : EventType
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<TeamMerge> Encoder = new TeamMergeEncoder();
+            internal static enc.StructEncoder<TeamMergeFrom> Encoder = new TeamMergeFromEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<TeamMerge> Decoder = new TeamMergeDecoder();
+            internal static enc.StructDecoder<TeamMergeFrom> Decoder = new TeamMergeFromDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="TeamMerge" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="TeamMergeFrom" />
+            /// class.</para>
             /// </summary>
-            private TeamMerge()
+            private TeamMergeFrom()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of TeamMerge</para>
+            /// <para>A singleton instance of TeamMergeFrom</para>
             /// </summary>
-            public static readonly TeamMerge Instance = new TeamMerge();
+            public static readonly TeamMergeFrom Instance = new TeamMergeFrom();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="TeamMerge" />.</para>
+            /// <para>Encoder for  <see cref="TeamMergeFrom" />.</para>
             /// </summary>
-            private class TeamMergeEncoder : enc.StructEncoder<TeamMerge>
+            private class TeamMergeFromEncoder : enc.StructEncoder<TeamMergeFrom>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(TeamMerge value, enc.IJsonWriter writer)
+                public override void EncodeFields(TeamMergeFrom value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -8836,17 +9059,87 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="TeamMerge" />.</para>
+            /// <para>Decoder for  <see cref="TeamMergeFrom" />.</para>
             /// </summary>
-            private class TeamMergeDecoder : enc.StructDecoder<TeamMerge>
+            private class TeamMergeFromDecoder : enc.StructDecoder<TeamMergeFrom>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="TeamMerge" />.</para>
+                /// <para>Create a new instance of type <see cref="TeamMergeFrom" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override TeamMerge Create()
+                protected override TeamMergeFrom Create()
                 {
-                    return TeamMerge.Instance;
+                    return TeamMergeFrom.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Merged this team into another team.</para>
+        /// </summary>
+        public sealed class TeamMergeTo : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamMergeTo> Encoder = new TeamMergeToEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamMergeTo> Decoder = new TeamMergeToDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamMergeTo" />
+            /// class.</para>
+            /// </summary>
+            private TeamMergeTo()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamMergeTo</para>
+            /// </summary>
+            public static readonly TeamMergeTo Instance = new TeamMergeTo();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamMergeTo" />.</para>
+            /// </summary>
+            private class TeamMergeToEncoder : enc.StructEncoder<TeamMergeTo>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamMergeTo value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamMergeTo" />.</para>
+            /// </summary>
+            private class TeamMergeToDecoder : enc.StructDecoder<TeamMergeTo>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamMergeTo" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamMergeTo Create()
+                {
+                    return TeamMergeTo.Instance;
                 }
 
             }
@@ -9127,6 +9420,503 @@ namespace Dropbox.Api.TeamLog
                 protected override AppUnlinkUser Create()
                 {
                     return AppUnlinkUser.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Added a file comment.</para>
+        /// </summary>
+        public sealed class FileAddComment : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileAddComment> Encoder = new FileAddCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileAddComment> Decoder = new FileAddCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileAddComment" />
+            /// class.</para>
+            /// </summary>
+            private FileAddComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileAddComment</para>
+            /// </summary>
+            public static readonly FileAddComment Instance = new FileAddComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileAddComment" />.</para>
+            /// </summary>
+            private class FileAddCommentEncoder : enc.StructEncoder<FileAddComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileAddComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileAddComment" />.</para>
+            /// </summary>
+            private class FileAddCommentDecoder : enc.StructDecoder<FileAddComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileAddComment" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileAddComment Create()
+                {
+                    return FileAddComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Subscribed to or unsubscribed from comment notifications for file.</para>
+        /// </summary>
+        public sealed class FileChangeCommentSubscription : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileChangeCommentSubscription> Encoder = new FileChangeCommentSubscriptionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileChangeCommentSubscription> Decoder = new FileChangeCommentSubscriptionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FileChangeCommentSubscription" /> class.</para>
+            /// </summary>
+            private FileChangeCommentSubscription()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileChangeCommentSubscription</para>
+            /// </summary>
+            public static readonly FileChangeCommentSubscription Instance = new FileChangeCommentSubscription();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileChangeCommentSubscription" />.</para>
+            /// </summary>
+            private class FileChangeCommentSubscriptionEncoder : enc.StructEncoder<FileChangeCommentSubscription>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileChangeCommentSubscription value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileChangeCommentSubscription" />.</para>
+            /// </summary>
+            private class FileChangeCommentSubscriptionDecoder : enc.StructDecoder<FileChangeCommentSubscription>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="FileChangeCommentSubscription" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileChangeCommentSubscription Create()
+                {
+                    return FileChangeCommentSubscription.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Deleted a file comment.</para>
+        /// </summary>
+        public sealed class FileDeleteComment : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileDeleteComment> Encoder = new FileDeleteCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileDeleteComment> Decoder = new FileDeleteCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileDeleteComment" />
+            /// class.</para>
+            /// </summary>
+            private FileDeleteComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileDeleteComment</para>
+            /// </summary>
+            public static readonly FileDeleteComment Instance = new FileDeleteComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileDeleteComment" />.</para>
+            /// </summary>
+            private class FileDeleteCommentEncoder : enc.StructEncoder<FileDeleteComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileDeleteComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileDeleteComment" />.</para>
+            /// </summary>
+            private class FileDeleteCommentDecoder : enc.StructDecoder<FileDeleteComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileDeleteComment"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileDeleteComment Create()
+                {
+                    return FileDeleteComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Liked a file comment. This event is deprecated and will not be logged going
+        /// forward as the associated product functionality no longer exists.</para>
+        /// </summary>
+        public sealed class FileLikeComment : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileLikeComment> Encoder = new FileLikeCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileLikeComment> Decoder = new FileLikeCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileLikeComment" />
+            /// class.</para>
+            /// </summary>
+            private FileLikeComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileLikeComment</para>
+            /// </summary>
+            public static readonly FileLikeComment Instance = new FileLikeComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileLikeComment" />.</para>
+            /// </summary>
+            private class FileLikeCommentEncoder : enc.StructEncoder<FileLikeComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileLikeComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileLikeComment" />.</para>
+            /// </summary>
+            private class FileLikeCommentDecoder : enc.StructDecoder<FileLikeComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileLikeComment" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileLikeComment Create()
+                {
+                    return FileLikeComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Resolved a file comment.</para>
+        /// </summary>
+        public sealed class FileResolveComment : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileResolveComment> Encoder = new FileResolveCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileResolveComment> Decoder = new FileResolveCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileResolveComment" />
+            /// class.</para>
+            /// </summary>
+            private FileResolveComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileResolveComment</para>
+            /// </summary>
+            public static readonly FileResolveComment Instance = new FileResolveComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileResolveComment" />.</para>
+            /// </summary>
+            private class FileResolveCommentEncoder : enc.StructEncoder<FileResolveComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileResolveComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileResolveComment" />.</para>
+            /// </summary>
+            private class FileResolveCommentDecoder : enc.StructDecoder<FileResolveComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileResolveComment"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileResolveComment Create()
+                {
+                    return FileResolveComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Unliked a file comment. This event is deprecated and will not be logged going
+        /// forward as the associated product functionality no longer exists.</para>
+        /// </summary>
+        public sealed class FileUnlikeComment : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileUnlikeComment> Encoder = new FileUnlikeCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileUnlikeComment> Decoder = new FileUnlikeCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileUnlikeComment" />
+            /// class.</para>
+            /// </summary>
+            private FileUnlikeComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileUnlikeComment</para>
+            /// </summary>
+            public static readonly FileUnlikeComment Instance = new FileUnlikeComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileUnlikeComment" />.</para>
+            /// </summary>
+            private class FileUnlikeCommentEncoder : enc.StructEncoder<FileUnlikeComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileUnlikeComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileUnlikeComment" />.</para>
+            /// </summary>
+            private class FileUnlikeCommentDecoder : enc.StructDecoder<FileUnlikeComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileUnlikeComment"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileUnlikeComment Create()
+                {
+                    return FileUnlikeComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Unresolved a file comment.</para>
+        /// </summary>
+        public sealed class FileUnresolveComment : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileUnresolveComment> Encoder = new FileUnresolveCommentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileUnresolveComment> Decoder = new FileUnresolveCommentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileUnresolveComment" />
+            /// class.</para>
+            /// </summary>
+            private FileUnresolveComment()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileUnresolveComment</para>
+            /// </summary>
+            public static readonly FileUnresolveComment Instance = new FileUnresolveComment();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileUnresolveComment" />.</para>
+            /// </summary>
+            private class FileUnresolveCommentEncoder : enc.StructEncoder<FileUnresolveComment>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileUnresolveComment value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileUnresolveComment" />.</para>
+            /// </summary>
+            private class FileUnresolveCommentDecoder : enc.StructDecoder<FileUnresolveComment>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileUnresolveComment"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileUnresolveComment Create()
+                {
+                    return FileUnresolveComment.Instance;
                 }
 
             }
@@ -14159,6 +14949,77 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Change the admin role belonging to team member.</para>
+        /// </summary>
+        public sealed class MemberChangeAdminRole : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberChangeAdminRole> Encoder = new MemberChangeAdminRoleEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberChangeAdminRole> Decoder = new MemberChangeAdminRoleDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberChangeAdminRole" />
+            /// class.</para>
+            /// </summary>
+            private MemberChangeAdminRole()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MemberChangeAdminRole</para>
+            /// </summary>
+            public static readonly MemberChangeAdminRole Instance = new MemberChangeAdminRole();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberChangeAdminRole" />.</para>
+            /// </summary>
+            private class MemberChangeAdminRoleEncoder : enc.StructEncoder<MemberChangeAdminRole>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberChangeAdminRole value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberChangeAdminRole" />.</para>
+            /// </summary>
+            private class MemberChangeAdminRoleDecoder : enc.StructDecoder<MemberChangeAdminRole>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MemberChangeAdminRole"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberChangeAdminRole Create()
+                {
+                    return MemberChangeAdminRole.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Changed team member email address.</para>
         /// </summary>
         public sealed class MemberChangeEmail : EventType
@@ -14300,48 +15161,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Change the admin permissions belonging to team member.</para>
+        /// <para>Changed the membership status of a team member.</para>
         /// </summary>
-        public sealed class MemberChangeRole : EventType
+        public sealed class MemberChangeStatus : EventType
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<MemberChangeRole> Encoder = new MemberChangeRoleEncoder();
+            internal static enc.StructEncoder<MemberChangeStatus> Encoder = new MemberChangeStatusEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<MemberChangeRole> Decoder = new MemberChangeRoleDecoder();
+            internal static enc.StructDecoder<MemberChangeStatus> Decoder = new MemberChangeStatusDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberChangeRole" />
+            /// <para>Initializes a new instance of the <see cref="MemberChangeStatus" />
             /// class.</para>
             /// </summary>
-            private MemberChangeRole()
+            private MemberChangeStatus()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of MemberChangeRole</para>
+            /// <para>A singleton instance of MemberChangeStatus</para>
             /// </summary>
-            public static readonly MemberChangeRole Instance = new MemberChangeRole();
+            public static readonly MemberChangeStatus Instance = new MemberChangeStatus();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="MemberChangeRole" />.</para>
+            /// <para>Encoder for  <see cref="MemberChangeStatus" />.</para>
             /// </summary>
-            private class MemberChangeRoleEncoder : enc.StructEncoder<MemberChangeRole>
+            private class MemberChangeStatusEncoder : enc.StructEncoder<MemberChangeStatus>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberChangeRole value, enc.IJsonWriter writer)
+                public override void EncodeFields(MemberChangeStatus value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -14351,296 +15212,18 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="MemberChangeRole" />.</para>
+            /// <para>Decoder for  <see cref="MemberChangeStatus" />.</para>
             /// </summary>
-            private class MemberChangeRoleDecoder : enc.StructDecoder<MemberChangeRole>
+            private class MemberChangeStatusDecoder : enc.StructDecoder<MemberChangeStatus>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberChangeRole" />.</para>
+                /// <para>Create a new instance of type <see cref="MemberChangeStatus"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override MemberChangeRole Create()
+                protected override MemberChangeStatus Create()
                 {
-                    return MemberChangeRole.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Invited a user to join the team.</para>
-        /// </summary>
-        public sealed class MemberInvite : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberInvite> Encoder = new MemberInviteEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberInvite> Decoder = new MemberInviteDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberInvite" />
-            /// class.</para>
-            /// </summary>
-            private MemberInvite()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberInvite</para>
-            /// </summary>
-            public static readonly MemberInvite Instance = new MemberInvite();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberInvite" />.</para>
-            /// </summary>
-            private class MemberInviteEncoder : enc.StructEncoder<MemberInvite>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberInvite value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberInvite" />.</para>
-            /// </summary>
-            private class MemberInviteDecoder : enc.StructDecoder<MemberInvite>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberInvite" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberInvite Create()
-                {
-                    return MemberInvite.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Joined the team.</para>
-        /// </summary>
-        public sealed class MemberJoin : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberJoin> Encoder = new MemberJoinEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberJoin> Decoder = new MemberJoinDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberJoin" /> class.</para>
-            /// </summary>
-            private MemberJoin()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberJoin</para>
-            /// </summary>
-            public static readonly MemberJoin Instance = new MemberJoin();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberJoin" />.</para>
-            /// </summary>
-            private class MemberJoinEncoder : enc.StructEncoder<MemberJoin>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberJoin value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberJoin" />.</para>
-            /// </summary>
-            private class MemberJoinDecoder : enc.StructDecoder<MemberJoin>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberJoin" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberJoin Create()
-                {
-                    return MemberJoin.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Removed a team member.</para>
-        /// </summary>
-        public sealed class MemberLeave : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberLeave> Encoder = new MemberLeaveEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberLeave> Decoder = new MemberLeaveDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberLeave" />
-            /// class.</para>
-            /// </summary>
-            private MemberLeave()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberLeave</para>
-            /// </summary>
-            public static readonly MemberLeave Instance = new MemberLeave();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberLeave" />.</para>
-            /// </summary>
-            private class MemberLeaveEncoder : enc.StructEncoder<MemberLeave>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberLeave value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberLeave" />.</para>
-            /// </summary>
-            private class MemberLeaveDecoder : enc.StructDecoder<MemberLeave>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberLeave" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberLeave Create()
-                {
-                    return MemberLeave.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Recovered a removed member.</para>
-        /// </summary>
-        public sealed class MemberRecover : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberRecover> Encoder = new MemberRecoverEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberRecover> Decoder = new MemberRecoverDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberRecover" />
-            /// class.</para>
-            /// </summary>
-            private MemberRecover()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberRecover</para>
-            /// </summary>
-            public static readonly MemberRecover Instance = new MemberRecover();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberRecover" />.</para>
-            /// </summary>
-            private class MemberRecoverEncoder : enc.StructEncoder<MemberRecover>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberRecover value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberRecover" />.</para>
-            /// </summary>
-            private class MemberRecoverDecoder : enc.StructDecoder<MemberRecover>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberRecover" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberRecover Create()
-                {
-                    return MemberRecover.Instance;
+                    return MemberChangeStatus.Instance;
                 }
 
             }
@@ -14711,146 +15294,6 @@ namespace Dropbox.Api.TeamLog
                 protected override MemberSuggest Create()
                 {
                     return MemberSuggest.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Suspended a team member.</para>
-        /// </summary>
-        public sealed class MemberSuspend : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberSuspend> Encoder = new MemberSuspendEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberSuspend> Decoder = new MemberSuspendDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberSuspend" />
-            /// class.</para>
-            /// </summary>
-            private MemberSuspend()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberSuspend</para>
-            /// </summary>
-            public static readonly MemberSuspend Instance = new MemberSuspend();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberSuspend" />.</para>
-            /// </summary>
-            private class MemberSuspendEncoder : enc.StructEncoder<MemberSuspend>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberSuspend value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberSuspend" />.</para>
-            /// </summary>
-            private class MemberSuspendDecoder : enc.StructDecoder<MemberSuspend>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberSuspend" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberSuspend Create()
-                {
-                    return MemberSuspend.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Unsuspended a team member.</para>
-        /// </summary>
-        public sealed class MemberUnsuspend : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberUnsuspend> Encoder = new MemberUnsuspendEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberUnsuspend> Decoder = new MemberUnsuspendDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberUnsuspend" />
-            /// class.</para>
-            /// </summary>
-            private MemberUnsuspend()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberUnsuspend</para>
-            /// </summary>
-            public static readonly MemberUnsuspend Instance = new MemberUnsuspend();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberUnsuspend" />.</para>
-            /// </summary>
-            private class MemberUnsuspendEncoder : enc.StructEncoder<MemberUnsuspend>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberUnsuspend value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberUnsuspend" />.</para>
-            /// </summary>
-            private class MemberUnsuspendDecoder : enc.StructDecoder<MemberUnsuspend>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberUnsuspend" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberUnsuspend Create()
-                {
-                    return MemberUnsuspend.Instance;
                 }
 
             }
@@ -17546,219 +17989,6 @@ namespace Dropbox.Api.TeamLog
                 protected override CollectionShare Create()
                 {
                     return CollectionShare.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Added a file comment.</para>
-        /// </summary>
-        public sealed class FileAddComment : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<FileAddComment> Encoder = new FileAddCommentEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<FileAddComment> Decoder = new FileAddCommentDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="FileAddComment" />
-            /// class.</para>
-            /// </summary>
-            private FileAddComment()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of FileAddComment</para>
-            /// </summary>
-            public static readonly FileAddComment Instance = new FileAddComment();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="FileAddComment" />.</para>
-            /// </summary>
-            private class FileAddCommentEncoder : enc.StructEncoder<FileAddComment>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(FileAddComment value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="FileAddComment" />.</para>
-            /// </summary>
-            private class FileAddCommentDecoder : enc.StructDecoder<FileAddComment>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="FileAddComment" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override FileAddComment Create()
-                {
-                    return FileAddComment.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Liked a file comment. This event is deprecated and will not be logged going
-        /// forward as the associated product functionality no longer exists.</para>
-        /// </summary>
-        public sealed class FileLikeComment : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<FileLikeComment> Encoder = new FileLikeCommentEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<FileLikeComment> Decoder = new FileLikeCommentDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="FileLikeComment" />
-            /// class.</para>
-            /// </summary>
-            private FileLikeComment()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of FileLikeComment</para>
-            /// </summary>
-            public static readonly FileLikeComment Instance = new FileLikeComment();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="FileLikeComment" />.</para>
-            /// </summary>
-            private class FileLikeCommentEncoder : enc.StructEncoder<FileLikeComment>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(FileLikeComment value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="FileLikeComment" />.</para>
-            /// </summary>
-            private class FileLikeCommentDecoder : enc.StructDecoder<FileLikeComment>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="FileLikeComment" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override FileLikeComment Create()
-                {
-                    return FileLikeComment.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Unliked a file comment. This event is deprecated and will not be logged going
-        /// forward as the associated product functionality no longer exists.</para>
-        /// </summary>
-        public sealed class FileUnlikeComment : EventType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<FileUnlikeComment> Encoder = new FileUnlikeCommentEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<FileUnlikeComment> Decoder = new FileUnlikeCommentDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="FileUnlikeComment" />
-            /// class.</para>
-            /// </summary>
-            private FileUnlikeComment()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of FileUnlikeComment</para>
-            /// </summary>
-            public static readonly FileUnlikeComment Instance = new FileUnlikeComment();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="FileUnlikeComment" />.</para>
-            /// </summary>
-            private class FileUnlikeCommentEncoder : enc.StructEncoder<FileUnlikeComment>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(FileUnlikeComment value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="FileUnlikeComment" />.</para>
-            /// </summary>
-            private class FileUnlikeCommentDecoder : enc.StructDecoder<FileUnlikeComment>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="FileUnlikeComment"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override FileUnlikeComment Create()
-                {
-                    return FileUnlikeComment.Instance;
                 }
 
             }
@@ -22181,50 +22411,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Removed single sign-on logout URL. This event is deprecated and will not be
-        /// logged going forward as the associated product functionality no longer
-        /// exists.</para>
+        /// <para>Added sign-in URL for SSO.</para>
         /// </summary>
-        public sealed class RemoveLogoutUrl : EventType
+        public sealed class SsoAddLoginUrl : EventType
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<RemoveLogoutUrl> Encoder = new RemoveLogoutUrlEncoder();
+            internal static enc.StructEncoder<SsoAddLoginUrl> Encoder = new SsoAddLoginUrlEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<RemoveLogoutUrl> Decoder = new RemoveLogoutUrlDecoder();
+            internal static enc.StructDecoder<SsoAddLoginUrl> Decoder = new SsoAddLoginUrlDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="RemoveLogoutUrl" />
+            /// <para>Initializes a new instance of the <see cref="SsoAddLoginUrl" />
             /// class.</para>
             /// </summary>
-            private RemoveLogoutUrl()
+            private SsoAddLoginUrl()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of RemoveLogoutUrl</para>
+            /// <para>A singleton instance of SsoAddLoginUrl</para>
             /// </summary>
-            public static readonly RemoveLogoutUrl Instance = new RemoveLogoutUrl();
+            public static readonly SsoAddLoginUrl Instance = new SsoAddLoginUrl();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="RemoveLogoutUrl" />.</para>
+            /// <para>Encoder for  <see cref="SsoAddLoginUrl" />.</para>
             /// </summary>
-            private class RemoveLogoutUrlEncoder : enc.StructEncoder<RemoveLogoutUrl>
+            private class SsoAddLoginUrlEncoder : enc.StructEncoder<SsoAddLoginUrl>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(RemoveLogoutUrl value, enc.IJsonWriter writer)
+                public override void EncodeFields(SsoAddLoginUrl value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -22234,17 +22462,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="RemoveLogoutUrl" />.</para>
+            /// <para>Decoder for  <see cref="SsoAddLoginUrl" />.</para>
             /// </summary>
-            private class RemoveLogoutUrlDecoder : enc.StructDecoder<RemoveLogoutUrl>
+            private class SsoAddLoginUrlDecoder : enc.StructDecoder<SsoAddLoginUrl>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="RemoveLogoutUrl" />.</para>
+                /// <para>Create a new instance of type <see cref="SsoAddLoginUrl" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override RemoveLogoutUrl Create()
+                protected override SsoAddLoginUrl Create()
                 {
-                    return RemoveLogoutUrl.Instance;
+                    return SsoAddLoginUrl.Instance;
                 }
 
             }
@@ -22253,50 +22481,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Changed the sign-out URL for SSO. This event is deprecated and will not be
-        /// logged going forward as the associated product functionality no longer
-        /// exists.</para>
+        /// <para>Added sign-out URL for SSO.</para>
         /// </summary>
-        public sealed class RemoveSsoUrl : EventType
+        public sealed class SsoAddLogoutUrl : EventType
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<RemoveSsoUrl> Encoder = new RemoveSsoUrlEncoder();
+            internal static enc.StructEncoder<SsoAddLogoutUrl> Encoder = new SsoAddLogoutUrlEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<RemoveSsoUrl> Decoder = new RemoveSsoUrlDecoder();
+            internal static enc.StructDecoder<SsoAddLogoutUrl> Decoder = new SsoAddLogoutUrlDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="RemoveSsoUrl" />
+            /// <para>Initializes a new instance of the <see cref="SsoAddLogoutUrl" />
             /// class.</para>
             /// </summary>
-            private RemoveSsoUrl()
+            private SsoAddLogoutUrl()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of RemoveSsoUrl</para>
+            /// <para>A singleton instance of SsoAddLogoutUrl</para>
             /// </summary>
-            public static readonly RemoveSsoUrl Instance = new RemoveSsoUrl();
+            public static readonly SsoAddLogoutUrl Instance = new SsoAddLogoutUrl();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="RemoveSsoUrl" />.</para>
+            /// <para>Encoder for  <see cref="SsoAddLogoutUrl" />.</para>
             /// </summary>
-            private class RemoveSsoUrlEncoder : enc.StructEncoder<RemoveSsoUrl>
+            private class SsoAddLogoutUrlEncoder : enc.StructEncoder<SsoAddLogoutUrl>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(RemoveSsoUrl value, enc.IJsonWriter writer)
+                public override void EncodeFields(SsoAddLogoutUrl value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -22306,17 +22532,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="RemoveSsoUrl" />.</para>
+            /// <para>Decoder for  <see cref="SsoAddLogoutUrl" />.</para>
             /// </summary>
-            private class RemoveSsoUrlDecoder : enc.StructDecoder<RemoveSsoUrl>
+            private class SsoAddLogoutUrlDecoder : enc.StructDecoder<SsoAddLogoutUrl>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="RemoveSsoUrl" />.</para>
+                /// <para>Create a new instance of type <see cref="SsoAddLogoutUrl" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override RemoveSsoUrl Create()
+                protected override SsoAddLogoutUrl Create()
                 {
-                    return RemoveSsoUrl.Instance;
+                    return SsoAddLogoutUrl.Instance;
                 }
 
             }
@@ -22600,6 +22826,148 @@ namespace Dropbox.Api.TeamLog
                 protected override SsoChangeSamlIdentityMode Create()
                 {
                     return SsoChangeSamlIdentityMode.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Removed the sign-in URL for SSO.</para>
+        /// </summary>
+        public sealed class SsoRemoveLoginUrl : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SsoRemoveLoginUrl> Encoder = new SsoRemoveLoginUrlEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SsoRemoveLoginUrl> Decoder = new SsoRemoveLoginUrlDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SsoRemoveLoginUrl" />
+            /// class.</para>
+            /// </summary>
+            private SsoRemoveLoginUrl()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SsoRemoveLoginUrl</para>
+            /// </summary>
+            public static readonly SsoRemoveLoginUrl Instance = new SsoRemoveLoginUrl();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SsoRemoveLoginUrl" />.</para>
+            /// </summary>
+            private class SsoRemoveLoginUrlEncoder : enc.StructEncoder<SsoRemoveLoginUrl>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SsoRemoveLoginUrl value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SsoRemoveLoginUrl" />.</para>
+            /// </summary>
+            private class SsoRemoveLoginUrlDecoder : enc.StructDecoder<SsoRemoveLoginUrl>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SsoRemoveLoginUrl"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SsoRemoveLoginUrl Create()
+                {
+                    return SsoRemoveLoginUrl.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Removed single sign-on logout URL.</para>
+        /// </summary>
+        public sealed class SsoRemoveLogoutUrl : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SsoRemoveLogoutUrl> Encoder = new SsoRemoveLogoutUrlEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SsoRemoveLogoutUrl> Decoder = new SsoRemoveLogoutUrlDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SsoRemoveLogoutUrl" />
+            /// class.</para>
+            /// </summary>
+            private SsoRemoveLogoutUrl()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SsoRemoveLogoutUrl</para>
+            /// </summary>
+            public static readonly SsoRemoveLogoutUrl Instance = new SsoRemoveLogoutUrl();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SsoRemoveLogoutUrl" />.</para>
+            /// </summary>
+            private class SsoRemoveLogoutUrlEncoder : enc.StructEncoder<SsoRemoveLogoutUrl>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SsoRemoveLogoutUrl value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SsoRemoveLogoutUrl" />.</para>
+            /// </summary>
+            private class SsoRemoveLogoutUrlDecoder : enc.StructDecoder<SsoRemoveLogoutUrl>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SsoRemoveLogoutUrl"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SsoRemoveLogoutUrl Create()
+                {
+                    return SsoRemoveLogoutUrl.Instance;
                 }
 
             }
@@ -23466,7 +23834,7 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Changed the action taken when a team member is already over the limits (e.g
-        /// when they join the team, an admin lowers limits, etc.).</para>
+        /// when they join the team, an admin lowers limits, etc).</para>
         /// </summary>
         public sealed class DeviceApprovalsChangeOverageAction : EventType
         {
@@ -25394,6 +25762,147 @@ namespace Dropbox.Api.TeamLog
                 protected override SmartSyncChangePolicy Create()
                 {
                     return SmartSyncChangePolicy.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Opted team into Smart Sync.</para>
+        /// </summary>
+        public sealed class SmartSyncNotOptOut : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SmartSyncNotOptOut> Encoder = new SmartSyncNotOptOutEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SmartSyncNotOptOut> Decoder = new SmartSyncNotOptOutDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SmartSyncNotOptOut" />
+            /// class.</para>
+            /// </summary>
+            private SmartSyncNotOptOut()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SmartSyncNotOptOut</para>
+            /// </summary>
+            public static readonly SmartSyncNotOptOut Instance = new SmartSyncNotOptOut();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SmartSyncNotOptOut" />.</para>
+            /// </summary>
+            private class SmartSyncNotOptOutEncoder : enc.StructEncoder<SmartSyncNotOptOut>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SmartSyncNotOptOut value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SmartSyncNotOptOut" />.</para>
+            /// </summary>
+            private class SmartSyncNotOptOutDecoder : enc.StructDecoder<SmartSyncNotOptOut>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SmartSyncNotOptOut"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SmartSyncNotOptOut Create()
+                {
+                    return SmartSyncNotOptOut.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Opted team out of Smart Sync.</para>
+        /// </summary>
+        public sealed class SmartSyncOptOut : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SmartSyncOptOut> Encoder = new SmartSyncOptOutEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SmartSyncOptOut> Decoder = new SmartSyncOptOutDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SmartSyncOptOut" />
+            /// class.</para>
+            /// </summary>
+            private SmartSyncOptOut()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SmartSyncOptOut</para>
+            /// </summary>
+            public static readonly SmartSyncOptOut Instance = new SmartSyncOptOut();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SmartSyncOptOut" />.</para>
+            /// </summary>
+            private class SmartSyncOptOutEncoder : enc.StructEncoder<SmartSyncOptOut>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SmartSyncOptOut value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SmartSyncOptOut" />.</para>
+            /// </summary>
+            private class SmartSyncOptOutDecoder : enc.StructDecoder<SmartSyncOptOut>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SmartSyncOptOut" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SmartSyncOptOut Create()
+                {
+                    return SmartSyncOptOut.Instance;
                 }
 
             }

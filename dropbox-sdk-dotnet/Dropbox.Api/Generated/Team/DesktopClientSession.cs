@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Information about linked Dropbox desktop client sessions</para>
+    /// <para>Information about linked Dropbox desktop client sessions.</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Team.DeviceSession" />
     public class DesktopClientSession : DeviceSession
@@ -32,19 +32,19 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="DesktopClientSession" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
-        /// <param name="hostName">Name of the hosting desktop</param>
-        /// <param name="clientType">The Dropbox desktop client type</param>
-        /// <param name="clientVersion">The Dropbox client version</param>
-        /// <param name="platform">Information on the hosting platform</param>
+        /// <param name="sessionId">The session id.</param>
+        /// <param name="hostName">Name of the hosting desktop.</param>
+        /// <param name="clientType">The Dropbox desktop client type.</param>
+        /// <param name="clientVersion">The Dropbox client version.</param>
+        /// <param name="platform">Information on the hosting platform.</param>
         /// <param name="isDeleteOnUnlinkSupported">Whether it's possible to delete all of the
-        /// account files upon unlinking</param>
+        /// account files upon unlinking.</param>
         /// <param name="ipAddress">The IP address of the last activity from this
-        /// session</param>
+        /// session.</param>
         /// <param name="country">The country from which the last activity from this session
-        /// was made</param>
-        /// <param name="created">The time this session was created</param>
-        /// <param name="updated">The time of the last activity from this session</param>
+        /// was made.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
         public DesktopClientSession(string sessionId,
                                     string hostName,
                                     DesktopPlatform clientType,
@@ -96,28 +96,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Name of the hosting desktop</para>
+        /// <para>Name of the hosting desktop.</para>
         /// </summary>
         public string HostName { get; protected set; }
 
         /// <summary>
-        /// <para>The Dropbox desktop client type</para>
+        /// <para>The Dropbox desktop client type.</para>
         /// </summary>
         public DesktopPlatform ClientType { get; protected set; }
 
         /// <summary>
-        /// <para>The Dropbox client version</para>
+        /// <para>The Dropbox client version.</para>
         /// </summary>
         public string ClientVersion { get; protected set; }
 
         /// <summary>
-        /// <para>Information on the hosting platform</para>
+        /// <para>Information on the hosting platform.</para>
         /// </summary>
         public string Platform { get; protected set; }
 
         /// <summary>
         /// <para>Whether it's possible to delete all of the account files upon
-        /// unlinking</para>
+        /// unlinking.</para>
         /// </summary>
         public bool IsDeleteOnUnlinkSupported { get; protected set; }
 

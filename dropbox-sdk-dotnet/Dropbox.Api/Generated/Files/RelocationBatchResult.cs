@@ -13,7 +13,8 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The relocation batch result object</para>
     /// </summary>
-    public class RelocationBatchResult
+    /// <seealso cref="Global::Dropbox.Api.Files.FileOpsResult" />
+    public class RelocationBatchResult : FileOpsResult
     {
         #pragma warning disable 108
 
@@ -32,7 +33,7 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="entries">The entries</param>
-        public RelocationBatchResult(col.IEnumerable<RelocationResult> entries)
+        public RelocationBatchResult(col.IEnumerable<RelocationBatchResultData> entries)
         {
             var entriesList = enc.Util.ToList(entries);
 
@@ -58,7 +59,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Gets the entries of the relocation batch result</para>
         /// </summary>
-        public col.IList<RelocationResult> Entries { get; protected set; }
+        public col.IList<RelocationBatchResultData> Entries { get; protected set; }
 
         #region Encoder class
 
@@ -74,7 +75,7 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RelocationBatchResult value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.RelocationResult.Encoder);
+                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.RelocationBatchResultData.Encoder);
             }
         }
 
@@ -109,7 +110,7 @@ namespace Dropbox.Api.Files
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList<RelocationResult>(reader, global::Dropbox.Api.Files.RelocationResult.Decoder);
+                        value.Entries = ReadList<RelocationBatchResultData>(reader, global::Dropbox.Api.Files.RelocationBatchResultData.Decoder);
                         break;
                     default:
                         reader.Skip();

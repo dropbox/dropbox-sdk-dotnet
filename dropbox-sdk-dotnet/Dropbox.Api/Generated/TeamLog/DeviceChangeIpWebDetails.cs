@@ -32,7 +32,10 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="userAgent">Web browser name.</param>
-        public DeviceChangeIpWebDetails(string userAgent)
+        /// <param name="deviceInfo">Device information. Might be missing due to historical
+        /// data gap.</param>
+        public DeviceChangeIpWebDetails(string userAgent,
+                                        DeviceLogInfo deviceInfo = null)
         {
             if (userAgent == null)
             {
@@ -40,6 +43,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.UserAgent = userAgent;
+            this.DeviceInfo = deviceInfo;
         }
 
         /// <summary>
@@ -58,6 +62,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string UserAgent { get; protected set; }
 
+        /// <summary>
+        /// <para>Device information. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public DeviceLogInfo DeviceInfo { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,6 +82,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(DeviceChangeIpWebDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("user_agent", value.UserAgent, writer, enc.StringEncoder.Instance);
+                if (value.DeviceInfo != null)
+                {
+                    WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
+                }
             }
         }
 
@@ -108,6 +121,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "user_agent":
                         value.UserAgent = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "device_info":
+                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

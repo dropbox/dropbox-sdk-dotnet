@@ -115,6 +115,107 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
+        /// <para>Creates a new Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="paperDocCreateArgs">The request parameters</param>
+        /// <param name="body">The content to upload.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperDocCreateError"/>.</exception>
+        public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(PaperDocCreateArgs paperDocCreateArgs, io.Stream body)
+        {
+            return this.Transport.SendUploadRequestAsync<PaperDocCreateArgs, PaperDocCreateUpdateResult, PaperDocCreateError>(paperDocCreateArgs, body, "api", "/paper/docs/create", "user", global::Dropbox.Api.Paper.PaperDocCreateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocCreateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the docs create route.</para>
+        /// </summary>
+        /// <param name="paperDocCreateArgs">The request parameters.</param>
+        /// <param name="body">The content to upload.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDocsCreate(PaperDocCreateArgs paperDocCreateArgs, io.Stream body, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DocsCreateAsync(paperDocCreateArgs, body);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Creates a new Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="importFormat">The format of provided data.</param>
+        /// <param name="parentFolderId">The Paper folder ID where the Paper document should be
+        /// created. The API user has to have write access to this folder or error is
+        /// thrown.</param>
+        /// <param name="body">The document to upload</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperDocCreateError"/>.</exception>
+        public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(ImportFormat importFormat,
+                                                                  string parentFolderId = null,
+                                                                  io.Stream body = null)
+        {
+            var paperDocCreateArgs = new PaperDocCreateArgs(importFormat,
+                                                            parentFolderId);
+
+            return this.DocsCreateAsync(paperDocCreateArgs, body);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the docs create route.</para>
+        /// </summary>
+        /// <param name="importFormat">The format of provided data.</param>
+        /// <param name="parentFolderId">The Paper folder ID where the Paper document should be
+        /// created. The API user has to have write access to this folder or error is
+        /// thrown.</param>
+        /// <param name="body">The document to upload</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDocsCreate(ImportFormat importFormat,
+                                                string parentFolderId = null,
+                                                io.Stream body = null,
+                                                sys.AsyncCallback callback = null,
+                                                object callbackState = null)
+        {
+            var paperDocCreateArgs = new PaperDocCreateArgs(importFormat,
+                                                            parentFolderId);
+
+            return this.BeginDocsCreate(paperDocCreateArgs, body, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the docs create route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperDocCreateError"/>.</exception>
+        public PaperDocCreateUpdateResult EndDocsCreate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PaperDocCreateUpdateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Exports and downloads Paper doc either as HTML or markdown.</para>
         /// </summary>
         /// <param name="paperDocExport">The request parameters</param>
@@ -978,6 +1079,119 @@ namespace Dropbox.Api.Paper.Routes
             {
                 throw new sys.InvalidOperationException();
             }
+        }
+
+        /// <summary>
+        /// <para>Updates an existing Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="paperDocUpdateArgs">The request parameters</param>
+        /// <param name="body">The content to upload.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperDocUpdateError"/>.</exception>
+        public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body)
+        {
+            return this.Transport.SendUploadRequestAsync<PaperDocUpdateArgs, PaperDocCreateUpdateResult, PaperDocUpdateError>(paperDocUpdateArgs, body, "api", "/paper/docs/update", "user", global::Dropbox.Api.Paper.PaperDocUpdateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocUpdateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the docs update route.</para>
+        /// </summary>
+        /// <param name="paperDocUpdateArgs">The request parameters.</param>
+        /// <param name="body">The content to upload.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDocsUpdate(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DocsUpdateAsync(paperDocUpdateArgs, body);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates an existing Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="docId">The Paper doc ID.</param>
+        /// <param name="docUpdatePolicy">The policy used for the current update call.</param>
+        /// <param name="revision">The latest doc revision. This value must match the head
+        /// revision or an error code will be returned. This is to prevent colliding
+        /// writes.</param>
+        /// <param name="importFormat">The format of provided data.</param>
+        /// <param name="body">The document to upload</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperDocUpdateError"/>.</exception>
+        public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(string docId,
+                                                                  PaperDocUpdatePolicy docUpdatePolicy,
+                                                                  long revision,
+                                                                  ImportFormat importFormat,
+                                                                  io.Stream body)
+        {
+            var paperDocUpdateArgs = new PaperDocUpdateArgs(docId,
+                                                            docUpdatePolicy,
+                                                            revision,
+                                                            importFormat);
+
+            return this.DocsUpdateAsync(paperDocUpdateArgs, body);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the docs update route.</para>
+        /// </summary>
+        /// <param name="docId">The Paper doc ID.</param>
+        /// <param name="docUpdatePolicy">The policy used for the current update call.</param>
+        /// <param name="revision">The latest doc revision. This value must match the head
+        /// revision or an error code will be returned. This is to prevent colliding
+        /// writes.</param>
+        /// <param name="importFormat">The format of provided data.</param>
+        /// <param name="body">The document to upload</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDocsUpdate(string docId,
+                                                PaperDocUpdatePolicy docUpdatePolicy,
+                                                long revision,
+                                                ImportFormat importFormat,
+                                                io.Stream body,
+                                                sys.AsyncCallback callback,
+                                                object callbackState = null)
+        {
+            var paperDocUpdateArgs = new PaperDocUpdateArgs(docId,
+                                                            docUpdatePolicy,
+                                                            revision,
+                                                            importFormat);
+
+            return this.BeginDocsUpdate(paperDocUpdateArgs, body, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the docs update route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperDocUpdateError"/>.</exception>
+        public PaperDocCreateUpdateResult EndDocsUpdate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PaperDocCreateUpdateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
         }
 
         /// <summary>

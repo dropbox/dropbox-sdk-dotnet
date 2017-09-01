@@ -80,6 +80,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamSharedDropboxError</para>
+        /// </summary>
+        public bool IsTeamSharedDropboxError
+        {
+            get
+            {
+                return this is TeamSharedDropboxError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamSharedDropboxError, or <c>null</c>.</para>
+        /// </summary>
+        public TeamSharedDropboxError AsTeamSharedDropboxError
+        {
+            get
+            {
+                return this as TeamSharedDropboxError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +150,12 @@ namespace Dropbox.Api.Team
                     StatusError.Encoder.EncodeFields((StatusError)value, writer);
                     return;
                 }
+                if (value is TeamSharedDropboxError)
+                {
+                    WriteProperty(".tag", "team_shared_dropbox_error", writer, enc.StringEncoder.Instance);
+                    TeamSharedDropboxError.Encoder.EncodeFields((TeamSharedDropboxError)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +199,8 @@ namespace Dropbox.Api.Team
                         return AccessError.Decoder.DecodeFields(reader);
                     case "status_error":
                         return StatusError.Decoder.DecodeFields(reader);
+                    case "team_shared_dropbox_error":
+                        return TeamSharedDropboxError.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -365,6 +396,105 @@ namespace Dropbox.Api.Team
                     {
                         case "status_error":
                             value.Value = global::Dropbox.Api.Team.TeamFolderInvalidStatusError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team shared dropbox error object</para>
+        /// </summary>
+        public sealed class TeamSharedDropboxError : TeamFolderArchiveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamSharedDropboxError> Encoder = new TeamSharedDropboxErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamSharedDropboxError> Decoder = new TeamSharedDropboxErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamSharedDropboxError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamSharedDropboxError(TeamFolderTeamSharedDropboxError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamSharedDropboxError" />
+            /// class.</para>
+            /// </summary>
+            private TeamSharedDropboxError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamFolderTeamSharedDropboxError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamSharedDropboxError" />.</para>
+            /// </summary>
+            private class TeamSharedDropboxErrorEncoder : enc.StructEncoder<TeamSharedDropboxError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamSharedDropboxError value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamSharedDropboxError" />.</para>
+            /// </summary>
+            private class TeamSharedDropboxErrorDecoder : enc.StructDecoder<TeamSharedDropboxError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamSharedDropboxError"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamSharedDropboxError Create()
+                {
+                    return new TeamSharedDropboxError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(TeamSharedDropboxError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "team_shared_dropbox_error":
+                            value.Value = global::Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

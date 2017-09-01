@@ -31,14 +31,14 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedFolderChangeMemberManagementPolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="newValue">New membership management policy.</param>
         /// <param name="sharedFolderType">Shared folder type. Might be missing due to
         /// historical data gap.</param>
         /// <param name="previousValue">Previous membership management policy. Might be missing
         /// due to historical data gap.</param>
-        public SharedFolderChangeMemberManagementPolicyDetails(long targetIndex,
+        public SharedFolderChangeMemberManagementPolicyDetails(ulong targetAssetIndex,
                                                                string originalFolderName,
                                                                SharedFolderMembershipManagementPolicy newValue,
                                                                string sharedFolderType = null,
@@ -54,7 +54,7 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.OriginalFolderName = originalFolderName;
             this.NewValue = newValue;
             this.SharedFolderType = sharedFolderType;
@@ -73,9 +73,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Original shared folder name.</para>
@@ -113,7 +113,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderChangeMemberManagementPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
                 WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SharedFolderMembershipManagementPolicy.Encoder);
                 if (value.SharedFolderType != null)
@@ -158,8 +158,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "original_folder_name":
                         value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);

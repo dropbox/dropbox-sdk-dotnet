@@ -35,9 +35,11 @@ namespace Dropbox.Api.TeamLog
         /// <param name="accountId">Filter the events by account ID. Return ony events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
+        /// <param name="category">Filter the returned events to a single category.</param>
         public GetTeamEventsArg(uint limit = 1000,
                                 string accountId = null,
-                                global::Dropbox.Api.TeamCommon.TimeRange time = null)
+                                global::Dropbox.Api.TeamCommon.TimeRange time = null,
+                                EventCategory category = null)
         {
             if (limit < 1U)
             {
@@ -63,6 +65,7 @@ namespace Dropbox.Api.TeamLog
             this.Limit = limit;
             this.AccountId = accountId;
             this.Time = time;
+            this.Category = category;
         }
 
         /// <summary>
@@ -93,6 +96,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public global::Dropbox.Api.TeamCommon.TimeRange Time { get; protected set; }
 
+        /// <summary>
+        /// <para>Filter the returned events to a single category.</para>
+        /// </summary>
+        public EventCategory Category { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -115,6 +123,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.Time != null)
                 {
                     WriteProperty("time", value.Time, writer, global::Dropbox.Api.TeamCommon.TimeRange.Encoder);
+                }
+                if (value.Category != null)
+                {
+                    WriteProperty("category", value.Category, writer, global::Dropbox.Api.TeamLog.EventCategory.Encoder);
                 }
             }
         }
@@ -156,6 +168,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "time":
                         value.Time = global::Dropbox.Api.TeamCommon.TimeRange.Decoder.Decode(reader);
+                        break;
+                    case "category":
+                        value.Category = global::Dropbox.Api.TeamLog.EventCategory.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

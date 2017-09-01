@@ -38,6 +38,9 @@ namespace Dropbox.Api.Sharing
         /// folder.</param>
         /// <param name="isTeamFolder">Whether this folder is a <a
         /// href="https://www.dropbox.com/en/help/986">team folder</a>.</param>
+        /// <param name="ownerDisplayNames">The display names of the users that own the folder.
+        /// If the folder is part of a team folder, the display names of the team admins are
+        /// also included. Absent if the owner display names cannot be fetched.</param>
         /// <param name="ownerTeam">The team that owns the folder. This field is not present if
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
@@ -47,6 +50,7 @@ namespace Dropbox.Api.Sharing
         public SharedFolderMetadataBase(AccessLevel accessType,
                                         bool isInsideTeamFolder,
                                         bool isTeamFolder,
+                                        col.IEnumerable<string> ownerDisplayNames = null,
                                         global::Dropbox.Api.Users.Team ownerTeam = null,
                                         string parentSharedFolderId = null,
                                         string pathLower = null)
@@ -55,6 +59,8 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("accessType");
             }
+
+            var ownerDisplayNamesList = enc.Util.ToList(ownerDisplayNames);
 
             if (parentSharedFolderId != null)
             {
@@ -67,6 +73,7 @@ namespace Dropbox.Api.Sharing
             this.AccessType = accessType;
             this.IsInsideTeamFolder = isInsideTeamFolder;
             this.IsTeamFolder = isTeamFolder;
+            this.OwnerDisplayNames = ownerDisplayNamesList;
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
             this.PathLower = pathLower;
@@ -98,6 +105,13 @@ namespace Dropbox.Api.Sharing
         /// folder</a>.</para>
         /// </summary>
         public bool IsTeamFolder { get; protected set; }
+
+        /// <summary>
+        /// <para>The display names of the users that own the folder. If the folder is part of
+        /// a team folder, the display names of the team admins are also included. Absent if
+        /// the owner display names cannot be fetched.</para>
+        /// </summary>
+        public col.IList<string> OwnerDisplayNames { get; protected set; }
 
         /// <summary>
         /// <para>The team that owns the folder. This field is not present if the folder is not
@@ -134,6 +148,10 @@ namespace Dropbox.Api.Sharing
                 WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("is_inside_team_folder", value.IsInsideTeamFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("is_team_folder", value.IsTeamFolder, writer, enc.BooleanEncoder.Instance);
+                if (value.OwnerDisplayNames.Count > 0)
+                {
+                    WriteListProperty("owner_display_names", value.OwnerDisplayNames, writer, enc.StringEncoder.Instance);
+                }
                 if (value.OwnerTeam != null)
                 {
                     WriteProperty("owner_team", value.OwnerTeam, writer, global::Dropbox.Api.Users.Team.Encoder);
@@ -187,6 +205,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "is_team_folder":
                         value.IsTeamFolder = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "owner_display_names":
+                        value.OwnerDisplayNames = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     case "owner_team":
                         value.OwnerTeam = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);

@@ -30,7 +30,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="TeamMemberInfo" /> class.</para>
         /// </summary>
-        /// <param name="teamInfo">Information about the member's team</param>
+        /// <param name="teamInfo">Information about the member's team.</param>
         /// <param name="displayName">The display name of the user.</param>
         /// <param name="memberId">ID of user as a member of a team. This field will only be
         /// present if the member is in the same team as current user.</param>
@@ -64,7 +64,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Information about the member's team</para>
+        /// <para>Information about the member's team.</para>
         /// </summary>
         public global::Dropbox.Api.Users.Team TeamInfo { get; protected set; }
 

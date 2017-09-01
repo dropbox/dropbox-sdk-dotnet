@@ -32,8 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="timestamp">The Dropbox timestamp representing when the action was
         /// taken.</param>
-        /// <param name="eventCategories">One or more categories that this type of action
-        /// belongs to.</param>
+        /// <param name="eventCategory">The category that this type of action belongs
+        /// to.</param>
         /// <param name="actor">The entity who actually performed the action.</param>
         /// <param name="involveNonTeamMember">True if the action involved a non team member
         /// either as the actor or as one of the affected users.</param>
@@ -53,7 +53,7 @@ namespace Dropbox.Api.TeamLog
         /// these include Dropbox files and folders but in the future we might add other asset
         /// types such as Paper documents, folders, projects, etc.</param>
         public TeamEvent(sys.DateTime timestamp,
-                         col.IEnumerable<EventCategory> eventCategories,
+                         EventCategory eventCategory,
                          ActorLogInfo actor,
                          bool involveNonTeamMember,
                          ContextLogInfo context,
@@ -63,15 +63,9 @@ namespace Dropbox.Api.TeamLog
                          col.IEnumerable<ParticipantLogInfo> participants = null,
                          col.IEnumerable<AssetLogInfo> assets = null)
         {
-            var eventCategoriesList = enc.Util.ToList(eventCategories);
-
-            if (eventCategories == null)
+            if (eventCategory == null)
             {
-                throw new sys.ArgumentNullException("eventCategories");
-            }
-            if (eventCategoriesList.Count < 1)
-            {
-                throw new sys.ArgumentOutOfRangeException("eventCategories", "List should at at least 1 items");
+                throw new sys.ArgumentNullException("eventCategory");
             }
 
             if (actor == null)
@@ -99,7 +93,7 @@ namespace Dropbox.Api.TeamLog
             var assetsList = enc.Util.ToList(assets);
 
             this.Timestamp = timestamp;
-            this.EventCategories = eventCategoriesList;
+            this.EventCategory = eventCategory;
             this.Actor = actor;
             this.InvolveNonTeamMember = involveNonTeamMember;
             this.Context = context;
@@ -126,9 +120,9 @@ namespace Dropbox.Api.TeamLog
         public sys.DateTime Timestamp { get; protected set; }
 
         /// <summary>
-        /// <para>One or more categories that this type of action belongs to.</para>
+        /// <para>The category that this type of action belongs to.</para>
         /// </summary>
-        public col.IList<EventCategory> EventCategories { get; protected set; }
+        public EventCategory EventCategory { get; protected set; }
 
         /// <summary>
         /// <para>The entity who actually performed the action.</para>
@@ -192,7 +186,7 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(TeamEvent value, enc.IJsonWriter writer)
             {
                 WriteProperty("timestamp", value.Timestamp, writer, enc.DateTimeEncoder.Instance);
-                WriteListProperty("event_categories", value.EventCategories, writer, global::Dropbox.Api.TeamLog.EventCategory.Encoder);
+                WriteProperty("event_category", value.EventCategory, writer, global::Dropbox.Api.TeamLog.EventCategory.Encoder);
                 WriteProperty("actor", value.Actor, writer, global::Dropbox.Api.TeamLog.ActorLogInfo.Encoder);
                 WriteProperty("involve_non_team_member", value.InvolveNonTeamMember, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("context", value.Context, writer, global::Dropbox.Api.TeamLog.ContextLogInfo.Encoder);
@@ -245,8 +239,8 @@ namespace Dropbox.Api.TeamLog
                     case "timestamp":
                         value.Timestamp = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
-                    case "event_categories":
-                        value.EventCategories = ReadList<EventCategory>(reader, global::Dropbox.Api.TeamLog.EventCategory.Decoder);
+                    case "event_category":
+                        value.EventCategory = global::Dropbox.Api.TeamLog.EventCategory.Decoder.Decode(reader);
                         break;
                     case "actor":
                         value.Actor = global::Dropbox.Api.TeamLog.ActorLogInfo.Decoder.Decode(reader);

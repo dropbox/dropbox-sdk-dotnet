@@ -13,7 +13,8 @@ namespace Dropbox.Api.Sharing
     /// <summary>
     /// <para>The share folder arg object</para>
     /// </summary>
-    public class ShareFolderArg
+    /// <seealso cref="Global::Dropbox.Api.Sharing.ShareFolderArgBase" />
+    public class ShareFolderArg : ShareFolderArgBase
     {
         #pragma warning disable 108
 
@@ -32,50 +33,36 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="path">The path to the folder to share. If it does not exist, then a
         /// new one is created.</param>
-        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
-        /// applicable if the current user is on a team.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
+        /// <param name="forceAsync">Whether to force the share to happen
+        /// asynchronously.</param>
+        /// <param name="memberPolicy">Who can be a member of this shared folder. Only
+        /// applicable if the current user is on a team.</param>
         /// <param name="sharedLinkPolicy">The policy to apply to shared links created for
         /// content inside this shared folder.  The current user must be on a team to set this
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
-        /// <param name="forceAsync">Whether to force the share to happen
-        /// asynchronously.</param>
+        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
+        /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
-        /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
-        /// folder.</param>
         public ShareFolderArg(string path,
-                              MemberPolicy memberPolicy = null,
                               AclUpdatePolicy aclUpdatePolicy = null,
-                              SharedLinkPolicy sharedLinkPolicy = null,
                               bool forceAsync = false,
+                              MemberPolicy memberPolicy = null,
+                              SharedLinkPolicy sharedLinkPolicy = null,
+                              ViewerInfoPolicy viewerInfoPolicy = null,
                               col.IEnumerable<FolderAction> actions = null,
-                              LinkSettings linkSettings = null,
-                              ViewerInfoPolicy viewerInfoPolicy = null)
+                              LinkSettings linkSettings = null)
+            : base(path, aclUpdatePolicy, forceAsync, memberPolicy, sharedLinkPolicy, viewerInfoPolicy)
         {
-            if (path == null)
-            {
-                throw new sys.ArgumentNullException("path");
-            }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
-            {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
-            }
-
             var actionsList = enc.Util.ToList(actions);
 
-            this.Path = path;
-            this.MemberPolicy = memberPolicy;
-            this.AclUpdatePolicy = aclUpdatePolicy;
-            this.SharedLinkPolicy = sharedLinkPolicy;
-            this.ForceAsync = forceAsync;
             this.Actions = actionsList;
             this.LinkSettings = linkSettings;
-            this.ViewerInfoPolicy = viewerInfoPolicy;
         }
 
         /// <summary>
@@ -86,37 +73,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ShareFolderArg()
         {
-            this.ForceAsync = false;
         }
-
-        /// <summary>
-        /// <para>The path to the folder to share. If it does not exist, then a new one is
-        /// created.</para>
-        /// </summary>
-        public string Path { get; protected set; }
-
-        /// <summary>
-        /// <para>Who can be a member of this shared folder. Only applicable if the current
-        /// user is on a team.</para>
-        /// </summary>
-        public MemberPolicy MemberPolicy { get; protected set; }
-
-        /// <summary>
-        /// <para>Who can add and remove members of this shared folder.</para>
-        /// </summary>
-        public AclUpdatePolicy AclUpdatePolicy { get; protected set; }
-
-        /// <summary>
-        /// <para>The policy to apply to shared links created for content inside this shared
-        /// folder.  The current user must be on a team to set this policy to <see
-        /// cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</para>
-        /// </summary>
-        public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
-
-        /// <summary>
-        /// <para>Whether to force the share to happen asynchronously.</para>
-        /// </summary>
-        public bool ForceAsync { get; protected set; }
 
         /// <summary>
         /// <para>A list of `FolderAction`s corresponding to `FolderPermission`s that should
@@ -130,11 +87,6 @@ namespace Dropbox.Api.Sharing
         /// <para>Settings on the link for this folder.</para>
         /// </summary>
         public LinkSettings LinkSettings { get; protected set; }
-
-        /// <summary>
-        /// <para>Who can enable/disable viewer info for this shared folder.</para>
-        /// </summary>
-        public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
 
         #region Encoder class
 
@@ -151,19 +103,23 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ShareFolderArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                if (value.MemberPolicy != null)
-                {
-                    WriteProperty("member_policy", value.MemberPolicy, writer, global::Dropbox.Api.Sharing.MemberPolicy.Encoder);
-                }
                 if (value.AclUpdatePolicy != null)
                 {
                     WriteProperty("acl_update_policy", value.AclUpdatePolicy, writer, global::Dropbox.Api.Sharing.AclUpdatePolicy.Encoder);
+                }
+                WriteProperty("force_async", value.ForceAsync, writer, enc.BooleanEncoder.Instance);
+                if (value.MemberPolicy != null)
+                {
+                    WriteProperty("member_policy", value.MemberPolicy, writer, global::Dropbox.Api.Sharing.MemberPolicy.Encoder);
                 }
                 if (value.SharedLinkPolicy != null)
                 {
                     WriteProperty("shared_link_policy", value.SharedLinkPolicy, writer, global::Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
                 }
-                WriteProperty("force_async", value.ForceAsync, writer, enc.BooleanEncoder.Instance);
+                if (value.ViewerInfoPolicy != null)
+                {
+                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, global::Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
+                }
                 if (value.Actions.Count > 0)
                 {
                     WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.FolderAction.Encoder);
@@ -171,10 +127,6 @@ namespace Dropbox.Api.Sharing
                 if (value.LinkSettings != null)
                 {
                     WriteProperty("link_settings", value.LinkSettings, writer, global::Dropbox.Api.Sharing.LinkSettings.Encoder);
-                }
-                if (value.ViewerInfoPolicy != null)
-                {
-                    WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, global::Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
                 }
             }
         }
@@ -211,26 +163,26 @@ namespace Dropbox.Api.Sharing
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "member_policy":
-                        value.MemberPolicy = global::Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
-                        break;
                     case "acl_update_policy":
                         value.AclUpdatePolicy = global::Dropbox.Api.Sharing.AclUpdatePolicy.Decoder.Decode(reader);
+                        break;
+                    case "force_async":
+                        value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "member_policy":
+                        value.MemberPolicy = global::Dropbox.Api.Sharing.MemberPolicy.Decoder.Decode(reader);
                         break;
                     case "shared_link_policy":
                         value.SharedLinkPolicy = global::Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
                         break;
-                    case "force_async":
-                        value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);
+                    case "viewer_info_policy":
+                        value.ViewerInfoPolicy = global::Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
                         break;
                     case "actions":
                         value.Actions = ReadList<FolderAction>(reader, global::Dropbox.Api.Sharing.FolderAction.Decoder);
                         break;
                     case "link_settings":
                         value.LinkSettings = global::Dropbox.Api.Sharing.LinkSettings.Decoder.Decode(reader);
-                        break;
-                    case "viewer_info_policy":
-                        value.ViewerInfoPolicy = global::Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

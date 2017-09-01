@@ -34,8 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New file requests policy.</param>
         /// <param name="previousValue">Previous file requests policy. Might be missing due to
         /// historical data gap.</param>
-        public FileRequestsChangePolicyDetails(EnableDisableChangePolicy newValue,
-                                               EnableDisableChangePolicy previousValue = null)
+        public FileRequestsChangePolicyDetails(FileRequestsPolicy newValue,
+                                               FileRequestsPolicy previousValue = null)
         {
             if (newValue == null)
             {
@@ -60,13 +60,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New file requests policy.</para>
         /// </summary>
-        public EnableDisableChangePolicy NewValue { get; protected set; }
+        public FileRequestsPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous file requests policy. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public EnableDisableChangePolicy PreviousValue { get; protected set; }
+        public FileRequestsPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileRequestsChangePolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.FileRequestsPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.FileRequestsPolicy.Encoder);
                 }
             }
         }
@@ -121,10 +121,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.FileRequestsPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.FileRequestsPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

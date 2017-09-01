@@ -32,11 +32,11 @@ namespace Dropbox.Api.TeamLog
         /// /> class.</para>
         /// </summary>
         /// <param name="eventUuid">Event unique identifier.</param>
-        /// <param name="targetIndex">Target asset index.</param>
-        /// <param name="parentIndex">Parent asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
+        /// <param name="parentAssetIndex">Parent asset position in the Assets list.</param>
         public PaperContentAddToFolderDetails(string eventUuid,
-                                              long targetIndex,
-                                              long parentIndex)
+                                              ulong targetAssetIndex,
+                                              ulong parentAssetIndex)
         {
             if (eventUuid == null)
             {
@@ -44,8 +44,8 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.EventUuid = eventUuid;
-            this.TargetIndex = targetIndex;
-            this.ParentIndex = parentIndex;
+            this.TargetAssetIndex = targetAssetIndex;
+            this.ParentAssetIndex = parentAssetIndex;
         }
 
         /// <summary>
@@ -65,14 +65,14 @@ namespace Dropbox.Api.TeamLog
         public string EventUuid { get; protected set; }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
-        /// <para>Parent asset index.</para>
+        /// <para>Parent asset position in the Assets list.</para>
         /// </summary>
-        public long ParentIndex { get; protected set; }
+        public ulong ParentAssetIndex { get; protected set; }
 
         #region Encoder class
 
@@ -89,8 +89,8 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(PaperContentAddToFolderDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("event_uuid", value.EventUuid, writer, enc.StringEncoder.Instance);
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
-                WriteProperty("parent_index", value.ParentIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("parent_asset_index", value.ParentAssetIndex, writer, enc.UInt64Encoder.Instance);
             }
         }
 
@@ -127,11 +127,11 @@ namespace Dropbox.Api.TeamLog
                     case "event_uuid":
                         value.EventUuid = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
-                    case "parent_index":
-                        value.ParentIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "parent_asset_index":
+                        value.ParentAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

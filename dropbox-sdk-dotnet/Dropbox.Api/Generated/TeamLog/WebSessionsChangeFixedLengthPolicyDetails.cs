@@ -31,21 +31,13 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="WebSessionsChangeFixedLengthPolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="newValue">New session length policy.</param>
-        /// <param name="previousValue">Previous session length policy.</param>
-        public WebSessionsChangeFixedLengthPolicyDetails(SessionsManagementSessionLengthPolicy newValue,
-                                                         SessionsManagementSessionLengthPolicy previousValue)
+        /// <param name="newValue">New session length policy. Might be missing due to
+        /// historical data gap.</param>
+        /// <param name="previousValue">Previous session length policy. Might be missing due to
+        /// historical data gap.</param>
+        public WebSessionsChangeFixedLengthPolicyDetails(WebSessionsFixedLengthPolicy newValue = null,
+                                                         WebSessionsFixedLengthPolicy previousValue = null)
         {
-            if (newValue == null)
-            {
-                throw new sys.ArgumentNullException("newValue");
-            }
-
-            if (previousValue == null)
-            {
-                throw new sys.ArgumentNullException("previousValue");
-            }
-
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
         }
@@ -62,14 +54,16 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>New session length policy.</para>
+        /// <para>New session length policy. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
-        public SessionsManagementSessionLengthPolicy NewValue { get; protected set; }
+        public WebSessionsFixedLengthPolicy NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Previous session length policy.</para>
+        /// <para>Previous session length policy. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
-        public SessionsManagementSessionLengthPolicy PreviousValue { get; protected set; }
+        public WebSessionsFixedLengthPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -85,8 +79,14 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(WebSessionsChangeFixedLengthPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SessionsManagementSessionLengthPolicy.Encoder);
-                WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SessionsManagementSessionLengthPolicy.Encoder);
+                if (value.NewValue != null)
+                {
+                    WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Encoder);
+                }
+                if (value.PreviousValue != null)
+                {
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Encoder);
+                }
             }
         }
 
@@ -121,10 +121,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.SessionsManagementSessionLengthPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.SessionsManagementSessionLengthPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

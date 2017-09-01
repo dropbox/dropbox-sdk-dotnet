@@ -31,25 +31,25 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentChangeMemberRoleDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="sharingPermission">Sharing permission. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="sharedFolderType">Shared folder type. Might be missing due to
+        /// <param name="newSharingPermission">New sharing permission. Might be missing due to
         /// historical data gap.</param>
         /// <param name="previousSharingPermission">Previous sharing permission. Might be
         /// missing due to historical data gap.</param>
-        public SharedContentChangeMemberRoleDetails(long targetIndex,
+        /// <param name="sharedFolderType">Shared folder type. Might be missing due to
+        /// historical data gap.</param>
+        public SharedContentChangeMemberRoleDetails(ulong targetAssetIndex,
                                                     string originalFolderName = null,
-                                                    string sharingPermission = null,
-                                                    string sharedFolderType = null,
-                                                    string previousSharingPermission = null)
+                                                    string newSharingPermission = null,
+                                                    string previousSharingPermission = null,
+                                                    string sharedFolderType = null)
         {
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.OriginalFolderName = originalFolderName;
-            this.SharingPermission = sharingPermission;
-            this.SharedFolderType = sharedFolderType;
+            this.NewSharingPermission = newSharingPermission;
             this.PreviousSharingPermission = previousSharingPermission;
+            this.SharedFolderType = sharedFolderType;
         }
 
         /// <summary>
@@ -64,9 +64,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Original shared folder name.</para>
@@ -74,20 +74,20 @@ namespace Dropbox.Api.TeamLog
         public string OriginalFolderName { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>New sharing permission. Might be missing due to historical data gap.</para>
         /// </summary>
-        public string SharingPermission { get; protected set; }
-
-        /// <summary>
-        /// <para>Shared folder type. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string SharedFolderType { get; protected set; }
+        public string NewSharingPermission { get; protected set; }
 
         /// <summary>
         /// <para>Previous sharing permission. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
         public string PreviousSharingPermission { get; protected set; }
+
+        /// <summary>
+        /// <para>Shared folder type. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string SharedFolderType { get; protected set; }
 
         #region Encoder class
 
@@ -103,22 +103,22 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentChangeMemberRoleDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 if (value.OriginalFolderName != null)
                 {
                     WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
                 }
-                if (value.SharingPermission != null)
+                if (value.NewSharingPermission != null)
                 {
-                    WriteProperty("sharing_permission", value.SharingPermission, writer, enc.StringEncoder.Instance);
-                }
-                if (value.SharedFolderType != null)
-                {
-                    WriteProperty("shared_folder_type", value.SharedFolderType, writer, enc.StringEncoder.Instance);
+                    WriteProperty("new_sharing_permission", value.NewSharingPermission, writer, enc.StringEncoder.Instance);
                 }
                 if (value.PreviousSharingPermission != null)
                 {
                     WriteProperty("previous_sharing_permission", value.PreviousSharingPermission, writer, enc.StringEncoder.Instance);
+                }
+                if (value.SharedFolderType != null)
+                {
+                    WriteProperty("shared_folder_type", value.SharedFolderType, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -153,20 +153,20 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "original_folder_name":
                         value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "sharing_permission":
-                        value.SharingPermission = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "shared_folder_type":
-                        value.SharedFolderType = enc.StringDecoder.Instance.Decode(reader);
+                    case "new_sharing_permission":
+                        value.NewSharingPermission = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "previous_sharing_permission":
                         value.PreviousSharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "shared_folder_type":
+                        value.SharedFolderType = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

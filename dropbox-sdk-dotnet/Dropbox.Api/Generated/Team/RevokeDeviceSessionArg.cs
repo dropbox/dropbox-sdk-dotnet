@@ -181,7 +181,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>End an active session</para>
+        /// <para>End an active session.</para>
         /// </summary>
         public sealed class WebSession : RevokeDeviceSessionArg
         {
@@ -268,7 +268,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Unlink a linked desktop device</para>
+        /// <para>Unlink a linked desktop device.</para>
         /// </summary>
         public sealed class DesktopClient : RevokeDeviceSessionArg
         {
@@ -357,7 +357,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Unlink a linked mobile device</para>
+        /// <para>Unlink a linked mobile device.</para>
         /// </summary>
         public sealed class MobileClient : RevokeDeviceSessionArg
         {

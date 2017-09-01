@@ -31,7 +31,7 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="ListTeamDevicesResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="devices">The devices of each member of the team</param>
+        /// <param name="devices">The devices of each member of the team.</param>
         /// <param name="hasMore">If true, then there are more devices available. Pass the
         /// cursor to <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> to
@@ -67,7 +67,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The devices of each member of the team</para>
+        /// <para>The devices of each member of the team.</para>
         /// </summary>
         public col.IList<MemberDevices> Devices { get; protected set; }
 

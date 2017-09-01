@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Partial</para>
-        /// </summary>
-        public bool IsPartial
-        {
-            get
-            {
-                return this is Partial;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Partial, or <c>null</c>.</para>
-        /// </summary>
-        public Partial AsPartial
-        {
-            get
-            {
-                return this as Partial;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Full</para>
         /// </summary>
         public bool IsFull
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Full;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Partial</para>
+        /// </summary>
+        public bool IsPartial
+        {
+            get
+            {
+                return this is Partial;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Partial, or <c>null</c>.</para>
+        /// </summary>
+        public Partial AsPartial
+        {
+            get
+            {
+                return this as Partial;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PaperDeploymentPolicy value, enc.IJsonWriter writer)
             {
-                if (value is Partial)
-                {
-                    WriteProperty(".tag", "partial", writer, enc.StringEncoder.Instance);
-                    Partial.Encoder.EncodeFields((Partial)value, writer);
-                    return;
-                }
                 if (value is Full)
                 {
                     WriteProperty(".tag", "full", writer, enc.StringEncoder.Instance);
                     Full.Encoder.EncodeFields((Full)value, writer);
+                    return;
+                }
+                if (value is Partial)
+                {
+                    WriteProperty(".tag", "partial", writer, enc.StringEncoder.Instance);
+                    Partial.Encoder.EncodeFields((Partial)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -166,10 +166,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "partial":
-                        return Partial.Decoder.DecodeFields(reader);
                     case "full":
                         return Full.Decoder.DecodeFields(reader);
+                    case "partial":
+                        return Partial.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -177,75 +177,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The partial object</para>
-        /// </summary>
-        public sealed class Partial : PaperDeploymentPolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Partial> Encoder = new PartialEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Partial> Decoder = new PartialDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Partial" /> class.</para>
-            /// </summary>
-            private Partial()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Partial</para>
-            /// </summary>
-            public static readonly Partial Instance = new Partial();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Partial" />.</para>
-            /// </summary>
-            private class PartialEncoder : enc.StructEncoder<Partial>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Partial value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Partial" />.</para>
-            /// </summary>
-            private class PartialDecoder : enc.StructDecoder<Partial>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Partial" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Partial Create()
-                {
-                    return Partial.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The full object</para>
@@ -309,6 +240,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Full Create()
                 {
                     return Full.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The partial object</para>
+        /// </summary>
+        public sealed class Partial : PaperDeploymentPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Partial> Encoder = new PartialEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Partial> Decoder = new PartialDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Partial" /> class.</para>
+            /// </summary>
+            private Partial()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Partial</para>
+            /// </summary>
+            public static readonly Partial Instance = new Partial();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Partial" />.</para>
+            /// </summary>
+            private class PartialEncoder : enc.StructEncoder<Partial>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Partial value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Partial" />.</para>
+            /// </summary>
+            private class PartialDecoder : enc.StructDecoder<Partial>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Partial" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Partial Create()
+                {
+                    return Partial.Instance;
                 }
 
             }

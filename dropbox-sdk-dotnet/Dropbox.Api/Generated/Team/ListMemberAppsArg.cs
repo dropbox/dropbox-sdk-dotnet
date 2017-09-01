@@ -31,7 +31,7 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="ListMemberAppsArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="teamMemberId">The team member id</param>
+        /// <param name="teamMemberId">The team member id.</param>
         public ListMemberAppsArg(string teamMemberId)
         {
             if (teamMemberId == null)
@@ -54,7 +54,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The team member id</para>
+        /// <para>The team member id.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 

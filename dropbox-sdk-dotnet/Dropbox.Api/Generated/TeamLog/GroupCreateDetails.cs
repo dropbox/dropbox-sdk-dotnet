@@ -31,25 +31,17 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupCreateDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
         /// <param name="joinPolicy">Group join policy.</param>
         /// <param name="isAdminManaged">Is admin managed group. Might be missing due to
         /// historical data gap.</param>
-        public GroupCreateDetails(GroupLogInfo groupInfo,
-                                  GroupJoinPolicy joinPolicy,
+        public GroupCreateDetails(GroupJoinPolicy joinPolicy,
                                   bool? isAdminManaged = null)
         {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
             if (joinPolicy == null)
             {
                 throw new sys.ArgumentNullException("joinPolicy");
             }
 
-            this.GroupInfo = groupInfo;
             this.JoinPolicy = joinPolicy;
             this.IsAdminManaged = isAdminManaged;
         }
@@ -64,11 +56,6 @@ namespace Dropbox.Api.TeamLog
         public GroupCreateDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         /// <summary>
         /// <para>Group join policy.</para>
@@ -94,7 +81,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupCreateDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
                 WriteProperty("join_policy", value.JoinPolicy, writer, global::Dropbox.Api.TeamLog.GroupJoinPolicy.Encoder);
                 if (value.IsAdminManaged != null)
                 {
@@ -132,9 +118,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     case "join_policy":
                         value.JoinPolicy = global::Dropbox.Api.TeamLog.GroupJoinPolicy.Decoder.Decode(reader);
                         break;

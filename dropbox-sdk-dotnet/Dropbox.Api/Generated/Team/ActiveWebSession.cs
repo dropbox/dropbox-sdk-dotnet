@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Information on active web sessions</para>
+    /// <para>Information on active web sessions.</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Team.DeviceSession" />
     public class ActiveWebSession : DeviceSession
@@ -32,17 +32,17 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="ActiveWebSession" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">The session id</param>
-        /// <param name="userAgent">Information on the hosting device</param>
-        /// <param name="os">Information on the hosting operating system</param>
-        /// <param name="browser">Information on the browser used for this web session</param>
+        /// <param name="sessionId">The session id.</param>
+        /// <param name="userAgent">Information on the hosting device.</param>
+        /// <param name="os">Information on the hosting operating system.</param>
+        /// <param name="browser">Information on the browser used for this web session.</param>
         /// <param name="ipAddress">The IP address of the last activity from this
-        /// session</param>
+        /// session.</param>
         /// <param name="country">The country from which the last activity from this session
-        /// was made</param>
-        /// <param name="created">The time this session was created</param>
-        /// <param name="updated">The time of the last activity from this session</param>
-        /// <param name="expires">The time this session expires</param>
+        /// was made.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
+        /// <param name="expires">The time this session expires.</param>
         public ActiveWebSession(string sessionId,
                                 string userAgent,
                                 string os,
@@ -87,22 +87,22 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Information on the hosting device</para>
+        /// <para>Information on the hosting device.</para>
         /// </summary>
         public string UserAgent { get; protected set; }
 
         /// <summary>
-        /// <para>Information on the hosting operating system</para>
+        /// <para>Information on the hosting operating system.</para>
         /// </summary>
         public string Os { get; protected set; }
 
         /// <summary>
-        /// <para>Information on the browser used for this web session</para>
+        /// <para>Information on the browser used for this web session.</para>
         /// </summary>
         public string Browser { get; protected set; }
 
         /// <summary>
-        /// <para>The time this session expires</para>
+        /// <para>The time this session expires.</para>
         /// </summary>
         public sys.DateTime? Expires { get; protected set; }
 

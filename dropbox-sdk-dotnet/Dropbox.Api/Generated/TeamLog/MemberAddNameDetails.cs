@@ -31,15 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="MemberAddNameDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="newValue">User's name.</param>
-        public MemberAddNameDetails(UserNameLogInfo newValue)
+        /// <param name="value">User's name.</param>
+        public MemberAddNameDetails(UserNameLogInfo @value)
         {
-            if (newValue == null)
+            if (@value == null)
             {
-                throw new sys.ArgumentNullException("newValue");
+                throw new sys.ArgumentNullException("@value");
             }
 
-            this.NewValue = newValue;
+            this.Value = @value;
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>User's name.</para>
         /// </summary>
-        public UserNameLogInfo NewValue { get; protected set; }
+        public UserNameLogInfo Value { get; protected set; }
 
         #region Encoder class
 
@@ -72,7 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberAddNameDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
+                WriteProperty("value", value.Value, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
             }
         }
 
@@ -105,8 +105,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.UserNameLogInfo.Decoder.Decode(reader);
+                    case "value":
+                        value.Value = global::Dropbox.Api.TeamLog.UserNameLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

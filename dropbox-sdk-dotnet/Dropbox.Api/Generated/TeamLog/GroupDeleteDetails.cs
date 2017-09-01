@@ -31,18 +31,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupDeleteDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="groupInfo">Group details.</param>
         /// <param name="isAdminManaged">Is admin managed group. Might be missing due to
         /// historical data gap.</param>
-        public GroupDeleteDetails(GroupLogInfo groupInfo,
-                                  bool? isAdminManaged = null)
+        public GroupDeleteDetails(bool? isAdminManaged = null)
         {
-            if (groupInfo == null)
-            {
-                throw new sys.ArgumentNullException("groupInfo");
-            }
-
-            this.GroupInfo = groupInfo;
             this.IsAdminManaged = isAdminManaged;
         }
 
@@ -56,11 +48,6 @@ namespace Dropbox.Api.TeamLog
         public GroupDeleteDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Group details.</para>
-        /// </summary>
-        public GroupLogInfo GroupInfo { get; protected set; }
 
         /// <summary>
         /// <para>Is admin managed group. Might be missing due to historical data gap.</para>
@@ -81,7 +68,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupDeleteDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("group_info", value.GroupInfo, writer, global::Dropbox.Api.TeamLog.GroupLogInfo.Encoder);
                 if (value.IsAdminManaged != null)
                 {
                     WriteProperty("is_admin_managed", value.IsAdminManaged.Value, writer, enc.BooleanEncoder.Instance);
@@ -118,9 +104,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "group_info":
-                        value.GroupInfo = global::Dropbox.Api.TeamLog.GroupLogInfo.Decoder.Decode(reader);
-                        break;
                     case "is_admin_managed":
                         value.IsAdminManaged = enc.BooleanDecoder.Instance.Decode(reader);
                         break;

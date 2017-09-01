@@ -31,7 +31,7 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="DownloadArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Deprecated. Please specify revision in <paramref name="path" />
+        /// <param name="rev">Please specify revision in <paramref name="path" />
         /// instead.</param>
         public DownloadArg(string path,
                            string rev = null)
@@ -77,7 +77,7 @@ namespace Dropbox.Api.Files
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Deprecated. Please specify revision in <see cref="Path" /> instead.</para>
+        /// <para>Please specify revision in <see cref="Path" /> instead.</para>
         /// </summary>
         public string Rev { get; protected set; }
 

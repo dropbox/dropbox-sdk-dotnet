@@ -31,19 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SsoChangeLogoutUrlDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="previousSsoLogoutUrl">Previous single sign-on logout URL.</param>
-        /// <param name="newSsoLogoutUrl">New single sign-on logout URL. Might be missing due
-        /// to historical data gap.</param>
-        public SsoChangeLogoutUrlDetails(string previousSsoLogoutUrl,
-                                         string newSsoLogoutUrl = null)
+        /// <param name="previousValue">Previous single sign-on logout URL. Might be missing
+        /// due to historical data gap.</param>
+        /// <param name="newValue">New single sign-on logout URL. Might be missing due to
+        /// historical data gap.</param>
+        public SsoChangeLogoutUrlDetails(string previousValue = null,
+                                         string newValue = null)
         {
-            if (previousSsoLogoutUrl == null)
-            {
-                throw new sys.ArgumentNullException("previousSsoLogoutUrl");
-            }
-
-            this.PreviousSsoLogoutUrl = previousSsoLogoutUrl;
-            this.NewSsoLogoutUrl = newSsoLogoutUrl;
+            this.PreviousValue = previousValue;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -58,15 +54,16 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Previous single sign-on logout URL.</para>
+        /// <para>Previous single sign-on logout URL. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
-        public string PreviousSsoLogoutUrl { get; protected set; }
+        public string PreviousValue { get; protected set; }
 
         /// <summary>
         /// <para>New single sign-on logout URL. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public string NewSsoLogoutUrl { get; protected set; }
+        public string NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +79,13 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SsoChangeLogoutUrlDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("previous_sso_logout_url", value.PreviousSsoLogoutUrl, writer, enc.StringEncoder.Instance);
-                if (value.NewSsoLogoutUrl != null)
+                if (value.PreviousValue != null)
                 {
-                    WriteProperty("new_sso_logout_url", value.NewSsoLogoutUrl, writer, enc.StringEncoder.Instance);
+                    WriteProperty("previous_value", value.PreviousValue, writer, enc.StringEncoder.Instance);
+                }
+                if (value.NewValue != null)
+                {
+                    WriteProperty("new_value", value.NewValue, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -120,11 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "previous_sso_logout_url":
-                        value.PreviousSsoLogoutUrl = enc.StringDecoder.Instance.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "new_sso_logout_url":
-                        value.NewSsoLogoutUrl = enc.StringDecoder.Instance.Decode(reader);
+                    case "new_value":
+                        value.NewValue = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

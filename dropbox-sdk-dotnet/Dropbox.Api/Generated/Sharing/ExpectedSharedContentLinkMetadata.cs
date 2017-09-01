@@ -12,7 +12,7 @@ namespace Dropbox.Api.Sharing
 
     /// <summary>
     /// <para>The expected metadata of a shared link for a file or folder when a link is first
-    /// created for  the content. Absent if the link already exists.</para>
+    /// created for the content. Absent if the link already exists.</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Sharing.SharedContentLinkMetadataBase" />
     public class ExpectedSharedContentLinkMetadata : SharedContentLinkMetadataBase

@@ -36,8 +36,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New paper external accessibility policy.</param>
         /// <param name="previousValue">Previous paper external accessibility policy. Might be
         /// missing due to historical data gap.</param>
-        public PaperChangeMemberPolicyDetails(ExternalSharingAccessibilityPolicy newValue,
-                                              ExternalSharingAccessibilityPolicy previousValue = null)
+        public PaperChangeMemberPolicyDetails(PaperMemberPolicy newValue,
+                                              PaperMemberPolicy previousValue = null)
         {
             if (newValue == null)
             {
@@ -62,13 +62,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New paper external accessibility policy.</para>
         /// </summary>
-        public ExternalSharingAccessibilityPolicy NewValue { get; protected set; }
+        public PaperMemberPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous paper external accessibility policy. Might be missing due to
         /// historical data gap.</para>
         /// </summary>
-        public ExternalSharingAccessibilityPolicy PreviousValue { get; protected set; }
+        public PaperMemberPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -84,10 +84,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PaperChangeMemberPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.ExternalSharingAccessibilityPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.PaperMemberPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.ExternalSharingAccessibilityPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.PaperMemberPolicy.Encoder);
                 }
             }
         }
@@ -123,10 +123,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.ExternalSharingAccessibilityPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.PaperMemberPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.ExternalSharingAccessibilityPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.PaperMemberPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -31,25 +31,25 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentChangeDownloadsPolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetIndex">Target asset index.</param>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="newValue">New downlaod policy.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="sharedFolderType">Shared folder type. Might be missing due to
         /// historical data gap.</param>
         /// <param name="previousValue">Previous downlaod policy. Might be missing due to
         /// historical data gap.</param>
-        public SharedContentChangeDownloadsPolicyDetails(long targetIndex,
-                                                         EnableDisableChangePolicy newValue,
+        public SharedContentChangeDownloadsPolicyDetails(ulong targetAssetIndex,
+                                                         SharedContentDownloadsPolicy newValue,
                                                          string originalFolderName = null,
                                                          string sharedFolderType = null,
-                                                         EnableDisableChangePolicy previousValue = null)
+                                                         SharedContentDownloadsPolicy previousValue = null)
         {
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.TargetIndex = targetIndex;
+            this.TargetAssetIndex = targetAssetIndex;
             this.NewValue = newValue;
             this.OriginalFolderName = originalFolderName;
             this.SharedFolderType = sharedFolderType;
@@ -68,14 +68,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset index.</para>
+        /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public long TargetIndex { get; protected set; }
+        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>New downlaod policy.</para>
         /// </summary>
-        public EnableDisableChangePolicy NewValue { get; protected set; }
+        public SharedContentDownloadsPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Original shared folder name.</para>
@@ -90,7 +90,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Previous downlaod policy. Might be missing due to historical data gap.</para>
         /// </summary>
-        public EnableDisableChangePolicy PreviousValue { get; protected set; }
+        public SharedContentDownloadsPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -106,8 +106,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentChangeDownloadsPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_index", value.TargetIndex, writer, enc.Int64Encoder.Instance);
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Encoder);
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Encoder);
                 if (value.OriginalFolderName != null)
                 {
                     WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
@@ -118,7 +118,7 @@ namespace Dropbox.Api.TeamLog
                 }
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Encoder);
                 }
             }
         }
@@ -153,11 +153,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_index":
-                        value.TargetIndex = enc.Int64Decoder.Instance.Decode(reader);
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Decoder.Decode(reader);
                         break;
                     case "original_folder_name":
                         value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
@@ -166,7 +166,7 @@ namespace Dropbox.Api.TeamLog
                         value.SharedFolderType = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.EnableDisableChangePolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

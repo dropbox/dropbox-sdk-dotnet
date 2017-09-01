@@ -208,7 +208,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>Official Windows Dropbox desktop client</para>
+        /// <para>Official Windows Dropbox desktop client.</para>
         /// </summary>
         public sealed class Windows : DesktopPlatform
         {
@@ -277,7 +277,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Mac Dropbox desktop client</para>
+        /// <para>Official Mac Dropbox desktop client.</para>
         /// </summary>
         public sealed class Mac : DesktopPlatform
         {
@@ -346,7 +346,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Official Linux Dropbox desktop client</para>
+        /// <para>Official Linux Dropbox desktop client.</para>
         /// </summary>
         public sealed class Linux : DesktopPlatform
         {

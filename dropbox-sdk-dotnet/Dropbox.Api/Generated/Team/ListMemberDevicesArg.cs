@@ -31,13 +31,13 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="ListMemberDevicesArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="teamMemberId">The team's member id</param>
+        /// <param name="teamMemberId">The team's member id.</param>
         /// <param name="includeWebSessions">Whether to list web sessions of the team's
-        /// member</param>
+        /// member.</param>
         /// <param name="includeDesktopClients">Whether to list linked desktop devices of the
-        /// team's member</param>
+        /// team's member.</param>
         /// <param name="includeMobileClients">Whether to list linked mobile devices of the
-        /// team's member</param>
+        /// team's member.</param>
         public ListMemberDevicesArg(string teamMemberId,
                                     bool includeWebSessions = true,
                                     bool includeDesktopClients = true,
@@ -69,22 +69,22 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The team's member id</para>
+        /// <para>The team's member id.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to list web sessions of the team's member</para>
+        /// <para>Whether to list web sessions of the team's member.</para>
         /// </summary>
         public bool IncludeWebSessions { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to list linked desktop devices of the team's member</para>
+        /// <para>Whether to list linked desktop devices of the team's member.</para>
         /// </summary>
         public bool IncludeDesktopClients { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to list linked mobile devices of the team's member</para>
+        /// <para>Whether to list linked mobile devices of the team's member.</para>
         /// </summary>
         public bool IncludeMobileClients { get; protected set; }
 

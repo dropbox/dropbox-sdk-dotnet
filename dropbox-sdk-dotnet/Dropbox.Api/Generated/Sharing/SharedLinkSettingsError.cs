@@ -229,7 +229,7 @@ namespace Dropbox.Api.Sharing
         /// <para>User is not allowed to modify the settings of this link. Note that basic
         /// users can only set <see cref="Dropbox.Api.Sharing.RequestedVisibility.Public" /> as
         /// the <see cref="Dropbox.Api.Sharing.SharedLinkSettings.RequestedVisibility" /> and
-        /// cannot set <see cref="Dropbox.Api.Sharing.SharedLinkSettings.Expires" /></para>
+        /// cannot set <see cref="Dropbox.Api.Sharing.SharedLinkSettings.Expires" />.</para>
         /// </summary>
         public sealed class NotAuthorized : SharedLinkSettingsError
         {

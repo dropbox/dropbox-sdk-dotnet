@@ -60,10 +60,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     throw new sys.ArgumentOutOfRangeException("displayName", "Length should be at least 1");
                 }
-                if (!re.Regex.IsMatch(displayName, @"\A(?:[^/:?*<>""|]*)\z"))
-                {
-                    throw new sys.ArgumentOutOfRangeException("displayName", @"Value should match pattern '\A(?:[^/:?*<>""|]*)\z'");
-                }
             }
 
             if (email != null)
