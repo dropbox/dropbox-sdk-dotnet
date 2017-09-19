@@ -202,7 +202,7 @@ namespace Dropbox.Api.Files
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public PropertiesError(InvalidPropertyGroupError value)
+            public PropertiesError(global::Dropbox.Api.FileProperties.InvalidPropertyGroupError value)
             {
                 this.Value = value;
             }
@@ -217,7 +217,7 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public InvalidPropertyGroupError Value { get; private set; }
+            public global::Dropbox.Api.FileProperties.InvalidPropertyGroupError Value { get; private set; }
 
             #region Encoder class
 
@@ -233,7 +233,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PropertiesError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.InvalidPropertyGroupError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -266,7 +266,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "properties_error":
-                            value.Value = global::Dropbox.Api.Files.InvalidPropertyGroupError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

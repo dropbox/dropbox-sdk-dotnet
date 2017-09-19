@@ -34,8 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New enterprise mobility management policy.</param>
         /// <param name="previousValue">Previous enterprise mobility management policy. Might
         /// be missing due to historical data gap.</param>
-        public EmmChangePolicyDetails(EmmPolicy newValue,
-                                      EmmPolicy previousValue = null)
+        public EmmChangePolicyDetails(global::Dropbox.Api.TeamPolicies.EmmState newValue,
+                                      global::Dropbox.Api.TeamPolicies.EmmState previousValue = null)
         {
             if (newValue == null)
             {
@@ -60,13 +60,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New enterprise mobility management policy.</para>
         /// </summary>
-        public EmmPolicy NewValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.EmmState NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous enterprise mobility management policy. Might be missing due to
         /// historical data gap.</para>
         /// </summary>
-        public EmmPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.EmmState PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(EmmChangePolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.EmmPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.EmmState.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.EmmPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.EmmState.Encoder);
                 }
             }
         }
@@ -121,10 +121,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.EmmPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamPolicies.EmmState.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.EmmPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamPolicies.EmmState.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

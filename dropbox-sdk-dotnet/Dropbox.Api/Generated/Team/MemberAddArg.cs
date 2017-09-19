@@ -64,10 +64,6 @@ namespace Dropbox.Api.Team
 
             if (memberGivenName != null)
             {
-                if (memberGivenName.Length < 1)
-                {
-                    throw new sys.ArgumentOutOfRangeException("memberGivenName", "Length should be at least 1");
-                }
                 if (memberGivenName.Length > 100)
                 {
                     throw new sys.ArgumentOutOfRangeException("memberGivenName", "Length should be at most 100");
@@ -80,10 +76,6 @@ namespace Dropbox.Api.Team
 
             if (memberSurname != null)
             {
-                if (memberSurname.Length < 1)
-                {
-                    throw new sys.ArgumentOutOfRangeException("memberSurname", "Length should be at least 1");
-                }
                 if (memberSurname.Length > 100)
                 {
                     throw new sys.ArgumentOutOfRangeException("memberSurname", "Length should be at most 100");

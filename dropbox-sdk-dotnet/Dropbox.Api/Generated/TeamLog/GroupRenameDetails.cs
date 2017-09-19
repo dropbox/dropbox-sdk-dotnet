@@ -32,14 +32,22 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="previousValue">Previous display name.</param>
-        public GroupRenameDetails(string previousValue)
+        /// <param name="newValue">New display name.</param>
+        public GroupRenameDetails(string previousValue,
+                                  string newValue)
         {
             if (previousValue == null)
             {
                 throw new sys.ArgumentNullException("previousValue");
             }
 
+            if (newValue == null)
+            {
+                throw new sys.ArgumentNullException("newValue");
+            }
+
             this.PreviousValue = previousValue;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -58,6 +66,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string PreviousValue { get; protected set; }
 
+        /// <summary>
+        /// <para>New display name.</para>
+        /// </summary>
+        public string NewValue { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,6 +86,7 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(GroupRenameDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("previous_value", value.PreviousValue, writer, enc.StringEncoder.Instance);
+                WriteProperty("new_value", value.NewValue, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -107,6 +121,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "previous_value":
                         value.PreviousValue = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "new_value":
+                        value.NewValue = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

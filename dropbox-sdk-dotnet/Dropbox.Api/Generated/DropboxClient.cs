@@ -8,6 +8,8 @@ namespace Dropbox.Api
 
     using Dropbox.Api.Stone;
     using Dropbox.Api.Auth.Routes;
+    using Dropbox.Api.FileProperties.Routes;
+    using Dropbox.Api.FileRequests.Routes;
     using Dropbox.Api.Files.Routes;
     using Dropbox.Api.Paper.Routes;
     using Dropbox.Api.Sharing.Routes;
@@ -19,6 +21,16 @@ namespace Dropbox.Api
         /// <para>Gets the Auth routes.</para>
         /// </summary>
         public AuthUserRoutes Auth { get; private set; }
+
+        /// <summary>
+        /// <para>Gets the FileProperties routes.</para>
+        /// </summary>
+        public FilePropertiesUserRoutes FileProperties { get; private set; }
+
+        /// <summary>
+        /// <para>Gets the FileRequests routes.</para>
+        /// </summary>
+        public FileRequestsUserRoutes FileRequests { get; private set; }
 
         /// <summary>
         /// <para>Gets the Files routes.</para>
@@ -47,6 +59,8 @@ namespace Dropbox.Api
         internal override void InitializeRoutes(ITransport transport)
         {
             this.Auth = new AuthUserRoutes(transport);
+            this.FileProperties = new FilePropertiesUserRoutes(transport);
+            this.FileRequests = new FileRequestsUserRoutes(transport);
             this.Files = new FilesUserRoutes(transport);
             this.Paper = new PaperUserRoutes(transport);
             this.Sharing = new SharingUserRoutes(transport);

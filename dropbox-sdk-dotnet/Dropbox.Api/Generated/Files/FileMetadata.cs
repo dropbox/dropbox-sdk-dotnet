@@ -86,7 +86,7 @@ namespace Dropbox.Api.Files
                             string parentSharedFolderId = null,
                             MediaInfo mediaInfo = null,
                             FileSharingInfo sharingInfo = null,
-                            col.IEnumerable<global::Dropbox.Api.Properties.PropertyGroup> propertyGroups = null,
+                            col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                             bool? hasExplicitSharedMembers = null,
                             string contentHash = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
@@ -194,7 +194,7 @@ namespace Dropbox.Api.Files
         /// <para>Additional information if the file has custom properties with the property
         /// template specified.</para>
         /// </summary>
-        public col.IList<global::Dropbox.Api.Properties.PropertyGroup> PropertyGroups { get; protected set; }
+        public col.IList<global::Dropbox.Api.FileProperties.PropertyGroup> PropertyGroups { get; protected set; }
 
         /// <summary>
         /// <para>This flag will only be present if include_has_explicit_shared_members  is
@@ -255,7 +255,7 @@ namespace Dropbox.Api.Files
                 }
                 if (value.PropertyGroups.Count > 0)
                 {
-                    WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.Properties.PropertyGroup.Encoder);
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.FileProperties.PropertyGroup.Encoder);
                 }
                 if (value.HasExplicitSharedMembers != null)
                 {
@@ -331,7 +331,7 @@ namespace Dropbox.Api.Files
                         value.SharingInfo = global::Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);
                         break;
                     case "property_groups":
-                        value.PropertyGroups = ReadList<global::Dropbox.Api.Properties.PropertyGroup>(reader, global::Dropbox.Api.Properties.PropertyGroup.Decoder);
+                        value.PropertyGroups = ReadList<global::Dropbox.Api.FileProperties.PropertyGroup>(reader, global::Dropbox.Api.FileProperties.PropertyGroup.Decoder);
                         break;
                     case "has_explicit_shared_members":
                         value.HasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);

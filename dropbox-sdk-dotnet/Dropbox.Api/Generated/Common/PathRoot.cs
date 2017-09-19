@@ -338,8 +338,8 @@ namespace Dropbox.Api.Common
 
         /// <summary>
         /// <para>Paths are relative to the authenticating team member's home directory. (This
-        /// results in :field:`PathRootError.invalid' if the user does not belong to a
-        /// team.)</para>
+        /// results in <see cref="Dropbox.Api.Common.PathRootError.Invalid" /> if the user does
+        /// not belong to a team.).</para>
         /// </summary>
         public sealed class MemberHome : PathRoot
         {
@@ -410,7 +410,7 @@ namespace Dropbox.Api.Common
         /// <summary>
         /// <para>Paths are relative to the given team directory. (This results in <see
         /// cref="Dropbox.Api.Common.PathRootError.Invalid" /> if the user is not a member of
-        /// the team associated with that path root id.)</para>
+        /// the team associated with that path root id.).</para>
         /// </summary>
         public sealed class Team : PathRoot
         {
@@ -508,7 +508,7 @@ namespace Dropbox.Api.Common
         /// <summary>
         /// <para>Paths are relative to the user's home directory. (This results in <see
         /// cref="Dropbox.Api.Common.PathRootError.Invalid" /> if the belongs to a
-        /// team.)</para>
+        /// team.).</para>
         /// </summary>
         public sealed class UserHome : PathRoot
         {
@@ -579,7 +579,7 @@ namespace Dropbox.Api.Common
         /// <summary>
         /// <para>Paths are relative to given namespace id (This results in <see
         /// cref="Dropbox.Api.Common.PathRootError.NoPermission" /> if you don't have access to
-        /// this namespace.)</para>
+        /// this namespace.).</para>
         /// </summary>
         public sealed class NamespaceId : PathRoot
         {

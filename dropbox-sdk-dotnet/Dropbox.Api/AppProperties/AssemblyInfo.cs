@@ -18,4 +18,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 
 [assembly: AssemblyVersion("4.0.0")]
-[assembly: AssemblyFileVersion("4.0.6454")]
+[assembly: AssemblyFileVersion("4.0.6472")]

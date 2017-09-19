@@ -35,8 +35,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New Dropbox Paper deployment policy.</param>
         /// <param name="previousValue">Previous Dropbox Paper deployment policy. Might be
         /// missing due to historical data gap.</param>
-        public PaperChangeDeploymentPolicyDetails(PaperDeploymentPolicy newValue,
-                                                  PaperDeploymentPolicy previousValue = null)
+        public PaperChangeDeploymentPolicyDetails(global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy newValue,
+                                                  global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy previousValue = null)
         {
             if (newValue == null)
             {
@@ -61,13 +61,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New Dropbox Paper deployment policy.</para>
         /// </summary>
-        public PaperDeploymentPolicy NewValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous Dropbox Paper deployment policy. Might be missing due to historical
         /// data gap.</para>
         /// </summary>
-        public PaperDeploymentPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -83,10 +83,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PaperChangeDeploymentPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.PaperDeploymentPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.PaperDeploymentPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy.Encoder);
                 }
             }
         }
@@ -122,10 +122,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.PaperDeploymentPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.PaperDeploymentPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamPolicies.PaperDeploymentPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

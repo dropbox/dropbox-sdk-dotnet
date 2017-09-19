@@ -156,7 +156,7 @@ namespace Dropbox.Api.Sharing
         /// cref="Dropbox.Api.Sharing.RequestedVisibility.Password" /> but the <see
         /// cref="Dropbox.Api.Sharing.SharedLinkSettings.LinkPassword" /> is missing, <see
         /// cref="Dropbox.Api.Sharing.SharedLinkSettings.Expires" /> is set to the past,
-        /// etc.)</para>
+        /// etc.).</para>
         /// </summary>
         public sealed class InvalidSettings : SharedLinkSettingsError
         {

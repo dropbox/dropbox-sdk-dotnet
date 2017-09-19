@@ -1857,53 +1857,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// GroupDescriptionUpdatedDetails</para>
-        /// </summary>
-        public bool IsGroupDescriptionUpdatedDetails
-        {
-            get
-            {
-                return this is GroupDescriptionUpdatedDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a GroupDescriptionUpdatedDetails, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public GroupDescriptionUpdatedDetails AsGroupDescriptionUpdatedDetails
-        {
-            get
-            {
-                return this as GroupDescriptionUpdatedDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// GroupJoinPolicyUpdatedDetails</para>
-        /// </summary>
-        public bool IsGroupJoinPolicyUpdatedDetails
-        {
-            get
-            {
-                return this is GroupJoinPolicyUpdatedDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a GroupJoinPolicyUpdatedDetails, or <c>null</c>.</para>
-        /// </summary>
-        public GroupJoinPolicyUpdatedDetails AsGroupJoinPolicyUpdatedDetails
-        {
-            get
-            {
-                return this as GroupJoinPolicyUpdatedDetails;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is GroupMovedDetails</para>
         /// </summary>
         public bool IsGroupMovedDetails
@@ -2408,30 +2361,6 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
-        /// PaperContentChangeSubscriptionDetails</para>
-        /// </summary>
-        public bool IsPaperContentChangeSubscriptionDetails
-        {
-            get
-            {
-                return this is PaperContentChangeSubscriptionDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a PaperContentChangeSubscriptionDetails, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public PaperContentChangeSubscriptionDetails AsPaperContentChangeSubscriptionDetails
-        {
-            get
-            {
-                return this as PaperContentChangeSubscriptionDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
         /// PaperContentCreateDetails</para>
         /// </summary>
         public bool IsPaperContentCreateDetails
@@ -2639,6 +2568,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as PaperDocChangeSharingPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// PaperDocChangeSubscriptionDetails</para>
+        /// </summary>
+        public bool IsPaperDocChangeSubscriptionDetails
+        {
+            get
+            {
+                return this is PaperDocChangeSubscriptionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperDocChangeSubscriptionDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public PaperDocChangeSubscriptionDetails AsPaperDocChangeSubscriptionDetails
+        {
+            get
+            {
+                return this as PaperDocChangeSubscriptionDetails;
             }
         }
 
@@ -2918,6 +2871,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// PaperDocTrashedDetails</para>
+        /// </summary>
+        public bool IsPaperDocTrashedDetails
+        {
+            get
+            {
+                return this is PaperDocTrashedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperDocTrashedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public PaperDocTrashedDetails AsPaperDocTrashedDetails
+        {
+            get
+            {
+                return this as PaperDocTrashedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// PaperDocUnresolveCommentDetails</para>
         /// </summary>
         public bool IsPaperDocUnresolveCommentDetails
@@ -2941,6 +2917,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// PaperDocUntrashedDetails</para>
+        /// </summary>
+        public bool IsPaperDocUntrashedDetails
+        {
+            get
+            {
+                return this is PaperDocUntrashedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperDocUntrashedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public PaperDocUntrashedDetails AsPaperDocUntrashedDetails
+        {
+            get
+            {
+                return this as PaperDocUntrashedDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is PaperDocViewDetails</para>
         /// </summary>
         public bool IsPaperDocViewDetails
@@ -2959,6 +2958,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as PaperDocViewDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// PaperFolderChangeSubscriptionDetails</para>
+        /// </summary>
+        public bool IsPaperFolderChangeSubscriptionDetails
+        {
+            get
+            {
+                return this is PaperFolderChangeSubscriptionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperFolderChangeSubscriptionDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public PaperFolderChangeSubscriptionDetails AsPaperFolderChangeSubscriptionDetails
+        {
+            get
+            {
+                return this as PaperFolderChangeSubscriptionDetails;
             }
         }
 
@@ -6710,18 +6733,6 @@ namespace Dropbox.Api.TeamLog
                     GroupDeleteDetails.Encoder.EncodeFields((GroupDeleteDetails)value, writer);
                     return;
                 }
-                if (value is GroupDescriptionUpdatedDetails)
-                {
-                    WriteProperty(".tag", "group_description_updated_details", writer, enc.StringEncoder.Instance);
-                    GroupDescriptionUpdatedDetails.Encoder.EncodeFields((GroupDescriptionUpdatedDetails)value, writer);
-                    return;
-                }
-                if (value is GroupJoinPolicyUpdatedDetails)
-                {
-                    WriteProperty(".tag", "group_join_policy_updated_details", writer, enc.StringEncoder.Instance);
-                    GroupJoinPolicyUpdatedDetails.Encoder.EncodeFields((GroupJoinPolicyUpdatedDetails)value, writer);
-                    return;
-                }
                 if (value is GroupMovedDetails)
                 {
                     WriteProperty(".tag", "group_moved_details", writer, enc.StringEncoder.Instance);
@@ -6854,12 +6865,6 @@ namespace Dropbox.Api.TeamLog
                     PaperContentArchiveDetails.Encoder.EncodeFields((PaperContentArchiveDetails)value, writer);
                     return;
                 }
-                if (value is PaperContentChangeSubscriptionDetails)
-                {
-                    WriteProperty(".tag", "paper_content_change_subscription_details", writer, enc.StringEncoder.Instance);
-                    PaperContentChangeSubscriptionDetails.Encoder.EncodeFields((PaperContentChangeSubscriptionDetails)value, writer);
-                    return;
-                }
                 if (value is PaperContentCreateDetails)
                 {
                     WriteProperty(".tag", "paper_content_create_details", writer, enc.StringEncoder.Instance);
@@ -6912,6 +6917,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "paper_doc_change_sharing_policy_details", writer, enc.StringEncoder.Instance);
                     PaperDocChangeSharingPolicyDetails.Encoder.EncodeFields((PaperDocChangeSharingPolicyDetails)value, writer);
+                    return;
+                }
+                if (value is PaperDocChangeSubscriptionDetails)
+                {
+                    WriteProperty(".tag", "paper_doc_change_subscription_details", writer, enc.StringEncoder.Instance);
+                    PaperDocChangeSubscriptionDetails.Encoder.EncodeFields((PaperDocChangeSubscriptionDetails)value, writer);
                     return;
                 }
                 if (value is PaperDocDeletedDetails)
@@ -6986,16 +6997,34 @@ namespace Dropbox.Api.TeamLog
                     PaperDocTeamInviteDetails.Encoder.EncodeFields((PaperDocTeamInviteDetails)value, writer);
                     return;
                 }
+                if (value is PaperDocTrashedDetails)
+                {
+                    WriteProperty(".tag", "paper_doc_trashed_details", writer, enc.StringEncoder.Instance);
+                    PaperDocTrashedDetails.Encoder.EncodeFields((PaperDocTrashedDetails)value, writer);
+                    return;
+                }
                 if (value is PaperDocUnresolveCommentDetails)
                 {
                     WriteProperty(".tag", "paper_doc_unresolve_comment_details", writer, enc.StringEncoder.Instance);
                     PaperDocUnresolveCommentDetails.Encoder.EncodeFields((PaperDocUnresolveCommentDetails)value, writer);
                     return;
                 }
+                if (value is PaperDocUntrashedDetails)
+                {
+                    WriteProperty(".tag", "paper_doc_untrashed_details", writer, enc.StringEncoder.Instance);
+                    PaperDocUntrashedDetails.Encoder.EncodeFields((PaperDocUntrashedDetails)value, writer);
+                    return;
+                }
                 if (value is PaperDocViewDetails)
                 {
                     WriteProperty(".tag", "paper_doc_view_details", writer, enc.StringEncoder.Instance);
                     PaperDocViewDetails.Encoder.EncodeFields((PaperDocViewDetails)value, writer);
+                    return;
+                }
+                if (value is PaperFolderChangeSubscriptionDetails)
+                {
+                    WriteProperty(".tag", "paper_folder_change_subscription_details", writer, enc.StringEncoder.Instance);
+                    PaperFolderChangeSubscriptionDetails.Encoder.EncodeFields((PaperFolderChangeSubscriptionDetails)value, writer);
                     return;
                 }
                 if (value is PaperFolderDeletedDetails)
@@ -8028,10 +8057,6 @@ namespace Dropbox.Api.TeamLog
                         return GroupCreateDetails.Decoder.DecodeFields(reader);
                     case "group_delete_details":
                         return GroupDeleteDetails.Decoder.DecodeFields(reader);
-                    case "group_description_updated_details":
-                        return GroupDescriptionUpdatedDetails.Decoder.DecodeFields(reader);
-                    case "group_join_policy_updated_details":
-                        return GroupJoinPolicyUpdatedDetails.Decoder.DecodeFields(reader);
                     case "group_moved_details":
                         return GroupMovedDetails.Decoder.DecodeFields(reader);
                     case "group_remove_external_id_details":
@@ -8076,8 +8101,6 @@ namespace Dropbox.Api.TeamLog
                         return PaperContentAddToFolderDetails.Decoder.DecodeFields(reader);
                     case "paper_content_archive_details":
                         return PaperContentArchiveDetails.Decoder.DecodeFields(reader);
-                    case "paper_content_change_subscription_details":
-                        return PaperContentChangeSubscriptionDetails.Decoder.DecodeFields(reader);
                     case "paper_content_create_details":
                         return PaperContentCreateDetails.Decoder.DecodeFields(reader);
                     case "paper_content_permanently_delete_details":
@@ -8096,6 +8119,8 @@ namespace Dropbox.Api.TeamLog
                         return PaperDocChangeMemberRoleDetails.Decoder.DecodeFields(reader);
                     case "paper_doc_change_sharing_policy_details":
                         return PaperDocChangeSharingPolicyDetails.Decoder.DecodeFields(reader);
+                    case "paper_doc_change_subscription_details":
+                        return PaperDocChangeSubscriptionDetails.Decoder.DecodeFields(reader);
                     case "paper_doc_deleted_details":
                         return PaperDocDeletedDetails.Decoder.DecodeFields(reader);
                     case "paper_doc_delete_comment_details":
@@ -8120,10 +8145,16 @@ namespace Dropbox.Api.TeamLog
                         return PaperDocSlackShareDetails.Decoder.DecodeFields(reader);
                     case "paper_doc_team_invite_details":
                         return PaperDocTeamInviteDetails.Decoder.DecodeFields(reader);
+                    case "paper_doc_trashed_details":
+                        return PaperDocTrashedDetails.Decoder.DecodeFields(reader);
                     case "paper_doc_unresolve_comment_details":
                         return PaperDocUnresolveCommentDetails.Decoder.DecodeFields(reader);
+                    case "paper_doc_untrashed_details":
+                        return PaperDocUntrashedDetails.Decoder.DecodeFields(reader);
                     case "paper_doc_view_details":
                         return PaperDocViewDetails.Decoder.DecodeFields(reader);
+                    case "paper_folder_change_subscription_details":
+                        return PaperFolderChangeSubscriptionDetails.Decoder.DecodeFields(reader);
                     case "paper_folder_deleted_details":
                         return PaperFolderDeletedDetails.Decoder.DecodeFields(reader);
                     case "paper_folder_followed_details":
@@ -15544,186 +15575,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Updated a group.</para>
-        /// </summary>
-        public sealed class GroupDescriptionUpdatedDetails : EventDetails
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<GroupDescriptionUpdatedDetails> Encoder = new GroupDescriptionUpdatedDetailsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<GroupDescriptionUpdatedDetails> Decoder = new GroupDescriptionUpdatedDetailsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="GroupDescriptionUpdatedDetails" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public GroupDescriptionUpdatedDetails(global::Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="GroupDescriptionUpdatedDetails" /> class.</para>
-            /// </summary>
-            private GroupDescriptionUpdatedDetails()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public global::Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="GroupDescriptionUpdatedDetails" />.</para>
-            /// </summary>
-            private class GroupDescriptionUpdatedDetailsEncoder : enc.StructEncoder<GroupDescriptionUpdatedDetails>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(GroupDescriptionUpdatedDetails value, enc.IJsonWriter writer)
-                {
-                    global::Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.Encoder.EncodeFields(value.Value, writer);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="GroupDescriptionUpdatedDetails" />.</para>
-            /// </summary>
-            private class GroupDescriptionUpdatedDetailsDecoder : enc.StructDecoder<GroupDescriptionUpdatedDetails>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="GroupDescriptionUpdatedDetails" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override GroupDescriptionUpdatedDetails Create()
-                {
-                    return new GroupDescriptionUpdatedDetails();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override GroupDescriptionUpdatedDetails DecodeFields(enc.IJsonReader reader)
-                {
-                    return new GroupDescriptionUpdatedDetails(global::Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Updated a group join policy.</para>
-        /// </summary>
-        public sealed class GroupJoinPolicyUpdatedDetails : EventDetails
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<GroupJoinPolicyUpdatedDetails> Encoder = new GroupJoinPolicyUpdatedDetailsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<GroupJoinPolicyUpdatedDetails> Decoder = new GroupJoinPolicyUpdatedDetailsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="GroupJoinPolicyUpdatedDetails" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public GroupJoinPolicyUpdatedDetails(global::Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="GroupJoinPolicyUpdatedDetails" /> class.</para>
-            /// </summary>
-            private GroupJoinPolicyUpdatedDetails()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public global::Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="GroupJoinPolicyUpdatedDetails" />.</para>
-            /// </summary>
-            private class GroupJoinPolicyUpdatedDetailsEncoder : enc.StructEncoder<GroupJoinPolicyUpdatedDetails>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(GroupJoinPolicyUpdatedDetails value, enc.IJsonWriter writer)
-                {
-                    global::Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.Encoder.EncodeFields(value.Value, writer);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="GroupJoinPolicyUpdatedDetails" />.</para>
-            /// </summary>
-            private class GroupJoinPolicyUpdatedDetailsDecoder : enc.StructDecoder<GroupJoinPolicyUpdatedDetails>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="GroupJoinPolicyUpdatedDetails" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override GroupJoinPolicyUpdatedDetails Create()
-                {
-                    return new GroupJoinPolicyUpdatedDetails();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override GroupJoinPolicyUpdatedDetails DecodeFields(enc.IJsonReader reader)
-                {
-                    return new GroupJoinPolicyUpdatedDetails(global::Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>Moved a group.</para>
         /// </summary>
         public sealed class GroupMovedDetails : EventDetails
@@ -17703,96 +17554,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Followed or unfollowed a Paper doc or folder.</para>
-        /// </summary>
-        public sealed class PaperContentChangeSubscriptionDetails : EventDetails
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<PaperContentChangeSubscriptionDetails> Encoder = new PaperContentChangeSubscriptionDetailsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<PaperContentChangeSubscriptionDetails> Decoder = new PaperContentChangeSubscriptionDetailsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="PaperContentChangeSubscriptionDetails" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public PaperContentChangeSubscriptionDetails(global::Dropbox.Api.TeamLog.PaperContentChangeSubscriptionDetails value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="PaperContentChangeSubscriptionDetails" /> class.</para>
-            /// </summary>
-            private PaperContentChangeSubscriptionDetails()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public global::Dropbox.Api.TeamLog.PaperContentChangeSubscriptionDetails Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="PaperContentChangeSubscriptionDetails" />.</para>
-            /// </summary>
-            private class PaperContentChangeSubscriptionDetailsEncoder : enc.StructEncoder<PaperContentChangeSubscriptionDetails>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(PaperContentChangeSubscriptionDetails value, enc.IJsonWriter writer)
-                {
-                    global::Dropbox.Api.TeamLog.PaperContentChangeSubscriptionDetails.Encoder.EncodeFields(value.Value, writer);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="PaperContentChangeSubscriptionDetails" />.</para>
-            /// </summary>
-            private class PaperContentChangeSubscriptionDetailsDecoder : enc.StructDecoder<PaperContentChangeSubscriptionDetails>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="PaperContentChangeSubscriptionDetails" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override PaperContentChangeSubscriptionDetails Create()
-                {
-                    return new PaperContentChangeSubscriptionDetails();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override PaperContentChangeSubscriptionDetails DecodeFields(enc.IJsonReader reader)
-                {
-                    return new PaperContentChangeSubscriptionDetails(global::Dropbox.Api.TeamLog.PaperContentChangeSubscriptionDetails.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>Created a Paper doc or folder.</para>
         /// </summary>
         public sealed class PaperContentCreateDetails : EventDetails
@@ -18596,6 +18357,96 @@ namespace Dropbox.Api.TeamLog
                 public override PaperDocChangeSharingPolicyDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PaperDocChangeSharingPolicyDetails(global::Dropbox.Api.TeamLog.PaperDocChangeSharingPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Followed or unfollowed a Paper doc.</para>
+        /// </summary>
+        public sealed class PaperDocChangeSubscriptionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperDocChangeSubscriptionDetails> Encoder = new PaperDocChangeSubscriptionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperDocChangeSubscriptionDetails> Decoder = new PaperDocChangeSubscriptionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperDocChangeSubscriptionDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperDocChangeSubscriptionDetails(global::Dropbox.Api.TeamLog.PaperDocChangeSubscriptionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperDocChangeSubscriptionDetails" /> class.</para>
+            /// </summary>
+            private PaperDocChangeSubscriptionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PaperDocChangeSubscriptionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperDocChangeSubscriptionDetails" />.</para>
+            /// </summary>
+            private class PaperDocChangeSubscriptionDetailsEncoder : enc.StructEncoder<PaperDocChangeSubscriptionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperDocChangeSubscriptionDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.PaperDocChangeSubscriptionDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperDocChangeSubscriptionDetails" />.</para>
+            /// </summary>
+            private class PaperDocChangeSubscriptionDetailsDecoder : enc.StructDecoder<PaperDocChangeSubscriptionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="PaperDocChangeSubscriptionDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperDocChangeSubscriptionDetails Create()
+                {
+                    return new PaperDocChangeSubscriptionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperDocChangeSubscriptionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperDocChangeSubscriptionDetails(global::Dropbox.Api.TeamLog.PaperDocChangeSubscriptionDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -19683,6 +19534,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Paper doc trashed.</para>
+        /// </summary>
+        public sealed class PaperDocTrashedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperDocTrashedDetails> Encoder = new PaperDocTrashedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperDocTrashedDetails> Decoder = new PaperDocTrashedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperDocTrashedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperDocTrashedDetails(global::Dropbox.Api.TeamLog.PaperDocTrashedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperDocTrashedDetails" />
+            /// class.</para>
+            /// </summary>
+            private PaperDocTrashedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PaperDocTrashedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperDocTrashedDetails" />.</para>
+            /// </summary>
+            private class PaperDocTrashedDetailsEncoder : enc.StructEncoder<PaperDocTrashedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperDocTrashedDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.PaperDocTrashedDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperDocTrashedDetails" />.</para>
+            /// </summary>
+            private class PaperDocTrashedDetailsDecoder : enc.StructDecoder<PaperDocTrashedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PaperDocTrashedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperDocTrashedDetails Create()
+                {
+                    return new PaperDocTrashedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperDocTrashedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperDocTrashedDetails(global::Dropbox.Api.TeamLog.PaperDocTrashedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Unresolved a Paper doc comment.</para>
         /// </summary>
         public sealed class PaperDocUnresolveCommentDetails : EventDetails
@@ -19773,6 +19714,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Paper doc untrashed.</para>
+        /// </summary>
+        public sealed class PaperDocUntrashedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperDocUntrashedDetails> Encoder = new PaperDocUntrashedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperDocUntrashedDetails> Decoder = new PaperDocUntrashedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperDocUntrashedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperDocUntrashedDetails(global::Dropbox.Api.TeamLog.PaperDocUntrashedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperDocUntrashedDetails" />
+            /// class.</para>
+            /// </summary>
+            private PaperDocUntrashedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PaperDocUntrashedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperDocUntrashedDetails" />.</para>
+            /// </summary>
+            private class PaperDocUntrashedDetailsEncoder : enc.StructEncoder<PaperDocUntrashedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperDocUntrashedDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.PaperDocUntrashedDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperDocUntrashedDetails" />.</para>
+            /// </summary>
+            private class PaperDocUntrashedDetailsDecoder : enc.StructDecoder<PaperDocUntrashedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PaperDocUntrashedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperDocUntrashedDetails Create()
+                {
+                    return new PaperDocUntrashedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperDocUntrashedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperDocUntrashedDetails(global::Dropbox.Api.TeamLog.PaperDocUntrashedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Viewed Paper doc.</para>
         /// </summary>
         public sealed class PaperDocViewDetails : EventDetails
@@ -19856,6 +19887,96 @@ namespace Dropbox.Api.TeamLog
                 public override PaperDocViewDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PaperDocViewDetails(global::Dropbox.Api.TeamLog.PaperDocViewDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Followed or unfollowed a Paper folder.</para>
+        /// </summary>
+        public sealed class PaperFolderChangeSubscriptionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperFolderChangeSubscriptionDetails> Encoder = new PaperFolderChangeSubscriptionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperFolderChangeSubscriptionDetails> Decoder = new PaperFolderChangeSubscriptionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperFolderChangeSubscriptionDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperFolderChangeSubscriptionDetails(global::Dropbox.Api.TeamLog.PaperFolderChangeSubscriptionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperFolderChangeSubscriptionDetails" /> class.</para>
+            /// </summary>
+            private PaperFolderChangeSubscriptionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PaperFolderChangeSubscriptionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperFolderChangeSubscriptionDetails" />.</para>
+            /// </summary>
+            private class PaperFolderChangeSubscriptionDetailsEncoder : enc.StructEncoder<PaperFolderChangeSubscriptionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperFolderChangeSubscriptionDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.PaperFolderChangeSubscriptionDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperFolderChangeSubscriptionDetails" />.</para>
+            /// </summary>
+            private class PaperFolderChangeSubscriptionDetailsDecoder : enc.StructDecoder<PaperFolderChangeSubscriptionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="PaperFolderChangeSubscriptionDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperFolderChangeSubscriptionDetails Create()
+                {
+                    return new PaperFolderChangeSubscriptionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperFolderChangeSubscriptionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperFolderChangeSubscriptionDetails(global::Dropbox.Api.TeamLog.PaperFolderChangeSubscriptionDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -28271,7 +28392,7 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Changed the action taken when a team member is already over the limits (e.g
-        /// when they join the team, an admin lowers limits, etc).</para>
+        /// when they join the team, an admin lowers limits, etc.).</para>
         /// </summary>
         public sealed class DeviceApprovalsChangeOverageActionDetails : EventDetails
         {

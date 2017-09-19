@@ -3093,6 +3093,9 @@ namespace Dropbox.Api.Team.Routes
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> while a user is
         /// still recoverable on your team will return with <see
         /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />.</para>
+        /// <para>Accounts can have their files transferred via the admin console for a limited
+        /// time, based on the version history length associated with the team (120 days for
+        /// most teams).</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
@@ -3137,6 +3140,9 @@ namespace Dropbox.Api.Team.Routes
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> while a user is
         /// still recoverable on your team will return with <see
         /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />.</para>
+        /// <para>Accounts can have their files transferred via the admin console for a limited
+        /// time, based on the version history length associated with the team (120 days for
+        /// most teams).</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
@@ -3950,87 +3956,89 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Add a property template. See route files/properties/add to add properties to
-        /// a file.</para>
+        /// <para>The properties template add route</para>
         /// </summary>
-        /// <param name="addPropertyTemplateArg">The request parameters</param>
+        /// <param name="addTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
-        public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(AddPropertyTemplateArg addPropertyTemplateArg)
+        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.AddTemplateResult> PropertiesTemplateAddAsync(global::Dropbox.Api.FileProperties.AddTemplateArg addTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<AddPropertyTemplateArg, AddPropertyTemplateResult, global::Dropbox.Api.Properties.ModifyPropertyTemplateError>(addPropertyTemplateArg, "api", "/team/properties/template/add", "team", global::Dropbox.Api.Team.AddPropertyTemplateArg.Encoder, global::Dropbox.Api.Team.AddPropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.AddTemplateArg, global::Dropbox.Api.FileProperties.AddTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(addTemplateArg, "api", "/team/properties/template/add", "team", global::Dropbox.Api.FileProperties.AddTemplateArg.Encoder, global::Dropbox.Api.FileProperties.AddTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the properties template add route.</para>
         /// </summary>
-        /// <param name="addPropertyTemplateArg">The request parameters.</param>
+        /// <param name="addTemplateArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPropertiesTemplateAdd(AddPropertyTemplateArg addPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginPropertiesTemplateAdd(global::Dropbox.Api.FileProperties.AddTemplateArg addTemplateArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.PropertiesTemplateAddAsync(addPropertyTemplateArg);
+            var task = this.PropertiesTemplateAddAsync(addTemplateArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Add a property template. See route files/properties/add to add properties to
-        /// a file.</para>
+        /// <para>The properties template add route</para>
         /// </summary>
-        /// <param name="name">A display name for the property template. Property template
-        /// names can be up to 256 bytes.</param>
-        /// <param name="description">Description for new property template. Property template
-        /// descriptions can be up to 1024 bytes.</param>
-        /// <param name="fields">This is a list of custom properties associated with a property
-        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="name">Display name for the template. Template names can be up to 256
+        /// bytes.</param>
+        /// <param name="description">Description for the template. Template descriptions can
+        /// be up to 1024 bytes.</param>
+        /// <param name="fields">Definitions of the property fields associated with this
+        /// template. There can be up to 32 properties in a single template.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
-        public t.Task<AddPropertyTemplateResult> PropertiesTemplateAddAsync(string name,
-                                                                            string description,
-                                                                            col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> fields)
+        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.AddTemplateResult> PropertiesTemplateAddAsync(string name,
+                                                                                                       string description,
+                                                                                                       col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> fields)
         {
-            var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
-                                                                    description,
-                                                                    fields);
+            var addTemplateArg = new global::Dropbox.Api.FileProperties.AddTemplateArg(name,
+                                                                                       description,
+                                                                                       fields);
 
-            return this.PropertiesTemplateAddAsync(addPropertyTemplateArg);
+            return this.PropertiesTemplateAddAsync(addTemplateArg);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the properties template add route.</para>
         /// </summary>
-        /// <param name="name">A display name for the property template. Property template
-        /// names can be up to 256 bytes.</param>
-        /// <param name="description">Description for new property template. Property template
-        /// descriptions can be up to 1024 bytes.</param>
-        /// <param name="fields">This is a list of custom properties associated with a property
-        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="name">Display name for the template. Template names can be up to 256
+        /// bytes.</param>
+        /// <param name="description">Description for the template. Template descriptions can
+        /// be up to 1024 bytes.</param>
+        /// <param name="fields">Definitions of the property fields associated with this
+        /// template. There can be up to 32 properties in a single template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginPropertiesTemplateAdd(string name,
                                                            string description,
-                                                           col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> fields,
+                                                           col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> fields,
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
         {
-            var addPropertyTemplateArg = new AddPropertyTemplateArg(name,
-                                                                    description,
-                                                                    fields);
+            var addTemplateArg = new global::Dropbox.Api.FileProperties.AddTemplateArg(name,
+                                                                                       description,
+                                                                                       fields);
 
-            return this.BeginPropertiesTemplateAdd(addPropertyTemplateArg, callback, callbackState);
+            return this.BeginPropertiesTemplateAdd(addTemplateArg, callback, callbackState);
         }
 
         /// <summary>
@@ -4042,10 +4050,11 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
-        public AddPropertyTemplateResult EndPropertiesTemplateAdd(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public global::Dropbox.Api.FileProperties.AddTemplateResult EndPropertiesTemplateAdd(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<AddPropertyTemplateResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.AddTemplateResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4055,69 +4064,79 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Get the schema for a specified template.</para>
+        /// <para>The properties template get route</para>
         /// </summary>
-        /// <param name="getPropertyTemplateArg">The request parameters</param>
+        /// <param name="getTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg)
+        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.FileProperties.GetTemplateArg getTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Properties.GetPropertyTemplateArg, global::Dropbox.Api.Properties.GetPropertyTemplateResult, global::Dropbox.Api.Properties.PropertyTemplateError>(getPropertyTemplateArg, "api", "/team/properties/template/get", "team", global::Dropbox.Api.Properties.GetPropertyTemplateArg.Encoder, global::Dropbox.Api.Properties.GetPropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.GetTemplateArg, global::Dropbox.Api.FileProperties.GetTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(getTemplateArg, "api", "/team/properties/template/get", "team", global::Dropbox.Api.FileProperties.GetTemplateArg.Encoder, global::Dropbox.Api.FileProperties.GetTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the properties template get route.</para>
         /// </summary>
-        /// <param name="getPropertyTemplateArg">The request parameters.</param>
+        /// <param name="getTemplateArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPropertiesTemplateGet(global::Dropbox.Api.Properties.GetPropertyTemplateArg getPropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginPropertiesTemplateGet(global::Dropbox.Api.FileProperties.GetTemplateArg getTemplateArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
+            var task = this.PropertiesTemplateGetAsync(getTemplateArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Get the schema for a specified template.</para>
+        /// <para>The properties template get route</para>
         /// </summary>
-        /// <param name="templateId">An identifier for property template added by route
-        /// properties/template/add.</param>
+        /// <param name="templateId">An identifier for template added by route  See <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
+        /// />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult> PropertiesTemplateGetAsync(string templateId)
+        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(string templateId)
         {
-            var getPropertyTemplateArg = new global::Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+            var getTemplateArg = new global::Dropbox.Api.FileProperties.GetTemplateArg(templateId);
 
-            return this.PropertiesTemplateGetAsync(getPropertyTemplateArg);
+            return this.PropertiesTemplateGetAsync(getTemplateArg);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the properties template get route.</para>
         /// </summary>
-        /// <param name="templateId">An identifier for property template added by route
-        /// properties/template/add.</param>
+        /// <param name="templateId">An identifier for template added by route  See <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
+        /// />.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginPropertiesTemplateGet(string templateId,
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
         {
-            var getPropertyTemplateArg = new global::Dropbox.Api.Properties.GetPropertyTemplateArg(templateId);
+            var getTemplateArg = new global::Dropbox.Api.FileProperties.GetTemplateArg(templateId);
 
-            return this.BeginPropertiesTemplateGet(getPropertyTemplateArg, callback, callbackState);
+            return this.BeginPropertiesTemplateGet(getTemplateArg, callback, callbackState);
         }
 
         /// <summary>
@@ -4129,10 +4148,11 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public global::Dropbox.Api.Properties.GetPropertyTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public global::Dropbox.Api.FileProperties.GetTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<global::Dropbox.Api.Properties.GetPropertyTemplateResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4142,18 +4162,17 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Get the property template identifiers for a team. To get the schema of each
-        /// template use <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateGetAsync" />.</para>
+        /// <para>The properties template list route</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Properties.ListPropertyTemplateIds> PropertiesTemplateListAsync()
+        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult> PropertiesTemplateListAsync()
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.Properties.ListPropertyTemplateIds, global::Dropbox.Api.Properties.PropertyTemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Properties.ListPropertyTemplateIds.Decoder, global::Dropbox.Api.Properties.PropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.FileProperties.ListTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
         }
 
         /// <summary>
@@ -4164,6 +4183,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginPropertiesTemplateList(sys.AsyncCallback callback, object state = null)
         {
             var task = this.PropertiesTemplateListAsync();
@@ -4180,10 +4200,11 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.PropertyTemplateError"/>.</exception>
-        public global::Dropbox.Api.Properties.ListPropertyTemplateIds EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public global::Dropbox.Api.FileProperties.ListTemplateResult EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<global::Dropbox.Api.Properties.ListPropertyTemplateIds>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4193,97 +4214,103 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Update a property template. This route can update the template name, the
-        /// template description and add optional properties to templates.</para>
+        /// <para>The properties template update route</para>
         /// </summary>
-        /// <param name="updatePropertyTemplateArg">The request parameters</param>
+        /// <param name="updateTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
-        public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(UpdatePropertyTemplateArg updatePropertyTemplateArg)
+        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(global::Dropbox.Api.FileProperties.UpdateTemplateArg updateTemplateArg)
         {
-            return this.Transport.SendRpcRequestAsync<UpdatePropertyTemplateArg, UpdatePropertyTemplateResult, global::Dropbox.Api.Properties.ModifyPropertyTemplateError>(updatePropertyTemplateArg, "api", "/team/properties/template/update", "team", global::Dropbox.Api.Team.UpdatePropertyTemplateArg.Encoder, global::Dropbox.Api.Team.UpdatePropertyTemplateResult.Decoder, global::Dropbox.Api.Properties.ModifyPropertyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.UpdateTemplateArg, global::Dropbox.Api.FileProperties.UpdateTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(updateTemplateArg, "api", "/team/properties/template/update", "team", global::Dropbox.Api.FileProperties.UpdateTemplateArg.Encoder, global::Dropbox.Api.FileProperties.UpdateTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the properties template update route.</para>
         /// </summary>
-        /// <param name="updatePropertyTemplateArg">The request parameters.</param>
+        /// <param name="updateTemplateArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginPropertiesTemplateUpdate(UpdatePropertyTemplateArg updatePropertyTemplateArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginPropertiesTemplateUpdate(global::Dropbox.Api.FileProperties.UpdateTemplateArg updateTemplateArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.PropertiesTemplateUpdateAsync(updatePropertyTemplateArg);
+            var task = this.PropertiesTemplateUpdateAsync(updateTemplateArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Update a property template. This route can update the template name, the
-        /// template description and add optional properties to templates.</para>
+        /// <para>The properties template update route</para>
         /// </summary>
-        /// <param name="templateId">An identifier for property template added by <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateAddAsync"
+        /// <param name="templateId">An identifier for template added by  See <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
         /// />.</param>
-        /// <param name="name">A display name for the property template. Property template
-        /// names can be up to 256 bytes.</param>
-        /// <param name="description">Description for new property template. Property template
-        /// descriptions can be up to 1024 bytes.</param>
-        /// <param name="addFields">This is a list of custom properties to add to the property
-        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="name">A display name for the template. template names can be up to 256
+        /// bytes.</param>
+        /// <param name="description">Description for the new template. Template descriptions
+        /// can be up to 1024 bytes.</param>
+        /// <param name="addFields">Property field templates to be added to the group template.
+        /// There can be up to 32 properties in a single template.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
-        public t.Task<UpdatePropertyTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
-                                                                                  string name = null,
-                                                                                  string description = null,
-                                                                                  col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null)
+        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
+                                                                                                             string name = null,
+                                                                                                             string description = null,
+                                                                                                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> addFields = null)
         {
-            var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
-                                                                          name,
-                                                                          description,
-                                                                          addFields);
+            var updateTemplateArg = new global::Dropbox.Api.FileProperties.UpdateTemplateArg(templateId,
+                                                                                             name,
+                                                                                             description,
+                                                                                             addFields);
 
-            return this.PropertiesTemplateUpdateAsync(updatePropertyTemplateArg);
+            return this.PropertiesTemplateUpdateAsync(updateTemplateArg);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the properties template update route.</para>
         /// </summary>
-        /// <param name="templateId">An identifier for property template added by <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.PropertiesTemplateAddAsync"
+        /// <param name="templateId">An identifier for template added by  See <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
         /// />.</param>
-        /// <param name="name">A display name for the property template. Property template
-        /// names can be up to 256 bytes.</param>
-        /// <param name="description">Description for new property template. Property template
-        /// descriptions can be up to 1024 bytes.</param>
-        /// <param name="addFields">This is a list of custom properties to add to the property
-        /// template. There can be up to 64 properties in a single property template.</param>
+        /// <param name="name">A display name for the template. template names can be up to 256
+        /// bytes.</param>
+        /// <param name="description">Description for the new template. Template descriptions
+        /// can be up to 1024 bytes.</param>
+        /// <param name="addFields">Property field templates to be added to the group template.
+        /// There can be up to 32 properties in a single template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginPropertiesTemplateUpdate(string templateId,
                                                               string name = null,
                                                               string description = null,
-                                                              col.IEnumerable<global::Dropbox.Api.Properties.PropertyFieldTemplate> addFields = null,
+                                                              col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> addFields = null,
                                                               sys.AsyncCallback callback = null,
                                                               object callbackState = null)
         {
-            var updatePropertyTemplateArg = new UpdatePropertyTemplateArg(templateId,
-                                                                          name,
-                                                                          description,
-                                                                          addFields);
+            var updateTemplateArg = new global::Dropbox.Api.FileProperties.UpdateTemplateArg(templateId,
+                                                                                             name,
+                                                                                             description,
+                                                                                             addFields);
 
-            return this.BeginPropertiesTemplateUpdate(updatePropertyTemplateArg, callback, callbackState);
+            return this.BeginPropertiesTemplateUpdate(updateTemplateArg, callback, callbackState);
         }
 
         /// <summary>
@@ -4295,10 +4322,11 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Properties.ModifyPropertyTemplateError"/>.</exception>
-        public UpdatePropertyTemplateResult EndPropertiesTemplateUpdate(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public global::Dropbox.Api.FileProperties.UpdateTemplateResult EndPropertiesTemplateUpdate(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<UpdatePropertyTemplateResult>;
+            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

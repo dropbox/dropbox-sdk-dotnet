@@ -12,7 +12,7 @@ namespace Dropbox.Api.TeamLog
 
     /// <summary>
     /// <para>Changed the action taken when a team member is already over the limits (e.g when
-    /// they join the team, an admin lowers limits, etc).</para>
+    /// they join the team, an admin lowers limits, etc.).</para>
     /// </summary>
     public class DeviceApprovalsChangeOverageActionDetails
     {
@@ -36,8 +36,8 @@ namespace Dropbox.Api.TeamLog
         /// historical data gap.</param>
         /// <param name="previousValue">Previous over the limit policy. Might be missing due to
         /// historical data gap.</param>
-        public DeviceApprovalsChangeOverageActionDetails(DeviceApprovalsRolloutPolicy newValue = null,
-                                                         DeviceApprovalsRolloutPolicy previousValue = null)
+        public DeviceApprovalsChangeOverageActionDetails(global::Dropbox.Api.TeamPolicies.RolloutMethod newValue = null,
+                                                         global::Dropbox.Api.TeamPolicies.RolloutMethod previousValue = null)
         {
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
@@ -58,13 +58,13 @@ namespace Dropbox.Api.TeamLog
         /// <para>New over the limits policy. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public DeviceApprovalsRolloutPolicy NewValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.RolloutMethod NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous over the limit policy. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public DeviceApprovalsRolloutPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.RolloutMethod PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,11 +82,11 @@ namespace Dropbox.Api.TeamLog
             {
                 if (value.NewValue != null)
                 {
-                    WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.DeviceApprovalsRolloutPolicy.Encoder);
+                    WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.RolloutMethod.Encoder);
                 }
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.DeviceApprovalsRolloutPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.RolloutMethod.Encoder);
                 }
             }
         }
@@ -122,10 +122,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.DeviceApprovalsRolloutPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamPolicies.RolloutMethod.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.DeviceApprovalsRolloutPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamPolicies.RolloutMethod.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

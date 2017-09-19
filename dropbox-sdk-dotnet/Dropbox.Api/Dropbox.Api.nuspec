@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.3.1</version>
+    <version>4.4.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -13,27 +13,14 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's new:
+  - FileProperties:
+    - New routes and structs for file properties and templates API functionality.
+  - FileRequests:
+    - New routes and structs for file requests API functionality.
   - Files:
-	- Added IncludeMountedFolders and Limit parameter to ListFolderArg.
-	- Added GetThumbnailBatch route.
-    - File ID is now supported for ListFolder route.
-	- Default value for AllowOwnershipTransfer is not false.
-	- Added ServerDeleted timestamp to ListRevisions.
-	- Added DeleteAt to DeleteMetadata
-	- Added IncludeDeleted parameter to ListRevisions
-  - Paper:
-    - Added DocsCreate and DocsUpdate routes.
-
-  - Sharing:
-	- Updated PermissionDeniedReason.
-    - GetSharedLinks now returns max results limit of 1000.
-	- Added OwnerDisplayNames to SharedFolderMetadataBase.
-
-  - Team:
-	- Added MemberSpaceLimitsSetCustomQuota route.
-	- Added MemberSpaceLimitsRemoveCustomQuota route.
-	- Added MemberSpaceLimitsGetCustomQuota route.
-    - Added TeamNamespacesList route.
+    - Deprecate preview routes for file properties.
+  - Properties:
+    - Removed in favor of FileProperties namespace.
 
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>

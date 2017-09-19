@@ -7,11 +7,17 @@ namespace Dropbox.Api
     using sys = System;
 
     using Dropbox.Api.Stone;
+    using Dropbox.Api.FileProperties.Routes;
     using Dropbox.Api.Team.Routes;
     using Dropbox.Api.TeamLog.Routes;
 
     public sealed partial class DropboxTeamClient
     {
+        /// <summary>
+        /// <para>Gets the FileProperties routes.</para>
+        /// </summary>
+        public FilePropertiesTeamRoutes FileProperties { get; private set; }
+
         /// <summary>
         /// <para>Gets the Team routes.</para>
         /// </summary>
@@ -28,6 +34,7 @@ namespace Dropbox.Api
         /// <returns>The transport.</returns>
         internal override void InitializeRoutes(ITransport transport)
         {
+            this.FileProperties = new FilePropertiesTeamRoutes(transport);
             this.Team = new TeamTeamRoutes(transport);
             this.TeamLog = new TeamLogTeamRoutes(transport);
         }

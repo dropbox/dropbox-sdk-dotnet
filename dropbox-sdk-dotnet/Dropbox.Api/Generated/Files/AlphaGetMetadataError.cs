@@ -172,7 +172,7 @@ namespace Dropbox.Api.Files
             /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public PropertiesError(LookUpPropertiesError value)
+            public PropertiesError(global::Dropbox.Api.FileProperties.LookUpPropertiesError value)
             {
                 this.Value = value;
             }
@@ -187,7 +187,7 @@ namespace Dropbox.Api.Files
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public LookUpPropertiesError Value { get; private set; }
+            public global::Dropbox.Api.FileProperties.LookUpPropertiesError Value { get; private set; }
 
             #region Encoder class
 
@@ -203,7 +203,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PropertiesError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.LookUpPropertiesError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.FileProperties.LookUpPropertiesError.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -236,7 +236,7 @@ namespace Dropbox.Api.Files
                     switch (fieldName)
                     {
                         case "properties_error":
-                            value.Value = global::Dropbox.Api.Files.LookUpPropertiesError.Decoder.Decode(reader);
+                            value.Value = global::Dropbox.Api.FileProperties.LookUpPropertiesError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
