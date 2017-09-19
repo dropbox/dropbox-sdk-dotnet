@@ -376,7 +376,7 @@ class _CSharpGenerator(CodeGenerator):
             self.emit(tag_start + ' />')
         else:
             self.emit_wrapped_text('{0}>{1}</{2}>'.format(tag_start, doc, tag),
-                                   process=self._tag_handler)
+                                   process=self._get_tag_handler(self._ns))
 
     @contextmanager
     def xml_block(self, tag, **attrs):
@@ -519,47 +519,50 @@ class _CSharpGenerator(CodeGenerator):
         self.emit_summary('Initializes a new instance of the <see cref="{0}" /> '
                           'class.'.format(class_name))
 
-    def _tag_handler(self, tag, value):
-        """
-        Passed as to the process_doc() method to handle tags that are found in
-        the documentation string
+    def _get_tag_handler(self, ns):
+        def tag_handler(tag, value):
+            """
+            Passed as to the process_doc() method to handle tags that are found in
+            the documentation string
 
-        Args:
-            tag (Union[str, unicode]): The tag type, one of 'field|link|route|type|val'
-            value (Union[str, unicode]): The value of the tag.
-        """
-        if tag == 'field':
-            if '.' in value:
-                parts = map(self._public_name, value.split('.'))
-                return '<see cref="{0}.{1}.{2}" />'.format(self._namespace_name, self._ns, '.'.join(parts))
-            elif self._tag_context:
-                data_type, is_constructor = self._tag_context
-                if is_constructor:
-                    return '<paramref name="{0}" />'.format(self._arg_name(value, is_doc=True))
+            Args:
+                tag (Union[str, unicode]): The tag type, one of 'field|link|route|type|val'
+                value (Union[str, unicode]): The value of the tag.
+            """
+            if tag == 'field':
+                if '.' in value:
+                    parts = map(self._public_name, value.split('.'))
+                    return '<see cref="{0}.{1}.{2}" />'.format(self._namespace_name, ns, '.'.join(parts))
+                elif self._tag_context:
+                    data_type, is_constructor = self._tag_context
+                    if is_constructor:
+                        return '<paramref name="{0}" />'.format(self._arg_name(value, is_doc=True))
+                    else:
+                        return '<see cref="{0}" />'.format(self._public_name(value))
                 else:
-                    return '<see cref="{0}" />'.format(self._public_name(value))
-            else:
-                return '<paramref name="{0}" />'.format(self._arg_name(value, is_doc=True))
-        elif tag == 'link':
-            parts = value.split(' ')
-            uri = parts[-1]
-            text = ' '.join(parts[:-1])
-            return '<a href="{0}">{1}</a>'.format(uri, text)
-        elif tag == 'route':
-            if '.' in value:
-                ns_name, route_name = map(self._public_name, value.split('.'))
-            else:
-                ns_name, route_name = self._ns, self._public_name(value)
-            auth_type = self._route_auth_map[(ns_name, route_name)]
+                    return '<paramref name="{0}" />'.format(self._arg_name(value, is_doc=True))
+            elif tag == 'link':
+                parts = value.split(' ')
+                uri = parts[-1]
+                text = ' '.join(parts[:-1])
+                return '<a href="{0}">{1}</a>'.format(uri, text)
+            elif tag == 'route':
+                if '.' in value:
+                    ns_name, route_name = map(self._public_name, value.split('.'))
+                else:
+                    ns_name, route_name = ns, self._public_name(value)
+                auth_type = self._route_auth_map[(ns_name, route_name)]
 
-            return ('<see cref="{0}.{1}.Routes.{1}{2}Routes.{3}Async" />'.format(
-                    self._namespace_name, ns_name, auth_type, route_name))
-        elif tag == 'type':
-            return '<see cref="{0}" />'.format(self._public_name(value))
-        elif tag == 'val':
-            return '<c>{0}</c>'.format(value.strip('`'))
-        else:
-            assert False, 'Unknown tag: {0}:{1}'.format(tag, value)
+                return ('<see cref="{0}.{1}.Routes.{1}{2}Routes.{3}Async" />'.format(
+                        self._namespace_name, ns_name, auth_type, route_name))
+            elif tag == 'type':
+                return '<see cref="{0}" />'.format(self._public_name(value))
+            elif tag == 'val':
+                return '<c>{0}</c>'.format(value.strip('`'))
+            else:
+                assert False, 'Unknown tag: {0}:{1}'.format(tag, value)
+
+        return tag_handler
 
     def _typename(self, data_type, void=None, is_property=False, is_response=False, include_namespace=False):
         """
@@ -1238,6 +1241,8 @@ class _CSharpGenerator(CodeGenerator):
                 arguments are being enumerated.
         """
         constructor_args = []
+        ns_name = self._public_name(struct.namespace.name)
+
         for field in struct.all_fields:
             fieldtype = self._typename(field.data_type)
             arg_name = self._arg_name(field.name)
@@ -1256,7 +1261,7 @@ class _CSharpGenerator(CodeGenerator):
 
             doc = field.doc or 'The {0}'.format(self._name_words(field.name))
             self._tag_context = (struct, True)
-            doc = self.process_doc(doc, self._tag_handler)
+            doc = self.process_doc(doc, self._get_tag_handler(ns_name))
             self._tag_context = None
             doc = '<param name="{0}">{1}</param>'.format(doc_name, doc)
 
@@ -2051,6 +2056,9 @@ class _CSharpGenerator(CodeGenerator):
         """
         if not deprecated:
             return
-
-        self.emit('[sys.Obsolete("This function is deprecated, please use {0}{1}{2} instead.")]'
-                  .format(prefix, self._public_name(deprecated.by.name), suffix))
+        
+        if not deprecated.by:
+            self.emit('[sys.Obsolete("This function is deprecated")]')
+        else:
+            self.emit('[sys.Obsolete("This function is deprecated, please use {0}{1}{2} instead.")]'
+                    .format(prefix, self._public_name(deprecated.by.name), suffix))
