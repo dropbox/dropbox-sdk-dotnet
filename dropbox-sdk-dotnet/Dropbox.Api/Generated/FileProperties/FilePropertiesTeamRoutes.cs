@@ -31,7 +31,7 @@ namespace Dropbox.Api.FileProperties.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Add a template associated with a team. See route <see
+        /// <para>Add a template associated with a team. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
         /// /> to add properties to a file or folder.</para>
         /// </summary>
@@ -63,7 +63,7 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Add a template associated with a team. See route <see
+        /// <para>Add a template associated with a team. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
         /// /> to add properties to a file or folder.</para>
         /// </summary>

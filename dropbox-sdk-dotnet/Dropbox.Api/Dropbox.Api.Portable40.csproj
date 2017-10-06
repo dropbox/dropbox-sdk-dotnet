@@ -258,6 +258,7 @@
     <Compile Include="Generated\Files\SearchMatchType.cs" />
     <Compile Include="Generated\Files\SearchMode.cs" />
     <Compile Include="Generated\Files\SearchResult.cs" />
+    <Compile Include="Generated\Files\SharedLink.cs" />
     <Compile Include="Generated\Files\SharingInfo.cs" />
     <Compile Include="Generated\Files\ThumbnailArg.cs" />
     <Compile Include="Generated\Files\ThumbnailError.cs" />
@@ -478,6 +479,7 @@
     <Compile Include="Generated\Sharing\UpdateFolderMemberError.cs" />
     <Compile Include="Generated\Sharing\UpdateFolderPolicyArg.cs" />
     <Compile Include="Generated\Sharing\UpdateFolderPolicyError.cs" />
+    <Compile Include="Generated\Sharing\UserFileMembershipInfo.cs" />
     <Compile Include="Generated\Sharing\UserInfo.cs" />
     <Compile Include="Generated\Sharing\UserMembershipInfo.cs" />
     <Compile Include="Generated\Sharing\ViewerInfoPolicy.cs" />
@@ -831,6 +833,7 @@
     <Compile Include="Generated\TeamLog\PaperAccessType.cs" />
     <Compile Include="Generated\TeamLog\PaperAdminExportStartDetails.cs" />
     <Compile Include="Generated\TeamLog\PaperChangeDeploymentPolicyDetails.cs" />
+    <Compile Include="Generated\TeamLog\PaperChangeMemberLinkPolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\PaperChangeMemberPolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\PaperChangePolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\PaperContentAddMemberDetails.cs" />
@@ -967,6 +970,7 @@
     <Compile Include="Generated\TeamLog\SmartSyncPolicy.cs" />
     <Compile Include="Generated\TeamLog\SpaceLimitsLevel.cs" />
     <Compile Include="Generated\TeamLog\SpaceLimitsStatus.cs" />
+    <Compile Include="Generated\TeamLog\SsoAddCertDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoAddLoginUrlDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoAddLogoutUrlDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoChangeCertDetails.cs" />
@@ -975,6 +979,7 @@
     <Compile Include="Generated\TeamLog\SsoChangePolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoChangeSamlIdentityModeDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoLoginFailDetails.cs" />
+    <Compile Include="Generated\TeamLog\SsoRemoveCertDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoRemoveLoginUrlDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoRemoveLogoutUrlDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamActivityCreateReportDetails.cs" />
@@ -993,6 +998,7 @@
     <Compile Include="Generated\TeamLog\TeamMergeToDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamName.cs" />
     <Compile Include="Generated\TeamLog\TeamProfileAddLogoDetails.cs" />
+    <Compile Include="Generated\TeamLog\TeamProfileChangeDefaultLanguageDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamProfileChangeLogoDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamProfileChangeNameDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamProfileRemoveLogoDetails.cs" />
@@ -1002,7 +1008,6 @@
     <Compile Include="Generated\TeamLog\TfaChangePolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\TfaChangeStatusDetails.cs" />
     <Compile Include="Generated\TeamLog\TfaConfiguration.cs" />
-    <Compile Include="Generated\TeamLog\TfaPolicy.cs" />
     <Compile Include="Generated\TeamLog\TfaRemoveBackupPhoneDetails.cs" />
     <Compile Include="Generated\TeamLog\TfaRemoveSecurityKeyDetails.cs" />
     <Compile Include="Generated\TeamLog\TfaResetDetails.cs" />
@@ -1030,6 +1035,7 @@
     <Compile Include="Generated\TeamPolicies\SsoPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\TeamMemberPolicies.cs" />
     <Compile Include="Generated\TeamPolicies\TeamSharingPolicies.cs" />
+    <Compile Include="Generated\TeamPolicies\TwoStepVerificationPolicy.cs" />
     <Compile Include="Generated\Users\Account.cs" />
     <Compile Include="Generated\Users\BasicAccount.cs" />
     <Compile Include="Generated\Users\FullAccount.cs" />

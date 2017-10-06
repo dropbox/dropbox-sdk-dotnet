@@ -4973,7 +4973,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new, active, team folder.</para>
+        /// <para>Creates a new, active, team folder with no members.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderCreateArg">The request parameters</param>
@@ -5004,7 +5004,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new, active, team folder.</para>
+        /// <para>Creates a new, active, team folder with no members.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="name">Name for the new team folder.</param>

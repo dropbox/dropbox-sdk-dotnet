@@ -11,26 +11,26 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The information about a user member of the shared content.</para>
+    /// <para>The information about a user member of the shared content with an appended last
+    /// seen timestamp.</para>
     /// </summary>
-    /// <seealso cref="UserFileMembershipInfo" />
-    /// <seealso cref="Global::Dropbox.Api.Sharing.MembershipInfo" />
-    public class UserMembershipInfo : MembershipInfo
+    /// <seealso cref="Global::Dropbox.Api.Sharing.UserMembershipInfo" />
+    public class UserFileMembershipInfo : UserMembershipInfo
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<UserMembershipInfo> Encoder = new UserMembershipInfoEncoder();
+        internal static enc.StructEncoder<UserFileMembershipInfo> Encoder = new UserFileMembershipInfoEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<UserMembershipInfo> Decoder = new UserMembershipInfoDecoder();
+        internal static enc.StructDecoder<UserFileMembershipInfo> Decoder = new UserFileMembershipInfoDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="UserMembershipInfo" />
+        /// <para>Initializes a new instance of the <see cref="UserFileMembershipInfo" />
         /// class.</para>
         /// </summary>
         /// <param name="accessType">The access type for this member.</param>
@@ -40,50 +40,49 @@ namespace Dropbox.Api.Sharing
         /// <param name="initials">Suggested name initials for a member.</param>
         /// <param name="isInherited">True if the member has access from a parent
         /// folder.</param>
-        public UserMembershipInfo(AccessLevel accessType,
-                                  UserInfo user,
-                                  col.IEnumerable<MemberPermission> permissions = null,
-                                  string initials = null,
-                                  bool isInherited = false)
-            : base(accessType, permissions, initials, isInherited)
+        /// <param name="timeLastSeen">The UTC timestamp of when the user has last seen the
+        /// content, if they have.</param>
+        public UserFileMembershipInfo(AccessLevel accessType,
+                                      UserInfo user,
+                                      col.IEnumerable<MemberPermission> permissions = null,
+                                      string initials = null,
+                                      bool isInherited = false,
+                                      sys.DateTime? timeLastSeen = null)
+            : base(accessType, user, permissions, initials, isInherited)
         {
-            if (user == null)
-            {
-                throw new sys.ArgumentNullException("user");
-            }
-
-            this.User = user;
+            this.TimeLastSeen = timeLastSeen;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="UserMembershipInfo" />
+        /// <para>Initializes a new instance of the <see cref="UserFileMembershipInfo" />
         /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public UserMembershipInfo()
+        public UserFileMembershipInfo()
         {
         }
 
         /// <summary>
-        /// <para>The account information for the membership user.</para>
+        /// <para>The UTC timestamp of when the user has last seen the content, if they
+        /// have.</para>
         /// </summary>
-        public UserInfo User { get; protected set; }
+        public sys.DateTime? TimeLastSeen { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="UserMembershipInfo" />.</para>
+        /// <para>Encoder for  <see cref="UserFileMembershipInfo" />.</para>
         /// </summary>
-        private class UserMembershipInfoEncoder : enc.StructEncoder<UserMembershipInfo>
+        private class UserFileMembershipInfoEncoder : enc.StructEncoder<UserFileMembershipInfo>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(UserMembershipInfo value, enc.IJsonWriter writer)
+            public override void EncodeFields(UserFileMembershipInfo value, enc.IJsonWriter writer)
             {
                 WriteProperty("access_type", value.AccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 WriteProperty("user", value.User, writer, global::Dropbox.Api.Sharing.UserInfo.Encoder);
@@ -96,6 +95,10 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
+                if (value.TimeLastSeen != null)
+                {
+                    WriteProperty("time_last_seen", value.TimeLastSeen.Value, writer, enc.DateTimeEncoder.Instance);
+                }
             }
         }
 
@@ -105,17 +108,18 @@ namespace Dropbox.Api.Sharing
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="UserMembershipInfo" />.</para>
+        /// <para>Decoder for  <see cref="UserFileMembershipInfo" />.</para>
         /// </summary>
-        private class UserMembershipInfoDecoder : enc.StructDecoder<UserMembershipInfo>
+        private class UserFileMembershipInfoDecoder : enc.StructDecoder<UserFileMembershipInfo>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="UserMembershipInfo" />.</para>
+            /// <para>Create a new instance of type <see cref="UserFileMembershipInfo"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override UserMembershipInfo Create()
+            protected override UserFileMembershipInfo Create()
             {
-                return new UserMembershipInfo();
+                return new UserFileMembershipInfo();
             }
 
             /// <summary>
@@ -124,7 +128,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(UserMembershipInfo value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(UserFileMembershipInfo value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
@@ -142,6 +146,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "is_inherited":
                         value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "time_last_seen":
+                        value.TimeLastSeen = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

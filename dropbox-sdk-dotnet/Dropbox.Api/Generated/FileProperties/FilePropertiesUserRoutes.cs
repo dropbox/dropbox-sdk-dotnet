@@ -230,7 +230,7 @@ namespace Dropbox.Api.FileProperties.Routes
 
         /// <summary>
         /// <para>Remove the specified property group from the file. To remove specific
-        /// property field key value pairs, see route <see
+        /// property field key value pairs, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesUpdateAsync"
         /// />. To update a template, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesUpdateForUserAsync"
@@ -266,7 +266,7 @@ namespace Dropbox.Api.FileProperties.Routes
 
         /// <summary>
         /// <para>Remove the specified property group from the file. To remove specific
-        /// property field key value pairs, see route <see
+        /// property field key value pairs, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesUpdateAsync"
         /// />. To update a template, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesUpdateForUserAsync"
@@ -534,9 +534,10 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Add a template associated with a user. See route <see
+        /// <para>Add a template associated with a user. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
-        /// /> to add properties to a file.</para>
+        /// /> to add properties to a file. This endpoint can't be called on a team member or
+        /// admin's behalf.</para>
         /// </summary>
         /// <param name="addTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -566,9 +567,10 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Add a template associated with a user. See route <see
+        /// <para>Add a template associated with a user. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
-        /// /> to add properties to a file.</para>
+        /// /> to add properties to a file. This endpoint can't be called on a team member or
+        /// admin's behalf.</para>
         /// </summary>
         /// <param name="name">Display name for the template. Template names can be up to 256
         /// bytes.</param>
@@ -641,7 +643,8 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Get the schema for a specified template.</para>
+        /// <para>Get the schema for a specified template. This endpoint can't be called on a
+        /// team member or admin's behalf.</para>
         /// </summary>
         /// <param name="getTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -671,7 +674,8 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Get the schema for a specified template.</para>
+        /// <para>Get the schema for a specified template. This endpoint can't be called on a
+        /// team member or admin's behalf.</para>
         /// </summary>
         /// <param name="templateId">An identifier for template added by route  See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
@@ -737,7 +741,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <para>Get the template identifiers for a team. To get the schema of each template
         /// use <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesGetForUserAsync"
-        /// />.</para>
+        /// />. This endpoint can't be called on a team member or admin's behalf.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -787,7 +791,8 @@ namespace Dropbox.Api.FileProperties.Routes
 
         /// <summary>
         /// <para>Update a template associated with a user. This route can update the template
-        /// name, the template description and add optional properties to templates.</para>
+        /// name, the template description and add optional properties to templates. This
+        /// endpoint can't be called on a team member or admin's behalf.</para>
         /// </summary>
         /// <param name="updateTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -818,7 +823,8 @@ namespace Dropbox.Api.FileProperties.Routes
 
         /// <summary>
         /// <para>Update a template associated with a user. This route can update the template
-        /// name, the template description and add optional properties to templates.</para>
+        /// name, the template description and add optional properties to templates. This
+        /// endpoint can't be called on a team member or admin's behalf.</para>
         /// </summary>
         /// <param name="templateId">An identifier for template added by  See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"

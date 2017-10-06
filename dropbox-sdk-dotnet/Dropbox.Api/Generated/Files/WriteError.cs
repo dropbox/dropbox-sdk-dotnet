@@ -708,7 +708,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>This endpoint cannot modify or delete team folders.</para>
+        /// <para>This endpoint cannot move or delete team folders.</para>
         /// </summary>
         public sealed class TeamFolder : WriteError
         {

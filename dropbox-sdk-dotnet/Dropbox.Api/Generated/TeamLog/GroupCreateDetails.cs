@@ -32,10 +32,10 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="joinPolicy">Group join policy.</param>
-        /// <param name="isAdminManaged">Is admin managed group. Might be missing due to
+        /// <param name="isCompanyManaged">Is company managed group. Might be missing due to
         /// historical data gap.</param>
         public GroupCreateDetails(GroupJoinPolicy joinPolicy,
-                                  bool? isAdminManaged = null)
+                                  bool? isCompanyManaged = null)
         {
             if (joinPolicy == null)
             {
@@ -43,7 +43,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.JoinPolicy = joinPolicy;
-            this.IsAdminManaged = isAdminManaged;
+            this.IsCompanyManaged = isCompanyManaged;
         }
 
         /// <summary>
@@ -63,9 +63,9 @@ namespace Dropbox.Api.TeamLog
         public GroupJoinPolicy JoinPolicy { get; protected set; }
 
         /// <summary>
-        /// <para>Is admin managed group. Might be missing due to historical data gap.</para>
+        /// <para>Is company managed group. Might be missing due to historical data gap.</para>
         /// </summary>
-        public bool? IsAdminManaged { get; protected set; }
+        public bool? IsCompanyManaged { get; protected set; }
 
         #region Encoder class
 
@@ -82,9 +82,9 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(GroupCreateDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("join_policy", value.JoinPolicy, writer, global::Dropbox.Api.TeamLog.GroupJoinPolicy.Encoder);
-                if (value.IsAdminManaged != null)
+                if (value.IsCompanyManaged != null)
                 {
-                    WriteProperty("is_admin_managed", value.IsAdminManaged.Value, writer, enc.BooleanEncoder.Instance);
+                    WriteProperty("is_company_managed", value.IsCompanyManaged.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -121,8 +121,8 @@ namespace Dropbox.Api.TeamLog
                     case "join_policy":
                         value.JoinPolicy = global::Dropbox.Api.TeamLog.GroupJoinPolicy.Decoder.Decode(reader);
                         break;
-                    case "is_admin_managed":
-                        value.IsAdminManaged = enc.BooleanDecoder.Instance.Decode(reader);
+                    case "is_company_managed":
+                        value.IsCompanyManaged = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -11,70 +11,68 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed a domain from the list of verified domains belonging to the team.</para>
+    /// <para>Changed whether non team members can view Paper documents using a link.</para>
     /// </summary>
-    public class DomainVerificationRemoveDomainDetails
+    public class PaperChangeMemberLinkPolicyDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<DomainVerificationRemoveDomainDetails> Encoder = new DomainVerificationRemoveDomainDetailsEncoder();
+        internal static enc.StructEncoder<PaperChangeMemberLinkPolicyDetails> Encoder = new PaperChangeMemberLinkPolicyDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<DomainVerificationRemoveDomainDetails> Decoder = new DomainVerificationRemoveDomainDetailsDecoder();
+        internal static enc.StructDecoder<PaperChangeMemberLinkPolicyDetails> Decoder = new PaperChangeMemberLinkPolicyDetailsDecoder();
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="DomainVerificationRemoveDomainDetails" /> class.</para>
+        /// cref="PaperChangeMemberLinkPolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="domainNames">Domain names.</param>
-        public DomainVerificationRemoveDomainDetails(col.IEnumerable<string> domainNames)
+        /// <param name="newValue">New paper external link accessibility policy.</param>
+        public PaperChangeMemberLinkPolicyDetails(PaperMemberPolicy newValue)
         {
-            var domainNamesList = enc.Util.ToList(domainNames);
-
-            if (domainNames == null)
+            if (newValue == null)
             {
-                throw new sys.ArgumentNullException("domainNames");
+                throw new sys.ArgumentNullException("newValue");
             }
 
-            this.DomainNames = domainNamesList;
+            this.NewValue = newValue;
         }
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="DomainVerificationRemoveDomainDetails" /> class.</para>
+        /// cref="PaperChangeMemberLinkPolicyDetails" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public DomainVerificationRemoveDomainDetails()
+        public PaperChangeMemberLinkPolicyDetails()
         {
         }
 
         /// <summary>
-        /// <para>Domain names.</para>
+        /// <para>New paper external link accessibility policy.</para>
         /// </summary>
-        public col.IList<string> DomainNames { get; protected set; }
+        public PaperMemberPolicy NewValue { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="DomainVerificationRemoveDomainDetails" />.</para>
+        /// <para>Encoder for  <see cref="PaperChangeMemberLinkPolicyDetails" />.</para>
         /// </summary>
-        private class DomainVerificationRemoveDomainDetailsEncoder : enc.StructEncoder<DomainVerificationRemoveDomainDetails>
+        private class PaperChangeMemberLinkPolicyDetailsEncoder : enc.StructEncoder<PaperChangeMemberLinkPolicyDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(DomainVerificationRemoveDomainDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(PaperChangeMemberLinkPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteListProperty("domain_names", value.DomainNames, writer, enc.StringEncoder.Instance);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.PaperMemberPolicy.Encoder);
             }
         }
 
@@ -84,18 +82,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="DomainVerificationRemoveDomainDetails" />.</para>
+        /// <para>Decoder for  <see cref="PaperChangeMemberLinkPolicyDetails" />.</para>
         /// </summary>
-        private class DomainVerificationRemoveDomainDetailsDecoder : enc.StructDecoder<DomainVerificationRemoveDomainDetails>
+        private class PaperChangeMemberLinkPolicyDetailsDecoder : enc.StructDecoder<PaperChangeMemberLinkPolicyDetails>
         {
             /// <summary>
             /// <para>Create a new instance of type <see
-            /// cref="DomainVerificationRemoveDomainDetails" />.</para>
+            /// cref="PaperChangeMemberLinkPolicyDetails" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override DomainVerificationRemoveDomainDetails Create()
+            protected override PaperChangeMemberLinkPolicyDetails Create()
             {
-                return new DomainVerificationRemoveDomainDetails();
+                return new PaperChangeMemberLinkPolicyDetails();
             }
 
             /// <summary>
@@ -104,12 +102,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(DomainVerificationRemoveDomainDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(PaperChangeMemberLinkPolicyDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "domain_names":
-                        value.DomainNames = ReadList<string>(reader, enc.StringDecoder.Instance);
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.PaperMemberPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

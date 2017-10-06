@@ -82,8 +82,6 @@
             <summary>
                 <para>This namespace contains endpoints and data types for file request
                 operations.</para>
-                <para>Warning: This namespace is in beta and is subject to
-                backwards-incompatible changes.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.FileRequests.Routes">

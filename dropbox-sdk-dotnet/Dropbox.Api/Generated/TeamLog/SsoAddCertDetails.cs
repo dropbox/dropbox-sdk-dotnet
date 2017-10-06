@@ -11,67 +11,68 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Deleted a group.</para>
+    /// <para>Added the X.509 certificate for SSO.</para>
     /// </summary>
-    public class GroupDeleteDetails
+    public class SsoAddCertDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<GroupDeleteDetails> Encoder = new GroupDeleteDetailsEncoder();
+        internal static enc.StructEncoder<SsoAddCertDetails> Encoder = new SsoAddCertDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<GroupDeleteDetails> Decoder = new GroupDeleteDetailsDecoder();
+        internal static enc.StructDecoder<SsoAddCertDetails> Decoder = new SsoAddCertDetailsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GroupDeleteDetails" />
+        /// <para>Initializes a new instance of the <see cref="SsoAddCertDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="isCompanyManaged">Is company managed group. Might be missing due to
-        /// historical data gap.</param>
-        public GroupDeleteDetails(bool? isCompanyManaged = null)
+        /// <param name="certificateDetails">SSO certificate details.</param>
+        public SsoAddCertDetails(Certificate certificateDetails)
         {
-            this.IsCompanyManaged = isCompanyManaged;
+            if (certificateDetails == null)
+            {
+                throw new sys.ArgumentNullException("certificateDetails");
+            }
+
+            this.CertificateDetails = certificateDetails;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GroupDeleteDetails" />
+        /// <para>Initializes a new instance of the <see cref="SsoAddCertDetails" />
         /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public GroupDeleteDetails()
+        public SsoAddCertDetails()
         {
         }
 
         /// <summary>
-        /// <para>Is company managed group. Might be missing due to historical data gap.</para>
+        /// <para>SSO certificate details.</para>
         /// </summary>
-        public bool? IsCompanyManaged { get; protected set; }
+        public Certificate CertificateDetails { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="GroupDeleteDetails" />.</para>
+        /// <para>Encoder for  <see cref="SsoAddCertDetails" />.</para>
         /// </summary>
-        private class GroupDeleteDetailsEncoder : enc.StructEncoder<GroupDeleteDetails>
+        private class SsoAddCertDetailsEncoder : enc.StructEncoder<SsoAddCertDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(GroupDeleteDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(SsoAddCertDetails value, enc.IJsonWriter writer)
             {
-                if (value.IsCompanyManaged != null)
-                {
-                    WriteProperty("is_company_managed", value.IsCompanyManaged.Value, writer, enc.BooleanEncoder.Instance);
-                }
+                WriteProperty("certificate_details", value.CertificateDetails, writer, global::Dropbox.Api.TeamLog.Certificate.Encoder);
             }
         }
 
@@ -81,17 +82,17 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="GroupDeleteDetails" />.</para>
+        /// <para>Decoder for  <see cref="SsoAddCertDetails" />.</para>
         /// </summary>
-        private class GroupDeleteDetailsDecoder : enc.StructDecoder<GroupDeleteDetails>
+        private class SsoAddCertDetailsDecoder : enc.StructDecoder<SsoAddCertDetails>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="GroupDeleteDetails" />.</para>
+            /// <para>Create a new instance of type <see cref="SsoAddCertDetails" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override GroupDeleteDetails Create()
+            protected override SsoAddCertDetails Create()
             {
-                return new GroupDeleteDetails();
+                return new SsoAddCertDetails();
             }
 
             /// <summary>
@@ -100,12 +101,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(GroupDeleteDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(SsoAddCertDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "is_company_managed":
-                        value.IsCompanyManaged = enc.BooleanDecoder.Instance.Decode(reader);
+                    case "certificate_details":
+                        value.CertificateDetails = global::Dropbox.Api.TeamLog.Certificate.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

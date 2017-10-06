@@ -4680,6 +4680,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is SsoAddCertDetails</para>
+        /// </summary>
+        public bool IsSsoAddCertDetails
+        {
+            get
+            {
+                return this is SsoAddCertDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SsoAddCertDetails, or <c>null</c>.</para>
+        /// </summary>
+        public SsoAddCertDetails AsSsoAddCertDetails
+        {
+            get
+            {
+                return this as SsoAddCertDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is SsoAddLoginUrlDetails</para>
         /// </summary>
         public bool IsSsoAddLoginUrlDetails
@@ -4813,6 +4835,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as SsoChangeSamlIdentityModeDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is SsoRemoveCertDetails</para>
+        /// </summary>
+        public bool IsSsoRemoveCertDetails
+        {
+            get
+            {
+                return this is SsoRemoveCertDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SsoRemoveCertDetails, or <c>null</c>.</para>
+        /// </summary>
+        public SsoRemoveCertDetails AsSsoRemoveCertDetails
+        {
+            get
+            {
+                return this as SsoRemoveCertDetails;
             }
         }
 
@@ -5622,6 +5666,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// PaperChangeMemberLinkPolicyDetails</para>
+        /// </summary>
+        public bool IsPaperChangeMemberLinkPolicyDetails
+        {
+            get
+            {
+                return this is PaperChangeMemberLinkPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperChangeMemberLinkPolicyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public PaperChangeMemberLinkPolicyDetails AsPaperChangeMemberLinkPolicyDetails
+        {
+            get
+            {
+                return this as PaperChangeMemberLinkPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// PaperChangeMemberPolicyDetails</para>
         /// </summary>
         public bool IsPaperChangeMemberPolicyDetails
@@ -5969,6 +6037,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamProfileAddLogoDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamProfileChangeDefaultLanguageDetails</para>
+        /// </summary>
+        public bool IsTeamProfileChangeDefaultLanguageDetails
+        {
+            get
+            {
+                return this is TeamProfileChangeDefaultLanguageDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamProfileChangeDefaultLanguageDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamProfileChangeDefaultLanguageDetails AsTeamProfileChangeDefaultLanguageDetails
+        {
+            get
+            {
+                return this as TeamProfileChangeDefaultLanguageDetails;
             }
         }
 
@@ -7465,6 +7557,12 @@ namespace Dropbox.Api.TeamLog
                     ShmodelVisibilityTeamOnlyDetails.Encoder.EncodeFields((ShmodelVisibilityTeamOnlyDetails)value, writer);
                     return;
                 }
+                if (value is SsoAddCertDetails)
+                {
+                    WriteProperty(".tag", "sso_add_cert_details", writer, enc.StringEncoder.Instance);
+                    SsoAddCertDetails.Encoder.EncodeFields((SsoAddCertDetails)value, writer);
+                    return;
+                }
                 if (value is SsoAddLoginUrlDetails)
                 {
                     WriteProperty(".tag", "sso_add_login_url_details", writer, enc.StringEncoder.Instance);
@@ -7499,6 +7597,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "sso_change_saml_identity_mode_details", writer, enc.StringEncoder.Instance);
                     SsoChangeSamlIdentityModeDetails.Encoder.EncodeFields((SsoChangeSamlIdentityModeDetails)value, writer);
+                    return;
+                }
+                if (value is SsoRemoveCertDetails)
+                {
+                    WriteProperty(".tag", "sso_remove_cert_details", writer, enc.StringEncoder.Instance);
+                    SsoRemoveCertDetails.Encoder.EncodeFields((SsoRemoveCertDetails)value, writer);
                     return;
                 }
                 if (value is SsoRemoveLoginUrlDetails)
@@ -7705,6 +7809,12 @@ namespace Dropbox.Api.TeamLog
                     PaperChangeDeploymentPolicyDetails.Encoder.EncodeFields((PaperChangeDeploymentPolicyDetails)value, writer);
                     return;
                 }
+                if (value is PaperChangeMemberLinkPolicyDetails)
+                {
+                    WriteProperty(".tag", "paper_change_member_link_policy_details", writer, enc.StringEncoder.Instance);
+                    PaperChangeMemberLinkPolicyDetails.Encoder.EncodeFields((PaperChangeMemberLinkPolicyDetails)value, writer);
+                    return;
+                }
                 if (value is PaperChangeMemberPolicyDetails)
                 {
                     WriteProperty(".tag", "paper_change_member_policy_details", writer, enc.StringEncoder.Instance);
@@ -7793,6 +7903,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "team_profile_add_logo_details", writer, enc.StringEncoder.Instance);
                     TeamProfileAddLogoDetails.Encoder.EncodeFields((TeamProfileAddLogoDetails)value, writer);
+                    return;
+                }
+                if (value is TeamProfileChangeDefaultLanguageDetails)
+                {
+                    WriteProperty(".tag", "team_profile_change_default_language_details", writer, enc.StringEncoder.Instance);
+                    TeamProfileChangeDefaultLanguageDetails.Encoder.EncodeFields((TeamProfileChangeDefaultLanguageDetails)value, writer);
                     return;
                 }
                 if (value is TeamProfileChangeLogoDetails)
@@ -8301,6 +8417,8 @@ namespace Dropbox.Api.TeamLog
                         return ShmodelVisibilityPublicDetails.Decoder.DecodeFields(reader);
                     case "shmodel_visibility_team_only_details":
                         return ShmodelVisibilityTeamOnlyDetails.Decoder.DecodeFields(reader);
+                    case "sso_add_cert_details":
+                        return SsoAddCertDetails.Decoder.DecodeFields(reader);
                     case "sso_add_login_url_details":
                         return SsoAddLoginUrlDetails.Decoder.DecodeFields(reader);
                     case "sso_add_logout_url_details":
@@ -8313,6 +8431,8 @@ namespace Dropbox.Api.TeamLog
                         return SsoChangeLogoutUrlDetails.Decoder.DecodeFields(reader);
                     case "sso_change_saml_identity_mode_details":
                         return SsoChangeSamlIdentityModeDetails.Decoder.DecodeFields(reader);
+                    case "sso_remove_cert_details":
+                        return SsoRemoveCertDetails.Decoder.DecodeFields(reader);
                     case "sso_remove_login_url_details":
                         return SsoRemoveLoginUrlDetails.Decoder.DecodeFields(reader);
                     case "sso_remove_logout_url_details":
@@ -8381,6 +8501,8 @@ namespace Dropbox.Api.TeamLog
                         return NetworkControlChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "paper_change_deployment_policy_details":
                         return PaperChangeDeploymentPolicyDetails.Decoder.DecodeFields(reader);
+                    case "paper_change_member_link_policy_details":
+                        return PaperChangeMemberLinkPolicyDetails.Decoder.DecodeFields(reader);
                     case "paper_change_member_policy_details":
                         return PaperChangeMemberPolicyDetails.Decoder.DecodeFields(reader);
                     case "paper_change_policy_details":
@@ -8411,6 +8533,8 @@ namespace Dropbox.Api.TeamLog
                         return WebSessionsChangeIdleLengthPolicyDetails.Decoder.DecodeFields(reader);
                     case "team_profile_add_logo_details":
                         return TeamProfileAddLogoDetails.Decoder.DecodeFields(reader);
+                    case "team_profile_change_default_language_details":
+                        return TeamProfileChangeDefaultLanguageDetails.Decoder.DecodeFields(reader);
                     case "team_profile_change_logo_details":
                         return TeamProfileChangeLogoDetails.Decoder.DecodeFields(reader);
                     case "team_profile_change_name_details":
@@ -26578,6 +26702,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Added the X.509 certificate for SSO.</para>
+        /// </summary>
+        public sealed class SsoAddCertDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SsoAddCertDetails> Encoder = new SsoAddCertDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SsoAddCertDetails> Decoder = new SsoAddCertDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SsoAddCertDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SsoAddCertDetails(global::Dropbox.Api.TeamLog.SsoAddCertDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SsoAddCertDetails" />
+            /// class.</para>
+            /// </summary>
+            private SsoAddCertDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SsoAddCertDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SsoAddCertDetails" />.</para>
+            /// </summary>
+            private class SsoAddCertDetailsEncoder : enc.StructEncoder<SsoAddCertDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SsoAddCertDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.SsoAddCertDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SsoAddCertDetails" />.</para>
+            /// </summary>
+            private class SsoAddCertDetailsDecoder : enc.StructDecoder<SsoAddCertDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SsoAddCertDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SsoAddCertDetails Create()
+                {
+                    return new SsoAddCertDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SsoAddCertDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SsoAddCertDetails(global::Dropbox.Api.TeamLog.SsoAddCertDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Added sign-in URL for SSO.</para>
         /// </summary>
         public sealed class SsoAddLoginUrlDetails : EventDetails
@@ -27111,6 +27325,96 @@ namespace Dropbox.Api.TeamLog
                 public override SsoChangeSamlIdentityModeDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new SsoChangeSamlIdentityModeDetails(global::Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Removed the X.509 certificate for SSO.</para>
+        /// </summary>
+        public sealed class SsoRemoveCertDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SsoRemoveCertDetails> Encoder = new SsoRemoveCertDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SsoRemoveCertDetails> Decoder = new SsoRemoveCertDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SsoRemoveCertDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SsoRemoveCertDetails(global::Dropbox.Api.TeamLog.SsoRemoveCertDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SsoRemoveCertDetails" />
+            /// class.</para>
+            /// </summary>
+            private SsoRemoveCertDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SsoRemoveCertDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SsoRemoveCertDetails" />.</para>
+            /// </summary>
+            private class SsoRemoveCertDetailsEncoder : enc.StructEncoder<SsoRemoveCertDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SsoRemoveCertDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.SsoRemoveCertDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SsoRemoveCertDetails" />.</para>
+            /// </summary>
+            private class SsoRemoveCertDetailsDecoder : enc.StructDecoder<SsoRemoveCertDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SsoRemoveCertDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SsoRemoveCertDetails Create()
+                {
+                    return new SsoRemoveCertDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SsoRemoveCertDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SsoRemoveCertDetails(global::Dropbox.Api.TeamLog.SsoRemoveCertDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -30214,6 +30518,97 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Changed whether non team members can view Paper documents using a
+        /// link.</para>
+        /// </summary>
+        public sealed class PaperChangeMemberLinkPolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperChangeMemberLinkPolicyDetails> Encoder = new PaperChangeMemberLinkPolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperChangeMemberLinkPolicyDetails> Decoder = new PaperChangeMemberLinkPolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperChangeMemberLinkPolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperChangeMemberLinkPolicyDetails(global::Dropbox.Api.TeamLog.PaperChangeMemberLinkPolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperChangeMemberLinkPolicyDetails" /> class.</para>
+            /// </summary>
+            private PaperChangeMemberLinkPolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PaperChangeMemberLinkPolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperChangeMemberLinkPolicyDetails" />.</para>
+            /// </summary>
+            private class PaperChangeMemberLinkPolicyDetailsEncoder : enc.StructEncoder<PaperChangeMemberLinkPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperChangeMemberLinkPolicyDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.PaperChangeMemberLinkPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperChangeMemberLinkPolicyDetails" />.</para>
+            /// </summary>
+            private class PaperChangeMemberLinkPolicyDetailsDecoder : enc.StructDecoder<PaperChangeMemberLinkPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="PaperChangeMemberLinkPolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperChangeMemberLinkPolicyDetails Create()
+                {
+                    return new PaperChangeMemberLinkPolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperChangeMemberLinkPolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperChangeMemberLinkPolicyDetails(global::Dropbox.Api.TeamLog.PaperChangeMemberLinkPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Changed whether team members can share Paper documents externally (i.e.
         /// outside the team), and if so, whether they should be accessible only by team
         /// members or anyone by default.</para>
@@ -31571,6 +31966,98 @@ namespace Dropbox.Api.TeamLog
                 public override TeamProfileAddLogoDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new TeamProfileAddLogoDetails(global::Dropbox.Api.TeamLog.TeamProfileAddLogoDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Changed the default language for the team.</para>
+        /// </summary>
+        public sealed class TeamProfileChangeDefaultLanguageDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamProfileChangeDefaultLanguageDetails> Encoder = new TeamProfileChangeDefaultLanguageDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamProfileChangeDefaultLanguageDetails> Decoder = new TeamProfileChangeDefaultLanguageDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamProfileChangeDefaultLanguageDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamProfileChangeDefaultLanguageDetails(global::Dropbox.Api.TeamLog.TeamProfileChangeDefaultLanguageDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamProfileChangeDefaultLanguageDetails" /> class.</para>
+            /// </summary>
+            private TeamProfileChangeDefaultLanguageDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamProfileChangeDefaultLanguageDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamProfileChangeDefaultLanguageDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamProfileChangeDefaultLanguageDetailsEncoder : enc.StructEncoder<TeamProfileChangeDefaultLanguageDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamProfileChangeDefaultLanguageDetails value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.TeamLog.TeamProfileChangeDefaultLanguageDetails.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamProfileChangeDefaultLanguageDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamProfileChangeDefaultLanguageDetailsDecoder : enc.StructDecoder<TeamProfileChangeDefaultLanguageDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamProfileChangeDefaultLanguageDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamProfileChangeDefaultLanguageDetails Create()
+                {
+                    return new TeamProfileChangeDefaultLanguageDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamProfileChangeDefaultLanguageDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamProfileChangeDefaultLanguageDetails(global::Dropbox.Api.TeamLog.TeamProfileChangeDefaultLanguageDetails.Decoder.DecodeFields(reader));
                 }
             }
 

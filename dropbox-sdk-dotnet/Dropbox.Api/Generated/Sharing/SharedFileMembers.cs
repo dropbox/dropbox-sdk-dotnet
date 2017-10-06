@@ -46,7 +46,7 @@ namespace Dropbox.Api.Sharing
         /// not been returned yet. Pass the cursor into <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync" />
         /// to list additional members.</param>
-        public SharedFileMembers(col.IEnumerable<UserMembershipInfo> users,
+        public SharedFileMembers(col.IEnumerable<UserFileMembershipInfo> users,
                                  col.IEnumerable<GroupMembershipInfo> groups,
                                  col.IEnumerable<InviteeMembershipInfo> invitees,
                                  string cursor = null)
@@ -92,7 +92,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The list of user members of the shared file.</para>
         /// </summary>
-        public col.IList<UserMembershipInfo> Users { get; protected set; }
+        public col.IList<UserFileMembershipInfo> Users { get; protected set; }
 
         /// <summary>
         /// <para>The list of group members of the shared file.</para>
@@ -127,7 +127,7 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFileMembers value, enc.IJsonWriter writer)
             {
-                WriteListProperty("users", value.Users, writer, global::Dropbox.Api.Sharing.UserMembershipInfo.Encoder);
+                WriteListProperty("users", value.Users, writer, global::Dropbox.Api.Sharing.UserFileMembershipInfo.Encoder);
                 WriteListProperty("groups", value.Groups, writer, global::Dropbox.Api.Sharing.GroupMembershipInfo.Encoder);
                 WriteListProperty("invitees", value.Invitees, writer, global::Dropbox.Api.Sharing.InviteeMembershipInfo.Encoder);
                 if (value.Cursor != null)
@@ -167,7 +167,7 @@ namespace Dropbox.Api.Sharing
                 switch (fieldName)
                 {
                     case "users":
-                        value.Users = ReadList<UserMembershipInfo>(reader, global::Dropbox.Api.Sharing.UserMembershipInfo.Decoder);
+                        value.Users = ReadList<UserFileMembershipInfo>(reader, global::Dropbox.Api.Sharing.UserFileMembershipInfo.Decoder);
                         break;
                     case "groups":
                         value.Groups = ReadList<GroupMembershipInfo>(reader, global::Dropbox.Api.Sharing.GroupMembershipInfo.Decoder);

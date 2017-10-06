@@ -16,6 +16,7 @@ namespace Dropbox.Api.Sharing
     /// cref="Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync" /> to obtain more
     /// detailed information.</para>
     /// </summary>
+    /// <seealso cref="UserFileMembershipInfo" />
     /// <seealso cref="UserMembershipInfo" />
     public class UserInfo
     {

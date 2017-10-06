@@ -31,15 +31,18 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SsoChangeCertDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="certificateDetails">SSO certificate details.</param>
-        public SsoChangeCertDetails(Certificate certificateDetails)
+        /// <param name="newCertificateDetails">New SSO certificate details.</param>
+        /// <param name="previousCertificateDetails">Previous SSO certificate details.</param>
+        public SsoChangeCertDetails(Certificate newCertificateDetails,
+                                    Certificate previousCertificateDetails = null)
         {
-            if (certificateDetails == null)
+            if (newCertificateDetails == null)
             {
-                throw new sys.ArgumentNullException("certificateDetails");
+                throw new sys.ArgumentNullException("newCertificateDetails");
             }
 
-            this.CertificateDetails = certificateDetails;
+            this.NewCertificateDetails = newCertificateDetails;
+            this.PreviousCertificateDetails = previousCertificateDetails;
         }
 
         /// <summary>
@@ -54,9 +57,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>SSO certificate details.</para>
+        /// <para>New SSO certificate details.</para>
         /// </summary>
-        public Certificate CertificateDetails { get; protected set; }
+        public Certificate NewCertificateDetails { get; protected set; }
+
+        /// <summary>
+        /// <para>Previous SSO certificate details.</para>
+        /// </summary>
+        public Certificate PreviousCertificateDetails { get; protected set; }
 
         #region Encoder class
 
@@ -72,7 +80,11 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SsoChangeCertDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("certificate_details", value.CertificateDetails, writer, global::Dropbox.Api.TeamLog.Certificate.Encoder);
+                WriteProperty("new_certificate_details", value.NewCertificateDetails, writer, global::Dropbox.Api.TeamLog.Certificate.Encoder);
+                if (value.PreviousCertificateDetails != null)
+                {
+                    WriteProperty("previous_certificate_details", value.PreviousCertificateDetails, writer, global::Dropbox.Api.TeamLog.Certificate.Encoder);
+                }
             }
         }
 
@@ -105,8 +117,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "certificate_details":
-                        value.CertificateDetails = global::Dropbox.Api.TeamLog.Certificate.Decoder.Decode(reader);
+                    case "new_certificate_details":
+                        value.NewCertificateDetails = global::Dropbox.Api.TeamLog.Certificate.Decoder.Decode(reader);
+                        break;
+                    case "previous_certificate_details":
+                        value.PreviousCertificateDetails = global::Dropbox.Api.TeamLog.Certificate.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

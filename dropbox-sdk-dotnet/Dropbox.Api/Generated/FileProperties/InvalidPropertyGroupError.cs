@@ -450,8 +450,8 @@ namespace Dropbox.Api.FileProperties
         }
 
         /// <summary>
-        /// <para>This folder cannot be tagged. Shared folders and team folders are not
-        /// supported for team-owned tags.</para>
+        /// <para>This folder cannot be tagged. Tagging folders is not supported for team-owned
+        /// templates.</para>
         /// </summary>
         public sealed class UnsupportedFolder : InvalidPropertyGroupError
         {

@@ -2223,6 +2223,10 @@ namespace Dropbox.Api.Files.Routes
         /// finishes.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
+        /// <param name="sharedLink">A shared link to list the contents of, if the link is
+        /// protected provide the password. if this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2245,6 +2249,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(string path,
+                                                        SharedLink sharedLink = null,
                                                         bool recursive = false,
                                                         bool includeMediaInfo = false,
                                                         bool includeDeleted = false,
@@ -2253,6 +2258,7 @@ namespace Dropbox.Api.Files.Routes
                                                         uint? limit = null)
         {
             var listFolderArg = new ListFolderArg(path,
+                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
@@ -2267,6 +2273,10 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder route.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
+        /// <param name="sharedLink">A shared link to list the contents of, if the link is
+        /// protected provide the password. if this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2289,6 +2299,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolder(string path,
+                                                SharedLink sharedLink = null,
                                                 bool recursive = false,
                                                 bool includeMediaInfo = false,
                                                 bool includeDeleted = false,
@@ -2299,6 +2310,7 @@ namespace Dropbox.Api.Files.Routes
                                                 object callbackState = null)
         {
             var listFolderArg = new ListFolderArg(path,
+                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
@@ -2472,6 +2484,10 @@ namespace Dropbox.Api.Files.Routes
         /// in Dropbox.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
+        /// <param name="sharedLink">A shared link to list the contents of, if the link is
+        /// protected provide the password. if this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2494,6 +2510,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(string path,
+                                                                                      SharedLink sharedLink = null,
                                                                                       bool recursive = false,
                                                                                       bool includeMediaInfo = false,
                                                                                       bool includeDeleted = false,
@@ -2502,6 +2519,7 @@ namespace Dropbox.Api.Files.Routes
                                                                                       uint? limit = null)
         {
             var listFolderArg = new ListFolderArg(path,
+                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
@@ -2517,6 +2535,10 @@ namespace Dropbox.Api.Files.Routes
         /// route.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
+        /// <param name="sharedLink">A shared link to list the contents of, if the link is
+        /// protected provide the password. if this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2539,6 +2561,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolderGetLatestCursor(string path,
+                                                               SharedLink sharedLink = null,
                                                                bool recursive = false,
                                                                bool includeMediaInfo = false,
                                                                bool includeDeleted = false,
@@ -2549,6 +2572,7 @@ namespace Dropbox.Api.Files.Routes
                                                                object callbackState = null)
         {
             var listFolderArg = new ListFolderArg(path,
+                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,

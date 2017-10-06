@@ -13,6 +13,7 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>Certificate details.</para>
     /// </summary>
+    /// <seealso cref="SsoAddCertDetails" />
     /// <seealso cref="SsoChangeCertDetails" />
     public class Certificate
     {
