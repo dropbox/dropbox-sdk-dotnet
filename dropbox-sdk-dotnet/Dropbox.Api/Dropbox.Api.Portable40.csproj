@@ -225,6 +225,7 @@
     <Compile Include="Generated\Files\ListFolderResult.cs" />
     <Compile Include="Generated\Files\ListRevisionsArg.cs" />
     <Compile Include="Generated\Files\ListRevisionsError.cs" />
+    <Compile Include="Generated\Files\ListRevisionsMode.cs" />
     <Compile Include="Generated\Files\ListRevisionsResult.cs" />
     <Compile Include="Generated\Files\LookupError.cs" />
     <Compile Include="Generated\Files\MediaInfo.cs" />

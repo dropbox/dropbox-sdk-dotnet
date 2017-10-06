@@ -2223,10 +2223,6 @@ namespace Dropbox.Api.Files.Routes
         /// finishes.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
-        /// <param name="sharedLink">A shared link to list the contents of, if the link is
-        /// protected provide the password. if this field is present, <see
-        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
-        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2243,28 +2239,32 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="limit">The maximum number of results to return per request. Note: This
         /// is an approximate number and there can be slightly more entries returned in some
         /// cases.</param>
+        /// <param name="sharedLink">A shared link to list the contents of. If the link is
+        /// password-protected, the password must be provided. If this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderResult> ListFolderAsync(string path,
-                                                        SharedLink sharedLink = null,
                                                         bool recursive = false,
                                                         bool includeMediaInfo = false,
                                                         bool includeDeleted = false,
                                                         bool includeHasExplicitSharedMembers = false,
                                                         bool includeMountedFolders = true,
-                                                        uint? limit = null)
+                                                        uint? limit = null,
+                                                        SharedLink sharedLink = null)
         {
             var listFolderArg = new ListFolderArg(path,
-                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
-                                                  limit);
+                                                  limit,
+                                                  sharedLink);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -2273,10 +2273,6 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder route.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
-        /// <param name="sharedLink">A shared link to list the contents of, if the link is
-        /// protected provide the password. if this field is present, <see
-        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
-        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2293,30 +2289,34 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="limit">The maximum number of results to return per request. Note: This
         /// is an approximate number and there can be slightly more entries returned in some
         /// cases.</param>
+        /// <param name="sharedLink">A shared link to list the contents of. If the link is
+        /// password-protected, the password must be provided. If this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolder(string path,
-                                                SharedLink sharedLink = null,
                                                 bool recursive = false,
                                                 bool includeMediaInfo = false,
                                                 bool includeDeleted = false,
                                                 bool includeHasExplicitSharedMembers = false,
                                                 bool includeMountedFolders = true,
                                                 uint? limit = null,
+                                                SharedLink sharedLink = null,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
             var listFolderArg = new ListFolderArg(path,
-                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
-                                                  limit);
+                                                  limit,
+                                                  sharedLink);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }
@@ -2484,10 +2484,6 @@ namespace Dropbox.Api.Files.Routes
         /// in Dropbox.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
-        /// <param name="sharedLink">A shared link to list the contents of, if the link is
-        /// protected provide the password. if this field is present, <see
-        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
-        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2504,28 +2500,32 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="limit">The maximum number of results to return per request. Note: This
         /// is an approximate number and there can be slightly more entries returned in some
         /// cases.</param>
+        /// <param name="sharedLink">A shared link to list the contents of. If the link is
+        /// password-protected, the password must be provided. If this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFolderError"/>.</exception>
         public t.Task<ListFolderGetLatestCursorResult> ListFolderGetLatestCursorAsync(string path,
-                                                                                      SharedLink sharedLink = null,
                                                                                       bool recursive = false,
                                                                                       bool includeMediaInfo = false,
                                                                                       bool includeDeleted = false,
                                                                                       bool includeHasExplicitSharedMembers = false,
                                                                                       bool includeMountedFolders = true,
-                                                                                      uint? limit = null)
+                                                                                      uint? limit = null,
+                                                                                      SharedLink sharedLink = null)
         {
             var listFolderArg = new ListFolderArg(path,
-                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
-                                                  limit);
+                                                  limit,
+                                                  sharedLink);
 
             return this.ListFolderGetLatestCursorAsync(listFolderArg);
         }
@@ -2535,10 +2535,6 @@ namespace Dropbox.Api.Files.Routes
         /// route.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
-        /// <param name="sharedLink">A shared link to list the contents of, if the link is
-        /// protected provide the password. if this field is present, <see
-        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
-        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -2555,30 +2551,34 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="limit">The maximum number of results to return per request. Note: This
         /// is an approximate number and there can be slightly more entries returned in some
         /// cases.</param>
+        /// <param name="sharedLink">A shared link to list the contents of. If the link is
+        /// password-protected, the password must be provided. If this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolderGetLatestCursor(string path,
-                                                               SharedLink sharedLink = null,
                                                                bool recursive = false,
                                                                bool includeMediaInfo = false,
                                                                bool includeDeleted = false,
                                                                bool includeHasExplicitSharedMembers = false,
                                                                bool includeMountedFolders = true,
                                                                uint? limit = null,
+                                                               SharedLink sharedLink = null,
                                                                sys.AsyncCallback callback = null,
                                                                object callbackState = null)
         {
             var listFolderArg = new ListFolderArg(path,
-                                                  sharedLink,
                                                   recursive,
                                                   includeMediaInfo,
                                                   includeDeleted,
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
-                                                  limit);
+                                                  limit,
+                                                  sharedLink);
 
             return this.BeginListFolderGetLatestCursor(listFolderArg, callback, callbackState);
         }
@@ -2724,7 +2724,16 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Return revisions of a file.</para>
+        /// <para>Returns revisions for files based on a file path or a file id. The file path
+        /// or file id is identified from the latest file entry at the given file path or id.
+        /// This end point allows your app to query either by file path or file id by setting
+        /// the mode parameter appropriately.</para>
+        /// <para>In the <see cref="Dropbox.Api.Files.ListRevisionsMode.Path" /> (default)
+        /// mode, all revisions at the same file path as the latest file entry are returned. If
+        /// revisions with the same file id are desired, then mode must be set to <see
+        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" />. The <see
+        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" /> mode is useful to retrieve
+        /// revisions for a given file across moves or renames.</para>
         /// </summary>
         /// <param name="listRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2754,9 +2763,20 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Return revisions of a file.</para>
+        /// <para>Returns revisions for files based on a file path or a file id. The file path
+        /// or file id is identified from the latest file entry at the given file path or id.
+        /// This end point allows your app to query either by file path or file id by setting
+        /// the mode parameter appropriately.</para>
+        /// <para>In the <see cref="Dropbox.Api.Files.ListRevisionsMode.Path" /> (default)
+        /// mode, all revisions at the same file path as the latest file entry are returned. If
+        /// revisions with the same file id are desired, then mode must be set to <see
+        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" />. The <see
+        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" /> mode is useful to retrieve
+        /// revisions for a given file across moves or renames.</para>
         /// </summary>
         /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="mode">Determines the behavior of the API in listing the revisions for
+        /// a given file path or id.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -2764,9 +2784,11 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
+                                                              ListRevisionsMode mode = null,
                                                               ulong limit = 10)
         {
             var listRevisionsArg = new ListRevisionsArg(path,
+                                                        mode,
                                                         limit);
 
             return this.ListRevisionsAsync(listRevisionsArg);
@@ -2776,6 +2798,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list revisions route.</para>
         /// </summary>
         /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="mode">Determines the behavior of the API in listing the revisions for
+        /// a given file path or id.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -2783,11 +2807,13 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListRevisions(string path,
+                                                   ListRevisionsMode mode = null,
                                                    ulong limit = 10,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
         {
             var listRevisionsArg = new ListRevisionsArg(path,
+                                                        mode,
                                                         limit);
 
             return this.BeginListRevisions(listRevisionsArg, callback, callbackState);

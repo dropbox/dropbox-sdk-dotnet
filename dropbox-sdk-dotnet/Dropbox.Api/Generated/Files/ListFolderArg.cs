@@ -31,10 +31,6 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ListFolderArg" /> class.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
-        /// <param name="sharedLink">A shared link to list the contents of, if the link is
-        /// protected provide the password. if this field is present, <see
-        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
-        /// shared link. Only non-recursive mode is supported for shared link.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
@@ -51,14 +47,18 @@ namespace Dropbox.Api.Files
         /// <param name="limit">The maximum number of results to return per request. Note: This
         /// is an approximate number and there can be slightly more entries returned in some
         /// cases.</param>
+        /// <param name="sharedLink">A shared link to list the contents of. If the link is
+        /// password-protected, the password must be provided. If this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</param>
         public ListFolderArg(string path,
-                             SharedLink sharedLink = null,
                              bool recursive = false,
                              bool includeMediaInfo = false,
                              bool includeDeleted = false,
                              bool includeHasExplicitSharedMembers = false,
                              bool includeMountedFolders = true,
-                             uint? limit = null)
+                             uint? limit = null,
+                             SharedLink sharedLink = null)
         {
             if (path == null)
             {
@@ -82,13 +82,13 @@ namespace Dropbox.Api.Files
             }
 
             this.Path = path;
-            this.SharedLink = sharedLink;
             this.Recursive = recursive;
             this.IncludeMediaInfo = includeMediaInfo;
             this.IncludeDeleted = includeDeleted;
             this.IncludeHasExplicitSharedMembers = includeHasExplicitSharedMembers;
             this.IncludeMountedFolders = includeMountedFolders;
             this.Limit = limit;
+            this.SharedLink = sharedLink;
         }
 
         /// <summary>
@@ -110,14 +110,6 @@ namespace Dropbox.Api.Files
         /// <para>A unique identifier for the file.</para>
         /// </summary>
         public string Path { get; protected set; }
-
-        /// <summary>
-        /// <para>A shared link to list the contents of, if the link is protected provide the
-        /// password. if this field is present, <see
-        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
-        /// shared link. Only non-recursive mode is supported for shared link.</para>
-        /// </summary>
-        public SharedLink SharedLink { get; protected set; }
 
         /// <summary>
         /// <para>If true, the list folder operation will be applied recursively to all
@@ -156,6 +148,14 @@ namespace Dropbox.Api.Files
         /// </summary>
         public uint? Limit { get; protected set; }
 
+        /// <summary>
+        /// <para>A shared link to list the contents of. If the link is password-protected, the
+        /// password must be provided. If this field is present, <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
+        /// shared link. Only non-recursive mode is supported for shared link.</para>
+        /// </summary>
+        public SharedLink SharedLink { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -171,10 +171,6 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(ListFolderArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
-                if (value.SharedLink != null)
-                {
-                    WriteProperty("shared_link", value.SharedLink, writer, global::Dropbox.Api.Files.SharedLink.Encoder);
-                }
                 WriteProperty("recursive", value.Recursive, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_deleted", value.IncludeDeleted, writer, enc.BooleanEncoder.Instance);
@@ -183,6 +179,10 @@ namespace Dropbox.Api.Files
                 if (value.Limit != null)
                 {
                     WriteProperty("limit", value.Limit.Value, writer, enc.UInt32Encoder.Instance);
+                }
+                if (value.SharedLink != null)
+                {
+                    WriteProperty("shared_link", value.SharedLink, writer, global::Dropbox.Api.Files.SharedLink.Encoder);
                 }
             }
         }
@@ -219,9 +219,6 @@ namespace Dropbox.Api.Files
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "shared_link":
-                        value.SharedLink = global::Dropbox.Api.Files.SharedLink.Decoder.Decode(reader);
-                        break;
                     case "recursive":
                         value.Recursive = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
@@ -239,6 +236,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "limit":
                         value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
+                        break;
+                    case "shared_link":
+                        value.SharedLink = global::Dropbox.Api.Files.SharedLink.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

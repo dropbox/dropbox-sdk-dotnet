@@ -31,7 +31,8 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ListRevisionsResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="isDeleted">If the file is deleted.</param>
+        /// <param name="isDeleted">If the file identified by the latest revision in the
+        /// response is either deleted or moved.</param>
         /// <param name="entries">The revisions for the file. Only revisions that are not
         /// deleted will show up here.</param>
         /// <param name="serverDeleted">The time of deletion if the file was deleted.</param>
@@ -63,7 +64,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>If the file is deleted.</para>
+        /// <para>If the file identified by the latest revision in the response is either
+        /// deleted or moved.</para>
         /// </summary>
         public bool IsDeleted { get; protected set; }
 

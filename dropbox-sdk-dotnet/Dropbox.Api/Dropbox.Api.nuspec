@@ -13,8 +13,9 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes> 
 What's New:
-  - ListFolder now supports shared links.
-
+  - Files:
+    - ListFolder now supports shared links.
+    - Added Mode parameter to ListRevisions.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

@@ -32,8 +32,11 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="path">The path to the file you want to see the revisions of.</param>
+        /// <param name="mode">Determines the behavior of the API in listing the revisions for
+        /// a given file path or id.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
         public ListRevisionsArg(string path,
+                                ListRevisionsMode mode = null,
                                 ulong limit = 10)
         {
             if (path == null)
@@ -45,6 +48,10 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/.*)?))\z'");
             }
 
+            if (mode == null)
+            {
+                mode = global::Dropbox.Api.Files.ListRevisionsMode.Path.Instance;
+            }
             if (limit < 1UL)
             {
                 throw new sys.ArgumentOutOfRangeException("limit", "Value should be greater or equal than 1");
@@ -55,6 +62,7 @@ namespace Dropbox.Api.Files
             }
 
             this.Path = path;
+            this.Mode = mode;
             this.Limit = limit;
         }
 
@@ -67,6 +75,7 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListRevisionsArg()
         {
+            this.Mode = global::Dropbox.Api.Files.ListRevisionsMode.Path.Instance;
             this.Limit = 10;
         }
 
@@ -74,6 +83,12 @@ namespace Dropbox.Api.Files
         /// <para>The path to the file you want to see the revisions of.</para>
         /// </summary>
         public string Path { get; protected set; }
+
+        /// <summary>
+        /// <para>Determines the behavior of the API in listing the revisions for a given file
+        /// path or id.</para>
+        /// </summary>
+        public ListRevisionsMode Mode { get; protected set; }
 
         /// <summary>
         /// <para>The maximum number of revision entries returned.</para>
@@ -95,6 +110,7 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(ListRevisionsArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.ListRevisionsMode.Encoder);
                 WriteProperty("limit", value.Limit, writer, enc.UInt64Encoder.Instance);
             }
         }
@@ -130,6 +146,9 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "mode":
+                        value.Mode = global::Dropbox.Api.Files.ListRevisionsMode.Decoder.Decode(reader);
                         break;
                     case "limit":
                         value.Limit = enc.UInt64Decoder.Instance.Decode(reader);
