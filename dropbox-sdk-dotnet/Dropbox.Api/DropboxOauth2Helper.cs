@@ -173,8 +173,12 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
+        /// <param name="requireRole"If this parameter is specified, the user will be asked to authorize with a particular
+        /// type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
+        /// verify the type of Dropbox account after authorization since the user could modify or remove the require_role
+        /// parameter</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null)
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
 
@@ -201,8 +205,12 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
+        /// <param name="requireRole"If this parameter is specified, the user will be asked to authorize with a particular
+        /// type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
+        /// verify the type of Dropbox account after authorization since the user could modify or remove the require_role
+        /// parameter</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null)
         {
             if (string.IsNullOrWhiteSpace(clientId))
             {
@@ -249,6 +257,11 @@ namespace Dropbox.Api
             if (disableSignup)
             {
                 queryBuilder.Append("&disable_signup=true");
+            }
+
+            if (!string.IsNullOrWhiteSpace(requireRole))
+            {
+                queryBuilder.Append("require_role=").Append(requireRole);
             }
 
             var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")
