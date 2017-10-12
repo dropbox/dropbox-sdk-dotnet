@@ -182,7 +182,7 @@ namespace Dropbox.Api
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
 
-            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup);
+            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole);
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace Dropbox.Api
 
             if (!string.IsNullOrWhiteSpace(requireRole))
             {
-                queryBuilder.Append("require_role=").Append(requireRole);
+                queryBuilder.Append("&require_role=").Append(requireRole);
             }
 
             var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")
