@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Portable40", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api", "Dropbox.Api\Dropbox.Api.csproj", "{68180B54-4724-4CD1-BAA6-EE7BC309797C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dropbox.Api.NetStandard", "Dropbox.Api\Dropbox.Api.NetStandard.csproj", "{B562AEC0-DAF8-457C-B5ED-AF03B133F168}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBusinessDashboard", "Examples\SimpleBusinessDashboard\SimpleBusinessDashboard.csproj", "{B762DE35-E606-4B57-8860-1A662DF5624C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Tests", "Dropbox.Api.Tests\Dropbox.Api.Tests.csproj", "{0FDF769B-43F8-4907-98D5-A413BD9DE62D}"
