@@ -30,6 +30,9 @@ What's New:
         <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
         <dependency id="Microsoft.Net.Http" version="2.2.29" />
       </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="10.0.3" />
+      </group>
     </dependencies>
   </metadata>
   <files>
@@ -39,5 +42,6 @@ What's New:
     <file src="bin\Release\portable\Dropbox.Api.xml" target="lib\portable-net45+win8+wpa81\Dropbox.Api.xml" />
     <file src="bin\Release\portable40\Dropbox.Api.dll" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.dll" />
     <file src="bin\Release\portable40\Dropbox.Api.xml" target="lib\portable-net40+sl5+wp80+win8+wpa81\Dropbox.Api.xml" />
+    <file src="bin\Release\netstandard2.0\Dropbox.Api.dll" target="lib\netstandard2.0\Dropbox.Api.dll" />
   </files>
 </package>
