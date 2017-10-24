@@ -96,7 +96,8 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         modes = [('Portable', '.Portable'),
                  ('Portable40', '.Portable40'),
                  ('Net45', ''),
-                 ('Doc', '.Doc')]
+                 ('Doc', '.Doc'),
+                  ('NetStandard','.NetStandard')]
 
         for mode, suffix in modes:
             with self.output_to_relative_path(
