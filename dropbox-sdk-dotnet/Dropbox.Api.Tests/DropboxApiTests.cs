@@ -18,6 +18,7 @@ namespace Dropbox.Api.Tests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Dropbox.Api.Auth;
+    using Dropbox.Api.Common;
     using Dropbox.Api.Users;
 
     /// <summary>
@@ -285,6 +286,37 @@ namespace Dropbox.Api.Tests
             Assert.AreEqual(account.TeamMemberId, adminId);
 
             // TODO: Add permission specific tests.
+        }
+
+        /// Test team auth select admin.
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestPathRoot()
+        {
+            await Client.Files.UploadAsync("/Foo.txt", body: GetStream("abc"));
+
+            var pathRootClient = Client.WithPathRoot(PathRoot.Home.Instance);
+            var metadata = await pathRootClient.Files.GetMetadataAsync("/Foo.txt");
+            Assert.AreEqual("/foo.txt", metadata.PathLower);
+
+            pathRootClient = Client.WithPathRoot(new PathRoot.Root("123"));
+
+            var exceptionRaised = false;
+
+            try
+            {
+                await pathRootClient.Files.GetMetadataAsync("/Foo.txt");
+            }
+            catch (PathRootException e)
+            {
+                exceptionRaised = true;
+                var error = e.ErrorResponse;
+                Assert.IsTrue(error.IsInvalidRoot);
+                Assert.IsTrue(error.AsInvalidRoot.Value.IsUser);
+            }
+
+            Assert.IsTrue(exceptionRaised);
         }
 
         /// Test app auth.

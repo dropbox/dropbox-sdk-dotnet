@@ -19,6 +19,8 @@ namespace Dropbox.Api
     using System.Threading.Tasks;
 
     using Dropbox.Api.Stone;
+    using Dropbox.Api.Common;
+
     using Newtonsoft.Json.Linq;
 
     /// <summary>
@@ -52,6 +54,11 @@ namespace Dropbox.Api
         private readonly string selectAdmin;
 
         /// <summary>
+        /// The path root value used to make API call.
+        /// </summary>
+        private readonly PathRoot pathRoot;
+
+        /// <summary>
         /// The configuration options for dropbox client.
         /// </summary>
         private readonly DropboxRequestHandlerOptions options;
@@ -75,7 +82,8 @@ namespace Dropbox.Api
         public DropboxRequestHandler(
             DropboxRequestHandlerOptions options,
             string selectUser = null,
-            string selectAdmin = null)
+            string selectAdmin = null,
+            PathRoot pathRoot = null)
         {
             if (options == null)
             {
@@ -85,6 +93,26 @@ namespace Dropbox.Api
             this.options = options;
             this.selectUser = selectUser;
             this.selectAdmin = selectAdmin;
+            this.pathRoot = pathRoot;
+        }
+
+        /// <summary>
+        /// Set the value for Dropbox-Api-Path-Root header.
+        /// </summary>
+        /// <param name="pathRoot">The path root object.</param>
+        /// <returns>A <see cref="DropboxClient"/> instance with Dropbox-Api-Path-Root header set.</returns>
+        internal DropboxRequestHandler WithPathRoot(PathRoot pathRoot)
+        {
+            if (pathRoot == null)
+            {
+                throw new ArgumentNullException("pathRoot");
+            }
+
+            return new DropboxRequestHandler(
+                this.options,
+                selectUser: this.selectUser,
+                selectAdmin: this.selectAdmin,
+                pathRoot: pathRoot);
         }
 
         /// <summary>
@@ -393,6 +421,13 @@ namespace Dropbox.Api
                 request.Headers.TryAddWithoutValidation("Dropbox-Api-Select-Admin", this.selectAdmin);
             }
 
+            if (this.pathRoot != null)
+            {
+                request.Headers.TryAddWithoutValidation(
+                    "Dropbox-Api-Path-Root",
+                    JsonWriter.Write(this.pathRoot, PathRoot.Encoder));
+            }
+
             var completionOption = HttpCompletionOption.ResponseContentRead;
 
             switch (routeStyle)
@@ -458,6 +493,11 @@ namespace Dropbox.Api
                 {
                     var reason = await response.Content.ReadAsStringAsync();
                     throw AccessException.Decode(reason, () => new AccessException(GetRequestId(response)));
+                }
+                else if ((int)response.StatusCode == 422)
+                {
+                    var reason = await response.Content.ReadAsStringAsync();
+                    throw PathRootException.Decode(reason, () => new PathRootException(GetRequestId(response)));
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
                     response.StatusCode == HttpStatusCode.NotFound)

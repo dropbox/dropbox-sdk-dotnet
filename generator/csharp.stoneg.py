@@ -48,6 +48,11 @@ class DropboxCSharpGenerator(_CSharpGenerator):
         self._generate_dropbox_exception(api, 'auth', 'AccessError', 'AccessException',
                                          'An HTTP exception that is caused by the account not'
                                          'not having access to the endpoint.')
+        
+        self._generate_dropbox_exception(api, 'common', 'PathRootError', 'PathRootException',
+                                         'An HTTP exception that is caused by invalid'
+                                         'Dropbox-Api-Path-Root header.')
+                                         
         self._generate_csproj()
 
         self._generate_xml_doc(api)

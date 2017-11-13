@@ -151,6 +151,20 @@ namespace Dropbox.Api
     }
 
     /// <summary>
+    /// An exception which is caused by invalid Dropbox-Api-Path-Root header.
+    /// </summary>
+    public partial class PathRootException
+    {
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="PathRootException"/> class.</para>
+        /// </summary>
+        internal PathRootException(string requestId)
+            : base(requestId)
+        {
+        }
+    }
+
+    /// <summary>
     /// An HTTP Exception that will cause a retry due to transient failure. The SDK will perform
     /// a certain number of retries which is configurable in <see cref="DropboxClient"/>. If the client
     /// still gets this exception, it's up to the client to decide whether to continue retrying or not.

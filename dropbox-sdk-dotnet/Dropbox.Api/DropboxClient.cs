@@ -8,11 +8,18 @@ namespace Dropbox.Api
 {
     using System;
 
+    using Dropbox.Api.Common;
+
     /// <summary>
     /// The client which contains endpoints which perform user-level actions.
     /// </summary>
     public sealed partial class DropboxClient : DropboxClientBase
     {
+        /// <summary>
+        /// The request handler.
+        /// </summary>
+        private readonly DropboxRequestHandler requestHandler;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
         /// </summary>
@@ -48,6 +55,21 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Set the value for Dropbox-Api-Path-Root header.
+        /// </summary>
+        /// <param name="pathRoot">The path root object.</param>
+        /// <returns>A <see cref="DropboxClient"/> instance with Dropbox-Api-Path-Root header set.</returns>
+        public DropboxClient WithPathRoot(PathRoot pathRoot)
+        {
+            if (pathRoot == null)
+            {
+                throw new ArgumentNullException("pathRoot");
+            }
+
+            return new DropboxClient(this.requestHandler.WithPathRoot(pathRoot));
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
         /// </summary>
         /// <param name="options">The request handler options.</param>
@@ -55,9 +77,23 @@ namespace Dropbox.Api
         /// a team access token, actions will be performed on this this user's Dropbox.</param>
         /// <param name="selectAdmin">The member id of the selected admin. If provided together with
         /// a team access token, access is allowed for all team owned contents.</param>
-        internal DropboxClient(DropboxRequestHandlerOptions options, string selectUser = null, string selectAdmin = null)
-            : base(new DropboxRequestHandler(options, selectUser: selectUser, selectAdmin: selectAdmin))
+        /// <param name="pathRoot">The path root value used as Dropbox-Api-Path-Root header.</param>
+        internal DropboxClient(
+            DropboxRequestHandlerOptions options,
+            string selectUser = null,
+            string selectAdmin = null,
+            PathRoot pathRoot = null)
+            : this(new DropboxRequestHandler(options, selectUser: selectUser, selectAdmin: selectAdmin, pathRoot: pathRoot))
         {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// </summary>
+        /// <param name="requestHandler">The request handler.</param>
+        private DropboxClient(DropboxRequestHandler requestHandler): base(requestHandler)
+        {
+            this.requestHandler = requestHandler;
         }
     }
 }

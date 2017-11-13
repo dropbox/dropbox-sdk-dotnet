@@ -319,6 +319,7 @@
     <Compile Include="Generated\Paper\SharingTeamPolicyType.cs" />
     <Compile Include="Generated\Paper\UserInfoWithPermissionLevel.cs" />
     <Compile Include="Generated\Paper\UserOnPaperDocFilter.cs" />
+    <Compile Include="Generated\PathRootException.cs" />
     <Compile Include="Generated\RateLimitException.cs" />
     <Compile Include="Generated\Sharing\AccessLevel.cs" />
     <Compile Include="Generated\Sharing\AclUpdatePolicy.cs" />
