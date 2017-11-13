@@ -70,6 +70,20 @@
                 <para>You can think of a property group template as a class definition for a
                 particular key/value metadata object, and the property groups themselves as the
                 instantiations of these objects.</para>
+                <para></para>
+                <para>Templates are owned either by a user/app pair or team/app pair. Templates
+                and their associated properties can't be accessed by any app other than the app
+                that created them, and even then, only when the app is linked with the owner of
+                the template (either a user or team).</para>
+                <para></para>
+                <para>User-owned templates are accessed via the user-auth template/*_for_user
+                endpoints, while team-owned templates are accessed via the team-auth
+                template/*_for_team endpoints. Properties associated with either type of
+                template can be accessed via the user-auth properties/* endpoints.</para>
+                <para></para>
+                <para>Finally, properties can be accessed from a number of endpoints that
+                return metadata, including `files/get_metadata`, and `files/list_folder`.
+                Properties can also be added during upload, using `files/upload`.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.FileProperties.Routes">

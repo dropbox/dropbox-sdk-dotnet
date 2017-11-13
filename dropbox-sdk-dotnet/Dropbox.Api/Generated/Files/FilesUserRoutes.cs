@@ -41,6 +41,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AlphaGetMetadataError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use GetMetadataAsync instead.")]
         public t.Task<Metadata> AlphaGetMetadataAsync(AlphaGetMetadataArg alphaGetMetadataArg)
         {
             return this.Transport.SendRpcRequestAsync<AlphaGetMetadataArg, Metadata, AlphaGetMetadataError>(alphaGetMetadataArg, "api", "/files/alpha/get_metadata", "user", global::Dropbox.Api.Files.AlphaGetMetadataArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.AlphaGetMetadataError.Decoder);
@@ -55,6 +56,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginGetMetadata instead.")]
         public sys.IAsyncResult BeginAlphaGetMetadata(AlphaGetMetadataArg alphaGetMetadataArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.AlphaGetMetadataAsync(alphaGetMetadataArg);
@@ -77,6 +79,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</param>
@@ -85,16 +90,19 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AlphaGetMetadataError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use GetMetadataAsync instead.")]
         public t.Task<Metadata> AlphaGetMetadataAsync(string path,
                                                       bool includeMediaInfo = false,
                                                       bool includeDeleted = false,
                                                       bool includeHasExplicitSharedMembers = false,
+                                                      global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                       col.IEnumerable<string> includePropertyTemplates = null)
         {
             var alphaGetMetadataArg = new AlphaGetMetadataArg(path,
                                                               includeMediaInfo,
                                                               includeDeleted,
                                                               includeHasExplicitSharedMembers,
+                                                              includePropertyGroups,
                                                               includePropertyTemplates);
 
             return this.AlphaGetMetadataAsync(alphaGetMetadataArg);
@@ -113,6 +121,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</param>
@@ -121,10 +132,12 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginGetMetadata instead.")]
         public sys.IAsyncResult BeginAlphaGetMetadata(string path,
                                                       bool includeMediaInfo = false,
                                                       bool includeDeleted = false,
                                                       bool includeHasExplicitSharedMembers = false,
+                                                      global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                       col.IEnumerable<string> includePropertyTemplates = null,
                                                       sys.AsyncCallback callback = null,
                                                       object callbackState = null)
@@ -133,6 +146,7 @@ namespace Dropbox.Api.Files.Routes
                                                               includeMediaInfo,
                                                               includeDeleted,
                                                               includeHasExplicitSharedMembers,
+                                                              includePropertyGroups,
                                                               includePropertyTemplates);
 
             return this.BeginAlphaGetMetadata(alphaGetMetadataArg, callback, callbackState);
@@ -148,6 +162,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AlphaGetMetadataError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndGetMetadata instead.")]
         public Metadata EndAlphaGetMetadata(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
@@ -174,6 +189,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadErrorWithProperties"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use AlphaUploadAsync instead.")]
         public t.Task<FileMetadata> AlphaUploadAsync(CommitInfoWithProperties commitInfoWithProperties, io.Stream body)
         {
             return this.Transport.SendUploadRequestAsync<CommitInfoWithProperties, FileMetadata, UploadErrorWithProperties>(commitInfoWithProperties, body, "content", "/files/alpha/upload", "user", global::Dropbox.Api.Files.CommitInfoWithProperties.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadErrorWithProperties.Decoder);
@@ -189,6 +205,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginAlphaUpload instead.")]
         public sys.IAsyncResult BeginAlphaUpload(CommitInfoWithProperties commitInfoWithProperties, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.AlphaUploadAsync(commitInfoWithProperties, body);
@@ -225,6 +242,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadErrorWithProperties"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use AlphaUploadAsync instead.")]
         public t.Task<FileMetadata> AlphaUploadAsync(string path,
                                                      WriteMode mode = null,
                                                      bool autorename = false,
@@ -267,6 +285,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginAlphaUpload instead.")]
         public sys.IAsyncResult BeginAlphaUpload(string path,
                                                  WriteMode mode = null,
                                                  bool autorename = false,
@@ -297,6 +316,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadErrorWithProperties"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndAlphaUpload instead.")]
         public FileMetadata EndAlphaUpload(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FileMetadata>;
@@ -1672,6 +1692,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1680,12 +1703,14 @@ namespace Dropbox.Api.Files.Routes
         public t.Task<Metadata> GetMetadataAsync(string path,
                                                  bool includeMediaInfo = false,
                                                  bool includeDeleted = false,
-                                                 bool includeHasExplicitSharedMembers = false)
+                                                 bool includeHasExplicitSharedMembers = false,
+                                                 global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
         {
             var getMetadataArg = new GetMetadataArg(path,
                                                     includeMediaInfo,
                                                     includeDeleted,
-                                                    includeHasExplicitSharedMembers);
+                                                    includeHasExplicitSharedMembers,
+                                                    includePropertyGroups);
 
             return this.GetMetadataAsync(getMetadataArg);
         }
@@ -1703,6 +1728,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1712,13 +1740,15 @@ namespace Dropbox.Api.Files.Routes
                                                  bool includeMediaInfo = false,
                                                  bool includeDeleted = false,
                                                  bool includeHasExplicitSharedMembers = false,
+                                                 global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
         {
             var getMetadataArg = new GetMetadataArg(path,
                                                     includeMediaInfo,
                                                     includeDeleted,
-                                                    includeHasExplicitSharedMembers);
+                                                    includeHasExplicitSharedMembers,
+                                                    includePropertyGroups);
 
             return this.BeginGetMetadata(getMetadataArg, callback, callbackState);
         }
@@ -2243,6 +2273,9 @@ namespace Dropbox.Api.Files.Routes
         /// password-protected, the password must be provided. If this field is present, <see
         /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
         /// shared link. Only non-recursive mode is supported for shared link.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2255,7 +2288,8 @@ namespace Dropbox.Api.Files.Routes
                                                         bool includeHasExplicitSharedMembers = false,
                                                         bool includeMountedFolders = true,
                                                         uint? limit = null,
-                                                        SharedLink sharedLink = null)
+                                                        SharedLink sharedLink = null,
+                                                        global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -2264,7 +2298,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
                                                   limit,
-                                                  sharedLink);
+                                                  sharedLink,
+                                                  includePropertyGroups);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -2293,6 +2328,9 @@ namespace Dropbox.Api.Files.Routes
         /// password-protected, the password must be provided. If this field is present, <see
         /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
         /// shared link. Only non-recursive mode is supported for shared link.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2306,6 +2344,7 @@ namespace Dropbox.Api.Files.Routes
                                                 bool includeMountedFolders = true,
                                                 uint? limit = null,
                                                 SharedLink sharedLink = null,
+                                                global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
@@ -2316,7 +2355,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
                                                   limit,
-                                                  sharedLink);
+                                                  sharedLink,
+                                                  includePropertyGroups);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }
@@ -2504,6 +2544,9 @@ namespace Dropbox.Api.Files.Routes
         /// password-protected, the password must be provided. If this field is present, <see
         /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
         /// shared link. Only non-recursive mode is supported for shared link.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2516,7 +2559,8 @@ namespace Dropbox.Api.Files.Routes
                                                                                       bool includeHasExplicitSharedMembers = false,
                                                                                       bool includeMountedFolders = true,
                                                                                       uint? limit = null,
-                                                                                      SharedLink sharedLink = null)
+                                                                                      SharedLink sharedLink = null,
+                                                                                      global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -2525,7 +2569,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
                                                   limit,
-                                                  sharedLink);
+                                                  sharedLink,
+                                                  includePropertyGroups);
 
             return this.ListFolderGetLatestCursorAsync(listFolderArg);
         }
@@ -2555,6 +2600,9 @@ namespace Dropbox.Api.Files.Routes
         /// password-protected, the password must be provided. If this field is present, <see
         /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
         /// shared link. Only non-recursive mode is supported for shared link.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2568,6 +2616,7 @@ namespace Dropbox.Api.Files.Routes
                                                                bool includeMountedFolders = true,
                                                                uint? limit = null,
                                                                SharedLink sharedLink = null,
+                                                               global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                                sys.AsyncCallback callback = null,
                                                                object callbackState = null)
         {
@@ -2578,7 +2627,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeHasExplicitSharedMembers,
                                                   includeMountedFolders,
                                                   limit,
-                                                  sharedLink);
+                                                  sharedLink,
+                                                  includePropertyGroups);
 
             return this.BeginListFolderGetLatestCursor(listFolderArg, callback, callbackState);
         }
@@ -4373,6 +4423,7 @@ namespace Dropbox.Api.Files.Routes
         /// their Dropbox account via notifications in the client software. If <c>true</c>,
         /// this tells the clients that this modification shouldn't result in a user
         /// notification.</param>
+        /// <param name="propertyGroups">List of custom properties to add to file.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -4383,13 +4434,15 @@ namespace Dropbox.Api.Files.Routes
                                                 bool autorename = false,
                                                 sys.DateTime? clientModified = null,
                                                 bool mute = false,
+                                                col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                 io.Stream body = null)
         {
             var commitInfo = new CommitInfo(path,
                                             mode,
                                             autorename,
                                             clientModified,
-                                            mute);
+                                            mute,
+                                            propertyGroups);
 
             return this.UploadAsync(commitInfo, body);
         }
@@ -4411,6 +4464,7 @@ namespace Dropbox.Api.Files.Routes
         /// their Dropbox account via notifications in the client software. If <c>true</c>,
         /// this tells the clients that this modification shouldn't result in a user
         /// notification.</param>
+        /// <param name="propertyGroups">List of custom properties to add to file.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -4422,6 +4476,7 @@ namespace Dropbox.Api.Files.Routes
                                             bool autorename = false,
                                             sys.DateTime? clientModified = null,
                                             bool mute = false,
+                                            col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                             io.Stream body = null,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)
@@ -4430,7 +4485,8 @@ namespace Dropbox.Api.Files.Routes
                                             mode,
                                             autorename,
                                             clientModified,
-                                            mute);
+                                            mute,
+                                            propertyGroups);
 
             return this.BeginUpload(commitInfo, body, callback, callbackState);
         }

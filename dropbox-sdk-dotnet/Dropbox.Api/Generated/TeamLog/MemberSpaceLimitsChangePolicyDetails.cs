@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the storage limits applied to team members by policy.</para>
+    /// <para>Changed the team default limit level.</para>
     /// </summary>
     public class MemberSpaceLimitsChangePolicyDetails
     {
@@ -31,21 +31,13 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="MemberSpaceLimitsChangePolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="previousValue">Previous storage limits policy.</param>
-        /// <param name="newValue">New storage limits policy.</param>
-        public MemberSpaceLimitsChangePolicyDetails(SpaceLimitsLevel previousValue,
-                                                    SpaceLimitsLevel newValue)
+        /// <param name="previousValue">Previous team default limit value in bytes. Might be
+        /// missing due to historical data gap.</param>
+        /// <param name="newValue">New team default limit value in bytes. Might be missing due
+        /// to historical data gap.</param>
+        public MemberSpaceLimitsChangePolicyDetails(ulong? previousValue = null,
+                                                    ulong? newValue = null)
         {
-            if (previousValue == null)
-            {
-                throw new sys.ArgumentNullException("previousValue");
-            }
-
-            if (newValue == null)
-            {
-                throw new sys.ArgumentNullException("newValue");
-            }
-
             this.PreviousValue = previousValue;
             this.NewValue = newValue;
         }
@@ -62,14 +54,16 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Previous storage limits policy.</para>
+        /// <para>Previous team default limit value in bytes. Might be missing due to
+        /// historical data gap.</para>
         /// </summary>
-        public SpaceLimitsLevel PreviousValue { get; protected set; }
+        public ulong? PreviousValue { get; protected set; }
 
         /// <summary>
-        /// <para>New storage limits policy.</para>
+        /// <para>New team default limit value in bytes. Might be missing due to historical
+        /// data gap.</para>
         /// </summary>
-        public SpaceLimitsLevel NewValue { get; protected set; }
+        public ulong? NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -85,8 +79,14 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberSpaceLimitsChangePolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SpaceLimitsLevel.Encoder);
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SpaceLimitsLevel.Encoder);
+                if (value.PreviousValue != null)
+                {
+                    WriteProperty("previous_value", value.PreviousValue.Value, writer, enc.UInt64Encoder.Instance);
+                }
+                if (value.NewValue != null)
+                {
+                    WriteProperty("new_value", value.NewValue.Value, writer, enc.UInt64Encoder.Instance);
+                }
             }
         }
 
@@ -121,10 +121,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.SpaceLimitsLevel.Decoder.Decode(reader);
+                        value.PreviousValue = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.SpaceLimitsLevel.Decoder.Decode(reader);
+                        value.NewValue = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

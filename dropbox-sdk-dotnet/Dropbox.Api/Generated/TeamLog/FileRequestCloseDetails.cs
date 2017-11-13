@@ -31,10 +31,27 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FileRequestCloseDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="requestTitle">File request title.</param>
-        public FileRequestCloseDetails(string requestTitle = null)
+        /// <param name="fileRequestId">File request id. Might be missing due to historical
+        /// data gap.</param>
+        /// <param name="previousDetails">Previous file request details. Might be missing due
+        /// to historical data gap.</param>
+        public FileRequestCloseDetails(string fileRequestId = null,
+                                       FileRequestDetails previousDetails = null)
         {
-            this.RequestTitle = requestTitle;
+            if (fileRequestId != null)
+            {
+                if (fileRequestId.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", "Length should be at least 1");
+                }
+                if (!re.Regex.IsMatch(fileRequestId, @"\A(?:[-_0-9a-zA-Z]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z]+)\z'");
+                }
+            }
+
+            this.FileRequestId = fileRequestId;
+            this.PreviousDetails = previousDetails;
         }
 
         /// <summary>
@@ -49,9 +66,15 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>File request title.</para>
+        /// <para>File request id. Might be missing due to historical data gap.</para>
         /// </summary>
-        public string RequestTitle { get; protected set; }
+        public string FileRequestId { get; protected set; }
+
+        /// <summary>
+        /// <para>Previous file request details. Might be missing due to historical data
+        /// gap.</para>
+        /// </summary>
+        public FileRequestDetails PreviousDetails { get; protected set; }
 
         #region Encoder class
 
@@ -67,9 +90,13 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileRequestCloseDetails value, enc.IJsonWriter writer)
             {
-                if (value.RequestTitle != null)
+                if (value.FileRequestId != null)
                 {
-                    WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
+                    WriteProperty("file_request_id", value.FileRequestId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PreviousDetails != null)
+                {
+                    WriteProperty("previous_details", value.PreviousDetails, writer, global::Dropbox.Api.TeamLog.FileRequestDetails.Encoder);
                 }
             }
         }
@@ -104,8 +131,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "request_title":
-                        value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
+                    case "file_request_id":
+                        value.FileRequestId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "previous_details":
+                        value.PreviousDetails = global::Dropbox.Api.TeamLog.FileRequestDetails.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

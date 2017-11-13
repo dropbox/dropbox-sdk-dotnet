@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Error returned by setting member custom quota.</para>
+    /// <para>Error returned when getting member custom quota.</para>
     /// </summary>
     public class CustomQuotaError
     {

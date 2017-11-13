@@ -32,22 +32,30 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="resellerName">Reseller name.</param>
-        /// <param name="resellerId">Reseller ID.</param>
+        /// <param name="resellerEmail">Reseller email.</param>
         public ResellerLogInfo(string resellerName,
-                               string resellerId)
+                               string resellerEmail)
         {
             if (resellerName == null)
             {
                 throw new sys.ArgumentNullException("resellerName");
             }
 
-            if (resellerId == null)
+            if (resellerEmail == null)
             {
-                throw new sys.ArgumentNullException("resellerId");
+                throw new sys.ArgumentNullException("resellerEmail");
+            }
+            if (resellerEmail.Length > 255)
+            {
+                throw new sys.ArgumentOutOfRangeException("resellerEmail", "Length should be at most 255");
+            }
+            if (!re.Regex.IsMatch(resellerEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("resellerEmail", @"Value should match pattern '\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z'");
             }
 
             this.ResellerName = resellerName;
-            this.ResellerId = resellerId;
+            this.ResellerEmail = resellerEmail;
         }
 
         /// <summary>
@@ -67,9 +75,9 @@ namespace Dropbox.Api.TeamLog
         public string ResellerName { get; protected set; }
 
         /// <summary>
-        /// <para>Reseller ID.</para>
+        /// <para>Reseller email.</para>
         /// </summary>
-        public string ResellerId { get; protected set; }
+        public string ResellerEmail { get; protected set; }
 
         #region Encoder class
 
@@ -86,7 +94,7 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(ResellerLogInfo value, enc.IJsonWriter writer)
             {
                 WriteProperty("reseller_name", value.ResellerName, writer, enc.StringEncoder.Instance);
-                WriteProperty("reseller_id", value.ResellerId, writer, enc.StringEncoder.Instance);
+                WriteProperty("reseller_email", value.ResellerEmail, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -122,8 +130,8 @@ namespace Dropbox.Api.TeamLog
                     case "reseller_name":
                         value.ResellerName = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "reseller_id":
-                        value.ResellerId = enc.StringDecoder.Instance.Decode(reader);
+                    case "reseller_email":
+                        value.ResellerEmail = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

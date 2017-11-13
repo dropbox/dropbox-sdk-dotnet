@@ -229,8 +229,8 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Remove the specified property group from the file. To remove specific
-        /// property field key value pairs, see <see
+        /// <para>Permanently removes the specified property group from the file. To remove
+        /// specific property field key value pairs, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesUpdateAsync"
         /// />. To update a template, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesUpdateForUserAsync"
@@ -265,8 +265,8 @@ namespace Dropbox.Api.FileProperties.Routes
         }
 
         /// <summary>
-        /// <para>Remove the specified property group from the file. To remove specific
-        /// property field key value pairs, see <see
+        /// <para>Permanently removes the specified property group from the file. To remove
+        /// specific property field key value pairs, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesUpdateAsync"
         /// />. To update a template, see <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesUpdateForUserAsync"
@@ -421,6 +421,103 @@ namespace Dropbox.Api.FileProperties.Routes
         /// processing the request; This will contain a <see
         /// cref="PropertiesSearchError"/>.</exception>
         public PropertiesSearchResult EndPropertiesSearch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PropertiesSearchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync"
+        /// />, use this to paginate through all search results.</para>
+        /// </summary>
+        /// <param name="propertiesSearchContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PropertiesSearchContinueError"/>.</exception>
+        public t.Task<PropertiesSearchResult> PropertiesSearchContinueAsync(PropertiesSearchContinueArg propertiesSearchContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<PropertiesSearchContinueArg, PropertiesSearchResult, PropertiesSearchContinueError>(propertiesSearchContinueArg, "api", "/file_properties/properties/search/continue", "user", global::Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Encoder, global::Dropbox.Api.FileProperties.PropertiesSearchResult.Decoder, global::Dropbox.Api.FileProperties.PropertiesSearchContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties search continue route.</para>
+        /// </summary>
+        /// <param name="propertiesSearchContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesSearchContinue(PropertiesSearchContinueArg propertiesSearchContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PropertiesSearchContinueAsync(propertiesSearchContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync"
+        /// />, use this to paginate through all search results.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PropertiesSearchContinueError"/>.</exception>
+        public t.Task<PropertiesSearchResult> PropertiesSearchContinueAsync(string cursor)
+        {
+            var propertiesSearchContinueArg = new PropertiesSearchContinueArg(cursor);
+
+            return this.PropertiesSearchContinueAsync(propertiesSearchContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the properties search continue route.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPropertiesSearchContinue(string cursor,
+                                                              sys.AsyncCallback callback,
+                                                              object callbackState = null)
+        {
+            var propertiesSearchContinueArg = new PropertiesSearchContinueArg(cursor);
+
+            return this.BeginPropertiesSearchContinue(propertiesSearchContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the properties search continue
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PropertiesSearchContinueError"/>.</exception>
+        public PropertiesSearchResult EndPropertiesSearchContinue(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<PropertiesSearchResult>;
             if (task == null)
@@ -787,6 +884,100 @@ namespace Dropbox.Api.FileProperties.Routes
             }
 
             return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Permanently removes the specified template created from <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// />. All properties associated with the template will also be removed. This action
+        /// cannot be undone.</para>
+        /// </summary>
+        /// <param name="removeTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TemplateError"/>.</exception>
+        public t.Task TemplatesRemoveForUserAsync(RemoveTemplateArg removeTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RemoveTemplateArg, enc.Empty, TemplateError>(removeTemplateArg, "api", "/file_properties/templates/remove_for_user", "user", global::Dropbox.Api.FileProperties.RemoveTemplateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the templates remove for user route.</para>
+        /// </summary>
+        /// <param name="removeTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTemplatesRemoveForUser(RemoveTemplateArg removeTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TemplatesRemoveForUserAsync(removeTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Permanently removes the specified template created from <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// />. All properties associated with the template will also be removed. This action
+        /// cannot be undone.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for a template created by <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TemplateError"/>.</exception>
+        public t.Task TemplatesRemoveForUserAsync(string templateId)
+        {
+            var removeTemplateArg = new RemoveTemplateArg(templateId);
+
+            return this.TemplatesRemoveForUserAsync(removeTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the templates remove for user route.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for a template created by <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTemplatesRemoveForUser(string templateId,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var removeTemplateArg = new RemoveTemplateArg(templateId);
+
+            return this.BeginTemplatesRemoveForUser(removeTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the templates remove for user
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TemplateError"/>.</exception>
+        public void EndTemplatesRemoveForUser(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
         }
 
         /// <summary>

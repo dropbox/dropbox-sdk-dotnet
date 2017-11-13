@@ -45,7 +45,7 @@ namespace Dropbox.Api.TeamLog
                            string expirationDate,
                            string serialNumber,
                            string sha1Fingerprint,
-                           string commonName)
+                           string commonName = null)
         {
             if (subject == null)
             {
@@ -75,11 +75,6 @@ namespace Dropbox.Api.TeamLog
             if (sha1Fingerprint == null)
             {
                 throw new sys.ArgumentNullException("sha1Fingerprint");
-            }
-
-            if (commonName == null)
-            {
-                throw new sys.ArgumentNullException("commonName");
             }
 
             this.Subject = subject;
@@ -156,7 +151,10 @@ namespace Dropbox.Api.TeamLog
                 WriteProperty("expiration_date", value.ExpirationDate, writer, enc.StringEncoder.Instance);
                 WriteProperty("serial_number", value.SerialNumber, writer, enc.StringEncoder.Instance);
                 WriteProperty("sha1_fingerprint", value.Sha1Fingerprint, writer, enc.StringEncoder.Instance);
-                WriteProperty("common_name", value.CommonName, writer, enc.StringEncoder.Instance);
+                if (value.CommonName != null)
+                {
+                    WriteProperty("common_name", value.CommonName, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 

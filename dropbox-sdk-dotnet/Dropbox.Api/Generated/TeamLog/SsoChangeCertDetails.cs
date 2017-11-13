@@ -32,7 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="newCertificateDetails">New SSO certificate details.</param>
-        /// <param name="previousCertificateDetails">Previous SSO certificate details.</param>
+        /// <param name="previousCertificateDetails">Previous SSO certificate details. Might be
+        /// missing due to historical data gap.</param>
         public SsoChangeCertDetails(Certificate newCertificateDetails,
                                     Certificate previousCertificateDetails = null)
         {
@@ -62,7 +63,8 @@ namespace Dropbox.Api.TeamLog
         public Certificate NewCertificateDetails { get; protected set; }
 
         /// <summary>
-        /// <para>Previous SSO certificate details.</para>
+        /// <para>Previous SSO certificate details. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
         public Certificate PreviousCertificateDetails { get; protected set; }
 

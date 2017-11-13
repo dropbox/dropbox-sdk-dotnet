@@ -31,13 +31,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FileUnlikeCommentDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="commentText">Comment text. Might be missing due to historical data
         /// gap.</param>
-        public FileUnlikeCommentDetails(ulong targetAssetIndex,
-                                        string commentText = null)
+        public FileUnlikeCommentDetails(string commentText = null)
         {
-            this.TargetAssetIndex = targetAssetIndex;
             this.CommentText = commentText;
         }
 
@@ -51,11 +48,6 @@ namespace Dropbox.Api.TeamLog
         public FileUnlikeCommentDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Comment text. Might be missing due to historical data gap.</para>
@@ -76,7 +68,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileUnlikeCommentDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 if (value.CommentText != null)
                 {
                     WriteProperty("comment_text", value.CommentText, writer, enc.StringEncoder.Instance);
@@ -114,9 +105,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
                     case "comment_text":
                         value.CommentText = enc.StringDecoder.Instance.Decode(reader);
                         break;

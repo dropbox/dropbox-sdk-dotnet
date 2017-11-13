@@ -80,6 +80,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is HasTeamFileEvents</para>
+        /// </summary>
+        public bool IsHasTeamFileEvents
+        {
+            get
+            {
+                return this is HasTeamFileEvents;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a HasTeamFileEvents, or <c>null</c>.</para>
+        /// </summary>
+        public HasTeamFileEvents AsHasTeamFileEvents
+        {
+            get
+            {
+                return this as HasTeamFileEvents;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Team
                     HasTeamSharedDropbox.Encoder.EncodeFields((HasTeamSharedDropbox)value, writer);
                     return;
                 }
+                if (value is HasTeamFileEvents)
+                {
+                    WriteProperty(".tag", "has_team_file_events", writer, enc.StringEncoder.Instance);
+                    HasTeamFileEvents.Encoder.EncodeFields((HasTeamFileEvents)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +197,8 @@ namespace Dropbox.Api.Team
                         return UploadApiRateLimit.Decoder.DecodeFields(reader);
                     case "has_team_shared_dropbox":
                         return HasTeamSharedDropbox.Decoder.DecodeFields(reader);
+                    case "has_team_file_events":
+                        return HasTeamFileEvents.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -364,6 +394,105 @@ namespace Dropbox.Api.Team
                     {
                         case "has_team_shared_dropbox":
                             value.Value = global::Dropbox.Api.Team.HasTeamSharedDropboxValue.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The has team file events object</para>
+        /// </summary>
+        public sealed class HasTeamFileEvents : FeatureValue
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<HasTeamFileEvents> Encoder = new HasTeamFileEventsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<HasTeamFileEvents> Decoder = new HasTeamFileEventsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasTeamFileEvents" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public HasTeamFileEvents(HasTeamFileEventsValue value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasTeamFileEvents" />
+            /// class.</para>
+            /// </summary>
+            private HasTeamFileEvents()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public HasTeamFileEventsValue Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="HasTeamFileEvents" />.</para>
+            /// </summary>
+            private class HasTeamFileEventsEncoder : enc.StructEncoder<HasTeamFileEvents>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(HasTeamFileEvents value, enc.IJsonWriter writer)
+                {
+                    global::Dropbox.Api.Team.HasTeamFileEventsValue.Encoder.EncodeFields(value.Value, writer);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="HasTeamFileEvents" />.</para>
+            /// </summary>
+            private class HasTeamFileEventsDecoder : enc.StructDecoder<HasTeamFileEvents>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="HasTeamFileEvents"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override HasTeamFileEvents Create()
+                {
+                    return new HasTeamFileEvents();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(HasTeamFileEvents value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "has_team_file_events":
+                            value.Value = global::Dropbox.Api.Team.HasTeamFileEventsValue.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

@@ -53,11 +53,8 @@ namespace Dropbox.Api.Files
                                         sys.DateTime? clientModified = null,
                                         bool mute = false,
                                         col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null)
-            : base(path, mode, autorename, clientModified, mute)
+            : base(path, mode, autorename, clientModified, mute, propertyGroups)
         {
-            var propertyGroupsList = enc.Util.ToList(propertyGroups);
-
-            this.PropertyGroups = propertyGroupsList;
         }
 
         /// <summary>
@@ -70,11 +67,6 @@ namespace Dropbox.Api.Files
         public CommitInfoWithProperties()
         {
         }
-
-        /// <summary>
-        /// <para>List of custom properties to add to file.</para>
-        /// </summary>
-        public col.IList<global::Dropbox.Api.FileProperties.PropertyGroup> PropertyGroups { get; protected set; }
 
         #region Encoder class
 

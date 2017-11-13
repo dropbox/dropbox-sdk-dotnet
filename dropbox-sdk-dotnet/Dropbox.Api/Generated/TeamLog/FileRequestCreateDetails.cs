@@ -31,10 +31,27 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FileRequestCreateDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="requestTitle">File request title.</param>
-        public FileRequestCreateDetails(string requestTitle = null)
+        /// <param name="fileRequestId">File request id. Might be missing due to historical
+        /// data gap.</param>
+        /// <param name="requestDetails">File request details. Might be missing due to
+        /// historical data gap.</param>
+        public FileRequestCreateDetails(string fileRequestId = null,
+                                        FileRequestDetails requestDetails = null)
         {
-            this.RequestTitle = requestTitle;
+            if (fileRequestId != null)
+            {
+                if (fileRequestId.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", "Length should be at least 1");
+                }
+                if (!re.Regex.IsMatch(fileRequestId, @"\A(?:[-_0-9a-zA-Z]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z]+)\z'");
+                }
+            }
+
+            this.FileRequestId = fileRequestId;
+            this.RequestDetails = requestDetails;
         }
 
         /// <summary>
@@ -49,9 +66,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>File request title.</para>
+        /// <para>File request id. Might be missing due to historical data gap.</para>
         /// </summary>
-        public string RequestTitle { get; protected set; }
+        public string FileRequestId { get; protected set; }
+
+        /// <summary>
+        /// <para>File request details. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public FileRequestDetails RequestDetails { get; protected set; }
 
         #region Encoder class
 
@@ -67,9 +89,13 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileRequestCreateDetails value, enc.IJsonWriter writer)
             {
-                if (value.RequestTitle != null)
+                if (value.FileRequestId != null)
                 {
-                    WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
+                    WriteProperty("file_request_id", value.FileRequestId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.RequestDetails != null)
+                {
+                    WriteProperty("request_details", value.RequestDetails, writer, global::Dropbox.Api.TeamLog.FileRequestDetails.Encoder);
                 }
             }
         }
@@ -104,8 +130,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "request_title":
-                        value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
+                    case "file_request_id":
+                        value.FileRequestId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "request_details":
+                        value.RequestDetails = global::Dropbox.Api.TeamLog.FileRequestDetails.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -53,7 +53,9 @@ namespace Dropbox.Api.Files
         /// <param name="sharingInfo">Set if the folder is contained in a shared folder or is a
         /// shared folder mount point.</param>
         /// <param name="propertyGroups">Additional information if the file has custom
-        /// properties with the property template specified.</param>
+        /// properties with the property template specified. Note that only properties
+        /// associated with user-owned templates, not team-owned templates, can be attached to
+        /// folders.</param>
         public FolderMetadata(string name,
                               string id,
                               string pathLower = null,
@@ -117,7 +119,8 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Additional information if the file has custom properties with the property
-        /// template specified.</para>
+        /// template specified. Note that only properties associated with user-owned templates,
+        /// not team-owned templates, can be attached to folders.</para>
         /// </summary>
         public col.IList<global::Dropbox.Api.FileProperties.PropertyGroup> PropertyGroups { get; protected set; }
 

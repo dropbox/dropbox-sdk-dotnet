@@ -51,6 +51,9 @@ namespace Dropbox.Api.Files
         /// password-protected, the password must be provided. If this field is present, <see
         /// cref="Dropbox.Api.Files.ListFolderArg.Path" /> will be relative to root of the
         /// shared link. Only non-recursive mode is supported for shared link.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         public ListFolderArg(string path,
                              bool recursive = false,
                              bool includeMediaInfo = false,
@@ -58,7 +61,8 @@ namespace Dropbox.Api.Files
                              bool includeHasExplicitSharedMembers = false,
                              bool includeMountedFolders = true,
                              uint? limit = null,
-                             SharedLink sharedLink = null)
+                             SharedLink sharedLink = null,
+                             global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
         {
             if (path == null)
             {
@@ -89,6 +93,7 @@ namespace Dropbox.Api.Files
             this.IncludeMountedFolders = includeMountedFolders;
             this.Limit = limit;
             this.SharedLink = sharedLink;
+            this.IncludePropertyGroups = includePropertyGroups;
         }
 
         /// <summary>
@@ -156,6 +161,13 @@ namespace Dropbox.Api.Files
         /// </summary>
         public SharedLink SharedLink { get; protected set; }
 
+        /// <summary>
+        /// <para>If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</para>
+        /// </summary>
+        public global::Dropbox.Api.FileProperties.TemplateFilterBase IncludePropertyGroups { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -183,6 +195,10 @@ namespace Dropbox.Api.Files
                 if (value.SharedLink != null)
                 {
                     WriteProperty("shared_link", value.SharedLink, writer, global::Dropbox.Api.Files.SharedLink.Encoder);
+                }
+                if (value.IncludePropertyGroups != null)
+                {
+                    WriteProperty("include_property_groups", value.IncludePropertyGroups, writer, global::Dropbox.Api.FileProperties.TemplateFilterBase.Encoder);
                 }
             }
         }
@@ -239,6 +255,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "shared_link":
                         value.SharedLink = global::Dropbox.Api.Files.SharedLink.Decoder.Decode(reader);
+                        break;
+                    case "include_property_groups":
+                        value.IncludePropertyGroups = global::Dropbox.Api.FileProperties.TemplateFilterBase.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

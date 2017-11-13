@@ -32,8 +32,11 @@ namespace Dropbox.Api.TeamLog
         /// /> class.</para>
         /// </summary>
         /// <param name="submittedFileNames">Submitted file names.</param>
+        /// <param name="fileRequestId">File request id. Might be missing due to historical
+        /// data gap.</param>
         /// <param name="requestTitle">File request title.</param>
         public FileRequestReceiveFileDetails(col.IEnumerable<string> submittedFileNames,
+                                             string fileRequestId = null,
                                              string requestTitle = null)
         {
             var submittedFileNamesList = enc.Util.ToList(submittedFileNames);
@@ -43,7 +46,20 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("submittedFileNames");
             }
 
+            if (fileRequestId != null)
+            {
+                if (fileRequestId.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", "Length should be at least 1");
+                }
+                if (!re.Regex.IsMatch(fileRequestId, @"\A(?:[-_0-9a-zA-Z]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z]+)\z'");
+                }
+            }
+
             this.SubmittedFileNames = submittedFileNamesList;
+            this.FileRequestId = fileRequestId;
             this.RequestTitle = requestTitle;
         }
 
@@ -62,6 +78,11 @@ namespace Dropbox.Api.TeamLog
         /// <para>Submitted file names.</para>
         /// </summary>
         public col.IList<string> SubmittedFileNames { get; protected set; }
+
+        /// <summary>
+        /// <para>File request id. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string FileRequestId { get; protected set; }
 
         /// <summary>
         /// <para>File request title.</para>
@@ -83,6 +104,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(FileRequestReceiveFileDetails value, enc.IJsonWriter writer)
             {
                 WriteListProperty("submitted_file_names", value.SubmittedFileNames, writer, enc.StringEncoder.Instance);
+                if (value.FileRequestId != null)
+                {
+                    WriteProperty("file_request_id", value.FileRequestId, writer, enc.StringEncoder.Instance);
+                }
                 if (value.RequestTitle != null)
                 {
                     WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
@@ -122,6 +147,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "submitted_file_names":
                         value.SubmittedFileNames = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        break;
+                    case "file_request_id":
+                        value.FileRequestId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "request_title":
                         value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);

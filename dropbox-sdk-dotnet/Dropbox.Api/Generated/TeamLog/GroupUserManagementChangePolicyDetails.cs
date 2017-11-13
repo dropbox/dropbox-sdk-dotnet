@@ -34,8 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New group users management policy.</param>
         /// <param name="previousValue">Previous group users management policy. Might be
         /// missing due to historical data gap.</param>
-        public GroupUserManagementChangePolicyDetails(GroupUserManagementPolicy newValue,
-                                                      GroupUserManagementPolicy previousValue = null)
+        public GroupUserManagementChangePolicyDetails(global::Dropbox.Api.TeamPolicies.GroupCreation newValue,
+                                                      global::Dropbox.Api.TeamPolicies.GroupCreation previousValue = null)
         {
             if (newValue == null)
             {
@@ -60,13 +60,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New group users management policy.</para>
         /// </summary>
-        public GroupUserManagementPolicy NewValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.GroupCreation NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous group users management policy. Might be missing due to historical
         /// data gap.</para>
         /// </summary>
-        public GroupUserManagementPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.GroupCreation PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupUserManagementChangePolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.GroupUserManagementPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.GroupCreation.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.GroupUserManagementPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.GroupCreation.Encoder);
                 }
             }
         }
@@ -121,10 +121,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.GroupUserManagementPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamPolicies.GroupCreation.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.GroupUserManagementPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamPolicies.GroupCreation.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

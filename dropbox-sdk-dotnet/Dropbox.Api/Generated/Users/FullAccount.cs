@@ -49,6 +49,7 @@ namespace Dropbox.Api.Users
         /// <c>null</c>, but <paramref name="isPaired" /> will indicate if a work account is
         /// linked.</param>
         /// <param name="accountType">What type of account this user has.</param>
+        /// <param name="rootInfo">The root info for this account.</param>
         /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
         /// set.</param>
         /// <param name="country">The user's two-letter country code, if available. Country
@@ -67,6 +68,7 @@ namespace Dropbox.Api.Users
                            string referralLink,
                            bool isPaired,
                            global::Dropbox.Api.UsersCommon.AccountType accountType,
+                           global::Dropbox.Api.Common.RootInfo rootInfo,
                            string profilePhotoUrl = null,
                            string country = null,
                            FullTeam team = null,
@@ -92,6 +94,11 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentNullException("accountType");
             }
 
+            if (rootInfo == null)
+            {
+                throw new sys.ArgumentNullException("rootInfo");
+            }
+
             if (country != null)
             {
                 if (country.Length < 2)
@@ -108,6 +115,7 @@ namespace Dropbox.Api.Users
             this.ReferralLink = referralLink;
             this.IsPaired = isPaired;
             this.AccountType = accountType;
+            this.RootInfo = rootInfo;
             this.Country = country;
             this.Team = team;
             this.TeamMemberId = teamMemberId;
@@ -149,6 +157,11 @@ namespace Dropbox.Api.Users
         public global::Dropbox.Api.UsersCommon.AccountType AccountType { get; protected set; }
 
         /// <summary>
+        /// <para>The root info for this account.</para>
+        /// </summary>
+        public global::Dropbox.Api.Common.RootInfo RootInfo { get; protected set; }
+
+        /// <summary>
         /// <para>The user's two-letter country code, if available. Country codes are based on
         /// <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a>.</para>
         /// </summary>
@@ -188,6 +201,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("referral_link", value.ReferralLink, writer, enc.StringEncoder.Instance);
                 WriteProperty("is_paired", value.IsPaired, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("account_type", value.AccountType, writer, global::Dropbox.Api.UsersCommon.AccountType.Encoder);
+                WriteProperty("root_info", value.RootInfo, writer, global::Dropbox.Api.Common.RootInfo.Encoder);
                 if (value.ProfilePhotoUrl != null)
                 {
                     WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
@@ -262,6 +276,9 @@ namespace Dropbox.Api.Users
                         break;
                     case "account_type":
                         value.AccountType = global::Dropbox.Api.UsersCommon.AccountType.Decoder.Decode(reader);
+                        break;
+                    case "root_info":
+                        value.RootInfo = global::Dropbox.Api.Common.RootInfo.Decoder.Decode(reader);
                         break;
                     case "profile_photo_url":
                         value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);

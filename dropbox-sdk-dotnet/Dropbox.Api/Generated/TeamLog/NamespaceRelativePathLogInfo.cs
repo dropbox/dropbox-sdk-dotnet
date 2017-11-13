@@ -47,14 +47,6 @@ namespace Dropbox.Api.TeamLog
                 }
             }
 
-            if (relativePath != null)
-            {
-                if (!re.Regex.IsMatch(relativePath, @"\A(?:/(.|[\r\n])*)\z"))
-                {
-                    throw new sys.ArgumentOutOfRangeException("relativePath", @"Value should match pattern '\A(?:/(.|[\r\n])*)\z'");
-                }
-            }
-
             this.NsId = nsId;
             this.RelativePath = relativePath;
         }

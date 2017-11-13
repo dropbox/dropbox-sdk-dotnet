@@ -13,8 +13,9 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>Provides details about a failure</para>
     /// </summary>
-    /// <seealso cref="PasswordLoginFailDetails" />
-    /// <seealso cref="SsoLoginFailDetails" />
+    /// <seealso cref="EmmErrorDetails" />
+    /// <seealso cref="LoginFailDetails" />
+    /// <seealso cref="SsoErrorDetails" />
     public class FailureDetailsLogInfo
     {
         #pragma warning disable 108

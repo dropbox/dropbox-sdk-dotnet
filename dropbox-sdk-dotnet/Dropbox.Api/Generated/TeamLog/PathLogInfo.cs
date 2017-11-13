@@ -45,14 +45,6 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("namespaceRelative");
             }
 
-            if (contextual != null)
-            {
-                if (!re.Regex.IsMatch(contextual, @"\A(?:/(.|[\r\n])*)\z"))
-                {
-                    throw new sys.ArgumentOutOfRangeException("contextual", @"Value should match pattern '\A(?:/(.|[\r\n])*)\z'");
-                }
-            }
-
             this.NamespaceRelative = namespaceRelative;
             this.Contextual = contextual;
         }

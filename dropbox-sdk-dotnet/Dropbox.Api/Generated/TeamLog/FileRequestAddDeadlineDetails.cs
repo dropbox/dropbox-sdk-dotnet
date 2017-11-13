@@ -31,9 +31,25 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FileRequestAddDeadlineDetails"
         /// /> class.</para>
         /// </summary>
+        /// <param name="fileRequestId">File request id. Might be missing due to historical
+        /// data gap.</param>
         /// <param name="requestTitle">File request title.</param>
-        public FileRequestAddDeadlineDetails(string requestTitle = null)
+        public FileRequestAddDeadlineDetails(string fileRequestId = null,
+                                             string requestTitle = null)
         {
+            if (fileRequestId != null)
+            {
+                if (fileRequestId.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", "Length should be at least 1");
+                }
+                if (!re.Regex.IsMatch(fileRequestId, @"\A(?:[-_0-9a-zA-Z]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("fileRequestId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z]+)\z'");
+                }
+            }
+
+            this.FileRequestId = fileRequestId;
             this.RequestTitle = requestTitle;
         }
 
@@ -47,6 +63,11 @@ namespace Dropbox.Api.TeamLog
         public FileRequestAddDeadlineDetails()
         {
         }
+
+        /// <summary>
+        /// <para>File request id. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string FileRequestId { get; protected set; }
 
         /// <summary>
         /// <para>File request title.</para>
@@ -67,6 +88,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileRequestAddDeadlineDetails value, enc.IJsonWriter writer)
             {
+                if (value.FileRequestId != null)
+                {
+                    WriteProperty("file_request_id", value.FileRequestId, writer, enc.StringEncoder.Instance);
+                }
                 if (value.RequestTitle != null)
                 {
                     WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
@@ -104,6 +129,9 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "file_request_id":
+                        value.FileRequestId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     case "request_title":
                         value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
                         break;

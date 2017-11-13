@@ -46,11 +46,13 @@ namespace Dropbox.Api.Files
         /// their Dropbox account via notifications in the client software. If <c>true</c>,
         /// this tells the clients that this modification shouldn't result in a user
         /// notification.</param>
+        /// <param name="propertyGroups">List of custom properties to add to file.</param>
         public CommitInfo(string path,
                           WriteMode mode = null,
                           bool autorename = false,
                           sys.DateTime? clientModified = null,
-                          bool mute = false)
+                          bool mute = false,
+                          col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null)
         {
             if (path == null)
             {
@@ -65,11 +67,14 @@ namespace Dropbox.Api.Files
             {
                 mode = global::Dropbox.Api.Files.WriteMode.Add.Instance;
             }
+            var propertyGroupsList = enc.Util.ToList(propertyGroups);
+
             this.Path = path;
             this.Mode = mode;
             this.Autorename = autorename;
             this.ClientModified = clientModified;
             this.Mute = mute;
+            this.PropertyGroups = propertyGroupsList;
         }
 
         /// <summary>
@@ -117,6 +122,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool Mute { get; protected set; }
 
+        /// <summary>
+        /// <para>List of custom properties to add to file.</para>
+        /// </summary>
+        public col.IList<global::Dropbox.Api.FileProperties.PropertyGroup> PropertyGroups { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -139,6 +149,10 @@ namespace Dropbox.Api.Files
                     WriteProperty("client_modified", value.ClientModified.Value, writer, enc.DateTimeEncoder.Instance);
                 }
                 WriteProperty("mute", value.Mute, writer, enc.BooleanEncoder.Instance);
+                if (value.PropertyGroups.Count > 0)
+                {
+                    WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.FileProperties.PropertyGroup.Encoder);
+                }
             }
         }
 
@@ -185,6 +199,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "mute":
                         value.Mute = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "property_groups":
+                        value.PropertyGroups = ReadList<global::Dropbox.Api.FileProperties.PropertyGroup>(reader, global::Dropbox.Api.FileProperties.PropertyGroup.Decoder);
                         break;
                     default:
                         reader.Skip();

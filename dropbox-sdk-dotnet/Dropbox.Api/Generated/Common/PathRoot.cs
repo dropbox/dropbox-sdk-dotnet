@@ -57,68 +57,24 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberHome</para>
+        /// <para>Gets a value indicating whether this instance is Root</para>
         /// </summary>
-        public bool IsMemberHome
+        public bool IsRoot
         {
             get
             {
-                return this is MemberHome;
+                return this is Root;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a MemberHome, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Root, or <c>null</c>.</para>
         /// </summary>
-        public MemberHome AsMemberHome
+        public Root AsRoot
         {
             get
             {
-                return this as MemberHome;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Team</para>
-        /// </summary>
-        public bool IsTeam
-        {
-            get
-            {
-                return this is Team;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Team, or <c>null</c>.</para>
-        /// </summary>
-        public Team AsTeam
-        {
-            get
-            {
-                return this as Team;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is UserHome</para>
-        /// </summary>
-        public bool IsUserHome
-        {
-            get
-            {
-                return this is UserHome;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a UserHome, or <c>null</c>.</para>
-        /// </summary>
-        public UserHome AsUserHome
-        {
-            get
-            {
-                return this as UserHome;
+                return this as Root;
             }
         }
 
@@ -186,22 +142,10 @@ namespace Dropbox.Api.Common
                     Home.Encoder.EncodeFields((Home)value, writer);
                     return;
                 }
-                if (value is MemberHome)
+                if (value is Root)
                 {
-                    WriteProperty(".tag", "member_home", writer, enc.StringEncoder.Instance);
-                    MemberHome.Encoder.EncodeFields((MemberHome)value, writer);
-                    return;
-                }
-                if (value is Team)
-                {
-                    WriteProperty(".tag", "team", writer, enc.StringEncoder.Instance);
-                    Team.Encoder.EncodeFields((Team)value, writer);
-                    return;
-                }
-                if (value is UserHome)
-                {
-                    WriteProperty(".tag", "user_home", writer, enc.StringEncoder.Instance);
-                    UserHome.Encoder.EncodeFields((UserHome)value, writer);
+                    WriteProperty(".tag", "root", writer, enc.StringEncoder.Instance);
+                    Root.Encoder.EncodeFields((Root)value, writer);
                     return;
                 }
                 if (value is NamespaceId)
@@ -250,12 +194,8 @@ namespace Dropbox.Api.Common
                 {
                     case "home":
                         return Home.Decoder.DecodeFields(reader);
-                    case "member_home":
-                        return MemberHome.Decoder.DecodeFields(reader);
-                    case "team":
-                        return Team.Decoder.DecodeFields(reader);
-                    case "user_home":
-                        return UserHome.Decoder.DecodeFields(reader);
+                    case "root":
+                        return Root.Decoder.DecodeFields(reader);
                     case "namespace_id":
                         return NamespaceId.Decoder.DecodeFields(reader);
                     default:
@@ -267,7 +207,7 @@ namespace Dropbox.Api.Common
         #endregion
 
         /// <summary>
-        /// <para>Paths are relative to the authenticating user's home directory, whether or
+        /// <para>Paths are relative to the authenticating user's home namespace, whether or
         /// not that user belongs to a team.</para>
         /// </summary>
         public sealed class Home : PathRoot
@@ -337,107 +277,36 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>Paths are relative to the authenticating team member's home directory. (This
-        /// results in <see cref="Dropbox.Api.Common.PathRootError.Invalid" /> if the user does
-        /// not belong to a team.).</para>
+        /// <para>Paths are relative to the authenticating user's root namespace (This results
+        /// in <see cref="Dropbox.Api.Common.PathRootError.InvalidRoot" /> if the user's root
+        /// namespace has changed.).</para>
         /// </summary>
-        public sealed class MemberHome : PathRoot
+        public sealed class Root : PathRoot
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<MemberHome> Encoder = new MemberHomeEncoder();
+            internal static enc.StructEncoder<Root> Encoder = new RootEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<MemberHome> Decoder = new MemberHomeDecoder();
+            internal static enc.StructDecoder<Root> Decoder = new RootDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberHome" /> class.</para>
-            /// </summary>
-            private MemberHome()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of MemberHome</para>
-            /// </summary>
-            public static readonly MemberHome Instance = new MemberHome();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberHome" />.</para>
-            /// </summary>
-            private class MemberHomeEncoder : enc.StructEncoder<MemberHome>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberHome value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberHome" />.</para>
-            /// </summary>
-            private class MemberHomeDecoder : enc.StructDecoder<MemberHome>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberHome" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberHome Create()
-                {
-                    return MemberHome.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Paths are relative to the given team directory. (This results in <see
-        /// cref="Dropbox.Api.Common.PathRootError.Invalid" /> if the user is not a member of
-        /// the team associated with that path root id.).</para>
-        /// </summary>
-        public sealed class Team : PathRoot
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Team> Encoder = new TeamEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Team> Decoder = new TeamDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Root" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Team(string value)
+            public Root(string value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Root" /> class.</para>
             /// </summary>
-            private Team()
+            private Root()
             {
             }
 
@@ -449,18 +318,18 @@ namespace Dropbox.Api.Common
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Team" />.</para>
+            /// <para>Encoder for  <see cref="Root" />.</para>
             /// </summary>
-            private class TeamEncoder : enc.StructEncoder<Team>
+            private class RootEncoder : enc.StructEncoder<Root>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Team value, enc.IJsonWriter writer)
+                public override void EncodeFields(Root value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("team", value.Value, writer, enc.StringEncoder.Instance);
+                    WriteProperty("root", value.Value, writer, enc.StringEncoder.Instance);
                 }
             }
 
@@ -469,17 +338,17 @@ namespace Dropbox.Api.Common
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Team" />.</para>
+            /// <para>Decoder for  <see cref="Root" />.</para>
             /// </summary>
-            private class TeamDecoder : enc.StructDecoder<Team>
+            private class RootDecoder : enc.StructDecoder<Root>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Team" />.</para>
+                /// <para>Create a new instance of type <see cref="Root" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Team Create()
+                protected override Root Create()
                 {
-                    return new Team();
+                    return new Root();
                 }
 
                 /// <summary>
@@ -488,11 +357,11 @@ namespace Dropbox.Api.Common
                 /// <param name="value">The field value.</param>
                 /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                protected override void SetField(Team value, string fieldName, enc.IJsonReader reader)
+                protected override void SetField(Root value, string fieldName, enc.IJsonReader reader)
                 {
                     switch (fieldName)
                     {
-                        case "team":
+                        case "root":
                             value.Value = enc.StringDecoder.Instance.Decode(reader);
                             break;
                         default:
@@ -500,77 +369,6 @@ namespace Dropbox.Api.Common
                             break;
                     }
                 }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Paths are relative to the user's home directory. (This results in <see
-        /// cref="Dropbox.Api.Common.PathRootError.Invalid" /> if the belongs to a
-        /// team.).</para>
-        /// </summary>
-        public sealed class UserHome : PathRoot
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<UserHome> Encoder = new UserHomeEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<UserHome> Decoder = new UserHomeDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="UserHome" /> class.</para>
-            /// </summary>
-            private UserHome()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of UserHome</para>
-            /// </summary>
-            public static readonly UserHome Instance = new UserHome();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="UserHome" />.</para>
-            /// </summary>
-            private class UserHomeEncoder : enc.StructEncoder<UserHome>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(UserHome value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="UserHome" />.</para>
-            /// </summary>
-            private class UserHomeDecoder : enc.StructDecoder<UserHome>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="UserHome" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override UserHome Create()
-                {
-                    return UserHome.Instance;
-                }
-
             }
 
             #endregion

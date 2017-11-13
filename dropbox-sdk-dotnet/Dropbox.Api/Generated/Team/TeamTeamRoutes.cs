@@ -2251,6 +2251,356 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Add users to member space limits excluded users list.</para>
+        /// </summary>
+        /// <param name="excludedUsersUpdateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersUpdateError"/>.</exception>
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersAddAsync(ExcludedUsersUpdateArg excludedUsersUpdateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersUpdateArg, ExcludedUsersUpdateResult, ExcludedUsersUpdateError>(excludedUsersUpdateArg, "api", "/team/member_space_limits/excluded_users/add", "team", global::Dropbox.Api.Team.ExcludedUsersUpdateArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersUpdateResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersUpdateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users add
+        /// route.</para>
+        /// </summary>
+        /// <param name="excludedUsersUpdateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersAdd(ExcludedUsersUpdateArg excludedUsersUpdateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MemberSpaceLimitsExcludedUsersAddAsync(excludedUsersUpdateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Add users to member space limits excluded users list.</para>
+        /// </summary>
+        /// <param name="users">List of users to be added/removed.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersUpdateError"/>.</exception>
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersAddAsync(col.IEnumerable<UserSelectorArg> users = null)
+        {
+            var excludedUsersUpdateArg = new ExcludedUsersUpdateArg(users);
+
+            return this.MemberSpaceLimitsExcludedUsersAddAsync(excludedUsersUpdateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users add
+        /// route.</para>
+        /// </summary>
+        /// <param name="users">List of users to be added/removed.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersAdd(col.IEnumerable<UserSelectorArg> users = null,
+                                                                       sys.AsyncCallback callback = null,
+                                                                       object callbackState = null)
+        {
+            var excludedUsersUpdateArg = new ExcludedUsersUpdateArg(users);
+
+            return this.BeginMemberSpaceLimitsExcludedUsersAdd(excludedUsersUpdateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the member space limits excluded
+        /// users add route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersUpdateError"/>.</exception>
+        public ExcludedUsersUpdateResult EndMemberSpaceLimitsExcludedUsersAdd(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ExcludedUsersUpdateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>List member space limits excluded users.</para>
+        /// </summary>
+        /// <param name="excludedUsersListArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersListError"/>.</exception>
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(ExcludedUsersListArg excludedUsersListArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersListArg, ExcludedUsersListResult, ExcludedUsersListError>(excludedUsersListArg, "api", "/team/member_space_limits/excluded_users/list", "team", global::Dropbox.Api.Team.ExcludedUsersListArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersListResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersListError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users list
+        /// route.</para>
+        /// </summary>
+        /// <param name="excludedUsersListArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersList(ExcludedUsersListArg excludedUsersListArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MemberSpaceLimitsExcludedUsersListAsync(excludedUsersListArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>List member space limits excluded users.</para>
+        /// </summary>
+        /// <param name="limit">Number of results to return per call.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersListError"/>.</exception>
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(uint limit = 1000)
+        {
+            var excludedUsersListArg = new ExcludedUsersListArg(limit);
+
+            return this.MemberSpaceLimitsExcludedUsersListAsync(excludedUsersListArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users list
+        /// route.</para>
+        /// </summary>
+        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersList(uint limit = 1000,
+                                                                        sys.AsyncCallback callback = null,
+                                                                        object callbackState = null)
+        {
+            var excludedUsersListArg = new ExcludedUsersListArg(limit);
+
+            return this.BeginMemberSpaceLimitsExcludedUsersList(excludedUsersListArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the member space limits excluded
+        /// users list route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersListError"/>.</exception>
+        public ExcludedUsersListResult EndMemberSpaceLimitsExcludedUsersList(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ExcludedUsersListResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Continue listing member space limits excluded users.</para>
+        /// </summary>
+        /// <param name="excludedUsersListContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersListContinueError"/>.</exception>
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListContinueAsync(ExcludedUsersListContinueArg excludedUsersListContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersListContinueArg, ExcludedUsersListResult, ExcludedUsersListContinueError>(excludedUsersListContinueArg, "api", "/team/member_space_limits/excluded_users/list/continue", "team", global::Dropbox.Api.Team.ExcludedUsersListContinueArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersListResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersListContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users list
+        /// continue route.</para>
+        /// </summary>
+        /// <param name="excludedUsersListContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersListContinue(ExcludedUsersListContinueArg excludedUsersListContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MemberSpaceLimitsExcludedUsersListContinueAsync(excludedUsersListContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Continue listing member space limits excluded users.</para>
+        /// </summary>
+        /// <param name="cursor">Indicates from what point to get the next set of
+        /// users.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersListContinueError"/>.</exception>
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListContinueAsync(string cursor)
+        {
+            var excludedUsersListContinueArg = new ExcludedUsersListContinueArg(cursor);
+
+            return this.MemberSpaceLimitsExcludedUsersListContinueAsync(excludedUsersListContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users list
+        /// continue route.</para>
+        /// </summary>
+        /// <param name="cursor">Indicates from what point to get the next set of
+        /// users.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersListContinue(string cursor,
+                                                                                sys.AsyncCallback callback,
+                                                                                object callbackState = null)
+        {
+            var excludedUsersListContinueArg = new ExcludedUsersListContinueArg(cursor);
+
+            return this.BeginMemberSpaceLimitsExcludedUsersListContinue(excludedUsersListContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the member space limits excluded
+        /// users list continue route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersListContinueError"/>.</exception>
+        public ExcludedUsersListResult EndMemberSpaceLimitsExcludedUsersListContinue(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ExcludedUsersListResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Remove users from member space limits excluded users list.</para>
+        /// </summary>
+        /// <param name="excludedUsersUpdateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersUpdateError"/>.</exception>
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersRemoveAsync(ExcludedUsersUpdateArg excludedUsersUpdateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersUpdateArg, ExcludedUsersUpdateResult, ExcludedUsersUpdateError>(excludedUsersUpdateArg, "api", "/team/member_space_limits/excluded_users/remove", "team", global::Dropbox.Api.Team.ExcludedUsersUpdateArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersUpdateResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersUpdateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users remove
+        /// route.</para>
+        /// </summary>
+        /// <param name="excludedUsersUpdateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersRemove(ExcludedUsersUpdateArg excludedUsersUpdateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MemberSpaceLimitsExcludedUsersRemoveAsync(excludedUsersUpdateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Remove users from member space limits excluded users list.</para>
+        /// </summary>
+        /// <param name="users">List of users to be added/removed.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersUpdateError"/>.</exception>
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersRemoveAsync(col.IEnumerable<UserSelectorArg> users = null)
+        {
+            var excludedUsersUpdateArg = new ExcludedUsersUpdateArg(users);
+
+            return this.MemberSpaceLimitsExcludedUsersRemoveAsync(excludedUsersUpdateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the member space limits excluded users remove
+        /// route.</para>
+        /// </summary>
+        /// <param name="users">List of users to be added/removed.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersRemove(col.IEnumerable<UserSelectorArg> users = null,
+                                                                          sys.AsyncCallback callback = null,
+                                                                          object callbackState = null)
+        {
+            var excludedUsersUpdateArg = new ExcludedUsersUpdateArg(users);
+
+            return this.BeginMemberSpaceLimitsExcludedUsersRemove(excludedUsersUpdateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the member space limits excluded
+        /// users remove route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ExcludedUsersUpdateError"/>.</exception>
+        public ExcludedUsersUpdateResult EndMemberSpaceLimitsExcludedUsersRemove(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ExcludedUsersUpdateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Get users custom quota. Returns none as the custom quota if none was set. A
         /// maximum of 1000 members can be specified in a single call.</para>
         /// </summary>
@@ -2429,7 +2779,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Set users custom quota. Custom quota has to be at least 25GB. A maximum of
+        /// <para>Set users custom quota. Custom quota has to be at least 15GB. A maximum of
         /// 1000 members can be specified in a single call.</para>
         /// </summary>
         /// <param name="setCustomQuotaArg">The request parameters</param>
@@ -2437,10 +2787,10 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="CustomQuotaError"/>.</exception>
+        /// cref="SetCustomQuotaError"/>.</exception>
         public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsSetCustomQuotaAsync(SetCustomQuotaArg setCustomQuotaArg)
         {
-            return this.Transport.SendRpcRequestAsync<SetCustomQuotaArg, col.List<CustomQuotaResult>, CustomQuotaError>(setCustomQuotaArg, "api", "/team/member_space_limits/set_custom_quota", "team", global::Dropbox.Api.Team.SetCustomQuotaArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.CustomQuotaResult.Decoder), global::Dropbox.Api.Team.CustomQuotaError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SetCustomQuotaArg, col.List<CustomQuotaResult>, SetCustomQuotaError>(setCustomQuotaArg, "api", "/team/member_space_limits/set_custom_quota", "team", global::Dropbox.Api.Team.SetCustomQuotaArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.CustomQuotaResult.Decoder), global::Dropbox.Api.Team.SetCustomQuotaError.Decoder);
         }
 
         /// <summary>
@@ -2461,7 +2811,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Set users custom quota. Custom quota has to be at least 25GB. A maximum of
+        /// <para>Set users custom quota. Custom quota has to be at least 15GB. A maximum of
         /// 1000 members can be specified in a single call.</para>
         /// </summary>
         /// <param name="usersAndQuotas">List of users and their custom quotas.</param>
@@ -2469,7 +2819,7 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="CustomQuotaError"/>.</exception>
+        /// cref="SetCustomQuotaError"/>.</exception>
         public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsSetCustomQuotaAsync(col.IEnumerable<UserCustomQuotaArg> usersAndQuotas)
         {
             var setCustomQuotaArg = new SetCustomQuotaArg(usersAndQuotas);
@@ -2505,7 +2855,7 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="CustomQuotaError"/>.</exception>
+        /// cref="SetCustomQuotaError"/>.</exception>
         public col.List<CustomQuotaResult> EndMemberSpaceLimitsSetCustomQuota(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<col.List<CustomQuotaResult>>;

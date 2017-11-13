@@ -32,7 +32,12 @@ namespace Dropbox.Api.FileProperties
         /// class.</para>
         /// </summary>
         /// <param name="matches">A list (possibly empty) of matches for the query.</param>
-        public PropertiesSearchResult(col.IEnumerable<PropertiesSearchMatch> matches)
+        /// <param name="cursor">Pass the cursor into <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync"
+        /// /> to continue to receive search results. Cursor will be null when there are no
+        /// more results.</param>
+        public PropertiesSearchResult(col.IEnumerable<PropertiesSearchMatch> matches,
+                                      string cursor = null)
         {
             var matchesList = enc.Util.ToList(matches);
 
@@ -41,7 +46,16 @@ namespace Dropbox.Api.FileProperties
                 throw new sys.ArgumentNullException("matches");
             }
 
+            if (cursor != null)
+            {
+                if (cursor.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("cursor", "Length should be at least 1");
+                }
+            }
+
             this.Matches = matchesList;
+            this.Cursor = cursor;
         }
 
         /// <summary>
@@ -60,6 +74,14 @@ namespace Dropbox.Api.FileProperties
         /// </summary>
         public col.IList<PropertiesSearchMatch> Matches { get; protected set; }
 
+        /// <summary>
+        /// <para>Pass the cursor into <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync"
+        /// /> to continue to receive search results. Cursor will be null when there are no
+        /// more results.</para>
+        /// </summary>
+        public string Cursor { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +97,10 @@ namespace Dropbox.Api.FileProperties
             public override void EncodeFields(PropertiesSearchResult value, enc.IJsonWriter writer)
             {
                 WriteListProperty("matches", value.Matches, writer, global::Dropbox.Api.FileProperties.PropertiesSearchMatch.Encoder);
+                if (value.Cursor != null)
+                {
+                    WriteProperty("cursor", value.Cursor, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -110,6 +136,9 @@ namespace Dropbox.Api.FileProperties
                 {
                     case "matches":
                         value.Matches = ReadList<PropertiesSearchMatch>(reader, global::Dropbox.Api.FileProperties.PropertiesSearchMatch.Decoder);
+                        break;
+                    case "cursor":
+                        value.Cursor = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

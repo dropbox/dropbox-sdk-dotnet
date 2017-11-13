@@ -34,6 +34,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <para>Add a template associated with a team. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
         /// /> to add properties to a file or folder.</para>
+        /// <para>Note: this endpoint will create team-owned templates.</para>
         /// </summary>
         /// <param name="addTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -66,6 +67,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <para>Add a template associated with a team. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
         /// /> to add properties to a file or folder.</para>
+        /// <para>Note: this endpoint will create team-owned templates.</para>
         /// </summary>
         /// <param name="name">Display name for the template. Template names can be up to 256
         /// bytes.</param>
@@ -280,6 +282,100 @@ namespace Dropbox.Api.FileProperties.Routes
             }
 
             return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Permanently removes the specified template created from <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// />. All properties associated with the template will also be removed. This action
+        /// cannot be undone.</para>
+        /// </summary>
+        /// <param name="removeTemplateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TemplateError"/>.</exception>
+        public t.Task TemplatesRemoveForTeamAsync(RemoveTemplateArg removeTemplateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RemoveTemplateArg, enc.Empty, TemplateError>(removeTemplateArg, "api", "/file_properties/templates/remove_for_team", "team", global::Dropbox.Api.FileProperties.RemoveTemplateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the templates remove for team route.</para>
+        /// </summary>
+        /// <param name="removeTemplateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTemplatesRemoveForTeam(RemoveTemplateArg removeTemplateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TemplatesRemoveForTeamAsync(removeTemplateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Permanently removes the specified template created from <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// />. All properties associated with the template will also be removed. This action
+        /// cannot be undone.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for a template created by <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TemplateError"/>.</exception>
+        public t.Task TemplatesRemoveForTeamAsync(string templateId)
+        {
+            var removeTemplateArg = new RemoveTemplateArg(templateId);
+
+            return this.TemplatesRemoveForTeamAsync(removeTemplateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the templates remove for team route.</para>
+        /// </summary>
+        /// <param name="templateId">An identifier for a template created by <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTemplatesRemoveForTeam(string templateId,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var removeTemplateArg = new RemoveTemplateArg(templateId);
+
+            return this.BeginTemplatesRemoveForTeam(removeTemplateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the templates remove for team
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TemplateError"/>.</exception>
+        public void EndTemplatesRemoveForTeam(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
         }
 
         /// <summary>

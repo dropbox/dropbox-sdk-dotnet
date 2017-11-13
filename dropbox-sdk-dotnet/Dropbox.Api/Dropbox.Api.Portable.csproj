@@ -91,9 +91,11 @@
     <Compile Include="Generated\Auth\TokenFromOAuth1Error.cs" />
     <Compile Include="Generated\Auth\TokenFromOAuth1Result.cs" />
     <Compile Include="Generated\AuthException.cs" />
-    <Compile Include="Generated\Common\InvalidPathRootError.cs" />
     <Compile Include="Generated\Common\PathRoot.cs" />
     <Compile Include="Generated\Common\PathRootError.cs" />
+    <Compile Include="Generated\Common\RootInfo.cs" />
+    <Compile Include="Generated\Common\TeamRootInfo.cs" />
+    <Compile Include="Generated\Common\UserRootInfo.cs" />
     <Compile Include="Generated\DropboxAppClient.cs" />
     <Compile Include="Generated\DropboxClient.cs" />
     <Compile Include="Generated\DropboxTeamClient.cs" />
@@ -114,6 +116,8 @@
     <Compile Include="Generated\FileProperties\OverwritePropertyGroupArg.cs" />
     <Compile Include="Generated\FileProperties\PropertiesError.cs" />
     <Compile Include="Generated\FileProperties\PropertiesSearchArg.cs" />
+    <Compile Include="Generated\FileProperties\PropertiesSearchContinueArg.cs" />
+    <Compile Include="Generated\FileProperties\PropertiesSearchContinueError.cs" />
     <Compile Include="Generated\FileProperties\PropertiesSearchError.cs" />
     <Compile Include="Generated\FileProperties\PropertiesSearchMatch.cs" />
     <Compile Include="Generated\FileProperties\PropertiesSearchMode.cs" />
@@ -127,8 +131,10 @@
     <Compile Include="Generated\FileProperties\PropertyType.cs" />
     <Compile Include="Generated\FileProperties\RemovePropertiesArg.cs" />
     <Compile Include="Generated\FileProperties\RemovePropertiesError.cs" />
+    <Compile Include="Generated\FileProperties\RemoveTemplateArg.cs" />
     <Compile Include="Generated\FileProperties\TemplateError.cs" />
     <Compile Include="Generated\FileProperties\TemplateFilter.cs" />
+    <Compile Include="Generated\FileProperties\TemplateFilterBase.cs" />
     <Compile Include="Generated\FileProperties\TemplateOwnerType.cs" />
     <Compile Include="Generated\FileProperties\UpdatePropertiesArg.cs" />
     <Compile Include="Generated\FileProperties\UpdatePropertiesError.cs" />
@@ -476,6 +482,15 @@
     <Compile Include="Generated\Team\DeviceSession.cs" />
     <Compile Include="Generated\Team\DeviceSessionArg.cs" />
     <Compile Include="Generated\Team\DevicesActive.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersListArg.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersListContinueArg.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersListContinueError.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersListError.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersListResult.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersUpdateArg.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersUpdateError.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersUpdateResult.cs" />
+    <Compile Include="Generated\Team\ExcludedUsersUpdateStatus.cs" />
     <Compile Include="Generated\Team\Feature.cs" />
     <Compile Include="Generated\Team\FeatureValue.cs" />
     <Compile Include="Generated\Team\FeaturesGetValuesBatchArg.cs" />
@@ -519,6 +534,7 @@
     <Compile Include="Generated\Team\GroupsMembersListResult.cs" />
     <Compile Include="Generated\Team\GroupsPollError.cs" />
     <Compile Include="Generated\Team\GroupsSelector.cs" />
+    <Compile Include="Generated\Team\HasTeamFileEventsValue.cs" />
     <Compile Include="Generated\Team\HasTeamSharedDropboxValue.cs" />
     <Compile Include="Generated\Team\IncludeMembersArg.cs" />
     <Compile Include="Generated\Team\ListMemberAppsArg.cs" />
@@ -592,6 +608,7 @@
     <Compile Include="Generated\Team\RevokeLinkedAppError.cs" />
     <Compile Include="Generated\Team\RevokeLinkedAppStatus.cs" />
     <Compile Include="Generated\Team\SetCustomQuotaArg.cs" />
+    <Compile Include="Generated\Team\SetCustomQuotaError.cs" />
     <Compile Include="Generated\Team\StorageBucket.cs" />
     <Compile Include="Generated\Team\TeamFolderAccessError.cs" />
     <Compile Include="Generated\Team\TeamFolderActivateError.cs" />
@@ -698,7 +715,7 @@
     <Compile Include="Generated\TeamLog\EmmChangePolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\EmmCreateExceptionsReportDetails.cs" />
     <Compile Include="Generated\TeamLog\EmmCreateUsageReportDetails.cs" />
-    <Compile Include="Generated\TeamLog\EmmLoginSuccessDetails.cs" />
+    <Compile Include="Generated\TeamLog\EmmErrorDetails.cs" />
     <Compile Include="Generated\TeamLog\EmmRefreshAuthTokenDetails.cs" />
     <Compile Include="Generated\TeamLog\EmmRemoveExceptionDetails.cs" />
     <Compile Include="Generated\TeamLog\EnabledDomainInvitesDetails.cs" />
@@ -728,10 +745,11 @@
     <Compile Include="Generated\TeamLog\FilePreviewDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRenameDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestAddDeadlineDetails.cs" />
+    <Compile Include="Generated\TeamLog\FileRequestChangeDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestChangeFolderDetails.cs" />
-    <Compile Include="Generated\TeamLog\FileRequestChangeTitleDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestCloseDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestCreateDetails.cs" />
+    <Compile Include="Generated\TeamLog\FileRequestDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestReceiveFileDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestRemoveDeadlineDetails.cs" />
     <Compile Include="Generated\TeamLog\FileRequestSendDetails.cs" />
@@ -769,10 +787,11 @@
     <Compile Include="Generated\TeamLog\GroupRemoveMemberDetails.cs" />
     <Compile Include="Generated\TeamLog\GroupRenameDetails.cs" />
     <Compile Include="Generated\TeamLog\GroupUserManagementChangePolicyDetails.cs" />
-    <Compile Include="Generated\TeamLog\GroupUserManagementPolicy.cs" />
-    <Compile Include="Generated\TeamLog\HostLogInfo.cs" />
     <Compile Include="Generated\TeamLog\JoinTeamDetails.cs" />
     <Compile Include="Generated\TeamLog\LinkAudience.cs" />
+    <Compile Include="Generated\TeamLog\LoginFailDetails.cs" />
+    <Compile Include="Generated\TeamLog\LoginMethod.cs" />
+    <Compile Include="Generated\TeamLog\LoginSuccessDetails.cs" />
     <Compile Include="Generated\TeamLog\LogoutDetails.cs" />
     <Compile Include="Generated\TeamLog\MemberAddNameDetails.cs" />
     <Compile Include="Generated\TeamLog\MemberChangeAdminRoleDetails.cs" />
@@ -857,8 +876,6 @@
     <Compile Include="Generated\TeamLog\PaperMemberPolicy.cs" />
     <Compile Include="Generated\TeamLog\ParticipantLogInfo.cs" />
     <Compile Include="Generated\TeamLog\PasswordChangeDetails.cs" />
-    <Compile Include="Generated\TeamLog\PasswordLoginFailDetails.cs" />
-    <Compile Include="Generated\TeamLog\PasswordLoginSuccessDetails.cs" />
     <Compile Include="Generated\TeamLog\PasswordResetAllDetails.cs" />
     <Compile Include="Generated\TeamLog\PasswordResetDetails.cs" />
     <Compile Include="Generated\TeamLog\PathLogInfo.cs" />
@@ -944,8 +961,6 @@
     <Compile Include="Generated\TeamLog\SmartSyncNotOptOutDetails.cs" />
     <Compile Include="Generated\TeamLog\SmartSyncOptOutDetails.cs" />
     <Compile Include="Generated\TeamLog\SmartSyncOptOutPolicy.cs" />
-    <Compile Include="Generated\TeamLog\SmartSyncPolicy.cs" />
-    <Compile Include="Generated\TeamLog\SpaceLimitsLevel.cs" />
     <Compile Include="Generated\TeamLog\SpaceLimitsStatus.cs" />
     <Compile Include="Generated\TeamLog\SsoAddCertDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoAddLoginUrlDetails.cs" />
@@ -955,7 +970,7 @@
     <Compile Include="Generated\TeamLog\SsoChangeLogoutUrlDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoChangePolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoChangeSamlIdentityModeDetails.cs" />
-    <Compile Include="Generated\TeamLog\SsoLoginFailDetails.cs" />
+    <Compile Include="Generated\TeamLog\SsoErrorDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoRemoveCertDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoRemoveLoginUrlDetails.cs" />
     <Compile Include="Generated\TeamLog\SsoRemoveLogoutUrlDetails.cs" />
@@ -1001,6 +1016,7 @@
     <Compile Include="Generated\TeamLog\WebSessionsFixedLengthPolicy.cs" />
     <Compile Include="Generated\TeamLog\WebSessionsIdleLengthPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\EmmState.cs" />
+    <Compile Include="Generated\TeamPolicies\GroupCreation.cs" />
     <Compile Include="Generated\TeamPolicies\OfficeAddInPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\PaperDeploymentPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\PaperEnabledPolicy.cs" />
@@ -1009,6 +1025,7 @@
     <Compile Include="Generated\TeamPolicies\SharedFolderJoinPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\SharedFolderMemberPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\SharedLinkCreatePolicy.cs" />
+    <Compile Include="Generated\TeamPolicies\SmartSyncPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\SsoPolicy.cs" />
     <Compile Include="Generated\TeamPolicies\TeamMemberPolicies.cs" />
     <Compile Include="Generated\TeamPolicies\TeamSharingPolicies.cs" />

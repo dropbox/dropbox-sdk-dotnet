@@ -33,10 +33,12 @@ namespace Dropbox.Api.FileProperties
         /// </summary>
         /// <param name="id">The ID for the matched file or folder.</param>
         /// <param name="path">The path for the matched file or folder.</param>
+        /// <param name="isDeleted">Whether the file or folder is deleted.</param>
         /// <param name="propertyGroups">List of custom property groups associated with the
         /// file.</param>
         public PropertiesSearchMatch(string id,
                                      string path,
+                                     bool isDeleted,
                                      col.IEnumerable<PropertyGroup> propertyGroups)
         {
             if (id == null)
@@ -62,6 +64,7 @@ namespace Dropbox.Api.FileProperties
 
             this.Id = id;
             this.Path = path;
+            this.IsDeleted = isDeleted;
             this.PropertyGroups = propertyGroupsList;
         }
 
@@ -87,6 +90,11 @@ namespace Dropbox.Api.FileProperties
         public string Path { get; protected set; }
 
         /// <summary>
+        /// <para>Whether the file or folder is deleted.</para>
+        /// </summary>
+        public bool IsDeleted { get; protected set; }
+
+        /// <summary>
         /// <para>List of custom property groups associated with the file.</para>
         /// </summary>
         public col.IList<PropertyGroup> PropertyGroups { get; protected set; }
@@ -107,6 +115,7 @@ namespace Dropbox.Api.FileProperties
             {
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                WriteProperty("is_deleted", value.IsDeleted, writer, enc.BooleanEncoder.Instance);
                 WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.FileProperties.PropertyGroup.Encoder);
             }
         }
@@ -146,6 +155,9 @@ namespace Dropbox.Api.FileProperties
                         break;
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_deleted":
+                        value.IsDeleted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "property_groups":
                         value.PropertyGroups = ReadList<PropertyGroup>(reader, global::Dropbox.Api.FileProperties.PropertyGroup.Decoder);

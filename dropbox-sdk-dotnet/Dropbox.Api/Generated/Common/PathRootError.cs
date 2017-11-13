@@ -35,24 +35,24 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Invalid</para>
+        /// <para>Gets a value indicating whether this instance is InvalidRoot</para>
         /// </summary>
-        public bool IsInvalid
+        public bool IsInvalidRoot
         {
             get
             {
-                return this is Invalid;
+                return this is InvalidRoot;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Invalid, or <c>null</c>.</para>
+        /// <para>Gets this instance as a InvalidRoot, or <c>null</c>.</para>
         /// </summary>
-        public Invalid AsInvalid
+        public InvalidRoot AsInvalidRoot
         {
             get
             {
-                return this as Invalid;
+                return this as InvalidRoot;
             }
         }
 
@@ -114,10 +114,10 @@ namespace Dropbox.Api.Common
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PathRootError value, enc.IJsonWriter writer)
             {
-                if (value is Invalid)
+                if (value is InvalidRoot)
                 {
-                    WriteProperty(".tag", "invalid", writer, enc.StringEncoder.Instance);
-                    Invalid.Encoder.EncodeFields((Invalid)value, writer);
+                    WriteProperty(".tag", "invalid_root", writer, enc.StringEncoder.Instance);
+                    InvalidRoot.Encoder.EncodeFields((InvalidRoot)value, writer);
                     return;
                 }
                 if (value is NoPermission)
@@ -164,8 +164,8 @@ namespace Dropbox.Api.Common
             {
                 switch (tag)
                 {
-                    case "invalid":
-                        return Invalid.Decoder.DecodeFields(reader);
+                    case "invalid_root":
+                        return InvalidRoot.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
                     default:
@@ -177,58 +177,60 @@ namespace Dropbox.Api.Common
         #endregion
 
         /// <summary>
-        /// <para>The path root id value in Dropbox-API-Path-Root header is no longer
-        /// valid.</para>
+        /// <para>The root namespace id in Dropbox-API-Path-Root header is not valid. The value
+        /// of this error is use's latest root info.</para>
         /// </summary>
-        public sealed class Invalid : PathRootError
+        public sealed class InvalidRoot : PathRootError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Invalid> Encoder = new InvalidEncoder();
+            internal static enc.StructEncoder<InvalidRoot> Encoder = new InvalidRootEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Invalid> Decoder = new InvalidDecoder();
+            internal static enc.StructDecoder<InvalidRoot> Decoder = new InvalidRootDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Invalid" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="InvalidRoot" />
+            /// class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Invalid(InvalidPathRootError value)
+            public InvalidRoot(RootInfo value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Invalid" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="InvalidRoot" />
+            /// class.</para>
             /// </summary>
-            private Invalid()
+            private InvalidRoot()
             {
             }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public InvalidPathRootError Value { get; private set; }
+            public RootInfo Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Invalid" />.</para>
+            /// <para>Encoder for  <see cref="InvalidRoot" />.</para>
             /// </summary>
-            private class InvalidEncoder : enc.StructEncoder<Invalid>
+            private class InvalidRootEncoder : enc.StructEncoder<InvalidRoot>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Invalid value, enc.IJsonWriter writer)
+                public override void EncodeFields(InvalidRoot value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Common.InvalidPathRootError.Encoder.EncodeFields(value.Value, writer);
+                    global::Dropbox.Api.Common.RootInfo.Encoder.EncodeFields(value.Value, writer);
                 }
             }
 
@@ -237,27 +239,36 @@ namespace Dropbox.Api.Common
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Invalid" />.</para>
+            /// <para>Decoder for  <see cref="InvalidRoot" />.</para>
             /// </summary>
-            private class InvalidDecoder : enc.StructDecoder<Invalid>
+            private class InvalidRootDecoder : enc.StructDecoder<InvalidRoot>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Invalid" />.</para>
+                /// <para>Create a new instance of type <see cref="InvalidRoot" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Invalid Create()
+                protected override InvalidRoot Create()
                 {
-                    return new Invalid();
+                    return new InvalidRoot();
                 }
 
                 /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
+                /// <para>Set given field.</para>
                 /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Invalid DecodeFields(enc.IJsonReader reader)
+                protected override void SetField(InvalidRoot value, string fieldName, enc.IJsonReader reader)
                 {
-                    return new Invalid(global::Dropbox.Api.Common.InvalidPathRootError.Decoder.DecodeFields(reader));
+                    switch (fieldName)
+                    {
+                        case "invalid_root":
+                            value.Value = global::Dropbox.Api.Common.RootInfo.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 
@@ -265,7 +276,7 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>You don't have permission to access the path root id in Dropbox-API-Path-Root
+        /// <para>You don't have permission to access the namespace id in Dropbox-API-Path-Root
         /// header.</para>
         /// </summary>
         public sealed class NoPermission : PathRootError

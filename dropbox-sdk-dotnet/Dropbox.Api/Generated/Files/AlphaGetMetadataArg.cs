@@ -42,6 +42,9 @@ namespace Dropbox.Api.Files
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
         /// flag for each file indicating whether or not  that file has any explicit
         /// members.</param>
+        /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
+        /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</param>
@@ -49,8 +52,9 @@ namespace Dropbox.Api.Files
                                    bool includeMediaInfo = false,
                                    bool includeDeleted = false,
                                    bool includeHasExplicitSharedMembers = false,
+                                   global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                    col.IEnumerable<string> includePropertyTemplates = null)
-            : base(path, includeMediaInfo, includeDeleted, includeHasExplicitSharedMembers)
+            : base(path, includeMediaInfo, includeDeleted, includeHasExplicitSharedMembers, includePropertyGroups)
         {
             var includePropertyTemplatesList = enc.Util.ToList(includePropertyTemplates);
 
@@ -93,6 +97,10 @@ namespace Dropbox.Api.Files
                 WriteProperty("include_media_info", value.IncludeMediaInfo, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_deleted", value.IncludeDeleted, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("include_has_explicit_shared_members", value.IncludeHasExplicitSharedMembers, writer, enc.BooleanEncoder.Instance);
+                if (value.IncludePropertyGroups != null)
+                {
+                    WriteProperty("include_property_groups", value.IncludePropertyGroups, writer, global::Dropbox.Api.FileProperties.TemplateFilterBase.Encoder);
+                }
                 if (value.IncludePropertyTemplates.Count > 0)
                 {
                     WriteListProperty("include_property_templates", value.IncludePropertyTemplates, writer, enc.StringEncoder.Instance);
@@ -140,6 +148,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_has_explicit_shared_members":
                         value.IncludeHasExplicitSharedMembers = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_property_groups":
+                        value.IncludePropertyGroups = global::Dropbox.Api.FileProperties.TemplateFilterBase.Decoder.Decode(reader);
                         break;
                     case "include_property_templates":
                         value.IncludePropertyTemplates = ReadList<string>(reader, enc.StringDecoder.Instance);

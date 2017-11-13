@@ -168,6 +168,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TooManyFiles</para>
+        /// </summary>
+        public bool IsTooManyFiles
+        {
+            get
+            {
+                return this is TooManyFiles;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManyFiles, or <c>null</c>.</para>
+        /// </summary>
+        public TooManyFiles AsTooManyFiles
+        {
+            get
+            {
+                return this as TooManyFiles;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -239,6 +261,12 @@ namespace Dropbox.Api.Sharing
                     NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
                     return;
                 }
+                if (value is TooManyFiles)
+                {
+                    WriteProperty(".tag", "too_many_files", writer, enc.StringEncoder.Instance);
+                    TooManyFiles.Encoder.EncodeFields((TooManyFiles)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -290,6 +318,8 @@ namespace Dropbox.Api.Sharing
                         return TeamFolder.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
+                    case "too_many_files":
+                        return TooManyFiles.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -767,6 +797,77 @@ namespace Dropbox.Api.Sharing
                 protected override NoPermission Create()
                 {
                     return NoPermission.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This shared folder has too many files for leaving a copy. You can still
+        /// remove this user without leaving a copy.</para>
+        /// </summary>
+        public sealed class TooManyFiles : RemoveFolderMemberError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManyFiles> Encoder = new TooManyFilesEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManyFiles> Decoder = new TooManyFilesDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManyFiles" />
+            /// class.</para>
+            /// </summary>
+            private TooManyFiles()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooManyFiles</para>
+            /// </summary>
+            public static readonly TooManyFiles Instance = new TooManyFiles();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManyFiles" />.</para>
+            /// </summary>
+            private class TooManyFilesEncoder : enc.StructEncoder<TooManyFiles>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManyFiles value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManyFiles" />.</para>
+            /// </summary>
+            private class TooManyFilesDecoder : enc.StructDecoder<TooManyFiles>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManyFiles" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManyFiles Create()
+                {
+                    return TooManyFiles.Instance;
                 }
 
             }

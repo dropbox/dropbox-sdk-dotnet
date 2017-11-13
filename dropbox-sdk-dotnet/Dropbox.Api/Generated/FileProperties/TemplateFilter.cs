@@ -168,8 +168,10 @@ namespace Dropbox.Api.FileProperties
                         return FilterNone.Decoder.DecodeFields(reader);
                     case "filter_some":
                         return FilterSome.Decoder.DecodeFields(reader);
-                    default:
+                    case "other":
                         return Other.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
                 }
             }
         }

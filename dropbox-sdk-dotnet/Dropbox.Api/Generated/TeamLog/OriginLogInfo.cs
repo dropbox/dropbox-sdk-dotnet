@@ -32,10 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="accessMethod">The method that was used to perform the action.</param>
         /// <param name="geoLocation">Geographic location details.</param>
-        /// <param name="host">Host details.</param>
         public OriginLogInfo(AccessMethodLogInfo accessMethod,
-                             GeoLocationLogInfo geoLocation = null,
-                             HostLogInfo host = null)
+                             GeoLocationLogInfo geoLocation = null)
         {
             if (accessMethod == null)
             {
@@ -44,7 +42,6 @@ namespace Dropbox.Api.TeamLog
 
             this.AccessMethod = accessMethod;
             this.GeoLocation = geoLocation;
-            this.Host = host;
         }
 
         /// <summary>
@@ -67,11 +64,6 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public GeoLocationLogInfo GeoLocation { get; protected set; }
 
-        /// <summary>
-        /// <para>Host details.</para>
-        /// </summary>
-        public HostLogInfo Host { get; protected set; }
-
         #region Encoder class
 
         /// <summary>
@@ -90,10 +82,6 @@ namespace Dropbox.Api.TeamLog
                 if (value.GeoLocation != null)
                 {
                     WriteProperty("geo_location", value.GeoLocation, writer, global::Dropbox.Api.TeamLog.GeoLocationLogInfo.Encoder);
-                }
-                if (value.Host != null)
-                {
-                    WriteProperty("host", value.Host, writer, global::Dropbox.Api.TeamLog.HostLogInfo.Encoder);
                 }
             }
         }
@@ -132,9 +120,6 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "geo_location":
                         value.GeoLocation = global::Dropbox.Api.TeamLog.GeoLocationLogInfo.Decoder.Decode(reader);
-                        break;
-                    case "host":
-                        value.Host = global::Dropbox.Api.TeamLog.HostLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

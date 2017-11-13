@@ -32,10 +32,9 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="newValue">New smart sync policy.</param>
-        /// <param name="previousValue">Previous smart sync policy. Might be missing due to
-        /// historical data gap.</param>
-        public SmartSyncChangePolicyDetails(SmartSyncPolicy newValue,
-                                            SmartSyncPolicy previousValue = null)
+        /// <param name="previousValue">Previous smart sync policy.</param>
+        public SmartSyncChangePolicyDetails(global::Dropbox.Api.TeamPolicies.SmartSyncPolicy newValue,
+                                            global::Dropbox.Api.TeamPolicies.SmartSyncPolicy previousValue = null)
         {
             if (newValue == null)
             {
@@ -60,13 +59,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New smart sync policy.</para>
         /// </summary>
-        public SmartSyncPolicy NewValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.SmartSyncPolicy NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Previous smart sync policy. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>Previous smart sync policy.</para>
         /// </summary>
-        public SmartSyncPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.SmartSyncPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +80,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SmartSyncChangePolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SmartSyncPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SmartSyncPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Encoder);
                 }
             }
         }
@@ -121,10 +119,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.SmartSyncPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.SmartSyncPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

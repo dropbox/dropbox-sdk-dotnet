@@ -31,12 +31,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="FileChangeCommentSubscriptionDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="newValue">New file comment subscription.</param>
         /// <param name="previousValue">Previous file comment subscription. Might be missing
         /// due to historical data gap.</param>
-        public FileChangeCommentSubscriptionDetails(ulong targetAssetIndex,
-                                                    FileCommentNotificationPolicy newValue,
+        public FileChangeCommentSubscriptionDetails(FileCommentNotificationPolicy newValue,
                                                     FileCommentNotificationPolicy previousValue = null)
         {
             if (newValue == null)
@@ -44,7 +42,6 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.TargetAssetIndex = targetAssetIndex;
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
         }
@@ -59,11 +56,6 @@ namespace Dropbox.Api.TeamLog
         public FileChangeCommentSubscriptionDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>New file comment subscription.</para>
@@ -90,7 +82,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FileChangeCommentSubscriptionDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
@@ -129,9 +120,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
                     case "new_value":
                         value.NewValue = global::Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Decoder.Decode(reader);
                         break;

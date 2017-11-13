@@ -259,6 +259,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InsufficientQuota</para>
+        /// </summary>
+        public bool IsInsufficientQuota
+        {
+            get
+            {
+                return this is InsufficientQuota;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InsufficientQuota, or <c>null</c>.</para>
+        /// </summary>
+        public InsufficientQuota AsInsufficientQuota
+        {
+            get
+            {
+                return this as InsufficientQuota;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -354,6 +376,12 @@ namespace Dropbox.Api.Files
                     CantTransferOwnership.Encoder.EncodeFields((CantTransferOwnership)value, writer);
                     return;
                 }
+                if (value is InsufficientQuota)
+                {
+                    WriteProperty(".tag", "insufficient_quota", writer, enc.StringEncoder.Instance);
+                    InsufficientQuota.Encoder.EncodeFields((InsufficientQuota)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -412,6 +440,8 @@ namespace Dropbox.Api.Files
                         return DuplicatedOrNestedPaths.Decoder.DecodeFields(reader);
                     case "cant_transfer_ownership":
                         return CantTransferOwnership.Decoder.DecodeFields(reader);
+                    case "insufficient_quota":
+                        return InsufficientQuota.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -1205,6 +1235,77 @@ namespace Dropbox.Api.Files
                 protected override CantTransferOwnership Create()
                 {
                     return CantTransferOwnership.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current user does not have enough space to move or copy the files.</para>
+        /// </summary>
+        public sealed class InsufficientQuota : RelocationBatchError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InsufficientQuota> Encoder = new InsufficientQuotaEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InsufficientQuota> Decoder = new InsufficientQuotaDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsufficientQuota" />
+            /// class.</para>
+            /// </summary>
+            private InsufficientQuota()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InsufficientQuota</para>
+            /// </summary>
+            public static readonly InsufficientQuota Instance = new InsufficientQuota();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InsufficientQuota" />.</para>
+            /// </summary>
+            private class InsufficientQuotaEncoder : enc.StructEncoder<InsufficientQuota>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InsufficientQuota value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InsufficientQuota" />.</para>
+            /// </summary>
+            private class InsufficientQuotaDecoder : enc.StructDecoder<InsufficientQuota>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InsufficientQuota"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InsufficientQuota Create()
+                {
+                    return InsufficientQuota.Instance;
                 }
 
             }
