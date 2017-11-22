@@ -260,7 +260,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(UploadApiRateLimit value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.UploadApiRateLimitValue.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("upload_api_rate_limit", value.Value, writer, global::Dropbox.Api.Team.UploadApiRateLimitValue.Encoder);
                 }
             }
 
@@ -359,7 +359,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(HasTeamSharedDropbox value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.HasTeamSharedDropboxValue.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("has_team_shared_dropbox", value.Value, writer, global::Dropbox.Api.Team.HasTeamSharedDropboxValue.Encoder);
                 }
             }
 
@@ -458,7 +458,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(HasTeamFileEvents value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.HasTeamFileEventsValue.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("has_team_file_events", value.Value, writer, global::Dropbox.Api.Team.HasTeamFileEventsValue.Encoder);
                 }
             }
 

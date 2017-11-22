@@ -317,7 +317,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(User value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.UserLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("user", value.Value, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
                 }
             }
 
@@ -413,7 +413,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Admin value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.UserLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("admin", value.Value, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
                 }
             }
 
@@ -509,7 +509,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(App value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AppLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("app", value.Value, writer, global::Dropbox.Api.TeamLog.AppLogInfo.Encoder);
                 }
             }
 
@@ -605,7 +605,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Reseller value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ResellerLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("reseller", value.Value, writer, global::Dropbox.Api.TeamLog.ResellerLogInfo.Encoder);
                 }
             }
 

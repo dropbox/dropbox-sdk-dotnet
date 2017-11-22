@@ -318,7 +318,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EndUser value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SessionLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("end_user", value.Value, writer, global::Dropbox.Api.TeamLog.SessionLogInfo.Encoder);
                 }
             }
 
@@ -414,7 +414,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SignInAs value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sign_in_as", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
                 }
             }
 
@@ -503,7 +503,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ContentManager value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("content_manager", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
                 }
             }
 
@@ -592,7 +592,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AdminConsole value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("admin_console", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
                 }
             }
 
@@ -679,7 +679,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Api value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ApiSessionLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("api", value.Value, writer, global::Dropbox.Api.TeamLog.ApiSessionLogInfo.Encoder);
                 }
             }
 

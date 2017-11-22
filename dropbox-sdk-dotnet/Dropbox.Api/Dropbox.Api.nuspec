@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.5.3</version>
+    <version>4.6.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,7 +14,24 @@
     <releaseNotes> 
 What's New:
   - OAuth 2
-    - Add require_role parameter.
+    - Add force_reauthentication parameter.
+  - Common
+    - Add support for Dropbox-Api-Path-Root header.
+  - FileProperties
+    - Add new routes for template operations.
+    - Add new routes for search.
+  - Files
+    - Add IncludePropertyGroups field to GetMetadataArg and ListFolderArg.
+    - Add PropertyGroups field to CommitInfo.
+  - Team
+    - Add MemberSpaceLimitsExcludedUsers routes.
+  - TeamPolicies
+    - Add SmartSyncPolicy.
+  - Users
+    - Add RootInfo fields to FullAccount.
+ 
+Bug Fixes:
+  - Fix a bug when serializing nested union.
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

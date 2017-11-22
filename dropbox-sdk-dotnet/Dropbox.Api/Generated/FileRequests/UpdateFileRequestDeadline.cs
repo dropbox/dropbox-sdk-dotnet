@@ -300,7 +300,7 @@ namespace Dropbox.Api.FileRequests
                 {
                     if (value.Value != null)
                     {
-                        global::Dropbox.Api.FileRequests.FileRequestDeadline.Encoder.EncodeFields(value.Value, writer);
+                        WriteProperty("update", value.Value, writer, global::Dropbox.Api.FileRequests.FileRequestDeadline.Encoder);
                     }
                 }
             }

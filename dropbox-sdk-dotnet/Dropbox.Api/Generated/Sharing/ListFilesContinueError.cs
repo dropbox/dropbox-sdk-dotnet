@@ -231,7 +231,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(UserError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.SharingUserError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("user_error", value.Value, writer, global::Dropbox.Api.Sharing.SharingUserError.Encoder);
                 }
             }
 

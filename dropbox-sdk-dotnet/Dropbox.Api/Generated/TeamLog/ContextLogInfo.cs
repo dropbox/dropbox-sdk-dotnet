@@ -257,7 +257,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamMember value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamMemberLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_member", value.Value, writer, global::Dropbox.Api.TeamLog.TeamMemberLogInfo.Encoder);
                 }
             }
 
@@ -346,7 +346,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NonTeamMember value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NonTeamMemberLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("non_team_member", value.Value, writer, global::Dropbox.Api.TeamLog.NonTeamMemberLogInfo.Encoder);
                 }
             }
 

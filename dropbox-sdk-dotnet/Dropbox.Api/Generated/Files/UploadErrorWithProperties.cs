@@ -233,7 +233,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PropertiesError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("properties_error", value.Value, writer, global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Encoder);
                 }
             }
 
@@ -329,7 +329,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.UploadWriteFailed.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.Files.UploadWriteFailed.Encoder);
                 }
             }
 

@@ -287,7 +287,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(File value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file", value.Value, writer, global::Dropbox.Api.TeamLog.FileLogInfo.Encoder);
                 }
             }
 
@@ -374,7 +374,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Folder value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FolderLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("folder", value.Value, writer, global::Dropbox.Api.TeamLog.FolderLogInfo.Encoder);
                 }
             }
 
@@ -463,7 +463,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocument value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocumentLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_document", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocumentLogInfo.Encoder);
                 }
             }
 
@@ -552,7 +552,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperFolder value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperFolderLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_folder", value.Value, writer, global::Dropbox.Api.TeamLog.PaperFolderLogInfo.Encoder);
                 }
             }
 

@@ -1195,7 +1195,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AlreadyShared value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.SharedFolderMetadata.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("already_shared", value.Value, writer, global::Dropbox.Api.Sharing.SharedFolderMetadata.Encoder);
                 }
             }
 

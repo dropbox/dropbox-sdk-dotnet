@@ -229,7 +229,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Success value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.UserSelectorArg.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("success", value.Value, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 }
             }
 
@@ -327,7 +327,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InvalidUser value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.UserSelectorArg.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("invalid_user", value.Value, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 }
             }
 

@@ -463,7 +463,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(BadPath value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.SharePathError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("bad_path", value.Value, writer, global::Dropbox.Api.Sharing.SharePathError.Encoder);
                 }
             }
 

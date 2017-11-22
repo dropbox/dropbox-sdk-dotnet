@@ -231,7 +231,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(WebSession value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.DeviceSessionArg.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("web_session", value.Value, writer, global::Dropbox.Api.Team.DeviceSessionArg.Encoder);
                 }
             }
 
@@ -320,7 +320,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DesktopClient value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.RevokeDesktopClientArg.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("desktop_client", value.Value, writer, global::Dropbox.Api.Team.RevokeDesktopClientArg.Encoder);
                 }
             }
 
@@ -409,7 +409,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MobileClient value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.DeviceSessionArg.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("mobile_client", value.Value, writer, global::Dropbox.Api.Team.DeviceSessionArg.Encoder);
                 }
             }
 

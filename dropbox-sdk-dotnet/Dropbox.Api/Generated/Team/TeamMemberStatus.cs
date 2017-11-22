@@ -469,7 +469,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Removed value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.RemovedStatus.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("removed", value.Value, writer, global::Dropbox.Api.Team.RemovedStatus.Encoder);
                 }
             }
 

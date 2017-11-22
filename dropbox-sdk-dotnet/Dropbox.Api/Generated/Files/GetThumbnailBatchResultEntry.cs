@@ -229,7 +229,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Success value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.GetThumbnailBatchResultData.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("success", value.Value, writer, global::Dropbox.Api.Files.GetThumbnailBatchResultData.Encoder);
                 }
             }
 
@@ -316,7 +316,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Failure value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.ThumbnailError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("failure", value.Value, writer, global::Dropbox.Api.Files.ThumbnailError.Encoder);
                 }
             }
 

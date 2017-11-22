@@ -449,7 +449,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Conflict value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.WriteConflictError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("conflict", value.Value, writer, global::Dropbox.Api.Files.WriteConflictError.Encoder);
                 }
             }
 

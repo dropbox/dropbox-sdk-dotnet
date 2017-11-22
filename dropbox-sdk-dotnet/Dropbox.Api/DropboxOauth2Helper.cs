@@ -168,7 +168,7 @@ namespace Dropbox.Api
         /// This parameter should be used to protect against cross-site request forgery (CSRF).</param>
         /// <param name="forceReapprove">Whether or not to force the user to approve the app again if they've already done so.
         /// If <c>false</c> (default), a user who has already approved the application may be automatically redirected to
-        /// <paramref name="redirectUri"/>. If <c>true</c>, the user will not be automatically redirected and will have to approve
+        /// <paramref name="redirectUri"/>If <c>true</c>, the user will not be automatically redirected and will have to approve
         /// the app again.</param>
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
@@ -176,13 +176,17 @@ namespace Dropbox.Api
         /// <param name="requireRole"If this parameter is specified, the user will be asked to authorize with a particular
         /// type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
         /// verify the type of Dropbox account after authorization since the user could modify or remove the require_role
-        /// parameter</param>
+        /// parameter.</param>
+        /// <param name="forceReauthentication"> If <c>true</c>, users will be signed out if they are currently signed in.
+        /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
+        /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
+        /// different account.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false)
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
 
-            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole);
+            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole, forceReauthentication);
         }
 
         /// <summary>
@@ -200,7 +204,7 @@ namespace Dropbox.Api
         /// This parameter should be used to protect against cross-site request forgery (CSRF).</param>
         /// <param name="forceReapprove">Whether or not to force the user to approve the app again if they've already done so.
         /// If <c>false</c> (default), a user who has already approved the application may be automatically redirected to
-        /// <paramref name="redirectUri"/>. If <c>true</c>, the user will not be automatically redirected and will have to approve
+        /// <paramref name="redirectUri"/>If <c>true</c>, the user will not be automatically redirected and will have to approve
         /// the app again.</param>
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
@@ -208,9 +212,13 @@ namespace Dropbox.Api
         /// <param name="requireRole"If this parameter is specified, the user will be asked to authorize with a particular
         /// type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
         /// verify the type of Dropbox account after authorization since the user could modify or remove the require_role
-        /// parameter</param>
+        /// parameter.</param>
+        /// <param name="forceReauthentication"> If <c>true</c>, users will be signed out if they are currently signed in.
+        /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
+        /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
+        /// different account.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false)
         {
             if (string.IsNullOrWhiteSpace(clientId))
             {
@@ -262,6 +270,11 @@ namespace Dropbox.Api
             if (!string.IsNullOrWhiteSpace(requireRole))
             {
                 queryBuilder.Append("&require_role=").Append(requireRole);
+            }
+
+            if (forceReauthentication)
+            {
+                queryBuilder.Append("&force_reauthentication=true");
             }
 
             var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")

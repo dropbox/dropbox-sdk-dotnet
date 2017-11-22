@@ -230,7 +230,7 @@ namespace Dropbox.Api.Common
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InvalidRoot value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Common.RootInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("invalid_root", value.Value, writer, global::Dropbox.Api.Common.RootInfo.Encoder);
                 }
             }
 

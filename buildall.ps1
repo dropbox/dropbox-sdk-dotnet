@@ -21,7 +21,7 @@ $generatorPath = "$generatorDir\csharp.stoneg.py"
 $generatorArgs = @("-m", "stone.cli", "-a:all", $generatorPath, $sourceDir)
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
-$releaseVersion = "4.5.3"
+$releaseVersion = "4.6.0"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 
@@ -29,7 +29,7 @@ $builds = @(
     @{Name = "Dropbox.Api"; Configuration="Release"; SignAssembly=$true; TestsName="Dropbox.Api.Tests"},
     @{Name = "Dropbox.Api.Portable"; Configuration="Release"; SignAssembly=$true; TestName=$null},
     @{Name = "Dropbox.Api.Portable40"; Configuration="Release"; SignAssembly=$true; TestName=$null},
-    @{Name = "Dropbox.Api.Doc"; Configuration="Debug"; SignAssembly=$false; TestName=$null}
+    @{Name = "Dropbox.Api.Doc"; Configuration="Release"; SignAssembly=$false; TestName=$null}
 )
 
 function RunCommand($command)

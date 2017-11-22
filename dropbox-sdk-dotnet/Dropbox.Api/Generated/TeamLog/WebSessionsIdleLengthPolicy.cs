@@ -229,7 +229,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Defined value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DurationLogInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("defined", value.Value, writer, global::Dropbox.Api.TeamLog.DurationLogInfo.Encoder);
                 }
             }
 

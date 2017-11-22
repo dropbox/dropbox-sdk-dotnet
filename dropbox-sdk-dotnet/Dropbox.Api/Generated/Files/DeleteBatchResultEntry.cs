@@ -201,7 +201,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Success value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.DeleteBatchResultData.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("success", value.Value, writer, global::Dropbox.Api.Files.DeleteBatchResultData.Encoder);
                 }
             }
 
@@ -288,7 +288,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Failure value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.DeleteError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("failure", value.Value, writer, global::Dropbox.Api.Files.DeleteError.Encoder);
                 }
             }
 

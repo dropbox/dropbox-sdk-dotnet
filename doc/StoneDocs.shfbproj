@@ -19,8 +19,8 @@
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\stone_summaries.xml" />
-      <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\docbin\Debug\Dropbox.Api.dll" />
-      <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\docbin\Debug\Dropbox.Api.XML" />
+      <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\docbin\Release\Dropbox.Api.dll" />
+      <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\docbin\Release\Dropbox.Api.XML" />
       <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\namespace_summaries.xml" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>

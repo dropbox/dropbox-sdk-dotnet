@@ -228,7 +228,7 @@ namespace Dropbox.Api.Users
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Individual value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Users.IndividualSpaceAllocation.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("individual", value.Value, writer, global::Dropbox.Api.Users.IndividualSpaceAllocation.Encoder);
                 }
             }
 
@@ -315,7 +315,7 @@ namespace Dropbox.Api.Users
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Team value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Users.TeamSpaceAllocation.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team", value.Value, writer, global::Dropbox.Api.Users.TeamSpaceAllocation.Encoder);
                 }
             }
 

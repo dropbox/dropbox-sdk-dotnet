@@ -266,7 +266,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(UnshareFolderError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.UnshareFolderError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("unshare_folder_error", value.Value, writer, global::Dropbox.Api.Sharing.UnshareFolderError.Encoder);
                 }
             }
 
@@ -367,7 +367,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(RemoveFolderMemberError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.RemoveFolderMemberError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("remove_folder_member_error", value.Value, writer, global::Dropbox.Api.Sharing.RemoveFolderMemberError.Encoder);
                 }
             }
 
@@ -468,7 +468,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(RelinquishFolderMembershipError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("relinquish_folder_membership_error", value.Value, writer, global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Encoder);
                 }
             }
 

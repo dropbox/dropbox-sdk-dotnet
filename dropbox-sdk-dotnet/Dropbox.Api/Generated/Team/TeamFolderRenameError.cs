@@ -567,7 +567,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.TeamFolderAccessError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("access_error", value.Value, writer, global::Dropbox.Api.Team.TeamFolderAccessError.Encoder);
                 }
             }
 
@@ -665,7 +665,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(StatusError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.TeamFolderInvalidStatusError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("status_error", value.Value, writer, global::Dropbox.Api.Team.TeamFolderInvalidStatusError.Encoder);
                 }
             }
 
@@ -763,7 +763,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamSharedDropboxError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_shared_dropbox_error", value.Value, writer, global::Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Encoder);
                 }
             }
 

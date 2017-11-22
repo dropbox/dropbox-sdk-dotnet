@@ -230,7 +230,7 @@ namespace Dropbox.Api.Auth
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InvalidAccountType value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Auth.InvalidAccountTypeError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("invalid_account_type", value.Value, writer, global::Dropbox.Api.Auth.InvalidAccountTypeError.Encoder);
                 }
             }
 
@@ -329,7 +329,7 @@ namespace Dropbox.Api.Auth
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperAccessDenied value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Auth.PaperAccessError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_access_denied", value.Value, writer, global::Dropbox.Api.Auth.PaperAccessError.Encoder);
                 }
             }
 

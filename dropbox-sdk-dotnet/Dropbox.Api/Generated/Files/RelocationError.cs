@@ -470,7 +470,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FromLookup value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("from_lookup", value.Value, writer, global::Dropbox.Api.Files.LookupError.Encoder);
                 }
             }
 
@@ -566,7 +566,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FromWrite value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("from_write", value.Value, writer, global::Dropbox.Api.Files.WriteError.Encoder);
                 }
             }
 
@@ -662,7 +662,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(To value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("to", value.Value, writer, global::Dropbox.Api.Files.WriteError.Encoder);
                 }
             }
 

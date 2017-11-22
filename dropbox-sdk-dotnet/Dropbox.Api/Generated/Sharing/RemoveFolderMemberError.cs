@@ -381,7 +381,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.SharedFolderAccessError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("access_error", value.Value, writer, global::Dropbox.Api.Sharing.SharedFolderAccessError.Encoder);
                 }
             }
 
@@ -479,7 +479,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.SharedFolderMemberError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_error", value.Value, writer, global::Dropbox.Api.Sharing.SharedFolderMemberError.Encoder);
                 }
             }
 

@@ -404,7 +404,7 @@ namespace Dropbox.Api.FileProperties
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.FileProperties.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.FileProperties.LookupError.Encoder);
                 }
             }
 

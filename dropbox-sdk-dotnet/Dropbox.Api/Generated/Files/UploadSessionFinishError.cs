@@ -293,7 +293,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(LookupFailed value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.UploadSessionLookupError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("lookup_failed", value.Value, writer, global::Dropbox.Api.Files.UploadSessionLookupError.Encoder);
                 }
             }
 
@@ -389,7 +389,7 @@ namespace Dropbox.Api.Files
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.WriteError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.Files.WriteError.Encoder);
                 }
             }
 

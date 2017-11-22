@@ -1204,7 +1204,8 @@ class _CSharpGenerator(CodeGenerator):
             if is_list:
                 method = 'WriteListProperty'
             elif is_user_defined_type(data_type):
-                if inline_composite_type:
+                if is_string_type(data_type) and inline_composite_type:
+                    # We inline struct fields when a union field is a struct.
                     self.emit('{0}.EncodeFields(value.Value, writer);'.format(self._get_encoder(data_type)))
                     return
             elif nullable and not is_string_type(data_type):

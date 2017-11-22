@@ -199,7 +199,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Files.LookupError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.Files.LookupError.Encoder);
                 }
             }
 

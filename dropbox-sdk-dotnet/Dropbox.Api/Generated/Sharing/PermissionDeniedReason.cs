@@ -1614,7 +1614,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(InsufficientPlan value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.InsufficientPlan.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("insufficient_plan", value.Value, writer, global::Dropbox.Api.Sharing.InsufficientPlan.Encoder);
                 }
             }
 

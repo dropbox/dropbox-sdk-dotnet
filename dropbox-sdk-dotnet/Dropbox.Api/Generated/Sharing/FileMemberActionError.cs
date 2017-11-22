@@ -431,7 +431,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccessError value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.SharingFileAccessError.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("access_error", value.Value, writer, global::Dropbox.Api.Sharing.SharingFileAccessError.Encoder);
                 }
             }
 
@@ -531,7 +531,7 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoExplicitAccess value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Sharing.MemberAccessLevelResult.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("no_explicit_access", value.Value, writer, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Encoder);
                 }
             }
 

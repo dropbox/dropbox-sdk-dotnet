@@ -8615,7 +8615,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberChangeMembershipTypeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_change_membership_type_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.Encoder);
                 }
             }
 
@@ -8706,7 +8706,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberPermanentlyDeleteAccountContentsDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberPermanentlyDeleteAccountContentsDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_permanently_delete_account_contents_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberPermanentlyDeleteAccountContentsDetails.Encoder);
                 }
             }
 
@@ -8798,7 +8798,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberSpaceLimitsChangeStatusDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_space_limits_change_status_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.Encoder);
                 }
             }
 
@@ -8889,7 +8889,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberTransferAccountContentsDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_transfer_account_contents_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.Encoder);
                 }
             }
 
@@ -8979,7 +8979,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperAdminExportStartDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperAdminExportStartDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_admin_export_start_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperAdminExportStartDetails.Encoder);
                 }
             }
 
@@ -9069,7 +9069,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperEnabledUsersGroupAdditionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_enabled_users_group_addition_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.Encoder);
                 }
             }
 
@@ -9159,7 +9159,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperEnabledUsersGroupRemovalDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperEnabledUsersGroupRemovalDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_enabled_users_group_removal_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperEnabledUsersGroupRemovalDetails.Encoder);
                 }
             }
 
@@ -9249,7 +9249,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperExternalViewAllowDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperExternalViewAllowDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_external_view_allow_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperExternalViewAllowDetails.Encoder);
                 }
             }
 
@@ -9339,7 +9339,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperExternalViewDefaultTeamDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperExternalViewDefaultTeamDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_external_view_default_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperExternalViewDefaultTeamDetails.Encoder);
                 }
             }
 
@@ -9429,7 +9429,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperExternalViewForbidDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_external_view_forbid_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.Encoder);
                 }
             }
 
@@ -9520,7 +9520,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfExternalInviteWarnDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfExternalInviteWarnDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_external_invite_warn_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfExternalInviteWarnDetails.Encoder);
                 }
             }
 
@@ -9610,7 +9610,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamMergeFromDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamMergeFromDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_merge_from_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamMergeFromDetails.Encoder);
                 }
             }
 
@@ -9700,7 +9700,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamMergeToDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamMergeToDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_merge_to_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamMergeToDetails.Encoder);
                 }
             }
 
@@ -9790,7 +9790,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AppLinkTeamDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AppLinkTeamDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("app_link_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.AppLinkTeamDetails.Encoder);
                 }
             }
 
@@ -9880,7 +9880,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AppLinkUserDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AppLinkUserDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("app_link_user_details", value.Value, writer, global::Dropbox.Api.TeamLog.AppLinkUserDetails.Encoder);
                 }
             }
 
@@ -9970,7 +9970,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AppUnlinkTeamDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AppUnlinkTeamDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("app_unlink_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.AppUnlinkTeamDetails.Encoder);
                 }
             }
 
@@ -10060,7 +10060,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AppUnlinkUserDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AppUnlinkUserDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("app_unlink_user_details", value.Value, writer, global::Dropbox.Api.TeamLog.AppUnlinkUserDetails.Encoder);
                 }
             }
 
@@ -10150,7 +10150,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileAddCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileAddCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_add_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileAddCommentDetails.Encoder);
                 }
             }
 
@@ -10240,7 +10240,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileChangeCommentSubscriptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileChangeCommentSubscriptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_change_comment_subscription_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileChangeCommentSubscriptionDetails.Encoder);
                 }
             }
 
@@ -10330,7 +10330,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileDeleteCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileDeleteCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_delete_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileDeleteCommentDetails.Encoder);
                 }
             }
 
@@ -10420,7 +10420,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileLikeCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileLikeCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_like_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileLikeCommentDetails.Encoder);
                 }
             }
 
@@ -10510,7 +10510,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileResolveCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileResolveCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_resolve_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileResolveCommentDetails.Encoder);
                 }
             }
 
@@ -10600,7 +10600,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileUnlikeCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileUnlikeCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_unlike_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileUnlikeCommentDetails.Encoder);
                 }
             }
 
@@ -10690,7 +10690,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileUnresolveCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileUnresolveCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_unresolve_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileUnresolveCommentDetails.Encoder);
                 }
             }
 
@@ -10780,7 +10780,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceChangeIpDesktopDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceChangeIpDesktopDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_change_ip_desktop_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceChangeIpDesktopDetails.Encoder);
                 }
             }
 
@@ -10870,7 +10870,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceChangeIpMobileDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_change_ip_mobile_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.Encoder);
                 }
             }
 
@@ -10960,7 +10960,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceChangeIpWebDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceChangeIpWebDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_change_ip_web_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceChangeIpWebDetails.Encoder);
                 }
             }
 
@@ -11050,7 +11050,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceDeleteOnUnlinkFailDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkFailDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_delete_on_unlink_fail_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkFailDetails.Encoder);
                 }
             }
 
@@ -11140,7 +11140,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceDeleteOnUnlinkSuccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_delete_on_unlink_success_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.Encoder);
                 }
             }
 
@@ -11230,7 +11230,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceLinkFailDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceLinkFailDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_link_fail_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceLinkFailDetails.Encoder);
                 }
             }
 
@@ -11320,7 +11320,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceLinkSuccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_link_success_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.Encoder);
                 }
             }
 
@@ -11410,7 +11410,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceManagementDisabledDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_management_disabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.Encoder);
                 }
             }
 
@@ -11500,7 +11500,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceManagementEnabledDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceManagementEnabledDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_management_enabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceManagementEnabledDetails.Encoder);
                 }
             }
 
@@ -11590,7 +11590,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceUnlinkDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceUnlinkDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_unlink_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceUnlinkDetails.Encoder);
                 }
             }
 
@@ -11681,7 +11681,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmRefreshAuthTokenDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmRefreshAuthTokenDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_refresh_auth_token_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmRefreshAuthTokenDetails.Encoder);
                 }
             }
 
@@ -11773,7 +11773,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccountCaptureChangeAvailabilityDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("account_capture_change_availability_details", value.Value, writer, global::Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.Encoder);
                 }
             }
 
@@ -11864,7 +11864,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccountCaptureMigrateAccountDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AccountCaptureMigrateAccountDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("account_capture_migrate_account_details", value.Value, writer, global::Dropbox.Api.TeamLog.AccountCaptureMigrateAccountDetails.Encoder);
                 }
             }
 
@@ -11956,7 +11956,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccountCaptureRelinquishAccountDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("account_capture_relinquish_account_details", value.Value, writer, global::Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.Encoder);
                 }
             }
 
@@ -12047,7 +12047,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DisabledDomainInvitesDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("disabled_domain_invites_details", value.Value, writer, global::Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.Encoder);
                 }
             }
 
@@ -12138,7 +12138,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainInvitesApproveRequestToJoinTeamDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_invites_approve_request_to_join_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamDetails.Encoder);
                 }
             }
 
@@ -12230,7 +12230,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainInvitesDeclineRequestToJoinTeamDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_invites_decline_request_to_join_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.Encoder);
                 }
             }
 
@@ -12322,7 +12322,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainInvitesEmailExistingUsersDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_invites_email_existing_users_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.Encoder);
                 }
             }
 
@@ -12413,7 +12413,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainInvitesRequestToJoinTeamDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainInvitesRequestToJoinTeamDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_invites_request_to_join_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainInvitesRequestToJoinTeamDetails.Encoder);
                 }
             }
 
@@ -12504,7 +12504,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainInvitesSetInviteNewUserPrefToNoDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_invites_set_invite_new_user_pref_to_no_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.Encoder);
                 }
             }
 
@@ -12596,7 +12596,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainInvitesSetInviteNewUserPrefToYesDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_invites_set_invite_new_user_pref_to_yes_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.Encoder);
                 }
             }
 
@@ -12688,7 +12688,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainVerificationAddDomainFailDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainVerificationAddDomainFailDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_verification_add_domain_fail_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainVerificationAddDomainFailDetails.Encoder);
                 }
             }
 
@@ -12780,7 +12780,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainVerificationAddDomainSuccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_verification_add_domain_success_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessDetails.Encoder);
                 }
             }
 
@@ -12872,7 +12872,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DomainVerificationRemoveDomainDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DomainVerificationRemoveDomainDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("domain_verification_remove_domain_details", value.Value, writer, global::Dropbox.Api.TeamLog.DomainVerificationRemoveDomainDetails.Encoder);
                 }
             }
 
@@ -12962,7 +12962,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EnabledDomainInvitesDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EnabledDomainInvitesDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("enabled_domain_invites_details", value.Value, writer, global::Dropbox.Api.TeamLog.EnabledDomainInvitesDetails.Encoder);
                 }
             }
 
@@ -13052,7 +13052,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(CreateFolderDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.CreateFolderDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("create_folder_details", value.Value, writer, global::Dropbox.Api.TeamLog.CreateFolderDetails.Encoder);
                 }
             }
 
@@ -13142,7 +13142,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileAddDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileAddDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_add_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileAddDetails.Encoder);
                 }
             }
 
@@ -13231,7 +13231,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileCopyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileCopyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_copy_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileCopyDetails.Encoder);
                 }
             }
 
@@ -13320,7 +13320,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileDeleteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileDeleteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileDeleteDetails.Encoder);
                 }
             }
 
@@ -13410,7 +13410,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileDownloadDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileDownloadDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_download_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileDownloadDetails.Encoder);
                 }
             }
 
@@ -13500,7 +13500,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileEditDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileEditDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_edit_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileEditDetails.Encoder);
                 }
             }
 
@@ -13589,7 +13589,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileGetCopyReferenceDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileGetCopyReferenceDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_get_copy_reference_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileGetCopyReferenceDetails.Encoder);
                 }
             }
 
@@ -13679,7 +13679,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileMoveDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileMoveDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_move_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileMoveDetails.Encoder);
                 }
             }
 
@@ -13768,7 +13768,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FilePermanentlyDeleteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FilePermanentlyDeleteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_permanently_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.FilePermanentlyDeleteDetails.Encoder);
                 }
             }
 
@@ -13858,7 +13858,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FilePreviewDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FilePreviewDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_preview_details", value.Value, writer, global::Dropbox.Api.TeamLog.FilePreviewDetails.Encoder);
                 }
             }
 
@@ -13948,7 +13948,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRenameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRenameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_rename_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRenameDetails.Encoder);
                 }
             }
 
@@ -14038,7 +14038,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRestoreDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRestoreDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_restore_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRestoreDetails.Encoder);
                 }
             }
 
@@ -14128,7 +14128,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRevertDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRevertDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_revert_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRevertDetails.Encoder);
                 }
             }
 
@@ -14218,7 +14218,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRollbackChangesDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRollbackChangesDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_rollback_changes_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRollbackChangesDetails.Encoder);
                 }
             }
 
@@ -14308,7 +14308,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileSaveCopyReferenceDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileSaveCopyReferenceDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_save_copy_reference_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileSaveCopyReferenceDetails.Encoder);
                 }
             }
 
@@ -14398,7 +14398,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestAddDeadlineDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestAddDeadlineDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_add_deadline_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestAddDeadlineDetails.Encoder);
                 }
             }
 
@@ -14488,7 +14488,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestChangeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestChangeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_change_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestChangeDetails.Encoder);
                 }
             }
 
@@ -14578,7 +14578,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestChangeFolderDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestChangeFolderDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_change_folder_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestChangeFolderDetails.Encoder);
                 }
             }
 
@@ -14668,7 +14668,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestCloseDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestCloseDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_close_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestCloseDetails.Encoder);
                 }
             }
 
@@ -14758,7 +14758,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestCreateDetails.Encoder);
                 }
             }
 
@@ -14848,7 +14848,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestReceiveFileDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_receive_file_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.Encoder);
                 }
             }
 
@@ -14938,7 +14938,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestRemoveDeadlineDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestRemoveDeadlineDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_remove_deadline_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestRemoveDeadlineDetails.Encoder);
                 }
             }
 
@@ -15028,7 +15028,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestSendDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestSendDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_request_send_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestSendDetails.Encoder);
                 }
             }
 
@@ -15118,7 +15118,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupAddExternalIdDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupAddExternalIdDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_add_external_id_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupAddExternalIdDetails.Encoder);
                 }
             }
 
@@ -15208,7 +15208,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupAddMemberDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupAddMemberDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_add_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupAddMemberDetails.Encoder);
                 }
             }
 
@@ -15298,7 +15298,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupChangeExternalIdDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupChangeExternalIdDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_change_external_id_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupChangeExternalIdDetails.Encoder);
                 }
             }
 
@@ -15388,7 +15388,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupChangeManagementTypeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_change_management_type_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.Encoder);
                 }
             }
 
@@ -15478,7 +15478,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupChangeMemberRoleDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_change_member_role_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.Encoder);
                 }
             }
 
@@ -15568,7 +15568,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupCreateDetails.Encoder);
                 }
             }
 
@@ -15658,7 +15658,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupDeleteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupDeleteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupDeleteDetails.Encoder);
                 }
             }
 
@@ -15748,7 +15748,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupMovedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupMovedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_moved_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupMovedDetails.Encoder);
                 }
             }
 
@@ -15838,7 +15838,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupRemoveExternalIdDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_remove_external_id_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.Encoder);
                 }
             }
 
@@ -15928,7 +15928,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupRemoveMemberDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupRemoveMemberDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_remove_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupRemoveMemberDetails.Encoder);
                 }
             }
 
@@ -16018,7 +16018,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupRenameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupRenameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_rename_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupRenameDetails.Encoder);
                 }
             }
 
@@ -16108,7 +16108,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmErrorDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmErrorDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_error_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmErrorDetails.Encoder);
                 }
             }
 
@@ -16197,7 +16197,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(LoginFailDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.LoginFailDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("login_fail_details", value.Value, writer, global::Dropbox.Api.TeamLog.LoginFailDetails.Encoder);
                 }
             }
 
@@ -16286,7 +16286,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(LoginSuccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.LoginSuccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("login_success_details", value.Value, writer, global::Dropbox.Api.TeamLog.LoginSuccessDetails.Encoder);
                 }
             }
 
@@ -16376,7 +16376,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(LogoutDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.LogoutDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("logout_details", value.Value, writer, global::Dropbox.Api.TeamLog.LogoutDetails.Encoder);
                 }
             }
 
@@ -16465,7 +16465,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ResellerSupportSessionEndDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("reseller_support_session_end_details", value.Value, writer, global::Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.Encoder);
                 }
             }
 
@@ -16555,7 +16555,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ResellerSupportSessionStartDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("reseller_support_session_start_details", value.Value, writer, global::Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.Encoder);
                 }
             }
 
@@ -16645,7 +16645,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SignInAsSessionEndDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SignInAsSessionEndDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sign_in_as_session_end_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignInAsSessionEndDetails.Encoder);
                 }
             }
 
@@ -16735,7 +16735,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SignInAsSessionStartDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SignInAsSessionStartDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sign_in_as_session_start_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignInAsSessionStartDetails.Encoder);
                 }
             }
 
@@ -16825,7 +16825,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoErrorDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoErrorDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_error_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoErrorDetails.Encoder);
                 }
             }
 
@@ -16914,7 +16914,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberAddNameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberAddNameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_add_name_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberAddNameDetails.Encoder);
                 }
             }
 
@@ -17004,7 +17004,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberChangeAdminRoleDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberChangeAdminRoleDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_change_admin_role_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberChangeAdminRoleDetails.Encoder);
                 }
             }
 
@@ -17094,7 +17094,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberChangeEmailDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberChangeEmailDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_change_email_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberChangeEmailDetails.Encoder);
                 }
             }
 
@@ -17184,7 +17184,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberChangeNameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberChangeNameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_change_name_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberChangeNameDetails.Encoder);
                 }
             }
 
@@ -17274,7 +17274,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberChangeStatusDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberChangeStatusDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_change_status_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberChangeStatusDetails.Encoder);
                 }
             }
 
@@ -17364,7 +17364,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberSuggestDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberSuggestDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_suggest_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberSuggestDetails.Encoder);
                 }
             }
 
@@ -17454,7 +17454,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentAddMemberDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentAddMemberDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_add_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentAddMemberDetails.Encoder);
                 }
             }
 
@@ -17544,7 +17544,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentAddToFolderDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentAddToFolderDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_add_to_folder_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentAddToFolderDetails.Encoder);
                 }
             }
 
@@ -17634,7 +17634,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentArchiveDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentArchiveDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_archive_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentArchiveDetails.Encoder);
                 }
             }
 
@@ -17724,7 +17724,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentCreateDetails.Encoder);
                 }
             }
 
@@ -17814,7 +17814,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentPermanentlyDeleteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentPermanentlyDeleteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_permanently_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentPermanentlyDeleteDetails.Encoder);
                 }
             }
 
@@ -17904,7 +17904,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentRemoveFromFolderDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_remove_from_folder_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.Encoder);
                 }
             }
 
@@ -17994,7 +17994,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentRemoveMemberDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_remove_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.Encoder);
                 }
             }
 
@@ -18084,7 +18084,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentRenameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentRenameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_rename_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentRenameDetails.Encoder);
                 }
             }
 
@@ -18174,7 +18174,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperContentRestoreDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperContentRestoreDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_content_restore_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperContentRestoreDetails.Encoder);
                 }
             }
 
@@ -18264,7 +18264,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocAddCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocAddCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_add_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocAddCommentDetails.Encoder);
                 }
             }
 
@@ -18354,7 +18354,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocChangeMemberRoleDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_change_member_role_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.Encoder);
                 }
             }
 
@@ -18444,7 +18444,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocChangeSharingPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocChangeSharingPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_change_sharing_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocChangeSharingPolicyDetails.Encoder);
                 }
             }
 
@@ -18534,7 +18534,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocChangeSubscriptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocChangeSubscriptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_change_subscription_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocChangeSubscriptionDetails.Encoder);
                 }
             }
 
@@ -18624,7 +18624,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocDeletedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocDeletedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_deleted_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocDeletedDetails.Encoder);
                 }
             }
 
@@ -18714,7 +18714,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocDeleteCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocDeleteCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_delete_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocDeleteCommentDetails.Encoder);
                 }
             }
 
@@ -18804,7 +18804,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocDownloadDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocDownloadDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_download_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocDownloadDetails.Encoder);
                 }
             }
 
@@ -18894,7 +18894,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocEditDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocEditDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_edit_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocEditDetails.Encoder);
                 }
             }
 
@@ -18984,7 +18984,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocEditCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocEditCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_edit_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocEditCommentDetails.Encoder);
                 }
             }
 
@@ -19074,7 +19074,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocFollowedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocFollowedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_followed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocFollowedDetails.Encoder);
                 }
             }
 
@@ -19164,7 +19164,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocMentionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocMentionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_mention_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocMentionDetails.Encoder);
                 }
             }
 
@@ -19254,7 +19254,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocRequestAccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_request_access_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.Encoder);
                 }
             }
 
@@ -19344,7 +19344,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocResolveCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocResolveCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_resolve_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocResolveCommentDetails.Encoder);
                 }
             }
 
@@ -19434,7 +19434,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocRevertDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocRevertDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_revert_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocRevertDetails.Encoder);
                 }
             }
 
@@ -19524,7 +19524,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocSlackShareDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocSlackShareDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_slack_share_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocSlackShareDetails.Encoder);
                 }
             }
 
@@ -19614,7 +19614,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocTeamInviteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocTeamInviteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_team_invite_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocTeamInviteDetails.Encoder);
                 }
             }
 
@@ -19704,7 +19704,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocTrashedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocTrashedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_trashed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocTrashedDetails.Encoder);
                 }
             }
 
@@ -19794,7 +19794,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocUnresolveCommentDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocUnresolveCommentDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_unresolve_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocUnresolveCommentDetails.Encoder);
                 }
             }
 
@@ -19884,7 +19884,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocUntrashedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocUntrashedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_untrashed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocUntrashedDetails.Encoder);
                 }
             }
 
@@ -19974,7 +19974,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperDocViewDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperDocViewDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_doc_view_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocViewDetails.Encoder);
                 }
             }
 
@@ -20064,7 +20064,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperFolderChangeSubscriptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperFolderChangeSubscriptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_folder_change_subscription_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperFolderChangeSubscriptionDetails.Encoder);
                 }
             }
 
@@ -20154,7 +20154,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperFolderDeletedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperFolderDeletedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_folder_deleted_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperFolderDeletedDetails.Encoder);
                 }
             }
 
@@ -20244,7 +20244,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperFolderFollowedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperFolderFollowedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_folder_followed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperFolderFollowedDetails.Encoder);
                 }
             }
 
@@ -20334,7 +20334,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperFolderTeamInviteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_folder_team_invite_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.Encoder);
                 }
             }
 
@@ -20424,7 +20424,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PasswordChangeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PasswordChangeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("password_change_details", value.Value, writer, global::Dropbox.Api.TeamLog.PasswordChangeDetails.Encoder);
                 }
             }
 
@@ -20514,7 +20514,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PasswordResetDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PasswordResetDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("password_reset_details", value.Value, writer, global::Dropbox.Api.TeamLog.PasswordResetDetails.Encoder);
                 }
             }
 
@@ -20604,7 +20604,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PasswordResetAllDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PasswordResetAllDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("password_reset_all_details", value.Value, writer, global::Dropbox.Api.TeamLog.PasswordResetAllDetails.Encoder);
                 }
             }
 
@@ -20694,7 +20694,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmCreateExceptionsReportDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmCreateExceptionsReportDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_create_exceptions_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmCreateExceptionsReportDetails.Encoder);
                 }
             }
 
@@ -20784,7 +20784,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmCreateUsageReportDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_create_usage_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.Encoder);
                 }
             }
 
@@ -20875,7 +20875,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SmartSyncCreateAdminPrivilegeReportDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("smart_sync_create_admin_privilege_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.Encoder);
                 }
             }
 
@@ -20966,7 +20966,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamActivityCreateReportDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamActivityCreateReportDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_activity_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamActivityCreateReportDetails.Encoder);
                 }
             }
 
@@ -21056,7 +21056,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(CollectionShareDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.CollectionShareDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("collection_share_details", value.Value, writer, global::Dropbox.Api.TeamLog.CollectionShareDetails.Encoder);
                 }
             }
 
@@ -21146,7 +21146,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoteAclInviteOnlyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NoteAclInviteOnlyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("note_acl_invite_only_details", value.Value, writer, global::Dropbox.Api.TeamLog.NoteAclInviteOnlyDetails.Encoder);
                 }
             }
 
@@ -21236,7 +21236,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoteAclLinkDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NoteAclLinkDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("note_acl_link_details", value.Value, writer, global::Dropbox.Api.TeamLog.NoteAclLinkDetails.Encoder);
                 }
             }
 
@@ -21326,7 +21326,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoteAclTeamLinkDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("note_acl_team_link_details", value.Value, writer, global::Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.Encoder);
                 }
             }
 
@@ -21416,7 +21416,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoteSharedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NoteSharedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("note_shared_details", value.Value, writer, global::Dropbox.Api.TeamLog.NoteSharedDetails.Encoder);
                 }
             }
 
@@ -21506,7 +21506,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NoteShareReceiveDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NoteShareReceiveDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("note_share_receive_details", value.Value, writer, global::Dropbox.Api.TeamLog.NoteShareReceiveDetails.Encoder);
                 }
             }
 
@@ -21596,7 +21596,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(OpenNoteSharedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.OpenNoteSharedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("open_note_shared_details", value.Value, writer, global::Dropbox.Api.TeamLog.OpenNoteSharedDetails.Encoder);
                 }
             }
 
@@ -21686,7 +21686,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfAddGroupDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfAddGroupDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_add_group_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfAddGroupDetails.Encoder);
                 }
             }
 
@@ -21777,7 +21777,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfAllowNonMembersToViewSharedLinksDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfAllowNonMembersToViewSharedLinksDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_allow_non_members_to_view_shared_links_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfAllowNonMembersToViewSharedLinksDetails.Encoder);
                 }
             }
 
@@ -21868,7 +21868,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfInviteGroupDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfInviteGroupDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_invite_group_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfInviteGroupDetails.Encoder);
                 }
             }
 
@@ -21958,7 +21958,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfNestDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfNestDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_nest_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfNestDetails.Encoder);
                 }
             }
 
@@ -22047,7 +22047,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamDeclineDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamDeclineDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_decline_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamDeclineDetails.Encoder);
                 }
             }
 
@@ -22137,7 +22137,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamGrantAccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamGrantAccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_grant_access_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamGrantAccessDetails.Encoder);
                 }
             }
 
@@ -22227,7 +22227,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamInviteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamInviteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_invite_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamInviteDetails.Encoder);
                 }
             }
 
@@ -22317,7 +22317,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamInviteChangeRoleDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamInviteChangeRoleDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_invite_change_role_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamInviteChangeRoleDetails.Encoder);
                 }
             }
 
@@ -22407,7 +22407,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamJoinDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamJoinDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_join_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamJoinDetails.Encoder);
                 }
             }
 
@@ -22497,7 +22497,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamJoinFromOobLinkDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_join_from_oob_link_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.Encoder);
                 }
             }
 
@@ -22587,7 +22587,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SfTeamUninviteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SfTeamUninviteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sf_team_uninvite_details", value.Value, writer, global::Dropbox.Api.TeamLog.SfTeamUninviteDetails.Encoder);
                 }
             }
 
@@ -22677,7 +22677,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentAddInviteesDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_add_invitees_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Encoder);
                 }
             }
 
@@ -22767,7 +22767,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentAddLinkExpiryDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentAddLinkExpiryDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_add_link_expiry_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentAddLinkExpiryDetails.Encoder);
                 }
             }
 
@@ -22857,7 +22857,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentAddLinkPasswordDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentAddLinkPasswordDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_add_link_password_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentAddLinkPasswordDetails.Encoder);
                 }
             }
 
@@ -22948,7 +22948,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentAddMemberDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentAddMemberDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_add_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentAddMemberDetails.Encoder);
                 }
             }
 
@@ -23039,7 +23039,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeDownloadsPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeDownloadsPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_downloads_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeDownloadsPolicyDetails.Encoder);
                 }
             }
 
@@ -23131,7 +23131,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeInviteeRoleDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_invitee_role_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Encoder);
                 }
             }
 
@@ -23222,7 +23222,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeLinkAudienceDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeLinkAudienceDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_link_audience_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeLinkAudienceDetails.Encoder);
                 }
             }
 
@@ -23313,7 +23313,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeLinkExpiryDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_link_expiry_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.Encoder);
                 }
             }
 
@@ -23404,7 +23404,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeLinkPasswordDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeLinkPasswordDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_link_password_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeLinkPasswordDetails.Encoder);
                 }
             }
 
@@ -23495,7 +23495,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeMemberRoleDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_member_role_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.Encoder);
                 }
             }
 
@@ -23586,7 +23586,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentChangeViewerInfoPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_change_viewer_info_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.Encoder);
                 }
             }
 
@@ -23677,7 +23677,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentClaimInvitationDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_claim_invitation_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.Encoder);
                 }
             }
 
@@ -23767,7 +23767,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentCopyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentCopyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_copy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentCopyDetails.Encoder);
                 }
             }
 
@@ -23857,7 +23857,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentDownloadDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentDownloadDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_download_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentDownloadDetails.Encoder);
                 }
             }
 
@@ -23948,7 +23948,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentRelinquishMembershipDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentRelinquishMembershipDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_relinquish_membership_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentRelinquishMembershipDetails.Encoder);
                 }
             }
 
@@ -24040,7 +24040,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentRemoveInviteeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentRemoveInviteeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_remove_invitee_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentRemoveInviteeDetails.Encoder);
                 }
             }
 
@@ -24130,7 +24130,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentRemoveLinkExpiryDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentRemoveLinkExpiryDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_remove_link_expiry_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentRemoveLinkExpiryDetails.Encoder);
                 }
             }
 
@@ -24221,7 +24221,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentRemoveLinkPasswordDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentRemoveLinkPasswordDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_remove_link_password_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentRemoveLinkPasswordDetails.Encoder);
                 }
             }
 
@@ -24313,7 +24313,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentRemoveMemberDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentRemoveMemberDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_remove_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentRemoveMemberDetails.Encoder);
                 }
             }
 
@@ -24403,7 +24403,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentRequestAccessDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_request_access_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.Encoder);
                 }
             }
 
@@ -24494,7 +24494,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentUnshareDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentUnshareDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_unshare_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentUnshareDetails.Encoder);
                 }
             }
 
@@ -24584,7 +24584,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedContentViewDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedContentViewDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_content_view_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedContentViewDetails.Encoder);
                 }
             }
 
@@ -24675,7 +24675,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderChangeConfidentialityDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderChangeConfidentialityDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_change_confidentiality_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderChangeConfidentialityDetails.Encoder);
                 }
             }
 
@@ -24766,7 +24766,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderChangeLinkPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_change_link_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.Encoder);
                 }
             }
 
@@ -24857,7 +24857,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderChangeMemberManagementPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderChangeMemberManagementPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_change_member_management_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderChangeMemberManagementPolicyDetails.Encoder);
                 }
             }
 
@@ -24948,7 +24948,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderChangeMemberPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderChangeMemberPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_change_member_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderChangeMemberPolicyDetails.Encoder);
                 }
             }
 
@@ -25038,7 +25038,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderCreateDetails.Encoder);
                 }
             }
 
@@ -25128,7 +25128,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderMountDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderMountDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_mount_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderMountDetails.Encoder);
                 }
             }
 
@@ -25218,7 +25218,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderTransferOwnershipDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderTransferOwnershipDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_transfer_ownership_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderTransferOwnershipDetails.Encoder);
                 }
             }
 
@@ -25308,7 +25308,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedFolderUnmountDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedFolderUnmountDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_folder_unmount_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderUnmountDetails.Encoder);
                 }
             }
 
@@ -25398,7 +25398,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedNoteOpenedDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharedNoteOpenedDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shared_note_opened_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedNoteOpenedDetails.Encoder);
                 }
             }
 
@@ -25488,7 +25488,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelAppCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelAppCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_app_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelAppCreateDetails.Encoder);
                 }
             }
 
@@ -25578,7 +25578,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelCreateDetails.Encoder);
                 }
             }
 
@@ -25668,7 +25668,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelDisableDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelDisableDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_disable_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelDisableDetails.Encoder);
                 }
             }
 
@@ -25758,7 +25758,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelFbShareDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelFbShareDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_fb_share_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelFbShareDetails.Encoder);
                 }
             }
 
@@ -25848,7 +25848,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelGroupShareDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelGroupShareDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_group_share_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelGroupShareDetails.Encoder);
                 }
             }
 
@@ -25938,7 +25938,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelRemoveExpirationDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelRemoveExpirationDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_remove_expiration_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelRemoveExpirationDetails.Encoder);
                 }
             }
 
@@ -26028,7 +26028,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelSetExpirationDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelSetExpirationDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_set_expiration_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelSetExpirationDetails.Encoder);
                 }
             }
 
@@ -26118,7 +26118,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelTeamCopyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelTeamCopyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_team_copy_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelTeamCopyDetails.Encoder);
                 }
             }
 
@@ -26208,7 +26208,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelTeamDownloadDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelTeamDownloadDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_team_download_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelTeamDownloadDetails.Encoder);
                 }
             }
 
@@ -26298,7 +26298,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelTeamShareDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelTeamShareDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_team_share_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelTeamShareDetails.Encoder);
                 }
             }
 
@@ -26388,7 +26388,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelTeamViewDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelTeamViewDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_team_view_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelTeamViewDetails.Encoder);
                 }
             }
 
@@ -26478,7 +26478,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelVisibilityPasswordDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelVisibilityPasswordDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_visibility_password_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelVisibilityPasswordDetails.Encoder);
                 }
             }
 
@@ -26568,7 +26568,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelVisibilityPublicDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelVisibilityPublicDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_visibility_public_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelVisibilityPublicDetails.Encoder);
                 }
             }
 
@@ -26658,7 +26658,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ShmodelVisibilityTeamOnlyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ShmodelVisibilityTeamOnlyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("shmodel_visibility_team_only_details", value.Value, writer, global::Dropbox.Api.TeamLog.ShmodelVisibilityTeamOnlyDetails.Encoder);
                 }
             }
 
@@ -26748,7 +26748,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoAddCertDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoAddCertDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_add_cert_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoAddCertDetails.Encoder);
                 }
             }
 
@@ -26838,7 +26838,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoAddLoginUrlDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoAddLoginUrlDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_add_login_url_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoAddLoginUrlDetails.Encoder);
                 }
             }
 
@@ -26928,7 +26928,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoAddLogoutUrlDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoAddLogoutUrlDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_add_logout_url_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoAddLogoutUrlDetails.Encoder);
                 }
             }
 
@@ -27018,7 +27018,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoChangeCertDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoChangeCertDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_change_cert_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoChangeCertDetails.Encoder);
                 }
             }
 
@@ -27108,7 +27108,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoChangeLoginUrlDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoChangeLoginUrlDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_change_login_url_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoChangeLoginUrlDetails.Encoder);
                 }
             }
 
@@ -27198,7 +27198,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoChangeLogoutUrlDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoChangeLogoutUrlDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_change_logout_url_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoChangeLogoutUrlDetails.Encoder);
                 }
             }
 
@@ -27288,7 +27288,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoChangeSamlIdentityModeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_change_saml_identity_mode_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeDetails.Encoder);
                 }
             }
 
@@ -27378,7 +27378,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoRemoveCertDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoRemoveCertDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_remove_cert_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoRemoveCertDetails.Encoder);
                 }
             }
 
@@ -27468,7 +27468,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoRemoveLoginUrlDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoRemoveLoginUrlDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_remove_login_url_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoRemoveLoginUrlDetails.Encoder);
                 }
             }
 
@@ -27558,7 +27558,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoRemoveLogoutUrlDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_remove_logout_url_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.Encoder);
                 }
             }
 
@@ -27648,7 +27648,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamFolderChangeStatusDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_folder_change_status_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.Encoder);
                 }
             }
 
@@ -27738,7 +27738,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamFolderCreateDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamFolderCreateDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_folder_create_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderCreateDetails.Encoder);
                 }
             }
 
@@ -27828,7 +27828,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamFolderDowngradeDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_folder_downgrade_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.Encoder);
                 }
             }
 
@@ -27918,7 +27918,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamFolderPermanentlyDeleteDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamFolderPermanentlyDeleteDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_folder_permanently_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderPermanentlyDeleteDetails.Encoder);
                 }
             }
 
@@ -28008,7 +28008,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamFolderRenameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamFolderRenameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_folder_rename_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderRenameDetails.Encoder);
                 }
             }
 
@@ -28098,7 +28098,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AccountCaptureChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AccountCaptureChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("account_capture_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.AccountCaptureChangePolicyDetails.Encoder);
                 }
             }
 
@@ -28188,7 +28188,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AllowDownloadDisabledDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AllowDownloadDisabledDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("allow_download_disabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.AllowDownloadDisabledDetails.Encoder);
                 }
             }
 
@@ -28278,7 +28278,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(AllowDownloadEnabledDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.AllowDownloadEnabledDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("allow_download_enabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.AllowDownloadEnabledDetails.Encoder);
                 }
             }
 
@@ -28370,7 +28370,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DataPlacementRestrictionChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DataPlacementRestrictionChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("data_placement_restriction_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.DataPlacementRestrictionChangePolicyDetails.Encoder);
                 }
             }
 
@@ -28464,7 +28464,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DataPlacementRestrictionSatisfyPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DataPlacementRestrictionSatisfyPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("data_placement_restriction_satisfy_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.DataPlacementRestrictionSatisfyPolicyDetails.Encoder);
                 }
             }
 
@@ -28557,7 +28557,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceApprovalsChangeDesktopPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_approvals_change_desktop_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.Encoder);
                 }
             }
 
@@ -28650,7 +28650,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceApprovalsChangeMobilePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_approvals_change_mobile_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.Encoder);
                 }
             }
 
@@ -28743,7 +28743,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceApprovalsChangeOverageActionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_approvals_change_overage_action_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.Encoder);
                 }
             }
 
@@ -28836,7 +28836,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(DeviceApprovalsChangeUnlinkActionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.DeviceApprovalsChangeUnlinkActionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("device_approvals_change_unlink_action_details", value.Value, writer, global::Dropbox.Api.TeamLog.DeviceApprovalsChangeUnlinkActionDetails.Encoder);
                 }
             }
 
@@ -28928,7 +28928,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmAddExceptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmAddExceptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_add_exception_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmAddExceptionDetails.Encoder);
                 }
             }
 
@@ -29018,7 +29018,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29109,7 +29109,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(EmmRemoveExceptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("emm_remove_exception_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.Encoder);
                 }
             }
 
@@ -29200,7 +29200,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(ExtendedVersionHistoryChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.ExtendedVersionHistoryChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("extended_version_history_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.ExtendedVersionHistoryChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29291,7 +29291,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileCommentsChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_comments_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29381,7 +29381,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestsChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_requests_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29471,7 +29471,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestsEmailsEnabledDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_requests_emails_enabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.Encoder);
                 }
             }
 
@@ -29562,7 +29562,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(FileRequestsEmailsRestrictedToTeamOnlyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("file_requests_emails_restricted_to_team_only_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.Encoder);
                 }
             }
 
@@ -29653,7 +29653,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GoogleSsoChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GoogleSsoChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("google_sso_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.GoogleSsoChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29744,7 +29744,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(GroupUserManagementChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("group_user_management_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29835,7 +29835,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberRequestsChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_requests_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.Encoder);
                 }
             }
 
@@ -29926,7 +29926,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberSpaceLimitsAddExceptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_space_limits_add_exception_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionDetails.Encoder);
                 }
             }
 
@@ -30016,7 +30016,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberSpaceLimitsChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_space_limits_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.Encoder);
                 }
             }
 
@@ -30108,7 +30108,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberSpaceLimitsRemoveExceptionDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_space_limits_remove_exception_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.Encoder);
                 }
             }
 
@@ -30200,7 +30200,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberSuggestionsChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MemberSuggestionsChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_suggestions_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberSuggestionsChangePolicyDetails.Encoder);
                 }
             }
 
@@ -30292,7 +30292,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MicrosoftOfficeAddinChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MicrosoftOfficeAddinChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("microsoft_office_addin_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.MicrosoftOfficeAddinChangePolicyDetails.Encoder);
                 }
             }
 
@@ -30383,7 +30383,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(NetworkControlChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.NetworkControlChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("network_control_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.NetworkControlChangePolicyDetails.Encoder);
                 }
             }
 
@@ -30474,7 +30474,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperChangeDeploymentPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_change_deployment_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.Encoder);
                 }
             }
 
@@ -30565,7 +30565,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperChangeMemberLinkPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperChangeMemberLinkPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_change_member_link_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperChangeMemberLinkPolicyDetails.Encoder);
                 }
             }
 
@@ -30657,7 +30657,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperChangeMemberPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_change_member_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.Encoder);
                 }
             }
 
@@ -30747,7 +30747,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PaperChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PaperChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("paper_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperChangePolicyDetails.Encoder);
                 }
             }
 
@@ -30838,7 +30838,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(PermanentDeleteChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("permanent_delete_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.Encoder);
                 }
             }
 
@@ -30929,7 +30929,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharingChangeFolderJoinPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sharing_change_folder_join_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.Encoder);
                 }
             }
 
@@ -31021,7 +31021,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharingChangeLinkPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sharing_change_link_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.Encoder);
                 }
             }
 
@@ -31112,7 +31112,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharingChangeMemberPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SharingChangeMemberPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sharing_change_member_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharingChangeMemberPolicyDetails.Encoder);
                 }
             }
 
@@ -31202,7 +31202,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SmartSyncChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("smart_sync_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.Encoder);
                 }
             }
 
@@ -31292,7 +31292,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SmartSyncNotOptOutDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SmartSyncNotOptOutDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("smart_sync_not_opt_out_details", value.Value, writer, global::Dropbox.Api.TeamLog.SmartSyncNotOptOutDetails.Encoder);
                 }
             }
 
@@ -31382,7 +31382,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SmartSyncOptOutDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SmartSyncOptOutDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("smart_sync_opt_out_details", value.Value, writer, global::Dropbox.Api.TeamLog.SmartSyncOptOutDetails.Encoder);
                 }
             }
 
@@ -31472,7 +31472,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SsoChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.SsoChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("sso_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SsoChangePolicyDetails.Encoder);
                 }
             }
 
@@ -31562,7 +31562,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaChangePolicyDetails.Encoder);
                 }
             }
 
@@ -31653,7 +31653,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TwoAccountChangePolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("two_account_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.Encoder);
                 }
             }
 
@@ -31745,7 +31745,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(WebSessionsChangeFixedLengthPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.WebSessionsChangeFixedLengthPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("web_sessions_change_fixed_length_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionsChangeFixedLengthPolicyDetails.Encoder);
                 }
             }
 
@@ -31838,7 +31838,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(WebSessionsChangeIdleLengthPolicyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("web_sessions_change_idle_length_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.Encoder);
                 }
             }
 
@@ -31929,7 +31929,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamProfileAddLogoDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamProfileAddLogoDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_profile_add_logo_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileAddLogoDetails.Encoder);
                 }
             }
 
@@ -32020,7 +32020,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamProfileChangeDefaultLanguageDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamProfileChangeDefaultLanguageDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_profile_change_default_language_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileChangeDefaultLanguageDetails.Encoder);
                 }
             }
 
@@ -32111,7 +32111,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamProfileChangeLogoDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_profile_change_logo_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.Encoder);
                 }
             }
 
@@ -32201,7 +32201,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamProfileChangeNameDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamProfileChangeNameDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_profile_change_name_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileChangeNameDetails.Encoder);
                 }
             }
 
@@ -32291,7 +32291,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TeamProfileRemoveLogoDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("team_profile_remove_logo_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.Encoder);
                 }
             }
 
@@ -32381,7 +32381,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaAddBackupPhoneDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaAddBackupPhoneDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_add_backup_phone_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaAddBackupPhoneDetails.Encoder);
                 }
             }
 
@@ -32471,7 +32471,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaAddSecurityKeyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_add_security_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.Encoder);
                 }
             }
 
@@ -32561,7 +32561,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaChangeBackupPhoneDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_change_backup_phone_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.Encoder);
                 }
             }
 
@@ -32652,7 +32652,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaChangeStatusDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaChangeStatusDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_change_status_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaChangeStatusDetails.Encoder);
                 }
             }
 
@@ -32742,7 +32742,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaRemoveBackupPhoneDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaRemoveBackupPhoneDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_remove_backup_phone_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaRemoveBackupPhoneDetails.Encoder);
                 }
             }
 
@@ -32832,7 +32832,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaRemoveSecurityKeyDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaRemoveSecurityKeyDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_remove_security_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaRemoveSecurityKeyDetails.Encoder);
                 }
             }
 
@@ -32922,7 +32922,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(TfaResetDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.TfaResetDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("tfa_reset_details", value.Value, writer, global::Dropbox.Api.TeamLog.TfaResetDetails.Encoder);
                 }
             }
 
@@ -33012,7 +33012,7 @@ namespace Dropbox.Api.TeamLog
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MissingDetails value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.TeamLog.MissingDetails.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("missing_details", value.Value, writer, global::Dropbox.Api.TeamLog.MissingDetails.Encoder);
                 }
             }
 

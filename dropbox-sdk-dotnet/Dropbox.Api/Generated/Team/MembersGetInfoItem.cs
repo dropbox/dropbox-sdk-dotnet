@@ -301,7 +301,7 @@ namespace Dropbox.Api.Team
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(MemberInfo value, enc.IJsonWriter writer)
                 {
-                    global::Dropbox.Api.Team.TeamMemberInfo.Encoder.EncodeFields(value.Value, writer);
+                    WriteProperty("member_info", value.Value, writer, global::Dropbox.Api.Team.TeamMemberInfo.Encoder);
                 }
             }
 
