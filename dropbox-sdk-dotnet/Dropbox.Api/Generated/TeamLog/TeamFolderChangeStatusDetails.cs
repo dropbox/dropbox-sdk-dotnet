@@ -34,8 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New team folder status.</param>
         /// <param name="previousValue">Previous team folder status. Might be missing due to
         /// historical data gap.</param>
-        public TeamFolderChangeStatusDetails(TeamFolderStatus newValue,
-                                             TeamFolderStatus previousValue = null)
+        public TeamFolderChangeStatusDetails(global::Dropbox.Api.Team.TeamFolderStatus newValue,
+                                             global::Dropbox.Api.Team.TeamFolderStatus previousValue = null)
         {
             if (newValue == null)
             {
@@ -60,13 +60,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>New team folder status.</para>
         /// </summary>
-        public TeamFolderStatus NewValue { get; protected set; }
+        public global::Dropbox.Api.Team.TeamFolderStatus NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous team folder status. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public TeamFolderStatus PreviousValue { get; protected set; }
+        public global::Dropbox.Api.Team.TeamFolderStatus PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderChangeStatusDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.TeamFolderStatus.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.Team.TeamFolderStatus.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.TeamFolderStatus.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.Team.TeamFolderStatus.Encoder);
                 }
             }
         }
@@ -121,10 +121,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.TeamFolderStatus.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.Team.TeamFolderStatus.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.TeamFolderStatus.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.Team.TeamFolderStatus.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

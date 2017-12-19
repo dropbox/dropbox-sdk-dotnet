@@ -32,8 +32,7 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="newValue">New user's name.</param>
-        /// <param name="previousValue">Previous user's name. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="previousValue">Previous user's name.</param>
         public MemberChangeNameDetails(UserNameLogInfo newValue,
                                        UserNameLogInfo previousValue = null)
         {
@@ -63,7 +62,7 @@ namespace Dropbox.Api.TeamLog
         public UserNameLogInfo NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Previous user's name. Might be missing due to historical data gap.</para>
+        /// <para>Previous user's name.</para>
         /// </summary>
         public UserNameLogInfo PreviousValue { get; protected set; }
 

@@ -33,14 +33,9 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="newValue">New smart sync policy.</param>
         /// <param name="previousValue">Previous smart sync policy.</param>
-        public SmartSyncChangePolicyDetails(global::Dropbox.Api.TeamPolicies.SmartSyncPolicy newValue,
+        public SmartSyncChangePolicyDetails(global::Dropbox.Api.TeamPolicies.SmartSyncPolicy newValue = null,
                                             global::Dropbox.Api.TeamPolicies.SmartSyncPolicy previousValue = null)
         {
-            if (newValue == null)
-            {
-                throw new sys.ArgumentNullException("newValue");
-            }
-
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
         }
@@ -80,7 +75,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SmartSyncChangePolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Encoder);
+                if (value.NewValue != null)
+                {
+                    WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Encoder);
+                }
                 if (value.PreviousValue != null)
                 {
                     WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.SmartSyncPolicy.Encoder);

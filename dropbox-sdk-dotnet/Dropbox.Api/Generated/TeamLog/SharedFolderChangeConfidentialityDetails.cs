@@ -31,28 +31,17 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedFolderChangeConfidentialityDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="newValue">New confidentiality value.</param>
         /// <param name="previousValue">Previous confidentiality value. Might be missing due to
         /// historical data gap.</param>
-        public SharedFolderChangeConfidentialityDetails(ulong targetAssetIndex,
-                                                        string originalFolderName,
-                                                        Confidentiality newValue,
+        public SharedFolderChangeConfidentialityDetails(Confidentiality newValue,
                                                         Confidentiality previousValue = null)
         {
-            if (originalFolderName == null)
-            {
-                throw new sys.ArgumentNullException("originalFolderName");
-            }
-
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
         }
@@ -67,16 +56,6 @@ namespace Dropbox.Api.TeamLog
         public SharedFolderChangeConfidentialityDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
 
         /// <summary>
         /// <para>New confidentiality value.</para>
@@ -103,8 +82,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderChangeConfidentialityDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
                 WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.Confidentiality.Encoder);
                 if (value.PreviousValue != null)
                 {
@@ -143,12 +120,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "new_value":
                         value.NewValue = global::Dropbox.Api.TeamLog.Confidentiality.Decoder.Decode(reader);
                         break;

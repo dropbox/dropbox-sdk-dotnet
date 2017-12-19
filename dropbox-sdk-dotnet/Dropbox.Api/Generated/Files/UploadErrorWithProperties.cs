@@ -36,28 +36,6 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is PropertiesError</para>
-        /// </summary>
-        public bool IsPropertiesError
-        {
-            get
-            {
-                return this is PropertiesError;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a PropertiesError, or <c>null</c>.</para>
-        /// </summary>
-        public PropertiesError AsPropertiesError
-        {
-            get
-            {
-                return this as PropertiesError;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Path</para>
         /// </summary>
         public bool IsPath
@@ -76,6 +54,28 @@ namespace Dropbox.Api.Files
             get
             {
                 return this as Path;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PropertiesError</para>
+        /// </summary>
+        public bool IsPropertiesError
+        {
+            get
+            {
+                return this is PropertiesError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PropertiesError, or <c>null</c>.</para>
+        /// </summary>
+        public PropertiesError AsPropertiesError
+        {
+            get
+            {
+                return this as PropertiesError;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UploadErrorWithProperties value, enc.IJsonWriter writer)
             {
-                if (value is PropertiesError)
-                {
-                    WriteProperty(".tag", "properties_error", writer, enc.StringEncoder.Instance);
-                    PropertiesError.Encoder.EncodeFields((PropertiesError)value, writer);
-                    return;
-                }
                 if (value is Path)
                 {
                     WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
                     Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is PropertiesError)
+                {
+                    WriteProperty(".tag", "properties_error", writer, enc.StringEncoder.Instance);
+                    PropertiesError.Encoder.EncodeFields((PropertiesError)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -166,10 +166,10 @@ namespace Dropbox.Api.Files
             {
                 switch (tag)
                 {
-                    case "properties_error":
-                        return PropertiesError.Decoder.DecodeFields(reader);
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "properties_error":
+                        return PropertiesError.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -181,7 +181,94 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The properties error object</para>
+        /// <para>Unable to save the uploaded contents to a file.</para>
+        /// </summary>
+        public sealed class Path : UploadErrorWithProperties
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Path> Encoder = new PathEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Path> Decoder = new PathDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public Path(UploadWriteFailed value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
+            /// </summary>
+            private Path()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public UploadWriteFailed Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Path" />.</para>
+            /// </summary>
+            private class PathEncoder : enc.StructEncoder<Path>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Path value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.Files.UploadWriteFailed.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Path" />.</para>
+            /// </summary>
+            private class PathDecoder : enc.StructDecoder<Path>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Path" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Path Create()
+                {
+                    return new Path();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Path DecodeFields(enc.IJsonReader reader)
+                {
+                    return new Path(global::Dropbox.Api.Files.UploadWriteFailed.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The supplied property group is invalid.</para>
         /// </summary>
         public sealed class PropertiesError : UploadErrorWithProperties
         {
@@ -272,93 +359,6 @@ namespace Dropbox.Api.Files
                             reader.Skip();
                             break;
                     }
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Unable to save the uploaded contents to a file.</para>
-        /// </summary>
-        public sealed class Path : UploadErrorWithProperties
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Path> Encoder = new PathEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Path> Decoder = new PathDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public Path(UploadWriteFailed value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
-            /// </summary>
-            private Path()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public UploadWriteFailed Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Path" />.</para>
-            /// </summary>
-            private class PathEncoder : enc.StructEncoder<Path>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Path value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.Files.UploadWriteFailed.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Path" />.</para>
-            /// </summary>
-            private class PathDecoder : enc.StructDecoder<Path>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Path" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Path Create()
-                {
-                    return new Path();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Path DecodeFields(enc.IJsonReader reader)
-                {
-                    return new Path(global::Dropbox.Api.Files.UploadWriteFailed.Decoder.DecodeFields(reader));
                 }
             }
 

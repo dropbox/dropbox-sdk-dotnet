@@ -145,6 +145,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Anonymous</para>
+        /// </summary>
+        public bool IsAnonymous
+        {
+            get
+            {
+                return this is Anonymous;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Anonymous, or <c>null</c>.</para>
+        /// </summary>
+        public Anonymous AsAnonymous
+        {
+            get
+            {
+                return this as Anonymous;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,6 +232,12 @@ namespace Dropbox.Api.TeamLog
                     Dropbox.Encoder.EncodeFields((Dropbox)value, writer);
                     return;
                 }
+                if (value is Anonymous)
+                {
+                    WriteProperty(".tag", "anonymous", writer, enc.StringEncoder.Instance);
+                    Anonymous.Encoder.EncodeFields((Anonymous)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -258,6 +286,8 @@ namespace Dropbox.Api.TeamLog
                         return Reseller.Decoder.DecodeFields(reader);
                     case "dropbox":
                         return Dropbox.Decoder.DecodeFields(reader);
+                    case "anonymous":
+                        return Anonymous.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -703,6 +733,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Dropbox Create()
                 {
                     return Dropbox.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Anonymous actor.</para>
+        /// </summary>
+        public sealed class Anonymous : ActorLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Anonymous> Encoder = new AnonymousEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Anonymous> Decoder = new AnonymousDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Anonymous" /> class.</para>
+            /// </summary>
+            private Anonymous()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Anonymous</para>
+            /// </summary>
+            public static readonly Anonymous Instance = new Anonymous();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Anonymous" />.</para>
+            /// </summary>
+            private class AnonymousEncoder : enc.StructEncoder<Anonymous>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Anonymous value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Anonymous" />.</para>
+            /// </summary>
+            private class AnonymousDecoder : enc.StructDecoder<Anonymous>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Anonymous" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Anonymous Create()
+                {
+                    return Anonymous.Instance;
                 }
 
             }

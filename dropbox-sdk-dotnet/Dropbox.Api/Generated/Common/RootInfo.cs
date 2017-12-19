@@ -32,11 +32,11 @@ namespace Dropbox.Api.Common
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="RootInfo" /> class.</para>
         /// </summary>
-        /// <param name="rootNamespaceId">The namespace id for user's root namespace. It will
-        /// be the namespace id of the shared team root if the user is member of a CDM team.
-        /// Otherwise it will be same as <see
+        /// <param name="rootNamespaceId">The namespace ID for user's root namespace. It will
+        /// be the namespace ID of the shared team root if the user is member of a team with a
+        /// separate team root. Otherwise it will be same as <see
         /// cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</param>
-        /// <param name="homeNamespaceId">The namespace id for user's home namespace.</param>
+        /// <param name="homeNamespaceId">The namespace ID for user's home namespace.</param>
         protected RootInfo(string rootNamespaceId,
                            string homeNamespaceId)
         {
@@ -117,14 +117,15 @@ namespace Dropbox.Api.Common
         }
 
         /// <summary>
-        /// <para>The namespace id for user's root namespace. It will be the namespace id of
-        /// the shared team root if the user is member of a CDM team. Otherwise it will be same
-        /// as <see cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</para>
+        /// <para>The namespace ID for user's root namespace. It will be the namespace ID of
+        /// the shared team root if the user is member of a team with a separate team root.
+        /// Otherwise it will be same as <see
+        /// cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</para>
         /// </summary>
         public string RootNamespaceId { get; protected set; }
 
         /// <summary>
-        /// <para>The namespace id for user's home namespace.</para>
+        /// <para>The namespace ID for user's home namespace.</para>
         /// </summary>
         public string HomeNamespaceId { get; protected set; }
 

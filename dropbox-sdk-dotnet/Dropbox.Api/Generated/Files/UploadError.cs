@@ -57,6 +57,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is PropertiesError</para>
+        /// </summary>
+        public bool IsPropertiesError
+        {
+            get
+            {
+                return this is PropertiesError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PropertiesError, or <c>null</c>.</para>
+        /// </summary>
+        public PropertiesError AsPropertiesError
+        {
+            get
+            {
+                return this as PropertiesError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -96,6 +118,12 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
                     Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is PropertiesError)
+                {
+                    WriteProperty(".tag", "properties_error", writer, enc.StringEncoder.Instance);
+                    PropertiesError.Encoder.EncodeFields((PropertiesError)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -138,6 +166,8 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "properties_error":
+                        return PropertiesError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -227,6 +257,104 @@ namespace Dropbox.Api.Files
                 public override Path DecodeFields(enc.IJsonReader reader)
                 {
                     return new Path(global::Dropbox.Api.Files.UploadWriteFailed.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The supplied property group is invalid.</para>
+        /// </summary>
+        public sealed class PropertiesError : UploadError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PropertiesError> Encoder = new PropertiesErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PropertiesError> Decoder = new PropertiesErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PropertiesError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PropertiesError(global::Dropbox.Api.FileProperties.InvalidPropertyGroupError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PropertiesError" />
+            /// class.</para>
+            /// </summary>
+            private PropertiesError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.FileProperties.InvalidPropertyGroupError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PropertiesError" />.</para>
+            /// </summary>
+            private class PropertiesErrorEncoder : enc.StructEncoder<PropertiesError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PropertiesError value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("properties_error", value.Value, writer, global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PropertiesError" />.</para>
+            /// </summary>
+            private class PropertiesErrorDecoder : enc.StructDecoder<PropertiesError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PropertiesError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PropertiesError Create()
+                {
+                    return new PropertiesError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(PropertiesError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "properties_error":
+                            value.Value = global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

@@ -21,7 +21,7 @@ $generatorPath = "$generatorDir\csharp.stoneg.py"
 $generatorArgs = @("-m", "stone.cli", "-a:all", $generatorPath, $sourceDir)
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
-$releaseVersion = "4.6.0"
+$releaseVersion = "4.7.0"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 

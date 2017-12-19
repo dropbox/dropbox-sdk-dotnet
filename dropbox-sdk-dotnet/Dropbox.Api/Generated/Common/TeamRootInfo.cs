@@ -11,7 +11,7 @@ namespace Dropbox.Api.Common
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Root info when user is member of a CDM team.</para>
+    /// <para>Root info when user is member of a team with a separate root namespace ID.</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Common.RootInfo" />
     public class TeamRootInfo : RootInfo
@@ -31,11 +31,11 @@ namespace Dropbox.Api.Common
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="TeamRootInfo" /> class.</para>
         /// </summary>
-        /// <param name="rootNamespaceId">The namespace id for user's root namespace. It will
-        /// be the namespace id of the shared team root if the user is member of a CDM team.
-        /// Otherwise it will be same as <see
+        /// <param name="rootNamespaceId">The namespace ID for user's root namespace. It will
+        /// be the namespace ID of the shared team root if the user is member of a team with a
+        /// separate team root. Otherwise it will be same as <see
         /// cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</param>
-        /// <param name="homeNamespaceId">The namespace id for user's home namespace.</param>
+        /// <param name="homeNamespaceId">The namespace ID for user's home namespace.</param>
         /// <param name="homePath">The path for user's home directory under the shared team
         /// root.</param>
         public TeamRootInfo(string rootNamespaceId,

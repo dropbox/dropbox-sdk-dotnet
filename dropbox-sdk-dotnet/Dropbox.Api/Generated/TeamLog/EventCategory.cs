@@ -35,50 +35,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AccountCapture</para>
-        /// </summary>
-        public bool IsAccountCapture
-        {
-            get
-            {
-                return this is AccountCapture;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a AccountCapture, or <c>null</c>.</para>
-        /// </summary>
-        public AccountCapture AsAccountCapture
-        {
-            get
-            {
-                return this as AccountCapture;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Administration</para>
-        /// </summary>
-        public bool IsAdministration
-        {
-            get
-            {
-                return this is Administration;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Administration, or <c>null</c>.</para>
-        /// </summary>
-        public Administration AsAdministration
-        {
-            get
-            {
-                return this as Administration;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Apps</para>
         /// </summary>
         public bool IsApps
@@ -97,28 +53,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Apps;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Authentication</para>
-        /// </summary>
-        public bool IsAuthentication
-        {
-            get
-            {
-                return this is Authentication;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Authentication, or <c>null</c>.</para>
-        /// </summary>
-        public Authentication AsAuthentication
-        {
-            get
-            {
-                return this as Authentication;
             }
         }
 
@@ -145,28 +79,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is ContentAccess</para>
-        /// </summary>
-        public bool IsContentAccess
-        {
-            get
-            {
-                return this is ContentAccess;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a ContentAccess, or <c>null</c>.</para>
-        /// </summary>
-        public ContentAccess AsContentAccess
-        {
-            get
-            {
-                return this as ContentAccess;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Devices</para>
         /// </summary>
         public bool IsDevices
@@ -189,28 +101,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is DeviceApprovals</para>
-        /// </summary>
-        public bool IsDeviceApprovals
-        {
-            get
-            {
-                return this is DeviceApprovals;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a DeviceApprovals, or <c>null</c>.</para>
-        /// </summary>
-        public DeviceApprovals AsDeviceApprovals
-        {
-            get
-            {
-                return this as DeviceApprovals;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Domains</para>
         /// </summary>
         public bool IsDomains
@@ -229,72 +119,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Domains;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Emm</para>
-        /// </summary>
-        public bool IsEmm
-        {
-            get
-            {
-                return this is Emm;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Emm, or <c>null</c>.</para>
-        /// </summary>
-        public Emm AsEmm
-        {
-            get
-            {
-                return this as Emm;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Errors</para>
-        /// </summary>
-        public bool IsErrors
-        {
-            get
-            {
-                return this is Errors;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Errors, or <c>null</c>.</para>
-        /// </summary>
-        public Errors AsErrors
-        {
-            get
-            {
-                return this as Errors;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Files</para>
-        /// </summary>
-        public bool IsFiles
-        {
-            get
-            {
-                return this is Files;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Files, or <c>null</c>.</para>
-        /// </summary>
-        public Files AsFiles
-        {
-            get
-            {
-                return this as Files;
             }
         }
 
@@ -475,94 +299,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Sessions</para>
-        /// </summary>
-        public bool IsSessions
-        {
-            get
-            {
-                return this is Sessions;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Sessions, or <c>null</c>.</para>
-        /// </summary>
-        public Sessions AsSessions
-        {
-            get
-            {
-                return this as Sessions;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is SharedFiles</para>
-        /// </summary>
-        public bool IsSharedFiles
-        {
-            get
-            {
-                return this is SharedFiles;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a SharedFiles, or <c>null</c>.</para>
-        /// </summary>
-        public SharedFiles AsSharedFiles
-        {
-            get
-            {
-                return this as SharedFiles;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is SharedFolders</para>
-        /// </summary>
-        public bool IsSharedFolders
-        {
-            get
-            {
-                return this is SharedFolders;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a SharedFolders, or <c>null</c>.</para>
-        /// </summary>
-        public SharedFolders AsSharedFolders
-        {
-            get
-            {
-                return this as SharedFolders;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is SharedLinks</para>
-        /// </summary>
-        public bool IsSharedLinks
-        {
-            get
-            {
-                return this is SharedLinks;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a SharedLinks, or <c>null</c>.</para>
-        /// </summary>
-        public SharedLinks AsSharedLinks
-        {
-            get
-            {
-                return this as SharedLinks;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Sharing</para>
         /// </summary>
         public bool IsSharing
@@ -581,28 +317,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Sharing;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is SharingPolicies</para>
-        /// </summary>
-        public bool IsSharingPolicies
-        {
-            get
-            {
-                return this is SharingPolicies;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a SharingPolicies, or <c>null</c>.</para>
-        /// </summary>
-        public SharingPolicies AsSharingPolicies
-        {
-            get
-            {
-                return this as SharingPolicies;
             }
         }
 
@@ -752,28 +466,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(EventCategory value, enc.IJsonWriter writer)
             {
-                if (value is AccountCapture)
-                {
-                    WriteProperty(".tag", "account_capture", writer, enc.StringEncoder.Instance);
-                    AccountCapture.Encoder.EncodeFields((AccountCapture)value, writer);
-                    return;
-                }
-                if (value is Administration)
-                {
-                    WriteProperty(".tag", "administration", writer, enc.StringEncoder.Instance);
-                    Administration.Encoder.EncodeFields((Administration)value, writer);
-                    return;
-                }
                 if (value is Apps)
                 {
                     WriteProperty(".tag", "apps", writer, enc.StringEncoder.Instance);
                     Apps.Encoder.EncodeFields((Apps)value, writer);
-                    return;
-                }
-                if (value is Authentication)
-                {
-                    WriteProperty(".tag", "authentication", writer, enc.StringEncoder.Instance);
-                    Authentication.Encoder.EncodeFields((Authentication)value, writer);
                     return;
                 }
                 if (value is Comments)
@@ -782,46 +478,16 @@ namespace Dropbox.Api.TeamLog
                     Comments.Encoder.EncodeFields((Comments)value, writer);
                     return;
                 }
-                if (value is ContentAccess)
-                {
-                    WriteProperty(".tag", "content_access", writer, enc.StringEncoder.Instance);
-                    ContentAccess.Encoder.EncodeFields((ContentAccess)value, writer);
-                    return;
-                }
                 if (value is Devices)
                 {
                     WriteProperty(".tag", "devices", writer, enc.StringEncoder.Instance);
                     Devices.Encoder.EncodeFields((Devices)value, writer);
                     return;
                 }
-                if (value is DeviceApprovals)
-                {
-                    WriteProperty(".tag", "device_approvals", writer, enc.StringEncoder.Instance);
-                    DeviceApprovals.Encoder.EncodeFields((DeviceApprovals)value, writer);
-                    return;
-                }
                 if (value is Domains)
                 {
                     WriteProperty(".tag", "domains", writer, enc.StringEncoder.Instance);
                     Domains.Encoder.EncodeFields((Domains)value, writer);
-                    return;
-                }
-                if (value is Emm)
-                {
-                    WriteProperty(".tag", "emm", writer, enc.StringEncoder.Instance);
-                    Emm.Encoder.EncodeFields((Emm)value, writer);
-                    return;
-                }
-                if (value is Errors)
-                {
-                    WriteProperty(".tag", "errors", writer, enc.StringEncoder.Instance);
-                    Errors.Encoder.EncodeFields((Errors)value, writer);
-                    return;
-                }
-                if (value is Files)
-                {
-                    WriteProperty(".tag", "files", writer, enc.StringEncoder.Instance);
-                    Files.Encoder.EncodeFields((Files)value, writer);
                     return;
                 }
                 if (value is FileOperations)
@@ -872,40 +538,10 @@ namespace Dropbox.Api.TeamLog
                     Reports.Encoder.EncodeFields((Reports)value, writer);
                     return;
                 }
-                if (value is Sessions)
-                {
-                    WriteProperty(".tag", "sessions", writer, enc.StringEncoder.Instance);
-                    Sessions.Encoder.EncodeFields((Sessions)value, writer);
-                    return;
-                }
-                if (value is SharedFiles)
-                {
-                    WriteProperty(".tag", "shared_files", writer, enc.StringEncoder.Instance);
-                    SharedFiles.Encoder.EncodeFields((SharedFiles)value, writer);
-                    return;
-                }
-                if (value is SharedFolders)
-                {
-                    WriteProperty(".tag", "shared_folders", writer, enc.StringEncoder.Instance);
-                    SharedFolders.Encoder.EncodeFields((SharedFolders)value, writer);
-                    return;
-                }
-                if (value is SharedLinks)
-                {
-                    WriteProperty(".tag", "shared_links", writer, enc.StringEncoder.Instance);
-                    SharedLinks.Encoder.EncodeFields((SharedLinks)value, writer);
-                    return;
-                }
                 if (value is Sharing)
                 {
                     WriteProperty(".tag", "sharing", writer, enc.StringEncoder.Instance);
                     Sharing.Encoder.EncodeFields((Sharing)value, writer);
-                    return;
-                }
-                if (value is SharingPolicies)
-                {
-                    WriteProperty(".tag", "sharing_policies", writer, enc.StringEncoder.Instance);
-                    SharingPolicies.Encoder.EncodeFields((SharingPolicies)value, writer);
                     return;
                 }
                 if (value is Sso)
@@ -976,30 +612,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "account_capture":
-                        return AccountCapture.Decoder.DecodeFields(reader);
-                    case "administration":
-                        return Administration.Decoder.DecodeFields(reader);
                     case "apps":
                         return Apps.Decoder.DecodeFields(reader);
-                    case "authentication":
-                        return Authentication.Decoder.DecodeFields(reader);
                     case "comments":
                         return Comments.Decoder.DecodeFields(reader);
-                    case "content_access":
-                        return ContentAccess.Decoder.DecodeFields(reader);
                     case "devices":
                         return Devices.Decoder.DecodeFields(reader);
-                    case "device_approvals":
-                        return DeviceApprovals.Decoder.DecodeFields(reader);
                     case "domains":
                         return Domains.Decoder.DecodeFields(reader);
-                    case "emm":
-                        return Emm.Decoder.DecodeFields(reader);
-                    case "errors":
-                        return Errors.Decoder.DecodeFields(reader);
-                    case "files":
-                        return Files.Decoder.DecodeFields(reader);
                     case "file_operations":
                         return FileOperations.Decoder.DecodeFields(reader);
                     case "file_requests":
@@ -1016,18 +636,8 @@ namespace Dropbox.Api.TeamLog
                         return Passwords.Decoder.DecodeFields(reader);
                     case "reports":
                         return Reports.Decoder.DecodeFields(reader);
-                    case "sessions":
-                        return Sessions.Decoder.DecodeFields(reader);
-                    case "shared_files":
-                        return SharedFiles.Decoder.DecodeFields(reader);
-                    case "shared_folders":
-                        return SharedFolders.Decoder.DecodeFields(reader);
-                    case "shared_links":
-                        return SharedLinks.Decoder.DecodeFields(reader);
                     case "sharing":
                         return Sharing.Decoder.DecodeFields(reader);
-                    case "sharing_policies":
-                        return SharingPolicies.Decoder.DecodeFields(reader);
                     case "sso":
                         return Sso.Decoder.DecodeFields(reader);
                     case "team_folders":
@@ -1045,150 +655,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>Events that have to do with account capture and invite enforcement on
-        /// team-owned domains.</para>
-        /// </summary>
-        public sealed class AccountCapture : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<AccountCapture> Encoder = new AccountCaptureEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<AccountCapture> Decoder = new AccountCaptureDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AccountCapture" />
-            /// class.</para>
-            /// </summary>
-            private AccountCapture()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of AccountCapture</para>
-            /// </summary>
-            public static readonly AccountCapture Instance = new AccountCapture();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="AccountCapture" />.</para>
-            /// </summary>
-            private class AccountCaptureEncoder : enc.StructEncoder<AccountCapture>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(AccountCapture value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="AccountCapture" />.</para>
-            /// </summary>
-            private class AccountCaptureDecoder : enc.StructDecoder<AccountCapture>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="AccountCapture" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override AccountCapture Create()
-                {
-                    return AccountCapture.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that relate to team and team member account administration or team
-        /// administration. Note that these actions are not necessarily performed by team
-        /// admins. They might also be performed by Dropbox Support or System or by team
-        /// members on their own accounts.</para>
-        /// </summary>
-        public sealed class Administration : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Administration> Encoder = new AdministrationEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Administration> Decoder = new AdministrationDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Administration" />
-            /// class.</para>
-            /// </summary>
-            private Administration()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Administration</para>
-            /// </summary>
-            public static readonly Administration Instance = new Administration();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Administration" />.</para>
-            /// </summary>
-            private class AdministrationEncoder : enc.StructEncoder<Administration>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Administration value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Administration" />.</para>
-            /// </summary>
-            private class AdministrationDecoder : enc.StructDecoder<Administration>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Administration" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Administration Create()
-                {
-                    return Administration.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>Events that apply to management of linked apps.</para>
@@ -1260,76 +726,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Events that apply to user authentication in some way.</para>
-        /// </summary>
-        public sealed class Authentication : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Authentication> Encoder = new AuthenticationEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Authentication> Decoder = new AuthenticationDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Authentication" />
-            /// class.</para>
-            /// </summary>
-            private Authentication()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Authentication</para>
-            /// </summary>
-            public static readonly Authentication Instance = new Authentication();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Authentication" />.</para>
-            /// </summary>
-            private class AuthenticationEncoder : enc.StructEncoder<Authentication>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Authentication value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Authentication" />.</para>
-            /// </summary>
-            private class AuthenticationDecoder : enc.StructDecoder<Authentication>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Authentication" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Authentication Create()
-                {
-                    return Authentication.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>Events that have to do with comments on files and Paper documents.</para>
         /// </summary>
         public sealed class Comments : EventCategory
@@ -1391,77 +787,6 @@ namespace Dropbox.Api.TeamLog
                 protected override Comments Create()
                 {
                     return Comments.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that apply to changes how people can access content on Dropbox as well
-        /// as actions that represent actually accessing content.</para>
-        /// </summary>
-        public sealed class ContentAccess : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<ContentAccess> Encoder = new ContentAccessEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<ContentAccess> Decoder = new ContentAccessDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="ContentAccess" />
-            /// class.</para>
-            /// </summary>
-            private ContentAccess()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of ContentAccess</para>
-            /// </summary>
-            public static readonly ContentAccess Instance = new ContentAccess();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="ContentAccess" />.</para>
-            /// </summary>
-            private class ContentAccessEncoder : enc.StructEncoder<ContentAccess>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(ContentAccess value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="ContentAccess" />.</para>
-            /// </summary>
-            private class ContentAccessDecoder : enc.StructDecoder<ContentAccess>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="ContentAccess" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override ContentAccess Create()
-                {
-                    return ContentAccess.Instance;
                 }
 
             }
@@ -1540,76 +865,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Events that concern device approvals and device management.</para>
-        /// </summary>
-        public sealed class DeviceApprovals : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<DeviceApprovals> Encoder = new DeviceApprovalsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<DeviceApprovals> Decoder = new DeviceApprovalsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="DeviceApprovals" />
-            /// class.</para>
-            /// </summary>
-            private DeviceApprovals()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of DeviceApprovals</para>
-            /// </summary>
-            public static readonly DeviceApprovals Instance = new DeviceApprovals();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="DeviceApprovals" />.</para>
-            /// </summary>
-            private class DeviceApprovalsEncoder : enc.StructEncoder<DeviceApprovals>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(DeviceApprovals value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="DeviceApprovals" />.</para>
-            /// </summary>
-            private class DeviceApprovalsDecoder : enc.StructDecoder<DeviceApprovals>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="DeviceApprovals" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override DeviceApprovals Create()
-                {
-                    return DeviceApprovals.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>Events that involve domain management feature: domain verification, invite
         /// enforcement and account capture.</para>
         /// </summary>
@@ -1672,215 +927,6 @@ namespace Dropbox.Api.TeamLog
                 protected override Domains Create()
                 {
                     return Domains.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that involve enterprise mobility management and the Dropbox EMM
-        /// app.</para>
-        /// </summary>
-        public sealed class Emm : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Emm> Encoder = new EmmEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Emm> Decoder = new EmmDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Emm" /> class.</para>
-            /// </summary>
-            private Emm()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Emm</para>
-            /// </summary>
-            public static readonly Emm Instance = new Emm();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Emm" />.</para>
-            /// </summary>
-            private class EmmEncoder : enc.StructEncoder<Emm>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Emm value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Emm" />.</para>
-            /// </summary>
-            private class EmmDecoder : enc.StructDecoder<Emm>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Emm" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Emm Create()
-                {
-                    return Emm.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that mark some type of unexpected outcome.</para>
-        /// </summary>
-        public sealed class Errors : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Errors> Encoder = new ErrorsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Errors> Decoder = new ErrorsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Errors" /> class.</para>
-            /// </summary>
-            private Errors()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Errors</para>
-            /// </summary>
-            public static readonly Errors Instance = new Errors();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Errors" />.</para>
-            /// </summary>
-            private class ErrorsEncoder : enc.StructEncoder<Errors>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Errors value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Errors" />.</para>
-            /// </summary>
-            private class ErrorsDecoder : enc.StructDecoder<Errors>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Errors" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Errors Create()
-                {
-                    return Errors.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that mark a user's interaction with files and folders on
-        /// Dropbox.</para>
-        /// </summary>
-        public sealed class Files : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Files> Encoder = new FilesEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Files> Decoder = new FilesDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Files" /> class.</para>
-            /// </summary>
-            private Files()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Files</para>
-            /// </summary>
-            public static readonly Files Instance = new Files();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Files" />.</para>
-            /// </summary>
-            private class FilesEncoder : enc.StructEncoder<Files>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Files value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Files" />.</para>
-            /// </summary>
-            private class FilesDecoder : enc.StructDecoder<Files>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Files" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Files Create()
-                {
-                    return Files.Instance;
                 }
 
             }
@@ -2445,286 +1491,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Events that mark the beginning or end of sessions as well as those that apply
-        /// to an ongoing session.</para>
-        /// </summary>
-        public sealed class Sessions : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Sessions> Encoder = new SessionsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Sessions> Decoder = new SessionsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Sessions" /> class.</para>
-            /// </summary>
-            private Sessions()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Sessions</para>
-            /// </summary>
-            public static readonly Sessions Instance = new Sessions();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Sessions" />.</para>
-            /// </summary>
-            private class SessionsEncoder : enc.StructEncoder<Sessions>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Sessions value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Sessions" />.</para>
-            /// </summary>
-            private class SessionsDecoder : enc.StructDecoder<Sessions>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Sessions" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Sessions Create()
-                {
-                    return Sessions.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that specifically apply to shared files.</para>
-        /// </summary>
-        public sealed class SharedFiles : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<SharedFiles> Encoder = new SharedFilesEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<SharedFiles> Decoder = new SharedFilesDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SharedFiles" />
-            /// class.</para>
-            /// </summary>
-            private SharedFiles()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of SharedFiles</para>
-            /// </summary>
-            public static readonly SharedFiles Instance = new SharedFiles();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="SharedFiles" />.</para>
-            /// </summary>
-            private class SharedFilesEncoder : enc.StructEncoder<SharedFiles>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(SharedFiles value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="SharedFiles" />.</para>
-            /// </summary>
-            private class SharedFilesDecoder : enc.StructDecoder<SharedFiles>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="SharedFiles" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override SharedFiles Create()
-                {
-                    return SharedFiles.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that specifically apply to shared folders.</para>
-        /// </summary>
-        public sealed class SharedFolders : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<SharedFolders> Encoder = new SharedFoldersEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<SharedFolders> Decoder = new SharedFoldersDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SharedFolders" />
-            /// class.</para>
-            /// </summary>
-            private SharedFolders()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of SharedFolders</para>
-            /// </summary>
-            public static readonly SharedFolders Instance = new SharedFolders();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="SharedFolders" />.</para>
-            /// </summary>
-            private class SharedFoldersEncoder : enc.StructEncoder<SharedFolders>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(SharedFolders value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="SharedFolders" />.</para>
-            /// </summary>
-            private class SharedFoldersDecoder : enc.StructDecoder<SharedFolders>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="SharedFolders" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override SharedFolders Create()
-                {
-                    return SharedFolders.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that specifically apply to link sharing.</para>
-        /// </summary>
-        public sealed class SharedLinks : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<SharedLinks> Encoder = new SharedLinksEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<SharedLinks> Decoder = new SharedLinksDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SharedLinks" />
-            /// class.</para>
-            /// </summary>
-            private SharedLinks()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of SharedLinks</para>
-            /// </summary>
-            public static readonly SharedLinks Instance = new SharedLinks();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="SharedLinks" />.</para>
-            /// </summary>
-            private class SharedLinksEncoder : enc.StructEncoder<SharedLinks>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(SharedLinks value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="SharedLinks" />.</para>
-            /// </summary>
-            private class SharedLinksDecoder : enc.StructDecoder<SharedLinks>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="SharedLinks" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override SharedLinks Create()
-                {
-                    return SharedLinks.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>Events that apply to all types of sharing and collaboration.</para>
         /// </summary>
         public sealed class Sharing : EventCategory
@@ -2786,77 +1552,6 @@ namespace Dropbox.Api.TeamLog
                 protected override Sharing Create()
                 {
                     return Sharing.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that concern policies that affect sharing - both at the team level and
-        /// at the folder level.</para>
-        /// </summary>
-        public sealed class SharingPolicies : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<SharingPolicies> Encoder = new SharingPoliciesEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<SharingPolicies> Decoder = new SharingPoliciesDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SharingPolicies" />
-            /// class.</para>
-            /// </summary>
-            private SharingPolicies()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of SharingPolicies</para>
-            /// </summary>
-            public static readonly SharingPolicies Instance = new SharingPolicies();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="SharingPolicies" />.</para>
-            /// </summary>
-            private class SharingPoliciesEncoder : enc.StructEncoder<SharingPolicies>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(SharingPolicies value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="SharingPolicies" />.</para>
-            /// </summary>
-            private class SharingPoliciesDecoder : enc.StructDecoder<SharingPolicies>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="SharingPolicies" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override SharingPolicies Create()
-                {
-                    return SharingPolicies.Instance;
                 }
 
             }

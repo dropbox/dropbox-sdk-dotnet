@@ -31,22 +31,11 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SharedFolderCreateDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="parentNsId">Parent namespace ID. Might be missing due to historical
+        /// <param name="targetNsId">Target namespace ID. Might be missing due to historical
         /// data gap.</param>
-        public SharedFolderCreateDetails(ulong targetAssetIndex,
-                                         string parentNsId = null)
+        public SharedFolderCreateDetails(string targetNsId = null)
         {
-            if (parentNsId != null)
-            {
-                if (!re.Regex.IsMatch(parentNsId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
-                {
-                    throw new sys.ArgumentOutOfRangeException("parentNsId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
-                }
-            }
-
-            this.TargetAssetIndex = targetAssetIndex;
-            this.ParentNsId = parentNsId;
+            this.TargetNsId = targetNsId;
         }
 
         /// <summary>
@@ -61,14 +50,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>Target namespace ID. Might be missing due to historical data gap.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Parent namespace ID. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string ParentNsId { get; protected set; }
+        public string TargetNsId { get; protected set; }
 
         #region Encoder class
 
@@ -84,10 +68,9 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderCreateDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                if (value.ParentNsId != null)
+                if (value.TargetNsId != null)
                 {
-                    WriteProperty("parent_ns_id", value.ParentNsId, writer, enc.StringEncoder.Instance);
+                    WriteProperty("target_ns_id", value.TargetNsId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -122,11 +105,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "parent_ns_id":
-                        value.ParentNsId = enc.StringDecoder.Instance.Decode(reader);
+                    case "target_ns_id":
+                        value.TargetNsId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

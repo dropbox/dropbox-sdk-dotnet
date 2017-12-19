@@ -32,9 +32,59 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SfExternalInviteWarnDetails" />
         /// class.</para>
         /// </summary>
+        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
+        /// <param name="originalFolderName">Original shared folder name.</param>
+        /// <param name="newSharingPermission">New sharing permission. Might be missing due to
+        /// historical data gap.</param>
+        /// <param name="previousSharingPermission">Previous sharing permission. Might be
+        /// missing due to historical data gap.</param>
+        public SfExternalInviteWarnDetails(ulong targetAssetIndex,
+                                           string originalFolderName,
+                                           string newSharingPermission = null,
+                                           string previousSharingPermission = null)
+        {
+            if (originalFolderName == null)
+            {
+                throw new sys.ArgumentNullException("originalFolderName");
+            }
+
+            this.TargetAssetIndex = targetAssetIndex;
+            this.OriginalFolderName = originalFolderName;
+            this.NewSharingPermission = newSharingPermission;
+            this.PreviousSharingPermission = previousSharingPermission;
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="SfExternalInviteWarnDetails" />
+        /// class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SfExternalInviteWarnDetails()
         {
         }
+
+        /// <summary>
+        /// <para>Target asset position in the Assets list.</para>
+        /// </summary>
+        public ulong TargetAssetIndex { get; protected set; }
+
+        /// <summary>
+        /// <para>Original shared folder name.</para>
+        /// </summary>
+        public string OriginalFolderName { get; protected set; }
+
+        /// <summary>
+        /// <para>New sharing permission. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string NewSharingPermission { get; protected set; }
+
+        /// <summary>
+        /// <para>Previous sharing permission. Might be missing due to historical data
+        /// gap.</para>
+        /// </summary>
+        public string PreviousSharingPermission { get; protected set; }
 
         #region Encoder class
 
@@ -50,6 +100,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SfExternalInviteWarnDetails value, enc.IJsonWriter writer)
             {
+                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
+                if (value.NewSharingPermission != null)
+                {
+                    WriteProperty("new_sharing_permission", value.NewSharingPermission, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PreviousSharingPermission != null)
+                {
+                    WriteProperty("previous_sharing_permission", value.PreviousSharingPermission, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -83,6 +143,18 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "target_asset_index":
+                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "original_folder_name":
+                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "new_sharing_permission":
+                        value.NewSharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "previous_sharing_permission":
+                        value.PreviousSharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     default:
                         reader.Skip();
                         break;

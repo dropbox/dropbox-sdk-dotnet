@@ -33,15 +33,12 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="assetIndex">Asset position in the Assets list.</param>
-        /// <param name="requestTitle">File request title.</param>
         /// <param name="deadline">File request deadline. Might be missing due to historical
         /// data gap.</param>
         public FileRequestDetails(ulong assetIndex,
-                                  string requestTitle = null,
-                                  sys.DateTime? deadline = null)
+                                  FileRequestDeadline deadline = null)
         {
             this.AssetIndex = assetIndex;
-            this.RequestTitle = requestTitle;
             this.Deadline = deadline;
         }
 
@@ -62,14 +59,9 @@ namespace Dropbox.Api.TeamLog
         public ulong AssetIndex { get; protected set; }
 
         /// <summary>
-        /// <para>File request title.</para>
-        /// </summary>
-        public string RequestTitle { get; protected set; }
-
-        /// <summary>
         /// <para>File request deadline. Might be missing due to historical data gap.</para>
         /// </summary>
-        public sys.DateTime? Deadline { get; protected set; }
+        public FileRequestDeadline Deadline { get; protected set; }
 
         #region Encoder class
 
@@ -86,13 +78,9 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(FileRequestDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("asset_index", value.AssetIndex, writer, enc.UInt64Encoder.Instance);
-                if (value.RequestTitle != null)
-                {
-                    WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
-                }
                 if (value.Deadline != null)
                 {
-                    WriteProperty("deadline", value.Deadline.Value, writer, enc.DateTimeEncoder.Instance);
+                    WriteProperty("deadline", value.Deadline, writer, global::Dropbox.Api.TeamLog.FileRequestDeadline.Encoder);
                 }
             }
         }
@@ -129,11 +117,8 @@ namespace Dropbox.Api.TeamLog
                     case "asset_index":
                         value.AssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
-                    case "request_title":
-                        value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "deadline":
-                        value.Deadline = enc.DateTimeDecoder.Instance.Decode(reader);
+                        value.Deadline = global::Dropbox.Api.TeamLog.FileRequestDeadline.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

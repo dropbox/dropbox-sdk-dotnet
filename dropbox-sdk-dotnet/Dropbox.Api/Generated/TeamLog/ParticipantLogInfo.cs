@@ -178,7 +178,7 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>User details.</para>
+        /// <para>A user with a Dropbox account.</para>
         /// </summary>
         public sealed class User : ParticipantLogInfo
         {

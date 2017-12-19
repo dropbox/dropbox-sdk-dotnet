@@ -33,7 +33,7 @@ namespace Dropbox.Api.FileRequests
         /// </summary>
         /// <param name="deadline">The deadline for this file request.</param>
         /// <param name="allowLateUploads">If set, allow uploads after the deadline has passed.
-        /// These uploads will be marked overdue.</param>
+        /// These     uploads will be marked overdue.</param>
         public FileRequestDeadline(sys.DateTime deadline,
                                    GracePeriod allowLateUploads = null)
         {
@@ -58,8 +58,8 @@ namespace Dropbox.Api.FileRequests
         public sys.DateTime Deadline { get; protected set; }
 
         /// <summary>
-        /// <para>If set, allow uploads after the deadline has passed. These uploads will be
-        /// marked overdue.</para>
+        /// <para>If set, allow uploads after the deadline has passed. These     uploads will
+        /// be marked overdue.</para>
         /// </summary>
         public GracePeriod AllowLateUploads { get; protected set; }
 

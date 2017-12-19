@@ -39,14 +39,6 @@ namespace Dropbox.Api.TeamLog
         public NamespaceRelativePathLogInfo(string nsId = null,
                                             string relativePath = null)
         {
-            if (nsId != null)
-            {
-                if (!re.Regex.IsMatch(nsId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
-                {
-                    throw new sys.ArgumentOutOfRangeException("nsId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
-                }
-            }
-
             this.NsId = nsId;
             this.RelativePath = relativePath;
         }

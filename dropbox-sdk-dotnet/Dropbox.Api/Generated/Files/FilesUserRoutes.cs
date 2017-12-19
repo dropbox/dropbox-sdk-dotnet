@@ -1648,6 +1648,95 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Download a folder from the user's Dropbox, as a zip file. The folder must be
+        /// less than 1 GB in size and have fewer than 10,000 total files. The input cannot be
+        /// a single file.</para>
+        /// </summary>
+        /// <param name="downloadZipArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DownloadZipError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<DownloadZipResult>> DownloadZipAsync(DownloadZipArg downloadZipArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<DownloadZipArg, DownloadZipResult, DownloadZipError>(downloadZipArg, "content", "/files/download_zip", "user", global::Dropbox.Api.Files.DownloadZipArg.Encoder, global::Dropbox.Api.Files.DownloadZipResult.Decoder, global::Dropbox.Api.Files.DownloadZipError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the download zip route.</para>
+        /// </summary>
+        /// <param name="downloadZipArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDownloadZip(DownloadZipArg downloadZipArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DownloadZipAsync(downloadZipArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Download a folder from the user's Dropbox, as a zip file. The folder must be
+        /// less than 1 GB in size and have fewer than 10,000 total files. The input cannot be
+        /// a single file.</para>
+        /// </summary>
+        /// <param name="path">The path of the folder to download.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DownloadZipError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<DownloadZipResult>> DownloadZipAsync(string path)
+        {
+            var downloadZipArg = new DownloadZipArg(path);
+
+            return this.DownloadZipAsync(downloadZipArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the download zip route.</para>
+        /// </summary>
+        /// <param name="path">The path of the folder to download.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDownloadZip(string path,
+                                                 sys.AsyncCallback callback,
+                                                 object callbackState = null)
+        {
+            var downloadZipArg = new DownloadZipArg(path);
+
+            return this.BeginDownloadZip(downloadZipArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the download zip route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DownloadZipError"/>.</exception>
+        public enc.IDownloadResponse<DownloadZipResult> EndDownloadZip(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<DownloadZipResult>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
         /// <para>Note: Metadata for the root folder is unsupported.</para>
         /// </summary>

@@ -31,9 +31,34 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="MemberSuggestDetails" />
         /// class.</para>
         /// </summary>
+        /// <param name="suggestedMembers">suggested users emails.</param>
+        public MemberSuggestDetails(col.IEnumerable<string> suggestedMembers)
+        {
+            var suggestedMembersList = enc.Util.ToList(suggestedMembers);
+
+            if (suggestedMembers == null)
+            {
+                throw new sys.ArgumentNullException("suggestedMembers");
+            }
+
+            this.SuggestedMembers = suggestedMembersList;
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="MemberSuggestDetails" />
+        /// class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public MemberSuggestDetails()
         {
         }
+
+        /// <summary>
+        /// <para>suggested users emails.</para>
+        /// </summary>
+        public col.IList<string> SuggestedMembers { get; protected set; }
 
         #region Encoder class
 
@@ -49,6 +74,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberSuggestDetails value, enc.IJsonWriter writer)
             {
+                WriteListProperty("suggested_members", value.SuggestedMembers, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -81,6 +107,9 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "suggested_members":
+                        value.SuggestedMembers = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        break;
                     default:
                         reader.Skip();
                         break;

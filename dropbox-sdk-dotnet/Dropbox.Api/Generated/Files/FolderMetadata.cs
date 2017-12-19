@@ -14,6 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>The folder metadata object</para>
     /// </summary>
     /// <seealso cref="CreateFolderResult" />
+    /// <seealso cref="DownloadZipResult" />
     /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
     public class FolderMetadata : Metadata
     {

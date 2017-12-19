@@ -40,7 +40,7 @@ namespace Dropbox.Api.TeamLog
         /// historical data gap.</param>
         public SharedContentChangeLinkExpiryDetails(ulong targetAssetIndex,
                                                     string expirationStartDate,
-                                                    long expirationDays,
+                                                    ulong expirationDays,
                                                     string originalFolderName = null,
                                                     string sharedFolderType = null)
         {
@@ -81,7 +81,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>The number of days from the starting expiration date after which the link
         /// will expire.</para>
         /// </summary>
-        public long ExpirationDays { get; protected set; }
+        public ulong ExpirationDays { get; protected set; }
 
         /// <summary>
         /// <para>Original shared folder name.</para>
@@ -109,7 +109,7 @@ namespace Dropbox.Api.TeamLog
             {
                 WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("expiration_start_date", value.ExpirationStartDate, writer, enc.StringEncoder.Instance);
-                WriteProperty("expiration_days", value.ExpirationDays, writer, enc.Int64Encoder.Instance);
+                WriteProperty("expiration_days", value.ExpirationDays, writer, enc.UInt64Encoder.Instance);
                 if (value.OriginalFolderName != null)
                 {
                     WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
@@ -158,7 +158,7 @@ namespace Dropbox.Api.TeamLog
                         value.ExpirationStartDate = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "expiration_days":
-                        value.ExpirationDays = enc.Int64Decoder.Instance.Decode(reader);
+                        value.ExpirationDays = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     case "original_folder_name":
                         value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);

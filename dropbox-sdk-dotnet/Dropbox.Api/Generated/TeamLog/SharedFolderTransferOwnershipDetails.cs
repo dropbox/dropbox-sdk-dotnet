@@ -31,18 +31,32 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedFolderTransferOwnershipDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        public SharedFolderTransferOwnershipDetails(ulong targetAssetIndex,
-                                                    string originalFolderName)
+        /// <param name="newOwnerEmail">The email address of the new shared folder
+        /// owner.</param>
+        /// <param name="previousOwnerEmail">The email address of the previous shared folder
+        /// owner.</param>
+        public SharedFolderTransferOwnershipDetails(string newOwnerEmail,
+                                                    string previousOwnerEmail = null)
         {
-            if (originalFolderName == null)
+            if (newOwnerEmail == null)
             {
-                throw new sys.ArgumentNullException("originalFolderName");
+                throw new sys.ArgumentNullException("newOwnerEmail");
+            }
+            if (newOwnerEmail.Length > 255)
+            {
+                throw new sys.ArgumentOutOfRangeException("newOwnerEmail", "Length should be at most 255");
             }
 
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
+            if (previousOwnerEmail != null)
+            {
+                if (previousOwnerEmail.Length > 255)
+                {
+                    throw new sys.ArgumentOutOfRangeException("previousOwnerEmail", "Length should be at most 255");
+                }
+            }
+
+            this.NewOwnerEmail = newOwnerEmail;
+            this.PreviousOwnerEmail = previousOwnerEmail;
         }
 
         /// <summary>
@@ -57,14 +71,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>The email address of the new shared folder owner.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public string NewOwnerEmail { get; protected set; }
 
         /// <summary>
-        /// <para>Original shared folder name.</para>
+        /// <para>The email address of the previous shared folder owner.</para>
         /// </summary>
-        public string OriginalFolderName { get; protected set; }
+        public string PreviousOwnerEmail { get; protected set; }
 
         #region Encoder class
 
@@ -80,8 +94,11 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderTransferOwnershipDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
+                WriteProperty("new_owner_email", value.NewOwnerEmail, writer, enc.StringEncoder.Instance);
+                if (value.PreviousOwnerEmail != null)
+                {
+                    WriteProperty("previous_owner_email", value.PreviousOwnerEmail, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -115,11 +132,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                    case "new_owner_email":
+                        value.NewOwnerEmail = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
+                    case "previous_owner_email":
+                        value.PreviousOwnerEmail = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

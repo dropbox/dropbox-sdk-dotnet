@@ -31,9 +31,32 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="PaperExternalViewForbidDetails"
         /// /> class.</para>
         /// </summary>
+        /// <param name="eventUuid">Event unique identifier.</param>
+        public PaperExternalViewForbidDetails(string eventUuid)
+        {
+            if (eventUuid == null)
+            {
+                throw new sys.ArgumentNullException("eventUuid");
+            }
+
+            this.EventUuid = eventUuid;
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="PaperExternalViewForbidDetails"
+        /// /> class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public PaperExternalViewForbidDetails()
         {
         }
+
+        /// <summary>
+        /// <para>Event unique identifier.</para>
+        /// </summary>
+        public string EventUuid { get; protected set; }
 
         #region Encoder class
 
@@ -49,6 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PaperExternalViewForbidDetails value, enc.IJsonWriter writer)
             {
+                WriteProperty("event_uuid", value.EventUuid, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -82,6 +106,9 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "event_uuid":
+                        value.EventUuid = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     default:
                         reader.Skip();
                         break;
