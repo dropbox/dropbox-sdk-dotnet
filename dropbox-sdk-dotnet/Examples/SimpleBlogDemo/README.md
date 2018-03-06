@@ -1,6 +1,6 @@
 # Simple Blog Demo
 
-A example web app built using Dropbox API v2 .NET SDK. This app allow you to post blogs which will be automatically saved to your Dropbox. It can help you go througth the server app OAuth flow and file operations APIs.
+An example web app built using Dropbox API v2 .NET SDK. This app allows you to post blogs which will be automatically saved to your Dropbox. It can help you go through the server app OAuth flow and file operations APIs.
 
 ## Setup
 
