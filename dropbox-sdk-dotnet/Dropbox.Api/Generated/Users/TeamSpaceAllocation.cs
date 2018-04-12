@@ -35,11 +35,25 @@ namespace Dropbox.Api.Users
         /// (bytes).</param>
         /// <param name="allocated">The total space allocated to the user's team
         /// (bytes).</param>
+        /// <param name="userWithinTeamSpaceAllocated">The total space allocated to the user
+        /// within its team allocated space (0 means that no restriction is imposed on the
+        /// user's quota within its team).</param>
+        /// <param name="userWithinTeamSpaceLimitType">The type of the space limit imposed on
+        /// the team member (off, alert_only, stop_sync).</param>
         public TeamSpaceAllocation(ulong used,
-                                   ulong allocated)
+                                   ulong allocated,
+                                   ulong userWithinTeamSpaceAllocated,
+                                   global::Dropbox.Api.TeamCommon.MemberSpaceLimitType userWithinTeamSpaceLimitType)
         {
+            if (userWithinTeamSpaceLimitType == null)
+            {
+                throw new sys.ArgumentNullException("userWithinTeamSpaceLimitType");
+            }
+
             this.Used = used;
             this.Allocated = allocated;
+            this.UserWithinTeamSpaceAllocated = userWithinTeamSpaceAllocated;
+            this.UserWithinTeamSpaceLimitType = userWithinTeamSpaceLimitType;
         }
 
         /// <summary>
@@ -63,6 +77,18 @@ namespace Dropbox.Api.Users
         /// </summary>
         public ulong Allocated { get; protected set; }
 
+        /// <summary>
+        /// <para>The total space allocated to the user within its team allocated space (0
+        /// means that no restriction is imposed on the user's quota within its team).</para>
+        /// </summary>
+        public ulong UserWithinTeamSpaceAllocated { get; protected set; }
+
+        /// <summary>
+        /// <para>The type of the space limit imposed on the team member (off, alert_only,
+        /// stop_sync).</para>
+        /// </summary>
+        public global::Dropbox.Api.TeamCommon.MemberSpaceLimitType UserWithinTeamSpaceLimitType { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -79,6 +105,8 @@ namespace Dropbox.Api.Users
             {
                 WriteProperty("used", value.Used, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("allocated", value.Allocated, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("user_within_team_space_allocated", value.UserWithinTeamSpaceAllocated, writer, enc.UInt64Encoder.Instance);
+                WriteProperty("user_within_team_space_limit_type", value.UserWithinTeamSpaceLimitType, writer, global::Dropbox.Api.TeamCommon.MemberSpaceLimitType.Encoder);
             }
         }
 
@@ -116,6 +144,12 @@ namespace Dropbox.Api.Users
                         break;
                     case "allocated":
                         value.Allocated = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "user_within_team_space_allocated":
+                        value.UserWithinTeamSpaceAllocated = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "user_within_team_space_limit_type":
+                        value.UserWithinTeamSpaceLimitType = global::Dropbox.Api.TeamCommon.MemberSpaceLimitType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

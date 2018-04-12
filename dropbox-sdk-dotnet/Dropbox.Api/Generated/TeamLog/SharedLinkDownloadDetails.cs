@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Downloaded a file/folder from a shared link.</para>
+    /// <para>Downloaded file/folder from shared link.</para>
     /// </summary>
     public class SharedLinkDownloadDetails
     {

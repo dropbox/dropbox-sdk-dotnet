@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed the team logo to be displayed on shared link headers.</para>
+    /// <para>Removed team logo displayed on shared link headers.</para>
     /// </summary>
     public class TeamProfileRemoveLogoDetails
     {

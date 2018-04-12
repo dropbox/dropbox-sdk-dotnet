@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Reverted files to a previous version.</para>
+    /// <para>Reverted files to previous version.</para>
     /// </summary>
     public class FileRevertDetails
     {

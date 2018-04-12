@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Account captured user migrated their account to the team.</para>
+    /// <para>Account-captured user migrated account to team.</para>
     /// </summary>
     public class AccountCaptureMigrateAccountDetails
     {

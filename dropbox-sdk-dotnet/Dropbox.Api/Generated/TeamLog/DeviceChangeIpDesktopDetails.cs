@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>IP address associated with active desktop session changed.</para>
+    /// <para>Changed IP address associated with active desktop session.</para>
     /// </summary>
     public class DeviceChangeIpDesktopDetails
     {
@@ -31,15 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="DeviceChangeIpDesktopDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="deviceInfo">Device information.</param>
-        public DeviceChangeIpDesktopDetails(DeviceLogInfo deviceInfo)
+        /// <param name="deviceSessionInfo">Device's session logged information.</param>
+        public DeviceChangeIpDesktopDetails(DeviceSessionLogInfo deviceSessionInfo)
         {
-            if (deviceInfo == null)
+            if (deviceSessionInfo == null)
             {
-                throw new sys.ArgumentNullException("deviceInfo");
+                throw new sys.ArgumentNullException("deviceSessionInfo");
             }
 
-            this.DeviceInfo = deviceInfo;
+            this.DeviceSessionInfo = deviceSessionInfo;
         }
 
         /// <summary>
@@ -54,9 +54,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Device information.</para>
+        /// <para>Device's session logged information.</para>
         /// </summary>
-        public DeviceLogInfo DeviceInfo { get; protected set; }
+        public DeviceSessionLogInfo DeviceSessionInfo { get; protected set; }
 
         #region Encoder class
 
@@ -72,7 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceChangeIpDesktopDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
+                WriteProperty("device_session_info", value.DeviceSessionInfo, writer, global::Dropbox.Api.TeamLog.DeviceSessionLogInfo.Encoder);
             }
         }
 
@@ -106,8 +106,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "device_info":
-                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
+                    case "device_session_info":
+                        value.DeviceSessionInfo = global::Dropbox.Api.TeamLog.DeviceSessionLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

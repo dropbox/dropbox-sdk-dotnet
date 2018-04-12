@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Sent an email invitation to the membership of a shared file or folder.</para>
+    /// <para>Invited user to Dropbox and added them to shared file/folder.</para>
     /// </summary>
     public class SharedContentAddInviteesDetails
     {
@@ -31,17 +31,25 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SharedContentAddInviteesDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="sharingPermission">Sharing permission. Might be missing due to
-        /// historical data gap.</param>
-        public SharedContentAddInviteesDetails(ulong targetAssetIndex,
-                                               string originalFolderName = null,
-                                               string sharingPermission = null)
+        /// <param name="sharedContentAccessLevel">Shared content access level.</param>
+        /// <param name="invitees">A list of invitees.</param>
+        public SharedContentAddInviteesDetails(global::Dropbox.Api.Sharing.AccessLevel sharedContentAccessLevel,
+                                               col.IEnumerable<string> invitees)
         {
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
-            this.SharingPermission = sharingPermission;
+            if (sharedContentAccessLevel == null)
+            {
+                throw new sys.ArgumentNullException("sharedContentAccessLevel");
+            }
+
+            var inviteesList = enc.Util.ToList(invitees);
+
+            if (invitees == null)
+            {
+                throw new sys.ArgumentNullException("invitees");
+            }
+
+            this.SharedContentAccessLevel = sharedContentAccessLevel;
+            this.Invitees = inviteesList;
         }
 
         /// <summary>
@@ -56,19 +64,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>Shared content access level.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public global::Dropbox.Api.Sharing.AccessLevel SharedContentAccessLevel { get; protected set; }
 
         /// <summary>
-        /// <para>Original shared folder name.</para>
+        /// <para>A list of invitees.</para>
         /// </summary>
-        public string OriginalFolderName { get; protected set; }
-
-        /// <summary>
-        /// <para>Sharing permission. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string SharingPermission { get; protected set; }
+        public col.IList<string> Invitees { get; protected set; }
 
         #region Encoder class
 
@@ -84,15 +87,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentAddInviteesDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                if (value.OriginalFolderName != null)
-                {
-                    WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
-                }
-                if (value.SharingPermission != null)
-                {
-                    WriteProperty("sharing_permission", value.SharingPermission, writer, enc.StringEncoder.Instance);
-                }
+                WriteProperty("shared_content_access_level", value.SharedContentAccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteListProperty("invitees", value.Invitees, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -126,14 +122,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                    case "shared_content_access_level":
+                        value.SharedContentAccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "sharing_permission":
-                        value.SharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                    case "invitees":
+                        value.Invitees = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     default:
                         reader.Skip();

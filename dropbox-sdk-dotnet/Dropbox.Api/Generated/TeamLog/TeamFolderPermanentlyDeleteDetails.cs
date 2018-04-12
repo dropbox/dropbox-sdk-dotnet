@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Permanently deleted an archived team folder.</para>
+    /// <para>Permanently deleted archived team folder.</para>
     /// </summary>
     public class TeamFolderPermanentlyDeleteDetails
     {

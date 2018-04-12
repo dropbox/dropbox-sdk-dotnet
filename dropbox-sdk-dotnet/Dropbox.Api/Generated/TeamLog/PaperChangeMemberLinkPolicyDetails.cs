@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether non team members can view Paper documents using a link.</para>
+    /// <para>Changed whether non-members can view Paper docs with link.</para>
     /// </summary>
     public class PaperChangeMemberLinkPolicyDetails
     {

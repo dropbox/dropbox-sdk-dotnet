@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the account capture policy on a domain belonging to the team.</para>
+    /// <para>Changed account capture setting on team domain.</para>
     /// </summary>
     public class AccountCaptureChangePolicyDetails
     {

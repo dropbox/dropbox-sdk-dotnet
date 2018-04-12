@@ -11,8 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether Dropbox Paper, when enabled, is deployed to all teams or to
-    /// specific members of the team.</para>
+    /// <para>Changed whether Dropbox Paper, when enabled, is deployed to all members or to
+    /// specific members.</para>
     /// </summary>
     public class PaperChangeDeploymentPolicyDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Save a file or folder using a copy reference.</para>
+    /// <para>Saved file/folder using copy reference.</para>
     /// </summary>
     public class FileSaveCopyReferenceDetails
     {

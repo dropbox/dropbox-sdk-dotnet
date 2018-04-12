@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Failed to link a device.</para>
+    /// <para>Failed to link device.</para>
     /// </summary>
     public class DeviceLinkFailDetails
     {
@@ -33,10 +33,10 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="deviceType">A description of the device used while user approval
         /// blocked.</param>
-        /// <param name="deviceInfo">Device information. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="ipAddress">IP address. Might be missing due to historical data
+        /// gap.</param>
         public DeviceLinkFailDetails(DeviceType deviceType,
-                                     DeviceLogInfo deviceInfo = null)
+                                     string ipAddress = null)
         {
             if (deviceType == null)
             {
@@ -44,7 +44,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.DeviceType = deviceType;
-            this.DeviceInfo = deviceInfo;
+            this.IpAddress = ipAddress;
         }
 
         /// <summary>
@@ -64,9 +64,9 @@ namespace Dropbox.Api.TeamLog
         public DeviceType DeviceType { get; protected set; }
 
         /// <summary>
-        /// <para>Device information. Might be missing due to historical data gap.</para>
+        /// <para>IP address. Might be missing due to historical data gap.</para>
         /// </summary>
-        public DeviceLogInfo DeviceInfo { get; protected set; }
+        public string IpAddress { get; protected set; }
 
         #region Encoder class
 
@@ -83,9 +83,9 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(DeviceLinkFailDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("device_type", value.DeviceType, writer, global::Dropbox.Api.TeamLog.DeviceType.Encoder);
-                if (value.DeviceInfo != null)
+                if (value.IpAddress != null)
                 {
-                    WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
+                    WriteProperty("ip_address", value.IpAddress, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -123,8 +123,8 @@ namespace Dropbox.Api.TeamLog
                     case "device_type":
                         value.DeviceType = global::Dropbox.Api.TeamLog.DeviceType.Decoder.Decode(reader);
                         break;
-                    case "device_info":
-                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
+                    case "ip_address":
+                        value.IpAddress = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

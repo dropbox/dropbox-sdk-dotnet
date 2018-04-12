@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed how long team members can be idle while signed in to Dropbox on the
-    /// web.</para>
+    /// <para>Changed how long team members can be idle while signed in to Dropbox.com.</para>
     /// </summary>
     public class WebSessionsChangeIdleLengthPolicyDetails
     {

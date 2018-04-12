@@ -11,9 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether team members can share links externally (i.e. outside the team),
-    /// and if so, whether links should be accessible only by team members or anyone by
-    /// default.</para>
+    /// <para>Changed whether members can share links outside team, and if links are accessible
+    /// only by team members or anyone by default.</para>
     /// </summary>
     public class SharingChangeLinkPolicyDetails
     {

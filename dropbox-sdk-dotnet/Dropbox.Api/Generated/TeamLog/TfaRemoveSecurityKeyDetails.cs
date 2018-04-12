@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed a security key for two-step verification.</para>
+    /// <para>Removed security key for two-step verification.</para>
     /// </summary>
     public class TfaRemoveSecurityKeyDetails
     {

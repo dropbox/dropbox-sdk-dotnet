@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Admin settings: team members see a warning before sharing folders outside the
-    /// team (DEPRECATED FEATURE).</para>
+    /// <para>Set team members to see warning before sharing folders outside team.</para>
     /// </summary>
     public class SfExternalInviteWarnDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the archival status of a team folder.</para>
+    /// <para>Changed archival status of team folder.</para>
     /// </summary>
     public class TeamFolderChangeStatusDetails
     {

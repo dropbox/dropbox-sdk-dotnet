@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Created a shared folder.</para>
+    /// <para>Created shared folder.</para>
     /// </summary>
     public class SharedFolderCreateDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Renamed an active or archived team folder.</para>
+    /// <para>Renamed active/archived team folder.</para>
     /// </summary>
     public class TeamFolderRenameDetails
     {
@@ -31,16 +31,23 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="TeamFolderRenameDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="relocateActionDetails">Specifies the source and destination indices in
-        /// the assets list.</param>
-        public TeamFolderRenameDetails(RelocateAssetReferencesLogInfo relocateActionDetails)
+        /// <param name="previousFolderName">Previous folder name.</param>
+        /// <param name="newFolderName">New folder name.</param>
+        public TeamFolderRenameDetails(string previousFolderName,
+                                       string newFolderName)
         {
-            if (relocateActionDetails == null)
+            if (previousFolderName == null)
             {
-                throw new sys.ArgumentNullException("relocateActionDetails");
+                throw new sys.ArgumentNullException("previousFolderName");
             }
 
-            this.RelocateActionDetails = relocateActionDetails;
+            if (newFolderName == null)
+            {
+                throw new sys.ArgumentNullException("newFolderName");
+            }
+
+            this.PreviousFolderName = previousFolderName;
+            this.NewFolderName = newFolderName;
         }
 
         /// <summary>
@@ -55,9 +62,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Specifies the source and destination indices in the assets list.</para>
+        /// <para>Previous folder name.</para>
         /// </summary>
-        public RelocateAssetReferencesLogInfo RelocateActionDetails { get; protected set; }
+        public string PreviousFolderName { get; protected set; }
+
+        /// <summary>
+        /// <para>New folder name.</para>
+        /// </summary>
+        public string NewFolderName { get; protected set; }
 
         #region Encoder class
 
@@ -73,7 +85,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamFolderRenameDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("relocate_action_details", value.RelocateActionDetails, writer, global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Encoder);
+                WriteProperty("previous_folder_name", value.PreviousFolderName, writer, enc.StringEncoder.Instance);
+                WriteProperty("new_folder_name", value.NewFolderName, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -107,8 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "relocate_action_details":
-                        value.RelocateActionDetails = global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Decoder.Decode(reader);
+                    case "previous_folder_name":
+                        value.PreviousFolderName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "new_folder_name":
+                        value.NewFolderName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

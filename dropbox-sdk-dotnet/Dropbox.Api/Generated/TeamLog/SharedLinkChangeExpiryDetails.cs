@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the shared link expiration date.</para>
+    /// <para>Changed shared link expiration date.</para>
     /// </summary>
     public class SharedLinkChangeExpiryDetails
     {

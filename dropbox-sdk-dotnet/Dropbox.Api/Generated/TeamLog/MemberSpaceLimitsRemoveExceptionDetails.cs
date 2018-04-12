@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed an exception for one or more team members to bypass space limits imposed
-    /// by policy.</para>
+    /// <para>Removed members from member space limit exception list.</para>
     /// </summary>
     public class MemberSpaceLimitsRemoveExceptionDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed who can access the shared folder via a link.</para>
+    /// <para>Changed who can access shared folder via link.</para>
     /// </summary>
     public class SharedFolderChangeLinkPolicyDetails
     {
@@ -31,33 +31,18 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedFolderChangeLinkPolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="newValue">New shared folder link policy.</param>
-        /// <param name="sharedFolderType">Shared folder type. Might be missing due to
-        /// historical data gap.</param>
         /// <param name="previousValue">Previous shared folder link policy. Might be missing
         /// due to historical data gap.</param>
-        public SharedFolderChangeLinkPolicyDetails(ulong targetAssetIndex,
-                                                   string originalFolderName,
-                                                   SharedFolderLinkPolicy newValue,
-                                                   string sharedFolderType = null,
-                                                   SharedFolderLinkPolicy previousValue = null)
+        public SharedFolderChangeLinkPolicyDetails(global::Dropbox.Api.Sharing.SharedLinkPolicy newValue,
+                                                   global::Dropbox.Api.Sharing.SharedLinkPolicy previousValue = null)
         {
-            if (originalFolderName == null)
-            {
-                throw new sys.ArgumentNullException("originalFolderName");
-            }
-
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
             this.NewValue = newValue;
-            this.SharedFolderType = sharedFolderType;
             this.PreviousValue = previousValue;
         }
 
@@ -73,30 +58,15 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
-
-        /// <summary>
         /// <para>New shared folder link policy.</para>
         /// </summary>
-        public SharedFolderLinkPolicy NewValue { get; protected set; }
-
-        /// <summary>
-        /// <para>Shared folder type. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string SharedFolderType { get; protected set; }
+        public global::Dropbox.Api.Sharing.SharedLinkPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>Previous shared folder link policy. Might be missing due to historical data
         /// gap.</para>
         /// </summary>
-        public SharedFolderLinkPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.Sharing.SharedLinkPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -112,16 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderChangeLinkPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SharedFolderLinkPolicy.Encoder);
-                if (value.SharedFolderType != null)
-                {
-                    WriteProperty("shared_folder_type", value.SharedFolderType, writer, enc.StringEncoder.Instance);
-                }
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SharedFolderLinkPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.Sharing.SharedLinkPolicy.Encoder);
                 }
             }
         }
@@ -156,20 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.SharedFolderLinkPolicy.Decoder.Decode(reader);
-                        break;
-                    case "shared_folder_type":
-                        value.SharedFolderType = enc.StringDecoder.Instance.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.SharedFolderLinkPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.Sharing.SharedLinkPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

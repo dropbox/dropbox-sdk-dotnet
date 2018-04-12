@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the parent of a shared folder.</para>
+    /// <para>Changed parent of shared folder.</para>
     /// </summary>
     public class SharedFolderNestDetails
     {

@@ -13,6 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The folder metadata object</para>
     /// </summary>
+    /// <seealso cref="CreateFolderEntryResult" />
     /// <seealso cref="CreateFolderResult" />
     /// <seealso cref="DownloadZipResult" />
     /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />

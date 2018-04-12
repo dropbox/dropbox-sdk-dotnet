@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the team default limit level.</para>
+    /// <para>Changed team default member space limit.</para>
     /// </summary>
     public class MemberSpaceLimitsChangePolicyDetails
     {

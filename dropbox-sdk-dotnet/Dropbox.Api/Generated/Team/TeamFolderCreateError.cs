@@ -102,6 +102,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is SyncSettingsError</para>
+        /// </summary>
+        public bool IsSyncSettingsError
+        {
+            get
+            {
+                return this is SyncSettingsError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SyncSettingsError, or <c>null</c>.</para>
+        /// </summary>
+        public SyncSettingsError AsSyncSettingsError
+        {
+            get
+            {
+                return this as SyncSettingsError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.Team
                     FolderNameReserved.Encoder.EncodeFields((FolderNameReserved)value, writer);
                     return;
                 }
+                if (value is SyncSettingsError)
+                {
+                    WriteProperty(".tag", "sync_settings_error", writer, enc.StringEncoder.Instance);
+                    SyncSettingsError.Encoder.EncodeFields((SyncSettingsError)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +228,8 @@ namespace Dropbox.Api.Team
                         return FolderNameAlreadyUsed.Decoder.DecodeFields(reader);
                     case "folder_name_reserved":
                         return FolderNameReserved.Decoder.DecodeFields(reader);
+                    case "sync_settings_error":
+                        return SyncSettingsError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -416,6 +446,105 @@ namespace Dropbox.Api.Team
                     return FolderNameReserved.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>An error occurred setting the sync settings.</para>
+        /// </summary>
+        public sealed class SyncSettingsError : TeamFolderCreateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SyncSettingsError> Encoder = new SyncSettingsErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SyncSettingsError> Decoder = new SyncSettingsErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SyncSettingsError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SyncSettingsError(global::Dropbox.Api.Files.SyncSettingsError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SyncSettingsError" />
+            /// class.</para>
+            /// </summary>
+            private SyncSettingsError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.Files.SyncSettingsError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SyncSettingsError" />.</para>
+            /// </summary>
+            private class SyncSettingsErrorEncoder : enc.StructEncoder<SyncSettingsError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SyncSettingsError value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sync_settings_error", value.Value, writer, global::Dropbox.Api.Files.SyncSettingsError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SyncSettingsError" />.</para>
+            /// </summary>
+            private class SyncSettingsErrorDecoder : enc.StructDecoder<SyncSettingsError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SyncSettingsError"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SyncSettingsError Create()
+                {
+                    return new SyncSettingsError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(SyncSettingsError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "sync_settings_error":
+                            value.Value = global::Dropbox.Api.Files.SyncSettingsError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
             }
 
             #endregion

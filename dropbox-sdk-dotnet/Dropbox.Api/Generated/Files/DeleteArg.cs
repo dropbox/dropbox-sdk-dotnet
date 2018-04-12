@@ -31,7 +31,10 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="DeleteArg" /> class.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
-        public DeleteArg(string path)
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
+        public DeleteArg(string path,
+                         string parentRev = null)
         {
             if (path == null)
             {
@@ -42,7 +45,20 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?)|(id:.*))\z'");
             }
 
+            if (parentRev != null)
+            {
+                if (parentRev.Length < 9)
+                {
+                    throw new sys.ArgumentOutOfRangeException("parentRev", "Length should be at least 9");
+                }
+                if (!re.Regex.IsMatch(parentRev, @"\A(?:[0-9a-f]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("parentRev", @"Value should match pattern '\A(?:[0-9a-f]+)\z'");
+                }
+            }
+
             this.Path = path;
+            this.ParentRev = parentRev;
         }
 
         /// <summary>
@@ -60,6 +76,12 @@ namespace Dropbox.Api.Files
         /// </summary>
         public string Path { get; protected set; }
 
+        /// <summary>
+        /// <para>Perform delete if given "rev" matches the existing file's latest "rev". This
+        /// field does not support deleting a folder.</para>
+        /// </summary>
+        public string ParentRev { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +97,10 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(DeleteArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                if (value.ParentRev != null)
+                {
+                    WriteProperty("parent_rev", value.ParentRev, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -109,6 +135,9 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "parent_rev":
+                        value.ParentRev = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

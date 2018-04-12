@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the default language for the team.</para>
+    /// <para>Changed default language for team.</para>
     /// </summary>
     public class TeamProfileChangeDefaultLanguageDetails
     {

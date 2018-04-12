@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Updated a group join policy.</para>
+    /// <para>Updated group join policy.</para>
     /// </summary>
     public class GroupJoinPolicyUpdatedDetails
     {
@@ -31,19 +31,14 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupJoinPolicyUpdatedDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="joinPolicy">Group join policy.</param>
-        /// <param name="isAdminManaged">Is admin managed group. Might be missing due to
+        /// <param name="isCompanyManaged">Is company managed group. Might be missing due to
         /// historical data gap.</param>
-        public GroupJoinPolicyUpdatedDetails(GroupJoinPolicy joinPolicy,
-                                             bool? isAdminManaged = null)
+        /// <param name="joinPolicy">Group join policy.</param>
+        public GroupJoinPolicyUpdatedDetails(bool? isCompanyManaged = null,
+                                             GroupJoinPolicy joinPolicy = null)
         {
-            if (joinPolicy == null)
-            {
-                throw new sys.ArgumentNullException("joinPolicy");
-            }
-
+            this.IsCompanyManaged = isCompanyManaged;
             this.JoinPolicy = joinPolicy;
-            this.IsAdminManaged = isAdminManaged;
         }
 
         /// <summary>
@@ -58,14 +53,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Is company managed group. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public bool? IsCompanyManaged { get; protected set; }
+
+        /// <summary>
         /// <para>Group join policy.</para>
         /// </summary>
         public GroupJoinPolicy JoinPolicy { get; protected set; }
-
-        /// <summary>
-        /// <para>Is admin managed group. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public bool? IsAdminManaged { get; protected set; }
 
         #region Encoder class
 
@@ -81,10 +76,13 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(GroupJoinPolicyUpdatedDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("join_policy", value.JoinPolicy, writer, global::Dropbox.Api.TeamLog.GroupJoinPolicy.Encoder);
-                if (value.IsAdminManaged != null)
+                if (value.IsCompanyManaged != null)
                 {
-                    WriteProperty("is_admin_managed", value.IsAdminManaged.Value, writer, enc.BooleanEncoder.Instance);
+                    WriteProperty("is_company_managed", value.IsCompanyManaged.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.JoinPolicy != null)
+                {
+                    WriteProperty("join_policy", value.JoinPolicy, writer, global::Dropbox.Api.TeamLog.GroupJoinPolicy.Encoder);
                 }
             }
         }
@@ -119,11 +117,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "is_company_managed":
+                        value.IsCompanyManaged = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
                     case "join_policy":
                         value.JoinPolicy = global::Dropbox.Api.TeamLog.GroupJoinPolicy.Decoder.Decode(reader);
-                        break;
-                    case "is_admin_managed":
-                        value.IsAdminManaged = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

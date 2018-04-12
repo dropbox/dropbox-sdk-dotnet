@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Paper external sharing policy changed: default team.</para>
+    /// <para>Changed Paper external sharing setting to default team.</para>
     /// </summary>
     public class PaperExternalViewDefaultTeamDetails
     {

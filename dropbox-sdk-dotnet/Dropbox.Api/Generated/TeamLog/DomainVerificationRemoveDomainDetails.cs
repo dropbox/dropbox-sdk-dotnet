@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed a domain from the list of verified domains belonging to the team.</para>
+    /// <para>Removed domain from list of verified team domains.</para>
     /// </summary>
     public class DomainVerificationRemoveDomainDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Unresolved a file comment.</para>
+    /// <para>Unresolved file comment.</para>
     /// </summary>
     public class FileUnresolveCommentDetails
     {

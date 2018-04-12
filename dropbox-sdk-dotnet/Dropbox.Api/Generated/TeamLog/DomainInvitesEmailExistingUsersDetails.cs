@@ -33,17 +33,15 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="domainName">Domain names.</param>
         /// <param name="numRecipients">Number of recipients.</param>
-        public DomainInvitesEmailExistingUsersDetails(col.IEnumerable<string> domainName,
+        public DomainInvitesEmailExistingUsersDetails(string domainName,
                                                       ulong numRecipients)
         {
-            var domainNameList = enc.Util.ToList(domainName);
-
             if (domainName == null)
             {
                 throw new sys.ArgumentNullException("domainName");
             }
 
-            this.DomainName = domainNameList;
+            this.DomainName = domainName;
             this.NumRecipients = numRecipients;
         }
 
@@ -61,7 +59,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Domain names.</para>
         /// </summary>
-        public col.IList<string> DomainName { get; protected set; }
+        public string DomainName { get; protected set; }
 
         /// <summary>
         /// <para>Number of recipients.</para>
@@ -82,7 +80,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DomainInvitesEmailExistingUsersDetails value, enc.IJsonWriter writer)
             {
-                WriteListProperty("domain_name", value.DomainName, writer, enc.StringEncoder.Instance);
+                WriteProperty("domain_name", value.DomainName, writer, enc.StringEncoder.Instance);
                 WriteProperty("num_recipients", value.NumRecipients, writer, enc.UInt64Encoder.Instance);
             }
         }
@@ -118,7 +116,7 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "domain_name":
-                        value.DomainName = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        value.DomainName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "num_recipients":
                         value.NumRecipients = enc.UInt64Decoder.Instance.Decode(reader);

@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Account captured user relinquished their account by changing the email address
-    /// associated with it.</para>
+    /// <para>Account-captured user changed account email to personal email.</para>
     /// </summary>
     public class AccountCaptureRelinquishAccountDetails
     {

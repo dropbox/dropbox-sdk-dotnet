@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the default Smart Sync policy for team members.</para>
+    /// <para>Changed default Smart Sync setting for team members.</para>
     /// </summary>
     public class SmartSyncChangePolicyDetails
     {

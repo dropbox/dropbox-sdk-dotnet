@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Change a file request.</para>
+    /// <para>Changed file request.</para>
     /// </summary>
     public class FileRequestChangeDetails
     {

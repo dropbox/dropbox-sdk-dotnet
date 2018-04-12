@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed an exception for one or more team members to optionally use the regular
-    /// Dropbox app when EMM is enabled.</para>
+    /// <para>Removed members from EMM exception list.</para>
     /// </summary>
     public class EmmRemoveExceptionDetails
     {

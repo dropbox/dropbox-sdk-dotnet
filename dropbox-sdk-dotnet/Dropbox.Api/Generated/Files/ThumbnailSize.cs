@@ -101,6 +101,50 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is W256h256</para>
+        /// </summary>
+        public bool IsW256h256
+        {
+            get
+            {
+                return this is W256h256;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a W256h256, or <c>null</c>.</para>
+        /// </summary>
+        public W256h256 AsW256h256
+        {
+            get
+            {
+                return this as W256h256;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is W480h320</para>
+        /// </summary>
+        public bool IsW480h320
+        {
+            get
+            {
+                return this is W480h320;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a W480h320, or <c>null</c>.</para>
+        /// </summary>
+        public W480h320 AsW480h320
+        {
+            get
+            {
+                return this as W480h320;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is W640h480</para>
         /// </summary>
         public bool IsW640h480
@@ -123,6 +167,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is W960h640</para>
+        /// </summary>
+        public bool IsW960h640
+        {
+            get
+            {
+                return this is W960h640;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a W960h640, or <c>null</c>.</para>
+        /// </summary>
+        public W960h640 AsW960h640
+        {
+            get
+            {
+                return this as W960h640;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is W1024h768</para>
         /// </summary>
         public bool IsW1024h768
@@ -141,6 +207,28 @@ namespace Dropbox.Api.Files
             get
             {
                 return this as W1024h768;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is W2048h1536</para>
+        /// </summary>
+        public bool IsW2048h1536
+        {
+            get
+            {
+                return this is W2048h1536;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a W2048h1536, or <c>null</c>.</para>
+        /// </summary>
+        public W2048h1536 AsW2048h1536
+        {
+            get
+            {
+                return this as W2048h1536;
             }
         }
 
@@ -176,16 +264,40 @@ namespace Dropbox.Api.Files
                     W128h128.Encoder.EncodeFields((W128h128)value, writer);
                     return;
                 }
+                if (value is W256h256)
+                {
+                    WriteProperty(".tag", "w256h256", writer, enc.StringEncoder.Instance);
+                    W256h256.Encoder.EncodeFields((W256h256)value, writer);
+                    return;
+                }
+                if (value is W480h320)
+                {
+                    WriteProperty(".tag", "w480h320", writer, enc.StringEncoder.Instance);
+                    W480h320.Encoder.EncodeFields((W480h320)value, writer);
+                    return;
+                }
                 if (value is W640h480)
                 {
                     WriteProperty(".tag", "w640h480", writer, enc.StringEncoder.Instance);
                     W640h480.Encoder.EncodeFields((W640h480)value, writer);
                     return;
                 }
+                if (value is W960h640)
+                {
+                    WriteProperty(".tag", "w960h640", writer, enc.StringEncoder.Instance);
+                    W960h640.Encoder.EncodeFields((W960h640)value, writer);
+                    return;
+                }
                 if (value is W1024h768)
                 {
                     WriteProperty(".tag", "w1024h768", writer, enc.StringEncoder.Instance);
                     W1024h768.Encoder.EncodeFields((W1024h768)value, writer);
+                    return;
+                }
+                if (value is W2048h1536)
+                {
+                    WriteProperty(".tag", "w2048h1536", writer, enc.StringEncoder.Instance);
+                    W2048h1536.Encoder.EncodeFields((W2048h1536)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -226,10 +338,18 @@ namespace Dropbox.Api.Files
                         return W64h64.Decoder.DecodeFields(reader);
                     case "w128h128":
                         return W128h128.Decoder.DecodeFields(reader);
+                    case "w256h256":
+                        return W256h256.Decoder.DecodeFields(reader);
+                    case "w480h320":
+                        return W480h320.Decoder.DecodeFields(reader);
                     case "w640h480":
                         return W640h480.Decoder.DecodeFields(reader);
+                    case "w960h640":
+                        return W960h640.Decoder.DecodeFields(reader);
                     case "w1024h768":
                         return W1024h768.Decoder.DecodeFields(reader);
+                    case "w2048h1536":
+                        return W2048h1536.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -446,6 +566,144 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>256 by 256 px.</para>
+        /// </summary>
+        public sealed class W256h256 : ThumbnailSize
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W256h256> Encoder = new W256h256Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W256h256> Decoder = new W256h256Decoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="W256h256" /> class.</para>
+            /// </summary>
+            private W256h256()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of W256h256</para>
+            /// </summary>
+            public static readonly W256h256 Instance = new W256h256();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="W256h256" />.</para>
+            /// </summary>
+            private class W256h256Encoder : enc.StructEncoder<W256h256>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W256h256 value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="W256h256" />.</para>
+            /// </summary>
+            private class W256h256Decoder : enc.StructDecoder<W256h256>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W256h256" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W256h256 Create()
+                {
+                    return W256h256.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>480 by 320 px.</para>
+        /// </summary>
+        public sealed class W480h320 : ThumbnailSize
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W480h320> Encoder = new W480h320Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W480h320> Decoder = new W480h320Decoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="W480h320" /> class.</para>
+            /// </summary>
+            private W480h320()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of W480h320</para>
+            /// </summary>
+            public static readonly W480h320 Instance = new W480h320();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="W480h320" />.</para>
+            /// </summary>
+            private class W480h320Encoder : enc.StructEncoder<W480h320>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W480h320 value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="W480h320" />.</para>
+            /// </summary>
+            private class W480h320Decoder : enc.StructDecoder<W480h320>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W480h320" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W480h320 Create()
+                {
+                    return W480h320.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>640 by 480 px.</para>
         /// </summary>
         public sealed class W640h480 : ThumbnailSize
@@ -515,7 +773,76 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>1024 by 768.</para>
+        /// <para>960 by 640 px.</para>
+        /// </summary>
+        public sealed class W960h640 : ThumbnailSize
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W960h640> Encoder = new W960h640Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W960h640> Decoder = new W960h640Decoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="W960h640" /> class.</para>
+            /// </summary>
+            private W960h640()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of W960h640</para>
+            /// </summary>
+            public static readonly W960h640 Instance = new W960h640();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="W960h640" />.</para>
+            /// </summary>
+            private class W960h640Encoder : enc.StructEncoder<W960h640>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W960h640 value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="W960h640" />.</para>
+            /// </summary>
+            private class W960h640Decoder : enc.StructDecoder<W960h640>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W960h640" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W960h640 Create()
+                {
+                    return W960h640.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>1024 by 768 px.</para>
         /// </summary>
         public sealed class W1024h768 : ThumbnailSize
         {
@@ -576,6 +903,75 @@ namespace Dropbox.Api.Files
                 protected override W1024h768 Create()
                 {
                     return W1024h768.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>2048 by 1536 px.</para>
+        /// </summary>
+        public sealed class W2048h1536 : ThumbnailSize
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W2048h1536> Encoder = new W2048h1536Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W2048h1536> Decoder = new W2048h1536Decoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="W2048h1536" /> class.</para>
+            /// </summary>
+            private W2048h1536()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of W2048h1536</para>
+            /// </summary>
+            public static readonly W2048h1536 Instance = new W2048h1536();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="W2048h1536" />.</para>
+            /// </summary>
+            private class W2048h1536Encoder : enc.StructEncoder<W2048h1536>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W2048h1536 value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="W2048h1536" />.</para>
+            /// </summary>
+            private class W2048h1536Decoder : enc.StructDecoder<W2048h1536>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W2048h1536" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W2048h1536 Create()
+                {
+                    return W2048h1536.Instance;
                 }
 
             }

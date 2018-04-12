@@ -76,10 +76,11 @@
                 that created them, and even then, only when the app is linked with the owner of
                 the template (either a user or team).</para>
                 <para></para>
-                <para>User-owned templates are accessed via the user-auth template/*_for_user
-                endpoints, while team-owned templates are accessed via the team-auth
-                template/*_for_team endpoints. Properties associated with either type of
-                template can be accessed via the user-auth properties/* endpoints.</para>
+                <para>User-owned templates are accessed via the user-auth
+                file_properties/templates/*_for_user endpoints, while team-owned templates are
+                accessed via the team-auth file_properties/templates/*_for_team endpoints.
+                Properties associated with either type of template can be accessed via the
+                user-auth properties/* endpoints.</para>
                 <para></para>
                 <para>Finally, properties can be accessed from a number of endpoints that
                 return metadata, including `files/get_metadata`, and `files/list_folder`.
@@ -125,6 +126,18 @@
         <member name="N:Dropbox.Api.Paper.Routes">
             <summary>
                 <para>Contains the routes for the <see cref="N:Dropbox.Api.Paper" />
+                namespace.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.SeenState">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.SeenState.Routes.SeenStateRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.SeenState.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.SeenState" />
                 namespace.</para>
             </summary>
         </member>

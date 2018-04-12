@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether team members can join shared folders owned externally (i.e.
-    /// outside the team).</para>
+    /// <para>Changed whether team members can join shared folders owned outside team.</para>
     /// </summary>
     public class SharingChangeFolderJoinPolicyDetails
     {

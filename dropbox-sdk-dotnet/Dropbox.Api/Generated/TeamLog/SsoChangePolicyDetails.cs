@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Change the single sign-on policy for the team.</para>
+    /// <para>Changed single sign-on setting for team.</para>
     /// </summary>
     public class SsoChangePolicyDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled commenting on team files.</para>
+    /// <para>Enabled/disabled commenting on team files.</para>
     /// </summary>
     public class FileCommentsChangePolicyDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Permanently deleted contents of a removed team member account.</para>
+    /// <para>Permanently deleted contents of deleted team member account.</para>
     /// </summary>
     public class MemberPermanentlyDeleteAccountContentsDetails
     {

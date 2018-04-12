@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the expiry of the link for the shared file or folder.</para>
+    /// <para>Changed link expiration of shared file/folder.</para>
     /// </summary>
     public class SharedContentChangeLinkExpiryDetails
     {
@@ -31,29 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentChangeLinkExpiryDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="expirationStartDate">Expiration starting date.</param>
-        /// <param name="expirationDays">The number of days from the starting expiration date
-        /// after which the link will expire.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="sharedFolderType">Shared folder type. Might be missing due to
-        /// historical data gap.</param>
-        public SharedContentChangeLinkExpiryDetails(ulong targetAssetIndex,
-                                                    string expirationStartDate,
-                                                    ulong expirationDays,
-                                                    string originalFolderName = null,
-                                                    string sharedFolderType = null)
+        /// <param name="newValue">New shared content link expiration date. Might be missing
+        /// due to historical data gap.</param>
+        /// <param name="previousValue">Previous shared content link expiration date. Might be
+        /// missing due to historical data gap.</param>
+        public SharedContentChangeLinkExpiryDetails(sys.DateTime? newValue = null,
+                                                    sys.DateTime? previousValue = null)
         {
-            if (expirationStartDate == null)
-            {
-                throw new sys.ArgumentNullException("expirationStartDate");
-            }
-
-            this.TargetAssetIndex = targetAssetIndex;
-            this.ExpirationStartDate = expirationStartDate;
-            this.ExpirationDays = expirationDays;
-            this.OriginalFolderName = originalFolderName;
-            this.SharedFolderType = sharedFolderType;
+            this.NewValue = newValue;
+            this.PreviousValue = previousValue;
         }
 
         /// <summary>
@@ -68,30 +54,16 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>New shared content link expiration date. Might be missing due to historical
+        /// data gap.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public sys.DateTime? NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Expiration starting date.</para>
+        /// <para>Previous shared content link expiration date. Might be missing due to
+        /// historical data gap.</para>
         /// </summary>
-        public string ExpirationStartDate { get; protected set; }
-
-        /// <summary>
-        /// <para>The number of days from the starting expiration date after which the link
-        /// will expire.</para>
-        /// </summary>
-        public ulong ExpirationDays { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
-
-        /// <summary>
-        /// <para>Shared folder type. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string SharedFolderType { get; protected set; }
+        public sys.DateTime? PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -107,16 +79,13 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentChangeLinkExpiryDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("expiration_start_date", value.ExpirationStartDate, writer, enc.StringEncoder.Instance);
-                WriteProperty("expiration_days", value.ExpirationDays, writer, enc.UInt64Encoder.Instance);
-                if (value.OriginalFolderName != null)
+                if (value.NewValue != null)
                 {
-                    WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
+                    WriteProperty("new_value", value.NewValue.Value, writer, enc.DateTimeEncoder.Instance);
                 }
-                if (value.SharedFolderType != null)
+                if (value.PreviousValue != null)
                 {
-                    WriteProperty("shared_folder_type", value.SharedFolderType, writer, enc.StringEncoder.Instance);
+                    WriteProperty("previous_value", value.PreviousValue.Value, writer, enc.DateTimeEncoder.Instance);
                 }
             }
         }
@@ -151,20 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                    case "new_value":
+                        value.NewValue = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
-                    case "expiration_start_date":
-                        value.ExpirationStartDate = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "expiration_days":
-                        value.ExpirationDays = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "shared_folder_type":
-                        value.SharedFolderType = enc.StringDecoder.Instance.Decode(reader);
+                    case "previous_value":
+                        value.PreviousValue = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

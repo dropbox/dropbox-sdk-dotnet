@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Requested to be on the membership of a shared file or folder.</para>
+    /// <para>Requested access to shared file/folder.</para>
     /// </summary>
     public class SharedContentRequestAccessDetails
     {
@@ -31,15 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentRequestAccessDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="sharedContentLink">Shared content link.</param>
-        public SharedContentRequestAccessDetails(ulong targetAssetIndex,
-                                                 string originalFolderName = null,
-                                                 string sharedContentLink = null)
+        public SharedContentRequestAccessDetails(string sharedContentLink = null)
         {
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
             this.SharedContentLink = sharedContentLink;
         }
 
@@ -53,16 +47,6 @@ namespace Dropbox.Api.TeamLog
         public SharedContentRequestAccessDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
 
         /// <summary>
         /// <para>Shared content link.</para>
@@ -83,11 +67,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentRequestAccessDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                if (value.OriginalFolderName != null)
-                {
-                    WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
-                }
                 if (value.SharedContentLink != null)
                 {
                     WriteProperty("shared_content_link", value.SharedContentLink, writer, enc.StringEncoder.Instance);
@@ -125,12 +104,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     case "shared_content_link":
                         value.SharedContentLink = enc.StringDecoder.Instance.Decode(reader);
                         break;

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Deleted all files from an unlinked device.</para>
+    /// <para>Deleted all files from unlinked device.</para>
     /// </summary>
     public class DeviceDeleteOnUnlinkSuccessDetails
     {
@@ -31,15 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="DeviceDeleteOnUnlinkSuccessDetails" /> class.</para>
         /// </summary>
-        /// <param name="deviceInfo">Device information.</param>
-        public DeviceDeleteOnUnlinkSuccessDetails(DeviceLogInfo deviceInfo)
+        /// <param name="sessionInfo">Session unique id. Might be missing due to historical
+        /// data gap.</param>
+        /// <param name="displayName">The device name. Might be missing due to historical data
+        /// gap.</param>
+        public DeviceDeleteOnUnlinkSuccessDetails(SessionLogInfo sessionInfo = null,
+                                                  string displayName = null)
         {
-            if (deviceInfo == null)
-            {
-                throw new sys.ArgumentNullException("deviceInfo");
-            }
-
-            this.DeviceInfo = deviceInfo;
+            this.SessionInfo = sessionInfo;
+            this.DisplayName = displayName;
         }
 
         /// <summary>
@@ -54,9 +54,14 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Device information.</para>
+        /// <para>Session unique id. Might be missing due to historical data gap.</para>
         /// </summary>
-        public DeviceLogInfo DeviceInfo { get; protected set; }
+        public SessionLogInfo SessionInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>The device name. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string DisplayName { get; protected set; }
 
         #region Encoder class
 
@@ -72,7 +77,14 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceDeleteOnUnlinkSuccessDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
+                if (value.SessionInfo != null)
+                {
+                    WriteProperty("session_info", value.SessionInfo, writer, global::Dropbox.Api.TeamLog.SessionLogInfo.Encoder);
+                }
+                if (value.DisplayName != null)
+                {
+                    WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -106,8 +118,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "device_info":
-                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
+                    case "session_info":
+                        value.SessionInfo = global::Dropbox.Api.TeamLog.SessionLogInfo.Decoder.Decode(reader);
+                        break;
+                    case "display_name":
+                        value.DisplayName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

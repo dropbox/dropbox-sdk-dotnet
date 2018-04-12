@@ -321,6 +321,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Showcase</para>
+        /// </summary>
+        public bool IsShowcase
+        {
+            get
+            {
+                return this is Showcase;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Showcase, or <c>null</c>.</para>
+        /// </summary>
+        public Showcase AsShowcase
+        {
+            get
+            {
+                return this as Showcase;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Sso</para>
         /// </summary>
         public bool IsSso
@@ -544,6 +566,12 @@ namespace Dropbox.Api.TeamLog
                     Sharing.Encoder.EncodeFields((Sharing)value, writer);
                     return;
                 }
+                if (value is Showcase)
+                {
+                    WriteProperty(".tag", "showcase", writer, enc.StringEncoder.Instance);
+                    Showcase.Encoder.EncodeFields((Showcase)value, writer);
+                    return;
+                }
                 if (value is Sso)
                 {
                     WriteProperty(".tag", "sso", writer, enc.StringEncoder.Instance);
@@ -638,6 +666,8 @@ namespace Dropbox.Api.TeamLog
                         return Reports.Decoder.DecodeFields(reader);
                     case "sharing":
                         return Sharing.Decoder.DecodeFields(reader);
+                    case "showcase":
+                        return Showcase.Decoder.DecodeFields(reader);
                     case "sso":
                         return Sso.Decoder.DecodeFields(reader);
                     case "team_folders":
@@ -1552,6 +1582,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Sharing Create()
                 {
                     return Sharing.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Events that apply to Dropbox Showcase.</para>
+        /// </summary>
+        public sealed class Showcase : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Showcase> Encoder = new ShowcaseEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Showcase> Decoder = new ShowcaseDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Showcase" /> class.</para>
+            /// </summary>
+            private Showcase()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Showcase</para>
+            /// </summary>
+            public static readonly Showcase Instance = new Showcase();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Showcase" />.</para>
+            /// </summary>
+            private class ShowcaseEncoder : enc.StructEncoder<Showcase>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Showcase value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Showcase" />.</para>
+            /// </summary>
+            private class ShowcaseDecoder : enc.StructDecoder<Showcase>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Showcase" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Showcase Create()
+                {
+                    return Showcase.Instance;
                 }
 
             }

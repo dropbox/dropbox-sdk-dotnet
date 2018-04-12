@@ -15,6 +15,7 @@ namespace Dropbox.Api.Team
     /// </summary>
     /// <seealso cref="TeamFolderArchiveArg" />
     /// <seealso cref="TeamFolderRenameArg" />
+    /// <seealso cref="TeamFolderUpdateSyncSettingsArg" />
     public class TeamFolderIdArg
     {
         #pragma warning disable 108

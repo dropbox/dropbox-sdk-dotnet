@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Set a restriction policy regarding the location of data centers where team data
-    /// resides.</para>
+    /// <para>Set restrictions on data center locations where team data resides.</para>
     /// </summary>
     public class DataPlacementRestrictionChangePolicyDetails
     {

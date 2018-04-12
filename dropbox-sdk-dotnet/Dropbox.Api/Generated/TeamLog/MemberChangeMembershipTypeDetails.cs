@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the membership type (limited vs full) for team member.</para>
+    /// <para>Changed membership type (limited/full) of member.</para>
     /// </summary>
     public class MemberChangeMembershipTypeDetails
     {

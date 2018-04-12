@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Deleted a file comment.</para>
+    /// <para>Deleted file comment.</para>
     /// </summary>
     public class FileDeleteCommentDetails
     {

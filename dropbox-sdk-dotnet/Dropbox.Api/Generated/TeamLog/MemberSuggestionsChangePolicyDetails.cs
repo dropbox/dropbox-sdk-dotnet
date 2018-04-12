@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled the option for team members to suggest new members to add to
-    /// the team.</para>
+    /// <para>Enabled/disabled option for team members to suggest people to add to team.</para>
     /// </summary>
     public class MemberSuggestionsChangePolicyDetails
     {

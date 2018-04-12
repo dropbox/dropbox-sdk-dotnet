@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Downloaded a Paper doc in a particular output format.</para>
+    /// <para>Downloaded Paper doc in specific format.</para>
     /// </summary>
     public class PaperDocDownloadDetails
     {

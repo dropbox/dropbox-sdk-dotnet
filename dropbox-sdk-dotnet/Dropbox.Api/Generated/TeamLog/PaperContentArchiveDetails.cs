@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Archived Paper doc or folder.</para>
+    /// <para>Archived Paper doc/folder.</para>
     /// </summary>
     public class PaperContentArchiveDetails
     {

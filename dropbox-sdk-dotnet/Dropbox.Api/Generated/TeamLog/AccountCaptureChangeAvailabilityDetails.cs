@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Granted or revoked the option to enable account capture on domains belonging to
-    /// the team.</para>
+    /// <para>Granted/revoked option to enable account capture on team domains.</para>
     /// </summary>
     public class AccountCaptureChangeAvailabilityDetails
     {

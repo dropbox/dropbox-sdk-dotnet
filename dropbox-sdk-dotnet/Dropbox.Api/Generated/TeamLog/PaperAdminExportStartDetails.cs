@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Exported all Paper documents in the team.</para>
+    /// <para>Exported all team Paper docs.</para>
     /// </summary>
     public class PaperAdminExportStartDetails
     {

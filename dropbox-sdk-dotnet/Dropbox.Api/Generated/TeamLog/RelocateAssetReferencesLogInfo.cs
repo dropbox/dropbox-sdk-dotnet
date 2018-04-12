@@ -14,8 +14,6 @@ namespace Dropbox.Api.TeamLog
     /// <para>Provides the indices of the source asset and the destination asset for a relocate
     /// action.</para>
     /// </summary>
-    /// <seealso cref="SharedContentCopyDetails" />
-    /// <seealso cref="TeamFolderRenameDetails" />
     public class RelocateAssetReferencesLogInfo
     {
         #pragma warning disable 108

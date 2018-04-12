@@ -149,7 +149,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>This action is not allowed for a team shared dropbox.</para>
+        /// <para>This action is not allowed for a shared team root.</para>
         /// </summary>
         public sealed class Disallowed : TeamFolderTeamSharedDropboxError
         {

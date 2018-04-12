@@ -11,7 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>An indication that an event was returned with missing details</para>
+    /// <para>An indication that an error occurred while retrieving the event. Some attributes
+    /// of the event may be omitted as a result.</para>
     /// </summary>
     public class MissingDetails
     {
@@ -30,9 +31,28 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="MissingDetails" /> class.</para>
         /// </summary>
+        /// <param name="sourceEventFields">All the data that could be retrieved and converted
+        /// from the source event.</param>
+        public MissingDetails(string sourceEventFields = null)
+        {
+            this.SourceEventFields = sourceEventFields;
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="MissingDetails" /> class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public MissingDetails()
         {
         }
+
+        /// <summary>
+        /// <para>All the data that could be retrieved and converted from the source
+        /// event.</para>
+        /// </summary>
+        public string SourceEventFields { get; protected set; }
 
         #region Encoder class
 
@@ -48,6 +68,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MissingDetails value, enc.IJsonWriter writer)
             {
+                if (value.SourceEventFields != null)
+                {
+                    WriteProperty("source_event_fields", value.SourceEventFields, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -80,6 +104,9 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "source_event_fields":
+                        value.SourceEventFields = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     default:
                         reader.Skip();
                         break;

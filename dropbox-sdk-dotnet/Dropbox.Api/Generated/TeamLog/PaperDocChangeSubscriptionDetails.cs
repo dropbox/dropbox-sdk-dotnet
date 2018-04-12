@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Followed or unfollowed a Paper doc.</para>
+    /// <para>Followed/unfollowed Paper doc.</para>
     /// </summary>
     public class PaperDocChangeSubscriptionDetails
     {

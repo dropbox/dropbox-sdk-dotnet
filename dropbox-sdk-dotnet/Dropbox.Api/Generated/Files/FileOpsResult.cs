@@ -13,6 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The file ops result object</para>
     /// </summary>
+    /// <seealso cref="CreateFolderBatchResult" />
     /// <seealso cref="CreateFolderResult" />
     /// <seealso cref="DeleteBatchResult" />
     /// <seealso cref="DeleteResult" />

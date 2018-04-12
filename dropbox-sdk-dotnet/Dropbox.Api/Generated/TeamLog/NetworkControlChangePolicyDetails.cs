@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled network control.</para>
+    /// <para>Enabled/disabled network control.</para>
     /// </summary>
     public class NetworkControlChangePolicyDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the visibility of a shared link.</para>
+    /// <para>Changed visibility of shared link.</para>
     /// </summary>
     public class SharedLinkChangeVisibilityDetails
     {

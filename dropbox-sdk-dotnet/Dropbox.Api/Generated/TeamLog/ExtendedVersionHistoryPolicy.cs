@@ -102,6 +102,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ImplicitlyUnlimited</para>
+        /// </summary>
+        public bool IsImplicitlyUnlimited
+        {
+            get
+            {
+                return this is ImplicitlyUnlimited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ImplicitlyUnlimited, or <c>null</c>.</para>
+        /// </summary>
+        public ImplicitlyUnlimited AsImplicitlyUnlimited
+        {
+            get
+            {
+                return this as ImplicitlyUnlimited;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.TeamLog
                     ImplicitlyLimited.Encoder.EncodeFields((ImplicitlyLimited)value, writer);
                     return;
                 }
+                if (value is ImplicitlyUnlimited)
+                {
+                    WriteProperty(".tag", "implicitly_unlimited", writer, enc.StringEncoder.Instance);
+                    ImplicitlyUnlimited.Encoder.EncodeFields((ImplicitlyUnlimited)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +228,8 @@ namespace Dropbox.Api.TeamLog
                         return ExplicitlyUnlimited.Decoder.DecodeFields(reader);
                     case "implicitly_limited":
                         return ImplicitlyLimited.Decoder.DecodeFields(reader);
+                    case "implicitly_unlimited":
+                        return ImplicitlyUnlimited.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -414,6 +444,77 @@ namespace Dropbox.Api.TeamLog
                 protected override ImplicitlyLimited Create()
                 {
                     return ImplicitlyLimited.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The implicitly unlimited object</para>
+        /// </summary>
+        public sealed class ImplicitlyUnlimited : ExtendedVersionHistoryPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ImplicitlyUnlimited> Encoder = new ImplicitlyUnlimitedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ImplicitlyUnlimited> Decoder = new ImplicitlyUnlimitedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ImplicitlyUnlimited" />
+            /// class.</para>
+            /// </summary>
+            private ImplicitlyUnlimited()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ImplicitlyUnlimited</para>
+            /// </summary>
+            public static readonly ImplicitlyUnlimited Instance = new ImplicitlyUnlimited();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ImplicitlyUnlimited" />.</para>
+            /// </summary>
+            private class ImplicitlyUnlimitedEncoder : enc.StructEncoder<ImplicitlyUnlimited>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ImplicitlyUnlimited value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ImplicitlyUnlimited" />.</para>
+            /// </summary>
+            private class ImplicitlyUnlimitedDecoder : enc.StructDecoder<ImplicitlyUnlimited>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ImplicitlyUnlimited"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ImplicitlyUnlimited Create()
+                {
+                    return ImplicitlyUnlimited.Instance;
                 }
 
             }

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Linked an app for team.</para>
+    /// <para>Linked app for team.</para>
     /// </summary>
     public class AppLinkTeamDetails
     {

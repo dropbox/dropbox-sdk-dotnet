@@ -34,8 +34,8 @@ namespace Dropbox.Api.Team
         /// <param name="name">The name of this namespace.</param>
         /// <param name="namespaceId">The ID of this namespace.</param>
         /// <param name="namespaceType">The type of this namespace.</param>
-        /// <param name="teamMemberId">If this is a team member folder, the ID of the team
-        /// member. Otherwise, this field is not present.</param>
+        /// <param name="teamMemberId">If this is a team member or app folder, the ID of the
+        /// owning team member. Otherwise, this field is not present.</param>
         public NamespaceMetadata(string name,
                                  string namespaceId,
                                  NamespaceType namespaceType,
@@ -93,8 +93,8 @@ namespace Dropbox.Api.Team
         public NamespaceType NamespaceType { get; protected set; }
 
         /// <summary>
-        /// <para>If this is a team member folder, the ID of the team member. Otherwise, this
-        /// field is not present.</para>
+        /// <para>If this is a team member or app folder, the ID of the owning team member.
+        /// Otherwise, this field is not present.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 

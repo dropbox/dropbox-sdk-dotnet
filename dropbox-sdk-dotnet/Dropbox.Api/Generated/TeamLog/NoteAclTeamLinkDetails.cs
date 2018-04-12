@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed a Paper document to be link accessible for the team.</para>
+    /// <para>Changed Paper doc to link-accessible for team.</para>
     /// </summary>
     public class NoteAclTeamLinkDetails
     {

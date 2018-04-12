@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled Dropbox Paper for the team.</para>
+    /// <para>Enabled/disabled Dropbox Paper for team.</para>
     /// </summary>
     public class PaperChangePolicyDetails
     {

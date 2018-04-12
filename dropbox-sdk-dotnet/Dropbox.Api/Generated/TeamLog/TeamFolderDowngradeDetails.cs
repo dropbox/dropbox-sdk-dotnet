@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Downgraded a team folder to a regular shared folder.</para>
+    /// <para>Downgraded team folder to regular shared folder.</para>
     /// </summary>
     public class TeamFolderDowngradeDetails
     {

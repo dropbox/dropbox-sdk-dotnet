@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Closed a file request.</para>
+    /// <para>Closed file request.</para>
     /// </summary>
     public class FileRequestCloseDetails
     {

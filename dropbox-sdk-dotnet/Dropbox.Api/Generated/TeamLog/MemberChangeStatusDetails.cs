@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the membership status of a team member.</para>
+    /// <para>Changed membership status of team member.</para>
     /// </summary>
     public class MemberChangeStatusDetails
     {
@@ -34,11 +34,11 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New member status.</param>
         /// <param name="previousValue">Previous member status. Might be missing due to
         /// historical data gap.</param>
-        /// <param name="teamJoinDetails">Additional information relevant when a new member
-        /// joins the team.</param>
+        /// <param name="action">Additional information indicating the action taken that caused
+        /// status change.</param>
         public MemberChangeStatusDetails(MemberStatus newValue,
                                          MemberStatus previousValue = null,
-                                         JoinTeamDetails teamJoinDetails = null)
+                                         ActionDetails action = null)
         {
             if (newValue == null)
             {
@@ -47,7 +47,7 @@ namespace Dropbox.Api.TeamLog
 
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
-            this.TeamJoinDetails = teamJoinDetails;
+            this.Action = action;
         }
 
         /// <summary>
@@ -72,9 +72,10 @@ namespace Dropbox.Api.TeamLog
         public MemberStatus PreviousValue { get; protected set; }
 
         /// <summary>
-        /// <para>Additional information relevant when a new member joins the team.</para>
+        /// <para>Additional information indicating the action taken that caused status
+        /// change.</para>
         /// </summary>
-        public JoinTeamDetails TeamJoinDetails { get; protected set; }
+        public ActionDetails Action { get; protected set; }
 
         #region Encoder class
 
@@ -95,9 +96,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.MemberStatus.Encoder);
                 }
-                if (value.TeamJoinDetails != null)
+                if (value.Action != null)
                 {
-                    WriteProperty("team_join_details", value.TeamJoinDetails, writer, global::Dropbox.Api.TeamLog.JoinTeamDetails.Encoder);
+                    WriteProperty("action", value.Action, writer, global::Dropbox.Api.TeamLog.ActionDetails.Encoder);
                 }
             }
         }
@@ -138,8 +139,8 @@ namespace Dropbox.Api.TeamLog
                     case "previous_value":
                         value.PreviousValue = global::Dropbox.Api.TeamLog.MemberStatus.Decoder.Decode(reader);
                         break;
-                    case "team_join_details":
-                        value.TeamJoinDetails = global::Dropbox.Api.TeamLog.JoinTeamDetails.Decoder.Decode(reader);
+                    case "action":
+                        value.Action = global::Dropbox.Api.TeamLog.ActionDetails.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

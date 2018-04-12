@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Unshared a shared file or folder by clearing its membership and turning off its
-    /// link.</para>
+    /// <para>Unshared file/folder by clearing membership and turning off link.</para>
     /// </summary>
     public class SharedContentUnshareDetails
     {
@@ -32,35 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SharedContentUnshareDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        public SharedContentUnshareDetails(ulong targetAssetIndex,
-                                           string originalFolderName = null)
-        {
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
-        }
-
-        /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SharedContentUnshareDetails" />
-        /// class.</para>
-        /// </summary>
-        /// <remarks>This is to construct an instance of the object when
-        /// deserializing.</remarks>
-        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SharedContentUnshareDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
 
         #region Encoder class
 
@@ -76,11 +49,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentUnshareDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                if (value.OriginalFolderName != null)
-                {
-                    WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
-                }
             }
         }
 
@@ -114,12 +82,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     default:
                         reader.Skip();
                         break;

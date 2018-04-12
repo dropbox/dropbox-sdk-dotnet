@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Previewed the shared file or folder.</para>
+    /// <para>Previewed shared file/folder.</para>
     /// </summary>
     public class SharedContentViewDetails
     {
@@ -32,21 +32,25 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="sharedContentLink">Shared content link.</param>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="sharingPermission">Sharing permission. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="sharedContentAccessLevel">Shared content access level.</param>
+        /// <param name="sharedContentOwner">The shared content owner.</param>
         public SharedContentViewDetails(string sharedContentLink,
-                                        ulong targetAssetIndex,
-                                        string sharingPermission = null)
+                                        global::Dropbox.Api.Sharing.AccessLevel sharedContentAccessLevel,
+                                        UserLogInfo sharedContentOwner = null)
         {
             if (sharedContentLink == null)
             {
                 throw new sys.ArgumentNullException("sharedContentLink");
             }
 
+            if (sharedContentAccessLevel == null)
+            {
+                throw new sys.ArgumentNullException("sharedContentAccessLevel");
+            }
+
             this.SharedContentLink = sharedContentLink;
-            this.TargetAssetIndex = targetAssetIndex;
-            this.SharingPermission = sharingPermission;
+            this.SharedContentAccessLevel = sharedContentAccessLevel;
+            this.SharedContentOwner = sharedContentOwner;
         }
 
         /// <summary>
@@ -66,14 +70,14 @@ namespace Dropbox.Api.TeamLog
         public string SharedContentLink { get; protected set; }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>Shared content access level.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public global::Dropbox.Api.Sharing.AccessLevel SharedContentAccessLevel { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>The shared content owner.</para>
         /// </summary>
-        public string SharingPermission { get; protected set; }
+        public UserLogInfo SharedContentOwner { get; protected set; }
 
         #region Encoder class
 
@@ -90,10 +94,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(SharedContentViewDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_content_link", value.SharedContentLink, writer, enc.StringEncoder.Instance);
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                if (value.SharingPermission != null)
+                WriteProperty("shared_content_access_level", value.SharedContentAccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                if (value.SharedContentOwner != null)
                 {
-                    WriteProperty("sharing_permission", value.SharingPermission, writer, enc.StringEncoder.Instance);
+                    WriteProperty("shared_content_owner", value.SharedContentOwner, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
                 }
             }
         }
@@ -131,11 +135,11 @@ namespace Dropbox.Api.TeamLog
                     case "shared_content_link":
                         value.SharedContentLink = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                    case "shared_content_access_level":
+                        value.SharedContentAccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
-                    case "sharing_permission":
-                        value.SharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                    case "shared_content_owner":
+                        value.SharedContentOwner = global::Dropbox.Api.TeamLog.UserLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

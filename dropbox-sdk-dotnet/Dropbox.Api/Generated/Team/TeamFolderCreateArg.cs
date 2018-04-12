@@ -32,7 +32,10 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="name">Name for the new team folder.</param>
-        public TeamFolderCreateArg(string name)
+        /// <param name="syncSetting">The sync setting to apply to this team folder. Only
+        /// permitted if the team has team selective sync enabled.</param>
+        public TeamFolderCreateArg(string name,
+                                   global::Dropbox.Api.Files.SyncSettingArg syncSetting = null)
         {
             if (name == null)
             {
@@ -40,6 +43,7 @@ namespace Dropbox.Api.Team
             }
 
             this.Name = name;
+            this.SyncSetting = syncSetting;
         }
 
         /// <summary>
@@ -58,6 +62,12 @@ namespace Dropbox.Api.Team
         /// </summary>
         public string Name { get; protected set; }
 
+        /// <summary>
+        /// <para>The sync setting to apply to this team folder. Only permitted if the team has
+        /// team selective sync enabled.</para>
+        /// </summary>
+        public global::Dropbox.Api.Files.SyncSettingArg SyncSetting { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,6 +83,10 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(TeamFolderCreateArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
+                if (value.SyncSetting != null)
+                {
+                    WriteProperty("sync_setting", value.SyncSetting, writer, global::Dropbox.Api.Files.SyncSettingArg.Encoder);
+                }
             }
         }
 
@@ -107,6 +121,9 @@ namespace Dropbox.Api.Team
                 {
                     case "name":
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "sync_setting":
+                        value.SyncSetting = global::Dropbox.Api.Files.SyncSettingArg.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

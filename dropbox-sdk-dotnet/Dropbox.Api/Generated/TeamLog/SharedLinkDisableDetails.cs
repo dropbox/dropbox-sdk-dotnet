@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed a shared link.</para>
+    /// <para>Removed shared link.</para>
     /// </summary>
     public class SharedLinkDisableDetails
     {

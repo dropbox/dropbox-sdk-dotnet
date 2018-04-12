@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Copied the shared file or folder to own Dropbox.</para>
+    /// <para>Copied shared file/folder to own Dropbox.</para>
     /// </summary>
     public class SharedContentCopyDetails
     {
@@ -32,30 +32,33 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="sharedContentLink">Shared content link.</param>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="relocateActionDetails">Specifies the source and destination indices in
-        /// the assets list.</param>
-        /// <param name="sharingPermission">Sharing permission. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="sharedContentAccessLevel">Shared content access level.</param>
+        /// <param name="destinationPath">The path where the member saved the content.</param>
+        /// <param name="sharedContentOwner">The shared content owner.</param>
         public SharedContentCopyDetails(string sharedContentLink,
-                                        ulong targetAssetIndex,
-                                        RelocateAssetReferencesLogInfo relocateActionDetails,
-                                        string sharingPermission = null)
+                                        global::Dropbox.Api.Sharing.AccessLevel sharedContentAccessLevel,
+                                        string destinationPath,
+                                        UserLogInfo sharedContentOwner = null)
         {
             if (sharedContentLink == null)
             {
                 throw new sys.ArgumentNullException("sharedContentLink");
             }
 
-            if (relocateActionDetails == null)
+            if (sharedContentAccessLevel == null)
             {
-                throw new sys.ArgumentNullException("relocateActionDetails");
+                throw new sys.ArgumentNullException("sharedContentAccessLevel");
+            }
+
+            if (destinationPath == null)
+            {
+                throw new sys.ArgumentNullException("destinationPath");
             }
 
             this.SharedContentLink = sharedContentLink;
-            this.TargetAssetIndex = targetAssetIndex;
-            this.RelocateActionDetails = relocateActionDetails;
-            this.SharingPermission = sharingPermission;
+            this.SharedContentAccessLevel = sharedContentAccessLevel;
+            this.DestinationPath = destinationPath;
+            this.SharedContentOwner = sharedContentOwner;
         }
 
         /// <summary>
@@ -75,19 +78,19 @@ namespace Dropbox.Api.TeamLog
         public string SharedContentLink { get; protected set; }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>Shared content access level.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public global::Dropbox.Api.Sharing.AccessLevel SharedContentAccessLevel { get; protected set; }
 
         /// <summary>
-        /// <para>Specifies the source and destination indices in the assets list.</para>
+        /// <para>The path where the member saved the content.</para>
         /// </summary>
-        public RelocateAssetReferencesLogInfo RelocateActionDetails { get; protected set; }
+        public string DestinationPath { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>The shared content owner.</para>
         /// </summary>
-        public string SharingPermission { get; protected set; }
+        public UserLogInfo SharedContentOwner { get; protected set; }
 
         #region Encoder class
 
@@ -104,11 +107,11 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(SharedContentCopyDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("shared_content_link", value.SharedContentLink, writer, enc.StringEncoder.Instance);
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("relocate_action_details", value.RelocateActionDetails, writer, global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Encoder);
-                if (value.SharingPermission != null)
+                WriteProperty("shared_content_access_level", value.SharedContentAccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("destination_path", value.DestinationPath, writer, enc.StringEncoder.Instance);
+                if (value.SharedContentOwner != null)
                 {
-                    WriteProperty("sharing_permission", value.SharingPermission, writer, enc.StringEncoder.Instance);
+                    WriteProperty("shared_content_owner", value.SharedContentOwner, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
                 }
             }
         }
@@ -146,14 +149,14 @@ namespace Dropbox.Api.TeamLog
                     case "shared_content_link":
                         value.SharedContentLink = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                    case "shared_content_access_level":
+                        value.SharedContentAccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
-                    case "relocate_action_details":
-                        value.RelocateActionDetails = global::Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo.Decoder.Decode(reader);
+                    case "destination_path":
+                        value.DestinationPath = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "sharing_permission":
-                        value.SharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                    case "shared_content_owner":
+                        value.SharedContentOwner = global::Dropbox.Api.TeamLog.UserLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

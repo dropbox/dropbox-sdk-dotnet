@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the action taken when a team member is already over the limits (e.g when
-    /// they join the team, an admin lowers limits, etc.).</para>
+    /// <para>Changed device approvals setting when member is over limit.</para>
     /// </summary>
     public class DeviceApprovalsChangeOverageActionDetails
     {

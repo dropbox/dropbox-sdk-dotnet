@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Received files for a file request.</para>
+    /// <para>Received files for file request.</para>
     /// </summary>
     public class FileRequestReceiveFileDetails
     {
@@ -34,10 +34,17 @@ namespace Dropbox.Api.TeamLog
         /// <param name="submittedFileNames">Submitted file names.</param>
         /// <param name="fileRequestId">File request id. Might be missing due to historical
         /// data gap.</param>
-        /// <param name="requestTitle">File request title.</param>
+        /// <param name="fileRequestDetails">File request details. Might be missing due to
+        /// historical data gap.</param>
+        /// <param name="submitterName">The name as provided by the submitter. Might be missing
+        /// due to historical data gap.</param>
+        /// <param name="submitterEmail">The email as provided by the submitter. Might be
+        /// missing due to historical data gap.</param>
         public FileRequestReceiveFileDetails(col.IEnumerable<string> submittedFileNames,
                                              string fileRequestId = null,
-                                             string requestTitle = null)
+                                             FileRequestDetails fileRequestDetails = null,
+                                             string submitterName = null,
+                                             string submitterEmail = null)
         {
             var submittedFileNamesList = enc.Util.ToList(submittedFileNames);
 
@@ -58,9 +65,27 @@ namespace Dropbox.Api.TeamLog
                 }
             }
 
+            if (submitterName != null)
+            {
+                if (submitterName.Length < 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("submitterName", "Length should be at least 1");
+                }
+            }
+
+            if (submitterEmail != null)
+            {
+                if (submitterEmail.Length > 255)
+                {
+                    throw new sys.ArgumentOutOfRangeException("submitterEmail", "Length should be at most 255");
+                }
+            }
+
             this.SubmittedFileNames = submittedFileNamesList;
             this.FileRequestId = fileRequestId;
-            this.RequestTitle = requestTitle;
+            this.FileRequestDetails = fileRequestDetails;
+            this.SubmitterName = submitterName;
+            this.SubmitterEmail = submitterEmail;
         }
 
         /// <summary>
@@ -85,9 +110,21 @@ namespace Dropbox.Api.TeamLog
         public string FileRequestId { get; protected set; }
 
         /// <summary>
-        /// <para>File request title.</para>
+        /// <para>File request details. Might be missing due to historical data gap.</para>
         /// </summary>
-        public string RequestTitle { get; protected set; }
+        public FileRequestDetails FileRequestDetails { get; protected set; }
+
+        /// <summary>
+        /// <para>The name as provided by the submitter. Might be missing due to historical
+        /// data gap.</para>
+        /// </summary>
+        public string SubmitterName { get; protected set; }
+
+        /// <summary>
+        /// <para>The email as provided by the submitter. Might be missing due to historical
+        /// data gap.</para>
+        /// </summary>
+        public string SubmitterEmail { get; protected set; }
 
         #region Encoder class
 
@@ -108,9 +145,17 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty("file_request_id", value.FileRequestId, writer, enc.StringEncoder.Instance);
                 }
-                if (value.RequestTitle != null)
+                if (value.FileRequestDetails != null)
                 {
-                    WriteProperty("request_title", value.RequestTitle, writer, enc.StringEncoder.Instance);
+                    WriteProperty("file_request_details", value.FileRequestDetails, writer, global::Dropbox.Api.TeamLog.FileRequestDetails.Encoder);
+                }
+                if (value.SubmitterName != null)
+                {
+                    WriteProperty("submitter_name", value.SubmitterName, writer, enc.StringEncoder.Instance);
+                }
+                if (value.SubmitterEmail != null)
+                {
+                    WriteProperty("submitter_email", value.SubmitterEmail, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -151,8 +196,14 @@ namespace Dropbox.Api.TeamLog
                     case "file_request_id":
                         value.FileRequestId = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "request_title":
-                        value.RequestTitle = enc.StringDecoder.Instance.Decode(reader);
+                    case "file_request_details":
+                        value.FileRequestDetails = global::Dropbox.Api.TeamLog.FileRequestDetails.Decoder.Decode(reader);
+                        break;
+                    case "submitter_name":
+                        value.SubmitterName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "submitter_email":
+                        value.SubmitterEmail = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

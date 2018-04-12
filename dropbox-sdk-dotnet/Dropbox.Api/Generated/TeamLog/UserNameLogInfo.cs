@@ -13,6 +13,7 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>User's name logged information</para>
     /// </summary>
+    /// <seealso cref="MemberAddNameDetails" />
     /// <seealso cref="MemberChangeNameDetails" />
     public class UserNameLogInfo
     {

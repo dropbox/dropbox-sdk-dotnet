@@ -5358,14 +5358,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="name">Name for the new team folder.</param>
+        /// <param name="syncSetting">The sync setting to apply to this team folder. Only
+        /// permitted if the team has team selective sync enabled.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderCreateError"/>.</exception>
-        public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(string name)
+        public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(string name,
+                                                                global::Dropbox.Api.Files.SyncSettingArg syncSetting = null)
         {
-            var teamFolderCreateArg = new TeamFolderCreateArg(name);
+            var teamFolderCreateArg = new TeamFolderCreateArg(name,
+                                                              syncSetting);
 
             return this.TeamFolderCreateAsync(teamFolderCreateArg);
         }
@@ -5374,16 +5378,20 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the team folder create route.</para>
         /// </summary>
         /// <param name="name">Name for the new team folder.</param>
+        /// <param name="syncSetting">The sync setting to apply to this team folder. Only
+        /// permitted if the team has team selective sync enabled.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginTeamFolderCreate(string name,
-                                                      sys.AsyncCallback callback,
+                                                      global::Dropbox.Api.Files.SyncSettingArg syncSetting = null,
+                                                      sys.AsyncCallback callback = null,
                                                       object callbackState = null)
         {
-            var teamFolderCreateArg = new TeamFolderCreateArg(name);
+            var teamFolderCreateArg = new TeamFolderCreateArg(name,
+                                                              syncSetting);
 
             return this.BeginTeamFolderCreate(teamFolderCreateArg, callback, callbackState);
         }
@@ -5834,6 +5842,111 @@ namespace Dropbox.Api.Team.Routes
         /// processing the request; This will contain a <see
         /// cref="TeamFolderRenameError"/>.</exception>
         public TeamFolderMetadata EndTeamFolderRename(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Updates the sync settings on a team folder or its contents.  Use of this
+        /// endpoint requires that the team has team selective sync enabled.</para>
+        /// </summary>
+        /// <param name="teamFolderUpdateSyncSettingsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderUpdateSyncSettingsError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderUpdateSyncSettingsAsync(TeamFolderUpdateSyncSettingsArg teamFolderUpdateSyncSettingsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderUpdateSyncSettingsArg, TeamFolderMetadata, TeamFolderUpdateSyncSettingsError>(teamFolderUpdateSyncSettingsArg, "api", "/team/team_folder/update_sync_settings", "team", global::Dropbox.Api.Team.TeamFolderUpdateSyncSettingsArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderUpdateSyncSettingsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder update sync settings
+        /// route.</para>
+        /// </summary>
+        /// <param name="teamFolderUpdateSyncSettingsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderUpdateSyncSettings(TeamFolderUpdateSyncSettingsArg teamFolderUpdateSyncSettingsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderUpdateSyncSettingsAsync(teamFolderUpdateSyncSettingsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates the sync settings on a team folder or its contents.  Use of this
+        /// endpoint requires that the team has team selective sync enabled.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="syncSetting">Sync setting to apply to the team folder itself. Only
+        /// meaningful if the team folder is not a shared team root.</param>
+        /// <param name="contentSyncSettings">Sync settings to apply to contents of this team
+        /// folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderUpdateSyncSettingsError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderUpdateSyncSettingsAsync(string teamFolderId,
+                                                                            global::Dropbox.Api.Files.SyncSettingArg syncSetting = null,
+                                                                            col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSettingArg> contentSyncSettings = null)
+        {
+            var teamFolderUpdateSyncSettingsArg = new TeamFolderUpdateSyncSettingsArg(teamFolderId,
+                                                                                      syncSetting,
+                                                                                      contentSyncSettings);
+
+            return this.TeamFolderUpdateSyncSettingsAsync(teamFolderUpdateSyncSettingsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder update sync settings
+        /// route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="syncSetting">Sync setting to apply to the team folder itself. Only
+        /// meaningful if the team folder is not a shared team root.</param>
+        /// <param name="contentSyncSettings">Sync settings to apply to contents of this team
+        /// folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderUpdateSyncSettings(string teamFolderId,
+                                                                  global::Dropbox.Api.Files.SyncSettingArg syncSetting = null,
+                                                                  col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSettingArg> contentSyncSettings = null,
+                                                                  sys.AsyncCallback callback = null,
+                                                                  object callbackState = null)
+        {
+            var teamFolderUpdateSyncSettingsArg = new TeamFolderUpdateSyncSettingsArg(teamFolderId,
+                                                                                      syncSetting,
+                                                                                      contentSyncSettings);
+
+            return this.BeginTeamFolderUpdateSyncSettings(teamFolderUpdateSyncSettingsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder update sync
+        /// settings route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderUpdateSyncSettingsError"/>.</exception>
+        public TeamFolderMetadata EndTeamFolderUpdateSyncSettings(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamFolderMetadata>;
             if (task == null)

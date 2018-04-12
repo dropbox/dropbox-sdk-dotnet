@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Added a Paper doc comment.</para>
+    /// <para>Added Paper doc comment.</para>
     /// </summary>
     public class PaperDocAddCommentDetails
     {

@@ -36,10 +36,14 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="UserInfo" /> class.</para>
         /// </summary>
         /// <param name="accountId">The account ID of the user.</param>
+        /// <param name="email">Email address of user.</param>
+        /// <param name="displayName">The display name of the user.</param>
         /// <param name="sameTeam">If the user is in the same team as current user.</param>
         /// <param name="teamMemberId">The team member ID of the shared folder member. Only
         /// present if <paramref name="sameTeam" /> is true.</param>
         public UserInfo(string accountId,
+                        string email,
+                        string displayName,
                         bool sameTeam,
                         string teamMemberId = null)
         {
@@ -56,7 +60,19 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("accountId", "Length should be at most 40");
             }
 
+            if (email == null)
+            {
+                throw new sys.ArgumentNullException("email");
+            }
+
+            if (displayName == null)
+            {
+                throw new sys.ArgumentNullException("displayName");
+            }
+
             this.AccountId = accountId;
+            this.Email = email;
+            this.DisplayName = displayName;
             this.SameTeam = sameTeam;
             this.TeamMemberId = teamMemberId;
         }
@@ -75,6 +91,16 @@ namespace Dropbox.Api.Sharing
         /// <para>The account ID of the user.</para>
         /// </summary>
         public string AccountId { get; protected set; }
+
+        /// <summary>
+        /// <para>Email address of user.</para>
+        /// </summary>
+        public string Email { get; protected set; }
+
+        /// <summary>
+        /// <para>The display name of the user.</para>
+        /// </summary>
+        public string DisplayName { get; protected set; }
 
         /// <summary>
         /// <para>If the user is in the same team as current user.</para>
@@ -102,6 +128,8 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(UserInfo value, enc.IJsonWriter writer)
             {
                 WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
+                WriteProperty("email", value.Email, writer, enc.StringEncoder.Instance);
+                WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
                 WriteProperty("same_team", value.SameTeam, writer, enc.BooleanEncoder.Instance);
                 if (value.TeamMemberId != null)
                 {
@@ -141,6 +169,12 @@ namespace Dropbox.Api.Sharing
                 {
                     case "account_id":
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "email":
+                        value.Email = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "display_name":
+                        value.DisplayName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "same_team":
                         value.SameTeam = enc.BooleanDecoder.Instance.Decode(reader);

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled allow downloads.</para>
+    /// <para>Enabled downloads.</para>
     /// </summary>
     public class AllowDownloadEnabledDetails
     {

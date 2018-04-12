@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed the X.509 certificate for SSO.</para>
+    /// <para>Removed X.509 certificate for SSO.</para>
     /// </summary>
     public class SsoRemoveCertDetails
     {

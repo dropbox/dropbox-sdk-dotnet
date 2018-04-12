@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>EMM excluded users report created.</para>
+    /// <para>Created EMM-excluded users report.</para>
     /// </summary>
     public class EmmCreateExceptionsReportDetails
     {

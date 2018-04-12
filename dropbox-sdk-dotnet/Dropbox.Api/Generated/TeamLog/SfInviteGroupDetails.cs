@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Invited a group to a shared folder.</para>
+    /// <para>Invited group to shared folder.</para>
     /// </summary>
     public class SfInviteGroupDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Accepted or opted out of extended version history.</para>
+    /// <para>Accepted/opted out of extended version history.</para>
     /// </summary>
     public class ExtendedVersionHistoryChangePolicyDetails
     {

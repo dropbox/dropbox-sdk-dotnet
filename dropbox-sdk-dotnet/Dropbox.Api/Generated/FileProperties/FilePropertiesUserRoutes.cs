@@ -236,7 +236,11 @@ namespace Dropbox.Api.FileProperties.Routes
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesUpdateForUserAsync"
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync"
-        /// />. Templates can't be removed once created.</para>
+        /// />. To remove a template, see <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesRemoveForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync"
+        /// />.</para>
         /// </summary>
         /// <param name="removePropertiesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -272,7 +276,11 @@ namespace Dropbox.Api.FileProperties.Routes
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesUpdateForUserAsync"
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync"
-        /// />. Templates can't be removed once created.</para>
+        /// />. To remove a template, see <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesRemoveForUserAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync"
+        /// />.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyTemplateIds">A list of identifiers for a template created by

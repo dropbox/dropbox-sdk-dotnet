@@ -150,7 +150,7 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>Does this team have a team shared dropbox.</para>
+        /// <para>Does this team have a shared team root.</para>
         /// </summary>
         public sealed class HasTeamSharedDropbox : HasTeamSharedDropboxValue
         {

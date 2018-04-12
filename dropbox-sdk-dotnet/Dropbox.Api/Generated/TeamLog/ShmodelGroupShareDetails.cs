@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Shared a link with a group.</para>
+    /// <para>Shared link with group.</para>
     /// </summary>
     public class ShmodelGroupShareDetails
     {

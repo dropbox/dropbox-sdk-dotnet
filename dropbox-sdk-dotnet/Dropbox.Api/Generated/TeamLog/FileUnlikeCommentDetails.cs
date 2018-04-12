@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Unliked a file comment.</para>
+    /// <para>Unliked file comment.</para>
     /// </summary>
     public class FileUnlikeCommentDetails
     {

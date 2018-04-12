@@ -315,6 +315,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CannotKeepInvitedUserAccount</para>
+        /// </summary>
+        public bool IsCannotKeepInvitedUserAccount
+        {
+            get
+            {
+                return this is CannotKeepInvitedUserAccount;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotKeepInvitedUserAccount, or <c>null</c>.</para>
+        /// </summary>
+        public CannotKeepInvitedUserAccount AsCannotKeepInvitedUserAccount
+        {
+            get
+            {
+                return this as CannotKeepInvitedUserAccount;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserNotInTeam</para>
         /// </summary>
         public bool IsUserNotInTeam
@@ -444,6 +467,12 @@ namespace Dropbox.Api.Team
                     EmailAddressTooLongToBeDisabled.Encoder.EncodeFields((EmailAddressTooLongToBeDisabled)value, writer);
                     return;
                 }
+                if (value is CannotKeepInvitedUserAccount)
+                {
+                    WriteProperty(".tag", "cannot_keep_invited_user_account", writer, enc.StringEncoder.Instance);
+                    CannotKeepInvitedUserAccount.Encoder.EncodeFields((CannotKeepInvitedUserAccount)value, writer);
+                    return;
+                }
                 if (value is UserNotInTeam)
                 {
                     WriteProperty(".tag", "user_not_in_team", writer, enc.StringEncoder.Instance);
@@ -512,6 +541,8 @@ namespace Dropbox.Api.Team
                         return CannotKeepAccountAndDeleteData.Decoder.DecodeFields(reader);
                     case "email_address_too_long_to_be_disabled":
                         return EmailAddressTooLongToBeDisabled.Decoder.DecodeFields(reader);
+                    case "cannot_keep_invited_user_account":
+                        return CannotKeepInvitedUserAccount.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
                         return UserNotInTeam.Decoder.DecodeFields(reader);
                     case "other":
@@ -1372,6 +1403,77 @@ namespace Dropbox.Api.Team
                 protected override EmailAddressTooLongToBeDisabled Create()
                 {
                     return EmailAddressTooLongToBeDisabled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot keep account of an invited user.</para>
+        /// </summary>
+        public sealed class CannotKeepInvitedUserAccount : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotKeepInvitedUserAccount> Encoder = new CannotKeepInvitedUserAccountEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotKeepInvitedUserAccount> Decoder = new CannotKeepInvitedUserAccountDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotKeepInvitedUserAccount" /> class.</para>
+            /// </summary>
+            private CannotKeepInvitedUserAccount()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotKeepInvitedUserAccount</para>
+            /// </summary>
+            public static readonly CannotKeepInvitedUserAccount Instance = new CannotKeepInvitedUserAccount();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotKeepInvitedUserAccount" />.</para>
+            /// </summary>
+            private class CannotKeepInvitedUserAccountEncoder : enc.StructEncoder<CannotKeepInvitedUserAccount>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotKeepInvitedUserAccount value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotKeepInvitedUserAccount" />.</para>
+            /// </summary>
+            private class CannotKeepInvitedUserAccountDecoder : enc.StructDecoder<CannotKeepInvitedUserAccount>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotKeepInvitedUserAccount" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotKeepInvitedUserAccount Create()
+                {
+                    return CannotKeepInvitedUserAccount.Instance;
                 }
 
             }

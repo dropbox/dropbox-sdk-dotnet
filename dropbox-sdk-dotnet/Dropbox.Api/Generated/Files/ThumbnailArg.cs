@@ -35,9 +35,12 @@ namespace Dropbox.Api.Files
         /// images that are photos, jpeg should be preferred, while png is  better for
         /// screenshots and digital arts.</param>
         /// <param name="size">The size for the thumbnail image.</param>
+        /// <param name="mode">How to resize and crop the image to achieve the desired
+        /// size.</param>
         public ThumbnailArg(string path,
                             ThumbnailFormat format = null,
-                            ThumbnailSize size = null)
+                            ThumbnailSize size = null,
+                            ThumbnailMode mode = null)
         {
             if (path == null)
             {
@@ -56,9 +59,14 @@ namespace Dropbox.Api.Files
             {
                 size = global::Dropbox.Api.Files.ThumbnailSize.W64h64.Instance;
             }
+            if (mode == null)
+            {
+                mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
+            }
             this.Path = path;
             this.Format = format;
             this.Size = size;
+            this.Mode = mode;
         }
 
         /// <summary>
@@ -71,6 +79,7 @@ namespace Dropbox.Api.Files
         {
             this.Format = global::Dropbox.Api.Files.ThumbnailFormat.Jpeg.Instance;
             this.Size = global::Dropbox.Api.Files.ThumbnailSize.W64h64.Instance;
+            this.Mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
         }
 
         /// <summary>
@@ -90,6 +99,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public ThumbnailSize Size { get; protected set; }
 
+        /// <summary>
+        /// <para>How to resize and crop the image to achieve the desired size.</para>
+        /// </summary>
+        public ThumbnailMode Mode { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -107,6 +121,7 @@ namespace Dropbox.Api.Files
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 WriteProperty("format", value.Format, writer, global::Dropbox.Api.Files.ThumbnailFormat.Encoder);
                 WriteProperty("size", value.Size, writer, global::Dropbox.Api.Files.ThumbnailSize.Encoder);
+                WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.ThumbnailMode.Encoder);
             }
         }
 
@@ -147,6 +162,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "size":
                         value.Size = global::Dropbox.Api.Files.ThumbnailSize.Decoder.Decode(reader);
+                        break;
+                    case "mode":
+                        value.Mode = global::Dropbox.Api.Files.ThumbnailMode.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

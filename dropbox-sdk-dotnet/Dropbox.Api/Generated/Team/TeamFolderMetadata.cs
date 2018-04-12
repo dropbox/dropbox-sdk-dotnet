@@ -34,12 +34,17 @@ namespace Dropbox.Api.Team
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <param name="name">The name of the team folder.</param>
         /// <param name="status">The status of the team folder.</param>
-        /// <param name="isTeamSharedDropbox">True if this team folder is the team shared
-        /// dropbox.</param>
+        /// <param name="isTeamSharedDropbox">True if this team folder is a shared team
+        /// root.</param>
+        /// <param name="syncSetting">The sync setting applied to this team folder.</param>
+        /// <param name="contentSyncSettings">Sync settings applied to contents of this team
+        /// folder.</param>
         public TeamFolderMetadata(string teamFolderId,
                                   string name,
                                   TeamFolderStatus status,
-                                  bool isTeamSharedDropbox)
+                                  bool isTeamSharedDropbox,
+                                  global::Dropbox.Api.Files.SyncSetting syncSetting,
+                                  col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSetting> contentSyncSettings)
         {
             if (teamFolderId == null)
             {
@@ -60,10 +65,24 @@ namespace Dropbox.Api.Team
                 throw new sys.ArgumentNullException("status");
             }
 
+            if (syncSetting == null)
+            {
+                throw new sys.ArgumentNullException("syncSetting");
+            }
+
+            var contentSyncSettingsList = enc.Util.ToList(contentSyncSettings);
+
+            if (contentSyncSettings == null)
+            {
+                throw new sys.ArgumentNullException("contentSyncSettings");
+            }
+
             this.TeamFolderId = teamFolderId;
             this.Name = name;
             this.Status = status;
             this.IsTeamSharedDropbox = isTeamSharedDropbox;
+            this.SyncSetting = syncSetting;
+            this.ContentSyncSettings = contentSyncSettingsList;
         }
 
         /// <summary>
@@ -93,9 +112,19 @@ namespace Dropbox.Api.Team
         public TeamFolderStatus Status { get; protected set; }
 
         /// <summary>
-        /// <para>True if this team folder is the team shared dropbox.</para>
+        /// <para>True if this team folder is a shared team root.</para>
         /// </summary>
         public bool IsTeamSharedDropbox { get; protected set; }
+
+        /// <summary>
+        /// <para>The sync setting applied to this team folder.</para>
+        /// </summary>
+        public global::Dropbox.Api.Files.SyncSetting SyncSetting { get; protected set; }
+
+        /// <summary>
+        /// <para>Sync settings applied to contents of this team folder.</para>
+        /// </summary>
+        public col.IList<global::Dropbox.Api.Files.ContentSyncSetting> ContentSyncSettings { get; protected set; }
 
         #region Encoder class
 
@@ -115,6 +144,8 @@ namespace Dropbox.Api.Team
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("status", value.Status, writer, global::Dropbox.Api.Team.TeamFolderStatus.Encoder);
                 WriteProperty("is_team_shared_dropbox", value.IsTeamSharedDropbox, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("sync_setting", value.SyncSetting, writer, global::Dropbox.Api.Files.SyncSetting.Encoder);
+                WriteListProperty("content_sync_settings", value.ContentSyncSettings, writer, global::Dropbox.Api.Files.ContentSyncSetting.Encoder);
             }
         }
 
@@ -158,6 +189,12 @@ namespace Dropbox.Api.Team
                         break;
                     case "is_team_shared_dropbox":
                         value.IsTeamSharedDropbox = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "sync_setting":
+                        value.SyncSetting = global::Dropbox.Api.Files.SyncSetting.Decoder.Decode(reader);
+                        break;
+                    case "content_sync_settings":
+                        value.ContentSyncSettings = ReadList<global::Dropbox.Api.Files.ContentSyncSetting>(reader, global::Dropbox.Api.Files.ContentSyncSetting.Decoder);
                         break;
                     default:
                         reader.Skip();

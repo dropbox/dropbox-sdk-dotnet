@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>A set of features that Dropbox for Business account support.</para>
+    /// <para>A set of features that a Dropbox Business account may support.</para>
     /// </summary>
     public class Feature
     {
@@ -101,6 +101,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is HasTeamSelectiveSync</para>
+        /// </summary>
+        public bool IsHasTeamSelectiveSync
+        {
+            get
+            {
+                return this is HasTeamSelectiveSync;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a HasTeamSelectiveSync, or <c>null</c>.</para>
+        /// </summary>
+        public HasTeamSelectiveSync AsHasTeamSelectiveSync
+        {
+            get
+            {
+                return this as HasTeamSelectiveSync;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -154,6 +176,12 @@ namespace Dropbox.Api.Team
                     HasTeamFileEvents.Encoder.EncodeFields((HasTeamFileEvents)value, writer);
                     return;
                 }
+                if (value is HasTeamSelectiveSync)
+                {
+                    WriteProperty(".tag", "has_team_selective_sync", writer, enc.StringEncoder.Instance);
+                    HasTeamSelectiveSync.Encoder.EncodeFields((HasTeamSelectiveSync)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -198,6 +226,8 @@ namespace Dropbox.Api.Team
                         return HasTeamSharedDropbox.Decoder.DecodeFields(reader);
                     case "has_team_file_events":
                         return HasTeamFileEvents.Decoder.DecodeFields(reader);
+                    case "has_team_selective_sync":
+                        return HasTeamSelectiveSync.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -278,7 +308,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Does this team have a have a company shared dropbox.</para>
+        /// <para>Does this team have a shared team root.</para>
         /// </summary>
         public sealed class HasTeamSharedDropbox : Feature
         {
@@ -412,6 +442,77 @@ namespace Dropbox.Api.Team
                 protected override HasTeamFileEvents Create()
                 {
                     return HasTeamFileEvents.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Does this team have team selective sync enabled.</para>
+        /// </summary>
+        public sealed class HasTeamSelectiveSync : Feature
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<HasTeamSelectiveSync> Encoder = new HasTeamSelectiveSyncEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<HasTeamSelectiveSync> Decoder = new HasTeamSelectiveSyncDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasTeamSelectiveSync" />
+            /// class.</para>
+            /// </summary>
+            private HasTeamSelectiveSync()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of HasTeamSelectiveSync</para>
+            /// </summary>
+            public static readonly HasTeamSelectiveSync Instance = new HasTeamSelectiveSync();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="HasTeamSelectiveSync" />.</para>
+            /// </summary>
+            private class HasTeamSelectiveSyncEncoder : enc.StructEncoder<HasTeamSelectiveSync>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(HasTeamSelectiveSync value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="HasTeamSelectiveSync" />.</para>
+            /// </summary>
+            private class HasTeamSelectiveSyncDecoder : enc.StructDecoder<HasTeamSelectiveSync>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="HasTeamSelectiveSync"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override HasTeamSelectiveSync Create()
+                {
+                    return HasTeamSelectiveSync.Instance;
                 }
 
             }

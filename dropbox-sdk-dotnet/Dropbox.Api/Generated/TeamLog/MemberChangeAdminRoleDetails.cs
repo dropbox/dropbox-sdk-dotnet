@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Change the admin role belonging to team member.</para>
+    /// <para>Changed team member admin role.</para>
     /// </summary>
     public class MemberChangeAdminRoleDetails
     {

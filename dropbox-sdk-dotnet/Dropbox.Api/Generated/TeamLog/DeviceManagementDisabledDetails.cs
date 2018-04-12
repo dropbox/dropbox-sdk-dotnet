@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Disable Device Management.</para>
+    /// <para>Disabled device management.</para>
     /// </summary>
     public class DeviceManagementDisabledDetails
     {

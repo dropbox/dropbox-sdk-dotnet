@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled Google single sign-on for the team.</para>
+    /// <para>Enabled/disabled Google single sign-on for team.</para>
     /// </summary>
     public class GoogleSsoChangePolicyDetails
     {

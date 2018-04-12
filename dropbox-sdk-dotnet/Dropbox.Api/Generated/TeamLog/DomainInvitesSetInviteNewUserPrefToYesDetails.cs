@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Turned on u201cAutomatically invite new usersu201d.</para>
+    /// <para>Enabled "Automatically invite new users".</para>
     /// </summary>
     public class DomainInvitesSetInviteNewUserPrefToYesDetails
     {

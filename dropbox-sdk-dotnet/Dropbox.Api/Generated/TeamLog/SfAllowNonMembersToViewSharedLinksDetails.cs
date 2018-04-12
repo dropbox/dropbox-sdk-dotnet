@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Allowed non collaborators to view links to files in a shared folder.</para>
+    /// <para>Allowed non-collaborators to view links to files in shared folder.</para>
     /// </summary>
     public class SfAllowNonMembersToViewSharedLinksDetails
     {

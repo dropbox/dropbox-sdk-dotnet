@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the action taken with respect to approval limits when a team member
-    /// unlinks an approved device.</para>
+    /// <para>Changed device approvals setting when member unlinks approved device.</para>
     /// </summary>
     public class DeviceApprovalsChangeUnlinkActionDetails
     {

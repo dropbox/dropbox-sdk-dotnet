@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Allowed file request emails for the team.</para>
+    /// <para>Enabled file request emails for team.</para>
     /// </summary>
     public class FileRequestsEmailsRestrictedToTeamOnlyDetails
     {

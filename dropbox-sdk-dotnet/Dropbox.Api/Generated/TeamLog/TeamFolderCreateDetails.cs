@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Created a new team folder in active status.</para>
+    /// <para>Created team folder in active status.</para>
     /// </summary>
     public class TeamFolderCreateDetails
     {

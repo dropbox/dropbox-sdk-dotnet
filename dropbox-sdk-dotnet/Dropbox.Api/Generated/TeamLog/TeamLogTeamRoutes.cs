@@ -32,6 +32,9 @@ namespace Dropbox.Api.TeamLog.Routes
 
         /// <summary>
         /// <para>Retrieves team events.</para>
+        /// <para>Events have a lifespan of two years. Events older than two years will not be
+        /// returned.</para>
+        /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="getTeamEventsArg">The request parameters</param>
@@ -63,6 +66,9 @@ namespace Dropbox.Api.TeamLog.Routes
 
         /// <summary>
         /// <para>Retrieves team events.</para>
+        /// <para>Events have a lifespan of two years. Events older than two years will not be
+        /// returned.</para>
+        /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>

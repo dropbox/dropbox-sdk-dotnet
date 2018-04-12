@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled, disabled or changed the configuration for two-step verification.</para>
+    /// <para>Enabled/disabled/changed two-step verification setting.</para>
     /// </summary>
     public class TfaChangeStatusDetails
     {

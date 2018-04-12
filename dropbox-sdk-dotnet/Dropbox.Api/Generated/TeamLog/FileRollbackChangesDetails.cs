@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Rolled back file change location changes.</para>
+    /// <para>Rolled back file actions.</para>
     /// </summary>
     public class FileRollbackChangesDetails
     {

@@ -11,9 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether team members can share Paper documents externally (i.e. outside
-    /// the team), and if so, whether they should be accessible only by team members or anyone
-    /// by default.</para>
+    /// <para>Changed whether members can share Paper docs outside team, and if docs are
+    /// accessible only by team members or anyone by default.</para>
     /// </summary>
     public class PaperChangeMemberPolicyDetails
     {

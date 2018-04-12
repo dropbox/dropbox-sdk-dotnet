@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Refreshed the auth token used for setting up enterprise mobility
-    /// management.</para>
+    /// <para>Refreshed auth token used for setting up enterprise mobility management.</para>
     /// </summary>
     public class EmmRefreshAuthTokenDetails
     {

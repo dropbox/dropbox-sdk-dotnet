@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled enterprise mobility management for team members.</para>
+    /// <para>Enabled/disabled enterprise mobility management for members.</para>
     /// </summary>
     public class EmmChangePolicyDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Unshared a folder with a team member.</para>
+    /// <para>Unshared folder with team member.</para>
     /// </summary>
     public class SfTeamUninviteDetails
     {

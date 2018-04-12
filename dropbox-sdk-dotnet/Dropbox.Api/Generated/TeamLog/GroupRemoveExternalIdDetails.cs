@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed the external ID for group.</para>
+    /// <para>Removed external ID for group.</para>
     /// </summary>
     public class GroupRemoveExternalIdDetails
     {

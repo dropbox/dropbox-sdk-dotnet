@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed single sign-on logout URL.</para>
+    /// <para>Removed sign-out URL for SSO.</para>
     /// </summary>
     public class SsoRemoveLogoutUrlDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Declined a team member's invitation to a shared folder.</para>
+    /// <para>Declined team member's invite to shared folder.</para>
     /// </summary>
     public class SharedFolderDeclineInvitationDetails
     {

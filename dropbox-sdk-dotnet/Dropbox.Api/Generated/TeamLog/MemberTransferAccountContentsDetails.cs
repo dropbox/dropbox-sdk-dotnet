@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Transferred contents of a removed team member account to another member.</para>
+    /// <para>Transferred contents of deleted member account to another member.</para>
     /// </summary>
     public class MemberTransferAccountContentsDetails
     {
@@ -31,37 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="MemberTransferAccountContentsDetails" /> class.</para>
         /// </summary>
-        /// <param name="srcParticipantIndex">Source participant position in the Participants
-        /// list.</param>
-        /// <param name="destParticipantIndex">Destination participant position in the
-        /// Participants list.</param>
-        public MemberTransferAccountContentsDetails(ulong srcParticipantIndex,
-                                                    ulong destParticipantIndex)
-        {
-            this.SrcParticipantIndex = srcParticipantIndex;
-            this.DestParticipantIndex = destParticipantIndex;
-        }
-
-        /// <summary>
-        /// <para>Initializes a new instance of the <see
-        /// cref="MemberTransferAccountContentsDetails" /> class.</para>
-        /// </summary>
-        /// <remarks>This is to construct an instance of the object when
-        /// deserializing.</remarks>
-        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public MemberTransferAccountContentsDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Source participant position in the Participants list.</para>
-        /// </summary>
-        public ulong SrcParticipantIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Destination participant position in the Participants list.</para>
-        /// </summary>
-        public ulong DestParticipantIndex { get; protected set; }
 
         #region Encoder class
 
@@ -77,8 +49,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberTransferAccountContentsDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("src_participant_index", value.SrcParticipantIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("dest_participant_index", value.DestParticipantIndex, writer, enc.UInt64Encoder.Instance);
             }
         }
 
@@ -112,12 +82,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "src_participant_index":
-                        value.SrcParticipantIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "dest_participant_index":
-                        value.DestParticipantIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
                     default:
                         reader.Skip();
                         break;

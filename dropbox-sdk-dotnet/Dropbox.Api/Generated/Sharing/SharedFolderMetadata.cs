@@ -60,6 +60,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="permissions">Actions the current user may perform on the folder and
         /// its contents. The set of permissions corresponds to the FolderActions in the
         /// request.</param>
+        /// <param name="accessInheritance">Whether the folder inherits its members from its
+        /// parent.</param>
         public SharedFolderMetadata(AccessLevel accessType,
                                     bool isInsideTeamFolder,
                                     bool isTeamFolder,
@@ -73,7 +75,8 @@ namespace Dropbox.Api.Sharing
                                     string parentSharedFolderId = null,
                                     string pathLower = null,
                                     SharedContentLinkMetadata linkMetadata = null,
-                                    col.IEnumerable<FolderPermission> permissions = null)
+                                    col.IEnumerable<FolderPermission> permissions = null,
+                                    AccessInheritance accessInheritance = null)
             : base(accessType, isInsideTeamFolder, isTeamFolder, ownerDisplayNames, ownerTeam, parentSharedFolderId, pathLower)
         {
             if (name == null)
@@ -102,6 +105,10 @@ namespace Dropbox.Api.Sharing
 
             var permissionsList = enc.Util.ToList(permissions);
 
+            if (accessInheritance == null)
+            {
+                accessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Inherit.Instance;
+            }
             this.Name = name;
             this.Policy = policy;
             this.PreviewUrl = previewUrl;
@@ -109,6 +116,7 @@ namespace Dropbox.Api.Sharing
             this.TimeInvited = timeInvited;
             this.LinkMetadata = linkMetadata;
             this.Permissions = permissionsList;
+            this.AccessInheritance = accessInheritance;
         }
 
         /// <summary>
@@ -120,6 +128,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SharedFolderMetadata()
         {
+            this.AccessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Inherit.Instance;
         }
 
         /// <summary>
@@ -160,6 +169,11 @@ namespace Dropbox.Api.Sharing
         /// of permissions corresponds to the FolderActions in the request.</para>
         /// </summary>
         public col.IList<FolderPermission> Permissions { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the folder inherits its members from its parent.</para>
+        /// </summary>
+        public AccessInheritance AccessInheritance { get; protected set; }
 
         #region Encoder class
 
@@ -207,6 +221,7 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteListProperty("permissions", value.Permissions, writer, global::Dropbox.Api.Sharing.FolderPermission.Encoder);
                 }
+                WriteProperty("access_inheritance", value.AccessInheritance, writer, global::Dropbox.Api.Sharing.AccessInheritance.Encoder);
             }
         }
 
@@ -280,6 +295,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "permissions":
                         value.Permissions = ReadList<FolderPermission>(reader, global::Dropbox.Api.Sharing.FolderPermission.Decoder);
+                        break;
+                    case "access_inheritance":
+                        value.AccessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

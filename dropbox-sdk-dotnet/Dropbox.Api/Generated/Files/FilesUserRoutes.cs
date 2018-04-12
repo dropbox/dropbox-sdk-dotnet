@@ -1098,6 +1098,205 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Create multiple folders at once.</para>
+        /// <para>This route is asynchronous for large batches, which returns a job ID
+        /// immediately and runs the create folder batch asynchronously. Otherwise, creates the
+        /// folders and returns the result synchronously for smaller inputs. You can force
+        /// asynchronous behaviour by using the <see
+        /// cref="Dropbox.Api.Files.CreateFolderBatchArg.ForceAsync" /> flag.  Use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CreateFolderBatchCheckAsync" /> to
+        /// check the job status.</para>
+        /// </summary>
+        /// <param name="createFolderBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<CreateFolderBatchLaunch> CreateFolderBatchAsync(CreateFolderBatchArg createFolderBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<CreateFolderBatchArg, CreateFolderBatchLaunch, enc.Empty>(createFolderBatchArg, "api", "/files/create_folder_batch", "user", global::Dropbox.Api.Files.CreateFolderBatchArg.Encoder, global::Dropbox.Api.Files.CreateFolderBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder batch route.</para>
+        /// </summary>
+        /// <param name="createFolderBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCreateFolderBatch(CreateFolderBatchArg createFolderBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CreateFolderBatchAsync(createFolderBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Create multiple folders at once.</para>
+        /// <para>This route is asynchronous for large batches, which returns a job ID
+        /// immediately and runs the create folder batch asynchronously. Otherwise, creates the
+        /// folders and returns the result synchronously for smaller inputs. You can force
+        /// asynchronous behaviour by using the <see
+        /// cref="Dropbox.Api.Files.CreateFolderBatchArg.ForceAsync" /> flag.  Use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CreateFolderBatchCheckAsync" /> to
+        /// check the job status.</para>
+        /// </summary>
+        /// <param name="paths">List of paths to be created in the user's Dropbox. Duplicate
+        /// path arguments in the batch are considered only once.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
+        /// <param name="forceAsync">Whether to force the create to happen
+        /// asynchronously.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<CreateFolderBatchLaunch> CreateFolderBatchAsync(col.IEnumerable<string> paths,
+                                                                      bool autorename = false,
+                                                                      bool forceAsync = false)
+        {
+            var createFolderBatchArg = new CreateFolderBatchArg(paths,
+                                                                autorename,
+                                                                forceAsync);
+
+            return this.CreateFolderBatchAsync(createFolderBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder batch route.</para>
+        /// </summary>
+        /// <param name="paths">List of paths to be created in the user's Dropbox. Duplicate
+        /// path arguments in the batch are considered only once.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
+        /// <param name="forceAsync">Whether to force the create to happen
+        /// asynchronously.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCreateFolderBatch(col.IEnumerable<string> paths,
+                                                       bool autorename = false,
+                                                       bool forceAsync = false,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var createFolderBatchArg = new CreateFolderBatchArg(paths,
+                                                                autorename,
+                                                                forceAsync);
+
+            return this.BeginCreateFolderBatch(createFolderBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the create folder batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public CreateFolderBatchLaunch EndCreateFolderBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<CreateFolderBatchLaunch>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CreateFolderBatchAsync" />. If
+        /// success, it returns list of result for each entry.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<CreateFolderBatchJobStatus> CreateFolderBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, CreateFolderBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/create_folder_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.CreateFolderBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder batch check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCreateFolderBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CreateFolderBatchCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CreateFolderBatchAsync" />. If
+        /// success, it returns list of result for each entry.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<CreateFolderBatchJobStatus> CreateFolderBatchCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.CreateFolderBatchCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder batch check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCreateFolderBatchCheck(string asyncJobId,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginCreateFolderBatchCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the create folder batch check
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public CreateFolderBatchJobStatus EndCreateFolderBatchCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<CreateFolderBatchJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Create a folder at a given path.</para>
         /// </summary>
         /// <param name="createFolderArg">The request parameters</param>
@@ -1235,14 +1434,18 @@ namespace Dropbox.Api.Files.Routes
         /// cref="DeletedMetadata" /> object.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use DeleteV2Async instead.")]
-        public t.Task<Metadata> DeleteAsync(string path)
+        public t.Task<Metadata> DeleteAsync(string path,
+                                            string parentRev = null)
         {
-            var deleteArg = new DeleteArg(path);
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
 
             return this.DeleteAsync(deleteArg);
         }
@@ -1251,6 +1454,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the delete route.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1258,10 +1463,12 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         [sys.Obsolete("This function is deprecated, please use BeginDeleteV2 instead.")]
         public sys.IAsyncResult BeginDelete(string path,
-                                            sys.AsyncCallback callback,
+                                            string parentRev = null,
+                                            sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
-            var deleteArg = new DeleteArg(path);
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
 
             return this.BeginDelete(deleteArg, callback, callbackState);
         }
@@ -1505,13 +1712,17 @@ namespace Dropbox.Api.Files.Routes
         /// cref="DeletedMetadata" /> object.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public t.Task<DeleteResult> DeleteV2Async(string path)
+        public t.Task<DeleteResult> DeleteV2Async(string path,
+                                                  string parentRev = null)
         {
-            var deleteArg = new DeleteArg(path);
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
 
             return this.DeleteV2Async(deleteArg);
         }
@@ -1520,16 +1731,20 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the delete v2 route.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginDeleteV2(string path,
-                                              sys.AsyncCallback callback,
+                                              string parentRev = null,
+                                              sys.AsyncCallback callback = null,
                                               object callbackState = null)
         {
-            var deleteArg = new DeleteArg(path);
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
 
             return this.BeginDeleteV2(deleteArg, callback, callbackState);
         }
@@ -2098,6 +2313,8 @@ namespace Dropbox.Api.Files.Routes
         /// images that are photos, jpeg should be preferred, while png is  better for
         /// screenshots and digital arts.</param>
         /// <param name="size">The size for the thumbnail image.</param>
+        /// <param name="mode">How to resize and crop the image to achieve the desired
+        /// size.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2105,11 +2322,13 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ThumbnailError"/>.</exception>
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(string path,
                                                                              ThumbnailFormat format = null,
-                                                                             ThumbnailSize size = null)
+                                                                             ThumbnailSize size = null,
+                                                                             ThumbnailMode mode = null)
         {
             var thumbnailArg = new ThumbnailArg(path,
                                                 format,
-                                                size);
+                                                size,
+                                                mode);
 
             return this.GetThumbnailAsync(thumbnailArg);
         }
@@ -2122,6 +2341,8 @@ namespace Dropbox.Api.Files.Routes
         /// images that are photos, jpeg should be preferred, while png is  better for
         /// screenshots and digital arts.</param>
         /// <param name="size">The size for the thumbnail image.</param>
+        /// <param name="mode">How to resize and crop the image to achieve the desired
+        /// size.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2130,12 +2351,14 @@ namespace Dropbox.Api.Files.Routes
         public sys.IAsyncResult BeginGetThumbnail(string path,
                                                   ThumbnailFormat format = null,
                                                   ThumbnailSize size = null,
+                                                  ThumbnailMode mode = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
             var thumbnailArg = new ThumbnailArg(path,
                                                 format,
-                                                size);
+                                                size,
+                                                mode);
 
             return this.BeginGetThumbnail(thumbnailArg, callback, callbackState);
         }
@@ -3492,12 +3715,16 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        public t.Task PermanentlyDeleteAsync(string path)
+        public t.Task PermanentlyDeleteAsync(string path,
+                                             string parentRev = null)
         {
-            var deleteArg = new DeleteArg(path);
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
 
             return this.PermanentlyDeleteAsync(deleteArg);
         }
@@ -3506,16 +3733,20 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the permanently delete route.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginPermanentlyDelete(string path,
-                                                       sys.AsyncCallback callback,
+                                                       string parentRev = null,
+                                                       sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
-            var deleteArg = new DeleteArg(path);
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
 
             return this.BeginPermanentlyDelete(deleteArg, callback, callbackState);
         }

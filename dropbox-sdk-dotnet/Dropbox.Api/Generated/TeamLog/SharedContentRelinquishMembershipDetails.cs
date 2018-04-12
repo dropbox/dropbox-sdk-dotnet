@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Left the membership of a shared file or folder.</para>
+    /// <para>Left shared file/folder.</para>
     /// </summary>
     public class SharedContentRelinquishMembershipDetails
     {
@@ -31,40 +31,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentRelinquishMembershipDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        public SharedContentRelinquishMembershipDetails(ulong targetAssetIndex,
-                                                        string originalFolderName)
-        {
-            if (originalFolderName == null)
-            {
-                throw new sys.ArgumentNullException("originalFolderName");
-            }
-
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
-        }
-
-        /// <summary>
-        /// <para>Initializes a new instance of the <see
-        /// cref="SharedContentRelinquishMembershipDetails" /> class.</para>
-        /// </summary>
-        /// <remarks>This is to construct an instance of the object when
-        /// deserializing.</remarks>
-        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SharedContentRelinquishMembershipDetails()
         {
         }
-
-        /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
-        /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
 
         #region Encoder class
 
@@ -80,8 +49,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentRelinquishMembershipDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -115,12 +82,6 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
                     default:
                         reader.Skip();
                         break;

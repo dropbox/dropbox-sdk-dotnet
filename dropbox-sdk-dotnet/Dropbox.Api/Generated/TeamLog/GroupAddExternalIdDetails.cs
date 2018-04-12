@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Added an external ID for group.</para>
+    /// <para>Added external ID for group.</para>
     /// </summary>
     public class GroupAddExternalIdDetails
     {

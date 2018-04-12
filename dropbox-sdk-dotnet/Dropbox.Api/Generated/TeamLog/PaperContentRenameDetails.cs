@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Renamed Paper doc or folder.</para>
+    /// <para>Renamed Paper doc/folder.</para>
     /// </summary>
     public class PaperContentRenameDetails
     {

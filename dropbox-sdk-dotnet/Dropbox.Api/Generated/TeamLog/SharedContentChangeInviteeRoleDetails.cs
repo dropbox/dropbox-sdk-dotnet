@@ -11,8 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the access type of an invitee to a shared file or folder before the
-    /// invitation was claimed.</para>
+    /// <para>Changed access type of invitee to shared file/folder before invite
+    /// accepted.</para>
     /// </summary>
     public class SharedContentChangeInviteeRoleDetails
     {
@@ -32,26 +32,31 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentChangeInviteeRoleDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="newSharingPermission">New sharing permission. Might be missing due to
+        /// <param name="newAccessLevel">New access level.</param>
+        /// <param name="invitee">The invitee whose role was changed.</param>
+        /// <param name="previousAccessLevel">Previous access level. Might be missing due to
         /// historical data gap.</param>
-        /// <param name="previousSharingPermission">Previous sharing permission. Might be
-        /// missing due to historical data gap.</param>
-        public SharedContentChangeInviteeRoleDetails(ulong targetAssetIndex,
-                                                     string originalFolderName,
-                                                     string newSharingPermission = null,
-                                                     string previousSharingPermission = null)
+        public SharedContentChangeInviteeRoleDetails(global::Dropbox.Api.Sharing.AccessLevel newAccessLevel,
+                                                     string invitee,
+                                                     global::Dropbox.Api.Sharing.AccessLevel previousAccessLevel = null)
         {
-            if (originalFolderName == null)
+            if (newAccessLevel == null)
             {
-                throw new sys.ArgumentNullException("originalFolderName");
+                throw new sys.ArgumentNullException("newAccessLevel");
             }
 
-            this.TargetAssetIndex = targetAssetIndex;
-            this.OriginalFolderName = originalFolderName;
-            this.NewSharingPermission = newSharingPermission;
-            this.PreviousSharingPermission = previousSharingPermission;
+            if (invitee == null)
+            {
+                throw new sys.ArgumentNullException("invitee");
+            }
+            if (invitee.Length > 255)
+            {
+                throw new sys.ArgumentOutOfRangeException("invitee", "Length should be at most 255");
+            }
+
+            this.NewAccessLevel = newAccessLevel;
+            this.Invitee = invitee;
+            this.PreviousAccessLevel = previousAccessLevel;
         }
 
         /// <summary>
@@ -66,25 +71,19 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>New access level.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public global::Dropbox.Api.Sharing.AccessLevel NewAccessLevel { get; protected set; }
 
         /// <summary>
-        /// <para>Original shared folder name.</para>
+        /// <para>The invitee whose role was changed.</para>
         /// </summary>
-        public string OriginalFolderName { get; protected set; }
+        public string Invitee { get; protected set; }
 
         /// <summary>
-        /// <para>New sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>Previous access level. Might be missing due to historical data gap.</para>
         /// </summary>
-        public string NewSharingPermission { get; protected set; }
-
-        /// <summary>
-        /// <para>Previous sharing permission. Might be missing due to historical data
-        /// gap.</para>
-        /// </summary>
-        public string PreviousSharingPermission { get; protected set; }
+        public global::Dropbox.Api.Sharing.AccessLevel PreviousAccessLevel { get; protected set; }
 
         #region Encoder class
 
@@ -100,15 +99,11 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentChangeInviteeRoleDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
-                if (value.NewSharingPermission != null)
+                WriteProperty("new_access_level", value.NewAccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                WriteProperty("invitee", value.Invitee, writer, enc.StringEncoder.Instance);
+                if (value.PreviousAccessLevel != null)
                 {
-                    WriteProperty("new_sharing_permission", value.NewSharingPermission, writer, enc.StringEncoder.Instance);
-                }
-                if (value.PreviousSharingPermission != null)
-                {
-                    WriteProperty("previous_sharing_permission", value.PreviousSharingPermission, writer, enc.StringEncoder.Instance);
+                    WriteProperty("previous_access_level", value.PreviousAccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 }
             }
         }
@@ -143,17 +138,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
+                    case "new_access_level":
+                        value.NewAccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
+                    case "invitee":
+                        value.Invitee = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "new_sharing_permission":
-                        value.NewSharingPermission = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "previous_sharing_permission":
-                        value.PreviousSharingPermission = enc.StringDecoder.Instance.Decode(reader);
+                    case "previous_access_level":
+                        value.PreviousAccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

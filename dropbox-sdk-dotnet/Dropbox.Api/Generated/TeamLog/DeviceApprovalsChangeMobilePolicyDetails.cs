@@ -11,8 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Set or removed a limit on the number of mobiles devices each team member can link
-    /// to their work Dropbox account.</para>
+    /// <para>Set/removed limit on number of mobile devices member can link to team Dropbox
+    /// account.</para>
     /// </summary>
     public class DeviceApprovalsChangeMobilePolicyDetails
     {

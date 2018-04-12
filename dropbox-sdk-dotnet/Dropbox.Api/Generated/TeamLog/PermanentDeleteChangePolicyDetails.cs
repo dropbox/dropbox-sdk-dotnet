@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled the ability of team members to permanently delete
-    /// content.</para>
+    /// <para>Enabled/disabled ability of team members to permanently delete content.</para>
     /// </summary>
     public class PermanentDeleteChangePolicyDetails
     {

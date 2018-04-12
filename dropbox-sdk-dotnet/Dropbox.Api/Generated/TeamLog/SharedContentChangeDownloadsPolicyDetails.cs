@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether members can download the shared file or folder.</para>
+    /// <para>Changed whether members can download shared file/folder.</para>
     /// </summary>
     public class SharedContentChangeDownloadsPolicyDetails
     {
@@ -31,28 +31,18 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="SharedContentChangeDownloadsPolicyDetails" /> class.</para>
         /// </summary>
-        /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
-        /// <param name="newValue">New downlaod policy.</param>
-        /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="sharedFolderType">Shared folder type. Might be missing due to
+        /// <param name="newValue">New downloads policy.</param>
+        /// <param name="previousValue">Previous downloads policy. Might be missing due to
         /// historical data gap.</param>
-        /// <param name="previousValue">Previous downlaod policy. Might be missing due to
-        /// historical data gap.</param>
-        public SharedContentChangeDownloadsPolicyDetails(ulong targetAssetIndex,
-                                                         SharedContentDownloadsPolicy newValue,
-                                                         string originalFolderName = null,
-                                                         string sharedFolderType = null,
-                                                         SharedContentDownloadsPolicy previousValue = null)
+        public SharedContentChangeDownloadsPolicyDetails(DownloadPolicyType newValue,
+                                                         DownloadPolicyType previousValue = null)
         {
             if (newValue == null)
             {
                 throw new sys.ArgumentNullException("newValue");
             }
 
-            this.TargetAssetIndex = targetAssetIndex;
             this.NewValue = newValue;
-            this.OriginalFolderName = originalFolderName;
-            this.SharedFolderType = sharedFolderType;
             this.PreviousValue = previousValue;
         }
 
@@ -68,29 +58,15 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target asset position in the Assets list.</para>
+        /// <para>New downloads policy.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public DownloadPolicyType NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>New downlaod policy.</para>
+        /// <para>Previous downloads policy. Might be missing due to historical data
+        /// gap.</para>
         /// </summary>
-        public SharedContentDownloadsPolicy NewValue { get; protected set; }
-
-        /// <summary>
-        /// <para>Original shared folder name.</para>
-        /// </summary>
-        public string OriginalFolderName { get; protected set; }
-
-        /// <summary>
-        /// <para>Shared folder type. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public string SharedFolderType { get; protected set; }
-
-        /// <summary>
-        /// <para>Previous downlaod policy. Might be missing due to historical data gap.</para>
-        /// </summary>
-        public SharedContentDownloadsPolicy PreviousValue { get; protected set; }
+        public DownloadPolicyType PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -106,19 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedContentChangeDownloadsPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Encoder);
-                if (value.OriginalFolderName != null)
-                {
-                    WriteProperty("original_folder_name", value.OriginalFolderName, writer, enc.StringEncoder.Instance);
-                }
-                if (value.SharedFolderType != null)
-                {
-                    WriteProperty("shared_folder_type", value.SharedFolderType, writer, enc.StringEncoder.Instance);
-                }
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.DownloadPolicyType.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.DownloadPolicyType.Encoder);
                 }
             }
         }
@@ -153,20 +120,11 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "target_asset_index":
-                        value.TargetAssetIndex = enc.UInt64Decoder.Instance.Decode(reader);
-                        break;
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Decoder.Decode(reader);
-                        break;
-                    case "original_folder_name":
-                        value.OriginalFolderName = enc.StringDecoder.Instance.Decode(reader);
-                        break;
-                    case "shared_folder_type":
-                        value.SharedFolderType = enc.StringDecoder.Instance.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.DownloadPolicyType.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.SharedContentDownloadsPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.DownloadPolicyType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

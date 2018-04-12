@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled the Microsoft Office add-in, which lets team members save
-    /// files to Dropbox directly from Microsoft Office.</para>
+    /// <para>Enabled/disabled Microsoft Office add-in.</para>
     /// </summary>
     public class MicrosoftOfficeAddinChangePolicyDetails
     {

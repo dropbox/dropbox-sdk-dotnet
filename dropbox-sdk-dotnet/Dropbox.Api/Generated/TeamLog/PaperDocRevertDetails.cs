@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Restored a Paper doc to previous revision.</para>
+    /// <para>Restored Paper doc to previous version.</para>
     /// </summary>
     public class PaperDocRevertDetails
     {

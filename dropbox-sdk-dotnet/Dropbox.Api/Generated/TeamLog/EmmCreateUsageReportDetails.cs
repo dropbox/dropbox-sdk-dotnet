@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>EMM mobile app usage report created.</para>
+    /// <para>Created EMM mobile app usage report.</para>
     /// </summary>
     public class EmmCreateUsageReportDetails
     {

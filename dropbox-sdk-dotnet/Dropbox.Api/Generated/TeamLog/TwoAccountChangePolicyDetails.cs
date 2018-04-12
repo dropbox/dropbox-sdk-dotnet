@@ -11,8 +11,8 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Enabled or disabled the option for team members to link a personal Dropbox
-    /// account in addition to their work account to the same computer.</para>
+    /// <para>Enabled/disabled option for members to link personal Dropbox account and team
+    /// account to same computer.</para>
     /// </summary>
     public class TwoAccountChangePolicyDetails
     {

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Asked to join the team.</para>
+    /// <para>Requested to join team.</para>
     /// </summary>
     public class DomainInvitesRequestToJoinTeamDetails
     {

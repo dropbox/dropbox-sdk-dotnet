@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Users removed from Paper enabled users list.</para>
+    /// <para>Removed users from Paper-enabled users list.</para>
     /// </summary>
     public class PaperEnabledUsersGroupRemovalDetails
     {

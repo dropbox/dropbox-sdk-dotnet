@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the manager permissions belonging to a group member.</para>
+    /// <para>Changed manager permissions of group member.</para>
     /// </summary>
     public class GroupChangeMemberRoleDetails
     {

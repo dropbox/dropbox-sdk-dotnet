@@ -123,6 +123,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ShowcaseDocument</para>
+        /// </summary>
+        public bool IsShowcaseDocument
+        {
+            get
+            {
+                return this is ShowcaseDocument;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ShowcaseDocument, or <c>null</c>.</para>
+        /// </summary>
+        public ShowcaseDocument AsShowcaseDocument
+        {
+            get
+            {
+                return this as ShowcaseDocument;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -182,6 +204,12 @@ namespace Dropbox.Api.TeamLog
                     PaperFolder.Encoder.EncodeFields((PaperFolder)value, writer);
                     return;
                 }
+                if (value is ShowcaseDocument)
+                {
+                    WriteProperty(".tag", "showcase_document", writer, enc.StringEncoder.Instance);
+                    ShowcaseDocument.Encoder.EncodeFields((ShowcaseDocument)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -228,6 +256,8 @@ namespace Dropbox.Api.TeamLog
                         return PaperDocument.Decoder.DecodeFields(reader);
                     case "paper_folder":
                         return PaperFolder.Decoder.DecodeFields(reader);
+                    case "showcase_document":
+                        return ShowcaseDocument.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -582,6 +612,95 @@ namespace Dropbox.Api.TeamLog
                 public override PaperFolder DecodeFields(enc.IJsonReader reader)
                 {
                     return new PaperFolder(global::Dropbox.Api.TeamLog.PaperFolderLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Showcase document's details.</para>
+        /// </summary>
+        public sealed class ShowcaseDocument : AssetLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ShowcaseDocument> Encoder = new ShowcaseDocumentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ShowcaseDocument> Decoder = new ShowcaseDocumentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ShowcaseDocument" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ShowcaseDocument(ShowcaseDocumentLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ShowcaseDocument" />
+            /// class.</para>
+            /// </summary>
+            private ShowcaseDocument()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ShowcaseDocumentLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ShowcaseDocument" />.</para>
+            /// </summary>
+            private class ShowcaseDocumentEncoder : enc.StructEncoder<ShowcaseDocument>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ShowcaseDocument value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("showcase_document", value.Value, writer, global::Dropbox.Api.TeamLog.ShowcaseDocumentLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ShowcaseDocument" />.</para>
+            /// </summary>
+            private class ShowcaseDocumentDecoder : enc.StructDecoder<ShowcaseDocument>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ShowcaseDocument" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ShowcaseDocument Create()
+                {
+                    return new ShowcaseDocument();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ShowcaseDocument DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ShowcaseDocument(global::Dropbox.Api.TeamLog.ShowcaseDocumentLogInfo.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -34,18 +34,20 @@ namespace Dropbox.Api.TeamLog
         /// taken.</param>
         /// <param name="eventCategory">The category that this type of action belongs
         /// to.</param>
-        /// <param name="actor">The entity who actually performed the action.</param>
-        /// <param name="involveNonTeamMember">True if the action involved a non team member
-        /// either as the actor or as one of the affected users.</param>
-        /// <param name="context">The user or team on whose behalf the actor performed the
-        /// action.</param>
         /// <param name="eventType">The particular type of action taken.</param>
         /// <param name="details">The variable event schema applicable to this type of action,
         /// instantiated with respect to this particular action.</param>
+        /// <param name="actor">The entity who actually performed the action. Might be missing
+        /// due to historical data gap.</param>
         /// <param name="origin">The origin from which the actor performed the action including
         /// information about host, ip address, location, session, etc. If the action was
         /// performed programmatically via the API the origin represents the API
         /// client.</param>
+        /// <param name="involveNonTeamMember">True if the action involved a non team member
+        /// either as the actor or as one of the affected users. Might be missing due to
+        /// historical data gap.</param>
+        /// <param name="context">The user or team on whose behalf the actor performed the
+        /// action. Might be missing due to historical data gap.</param>
         /// <param name="participants">Zero or more users and/or groups that are affected by
         /// the action. Note that this list doesn't include any actors or users in
         /// context.</param>
@@ -54,28 +56,18 @@ namespace Dropbox.Api.TeamLog
         /// types such as Paper documents, folders, projects, etc.</param>
         public TeamEvent(sys.DateTime timestamp,
                          EventCategory eventCategory,
-                         ActorLogInfo actor,
-                         bool involveNonTeamMember,
-                         ContextLogInfo context,
                          EventType eventType,
                          EventDetails details,
+                         ActorLogInfo actor = null,
                          OriginLogInfo origin = null,
+                         bool? involveNonTeamMember = null,
+                         ContextLogInfo context = null,
                          col.IEnumerable<ParticipantLogInfo> participants = null,
                          col.IEnumerable<AssetLogInfo> assets = null)
         {
             if (eventCategory == null)
             {
                 throw new sys.ArgumentNullException("eventCategory");
-            }
-
-            if (actor == null)
-            {
-                throw new sys.ArgumentNullException("actor");
-            }
-
-            if (context == null)
-            {
-                throw new sys.ArgumentNullException("context");
             }
 
             if (eventType == null)
@@ -94,12 +86,12 @@ namespace Dropbox.Api.TeamLog
 
             this.Timestamp = timestamp;
             this.EventCategory = eventCategory;
-            this.Actor = actor;
-            this.InvolveNonTeamMember = involveNonTeamMember;
-            this.Context = context;
             this.EventType = eventType;
             this.Details = details;
+            this.Actor = actor;
             this.Origin = origin;
+            this.InvolveNonTeamMember = involveNonTeamMember;
+            this.Context = context;
             this.Participants = participantsList;
             this.Assets = assetsList;
         }
@@ -125,22 +117,6 @@ namespace Dropbox.Api.TeamLog
         public EventCategory EventCategory { get; protected set; }
 
         /// <summary>
-        /// <para>The entity who actually performed the action.</para>
-        /// </summary>
-        public ActorLogInfo Actor { get; protected set; }
-
-        /// <summary>
-        /// <para>True if the action involved a non team member either as the actor or as one
-        /// of the affected users.</para>
-        /// </summary>
-        public bool InvolveNonTeamMember { get; protected set; }
-
-        /// <summary>
-        /// <para>The user or team on whose behalf the actor performed the action.</para>
-        /// </summary>
-        public ContextLogInfo Context { get; protected set; }
-
-        /// <summary>
         /// <para>The particular type of action taken.</para>
         /// </summary>
         public EventType EventType { get; protected set; }
@@ -152,11 +128,29 @@ namespace Dropbox.Api.TeamLog
         public EventDetails Details { get; protected set; }
 
         /// <summary>
+        /// <para>The entity who actually performed the action. Might be missing due to
+        /// historical data gap.</para>
+        /// </summary>
+        public ActorLogInfo Actor { get; protected set; }
+
+        /// <summary>
         /// <para>The origin from which the actor performed the action including information
         /// about host, ip address, location, session, etc. If the action was performed
         /// programmatically via the API the origin represents the API client.</para>
         /// </summary>
         public OriginLogInfo Origin { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the action involved a non team member either as the actor or as one
+        /// of the affected users. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public bool? InvolveNonTeamMember { get; protected set; }
+
+        /// <summary>
+        /// <para>The user or team on whose behalf the actor performed the action. Might be
+        /// missing due to historical data gap.</para>
+        /// </summary>
+        public ContextLogInfo Context { get; protected set; }
 
         /// <summary>
         /// <para>Zero or more users and/or groups that are affected by the action. Note that
@@ -187,14 +181,23 @@ namespace Dropbox.Api.TeamLog
             {
                 WriteProperty("timestamp", value.Timestamp, writer, enc.DateTimeEncoder.Instance);
                 WriteProperty("event_category", value.EventCategory, writer, global::Dropbox.Api.TeamLog.EventCategory.Encoder);
-                WriteProperty("actor", value.Actor, writer, global::Dropbox.Api.TeamLog.ActorLogInfo.Encoder);
-                WriteProperty("involve_non_team_member", value.InvolveNonTeamMember, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("context", value.Context, writer, global::Dropbox.Api.TeamLog.ContextLogInfo.Encoder);
                 WriteProperty("event_type", value.EventType, writer, global::Dropbox.Api.TeamLog.EventType.Encoder);
                 WriteProperty("details", value.Details, writer, global::Dropbox.Api.TeamLog.EventDetails.Encoder);
+                if (value.Actor != null)
+                {
+                    WriteProperty("actor", value.Actor, writer, global::Dropbox.Api.TeamLog.ActorLogInfo.Encoder);
+                }
                 if (value.Origin != null)
                 {
                     WriteProperty("origin", value.Origin, writer, global::Dropbox.Api.TeamLog.OriginLogInfo.Encoder);
+                }
+                if (value.InvolveNonTeamMember != null)
+                {
+                    WriteProperty("involve_non_team_member", value.InvolveNonTeamMember.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.Context != null)
+                {
+                    WriteProperty("context", value.Context, writer, global::Dropbox.Api.TeamLog.ContextLogInfo.Encoder);
                 }
                 if (value.Participants.Count > 0)
                 {
@@ -242,23 +245,23 @@ namespace Dropbox.Api.TeamLog
                     case "event_category":
                         value.EventCategory = global::Dropbox.Api.TeamLog.EventCategory.Decoder.Decode(reader);
                         break;
-                    case "actor":
-                        value.Actor = global::Dropbox.Api.TeamLog.ActorLogInfo.Decoder.Decode(reader);
-                        break;
-                    case "involve_non_team_member":
-                        value.InvolveNonTeamMember = enc.BooleanDecoder.Instance.Decode(reader);
-                        break;
-                    case "context":
-                        value.Context = global::Dropbox.Api.TeamLog.ContextLogInfo.Decoder.Decode(reader);
-                        break;
                     case "event_type":
                         value.EventType = global::Dropbox.Api.TeamLog.EventType.Decoder.Decode(reader);
                         break;
                     case "details":
                         value.Details = global::Dropbox.Api.TeamLog.EventDetails.Decoder.Decode(reader);
                         break;
+                    case "actor":
+                        value.Actor = global::Dropbox.Api.TeamLog.ActorLogInfo.Decoder.Decode(reader);
+                        break;
                     case "origin":
                         value.Origin = global::Dropbox.Api.TeamLog.OriginLogInfo.Decoder.Decode(reader);
+                        break;
+                    case "involve_non_team_member":
+                        value.InvolveNonTeamMember = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "context":
+                        value.Context = global::Dropbox.Api.TeamLog.ContextLogInfo.Decoder.Decode(reader);
                         break;
                     case "participants":
                         value.Participants = ReadList<ParticipantLogInfo>(reader, global::Dropbox.Api.TeamLog.ParticipantLogInfo.Decoder);

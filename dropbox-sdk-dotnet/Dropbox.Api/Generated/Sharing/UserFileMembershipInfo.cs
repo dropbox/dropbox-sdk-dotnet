@@ -37,20 +37,24 @@ namespace Dropbox.Api.Sharing
         /// <param name="user">The account information for the membership user.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
-        /// <param name="initials">Suggested name initials for a member.</param>
+        /// <param name="initials">Never set.</param>
         /// <param name="isInherited">True if the member has access from a parent
         /// folder.</param>
         /// <param name="timeLastSeen">The UTC timestamp of when the user has last seen the
         /// content, if they have.</param>
+        /// <param name="platformType">The platform on which the user has last seen the
+        /// content, or unknown.</param>
         public UserFileMembershipInfo(AccessLevel accessType,
                                       UserInfo user,
                                       col.IEnumerable<MemberPermission> permissions = null,
                                       string initials = null,
                                       bool isInherited = false,
-                                      sys.DateTime? timeLastSeen = null)
+                                      sys.DateTime? timeLastSeen = null,
+                                      global::Dropbox.Api.SeenState.PlatformType platformType = null)
             : base(accessType, user, permissions, initials, isInherited)
         {
             this.TimeLastSeen = timeLastSeen;
+            this.PlatformType = platformType;
         }
 
         /// <summary>
@@ -69,6 +73,11 @@ namespace Dropbox.Api.Sharing
         /// have.</para>
         /// </summary>
         public sys.DateTime? TimeLastSeen { get; protected set; }
+
+        /// <summary>
+        /// <para>The platform on which the user has last seen the content, or unknown.</para>
+        /// </summary>
+        public global::Dropbox.Api.SeenState.PlatformType PlatformType { get; protected set; }
 
         #region Encoder class
 
@@ -98,6 +107,10 @@ namespace Dropbox.Api.Sharing
                 if (value.TimeLastSeen != null)
                 {
                     WriteProperty("time_last_seen", value.TimeLastSeen.Value, writer, enc.DateTimeEncoder.Instance);
+                }
+                if (value.PlatformType != null)
+                {
+                    WriteProperty("platform_type", value.PlatformType, writer, global::Dropbox.Api.SeenState.PlatformType.Encoder);
                 }
             }
         }
@@ -149,6 +162,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "time_last_seen":
                         value.TimeLastSeen = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "platform_type":
+                        value.PlatformType = global::Dropbox.Api.SeenState.PlatformType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

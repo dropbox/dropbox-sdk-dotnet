@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed a Paper document to be invite-only.</para>
+    /// <para>Changed Paper doc to invite-only.</para>
     /// </summary>
     public class NoteAclInviteOnlyDetails
     {

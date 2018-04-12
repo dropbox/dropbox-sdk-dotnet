@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Disconnected a device.</para>
+    /// <para>Disconnected device.</para>
     /// </summary>
     public class DeviceUnlinkDetails
     {
@@ -31,19 +31,18 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="DeviceUnlinkDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="deviceInfo">Device information.</param>
         /// <param name="deleteData">True if the user requested to delete data after device
         /// unlink, false otherwise.</param>
-        public DeviceUnlinkDetails(DeviceLogInfo deviceInfo,
-                                   bool deleteData)
+        /// <param name="sessionInfo">Session unique id.</param>
+        /// <param name="displayName">The device name. Might be missing due to historical data
+        /// gap.</param>
+        public DeviceUnlinkDetails(bool deleteData,
+                                   SessionLogInfo sessionInfo = null,
+                                   string displayName = null)
         {
-            if (deviceInfo == null)
-            {
-                throw new sys.ArgumentNullException("deviceInfo");
-            }
-
-            this.DeviceInfo = deviceInfo;
             this.DeleteData = deleteData;
+            this.SessionInfo = sessionInfo;
+            this.DisplayName = displayName;
         }
 
         /// <summary>
@@ -58,15 +57,20 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Device information.</para>
-        /// </summary>
-        public DeviceLogInfo DeviceInfo { get; protected set; }
-
-        /// <summary>
         /// <para>True if the user requested to delete data after device unlink, false
         /// otherwise.</para>
         /// </summary>
         public bool DeleteData { get; protected set; }
+
+        /// <summary>
+        /// <para>Session unique id.</para>
+        /// </summary>
+        public SessionLogInfo SessionInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>The device name. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string DisplayName { get; protected set; }
 
         #region Encoder class
 
@@ -82,8 +86,15 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceUnlinkDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
                 WriteProperty("delete_data", value.DeleteData, writer, enc.BooleanEncoder.Instance);
+                if (value.SessionInfo != null)
+                {
+                    WriteProperty("session_info", value.SessionInfo, writer, global::Dropbox.Api.TeamLog.SessionLogInfo.Encoder);
+                }
+                if (value.DisplayName != null)
+                {
+                    WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -116,11 +127,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "device_info":
-                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
-                        break;
                     case "delete_data":
                         value.DeleteData = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "session_info":
+                        value.SessionInfo = global::Dropbox.Api.TeamLog.SessionLogInfo.Decoder.Decode(reader);
+                        break;
+                    case "display_name":
+                        value.DisplayName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Transferred the ownership of a shared folder to another member.</para>
+    /// <para>Transferred ownership of shared folder to another member.</para>
     /// </summary>
     public class SharedFolderTransferOwnershipDetails
     {

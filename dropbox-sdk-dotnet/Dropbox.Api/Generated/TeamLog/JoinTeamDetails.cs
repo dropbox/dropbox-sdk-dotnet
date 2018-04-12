@@ -34,8 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="linkedApps">Linked applications.</param>
         /// <param name="linkedDevices">Linked devices.</param>
         /// <param name="linkedSharedFolders">Linked shared folders.</param>
-        public JoinTeamDetails(col.IEnumerable<AppLogInfo> linkedApps,
-                               col.IEnumerable<DeviceLogInfo> linkedDevices,
+        public JoinTeamDetails(col.IEnumerable<UserLinkedAppLogInfo> linkedApps,
+                               col.IEnumerable<LinkedDeviceLogInfo> linkedDevices,
                                col.IEnumerable<FolderLogInfo> linkedSharedFolders)
         {
             var linkedAppsList = enc.Util.ToList(linkedApps);
@@ -78,12 +78,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Linked applications.</para>
         /// </summary>
-        public col.IList<AppLogInfo> LinkedApps { get; protected set; }
+        public col.IList<UserLinkedAppLogInfo> LinkedApps { get; protected set; }
 
         /// <summary>
         /// <para>Linked devices.</para>
         /// </summary>
-        public col.IList<DeviceLogInfo> LinkedDevices { get; protected set; }
+        public col.IList<LinkedDeviceLogInfo> LinkedDevices { get; protected set; }
 
         /// <summary>
         /// <para>Linked shared folders.</para>
@@ -104,8 +104,8 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(JoinTeamDetails value, enc.IJsonWriter writer)
             {
-                WriteListProperty("linked_apps", value.LinkedApps, writer, global::Dropbox.Api.TeamLog.AppLogInfo.Encoder);
-                WriteListProperty("linked_devices", value.LinkedDevices, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
+                WriteListProperty("linked_apps", value.LinkedApps, writer, global::Dropbox.Api.TeamLog.UserLinkedAppLogInfo.Encoder);
+                WriteListProperty("linked_devices", value.LinkedDevices, writer, global::Dropbox.Api.TeamLog.LinkedDeviceLogInfo.Encoder);
                 WriteListProperty("linked_shared_folders", value.LinkedSharedFolders, writer, global::Dropbox.Api.TeamLog.FolderLogInfo.Encoder);
             }
         }
@@ -140,10 +140,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "linked_apps":
-                        value.LinkedApps = ReadList<AppLogInfo>(reader, global::Dropbox.Api.TeamLog.AppLogInfo.Decoder);
+                        value.LinkedApps = ReadList<UserLinkedAppLogInfo>(reader, global::Dropbox.Api.TeamLog.UserLinkedAppLogInfo.Decoder);
                         break;
                     case "linked_devices":
-                        value.LinkedDevices = ReadList<DeviceLogInfo>(reader, global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder);
+                        value.LinkedDevices = ReadList<LinkedDeviceLogInfo>(reader, global::Dropbox.Api.TeamLog.LinkedDeviceLogInfo.Decoder);
                         break;
                     case "linked_shared_folders":
                         value.LinkedSharedFolders = ReadList<FolderLogInfo>(reader, global::Dropbox.Api.TeamLog.FolderLogInfo.Decoder);

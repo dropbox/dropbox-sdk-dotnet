@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether users can find the team when not invited.</para>
+    /// <para>Changed whether users can find team when not invited.</para>
     /// </summary>
     public class MemberRequestsChangePolicyDetails
     {

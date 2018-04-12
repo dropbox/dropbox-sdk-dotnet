@@ -36,7 +36,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="accessType">The access type for this member.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
-        /// <param name="initials">Suggested name initials for a member.</param>
+        /// <param name="initials">Never set.</param>
         /// <param name="isInherited">True if the member has access from a parent
         /// folder.</param>
         public MembershipInfo(AccessLevel accessType,
@@ -80,7 +80,7 @@ namespace Dropbox.Api.Sharing
         public col.IList<MemberPermission> Permissions { get; protected set; }
 
         /// <summary>
-        /// <para>Suggested name initials for a member.</para>
+        /// <para>Never set.</para>
         /// </summary>
         public string Initials { get; protected set; }
 

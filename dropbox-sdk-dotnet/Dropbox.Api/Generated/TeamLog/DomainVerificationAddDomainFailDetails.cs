@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Failed to verify a domain belonging to the team.</para>
+    /// <para>Failed to verify team domain.</para>
     /// </summary>
     public class DomainVerificationAddDomainFailDetails
     {

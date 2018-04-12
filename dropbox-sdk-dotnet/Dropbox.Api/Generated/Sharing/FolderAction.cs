@@ -321,6 +321,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is SetAccessInheritance</para>
+        /// </summary>
+        public bool IsSetAccessInheritance
+        {
+            get
+            {
+                return this is SetAccessInheritance;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SetAccessInheritance, or <c>null</c>.</para>
+        /// </summary>
+        public SetAccessInheritance AsSetAccessInheritance
+        {
+            get
+            {
+                return this as SetAccessInheritance;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -434,6 +456,12 @@ namespace Dropbox.Api.Sharing
                     CreateLink.Encoder.EncodeFields((CreateLink)value, writer);
                     return;
                 }
+                if (value is SetAccessInheritance)
+                {
+                    WriteProperty(".tag", "set_access_inheritance", writer, enc.StringEncoder.Instance);
+                    SetAccessInheritance.Encoder.EncodeFields((SetAccessInheritance)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -498,6 +526,8 @@ namespace Dropbox.Api.Sharing
                         return ShareLink.Decoder.DecodeFields(reader);
                     case "create_link":
                         return CreateLink.Decoder.DecodeFields(reader);
+                    case "set_access_inheritance":
+                        return SetAccessInheritance.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1410,6 +1440,77 @@ namespace Dropbox.Api.Sharing
                 protected override CreateLink Create()
                 {
                     return CreateLink.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Set whether the folder inherits permissions from its parent.</para>
+        /// </summary>
+        public sealed class SetAccessInheritance : FolderAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SetAccessInheritance> Encoder = new SetAccessInheritanceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SetAccessInheritance> Decoder = new SetAccessInheritanceDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SetAccessInheritance" />
+            /// class.</para>
+            /// </summary>
+            private SetAccessInheritance()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SetAccessInheritance</para>
+            /// </summary>
+            public static readonly SetAccessInheritance Instance = new SetAccessInheritance();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SetAccessInheritance" />.</para>
+            /// </summary>
+            private class SetAccessInheritanceEncoder : enc.StructEncoder<SetAccessInheritance>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SetAccessInheritance value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SetAccessInheritance" />.</para>
+            /// </summary>
+            private class SetAccessInheritanceDecoder : enc.StructDecoder<SetAccessInheritance>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SetAccessInheritance"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SetAccessInheritance Create()
+                {
+                    return SetAccessInheritance.Instance;
                 }
 
             }

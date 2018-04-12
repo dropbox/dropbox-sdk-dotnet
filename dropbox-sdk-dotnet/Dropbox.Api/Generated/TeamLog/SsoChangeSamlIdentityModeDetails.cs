@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the SAML identity mode for SSO.</para>
+    /// <para>Changed SAML identity mode for SSO.</para>
     /// </summary>
     public class SsoChangeSamlIdentityModeDetails
     {

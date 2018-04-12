@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Set team member name when joining team.</para>
+    /// <para>Added team member name.</para>
     /// </summary>
     public class MemberAddNameDetails
     {
@@ -31,15 +31,15 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="MemberAddNameDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="value">User's name.</param>
-        public MemberAddNameDetails(UserNameLogInfo @value)
+        /// <param name="newValue">New user's name.</param>
+        public MemberAddNameDetails(UserNameLogInfo newValue)
         {
-            if (@value == null)
+            if (newValue == null)
             {
-                throw new sys.ArgumentNullException("@value");
+                throw new sys.ArgumentNullException("newValue");
             }
 
-            this.Value = @value;
+            this.NewValue = newValue;
         }
 
         /// <summary>
@@ -54,9 +54,9 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>User's name.</para>
+        /// <para>New user's name.</para>
         /// </summary>
-        public UserNameLogInfo Value { get; protected set; }
+        public UserNameLogInfo NewValue { get; protected set; }
 
         #region Encoder class
 
@@ -72,7 +72,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberAddNameDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("value", value.Value, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.UserNameLogInfo.Encoder);
             }
         }
 
@@ -105,8 +105,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "value":
-                        value.Value = global::Dropbox.Api.TeamLog.UserNameLogInfo.Decoder.Decode(reader);
+                    case "new_value":
+                        value.NewValue = global::Dropbox.Api.TeamLog.UserNameLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

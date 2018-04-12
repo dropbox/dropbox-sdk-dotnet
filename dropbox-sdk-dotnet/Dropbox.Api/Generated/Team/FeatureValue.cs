@@ -12,7 +12,7 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>The values correspond to entries in <see cref="Feature" />. You may get different
-    /// value according to your Dropbox for Business plan.</para>
+    /// value according to your Dropbox Business plan.</para>
     /// </summary>
     public class FeatureValue
     {
@@ -102,6 +102,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is HasTeamSelectiveSync</para>
+        /// </summary>
+        public bool IsHasTeamSelectiveSync
+        {
+            get
+            {
+                return this is HasTeamSelectiveSync;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a HasTeamSelectiveSync, or <c>null</c>.</para>
+        /// </summary>
+        public HasTeamSelectiveSync AsHasTeamSelectiveSync
+        {
+            get
+            {
+                return this as HasTeamSelectiveSync;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.Team
                     HasTeamFileEvents.Encoder.EncodeFields((HasTeamFileEvents)value, writer);
                     return;
                 }
+                if (value is HasTeamSelectiveSync)
+                {
+                    WriteProperty(".tag", "has_team_selective_sync", writer, enc.StringEncoder.Instance);
+                    HasTeamSelectiveSync.Encoder.EncodeFields((HasTeamSelectiveSync)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -199,6 +227,8 @@ namespace Dropbox.Api.Team
                         return HasTeamSharedDropbox.Decoder.DecodeFields(reader);
                     case "has_team_file_events":
                         return HasTeamFileEvents.Decoder.DecodeFields(reader);
+                    case "has_team_selective_sync":
+                        return HasTeamSelectiveSync.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -493,6 +523,105 @@ namespace Dropbox.Api.Team
                     {
                         case "has_team_file_events":
                             value.Value = global::Dropbox.Api.Team.HasTeamFileEventsValue.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The has team selective sync object</para>
+        /// </summary>
+        public sealed class HasTeamSelectiveSync : FeatureValue
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<HasTeamSelectiveSync> Encoder = new HasTeamSelectiveSyncEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<HasTeamSelectiveSync> Decoder = new HasTeamSelectiveSyncDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasTeamSelectiveSync" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public HasTeamSelectiveSync(HasTeamSelectiveSyncValue value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasTeamSelectiveSync" />
+            /// class.</para>
+            /// </summary>
+            private HasTeamSelectiveSync()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public HasTeamSelectiveSyncValue Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="HasTeamSelectiveSync" />.</para>
+            /// </summary>
+            private class HasTeamSelectiveSyncEncoder : enc.StructEncoder<HasTeamSelectiveSync>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(HasTeamSelectiveSync value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("has_team_selective_sync", value.Value, writer, global::Dropbox.Api.Team.HasTeamSelectiveSyncValue.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="HasTeamSelectiveSync" />.</para>
+            /// </summary>
+            private class HasTeamSelectiveSyncDecoder : enc.StructDecoder<HasTeamSelectiveSync>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="HasTeamSelectiveSync"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override HasTeamSelectiveSync Create()
+                {
+                    return new HasTeamSelectiveSync();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(HasTeamSelectiveSync value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "has_team_selective_sync":
+                            value.Value = global::Dropbox.Api.Team.HasTeamSelectiveSyncValue.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

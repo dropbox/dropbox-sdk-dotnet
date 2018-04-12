@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Failed to delete all files from an unlinked device.</para>
+    /// <para>Failed to delete all files from unlinked device.</para>
     /// </summary>
     public class DeviceDeleteOnUnlinkFailDetails
     {
@@ -31,19 +31,19 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="DeviceDeleteOnUnlinkFailDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="deviceInfo">Device information.</param>
         /// <param name="numFailures">The number of times that remote file deletion
         /// failed.</param>
-        public DeviceDeleteOnUnlinkFailDetails(DeviceLogInfo deviceInfo,
-                                               long numFailures)
+        /// <param name="sessionInfo">Session unique id. Might be missing due to historical
+        /// data gap.</param>
+        /// <param name="displayName">The device name. Might be missing due to historical data
+        /// gap.</param>
+        public DeviceDeleteOnUnlinkFailDetails(long numFailures,
+                                               SessionLogInfo sessionInfo = null,
+                                               string displayName = null)
         {
-            if (deviceInfo == null)
-            {
-                throw new sys.ArgumentNullException("deviceInfo");
-            }
-
-            this.DeviceInfo = deviceInfo;
             this.NumFailures = numFailures;
+            this.SessionInfo = sessionInfo;
+            this.DisplayName = displayName;
         }
 
         /// <summary>
@@ -58,14 +58,19 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Device information.</para>
-        /// </summary>
-        public DeviceLogInfo DeviceInfo { get; protected set; }
-
-        /// <summary>
         /// <para>The number of times that remote file deletion failed.</para>
         /// </summary>
         public long NumFailures { get; protected set; }
+
+        /// <summary>
+        /// <para>Session unique id. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public SessionLogInfo SessionInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>The device name. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string DisplayName { get; protected set; }
 
         #region Encoder class
 
@@ -81,8 +86,15 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceDeleteOnUnlinkFailDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("device_info", value.DeviceInfo, writer, global::Dropbox.Api.TeamLog.DeviceLogInfo.Encoder);
                 WriteProperty("num_failures", value.NumFailures, writer, enc.Int64Encoder.Instance);
+                if (value.SessionInfo != null)
+                {
+                    WriteProperty("session_info", value.SessionInfo, writer, global::Dropbox.Api.TeamLog.SessionLogInfo.Encoder);
+                }
+                if (value.DisplayName != null)
+                {
+                    WriteProperty("display_name", value.DisplayName, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -116,11 +128,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
-                    case "device_info":
-                        value.DeviceInfo = global::Dropbox.Api.TeamLog.DeviceLogInfo.Decoder.Decode(reader);
-                        break;
                     case "num_failures":
                         value.NumFailures = enc.Int64Decoder.Instance.Decode(reader);
+                        break;
+                    case "session_info":
+                        value.SessionInfo = global::Dropbox.Api.TeamLog.SessionLogInfo.Decoder.Decode(reader);
+                        break;
+                    case "display_name":
+                        value.DisplayName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

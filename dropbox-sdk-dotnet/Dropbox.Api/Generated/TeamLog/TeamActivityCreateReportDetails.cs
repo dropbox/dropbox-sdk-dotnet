@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Created a team activity report.</para>
+    /// <para>Created team activity report.</para>
     /// </summary>
     public class TeamActivityCreateReportDetails
     {

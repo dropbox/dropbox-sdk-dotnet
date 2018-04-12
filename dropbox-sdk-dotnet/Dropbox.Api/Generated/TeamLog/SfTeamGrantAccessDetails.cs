@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Granted access to a shared folder.</para>
+    /// <para>Granted access to shared folder.</para>
     /// </summary>
     public class SfTeamGrantAccessDetails
     {

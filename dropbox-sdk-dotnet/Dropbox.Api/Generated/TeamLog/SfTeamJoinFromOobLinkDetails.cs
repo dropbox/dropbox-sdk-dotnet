@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Joined a team member's shared folder from a link.</para>
+    /// <para>Joined team member's shared folder from link.</para>
     /// </summary>
     public class SfTeamJoinFromOobLinkDetails
     {

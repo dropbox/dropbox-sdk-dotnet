@@ -377,7 +377,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The current user's e-mail address is unverified.</para>
+        /// <para>Never set.</para>
         /// </summary>
         public sealed class EmailUnverified : SharedFolderAccessError
         {

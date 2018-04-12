@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the status with respect to whether the team member is under or over
-    /// storage quota specified by policy.</para>
+    /// <para>Changed space limit status.</para>
     /// </summary>
     public class MemberSpaceLimitsChangeStatusDetails
     {

@@ -62,6 +62,7 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         /// <param name="mediaInfo">Additional information if the file is a photo or
         /// video.</param>
+        /// <param name="symlinkInfo">Set if this file is a symlink.</param>
         /// <param name="sharingInfo">Set if this file is contained in a shared folder.</param>
         /// <param name="propertyGroups">Additional information if the file has custom
         /// properties with the property template specified.</param>
@@ -85,6 +86,7 @@ namespace Dropbox.Api.Files
                             string pathDisplay = null,
                             string parentSharedFolderId = null,
                             MediaInfo mediaInfo = null,
+                            SymlinkInfo symlinkInfo = null,
                             FileSharingInfo sharingInfo = null,
                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                             bool? hasExplicitSharedMembers = null,
@@ -133,6 +135,7 @@ namespace Dropbox.Api.Files
             this.Rev = rev;
             this.Size = size;
             this.MediaInfo = mediaInfo;
+            this.SymlinkInfo = symlinkInfo;
             this.SharingInfo = sharingInfo;
             this.PropertyGroups = propertyGroupsList;
             this.HasExplicitSharedMembers = hasExplicitSharedMembers;
@@ -184,6 +187,11 @@ namespace Dropbox.Api.Files
         /// <para>Additional information if the file is a photo or video.</para>
         /// </summary>
         public MediaInfo MediaInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>Set if this file is a symlink.</para>
+        /// </summary>
+        public SymlinkInfo SymlinkInfo { get; protected set; }
 
         /// <summary>
         /// <para>Set if this file is contained in a shared folder.</para>
@@ -248,6 +256,10 @@ namespace Dropbox.Api.Files
                 if (value.MediaInfo != null)
                 {
                     WriteProperty("media_info", value.MediaInfo, writer, global::Dropbox.Api.Files.MediaInfo.Encoder);
+                }
+                if (value.SymlinkInfo != null)
+                {
+                    WriteProperty("symlink_info", value.SymlinkInfo, writer, global::Dropbox.Api.Files.SymlinkInfo.Encoder);
                 }
                 if (value.SharingInfo != null)
                 {
@@ -326,6 +338,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "media_info":
                         value.MediaInfo = global::Dropbox.Api.Files.MediaInfo.Decoder.Decode(reader);
+                        break;
+                    case "symlink_info":
+                        value.SymlinkInfo = global::Dropbox.Api.Files.SymlinkInfo.Decoder.Decode(reader);
                         break;
                     case "sharing_info":
                         value.SharingInfo = global::Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);

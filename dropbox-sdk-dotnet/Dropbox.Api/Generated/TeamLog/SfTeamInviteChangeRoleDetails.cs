@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed a team member's role in a shared folder.</para>
+    /// <para>Changed team member's role in shared folder.</para>
     /// </summary>
     public class SfTeamInviteChangeRoleDetails
     {

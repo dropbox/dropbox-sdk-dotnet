@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Renamed a group.</para>
+    /// <para>Renamed group.</para>
     /// </summary>
     public class GroupRenameDetails
     {

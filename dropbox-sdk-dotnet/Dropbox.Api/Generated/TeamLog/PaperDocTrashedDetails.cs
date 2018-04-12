@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Paper doc trashed.</para>
+    /// <para>Deleted Paper doc.</para>
     /// </summary>
     public class PaperDocTrashedDetails
     {

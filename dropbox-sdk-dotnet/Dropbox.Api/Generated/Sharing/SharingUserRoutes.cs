@@ -3488,6 +3488,109 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
+        /// <para>Change the inheritance policy of an existing Shared Folder. Only permitted
+        /// for shared folders in a shared team root.</para>
+        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
+        /// returned, you'll need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckShareJobStatusAsync" />
+        /// until the action completes to get the metadata for the folder.</para>
+        /// </summary>
+        /// <param name="setAccessInheritanceArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SetAccessInheritanceError"/>.</exception>
+        public t.Task<ShareFolderLaunch> SetAccessInheritanceAsync(SetAccessInheritanceArg setAccessInheritanceArg)
+        {
+            return this.Transport.SendRpcRequestAsync<SetAccessInheritanceArg, ShareFolderLaunch, SetAccessInheritanceError>(setAccessInheritanceArg, "api", "/sharing/set_access_inheritance", "user", global::Dropbox.Api.Sharing.SetAccessInheritanceArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, global::Dropbox.Api.Sharing.SetAccessInheritanceError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the set access inheritance route.</para>
+        /// </summary>
+        /// <param name="setAccessInheritanceArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSetAccessInheritance(SetAccessInheritanceArg setAccessInheritanceArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SetAccessInheritanceAsync(setAccessInheritanceArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Change the inheritance policy of an existing Shared Folder. Only permitted
+        /// for shared folders in a shared team root.</para>
+        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
+        /// returned, you'll need to call <see
+        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckShareJobStatusAsync" />
+        /// until the action completes to get the metadata for the folder.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="accessInheritance">The access inheritance settings for the
+        /// folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SetAccessInheritanceError"/>.</exception>
+        public t.Task<ShareFolderLaunch> SetAccessInheritanceAsync(string sharedFolderId,
+                                                                   AccessInheritance accessInheritance = null)
+        {
+            var setAccessInheritanceArg = new SetAccessInheritanceArg(sharedFolderId,
+                                                                      accessInheritance);
+
+            return this.SetAccessInheritanceAsync(setAccessInheritanceArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the set access inheritance route.</para>
+        /// </summary>
+        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="accessInheritance">The access inheritance settings for the
+        /// folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSetAccessInheritance(string sharedFolderId,
+                                                          AccessInheritance accessInheritance = null,
+                                                          sys.AsyncCallback callback = null,
+                                                          object callbackState = null)
+        {
+            var setAccessInheritanceArg = new SetAccessInheritanceArg(sharedFolderId,
+                                                                      accessInheritance);
+
+            return this.BeginSetAccessInheritance(setAccessInheritanceArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the set access inheritance route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SetAccessInheritanceError"/>.</exception>
+        public ShareFolderLaunch EndSetAccessInheritance(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ShareFolderLaunch>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Share a folder with collaborators.</para>
         /// <para>Most sharing will be completed synchronously. Large folders will be completed
         /// asynchronously. To make testing the async case repeatable, set

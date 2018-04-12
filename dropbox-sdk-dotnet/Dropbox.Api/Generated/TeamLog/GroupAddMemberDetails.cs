@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Added team members to a group.</para>
+    /// <para>Added team members to group.</para>
     /// </summary>
     public class GroupAddMemberDetails
     {

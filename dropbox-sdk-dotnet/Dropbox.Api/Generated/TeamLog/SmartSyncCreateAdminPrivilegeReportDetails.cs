@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Smart Sync non-admin devices report created.</para>
+    /// <para>Created Smart Sync non-admin devices report.</para>
     /// </summary>
     public class SmartSyncCreateAdminPrivilegeReportDetails
     {

@@ -83,13 +83,13 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("id");
             }
-            if (id.Length < 1)
+            if (id.Length < 4)
             {
-                throw new sys.ArgumentOutOfRangeException("id", "Length should be at least 1");
+                throw new sys.ArgumentOutOfRangeException("id", "Length should be at least 4");
             }
-            if (!re.Regex.IsMatch(id, @"\A(?:id:.*)\z"))
+            if (!re.Regex.IsMatch(id, @"\A(?:id:.+)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("id", @"Value should match pattern '\A(?:id:.*)\z'");
+                throw new sys.ArgumentOutOfRangeException("id", @"Value should match pattern '\A(?:id:.+)\z'");
             }
 
             if (name == null)

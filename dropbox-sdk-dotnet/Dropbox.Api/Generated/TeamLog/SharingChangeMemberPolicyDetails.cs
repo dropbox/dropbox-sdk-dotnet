@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed whether team members can share files and folders externally (i.e. outside
-    /// the team).</para>
+    /// <para>Changed whether members can share files/folders outside team.</para>
     /// </summary>
     public class SharingChangeMemberPolicyDetails
     {

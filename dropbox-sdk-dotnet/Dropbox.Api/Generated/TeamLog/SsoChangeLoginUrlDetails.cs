@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the sign-in URL for SSO.</para>
+    /// <para>Changed sign-in URL for SSO.</para>
     /// </summary>
     public class SsoChangeLoginUrlDetails
     {
