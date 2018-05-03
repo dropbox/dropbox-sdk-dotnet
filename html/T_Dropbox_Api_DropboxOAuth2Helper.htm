@@ -14,8 +14,90 @@
             </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_1.htm">ProcessCodeFlowAsync(Uri, String, String, String, String, HttpClient)</a></td><td><div class="summary">
             Processes the second half of the OAuth 2.0 code flow.
             </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Examples</span></div><div id="ID4RBSection" class="collapsibleSection"><p>
+             This shows an example of how to use the code flow. This is part of a Windows Console or WPF app.
+             </p><p>
+             The <span class="code">GetAccessToken()</span> method calls <a href="M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean)</a> to create the URI with response type
+             set to <a href="T_Dropbox_Api_OAuthResponseType.htm">Code</a> for code flow.
+             </p><p><a href="http://msdn2.microsoft.com/en-us/library/b49320df" target="_blank">NewGuid<span id="LSTEC792078_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTEC792078_2?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> is called to generate a random string to use as the state argument, this value can also be used to
+             store application context and prevent cross-site request forgery.
+             </p><p>
+             A <a href="http://msdn2.microsoft.com/en-us/library/34xswsd2" target="_blank">HttpListener</a> is created to listen to the <span class="code">RedirectUri</span> which will later receive redirect callback from
+             the server. <a href="http://msdn2.microsoft.com/en-us/library/e8zac0ca" target="_blank">Start<span id="LSTEC792078_3"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTEC792078_3?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> is called to launch a native browser and navigate user to the authorize
+             URI. The <span class="code">RedirectUri</span> needs to be registered at <a href="https://www.dropbox.com/developers/apps">App Console</a>. It's
+             common to use value like <span class="code">http://127.0.0.1:{some_avaialble_port}</span>.
+             </p><p>
+             After user successfully authorizes the request, <a href="http://msdn2.microsoft.com/en-us/library/hh194002" target="_blank">GetContextAsync<span id="LSTEC792078_4"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTEC792078_4?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> will receive the redirect callback
+             which contains state and authorization code as URL parameters. <a href="M_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm">ProcessCodeFlowAsync(String, String, String, String, HttpClient)</a> is called
+             to verify the state parameter in the callback URL and complete the authorization if verification succeeds.
+             This returns an <a href="T_Dropbox_Api_OAuth2Response.htm">OAuth2Response</a> containing the access token that will be passed to the <a href="T_Dropbox_Api_DropboxClient.htm">DropboxClient</a> constructor.
+             </p><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID1EALABA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID1EALABA');return false;" title="Copy">Copy</a></div></div><div id="ID1EALABA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> <span class="highlight-keyword">async</span> Task GetAccessToken() {
+    <span class="highlight-keyword">var</span> state = Guid.NewGuid().ToString(<span class="highlight-literal">"N"</span>);
+    <span class="highlight-keyword">var</span> authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, <span class="highlight-keyword">new</span> Uri(RedirectUri), state: state);
+
+    <span class="highlight-keyword">var</span> http = <span class="highlight-keyword">new</span> HttpListener();
+    http.Prefixes.Add(RedirectUri);
+    http.Start();
+
+    System.Diagnostics.Process.Start(authorizeUri.ToString());
+
+    <span class="highlight-keyword">var</span> context = <span class="highlight-keyword">await</span> http.GetContextAsync();
+
+    <span class="highlight-keyword">var</span> result = <span class="highlight-keyword">await</span> DropboxOAuth2Helper.ProcessCodeFlowAsync(
+        context.Request.Url,
+        ApiKey,
+        ApiSecret,
+        redirectUri: RedirectUri,
+        state: state);
+
+    Settings.Default.AccessToken = result.AccessToken;
+}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1EALABA");</script><p>
+             This shows an example of how to use the code flow. This is part of a controller class on an ASP.Net MVC website.
+             </p><p>
+             The <span class="code">Connect()</span> method calls <a href="M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean)</a> to create the URI that the browser component
+             navigate to; the response type is set to <a href="T_Dropbox_Api_OAuthResponseType.htm">Code</a> to create a URI for the code flow.
+             </p><p><a href="http://msdn2.microsoft.com/en-us/library/b49320df" target="_blank">NewGuid<span id="LSTEC792078_5"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTEC792078_5?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> is called to generate a random string to use as the state argument, this value is stored
+             on a field in the web app's user database associated with the current user, this helps prevent cross-site request forgery.
+             </p><p>
+             The <span class="code">AuthAsync</span> method handles the route represented by the <span class="code">RedirectUri</span>. The ASP.Net infrastructure has already 
+             parsed the query string and extracted the <span class="code">code</span> and <span class="code">state</span> arguments. After validating that the <span class="code">state</span>
+             matches the value stored in the user record in the <span class="code">Connect</span> method, authorization is completed by calling
+             <a href="M_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm">ProcessCodeFlowAsync(String, String, String, String, HttpClient)</a>. This returns an <a href="T_Dropbox_Api_OAuth2Response.htm">OAuth2Response</a> containing the access token
+             that will be passed to the <a href="T_Dropbox_Api_DropboxClient.htm">DropboxClient</a> constructor.
+             </p><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID1EAGABA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID1EAGABA');return false;" title="Copy">Copy</a></div></div><div id="ID1EAGABA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// GET: /Home/Connect</span>
+<span class="highlight-keyword">public</span> ActionResult Connect()
+{
+    <span class="highlight-keyword">var</span> user = <span class="highlight-keyword">this</span>.store.CurrentUser();
+    user.ConnectState = Guid.NewGuid().ToString(<span class="highlight-literal">"N"</span>);
+    <span class="highlight-keyword">this</span>.store.SaveChanges();
+
+    <span class="highlight-keyword">var</span> redirect = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Code, AppKey, RedirectUri, user.ConnectState);
+    <span class="highlight-keyword">return</span> Redirect(redirect.ToString());
+}
+
+<span class="highlight-comment">// GET: /Home/Auth</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">async</span> Task&lt;ActionResult&gt; AuthAsync(<span class="highlight-keyword">string</span> code, <span class="highlight-keyword">string</span> state)
+{
+    <span class="highlight-keyword">var</span> user = <span class="highlight-keyword">this</span>.store.CurrentUser();
+
+    <span class="highlight-keyword">if</span> (user.ConnectState != state)
+    {
+        <span class="highlight-keyword">this</span>.Flash(<span class="highlight-literal">"There was an error connecting to Dropbox."</span>);
+        <span class="highlight-keyword">return</span> <span class="highlight-keyword">this</span>.RedirectToAction(<span class="highlight-literal">"Index"</span>);
+    }
+
+    OAuth2Response response = <span class="highlight-keyword">await</span> DropboxOAuth2Helper.ProcessCodeFlowAsync(code, AppKey, AppSecret, RedirectUri);
+
+    user.DropboxAccessToken = response.AccessToken;
+    <span class="highlight-keyword">await</span> <span class="highlight-keyword">this</span>.store.SaveChangesAsync();
+
+    <span class="highlight-keyword">this</span>.Flash(<span class="highlight-literal">"This account has been connected to Dropbox."</span>);
+    <span class="highlight-keyword">return</span> <span class="highlight-keyword">this</span>.RedirectToAction(<span class="highlight-literal">"Profile"</span>);
+}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1EAGABA");</script><p>
              This shows an example of how to use the token, or implicit grant, flow.
              This code is part of a XAML window that contains a WebBrowser object as <span class="code">this.Browser</span></p><p>
+             Warning: Handling OAuth flow in embedded webview is deprecated and may no longer work in the future. We strongly
+             recommend following one of the two code flow examples above.
+             </p><p>
              The <span class="code">Start</span> method calls <a href="M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean)</a> to create the URI that the browser component
              navigate to; the response type is set to <a href="T_Dropbox_Api_OAuthResponseType.htm">Token</a> to create a URI for the token flow.
              </p><p>
@@ -25,11 +107,11 @@
              </p><p>
              The <span class="code">BrowserNavigating</span> method has been attached to the <span class="code">Navigating</span> event on the <span class="code">WebBrowser</span> object.
              It first checks if the URI to which the browser is navigating starts with the redirect uri provided in the call to
-             <a href="M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean)</a> — it is important not to prevent other navigation which may happen within the 
-             authorization flow — if the URI matches, then the code uses <a href="M_Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment.htm">ParseTokenFragment(Uri)</a> to parse the 
+             <a href="M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean)</a> — it is important not to prevent other navigation which may happen within the
+             authorization flow — if the URI matches, then the code uses <a href="M_Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment.htm">ParseTokenFragment(Uri)</a> to parse the
              <a href="T_Dropbox_Api_OAuth2Response.htm">OAuth2Response</a> from the fragment component of the redirected URI. The <a href="P_Dropbox_Api_OAuth2Response_AccessToken.htm">AccessToken</a>
              will then be used to construct an instance of <a href="T_Dropbox_Api_DropboxClient.htm">DropboxClient</a>.
-             </p><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID1EAFABA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID1EAFABA');return false;" title="Copy">Copy</a></div></div><div id="ID1EAFABA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> Start(<span class="highlight-keyword">string</span> appKey)
+             </p><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID1EAAABA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID1EAAABA');return false;" title="Copy">Copy</a></div></div><div id="ID1EAAABA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> Start(<span class="highlight-keyword">string</span> appKey)
 {
     <span class="highlight-keyword">this</span>.oauth2State = Guid.NewGuid().ToString(<span class="highlight-literal">"N"</span>);
     Uri authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Token, appKey, RedirectUri, state: oauth2State);
@@ -66,46 +148,4 @@
         e.Cancel = <span class="highlight-keyword">true</span>;
         <span class="highlight-keyword">this</span>.Close();
     }
-}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1EAFABA");</script><p>
-             This shows an example of how to use the code flow. This is part of a controller class on an ASP.Net MVC website.
-             </p><p>
-             The <span class="code">Connect()</span> method calls <a href="M_Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri.htm">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean)</a> to create the URI that the browser component
-             navigate to; the response type is set to <a href="T_Dropbox_Api_OAuthResponseType.htm">Code</a> to create a URI for the code flow.
-             </p><p><a href="http://msdn2.microsoft.com/en-us/library/b49320df" target="_blank">NewGuid<span id="LSTEC792078_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTEC792078_2?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> is called to generate a random string to use as the state argument, this value is stored
-             on a field in the web app's user database associated with the current user, this helps prevent cross-site request forgery.
-             </p><p>
-             The <span class="code">AuthAsync</span> method handles the route represented by the <span class="code">RedirectUri</span>. The ASP.Net infrastructure has already 
-             parsed the query string and extracted the <span class="code">code</span> and <span class="code">state</span> arguments. After validating that the <span class="code">state</span>
-             matches the value stored in the user record in the <span class="code">Connect</span> method, authorization is completed by calling
-             <a href="M_Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync.htm">ProcessCodeFlowAsync(String, String, String, String, HttpClient)</a>. This returns an <a href="T_Dropbox_Api_OAuth2Response.htm">OAuth2Response</a> containing the access token
-             that will be passed to the <a href="T_Dropbox_Api_DropboxClient.htm">DropboxClient</a> constructor.
-             </p><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID1EAAABA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID1EAAABA');return false;" title="Copy">Copy</a></div></div><div id="ID1EAAABA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// GET: /Home/Connect</span>
-<span class="highlight-keyword">public</span> ActionResult Connect()
-{
-    <span class="highlight-keyword">var</span> user = <span class="highlight-keyword">this</span>.store.CurrentUser();
-    user.ConnectState = Guid.NewGuid().ToString(<span class="highlight-literal">"N"</span>);
-    <span class="highlight-keyword">this</span>.store.SaveChanges();
-
-    <span class="highlight-keyword">var</span> redirect = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Code, AppKey, RedirectUri, user.ConnectState);
-    <span class="highlight-keyword">return</span> Redirect(redirect.ToString());
-}
-
-<span class="highlight-comment">// GET: /Home/Auth</span>
-<span class="highlight-keyword">public</span> <span class="highlight-keyword">async</span> Task&lt;ActionResult&gt; AuthAsync(<span class="highlight-keyword">string</span> code, <span class="highlight-keyword">string</span> state)
-{
-    <span class="highlight-keyword">var</span> user = <span class="highlight-keyword">this</span>.store.CurrentUser();
-
-    <span class="highlight-keyword">if</span> (user.ConnectState != state)
-    {
-        <span class="highlight-keyword">this</span>.Flash(<span class="highlight-literal">"There was an error connecting to Dropbox."</span>);
-        <span class="highlight-keyword">return</span> <span class="highlight-keyword">this</span>.RedirectToAction(<span class="highlight-literal">"Index"</span>);
-    }
-
-    OAuth2Response response = <span class="highlight-keyword">await</span> DropboxOAuth2Helper.ProcessCodeFlowAsync(code, AppKey, AppSecret, RedirectUri);
-
-    user.DropboxAccessToken = response.AccessToken;
-    <span class="highlight-keyword">await</span> <span class="highlight-keyword">this</span>.store.SaveChangesAsync();
-
-    <span class="highlight-keyword">this</span>.Flash(<span class="highlight-literal">"This account has been connected to Dropbox."</span>);
-    <span class="highlight-keyword">return</span> <span class="highlight-keyword">this</span>.RedirectToAction(<span class="highlight-literal">"Profile"</span>);
 }</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1EAAABA");</script></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID5RB')" onkeypress="SectionExpandCollapse_CheckKey('ID5RB', event)" tabindex="0"><img id="ID5RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID5RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_Dropbox_Api.htm">Dropbox.Api Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"> </div></body></html>
