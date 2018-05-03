@@ -40,64 +40,87 @@ namespace Dropbox.Api
     /// </summary>
     /// <example>
     /// <para>
-    /// This shows an example of how to use the token, or implicit grant, flow.
-    /// This code is part of a XAML window that contains a WebBrowser object as <c>this.Browser</c>
+    /// This shows an example of how to use the token flow. This is part of a Windows Console or WPF app.
     /// </para>
     /// <para>
-    /// The <c>Start</c> method calls <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> to create the URI that the browser component
-    /// navigate to; the response type is set to <see cref="OAuthResponseType.Token"/> to create a URI for the token flow.
+    /// The <c>GetAccessToken()</c> method calls <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> to create the URI with response type
+    /// set to <see cref="OAuthResponseType.Token"/> for token flow.
     /// </para>
     /// <para>
-    /// The exact value of the redirect URI is not important with the code flow, only that it is registered in the
-    /// <a href="https://www.dropbox.com/developers/apps">App Console</a>; it is common to use a <c>localhost</c>
-    /// URI for use within a client token flow like this.
+    /// <see cref="Guid.NewGuid"/> is called to generate a random string to use as the state argument, this value can also be used to
+    /// store application context and prevent cross-site request forgery.
     /// </para>
     /// <para>
-    /// The <c>BrowserNavigating</c> method has been attached to the <c>Navigating</c> event on the <c>WebBrowser</c> object.
-    /// It first checks if the URI to which the browser is navigating starts with the redirect uri provided in the call to
-    /// <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> &#x2014; it is important not to prevent other navigation which may happen within the 
-    /// authorization flow &#x2014; if the URI matches, then the code uses <see cref="DropboxOAuth2Helper.ParseTokenFragment"/> to parse the 
-    /// <see cref="OAuth2Response"/> from the fragment component of the redirected URI. The <see cref="OAuth2Response.AccessToken" />
-    /// will then be used to construct an instance of <see cref="DropboxClient"/>.
+    /// A <see cref="HttpListener"/> is created to listen to the <c>RedirectUri</c> which will later receive redirect callback from
+    /// the server. <see cref="System.Diagnostics.Process.Start"/> is called to launch a native browser and navigate user to the authorize
+    /// URI. The <c>RedirectUri</c> needs to be registered at <a href="https://www.dropbox.com/developers/apps">App Console</a>. It's
+    /// common to use value like <c>http://127.0.0.1:{some_avaialble_port}</c>.
+    /// </para>
+    /// <para>
+    /// After user successfully authorizes the request, <c>HandleOAuth2Redirect</c> receives the redirect callback which contains state
+    /// and access token as URL fragment. Since the server cannot receive URL fragment directly, it calls <c>RespondPageWithJSRedirect</c>
+    /// to respond with a HTML page which runs JS code and sends URL fragment as query string parameter to a separate <c>JSRedirect</c> endpoint.
+    /// </para>
+    /// <para>
+    /// <c>HandleJSRedirect</c> is called to handle redirect from JS code and processes OAuth response from query string.
+    /// This returns an <see cref="OAuth2Response"/> containing the access token that will be passed to the <see cref="DropboxClient"/> constructor.
     /// </para>
     /// <code>
-    /// private void Start(string appKey)
+    /// private async Task HandleOAuth2Redirect(HttpListener http)
     /// {
-    ///     this.oauth2State = Guid.NewGuid().ToString("N");
-    ///     Uri authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Token, appKey, RedirectUri, state: oauth2State);
-    ///     this.Browser.Navigate(authorizeUri);
+    ///     var context = await http.GetContextAsync();
+    ///
+    ///     // We only care about request to RedirectUri endpoint.
+    ///     while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+    ///     {
+    ///         context = await http.GetContextAsync();
+    ///     }
+    ///
+    ///     // Respond with a HTML page which runs JS to send URl fragment.
+    ///     RespondPageWithJSRedirect();
     /// }
     ///
-    /// private void BrowserNavigating(object sender, NavigatingCancelEventArgs e)
+    ///
+    /// private async Task&lt;OAuth2Response&gt; HandleJSRedirect(HttpListener http)
     /// {
-    ///     if (!e.Uri.ToString().StartsWith(RedirectUri, StringComparison.OrdinalIgnoreCase))
+    ///     var context = await http.GetContextAsync();
+    ///
+    ///     // We only care about request to TokenRedirectUri endpoint.
+    ///     while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
     ///     {
-    ///         // we need to ignore all navigation that isn't to the redirect uri.
-    ///         return;
+    ///         context = await http.GetContextAsync();
     ///     }
     ///
-    ///     try
-    ///     {
-    ///         OAuth2Response result = DropboxOAuth2Helper.ParseTokenFragment(e.Uri);
-    ///         if (result.State != this.oauth2State)
-    ///         {
-    ///             // The state in the response doesn't match the state in the request.
-    ///             return;
-    ///         }
+    ///     var redirectUri = new Uri(context.Request.QueryString["url_with_fragment"]);
     ///
-    ///         this.AccessToken = result.AccessToken;
-    ///         this.Uid = result.Uid;
-    ///         this.Result = true;
-    ///     }
-    ///     catch (ArgumentException)
+    ///     var result = DropboxOAuth2Helper.ParseTokenFragment(redirectUri);
+    ///
+    ///     return result;
+    /// }
+    ///
+    /// private async Task GetAccessToken() {
+    ///     var state = Guid.NewGuid().ToString("N");
+    ///     var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, new Uri(RedirectUri), state: state);
+    ///
+    ///     var http = new HttpListener();
+    ///     http.Prefixes.Add(RedirectUri);
+    ///     http.Start();
+    ///
+    ///     System.Diagnostics.Process.Start(authorizeUri.ToString());
+    ///
+    ///     // Handle OAuth redirect and send URL fragment to local server using JS.
+    ///     await HandleOAuth2Redirect(http);
+    ///
+    ///     // Handle redirect from JS and process OAuth response.
+    ///     var result = await HandleJSRedirect(http);
+    ///
+    ///     if (result.State != state)
     ///     {
-    ///         // There was an error in the URI passed to ParseTokenFragment
+    ///         // The state in the response doesn't match the state in the request.
+    ///         return null;
     ///     }
-    ///     finally
-    ///     {
-    ///         e.Cancel = true;
-    ///         this.Close();
-    ///     }
+    ///
+    ///     Settings.Default.AccessToken = result.AccessToken;
     /// }
     /// </code>
     /// <para>
