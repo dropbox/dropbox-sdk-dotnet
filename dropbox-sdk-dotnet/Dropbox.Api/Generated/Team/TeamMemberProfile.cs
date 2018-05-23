@@ -52,6 +52,8 @@ namespace Dropbox.Api.Team
         /// team.</param>
         /// <param name="persistentId">Persistent ID that a team can attach to the user. The
         /// persistent ID is unique ID to be used for SAML authentication.</param>
+        /// <param name="isDirectoryRestricted">Whether the user is a directory restricted
+        /// user.</param>
         public TeamMemberProfile(string teamMemberId,
                                  string email,
                                  bool emailVerified,
@@ -63,8 +65,9 @@ namespace Dropbox.Api.Team
                                  string externalId = null,
                                  string accountId = null,
                                  sys.DateTime? joinedOn = null,
-                                 string persistentId = null)
-            : base(teamMemberId, email, emailVerified, status, name, membershipType, externalId, accountId, joinedOn, persistentId)
+                                 string persistentId = null,
+                                 bool? isDirectoryRestricted = null)
+            : base(teamMemberId, email, emailVerified, status, name, membershipType, externalId, accountId, joinedOn, persistentId, isDirectoryRestricted)
         {
             var groupsList = enc.Util.ToList(groups);
 
@@ -145,6 +148,10 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty("persistent_id", value.PersistentId, writer, enc.StringEncoder.Instance);
                 }
+                if (value.IsDirectoryRestricted != null)
+                {
+                    WriteProperty("is_directory_restricted", value.IsDirectoryRestricted.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 
@@ -212,6 +219,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "persistent_id":
                         value.PersistentId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_directory_restricted":
+                        value.IsDirectoryRestricted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

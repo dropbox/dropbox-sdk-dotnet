@@ -41,12 +41,15 @@ namespace Dropbox.Api.Team
         /// <param name="newSurname">New surname for member.</param>
         /// <param name="newPersistentId">New persistent ID. This field only available to teams
         /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
         public MembersSetProfileArg(UserSelectorArg user,
                                     string newEmail = null,
                                     string newExternalId = null,
                                     string newGivenName = null,
                                     string newSurname = null,
-                                    string newPersistentId = null)
+                                    string newPersistentId = null,
+                                    bool? newIsDirectoryRestricted = null)
         {
             if (user == null)
             {
@@ -103,6 +106,7 @@ namespace Dropbox.Api.Team
             this.NewGivenName = newGivenName;
             this.NewSurname = newSurname;
             this.NewPersistentId = newPersistentId;
+            this.NewIsDirectoryRestricted = newIsDirectoryRestricted;
         }
 
         /// <summary>
@@ -147,6 +151,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public string NewPersistentId { get; protected set; }
 
+        /// <summary>
+        /// <para>New value for whether the user is a directory restricted user.</para>
+        /// </summary>
+        public bool? NewIsDirectoryRestricted { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -181,6 +190,10 @@ namespace Dropbox.Api.Team
                 if (value.NewPersistentId != null)
                 {
                     WriteProperty("new_persistent_id", value.NewPersistentId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.NewIsDirectoryRestricted != null)
+                {
+                    WriteProperty("new_is_directory_restricted", value.NewIsDirectoryRestricted.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -231,6 +244,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "new_persistent_id":
                         value.NewPersistentId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "new_is_directory_restricted":
+                        value.NewIsDirectoryRestricted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

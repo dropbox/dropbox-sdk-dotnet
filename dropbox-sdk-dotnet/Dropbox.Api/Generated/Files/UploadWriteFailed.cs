@@ -32,8 +32,10 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="reason">The reason why the file couldn't be saved.</param>
-        /// <param name="uploadSessionId">The upload session ID; this may be used to retry the
-        /// commit.</param>
+        /// <param name="uploadSessionId">The upload session ID; data has already been uploaded
+        /// to the corresponding upload session and this ID may be used to retry the commit
+        /// with <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync"
+        /// />.</param>
         public UploadWriteFailed(WriteError reason,
                                  string uploadSessionId)
         {
@@ -68,7 +70,9 @@ namespace Dropbox.Api.Files
         public WriteError Reason { get; protected set; }
 
         /// <summary>
-        /// <para>The upload session ID; this may be used to retry the commit.</para>
+        /// <para>The upload session ID; data has already been uploaded to the corresponding
+        /// upload session and this ID may be used to retry the commit with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />.</para>
         /// </summary>
         public string UploadSessionId { get; protected set; }
 

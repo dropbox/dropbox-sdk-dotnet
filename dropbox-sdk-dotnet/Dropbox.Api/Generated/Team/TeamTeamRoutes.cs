@@ -3871,6 +3871,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="newSurname">New surname for member.</param>
         /// <param name="newPersistentId">New persistent ID. This field only available to teams
         /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3881,14 +3883,16 @@ namespace Dropbox.Api.Team.Routes
                                                              string newExternalId = null,
                                                              string newGivenName = null,
                                                              string newSurname = null,
-                                                             string newPersistentId = null)
+                                                             string newPersistentId = null,
+                                                             bool? newIsDirectoryRestricted = null)
         {
             var membersSetProfileArg = new MembersSetProfileArg(user,
                                                                 newEmail,
                                                                 newExternalId,
                                                                 newGivenName,
                                                                 newSurname,
-                                                                newPersistentId);
+                                                                newPersistentId,
+                                                                newIsDirectoryRestricted);
 
             return this.MembersSetProfileAsync(membersSetProfileArg);
         }
@@ -3903,6 +3907,8 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="newSurname">New surname for member.</param>
         /// <param name="newPersistentId">New persistent ID. This field only available to teams
         /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3914,6 +3920,7 @@ namespace Dropbox.Api.Team.Routes
                                                        string newGivenName = null,
                                                        string newSurname = null,
                                                        string newPersistentId = null,
+                                                       bool? newIsDirectoryRestricted = null,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
@@ -3922,7 +3929,8 @@ namespace Dropbox.Api.Team.Routes
                                                                 newExternalId,
                                                                 newGivenName,
                                                                 newSurname,
-                                                                newPersistentId);
+                                                                newPersistentId,
+                                                                newIsDirectoryRestricted);
 
             return this.BeginMembersSetProfile(membersSetProfileArg, callback, callbackState);
         }

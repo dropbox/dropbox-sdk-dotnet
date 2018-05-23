@@ -4833,7 +4833,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Append more data to an upload session.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// </summary>
         /// <param name="uploadSessionCursor">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -4867,7 +4868,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Append more data to an upload session.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// </summary>
         /// <param name="sessionId">The upload session ID (returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
@@ -4941,7 +4943,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Append more data to an upload session.</para>
         /// <para>When the parameter close is set, this call will close the session.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// </summary>
         /// <param name="uploadSessionAppendArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -4974,7 +4977,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Append more data to an upload session.</para>
         /// <para>When the parameter close is set, this call will close the session.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="close">If true, the current session will be closed, at which point you
@@ -5043,7 +5047,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Finish an upload session and save the uploaded data to the given file
         /// path.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// </summary>
         /// <param name="uploadSessionFinishArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -5077,7 +5082,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Finish an upload session and save the uploaded data to the given file
         /// path.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
@@ -5155,8 +5161,8 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
         /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
-        /// call.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
+        /// The maximum size of a file one can upload to an upload session is 350 GB.</para>
         /// <para>This route will return a job_id immediately and do the async commit job in
         /// background. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
@@ -5201,8 +5207,8 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
         /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
-        /// call.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
+        /// The maximum size of a file one can upload to an upload session is 350 GB.</para>
         /// <para>This route will return a job_id immediately and do the async commit job in
         /// background. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
@@ -5358,7 +5364,8 @@ namespace Dropbox.Api.Files.Routes
         /// add more data and <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
         /// all the data to a file in Dropbox.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// <para>An upload session can be used for a maximum of 48 hours. Attempting to use an
         /// <see cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
@@ -5400,7 +5407,8 @@ namespace Dropbox.Api.Files.Routes
         /// add more data and <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
         /// all the data to a file in Dropbox.</para>
-        /// <para>A single request should not upload more than 150 MB.</para>
+        /// <para>A single request should not upload more than 150 MB. The maximum size of a
+        /// file one can upload to an upload session is 350 GB.</para>
         /// <para>An upload session can be used for a maximum of 48 hours. Attempting to use an
         /// <see cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or

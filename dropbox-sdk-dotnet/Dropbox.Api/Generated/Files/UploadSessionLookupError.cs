@@ -124,6 +124,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TooLarge</para>
+        /// </summary>
+        public bool IsTooLarge
+        {
+            get
+            {
+                return this is TooLarge;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooLarge, or <c>null</c>.</para>
+        /// </summary>
+        public TooLarge AsTooLarge
+        {
+            get
+            {
+                return this as TooLarge;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -183,6 +205,12 @@ namespace Dropbox.Api.Files
                     NotClosed.Encoder.EncodeFields((NotClosed)value, writer);
                     return;
                 }
+                if (value is TooLarge)
+                {
+                    WriteProperty(".tag", "too_large", writer, enc.StringEncoder.Instance);
+                    TooLarge.Encoder.EncodeFields((TooLarge)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -230,6 +258,8 @@ namespace Dropbox.Api.Files
                         return Closed.Decoder.DecodeFields(reader);
                     case "not_closed":
                         return NotClosed.Decoder.DecodeFields(reader);
+                    case "too_large":
+                        return TooLarge.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -532,6 +562,76 @@ namespace Dropbox.Api.Files
                 protected override NotClosed Create()
                 {
                     return NotClosed.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>You can not append to the upload session because the size of a file should
+        /// not reach the max file size limit (i.e. 350GB).</para>
+        /// </summary>
+        public sealed class TooLarge : UploadSessionLookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooLarge> Encoder = new TooLargeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooLarge> Decoder = new TooLargeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooLarge" /> class.</para>
+            /// </summary>
+            private TooLarge()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooLarge</para>
+            /// </summary>
+            public static readonly TooLarge Instance = new TooLarge();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooLarge" />.</para>
+            /// </summary>
+            private class TooLargeEncoder : enc.StructEncoder<TooLarge>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooLarge value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooLarge" />.</para>
+            /// </summary>
+            private class TooLargeDecoder : enc.StructDecoder<TooLarge>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooLarge" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooLarge Create()
+                {
+                    return TooLarge.Instance;
                 }
 
             }

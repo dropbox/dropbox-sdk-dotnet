@@ -41,13 +41,15 @@ namespace Dropbox.Api.Team
         /// be useful for apps using single sign-on (SSO) flows for onboarding that want to
         /// handle announcements themselves.</param>
         /// <param name="role">The role</param>
+        /// <param name="isDirectoryRestricted">Whether a user is directory restricted.</param>
         public MemberAddArg(string memberEmail,
                             string memberGivenName = null,
                             string memberSurname = null,
                             string memberExternalId = null,
                             string memberPersistentId = null,
                             bool sendWelcomeEmail = true,
-                            AdminTier role = null)
+                            AdminTier role = null,
+                            bool? isDirectoryRestricted = null)
         {
             if (memberEmail == null)
             {
@@ -105,6 +107,7 @@ namespace Dropbox.Api.Team
             this.MemberPersistentId = memberPersistentId;
             this.SendWelcomeEmail = sendWelcomeEmail;
             this.Role = role;
+            this.IsDirectoryRestricted = isDirectoryRestricted;
         }
 
         /// <summary>
@@ -158,6 +161,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public AdminTier Role { get; protected set; }
 
+        /// <summary>
+        /// <para>Whether a user is directory restricted.</para>
+        /// </summary>
+        public bool? IsDirectoryRestricted { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -191,6 +199,10 @@ namespace Dropbox.Api.Team
                 }
                 WriteProperty("send_welcome_email", value.SendWelcomeEmail, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("role", value.Role, writer, global::Dropbox.Api.Team.AdminTier.Encoder);
+                if (value.IsDirectoryRestricted != null)
+                {
+                    WriteProperty("is_directory_restricted", value.IsDirectoryRestricted.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 
@@ -243,6 +255,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "role":
                         value.Role = global::Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
+                        break;
+                    case "is_directory_restricted":
+                        value.IsDirectoryRestricted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

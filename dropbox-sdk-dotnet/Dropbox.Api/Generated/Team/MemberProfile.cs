@@ -48,6 +48,8 @@ namespace Dropbox.Api.Team
         /// team.</param>
         /// <param name="persistentId">Persistent ID that a team can attach to the user. The
         /// persistent ID is unique ID to be used for SAML authentication.</param>
+        /// <param name="isDirectoryRestricted">Whether the user is a directory restricted
+        /// user.</param>
         public MemberProfile(string teamMemberId,
                              string email,
                              bool emailVerified,
@@ -57,7 +59,8 @@ namespace Dropbox.Api.Team
                              string externalId = null,
                              string accountId = null,
                              sys.DateTime? joinedOn = null,
-                             string persistentId = null)
+                             string persistentId = null,
+                             bool? isDirectoryRestricted = null)
         {
             if (teamMemberId == null)
             {
@@ -106,6 +109,7 @@ namespace Dropbox.Api.Team
             this.AccountId = accountId;
             this.JoinedOn = joinedOn;
             this.PersistentId = persistentId;
+            this.IsDirectoryRestricted = isDirectoryRestricted;
         }
 
         /// <summary>
@@ -172,6 +176,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public string PersistentId { get; protected set; }
 
+        /// <summary>
+        /// <para>Whether the user is a directory restricted user.</para>
+        /// </summary>
+        public bool? IsDirectoryRestricted { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -207,6 +216,10 @@ namespace Dropbox.Api.Team
                 if (value.PersistentId != null)
                 {
                     WriteProperty("persistent_id", value.PersistentId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.IsDirectoryRestricted != null)
+                {
+                    WriteProperty("is_directory_restricted", value.IsDirectoryRestricted.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -269,6 +282,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "persistent_id":
                         value.PersistentId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_directory_restricted":
+                        value.IsDirectoryRestricted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

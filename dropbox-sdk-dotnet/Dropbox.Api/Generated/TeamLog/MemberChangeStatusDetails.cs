@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed membership status of team member.</para>
+    /// <para>Changed member status (invited, joined, suspended, etc.).</para>
     /// </summary>
     public class MemberChangeStatusDetails
     {

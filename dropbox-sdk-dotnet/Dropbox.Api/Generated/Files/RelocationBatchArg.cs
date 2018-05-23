@@ -56,6 +56,10 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("entries");
             }
+            if (entriesList.Count < 1)
+            {
+                throw new sys.ArgumentOutOfRangeException("entries", "List should at at least 1 items");
+            }
 
             this.Entries = entriesList;
             this.AllowSharedFolder = allowSharedFolder;

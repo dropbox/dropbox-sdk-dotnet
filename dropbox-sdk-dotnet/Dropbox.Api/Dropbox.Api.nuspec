@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.8.0</version>
+    <version>4.8.1</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -14,30 +14,11 @@
     <releaseNotes> 
 What's New:
   - Files:
-    - new SymlinkInfo struct on FileMetadata
-    - added TooManyWriteOperations error type to WriteError
-    - New CreateFolderBatch endpoint and related datatypes
-    - Added parent_rev attribute to DeleteArg
-    - New ThumbnailSize
-    - New ThumbnailMode object
-    - New SyncSettings objects
-
-  - Sharing:
-    - add SeenState.PlatformType to UserFileMembershipInfo
-    - new SetAccessInheritance for FolderAction
-    - additional user info added to UserInfo struct
-    - new AccessInheritance union
-    - new SetAccessInheritance route
+    - added new TooLarge error type for uploads
 
   - Team:
-    - new HasTeamSelectiveSync object
-    - new selective sync settings included in various return objects and error types
-    - new update_sync_settings route
-
-  - TeamPolicies:
-    - new ShowcaseEnabledPolicy object
-    - new ShowcaseDownloadPolicy object
-    - new ShowcaseExternalSharingPolicy object
+    - add is_directory_restricted attribute to MemberProfile, MemberAddArg
+    - add new_is_directory_restricted to MemberSetProfileArg
    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

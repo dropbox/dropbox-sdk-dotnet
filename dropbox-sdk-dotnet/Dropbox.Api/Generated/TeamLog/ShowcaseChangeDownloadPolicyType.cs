@@ -11,70 +11,68 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed invitee from shared file/folder before invite was accepted.</para>
+    /// <para>The showcase change download policy type object</para>
     /// </summary>
-    public class SharedContentRemoveInviteesDetails
+    public class ShowcaseChangeDownloadPolicyType
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<SharedContentRemoveInviteesDetails> Encoder = new SharedContentRemoveInviteesDetailsEncoder();
+        internal static enc.StructEncoder<ShowcaseChangeDownloadPolicyType> Encoder = new ShowcaseChangeDownloadPolicyTypeEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<SharedContentRemoveInviteesDetails> Decoder = new SharedContentRemoveInviteesDetailsDecoder();
+        internal static enc.StructDecoder<ShowcaseChangeDownloadPolicyType> Decoder = new ShowcaseChangeDownloadPolicyTypeDecoder();
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="SharedContentRemoveInviteesDetails" /> class.</para>
+        /// cref="ShowcaseChangeDownloadPolicyType" /> class.</para>
         /// </summary>
-        /// <param name="invitees">A list of invitees.</param>
-        public SharedContentRemoveInviteesDetails(col.IEnumerable<string> invitees)
+        /// <param name="description">The description</param>
+        public ShowcaseChangeDownloadPolicyType(string description)
         {
-            var inviteesList = enc.Util.ToList(invitees);
-
-            if (invitees == null)
+            if (description == null)
             {
-                throw new sys.ArgumentNullException("invitees");
+                throw new sys.ArgumentNullException("description");
             }
 
-            this.Invitees = inviteesList;
+            this.Description = description;
         }
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="SharedContentRemoveInviteesDetails" /> class.</para>
+        /// cref="ShowcaseChangeDownloadPolicyType" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public SharedContentRemoveInviteesDetails()
+        public ShowcaseChangeDownloadPolicyType()
         {
         }
 
         /// <summary>
-        /// <para>A list of invitees.</para>
+        /// <para>Gets the description of the showcase change download policy type</para>
         /// </summary>
-        public col.IList<string> Invitees { get; protected set; }
+        public string Description { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="SharedContentRemoveInviteesDetails" />.</para>
+        /// <para>Encoder for  <see cref="ShowcaseChangeDownloadPolicyType" />.</para>
         /// </summary>
-        private class SharedContentRemoveInviteesDetailsEncoder : enc.StructEncoder<SharedContentRemoveInviteesDetails>
+        private class ShowcaseChangeDownloadPolicyTypeEncoder : enc.StructEncoder<ShowcaseChangeDownloadPolicyType>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(SharedContentRemoveInviteesDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(ShowcaseChangeDownloadPolicyType value, enc.IJsonWriter writer)
             {
-                WriteListProperty("invitees", value.Invitees, writer, enc.StringEncoder.Instance);
+                WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -84,18 +82,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="SharedContentRemoveInviteesDetails" />.</para>
+        /// <para>Decoder for  <see cref="ShowcaseChangeDownloadPolicyType" />.</para>
         /// </summary>
-        private class SharedContentRemoveInviteesDetailsDecoder : enc.StructDecoder<SharedContentRemoveInviteesDetails>
+        private class ShowcaseChangeDownloadPolicyTypeDecoder : enc.StructDecoder<ShowcaseChangeDownloadPolicyType>
         {
             /// <summary>
             /// <para>Create a new instance of type <see
-            /// cref="SharedContentRemoveInviteesDetails" />.</para>
+            /// cref="ShowcaseChangeDownloadPolicyType" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override SharedContentRemoveInviteesDetails Create()
+            protected override ShowcaseChangeDownloadPolicyType Create()
             {
-                return new SharedContentRemoveInviteesDetails();
+                return new ShowcaseChangeDownloadPolicyType();
             }
 
             /// <summary>
@@ -104,12 +102,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(SharedContentRemoveInviteesDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(ShowcaseChangeDownloadPolicyType value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "invitees":
-                        value.Invitees = ReadList<string>(reader, enc.StringDecoder.Instance);
+                    case "description":
+                        value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

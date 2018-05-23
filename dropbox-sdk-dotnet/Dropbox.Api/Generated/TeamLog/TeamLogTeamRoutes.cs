@@ -35,6 +35,11 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <para>Events have a lifespan of two years. Events older than two years will not be
         /// returned.</para>
         /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
+        /// <para>Note that the file_operations category and & analogous paper events are not
+        /// available on all Dropbox Business <a href="/business/plans-comparison">plans</a>.
+        /// Use <a
+        /// href="/developers/documentation/http/teams#team-features-get_values">features/get_values</a>
+        /// to check for this feature.</para>
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="getTeamEventsArg">The request parameters</param>
@@ -69,6 +74,11 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <para>Events have a lifespan of two years. Events older than two years will not be
         /// returned.</para>
         /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
+        /// <para>Note that the file_operations category and & analogous paper events are not
+        /// available on all Dropbox Business <a href="/business/plans-comparison">plans</a>.
+        /// Use <a
+        /// href="/developers/documentation/http/teams#team-features-get_values">features/get_values</a>
+        /// to check for this feature.</para>
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>

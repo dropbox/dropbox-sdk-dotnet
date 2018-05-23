@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed access type of invitee to shared file/folder before invite
+    /// <para>Changed access type of invitee to shared file/folder before invite was
     /// accepted.</para>
     /// </summary>
     public class SharedContentChangeInviteeRoleDetails

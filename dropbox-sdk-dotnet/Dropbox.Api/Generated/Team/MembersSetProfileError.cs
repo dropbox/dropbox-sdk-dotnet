@@ -217,6 +217,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DirectoryRestrictedOff</para>
+        /// </summary>
+        public bool IsDirectoryRestrictedOff
+        {
+            get
+            {
+                return this is DirectoryRestrictedOff;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DirectoryRestrictedOff, or <c>null</c>.</para>
+        /// </summary>
+        public DirectoryRestrictedOff AsDirectoryRestrictedOff
+        {
+            get
+            {
+                return this as DirectoryRestrictedOff;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -322,6 +345,12 @@ namespace Dropbox.Api.Team
                     PersistentIdUsedByOtherUser.Encoder.EncodeFields((PersistentIdUsedByOtherUser)value, writer);
                     return;
                 }
+                if (value is DirectoryRestrictedOff)
+                {
+                    WriteProperty(".tag", "directory_restricted_off", writer, enc.StringEncoder.Instance);
+                    DirectoryRestrictedOff.Encoder.EncodeFields((DirectoryRestrictedOff)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -383,6 +412,8 @@ namespace Dropbox.Api.Team
                         return PersistentIdDisabled.Decoder.DecodeFields(reader);
                     case "persistent_id_used_by_other_user":
                         return PersistentIdUsedByOtherUser.Decoder.DecodeFields(reader);
+                    case "directory_restricted_off":
+                        return DirectoryRestrictedOff.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
@@ -956,6 +987,77 @@ namespace Dropbox.Api.Team
                 protected override PersistentIdUsedByOtherUser Create()
                 {
                     return PersistentIdUsedByOtherUser.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Directory Restrictions option is not available.</para>
+        /// </summary>
+        public sealed class DirectoryRestrictedOff : MembersSetProfileError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DirectoryRestrictedOff> Encoder = new DirectoryRestrictedOffEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DirectoryRestrictedOff> Decoder = new DirectoryRestrictedOffDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DirectoryRestrictedOff" />
+            /// class.</para>
+            /// </summary>
+            private DirectoryRestrictedOff()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DirectoryRestrictedOff</para>
+            /// </summary>
+            public static readonly DirectoryRestrictedOff Instance = new DirectoryRestrictedOff();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DirectoryRestrictedOff" />.</para>
+            /// </summary>
+            private class DirectoryRestrictedOffEncoder : enc.StructEncoder<DirectoryRestrictedOff>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DirectoryRestrictedOff value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DirectoryRestrictedOff" />.</para>
+            /// </summary>
+            private class DirectoryRestrictedOffDecoder : enc.StructDecoder<DirectoryRestrictedOff>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DirectoryRestrictedOff"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DirectoryRestrictedOff Create()
+                {
+                    return DirectoryRestrictedOff.Instance;
                 }
 
             }

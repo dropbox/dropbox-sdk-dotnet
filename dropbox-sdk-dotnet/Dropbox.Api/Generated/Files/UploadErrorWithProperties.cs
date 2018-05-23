@@ -268,7 +268,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The supplied property group is invalid.</para>
+        /// <para>The supplied property group is invalid. The file has uploaded without
+        /// property groups.</para>
         /// </summary>
         public sealed class PropertiesError : UploadErrorWithProperties
         {
