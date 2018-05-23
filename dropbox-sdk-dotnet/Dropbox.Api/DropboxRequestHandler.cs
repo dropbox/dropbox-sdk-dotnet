@@ -327,7 +327,7 @@ namespace Dropbox.Api
 #if PORTABLE40
                     await TaskEx.Delay(backoff);
 #else
-                    await Task.Delay(backoff);
+                    await Task.Delay(backoff).ConfigureAwait(false);
 #endif
                     if (body != null)
                     {
@@ -469,40 +469,40 @@ namespace Dropbox.Api
             {
                 if ((int)response.StatusCode >= 500)
                 {
-                    var text = await response.Content.ReadAsStringAsync();
+                    var text = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     text = this.CheckForError(text);
                     throw new RetryException(requestId, (int)response.StatusCode, message: text, uri: uri);
                 }
                 else if (response.StatusCode == HttpStatusCode.BadRequest)
                 {
-                    var text = await response.Content.ReadAsStringAsync();
+                    var text = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     text = this.CheckForError(text);
                     throw new BadInputException(requestId, text, uri);
                 }
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    var reason = await response.Content.ReadAsStringAsync();
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     throw AuthException.Decode(reason, () => new AuthException(GetRequestId(response)));
                 }
                 else if ((int)response.StatusCode == 429)
                 {
-                    var reason = await response.Content.ReadAsStringAsync();
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     throw RateLimitException.Decode(reason, () => new RateLimitException(GetRequestId(response)));
                 }
                 else if (response.StatusCode == HttpStatusCode.Forbidden)
                 {
-                    var reason = await response.Content.ReadAsStringAsync();
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     throw AccessException.Decode(reason, () => new AccessException(GetRequestId(response)));
                 }
                 else if ((int)response.StatusCode == 422)
                 {
-                    var reason = await response.Content.ReadAsStringAsync();
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     throw PathRootException.Decode(reason, () => new PathRootException(GetRequestId(response)));
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
                     response.StatusCode == HttpStatusCode.NotFound)
                 {
-                    var reason = await response.Content.ReadAsStringAsync();
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
                     return new Result
                     {
@@ -528,13 +528,13 @@ namespace Dropbox.Api
                         return new Result
                         {
                             IsError = false,
-                            ObjectResult = await response.Content.ReadAsStringAsync()
-                        };
+                            ObjectResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false)
+						};
                     }
                 }
                 else
                 {
-                    var text = await response.Content.ReadAsStringAsync();
+                    var text = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     text = this.CheckForError(text);
                     throw new HttpException(requestId, (int)response.StatusCode, text, uri);
                 }
