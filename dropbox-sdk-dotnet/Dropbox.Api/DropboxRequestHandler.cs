@@ -529,7 +529,7 @@ namespace Dropbox.Api
                         {
                             IsError = false,
                             ObjectResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false)
-						};
+                        };
                     }
                 }
                 else
