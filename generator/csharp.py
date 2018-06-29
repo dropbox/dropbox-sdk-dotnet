@@ -8,7 +8,7 @@ import shutil
 from collections import defaultdict, namedtuple
 from contextlib import contextmanager
 
-from stone.data_type import (
+from stone.ir.data_types import (
     Float32,
     Float64,
     Int32,
@@ -28,7 +28,7 @@ from stone.data_type import (
     is_union_type,
     is_void_type,
 )
-from stone.generator import CodeGenerator
+from stone.backend import CodeBackend
 
 
 def memo_one(fn):
@@ -49,7 +49,7 @@ def memo_one(fn):
 ConstructorArg = namedtuple('ConstructorArg', ('type', 'name', 'arg', 'doc'))
 
 
-class _CSharpGenerator(CodeGenerator):
+class _CSharpGenerator(CodeBackend):
     _CAMEL_CASE_RE = re.compile('((?<=[a-z0-9])[A-Z]|(?!^)[A-Z](?=[a-z]))')
     _CSHARP_KEYWORDS = frozenset({
         'abstract', 'add', 'alias', 'as', 'ascending', 'async', 'await',
@@ -548,9 +548,17 @@ class _CSharpGenerator(CodeGenerator):
                 return '<a href="{0}">{1}</a>'.format(uri, text)
             elif tag == 'route':
                 if '.' in value:
-                    ns_name, route_name = map(self._public_name, value.split('.'))
+                    ns_name, route_name = value.split('.')
+                    ns_name = self._public_name(ns_name)
                 else:
-                    ns_name, route_name = ns, self._public_name(value)
+                    ns_name, route_name = ns, value
+                
+                if ':' in route_name:
+                    route_name, version = route_name.split(':')
+                else:
+                    route_name, version = route_name, 1
+                
+                route_name = self._public_route_name(route_name, version)
                 auth_type = self._route_auth_map[(ns_name, route_name)]
 
                 return ('<see cref="{0}.{1}.Routes.{1}{2}Routes.{3}Async" />'.format(
@@ -830,6 +838,42 @@ class _CSharpGenerator(CodeGenerator):
         if arg_name in _CSharpGenerator._CSHARP_KEYWORDS and not is_doc:
             return '@' + arg_name
         return arg_name
+    
+    def _route_url(self, ns_name, route_name, route_version):
+        """
+        Get url path for given route.
+
+        Args:
+            ns_name (Union[str, unicode]): The name of the namespace.
+            route_name (Union[str, unicode]): The name of the route.
+            route_version (int): The version of the route.
+        """
+
+        route_url = '"/{}/{}"'.format(ns_name, route_name)
+
+        if route_version != 1:
+            route_url = "{}_v{}".format(route_url, version)
+
+        return route_url
+
+    def _public_route_name(self, name, version):
+        """
+        Creates an initial capitalize CamelCase representation of a route name with optional version suffix.
+
+        This performs the following transformations.
+            foo_bar -> FooBar
+            foo_bar:2 -> FooBarV2
+
+        Args:
+            route (Union[str, unicode]): Name of the route.
+            version (int): Version number
+        """
+        route_name = self._public_name(name)
+
+        if version != 1:
+            route_name = '{}V{}'.format(route_name, version)
+
+        return route_name
 
     @memo_one
     def _segment_name(self, name):
@@ -859,7 +903,7 @@ class _CSharpGenerator(CodeGenerator):
             name (Union[str, unicode]): The name to transform
         """
         return ''.join(x.capitalize() for x in self._segment_name(name))
-
+    
     @memo_one
     def _name_words(self, name):
         """
@@ -959,7 +1003,7 @@ class _CSharpGenerator(CodeGenerator):
 
         for ns in api.namespaces.itervalues():
             for route in ns.routes:
-                key = (self._public_name(ns.name), self._public_name(route.name))
+                key = (self._public_name(ns.name), self._public_route_name(route.name, route.version))
                 d[key] = self._public_name(self._get_auth_type(route))
 
         self._route_auth_map = d
@@ -1835,7 +1879,7 @@ class _CSharpGenerator(CodeGenerator):
             ns (stone.api.ApiNamespace): The namespace of the route.
             route (stone.api.ApiRoute): The route in question.
         """
-        public_name = self._public_name(route.name)
+        public_name = self._public_route_name(route.name, route.version)
         async_name = '{0}Async'.format(public_name)
         route_host = route.attrs.get('host', 'api')
         route_style = route.attrs.get('style', 'rpc')
@@ -1908,7 +1952,7 @@ class _CSharpGenerator(CodeGenerator):
                 args.append('body')
             args.extend([
                 '"{0}"'.format(route_host),
-                '"/{0}/{1}"'.format(ns.name, route.name),
+                self._route_url(ns.name, route.name, route.version),
                 '"{0}"'.format(auth_type),
                 self._get_encoder(route.arg_data_type),
                 self._get_decoder(route.result_data_type),
