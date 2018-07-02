@@ -332,39 +332,6 @@ DOC_CSPROJ_END_BLOCK = r"""  <ItemGroup>
 </Project>
 """
 
-DOC_CSPROJ_NETSTANDARD_BLOCK = r"""<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Dropbox.Api</AssemblyName>
-    <RootNamespace>Dropbox.Api</RootNamespace>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="AppProperties\**" />
-    <EmbeddedResource Remove="AppProperties\**" />
-    <None Remove="AppProperties\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="app.config" />
-    <None Remove="Dropbox.Api.nuspec" />
-    <None Remove="dropbox_api_key.snk" />
-    <None Remove="packages.config" />
-    <None Remove="packages.Dropbox.Api.Portable.config" />
-    <None Remove="packages.Dropbox.Api.Portable40.config" />
-    <None Remove="Settings.StyleCop" />
-    <None Remove="stone_summaries.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
-
-</Project>
-"""
-
 def _include_items(buf, item_type, paths):
     buf.write('  <ItemGroup>\n')
     for path in paths:
@@ -388,10 +355,6 @@ def make_csproj_file(files, mode):
         start = PORTABLE_CSPROJ_START_BLOCK
         end = PORTABLE_CSPROJ_END_BLOCK
         none_includes = PORTABLE_NONE_INCLUDES
-    elif mode == 'netstandard':
-        start = DOC_CSPROJ_NETSTANDARD_BLOCK
-        end = ''
-        none_includes = PORTABLE_NONE_INCLUDES
     else:
         start = CSPROJ_START_BLOCK
         end = CSPROJ_END_BLOCK
@@ -400,10 +363,9 @@ def make_csproj_file(files, mode):
     buf = StringIO()
     buf.write(start)
 
-    if mode != 'netstandard':
-        _include_items(buf, 'Compile', COMPILE_INCLUDES)
-        _include_items(buf, 'Compile', sorted(files, key=lambda x: x.replace('\\', '/')))
-        _include_items(buf, 'None', none_includes)
+    _include_items(buf, 'Compile', COMPILE_INCLUDES)
+    _include_items(buf, 'Compile', sorted(files, key=lambda x: x.replace('\\', '/')))
+    _include_items(buf, 'None', none_includes)
 
     buf.write(end)
 
