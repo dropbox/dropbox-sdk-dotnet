@@ -29,6 +29,7 @@ $builds = @(
     @{Name = "Dropbox.Api"; Configuration="Release"; SignAssembly=$true; TestsName="Dropbox.Api.Tests"},
     @{Name = "Dropbox.Api.Portable"; Configuration="Release"; SignAssembly=$true; TestName=$null},
     @{Name = "Dropbox.Api.Portable40"; Configuration="Release"; SignAssembly=$true; TestName=$null},
+    @{Name = "Dropbox.Api.NetStandard"; Configuration="Release"; SignAssembly=$true; TestName=$null},
     @{Name = "Dropbox.Api.Doc"; Configuration="Release"; SignAssembly=$false; TestName=$null}
 )
 

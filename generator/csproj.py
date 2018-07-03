@@ -59,13 +59,13 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <BaseIntermediateOutputPath>net45obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\net45</OutputPath>
-    <IntermediateOutputPath>obj\Debug\net45</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -78,7 +78,6 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\net45</OutputPath>
-    <IntermediateOutputPath>obj\Release\net45</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -128,13 +127,13 @@ PORTABLE40_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <BaseIntermediateOutputPath>portable40obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\portable40</OutputPath>
-    <IntermediateOutputPath>obj\Debug\portable40</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;PORTABLE40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -147,7 +146,6 @@ PORTABLE40_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\portable40</OutputPath>
-    <IntermediateOutputPath>obj\Release\portable40</IntermediateOutputPath>
     <DefineConstants>TRACE;PORTABLE40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -218,13 +216,13 @@ PORTABLE_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <BaseIntermediateOutputPath>portableobj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\portable</OutputPath>
-    <IntermediateOutputPath>obj\Debug\portable</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;PORTABLE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -237,7 +235,6 @@ PORTABLE_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\portable</OutputPath>
-    <IntermediateOutputPath>obj\Release\portable</IntermediateOutputPath>
     <DefineConstants>TRACE;PORTABLE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -278,13 +275,13 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <BaseIntermediateOutputPath>docobj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>docbin\Debug\</OutputPath>
-    <IntermediateOutputPath>docobj\Debug\</IntermediateOutputPath>
     <DefineConstants>TRACE;DEBUG;DOC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -295,7 +292,6 @@ DOC_CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>docbin\Release\</OutputPath>
-    <IntermediateOutputPath>docobj\Release\</IntermediateOutputPath>
     <DefineConstants>TRACE;DOC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
