@@ -5,13 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyName>Dropbox.Api</AssemblyName>
     <RootNamespace>Dropbox.Api</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="AppProperties\**" />
-    <EmbeddedResource Remove="AppProperties\**" />
-    <None Remove="AppProperties\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Remove="app.config" />
