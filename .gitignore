@@ -50,3 +50,4 @@ AppPackages/
 
 # Visual studio stuff
 /dropbox-sdk-dotnet/UpgradeLog.htm
+/dropbox-sdk-dotnet/.vs/
