@@ -515,7 +515,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>  - folder sharing policy; permissions for subfolders are set by the
         /// top-level folder.</para>
         /// <para>  - full 'filepath', i.e. the list of folders (both folderId and folderName)
-        /// from the root folder to the folder directly containing the Paper doc.</para>
+        /// from     the root folder to the folder directly containing the Paper doc.</para>
         /// <para></para>
         /// <para>Note: If the Paper doc is not in any folder (aka unfiled) the response will
         /// be empty.</para>
@@ -552,7 +552,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>  - folder sharing policy; permissions for subfolders are set by the
         /// top-level folder.</para>
         /// <para>  - full 'filepath', i.e. the list of folders (both folderId and folderName)
-        /// from the root folder to the folder directly containing the Paper doc.</para>
+        /// from     the root folder to the folder directly containing the Paper doc.</para>
         /// <para></para>
         /// <para>Note: If the Paper doc is not in any folder (aka unfiled) the response will
         /// be empty.</para>

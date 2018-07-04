@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.8.1</version>
+    <version>4.9.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -11,15 +11,11 @@
     <iconUrl>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
-    <releaseNotes> 
+    <releaseNotes>
 What's New:
-  - Files:
-    - added new TooLarge error type for uploads
-
-  - Team:
-    - add is_directory_restricted attribute to MemberProfile, MemberAddArg
-    - add new_is_directory_restricted to MemberSetProfileArg
-   </releaseNotes>
+  - Add native support for .Net Standard 2.0.
+  - Remove unused data types.
+    </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
     <dependencies>

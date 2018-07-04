@@ -19,9 +19,14 @@ $nugetPath = "$nugetDir\nuget.exe"
 $nugetSpecPath = "$sourceDir\Dropbox.Api.nuspec"
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
-$releaseVersion = "4.8.1"
+$releaseVersion = "4.9.1"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
+$releaseNotes = @'
+What's New:
+  - Add native support for .Net Standard 2.0.
+  - Remove unused data types.
+'@
 
 $builds = @(
     @{Name = "Dropbox.Api"; Configuration="Release"; SignAssembly=$true; TestsName="Dropbox.Api.Tests"},
@@ -194,6 +199,7 @@ function UpdateNugetSpec()
     Write-Host "Updating nuspec file..."
     $xml = [xml](Get-Content $nugetSpecPath)
     $xml.SelectNodes('/package/metadata/version')[0].InnerXml = $releaseVersion
+    $xml.SelectNodes('/package/metadata/releaseNotes')[0].InnerXml = "`n" + $releaseNotes + "`n    "
     $xml.Save($nugetSpecPath)
 }
 
