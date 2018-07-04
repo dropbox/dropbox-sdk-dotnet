@@ -52,6 +52,7 @@ You can also build the SDK or create local nuget package from source code direct
    - Visual Studio 2013 or above.
    - Python 2.7 or above.
    - [Optional] Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases). This is only required for doc generation.
+   - [Optional] Visual Studio 2017 or above. This is required to generate .Net Standard package
 
 2. Clone the repository and update submodules.
    ```
@@ -77,9 +78,8 @@ You can also build the SDK or create local nuget package from source code direct
    the included examples as a sanity check.
 
 ### Create nuget package (This needs to be done on Windows)
-1. Edit `dropbox-sdk-dotnet/Dropbox.Api/Dropbox.Api.nuspec` and update release note.
-2. Edit buildall.ps1 and update major version and release version.
-3. In Visual Studio Developer Command Prompt run
+1. Edit buildall.ps1 and update major version, release version and release notes.
+2. In Visual Studio Developer Command Prompt run
    ```
    powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> 
    ```
