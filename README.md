@@ -7,7 +7,8 @@ A .NET SDK for integrating with the Dropbox API v2.
  - Windows Store Apps
  - Windows Phone 8 and 8.1 Apps
  - Silverlight 5.0
- - .NET Standard 1.1+ (Note: If you are using project.json, you need to add `portable-net45+win8` to imports under you frameworks section. If you are using .csproj file, you need to add `<PackageTargetFallback>portable-net45+win8</PackageTargetFallback>` element to your project.)
+ - .NET Standard 2.0+
+ - .NET Standard 1.x (Note: If you are using project.json, you need to add `portable-net45+win8` to imports under you frameworks section. If you are using .csproj file, you need to add `<PackageTargetFallback>portable-net45+win8</PackageTargetFallback>` element to your project.)
 ## Setup
 
 To get started with Dropbox.NET, we recommend you add it to your project using NuGet.
@@ -52,7 +53,7 @@ You can also build the SDK or create local nuget package from source code direct
    - Visual Studio 2013 or above.
    - Python 2.7 or above.
    - [Optional] Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases). This is only required for doc generation.
-   - [Optional] Visual Studio 2017 or above. This is required to generate .Net Standard package
+   - [Optional] Visual Studio 2017 or above. This is required to generate .NET Standard package
 
 2. Clone the repository and update submodules.
    ```
