@@ -11,10 +11,8 @@ def main():
     """The entry point for the program."""
     
     repo_path = 'dropbox-sdk-dotnet'
-    print('Generating code')
+    print('Generating Stone types')
     try:
-        for path in glob.glob(os.path.join(repo_path, 'Dropbox.Api/*.csproj')):
-            os.remove(path)
         shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api', 'Generated'))
     except OSError:
         pass

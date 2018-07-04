@@ -17,8 +17,6 @@ $specDir = Resolve-Path "spec"
 $nugetDir = "$solutionDir\.nuget"
 $nugetPath = "$nugetDir\nuget.exe"
 $nugetSpecPath = "$sourceDir\Dropbox.Api.nuspec"
-$generatorPath = "$generatorDir\csharp.stoneg.py"
-$generatorArgs = @("-m", "stone.cli", "-a:all", $generatorPath, $sourceDir)
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
 $releaseVersion = "4.8.1"
@@ -90,9 +88,8 @@ function GenerateProjectFiles()
     Write-Host "Generating Dropbox.Api..."
 
     [environment]::SetEnvironmentVariable("PYTHONPATH", $pythonPath)
-    $files = Get-ChildItem "$specDir\*" -Include *.stone | Select -ExpandProperty FullName
 
-    RunCommand { python $generatorArgs $files }
+    RunCommand { python 'generate.py' }
 }
 
 function RestoreNugetPackages()
