@@ -6,7 +6,7 @@
 [dD]ebug/
 [rR]elease/
 [bB]in/
-[oO]bj/
+*[oO]bj/
 [Ll]ast[Bb]uild.log
 
 # test stuff
@@ -49,5 +49,5 @@ AppPackages/
 .idea/
 
 # Visual studio stuff
-/dropbox-sdk-dotnet/UpgradeLog.htm
+/dropbox-sdk-dotnet/UpgradeLog*.htm
 /dropbox-sdk-dotnet/.vs/
