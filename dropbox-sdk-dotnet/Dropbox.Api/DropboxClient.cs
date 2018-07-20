@@ -55,7 +55,35 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Set the value for Dropbox-Api-Path-Root header.
+        /// Set the value for Dropbox-Api-Path-Root header. This allows accessing content outside of user's
+        /// home namespace. Below is sample code of accessing content inside team space. See
+        /// <a href="https://www.dropbox.com/developers/reference/namespace-guide">Namespace Guide</a> for details
+        /// about user space vs team space.
+        /// <code>
+        /// // Fetch root namespace info from user's account info.
+        /// var account = await client.Users.GetCurrentAccountAsync();
+        ///
+        /// if (!account.RootInfo.IsTeam)
+        /// {
+        ///     Console.WriteLine("This user doesn't belong to a team with shared space.");
+        /// }
+        /// else
+        /// {
+        ///     try
+        ///     {
+        ///         // Point path root to namespace id of team space.
+        ///         client = client.WithPathRoot(new PathRoot.Root(account.RootInfo.RootNamespaceId));
+        ///         await client.Files.ListFolderAsync(path);
+        ///     }
+        ///     catch (PathRootException ex)
+        ///     {
+        ///         // Handle race condition when user switched team.
+        ///         Console.WriteLine(
+        ///             "The user's root namespace ID has changed to {0}",
+        ///             ex.ErrorResponse.AsInvalidRoot.Value);
+        ///     }
+        /// }
+        /// </code>
         /// </summary>
         /// <param name="pathRoot">The path root object.</param>
         /// <returns>A <see cref="DropboxClient"/> instance with Dropbox-Api-Path-Root header set.</returns>

@@ -9,6 +9,7 @@ namespace SimpleTest
     using System.Threading.Tasks;
 
     using Dropbox.Api;
+    using Dropbox.Api.Common;
     using Dropbox.Api.Files;
     using Dropbox.Api.Team;
 
@@ -117,6 +118,9 @@ namespace SimpleTest
             {
                 await Download(client, path, firstFile.AsFile);
             }
+
+            var pathInTeamSpace = "/Test";
+            await ListFolderInTeamSpace(client, pathInTeamSpace);
 
             await Upload(client, path, "Test.txt", "This is a text file");
 
@@ -313,11 +317,45 @@ namespace SimpleTest
         {
             Console.WriteLine("--- Creating Folder ---");
             var folderArg = new CreateFolderArg(path);
-            var folder = await client.Files.CreateFolderAsync(folderArg);
+            var folder = await client.Files.CreateFolderV2Async(folderArg);
 
             Console.WriteLine("Folder: " + path + " created!");
 
-            return folder;
+            return folder.Metadata;
+        }
+
+        /// <summary>
+        /// Lists the items within a folder inside team space. See
+        /// https://www.dropbox.com/developers/reference/namespace-guide for details about
+        /// user namespace vs team namespace.
+        /// </summary>
+        /// <param name="client">The Dropbox client.</param>
+        /// <param name="path">The path to list.</param>
+        /// <returns>The <see cref="Task"/></returns>
+        private async Task ListFolderInTeamSpace(DropboxClient client, string path)
+        {
+            // Fetch root namespace info from user's account info.
+            var account = await client.Users.GetCurrentAccountAsync();
+
+            if (!account.RootInfo.IsTeam)
+            {
+                Console.WriteLine("This user doesn't belong to a team with shared space.");
+            }
+            else
+            {
+                try
+                {
+                    // Point path root to namespace id of team space.
+                    client = client.WithPathRoot(new PathRoot.Root(account.RootInfo.RootNamespaceId));
+                    await ListFolder(client, path);
+                }
+                catch (PathRootException ex)
+                {
+                    Console.WriteLine(
+                        "The user's root namespace ID has changed to {0}",
+                        ex.ErrorResponse.AsInvalidRoot.Value);
+                }
+            }
         }
 
         /// <summary>
