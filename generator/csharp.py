@@ -849,12 +849,12 @@ class _CSharpGenerator(CodeBackend):
             route_version (int): The version of the route.
         """
 
-        route_url = '"/{}/{}"'.format(ns_name, route_name)
+        route_url = '/{}/{}'.format(ns_name, route_name)
 
         if route_version != 1:
-            route_url = "{}_v{}".format(route_url, version)
+            route_url = "{}_v{}".format(route_url, route_version)
 
-        return route_url
+        return '"{}"'.format(route_url)
 
     def _public_route_name(self, name, version):
         """
