@@ -399,7 +399,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The revision is invalid. It may point to a different file.</para>
+        /// <para>The revision is invalid. It may not exist.</para>
         /// </summary>
         public sealed class InvalidRevision : RestoreError
         {

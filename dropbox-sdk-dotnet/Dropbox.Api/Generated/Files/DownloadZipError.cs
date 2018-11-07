@@ -304,7 +304,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The folder is too large to download.</para>
+        /// <para>The folder or a file is too large to download.</para>
         /// </summary>
         public sealed class TooLarge : DownloadZipError
         {

@@ -123,6 +123,28 @@ namespace Dropbox.Api.Auth
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ExpiredAccessToken</para>
+        /// </summary>
+        public bool IsExpiredAccessToken
+        {
+            get
+            {
+                return this is ExpiredAccessToken;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ExpiredAccessToken, or <c>null</c>.</para>
+        /// </summary>
+        public ExpiredAccessToken AsExpiredAccessToken
+        {
+            get
+            {
+                return this as ExpiredAccessToken;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -182,6 +204,12 @@ namespace Dropbox.Api.Auth
                     UserSuspended.Encoder.EncodeFields((UserSuspended)value, writer);
                     return;
                 }
+                if (value is ExpiredAccessToken)
+                {
+                    WriteProperty(".tag", "expired_access_token", writer, enc.StringEncoder.Instance);
+                    ExpiredAccessToken.Encoder.EncodeFields((ExpiredAccessToken)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -228,6 +256,8 @@ namespace Dropbox.Api.Auth
                         return InvalidSelectAdmin.Decoder.DecodeFields(reader);
                     case "user_suspended":
                         return UserSuspended.Decoder.DecodeFields(reader);
+                    case "expired_access_token":
+                        return ExpiredAccessToken.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -514,6 +544,77 @@ namespace Dropbox.Api.Auth
                 protected override UserSuspended Create()
                 {
                     return UserSuspended.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The access token has expired.</para>
+        /// </summary>
+        public sealed class ExpiredAccessToken : AuthError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ExpiredAccessToken> Encoder = new ExpiredAccessTokenEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ExpiredAccessToken> Decoder = new ExpiredAccessTokenDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ExpiredAccessToken" />
+            /// class.</para>
+            /// </summary>
+            private ExpiredAccessToken()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ExpiredAccessToken</para>
+            /// </summary>
+            public static readonly ExpiredAccessToken Instance = new ExpiredAccessToken();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ExpiredAccessToken" />.</para>
+            /// </summary>
+            private class ExpiredAccessTokenEncoder : enc.StructEncoder<ExpiredAccessToken>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ExpiredAccessToken value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ExpiredAccessToken" />.</para>
+            /// </summary>
+            private class ExpiredAccessTokenDecoder : enc.StructDecoder<ExpiredAccessToken>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ExpiredAccessToken"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ExpiredAccessToken Create()
+                {
+                    return ExpiredAccessToken.Instance;
                 }
 
             }

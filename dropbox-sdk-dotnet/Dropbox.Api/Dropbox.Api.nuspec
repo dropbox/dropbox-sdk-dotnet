@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>4.9.0</version>
+    <version>4.9.2</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
@@ -13,8 +13,16 @@
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes>
 What's New:
-  - Add native support for .Net Standard 2.0.
-  - Remove unused data types.
+  - Files Namespace:
+    - Updated doc strings
+
+  - Team_log Namespace:
+    - Updated event docstrings
+    - New reset field for loading events with a cursor
+    - New event types added
+
+  - Team_policies Namespace:
+    - New CameraUploadsPolicyState union
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>

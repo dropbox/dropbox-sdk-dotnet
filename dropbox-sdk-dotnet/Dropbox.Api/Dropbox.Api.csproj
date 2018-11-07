@@ -207,6 +207,8 @@
     <Compile Include="Generated\Files\GetTemporaryLinkArg.cs" />
     <Compile Include="Generated\Files\GetTemporaryLinkError.cs" />
     <Compile Include="Generated\Files\GetTemporaryLinkResult.cs" />
+    <Compile Include="Generated\Files\GetTemporaryUploadLinkArg.cs" />
+    <Compile Include="Generated\Files\GetTemporaryUploadLinkResult.cs" />
     <Compile Include="Generated\Files\GetThumbnailBatchArg.cs" />
     <Compile Include="Generated\Files\GetThumbnailBatchError.cs" />
     <Compile Include="Generated\Files\GetThumbnailBatchResult.cs" />
@@ -593,7 +595,9 @@
     <Compile Include="Generated\Team\MembersAddArg.cs" />
     <Compile Include="Generated\Team\MembersAddJobStatus.cs" />
     <Compile Include="Generated\Team\MembersAddLaunch.cs" />
+    <Compile Include="Generated\Team\MembersDataTransferArg.cs" />
     <Compile Include="Generated\Team\MembersDeactivateArg.cs" />
+    <Compile Include="Generated\Team\MembersDeactivateBaseArg.cs" />
     <Compile Include="Generated\Team\MembersDeactivateError.cs" />
     <Compile Include="Generated\Team\MembersGetInfoArgs.cs" />
     <Compile Include="Generated\Team\MembersGetInfoError.cs" />
@@ -614,6 +618,8 @@
     <Compile Include="Generated\Team\MembersSetProfileArg.cs" />
     <Compile Include="Generated\Team\MembersSetProfileError.cs" />
     <Compile Include="Generated\Team\MembersSuspendError.cs" />
+    <Compile Include="Generated\Team\MembersTransferFilesError.cs" />
+    <Compile Include="Generated\Team\MembersTransferFormerMembersFilesError.cs" />
     <Compile Include="Generated\Team\MembersUnsuspendArg.cs" />
     <Compile Include="Generated\Team\MembersUnsuspendError.cs" />
     <Compile Include="Generated\Team\MobileClientPlatform.cs" />
@@ -942,6 +948,8 @@
     <Compile Include="Generated\TeamLog\MemberChangeNameType.cs" />
     <Compile Include="Generated\TeamLog\MemberChangeStatusDetails.cs" />
     <Compile Include="Generated\TeamLog\MemberChangeStatusType.cs" />
+    <Compile Include="Generated\TeamLog\MemberDeleteManualContactsDetails.cs" />
+    <Compile Include="Generated\TeamLog\MemberDeleteManualContactsType.cs" />
     <Compile Include="Generated\TeamLog\MemberPermanentlyDeleteAccountContentsDetails.cs" />
     <Compile Include="Generated\TeamLog\MemberPermanentlyDeleteAccountContentsType.cs" />
     <Compile Include="Generated\TeamLog\MemberRemoveActionType.cs" />
@@ -1047,6 +1055,8 @@
     <Compile Include="Generated\TeamLog\PaperDocFollowedType.cs" />
     <Compile Include="Generated\TeamLog\PaperDocMentionDetails.cs" />
     <Compile Include="Generated\TeamLog\PaperDocMentionType.cs" />
+    <Compile Include="Generated\TeamLog\PaperDocOwnershipChangedDetails.cs" />
+    <Compile Include="Generated\TeamLog\PaperDocOwnershipChangedType.cs" />
     <Compile Include="Generated\TeamLog\PaperDocRequestAccessDetails.cs" />
     <Compile Include="Generated\TeamLog\PaperDocRequestAccessType.cs" />
     <Compile Include="Generated\TeamLog\PaperDocResolveCommentDetails.cs" />
@@ -1088,6 +1098,7 @@
     <Compile Include="Generated\TeamLog\PaperFolderTeamInviteType.cs" />
     <Compile Include="Generated\TeamLog\PaperMemberPolicy.cs" />
     <Compile Include="Generated\TeamLog\ParticipantLogInfo.cs" />
+    <Compile Include="Generated\TeamLog\PassPolicy.cs" />
     <Compile Include="Generated\TeamLog\PasswordChangeDetails.cs" />
     <Compile Include="Generated\TeamLog\PasswordChangeType.cs" />
     <Compile Include="Generated\TeamLog\PasswordResetAllDetails.cs" />
@@ -1098,6 +1109,7 @@
     <Compile Include="Generated\TeamLog\PermanentDeleteChangePolicyDetails.cs" />
     <Compile Include="Generated\TeamLog\PermanentDeleteChangePolicyType.cs" />
     <Compile Include="Generated\TeamLog\PlacementRestriction.cs" />
+    <Compile Include="Generated\TeamLog\QuickActionType.cs" />
     <Compile Include="Generated\TeamLog\RelocateAssetReferencesLogInfo.cs" />
     <Compile Include="Generated\TeamLog\ResellerLogInfo.cs" />
     <Compile Include="Generated\TeamLog\ResellerSupportSessionEndDetails.cs" />
@@ -1363,6 +1375,9 @@
     <Compile Include="Generated\TeamLog\TeamProfileChangeNameType.cs" />
     <Compile Include="Generated\TeamLog\TeamProfileRemoveLogoDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamProfileRemoveLogoType.cs" />
+    <Compile Include="Generated\TeamLog\TeamSelectiveSyncPolicy.cs" />
+    <Compile Include="Generated\TeamLog\TeamSelectiveSyncPolicyChangedDetails.cs" />
+    <Compile Include="Generated\TeamLog\TeamSelectiveSyncPolicyChangedType.cs" />
     <Compile Include="Generated\TeamLog\TeamSelectiveSyncSettingsChangedDetails.cs" />
     <Compile Include="Generated\TeamLog\TeamSelectiveSyncSettingsChangedType.cs" />
     <Compile Include="Generated\TeamLog\TfaAddBackupPhoneDetails.cs" />
@@ -1390,6 +1405,8 @@
     <Compile Include="Generated\TeamLog\UserLogInfo.cs" />
     <Compile Include="Generated\TeamLog\UserNameLogInfo.cs" />
     <Compile Include="Generated\TeamLog\UserOrTeamLinkedAppLogInfo.cs" />
+    <Compile Include="Generated\TeamLog\ViewerInfoPolicyChangedDetails.cs" />
+    <Compile Include="Generated\TeamLog\ViewerInfoPolicyChangedType.cs" />
     <Compile Include="Generated\TeamLog\WebDeviceSessionLogInfo.cs" />
     <Compile Include="Generated\TeamLog\WebSessionLogInfo.cs" />
     <Compile Include="Generated\TeamLog\WebSessionsChangeFixedLengthPolicyDetails.cs" />
@@ -1398,6 +1415,7 @@
     <Compile Include="Generated\TeamLog\WebSessionsChangeIdleLengthPolicyType.cs" />
     <Compile Include="Generated\TeamLog\WebSessionsFixedLengthPolicy.cs" />
     <Compile Include="Generated\TeamLog\WebSessionsIdleLengthPolicy.cs" />
+    <Compile Include="Generated\TeamPolicies\CameraUploadsPolicyState.cs" />
     <Compile Include="Generated\TeamPolicies\EmmState.cs" />
     <Compile Include="Generated\TeamPolicies\GroupCreation.cs" />
     <Compile Include="Generated\TeamPolicies\OfficeAddInPolicy.cs" />

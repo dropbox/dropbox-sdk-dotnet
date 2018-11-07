@@ -32,7 +32,8 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="MembersRemoveArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="user">Identity of user to remove/suspend.</param>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
         /// <param name="transferDestId">If provided, files from the deleted member account

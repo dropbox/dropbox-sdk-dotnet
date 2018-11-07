@@ -81,7 +81,12 @@ namespace Dropbox.Api.TeamLog.Routes
         /// to check for this feature.</para>
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
-        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="limit">The maximal number of results to return per call. Note that
+        /// some calls may not return <paramref name="limit" /> number of events, and may even
+        /// return no events, even with `has_more` set to true. In this case, callers should
+        /// fetch again using <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
+        /// />.</param>
         /// <param name="accountId">Filter the events by account ID. Return ony events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
@@ -107,7 +112,12 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the get events route.</para>
         /// </summary>
-        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="limit">The maximal number of results to return per call. Note that
+        /// some calls may not return <paramref name="limit" /> number of events, and may even
+        /// return no events, even with `has_more` set to true. In this case, callers should
+        /// fetch again using <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
+        /// />.</param>
         /// <param name="accountId">Filter the events by account ID. Return ony events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>

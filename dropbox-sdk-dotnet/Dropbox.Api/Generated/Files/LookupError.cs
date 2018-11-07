@@ -267,7 +267,10 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>The malformed path object</para>
+        /// <para>The given path does not satisfy the required path format. Please refer to the
+        /// <a
+        /// href="https://www.dropbox.com/developers/documentation/http/documentation#path-formats">Path
+        /// formats documentation</a> for more information.</para>
         /// </summary>
         public sealed class MalformedPath : LookupError
         {

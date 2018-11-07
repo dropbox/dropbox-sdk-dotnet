@@ -14,6 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>The commit info object</para>
     /// </summary>
     /// <seealso cref="CommitInfoWithProperties" />
+    /// <seealso cref="GetTemporaryUploadLinkArg" />
     /// <seealso cref="UploadSessionFinishArg" />
     public class CommitInfo
     {
@@ -47,12 +48,18 @@ namespace Dropbox.Api.Files
         /// this tells the clients that this modification shouldn't result in a user
         /// notification.</param>
         /// <param name="propertyGroups">List of custom properties to add to file.</param>
+        /// <param name="strictConflict">Be more strict about how each <see cref="WriteMode" />
+        /// detects conflict. For example, always return a conflict error when <paramref
+        /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
+        /// "rev" doesn't match the existing file's "rev", even if the existing file has been
+        /// deleted.</param>
         public CommitInfo(string path,
                           WriteMode mode = null,
                           bool autorename = false,
                           sys.DateTime? clientModified = null,
                           bool mute = false,
-                          col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null)
+                          col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
+                          bool strictConflict = false)
         {
             if (path == null)
             {
@@ -75,6 +82,7 @@ namespace Dropbox.Api.Files
             this.ClientModified = clientModified;
             this.Mute = mute;
             this.PropertyGroups = propertyGroupsList;
+            this.StrictConflict = strictConflict;
         }
 
         /// <summary>
@@ -88,6 +96,7 @@ namespace Dropbox.Api.Files
             this.Mode = global::Dropbox.Api.Files.WriteMode.Add.Instance;
             this.Autorename = false;
             this.Mute = false;
+            this.StrictConflict = false;
         }
 
         /// <summary>
@@ -127,6 +136,14 @@ namespace Dropbox.Api.Files
         /// </summary>
         public col.IList<global::Dropbox.Api.FileProperties.PropertyGroup> PropertyGroups { get; protected set; }
 
+        /// <summary>
+        /// <para>Be more strict about how each <see cref="WriteMode" /> detects conflict. For
+        /// example, always return a conflict error when <see cref="Mode" /> = <see
+        /// cref="Dropbox.Api.Files.WriteMode.Update" /> and the given "rev" doesn't match the
+        /// existing file's "rev", even if the existing file has been deleted.</para>
+        /// </summary>
+        public bool StrictConflict { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -153,6 +170,7 @@ namespace Dropbox.Api.Files
                 {
                     WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.FileProperties.PropertyGroup.Encoder);
                 }
+                WriteProperty("strict_conflict", value.StrictConflict, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -202,6 +220,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "property_groups":
                         value.PropertyGroups = ReadList<global::Dropbox.Api.FileProperties.PropertyGroup>(reader, global::Dropbox.Api.FileProperties.PropertyGroup.Decoder);
+                        break;
+                    case "strict_conflict":
+                        value.StrictConflict = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

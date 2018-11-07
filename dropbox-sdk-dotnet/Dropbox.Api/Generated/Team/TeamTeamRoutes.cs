@@ -3346,6 +3346,216 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Moves removed member's files to a different member. This endpoint initiates
+        /// an asynchronous job. To obtain the final result of the job, the client should
+        /// periodically poll <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesJobStatusCheckAsync"
+        /// />.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersDataTransferArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersTransferFormerMembersFilesError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersMoveFormerMemberFilesAsync(MembersDataTransferArg membersDataTransferArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersDataTransferArg, global::Dropbox.Api.Async.LaunchEmptyResult, MembersTransferFormerMembersFilesError>(membersDataTransferArg, "api", "/team/members/move_former_member_files", "team", global::Dropbox.Api.Team.MembersDataTransferArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.MembersTransferFormerMembersFilesError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members move former member files
+        /// route.</para>
+        /// </summary>
+        /// <param name="membersDataTransferArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersMoveFormerMemberFiles(MembersDataTransferArg membersDataTransferArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersMoveFormerMemberFilesAsync(membersDataTransferArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Moves removed member's files to a different member. This endpoint initiates
+        /// an asynchronous job. To obtain the final result of the job, the client should
+        /// periodically poll <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesJobStatusCheckAsync"
+        /// />.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
+        /// <param name="transferDestId">Files from the deleted member account will be
+        /// transferred to this user.</param>
+        /// <param name="transferAdminId">Errors during the transfer process will be sent via
+        /// email to this user.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersTransferFormerMembersFilesError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersMoveFormerMemberFilesAsync(UserSelectorArg user,
+                                                                                                     UserSelectorArg transferDestId,
+                                                                                                     UserSelectorArg transferAdminId)
+        {
+            var membersDataTransferArg = new MembersDataTransferArg(user,
+                                                                    transferDestId,
+                                                                    transferAdminId);
+
+            return this.MembersMoveFormerMemberFilesAsync(membersDataTransferArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members move former member files
+        /// route.</para>
+        /// </summary>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
+        /// <param name="transferDestId">Files from the deleted member account will be
+        /// transferred to this user.</param>
+        /// <param name="transferAdminId">Errors during the transfer process will be sent via
+        /// email to this user.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersMoveFormerMemberFiles(UserSelectorArg user,
+                                                                  UserSelectorArg transferDestId,
+                                                                  UserSelectorArg transferAdminId,
+                                                                  sys.AsyncCallback callback,
+                                                                  object callbackState = null)
+        {
+            var membersDataTransferArg = new MembersDataTransferArg(user,
+                                                                    transferDestId,
+                                                                    transferAdminId);
+
+            return this.BeginMembersMoveFormerMemberFiles(membersDataTransferArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members move former member
+        /// files route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersTransferFormerMembersFilesError"/>.</exception>
+        public global::Dropbox.Api.Async.LaunchEmptyResult EndMembersMoveFormerMemberFiles(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Once an async_job_id is returned from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesAsync" />
+        /// , use this to poll the status of the asynchronous request.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersMoveFormerMemberFilesJobStatusCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/move_former_member_files/job_status/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members move former member files job
+        /// status check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersMoveFormerMemberFilesJobStatusCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersMoveFormerMemberFilesJobStatusCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once an async_job_id is returned from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesAsync" />
+        /// , use this to poll the status of the asynchronous request.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersMoveFormerMemberFilesJobStatusCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.MembersMoveFormerMemberFilesJobStatusCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members move former member files job
+        /// status check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersMoveFormerMemberFilesJobStatusCheck(string asyncJobId,
+                                                                                sys.AsyncCallback callback,
+                                                                                object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginMembersMoveFormerMemberFilesJobStatusCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members move former member
+        /// files job status check route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public global::Dropbox.Api.Async.PollEmptyResult EndMembersMoveFormerMemberFilesJobStatusCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.PollEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Recover a deleted member.</para>
         /// <para>Permission : Team member management</para>
         /// <para>Exactly one of team_member_id, email, or external_id must be provided to
@@ -3498,7 +3708,8 @@ namespace Dropbox.Api.Team.Routes
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
         /// />.</para>
         /// </summary>
-        /// <param name="user">Identity of user to remove/suspend.</param>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
         /// <param name="transferDestId">If provided, files from the deleted member account
@@ -3533,7 +3744,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the members remove route.</para>
         /// </summary>
-        /// <param name="user">Identity of user to remove/suspend.</param>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
         /// <param name="transferDestId">If provided, files from the deleted member account
@@ -3994,7 +4206,8 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Exactly one of team_member_id, email, or external_id must be provided to
         /// identify the user account.</para>
         /// </summary>
-        /// <param name="user">Identity of user to remove/suspend.</param>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -4013,7 +4226,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the members suspend route.</para>
         /// </summary>
-        /// <param name="user">Identity of user to remove/suspend.</param>
+        /// <param name="user">Identity of user to remove/suspend/have their files
+        /// moved.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
         /// <param name="callback">The method to be called when the asynchronous send is

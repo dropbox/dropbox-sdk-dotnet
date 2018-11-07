@@ -47,13 +47,19 @@ namespace Dropbox.Api.Files
         /// this tells the clients that this modification shouldn't result in a user
         /// notification.</param>
         /// <param name="propertyGroups">List of custom properties to add to file.</param>
+        /// <param name="strictConflict">Be more strict about how each <see cref="WriteMode" />
+        /// detects conflict. For example, always return a conflict error when <paramref
+        /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
+        /// "rev" doesn't match the existing file's "rev", even if the existing file has been
+        /// deleted.</param>
         public CommitInfoWithProperties(string path,
                                         WriteMode mode = null,
                                         bool autorename = false,
                                         sys.DateTime? clientModified = null,
                                         bool mute = false,
-                                        col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null)
-            : base(path, mode, autorename, clientModified, mute, propertyGroups)
+                                        col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
+                                        bool strictConflict = false)
+            : base(path, mode, autorename, clientModified, mute, propertyGroups, strictConflict)
         {
         }
 
@@ -94,6 +100,7 @@ namespace Dropbox.Api.Files
                 {
                     WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.FileProperties.PropertyGroup.Encoder);
                 }
+                WriteProperty("strict_conflict", value.StrictConflict, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -144,6 +151,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "property_groups":
                         value.PropertyGroups = ReadList<global::Dropbox.Api.FileProperties.PropertyGroup>(reader, global::Dropbox.Api.FileProperties.PropertyGroup.Decoder);
+                        break;
+                    case "strict_conflict":
+                        value.StrictConflict = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

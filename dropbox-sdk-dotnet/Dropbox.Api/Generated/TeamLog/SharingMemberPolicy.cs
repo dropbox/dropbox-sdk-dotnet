@@ -80,6 +80,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamMembersAndWhitelist</para>
+        /// </summary>
+        public bool IsTeamMembersAndWhitelist
+        {
+            get
+            {
+                return this is TeamMembersAndWhitelist;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamMembersAndWhitelist, or <c>null</c>.</para>
+        /// </summary>
+        public TeamMembersAndWhitelist AsTeamMembersAndWhitelist
+        {
+            get
+            {
+                return this as TeamMembersAndWhitelist;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +150,12 @@ namespace Dropbox.Api.TeamLog
                     Forbid.Encoder.EncodeFields((Forbid)value, writer);
                     return;
                 }
+                if (value is TeamMembersAndWhitelist)
+                {
+                    WriteProperty(".tag", "team_members_and_whitelist", writer, enc.StringEncoder.Instance);
+                    TeamMembersAndWhitelist.Encoder.EncodeFields((TeamMembersAndWhitelist)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +198,8 @@ namespace Dropbox.Api.TeamLog
                         return Allow.Decoder.DecodeFields(reader);
                     case "forbid":
                         return Forbid.Decoder.DecodeFields(reader);
+                    case "team_members_and_whitelist":
+                        return TeamMembersAndWhitelist.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -308,6 +339,77 @@ namespace Dropbox.Api.TeamLog
                 protected override Forbid Create()
                 {
                     return Forbid.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team members and whitelist object</para>
+        /// </summary>
+        public sealed class TeamMembersAndWhitelist : SharingMemberPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamMembersAndWhitelist> Encoder = new TeamMembersAndWhitelistEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamMembersAndWhitelist> Decoder = new TeamMembersAndWhitelistDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamMembersAndWhitelist" />
+            /// class.</para>
+            /// </summary>
+            private TeamMembersAndWhitelist()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamMembersAndWhitelist</para>
+            /// </summary>
+            public static readonly TeamMembersAndWhitelist Instance = new TeamMembersAndWhitelist();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamMembersAndWhitelist" />.</para>
+            /// </summary>
+            private class TeamMembersAndWhitelistEncoder : enc.StructEncoder<TeamMembersAndWhitelist>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamMembersAndWhitelist value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamMembersAndWhitelist" />.</para>
+            /// </summary>
+            private class TeamMembersAndWhitelistDecoder : enc.StructDecoder<TeamMembersAndWhitelist>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamMembersAndWhitelist"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamMembersAndWhitelist Create()
+                {
+                    return TeamMembersAndWhitelist.Instance;
                 }
 
             }

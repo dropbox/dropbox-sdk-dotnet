@@ -31,7 +31,12 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GetTeamEventsArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="limit">The maximal number of results to return per call. Note that
+        /// some calls may not return <paramref name="limit" /> number of events, and may even
+        /// return no events, even with `has_more` set to true. In this case, callers should
+        /// fetch again using <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
+        /// />.</param>
         /// <param name="accountId">Filter the events by account ID. Return ony events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
@@ -81,7 +86,11 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Number of results to return per call.</para>
+        /// <para>The maximal number of results to return per call. Note that some calls may
+        /// not return <see cref="Limit" /> number of events, and may even return no events,
+        /// even with `has_more` set to true. In this case, callers should fetch again using
+        /// <see cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
+        /// />.</para>
         /// </summary>
         public uint Limit { get; protected set; }
 

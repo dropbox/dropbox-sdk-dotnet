@@ -3652,6 +3652,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
         /// folder.</param>
+        /// <param name="accessInheritance">The access inheritance settings for the
+        /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
@@ -3668,6 +3670,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                           MemberPolicy memberPolicy = null,
                                                           SharedLinkPolicy sharedLinkPolicy = null,
                                                           ViewerInfoPolicy viewerInfoPolicy = null,
+                                                          AccessInheritance accessInheritance = null,
                                                           col.IEnumerable<FolderAction> actions = null,
                                                           LinkSettings linkSettings = null)
         {
@@ -3677,6 +3680,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                     memberPolicy,
                                                     sharedLinkPolicy,
                                                     viewerInfoPolicy,
+                                                    accessInheritance,
                                                     actions,
                                                     linkSettings);
 
@@ -3699,6 +3703,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
         /// folder.</param>
+        /// <param name="accessInheritance">The access inheritance settings for the
+        /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
@@ -3715,6 +3721,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                  MemberPolicy memberPolicy = null,
                                                  SharedLinkPolicy sharedLinkPolicy = null,
                                                  ViewerInfoPolicy viewerInfoPolicy = null,
+                                                 AccessInheritance accessInheritance = null,
                                                  col.IEnumerable<FolderAction> actions = null,
                                                  LinkSettings linkSettings = null,
                                                  sys.AsyncCallback callback = null,
@@ -3726,6 +3733,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                     memberPolicy,
                                                     sharedLinkPolicy,
                                                     viewerInfoPolicy,
+                                                    accessInheritance,
                                                     actions,
                                                     linkSettings);
 

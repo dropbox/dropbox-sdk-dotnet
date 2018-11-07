@@ -75,7 +75,8 @@ namespace Dropbox.Api.Files
         /// has explicit members but is not contained within  a shared folder.</param>
         /// <param name="contentHash">A hash of the file content. This field can be used to
         /// verify data integrity. For more information see our <a
-        /// href="/developers/reference/content-hash">Content hash</a> page.</param>
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         public FileMetadata(string name,
                             string id,
                             sys.DateTime clientModified,
@@ -216,8 +217,9 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>A hash of the file content. This field can be used to verify data integrity.
-        /// For more information see our <a href="/developers/reference/content-hash">Content
-        /// hash</a> page.</para>
+        /// For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</para>
         /// </summary>
         public string ContentHash { get; protected set; }
 

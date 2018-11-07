@@ -145,6 +145,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InviteEditor</para>
+        /// </summary>
+        public bool IsInviteEditor
+        {
+            get
+            {
+                return this is InviteEditor;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InviteEditor, or <c>null</c>.</para>
+        /// </summary>
+        public InviteEditor AsInviteEditor
+        {
+            get
+            {
+                return this as InviteEditor;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Unshare</para>
         /// </summary>
         public bool IsUnshare
@@ -298,6 +320,12 @@ namespace Dropbox.Api.Sharing
                     InviteViewerNoComment.Encoder.EncodeFields((InviteViewerNoComment)value, writer);
                     return;
                 }
+                if (value is InviteEditor)
+                {
+                    WriteProperty(".tag", "invite_editor", writer, enc.StringEncoder.Instance);
+                    InviteEditor.Encoder.EncodeFields((InviteEditor)value, writer);
+                    return;
+                }
                 if (value is Unshare)
                 {
                     WriteProperty(".tag", "unshare", writer, enc.StringEncoder.Instance);
@@ -370,6 +398,8 @@ namespace Dropbox.Api.Sharing
                         return InviteViewer.Decoder.DecodeFields(reader);
                     case "invite_viewer_no_comment":
                         return InviteViewerNoComment.Decoder.DecodeFields(reader);
+                    case "invite_editor":
+                        return InviteEditor.Decoder.DecodeFields(reader);
                     case "unshare":
                         return Unshare.Decoder.DecodeFields(reader);
                     case "relinquish_membership":
@@ -731,6 +761,76 @@ namespace Dropbox.Api.Sharing
                 protected override InviteViewerNoComment Create()
                 {
                     return InviteViewerNoComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Add a member with edit permissions.</para>
+        /// </summary>
+        public sealed class InviteEditor : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InviteEditor> Encoder = new InviteEditorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InviteEditor> Decoder = new InviteEditorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InviteEditor" />
+            /// class.</para>
+            /// </summary>
+            private InviteEditor()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InviteEditor</para>
+            /// </summary>
+            public static readonly InviteEditor Instance = new InviteEditor();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InviteEditor" />.</para>
+            /// </summary>
+            private class InviteEditorEncoder : enc.StructEncoder<InviteEditor>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InviteEditor value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InviteEditor" />.</para>
+            /// </summary>
+            private class InviteEditorDecoder : enc.StructDecoder<InviteEditor>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InviteEditor" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InviteEditor Create()
+                {
+                    return InviteEditor.Instance;
                 }
 
             }

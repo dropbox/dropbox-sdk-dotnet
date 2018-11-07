@@ -32,7 +32,8 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="metadata">The metadata</param>
-        /// <param name="thumbnail">The thumbnail</param>
+        /// <param name="thumbnail">A string containing the base64-encoded thumbnail data for
+        /// this file.</param>
         public GetThumbnailBatchResultData(FileMetadata metadata,
                                            string thumbnail)
         {
@@ -67,7 +68,7 @@ namespace Dropbox.Api.Files
         public FileMetadata Metadata { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the thumbnail of the get thumbnail batch result data</para>
+        /// <para>A string containing the base64-encoded thumbnail data for this file.</para>
         /// </summary>
         public string Thumbnail { get; protected set; }
 

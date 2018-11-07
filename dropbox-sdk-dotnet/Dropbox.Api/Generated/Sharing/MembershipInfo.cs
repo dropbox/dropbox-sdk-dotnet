@@ -33,7 +33,8 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="MembershipInfo" /> class.</para>
         /// </summary>
-        /// <param name="accessType">The access type for this member.</param>
+        /// <param name="accessType">The access type for this member. It contains inherited
+        /// access type from parent folder, and acquired access type from this folder.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Never set.</param>
@@ -69,7 +70,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The access type for this member.</para>
+        /// <para>The access type for this member. It contains inherited access type from
+        /// parent folder, and acquired access type from this folder.</para>
         /// </summary>
         public AccessLevel AccessType { get; protected set; }
 

@@ -35,11 +35,19 @@ namespace Dropbox.Api.TeamLog
         /// to historical data gap.</param>
         /// <param name="newParentNsId">New parent namespace ID. Might be missing due to
         /// historical data gap.</param>
+        /// <param name="previousNsPath">Previous namespace path. Might be missing due to
+        /// historical data gap.</param>
+        /// <param name="newNsPath">New namespace path. Might be missing due to historical data
+        /// gap.</param>
         public SharedFolderNestDetails(string previousParentNsId = null,
-                                       string newParentNsId = null)
+                                       string newParentNsId = null,
+                                       string previousNsPath = null,
+                                       string newNsPath = null)
         {
             this.PreviousParentNsId = previousParentNsId;
             this.NewParentNsId = newParentNsId;
+            this.PreviousNsPath = previousNsPath;
+            this.NewNsPath = newNsPath;
         }
 
         /// <summary>
@@ -64,6 +72,16 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string NewParentNsId { get; protected set; }
 
+        /// <summary>
+        /// <para>Previous namespace path. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string PreviousNsPath { get; protected set; }
+
+        /// <summary>
+        /// <para>New namespace path. Might be missing due to historical data gap.</para>
+        /// </summary>
+        public string NewNsPath { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -85,6 +103,14 @@ namespace Dropbox.Api.TeamLog
                 if (value.NewParentNsId != null)
                 {
                     WriteProperty("new_parent_ns_id", value.NewParentNsId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PreviousNsPath != null)
+                {
+                    WriteProperty("previous_ns_path", value.PreviousNsPath, writer, enc.StringEncoder.Instance);
+                }
+                if (value.NewNsPath != null)
+                {
+                    WriteProperty("new_ns_path", value.NewNsPath, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -124,6 +150,12 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "new_parent_ns_id":
                         value.NewParentNsId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "previous_ns_path":
+                        value.PreviousNsPath = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "new_ns_path":
+                        value.NewNsPath = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

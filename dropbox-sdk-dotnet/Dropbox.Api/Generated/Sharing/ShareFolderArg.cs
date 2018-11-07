@@ -44,6 +44,8 @@ namespace Dropbox.Api.Sharing
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
         /// folder.</param>
+        /// <param name="accessInheritance">The access inheritance settings for the
+        /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
@@ -55,9 +57,10 @@ namespace Dropbox.Api.Sharing
                               MemberPolicy memberPolicy = null,
                               SharedLinkPolicy sharedLinkPolicy = null,
                               ViewerInfoPolicy viewerInfoPolicy = null,
+                              AccessInheritance accessInheritance = null,
                               col.IEnumerable<FolderAction> actions = null,
                               LinkSettings linkSettings = null)
-            : base(path, aclUpdatePolicy, forceAsync, memberPolicy, sharedLinkPolicy, viewerInfoPolicy)
+            : base(path, aclUpdatePolicy, forceAsync, memberPolicy, sharedLinkPolicy, viewerInfoPolicy, accessInheritance)
         {
             var actionsList = enc.Util.ToList(actions);
 
@@ -120,6 +123,7 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, global::Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
                 }
+                WriteProperty("access_inheritance", value.AccessInheritance, writer, global::Dropbox.Api.Sharing.AccessInheritance.Encoder);
                 if (value.Actions.Count > 0)
                 {
                     WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.FolderAction.Encoder);
@@ -177,6 +181,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "viewer_info_policy":
                         value.ViewerInfoPolicy = global::Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
+                        break;
+                    case "access_inheritance":
+                        value.AccessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Decoder.Decode(reader);
                         break;
                     case "actions":
                         value.Actions = ReadList<FolderAction>(reader, global::Dropbox.Api.Sharing.FolderAction.Decoder);

@@ -1921,6 +1921,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// MemberDeleteManualContacts</para>
+        /// </summary>
+        public bool IsMemberDeleteManualContacts
+        {
+            get
+            {
+                return this is MemberDeleteManualContacts;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberDeleteManualContacts, or <c>null</c>.</para>
+        /// </summary>
+        public MemberDeleteManualContacts AsMemberDeleteManualContacts
+        {
+            get
+            {
+                return this as MemberDeleteManualContacts;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// MemberPermanentlyDeleteAccountContents</para>
         /// </summary>
         public bool IsMemberPermanentlyDeleteAccountContents
@@ -2550,6 +2573,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as PaperDocMention;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// PaperDocOwnershipChanged</para>
+        /// </summary>
+        public bool IsPaperDocOwnershipChanged
+        {
+            get
+            {
+                return this is PaperDocOwnershipChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperDocOwnershipChanged, or <c>null</c>.</para>
+        /// </summary>
+        public PaperDocOwnershipChanged AsPaperDocOwnershipChanged
+        {
+            get
+            {
+                return this as PaperDocOwnershipChanged;
             }
         }
 
@@ -6515,6 +6561,30 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamSelectiveSyncPolicyChanged</para>
+        /// </summary>
+        public bool IsTeamSelectiveSyncPolicyChanged
+        {
+            get
+            {
+                return this is TeamSelectiveSyncPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamSelectiveSyncPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamSelectiveSyncPolicyChanged AsTeamSelectiveSyncPolicyChanged
+        {
+            get
+            {
+                return this as TeamSelectiveSyncPolicyChanged;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TfaChangePolicy</para>
         /// </summary>
         public bool IsTfaChangePolicy
@@ -6556,6 +6626,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TwoAccountChangePolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ViewerInfoPolicyChanged</para>
+        /// </summary>
+        public bool IsViewerInfoPolicyChanged
+        {
+            get
+            {
+                return this is ViewerInfoPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ViewerInfoPolicyChanged, or <c>null</c>.</para>
+        /// </summary>
+        public ViewerInfoPolicyChanged AsViewerInfoPolicyChanged
+        {
+            get
+            {
+                return this as ViewerInfoPolicyChanged;
             }
         }
 
@@ -7457,6 +7550,12 @@ namespace Dropbox.Api.TeamLog
                     MemberChangeStatus.Encoder.EncodeFields((MemberChangeStatus)value, writer);
                     return;
                 }
+                if (value is MemberDeleteManualContacts)
+                {
+                    WriteProperty(".tag", "member_delete_manual_contacts", writer, enc.StringEncoder.Instance);
+                    MemberDeleteManualContacts.Encoder.EncodeFields((MemberDeleteManualContacts)value, writer);
+                    return;
+                }
                 if (value is MemberPermanentlyDeleteAccountContents)
                 {
                     WriteProperty(".tag", "member_permanently_delete_account_contents", writer, enc.StringEncoder.Instance);
@@ -7623,6 +7722,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "paper_doc_mention", writer, enc.StringEncoder.Instance);
                     PaperDocMention.Encoder.EncodeFields((PaperDocMention)value, writer);
+                    return;
+                }
+                if (value is PaperDocOwnershipChanged)
+                {
+                    WriteProperty(".tag", "paper_doc_ownership_changed", writer, enc.StringEncoder.Instance);
+                    PaperDocOwnershipChanged.Encoder.EncodeFields((PaperDocOwnershipChanged)value, writer);
                     return;
                 }
                 if (value is PaperDocRequestAccess)
@@ -8675,6 +8780,12 @@ namespace Dropbox.Api.TeamLog
                     SsoChangePolicy.Encoder.EncodeFields((SsoChangePolicy)value, writer);
                     return;
                 }
+                if (value is TeamSelectiveSyncPolicyChanged)
+                {
+                    WriteProperty(".tag", "team_selective_sync_policy_changed", writer, enc.StringEncoder.Instance);
+                    TeamSelectiveSyncPolicyChanged.Encoder.EncodeFields((TeamSelectiveSyncPolicyChanged)value, writer);
+                    return;
+                }
                 if (value is TfaChangePolicy)
                 {
                     WriteProperty(".tag", "tfa_change_policy", writer, enc.StringEncoder.Instance);
@@ -8685,6 +8796,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "two_account_change_policy", writer, enc.StringEncoder.Instance);
                     TwoAccountChangePolicy.Encoder.EncodeFields((TwoAccountChangePolicy)value, writer);
+                    return;
+                }
+                if (value is ViewerInfoPolicyChanged)
+                {
+                    WriteProperty(".tag", "viewer_info_policy_changed", writer, enc.StringEncoder.Instance);
+                    ViewerInfoPolicyChanged.Encoder.EncodeFields((ViewerInfoPolicyChanged)value, writer);
                     return;
                 }
                 if (value is WebSessionsChangeFixedLengthPolicy)
@@ -8989,6 +9106,8 @@ namespace Dropbox.Api.TeamLog
                         return MemberChangeName.Decoder.DecodeFields(reader);
                     case "member_change_status":
                         return MemberChangeStatus.Decoder.DecodeFields(reader);
+                    case "member_delete_manual_contacts":
+                        return MemberDeleteManualContacts.Decoder.DecodeFields(reader);
                     case "member_permanently_delete_account_contents":
                         return MemberPermanentlyDeleteAccountContents.Decoder.DecodeFields(reader);
                     case "member_space_limits_add_custom_quota":
@@ -9045,6 +9164,8 @@ namespace Dropbox.Api.TeamLog
                         return PaperDocFollowed.Decoder.DecodeFields(reader);
                     case "paper_doc_mention":
                         return PaperDocMention.Decoder.DecodeFields(reader);
+                    case "paper_doc_ownership_changed":
+                        return PaperDocOwnershipChanged.Decoder.DecodeFields(reader);
                     case "paper_doc_request_access":
                         return PaperDocRequestAccess.Decoder.DecodeFields(reader);
                     case "paper_doc_resolve_comment":
@@ -9395,10 +9516,14 @@ namespace Dropbox.Api.TeamLog
                         return SmartSyncOptOut.Decoder.DecodeFields(reader);
                     case "sso_change_policy":
                         return SsoChangePolicy.Decoder.DecodeFields(reader);
+                    case "team_selective_sync_policy_changed":
+                        return TeamSelectiveSyncPolicyChanged.Decoder.DecodeFields(reader);
                     case "tfa_change_policy":
                         return TfaChangePolicy.Decoder.DecodeFields(reader);
                     case "two_account_change_policy":
                         return TwoAccountChangePolicy.Decoder.DecodeFields(reader);
+                    case "viewer_info_policy_changed":
+                        return ViewerInfoPolicyChanged.Decoder.DecodeFields(reader);
                     case "web_sessions_change_fixed_length_policy":
                         return WebSessionsChangeFixedLengthPolicy.Decoder.DecodeFields(reader);
                     case "web_sessions_change_idle_length_policy":
@@ -16957,6 +17082,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(members) Cleared saved contacts</para>
+        /// </summary>
+        public sealed class MemberDeleteManualContacts : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberDeleteManualContacts> Encoder = new MemberDeleteManualContactsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberDeleteManualContacts> Decoder = new MemberDeleteManualContactsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberDeleteManualContacts"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MemberDeleteManualContacts(MemberDeleteManualContactsType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberDeleteManualContacts"
+            /// /> class.</para>
+            /// </summary>
+            private MemberDeleteManualContacts()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public MemberDeleteManualContactsType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberDeleteManualContacts" />.</para>
+            /// </summary>
+            private class MemberDeleteManualContactsEncoder : enc.StructEncoder<MemberDeleteManualContacts>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberDeleteManualContacts value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("member_delete_manual_contacts", value.Value, writer, global::Dropbox.Api.TeamLog.MemberDeleteManualContactsType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberDeleteManualContacts" />.</para>
+            /// </summary>
+            private class MemberDeleteManualContactsDecoder : enc.StructDecoder<MemberDeleteManualContacts>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MemberDeleteManualContacts"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberDeleteManualContacts Create()
+                {
+                    return new MemberDeleteManualContacts();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MemberDeleteManualContacts DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MemberDeleteManualContacts(global::Dropbox.Api.TeamLog.MemberDeleteManualContactsType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(members) Permanently deleted contents of deleted team member account</para>
         /// </summary>
         public sealed class MemberPermanentlyDeleteAccountContents : EventType
@@ -19468,6 +19683,96 @@ namespace Dropbox.Api.TeamLog
                 public override PaperDocMention DecodeFields(enc.IJsonReader reader)
                 {
                     return new PaperDocMention(global::Dropbox.Api.TeamLog.PaperDocMentionType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(paper) Transferred ownership of Paper doc</para>
+        /// </summary>
+        public sealed class PaperDocOwnershipChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperDocOwnershipChanged> Encoder = new PaperDocOwnershipChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperDocOwnershipChanged> Decoder = new PaperDocOwnershipChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperDocOwnershipChanged" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperDocOwnershipChanged(PaperDocOwnershipChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PaperDocOwnershipChanged" />
+            /// class.</para>
+            /// </summary>
+            private PaperDocOwnershipChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public PaperDocOwnershipChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperDocOwnershipChanged" />.</para>
+            /// </summary>
+            private class PaperDocOwnershipChangedEncoder : enc.StructEncoder<PaperDocOwnershipChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperDocOwnershipChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("paper_doc_ownership_changed", value.Value, writer, global::Dropbox.Api.TeamLog.PaperDocOwnershipChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperDocOwnershipChanged" />.</para>
+            /// </summary>
+            private class PaperDocOwnershipChangedDecoder : enc.StructDecoder<PaperDocOwnershipChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PaperDocOwnershipChanged"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperDocOwnershipChanged Create()
+                {
+                    return new PaperDocOwnershipChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperDocOwnershipChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperDocOwnershipChanged(global::Dropbox.Api.TeamLog.PaperDocOwnershipChangedType.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -35224,6 +35529,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(team_policies) Enabled/disabled Team Selective Sync for team</para>
+        /// </summary>
+        public sealed class TeamSelectiveSyncPolicyChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamSelectiveSyncPolicyChanged> Encoder = new TeamSelectiveSyncPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamSelectiveSyncPolicyChanged> Decoder = new TeamSelectiveSyncPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamSelectiveSyncPolicyChanged" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamSelectiveSyncPolicyChanged(TeamSelectiveSyncPolicyChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamSelectiveSyncPolicyChanged" /> class.</para>
+            /// </summary>
+            private TeamSelectiveSyncPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamSelectiveSyncPolicyChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamSelectiveSyncPolicyChanged" />.</para>
+            /// </summary>
+            private class TeamSelectiveSyncPolicyChangedEncoder : enc.StructEncoder<TeamSelectiveSyncPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamSelectiveSyncPolicyChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_selective_sync_policy_changed", value.Value, writer, global::Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamSelectiveSyncPolicyChanged" />.</para>
+            /// </summary>
+            private class TeamSelectiveSyncPolicyChangedDecoder : enc.StructDecoder<TeamSelectiveSyncPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamSelectiveSyncPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamSelectiveSyncPolicyChanged Create()
+                {
+                    return new TeamSelectiveSyncPolicyChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamSelectiveSyncPolicyChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamSelectiveSyncPolicyChanged(global::Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(team_policies) Changed two-step verification setting for team</para>
         /// </summary>
         public sealed class TfaChangePolicy : EventType
@@ -35397,6 +35792,96 @@ namespace Dropbox.Api.TeamLog
                 public override TwoAccountChangePolicy DecodeFields(enc.IJsonReader reader)
                 {
                     return new TwoAccountChangePolicy(global::Dropbox.Api.TeamLog.TwoAccountChangePolicyType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed team policy for viewer info</para>
+        /// </summary>
+        public sealed class ViewerInfoPolicyChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ViewerInfoPolicyChanged> Encoder = new ViewerInfoPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ViewerInfoPolicyChanged> Decoder = new ViewerInfoPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ViewerInfoPolicyChanged" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ViewerInfoPolicyChanged(ViewerInfoPolicyChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ViewerInfoPolicyChanged" />
+            /// class.</para>
+            /// </summary>
+            private ViewerInfoPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ViewerInfoPolicyChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ViewerInfoPolicyChanged" />.</para>
+            /// </summary>
+            private class ViewerInfoPolicyChangedEncoder : enc.StructEncoder<ViewerInfoPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ViewerInfoPolicyChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("viewer_info_policy_changed", value.Value, writer, global::Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ViewerInfoPolicyChanged" />.</para>
+            /// </summary>
+            private class ViewerInfoPolicyChangedDecoder : enc.StructDecoder<ViewerInfoPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ViewerInfoPolicyChanged"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ViewerInfoPolicyChanged Create()
+                {
+                    return new ViewerInfoPolicyChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ViewerInfoPolicyChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ViewerInfoPolicyChanged(global::Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -19,13 +19,21 @@ $nugetPath = "$nugetDir\nuget.exe"
 $nugetSpecPath = "$sourceDir\Dropbox.Api.nuspec"
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
-$releaseVersion = "4.9.1"
+$releaseVersion = "4.9.2"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 $releaseNotes = @'
 What's New:
-  - Add native support for .Net Standard 2.0.
-  - Remove unused data types.
+  - Files Namespace:
+    - Updated doc strings
+
+  - Team_log Namespace:
+    - Updated event docstrings
+    - New reset field for loading events with a cursor
+    - New event types added
+
+  - Team_policies Namespace:
+    - New CameraUploadsPolicyState union
 '@
 
 $builds = @(

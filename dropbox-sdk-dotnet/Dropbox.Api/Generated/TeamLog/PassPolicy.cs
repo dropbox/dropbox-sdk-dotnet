@@ -11,72 +11,92 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Errors that can be raised when calling <see
-    /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" />.</para>
+    /// <para>The pass policy object</para>
     /// </summary>
-    public class GetTeamEventsContinueError
+    public class PassPolicy
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<GetTeamEventsContinueError> Encoder = new GetTeamEventsContinueErrorEncoder();
+        internal static enc.StructEncoder<PassPolicy> Encoder = new PassPolicyEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<GetTeamEventsContinueError> Decoder = new GetTeamEventsContinueErrorDecoder();
+        internal static enc.StructDecoder<PassPolicy> Decoder = new PassPolicyDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="GetTeamEventsContinueError" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="PassPolicy" /> class.</para>
         /// </summary>
-        public GetTeamEventsContinueError()
+        public PassPolicy()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is BadCursor</para>
+        /// <para>Gets a value indicating whether this instance is Enabled</para>
         /// </summary>
-        public bool IsBadCursor
+        public bool IsEnabled
         {
             get
             {
-                return this is BadCursor;
+                return this is Enabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a BadCursor, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Enabled, or <c>null</c>.</para>
         /// </summary>
-        public BadCursor AsBadCursor
+        public Enabled AsEnabled
         {
             get
             {
-                return this as BadCursor;
+                return this as Enabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Reset</para>
+        /// <para>Gets a value indicating whether this instance is Allow</para>
         /// </summary>
-        public bool IsReset
+        public bool IsAllow
         {
             get
             {
-                return this is Reset;
+                return this is Allow;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Reset, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Allow, or <c>null</c>.</para>
         /// </summary>
-        public Reset AsReset
+        public Allow AsAllow
         {
             get
             {
-                return this as Reset;
+                return this as Allow;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Disabled</para>
+        /// </summary>
+        public bool IsDisabled
+        {
+            get
+            {
+                return this is Disabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Disabled, or <c>null</c>.</para>
+        /// </summary>
+        public Disabled AsDisabled
+        {
+            get
+            {
+                return this as Disabled;
             }
         }
 
@@ -105,27 +125,33 @@ namespace Dropbox.Api.TeamLog
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="GetTeamEventsContinueError" />.</para>
+        /// <para>Encoder for  <see cref="PassPolicy" />.</para>
         /// </summary>
-        private class GetTeamEventsContinueErrorEncoder : enc.StructEncoder<GetTeamEventsContinueError>
+        private class PassPolicyEncoder : enc.StructEncoder<PassPolicy>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(GetTeamEventsContinueError value, enc.IJsonWriter writer)
+            public override void EncodeFields(PassPolicy value, enc.IJsonWriter writer)
             {
-                if (value is BadCursor)
+                if (value is Enabled)
                 {
-                    WriteProperty(".tag", "bad_cursor", writer, enc.StringEncoder.Instance);
-                    BadCursor.Encoder.EncodeFields((BadCursor)value, writer);
+                    WriteProperty(".tag", "enabled", writer, enc.StringEncoder.Instance);
+                    Enabled.Encoder.EncodeFields((Enabled)value, writer);
                     return;
                 }
-                if (value is Reset)
+                if (value is Allow)
                 {
-                    WriteProperty(".tag", "reset", writer, enc.StringEncoder.Instance);
-                    Reset.Encoder.EncodeFields((Reset)value, writer);
+                    WriteProperty(".tag", "allow", writer, enc.StringEncoder.Instance);
+                    Allow.Encoder.EncodeFields((Allow)value, writer);
+                    return;
+                }
+                if (value is Disabled)
+                {
+                    WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
+                    Disabled.Encoder.EncodeFields((Disabled)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -143,18 +169,17 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="GetTeamEventsContinueError" />.</para>
+        /// <para>Decoder for  <see cref="PassPolicy" />.</para>
         /// </summary>
-        private class GetTeamEventsContinueErrorDecoder : enc.UnionDecoder<GetTeamEventsContinueError>
+        private class PassPolicyDecoder : enc.UnionDecoder<PassPolicy>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="GetTeamEventsContinueError"
-            /// />.</para>
+            /// <para>Create a new instance of type <see cref="PassPolicy" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override GetTeamEventsContinueError Create()
+            protected override PassPolicy Create()
             {
-                return new GetTeamEventsContinueError();
+                return new PassPolicy();
             }
 
             /// <summary>
@@ -163,14 +188,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override GetTeamEventsContinueError Decode(string tag, enc.IJsonReader reader)
+            protected override PassPolicy Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "bad_cursor":
-                        return BadCursor.Decoder.DecodeFields(reader);
-                    case "reset":
-                        return Reset.Decoder.DecodeFields(reader);
+                    case "enabled":
+                        return Enabled.Decoder.DecodeFields(reader);
+                    case "allow":
+                        return Allow.Decoder.DecodeFields(reader);
+                    case "disabled":
+                        return Disabled.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -180,47 +207,47 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>Bad cursor.</para>
+        /// <para>The enabled object</para>
         /// </summary>
-        public sealed class BadCursor : GetTeamEventsContinueError
+        public sealed class Enabled : PassPolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<BadCursor> Encoder = new BadCursorEncoder();
+            internal static enc.StructEncoder<Enabled> Encoder = new EnabledEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<BadCursor> Decoder = new BadCursorDecoder();
+            internal static enc.StructDecoder<Enabled> Decoder = new EnabledDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="BadCursor" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Enabled" /> class.</para>
             /// </summary>
-            private BadCursor()
+            private Enabled()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of BadCursor</para>
+            /// <para>A singleton instance of Enabled</para>
             /// </summary>
-            public static readonly BadCursor Instance = new BadCursor();
+            public static readonly Enabled Instance = new Enabled();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="BadCursor" />.</para>
+            /// <para>Encoder for  <see cref="Enabled" />.</para>
             /// </summary>
-            private class BadCursorEncoder : enc.StructEncoder<BadCursor>
+            private class EnabledEncoder : enc.StructEncoder<Enabled>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(BadCursor value, enc.IJsonWriter writer)
+                public override void EncodeFields(Enabled value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -230,17 +257,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="BadCursor" />.</para>
+            /// <para>Decoder for  <see cref="Enabled" />.</para>
             /// </summary>
-            private class BadCursorDecoder : enc.StructDecoder<BadCursor>
+            private class EnabledDecoder : enc.StructDecoder<Enabled>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="BadCursor" />.</para>
+                /// <para>Create a new instance of type <see cref="Enabled" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override BadCursor Create()
+                protected override Enabled Create()
                 {
-                    return BadCursor.Instance;
+                    return Enabled.Instance;
                 }
 
             }
@@ -249,64 +276,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Cursors are intended to be used quickly. Individual cursor values are
-        /// normally valid for days, but in rare cases may be reset sooner.</para>
-        /// <para>Cursor reset errors should be handled by fetching a new cursor from <see
-        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" />.</para>
-        /// <para>The associated value is the approximate timestamp of the most recent event
-        /// returned by the cursor. This should be used as a resumption point when calling <see
-        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" /> to obtain a
-        /// new cursor.</para>
+        /// <para>The allow object</para>
         /// </summary>
-        public sealed class Reset : GetTeamEventsContinueError
+        public sealed class Allow : PassPolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Reset> Encoder = new ResetEncoder();
+            internal static enc.StructEncoder<Allow> Encoder = new AllowEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Reset> Decoder = new ResetDecoder();
+            internal static enc.StructDecoder<Allow> Decoder = new AllowDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Reset" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Allow" /> class.</para>
             /// </summary>
-            /// <param name="value">The value</param>
-            public Reset(sys.DateTime value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Reset" /> class.</para>
-            /// </summary>
-            private Reset()
+            private Allow()
             {
             }
 
             /// <summary>
-            /// <para>Gets the value of this instance.</para>
+            /// <para>A singleton instance of Allow</para>
             /// </summary>
-            public sys.DateTime Value { get; private set; }
+            public static readonly Allow Instance = new Allow();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Reset" />.</para>
+            /// <para>Encoder for  <see cref="Allow" />.</para>
             /// </summary>
-            private class ResetEncoder : enc.StructEncoder<Reset>
+            private class AllowEncoder : enc.StructEncoder<Allow>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Reset value, enc.IJsonWriter writer)
+                public override void EncodeFields(Allow value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("reset", value.Value, writer, enc.DateTimeEncoder.Instance);
                 }
             }
 
@@ -315,37 +326,88 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Reset" />.</para>
+            /// <para>Decoder for  <see cref="Allow" />.</para>
             /// </summary>
-            private class ResetDecoder : enc.StructDecoder<Reset>
+            private class AllowDecoder : enc.StructDecoder<Allow>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Reset" />.</para>
+                /// <para>Create a new instance of type <see cref="Allow" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Reset Create()
+                protected override Allow Create()
                 {
-                    return new Reset();
+                    return Allow.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The disabled object</para>
+        /// </summary>
+        public sealed class Disabled : PassPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Disabled> Encoder = new DisabledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Disabled> Decoder = new DisabledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Disabled" /> class.</para>
+            /// </summary>
+            private Disabled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Disabled</para>
+            /// </summary>
+            public static readonly Disabled Instance = new Disabled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Disabled" />.</para>
+            /// </summary>
+            private class DisabledEncoder : enc.StructEncoder<Disabled>
+            {
                 /// <summary>
-                /// <para>Set given field.</para>
+                /// <para>Encode fields of given value.</para>
                 /// </summary>
-                /// <param name="value">The field value.</param>
-                /// <param name="fieldName">The field name.</param>
-                /// <param name="reader">The json reader.</param>
-                protected override void SetField(Reset value, string fieldName, enc.IJsonReader reader)
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Disabled value, enc.IJsonWriter writer)
                 {
-                    switch (fieldName)
-                    {
-                        case "reset":
-                            value.Value = enc.DateTimeDecoder.Instance.Decode(reader);
-                            break;
-                        default:
-                            reader.Skip();
-                            break;
-                    }
                 }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Disabled" />.</para>
+            /// </summary>
+            private class DisabledDecoder : enc.StructDecoder<Disabled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Disabled" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Disabled Create()
+                {
+                    return Disabled.Instance;
+                }
+
             }
 
             #endregion
@@ -354,7 +416,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : GetTeamEventsContinueError
+        public sealed class Other : PassPolicy
         {
             #pragma warning disable 108
 

@@ -45,12 +45,15 @@ namespace Dropbox.Api.Sharing
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="viewerInfoPolicy">Who can enable/disable viewer info for this shared
         /// folder.</param>
+        /// <param name="accessInheritance">The access inheritance settings for the
+        /// folder.</param>
         public ShareFolderArgBase(string path,
                                   AclUpdatePolicy aclUpdatePolicy = null,
                                   bool forceAsync = false,
                                   MemberPolicy memberPolicy = null,
                                   SharedLinkPolicy sharedLinkPolicy = null,
-                                  ViewerInfoPolicy viewerInfoPolicy = null)
+                                  ViewerInfoPolicy viewerInfoPolicy = null,
+                                  AccessInheritance accessInheritance = null)
         {
             if (path == null)
             {
@@ -61,12 +64,17 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
             }
 
+            if (accessInheritance == null)
+            {
+                accessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Inherit.Instance;
+            }
             this.Path = path;
             this.AclUpdatePolicy = aclUpdatePolicy;
             this.ForceAsync = forceAsync;
             this.MemberPolicy = memberPolicy;
             this.SharedLinkPolicy = sharedLinkPolicy;
             this.ViewerInfoPolicy = viewerInfoPolicy;
+            this.AccessInheritance = accessInheritance;
         }
 
         /// <summary>
@@ -79,6 +87,7 @@ namespace Dropbox.Api.Sharing
         public ShareFolderArgBase()
         {
             this.ForceAsync = false;
+            this.AccessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Inherit.Instance;
         }
 
         /// <summary>
@@ -115,6 +124,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>The access inheritance settings for the folder.</para>
+        /// </summary>
+        public AccessInheritance AccessInheritance { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -147,6 +161,7 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty("viewer_info_policy", value.ViewerInfoPolicy, writer, global::Dropbox.Api.Sharing.ViewerInfoPolicy.Encoder);
                 }
+                WriteProperty("access_inheritance", value.AccessInheritance, writer, global::Dropbox.Api.Sharing.AccessInheritance.Encoder);
             }
         }
 
@@ -196,6 +211,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "viewer_info_policy":
                         value.ViewerInfoPolicy = global::Dropbox.Api.Sharing.ViewerInfoPolicy.Decoder.Decode(reader);
+                        break;
+                    case "access_inheritance":
+                        value.AccessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -11,143 +11,118 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The members remove error object</para>
+    /// <para>The members transfer former members files error object</para>
     /// </summary>
-    public class MembersRemoveError
+    public class MembersTransferFormerMembersFilesError
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MembersRemoveError> Encoder = new MembersRemoveErrorEncoder();
+        internal static enc.StructEncoder<MembersTransferFormerMembersFilesError> Encoder = new MembersTransferFormerMembersFilesErrorEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MembersRemoveError> Decoder = new MembersRemoveErrorDecoder();
+        internal static enc.StructDecoder<MembersTransferFormerMembersFilesError> Decoder = new MembersTransferFormerMembersFilesErrorDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MembersRemoveError" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see
+        /// cref="MembersTransferFormerMembersFilesError" /> class.</para>
         /// </summary>
-        public MembersRemoveError()
+        public MembersTransferFormerMembersFilesError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is RemoveLastAdmin</para>
+        /// <para>Gets a value indicating whether this instance is
+        /// UserDataIsBeingTransferred</para>
         /// </summary>
-        public bool IsRemoveLastAdmin
+        public bool IsUserDataIsBeingTransferred
         {
             get
             {
-                return this is RemoveLastAdmin;
+                return this is UserDataIsBeingTransferred;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a RemoveLastAdmin, or <c>null</c>.</para>
+        /// <para>Gets this instance as a UserDataIsBeingTransferred, or <c>null</c>.</para>
         /// </summary>
-        public RemoveLastAdmin AsRemoveLastAdmin
+        public UserDataIsBeingTransferred AsUserDataIsBeingTransferred
         {
             get
             {
-                return this as RemoveLastAdmin;
+                return this as UserDataIsBeingTransferred;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserNotRemoved</para>
+        /// </summary>
+        public bool IsUserNotRemoved
+        {
+            get
+            {
+                return this is UserNotRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserNotRemoved, or <c>null</c>.</para>
+        /// </summary>
+        public UserNotRemoved AsUserNotRemoved
+        {
+            get
+            {
+                return this as UserNotRemoved;
             }
         }
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
-        /// CannotKeepAccountAndTransfer</para>
+        /// UserDataCannotBeTransferred</para>
         /// </summary>
-        public bool IsCannotKeepAccountAndTransfer
+        public bool IsUserDataCannotBeTransferred
         {
             get
             {
-                return this is CannotKeepAccountAndTransfer;
+                return this is UserDataCannotBeTransferred;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a CannotKeepAccountAndTransfer, or <c>null</c>.</para>
+        /// <para>Gets this instance as a UserDataCannotBeTransferred, or <c>null</c>.</para>
         /// </summary>
-        public CannotKeepAccountAndTransfer AsCannotKeepAccountAndTransfer
+        public UserDataCannotBeTransferred AsUserDataCannotBeTransferred
         {
             get
             {
-                return this as CannotKeepAccountAndTransfer;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// CannotKeepAccountAndDeleteData</para>
-        /// </summary>
-        public bool IsCannotKeepAccountAndDeleteData
-        {
-            get
-            {
-                return this is CannotKeepAccountAndDeleteData;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a CannotKeepAccountAndDeleteData, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public CannotKeepAccountAndDeleteData AsCannotKeepAccountAndDeleteData
-        {
-            get
-            {
-                return this as CannotKeepAccountAndDeleteData;
+                return this as UserDataCannotBeTransferred;
             }
         }
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
-        /// EmailAddressTooLongToBeDisabled</para>
+        /// UserDataAlreadyTransferred</para>
         /// </summary>
-        public bool IsEmailAddressTooLongToBeDisabled
+        public bool IsUserDataAlreadyTransferred
         {
             get
             {
-                return this is EmailAddressTooLongToBeDisabled;
+                return this is UserDataAlreadyTransferred;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a EmailAddressTooLongToBeDisabled, or
-        /// <c>null</c>.</para>
+        /// <para>Gets this instance as a UserDataAlreadyTransferred, or <c>null</c>.</para>
         /// </summary>
-        public EmailAddressTooLongToBeDisabled AsEmailAddressTooLongToBeDisabled
+        public UserDataAlreadyTransferred AsUserDataAlreadyTransferred
         {
             get
             {
-                return this as EmailAddressTooLongToBeDisabled;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// CannotKeepInvitedUserAccount</para>
-        /// </summary>
-        public bool IsCannotKeepInvitedUserAccount
-        {
-            get
-            {
-                return this is CannotKeepInvitedUserAccount;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a CannotKeepInvitedUserAccount, or <c>null</c>.</para>
-        /// </summary>
-        public CannotKeepInvitedUserAccount AsCannotKeepInvitedUserAccount
-        {
-            get
-            {
-                return this as CannotKeepInvitedUserAccount;
+                return this as UserDataAlreadyTransferred;
             }
         }
 
@@ -362,45 +337,39 @@ namespace Dropbox.Api.Team
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MembersRemoveError" />.</para>
+        /// <para>Encoder for  <see cref="MembersTransferFormerMembersFilesError" />.</para>
         /// </summary>
-        private class MembersRemoveErrorEncoder : enc.StructEncoder<MembersRemoveError>
+        private class MembersTransferFormerMembersFilesErrorEncoder : enc.StructEncoder<MembersTransferFormerMembersFilesError>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MembersRemoveError value, enc.IJsonWriter writer)
+            public override void EncodeFields(MembersTransferFormerMembersFilesError value, enc.IJsonWriter writer)
             {
-                if (value is RemoveLastAdmin)
+                if (value is UserDataIsBeingTransferred)
                 {
-                    WriteProperty(".tag", "remove_last_admin", writer, enc.StringEncoder.Instance);
-                    RemoveLastAdmin.Encoder.EncodeFields((RemoveLastAdmin)value, writer);
+                    WriteProperty(".tag", "user_data_is_being_transferred", writer, enc.StringEncoder.Instance);
+                    UserDataIsBeingTransferred.Encoder.EncodeFields((UserDataIsBeingTransferred)value, writer);
                     return;
                 }
-                if (value is CannotKeepAccountAndTransfer)
+                if (value is UserNotRemoved)
                 {
-                    WriteProperty(".tag", "cannot_keep_account_and_transfer", writer, enc.StringEncoder.Instance);
-                    CannotKeepAccountAndTransfer.Encoder.EncodeFields((CannotKeepAccountAndTransfer)value, writer);
+                    WriteProperty(".tag", "user_not_removed", writer, enc.StringEncoder.Instance);
+                    UserNotRemoved.Encoder.EncodeFields((UserNotRemoved)value, writer);
                     return;
                 }
-                if (value is CannotKeepAccountAndDeleteData)
+                if (value is UserDataCannotBeTransferred)
                 {
-                    WriteProperty(".tag", "cannot_keep_account_and_delete_data", writer, enc.StringEncoder.Instance);
-                    CannotKeepAccountAndDeleteData.Encoder.EncodeFields((CannotKeepAccountAndDeleteData)value, writer);
+                    WriteProperty(".tag", "user_data_cannot_be_transferred", writer, enc.StringEncoder.Instance);
+                    UserDataCannotBeTransferred.Encoder.EncodeFields((UserDataCannotBeTransferred)value, writer);
                     return;
                 }
-                if (value is EmailAddressTooLongToBeDisabled)
+                if (value is UserDataAlreadyTransferred)
                 {
-                    WriteProperty(".tag", "email_address_too_long_to_be_disabled", writer, enc.StringEncoder.Instance);
-                    EmailAddressTooLongToBeDisabled.Encoder.EncodeFields((EmailAddressTooLongToBeDisabled)value, writer);
-                    return;
-                }
-                if (value is CannotKeepInvitedUserAccount)
-                {
-                    WriteProperty(".tag", "cannot_keep_invited_user_account", writer, enc.StringEncoder.Instance);
-                    CannotKeepInvitedUserAccount.Encoder.EncodeFields((CannotKeepInvitedUserAccount)value, writer);
+                    WriteProperty(".tag", "user_data_already_transferred", writer, enc.StringEncoder.Instance);
+                    UserDataAlreadyTransferred.Encoder.EncodeFields((UserDataAlreadyTransferred)value, writer);
                     return;
                 }
                 if (value is RemovedAndTransferDestShouldDiffer)
@@ -466,17 +435,18 @@ namespace Dropbox.Api.Team
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MembersRemoveError" />.</para>
+        /// <para>Decoder for  <see cref="MembersTransferFormerMembersFilesError" />.</para>
         /// </summary>
-        private class MembersRemoveErrorDecoder : enc.UnionDecoder<MembersRemoveError>
+        private class MembersTransferFormerMembersFilesErrorDecoder : enc.UnionDecoder<MembersTransferFormerMembersFilesError>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MembersRemoveError" />.</para>
+            /// <para>Create a new instance of type <see
+            /// cref="MembersTransferFormerMembersFilesError" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MembersRemoveError Create()
+            protected override MembersTransferFormerMembersFilesError Create()
             {
-                return new MembersRemoveError();
+                return new MembersTransferFormerMembersFilesError();
             }
 
             /// <summary>
@@ -485,20 +455,18 @@ namespace Dropbox.Api.Team
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override MembersRemoveError Decode(string tag, enc.IJsonReader reader)
+            protected override MembersTransferFormerMembersFilesError Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "remove_last_admin":
-                        return RemoveLastAdmin.Decoder.DecodeFields(reader);
-                    case "cannot_keep_account_and_transfer":
-                        return CannotKeepAccountAndTransfer.Decoder.DecodeFields(reader);
-                    case "cannot_keep_account_and_delete_data":
-                        return CannotKeepAccountAndDeleteData.Decoder.DecodeFields(reader);
-                    case "email_address_too_long_to_be_disabled":
-                        return EmailAddressTooLongToBeDisabled.Decoder.DecodeFields(reader);
-                    case "cannot_keep_invited_user_account":
-                        return CannotKeepInvitedUserAccount.Decoder.DecodeFields(reader);
+                    case "user_data_is_being_transferred":
+                        return UserDataIsBeingTransferred.Decoder.DecodeFields(reader);
+                    case "user_not_removed":
+                        return UserNotRemoved.Decoder.DecodeFields(reader);
+                    case "user_data_cannot_be_transferred":
+                        return UserDataCannotBeTransferred.Decoder.DecodeFields(reader);
+                    case "user_data_already_transferred":
+                        return UserDataAlreadyTransferred.Decoder.DecodeFields(reader);
                     case "removed_and_transfer_dest_should_differ":
                         return RemovedAndTransferDestShouldDiffer.Decoder.DecodeFields(reader);
                     case "removed_and_transfer_admin_should_differ":
@@ -526,49 +494,120 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>The user is the last admin of the team, so it cannot be removed from
-        /// it.</para>
+        /// <para>The user's data is being transferred. Please wait some time before
+        /// retrying.</para>
         /// </summary>
-        public sealed class RemoveLastAdmin : MembersRemoveError
+        public sealed class UserDataIsBeingTransferred : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<RemoveLastAdmin> Encoder = new RemoveLastAdminEncoder();
+            internal static enc.StructEncoder<UserDataIsBeingTransferred> Encoder = new UserDataIsBeingTransferredEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<RemoveLastAdmin> Decoder = new RemoveLastAdminDecoder();
+            internal static enc.StructDecoder<UserDataIsBeingTransferred> Decoder = new UserDataIsBeingTransferredDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="RemoveLastAdmin" />
+            /// <para>Initializes a new instance of the <see cref="UserDataIsBeingTransferred"
+            /// /> class.</para>
+            /// </summary>
+            private UserDataIsBeingTransferred()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserDataIsBeingTransferred</para>
+            /// </summary>
+            public static readonly UserDataIsBeingTransferred Instance = new UserDataIsBeingTransferred();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserDataIsBeingTransferred" />.</para>
+            /// </summary>
+            private class UserDataIsBeingTransferredEncoder : enc.StructEncoder<UserDataIsBeingTransferred>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserDataIsBeingTransferred value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserDataIsBeingTransferred" />.</para>
+            /// </summary>
+            private class UserDataIsBeingTransferredDecoder : enc.StructDecoder<UserDataIsBeingTransferred>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserDataIsBeingTransferred"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserDataIsBeingTransferred Create()
+                {
+                    return UserDataIsBeingTransferred.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>No matching removed user found for the argument user.</para>
+        /// </summary>
+        public sealed class UserNotRemoved : MembersTransferFormerMembersFilesError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserNotRemoved> Encoder = new UserNotRemovedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserNotRemoved> Decoder = new UserNotRemovedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserNotRemoved" />
             /// class.</para>
             /// </summary>
-            private RemoveLastAdmin()
+            private UserNotRemoved()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of RemoveLastAdmin</para>
+            /// <para>A singleton instance of UserNotRemoved</para>
             /// </summary>
-            public static readonly RemoveLastAdmin Instance = new RemoveLastAdmin();
+            public static readonly UserNotRemoved Instance = new UserNotRemoved();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="RemoveLastAdmin" />.</para>
+            /// <para>Encoder for  <see cref="UserNotRemoved" />.</para>
             /// </summary>
-            private class RemoveLastAdminEncoder : enc.StructEncoder<RemoveLastAdmin>
+            private class UserNotRemovedEncoder : enc.StructEncoder<UserNotRemoved>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(RemoveLastAdmin value, enc.IJsonWriter writer)
+                public override void EncodeFields(UserNotRemoved value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -578,17 +617,17 @@ namespace Dropbox.Api.Team
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="RemoveLastAdmin" />.</para>
+            /// <para>Decoder for  <see cref="UserNotRemoved" />.</para>
             /// </summary>
-            private class RemoveLastAdminDecoder : enc.StructDecoder<RemoveLastAdmin>
+            private class UserNotRemovedDecoder : enc.StructDecoder<UserNotRemoved>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="RemoveLastAdmin" />.</para>
+                /// <para>Create a new instance of type <see cref="UserNotRemoved" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override RemoveLastAdmin Create()
+                protected override UserNotRemoved Create()
                 {
-                    return RemoveLastAdmin.Instance;
+                    return UserNotRemoved.Instance;
                 }
 
             }
@@ -597,49 +636,48 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Cannot keep account and transfer the data to another user at the same
-        /// time.</para>
+        /// <para>User files aren't transferable anymore.</para>
         /// </summary>
-        public sealed class CannotKeepAccountAndTransfer : MembersRemoveError
+        public sealed class UserDataCannotBeTransferred : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<CannotKeepAccountAndTransfer> Encoder = new CannotKeepAccountAndTransferEncoder();
+            internal static enc.StructEncoder<UserDataCannotBeTransferred> Encoder = new UserDataCannotBeTransferredEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<CannotKeepAccountAndTransfer> Decoder = new CannotKeepAccountAndTransferDecoder();
+            internal static enc.StructDecoder<UserDataCannotBeTransferred> Decoder = new UserDataCannotBeTransferredDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="CannotKeepAccountAndTransfer" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="UserDataCannotBeTransferred"
+            /// /> class.</para>
             /// </summary>
-            private CannotKeepAccountAndTransfer()
+            private UserDataCannotBeTransferred()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of CannotKeepAccountAndTransfer</para>
+            /// <para>A singleton instance of UserDataCannotBeTransferred</para>
             /// </summary>
-            public static readonly CannotKeepAccountAndTransfer Instance = new CannotKeepAccountAndTransfer();
+            public static readonly UserDataCannotBeTransferred Instance = new UserDataCannotBeTransferred();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="CannotKeepAccountAndTransfer" />.</para>
+            /// <para>Encoder for  <see cref="UserDataCannotBeTransferred" />.</para>
             /// </summary>
-            private class CannotKeepAccountAndTransferEncoder : enc.StructEncoder<CannotKeepAccountAndTransfer>
+            private class UserDataCannotBeTransferredEncoder : enc.StructEncoder<UserDataCannotBeTransferred>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(CannotKeepAccountAndTransfer value, enc.IJsonWriter writer)
+                public override void EncodeFields(UserDataCannotBeTransferred value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -649,18 +687,18 @@ namespace Dropbox.Api.Team
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="CannotKeepAccountAndTransfer" />.</para>
+            /// <para>Decoder for  <see cref="UserDataCannotBeTransferred" />.</para>
             /// </summary>
-            private class CannotKeepAccountAndTransferDecoder : enc.StructDecoder<CannotKeepAccountAndTransfer>
+            private class UserDataCannotBeTransferredDecoder : enc.StructDecoder<UserDataCannotBeTransferred>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="CannotKeepAccountAndTransfer" />.</para>
+                /// <para>Create a new instance of type <see cref="UserDataCannotBeTransferred"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override CannotKeepAccountAndTransfer Create()
+                protected override UserDataCannotBeTransferred Create()
                 {
-                    return CannotKeepAccountAndTransfer.Instance;
+                    return UserDataCannotBeTransferred.Instance;
                 }
 
             }
@@ -669,49 +707,48 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Cannot keep account and delete the data at the same time. To keep the account
-        /// the argument wipe_data should be set to False.</para>
+        /// <para>User's data has already been transferred to another user.</para>
         /// </summary>
-        public sealed class CannotKeepAccountAndDeleteData : MembersRemoveError
+        public sealed class UserDataAlreadyTransferred : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<CannotKeepAccountAndDeleteData> Encoder = new CannotKeepAccountAndDeleteDataEncoder();
+            internal static enc.StructEncoder<UserDataAlreadyTransferred> Encoder = new UserDataAlreadyTransferredEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<CannotKeepAccountAndDeleteData> Decoder = new CannotKeepAccountAndDeleteDataDecoder();
+            internal static enc.StructDecoder<UserDataAlreadyTransferred> Decoder = new UserDataAlreadyTransferredDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="CannotKeepAccountAndDeleteData" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="UserDataAlreadyTransferred"
+            /// /> class.</para>
             /// </summary>
-            private CannotKeepAccountAndDeleteData()
+            private UserDataAlreadyTransferred()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of CannotKeepAccountAndDeleteData</para>
+            /// <para>A singleton instance of UserDataAlreadyTransferred</para>
             /// </summary>
-            public static readonly CannotKeepAccountAndDeleteData Instance = new CannotKeepAccountAndDeleteData();
+            public static readonly UserDataAlreadyTransferred Instance = new UserDataAlreadyTransferred();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="CannotKeepAccountAndDeleteData" />.</para>
+            /// <para>Encoder for  <see cref="UserDataAlreadyTransferred" />.</para>
             /// </summary>
-            private class CannotKeepAccountAndDeleteDataEncoder : enc.StructEncoder<CannotKeepAccountAndDeleteData>
+            private class UserDataAlreadyTransferredEncoder : enc.StructEncoder<UserDataAlreadyTransferred>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(CannotKeepAccountAndDeleteData value, enc.IJsonWriter writer)
+                public override void EncodeFields(UserDataAlreadyTransferred value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -721,160 +758,18 @@ namespace Dropbox.Api.Team
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="CannotKeepAccountAndDeleteData" />.</para>
+            /// <para>Decoder for  <see cref="UserDataAlreadyTransferred" />.</para>
             /// </summary>
-            private class CannotKeepAccountAndDeleteDataDecoder : enc.StructDecoder<CannotKeepAccountAndDeleteData>
+            private class UserDataAlreadyTransferredDecoder : enc.StructDecoder<UserDataAlreadyTransferred>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="CannotKeepAccountAndDeleteData" />.</para>
+                /// <para>Create a new instance of type <see cref="UserDataAlreadyTransferred"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override CannotKeepAccountAndDeleteData Create()
+                protected override UserDataAlreadyTransferred Create()
                 {
-                    return CannotKeepAccountAndDeleteData.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The email address of the user is too long to be disabled.</para>
-        /// </summary>
-        public sealed class EmailAddressTooLongToBeDisabled : MembersRemoveError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<EmailAddressTooLongToBeDisabled> Encoder = new EmailAddressTooLongToBeDisabledEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<EmailAddressTooLongToBeDisabled> Decoder = new EmailAddressTooLongToBeDisabledDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="EmailAddressTooLongToBeDisabled" /> class.</para>
-            /// </summary>
-            private EmailAddressTooLongToBeDisabled()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of EmailAddressTooLongToBeDisabled</para>
-            /// </summary>
-            public static readonly EmailAddressTooLongToBeDisabled Instance = new EmailAddressTooLongToBeDisabled();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="EmailAddressTooLongToBeDisabled" />.</para>
-            /// </summary>
-            private class EmailAddressTooLongToBeDisabledEncoder : enc.StructEncoder<EmailAddressTooLongToBeDisabled>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(EmailAddressTooLongToBeDisabled value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="EmailAddressTooLongToBeDisabled" />.</para>
-            /// </summary>
-            private class EmailAddressTooLongToBeDisabledDecoder : enc.StructDecoder<EmailAddressTooLongToBeDisabled>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="EmailAddressTooLongToBeDisabled" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override EmailAddressTooLongToBeDisabled Create()
-                {
-                    return EmailAddressTooLongToBeDisabled.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Cannot keep account of an invited user.</para>
-        /// </summary>
-        public sealed class CannotKeepInvitedUserAccount : MembersRemoveError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<CannotKeepInvitedUserAccount> Encoder = new CannotKeepInvitedUserAccountEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<CannotKeepInvitedUserAccount> Decoder = new CannotKeepInvitedUserAccountDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="CannotKeepInvitedUserAccount" /> class.</para>
-            /// </summary>
-            private CannotKeepInvitedUserAccount()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of CannotKeepInvitedUserAccount</para>
-            /// </summary>
-            public static readonly CannotKeepInvitedUserAccount Instance = new CannotKeepInvitedUserAccount();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="CannotKeepInvitedUserAccount" />.</para>
-            /// </summary>
-            private class CannotKeepInvitedUserAccountEncoder : enc.StructEncoder<CannotKeepInvitedUserAccount>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(CannotKeepInvitedUserAccount value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="CannotKeepInvitedUserAccount" />.</para>
-            /// </summary>
-            private class CannotKeepInvitedUserAccountDecoder : enc.StructDecoder<CannotKeepInvitedUserAccount>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="CannotKeepInvitedUserAccount" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override CannotKeepInvitedUserAccount Create()
-                {
-                    return CannotKeepInvitedUserAccount.Instance;
+                    return UserDataAlreadyTransferred.Instance;
                 }
 
             }
@@ -885,7 +780,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Expected removed user and transfer_dest user to be different.</para>
         /// </summary>
-        public sealed class RemovedAndTransferDestShouldDiffer : MembersRemoveError
+        public sealed class RemovedAndTransferDestShouldDiffer : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -956,7 +851,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Expected removed user and transfer_admin user to be different.</para>
         /// </summary>
-        public sealed class RemovedAndTransferAdminShouldDiffer : MembersRemoveError
+        public sealed class RemovedAndTransferAdminShouldDiffer : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1027,7 +922,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>No matching user found for the argument transfer_dest_id.</para>
         /// </summary>
-        public sealed class TransferDestUserNotFound : MembersRemoveError
+        public sealed class TransferDestUserNotFound : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1098,7 +993,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>The provided transfer_dest_id does not exist on this team.</para>
         /// </summary>
-        public sealed class TransferDestUserNotInTeam : MembersRemoveError
+        public sealed class TransferDestUserNotInTeam : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1169,7 +1064,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>The provided transfer_admin_id does not exist on this team.</para>
         /// </summary>
-        public sealed class TransferAdminUserNotInTeam : MembersRemoveError
+        public sealed class TransferAdminUserNotInTeam : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1240,7 +1135,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>No matching user found for the argument transfer_admin_id.</para>
         /// </summary>
-        public sealed class TransferAdminUserNotFound : MembersRemoveError
+        public sealed class TransferAdminUserNotFound : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1312,7 +1207,7 @@ namespace Dropbox.Api.Team
         /// <para>The transfer_admin_id argument must be provided when file transfer is
         /// requested.</para>
         /// </summary>
-        public sealed class UnspecifiedTransferAdminId : MembersRemoveError
+        public sealed class UnspecifiedTransferAdminId : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1383,7 +1278,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Specified transfer_admin user is not a team admin.</para>
         /// </summary>
-        public sealed class TransferAdminIsNotAdmin : MembersRemoveError
+        public sealed class TransferAdminIsNotAdmin : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 
@@ -1454,7 +1349,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>The recipient user's email is not verified.</para>
         /// </summary>
-        public sealed class RecipientNotVerified : MembersRemoveError
+        public sealed class RecipientNotVerified : MembersTransferFormerMembersFilesError
         {
             #pragma warning disable 108
 

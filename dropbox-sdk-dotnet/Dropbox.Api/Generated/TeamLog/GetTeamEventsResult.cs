@@ -31,14 +31,23 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GetTeamEventsResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="events">List of events.</param>
+        /// <param name="events">List of events. Note that events are not guaranteed to be
+        /// sorted by their timestamp value.</param>
         /// <param name="cursor">Pass the cursor into <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> to
-        /// obtain additional events.</param>
-        /// <param name="hasMore">Is true if there are additional events that have not been
+        /// obtain additional events. The value of <paramref name="cursor" /> may change for
+        /// each response from <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" />,
+        /// regardless of the value of <paramref name="hasMore" />; older cursor strings may
+        /// expire. Thus, callers should ensure that they update their cursor based on the
+        /// latest value of <paramref name="cursor" /> after each call, and poll regularly if
+        /// they wish to poll for new events. Callers should handle reset exceptions for
+        /// expired cursors.</param>
+        /// <param name="hasMore">Is true if there may be additional events that have not been
         /// returned yet. An additional call to <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> can
-        /// retrieve them.</param>
+        /// retrieve them. Note that <paramref name="hasMore" /> may be <c>true</c>, even if
+        /// <paramref name="events" /> is empty.</param>
         public GetTeamEventsResult(col.IEnumerable<TeamEvent> events,
                                    string cursor,
                                    bool hasMore)
@@ -72,7 +81,8 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>List of events.</para>
+        /// <para>List of events. Note that events are not guaranteed to be sorted by their
+        /// timestamp value.</para>
         /// </summary>
         public col.IList<TeamEvent> Events { get; protected set; }
 
@@ -80,14 +90,23 @@ namespace Dropbox.Api.TeamLog
         /// <para>Pass the cursor into <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> to
         /// obtain additional events.</para>
+        /// <para>The value of <see cref="Cursor" /> may change for each response from <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" />,
+        /// regardless of the value of <see cref="HasMore" />; older cursor strings may
+        /// expire.</para>
+        /// <para>Thus, callers should ensure that they update their cursor based on the latest
+        /// value of <see cref="Cursor" /> after each call, and poll regularly if they wish to
+        /// poll for new events.</para>
+        /// <para>Callers should handle reset exceptions for expired cursors.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 
         /// <summary>
-        /// <para>Is true if there are additional events that have not been returned yet. An
+        /// <para>Is true if there may be additional events that have not been returned yet. An
         /// additional call to <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> can
-        /// retrieve them.</para>
+        /// retrieve them. Note that <see cref="HasMore" /> may be <c>true</c>, even if <see
+        /// cref="Events" /> is empty.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 

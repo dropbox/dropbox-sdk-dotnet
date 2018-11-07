@@ -30,8 +30,8 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="RestoreArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path to the file you want to restore.</param>
-        /// <param name="rev">The revision to restore for the file.</param>
+        /// <param name="path">The path to save the restored file.</param>
+        /// <param name="rev">The revision to restore.</param>
         public RestoreArg(string path,
                           string rev)
         {
@@ -72,12 +72,12 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The path to the file you want to restore.</para>
+        /// <para>The path to save the restored file.</para>
         /// </summary>
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>The revision to restore for the file.</para>
+        /// <para>The revision to restore.</para>
         /// </summary>
         public string Rev { get; protected set; }
 
