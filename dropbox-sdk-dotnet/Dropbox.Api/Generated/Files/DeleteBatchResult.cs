@@ -32,7 +32,9 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="DeleteBatchResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="entries">The entries</param>
+        /// <param name="entries">Each entry in <see
+        /// cref="Dropbox.Api.Files.DeleteBatchArg.Entries" /> will appear at the same position
+        /// inside <see cref="Dropbox.Api.Files.DeleteBatchResult.Entries" />.</param>
         public DeleteBatchResult(col.IEnumerable<DeleteBatchResultEntry> entries)
         {
             var entriesList = enc.Util.ToList(entries);
@@ -57,7 +59,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets the entries of the delete batch result</para>
+        /// <para>Each entry in <see cref="Dropbox.Api.Files.DeleteBatchArg.Entries" /> will
+        /// appear at the same position inside <see
+        /// cref="Dropbox.Api.Files.DeleteBatchResult.Entries" />.</para>
         /// </summary>
         public col.IList<DeleteBatchResultEntry> Entries { get; protected set; }
 

@@ -68,7 +68,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// files will be sent. For apps with the app folder permission, this will be relative
         /// to the app folder.</param>
         /// <param name="deadline">The deadline for the file request. Deadlines can only be set
-        /// by Pro and Business accounts.</param>
+        /// by Professional and Business accounts.</param>
         /// <param name="open">Whether or not the file request should be open. If the file
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
@@ -98,7 +98,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// files will be sent. For apps with the app folder permission, this will be relative
         /// to the app folder.</param>
         /// <param name="deadline">The deadline for the file request. Deadlines can only be set
-        /// by Pro and Business accounts.</param>
+        /// by Professional and Business accounts.</param>
         /// <param name="open">Whether or not the file request should be open. If the file
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
@@ -315,7 +315,8 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="destination">The new path of the folder in the Dropbox where uploaded
         /// files will be sent. For apps with the app folder permission, this will be relative
         /// to the app folder.</param>
-        /// <param name="deadline">The new deadline for the file request.</param>
+        /// <param name="deadline">The new deadline for the file request. Deadlines can only be
+        /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -345,7 +346,8 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="destination">The new path of the folder in the Dropbox where uploaded
         /// files will be sent. For apps with the app folder permission, this will be relative
         /// to the app folder.</param>
-        /// <param name="deadline">The new deadline for the file request.</param>
+        /// <param name="deadline">The new deadline for the file request. Deadlines can only be
+        /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>

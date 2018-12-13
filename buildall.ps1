@@ -19,21 +19,41 @@ $nugetPath = "$nugetDir\nuget.exe"
 $nugetSpecPath = "$sourceDir\Dropbox.Api.nuspec"
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
-$releaseVersion = "4.9.2"
+$releaseVersion = "4.9.3"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 $releaseNotes = @'
 What's New:
-  - Files Namespace:
-    - Updated doc strings
 
-  - Team_log Namespace:
-    - Updated event docstrings
-    - New reset field for loading events with a cursor
-    - New event types added
+Common Namespace:
+- Force matching dot character in alias EmailAddress
+- Allow DisplayNameLegacy to support a name of zero chars
 
-  - Team_policies Namespace:
-    - New CameraUploadsPolicyState union
+Contacts namespace:
+-  New namespace
+-  New routes: delete_manual_contacts and delete_manual_contacts_batch
+-  New argument structs for new routes
+
+File_properties namespace:
+- Doesn't allow app folder app to access file property endpoints.
+
+Files namespace:
+- Create copy_batch:2 and move_batch:2 endpoints. Deprecate existing copy_batch and move_batch.
+
+Sharing namespace:
+-  Add no_one option to LinkAudience union
+
+Sharing_files namespace:
+- Doesn't allow app folder app to access sharing files endpoints.
+
+Teams namespace:
+- Only Team apps with Team member file access can access team/properties endpoints.
+- Add is_disconnected boolean to RemovedStatus struct
+- Add error response type to namespace/list route
+
+Team_log namespace:
+- New event types added
+
 '@
 
 $builds = @(

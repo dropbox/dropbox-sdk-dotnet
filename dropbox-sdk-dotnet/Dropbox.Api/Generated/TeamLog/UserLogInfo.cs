@@ -15,6 +15,7 @@ namespace Dropbox.Api.TeamLog
     /// </summary>
     /// <seealso cref="NonTeamMemberLogInfo" />
     /// <seealso cref="TeamMemberLogInfo" />
+    /// <seealso cref="TrustedNonTeamMemberLogInfo" />
     public class UserLogInfo
     {
         #pragma warning disable 108
@@ -51,14 +52,6 @@ namespace Dropbox.Api.TeamLog
                 if (accountId.Length > 40)
                 {
                     throw new sys.ArgumentOutOfRangeException("accountId", "Length should be at most 40");
-                }
-            }
-
-            if (displayName != null)
-            {
-                if (displayName.Length < 1)
-                {
-                    throw new sys.ArgumentOutOfRangeException("displayName", "Length should be at least 1");
                 }
             }
 
@@ -105,6 +98,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamMemberLogInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is TrustedNonTeamMember</para>
+        /// </summary>
+        public bool IsTrustedNonTeamMember
+        {
+            get
+            {
+                return this is TrustedNonTeamMemberLogInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a <see cref="TrustedNonTeamMemberLogInfo" />, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TrustedNonTeamMemberLogInfo AsTrustedNonTeamMember
+        {
+            get
+            {
+                return this as TrustedNonTeamMemberLogInfo;
             }
         }
 
@@ -166,6 +182,12 @@ namespace Dropbox.Api.TeamLog
                     TeamMemberLogInfo.Encoder.EncodeFields((TeamMemberLogInfo)value, writer);
                     return;
                 }
+                if (value is TrustedNonTeamMemberLogInfo)
+                {
+                    WriteProperty(".tag", "trusted_non_team_member", writer, enc.StringEncoder.Instance);
+                    TrustedNonTeamMemberLogInfo.Encoder.EncodeFields((TrustedNonTeamMemberLogInfo)value, writer);
+                    return;
+                }
                 if (value is NonTeamMemberLogInfo)
                 {
                     WriteProperty(".tag", "non_team_member", writer, enc.StringEncoder.Instance);
@@ -218,6 +240,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "team_member":
                         return TeamMemberLogInfo.Decoder.DecodeFields(reader);
+                    case "trusted_non_team_member":
+                        return TrustedNonTeamMemberLogInfo.Decoder.DecodeFields(reader);
                     case "non_team_member":
                         return NonTeamMemberLogInfo.Decoder.DecodeFields(reader);
                     default:

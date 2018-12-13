@@ -37,7 +37,8 @@ namespace Dropbox.Api.FileRequests
         /// <param name="destination">The new path of the folder in the Dropbox where uploaded
         /// files will be sent. For apps with the app folder permission, this will be relative
         /// to the app folder.</param>
-        /// <param name="deadline">The new deadline for the file request.</param>
+        /// <param name="deadline">The new deadline for the file request. Deadlines can only be
+        /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
         public UpdateFileRequestArgs(string id,
                                      string title = null,
@@ -115,7 +116,8 @@ namespace Dropbox.Api.FileRequests
         public string Destination { get; protected set; }
 
         /// <summary>
-        /// <para>The new deadline for the file request.</para>
+        /// <para>The new deadline for the file request. Deadlines can only be set by
+        /// Professional and Business accounts.</para>
         /// </summary>
         public UpdateFileRequestDeadline Deadline { get; protected set; }
 

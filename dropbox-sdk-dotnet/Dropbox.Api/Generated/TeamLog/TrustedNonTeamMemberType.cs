@@ -11,71 +11,49 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>External sharing policy</para>
+    /// <para>The trusted non team member type object</para>
     /// </summary>
-    public class SharingMemberPolicy
+    public class TrustedNonTeamMemberType
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<SharingMemberPolicy> Encoder = new SharingMemberPolicyEncoder();
+        internal static enc.StructEncoder<TrustedNonTeamMemberType> Encoder = new TrustedNonTeamMemberTypeEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<SharingMemberPolicy> Decoder = new SharingMemberPolicyDecoder();
+        internal static enc.StructDecoder<TrustedNonTeamMemberType> Decoder = new TrustedNonTeamMemberTypeDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SharingMemberPolicy" />
+        /// <para>Initializes a new instance of the <see cref="TrustedNonTeamMemberType" />
         /// class.</para>
         /// </summary>
-        public SharingMemberPolicy()
+        public TrustedNonTeamMemberType()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Allow</para>
+        /// <para>Gets a value indicating whether this instance is MultiInstanceAdmin</para>
         /// </summary>
-        public bool IsAllow
+        public bool IsMultiInstanceAdmin
         {
             get
             {
-                return this is Allow;
+                return this is MultiInstanceAdmin;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Allow, or <c>null</c>.</para>
+        /// <para>Gets this instance as a MultiInstanceAdmin, or <c>null</c>.</para>
         /// </summary>
-        public Allow AsAllow
+        public MultiInstanceAdmin AsMultiInstanceAdmin
         {
             get
             {
-                return this as Allow;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Forbid</para>
-        /// </summary>
-        public bool IsForbid
-        {
-            get
-            {
-                return this is Forbid;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Forbid, or <c>null</c>.</para>
-        /// </summary>
-        public Forbid AsForbid
-        {
-            get
-            {
-                return this as Forbid;
+                return this as MultiInstanceAdmin;
             }
         }
 
@@ -104,27 +82,21 @@ namespace Dropbox.Api.TeamLog
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="SharingMemberPolicy" />.</para>
+        /// <para>Encoder for  <see cref="TrustedNonTeamMemberType" />.</para>
         /// </summary>
-        private class SharingMemberPolicyEncoder : enc.StructEncoder<SharingMemberPolicy>
+        private class TrustedNonTeamMemberTypeEncoder : enc.StructEncoder<TrustedNonTeamMemberType>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(SharingMemberPolicy value, enc.IJsonWriter writer)
+            public override void EncodeFields(TrustedNonTeamMemberType value, enc.IJsonWriter writer)
             {
-                if (value is Allow)
+                if (value is MultiInstanceAdmin)
                 {
-                    WriteProperty(".tag", "allow", writer, enc.StringEncoder.Instance);
-                    Allow.Encoder.EncodeFields((Allow)value, writer);
-                    return;
-                }
-                if (value is Forbid)
-                {
-                    WriteProperty(".tag", "forbid", writer, enc.StringEncoder.Instance);
-                    Forbid.Encoder.EncodeFields((Forbid)value, writer);
+                    WriteProperty(".tag", "multi_instance_admin", writer, enc.StringEncoder.Instance);
+                    MultiInstanceAdmin.Encoder.EncodeFields((MultiInstanceAdmin)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -142,17 +114,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="SharingMemberPolicy" />.</para>
+        /// <para>Decoder for  <see cref="TrustedNonTeamMemberType" />.</para>
         /// </summary>
-        private class SharingMemberPolicyDecoder : enc.UnionDecoder<SharingMemberPolicy>
+        private class TrustedNonTeamMemberTypeDecoder : enc.UnionDecoder<TrustedNonTeamMemberType>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="SharingMemberPolicy" />.</para>
+            /// <para>Create a new instance of type <see cref="TrustedNonTeamMemberType"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override SharingMemberPolicy Create()
+            protected override TrustedNonTeamMemberType Create()
             {
-                return new SharingMemberPolicy();
+                return new TrustedNonTeamMemberType();
             }
 
             /// <summary>
@@ -161,14 +134,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override SharingMemberPolicy Decode(string tag, enc.IJsonReader reader)
+            protected override TrustedNonTeamMemberType Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "allow":
-                        return Allow.Decoder.DecodeFields(reader);
-                    case "forbid":
-                        return Forbid.Decoder.DecodeFields(reader);
+                    case "multi_instance_admin":
+                        return MultiInstanceAdmin.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -178,47 +149,48 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The allow object</para>
+        /// <para>The multi instance admin object</para>
         /// </summary>
-        public sealed class Allow : SharingMemberPolicy
+        public sealed class MultiInstanceAdmin : TrustedNonTeamMemberType
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Allow> Encoder = new AllowEncoder();
+            internal static enc.StructEncoder<MultiInstanceAdmin> Encoder = new MultiInstanceAdminEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Allow> Decoder = new AllowDecoder();
+            internal static enc.StructDecoder<MultiInstanceAdmin> Decoder = new MultiInstanceAdminDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Allow" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="MultiInstanceAdmin" />
+            /// class.</para>
             /// </summary>
-            private Allow()
+            private MultiInstanceAdmin()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Allow</para>
+            /// <para>A singleton instance of MultiInstanceAdmin</para>
             /// </summary>
-            public static readonly Allow Instance = new Allow();
+            public static readonly MultiInstanceAdmin Instance = new MultiInstanceAdmin();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Allow" />.</para>
+            /// <para>Encoder for  <see cref="MultiInstanceAdmin" />.</para>
             /// </summary>
-            private class AllowEncoder : enc.StructEncoder<Allow>
+            private class MultiInstanceAdminEncoder : enc.StructEncoder<MultiInstanceAdmin>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Allow value, enc.IJsonWriter writer)
+                public override void EncodeFields(MultiInstanceAdmin value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -228,86 +200,18 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Allow" />.</para>
+            /// <para>Decoder for  <see cref="MultiInstanceAdmin" />.</para>
             /// </summary>
-            private class AllowDecoder : enc.StructDecoder<Allow>
+            private class MultiInstanceAdminDecoder : enc.StructDecoder<MultiInstanceAdmin>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Allow" />.</para>
+                /// <para>Create a new instance of type <see cref="MultiInstanceAdmin"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Allow Create()
+                protected override MultiInstanceAdmin Create()
                 {
-                    return Allow.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The forbid object</para>
-        /// </summary>
-        public sealed class Forbid : SharingMemberPolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Forbid> Encoder = new ForbidEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Forbid> Decoder = new ForbidDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Forbid" /> class.</para>
-            /// </summary>
-            private Forbid()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Forbid</para>
-            /// </summary>
-            public static readonly Forbid Instance = new Forbid();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Forbid" />.</para>
-            /// </summary>
-            private class ForbidEncoder : enc.StructEncoder<Forbid>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Forbid value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Forbid" />.</para>
-            /// </summary>
-            private class ForbidDecoder : enc.StructDecoder<Forbid>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Forbid" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Forbid Create()
-                {
-                    return Forbid.Instance;
+                    return MultiInstanceAdmin.Instance;
                 }
 
             }
@@ -318,7 +222,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : SharingMemberPolicy
+        public sealed class Other : TrustedNonTeamMemberType
         {
             #pragma warning disable 108
 

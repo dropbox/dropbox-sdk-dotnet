@@ -193,6 +193,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// FileEditCommentDetails</para>
+        /// </summary>
+        public bool IsFileEditCommentDetails
+        {
+            get
+            {
+                return this is FileEditCommentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileEditCommentDetails, or <c>null</c>.</para>
+        /// </summary>
+        public FileEditCommentDetails AsFileEditCommentDetails
+        {
+            get
+            {
+                return this as FileEditCommentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// FileLikeCommentDetails</para>
         /// </summary>
         public bool IsFileLikeCommentDetails
@@ -5720,6 +5743,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// CameraUploadsPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsCameraUploadsPolicyChangedDetails
+        {
+            get
+            {
+                return this is CameraUploadsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CameraUploadsPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CameraUploadsPolicyChangedDetails AsCameraUploadsPolicyChangedDetails
+        {
+            get
+            {
+                return this as CameraUploadsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// DataPlacementRestrictionChangePolicyDetails</para>
         /// </summary>
         public bool IsDataPlacementRestrictionChangePolicyDetails
@@ -7303,6 +7350,12 @@ namespace Dropbox.Api.TeamLog
                     FileDeleteCommentDetails.Encoder.EncodeFields((FileDeleteCommentDetails)value, writer);
                     return;
                 }
+                if (value is FileEditCommentDetails)
+                {
+                    WriteProperty(".tag", "file_edit_comment_details", writer, enc.StringEncoder.Instance);
+                    FileEditCommentDetails.Encoder.EncodeFields((FileEditCommentDetails)value, writer);
+                    return;
+                }
                 if (value is FileLikeCommentDetails)
                 {
                     WriteProperty(".tag", "file_like_comment_details", writer, enc.StringEncoder.Instance);
@@ -8737,6 +8790,12 @@ namespace Dropbox.Api.TeamLog
                     AllowDownloadEnabledDetails.Encoder.EncodeFields((AllowDownloadEnabledDetails)value, writer);
                     return;
                 }
+                if (value is CameraUploadsPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "camera_uploads_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    CameraUploadsPolicyChangedDetails.Encoder.EncodeFields((CameraUploadsPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is DataPlacementRestrictionChangePolicyDetails)
                 {
                     WriteProperty(".tag", "data_placement_restriction_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -9173,6 +9232,8 @@ namespace Dropbox.Api.TeamLog
                         return FileChangeCommentSubscriptionDetails.Decoder.DecodeFields(reader);
                     case "file_delete_comment_details":
                         return FileDeleteCommentDetails.Decoder.DecodeFields(reader);
+                    case "file_edit_comment_details":
+                        return FileEditCommentDetails.Decoder.DecodeFields(reader);
                     case "file_like_comment_details":
                         return FileLikeCommentDetails.Decoder.DecodeFields(reader);
                     case "file_resolve_comment_details":
@@ -9651,6 +9712,8 @@ namespace Dropbox.Api.TeamLog
                         return AllowDownloadDisabledDetails.Decoder.DecodeFields(reader);
                     case "allow_download_enabled_details":
                         return AllowDownloadEnabledDetails.Decoder.DecodeFields(reader);
+                    case "camera_uploads_policy_changed_details":
+                        return CameraUploadsPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_change_policy_details":
                         return DataPlacementRestrictionChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_satisfy_policy_details":
@@ -10411,6 +10474,96 @@ namespace Dropbox.Api.TeamLog
                 public override FileDeleteCommentDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new FileDeleteCommentDetails(global::Dropbox.Api.TeamLog.FileDeleteCommentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The file edit comment details object</para>
+        /// </summary>
+        public sealed class FileEditCommentDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileEditCommentDetails> Encoder = new FileEditCommentDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileEditCommentDetails> Decoder = new FileEditCommentDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileEditCommentDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public FileEditCommentDetails(global::Dropbox.Api.TeamLog.FileEditCommentDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileEditCommentDetails" />
+            /// class.</para>
+            /// </summary>
+            private FileEditCommentDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.FileEditCommentDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileEditCommentDetails" />.</para>
+            /// </summary>
+            private class FileEditCommentDetailsEncoder : enc.StructEncoder<FileEditCommentDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileEditCommentDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("file_edit_comment_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileEditCommentDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileEditCommentDetails" />.</para>
+            /// </summary>
+            private class FileEditCommentDetailsDecoder : enc.StructDecoder<FileEditCommentDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileEditCommentDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileEditCommentDetails Create()
+                {
+                    return new FileEditCommentDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FileEditCommentDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new FileEditCommentDetails(global::Dropbox.Api.TeamLog.FileEditCommentDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -31965,6 +32118,96 @@ namespace Dropbox.Api.TeamLog
                 public override AllowDownloadEnabledDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new AllowDownloadEnabledDetails(global::Dropbox.Api.TeamLog.AllowDownloadEnabledDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The camera uploads policy changed details object</para>
+        /// </summary>
+        public sealed class CameraUploadsPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CameraUploadsPolicyChangedDetails> Encoder = new CameraUploadsPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CameraUploadsPolicyChangedDetails> Decoder = new CameraUploadsPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CameraUploadsPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public CameraUploadsPolicyChangedDetails(global::Dropbox.Api.TeamLog.CameraUploadsPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CameraUploadsPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private CameraUploadsPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.CameraUploadsPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CameraUploadsPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class CameraUploadsPolicyChangedDetailsEncoder : enc.StructEncoder<CameraUploadsPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CameraUploadsPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("camera_uploads_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.CameraUploadsPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CameraUploadsPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class CameraUploadsPolicyChangedDetailsDecoder : enc.StructDecoder<CameraUploadsPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CameraUploadsPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CameraUploadsPolicyChangedDetails Create()
+                {
+                    return new CameraUploadsPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CameraUploadsPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new CameraUploadsPolicyChangedDetails(global::Dropbox.Api.TeamLog.CameraUploadsPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 

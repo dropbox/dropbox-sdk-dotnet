@@ -11,32 +11,31 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The create folder batch result object</para>
+    /// <para>The relocation batch v2 result object</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Files.FileOpsResult" />
-    public class CreateFolderBatchResult : FileOpsResult
+    public class RelocationBatchV2Result : FileOpsResult
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<CreateFolderBatchResult> Encoder = new CreateFolderBatchResultEncoder();
+        internal static enc.StructEncoder<RelocationBatchV2Result> Encoder = new RelocationBatchV2ResultEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<CreateFolderBatchResult> Decoder = new CreateFolderBatchResultDecoder();
+        internal static enc.StructDecoder<RelocationBatchV2Result> Decoder = new RelocationBatchV2ResultDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CreateFolderBatchResult" />
+        /// <para>Initializes a new instance of the <see cref="RelocationBatchV2Result" />
         /// class.</para>
         /// </summary>
-        /// <param name="entries">Each entry in <see
-        /// cref="Dropbox.Api.Files.CreateFolderBatchArg.Paths" /> will appear at the same
-        /// position inside <see cref="Dropbox.Api.Files.CreateFolderBatchResult.Entries"
-        /// />.</param>
-        public CreateFolderBatchResult(col.IEnumerable<CreateFolderBatchResultEntry> entries)
+        /// <param name="entries">Each entry in CopyBatchArg.entries or <see
+        /// cref="Dropbox.Api.Files.MoveBatchArg.Entries" /> will appear at the same position
+        /// inside <see cref="Dropbox.Api.Files.RelocationBatchV2Result.Entries" />.</param>
+        public RelocationBatchV2Result(col.IEnumerable<RelocationBatchResultEntry> entries)
         {
             var entriesList = enc.Util.ToList(entries);
 
@@ -49,38 +48,38 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CreateFolderBatchResult" />
+        /// <para>Initializes a new instance of the <see cref="RelocationBatchV2Result" />
         /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public CreateFolderBatchResult()
+        public RelocationBatchV2Result()
         {
         }
 
         /// <summary>
-        /// <para>Each entry in <see cref="Dropbox.Api.Files.CreateFolderBatchArg.Paths" />
-        /// will appear at the same position inside <see
-        /// cref="Dropbox.Api.Files.CreateFolderBatchResult.Entries" />.</para>
+        /// <para>Each entry in CopyBatchArg.entries or <see
+        /// cref="Dropbox.Api.Files.MoveBatchArg.Entries" /> will appear at the same position
+        /// inside <see cref="Dropbox.Api.Files.RelocationBatchV2Result.Entries" />.</para>
         /// </summary>
-        public col.IList<CreateFolderBatchResultEntry> Entries { get; protected set; }
+        public col.IList<RelocationBatchResultEntry> Entries { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="CreateFolderBatchResult" />.</para>
+        /// <para>Encoder for  <see cref="RelocationBatchV2Result" />.</para>
         /// </summary>
-        private class CreateFolderBatchResultEncoder : enc.StructEncoder<CreateFolderBatchResult>
+        private class RelocationBatchV2ResultEncoder : enc.StructEncoder<RelocationBatchV2Result>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(CreateFolderBatchResult value, enc.IJsonWriter writer)
+            public override void EncodeFields(RelocationBatchV2Result value, enc.IJsonWriter writer)
             {
-                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.CreateFolderBatchResultEntry.Encoder);
+                WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.RelocationBatchResultEntry.Encoder);
             }
         }
 
@@ -90,18 +89,18 @@ namespace Dropbox.Api.Files
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="CreateFolderBatchResult" />.</para>
+        /// <para>Decoder for  <see cref="RelocationBatchV2Result" />.</para>
         /// </summary>
-        private class CreateFolderBatchResultDecoder : enc.StructDecoder<CreateFolderBatchResult>
+        private class RelocationBatchV2ResultDecoder : enc.StructDecoder<RelocationBatchV2Result>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="CreateFolderBatchResult"
+            /// <para>Create a new instance of type <see cref="RelocationBatchV2Result"
             /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override CreateFolderBatchResult Create()
+            protected override RelocationBatchV2Result Create()
             {
-                return new CreateFolderBatchResult();
+                return new RelocationBatchV2Result();
             }
 
             /// <summary>
@@ -110,12 +109,12 @@ namespace Dropbox.Api.Files
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(CreateFolderBatchResult value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(RelocationBatchV2Result value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
                     case "entries":
-                        value.Entries = ReadList<CreateFolderBatchResultEntry>(reader, global::Dropbox.Api.Files.CreateFolderBatchResultEntry.Decoder);
+                        value.Entries = ReadList<RelocationBatchResultEntry>(reader, global::Dropbox.Api.Files.RelocationBatchResultEntry.Decoder);
                         break;
                     default:
                         reader.Skip();

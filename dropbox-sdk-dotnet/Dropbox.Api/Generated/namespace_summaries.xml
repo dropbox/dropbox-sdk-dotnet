@@ -46,6 +46,18 @@
                 namespace.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Contacts">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Contacts.Routes.ContactsRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Contacts.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Contacts" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.FileProperties">
             <summary>
                 <para>This namespace contains helpers for property and template metadata

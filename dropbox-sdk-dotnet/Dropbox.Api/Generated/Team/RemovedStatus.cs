@@ -31,9 +31,13 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="RemovedStatus" /> class.</para>
         /// </summary>
         /// <param name="isRecoverable">True if the removed team member is recoverable.</param>
-        public RemovedStatus(bool isRecoverable)
+        /// <param name="isDisconnected">True if the team member's account was converted to
+        /// individual account.</param>
+        public RemovedStatus(bool isRecoverable,
+                             bool isDisconnected)
         {
             this.IsRecoverable = isRecoverable;
+            this.IsDisconnected = isDisconnected;
         }
 
         /// <summary>
@@ -51,6 +55,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public bool IsRecoverable { get; protected set; }
 
+        /// <summary>
+        /// <para>True if the team member's account was converted to individual account.</para>
+        /// </summary>
+        public bool IsDisconnected { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -66,6 +75,7 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(RemovedStatus value, enc.IJsonWriter writer)
             {
                 WriteProperty("is_recoverable", value.IsRecoverable, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("is_disconnected", value.IsDisconnected, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -100,6 +110,9 @@ namespace Dropbox.Api.Team
                 {
                     case "is_recoverable":
                         value.IsRecoverable = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_disconnected":
+                        value.IsDisconnected = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

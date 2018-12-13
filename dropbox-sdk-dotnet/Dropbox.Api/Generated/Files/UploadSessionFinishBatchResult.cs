@@ -31,7 +31,10 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="UploadSessionFinishBatchResult"
         /// /> class.</para>
         /// </summary>
-        /// <param name="entries">Commit result for each file in the batch.</param>
+        /// <param name="entries">Each entry in <see
+        /// cref="Dropbox.Api.Files.UploadSessionFinishBatchArg.Entries" /> will appear at the
+        /// same position inside <see
+        /// cref="Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries" />.</param>
         public UploadSessionFinishBatchResult(col.IEnumerable<UploadSessionFinishBatchResultEntry> entries)
         {
             var entriesList = enc.Util.ToList(entries);
@@ -56,7 +59,10 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Commit result for each file in the batch.</para>
+        /// <para>Each entry in <see
+        /// cref="Dropbox.Api.Files.UploadSessionFinishBatchArg.Entries" /> will appear at the
+        /// same position inside <see
+        /// cref="Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries" />.</para>
         /// </summary>
         public col.IList<UploadSessionFinishBatchResultEntry> Entries { get; protected set; }
 

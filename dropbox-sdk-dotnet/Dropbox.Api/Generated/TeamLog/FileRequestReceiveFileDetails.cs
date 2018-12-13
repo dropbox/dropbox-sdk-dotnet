@@ -65,14 +65,6 @@ namespace Dropbox.Api.TeamLog
                 }
             }
 
-            if (submitterName != null)
-            {
-                if (submitterName.Length < 1)
-                {
-                    throw new sys.ArgumentOutOfRangeException("submitterName", "Length should be at least 1");
-                }
-            }
-
             if (submitterEmail != null)
             {
                 if (submitterEmail.Length > 255)
