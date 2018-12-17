@@ -163,8 +163,8 @@ function BuildChildren(tocDiv, data)
         if(childId != null && childId.length > 5)
         {
             // The Url attribute has the form "html/{childId}.htm"
-            childHRef = childId.substring(5, childId.length);
-            childId = childId.substring(5, childId.lastIndexOf("."));
+            childHRef = "../" + childId;
+            childId = childId.substring(childId.lastIndexOf("/") + 1, childId.lastIndexOf("."));
         }
         else
         {
@@ -503,7 +503,7 @@ function ParseKeywords(keywords)
 {
     var keywordList = [];
     var checkWord;
-    var words = keywords.split(/\W+/);
+    var words = keywords.split(/[\s!@#$%^&*()\-=+\[\]{}\\|<>;:'",.<>/?`~]+/);
 
     for(var idx = 0; idx < words.length; idx++)
     {
