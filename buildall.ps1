@@ -25,34 +25,34 @@ $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 $releaseNotes = @'
 What's New:
 
-Common Namespace:
-- Force matching dot character in alias EmailAddress
-- Allow DisplayNameLegacy to support a name of zero chars
+  - Common Namespace:
+    - Force matching dot character in alias EmailAddress
+    - Allow DisplayNameLegacy to support a name of zero chars
 
-Contacts namespace:
--  New namespace
--  New routes: delete_manual_contacts and delete_manual_contacts_batch
--  New argument structs for new routes
+  - Contacts namespace:
+    - New namespace
+    - New routes: delete_manual_contacts and delete_manual_contacts_batch
+    - New argument structs for new routes
 
-File_properties namespace:
-- Doesn't allow app folder app to access file property endpoints.
+  - File_properties namespace:
+    - Doesn't allow app folder app to access file property endpoints.
 
-Files namespace:
-- Create copy_batch:2 and move_batch:2 endpoints. Deprecate existing copy_batch and move_batch.
+  - Files namespace:
+    - Create copy_batch:2 and move_batch:2 endpoints. Deprecate existing copy_batch and move_batch.
 
-Sharing namespace:
--  Add no_one option to LinkAudience union
+  - Sharing namespace:
+    - Add no_one option to LinkAudience union
 
-Sharing_files namespace:
-- Doesn't allow app folder app to access sharing files endpoints.
+  - Sharing_files namespace:
+    - Doesn't allow app folder app to access sharing files endpoints.
 
-Teams namespace:
-- Only Team apps with Team member file access can access team/properties endpoints.
-- Add is_disconnected boolean to RemovedStatus struct
-- Add error response type to namespace/list route
+  - Teams namespace:
+    - Only Team apps with Team member file access can access team/properties endpoints.
+    - Add is_disconnected boolean to RemovedStatus struct
+    - Add error response type to namespace/list route
 
-Team_log namespace:
-- New event types added
+  - Team_log namespace:
+    - New event types added
 
 '@
 
