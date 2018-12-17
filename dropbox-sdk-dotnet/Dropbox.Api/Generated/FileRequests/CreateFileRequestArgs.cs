@@ -37,7 +37,7 @@ namespace Dropbox.Api.FileRequests
         /// files will be sent. For apps with the app folder permission, this will be relative
         /// to the app folder.</param>
         /// <param name="deadline">The deadline for the file request. Deadlines can only be set
-        /// by Pro and Business accounts.</param>
+        /// by Professional and Business accounts.</param>
         /// <param name="open">Whether or not the file request should be open. If the file
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
@@ -95,8 +95,8 @@ namespace Dropbox.Api.FileRequests
         public string Destination { get; protected set; }
 
         /// <summary>
-        /// <para>The deadline for the file request. Deadlines can only be set by Pro and
-        /// Business accounts.</para>
+        /// <para>The deadline for the file request. Deadlines can only be set by Professional
+        /// and Business accounts.</para>
         /// </summary>
         public FileRequestDeadline Deadline { get; protected set; }
 

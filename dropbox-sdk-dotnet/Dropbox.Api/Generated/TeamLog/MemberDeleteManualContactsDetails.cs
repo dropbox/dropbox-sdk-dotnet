@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Cleared saved contacts.</para>
+    /// <para>Cleared manually added contacts.</para>
     /// </summary>
     public class MemberDeleteManualContactsDetails
     {

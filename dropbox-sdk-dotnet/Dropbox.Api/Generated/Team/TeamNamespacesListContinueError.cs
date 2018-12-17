@@ -58,6 +58,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidArg</para>
+        /// </summary>
+        public bool IsInvalidArg
+        {
+            get
+            {
+                return this is InvalidArg;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidArg, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidArg AsInvalidArg
+        {
+            get
+            {
+                return this as InvalidArg;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -97,6 +119,12 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "invalid_cursor", writer, enc.StringEncoder.Instance);
                     InvalidCursor.Encoder.EncodeFields((InvalidCursor)value, writer);
+                    return;
+                }
+                if (value is InvalidArg)
+                {
+                    WriteProperty(".tag", "invalid_arg", writer, enc.StringEncoder.Instance);
+                    InvalidArg.Encoder.EncodeFields((InvalidArg)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -140,8 +168,12 @@ namespace Dropbox.Api.Team
                 {
                     case "invalid_cursor":
                         return InvalidCursor.Decoder.DecodeFields(reader);
-                    default:
+                    case "invalid_arg":
+                        return InvalidArg.Decoder.DecodeFields(reader);
+                    case "other":
                         return Other.Decoder.DecodeFields(reader);
+                    default:
+                        throw new sys.InvalidOperationException();
                 }
             }
         }
@@ -211,6 +243,75 @@ namespace Dropbox.Api.Team
                 protected override InvalidCursor Create()
                 {
                     return InvalidCursor.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Argument passed in is invalid.</para>
+        /// </summary>
+        public sealed class InvalidArg : TeamNamespacesListContinueError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidArg> Encoder = new InvalidArgEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidArg> Decoder = new InvalidArgDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidArg" /> class.</para>
+            /// </summary>
+            private InvalidArg()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidArg</para>
+            /// </summary>
+            public static readonly InvalidArg Instance = new InvalidArg();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidArg" />.</para>
+            /// </summary>
+            private class InvalidArgEncoder : enc.StructEncoder<InvalidArg>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidArg value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidArg" />.</para>
+            /// </summary>
+            private class InvalidArgDecoder : enc.StructDecoder<InvalidArg>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidArg" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidArg Create()
+                {
+                    return InvalidArg.Instance;
                 }
 
             }

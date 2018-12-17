@@ -18,6 +18,7 @@ namespace Dropbox.Api.Files
     /// <seealso cref="DeleteBatchResult" />
     /// <seealso cref="DeleteResult" />
     /// <seealso cref="RelocationBatchResult" />
+    /// <seealso cref="RelocationBatchV2Result" />
     /// <seealso cref="RelocationResult" />
     public class FileOpsResult
     {

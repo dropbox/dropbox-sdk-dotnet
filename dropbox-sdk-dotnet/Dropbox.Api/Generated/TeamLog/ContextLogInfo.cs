@@ -123,6 +123,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TrustedNonTeamMember</para>
+        /// </summary>
+        public bool IsTrustedNonTeamMember
+        {
+            get
+            {
+                return this is TrustedNonTeamMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TrustedNonTeamMember, or <c>null</c>.</para>
+        /// </summary>
+        public TrustedNonTeamMember AsTrustedNonTeamMember
+        {
+            get
+            {
+                return this as TrustedNonTeamMember;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -182,6 +204,12 @@ namespace Dropbox.Api.TeamLog
                     Team.Encoder.EncodeFields((Team)value, writer);
                     return;
                 }
+                if (value is TrustedNonTeamMember)
+                {
+                    WriteProperty(".tag", "trusted_non_team_member", writer, enc.StringEncoder.Instance);
+                    TrustedNonTeamMember.Encoder.EncodeFields((TrustedNonTeamMember)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -228,6 +256,8 @@ namespace Dropbox.Api.TeamLog
                         return Anonymous.Decoder.DecodeFields(reader);
                     case "team":
                         return Team.Decoder.DecodeFields(reader);
+                    case "trusted_non_team_member":
+                        return TrustedNonTeamMember.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -545,6 +575,96 @@ namespace Dropbox.Api.TeamLog
                     return Team.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Action was done on behalf of a trusted non team member.</para>
+        /// </summary>
+        public sealed class TrustedNonTeamMember : ContextLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TrustedNonTeamMember> Encoder = new TrustedNonTeamMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TrustedNonTeamMember> Decoder = new TrustedNonTeamMemberDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TrustedNonTeamMember" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TrustedNonTeamMember(TrustedNonTeamMemberLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TrustedNonTeamMember" />
+            /// class.</para>
+            /// </summary>
+            private TrustedNonTeamMember()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TrustedNonTeamMemberLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TrustedNonTeamMember" />.</para>
+            /// </summary>
+            private class TrustedNonTeamMemberEncoder : enc.StructEncoder<TrustedNonTeamMember>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TrustedNonTeamMember value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("trusted_non_team_member", value.Value, writer, global::Dropbox.Api.TeamLog.TrustedNonTeamMemberLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TrustedNonTeamMember" />.</para>
+            /// </summary>
+            private class TrustedNonTeamMemberDecoder : enc.StructDecoder<TrustedNonTeamMember>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TrustedNonTeamMember"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TrustedNonTeamMember Create()
+                {
+                    return new TrustedNonTeamMember();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TrustedNonTeamMember DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TrustedNonTeamMember(global::Dropbox.Api.TeamLog.TrustedNonTeamMemberLogInfo.Decoder.DecodeFields(reader));
+                }
             }
 
             #endregion

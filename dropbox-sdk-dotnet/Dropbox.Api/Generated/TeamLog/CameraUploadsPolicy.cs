@@ -11,71 +11,71 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>External sharing policy</para>
+    /// <para>Policy for controlling if team members can activate camera uploads</para>
     /// </summary>
-    public class SharingMemberPolicy
+    public class CameraUploadsPolicy
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<SharingMemberPolicy> Encoder = new SharingMemberPolicyEncoder();
+        internal static enc.StructEncoder<CameraUploadsPolicy> Encoder = new CameraUploadsPolicyEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<SharingMemberPolicy> Decoder = new SharingMemberPolicyDecoder();
+        internal static enc.StructDecoder<CameraUploadsPolicy> Decoder = new CameraUploadsPolicyDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="SharingMemberPolicy" />
+        /// <para>Initializes a new instance of the <see cref="CameraUploadsPolicy" />
         /// class.</para>
         /// </summary>
-        public SharingMemberPolicy()
+        public CameraUploadsPolicy()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Allow</para>
+        /// <para>Gets a value indicating whether this instance is Disabled</para>
         /// </summary>
-        public bool IsAllow
+        public bool IsDisabled
         {
             get
             {
-                return this is Allow;
+                return this is Disabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Allow, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Disabled, or <c>null</c>.</para>
         /// </summary>
-        public Allow AsAllow
+        public Disabled AsDisabled
         {
             get
             {
-                return this as Allow;
+                return this as Disabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Forbid</para>
+        /// <para>Gets a value indicating whether this instance is Enabled</para>
         /// </summary>
-        public bool IsForbid
+        public bool IsEnabled
         {
             get
             {
-                return this is Forbid;
+                return this is Enabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Forbid, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Enabled, or <c>null</c>.</para>
         /// </summary>
-        public Forbid AsForbid
+        public Enabled AsEnabled
         {
             get
             {
-                return this as Forbid;
+                return this as Enabled;
             }
         }
 
@@ -104,27 +104,27 @@ namespace Dropbox.Api.TeamLog
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="SharingMemberPolicy" />.</para>
+        /// <para>Encoder for  <see cref="CameraUploadsPolicy" />.</para>
         /// </summary>
-        private class SharingMemberPolicyEncoder : enc.StructEncoder<SharingMemberPolicy>
+        private class CameraUploadsPolicyEncoder : enc.StructEncoder<CameraUploadsPolicy>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(SharingMemberPolicy value, enc.IJsonWriter writer)
+            public override void EncodeFields(CameraUploadsPolicy value, enc.IJsonWriter writer)
             {
-                if (value is Allow)
+                if (value is Disabled)
                 {
-                    WriteProperty(".tag", "allow", writer, enc.StringEncoder.Instance);
-                    Allow.Encoder.EncodeFields((Allow)value, writer);
+                    WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
+                    Disabled.Encoder.EncodeFields((Disabled)value, writer);
                     return;
                 }
-                if (value is Forbid)
+                if (value is Enabled)
                 {
-                    WriteProperty(".tag", "forbid", writer, enc.StringEncoder.Instance);
-                    Forbid.Encoder.EncodeFields((Forbid)value, writer);
+                    WriteProperty(".tag", "enabled", writer, enc.StringEncoder.Instance);
+                    Enabled.Encoder.EncodeFields((Enabled)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -142,17 +142,17 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="SharingMemberPolicy" />.</para>
+        /// <para>Decoder for  <see cref="CameraUploadsPolicy" />.</para>
         /// </summary>
-        private class SharingMemberPolicyDecoder : enc.UnionDecoder<SharingMemberPolicy>
+        private class CameraUploadsPolicyDecoder : enc.UnionDecoder<CameraUploadsPolicy>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="SharingMemberPolicy" />.</para>
+            /// <para>Create a new instance of type <see cref="CameraUploadsPolicy" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override SharingMemberPolicy Create()
+            protected override CameraUploadsPolicy Create()
             {
-                return new SharingMemberPolicy();
+                return new CameraUploadsPolicy();
             }
 
             /// <summary>
@@ -161,14 +161,14 @@ namespace Dropbox.Api.TeamLog
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override SharingMemberPolicy Decode(string tag, enc.IJsonReader reader)
+            protected override CameraUploadsPolicy Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "allow":
-                        return Allow.Decoder.DecodeFields(reader);
-                    case "forbid":
-                        return Forbid.Decoder.DecodeFields(reader);
+                    case "disabled":
+                        return Disabled.Decoder.DecodeFields(reader);
+                    case "enabled":
+                        return Enabled.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -178,47 +178,47 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The allow object</para>
+        /// <para>The disabled object</para>
         /// </summary>
-        public sealed class Allow : SharingMemberPolicy
+        public sealed class Disabled : CameraUploadsPolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Allow> Encoder = new AllowEncoder();
+            internal static enc.StructEncoder<Disabled> Encoder = new DisabledEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Allow> Decoder = new AllowDecoder();
+            internal static enc.StructDecoder<Disabled> Decoder = new DisabledDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Allow" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Disabled" /> class.</para>
             /// </summary>
-            private Allow()
+            private Disabled()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Allow</para>
+            /// <para>A singleton instance of Disabled</para>
             /// </summary>
-            public static readonly Allow Instance = new Allow();
+            public static readonly Disabled Instance = new Disabled();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Allow" />.</para>
+            /// <para>Encoder for  <see cref="Disabled" />.</para>
             /// </summary>
-            private class AllowEncoder : enc.StructEncoder<Allow>
+            private class DisabledEncoder : enc.StructEncoder<Disabled>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Allow value, enc.IJsonWriter writer)
+                public override void EncodeFields(Disabled value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -228,17 +228,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Allow" />.</para>
+            /// <para>Decoder for  <see cref="Disabled" />.</para>
             /// </summary>
-            private class AllowDecoder : enc.StructDecoder<Allow>
+            private class DisabledDecoder : enc.StructDecoder<Disabled>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Allow" />.</para>
+                /// <para>Create a new instance of type <see cref="Disabled" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Allow Create()
+                protected override Disabled Create()
                 {
-                    return Allow.Instance;
+                    return Disabled.Instance;
                 }
 
             }
@@ -247,47 +247,47 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The forbid object</para>
+        /// <para>The enabled object</para>
         /// </summary>
-        public sealed class Forbid : SharingMemberPolicy
+        public sealed class Enabled : CameraUploadsPolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Forbid> Encoder = new ForbidEncoder();
+            internal static enc.StructEncoder<Enabled> Encoder = new EnabledEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Forbid> Decoder = new ForbidDecoder();
+            internal static enc.StructDecoder<Enabled> Decoder = new EnabledDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Forbid" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Enabled" /> class.</para>
             /// </summary>
-            private Forbid()
+            private Enabled()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Forbid</para>
+            /// <para>A singleton instance of Enabled</para>
             /// </summary>
-            public static readonly Forbid Instance = new Forbid();
+            public static readonly Enabled Instance = new Enabled();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Forbid" />.</para>
+            /// <para>Encoder for  <see cref="Enabled" />.</para>
             /// </summary>
-            private class ForbidEncoder : enc.StructEncoder<Forbid>
+            private class EnabledEncoder : enc.StructEncoder<Enabled>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Forbid value, enc.IJsonWriter writer)
+                public override void EncodeFields(Enabled value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -297,17 +297,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Forbid" />.</para>
+            /// <para>Decoder for  <see cref="Enabled" />.</para>
             /// </summary>
-            private class ForbidDecoder : enc.StructDecoder<Forbid>
+            private class EnabledDecoder : enc.StructDecoder<Enabled>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Forbid" />.</para>
+                /// <para>Create a new instance of type <see cref="Enabled" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Forbid Create()
+                protected override Enabled Create()
                 {
-                    return Forbid.Instance;
+                    return Enabled.Instance;
                 }
 
             }
@@ -318,7 +318,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : SharingMemberPolicy
+        public sealed class Other : CameraUploadsPolicy
         {
             #pragma warning disable 108
 

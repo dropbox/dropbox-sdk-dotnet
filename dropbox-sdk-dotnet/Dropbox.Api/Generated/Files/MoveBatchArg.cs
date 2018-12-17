@@ -11,73 +11,51 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The relocation batch arg object</para>
+    /// <para>The move batch arg object</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Files.RelocationBatchArgBase" />
-    public class RelocationBatchArg : RelocationBatchArgBase
+    public class MoveBatchArg : RelocationBatchArgBase
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<RelocationBatchArg> Encoder = new RelocationBatchArgEncoder();
+        internal static enc.StructEncoder<MoveBatchArg> Encoder = new MoveBatchArgEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<RelocationBatchArg> Decoder = new RelocationBatchArgDecoder();
+        internal static enc.StructDecoder<MoveBatchArg> Decoder = new MoveBatchArgDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="RelocationBatchArg" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="MoveBatchArg" /> class.</para>
         /// </summary>
         /// <param name="entries">List of entries to be moved or copied. Each entry is <see
         /// cref="RelocationPath" />.</param>
         /// <param name="autorename">If there's a conflict with any file, have the Dropbox
         /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">If true, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> will copy
-        /// contents in shared folder, otherwise <see
-        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
-        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
-        /// This field is always true for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
-        public RelocationBatchArg(col.IEnumerable<RelocationPath> entries,
-                                  bool autorename = false,
-                                  bool allowSharedFolder = false,
-                                  bool allowOwnershipTransfer = false)
+        public MoveBatchArg(col.IEnumerable<RelocationPath> entries,
+                            bool autorename = false,
+                            bool allowOwnershipTransfer = false)
             : base(entries, autorename)
         {
-            this.AllowSharedFolder = allowSharedFolder;
             this.AllowOwnershipTransfer = allowOwnershipTransfer;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="RelocationBatchArg" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="MoveBatchArg" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public RelocationBatchArg()
+        public MoveBatchArg()
         {
-            this.AllowSharedFolder = false;
             this.AllowOwnershipTransfer = false;
         }
-
-        /// <summary>
-        /// <para>If true, <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync"
-        /// /> will copy contents in shared folder, otherwise <see
-        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
-        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
-        /// This field is always true for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</para>
-        /// </summary>
-        public bool AllowSharedFolder { get; protected set; }
 
         /// <summary>
         /// <para>Allow moves by owner even if it would result in an ownership transfer for the
@@ -88,20 +66,19 @@ namespace Dropbox.Api.Files
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="RelocationBatchArg" />.</para>
+        /// <para>Encoder for  <see cref="MoveBatchArg" />.</para>
         /// </summary>
-        private class RelocationBatchArgEncoder : enc.StructEncoder<RelocationBatchArg>
+        private class MoveBatchArgEncoder : enc.StructEncoder<MoveBatchArg>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(RelocationBatchArg value, enc.IJsonWriter writer)
+            public override void EncodeFields(MoveBatchArg value, enc.IJsonWriter writer)
             {
                 WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.RelocationPath.Encoder);
                 WriteProperty("autorename", value.Autorename, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("allow_shared_folder", value.AllowSharedFolder, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("allow_ownership_transfer", value.AllowOwnershipTransfer, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -112,17 +89,17 @@ namespace Dropbox.Api.Files
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="RelocationBatchArg" />.</para>
+        /// <para>Decoder for  <see cref="MoveBatchArg" />.</para>
         /// </summary>
-        private class RelocationBatchArgDecoder : enc.StructDecoder<RelocationBatchArg>
+        private class MoveBatchArgDecoder : enc.StructDecoder<MoveBatchArg>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="RelocationBatchArg" />.</para>
+            /// <para>Create a new instance of type <see cref="MoveBatchArg" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override RelocationBatchArg Create()
+            protected override MoveBatchArg Create()
             {
-                return new RelocationBatchArg();
+                return new MoveBatchArg();
             }
 
             /// <summary>
@@ -131,7 +108,7 @@ namespace Dropbox.Api.Files
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(RelocationBatchArg value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(MoveBatchArg value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
@@ -140,9 +117,6 @@ namespace Dropbox.Api.Files
                         break;
                     case "autorename":
                         value.Autorename = enc.BooleanDecoder.Instance.Decode(reader);
-                        break;
-                    case "allow_shared_folder":
-                        value.AllowSharedFolder = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "allow_ownership_transfer":
                         value.AllowOwnershipTransfer = enc.BooleanDecoder.Instance.Decode(reader);

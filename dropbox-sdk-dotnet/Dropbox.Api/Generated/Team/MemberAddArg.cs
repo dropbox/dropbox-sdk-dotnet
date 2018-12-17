@@ -59,9 +59,9 @@ namespace Dropbox.Api.Team
             {
                 throw new sys.ArgumentOutOfRangeException("memberEmail", "Length should be at most 255");
             }
-            if (!re.Regex.IsMatch(memberEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z"))
+            if (!re.Regex.IsMatch(memberEmail, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*\.[A-Za-z]{2,15}$)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("memberEmail", @"Value should match pattern '\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*.[A-Za-z]{2,15}$)\z'");
+                throw new sys.ArgumentOutOfRangeException("memberEmail", @"Value should match pattern '\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*\.[A-Za-z]{2,15}$)\z'");
             }
 
             if (memberGivenName != null)

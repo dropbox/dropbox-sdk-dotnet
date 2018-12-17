@@ -140,6 +140,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all device sessions of a team.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="listMembersDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -170,6 +171,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all device sessions of a team.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> the
@@ -257,6 +259,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all device sessions of a team.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="listTeamDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -289,6 +292,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List all device sessions of a team.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> the
@@ -4360,9 +4364,12 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="teamNamespacesListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamNamespacesListError"/>.</exception>
         public t.Task<TeamNamespacesListResult> NamespacesListAsync(TeamNamespacesListArg teamNamespacesListArg)
         {
-            return this.Transport.SendRpcRequestAsync<TeamNamespacesListArg, TeamNamespacesListResult, enc.Empty>(teamNamespacesListArg, "api", "/team/namespaces/list", "team", global::Dropbox.Api.Team.TeamNamespacesListArg.Encoder, global::Dropbox.Api.Team.TeamNamespacesListResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<TeamNamespacesListArg, TeamNamespacesListResult, TeamNamespacesListError>(teamNamespacesListArg, "api", "/team/namespaces/list", "team", global::Dropbox.Api.Team.TeamNamespacesListArg.Encoder, global::Dropbox.Api.Team.TeamNamespacesListResult.Decoder, global::Dropbox.Api.Team.TeamNamespacesListError.Decoder);
         }
 
         /// <summary>
@@ -4391,6 +4398,9 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="limit">Specifying a value here has no effect.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamNamespacesListError"/>.</exception>
         public t.Task<TeamNamespacesListResult> NamespacesListAsync(uint limit = 1000)
         {
             var teamNamespacesListArg = new TeamNamespacesListArg(limit);
@@ -4423,6 +4433,9 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamNamespacesListError"/>.</exception>
         public TeamNamespacesListResult EndNamespacesList(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamNamespacesListResult>;
@@ -4528,7 +4541,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template add route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="addTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4560,7 +4573,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template add route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="name">Display name for the template. Template names can be up to 256
         /// bytes.</param>
@@ -4636,7 +4649,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template get route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="getTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4668,7 +4681,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template get route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="templateId">An identifier for template added by route  See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
@@ -4734,7 +4747,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template list route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -4786,7 +4799,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template update route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="updateTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4818,7 +4831,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The properties template update route</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="templateId">An identifier for template added by  See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
