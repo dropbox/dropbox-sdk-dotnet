@@ -19,40 +19,36 @@ $nugetPath = "$nugetDir\nuget.exe"
 $nugetSpecPath = "$sourceDir\Dropbox.Api.nuspec"
 $docBuildPath = Resolve-Path "doc\StoneDocs.shfbproj"
 $majorVersion = "4.0"
-$releaseVersion = "4.9.3"
+$releaseVersion = "4.9.4"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 $releaseNotes = @'
 What's New:
 
-  - Common Namespace:
-    - Force matching dot character in alias EmailAddress
-    - Allow DisplayNameLegacy to support a name of zero chars
-
-  - Contacts namespace:
-    - New namespace
-    - New routes: delete_manual_contacts and delete_manual_contacts_batch
-    - New argument structs for new routes
-
-  - File_properties namespace:
-    - Doesn't allow app folder app to access file property endpoints.
-
   - Files namespace:
-    - Create copy_batch:2 and move_batch:2 endpoints. Deprecate existing copy_batch and move_batch.
+    - Added new ExportInfo struct
+    - Added new fields (is_downloadable, export_info) to FileMetadata
+    - Added new include_non_downloadable_files to ListFolderArg
+    - Added new ExportMetadata, ExportArg, Export Result Structs
+    - Added new ExportError union
+    - Added new /export route
 
   - Sharing namespace:
-    - Add no_one option to LinkAudience union
-
-  - Sharing_files namespace:
-    - Doesn't allow app folder app to access sharing files endpoints.
-
-  - Teams namespace:
-    - Only Team apps with Team member file access can access team/properties endpoints.
-    - Add is_disconnected boolean to RemovedStatus struct
-    - Add error response type to namespace/list route
+    - Added password field to LinkAudience
+    - Added effective_audience and link_access_level fields to LinkPermissions struct
+    - Updated docstrings for LinkPermissions
+    - Added audience and access fields to SharedLinkSettings struct
+    - New LinkAccessLevel and RequestedLinkAccessLevel union
+    - Added new create_view_link and create_edit_link fields to FileAction union
 
   - Team_log namespace:
-    - New event types added
+    - New types added
+
+  - Team_policies namespace:
+    - New TwoStepVerificationState union
+
+  - Team_reports namespace:
+    - New TemporaryFailureReason union added.
 
 '@
 
