@@ -554,7 +554,8 @@ class _CSharpGenerator(CodeBackend):
                     ns_name, route_name = ns, value
                 
                 if ':' in route_name:
-                    route_name, version = route_name.split(':')
+                    route_name, version_str = route_name.split(':')
+                    version = int(version_str)
                 else:
                     route_name, version = route_name, 1
                 
