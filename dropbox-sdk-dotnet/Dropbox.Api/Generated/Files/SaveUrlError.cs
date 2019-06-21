@@ -333,7 +333,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Failed downloading the given URL.</para>
+        /// <para>Failed downloading the given URL. The url may be password-protected / the
+        /// password provided was incorrect.</para>
         /// </summary>
         public sealed class DownloadFailed : SaveUrlError
         {

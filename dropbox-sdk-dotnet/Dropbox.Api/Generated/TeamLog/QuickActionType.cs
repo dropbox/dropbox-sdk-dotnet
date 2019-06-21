@@ -58,6 +58,94 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ResetPassword</para>
+        /// </summary>
+        public bool IsResetPassword
+        {
+            get
+            {
+                return this is ResetPassword;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ResetPassword, or <c>null</c>.</para>
+        /// </summary>
+        public ResetPassword AsResetPassword
+        {
+            get
+            {
+                return this as ResetPassword;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is RestoreFileOrFolder</para>
+        /// </summary>
+        public bool IsRestoreFileOrFolder
+        {
+            get
+            {
+                return this is RestoreFileOrFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RestoreFileOrFolder, or <c>null</c>.</para>
+        /// </summary>
+        public RestoreFileOrFolder AsRestoreFileOrFolder
+        {
+            get
+            {
+                return this as RestoreFileOrFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UnlinkApp</para>
+        /// </summary>
+        public bool IsUnlinkApp
+        {
+            get
+            {
+                return this is UnlinkApp;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnlinkApp, or <c>null</c>.</para>
+        /// </summary>
+        public UnlinkApp AsUnlinkApp
+        {
+            get
+            {
+                return this as UnlinkApp;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UnlinkSession</para>
+        /// </summary>
+        public bool IsUnlinkSession
+        {
+            get
+            {
+                return this is UnlinkSession;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnlinkSession, or <c>null</c>.</para>
+        /// </summary>
+        public UnlinkSession AsUnlinkSession
+        {
+            get
+            {
+                return this as UnlinkSession;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -97,6 +185,30 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "delete_shared_link", writer, enc.StringEncoder.Instance);
                     DeleteSharedLink.Encoder.EncodeFields((DeleteSharedLink)value, writer);
+                    return;
+                }
+                if (value is ResetPassword)
+                {
+                    WriteProperty(".tag", "reset_password", writer, enc.StringEncoder.Instance);
+                    ResetPassword.Encoder.EncodeFields((ResetPassword)value, writer);
+                    return;
+                }
+                if (value is RestoreFileOrFolder)
+                {
+                    WriteProperty(".tag", "restore_file_or_folder", writer, enc.StringEncoder.Instance);
+                    RestoreFileOrFolder.Encoder.EncodeFields((RestoreFileOrFolder)value, writer);
+                    return;
+                }
+                if (value is UnlinkApp)
+                {
+                    WriteProperty(".tag", "unlink_app", writer, enc.StringEncoder.Instance);
+                    UnlinkApp.Encoder.EncodeFields((UnlinkApp)value, writer);
+                    return;
+                }
+                if (value is UnlinkSession)
+                {
+                    WriteProperty(".tag", "unlink_session", writer, enc.StringEncoder.Instance);
+                    UnlinkSession.Encoder.EncodeFields((UnlinkSession)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -139,6 +251,14 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "delete_shared_link":
                         return DeleteSharedLink.Decoder.DecodeFields(reader);
+                    case "reset_password":
+                        return ResetPassword.Decoder.DecodeFields(reader);
+                    case "restore_file_or_folder":
+                        return RestoreFileOrFolder.Decoder.DecodeFields(reader);
+                    case "unlink_app":
+                        return UnlinkApp.Decoder.DecodeFields(reader);
+                    case "unlink_session":
+                        return UnlinkSession.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -210,6 +330,286 @@ namespace Dropbox.Api.TeamLog
                 protected override DeleteSharedLink Create()
                 {
                     return DeleteSharedLink.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The reset password object</para>
+        /// </summary>
+        public sealed class ResetPassword : QuickActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ResetPassword> Encoder = new ResetPasswordEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ResetPassword> Decoder = new ResetPasswordDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ResetPassword" />
+            /// class.</para>
+            /// </summary>
+            private ResetPassword()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ResetPassword</para>
+            /// </summary>
+            public static readonly ResetPassword Instance = new ResetPassword();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ResetPassword" />.</para>
+            /// </summary>
+            private class ResetPasswordEncoder : enc.StructEncoder<ResetPassword>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ResetPassword value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ResetPassword" />.</para>
+            /// </summary>
+            private class ResetPasswordDecoder : enc.StructDecoder<ResetPassword>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ResetPassword" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ResetPassword Create()
+                {
+                    return ResetPassword.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The restore file or folder object</para>
+        /// </summary>
+        public sealed class RestoreFileOrFolder : QuickActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RestoreFileOrFolder> Encoder = new RestoreFileOrFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RestoreFileOrFolder> Decoder = new RestoreFileOrFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RestoreFileOrFolder" />
+            /// class.</para>
+            /// </summary>
+            private RestoreFileOrFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RestoreFileOrFolder</para>
+            /// </summary>
+            public static readonly RestoreFileOrFolder Instance = new RestoreFileOrFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RestoreFileOrFolder" />.</para>
+            /// </summary>
+            private class RestoreFileOrFolderEncoder : enc.StructEncoder<RestoreFileOrFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RestoreFileOrFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RestoreFileOrFolder" />.</para>
+            /// </summary>
+            private class RestoreFileOrFolderDecoder : enc.StructDecoder<RestoreFileOrFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RestoreFileOrFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RestoreFileOrFolder Create()
+                {
+                    return RestoreFileOrFolder.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The unlink app object</para>
+        /// </summary>
+        public sealed class UnlinkApp : QuickActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnlinkApp> Encoder = new UnlinkAppEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnlinkApp> Decoder = new UnlinkAppDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnlinkApp" /> class.</para>
+            /// </summary>
+            private UnlinkApp()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnlinkApp</para>
+            /// </summary>
+            public static readonly UnlinkApp Instance = new UnlinkApp();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnlinkApp" />.</para>
+            /// </summary>
+            private class UnlinkAppEncoder : enc.StructEncoder<UnlinkApp>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnlinkApp value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnlinkApp" />.</para>
+            /// </summary>
+            private class UnlinkAppDecoder : enc.StructDecoder<UnlinkApp>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnlinkApp" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnlinkApp Create()
+                {
+                    return UnlinkApp.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The unlink session object</para>
+        /// </summary>
+        public sealed class UnlinkSession : QuickActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnlinkSession> Encoder = new UnlinkSessionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnlinkSession> Decoder = new UnlinkSessionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnlinkSession" />
+            /// class.</para>
+            /// </summary>
+            private UnlinkSession()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnlinkSession</para>
+            /// </summary>
+            public static readonly UnlinkSession Instance = new UnlinkSession();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnlinkSession" />.</para>
+            /// </summary>
+            private class UnlinkSessionEncoder : enc.StructEncoder<UnlinkSession>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnlinkSession value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnlinkSession" />.</para>
+            /// </summary>
+            private class UnlinkSessionDecoder : enc.StructDecoder<UnlinkSession>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnlinkSession" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnlinkSession Create()
+                {
+                    return UnlinkSession.Instance;
                 }
 
             }

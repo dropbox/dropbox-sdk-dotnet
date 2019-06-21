@@ -58,6 +58,50 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is EmailNotVerified</para>
+        /// </summary>
+        public bool IsEmailNotVerified
+        {
+            get
+            {
+                return this is EmailNotVerified;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EmailNotVerified, or <c>null</c>.</para>
+        /// </summary>
+        public EmailNotVerified AsEmailNotVerified
+        {
+            get
+            {
+                return this as EmailNotVerified;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UnsupportedFile</para>
+        /// </summary>
+        public bool IsUnsupportedFile
+        {
+            get
+            {
+                return this is UnsupportedFile;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnsupportedFile, or <c>null</c>.</para>
+        /// </summary>
+        public UnsupportedFile AsUnsupportedFile
+        {
+            get
+            {
+                return this as UnsupportedFile;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -97,6 +141,18 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
                     Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is EmailNotVerified)
+                {
+                    WriteProperty(".tag", "email_not_verified", writer, enc.StringEncoder.Instance);
+                    EmailNotVerified.Encoder.EncodeFields((EmailNotVerified)value, writer);
+                    return;
+                }
+                if (value is UnsupportedFile)
+                {
+                    WriteProperty(".tag", "unsupported_file", writer, enc.StringEncoder.Instance);
+                    UnsupportedFile.Encoder.EncodeFields((UnsupportedFile)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -140,6 +196,10 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "email_not_verified":
+                        return EmailNotVerified.Decoder.DecodeFields(reader);
+                    case "unsupported_file":
+                        return UnsupportedFile.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -239,6 +299,148 @@ namespace Dropbox.Api.Files
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user's email address needs to be verified to use this
+        /// functionality.</para>
+        /// </summary>
+        public sealed class EmailNotVerified : GetTemporaryLinkError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EmailNotVerified> Encoder = new EmailNotVerifiedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EmailNotVerified> Decoder = new EmailNotVerifiedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EmailNotVerified" />
+            /// class.</para>
+            /// </summary>
+            private EmailNotVerified()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of EmailNotVerified</para>
+            /// </summary>
+            public static readonly EmailNotVerified Instance = new EmailNotVerified();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EmailNotVerified" />.</para>
+            /// </summary>
+            private class EmailNotVerifiedEncoder : enc.StructEncoder<EmailNotVerified>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EmailNotVerified value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EmailNotVerified" />.</para>
+            /// </summary>
+            private class EmailNotVerifiedDecoder : enc.StructDecoder<EmailNotVerified>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EmailNotVerified" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EmailNotVerified Create()
+                {
+                    return EmailNotVerified.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot get temporary link to this file type; use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ExportAsync" /> instead.</para>
+        /// </summary>
+        public sealed class UnsupportedFile : GetTemporaryLinkError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedFile> Encoder = new UnsupportedFileEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedFile> Decoder = new UnsupportedFileDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnsupportedFile" />
+            /// class.</para>
+            /// </summary>
+            private UnsupportedFile()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnsupportedFile</para>
+            /// </summary>
+            public static readonly UnsupportedFile Instance = new UnsupportedFile();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnsupportedFile" />.</para>
+            /// </summary>
+            private class UnsupportedFileEncoder : enc.StructEncoder<UnsupportedFile>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedFile value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnsupportedFile" />.</para>
+            /// </summary>
+            private class UnsupportedFileDecoder : enc.StructDecoder<UnsupportedFile>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedFile" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedFile Create()
+                {
+                    return UnsupportedFile.Instance;
+                }
+
             }
 
             #endregion

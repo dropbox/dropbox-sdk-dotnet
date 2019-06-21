@@ -80,6 +80,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is BannedMember</para>
+        /// </summary>
+        public bool IsBannedMember
+        {
+            get
+            {
+                return this is BannedMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a BannedMember, or <c>null</c>.</para>
+        /// </summary>
+        public BannedMember AsBannedMember
+        {
+            get
+            {
+                return this as BannedMember;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is BadMember</para>
         /// </summary>
         public bool IsBadMember
@@ -325,6 +347,12 @@ namespace Dropbox.Api.Sharing
                     EmailUnverified.Encoder.EncodeFields((EmailUnverified)value, writer);
                     return;
                 }
+                if (value is BannedMember)
+                {
+                    WriteProperty(".tag", "banned_member", writer, enc.StringEncoder.Instance);
+                    BannedMember.Encoder.EncodeFields((BannedMember)value, writer);
+                    return;
+                }
                 if (value is BadMember)
                 {
                     WriteProperty(".tag", "bad_member", writer, enc.StringEncoder.Instance);
@@ -421,6 +449,8 @@ namespace Dropbox.Api.Sharing
                         return AccessError.Decoder.DecodeFields(reader);
                     case "email_unverified":
                         return EmailUnverified.Decoder.DecodeFields(reader);
+                    case "banned_member":
+                        return BannedMember.Decoder.DecodeFields(reader);
                     case "bad_member":
                         return BadMember.Decoder.DecodeFields(reader);
                     case "cant_share_outside_team":
@@ -608,6 +638,76 @@ namespace Dropbox.Api.Sharing
                 protected override EmailUnverified Create()
                 {
                     return EmailUnverified.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current user has been banned.</para>
+        /// </summary>
+        public sealed class BannedMember : AddFolderMemberError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<BannedMember> Encoder = new BannedMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<BannedMember> Decoder = new BannedMemberDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="BannedMember" />
+            /// class.</para>
+            /// </summary>
+            private BannedMember()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of BannedMember</para>
+            /// </summary>
+            public static readonly BannedMember Instance = new BannedMember();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="BannedMember" />.</para>
+            /// </summary>
+            private class BannedMemberEncoder : enc.StructEncoder<BannedMember>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(BannedMember value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="BannedMember" />.</para>
+            /// </summary>
+            private class BannedMemberDecoder : enc.StructDecoder<BannedMember>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="BannedMember" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override BannedMember Create()
+                {
+                    return BannedMember.Instance;
                 }
 
             }

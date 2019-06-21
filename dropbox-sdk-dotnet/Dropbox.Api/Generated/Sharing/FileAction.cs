@@ -255,6 +255,50 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CreateViewLink</para>
+        /// </summary>
+        public bool IsCreateViewLink
+        {
+            get
+            {
+                return this is CreateViewLink;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CreateViewLink, or <c>null</c>.</para>
+        /// </summary>
+        public CreateViewLink AsCreateViewLink
+        {
+            get
+            {
+                return this as CreateViewLink;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is CreateEditLink</para>
+        /// </summary>
+        public bool IsCreateEditLink
+        {
+            get
+            {
+                return this is CreateEditLink;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CreateEditLink, or <c>null</c>.</para>
+        /// </summary>
+        public CreateEditLink AsCreateEditLink
+        {
+            get
+            {
+                return this as CreateEditLink;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -350,6 +394,18 @@ namespace Dropbox.Api.Sharing
                     CreateLink.Encoder.EncodeFields((CreateLink)value, writer);
                     return;
                 }
+                if (value is CreateViewLink)
+                {
+                    WriteProperty(".tag", "create_view_link", writer, enc.StringEncoder.Instance);
+                    CreateViewLink.Encoder.EncodeFields((CreateViewLink)value, writer);
+                    return;
+                }
+                if (value is CreateEditLink)
+                {
+                    WriteProperty(".tag", "create_edit_link", writer, enc.StringEncoder.Instance);
+                    CreateEditLink.Encoder.EncodeFields((CreateEditLink)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -408,6 +464,10 @@ namespace Dropbox.Api.Sharing
                         return ShareLink.Decoder.DecodeFields(reader);
                     case "create_link":
                         return CreateLink.Decoder.DecodeFields(reader);
+                    case "create_view_link":
+                        return CreateViewLink.Decoder.DecodeFields(reader);
+                    case "create_edit_link":
+                        return CreateEditLink.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -979,7 +1039,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Use create_link instead.</para>
+        /// <para>Use create_view_link and create_edit_link instead.</para>
         /// </summary>
         public sealed class ShareLink : FileAction
         {
@@ -1048,7 +1108,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Create a shared link to the file.</para>
+        /// <para>Use create_view_link and create_edit_link instead.</para>
         /// </summary>
         public sealed class CreateLink : FileAction
         {
@@ -1109,6 +1169,147 @@ namespace Dropbox.Api.Sharing
                 protected override CreateLink Create()
                 {
                     return CreateLink.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Create a shared link to a file that only allows users to view the
+        /// content.</para>
+        /// </summary>
+        public sealed class CreateViewLink : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CreateViewLink> Encoder = new CreateViewLinkEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CreateViewLink> Decoder = new CreateViewLinkDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CreateViewLink" />
+            /// class.</para>
+            /// </summary>
+            private CreateViewLink()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CreateViewLink</para>
+            /// </summary>
+            public static readonly CreateViewLink Instance = new CreateViewLink();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CreateViewLink" />.</para>
+            /// </summary>
+            private class CreateViewLinkEncoder : enc.StructEncoder<CreateViewLink>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CreateViewLink value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CreateViewLink" />.</para>
+            /// </summary>
+            private class CreateViewLinkDecoder : enc.StructDecoder<CreateViewLink>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CreateViewLink" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CreateViewLink Create()
+                {
+                    return CreateViewLink.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Create a shared link to a file that allows users to edit the content.</para>
+        /// </summary>
+        public sealed class CreateEditLink : FileAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CreateEditLink> Encoder = new CreateEditLinkEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CreateEditLink> Decoder = new CreateEditLinkDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CreateEditLink" />
+            /// class.</para>
+            /// </summary>
+            private CreateEditLink()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CreateEditLink</para>
+            /// </summary>
+            public static readonly CreateEditLink Instance = new CreateEditLink();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CreateEditLink" />.</para>
+            /// </summary>
+            private class CreateEditLinkEncoder : enc.StructEncoder<CreateEditLink>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CreateEditLink value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CreateEditLink" />.</para>
+            /// </summary>
+            private class CreateEditLinkDecoder : enc.StructDecoder<CreateEditLink>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CreateEditLink" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CreateEditLink Create()
+                {
+                    return CreateEditLink.Instance;
                 }
 
             }

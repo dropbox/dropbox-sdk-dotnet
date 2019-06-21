@@ -46,10 +46,15 @@ namespace Dropbox.Api.Team
         /// <param name="accountId">A user's account identifier.</param>
         /// <param name="joinedOn">The date and time the user joined as a member of a specific
         /// team.</param>
+        /// <param name="suspendedOn">The date and time the user was suspended from the team
+        /// (contains value only when the member's status matches <see
+        /// cref="Dropbox.Api.Team.TeamMemberStatus.Suspended" />.</param>
         /// <param name="persistentId">Persistent ID that a team can attach to the user. The
         /// persistent ID is unique ID to be used for SAML authentication.</param>
         /// <param name="isDirectoryRestricted">Whether the user is a directory restricted
         /// user.</param>
+        /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
+        /// set.</param>
         public MemberProfile(string teamMemberId,
                              string email,
                              bool emailVerified,
@@ -59,8 +64,10 @@ namespace Dropbox.Api.Team
                              string externalId = null,
                              string accountId = null,
                              sys.DateTime? joinedOn = null,
+                             sys.DateTime? suspendedOn = null,
                              string persistentId = null,
-                             bool? isDirectoryRestricted = null)
+                             bool? isDirectoryRestricted = null,
+                             string profilePhotoUrl = null)
         {
             if (teamMemberId == null)
             {
@@ -108,8 +115,10 @@ namespace Dropbox.Api.Team
             this.ExternalId = externalId;
             this.AccountId = accountId;
             this.JoinedOn = joinedOn;
+            this.SuspendedOn = suspendedOn;
             this.PersistentId = persistentId;
             this.IsDirectoryRestricted = isDirectoryRestricted;
+            this.ProfilePhotoUrl = profilePhotoUrl;
         }
 
         /// <summary>
@@ -171,6 +180,13 @@ namespace Dropbox.Api.Team
         public sys.DateTime? JoinedOn { get; protected set; }
 
         /// <summary>
+        /// <para>The date and time the user was suspended from the team (contains value only
+        /// when the member's status matches <see
+        /// cref="Dropbox.Api.Team.TeamMemberStatus.Suspended" />.</para>
+        /// </summary>
+        public sys.DateTime? SuspendedOn { get; protected set; }
+
+        /// <summary>
         /// <para>Persistent ID that a team can attach to the user. The persistent ID is unique
         /// ID to be used for SAML authentication.</para>
         /// </summary>
@@ -180,6 +196,11 @@ namespace Dropbox.Api.Team
         /// <para>Whether the user is a directory restricted user.</para>
         /// </summary>
         public bool? IsDirectoryRestricted { get; protected set; }
+
+        /// <summary>
+        /// <para>URL for the photo representing the user, if one is set.</para>
+        /// </summary>
+        public string ProfilePhotoUrl { get; protected set; }
 
         #region Encoder class
 
@@ -213,6 +234,10 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty("joined_on", value.JoinedOn.Value, writer, enc.DateTimeEncoder.Instance);
                 }
+                if (value.SuspendedOn != null)
+                {
+                    WriteProperty("suspended_on", value.SuspendedOn.Value, writer, enc.DateTimeEncoder.Instance);
+                }
                 if (value.PersistentId != null)
                 {
                     WriteProperty("persistent_id", value.PersistentId, writer, enc.StringEncoder.Instance);
@@ -220,6 +245,10 @@ namespace Dropbox.Api.Team
                 if (value.IsDirectoryRestricted != null)
                 {
                     WriteProperty("is_directory_restricted", value.IsDirectoryRestricted.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.ProfilePhotoUrl != null)
+                {
+                    WriteProperty("profile_photo_url", value.ProfilePhotoUrl, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -280,11 +309,17 @@ namespace Dropbox.Api.Team
                     case "joined_on":
                         value.JoinedOn = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
+                    case "suspended_on":
+                        value.SuspendedOn = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
                     case "persistent_id":
                         value.PersistentId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "is_directory_restricted":
                         value.IsDirectoryRestricted = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "profile_photo_url":
+                        value.ProfilePhotoUrl = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

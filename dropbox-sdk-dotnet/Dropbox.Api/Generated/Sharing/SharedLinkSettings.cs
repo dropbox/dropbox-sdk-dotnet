@@ -39,13 +39,24 @@ namespace Dropbox.Api.Sharing
         /// specify the password to access the link.</param>
         /// <param name="expires">Expiration time of the shared link. By default the link won't
         /// expire.</param>
+        /// <param name="audience">The new audience who can benefit from the access level
+        /// specified by the link's access level specified in the `link_access_level` field of
+        /// `LinkPermissions`. This is used in conjunction with team policies and shared folder
+        /// policies to determine the final effective audience type in the `effective_audience`
+        /// field of `LinkPermissions.</param>
+        /// <param name="access">Requested access level you want the audience to gain from this
+        /// link.</param>
         public SharedLinkSettings(RequestedVisibility requestedVisibility = null,
                                   string linkPassword = null,
-                                  sys.DateTime? expires = null)
+                                  sys.DateTime? expires = null,
+                                  LinkAudience audience = null,
+                                  RequestedLinkAccessLevel access = null)
         {
             this.RequestedVisibility = requestedVisibility;
             this.LinkPassword = linkPassword;
             this.Expires = expires;
+            this.Audience = audience;
+            this.Access = access;
         }
 
         /// <summary>
@@ -76,6 +87,20 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public sys.DateTime? Expires { get; protected set; }
 
+        /// <summary>
+        /// <para>The new audience who can benefit from the access level specified by the
+        /// link's access level specified in the `link_access_level` field of
+        /// `LinkPermissions`. This is used in conjunction with team policies and shared folder
+        /// policies to determine the final effective audience type in the `effective_audience`
+        /// field of `LinkPermissions.</para>
+        /// </summary>
+        public LinkAudience Audience { get; protected set; }
+
+        /// <summary>
+        /// <para>Requested access level you want the audience to gain from this link.</para>
+        /// </summary>
+        public RequestedLinkAccessLevel Access { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -101,6 +126,14 @@ namespace Dropbox.Api.Sharing
                 if (value.Expires != null)
                 {
                     WriteProperty("expires", value.Expires.Value, writer, enc.DateTimeEncoder.Instance);
+                }
+                if (value.Audience != null)
+                {
+                    WriteProperty("audience", value.Audience, writer, global::Dropbox.Api.Sharing.LinkAudience.Encoder);
+                }
+                if (value.Access != null)
+                {
+                    WriteProperty("access", value.Access, writer, global::Dropbox.Api.Sharing.RequestedLinkAccessLevel.Encoder);
                 }
             }
         }
@@ -142,6 +175,12 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "expires":
                         value.Expires = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "audience":
+                        value.Audience = global::Dropbox.Api.Sharing.LinkAudience.Decoder.Decode(reader);
+                        break;
+                    case "access":
+                        value.Access = global::Dropbox.Api.Sharing.RequestedLinkAccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

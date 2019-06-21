@@ -145,6 +145,28 @@ namespace Dropbox.Api.Auth
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MissingScope</para>
+        /// </summary>
+        public bool IsMissingScope
+        {
+            get
+            {
+                return this is MissingScope;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MissingScope, or <c>null</c>.</para>
+        /// </summary>
+        public MissingScope AsMissingScope
+        {
+            get
+            {
+                return this as MissingScope;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,6 +232,12 @@ namespace Dropbox.Api.Auth
                     ExpiredAccessToken.Encoder.EncodeFields((ExpiredAccessToken)value, writer);
                     return;
                 }
+                if (value is MissingScope)
+                {
+                    WriteProperty(".tag", "missing_scope", writer, enc.StringEncoder.Instance);
+                    MissingScope.Encoder.EncodeFields((MissingScope)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -258,6 +286,8 @@ namespace Dropbox.Api.Auth
                         return UserSuspended.Decoder.DecodeFields(reader);
                     case "expired_access_token":
                         return ExpiredAccessToken.Decoder.DecodeFields(reader);
+                    case "missing_scope":
+                        return MissingScope.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -617,6 +647,95 @@ namespace Dropbox.Api.Auth
                     return ExpiredAccessToken.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The access token does not have the required scope to access the route.</para>
+        /// </summary>
+        public sealed class MissingScope : AuthError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MissingScope> Encoder = new MissingScopeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MissingScope> Decoder = new MissingScopeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MissingScope" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MissingScope(TokenScopeError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MissingScope" />
+            /// class.</para>
+            /// </summary>
+            private MissingScope()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TokenScopeError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MissingScope" />.</para>
+            /// </summary>
+            private class MissingScopeEncoder : enc.StructEncoder<MissingScope>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MissingScope value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("missing_scope", value.Value, writer, global::Dropbox.Api.Auth.TokenScopeError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MissingScope" />.</para>
+            /// </summary>
+            private class MissingScopeDecoder : enc.StructDecoder<MissingScope>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MissingScope" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MissingScope Create()
+                {
+                    return new MissingScope();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MissingScope DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MissingScope(global::Dropbox.Api.Auth.TokenScopeError.Decoder.DecodeFields(reader));
+                }
             }
 
             #endregion

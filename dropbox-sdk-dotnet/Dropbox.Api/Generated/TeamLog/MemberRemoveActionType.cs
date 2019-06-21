@@ -102,6 +102,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// OffboardAndRetainTeamFolders</para>
+        /// </summary>
+        public bool IsOffboardAndRetainTeamFolders
+        {
+            get
+            {
+                return this is OffboardAndRetainTeamFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a OffboardAndRetainTeamFolders, or <c>null</c>.</para>
+        /// </summary>
+        public OffboardAndRetainTeamFolders AsOffboardAndRetainTeamFolders
+        {
+            get
+            {
+                return this as OffboardAndRetainTeamFolders;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +178,12 @@ namespace Dropbox.Api.TeamLog
                     Leave.Encoder.EncodeFields((Leave)value, writer);
                     return;
                 }
+                if (value is OffboardAndRetainTeamFolders)
+                {
+                    WriteProperty(".tag", "offboard_and_retain_team_folders", writer, enc.StringEncoder.Instance);
+                    OffboardAndRetainTeamFolders.Encoder.EncodeFields((OffboardAndRetainTeamFolders)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +229,8 @@ namespace Dropbox.Api.TeamLog
                         return Offboard.Decoder.DecodeFields(reader);
                     case "leave":
                         return Leave.Decoder.DecodeFields(reader);
+                    case "offboard_and_retain_team_folders":
+                        return OffboardAndRetainTeamFolders.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -408,6 +439,77 @@ namespace Dropbox.Api.TeamLog
                 protected override Leave Create()
                 {
                     return Leave.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The offboard and retain team folders object</para>
+        /// </summary>
+        public sealed class OffboardAndRetainTeamFolders : MemberRemoveActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<OffboardAndRetainTeamFolders> Encoder = new OffboardAndRetainTeamFoldersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<OffboardAndRetainTeamFolders> Decoder = new OffboardAndRetainTeamFoldersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="OffboardAndRetainTeamFolders" /> class.</para>
+            /// </summary>
+            private OffboardAndRetainTeamFolders()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of OffboardAndRetainTeamFolders</para>
+            /// </summary>
+            public static readonly OffboardAndRetainTeamFolders Instance = new OffboardAndRetainTeamFolders();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="OffboardAndRetainTeamFolders" />.</para>
+            /// </summary>
+            private class OffboardAndRetainTeamFoldersEncoder : enc.StructEncoder<OffboardAndRetainTeamFolders>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(OffboardAndRetainTeamFolders value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="OffboardAndRetainTeamFolders" />.</para>
+            /// </summary>
+            private class OffboardAndRetainTeamFoldersDecoder : enc.StructDecoder<OffboardAndRetainTeamFolders>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="OffboardAndRetainTeamFolders" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override OffboardAndRetainTeamFolders Create()
+                {
+                    return OffboardAndRetainTeamFolders.Instance;
                 }
 
             }

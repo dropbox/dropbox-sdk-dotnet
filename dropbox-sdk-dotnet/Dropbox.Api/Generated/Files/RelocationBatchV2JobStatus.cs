@@ -12,9 +12,9 @@ namespace Dropbox.Api.Files
 
     /// <summary>
     /// <para>Result returned by <see
-    /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchV2Async" /> or <see
-    /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchV2Async" /> that may either
-    /// launch an asynchronous job or complete synchronously.</para>
+    /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckV2Async" /> or <see
+    /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckV2Async" /> that may
+    /// either be in progress or completed with result for each entry.</para>
     /// </summary>
     public class RelocationBatchV2JobStatus
     {

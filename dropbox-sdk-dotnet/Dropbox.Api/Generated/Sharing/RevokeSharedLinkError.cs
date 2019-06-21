@@ -455,7 +455,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>This type of link is not supported.</para>
+        /// <para>This type of link is not supported; use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ExportAsync" /> instead.</para>
         /// </summary>
         public sealed class UnsupportedLinkType : RevokeSharedLinkError
         {
