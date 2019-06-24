@@ -280,6 +280,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CantMoveSharedFolder</para>
+        /// </summary>
+        public bool IsCantMoveSharedFolder
+        {
+            get
+            {
+                return this is CantMoveSharedFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CantMoveSharedFolder, or <c>null</c>.</para>
+        /// </summary>
+        public CantMoveSharedFolder AsCantMoveSharedFolder
+        {
+            get
+            {
+                return this as CantMoveSharedFolder;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -381,6 +403,12 @@ namespace Dropbox.Api.Files
                     InternalError.Encoder.EncodeFields((InternalError)value, writer);
                     return;
                 }
+                if (value is CantMoveSharedFolder)
+                {
+                    WriteProperty(".tag", "cant_move_shared_folder", writer, enc.StringEncoder.Instance);
+                    CantMoveSharedFolder.Encoder.EncodeFields((CantMoveSharedFolder)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -441,6 +469,8 @@ namespace Dropbox.Api.Files
                         return InsufficientQuota.Decoder.DecodeFields(reader);
                     case "internal_error":
                         return InternalError.Decoder.DecodeFields(reader);
+                    case "cant_move_shared_folder":
+                        return CantMoveSharedFolder.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1303,6 +1333,77 @@ namespace Dropbox.Api.Files
                 protected override InternalError Create()
                 {
                     return InternalError.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Can't move the shared folder to the given destination.</para>
+        /// </summary>
+        public sealed class CantMoveSharedFolder : RelocationError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantMoveSharedFolder> Encoder = new CantMoveSharedFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantMoveSharedFolder> Decoder = new CantMoveSharedFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantMoveSharedFolder" />
+            /// class.</para>
+            /// </summary>
+            private CantMoveSharedFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CantMoveSharedFolder</para>
+            /// </summary>
+            public static readonly CantMoveSharedFolder Instance = new CantMoveSharedFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CantMoveSharedFolder" />.</para>
+            /// </summary>
+            private class CantMoveSharedFolderEncoder : enc.StructEncoder<CantMoveSharedFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantMoveSharedFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CantMoveSharedFolder" />.</para>
+            /// </summary>
+            private class CantMoveSharedFolderDecoder : enc.StructDecoder<CantMoveSharedFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantMoveSharedFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantMoveSharedFolder Create()
+                {
+                    return CantMoveSharedFolder.Instance;
                 }
 
             }

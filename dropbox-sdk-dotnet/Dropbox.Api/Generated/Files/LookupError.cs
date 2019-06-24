@@ -145,6 +145,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UnsupportedContentType</para>
+        /// </summary>
+        public bool IsUnsupportedContentType
+        {
+            get
+            {
+                return this is UnsupportedContentType;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnsupportedContentType, or <c>null</c>.</para>
+        /// </summary>
+        public UnsupportedContentType AsUnsupportedContentType
+        {
+            get
+            {
+                return this as UnsupportedContentType;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,6 +233,12 @@ namespace Dropbox.Api.Files
                     RestrictedContent.Encoder.EncodeFields((RestrictedContent)value, writer);
                     return;
                 }
+                if (value is UnsupportedContentType)
+                {
+                    WriteProperty(".tag", "unsupported_content_type", writer, enc.StringEncoder.Instance);
+                    UnsupportedContentType.Encoder.EncodeFields((UnsupportedContentType)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -258,6 +287,8 @@ namespace Dropbox.Api.Files
                         return NotFolder.Decoder.DecodeFields(reader);
                     case "restricted_content":
                         return RestrictedContent.Decoder.DecodeFields(reader);
+                    case "unsupported_content_type":
+                        return UnsupportedContentType.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -644,6 +675,77 @@ namespace Dropbox.Api.Files
                 protected override RestrictedContent Create()
                 {
                     return RestrictedContent.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This operation is not supported for this content type.</para>
+        /// </summary>
+        public sealed class UnsupportedContentType : LookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedContentType> Encoder = new UnsupportedContentTypeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedContentType> Decoder = new UnsupportedContentTypeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnsupportedContentType" />
+            /// class.</para>
+            /// </summary>
+            private UnsupportedContentType()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnsupportedContentType</para>
+            /// </summary>
+            public static readonly UnsupportedContentType Instance = new UnsupportedContentType();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnsupportedContentType" />.</para>
+            /// </summary>
+            private class UnsupportedContentTypeEncoder : enc.StructEncoder<UnsupportedContentType>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedContentType value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnsupportedContentType" />.</para>
+            /// </summary>
+            private class UnsupportedContentTypeDecoder : enc.StructDecoder<UnsupportedContentType>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedContentType"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedContentType Create()
+                {
+                    return UnsupportedContentType.Instance;
                 }
 
             }

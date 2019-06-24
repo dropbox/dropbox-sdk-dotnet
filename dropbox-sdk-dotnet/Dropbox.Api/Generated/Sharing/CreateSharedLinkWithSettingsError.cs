@@ -410,7 +410,7 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The shared link already exists. You can call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to get
-        /// the existing link.</para>
+        /// the  existing link, or use the provided metadata if it is returned.</para>
         /// </summary>
         public sealed class SharedLinkAlreadyExists : CreateSharedLinkWithSettingsError
         {
@@ -430,14 +430,23 @@ namespace Dropbox.Api.Sharing
             /// <para>Initializes a new instance of the <see cref="SharedLinkAlreadyExists" />
             /// class.</para>
             /// </summary>
+            /// <param name="value">The value</param>
+            public SharedLinkAlreadyExists(SharedLinkAlreadyExistsMetadata value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SharedLinkAlreadyExists" />
+            /// class.</para>
+            /// </summary>
             private SharedLinkAlreadyExists()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of SharedLinkAlreadyExists</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly SharedLinkAlreadyExists Instance = new SharedLinkAlreadyExists();
+            public SharedLinkAlreadyExistsMetadata Value { get; private set; }
 
             #region Encoder class
 
@@ -453,6 +462,10 @@ namespace Dropbox.Api.Sharing
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(SharedLinkAlreadyExists value, enc.IJsonWriter writer)
                 {
+                    if (value.Value != null)
+                    {
+                        WriteProperty("shared_link_already_exists", value.Value, writer, global::Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Encoder);
+                    }
                 }
             }
 
@@ -472,9 +485,27 @@ namespace Dropbox.Api.Sharing
                 /// <returns>The struct instance.</returns>
                 protected override SharedLinkAlreadyExists Create()
                 {
-                    return SharedLinkAlreadyExists.Instance;
+                    return new SharedLinkAlreadyExists();
                 }
 
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(SharedLinkAlreadyExists value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "shared_link_already_exists":
+                            value.Value = global::Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
             }
 
             #endregion

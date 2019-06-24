@@ -35,8 +35,8 @@ namespace Dropbox.Api.Files
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
-        /// video.</param>
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
+        /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
@@ -54,6 +54,8 @@ namespace Dropbox.Api.Files
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
+        /// <param name="includeNonDownloadableFiles">If true, include files that are not
+        /// downloadable, i.e. Google Docs.</param>
         public ListFolderArg(string path,
                              bool recursive = false,
                              bool includeMediaInfo = false,
@@ -62,7 +64,8 @@ namespace Dropbox.Api.Files
                              bool includeMountedFolders = true,
                              uint? limit = null,
                              SharedLink sharedLink = null,
-                             global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
+                             global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
+                             bool includeNonDownloadableFiles = true)
         {
             if (path == null)
             {
@@ -94,6 +97,7 @@ namespace Dropbox.Api.Files
             this.Limit = limit;
             this.SharedLink = sharedLink;
             this.IncludePropertyGroups = includePropertyGroups;
+            this.IncludeNonDownloadableFiles = includeNonDownloadableFiles;
         }
 
         /// <summary>
@@ -109,6 +113,7 @@ namespace Dropbox.Api.Files
             this.IncludeDeleted = false;
             this.IncludeHasExplicitSharedMembers = false;
             this.IncludeMountedFolders = true;
+            this.IncludeNonDownloadableFiles = true;
         }
 
         /// <summary>
@@ -124,7 +129,8 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>If true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for
-        /// photo and video.</para>
+        /// photo and video. This parameter will no longer have an effect starting December 2,
+        /// 2019.</para>
         /// </summary>
         public bool IncludeMediaInfo { get; protected set; }
 
@@ -168,6 +174,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public global::Dropbox.Api.FileProperties.TemplateFilterBase IncludePropertyGroups { get; protected set; }
 
+        /// <summary>
+        /// <para>If true, include files that are not downloadable, i.e. Google Docs.</para>
+        /// </summary>
+        public bool IncludeNonDownloadableFiles { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -200,6 +211,7 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty("include_property_groups", value.IncludePropertyGroups, writer, global::Dropbox.Api.FileProperties.TemplateFilterBase.Encoder);
                 }
+                WriteProperty("include_non_downloadable_files", value.IncludeNonDownloadableFiles, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -258,6 +270,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_property_groups":
                         value.IncludePropertyGroups = global::Dropbox.Api.FileProperties.TemplateFilterBase.Decoder.Decode(reader);
+                        break;
+                    case "include_non_downloadable_files":
+                        value.IncludeNonDownloadableFiles = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

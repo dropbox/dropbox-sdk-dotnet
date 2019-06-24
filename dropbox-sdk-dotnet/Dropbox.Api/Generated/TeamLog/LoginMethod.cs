@@ -102,6 +102,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is GoogleOauth</para>
+        /// </summary>
+        public bool IsGoogleOauth
+        {
+            get
+            {
+                return this is GoogleOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GoogleOauth, or <c>null</c>.</para>
+        /// </summary>
+        public GoogleOauth AsGoogleOauth
+        {
+            get
+            {
+                return this as GoogleOauth;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.TeamLog
                     Saml.Encoder.EncodeFields((Saml)value, writer);
                     return;
                 }
+                if (value is GoogleOauth)
+                {
+                    WriteProperty(".tag", "google_oauth", writer, enc.StringEncoder.Instance);
+                    GoogleOauth.Encoder.EncodeFields((GoogleOauth)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -199,6 +227,8 @@ namespace Dropbox.Api.TeamLog
                         return TwoFactorAuthentication.Decoder.DecodeFields(reader);
                     case "saml":
                         return Saml.Decoder.DecodeFields(reader);
+                    case "google_oauth":
+                        return GoogleOauth.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -409,6 +439,76 @@ namespace Dropbox.Api.TeamLog
                 protected override Saml Create()
                 {
                     return Saml.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The google oauth object</para>
+        /// </summary>
+        public sealed class GoogleOauth : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GoogleOauth> Encoder = new GoogleOauthEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GoogleOauth> Decoder = new GoogleOauthDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GoogleOauth" />
+            /// class.</para>
+            /// </summary>
+            private GoogleOauth()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GoogleOauth</para>
+            /// </summary>
+            public static readonly GoogleOauth Instance = new GoogleOauth();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GoogleOauth" />.</para>
+            /// </summary>
+            private class GoogleOauthEncoder : enc.StructEncoder<GoogleOauth>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GoogleOauth value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GoogleOauth" />.</para>
+            /// </summary>
+            private class GoogleOauthDecoder : enc.StructDecoder<GoogleOauth>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GoogleOauth" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GoogleOauth Create()
+                {
+                    return GoogleOauth.Instance;
                 }
 
             }

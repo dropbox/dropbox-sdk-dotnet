@@ -39,23 +39,38 @@ namespace Dropbox.Api.Sharing
         /// considering the shared links policies of the the team (in case the link's owner is
         /// part of a team) and the shared folder (in case the linked file is part of a shared
         /// folder). This field is shown only if the caller has access to this info (the link's
-        /// owner always has access to this data).</param>
+        /// owner always has access to this data). For some links, an effective_audience value
+        /// is returned instead.</param>
         /// <param name="requestedVisibility">The shared link's requested visibility. This can
         /// be overridden by the team and shared folder policies. The final visibility, after
         /// considering these policies, can be found in <paramref name="resolvedVisibility" />.
-        /// This is shown only if the caller is the link's owner.</param>
+        /// This is shown only if the caller is the link's owner and resolved_visibility is
+        /// returned instead of effective_audience.</param>
         /// <param name="revokeFailureReason">The failure reason for revoking the link. This
         /// field will only be present if the <paramref name="canRevoke" /> is
         /// <c>false</c>.</param>
+        /// <param name="effectiveAudience">The type of audience who can benefit from the
+        /// access level specified by the `link_access_level` field.</param>
+        /// <param name="linkAccessLevel">The access level that the link will grant to its
+        /// users. A link can grant additional rights to a user beyond their current access
+        /// level. For example, if a user was invited as a viewer to a file, and then opens a
+        /// link with `link_access_level` set to `editor`, then they will gain editor
+        /// privileges. The `link_access_level` is a property of the link, and does not depend
+        /// on who is calling this API. In particular, `link_access_level` does not take into
+        /// account the API caller's current permissions to the content.</param>
         public LinkPermissions(bool canRevoke,
                                ResolvedVisibility resolvedVisibility = null,
                                RequestedVisibility requestedVisibility = null,
-                               SharedLinkAccessFailureReason revokeFailureReason = null)
+                               SharedLinkAccessFailureReason revokeFailureReason = null,
+                               LinkAudience effectiveAudience = null,
+                               LinkAccessLevel linkAccessLevel = null)
         {
             this.CanRevoke = canRevoke;
             this.ResolvedVisibility = resolvedVisibility;
             this.RequestedVisibility = requestedVisibility;
             this.RevokeFailureReason = revokeFailureReason;
+            this.EffectiveAudience = effectiveAudience;
+            this.LinkAccessLevel = linkAccessLevel;
         }
 
         /// <summary>
@@ -79,7 +94,8 @@ namespace Dropbox.Api.Sharing
         /// policies of the the team (in case the link's owner is part of a team) and the
         /// shared folder (in case the linked file is part of a shared folder). This field is
         /// shown only if the caller has access to this info (the link's owner always has
-        /// access to this data).</para>
+        /// access to this data). For some links, an effective_audience value is returned
+        /// instead.</para>
         /// </summary>
         public ResolvedVisibility ResolvedVisibility { get; protected set; }
 
@@ -87,7 +103,8 @@ namespace Dropbox.Api.Sharing
         /// <para>The shared link's requested visibility. This can be overridden by the team
         /// and shared folder policies. The final visibility, after considering these policies,
         /// can be found in <see cref="ResolvedVisibility" />. This is shown only if the caller
-        /// is the link's owner.</para>
+        /// is the link's owner and resolved_visibility is returned instead of
+        /// effective_audience.</para>
         /// </summary>
         public RequestedVisibility RequestedVisibility { get; protected set; }
 
@@ -96,6 +113,23 @@ namespace Dropbox.Api.Sharing
         /// the <see cref="CanRevoke" /> is <c>false</c>.</para>
         /// </summary>
         public SharedLinkAccessFailureReason RevokeFailureReason { get; protected set; }
+
+        /// <summary>
+        /// <para>The type of audience who can benefit from the access level specified by the
+        /// `link_access_level` field.</para>
+        /// </summary>
+        public LinkAudience EffectiveAudience { get; protected set; }
+
+        /// <summary>
+        /// <para>The access level that the link will grant to its users. A link can grant
+        /// additional rights to a user beyond their current access level. For example, if a
+        /// user was invited as a viewer to a file, and then opens a link with
+        /// `link_access_level` set to `editor`, then they will gain editor privileges. The
+        /// `link_access_level` is a property of the link, and does not depend on who is
+        /// calling this API. In particular, `link_access_level` does not take into account the
+        /// API caller's current permissions to the content.</para>
+        /// </summary>
+        public LinkAccessLevel LinkAccessLevel { get; protected set; }
 
         #region Encoder class
 
@@ -123,6 +157,14 @@ namespace Dropbox.Api.Sharing
                 if (value.RevokeFailureReason != null)
                 {
                     WriteProperty("revoke_failure_reason", value.RevokeFailureReason, writer, global::Dropbox.Api.Sharing.SharedLinkAccessFailureReason.Encoder);
+                }
+                if (value.EffectiveAudience != null)
+                {
+                    WriteProperty("effective_audience", value.EffectiveAudience, writer, global::Dropbox.Api.Sharing.LinkAudience.Encoder);
+                }
+                if (value.LinkAccessLevel != null)
+                {
+                    WriteProperty("link_access_level", value.LinkAccessLevel, writer, global::Dropbox.Api.Sharing.LinkAccessLevel.Encoder);
                 }
             }
         }
@@ -167,6 +209,12 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "revoke_failure_reason":
                         value.RevokeFailureReason = global::Dropbox.Api.Sharing.SharedLinkAccessFailureReason.Decoder.Decode(reader);
+                        break;
+                    case "effective_audience":
+                        value.EffectiveAudience = global::Dropbox.Api.Sharing.LinkAudience.Decoder.Decode(reader);
+                        break;
+                    case "link_access_level":
+                        value.LinkAccessLevel = global::Dropbox.Api.Sharing.LinkAccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

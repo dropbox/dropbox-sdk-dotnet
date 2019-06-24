@@ -13,6 +13,7 @@ namespace Dropbox.Api.Files
     /// <summary>
     /// <para>The file metadata object</para>
     /// </summary>
+    /// <seealso cref="ExportResult" />
     /// <seealso cref="GetTemporaryLinkResult" />
     /// <seealso cref="GetThumbnailBatchResultData" />
     /// <seealso cref="Global::Dropbox.Api.Files.Metadata" />
@@ -60,10 +61,19 @@ namespace Dropbox.Api.Files
         /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
-        /// <param name="mediaInfo">Additional information if the file is a photo or
-        /// video.</param>
+        /// <param name="mediaInfo">Additional information if the file is a photo or video.
+        /// This field will not be set on entries returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailBatchAsync" />, starting
+        /// December 2, 2019.</param>
         /// <param name="symlinkInfo">Set if this file is a symlink.</param>
         /// <param name="sharingInfo">Set if this file is contained in a shared folder.</param>
+        /// <param name="isDownloadable">If true, file can be downloaded directly; else the
+        /// file must be exported.</param>
+        /// <param name="exportInfo">Information about format this file can be exported to.
+        /// This filed must be set if <paramref name="isDownloadable" /> is set to
+        /// false.</param>
         /// <param name="propertyGroups">Additional information if the file has custom
         /// properties with the property template specified.</param>
         /// <param name="hasExplicitSharedMembers">This flag will only be present if
@@ -89,6 +99,8 @@ namespace Dropbox.Api.Files
                             MediaInfo mediaInfo = null,
                             SymlinkInfo symlinkInfo = null,
                             FileSharingInfo sharingInfo = null,
+                            bool isDownloadable = true,
+                            ExportInfo exportInfo = null,
                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                             bool? hasExplicitSharedMembers = null,
                             string contentHash = null)
@@ -138,6 +150,8 @@ namespace Dropbox.Api.Files
             this.MediaInfo = mediaInfo;
             this.SymlinkInfo = symlinkInfo;
             this.SharingInfo = sharingInfo;
+            this.IsDownloadable = isDownloadable;
+            this.ExportInfo = exportInfo;
             this.PropertyGroups = propertyGroupsList;
             this.HasExplicitSharedMembers = hasExplicitSharedMembers;
             this.ContentHash = contentHash;
@@ -151,6 +165,7 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public FileMetadata()
         {
+            this.IsDownloadable = true;
         }
 
         /// <summary>
@@ -185,7 +200,12 @@ namespace Dropbox.Api.Files
         public ulong Size { get; protected set; }
 
         /// <summary>
-        /// <para>Additional information if the file is a photo or video.</para>
+        /// <para>Additional information if the file is a photo or video. This field will not
+        /// be set on entries returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailBatchAsync" />, starting
+        /// December 2, 2019.</para>
         /// </summary>
         public MediaInfo MediaInfo { get; protected set; }
 
@@ -198,6 +218,18 @@ namespace Dropbox.Api.Files
         /// <para>Set if this file is contained in a shared folder.</para>
         /// </summary>
         public FileSharingInfo SharingInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>If true, file can be downloaded directly; else the file must be
+        /// exported.</para>
+        /// </summary>
+        public bool IsDownloadable { get; protected set; }
+
+        /// <summary>
+        /// <para>Information about format this file can be exported to. This filed must be set
+        /// if <see cref="IsDownloadable" /> is set to false.</para>
+        /// </summary>
+        public ExportInfo ExportInfo { get; protected set; }
 
         /// <summary>
         /// <para>Additional information if the file has custom properties with the property
@@ -266,6 +298,11 @@ namespace Dropbox.Api.Files
                 if (value.SharingInfo != null)
                 {
                     WriteProperty("sharing_info", value.SharingInfo, writer, global::Dropbox.Api.Files.FileSharingInfo.Encoder);
+                }
+                WriteProperty("is_downloadable", value.IsDownloadable, writer, enc.BooleanEncoder.Instance);
+                if (value.ExportInfo != null)
+                {
+                    WriteProperty("export_info", value.ExportInfo, writer, global::Dropbox.Api.Files.ExportInfo.Encoder);
                 }
                 if (value.PropertyGroups.Count > 0)
                 {
@@ -346,6 +383,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "sharing_info":
                         value.SharingInfo = global::Dropbox.Api.Files.FileSharingInfo.Decoder.Decode(reader);
+                        break;
+                    case "is_downloadable":
+                        value.IsDownloadable = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "export_info":
+                        value.ExportInfo = global::Dropbox.Api.Files.ExportInfo.Decoder.Decode(reader);
                         break;
                     case "property_groups":
                         value.PropertyGroups = ReadList<global::Dropbox.Api.FileProperties.PropertyGroup>(reader, global::Dropbox.Api.FileProperties.PropertyGroup.Decoder);

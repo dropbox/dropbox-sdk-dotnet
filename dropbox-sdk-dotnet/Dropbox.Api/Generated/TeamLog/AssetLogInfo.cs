@@ -441,7 +441,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Paper docuement's details.</para>
+        /// <para>Paper document's details.</para>
         /// </summary>
         public sealed class PaperDocument : AssetLogInfo
         {

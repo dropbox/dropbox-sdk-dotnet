@@ -61,6 +61,11 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentNullException("query");
             }
 
+            if (start > 9999UL)
+            {
+                throw new sys.ArgumentOutOfRangeException("start", "Value should be less of equal than 9999");
+            }
+
             if (maxResults < 1UL)
             {
                 throw new sys.ArgumentOutOfRangeException("maxResults", "Value should be greater or equal than 1");

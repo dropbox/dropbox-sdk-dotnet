@@ -322,7 +322,6 @@ namespace Dropbox.Api.Tests
                 exceptionRaised = true;
                 var error = e.ErrorResponse;
                 Assert.IsTrue(error.IsInvalidRoot);
-                Assert.IsTrue(error.AsInvalidRoot.Value.IsUser);
             }
 
             Assert.IsTrue(exceptionRaised);

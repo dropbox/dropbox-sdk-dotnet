@@ -604,7 +604,7 @@ namespace Dropbox.Api.Files.Routes
         /// Dropbox.</para>
         /// <para>This route will replace <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. The main
-        /// difference is this route will return stutus for each entry, while <see
+        /// difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> raises failure if
         /// any entry fails.</para>
         /// <para>This route will either finish synchronously, or return a job ID and do the
@@ -641,7 +641,7 @@ namespace Dropbox.Api.Files.Routes
         /// Dropbox.</para>
         /// <para>This route will replace <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. The main
-        /// difference is this route will return stutus for each entry, while <see
+        /// difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> raises failure if
         /// any entry fails.</para>
         /// <para>This route will either finish synchronously, or return a job ID and do the
@@ -2172,6 +2172,94 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Export a file from a user's Dropbox. This route only supports exporting files
+        /// that cannot be downloaded directly  and whose <see
+        /// cref="Dropbox.Api.Files.ExportResult.FileMetadata" /> has <see
+        /// cref="Dropbox.Api.Files.ExportInfo.ExportAs" /> populated.</para>
+        /// </summary>
+        /// <param name="exportArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="ExportError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<ExportResult>> ExportAsync(ExportArg exportArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<ExportArg, ExportResult, ExportError>(exportArg, "content", "/files/export", "user", global::Dropbox.Api.Files.ExportArg.Encoder, global::Dropbox.Api.Files.ExportResult.Decoder, global::Dropbox.Api.Files.ExportError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the export route.</para>
+        /// </summary>
+        /// <param name="exportArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginExport(ExportArg exportArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ExportAsync(exportArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Export a file from a user's Dropbox. This route only supports exporting files
+        /// that cannot be downloaded directly  and whose <see
+        /// cref="Dropbox.Api.Files.ExportResult.FileMetadata" /> has <see
+        /// cref="Dropbox.Api.Files.ExportInfo.ExportAs" /> populated.</para>
+        /// </summary>
+        /// <param name="path">The path of the file to be exported.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="ExportError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<ExportResult>> ExportAsync(string path)
+        {
+            var exportArg = new ExportArg(path);
+
+            return this.ExportAsync(exportArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the export route.</para>
+        /// </summary>
+        /// <param name="path">The path of the file to be exported.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginExport(string path,
+                                            sys.AsyncCallback callback,
+                                            object callbackState = null)
+        {
+            var exportArg = new ExportArg(path);
+
+            return this.BeginExport(exportArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the export route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="ExportError"/>.</exception>
+        public enc.IDownloadResponse<ExportResult> EndExport(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<ExportResult>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
         /// <para>Note: Metadata for the root folder is unsupported.</para>
         /// </summary>
@@ -2301,10 +2389,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a preview for a file.</para>
         /// <para>Currently, PDF previews are generated for files with the following
-        /// extensions: .ai, .doc, .docm, .docx, .eps, .odp, .odt, .pps, .ppsm, .ppsx, .ppt,
-        /// .pptm, .pptx, .rtf.</para>
+        /// extensions: .ai, .doc, .docm, .docx, .eps, .gdoc, .gslides, .odp, .odt, .pps,
+        /// .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf.</para>
         /// <para>HTML previews are generated for files with the following extensions: .csv,
-        /// .ods, .xls, .xlsm, .xlsx.</para>
+        /// .ods, .xls, .xlsm, .gsheet, .xlsx.</para>
         /// <para>Other formats will return an unsupported extension error.</para>
         /// </summary>
         /// <param name="previewArg">The request parameters</param>
@@ -2336,10 +2424,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a preview for a file.</para>
         /// <para>Currently, PDF previews are generated for files with the following
-        /// extensions: .ai, .doc, .docm, .docx, .eps, .odp, .odt, .pps, .ppsm, .ppsx, .ppt,
-        /// .pptm, .pptx, .rtf.</para>
+        /// extensions: .ai, .doc, .docm, .docx, .eps, .gdoc, .gslides, .odp, .odt, .pps,
+        /// .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf.</para>
         /// <para>HTML previews are generated for files with the following extensions: .csv,
-        /// .ods, .xls, .xlsm, .xlsx.</para>
+        /// .ods, .xls, .xlsm, .gsheet, .xlsx.</para>
         /// <para>Other formats will return an unsupported extension error.</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
@@ -2402,8 +2490,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Get a temporary link to stream content of a file. This link will expire in
-        /// four hours and afterwards you will get 410 Gone. So this URL should not be used to
-        /// display content directly in the browser.  Content-Type of the link is determined
+        /// four hours and afterwards you will get 410 Gone. This URL should not be used to
+        /// display content directly in the browser. The Content-Type of the link is determined
         /// automatically by the file's mime type.</para>
         /// </summary>
         /// <param name="getTemporaryLinkArg">The request parameters</param>
@@ -2435,8 +2523,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Get a temporary link to stream content of a file. This link will expire in
-        /// four hours and afterwards you will get 410 Gone. So this URL should not be used to
-        /// display content directly in the browser.  Content-Type of the link is determined
+        /// four hours and afterwards you will get 410 Gone. This URL should not be used to
+        /// display content directly in the browser. The Content-Type of the link is determined
         /// automatically by the file's mime type.</para>
         /// </summary>
         /// <param name="path">The path to the file you want a temporary link to.</param>
@@ -2967,8 +3055,8 @@ namespace Dropbox.Api.Files.Routes
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
-        /// video.</param>
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
+        /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
@@ -2986,6 +3074,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
+        /// <param name="includeNonDownloadableFiles">If true, include files that are not
+        /// downloadable, i.e. Google Docs.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2999,7 +3089,8 @@ namespace Dropbox.Api.Files.Routes
                                                         bool includeMountedFolders = true,
                                                         uint? limit = null,
                                                         SharedLink sharedLink = null,
-                                                        global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
+                                                        global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
+                                                        bool includeNonDownloadableFiles = true)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -3009,7 +3100,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeMountedFolders,
                                                   limit,
                                                   sharedLink,
-                                                  includePropertyGroups);
+                                                  includePropertyGroups,
+                                                  includeNonDownloadableFiles);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -3022,8 +3114,8 @@ namespace Dropbox.Api.Files.Routes
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
-        /// video.</param>
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
+        /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
@@ -3041,6 +3133,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
+        /// <param name="includeNonDownloadableFiles">If true, include files that are not
+        /// downloadable, i.e. Google Docs.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3055,6 +3149,7 @@ namespace Dropbox.Api.Files.Routes
                                                 uint? limit = null,
                                                 SharedLink sharedLink = null,
                                                 global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
+                                                bool includeNonDownloadableFiles = true,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
@@ -3066,7 +3161,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeMountedFolders,
                                                   limit,
                                                   sharedLink,
-                                                  includePropertyGroups);
+                                                  includePropertyGroups,
+                                                  includeNonDownloadableFiles);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }
@@ -3238,8 +3334,8 @@ namespace Dropbox.Api.Files.Routes
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
-        /// video.</param>
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
+        /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
@@ -3257,6 +3353,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
+        /// <param name="includeNonDownloadableFiles">If true, include files that are not
+        /// downloadable, i.e. Google Docs.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3270,7 +3368,8 @@ namespace Dropbox.Api.Files.Routes
                                                                                       bool includeMountedFolders = true,
                                                                                       uint? limit = null,
                                                                                       SharedLink sharedLink = null,
-                                                                                      global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null)
+                                                                                      global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
+                                                                                      bool includeNonDownloadableFiles = true)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -3280,7 +3379,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeMountedFolders,
                                                   limit,
                                                   sharedLink,
-                                                  includePropertyGroups);
+                                                  includePropertyGroups,
+                                                  includeNonDownloadableFiles);
 
             return this.ListFolderGetLatestCursorAsync(listFolderArg);
         }
@@ -3294,8 +3394,8 @@ namespace Dropbox.Api.Files.Routes
         /// recursively to all subfolders and the response will contain contents of all
         /// subfolders.</param>
         /// <param name="includeMediaInfo">If true, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and
-        /// video.</param>
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
+        /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
@@ -3313,6 +3413,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
+        /// <param name="includeNonDownloadableFiles">If true, include files that are not
+        /// downloadable, i.e. Google Docs.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3327,6 +3429,7 @@ namespace Dropbox.Api.Files.Routes
                                                                uint? limit = null,
                                                                SharedLink sharedLink = null,
                                                                global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
+                                                               bool includeNonDownloadableFiles = true,
                                                                sys.AsyncCallback callback = null,
                                                                object callbackState = null)
         {
@@ -3338,7 +3441,8 @@ namespace Dropbox.Api.Files.Routes
                                                   includeMountedFolders,
                                                   limit,
                                                   sharedLink,
-                                                  includePropertyGroups);
+                                                  includePropertyGroups,
+                                                  includeNonDownloadableFiles);
 
             return this.BeginListFolderGetLatestCursor(listFolderArg, callback, callbackState);
         }
@@ -3861,8 +3965,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Move multiple files or folders to different locations at once in the user's
         /// Dropbox.</para>
         /// <para>This route will replace <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchV2Async" />. The main
-        /// difference is this route will return stutus for each entry, while <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The main
+        /// difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" /> raises failure if
         /// any entry fails.</para>
         /// <para>This route will either finish synchronously, or return a job ID and do the
@@ -3898,8 +4002,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Move multiple files or folders to different locations at once in the user's
         /// Dropbox.</para>
         /// <para>This route will replace <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchV2Async" />. The main
-        /// difference is this route will return stutus for each entry, while <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The main
+        /// difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" /> raises failure if
         /// any entry fails.</para>
         /// <para>This route will either finish synchronously, or return a job ID and do the

@@ -453,6 +453,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TrustedTeams</para>
+        /// </summary>
+        public bool IsTrustedTeams
+        {
+            get
+            {
+                return this is TrustedTeams;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TrustedTeams, or <c>null</c>.</para>
+        /// </summary>
+        public TrustedTeams AsTrustedTeams
+        {
+            get
+            {
+                return this as TrustedTeams;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -602,6 +624,12 @@ namespace Dropbox.Api.TeamLog
                     Tfa.Encoder.EncodeFields((Tfa)value, writer);
                     return;
                 }
+                if (value is TrustedTeams)
+                {
+                    WriteProperty(".tag", "trusted_teams", writer, enc.StringEncoder.Instance);
+                    TrustedTeams.Encoder.EncodeFields((TrustedTeams)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -678,6 +706,8 @@ namespace Dropbox.Api.TeamLog
                         return TeamProfile.Decoder.DecodeFields(reader);
                     case "tfa":
                         return Tfa.Decoder.DecodeFields(reader);
+                    case "trusted_teams":
+                        return TrustedTeams.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -2001,6 +2031,76 @@ namespace Dropbox.Api.TeamLog
                 protected override Tfa Create()
                 {
                     return Tfa.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Events that apply to cross-team trust establishment.</para>
+        /// </summary>
+        public sealed class TrustedTeams : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TrustedTeams> Encoder = new TrustedTeamsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TrustedTeams> Decoder = new TrustedTeamsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TrustedTeams" />
+            /// class.</para>
+            /// </summary>
+            private TrustedTeams()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TrustedTeams</para>
+            /// </summary>
+            public static readonly TrustedTeams Instance = new TrustedTeams();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TrustedTeams" />.</para>
+            /// </summary>
+            private class TrustedTeamsEncoder : enc.StructEncoder<TrustedTeams>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TrustedTeams value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TrustedTeams" />.</para>
+            /// </summary>
+            private class TrustedTeamsDecoder : enc.StructDecoder<TrustedTeams>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TrustedTeams" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TrustedTeams Create()
+                {
+                    return TrustedTeams.Instance;
                 }
 
             }

@@ -36,6 +36,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AustraliaOnly</para>
+        /// </summary>
+        public bool IsAustraliaOnly
+        {
+            get
+            {
+                return this is AustraliaOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AustraliaOnly, or <c>null</c>.</para>
+        /// </summary>
+        public AustraliaOnly AsAustraliaOnly
+        {
+            get
+            {
+                return this as AustraliaOnly;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is EuropeOnly</para>
         /// </summary>
         public bool IsEuropeOnly
@@ -54,6 +76,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as EuropeOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is JapanOnly</para>
+        /// </summary>
+        public bool IsJapanOnly
+        {
+            get
+            {
+                return this is JapanOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a JapanOnly, or <c>null</c>.</para>
+        /// </summary>
+        public JapanOnly AsJapanOnly
+        {
+            get
+            {
+                return this as JapanOnly;
             }
         }
 
@@ -115,10 +159,22 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PlacementRestriction value, enc.IJsonWriter writer)
             {
+                if (value is AustraliaOnly)
+                {
+                    WriteProperty(".tag", "australia_only", writer, enc.StringEncoder.Instance);
+                    AustraliaOnly.Encoder.EncodeFields((AustraliaOnly)value, writer);
+                    return;
+                }
                 if (value is EuropeOnly)
                 {
                     WriteProperty(".tag", "europe_only", writer, enc.StringEncoder.Instance);
                     EuropeOnly.Encoder.EncodeFields((EuropeOnly)value, writer);
+                    return;
+                }
+                if (value is JapanOnly)
+                {
+                    WriteProperty(".tag", "japan_only", writer, enc.StringEncoder.Instance);
+                    JapanOnly.Encoder.EncodeFields((JapanOnly)value, writer);
                     return;
                 }
                 if (value is None)
@@ -165,8 +221,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "australia_only":
+                        return AustraliaOnly.Decoder.DecodeFields(reader);
                     case "europe_only":
                         return EuropeOnly.Decoder.DecodeFields(reader);
+                    case "japan_only":
+                        return JapanOnly.Decoder.DecodeFields(reader);
                     case "none":
                         return None.Decoder.DecodeFields(reader);
                     default:
@@ -176,6 +236,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The australia only object</para>
+        /// </summary>
+        public sealed class AustraliaOnly : PlacementRestriction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AustraliaOnly> Encoder = new AustraliaOnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AustraliaOnly> Decoder = new AustraliaOnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AustraliaOnly" />
+            /// class.</para>
+            /// </summary>
+            private AustraliaOnly()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AustraliaOnly</para>
+            /// </summary>
+            public static readonly AustraliaOnly Instance = new AustraliaOnly();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AustraliaOnly" />.</para>
+            /// </summary>
+            private class AustraliaOnlyEncoder : enc.StructEncoder<AustraliaOnly>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AustraliaOnly value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AustraliaOnly" />.</para>
+            /// </summary>
+            private class AustraliaOnlyDecoder : enc.StructDecoder<AustraliaOnly>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AustraliaOnly" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AustraliaOnly Create()
+                {
+                    return AustraliaOnly.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The europe only object</para>
@@ -239,6 +369,75 @@ namespace Dropbox.Api.TeamLog
                 protected override EuropeOnly Create()
                 {
                     return EuropeOnly.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The japan only object</para>
+        /// </summary>
+        public sealed class JapanOnly : PlacementRestriction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<JapanOnly> Encoder = new JapanOnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<JapanOnly> Decoder = new JapanOnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="JapanOnly" /> class.</para>
+            /// </summary>
+            private JapanOnly()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of JapanOnly</para>
+            /// </summary>
+            public static readonly JapanOnly Instance = new JapanOnly();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="JapanOnly" />.</para>
+            /// </summary>
+            private class JapanOnlyEncoder : enc.StructEncoder<JapanOnly>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(JapanOnly value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="JapanOnly" />.</para>
+            /// </summary>
+            private class JapanOnlyDecoder : enc.StructDecoder<JapanOnly>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="JapanOnly" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override JapanOnly Create()
+                {
+                    return JapanOnly.Instance;
                 }
 
             }

@@ -431,7 +431,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>You are attempting to append data to an upload session that has alread been
+        /// <para>You are attempting to append data to an upload session that has already been
         /// closed (i.e. committed).</para>
         /// </summary>
         public sealed class Closed : UploadSessionLookupError

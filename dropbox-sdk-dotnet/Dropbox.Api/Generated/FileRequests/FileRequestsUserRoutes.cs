@@ -31,6 +31,55 @@ namespace Dropbox.Api.FileRequests.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Returns the total number of file requests owned by this user. Includes both
+        /// open and closed file requests.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CountFileRequestsError"/>.</exception>
+        public t.Task<CountFileRequestsResult> CountAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, CountFileRequestsResult, CountFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/count", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.CountFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.CountFileRequestsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the count route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginCount(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CountAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the count route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CountFileRequestsError"/>.</exception>
+        public CountFileRequestsResult EndCount(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<CountFileRequestsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Creates a file request for this user.</para>
         /// </summary>
         /// <param name="createFileRequestArgs">The request parameters</param>
@@ -144,6 +193,140 @@ namespace Dropbox.Api.FileRequests.Routes
         }
 
         /// <summary>
+        /// <para>Delete a batch of closed file requests.</para>
+        /// </summary>
+        /// <param name="deleteFileRequestArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteFileRequestError"/>.</exception>
+        public t.Task<DeleteFileRequestsResult> DeleteAsync(DeleteFileRequestArgs deleteFileRequestArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteFileRequestArgs, DeleteFileRequestsResult, DeleteFileRequestError>(deleteFileRequestArgs, "api", "/file_requests/delete", "user", global::Dropbox.Api.FileRequests.DeleteFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.DeleteFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.DeleteFileRequestError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete route.</para>
+        /// </summary>
+        /// <param name="deleteFileRequestArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDelete(DeleteFileRequestArgs deleteFileRequestArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteAsync(deleteFileRequestArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Delete a batch of closed file requests.</para>
+        /// </summary>
+        /// <param name="ids">List IDs of the file requests to delete.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteFileRequestError"/>.</exception>
+        public t.Task<DeleteFileRequestsResult> DeleteAsync(col.IEnumerable<string> ids)
+        {
+            var deleteFileRequestArgs = new DeleteFileRequestArgs(ids);
+
+            return this.DeleteAsync(deleteFileRequestArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete route.</para>
+        /// </summary>
+        /// <param name="ids">List IDs of the file requests to delete.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDelete(col.IEnumerable<string> ids,
+                                            sys.AsyncCallback callback,
+                                            object callbackState = null)
+        {
+            var deleteFileRequestArgs = new DeleteFileRequestArgs(ids);
+
+            return this.BeginDelete(deleteFileRequestArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteFileRequestError"/>.</exception>
+        public DeleteFileRequestsResult EndDelete(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<DeleteFileRequestsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Delete all closed file requests owned by this user.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteAllClosedFileRequestsError"/>.</exception>
+        public t.Task<DeleteAllClosedFileRequestsResult> DeleteAllClosedAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, DeleteAllClosedFileRequestsResult, DeleteAllClosedFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/delete_all_closed", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete all closed route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDeleteAllClosed(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteAllClosedAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete all closed route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteAllClosedFileRequestsError"/>.</exception>
+        public DeleteAllClosedFileRequestsResult EndDeleteAllClosed(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<DeleteAllClosedFileRequestsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the specified file request.</para>
         /// </summary>
         /// <param name="getFileRequestArgs">The request parameters</param>
@@ -232,6 +415,96 @@ namespace Dropbox.Api.FileRequests.Routes
         /// folder permission, this will only return file requests with destinations in the app
         /// folder.</para>
         /// </summary>
+        /// <param name="listFileRequestsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFileRequestsError"/>.</exception>
+        public t.Task<ListFileRequestsV2Result> ListV2Async(ListFileRequestsArg listFileRequestsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListFileRequestsArg, ListFileRequestsV2Result, ListFileRequestsError>(listFileRequestsArg, "api", "/file_requests/list_v2", "user", global::Dropbox.Api.FileRequests.ListFileRequestsArg.Encoder, global::Dropbox.Api.FileRequests.ListFileRequestsV2Result.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list route.</para>
+        /// </summary>
+        /// <param name="listFileRequestsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListV2(ListFileRequestsArg listFileRequestsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListV2Async(listFileRequestsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns a list of file requests owned by this user. For apps with the app
+        /// folder permission, this will only return file requests with destinations in the app
+        /// folder.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of file requests that should be returned per
+        /// request.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFileRequestsError"/>.</exception>
+        public t.Task<ListFileRequestsV2Result> ListV2Async(ulong limit = 1000)
+        {
+            var listFileRequestsArg = new ListFileRequestsArg(limit);
+
+            return this.ListV2Async(listFileRequestsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list route.</para>
+        /// </summary>
+        /// <param name="limit">The maximum number of file requests that should be returned per
+        /// request.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListV2(ulong limit = 1000,
+                                            sys.AsyncCallback callback = null,
+                                            object callbackState = null)
+        {
+            var listFileRequestsArg = new ListFileRequestsArg(limit);
+
+            return this.BeginListV2(listFileRequestsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFileRequestsError"/>.</exception>
+        public ListFileRequestsV2Result EndListV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListFileRequestsV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns a list of file requests owned by this user. For apps with the app
+        /// folder permission, this will only return file requests with destinations in the app
+        /// folder.</para>
+        /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -269,6 +542,107 @@ namespace Dropbox.Api.FileRequests.Routes
         public ListFileRequestsResult EndList(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListFileRequestsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async" />, use
+        /// this to paginate through all file requests. The cursor must come from a previous
+        /// call to <see
+        /// cref="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async" /> or
+        /// <see
+        /// cref="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync"
+        /// />.</para>
+        /// </summary>
+        /// <param name="listFileRequestsContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFileRequestsContinueError"/>.</exception>
+        public t.Task<ListFileRequestsV2Result> ListContinueAsync(ListFileRequestsContinueArg listFileRequestsContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ListFileRequestsContinueArg, ListFileRequestsV2Result, ListFileRequestsContinueError>(listFileRequestsContinueArg, "api", "/file_requests/list/continue", "user", global::Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Encoder, global::Dropbox.Api.FileRequests.ListFileRequestsV2Result.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list continue route.</para>
+        /// </summary>
+        /// <param name="listFileRequestsContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListContinue(ListFileRequestsContinueArg listFileRequestsContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ListContinueAsync(listFileRequestsContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async" />, use
+        /// this to paginate through all file requests. The cursor must come from a previous
+        /// call to <see
+        /// cref="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async" /> or
+        /// <see
+        /// cref="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync"
+        /// />.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by the previous API call specified in the
+        /// endpoint description.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFileRequestsContinueError"/>.</exception>
+        public t.Task<ListFileRequestsV2Result> ListContinueAsync(string cursor)
+        {
+            var listFileRequestsContinueArg = new ListFileRequestsContinueArg(cursor);
+
+            return this.ListContinueAsync(listFileRequestsContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the list continue route.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by the previous API call specified in the
+        /// endpoint description.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginListContinue(string cursor,
+                                                  sys.AsyncCallback callback,
+                                                  object callbackState = null)
+        {
+            var listFileRequestsContinueArg = new ListFileRequestsContinueArg(cursor);
+
+            return this.BeginListContinue(listFileRequestsContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the list continue route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ListFileRequestsContinueError"/>.</exception>
+        public ListFileRequestsV2Result EndListContinue(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ListFileRequestsV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
