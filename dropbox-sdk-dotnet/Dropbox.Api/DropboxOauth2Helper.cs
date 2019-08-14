@@ -100,7 +100,7 @@ namespace Dropbox.Api
     ///
     /// private async Task GetAccessToken() {
     ///     var state = Guid.NewGuid().ToString("N");
-    ///     var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, new Uri(RedirectUri), state: state);
+    ///     var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, new Uri(RedirectUri), state: state);
     ///
     ///     var http = new HttpListener();
     ///     http.Prefixes.Add(RedirectUri);
