@@ -94,7 +94,7 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(ListFoldersArgs value, enc.IJsonWriter writer)
             {
                 WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
-                if (value.Actions.Count > 0)
+                if (value != null && value.Actions != null && value.Actions.Count > 0)
                 {
                     WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.FolderAction.Encoder);
                 }
