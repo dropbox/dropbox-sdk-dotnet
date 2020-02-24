@@ -124,7 +124,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocCreateError"/>.</exception>
-        public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(PaperDocCreateArgs paperDocCreateArgs, io.Stream body)
+        public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(PaperDocCreateArgs paperDocCreateArgs, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<PaperDocCreateArgs, PaperDocCreateUpdateResult, PaperDocCreateError>(paperDocCreateArgs, body, "api", "/paper/docs/create", "user", global::Dropbox.Api.Paper.PaperDocCreateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocCreateError.Decoder);
         }
@@ -139,7 +139,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDocsCreate(PaperDocCreateArgs paperDocCreateArgs, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginDocsCreate(PaperDocCreateArgs paperDocCreateArgs, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsCreateAsync(paperDocCreateArgs, body);
 
@@ -161,7 +161,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="PaperDocCreateError"/>.</exception>
         public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(ImportFormat importFormat,
                                                                   string parentFolderId = null,
-                                                                  io.Stream body = null)
+                                                                  col.IEnumerable<byte> body = null)
         {
             var paperDocCreateArgs = new PaperDocCreateArgs(importFormat,
                                                             parentFolderId);
@@ -184,7 +184,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginDocsCreate(ImportFormat importFormat,
                                                 string parentFolderId = null,
-                                                io.Stream body = null,
+                                                col.IEnumerable<byte> body = null,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
@@ -1091,7 +1091,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocUpdateError"/>.</exception>
-        public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body)
+        public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(PaperDocUpdateArgs paperDocUpdateArgs, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<PaperDocUpdateArgs, PaperDocCreateUpdateResult, PaperDocUpdateError>(paperDocUpdateArgs, body, "api", "/paper/docs/update", "user", global::Dropbox.Api.Paper.PaperDocUpdateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocUpdateError.Decoder);
         }
@@ -1106,7 +1106,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginDocsUpdate(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginDocsUpdate(PaperDocUpdateArgs paperDocUpdateArgs, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsUpdateAsync(paperDocUpdateArgs, body);
 
@@ -1132,7 +1132,7 @@ namespace Dropbox.Api.Paper.Routes
                                                                   PaperDocUpdatePolicy docUpdatePolicy,
                                                                   long revision,
                                                                   ImportFormat importFormat,
-                                                                  io.Stream body)
+                                                                  col.IEnumerable<byte> body)
         {
             var paperDocUpdateArgs = new PaperDocUpdateArgs(docId,
                                                             docUpdatePolicy,
@@ -1161,7 +1161,7 @@ namespace Dropbox.Api.Paper.Routes
                                                 PaperDocUpdatePolicy docUpdatePolicy,
                                                 long revision,
                                                 ImportFormat importFormat,
-                                                io.Stream body,
+                                                col.IEnumerable<byte> body,
                                                 sys.AsyncCallback callback,
                                                 object callbackState = null)
         {

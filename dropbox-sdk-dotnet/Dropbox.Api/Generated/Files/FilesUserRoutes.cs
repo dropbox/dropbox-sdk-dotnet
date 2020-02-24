@@ -190,7 +190,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="UploadErrorWithProperties"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use AlphaUploadAsync instead.")]
-        public t.Task<FileMetadata> AlphaUploadAsync(CommitInfoWithProperties commitInfoWithProperties, io.Stream body)
+        public t.Task<FileMetadata> AlphaUploadAsync(CommitInfoWithProperties commitInfoWithProperties, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<CommitInfoWithProperties, FileMetadata, UploadErrorWithProperties>(commitInfoWithProperties, body, "content", "/files/alpha/upload", "user", global::Dropbox.Api.Files.CommitInfoWithProperties.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadErrorWithProperties.Decoder);
         }
@@ -206,7 +206,7 @@ namespace Dropbox.Api.Files.Routes
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         [sys.Obsolete("This function is deprecated, please use BeginAlphaUpload instead.")]
-        public sys.IAsyncResult BeginAlphaUpload(CommitInfoWithProperties commitInfoWithProperties, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginAlphaUpload(CommitInfoWithProperties commitInfoWithProperties, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.AlphaUploadAsync(commitInfoWithProperties, body);
 
@@ -255,7 +255,7 @@ namespace Dropbox.Api.Files.Routes
                                                      bool mute = false,
                                                      col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                      bool strictConflict = false,
-                                                     io.Stream body = null)
+                                                     col.IEnumerable<byte> body = null)
         {
             var commitInfoWithProperties = new CommitInfoWithProperties(path,
                                                                         mode,
@@ -305,7 +305,7 @@ namespace Dropbox.Api.Files.Routes
                                                  bool mute = false,
                                                  col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                  bool strictConflict = false,
-                                                 io.Stream body = null,
+                                                 col.IEnumerable<byte> body = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
         {
@@ -5418,7 +5418,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
+        public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", "user", global::Dropbox.Api.Files.CommitInfo.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadError.Decoder);
         }
@@ -5433,7 +5433,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUpload(CommitInfo commitInfo, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUpload(CommitInfo commitInfo, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadAsync(commitInfo, body);
 
@@ -5483,7 +5483,7 @@ namespace Dropbox.Api.Files.Routes
                                                 bool mute = false,
                                                 col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                 bool strictConflict = false,
-                                                io.Stream body = null)
+                                                col.IEnumerable<byte> body = null)
         {
             var commitInfo = new CommitInfo(path,
                                             mode,
@@ -5532,7 +5532,7 @@ namespace Dropbox.Api.Files.Routes
                                             bool mute = false,
                                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                             bool strictConflict = false,
-                                            io.Stream body = null,
+                                            col.IEnumerable<byte> body = null,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
@@ -5584,7 +5584,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
-        public t.Task UploadSessionAppendV2Async(UploadSessionAppendArg uploadSessionAppendArg, io.Stream body)
+        public t.Task UploadSessionAppendV2Async(UploadSessionAppendArg uploadSessionAppendArg, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<UploadSessionAppendArg, enc.Empty, UploadSessionLookupError>(uploadSessionAppendArg, body, "content", "/files/upload_session/append_v2", "user", global::Dropbox.Api.Files.UploadSessionAppendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
         }
@@ -5599,7 +5599,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUploadSessionAppendV2(UploadSessionAppendArg uploadSessionAppendArg, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionAppendV2(UploadSessionAppendArg uploadSessionAppendArg, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionAppendV2Async(uploadSessionAppendArg, body);
 
@@ -5629,7 +5629,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionLookupError"/>.</exception>
         public t.Task UploadSessionAppendV2Async(UploadSessionCursor cursor,
                                                  bool close = false,
-                                                 io.Stream body = null)
+                                                 col.IEnumerable<byte> body = null)
         {
             var uploadSessionAppendArg = new UploadSessionAppendArg(cursor,
                                                                     close);
@@ -5653,7 +5653,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionAppendV2(UploadSessionCursor cursor,
                                                            bool close = false,
-                                                           io.Stream body = null,
+                                                           col.IEnumerable<byte> body = null,
                                                            sys.AsyncCallback callback = null,
                                                            object callbackState = null)
         {
@@ -5698,7 +5698,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use UploadSessionAppendAsync instead.")]
-        public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
+        public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
         }
@@ -5714,7 +5714,7 @@ namespace Dropbox.Api.Files.Routes
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppend instead.")]
-        public sys.IAsyncResult BeginUploadSessionAppend(UploadSessionCursor uploadSessionCursor, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionAppend(UploadSessionCursor uploadSessionCursor, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionAppendAsync(uploadSessionCursor, body);
 
@@ -5745,7 +5745,7 @@ namespace Dropbox.Api.Files.Routes
         [sys.Obsolete("This function is deprecated, please use UploadSessionAppendAsync instead.")]
         public t.Task UploadSessionAppendAsync(string sessionId,
                                                ulong offset,
-                                               io.Stream body)
+                                               col.IEnumerable<byte> body)
         {
             var uploadSessionCursor = new UploadSessionCursor(sessionId,
                                                               offset);
@@ -5771,7 +5771,7 @@ namespace Dropbox.Api.Files.Routes
         [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppend instead.")]
         public sys.IAsyncResult BeginUploadSessionAppend(string sessionId,
                                                          ulong offset,
-                                                         io.Stream body,
+                                                         col.IEnumerable<byte> body,
                                                          sys.AsyncCallback callback,
                                                          object callbackState = null)
         {
@@ -5818,7 +5818,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadSessionFinishError"/>.</exception>
-        public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionFinishArg uploadSessionFinishArg, io.Stream body)
+        public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionFinishArg uploadSessionFinishArg, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<UploadSessionFinishArg, FileMetadata, UploadSessionFinishError>(uploadSessionFinishArg, body, "content", "/files/upload_session/finish", "user", global::Dropbox.Api.Files.UploadSessionFinishArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadSessionFinishError.Decoder);
         }
@@ -5833,7 +5833,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUploadSessionFinish(UploadSessionFinishArg uploadSessionFinishArg, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionFinish(UploadSessionFinishArg uploadSessionFinishArg, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionFinishAsync(uploadSessionFinishArg, body);
 
@@ -5862,7 +5862,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionFinishError"/>.</exception>
         public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionCursor cursor,
                                                              CommitInfo commit,
-                                                             io.Stream body)
+                                                             col.IEnumerable<byte> body)
         {
             var uploadSessionFinishArg = new UploadSessionFinishArg(cursor,
                                                                     commit);
@@ -5884,7 +5884,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionFinish(UploadSessionCursor cursor,
                                                          CommitInfo commit,
-                                                         io.Stream body,
+                                                         col.IEnumerable<byte> body,
                                                          sys.AsyncCallback callback,
                                                          object callbackState = null)
         {
@@ -6158,7 +6158,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<UploadSessionStartResult> UploadSessionStartAsync(UploadSessionStartArg uploadSessionStartArg, io.Stream body)
+        public t.Task<UploadSessionStartResult> UploadSessionStartAsync(UploadSessionStartArg uploadSessionStartArg, col.IEnumerable<byte> body)
         {
             return this.Transport.SendUploadRequestAsync<UploadSessionStartArg, UploadSessionStartResult, enc.Empty>(uploadSessionStartArg, body, "content", "/files/upload_session/start", "user", global::Dropbox.Api.Files.UploadSessionStartArg.Encoder, global::Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
         }
@@ -6173,7 +6173,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUploadSessionStart(UploadSessionStartArg uploadSessionStartArg, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionStart(UploadSessionStartArg uploadSessionStartArg, col.IEnumerable<byte> body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionStartAsync(uploadSessionStartArg, body);
 
@@ -6210,7 +6210,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<UploadSessionStartResult> UploadSessionStartAsync(bool close = false,
-                                                                        io.Stream body = null)
+                                                                        col.IEnumerable<byte> body = null)
         {
             var uploadSessionStartArg = new UploadSessionStartArg(close);
 
@@ -6231,7 +6231,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionStart(bool close = false,
-                                                        io.Stream body = null,
+                                                        col.IEnumerable<byte> body = null,
                                                         sys.AsyncCallback callback = null,
                                                         object callbackState = null)
         {
