@@ -90,7 +90,7 @@ namespace Dropbox.Api.Stone
         /// <returns>An asynchronous task for the response.</returns>
         Task<TResponse> SendUploadRequestAsync<TRequest, TResponse, TError>(
             TRequest request,
-            Stream body,
+            IEnumerable<byte> body,
             string host,
             string route,
             string auth,

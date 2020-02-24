@@ -200,7 +200,7 @@ namespace Dropbox.Api
         /// </exception>
         async Task<TResponse> ITransport.SendUploadRequestAsync<TRequest, TResponse, TError>(
             TRequest request,
-            Stream body,
+            IEnumerable<byte> body,
             string host,
             string route,
             string auth,
@@ -278,7 +278,7 @@ namespace Dropbox.Api
             string auth,
             RouteStyle routeStyle,
             string requestArg,
-            Stream body = null)
+            IEnumerable<byte> body = null)
         {
             var attempt = 0;
             var maxRetries = this.options.MaxClientRetries;
@@ -290,57 +290,36 @@ namespace Dropbox.Api
                 {
                     throw new ArgumentNullException("body");
                 }
-
-                // to support retry logic, the body stream must be seekable
-                // if it isn't we won't retry
-                if (!body.CanSeek)
-                {
-                    maxRetries = 0;
-                }
             }
 
-            try
+            while (true)
             {
-                while (true)
+                try
                 {
-                    try
-                    {
-                        return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body)
-                            .ConfigureAwait(false);
-                    }
-                    catch (RateLimitException)
+                    return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body)
+                        .ConfigureAwait(false);
+                }
+                catch (RateLimitException)
+                {
+                    throw;
+                }
+                catch (RetryException)
+                {
+                    // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
+                    // do not count a rate limiting error as an attempt
+                    if (++attempt > maxRetries)
                     {
                         throw;
                     }
-                    catch (RetryException)
-                    {
-                        // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
-                        // do not count a rate limiting error as an attempt
-                        if (++attempt > maxRetries)
-                        {
-                            throw;
-                        }
-                    }
+                }
 
-                    // use exponential backoff
-                    var backoff = TimeSpan.FromSeconds(Math.Pow(2, attempt) * r.NextDouble());
+                // use exponential backoff
+                var backoff = TimeSpan.FromSeconds(Math.Pow(2, attempt) * r.NextDouble());
 #if PORTABLE40
                     await TaskEx.Delay(backoff);
 #else
-                    await Task.Delay(backoff).ConfigureAwait(false);
+                await Task.Delay(backoff).ConfigureAwait(false);
 #endif
-                    if (body != null)
-                    {
-                        body.Position = 0;
-                    }
-                }
-            }
-            finally
-            {
-                if (body != null)
-                {
-                    body.Dispose();
-                }
             }
         }
 
@@ -386,7 +365,7 @@ namespace Dropbox.Api
             string auth,
             RouteStyle routeStyle,
             string requestArg,
-            Stream body = null)
+            IEnumerable<byte> body = null)
         {
             var hostname = this.options.HostMap[host];
             var uri = this.GetRouteUri(hostname, routeName);
@@ -451,7 +430,7 @@ namespace Dropbox.Api
                         throw new ArgumentNullException("body");
                     }
 
-                    request.Content = new CustomStreamContent(body);
+                    request.Content = new ByteArrayContent(body.ToArray());
                     request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                     break;
                 default:
