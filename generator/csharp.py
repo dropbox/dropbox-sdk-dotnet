@@ -171,7 +171,7 @@ class _CSharpGenerator(CodeBackend):
 
     def namespace(self, name=None):
         """
-        Context manager for a `namespace` stement. All code emitted within the
+        Context manager for a `namespace` statement. All code emitted within the
         context is within the namespace.
         """
         ns_name = '{0}.{1}'.format(self._namespace_name, name) if name else self._namespace_name
@@ -366,7 +366,7 @@ class _CSharpGenerator(CodeBackend):
             doc (Union[str, unicode]): The contents of the xml element, if this is `None` then
                 the element is emitted in self closed form
             tag (Union[str, unicode]): The xml element tag name.
-            attrs (dict): The attributes (if any) for the elemen
+            attrs (dict): The attributes (if any) for the element
         """
         tag_start = '<' + tag
         if attrs:
@@ -657,6 +657,8 @@ class _CSharpGenerator(CodeBackend):
         """
         if isinstance(literal, bool):
             return 'true' if literal else 'false'
+        elif isinstance(literal, str) or isinstance(literal, unicode):
+            return '\"{0}\"'.format(literal)
         return literal
 
     @staticmethod
@@ -1150,17 +1152,21 @@ class _CSharpGenerator(CodeBackend):
     @staticmethod
     def _get_auth_type(route):
         auth_type = route.attrs.get('auth', 'user')
+        if "," in auth_type:
+            multi_auths = auth_type.replace(" ", "").split(",")
+            return multi_auths
         if auth_type == 'noauth':
-            return 'user'
+            return ['user']
         else:
-            return auth_type
+            return [auth_type]
 
     @classmethod
     def _get_routes(cls, ns):
         ret = defaultdict(list)
 
         for r in ns.routes:
-            ret[cls._get_auth_type(r)].append(r)
+            for auth in cls._get_auth_type(r):
+                ret[auth].append(r)
 
         return ret
 
@@ -1860,9 +1866,9 @@ class _CSharpGenerator(CodeBackend):
                         self.emit('internal enc.ITransport Transport { get; private set; }')
 
                         for route in routes:
-                            self._generate_route(ns, route)
+                            self._generate_route(ns, route, auth_type)
 
-    def _generate_route(self, ns, route):
+    def _generate_route(self, ns, route, auth_type):
         """
         Generates the methods that allow a route to be called.
 
@@ -1884,7 +1890,6 @@ class _CSharpGenerator(CodeBackend):
         async_name = '{0}Async'.format(public_name)
         route_host = route.attrs.get('host', 'api')
         route_style = route.attrs.get('style', 'rpc')
-        auth_type = route.attrs.get('auth', 'user')
 
         arg_type = self._typename(route.arg_data_type, void='enc.Empty')
         arg_is_void = is_void_type(route.arg_data_type)
