@@ -1890,6 +1890,11 @@ class _CSharpGenerator(CodeBackend):
         async_name = '{0}Async'.format(public_name)
         route_host = route.attrs.get('host', 'api')
         route_style = route.attrs.get('style', 'rpc')
+        # Have to check for noauth - we want noauth routes to be grouped in with user routes
+        # Which is what would get passed in but it is noauth we want to override it here so noauth routes work
+        original_auth_type = route.attrs.get('auth', 'user')
+        if original_auth_type == 'noauth':
+            auth_type = original_auth_type
 
         arg_type = self._typename(route.arg_data_type, void='enc.Empty')
         arg_is_void = is_void_type(route.arg_data_type)
