@@ -564,7 +564,7 @@ class _CSharpGenerator(CodeBackend):
                 links = []
                 for auth in auth_type:
                     links.append('<see cref="{0}.{1}.Routes.{1}{2}Routes.{3}Async" />'.format(
-                        self._namespace_name, ns_name, auth, route_name))
+                        self._namespace_name, ns_name, self._public_name(auth), route_name))
                 return " ".join(links)
             elif tag == 'type':
                 return '<see cref="{0}" />'.format(self._public_name(value))
@@ -1009,7 +1009,7 @@ class _CSharpGenerator(CodeBackend):
         for ns in api.namespaces.itervalues():
             for route in ns.routes:
                 key = (self._public_name(ns.name), self._public_route_name(route.name, route.version))
-                d[key] = self._public_name(self._get_auth_type(route))
+                d[key] = self._get_auth_type(route)
 
         self._route_auth_map = d
 
