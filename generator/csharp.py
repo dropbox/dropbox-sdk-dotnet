@@ -1007,7 +1007,7 @@ class _CSharpGenerator(CodeBackend):
         for ns in api.namespaces.itervalues():
             for route in ns.routes:
                 key = (self._public_name(ns.name), self._public_route_name(route.name, route.version))
-                d[key] = self._public_name(self._get_auth_type(route))
+                d[key] = self._public_name(str(self._get_auth_type(route)))
 
         self._route_auth_map = d
 
