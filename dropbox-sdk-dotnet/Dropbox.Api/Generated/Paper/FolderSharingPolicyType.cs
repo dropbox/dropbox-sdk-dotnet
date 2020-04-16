@@ -12,8 +12,7 @@ namespace Dropbox.Api.Paper
 
     /// <summary>
     /// <para>The sharing policy of a Paper folder.</para>
-    /// <para></para>
-    /// <para>Note: The sharing policy of subfolders is inherited from the root folder.</para>
+    /// <para>The sharing policy of subfolders is inherited from the root folder.</para>
     /// </summary>
     public class FolderSharingPolicyType
     {

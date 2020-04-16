@@ -45,7 +45,7 @@ namespace Dropbox.Api.Sharing
         /// policies to determine the final effective audience type in the `effective_audience`
         /// field of `LinkPermissions.</param>
         /// <param name="access">Requested access level you want the audience to gain from this
-        /// link.</param>
+        /// link. Note, modifying access level for an existing link is not supported.</param>
         public SharedLinkSettings(RequestedVisibility requestedVisibility = null,
                                   string linkPassword = null,
                                   sys.DateTime? expires = null,
@@ -97,7 +97,8 @@ namespace Dropbox.Api.Sharing
         public LinkAudience Audience { get; protected set; }
 
         /// <summary>
-        /// <para>Requested access level you want the audience to gain from this link.</para>
+        /// <para>Requested access level you want the audience to gain from this link. Note,
+        /// modifying access level for an existing link is not supported.</para>
         /// </summary>
         public RequestedLinkAccessLevel Access { get; protected set; }
 

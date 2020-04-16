@@ -40,10 +40,13 @@ namespace Dropbox.Api.Users
         /// user's quota within its team).</param>
         /// <param name="userWithinTeamSpaceLimitType">The type of the space limit imposed on
         /// the team member (off, alert_only, stop_sync).</param>
+        /// <param name="userWithinTeamSpaceUsedCached">An accurate cached calculation of a
+        /// team member's total space usage (bytes).</param>
         public TeamSpaceAllocation(ulong used,
                                    ulong allocated,
                                    ulong userWithinTeamSpaceAllocated,
-                                   global::Dropbox.Api.TeamCommon.MemberSpaceLimitType userWithinTeamSpaceLimitType)
+                                   global::Dropbox.Api.TeamCommon.MemberSpaceLimitType userWithinTeamSpaceLimitType,
+                                   ulong userWithinTeamSpaceUsedCached)
         {
             if (userWithinTeamSpaceLimitType == null)
             {
@@ -54,6 +57,7 @@ namespace Dropbox.Api.Users
             this.Allocated = allocated;
             this.UserWithinTeamSpaceAllocated = userWithinTeamSpaceAllocated;
             this.UserWithinTeamSpaceLimitType = userWithinTeamSpaceLimitType;
+            this.UserWithinTeamSpaceUsedCached = userWithinTeamSpaceUsedCached;
         }
 
         /// <summary>
@@ -89,6 +93,12 @@ namespace Dropbox.Api.Users
         /// </summary>
         public global::Dropbox.Api.TeamCommon.MemberSpaceLimitType UserWithinTeamSpaceLimitType { get; protected set; }
 
+        /// <summary>
+        /// <para>An accurate cached calculation of a team member's total space usage
+        /// (bytes).</para>
+        /// </summary>
+        public ulong UserWithinTeamSpaceUsedCached { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -107,6 +117,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("allocated", value.Allocated, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("user_within_team_space_allocated", value.UserWithinTeamSpaceAllocated, writer, enc.UInt64Encoder.Instance);
                 WriteProperty("user_within_team_space_limit_type", value.UserWithinTeamSpaceLimitType, writer, global::Dropbox.Api.TeamCommon.MemberSpaceLimitType.Encoder);
+                WriteProperty("user_within_team_space_used_cached", value.UserWithinTeamSpaceUsedCached, writer, enc.UInt64Encoder.Instance);
             }
         }
 
@@ -150,6 +161,9 @@ namespace Dropbox.Api.Users
                         break;
                     case "user_within_team_space_limit_type":
                         value.UserWithinTeamSpaceLimitType = global::Dropbox.Api.TeamCommon.MemberSpaceLimitType.Decoder.Decode(reader);
+                        break;
+                    case "user_within_team_space_used_cached":
+                        value.UserWithinTeamSpaceUsedCached = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

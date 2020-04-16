@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Sent proactive account capture email to all unmanaged members.</para>
+    /// <para>Sent account capture email to all unmanaged members.</para>
     /// </summary>
     public class AccountCaptureNotificationEmailsSentDetails
     {
@@ -32,7 +32,9 @@ namespace Dropbox.Api.TeamLog
         /// cref="AccountCaptureNotificationEmailsSentDetails" /> class.</para>
         /// </summary>
         /// <param name="domainName">Domain name.</param>
-        public AccountCaptureNotificationEmailsSentDetails(string domainName)
+        /// <param name="notificationType">Account-capture email notification type.</param>
+        public AccountCaptureNotificationEmailsSentDetails(string domainName,
+                                                           AccountCaptureNotificationType notificationType = null)
         {
             if (domainName == null)
             {
@@ -40,6 +42,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.DomainName = domainName;
+            this.NotificationType = notificationType;
         }
 
         /// <summary>
@@ -58,6 +61,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string DomainName { get; protected set; }
 
+        /// <summary>
+        /// <para>Account-capture email notification type.</para>
+        /// </summary>
+        public AccountCaptureNotificationType NotificationType { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -74,6 +82,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(AccountCaptureNotificationEmailsSentDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("domain_name", value.DomainName, writer, enc.StringEncoder.Instance);
+                if (value.NotificationType != null)
+                {
+                    WriteProperty("notification_type", value.NotificationType, writer, global::Dropbox.Api.TeamLog.AccountCaptureNotificationType.Encoder);
+                }
             }
         }
 
@@ -110,6 +122,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "domain_name":
                         value.DomainName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "notification_type":
+                        value.NotificationType = global::Dropbox.Api.TeamLog.AccountCaptureNotificationType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

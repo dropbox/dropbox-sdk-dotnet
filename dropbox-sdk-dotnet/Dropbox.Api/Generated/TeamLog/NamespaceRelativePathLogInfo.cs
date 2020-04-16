@@ -36,11 +36,15 @@ namespace Dropbox.Api.TeamLog
         /// gap.</param>
         /// <param name="relativePath">A path relative to the specified namespace ID. Might be
         /// missing due to historical data gap.</param>
+        /// <param name="isSharedNamespace">True if the namespace is shared. Might be missing
+        /// due to historical data gap.</param>
         public NamespaceRelativePathLogInfo(string nsId = null,
-                                            string relativePath = null)
+                                            string relativePath = null,
+                                            bool? isSharedNamespace = null)
         {
             this.NsId = nsId;
             this.RelativePath = relativePath;
+            this.IsSharedNamespace = isSharedNamespace;
         }
 
         /// <summary>
@@ -65,6 +69,12 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string RelativePath { get; protected set; }
 
+        /// <summary>
+        /// <para>True if the namespace is shared. Might be missing due to historical data
+        /// gap.</para>
+        /// </summary>
+        public bool? IsSharedNamespace { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -86,6 +96,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.RelativePath != null)
                 {
                     WriteProperty("relative_path", value.RelativePath, writer, enc.StringEncoder.Instance);
+                }
+                if (value.IsSharedNamespace != null)
+                {
+                    WriteProperty("is_shared_namespace", value.IsSharedNamespace.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -125,6 +139,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "relative_path":
                         value.RelativePath = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_shared_namespace":
+                        value.IsSharedNamespace = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

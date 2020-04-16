@@ -35,8 +35,10 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="groupInfo">The group info after member change operation has been
         /// performed.</param>
-        /// <param name="asyncJobId">An ID that can be used to obtain the status of
-        /// granting/revoking group-owned resources.</param>
+        /// <param name="asyncJobId">For legacy purposes async_job_id will always return one
+        /// space ' '. Formerly, it was an ID that was used to obtain the status of
+        /// granting/revoking group-owned resources. It's no longer necessary because the async
+        /// processing now happens automatically.</param>
         public GroupMembersChangeResult(GroupFullInfo groupInfo,
                                         string asyncJobId)
         {
@@ -75,8 +77,10 @@ namespace Dropbox.Api.Team
         public GroupFullInfo GroupInfo { get; protected set; }
 
         /// <summary>
-        /// <para>An ID that can be used to obtain the status of granting/revoking group-owned
-        /// resources.</para>
+        /// <para>For legacy purposes async_job_id will always return one space ' '. Formerly,
+        /// it was an ID that was used to obtain the status of granting/revoking group-owned
+        /// resources. It's no longer necessary because the async processing now happens
+        /// automatically.</para>
         /// </summary>
         public string AsyncJobId { get; protected set; }
 

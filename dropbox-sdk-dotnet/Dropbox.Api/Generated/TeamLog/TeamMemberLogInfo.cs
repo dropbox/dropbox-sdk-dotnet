@@ -41,11 +41,14 @@ namespace Dropbox.Api.TeamLog
         /// <param name="teamMemberId">Team member ID. Might be missing due to historical data
         /// gap.</param>
         /// <param name="memberExternalId">Team member external ID.</param>
+        /// <param name="team">Details about this user&#x2019s team for enterprise
+        /// event.</param>
         public TeamMemberLogInfo(string accountId = null,
                                  string displayName = null,
                                  string email = null,
                                  string teamMemberId = null,
-                                 string memberExternalId = null)
+                                 string memberExternalId = null,
+                                 TeamLogInfo team = null)
             : base(accountId, displayName, email)
         {
             if (memberExternalId != null)
@@ -58,6 +61,7 @@ namespace Dropbox.Api.TeamLog
 
             this.TeamMemberId = teamMemberId;
             this.MemberExternalId = memberExternalId;
+            this.Team = team;
         }
 
         /// <summary>
@@ -80,6 +84,11 @@ namespace Dropbox.Api.TeamLog
         /// <para>Team member external ID.</para>
         /// </summary>
         public string MemberExternalId { get; protected set; }
+
+        /// <summary>
+        /// <para>Details about this user&#x2019s team for enterprise event.</para>
+        /// </summary>
+        public TeamLogInfo Team { get; protected set; }
 
         #region Encoder class
 
@@ -114,6 +123,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.MemberExternalId != null)
                 {
                     WriteProperty("member_external_id", value.MemberExternalId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.Team != null)
+                {
+                    WriteProperty("team", value.Team, writer, global::Dropbox.Api.TeamLog.TeamLogInfo.Encoder);
                 }
             }
         }
@@ -161,6 +174,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "member_external_id":
                         value.MemberExternalId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "team":
+                        value.Team = global::Dropbox.Api.TeamLog.TeamLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -32,14 +32,22 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Marks the given Paper doc as archived.</para>
-        /// <para>Note: This action can be performed or undone by anyone with edit permissions
-        /// to the doc.</para>
+        /// <para>This action can be performed or undone by anyone with edit permissions to the
+        /// doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsArchiveAsync(RefPaperDoc refPaperDoc)
         {
             return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/archive", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -54,6 +62,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsArchive(RefPaperDoc refPaperDoc, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsArchiveAsync(refPaperDoc);
@@ -63,14 +72,22 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Marks the given Paper doc as archived.</para>
-        /// <para>Note: This action can be performed or undone by anyone with edit permissions
-        /// to the doc.</para>
+        /// <para>This action can be performed or undone by anyone with edit permissions to the
+        /// doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsArchiveAsync(string docId)
         {
             var refPaperDoc = new RefPaperDoc(docId);
@@ -87,6 +104,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsArchive(string docId,
                                                  sys.AsyncCallback callback,
                                                  object callbackState = null)
@@ -105,6 +123,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public void EndDocsArchive(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task;
@@ -116,6 +135,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Creates a new Paper doc with the provided content.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="paperDocCreateArgs">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -124,6 +150,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocCreateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(PaperDocCreateArgs paperDocCreateArgs, io.Stream body)
         {
             return this.Transport.SendUploadRequestAsync<PaperDocCreateArgs, PaperDocCreateUpdateResult, PaperDocCreateError>(paperDocCreateArgs, body, "api", "/paper/docs/create", "user", global::Dropbox.Api.Paper.PaperDocCreateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocCreateError.Decoder);
@@ -139,6 +166,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsCreate(PaperDocCreateArgs paperDocCreateArgs, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsCreateAsync(paperDocCreateArgs, body);
@@ -148,6 +176,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Creates a new Paper doc with the provided content.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="importFormat">The format of provided data.</param>
         /// <param name="parentFolderId">The Paper folder ID where the Paper document should be
@@ -159,6 +194,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocCreateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(ImportFormat importFormat,
                                                                   string parentFolderId = null,
                                                                   io.Stream body = null)
@@ -182,6 +218,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsCreate(ImportFormat importFormat,
                                                 string parentFolderId = null,
                                                 io.Stream body = null,
@@ -204,6 +241,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocCreateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public PaperDocCreateUpdateResult EndDocsCreate(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<PaperDocCreateUpdateResult>;
@@ -217,6 +255,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Exports and downloads Paper doc either as HTML or markdown.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="paperDocExport">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -224,6 +269,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(PaperDocExport paperDocExport)
         {
             return this.Transport.SendDownloadRequestAsync<PaperDocExport, PaperDocExportResult, DocLookupError>(paperDocExport, "api", "/paper/docs/download", "user", global::Dropbox.Api.Paper.PaperDocExport.Encoder, global::Dropbox.Api.Paper.PaperDocExportResult.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -238,6 +284,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsDownload(PaperDocExport paperDocExport, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsDownloadAsync(paperDocExport);
@@ -247,6 +294,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Exports and downloads Paper doc either as HTML or markdown.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="exportFormat">The export format</param>
@@ -255,6 +309,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(string docId,
                                                                                      ExportFormat exportFormat)
         {
@@ -274,6 +329,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsDownload(string docId,
                                                   ExportFormat exportFormat,
                                                   sys.AsyncCallback callback,
@@ -295,6 +351,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public enc.IDownloadResponse<PaperDocExportResult> EndDocsDownload(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<enc.IDownloadResponse<PaperDocExportResult>>;
@@ -311,6 +368,13 @@ namespace Dropbox.Api.Paper.Routes
         /// Paper doc is contained. For private folders all users (including owner) shared on
         /// the folder are listed and for team folders all non-team users shared on the folder
         /// are returned.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnFolderArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -318,6 +382,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListAsync(ListUsersOnFolderArgs listUsersOnFolderArgs)
         {
             return this.Transport.SendRpcRequestAsync<ListUsersOnFolderArgs, ListUsersOnFolderResponse, DocLookupError>(listUsersOnFolderArgs, "api", "/paper/docs/folder_users/list", "user", global::Dropbox.Api.Paper.ListUsersOnFolderArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -332,6 +397,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsFolderUsersList(ListUsersOnFolderArgs listUsersOnFolderArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsFolderUsersListAsync(listUsersOnFolderArgs);
@@ -344,6 +410,13 @@ namespace Dropbox.Api.Paper.Routes
         /// Paper doc is contained. For private folders all users (including owner) shared on
         /// the folder are listed and for team folders all non-team users shared on the folder
         /// are returned.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="limit">Size limit per batch. The maximum number of users that can be
@@ -354,6 +427,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListAsync(string docId,
                                                                           int limit = 1000)
         {
@@ -375,6 +449,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsFolderUsersList(string docId,
                                                          int limit = 1000,
                                                          sys.AsyncCallback callback = null,
@@ -396,6 +471,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public ListUsersOnFolderResponse EndDocsFolderUsersList(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListUsersOnFolderResponse>;
@@ -411,6 +487,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync" />, use
         /// this to paginate through all users on the Paper folder.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnFolderContinueArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -418,6 +501,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListContinueAsync(ListUsersOnFolderContinueArgs listUsersOnFolderContinueArgs)
         {
             return this.Transport.SendRpcRequestAsync<ListUsersOnFolderContinueArgs, ListUsersOnFolderResponse, ListUsersCursorError>(listUsersOnFolderContinueArgs, "api", "/paper/docs/folder_users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnFolderContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder);
@@ -433,6 +517,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsFolderUsersListContinue(ListUsersOnFolderContinueArgs listUsersOnFolderContinueArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsFolderUsersListContinueAsync(listUsersOnFolderContinueArgs);
@@ -444,6 +529,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync" />, use
         /// this to paginate through all users on the Paper folder.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="cursor">The cursor obtained from <see
@@ -455,6 +547,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListContinueAsync(string docId,
                                                                                   string cursor)
         {
@@ -478,6 +571,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsFolderUsersListContinue(string docId,
                                                                  string cursor,
                                                                  sys.AsyncCallback callback,
@@ -499,6 +593,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public ListUsersOnFolderResponse EndDocsFolderUsersListContinue(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListUsersOnFolderResponse>;
@@ -517,8 +612,15 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>  - full 'filepath', i.e. the list of folders (both folderId and folderName)
         /// from     the root folder to the folder directly containing the Paper doc.</para>
         /// <para></para>
-        /// <para>Note: If the Paper doc is not in any folder (aka unfiled) the response will
-        /// be empty.</para>
+        /// <para>If the Paper doc is not in any folder (aka unfiled) the response will be
+        /// empty.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -526,6 +628,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(RefPaperDoc refPaperDoc)
         {
             return this.Transport.SendRpcRequestAsync<RefPaperDoc, FoldersContainingPaperDoc, DocLookupError>(refPaperDoc, "api", "/paper/docs/get_folder_info", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.FoldersContainingPaperDoc.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -540,6 +643,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsGetFolderInfo(RefPaperDoc refPaperDoc, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsGetFolderInfoAsync(refPaperDoc);
@@ -554,8 +658,15 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>  - full 'filepath', i.e. the list of folders (both folderId and folderName)
         /// from     the root folder to the folder directly containing the Paper doc.</para>
         /// <para></para>
-        /// <para>Note: If the Paper doc is not in any folder (aka unfiled) the response will
-        /// be empty.</para>
+        /// <para>If the Paper doc is not in any folder (aka unfiled) the response will be
+        /// empty.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -563,6 +674,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(string docId)
         {
             var refPaperDoc = new RefPaperDoc(docId);
@@ -579,6 +691,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsGetFolderInfo(string docId,
                                                        sys.AsyncCallback callback,
                                                        object callbackState = null)
@@ -598,6 +711,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public FoldersContainingPaperDoc EndDocsGetFolderInfo(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FoldersContainingPaperDoc>;
@@ -613,10 +727,18 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Return the list of all Paper docs according to the argument specifications.
         /// To iterate over through the full pagination, pass the cursor to <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listPaperDocsArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsArgs listPaperDocsArgs)
         {
             return this.Transport.SendRpcRequestAsync<ListPaperDocsArgs, ListPaperDocsResponse, enc.Empty>(listPaperDocsArgs, "api", "/paper/docs/list", "user", global::Dropbox.Api.Paper.ListPaperDocsArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, enc.EmptyDecoder.Instance);
@@ -631,6 +753,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsList(ListPaperDocsArgs listPaperDocsArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsListAsync(listPaperDocsArgs);
@@ -642,6 +765,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Return the list of all Paper docs according to the argument specifications.
         /// To iterate over through the full pagination, pass the cursor to <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="filterBy">Allows user to specify how the Paper docs should be
         /// filtered.</param>
@@ -654,6 +784,7 @@ namespace Dropbox.Api.Paper.Routes
         /// error.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsFilterBy filterBy = null,
                                                            ListPaperDocsSortBy sortBy = null,
                                                            ListPaperDocsSortOrder sortOrder = null,
@@ -684,6 +815,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsList(ListPaperDocsFilterBy filterBy = null,
                                               ListPaperDocsSortBy sortBy = null,
                                               ListPaperDocsSortOrder sortOrder = null,
@@ -706,6 +838,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated")]
         public ListPaperDocsResponse EndDocsList(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListPaperDocsResponse>;
@@ -721,6 +854,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync" />, use this to
         /// paginate through all Paper doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listPaperDocsContinueArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -728,6 +868,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListDocsCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListPaperDocsResponse> DocsListContinueAsync(ListPaperDocsContinueArgs listPaperDocsContinueArgs)
         {
             return this.Transport.SendRpcRequestAsync<ListPaperDocsContinueArgs, ListPaperDocsResponse, ListDocsCursorError>(listPaperDocsContinueArgs, "api", "/paper/docs/list/continue", "user", global::Dropbox.Api.Paper.ListPaperDocsContinueArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, global::Dropbox.Api.Paper.ListDocsCursorError.Decoder);
@@ -742,6 +883,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsListContinue(ListPaperDocsContinueArgs listPaperDocsContinueArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsListContinueAsync(listPaperDocsContinueArgs);
@@ -753,6 +895,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync" />, use this to
         /// paginate through all Paper doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="cursor">The cursor obtained from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync" /> or <see
@@ -763,6 +912,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListDocsCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListPaperDocsResponse> DocsListContinueAsync(string cursor)
         {
             var listPaperDocsContinueArgs = new ListPaperDocsContinueArgs(cursor);
@@ -782,6 +932,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsListContinue(string cursor,
                                                       sys.AsyncCallback callback,
                                                       object callbackState = null)
@@ -801,6 +952,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListDocsCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public ListPaperDocsResponse EndDocsListContinue(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListPaperDocsResponse>;
@@ -815,14 +967,21 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Permanently deletes the given Paper doc. This operation is final as the doc
         /// cannot be recovered.</para>
-        /// <para></para>
-        /// <para>Note: This action can be performed only by the doc owner.</para>
+        /// <para>This action can be performed only by the doc owner.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsPermanentlyDeleteAsync(RefPaperDoc refPaperDoc)
         {
             return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/permanently_delete", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -837,6 +996,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsPermanentlyDelete(RefPaperDoc refPaperDoc, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsPermanentlyDeleteAsync(refPaperDoc);
@@ -847,14 +1007,21 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Permanently deletes the given Paper doc. This operation is final as the doc
         /// cannot be recovered.</para>
-        /// <para></para>
-        /// <para>Note: This action can be performed only by the doc owner.</para>
+        /// <para>This action can be performed only by the doc owner.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsPermanentlyDeleteAsync(string docId)
         {
             var refPaperDoc = new RefPaperDoc(docId);
@@ -871,6 +1038,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsPermanentlyDelete(string docId,
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
@@ -889,6 +1057,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public void EndDocsPermanentlyDelete(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task;
@@ -900,6 +1069,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Gets the default sharing policy for the given Paper doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -907,6 +1083,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(RefPaperDoc refPaperDoc)
         {
             return this.Transport.SendRpcRequestAsync<RefPaperDoc, SharingPolicy, DocLookupError>(refPaperDoc, "api", "/paper/docs/sharing_policy/get", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.SharingPolicy.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -921,6 +1098,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsSharingPolicyGet(RefPaperDoc refPaperDoc, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsSharingPolicyGetAsync(refPaperDoc);
@@ -930,6 +1108,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Gets the default sharing policy for the given Paper doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -937,6 +1122,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(string docId)
         {
             var refPaperDoc = new RefPaperDoc(docId);
@@ -953,6 +1139,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsSharingPolicyGet(string docId,
                                                           sys.AsyncCallback callback,
                                                           object callbackState = null)
@@ -972,6 +1159,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public SharingPolicy EndDocsSharingPolicyGet(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SharingPolicy>;
@@ -987,15 +1175,22 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Sets the default sharing policy for the given Paper doc. The default
         /// 'team_sharing_policy' can be changed only by teams, omit this field for personal
         /// accounts.</para>
-        /// <para></para>
-        /// <para>Note: 'public_sharing_policy' cannot be set to the value 'disabled' because
-        /// this setting can be changed only via the team admin console.</para>
+        /// <para>The 'public_sharing_policy' policy can't be set to the value 'disabled'
+        /// because this setting can be changed only via the team admin console.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="paperDocSharingPolicy">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsSharingPolicySetAsync(PaperDocSharingPolicy paperDocSharingPolicy)
         {
             return this.Transport.SendRpcRequestAsync<PaperDocSharingPolicy, enc.Empty, DocLookupError>(paperDocSharingPolicy, "api", "/paper/docs/sharing_policy/set", "user", global::Dropbox.Api.Paper.PaperDocSharingPolicy.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -1010,6 +1205,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsSharingPolicySet(PaperDocSharingPolicy paperDocSharingPolicy, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsSharingPolicySetAsync(paperDocSharingPolicy);
@@ -1021,9 +1217,15 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Sets the default sharing policy for the given Paper doc. The default
         /// 'team_sharing_policy' can be changed only by teams, omit this field for personal
         /// accounts.</para>
-        /// <para></para>
-        /// <para>Note: 'public_sharing_policy' cannot be set to the value 'disabled' because
-        /// this setting can be changed only via the team admin console.</para>
+        /// <para>The 'public_sharing_policy' policy can't be set to the value 'disabled'
+        /// because this setting can be changed only via the team admin console.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="sharingPolicy">The default sharing policy to be set for the Paper
@@ -1032,6 +1234,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsSharingPolicySetAsync(string docId,
                                                 SharingPolicy sharingPolicy)
         {
@@ -1052,6 +1255,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsSharingPolicySet(string docId,
                                                           SharingPolicy sharingPolicy,
                                                           sys.AsyncCallback callback,
@@ -1072,6 +1276,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public void EndDocsSharingPolicySet(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task;
@@ -1083,6 +1288,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Updates an existing Paper doc with the provided content.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="paperDocUpdateArgs">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -1091,6 +1303,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocUpdateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body)
         {
             return this.Transport.SendUploadRequestAsync<PaperDocUpdateArgs, PaperDocCreateUpdateResult, PaperDocUpdateError>(paperDocUpdateArgs, body, "api", "/paper/docs/update", "user", global::Dropbox.Api.Paper.PaperDocUpdateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocUpdateError.Decoder);
@@ -1106,6 +1319,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUpdate(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsUpdateAsync(paperDocUpdateArgs, body);
@@ -1115,6 +1329,13 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Updates an existing Paper doc with the provided content.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="docUpdatePolicy">The policy used for the current update call.</param>
@@ -1128,6 +1349,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocUpdateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(string docId,
                                                                   PaperDocUpdatePolicy docUpdatePolicy,
                                                                   long revision,
@@ -1157,6 +1379,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUpdate(string docId,
                                                 PaperDocUpdatePolicy docUpdatePolicy,
                                                 long revision,
@@ -1183,6 +1406,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocUpdateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public PaperDocCreateUpdateResult EndDocsUpdate(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<PaperDocCreateUpdateResult>;
@@ -1197,8 +1421,14 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Allows an owner or editor to add users to a Paper doc or change their
         /// permissions using their email address or Dropbox account ID.</para>
-        /// <para></para>
-        /// <para>Note: The Doc owner's permissions cannot be changed.</para>
+        /// <para>The doc owner's permissions cannot be changed.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="addPaperDocUser">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1206,6 +1436,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<col.List<AddPaperDocUserMemberResult>> DocsUsersAddAsync(AddPaperDocUser addPaperDocUser)
         {
             return this.Transport.SendRpcRequestAsync<AddPaperDocUser, col.List<AddPaperDocUserMemberResult>, DocLookupError>(addPaperDocUser, "api", "/paper/docs/users/add", "user", global::Dropbox.Api.Paper.AddPaperDocUser.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Paper.AddPaperDocUserMemberResult.Decoder), global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -1220,6 +1451,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersAdd(AddPaperDocUser addPaperDocUser, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsUsersAddAsync(addPaperDocUser);
@@ -1230,8 +1462,14 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Allows an owner or editor to add users to a Paper doc or change their
         /// permissions using their email address or Dropbox account ID.</para>
-        /// <para></para>
-        /// <para>Note: The Doc owner's permissions cannot be changed.</para>
+        /// <para>The doc owner's permissions cannot be changed.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="members">User which should be added to the Paper doc. Specify only
@@ -1245,6 +1483,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<col.List<AddPaperDocUserMemberResult>> DocsUsersAddAsync(string docId,
                                                                                col.IEnumerable<AddMember> members,
                                                                                string customMessage = null,
@@ -1273,6 +1512,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersAdd(string docId,
                                                   col.IEnumerable<AddMember> members,
                                                   string customMessage = null,
@@ -1298,6 +1538,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public col.List<AddPaperDocUserMemberResult> EndDocsUsersAdd(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<col.List<AddPaperDocUserMemberResult>>;
@@ -1315,6 +1556,13 @@ namespace Dropbox.Api.Paper.Routes
         /// visit or the share date.</para>
         /// <para>The list will include both users, the explicitly shared ones as well as those
         /// who came in using the Paper url link.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnPaperDocArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1322,6 +1570,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListAsync(ListUsersOnPaperDocArgs listUsersOnPaperDocArgs)
         {
             return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocArgs, ListUsersOnPaperDocResponse, DocLookupError>(listUsersOnPaperDocArgs, "api", "/paper/docs/users/list", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -1336,6 +1585,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersList(ListUsersOnPaperDocArgs listUsersOnPaperDocArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsUsersListAsync(listUsersOnPaperDocArgs);
@@ -1349,6 +1599,13 @@ namespace Dropbox.Api.Paper.Routes
         /// visit or the share date.</para>
         /// <para>The list will include both users, the explicitly shared ones as well as those
         /// who came in using the Paper url link.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="limit">Size limit per batch. The maximum number of users that can be
@@ -1361,6 +1618,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListAsync(string docId,
                                                                       int limit = 1000,
                                                                       UserOnPaperDocFilter filterBy = null)
@@ -1386,6 +1644,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersList(string docId,
                                                    int limit = 1000,
                                                    UserOnPaperDocFilter filterBy = null,
@@ -1409,6 +1668,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public ListUsersOnPaperDocResponse EndDocsUsersList(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListUsersOnPaperDocResponse>;
@@ -1424,6 +1684,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersListAsync" />, use this to
         /// paginate through all users on the Paper doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnPaperDocContinueArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1431,6 +1698,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListContinueAsync(ListUsersOnPaperDocContinueArgs listUsersOnPaperDocContinueArgs)
         {
             return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocContinueArgs, ListUsersOnPaperDocResponse, ListUsersCursorError>(listUsersOnPaperDocContinueArgs, "api", "/paper/docs/users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder);
@@ -1445,6 +1713,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersListContinue(ListUsersOnPaperDocContinueArgs listUsersOnPaperDocContinueArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsUsersListContinueAsync(listUsersOnPaperDocContinueArgs);
@@ -1456,6 +1725,13 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersListAsync" />, use this to
         /// paginate through all users on the Paper doc.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="cursor">The cursor obtained from <see
@@ -1467,6 +1743,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListContinueAsync(string docId,
                                                                               string cursor)
         {
@@ -1489,6 +1766,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersListContinue(string docId,
                                                            string cursor,
                                                            sys.AsyncCallback callback,
@@ -1510,6 +1788,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public ListUsersOnPaperDocResponse EndDocsUsersListContinue(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListUsersOnPaperDocResponse>;
@@ -1524,14 +1803,21 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Allows an owner or editor to remove users from a Paper doc using their email
         /// address or Dropbox account ID.</para>
-        /// <para></para>
-        /// <para>Note: Doc owner cannot be removed.</para>
+        /// <para>The doc owner cannot be removed.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="removePaperDocUser">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsUsersRemoveAsync(RemovePaperDocUser removePaperDocUser)
         {
             return this.Transport.SendRpcRequestAsync<RemovePaperDocUser, enc.Empty, DocLookupError>(removePaperDocUser, "api", "/paper/docs/users/remove", "user", global::Dropbox.Api.Paper.RemovePaperDocUser.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
@@ -1546,6 +1832,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersRemove(RemovePaperDocUser removePaperDocUser, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DocsUsersRemoveAsync(removePaperDocUser);
@@ -1556,8 +1843,14 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Allows an owner or editor to remove users from a Paper doc using their email
         /// address or Dropbox account ID.</para>
-        /// <para></para>
-        /// <para>Note: Doc owner cannot be removed.</para>
+        /// <para>The doc owner cannot be removed.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="member">User which should be removed from the Paper doc. Specify only
@@ -1566,6 +1859,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task DocsUsersRemoveAsync(string docId,
                                            global::Dropbox.Api.Sharing.MemberSelector member)
         {
@@ -1586,6 +1880,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsUsersRemove(string docId,
                                                      global::Dropbox.Api.Sharing.MemberSelector member,
                                                      sys.AsyncCallback callback,
@@ -1606,6 +1901,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public void EndDocsUsersRemove(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task;
@@ -1613,6 +1909,136 @@ namespace Dropbox.Api.Paper.Routes
             {
                 throw new sys.InvalidOperationException();
             }
+        }
+
+        /// <summary>
+        /// <para>Create a new Paper folder with the provided info.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
+        /// </summary>
+        /// <param name="paperFolderCreateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperFolderCreateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<PaperFolderCreateResult> FoldersCreateAsync(PaperFolderCreateArg paperFolderCreateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<PaperFolderCreateArg, PaperFolderCreateResult, PaperFolderCreateError>(paperFolderCreateArg, "api", "/paper/folders/create", "user", global::Dropbox.Api.Paper.PaperFolderCreateArg.Encoder, global::Dropbox.Api.Paper.PaperFolderCreateResult.Decoder, global::Dropbox.Api.Paper.PaperFolderCreateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the folders create route.</para>
+        /// </summary>
+        /// <param name="paperFolderCreateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginFoldersCreate(PaperFolderCreateArg paperFolderCreateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.FoldersCreateAsync(paperFolderCreateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Create a new Paper folder with the provided info.</para>
+        /// <para>Note that this endpoint will continue to work for content created by users on
+        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
+        /// is running the new version of Paper.</para>
+        /// <para>Refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a> for migration information.</para>
+        /// </summary>
+        /// <param name="name">The name of the new Paper folder.</param>
+        /// <param name="parentFolderId">The encrypted Paper folder Id where the new Paper
+        /// folder should be created. The API user has to have write access to this folder or
+        /// error is thrown. If not supplied, the new folder will be created at top
+        /// level.</param>
+        /// <param name="isTeamFolder">Whether the folder to be created should be a team
+        /// folder. This value will be ignored if parent_folder_id is supplied, as the new
+        /// folder will inherit the type (private or team folder) from its parent. We will by
+        /// default create a top-level private folder if both parent_folder_id and
+        /// is_team_folder are not supplied.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperFolderCreateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<PaperFolderCreateResult> FoldersCreateAsync(string name,
+                                                                  string parentFolderId = null,
+                                                                  bool? isTeamFolder = null)
+        {
+            var paperFolderCreateArg = new PaperFolderCreateArg(name,
+                                                                parentFolderId,
+                                                                isTeamFolder);
+
+            return this.FoldersCreateAsync(paperFolderCreateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the folders create route.</para>
+        /// </summary>
+        /// <param name="name">The name of the new Paper folder.</param>
+        /// <param name="parentFolderId">The encrypted Paper folder Id where the new Paper
+        /// folder should be created. The API user has to have write access to this folder or
+        /// error is thrown. If not supplied, the new folder will be created at top
+        /// level.</param>
+        /// <param name="isTeamFolder">Whether the folder to be created should be a team
+        /// folder. This value will be ignored if parent_folder_id is supplied, as the new
+        /// folder will inherit the type (private or team folder) from its parent. We will by
+        /// default create a top-level private folder if both parent_folder_id and
+        /// is_team_folder are not supplied.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginFoldersCreate(string name,
+                                                   string parentFolderId = null,
+                                                   bool? isTeamFolder = null,
+                                                   sys.AsyncCallback callback = null,
+                                                   object callbackState = null)
+        {
+            var paperFolderCreateArg = new PaperFolderCreateArg(name,
+                                                                parentFolderId,
+                                                                isTeamFolder);
+
+            return this.BeginFoldersCreate(paperFolderCreateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the folders create route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperFolderCreateError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public PaperFolderCreateResult EndFoldersCreate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PaperFolderCreateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
         }
     }
 }

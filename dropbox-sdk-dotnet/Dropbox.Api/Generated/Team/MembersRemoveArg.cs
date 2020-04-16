@@ -44,17 +44,25 @@ namespace Dropbox.Api.Team
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
         /// retain the email address associated with their Dropbox  account and data in their
         /// account that is not restricted to team members. In order to keep the account the
-        /// argument wipe_data should be set to False.</param>
+        /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
+        /// <param name="retainTeamShares">If provided, allows removed users to keep access to
+        /// folders already explicitly shared with them (not via a group) when they are
+        /// downgraded to a Basic account. Users will not retain access to folders that do not
+        /// allow external sharing. In order to keep the sharing relationships, the arguments
+        /// <paramref name="wipeData" /> should be set to <c>false</c> and <paramref
+        /// name="keepAccount" /> should be set to <c>true</c>.</param>
         public MembersRemoveArg(UserSelectorArg user,
                                 bool wipeData = true,
                                 UserSelectorArg transferDestId = null,
                                 UserSelectorArg transferAdminId = null,
-                                bool keepAccount = false)
+                                bool keepAccount = false,
+                                bool retainTeamShares = false)
             : base(user, wipeData)
         {
             this.TransferDestId = transferDestId;
             this.TransferAdminId = transferAdminId;
             this.KeepAccount = keepAccount;
+            this.RetainTeamShares = retainTeamShares;
         }
 
         /// <summary>
@@ -67,6 +75,7 @@ namespace Dropbox.Api.Team
         public MembersRemoveArg()
         {
             this.KeepAccount = false;
+            this.RetainTeamShares = false;
         }
 
         /// <summary>
@@ -85,10 +94,20 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>Downgrade the member to a Basic account. The user will retain the email
         /// address associated with their Dropbox  account and data in their account that is
-        /// not restricted to team members. In order to keep the account the argument wipe_data
-        /// should be set to False.</para>
+        /// not restricted to team members. In order to keep the account the argument <see
+        /// cref="WipeData" /> should be set to <c>false</c>.</para>
         /// </summary>
         public bool KeepAccount { get; protected set; }
+
+        /// <summary>
+        /// <para>If provided, allows removed users to keep access to folders already
+        /// explicitly shared with them (not via a group) when they are downgraded to a Basic
+        /// account. Users will not retain access to folders that do not allow external
+        /// sharing. In order to keep the sharing relationships, the arguments <see
+        /// cref="WipeData" /> should be set to <c>false</c> and <see cref="KeepAccount" />
+        /// should be set to <c>true</c>.</para>
+        /// </summary>
+        public bool RetainTeamShares { get; protected set; }
 
         #region Encoder class
 
@@ -115,6 +134,7 @@ namespace Dropbox.Api.Team
                     WriteProperty("transfer_admin_id", value.TransferAdminId, writer, global::Dropbox.Api.Team.UserSelectorArg.Encoder);
                 }
                 WriteProperty("keep_account", value.KeepAccount, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("retain_team_shares", value.RetainTeamShares, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -161,6 +181,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "keep_account":
                         value.KeepAccount = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "retain_team_shares":
+                        value.RetainTeamShares = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -189,6 +189,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is LegalHolds</para>
+        /// </summary>
+        public bool IsLegalHolds
+        {
+            get
+            {
+                return this is LegalHolds;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHolds, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHolds AsLegalHolds
+        {
+            get
+            {
+                return this as LegalHolds;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Logins</para>
         /// </summary>
         public bool IsLogins
@@ -552,6 +574,12 @@ namespace Dropbox.Api.TeamLog
                     Groups.Encoder.EncodeFields((Groups)value, writer);
                     return;
                 }
+                if (value is LegalHolds)
+                {
+                    WriteProperty(".tag", "legal_holds", writer, enc.StringEncoder.Instance);
+                    LegalHolds.Encoder.EncodeFields((LegalHolds)value, writer);
+                    return;
+                }
                 if (value is Logins)
                 {
                     WriteProperty(".tag", "logins", writer, enc.StringEncoder.Instance);
@@ -682,6 +710,8 @@ namespace Dropbox.Api.TeamLog
                         return FileRequests.Decoder.DecodeFields(reader);
                     case "groups":
                         return Groups.Decoder.DecodeFields(reader);
+                    case "legal_holds":
+                        return LegalHolds.Decoder.DecodeFields(reader);
                     case "logins":
                         return Logins.Decoder.DecodeFields(reader);
                     case "members":
@@ -1197,6 +1227,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Groups Create()
                 {
                     return Groups.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Events that involve placing holds on content for litigation reasons</para>
+        /// </summary>
+        public sealed class LegalHolds : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHolds> Encoder = new LegalHoldsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHolds> Decoder = new LegalHoldsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHolds" /> class.</para>
+            /// </summary>
+            private LegalHolds()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHolds</para>
+            /// </summary>
+            public static readonly LegalHolds Instance = new LegalHolds();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHolds" />.</para>
+            /// </summary>
+            private class LegalHoldsEncoder : enc.StructEncoder<LegalHolds>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHolds value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHolds" />.</para>
+            /// </summary>
+            private class LegalHoldsDecoder : enc.StructDecoder<LegalHolds>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHolds" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHolds Create()
+                {
+                    return LegalHolds.Instance;
                 }
 
             }

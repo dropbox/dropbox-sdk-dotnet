@@ -124,6 +124,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UnlinkDevice</para>
+        /// </summary>
+        public bool IsUnlinkDevice
+        {
+            get
+            {
+                return this is UnlinkDevice;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnlinkDevice, or <c>null</c>.</para>
+        /// </summary>
+        public UnlinkDevice AsUnlinkDevice
+        {
+            get
+            {
+                return this as UnlinkDevice;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UnlinkSession</para>
         /// </summary>
         public bool IsUnlinkSession
@@ -205,6 +227,12 @@ namespace Dropbox.Api.TeamLog
                     UnlinkApp.Encoder.EncodeFields((UnlinkApp)value, writer);
                     return;
                 }
+                if (value is UnlinkDevice)
+                {
+                    WriteProperty(".tag", "unlink_device", writer, enc.StringEncoder.Instance);
+                    UnlinkDevice.Encoder.EncodeFields((UnlinkDevice)value, writer);
+                    return;
+                }
                 if (value is UnlinkSession)
                 {
                     WriteProperty(".tag", "unlink_session", writer, enc.StringEncoder.Instance);
@@ -257,6 +285,8 @@ namespace Dropbox.Api.TeamLog
                         return RestoreFileOrFolder.Decoder.DecodeFields(reader);
                     case "unlink_app":
                         return UnlinkApp.Decoder.DecodeFields(reader);
+                    case "unlink_device":
+                        return UnlinkDevice.Decoder.DecodeFields(reader);
                     case "unlink_session":
                         return UnlinkSession.Decoder.DecodeFields(reader);
                     default:
@@ -540,6 +570,76 @@ namespace Dropbox.Api.TeamLog
                 protected override UnlinkApp Create()
                 {
                     return UnlinkApp.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The unlink device object</para>
+        /// </summary>
+        public sealed class UnlinkDevice : QuickActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnlinkDevice> Encoder = new UnlinkDeviceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnlinkDevice> Decoder = new UnlinkDeviceDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnlinkDevice" />
+            /// class.</para>
+            /// </summary>
+            private UnlinkDevice()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnlinkDevice</para>
+            /// </summary>
+            public static readonly UnlinkDevice Instance = new UnlinkDevice();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnlinkDevice" />.</para>
+            /// </summary>
+            private class UnlinkDeviceEncoder : enc.StructEncoder<UnlinkDevice>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnlinkDevice value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnlinkDevice" />.</para>
+            /// </summary>
+            private class UnlinkDeviceDecoder : enc.StructDecoder<UnlinkDevice>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnlinkDevice" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnlinkDevice Create()
+                {
+                    return UnlinkDevice.Instance;
                 }
 
             }

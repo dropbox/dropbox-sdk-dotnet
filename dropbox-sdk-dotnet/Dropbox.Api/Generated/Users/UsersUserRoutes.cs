@@ -31,6 +31,97 @@ namespace Dropbox.Api.Users.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Get a list of feature values that may be configured for the current
+        /// account.</para>
+        /// </summary>
+        /// <param name="userFeaturesGetValuesBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UserFeaturesGetValuesBatchError"/>.</exception>
+        public t.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(UserFeaturesGetValuesBatchArg userFeaturesGetValuesBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UserFeaturesGetValuesBatchArg, UserFeaturesGetValuesBatchResult, UserFeaturesGetValuesBatchError>(userFeaturesGetValuesBatchArg, "api", "/users/features/get_values", "user", global::Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Encoder, global::Dropbox.Api.Users.UserFeaturesGetValuesBatchResult.Decoder, global::Dropbox.Api.Users.UserFeaturesGetValuesBatchError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the features get values route.</para>
+        /// </summary>
+        /// <param name="userFeaturesGetValuesBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginFeaturesGetValues(UserFeaturesGetValuesBatchArg userFeaturesGetValuesBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.FeaturesGetValuesAsync(userFeaturesGetValuesBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get a list of feature values that may be configured for the current
+        /// account.</para>
+        /// </summary>
+        /// <param name="features">A list of features in <see cref="UserFeature" />. If the
+        /// list is empty, this route will return <see cref="UserFeaturesGetValuesBatchError"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UserFeaturesGetValuesBatchError"/>.</exception>
+        public t.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(col.IEnumerable<UserFeature> features)
+        {
+            var userFeaturesGetValuesBatchArg = new UserFeaturesGetValuesBatchArg(features);
+
+            return this.FeaturesGetValuesAsync(userFeaturesGetValuesBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the features get values route.</para>
+        /// </summary>
+        /// <param name="features">A list of features in <see cref="UserFeature" />. If the
+        /// list is empty, this route will return <see cref="UserFeaturesGetValuesBatchError"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginFeaturesGetValues(col.IEnumerable<UserFeature> features,
+                                                       sys.AsyncCallback callback,
+                                                       object callbackState = null)
+        {
+            var userFeaturesGetValuesBatchArg = new UserFeaturesGetValuesBatchArg(features);
+
+            return this.BeginFeaturesGetValues(userFeaturesGetValuesBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the features get values route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UserFeaturesGetValuesBatchError"/>.</exception>
+        public UserFeaturesGetValuesBatchResult EndFeaturesGetValues(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<UserFeaturesGetValuesBatchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Get information about a user's account.</para>
         /// </summary>
         /// <param name="getAccountArg">The request parameters</param>

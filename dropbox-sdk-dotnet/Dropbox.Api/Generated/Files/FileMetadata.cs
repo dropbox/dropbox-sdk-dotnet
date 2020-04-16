@@ -87,6 +87,8 @@ namespace Dropbox.Api.Files
         /// verify data integrity. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
+        /// <param name="fileLockInfo">If present, the metadata associated with the file's
+        /// current lock.</param>
         public FileMetadata(string name,
                             string id,
                             sys.DateTime clientModified,
@@ -103,7 +105,8 @@ namespace Dropbox.Api.Files
                             ExportInfo exportInfo = null,
                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                             bool? hasExplicitSharedMembers = null,
-                            string contentHash = null)
+                            string contentHash = null,
+                            FileLockMetadata fileLockInfo = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId)
         {
             if (id == null)
@@ -155,6 +158,7 @@ namespace Dropbox.Api.Files
             this.PropertyGroups = propertyGroupsList;
             this.HasExplicitSharedMembers = hasExplicitSharedMembers;
             this.ContentHash = contentHash;
+            this.FileLockInfo = fileLockInfo;
         }
 
         /// <summary>
@@ -255,6 +259,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public string ContentHash { get; protected set; }
 
+        /// <summary>
+        /// <para>If present, the metadata associated with the file's current lock.</para>
+        /// </summary>
+        public FileLockMetadata FileLockInfo { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -315,6 +324,10 @@ namespace Dropbox.Api.Files
                 if (value.ContentHash != null)
                 {
                     WriteProperty("content_hash", value.ContentHash, writer, enc.StringEncoder.Instance);
+                }
+                if (value.FileLockInfo != null)
+                {
+                    WriteProperty("file_lock_info", value.FileLockInfo, writer, global::Dropbox.Api.Files.FileLockMetadata.Encoder);
                 }
             }
         }
@@ -398,6 +411,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "content_hash":
                         value.ContentHash = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "file_lock_info":
+                        value.FileLockInfo = global::Dropbox.Api.Files.FileLockMetadata.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

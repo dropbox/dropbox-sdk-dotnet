@@ -47,13 +47,15 @@ namespace Dropbox.Api.Sharing
         /// is present only if the folder is contained within another shared folder.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
+        /// <param name="parentFolderName">Display name for the parent folder.</param>
         public SharedFolderMetadataBase(AccessLevel accessType,
                                         bool isInsideTeamFolder,
                                         bool isTeamFolder,
                                         col.IEnumerable<string> ownerDisplayNames = null,
                                         global::Dropbox.Api.Users.Team ownerTeam = null,
                                         string parentSharedFolderId = null,
-                                        string pathLower = null)
+                                        string pathLower = null,
+                                        string parentFolderName = null)
         {
             if (accessType == null)
             {
@@ -77,6 +79,7 @@ namespace Dropbox.Api.Sharing
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
             this.PathLower = pathLower;
+            this.ParentFolderName = parentFolderName;
         }
 
         /// <summary>
@@ -131,6 +134,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string PathLower { get; protected set; }
 
+        /// <summary>
+        /// <para>Display name for the parent folder.</para>
+        /// </summary>
+        public string ParentFolderName { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -163,6 +171,10 @@ namespace Dropbox.Api.Sharing
                 if (value.PathLower != null)
                 {
                     WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
+                }
+                if (value.ParentFolderName != null)
+                {
+                    WriteProperty("parent_folder_name", value.ParentFolderName, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -217,6 +229,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "parent_folder_name":
+                        value.ParentFolderName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

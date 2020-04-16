@@ -31,12 +31,32 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="JoinTeamDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="linkedApps">Linked applications.</param>
-        /// <param name="linkedDevices">Linked devices.</param>
-        /// <param name="linkedSharedFolders">Linked shared folders.</param>
+        /// <param name="linkedApps">Linked applications. (Deprecated) Please use
+        /// has_linked_apps boolean field instead.</param>
+        /// <param name="linkedDevices">Linked devices. (Deprecated) Please use
+        /// has_linked_devices boolean field instead.</param>
+        /// <param name="linkedSharedFolders">Linked shared folders. (Deprecated) Please use
+        /// has_linked_shared_folders boolean field instead.</param>
+        /// <param name="wasLinkedAppsTruncated">True if the linked_apps list was truncated to
+        /// the maximum supported length (50).</param>
+        /// <param name="wasLinkedDevicesTruncated">True if the linked_devices list was
+        /// truncated to the maximum supported length (50).</param>
+        /// <param name="wasLinkedSharedFoldersTruncated">True if the linked_shared_folders
+        /// list was truncated to the maximum supported length (50).</param>
+        /// <param name="hasLinkedApps">True if the user had linked apps at event time.</param>
+        /// <param name="hasLinkedDevices">True if the user had linked apps at event
+        /// time.</param>
+        /// <param name="hasLinkedSharedFolders">True if the user had linked shared folders at
+        /// event time.</param>
         public JoinTeamDetails(col.IEnumerable<UserLinkedAppLogInfo> linkedApps,
                                col.IEnumerable<LinkedDeviceLogInfo> linkedDevices,
-                               col.IEnumerable<FolderLogInfo> linkedSharedFolders)
+                               col.IEnumerable<FolderLogInfo> linkedSharedFolders,
+                               bool? wasLinkedAppsTruncated = null,
+                               bool? wasLinkedDevicesTruncated = null,
+                               bool? wasLinkedSharedFoldersTruncated = null,
+                               bool? hasLinkedApps = null,
+                               bool? hasLinkedDevices = null,
+                               bool? hasLinkedSharedFolders = null)
         {
             var linkedAppsList = enc.Util.ToList(linkedApps);
 
@@ -62,6 +82,12 @@ namespace Dropbox.Api.TeamLog
             this.LinkedApps = linkedAppsList;
             this.LinkedDevices = linkedDevicesList;
             this.LinkedSharedFolders = linkedSharedFoldersList;
+            this.WasLinkedAppsTruncated = wasLinkedAppsTruncated;
+            this.WasLinkedDevicesTruncated = wasLinkedDevicesTruncated;
+            this.WasLinkedSharedFoldersTruncated = wasLinkedSharedFoldersTruncated;
+            this.HasLinkedApps = hasLinkedApps;
+            this.HasLinkedDevices = hasLinkedDevices;
+            this.HasLinkedSharedFolders = hasLinkedSharedFolders;
         }
 
         /// <summary>
@@ -76,19 +102,55 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Linked applications.</para>
+        /// <para>Linked applications. (Deprecated) Please use has_linked_apps boolean field
+        /// instead.</para>
         /// </summary>
         public col.IList<UserLinkedAppLogInfo> LinkedApps { get; protected set; }
 
         /// <summary>
-        /// <para>Linked devices.</para>
+        /// <para>Linked devices. (Deprecated) Please use has_linked_devices boolean field
+        /// instead.</para>
         /// </summary>
         public col.IList<LinkedDeviceLogInfo> LinkedDevices { get; protected set; }
 
         /// <summary>
-        /// <para>Linked shared folders.</para>
+        /// <para>Linked shared folders. (Deprecated) Please use has_linked_shared_folders
+        /// boolean field instead.</para>
         /// </summary>
         public col.IList<FolderLogInfo> LinkedSharedFolders { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the linked_apps list was truncated to the maximum supported length
+        /// (50).</para>
+        /// </summary>
+        public bool? WasLinkedAppsTruncated { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the linked_devices list was truncated to the maximum supported length
+        /// (50).</para>
+        /// </summary>
+        public bool? WasLinkedDevicesTruncated { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the linked_shared_folders list was truncated to the maximum supported
+        /// length (50).</para>
+        /// </summary>
+        public bool? WasLinkedSharedFoldersTruncated { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the user had linked apps at event time.</para>
+        /// </summary>
+        public bool? HasLinkedApps { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the user had linked apps at event time.</para>
+        /// </summary>
+        public bool? HasLinkedDevices { get; protected set; }
+
+        /// <summary>
+        /// <para>True if the user had linked shared folders at event time.</para>
+        /// </summary>
+        public bool? HasLinkedSharedFolders { get; protected set; }
 
         #region Encoder class
 
@@ -107,6 +169,30 @@ namespace Dropbox.Api.TeamLog
                 WriteListProperty("linked_apps", value.LinkedApps, writer, global::Dropbox.Api.TeamLog.UserLinkedAppLogInfo.Encoder);
                 WriteListProperty("linked_devices", value.LinkedDevices, writer, global::Dropbox.Api.TeamLog.LinkedDeviceLogInfo.Encoder);
                 WriteListProperty("linked_shared_folders", value.LinkedSharedFolders, writer, global::Dropbox.Api.TeamLog.FolderLogInfo.Encoder);
+                if (value.WasLinkedAppsTruncated != null)
+                {
+                    WriteProperty("was_linked_apps_truncated", value.WasLinkedAppsTruncated.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.WasLinkedDevicesTruncated != null)
+                {
+                    WriteProperty("was_linked_devices_truncated", value.WasLinkedDevicesTruncated.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.WasLinkedSharedFoldersTruncated != null)
+                {
+                    WriteProperty("was_linked_shared_folders_truncated", value.WasLinkedSharedFoldersTruncated.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.HasLinkedApps != null)
+                {
+                    WriteProperty("has_linked_apps", value.HasLinkedApps.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.HasLinkedDevices != null)
+                {
+                    WriteProperty("has_linked_devices", value.HasLinkedDevices.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.HasLinkedSharedFolders != null)
+                {
+                    WriteProperty("has_linked_shared_folders", value.HasLinkedSharedFolders.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 
@@ -147,6 +233,24 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "linked_shared_folders":
                         value.LinkedSharedFolders = ReadList<FolderLogInfo>(reader, global::Dropbox.Api.TeamLog.FolderLogInfo.Decoder);
+                        break;
+                    case "was_linked_apps_truncated":
+                        value.WasLinkedAppsTruncated = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "was_linked_devices_truncated":
+                        value.WasLinkedDevicesTruncated = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "was_linked_shared_folders_truncated":
+                        value.WasLinkedSharedFoldersTruncated = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "has_linked_apps":
+                        value.HasLinkedApps = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "has_linked_devices":
+                        value.HasLinkedDevices = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "has_linked_shared_folders":
+                        value.HasLinkedSharedFolders = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

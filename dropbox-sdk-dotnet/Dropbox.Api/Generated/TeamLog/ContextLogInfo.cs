@@ -123,6 +123,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is OrganizationTeam</para>
+        /// </summary>
+        public bool IsOrganizationTeam
+        {
+            get
+            {
+                return this is OrganizationTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a OrganizationTeam, or <c>null</c>.</para>
+        /// </summary>
+        public OrganizationTeam AsOrganizationTeam
+        {
+            get
+            {
+                return this as OrganizationTeam;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TrustedNonTeamMember</para>
         /// </summary>
         public bool IsTrustedNonTeamMember
@@ -204,6 +226,12 @@ namespace Dropbox.Api.TeamLog
                     Team.Encoder.EncodeFields((Team)value, writer);
                     return;
                 }
+                if (value is OrganizationTeam)
+                {
+                    WriteProperty(".tag", "organization_team", writer, enc.StringEncoder.Instance);
+                    OrganizationTeam.Encoder.EncodeFields((OrganizationTeam)value, writer);
+                    return;
+                }
                 if (value is TrustedNonTeamMember)
                 {
                     WriteProperty(".tag", "trusted_non_team_member", writer, enc.StringEncoder.Instance);
@@ -256,6 +284,8 @@ namespace Dropbox.Api.TeamLog
                         return Anonymous.Decoder.DecodeFields(reader);
                     case "team":
                         return Team.Decoder.DecodeFields(reader);
+                    case "organization_team":
+                        return OrganizationTeam.Decoder.DecodeFields(reader);
                     case "trusted_non_team_member":
                         return TrustedNonTeamMember.Decoder.DecodeFields(reader);
                     default:
@@ -575,6 +605,95 @@ namespace Dropbox.Api.TeamLog
                     return Team.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Action was done on behalf of a team that's part of an organization.</para>
+        /// </summary>
+        public sealed class OrganizationTeam : ContextLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<OrganizationTeam> Encoder = new OrganizationTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<OrganizationTeam> Decoder = new OrganizationTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="OrganizationTeam" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public OrganizationTeam(TeamLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="OrganizationTeam" />
+            /// class.</para>
+            /// </summary>
+            private OrganizationTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="OrganizationTeam" />.</para>
+            /// </summary>
+            private class OrganizationTeamEncoder : enc.StructEncoder<OrganizationTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(OrganizationTeam value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("organization_team", value.Value, writer, global::Dropbox.Api.TeamLog.TeamLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="OrganizationTeam" />.</para>
+            /// </summary>
+            private class OrganizationTeamDecoder : enc.StructDecoder<OrganizationTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="OrganizationTeam" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override OrganizationTeam Create()
+                {
+                    return new OrganizationTeam();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override OrganizationTeam DecodeFields(enc.IJsonReader reader)
+                {
+                    return new OrganizationTeam(global::Dropbox.Api.TeamLog.TeamLogInfo.Decoder.DecodeFields(reader));
+                }
             }
 
             #endregion

@@ -33,7 +33,7 @@ namespace Dropbox.Api.FileProperties
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file.</param>
+        /// file. No two groups in the input should  refer to the same template.</param>
         public AddPropertiesArg(string path,
                                 col.IEnumerable<PropertyGroup> propertyGroups)
         {
@@ -74,7 +74,8 @@ namespace Dropbox.Api.FileProperties
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>The property groups which are to be added to a Dropbox file.</para>
+        /// <para>The property groups which are to be added to a Dropbox file. No two groups in
+        /// the input should  refer to the same template.</para>
         /// </summary>
         public col.IList<PropertyGroup> PropertyGroups { get; protected set; }
 

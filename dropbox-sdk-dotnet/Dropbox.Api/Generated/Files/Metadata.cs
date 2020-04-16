@@ -19,6 +19,7 @@ namespace Dropbox.Api.Files
     /// <seealso cref="FileMetadata" />
     /// <seealso cref="FolderMetadata" />
     /// <seealso cref="GetCopyReferenceResult" />
+    /// <seealso cref="LockFileResult" />
     /// <seealso cref="RelocationBatchResultData" />
     /// <seealso cref="RelocationResult" />
     /// <seealso cref="SaveCopyReferenceResult" />
