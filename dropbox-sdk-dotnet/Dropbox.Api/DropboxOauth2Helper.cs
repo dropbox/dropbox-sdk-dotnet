@@ -8,6 +8,7 @@ namespace Dropbox.Api
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Net;
     using System.Net.Http;
     using System.Text;
@@ -54,6 +55,25 @@ namespace Dropbox.Api
         /// Create one short-lived token with an expiration
         /// </summary>
         Online
+    }
+
+    /// <summary>
+    /// Which scopes that have already been granted to include when requesting scopes
+    /// </summary>
+    public enum IncludeGrantedScopes
+    {
+        /// <summary>
+        /// Default, requests only the scopes passed in to the oauth request
+        /// </summary>
+        None,
+        /// <summary>
+        /// Token should include all previously granted user scopes as well as requested scopes
+        /// </summary>
+        User, 
+        /// <summary>
+        /// Token should include all previously granted team scopes as well as requested scopes
+        /// </summary>
+        Team
     }
 
     /// <summary>
@@ -227,12 +247,14 @@ namespace Dropbox.Api
         /// different account.</param>
         /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
         /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
+        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</param>
+        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None)
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
 
-            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole, forceReauthentication, tokenAccessType);
+            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole, forceReauthentication, tokenAccessType, scopeList, includeGrantedScopes);
         }
 
         /// <summary>
@@ -265,8 +287,11 @@ namespace Dropbox.Api
         /// different account.</param>
         /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
         /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
+        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</param>
+        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None
+            )
         {
             if (string.IsNullOrWhiteSpace(clientId))
             {
@@ -328,6 +353,16 @@ namespace Dropbox.Api
             if (tokenAccessType != TokenAccessType.Legacy)
             {
                 queryBuilder.Append("&token_access_type=").Append(tokenAccessType.ToString().ToLower());
+            }
+
+            if (scopeList != null)
+            {
+                queryBuilder.Append("&scope=").Append(String.Join(" ", scopeList));
+            }
+
+            if(includeGrantedScopes != IncludeGrantedScopes.None)
+            {
+                queryBuilder.Append("&include_granted_scopes=").Append(includeGrantedScopes.ToString().ToLower());
             }
 
             var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")
@@ -474,6 +509,12 @@ namespace Dropbox.Api
                     expiresIn = json["expires_in"].ToObject<int>();
                 }
 
+                string[] scopeList = null;
+                if (json.Value<string>("scope") != null)
+                {
+                    scopeList = json["scope"].ToString().Split(' ');
+                }
+
                 if (expiresIn == -1)
                 {
                     return new OAuth2Response(
@@ -489,7 +530,8 @@ namespace Dropbox.Api
                     json["uid"].ToString(),
                     null,
                     json["token_type"].ToString(),
-                    expiresIn);
+                    expiresIn,
+                    scopeList);
             }
             finally
             {
@@ -578,7 +620,7 @@ namespace Dropbox.Api
     /// </summary>
     public sealed class OAuth2Response
     {
-        internal OAuth2Response(string accessToken, string refreshToken, string uid, string state, string tokenType, int expiresIn)
+        internal OAuth2Response(string accessToken, string refreshToken, string uid, string state, string tokenType, int expiresIn, string[] scopeList)
         {
             if (string.IsNullOrEmpty(accessToken) || uid == null)
             {
@@ -591,7 +633,7 @@ namespace Dropbox.Api
             this.TokenType = tokenType;
             this.RefreshToken = refreshToken;
             this.ExpiresAt = DateTime.Now.AddSeconds(expiresIn);
-
+            this.ScopeList = scopeList;
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuth2Response"/> class.
@@ -613,6 +655,7 @@ namespace Dropbox.Api
             this.TokenType = tokenType;
             this.RefreshToken = null;
             this.ExpiresAt = null;
+            this.ScopeList = null;
         }
 
         /// <summary>
@@ -660,6 +703,11 @@ namespace Dropbox.Api
         /// This is only filled if offline or online access type was selected.
         /// </summary>
         public Nullable<DateTime> ExpiresAt { get; private set; }
+
+        /// <summary>
+        /// List of scopes this oauth2 request granted the user
+        /// </summary>
+        public string[] ScopeList { get; private set; }
     }
 
     /// <summary>
