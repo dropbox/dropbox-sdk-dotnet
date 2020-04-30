@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed team member permissions for Paper doc.</para>
+    /// <para>Changed member permissions for Paper doc.</para>
     /// </summary>
     public class PaperDocChangeMemberRoleDetails
     {

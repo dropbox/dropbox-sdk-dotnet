@@ -688,6 +688,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupName">Group name.</param>
+        /// <param name="addCreatorAsOwner">Automatically add the creator of the group.</param>
         /// <param name="groupExternalId">The creator of a team can associate an arbitrary
         /// external ID to the group.</param>
         /// <param name="groupManagementType">Whether the team can be managed by selected
@@ -698,10 +699,12 @@ namespace Dropbox.Api.Team.Routes
         /// processing the request; This will contain a <see
         /// cref="GroupCreateError"/>.</exception>
         public t.Task<GroupFullInfo> GroupsCreateAsync(string groupName,
+                                                       bool addCreatorAsOwner = false,
                                                        string groupExternalId = null,
                                                        global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
         {
             var groupCreateArg = new GroupCreateArg(groupName,
+                                                    addCreatorAsOwner,
                                                     groupExternalId,
                                                     groupManagementType);
 
@@ -712,6 +715,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the groups create route.</para>
         /// </summary>
         /// <param name="groupName">Group name.</param>
+        /// <param name="addCreatorAsOwner">Automatically add the creator of the group.</param>
         /// <param name="groupExternalId">The creator of a team can associate an arbitrary
         /// external ID to the group.</param>
         /// <param name="groupManagementType">Whether the team can be managed by selected
@@ -722,12 +726,14 @@ namespace Dropbox.Api.Team.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGroupsCreate(string groupName,
+                                                  bool addCreatorAsOwner = false,
                                                   string groupExternalId = null,
                                                   global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
             var groupCreateArg = new GroupCreateArg(groupName,
+                                                    addCreatorAsOwner,
                                                     groupExternalId,
                                                     groupManagementType);
 
@@ -1775,6 +1781,659 @@ namespace Dropbox.Api.Team.Routes
         public GroupFullInfo EndGroupsUpdate(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GroupFullInfo>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Creates new legal hold policy.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="legalHoldsPolicyCreateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyCreateError"/>.</exception>
+        public t.Task<LegalHoldPolicy> LegalHoldsCreatePolicyAsync(LegalHoldsPolicyCreateArg legalHoldsPolicyCreateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyCreateArg, LegalHoldPolicy, LegalHoldsPolicyCreateError>(legalHoldsPolicyCreateArg, "api", "/team/legal_holds/create_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsPolicyCreateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds create policy route.</para>
+        /// </summary>
+        /// <param name="legalHoldsPolicyCreateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsCreatePolicy(LegalHoldsPolicyCreateArg legalHoldsPolicyCreateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsCreatePolicyAsync(legalHoldsPolicyCreateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Creates new legal hold policy.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="name">Policy name.</param>
+        /// <param name="members">List of team members added to the hold.</param>
+        /// <param name="description">A description of the legal hold policy.</param>
+        /// <param name="startDate">start date of the legal hold policy.</param>
+        /// <param name="endDate">end date of the legal hold policy.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyCreateError"/>.</exception>
+        public t.Task<LegalHoldPolicy> LegalHoldsCreatePolicyAsync(string name,
+                                                                   col.IEnumerable<string> members,
+                                                                   string description = null,
+                                                                   sys.DateTime? startDate = null,
+                                                                   sys.DateTime? endDate = null)
+        {
+            var legalHoldsPolicyCreateArg = new LegalHoldsPolicyCreateArg(name,
+                                                                          members,
+                                                                          description,
+                                                                          startDate,
+                                                                          endDate);
+
+            return this.LegalHoldsCreatePolicyAsync(legalHoldsPolicyCreateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds create policy route.</para>
+        /// </summary>
+        /// <param name="name">Policy name.</param>
+        /// <param name="members">List of team members added to the hold.</param>
+        /// <param name="description">A description of the legal hold policy.</param>
+        /// <param name="startDate">start date of the legal hold policy.</param>
+        /// <param name="endDate">end date of the legal hold policy.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsCreatePolicy(string name,
+                                                            col.IEnumerable<string> members,
+                                                            string description = null,
+                                                            sys.DateTime? startDate = null,
+                                                            sys.DateTime? endDate = null,
+                                                            sys.AsyncCallback callback = null,
+                                                            object callbackState = null)
+        {
+            var legalHoldsPolicyCreateArg = new LegalHoldsPolicyCreateArg(name,
+                                                                          members,
+                                                                          description,
+                                                                          startDate,
+                                                                          endDate);
+
+            return this.BeginLegalHoldsCreatePolicy(legalHoldsPolicyCreateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds create policy
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyCreateError"/>.</exception>
+        public LegalHoldPolicy EndLegalHoldsCreatePolicy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LegalHoldPolicy>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Gets a legal hold by Id.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="legalHoldsGetPolicyArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsGetPolicyError"/>.</exception>
+        public t.Task<LegalHoldPolicy> LegalHoldsGetPolicyAsync(LegalHoldsGetPolicyArg legalHoldsGetPolicyArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsGetPolicyArg, LegalHoldPolicy, LegalHoldsGetPolicyError>(legalHoldsGetPolicyArg, "api", "/team/legal_holds/get_policy", "team", global::Dropbox.Api.Team.LegalHoldsGetPolicyArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsGetPolicyError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds get policy route.</para>
+        /// </summary>
+        /// <param name="legalHoldsGetPolicyArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsGetPolicy(LegalHoldsGetPolicyArg legalHoldsGetPolicyArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsGetPolicyAsync(legalHoldsGetPolicyArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Gets a legal hold by Id.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsGetPolicyError"/>.</exception>
+        public t.Task<LegalHoldPolicy> LegalHoldsGetPolicyAsync(string id)
+        {
+            var legalHoldsGetPolicyArg = new LegalHoldsGetPolicyArg(id);
+
+            return this.LegalHoldsGetPolicyAsync(legalHoldsGetPolicyArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds get policy route.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsGetPolicy(string id,
+                                                         sys.AsyncCallback callback,
+                                                         object callbackState = null)
+        {
+            var legalHoldsGetPolicyArg = new LegalHoldsGetPolicyArg(id);
+
+            return this.BeginLegalHoldsGetPolicy(legalHoldsGetPolicyArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds get policy route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsGetPolicyError"/>.</exception>
+        public LegalHoldPolicy EndLegalHoldsGetPolicy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LegalHoldPolicy>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>The legal holds list held revisions route</para>
+        /// </summary>
+        /// <param name="legalHoldsListHeldRevisionsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsAsync(LegalHoldsListHeldRevisionsArg legalHoldsListHeldRevisionsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsListHeldRevisionsArg, LegalHoldsListHeldRevisionResult, LegalHoldsListHeldRevisionsError>(legalHoldsListHeldRevisionsArg, "api", "/team/legal_holds/list_held_revisions", "team", global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds list held revisions
+        /// route.</para>
+        /// </summary>
+        /// <param name="legalHoldsListHeldRevisionsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsListHeldRevisions(LegalHoldsListHeldRevisionsArg legalHoldsListHeldRevisionsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsListHeldRevisionsAsync(legalHoldsListHeldRevisionsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>The legal holds list held revisions route</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsAsync(string id)
+        {
+            var legalHoldsListHeldRevisionsArg = new LegalHoldsListHeldRevisionsArg(id);
+
+            return this.LegalHoldsListHeldRevisionsAsync(legalHoldsListHeldRevisionsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds list held revisions
+        /// route.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsListHeldRevisions(string id,
+                                                                 sys.AsyncCallback callback,
+                                                                 object callbackState = null)
+        {
+            var legalHoldsListHeldRevisionsArg = new LegalHoldsListHeldRevisionsArg(id);
+
+            return this.BeginLegalHoldsListHeldRevisions(legalHoldsListHeldRevisionsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds list held
+        /// revisions route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
+        public LegalHoldsListHeldRevisionResult EndLegalHoldsListHeldRevisions(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LegalHoldsListHeldRevisionResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>The legal holds list held revisions continue route</para>
+        /// </summary>
+        /// <param name="legalHoldsListHeldRevisionsContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsContinueAsync(LegalHoldsListHeldRevisionsContinueArg legalHoldsListHeldRevisionsContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsListHeldRevisionsContinueArg, LegalHoldsListHeldRevisionResult, LegalHoldsListHeldRevisionsError>(legalHoldsListHeldRevisionsContinueArg, "api", "/team/legal_holds/list_held_revisions_continue", "team", global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds list held revisions continue
+        /// route.</para>
+        /// </summary>
+        /// <param name="legalHoldsListHeldRevisionsContinueArg">The request
+        /// parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsListHeldRevisionsContinue(LegalHoldsListHeldRevisionsContinueArg legalHoldsListHeldRevisionsContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsListHeldRevisionsContinueAsync(legalHoldsListHeldRevisionsContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>The legal holds list held revisions continue route</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="cursor">cursor of list held revisions.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsContinueAsync(string id,
+                                                                                                 string cursor = null)
+        {
+            var legalHoldsListHeldRevisionsContinueArg = new LegalHoldsListHeldRevisionsContinueArg(id,
+                                                                                                    cursor);
+
+            return this.LegalHoldsListHeldRevisionsContinueAsync(legalHoldsListHeldRevisionsContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds list held revisions continue
+        /// route.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="cursor">cursor of list held revisions.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsListHeldRevisionsContinue(string id,
+                                                                         string cursor = null,
+                                                                         sys.AsyncCallback callback = null,
+                                                                         object callbackState = null)
+        {
+            var legalHoldsListHeldRevisionsContinueArg = new LegalHoldsListHeldRevisionsContinueArg(id,
+                                                                                                    cursor);
+
+            return this.BeginLegalHoldsListHeldRevisionsContinue(legalHoldsListHeldRevisionsContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds list held
+        /// revisions continue route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
+        public LegalHoldsListHeldRevisionResult EndLegalHoldsListHeldRevisionsContinue(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LegalHoldsListHeldRevisionResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Lists legal holds on a team.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="legalHoldsListPoliciesArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListPoliciesError"/>.</exception>
+        public t.Task<LegalHoldsListPoliciesResult> LegalHoldsListPoliciesAsync(LegalHoldsListPoliciesArg legalHoldsListPoliciesArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsListPoliciesArg, LegalHoldsListPoliciesResult, LegalHoldsListPoliciesError>(legalHoldsListPoliciesArg, "api", "/team/legal_holds/list_policies", "team", global::Dropbox.Api.Team.LegalHoldsListPoliciesArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListPoliciesResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListPoliciesError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds list policies route.</para>
+        /// </summary>
+        /// <param name="legalHoldsListPoliciesArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsListPolicies(LegalHoldsListPoliciesArg legalHoldsListPoliciesArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsListPoliciesAsync(legalHoldsListPoliciesArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Lists legal holds on a team.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="includeReleased">Whether to return holds that were released.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListPoliciesError"/>.</exception>
+        public t.Task<LegalHoldsListPoliciesResult> LegalHoldsListPoliciesAsync(bool includeReleased = false)
+        {
+            var legalHoldsListPoliciesArg = new LegalHoldsListPoliciesArg(includeReleased);
+
+            return this.LegalHoldsListPoliciesAsync(legalHoldsListPoliciesArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds list policies route.</para>
+        /// </summary>
+        /// <param name="includeReleased">Whether to return holds that were released.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsListPolicies(bool includeReleased = false,
+                                                            sys.AsyncCallback callback = null,
+                                                            object callbackState = null)
+        {
+            var legalHoldsListPoliciesArg = new LegalHoldsListPoliciesArg(includeReleased);
+
+            return this.BeginLegalHoldsListPolicies(legalHoldsListPoliciesArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds list policies
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsListPoliciesError"/>.</exception>
+        public LegalHoldsListPoliciesResult EndLegalHoldsListPolicies(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LegalHoldsListPoliciesResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Releases a legal hold by Id.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="legalHoldsPolicyReleaseArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyReleaseError"/>.</exception>
+        public t.Task LegalHoldsReleasePolicyAsync(LegalHoldsPolicyReleaseArg legalHoldsPolicyReleaseArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyReleaseArg, enc.Empty, LegalHoldsPolicyReleaseError>(legalHoldsPolicyReleaseArg, "api", "/team/legal_holds/release_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyReleaseArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.LegalHoldsPolicyReleaseError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds release policy route.</para>
+        /// </summary>
+        /// <param name="legalHoldsPolicyReleaseArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsReleasePolicy(LegalHoldsPolicyReleaseArg legalHoldsPolicyReleaseArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsReleasePolicyAsync(legalHoldsPolicyReleaseArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Releases a legal hold by Id.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyReleaseError"/>.</exception>
+        public t.Task LegalHoldsReleasePolicyAsync(string id)
+        {
+            var legalHoldsPolicyReleaseArg = new LegalHoldsPolicyReleaseArg(id);
+
+            return this.LegalHoldsReleasePolicyAsync(legalHoldsPolicyReleaseArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds release policy route.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsReleasePolicy(string id,
+                                                             sys.AsyncCallback callback,
+                                                             object callbackState = null)
+        {
+            var legalHoldsPolicyReleaseArg = new LegalHoldsPolicyReleaseArg(id);
+
+            return this.BeginLegalHoldsReleasePolicy(legalHoldsPolicyReleaseArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds release policy
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyReleaseError"/>.</exception>
+        public void EndLegalHoldsReleasePolicy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Updates a legal hold.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="legalHoldsPolicyUpdateArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyUpdateError"/>.</exception>
+        public t.Task<LegalHoldPolicy> LegalHoldsUpdatePolicyAsync(LegalHoldsPolicyUpdateArg legalHoldsPolicyUpdateArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyUpdateArg, LegalHoldPolicy, LegalHoldsPolicyUpdateError>(legalHoldsPolicyUpdateArg, "api", "/team/legal_holds/update_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyUpdateArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsPolicyUpdateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds update policy route.</para>
+        /// </summary>
+        /// <param name="legalHoldsPolicyUpdateArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsUpdatePolicy(LegalHoldsPolicyUpdateArg legalHoldsPolicyUpdateArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LegalHoldsUpdatePolicyAsync(legalHoldsPolicyUpdateArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a legal hold.</para>
+        /// <para>Permission : Team member file access.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="members">List of team members to apply the policy on.</param>
+        /// <param name="name">Policy new name.</param>
+        /// <param name="description">Policy new description.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyUpdateError"/>.</exception>
+        public t.Task<LegalHoldPolicy> LegalHoldsUpdatePolicyAsync(string id,
+                                                                   col.IEnumerable<string> members,
+                                                                   string name = null,
+                                                                   string description = null)
+        {
+            var legalHoldsPolicyUpdateArg = new LegalHoldsPolicyUpdateArg(id,
+                                                                          members,
+                                                                          name,
+                                                                          description);
+
+            return this.LegalHoldsUpdatePolicyAsync(legalHoldsPolicyUpdateArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the legal holds update policy route.</para>
+        /// </summary>
+        /// <param name="id">The legal hold Id.</param>
+        /// <param name="members">List of team members to apply the policy on.</param>
+        /// <param name="name">Policy new name.</param>
+        /// <param name="description">Policy new description.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLegalHoldsUpdatePolicy(string id,
+                                                            col.IEnumerable<string> members,
+                                                            string name = null,
+                                                            string description = null,
+                                                            sys.AsyncCallback callback = null,
+                                                            object callbackState = null)
+        {
+            var legalHoldsPolicyUpdateArg = new LegalHoldsPolicyUpdateArg(id,
+                                                                          members,
+                                                                          name,
+                                                                          description);
+
+            return this.BeginLegalHoldsUpdatePolicy(legalHoldsPolicyUpdateArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the legal holds update policy
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LegalHoldsPolicyUpdateError"/>.</exception>
+        public LegalHoldPolicy EndLegalHoldsUpdatePolicy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LegalHoldPolicy>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3071,6 +3730,95 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Deletes a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersDeleteProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfo> MembersDeleteProfilePhotoAsync(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersDeleteProfilePhotoArg, TeamMemberInfo, MembersDeleteProfilePhotoError>(membersDeleteProfilePhotoArg, "api", "/team/members/delete_profile_photo", "team", global::Dropbox.Api.Team.MembersDeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersDeleteProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// </summary>
+        /// <param name="membersDeleteProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteProfilePhoto(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersDeleteProfilePhotoAsync(membersDeleteProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Deletes a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be
+        /// deleted.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfo> MembersDeleteProfilePhotoAsync(UserSelectorArg user)
+        {
+            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+
+            return this.MembersDeleteProfilePhotoAsync(membersDeleteProfilePhotoArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be
+        /// deleted.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteProfilePhoto(UserSelectorArg user,
+                                                               sys.AsyncCallback callback,
+                                                               object callbackState = null)
+        {
+            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+
+            return this.BeginMembersDeleteProfilePhoto(membersDeleteProfilePhotoArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members delete profile photo
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public TeamMemberInfo EndMembersDeleteProfilePhoto(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfo>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns information about multiple team members.</para>
         /// <para>Permission : Team information</para>
         /// <para>This endpoint will return <see
@@ -3658,7 +4406,7 @@ namespace Dropbox.Api.Team.Routes
         /// still recoverable on your team will return with <see
         /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />.</para>
         /// <para>Accounts can have their files transferred via the admin console for a limited
-        /// time, based on the version history length associated with the team (120 days for
+        /// time, based on the version history length associated with the team (180 days for
         /// most teams).</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
@@ -3705,7 +4453,7 @@ namespace Dropbox.Api.Team.Routes
         /// still recoverable on your team will return with <see
         /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />.</para>
         /// <para>Accounts can have their files transferred via the admin console for a limited
-        /// time, based on the version history length associated with the team (120 days for
+        /// time, based on the version history length associated with the team (180 days for
         /// most teams).</para>
         /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
         /// the job, the client should periodically poll <see
@@ -3724,7 +4472,13 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
         /// retain the email address associated with their Dropbox  account and data in their
         /// account that is not restricted to team members. In order to keep the account the
-        /// argument wipe_data should be set to False.</param>
+        /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
+        /// <param name="retainTeamShares">If provided, allows removed users to keep access to
+        /// folders already explicitly shared with them (not via a group) when they are
+        /// downgraded to a Basic account. Users will not retain access to folders that do not
+        /// allow external sharing. In order to keep the sharing relationships, the arguments
+        /// <paramref name="wipeData" /> should be set to <c>false</c> and <paramref
+        /// name="keepAccount" /> should be set to <c>true</c>.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3734,13 +4488,15 @@ namespace Dropbox.Api.Team.Routes
                                                                                       bool wipeData = true,
                                                                                       UserSelectorArg transferDestId = null,
                                                                                       UserSelectorArg transferAdminId = null,
-                                                                                      bool keepAccount = false)
+                                                                                      bool keepAccount = false,
+                                                                                      bool retainTeamShares = false)
         {
             var membersRemoveArg = new MembersRemoveArg(user,
                                                         wipeData,
                                                         transferDestId,
                                                         transferAdminId,
-                                                        keepAccount);
+                                                        keepAccount,
+                                                        retainTeamShares);
 
             return this.MembersRemoveAsync(membersRemoveArg);
         }
@@ -3760,7 +4516,13 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
         /// retain the email address associated with their Dropbox  account and data in their
         /// account that is not restricted to team members. In order to keep the account the
-        /// argument wipe_data should be set to False.</param>
+        /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
+        /// <param name="retainTeamShares">If provided, allows removed users to keep access to
+        /// folders already explicitly shared with them (not via a group) when they are
+        /// downgraded to a Basic account. Users will not retain access to folders that do not
+        /// allow external sharing. In order to keep the sharing relationships, the arguments
+        /// <paramref name="wipeData" /> should be set to <c>false</c> and <paramref
+        /// name="keepAccount" /> should be set to <c>true</c>.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3771,6 +4533,7 @@ namespace Dropbox.Api.Team.Routes
                                                    UserSelectorArg transferDestId = null,
                                                    UserSelectorArg transferAdminId = null,
                                                    bool keepAccount = false,
+                                                   bool retainTeamShares = false,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
         {
@@ -3778,7 +4541,8 @@ namespace Dropbox.Api.Team.Routes
                                                         wipeData,
                                                         transferDestId,
                                                         transferAdminId,
-                                                        keepAccount);
+                                                        keepAccount,
+                                                        retainTeamShares);
 
             return this.BeginMembersRemove(membersRemoveArg, callback, callbackState);
         }
@@ -3891,6 +4655,265 @@ namespace Dropbox.Api.Team.Routes
         public global::Dropbox.Api.Async.PollEmptyResult EndMembersRemoveJobStatusGet(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.PollEmptyResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Add secondary emails to users.</para>
+        /// <para>Permission : Team member management.</para>
+        /// <para>Emails that are on verified domains will be verified automatically. For each
+        /// email address not on a verified domain a verification email will be sent.</para>
+        /// </summary>
+        /// <param name="addSecondaryEmailsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="AddSecondaryEmailsError"/>.</exception>
+        public t.Task<AddSecondaryEmailsResult> MembersSecondaryEmailsAddAsync(AddSecondaryEmailsArg addSecondaryEmailsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<AddSecondaryEmailsArg, AddSecondaryEmailsResult, AddSecondaryEmailsError>(addSecondaryEmailsArg, "api", "/team/members/secondary_emails/add", "team", global::Dropbox.Api.Team.AddSecondaryEmailsArg.Encoder, global::Dropbox.Api.Team.AddSecondaryEmailsResult.Decoder, global::Dropbox.Api.Team.AddSecondaryEmailsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members secondary emails add route.</para>
+        /// </summary>
+        /// <param name="addSecondaryEmailsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSecondaryEmailsAdd(AddSecondaryEmailsArg addSecondaryEmailsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSecondaryEmailsAddAsync(addSecondaryEmailsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Add secondary emails to users.</para>
+        /// <para>Permission : Team member management.</para>
+        /// <para>Emails that are on verified domains will be verified automatically. For each
+        /// email address not on a verified domain a verification email will be sent.</para>
+        /// </summary>
+        /// <param name="newSecondaryEmails">List of users and secondary emails to add.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="AddSecondaryEmailsError"/>.</exception>
+        public t.Task<AddSecondaryEmailsResult> MembersSecondaryEmailsAddAsync(col.IEnumerable<UserSecondaryEmailsArg> newSecondaryEmails)
+        {
+            var addSecondaryEmailsArg = new AddSecondaryEmailsArg(newSecondaryEmails);
+
+            return this.MembersSecondaryEmailsAddAsync(addSecondaryEmailsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members secondary emails add route.</para>
+        /// </summary>
+        /// <param name="newSecondaryEmails">List of users and secondary emails to add.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSecondaryEmailsAdd(col.IEnumerable<UserSecondaryEmailsArg> newSecondaryEmails,
+                                                               sys.AsyncCallback callback,
+                                                               object callbackState = null)
+        {
+            var addSecondaryEmailsArg = new AddSecondaryEmailsArg(newSecondaryEmails);
+
+            return this.BeginMembersSecondaryEmailsAdd(addSecondaryEmailsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members secondary emails add
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="AddSecondaryEmailsError"/>.</exception>
+        public AddSecondaryEmailsResult EndMembersSecondaryEmailsAdd(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<AddSecondaryEmailsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Delete secondary emails from users</para>
+        /// <para>Permission : Team member management.</para>
+        /// <para>Users will be notified of deletions of verified secondary emails at both the
+        /// secondary email and their primary email.</para>
+        /// </summary>
+        /// <param name="deleteSecondaryEmailsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<DeleteSecondaryEmailsResult> MembersSecondaryEmailsDeleteAsync(DeleteSecondaryEmailsArg deleteSecondaryEmailsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteSecondaryEmailsArg, DeleteSecondaryEmailsResult, enc.Empty>(deleteSecondaryEmailsArg, "api", "/team/members/secondary_emails/delete", "team", global::Dropbox.Api.Team.DeleteSecondaryEmailsArg.Encoder, global::Dropbox.Api.Team.DeleteSecondaryEmailsResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members secondary emails delete
+        /// route.</para>
+        /// </summary>
+        /// <param name="deleteSecondaryEmailsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSecondaryEmailsDelete(DeleteSecondaryEmailsArg deleteSecondaryEmailsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSecondaryEmailsDeleteAsync(deleteSecondaryEmailsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Delete secondary emails from users</para>
+        /// <para>Permission : Team member management.</para>
+        /// <para>Users will be notified of deletions of verified secondary emails at both the
+        /// secondary email and their primary email.</para>
+        /// </summary>
+        /// <param name="emailsToDelete">List of users and their secondary emails to
+        /// delete.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<DeleteSecondaryEmailsResult> MembersSecondaryEmailsDeleteAsync(col.IEnumerable<UserSecondaryEmailsArg> emailsToDelete)
+        {
+            var deleteSecondaryEmailsArg = new DeleteSecondaryEmailsArg(emailsToDelete);
+
+            return this.MembersSecondaryEmailsDeleteAsync(deleteSecondaryEmailsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members secondary emails delete
+        /// route.</para>
+        /// </summary>
+        /// <param name="emailsToDelete">List of users and their secondary emails to
+        /// delete.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSecondaryEmailsDelete(col.IEnumerable<UserSecondaryEmailsArg> emailsToDelete,
+                                                                  sys.AsyncCallback callback,
+                                                                  object callbackState = null)
+        {
+            var deleteSecondaryEmailsArg = new DeleteSecondaryEmailsArg(emailsToDelete);
+
+            return this.BeginMembersSecondaryEmailsDelete(deleteSecondaryEmailsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members secondary emails
+        /// delete route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public DeleteSecondaryEmailsResult EndMembersSecondaryEmailsDelete(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<DeleteSecondaryEmailsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Resend secondary email verification emails.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="resendVerificationEmailArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ResendVerificationEmailResult> MembersSecondaryEmailsResendVerificationEmailsAsync(ResendVerificationEmailArg resendVerificationEmailArg)
+        {
+            return this.Transport.SendRpcRequestAsync<ResendVerificationEmailArg, ResendVerificationEmailResult, enc.Empty>(resendVerificationEmailArg, "api", "/team/members/secondary_emails/resend_verification_emails", "team", global::Dropbox.Api.Team.ResendVerificationEmailArg.Encoder, global::Dropbox.Api.Team.ResendVerificationEmailResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members secondary emails resend
+        /// verification emails route.</para>
+        /// </summary>
+        /// <param name="resendVerificationEmailArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSecondaryEmailsResendVerificationEmails(ResendVerificationEmailArg resendVerificationEmailArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSecondaryEmailsResendVerificationEmailsAsync(resendVerificationEmailArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Resend secondary email verification emails.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="emailsToResend">List of users and secondary emails to resend
+        /// verification emails to.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<ResendVerificationEmailResult> MembersSecondaryEmailsResendVerificationEmailsAsync(col.IEnumerable<UserSecondaryEmailsArg> emailsToResend)
+        {
+            var resendVerificationEmailArg = new ResendVerificationEmailArg(emailsToResend);
+
+            return this.MembersSecondaryEmailsResendVerificationEmailsAsync(resendVerificationEmailArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members secondary emails resend
+        /// verification emails route.</para>
+        /// </summary>
+        /// <param name="emailsToResend">List of users and secondary emails to resend
+        /// verification emails to.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSecondaryEmailsResendVerificationEmails(col.IEnumerable<UserSecondaryEmailsArg> emailsToResend,
+                                                                                    sys.AsyncCallback callback,
+                                                                                    object callbackState = null)
+        {
+            var resendVerificationEmailArg = new ResendVerificationEmailArg(emailsToResend);
+
+            return this.BeginMembersSecondaryEmailsResendVerificationEmails(resendVerificationEmailArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members secondary emails
+        /// resend verification emails route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public ResendVerificationEmailResult EndMembersSecondaryEmailsResendVerificationEmails(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ResendVerificationEmailResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4162,6 +5185,99 @@ namespace Dropbox.Api.Team.Routes
         /// processing the request; This will contain a <see
         /// cref="MembersSetProfileError"/>.</exception>
         public TeamMemberInfo EndMembersSetProfile(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfo>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersSetProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfo> MembersSetProfilePhotoAsync(MembersSetProfilePhotoArg membersSetProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersSetProfilePhotoArg, TeamMemberInfo, MembersSetProfilePhotoError>(membersSetProfilePhotoArg, "api", "/team/members/set_profile_photo", "team", global::Dropbox.Api.Team.MembersSetProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// </summary>
+        /// <param name="membersSetProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfilePhoto(MembersSetProfilePhotoArg membersSetProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSetProfilePhotoAsync(membersSetProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be set.</param>
+        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfo> MembersSetProfilePhotoAsync(UserSelectorArg user,
+                                                                  global::Dropbox.Api.Account.PhotoSourceArg photo)
+        {
+            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
+                                                                          photo);
+
+            return this.MembersSetProfilePhotoAsync(membersSetProfilePhotoArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be set.</param>
+        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfilePhoto(UserSelectorArg user,
+                                                            global::Dropbox.Api.Account.PhotoSourceArg photo,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
+                                                                          photo);
+
+            return this.BeginMembersSetProfilePhoto(membersSetProfilePhotoArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members set profile photo
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public TeamMemberInfo EndMembersSetProfilePhoto(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamMemberInfo>;
             if (task == null)
@@ -4953,7 +6069,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Retrieves reporting data about a team's user activity.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -4972,7 +6089,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the reports get activity route.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -5044,7 +6162,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Retrieves reporting data about a team's linked devices.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -5063,7 +6182,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the reports get devices route.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -5135,7 +6255,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Retrieves reporting data about a team's membership.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -5154,7 +6275,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the reports get membership route.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -5226,7 +6348,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Retrieves reporting data about a team's storage usage.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -5245,7 +6368,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the reports get storage route.</para>
         /// </summary>
-        /// <param name="startDate">Optional starting date (inclusive).</param>
+        /// <param name="startDate">Optional starting date (inclusive). If start_date is None
+        /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>

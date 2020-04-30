@@ -54,6 +54,7 @@ namespace Dropbox.Api.Sharing
         /// is present only if the folder is contained within another shared folder.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
+        /// <param name="parentFolderName">Display name for the parent folder.</param>
         /// <param name="linkMetadata">The metadata of the shared content link to this shared
         /// folder. Absent if there is no link on the folder. This is for an unreleased feature
         /// so it may not be returned yet.</param>
@@ -74,10 +75,11 @@ namespace Dropbox.Api.Sharing
                                     global::Dropbox.Api.Users.Team ownerTeam = null,
                                     string parentSharedFolderId = null,
                                     string pathLower = null,
+                                    string parentFolderName = null,
                                     SharedContentLinkMetadata linkMetadata = null,
                                     col.IEnumerable<FolderPermission> permissions = null,
                                     AccessInheritance accessInheritance = null)
-            : base(accessType, isInsideTeamFolder, isTeamFolder, ownerDisplayNames, ownerTeam, parentSharedFolderId, pathLower)
+            : base(accessType, isInsideTeamFolder, isTeamFolder, ownerDisplayNames, ownerTeam, parentSharedFolderId, pathLower, parentFolderName)
         {
             if (name == null)
             {
@@ -213,6 +215,10 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
                 }
+                if (value.ParentFolderName != null)
+                {
+                    WriteProperty("parent_folder_name", value.ParentFolderName, writer, enc.StringEncoder.Instance);
+                }
                 if (value.LinkMetadata != null)
                 {
                     WriteProperty("link_metadata", value.LinkMetadata, writer, global::Dropbox.Api.Sharing.SharedContentLinkMetadata.Encoder);
@@ -289,6 +295,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "parent_folder_name":
+                        value.ParentFolderName = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "link_metadata":
                         value.LinkMetadata = global::Dropbox.Api.Sharing.SharedContentLinkMetadata.Decoder.Decode(reader);

@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Disabled</para>
+        /// </summary>
+        public bool IsDisabled
+        {
+            get
+            {
+                return this is Disabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Disabled, or <c>null</c>.</para>
+        /// </summary>
+        public Disabled AsDisabled
+        {
+            get
+            {
+                return this as Disabled;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.TeamPolicies
                     Optional.Encoder.EncodeFields((Optional)value, writer);
                     return;
                 }
+                if (value is Disabled)
+                {
+                    WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
+                    Disabled.Encoder.EncodeFields((Disabled)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.TeamPolicies
                         return Required.Decoder.DecodeFields(reader);
                     case "optional":
                         return Optional.Decoder.DecodeFields(reader);
+                    case "disabled":
+                        return Disabled.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -309,6 +339,75 @@ namespace Dropbox.Api.TeamPolicies
                 protected override Optional Create()
                 {
                     return Optional.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Disabled require two factor authorization.</para>
+        /// </summary>
+        public sealed class Disabled : TwoStepVerificationState
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Disabled> Encoder = new DisabledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Disabled> Decoder = new DisabledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Disabled" /> class.</para>
+            /// </summary>
+            private Disabled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Disabled</para>
+            /// </summary>
+            public static readonly Disabled Instance = new Disabled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Disabled" />.</para>
+            /// </summary>
+            private class DisabledEncoder : enc.StructEncoder<Disabled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Disabled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Disabled" />.</para>
+            /// </summary>
+            private class DisabledDecoder : enc.StructDecoder<Disabled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Disabled" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Disabled Create()
+                {
+                    return Disabled.Instance;
                 }
 
             }

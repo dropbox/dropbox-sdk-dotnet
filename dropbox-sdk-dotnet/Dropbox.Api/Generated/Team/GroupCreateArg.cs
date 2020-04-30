@@ -31,11 +31,13 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="GroupCreateArg" /> class.</para>
         /// </summary>
         /// <param name="groupName">Group name.</param>
+        /// <param name="addCreatorAsOwner">Automatically add the creator of the group.</param>
         /// <param name="groupExternalId">The creator of a team can associate an arbitrary
         /// external ID to the group.</param>
         /// <param name="groupManagementType">Whether the team can be managed by selected
         /// users, or only by team admins.</param>
         public GroupCreateArg(string groupName,
+                              bool addCreatorAsOwner = false,
                               string groupExternalId = null,
                               global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
         {
@@ -45,6 +47,7 @@ namespace Dropbox.Api.Team
             }
 
             this.GroupName = groupName;
+            this.AddCreatorAsOwner = addCreatorAsOwner;
             this.GroupExternalId = groupExternalId;
             this.GroupManagementType = groupManagementType;
         }
@@ -57,12 +60,18 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GroupCreateArg()
         {
+            this.AddCreatorAsOwner = false;
         }
 
         /// <summary>
         /// <para>Group name.</para>
         /// </summary>
         public string GroupName { get; protected set; }
+
+        /// <summary>
+        /// <para>Automatically add the creator of the group.</para>
+        /// </summary>
+        public bool AddCreatorAsOwner { get; protected set; }
 
         /// <summary>
         /// <para>The creator of a team can associate an arbitrary external ID to the
@@ -91,6 +100,7 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(GroupCreateArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("group_name", value.GroupName, writer, enc.StringEncoder.Instance);
+                WriteProperty("add_creator_as_owner", value.AddCreatorAsOwner, writer, enc.BooleanEncoder.Instance);
                 if (value.GroupExternalId != null)
                 {
                     WriteProperty("group_external_id", value.GroupExternalId, writer, enc.StringEncoder.Instance);
@@ -133,6 +143,9 @@ namespace Dropbox.Api.Team
                 {
                     case "group_name":
                         value.GroupName = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "add_creator_as_owner":
+                        value.AddCreatorAsOwner = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "group_external_id":
                         value.GroupExternalId = enc.StringDecoder.Instance.Decode(reader);

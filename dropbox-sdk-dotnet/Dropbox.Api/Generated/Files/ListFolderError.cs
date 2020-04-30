@@ -58,6 +58,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TemplateError</para>
+        /// </summary>
+        public bool IsTemplateError
+        {
+            get
+            {
+                return this is TemplateError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TemplateError, or <c>null</c>.</para>
+        /// </summary>
+        public TemplateError AsTemplateError
+        {
+            get
+            {
+                return this as TemplateError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -97,6 +119,12 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
                     Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is TemplateError)
+                {
+                    WriteProperty(".tag", "template_error", writer, enc.StringEncoder.Instance);
+                    TemplateError.Encoder.EncodeFields((TemplateError)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -139,6 +167,8 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "template_error":
+                        return TemplateError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -232,6 +262,104 @@ namespace Dropbox.Api.Files
                     {
                         case "path":
                             value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The template error object</para>
+        /// </summary>
+        public sealed class TemplateError : ListFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TemplateError> Encoder = new TemplateErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TemplateError> Decoder = new TemplateErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TemplateError" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TemplateError(global::Dropbox.Api.FileProperties.TemplateError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TemplateError" />
+            /// class.</para>
+            /// </summary>
+            private TemplateError()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.FileProperties.TemplateError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TemplateError" />.</para>
+            /// </summary>
+            private class TemplateErrorEncoder : enc.StructEncoder<TemplateError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TemplateError value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("template_error", value.Value, writer, global::Dropbox.Api.FileProperties.TemplateError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TemplateError" />.</para>
+            /// </summary>
+            private class TemplateErrorDecoder : enc.StructDecoder<TemplateError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TemplateError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TemplateError Create()
+                {
+                    return new TemplateError();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(TemplateError value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "template_error":
+                            value.Value = global::Dropbox.Api.FileProperties.TemplateError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

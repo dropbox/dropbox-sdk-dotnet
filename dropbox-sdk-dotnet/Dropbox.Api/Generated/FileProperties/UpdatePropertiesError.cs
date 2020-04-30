@@ -101,6 +101,29 @@ namespace Dropbox.Api.FileProperties
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DuplicatePropertyGroups</para>
+        /// </summary>
+        public bool IsDuplicatePropertyGroups
+        {
+            get
+            {
+                return this is DuplicatePropertyGroups;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DuplicatePropertyGroups, or <c>null</c>.</para>
+        /// </summary>
+        public DuplicatePropertyGroups AsDuplicatePropertyGroups
+        {
+            get
+            {
+                return this as DuplicatePropertyGroups;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -131,6 +154,12 @@ namespace Dropbox.Api.FileProperties
                 {
                     WriteProperty(".tag", "does_not_fit_template", writer, enc.StringEncoder.Instance);
                     DoesNotFitTemplate.Encoder.EncodeFields((DoesNotFitTemplate)value, writer);
+                    return;
+                }
+                if (value is DuplicatePropertyGroups)
+                {
+                    WriteProperty(".tag", "duplicate_property_groups", writer, enc.StringEncoder.Instance);
+                    DuplicatePropertyGroups.Encoder.EncodeFields((DuplicatePropertyGroups)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -172,6 +201,8 @@ namespace Dropbox.Api.FileProperties
                         return PropertyFieldTooLarge.Decoder.DecodeFields(reader);
                     case "does_not_fit_template":
                         return DoesNotFitTemplate.Decoder.DecodeFields(reader);
+                    case "duplicate_property_groups":
+                        return DuplicatePropertyGroups.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -415,6 +446,78 @@ namespace Dropbox.Api.FileProperties
                 protected override DoesNotFitTemplate Create()
                 {
                     return DoesNotFitTemplate.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>There are 2 or more property groups referring to the same templates in the
+        /// input.</para>
+        /// </summary>
+        public sealed class DuplicatePropertyGroups : UpdatePropertiesError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DuplicatePropertyGroups> Encoder = new DuplicatePropertyGroupsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DuplicatePropertyGroups> Decoder = new DuplicatePropertyGroupsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DuplicatePropertyGroups" />
+            /// class.</para>
+            /// </summary>
+            private DuplicatePropertyGroups()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DuplicatePropertyGroups</para>
+            /// </summary>
+            public static readonly DuplicatePropertyGroups Instance = new DuplicatePropertyGroups();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DuplicatePropertyGroups" />.</para>
+            /// </summary>
+            private class DuplicatePropertyGroupsEncoder : enc.StructEncoder<DuplicatePropertyGroups>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DuplicatePropertyGroups value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DuplicatePropertyGroups" />.</para>
+            /// </summary>
+            private class DuplicatePropertyGroupsDecoder : enc.StructDecoder<DuplicatePropertyGroups>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DuplicatePropertyGroups"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DuplicatePropertyGroups Create()
+                {
+                    return DuplicatePropertyGroups.Instance;
                 }
 
             }

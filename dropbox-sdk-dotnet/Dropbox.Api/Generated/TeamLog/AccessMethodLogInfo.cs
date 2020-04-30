@@ -124,6 +124,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is EnterpriseConsole</para>
+        /// </summary>
+        public bool IsEnterpriseConsole
+        {
+            get
+            {
+                return this is EnterpriseConsole;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EnterpriseConsole, or <c>null</c>.</para>
+        /// </summary>
+        public EnterpriseConsole AsEnterpriseConsole
+        {
+            get
+            {
+                return this as EnterpriseConsole;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Api</para>
         /// </summary>
         public bool IsApi
@@ -205,6 +227,12 @@ namespace Dropbox.Api.TeamLog
                     AdminConsole.Encoder.EncodeFields((AdminConsole)value, writer);
                     return;
                 }
+                if (value is EnterpriseConsole)
+                {
+                    WriteProperty(".tag", "enterprise_console", writer, enc.StringEncoder.Instance);
+                    EnterpriseConsole.Encoder.EncodeFields((EnterpriseConsole)value, writer);
+                    return;
+                }
                 if (value is Api)
                 {
                     WriteProperty(".tag", "api", writer, enc.StringEncoder.Instance);
@@ -257,6 +285,8 @@ namespace Dropbox.Api.TeamLog
                         return ContentManager.Decoder.DecodeFields(reader);
                     case "admin_console":
                         return AdminConsole.Decoder.DecodeFields(reader);
+                    case "enterprise_console":
+                        return EnterpriseConsole.Decoder.DecodeFields(reader);
                     case "api":
                         return Api.Decoder.DecodeFields(reader);
                     default:
@@ -622,6 +652,96 @@ namespace Dropbox.Api.TeamLog
                 public override AdminConsole DecodeFields(enc.IJsonReader reader)
                 {
                     return new AdminConsole(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Enterprise console session details.</para>
+        /// </summary>
+        public sealed class EnterpriseConsole : AccessMethodLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EnterpriseConsole> Encoder = new EnterpriseConsoleEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EnterpriseConsole> Decoder = new EnterpriseConsoleDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EnterpriseConsole" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EnterpriseConsole(WebSessionLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EnterpriseConsole" />
+            /// class.</para>
+            /// </summary>
+            private EnterpriseConsole()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public WebSessionLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EnterpriseConsole" />.</para>
+            /// </summary>
+            private class EnterpriseConsoleEncoder : enc.StructEncoder<EnterpriseConsole>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EnterpriseConsole value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("enterprise_console", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EnterpriseConsole" />.</para>
+            /// </summary>
+            private class EnterpriseConsoleDecoder : enc.StructDecoder<EnterpriseConsole>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EnterpriseConsole"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EnterpriseConsole Create()
+                {
+                    return new EnterpriseConsole();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EnterpriseConsole DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EnterpriseConsole(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -31,9 +31,14 @@ namespace Dropbox.Api.TeamLog.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Retrieves team events.</para>
-        /// <para>Events have a lifespan of two years. Events older than two years will not be
-        /// returned.</para>
+        /// <para>Retrieves team events. If the result's <see
+        /// cref="Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore" /> field is <c>true</c>,
+        /// call <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> with
+        /// the returned cursor to retrieve more entries. If end_time is not specified in your
+        /// request, you may use the returned cursor to poll <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> for
+        /// new events.</para>
         /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
         /// <para>Note that the file_operations category and & analogous paper events are not
         /// available on all Dropbox Business <a href="/business/plans-comparison">plans</a>.
@@ -70,9 +75,14 @@ namespace Dropbox.Api.TeamLog.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves team events.</para>
-        /// <para>Events have a lifespan of two years. Events older than two years will not be
-        /// returned.</para>
+        /// <para>Retrieves team events. If the result's <see
+        /// cref="Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore" /> field is <c>true</c>,
+        /// call <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> with
+        /// the returned cursor to retrieve more entries. If end_time is not specified in your
+        /// request, you may use the returned cursor to poll <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> for
+        /// new events.</para>
         /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
         /// <para>Note that the file_operations category and & analogous paper events are not
         /// available on all Dropbox Business <a href="/business/plans-comparison">plans</a>.

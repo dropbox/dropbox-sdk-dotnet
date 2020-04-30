@@ -44,11 +44,15 @@ namespace Dropbox.Api.Team
         /// application using the API may find it easier to use their own IDs instead of
         /// Dropbox IDs like account_id or team_member_id.</param>
         /// <param name="accountId">A user's account identifier.</param>
+        /// <param name="secondaryEmails">Secondary emails of a user.</param>
+        /// <param name="invitedOn">The date and time the user was invited to the team
+        /// (contains value only when the member's status matches <see
+        /// cref="Dropbox.Api.Team.TeamMemberStatus.Invited" />).</param>
         /// <param name="joinedOn">The date and time the user joined as a member of a specific
         /// team.</param>
         /// <param name="suspendedOn">The date and time the user was suspended from the team
         /// (contains value only when the member's status matches <see
-        /// cref="Dropbox.Api.Team.TeamMemberStatus.Suspended" />.</param>
+        /// cref="Dropbox.Api.Team.TeamMemberStatus.Suspended" />).</param>
         /// <param name="persistentId">Persistent ID that a team can attach to the user. The
         /// persistent ID is unique ID to be used for SAML authentication.</param>
         /// <param name="isDirectoryRestricted">Whether the user is a directory restricted
@@ -63,6 +67,8 @@ namespace Dropbox.Api.Team
                              TeamMembershipType membershipType,
                              string externalId = null,
                              string accountId = null,
+                             col.IEnumerable<global::Dropbox.Api.SecondaryEmails.SecondaryEmail> secondaryEmails = null,
+                             sys.DateTime? invitedOn = null,
                              sys.DateTime? joinedOn = null,
                              sys.DateTime? suspendedOn = null,
                              string persistentId = null,
@@ -106,6 +112,8 @@ namespace Dropbox.Api.Team
                 }
             }
 
+            var secondaryEmailsList = enc.Util.ToList(secondaryEmails);
+
             this.TeamMemberId = teamMemberId;
             this.Email = email;
             this.EmailVerified = emailVerified;
@@ -114,6 +122,8 @@ namespace Dropbox.Api.Team
             this.MembershipType = membershipType;
             this.ExternalId = externalId;
             this.AccountId = accountId;
+            this.SecondaryEmails = secondaryEmailsList;
+            this.InvitedOn = invitedOn;
             this.JoinedOn = joinedOn;
             this.SuspendedOn = suspendedOn;
             this.PersistentId = persistentId;
@@ -175,6 +185,18 @@ namespace Dropbox.Api.Team
         public string AccountId { get; protected set; }
 
         /// <summary>
+        /// <para>Secondary emails of a user.</para>
+        /// </summary>
+        public col.IList<global::Dropbox.Api.SecondaryEmails.SecondaryEmail> SecondaryEmails { get; protected set; }
+
+        /// <summary>
+        /// <para>The date and time the user was invited to the team (contains value only when
+        /// the member's status matches <see cref="Dropbox.Api.Team.TeamMemberStatus.Invited"
+        /// />).</para>
+        /// </summary>
+        public sys.DateTime? InvitedOn { get; protected set; }
+
+        /// <summary>
         /// <para>The date and time the user joined as a member of a specific team.</para>
         /// </summary>
         public sys.DateTime? JoinedOn { get; protected set; }
@@ -182,7 +204,7 @@ namespace Dropbox.Api.Team
         /// <summary>
         /// <para>The date and time the user was suspended from the team (contains value only
         /// when the member's status matches <see
-        /// cref="Dropbox.Api.Team.TeamMemberStatus.Suspended" />.</para>
+        /// cref="Dropbox.Api.Team.TeamMemberStatus.Suspended" />).</para>
         /// </summary>
         public sys.DateTime? SuspendedOn { get; protected set; }
 
@@ -229,6 +251,14 @@ namespace Dropbox.Api.Team
                 if (value.AccountId != null)
                 {
                     WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.SecondaryEmails.Count > 0)
+                {
+                    WriteListProperty("secondary_emails", value.SecondaryEmails, writer, global::Dropbox.Api.SecondaryEmails.SecondaryEmail.Encoder);
+                }
+                if (value.InvitedOn != null)
+                {
+                    WriteProperty("invited_on", value.InvitedOn.Value, writer, enc.DateTimeEncoder.Instance);
                 }
                 if (value.JoinedOn != null)
                 {
@@ -305,6 +335,12 @@ namespace Dropbox.Api.Team
                         break;
                     case "account_id":
                         value.AccountId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "secondary_emails":
+                        value.SecondaryEmails = ReadList<global::Dropbox.Api.SecondaryEmails.SecondaryEmail>(reader, global::Dropbox.Api.SecondaryEmails.SecondaryEmail.Decoder);
+                        break;
+                    case "invited_on":
+                        value.InvitedOn = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     case "joined_on":
                         value.JoinedOn = enc.DateTimeDecoder.Instance.Decode(reader);

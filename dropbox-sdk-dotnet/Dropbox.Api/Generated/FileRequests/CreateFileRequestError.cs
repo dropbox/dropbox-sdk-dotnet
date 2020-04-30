@@ -402,7 +402,7 @@ namespace Dropbox.Api.FileRequests
 
         /// <summary>
         /// <para>The user has reached the rate limit for creating file requests. The limit is
-        /// currently 100 file requests per day.</para>
+        /// currently 4000 file requests total.</para>
         /// </summary>
         public sealed class RateLimit : CreateFileRequestError
         {

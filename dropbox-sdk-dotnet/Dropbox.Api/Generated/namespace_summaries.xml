@@ -10,6 +10,18 @@
                 cref="T:Dropbox.Api.DropboxClient"/>.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Account">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Account.Routes.AccountRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Account.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Account" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Async">
             <summary>
                 <para>Contains the types used by the routes declared in <see
@@ -31,6 +43,29 @@
         <member name="N:Dropbox.Api.Auth.Routes">
             <summary>
                 <para>Contains the routes for the <see cref="N:Dropbox.Api.Auth" />
+                namespace.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Check">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Check.Routes.CheckRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Check.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Check" />
+                namespace.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.CloudDocs">
+            <summary>
+                <para>Endpoints and datatypes for Cloud Docs.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.CloudDocs.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.CloudDocs" />
                 namespace.</para>
             </summary>
         </member>
@@ -133,11 +168,29 @@
             <summary>
                 <para>This namespace contains endpoints and data types for managing docs and
                 folders in Dropbox Paper.</para>
+                <para>New Paper users will see docs they create in their filesystem as '.paper'
+                files alongside their other Dropbox content. The /paper endpoints are being
+                deprecated and you'll need to use /files and /sharing endpoints to interact
+                with their Paper content. Read more in the <a
+                href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+                Migration Guide</a>.</para>
             </summary>
         </member>
         <member name="N:Dropbox.Api.Paper.Routes">
             <summary>
                 <para>Contains the routes for the <see cref="N:Dropbox.Api.Paper" />
+                namespace.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.SecondaryEmails">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.SecondaryEmails.Routes.SecondaryEmailsRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.SecondaryEmails.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.SecondaryEmails" />
                 namespace.</para>
             </summary>
         </member>

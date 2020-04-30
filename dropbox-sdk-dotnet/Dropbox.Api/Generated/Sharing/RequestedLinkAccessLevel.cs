@@ -278,7 +278,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Users who use the link can edit, view and comment on the content.</para>
+        /// <para>Users who use the link can edit, view and comment on the content. Note not
+        /// all file types support edit links yet.</para>
         /// </summary>
         public sealed class Editor : RequestedLinkAccessLevel
         {

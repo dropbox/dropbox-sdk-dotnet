@@ -153,6 +153,148 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// CannotRetainSharesWhenDataWiped</para>
+        /// </summary>
+        public bool IsCannotRetainSharesWhenDataWiped
+        {
+            get
+            {
+                return this is CannotRetainSharesWhenDataWiped;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotRetainSharesWhenDataWiped, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotRetainSharesWhenDataWiped AsCannotRetainSharesWhenDataWiped
+        {
+            get
+            {
+                return this as CannotRetainSharesWhenDataWiped;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CannotRetainSharesWhenNoAccountKept</para>
+        /// </summary>
+        public bool IsCannotRetainSharesWhenNoAccountKept
+        {
+            get
+            {
+                return this is CannotRetainSharesWhenNoAccountKept;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotRetainSharesWhenNoAccountKept, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotRetainSharesWhenNoAccountKept AsCannotRetainSharesWhenNoAccountKept
+        {
+            get
+            {
+                return this as CannotRetainSharesWhenNoAccountKept;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CannotRetainSharesWhenTeamExternalSharingOff</para>
+        /// </summary>
+        public bool IsCannotRetainSharesWhenTeamExternalSharingOff
+        {
+            get
+            {
+                return this is CannotRetainSharesWhenTeamExternalSharingOff;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotRetainSharesWhenTeamExternalSharingOff, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotRetainSharesWhenTeamExternalSharingOff AsCannotRetainSharesWhenTeamExternalSharingOff
+        {
+            get
+            {
+                return this as CannotRetainSharesWhenTeamExternalSharingOff;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is CannotKeepAccount</para>
+        /// </summary>
+        public bool IsCannotKeepAccount
+        {
+            get
+            {
+                return this is CannotKeepAccount;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotKeepAccount, or <c>null</c>.</para>
+        /// </summary>
+        public CannotKeepAccount AsCannotKeepAccount
+        {
+            get
+            {
+                return this as CannotKeepAccount;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CannotKeepAccountUnderLegalHold</para>
+        /// </summary>
+        public bool IsCannotKeepAccountUnderLegalHold
+        {
+            get
+            {
+                return this is CannotKeepAccountUnderLegalHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotKeepAccountUnderLegalHold, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotKeepAccountUnderLegalHold AsCannotKeepAccountUnderLegalHold
+        {
+            get
+            {
+                return this as CannotKeepAccountUnderLegalHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CannotKeepAccountRequiredToSignTos</para>
+        /// </summary>
+        public bool IsCannotKeepAccountRequiredToSignTos
+        {
+            get
+            {
+                return this is CannotKeepAccountRequiredToSignTos;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotKeepAccountRequiredToSignTos, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotKeepAccountRequiredToSignTos AsCannotKeepAccountRequiredToSignTos
+        {
+            get
+            {
+                return this as CannotKeepAccountRequiredToSignTos;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// RemovedAndTransferDestShouldDiffer</para>
         /// </summary>
         public bool IsRemovedAndTransferDestShouldDiffer
@@ -403,6 +545,42 @@ namespace Dropbox.Api.Team
                     CannotKeepInvitedUserAccount.Encoder.EncodeFields((CannotKeepInvitedUserAccount)value, writer);
                     return;
                 }
+                if (value is CannotRetainSharesWhenDataWiped)
+                {
+                    WriteProperty(".tag", "cannot_retain_shares_when_data_wiped", writer, enc.StringEncoder.Instance);
+                    CannotRetainSharesWhenDataWiped.Encoder.EncodeFields((CannotRetainSharesWhenDataWiped)value, writer);
+                    return;
+                }
+                if (value is CannotRetainSharesWhenNoAccountKept)
+                {
+                    WriteProperty(".tag", "cannot_retain_shares_when_no_account_kept", writer, enc.StringEncoder.Instance);
+                    CannotRetainSharesWhenNoAccountKept.Encoder.EncodeFields((CannotRetainSharesWhenNoAccountKept)value, writer);
+                    return;
+                }
+                if (value is CannotRetainSharesWhenTeamExternalSharingOff)
+                {
+                    WriteProperty(".tag", "cannot_retain_shares_when_team_external_sharing_off", writer, enc.StringEncoder.Instance);
+                    CannotRetainSharesWhenTeamExternalSharingOff.Encoder.EncodeFields((CannotRetainSharesWhenTeamExternalSharingOff)value, writer);
+                    return;
+                }
+                if (value is CannotKeepAccount)
+                {
+                    WriteProperty(".tag", "cannot_keep_account", writer, enc.StringEncoder.Instance);
+                    CannotKeepAccount.Encoder.EncodeFields((CannotKeepAccount)value, writer);
+                    return;
+                }
+                if (value is CannotKeepAccountUnderLegalHold)
+                {
+                    WriteProperty(".tag", "cannot_keep_account_under_legal_hold", writer, enc.StringEncoder.Instance);
+                    CannotKeepAccountUnderLegalHold.Encoder.EncodeFields((CannotKeepAccountUnderLegalHold)value, writer);
+                    return;
+                }
+                if (value is CannotKeepAccountRequiredToSignTos)
+                {
+                    WriteProperty(".tag", "cannot_keep_account_required_to_sign_tos", writer, enc.StringEncoder.Instance);
+                    CannotKeepAccountRequiredToSignTos.Encoder.EncodeFields((CannotKeepAccountRequiredToSignTos)value, writer);
+                    return;
+                }
                 if (value is RemovedAndTransferDestShouldDiffer)
                 {
                     WriteProperty(".tag", "removed_and_transfer_dest_should_differ", writer, enc.StringEncoder.Instance);
@@ -499,6 +677,18 @@ namespace Dropbox.Api.Team
                         return EmailAddressTooLongToBeDisabled.Decoder.DecodeFields(reader);
                     case "cannot_keep_invited_user_account":
                         return CannotKeepInvitedUserAccount.Decoder.DecodeFields(reader);
+                    case "cannot_retain_shares_when_data_wiped":
+                        return CannotRetainSharesWhenDataWiped.Decoder.DecodeFields(reader);
+                    case "cannot_retain_shares_when_no_account_kept":
+                        return CannotRetainSharesWhenNoAccountKept.Decoder.DecodeFields(reader);
+                    case "cannot_retain_shares_when_team_external_sharing_off":
+                        return CannotRetainSharesWhenTeamExternalSharingOff.Decoder.DecodeFields(reader);
+                    case "cannot_keep_account":
+                        return CannotKeepAccount.Decoder.DecodeFields(reader);
+                    case "cannot_keep_account_under_legal_hold":
+                        return CannotKeepAccountUnderLegalHold.Decoder.DecodeFields(reader);
+                    case "cannot_keep_account_required_to_sign_tos":
+                        return CannotKeepAccountRequiredToSignTos.Decoder.DecodeFields(reader);
                     case "removed_and_transfer_dest_should_differ":
                         return RemovedAndTransferDestShouldDiffer.Decoder.DecodeFields(reader);
                     case "removed_and_transfer_admin_should_differ":
@@ -670,7 +860,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Cannot keep account and delete the data at the same time. To keep the account
-        /// the argument wipe_data should be set to False.</para>
+        /// the argument wipe_data should be set to <c>false</c>.</para>
         /// </summary>
         public sealed class CannotKeepAccountAndDeleteData : MembersRemoveError
         {
@@ -875,6 +1065,440 @@ namespace Dropbox.Api.Team
                 protected override CannotKeepInvitedUserAccount Create()
                 {
                     return CannotKeepInvitedUserAccount.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot retain team shares when the user's data is marked for deletion on
+        /// their linked devices. The argument wipe_data should be set to <c>false</c>.</para>
+        /// </summary>
+        public sealed class CannotRetainSharesWhenDataWiped : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotRetainSharesWhenDataWiped> Encoder = new CannotRetainSharesWhenDataWipedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotRetainSharesWhenDataWiped> Decoder = new CannotRetainSharesWhenDataWipedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotRetainSharesWhenDataWiped" /> class.</para>
+            /// </summary>
+            private CannotRetainSharesWhenDataWiped()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotRetainSharesWhenDataWiped</para>
+            /// </summary>
+            public static readonly CannotRetainSharesWhenDataWiped Instance = new CannotRetainSharesWhenDataWiped();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotRetainSharesWhenDataWiped" />.</para>
+            /// </summary>
+            private class CannotRetainSharesWhenDataWipedEncoder : enc.StructEncoder<CannotRetainSharesWhenDataWiped>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotRetainSharesWhenDataWiped value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotRetainSharesWhenDataWiped" />.</para>
+            /// </summary>
+            private class CannotRetainSharesWhenDataWipedDecoder : enc.StructDecoder<CannotRetainSharesWhenDataWiped>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotRetainSharesWhenDataWiped" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotRetainSharesWhenDataWiped Create()
+                {
+                    return CannotRetainSharesWhenDataWiped.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user's account must be kept in order to retain team shares. The argument
+        /// keep_account should be set to <c>true</c>.</para>
+        /// </summary>
+        public sealed class CannotRetainSharesWhenNoAccountKept : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotRetainSharesWhenNoAccountKept> Encoder = new CannotRetainSharesWhenNoAccountKeptEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotRetainSharesWhenNoAccountKept> Decoder = new CannotRetainSharesWhenNoAccountKeptDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotRetainSharesWhenNoAccountKept" /> class.</para>
+            /// </summary>
+            private CannotRetainSharesWhenNoAccountKept()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotRetainSharesWhenNoAccountKept</para>
+            /// </summary>
+            public static readonly CannotRetainSharesWhenNoAccountKept Instance = new CannotRetainSharesWhenNoAccountKept();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotRetainSharesWhenNoAccountKept" />.</para>
+            /// </summary>
+            private class CannotRetainSharesWhenNoAccountKeptEncoder : enc.StructEncoder<CannotRetainSharesWhenNoAccountKept>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotRetainSharesWhenNoAccountKept value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotRetainSharesWhenNoAccountKept" />.</para>
+            /// </summary>
+            private class CannotRetainSharesWhenNoAccountKeptDecoder : enc.StructDecoder<CannotRetainSharesWhenNoAccountKept>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotRetainSharesWhenNoAccountKept" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotRetainSharesWhenNoAccountKept Create()
+                {
+                    return CannotRetainSharesWhenNoAccountKept.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Externally sharing files, folders, and links must be enabled in team settings
+        /// in order to retain team shares for the user.</para>
+        /// </summary>
+        public sealed class CannotRetainSharesWhenTeamExternalSharingOff : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotRetainSharesWhenTeamExternalSharingOff> Encoder = new CannotRetainSharesWhenTeamExternalSharingOffEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotRetainSharesWhenTeamExternalSharingOff> Decoder = new CannotRetainSharesWhenTeamExternalSharingOffDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotRetainSharesWhenTeamExternalSharingOff" /> class.</para>
+            /// </summary>
+            private CannotRetainSharesWhenTeamExternalSharingOff()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of
+            /// CannotRetainSharesWhenTeamExternalSharingOff</para>
+            /// </summary>
+            public static readonly CannotRetainSharesWhenTeamExternalSharingOff Instance = new CannotRetainSharesWhenTeamExternalSharingOff();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotRetainSharesWhenTeamExternalSharingOff"
+            /// />.</para>
+            /// </summary>
+            private class CannotRetainSharesWhenTeamExternalSharingOffEncoder : enc.StructEncoder<CannotRetainSharesWhenTeamExternalSharingOff>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotRetainSharesWhenTeamExternalSharingOff value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotRetainSharesWhenTeamExternalSharingOff"
+            /// />.</para>
+            /// </summary>
+            private class CannotRetainSharesWhenTeamExternalSharingOffDecoder : enc.StructDecoder<CannotRetainSharesWhenTeamExternalSharingOff>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotRetainSharesWhenTeamExternalSharingOff" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotRetainSharesWhenTeamExternalSharingOff Create()
+                {
+                    return CannotRetainSharesWhenTeamExternalSharingOff.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Only a team admin, can convert this account to a Basic account.</para>
+        /// </summary>
+        public sealed class CannotKeepAccount : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotKeepAccount> Encoder = new CannotKeepAccountEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotKeepAccount> Decoder = new CannotKeepAccountDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CannotKeepAccount" />
+            /// class.</para>
+            /// </summary>
+            private CannotKeepAccount()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotKeepAccount</para>
+            /// </summary>
+            public static readonly CannotKeepAccount Instance = new CannotKeepAccount();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotKeepAccount" />.</para>
+            /// </summary>
+            private class CannotKeepAccountEncoder : enc.StructEncoder<CannotKeepAccount>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotKeepAccount value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotKeepAccount" />.</para>
+            /// </summary>
+            private class CannotKeepAccountDecoder : enc.StructDecoder<CannotKeepAccount>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CannotKeepAccount"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotKeepAccount Create()
+                {
+                    return CannotKeepAccount.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This user content is currently being held. To convert this member's account
+        /// to a Basic account, you'll first need to remove them from the hold.</para>
+        /// </summary>
+        public sealed class CannotKeepAccountUnderLegalHold : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotKeepAccountUnderLegalHold> Encoder = new CannotKeepAccountUnderLegalHoldEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotKeepAccountUnderLegalHold> Decoder = new CannotKeepAccountUnderLegalHoldDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotKeepAccountUnderLegalHold" /> class.</para>
+            /// </summary>
+            private CannotKeepAccountUnderLegalHold()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotKeepAccountUnderLegalHold</para>
+            /// </summary>
+            public static readonly CannotKeepAccountUnderLegalHold Instance = new CannotKeepAccountUnderLegalHold();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotKeepAccountUnderLegalHold" />.</para>
+            /// </summary>
+            private class CannotKeepAccountUnderLegalHoldEncoder : enc.StructEncoder<CannotKeepAccountUnderLegalHold>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotKeepAccountUnderLegalHold value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotKeepAccountUnderLegalHold" />.</para>
+            /// </summary>
+            private class CannotKeepAccountUnderLegalHoldDecoder : enc.StructDecoder<CannotKeepAccountUnderLegalHold>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotKeepAccountUnderLegalHold" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotKeepAccountUnderLegalHold Create()
+                {
+                    return CannotKeepAccountUnderLegalHold.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>To convert this member to a Basic account, they'll first need to sign in to
+        /// Dropbox and agree to the terms of service.</para>
+        /// </summary>
+        public sealed class CannotKeepAccountRequiredToSignTos : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotKeepAccountRequiredToSignTos> Encoder = new CannotKeepAccountRequiredToSignTosEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotKeepAccountRequiredToSignTos> Decoder = new CannotKeepAccountRequiredToSignTosDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotKeepAccountRequiredToSignTos" /> class.</para>
+            /// </summary>
+            private CannotKeepAccountRequiredToSignTos()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotKeepAccountRequiredToSignTos</para>
+            /// </summary>
+            public static readonly CannotKeepAccountRequiredToSignTos Instance = new CannotKeepAccountRequiredToSignTos();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotKeepAccountRequiredToSignTos" />.</para>
+            /// </summary>
+            private class CannotKeepAccountRequiredToSignTosEncoder : enc.StructEncoder<CannotKeepAccountRequiredToSignTos>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotKeepAccountRequiredToSignTos value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotKeepAccountRequiredToSignTos" />.</para>
+            /// </summary>
+            private class CannotKeepAccountRequiredToSignTosDecoder : enc.StructDecoder<CannotKeepAccountRequiredToSignTos>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotKeepAccountRequiredToSignTos" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotKeepAccountRequiredToSignTos Create()
+                {
+                    return CannotKeepAccountRequiredToSignTos.Instance;
                 }
 
             }

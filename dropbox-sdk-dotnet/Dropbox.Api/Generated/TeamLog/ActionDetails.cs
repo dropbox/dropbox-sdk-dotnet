@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamInviteDetails</para>
+        /// </summary>
+        public bool IsTeamInviteDetails
+        {
+            get
+            {
+                return this is TeamInviteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamInviteDetails, or <c>null</c>.</para>
+        /// </summary>
+        public TeamInviteDetails AsTeamInviteDetails
+        {
+            get
+            {
+                return this as TeamInviteDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.TeamLog
                     RemoveAction.Encoder.EncodeFields((RemoveAction)value, writer);
                     return;
                 }
+                if (value is TeamInviteDetails)
+                {
+                    WriteProperty(".tag", "team_invite_details", writer, enc.StringEncoder.Instance);
+                    TeamInviteDetails.Encoder.EncodeFields((TeamInviteDetails)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +197,8 @@ namespace Dropbox.Api.TeamLog
                         return TeamJoinDetails.Decoder.DecodeFields(reader);
                     case "remove_action":
                         return RemoveAction.Decoder.DecodeFields(reader);
+                    case "team_invite_details":
+                        return TeamInviteDetails.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -358,6 +388,96 @@ namespace Dropbox.Api.TeamLog
                             reader.Skip();
                             break;
                     }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Additional information relevant when someone is invited to the team.</para>
+        /// </summary>
+        public sealed class TeamInviteDetails : ActionDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamInviteDetails> Encoder = new TeamInviteDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamInviteDetails> Decoder = new TeamInviteDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamInviteDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamInviteDetails(global::Dropbox.Api.TeamLog.TeamInviteDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamInviteDetails" />
+            /// class.</para>
+            /// </summary>
+            private TeamInviteDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamInviteDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamInviteDetails" />.</para>
+            /// </summary>
+            private class TeamInviteDetailsEncoder : enc.StructEncoder<TeamInviteDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamInviteDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_invite_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamInviteDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamInviteDetails" />.</para>
+            /// </summary>
+            private class TeamInviteDetailsDecoder : enc.StructDecoder<TeamInviteDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamInviteDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamInviteDetails Create()
+                {
+                    return new TeamInviteDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamInviteDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamInviteDetails(global::Dropbox.Api.TeamLog.TeamInviteDetails.Decoder.DecodeFields(reader));
                 }
             }
 

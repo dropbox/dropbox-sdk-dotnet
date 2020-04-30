@@ -1,3 +1,5 @@
+*.runsettings
+
 ## Visual studio stuff
 *.suo
 *.user

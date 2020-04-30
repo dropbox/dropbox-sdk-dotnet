@@ -38,9 +38,11 @@ namespace Dropbox.Api.TeamLog
         /// gap.</param>
         /// <param name="fileId">Unique ID. Might be missing due to historical data
         /// gap.</param>
+        /// <param name="fileSize">File or folder size in bytes.</param>
         public FileOrFolderLogInfo(PathLogInfo path,
                                    string displayName = null,
-                                   string fileId = null)
+                                   string fileId = null,
+                                   ulong? fileSize = null)
         {
             if (path == null)
             {
@@ -50,6 +52,7 @@ namespace Dropbox.Api.TeamLog
             this.Path = path;
             this.DisplayName = displayName;
             this.FileId = fileId;
+            this.FileSize = fileSize;
         }
 
         /// <summary>
@@ -78,6 +81,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string FileId { get; protected set; }
 
+        /// <summary>
+        /// <para>File or folder size in bytes.</para>
+        /// </summary>
+        public ulong? FileSize { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -100,6 +108,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.FileId != null)
                 {
                     WriteProperty("file_id", value.FileId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.FileSize != null)
+                {
+                    WriteProperty("file_size", value.FileSize.Value, writer, enc.UInt64Encoder.Instance);
                 }
             }
         }
@@ -141,6 +153,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "file_id":
                         value.FileId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "file_size":
+                        value.FileSize = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

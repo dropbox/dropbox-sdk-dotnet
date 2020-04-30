@@ -149,7 +149,11 @@ namespace Dropbox.Api.Paper
         #endregion
 
         /// <summary>
-        /// <para>Your account does not have permissions to perform this action.</para>
+        /// <para>Your account does not have permissions to perform this action. This may be
+        /// due to it only having access to Paper as files in the Dropbox filesystem. For more
+        /// information, refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a>.</para>
         /// </summary>
         public sealed class InsufficientPermissions : PaperApiBaseError
         {

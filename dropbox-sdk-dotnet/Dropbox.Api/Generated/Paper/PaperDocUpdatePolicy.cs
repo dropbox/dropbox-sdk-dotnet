@@ -278,7 +278,7 @@ namespace Dropbox.Api.Paper
 
         /// <summary>
         /// <para>The content will be prepended to the doc.</para>
-        /// <para>Note: the doc title will not be affected.</para>
+        /// <para>The doc title will not be affected.</para>
         /// </summary>
         public sealed class Prepend : PaperDocUpdatePolicy
         {

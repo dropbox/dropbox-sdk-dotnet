@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ForbidWithExclusions</para>
+        /// </summary>
+        public bool IsForbidWithExclusions
+        {
+            get
+            {
+                return this is ForbidWithExclusions;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ForbidWithExclusions, or <c>null</c>.</para>
+        /// </summary>
+        public ForbidWithExclusions AsForbidWithExclusions
+        {
+            get
+            {
+                return this as ForbidWithExclusions;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.TeamLog
                     Forbid.Encoder.EncodeFields((Forbid)value, writer);
                     return;
                 }
+                if (value is ForbidWithExclusions)
+                {
+                    WriteProperty(".tag", "forbid_with_exclusions", writer, enc.StringEncoder.Instance);
+                    ForbidWithExclusions.Encoder.EncodeFields((ForbidWithExclusions)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +197,8 @@ namespace Dropbox.Api.TeamLog
                         return Allow.Decoder.DecodeFields(reader);
                     case "forbid":
                         return Forbid.Decoder.DecodeFields(reader);
+                    case "forbid_with_exclusions":
+                        return ForbidWithExclusions.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -308,6 +338,77 @@ namespace Dropbox.Api.TeamLog
                 protected override Forbid Create()
                 {
                     return Forbid.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The forbid with exclusions object</para>
+        /// </summary>
+        public sealed class ForbidWithExclusions : SharingMemberPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ForbidWithExclusions> Encoder = new ForbidWithExclusionsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ForbidWithExclusions> Decoder = new ForbidWithExclusionsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ForbidWithExclusions" />
+            /// class.</para>
+            /// </summary>
+            private ForbidWithExclusions()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ForbidWithExclusions</para>
+            /// </summary>
+            public static readonly ForbidWithExclusions Instance = new ForbidWithExclusions();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ForbidWithExclusions" />.</para>
+            /// </summary>
+            private class ForbidWithExclusionsEncoder : enc.StructEncoder<ForbidWithExclusions>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ForbidWithExclusions value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ForbidWithExclusions" />.</para>
+            /// </summary>
+            private class ForbidWithExclusionsDecoder : enc.StructDecoder<ForbidWithExclusions>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ForbidWithExclusions"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ForbidWithExclusions Create()
+                {
+                    return ForbidWithExclusions.Instance;
                 }
 
             }

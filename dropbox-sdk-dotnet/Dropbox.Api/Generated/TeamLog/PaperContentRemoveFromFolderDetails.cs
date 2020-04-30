@@ -35,8 +35,8 @@ namespace Dropbox.Api.TeamLog
         /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="parentAssetIndex">Parent asset position in the Assets list.</param>
         public PaperContentRemoveFromFolderDetails(string eventUuid,
-                                                   ulong targetAssetIndex,
-                                                   ulong parentAssetIndex)
+                                                   ulong? targetAssetIndex = null,
+                                                   ulong? parentAssetIndex = null)
         {
             if (eventUuid == null)
             {
@@ -67,12 +67,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Target asset position in the Assets list.</para>
         /// </summary>
-        public ulong TargetAssetIndex { get; protected set; }
+        public ulong? TargetAssetIndex { get; protected set; }
 
         /// <summary>
         /// <para>Parent asset position in the Assets list.</para>
         /// </summary>
-        public ulong ParentAssetIndex { get; protected set; }
+        public ulong? ParentAssetIndex { get; protected set; }
 
         #region Encoder class
 
@@ -89,8 +89,14 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(PaperContentRemoveFromFolderDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("event_uuid", value.EventUuid, writer, enc.StringEncoder.Instance);
-                WriteProperty("target_asset_index", value.TargetAssetIndex, writer, enc.UInt64Encoder.Instance);
-                WriteProperty("parent_asset_index", value.ParentAssetIndex, writer, enc.UInt64Encoder.Instance);
+                if (value.TargetAssetIndex != null)
+                {
+                    WriteProperty("target_asset_index", value.TargetAssetIndex.Value, writer, enc.UInt64Encoder.Instance);
+                }
+                if (value.ParentAssetIndex != null)
+                {
+                    WriteProperty("parent_asset_index", value.ParentAssetIndex.Value, writer, enc.UInt64Encoder.Instance);
+                }
             }
         }
 

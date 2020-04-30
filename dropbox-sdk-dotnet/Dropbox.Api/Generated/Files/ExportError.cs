@@ -79,6 +79,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is RetryError</para>
+        /// </summary>
+        public bool IsRetryError
+        {
+            get
+            {
+                return this is RetryError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RetryError, or <c>null</c>.</para>
+        /// </summary>
+        public RetryError AsRetryError
+        {
+            get
+            {
+                return this as RetryError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -126,6 +148,12 @@ namespace Dropbox.Api.Files
                     NonExportable.Encoder.EncodeFields((NonExportable)value, writer);
                     return;
                 }
+                if (value is RetryError)
+                {
+                    WriteProperty(".tag", "retry_error", writer, enc.StringEncoder.Instance);
+                    RetryError.Encoder.EncodeFields((RetryError)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -168,6 +196,8 @@ namespace Dropbox.Api.Files
                         return Path.Decoder.DecodeFields(reader);
                     case "non_exportable":
                         return NonExportable.Decoder.DecodeFields(reader);
+                    case "retry_error":
+                        return RetryError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -336,6 +366,75 @@ namespace Dropbox.Api.Files
                 protected override NonExportable Create()
                 {
                     return NonExportable.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The exportable content is not yet available. Please retry later.</para>
+        /// </summary>
+        public sealed class RetryError : ExportError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RetryError> Encoder = new RetryErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RetryError> Decoder = new RetryErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RetryError" /> class.</para>
+            /// </summary>
+            private RetryError()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RetryError</para>
+            /// </summary>
+            public static readonly RetryError Instance = new RetryError();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RetryError" />.</para>
+            /// </summary>
+            private class RetryErrorEncoder : enc.StructEncoder<RetryError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RetryError value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RetryError" />.</para>
+            /// </summary>
+            private class RetryErrorDecoder : enc.StructDecoder<RetryError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RetryError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RetryError Create()
+                {
+                    return RetryError.Instance;
                 }
 
             }

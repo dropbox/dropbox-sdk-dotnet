@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed team member from Paper doc/folder.</para>
+    /// <para>Removed users and/or groups from Paper doc/folder.</para>
     /// </summary>
     public class PaperContentRemoveMemberDetails
     {

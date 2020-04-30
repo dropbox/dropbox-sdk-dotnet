@@ -8,6 +8,8 @@ namespace Dropbox.Api
 
     using Dropbox.Api.Stone;
     using Dropbox.Api.Auth.Routes;
+    using Dropbox.Api.Check.Routes;
+    using Dropbox.Api.Files.Routes;
 
     public sealed partial class DropboxAppClient
     {
@@ -17,12 +19,24 @@ namespace Dropbox.Api
         public AuthAppRoutes Auth { get; private set; }
 
         /// <summary>
+        /// <para>Gets the Check routes.</para>
+        /// </summary>
+        public CheckAppRoutes Check { get; private set; }
+
+        /// <summary>
+        /// <para>Gets the Files routes.</para>
+        /// </summary>
+        public FilesAppRoutes Files { get; private set; }
+
+        /// <summary>
         /// <para>Initializes the routes.</para>
         /// </summary>
         /// <returns>The transport.</returns>
         internal override void InitializeRoutes(ITransport transport)
         {
             this.Auth = new AuthAppRoutes(transport);
+            this.Check = new CheckAppRoutes(transport);
+            this.Files = new FilesAppRoutes(transport);
         }
     }
 }

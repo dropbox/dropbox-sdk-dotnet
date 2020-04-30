@@ -36,10 +36,12 @@ namespace Dropbox.Api.TeamLog
         /// gap.</param>
         /// <param name="fileId">Unique ID. Might be missing due to historical data
         /// gap.</param>
+        /// <param name="fileSize">File or folder size in bytes.</param>
         public FileLogInfo(PathLogInfo path,
                            string displayName = null,
-                           string fileId = null)
-            : base(path, displayName, fileId)
+                           string fileId = null,
+                           ulong? fileSize = null)
+            : base(path, displayName, fileId, fileSize)
         {
         }
 
@@ -75,6 +77,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.FileId != null)
                 {
                     WriteProperty("file_id", value.FileId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.FileSize != null)
+                {
+                    WriteProperty("file_size", value.FileSize.Value, writer, enc.UInt64Encoder.Instance);
                 }
             }
         }
@@ -116,6 +122,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "file_id":
                         value.FileId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "file_size":
+                        value.FileSize = enc.UInt64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

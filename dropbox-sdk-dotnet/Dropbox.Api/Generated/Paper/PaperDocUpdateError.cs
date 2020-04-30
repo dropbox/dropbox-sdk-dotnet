@@ -513,7 +513,7 @@ namespace Dropbox.Api.Paper
 
         /// <summary>
         /// <para>The imported document contains an image that is too large. The current limit
-        /// is 1MB. Note: This only applies to HTML with data uri.</para>
+        /// is 1MB. This only applies to HTML with data URI.</para>
         /// </summary>
         public sealed class ImageSizeExceeded : PaperDocUpdateError
         {

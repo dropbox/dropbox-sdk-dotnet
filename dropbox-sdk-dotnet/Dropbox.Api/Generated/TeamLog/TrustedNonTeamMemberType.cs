@@ -58,6 +58,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is EnterpriseAdmin</para>
+        /// </summary>
+        public bool IsEnterpriseAdmin
+        {
+            get
+            {
+                return this is EnterpriseAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EnterpriseAdmin, or <c>null</c>.</para>
+        /// </summary>
+        public EnterpriseAdmin AsEnterpriseAdmin
+        {
+            get
+            {
+                return this as EnterpriseAdmin;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -97,6 +119,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "multi_instance_admin", writer, enc.StringEncoder.Instance);
                     MultiInstanceAdmin.Encoder.EncodeFields((MultiInstanceAdmin)value, writer);
+                    return;
+                }
+                if (value is EnterpriseAdmin)
+                {
+                    WriteProperty(".tag", "enterprise_admin", writer, enc.StringEncoder.Instance);
+                    EnterpriseAdmin.Encoder.EncodeFields((EnterpriseAdmin)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -140,6 +168,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "multi_instance_admin":
                         return MultiInstanceAdmin.Decoder.DecodeFields(reader);
+                    case "enterprise_admin":
+                        return EnterpriseAdmin.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -212,6 +242,76 @@ namespace Dropbox.Api.TeamLog
                 protected override MultiInstanceAdmin Create()
                 {
                     return MultiInstanceAdmin.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The enterprise admin object</para>
+        /// </summary>
+        public sealed class EnterpriseAdmin : TrustedNonTeamMemberType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EnterpriseAdmin> Encoder = new EnterpriseAdminEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EnterpriseAdmin> Decoder = new EnterpriseAdminDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EnterpriseAdmin" />
+            /// class.</para>
+            /// </summary>
+            private EnterpriseAdmin()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of EnterpriseAdmin</para>
+            /// </summary>
+            public static readonly EnterpriseAdmin Instance = new EnterpriseAdmin();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EnterpriseAdmin" />.</para>
+            /// </summary>
+            private class EnterpriseAdminEncoder : enc.StructEncoder<EnterpriseAdmin>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EnterpriseAdmin value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EnterpriseAdmin" />.</para>
+            /// </summary>
+            private class EnterpriseAdminDecoder : enc.StructDecoder<EnterpriseAdmin>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EnterpriseAdmin" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EnterpriseAdmin Create()
+                {
+                    return EnterpriseAdmin.Instance;
                 }
 
             }

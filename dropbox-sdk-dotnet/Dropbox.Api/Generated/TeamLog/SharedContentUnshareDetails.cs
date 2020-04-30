@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Unshared file/folder by clearing membership and turning off link.</para>
+    /// <para>Unshared file/folder by clearing membership.</para>
     /// </summary>
     public class SharedContentUnshareDetails
     {

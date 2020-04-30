@@ -57,6 +57,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidArgument</para>
+        /// </summary>
+        public bool IsInvalidArgument
+        {
+            get
+            {
+                return this is InvalidArgument;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidArgument, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidArgument AsInvalidArgument
+        {
+            get
+            {
+                return this as InvalidArgument;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -96,6 +118,12 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
                     Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is InvalidArgument)
+                {
+                    WriteProperty(".tag", "invalid_argument", writer, enc.StringEncoder.Instance);
+                    InvalidArgument.Encoder.EncodeFields((InvalidArgument)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -138,6 +166,8 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "invalid_argument":
+                        return InvalidArgument.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -231,6 +261,107 @@ namespace Dropbox.Api.Files
                     {
                         case "path":
                             value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The invalid argument object</para>
+        /// </summary>
+        public sealed class InvalidArgument : SearchError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidArgument> Encoder = new InvalidArgumentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidArgument> Decoder = new InvalidArgumentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidArgument" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public InvalidArgument(string value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidArgument" />
+            /// class.</para>
+            /// </summary>
+            private InvalidArgument()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public string Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidArgument" />.</para>
+            /// </summary>
+            private class InvalidArgumentEncoder : enc.StructEncoder<InvalidArgument>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidArgument value, enc.IJsonWriter writer)
+                {
+                    if (value.Value != null)
+                    {
+                        WriteProperty("invalid_argument", value.Value, writer, enc.StringEncoder.Instance);
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidArgument" />.</para>
+            /// </summary>
+            private class InvalidArgumentDecoder : enc.StructDecoder<InvalidArgument>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidArgument" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidArgument Create()
+                {
+                    return new InvalidArgument();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(InvalidArgument value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "invalid_argument":
+                            value.Value = enc.StringDecoder.Instance.Decode(reader);
                             break;
                         default:
                             reader.Skip();

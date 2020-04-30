@@ -2260,6 +2260,95 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Return the lock metadata for the given list of paths.</para>
+        /// </summary>
+        /// <param name="lockFileBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public t.Task<LockFileBatchResult> GetFileLockBatchAsync(LockFileBatchArg lockFileBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LockFileBatchArg, LockFileBatchResult, LockFileError>(lockFileBatchArg, "api", "/files/get_file_lock_batch", "user", global::Dropbox.Api.Files.LockFileBatchArg.Encoder, global::Dropbox.Api.Files.LockFileBatchResult.Decoder, global::Dropbox.Api.Files.LockFileError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get file lock batch route.</para>
+        /// </summary>
+        /// <param name="lockFileBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetFileLockBatch(LockFileBatchArg lockFileBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetFileLockBatchAsync(lockFileBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Return the lock metadata for the given list of paths.</para>
+        /// </summary>
+        /// <param name="entries">List of 'entries'. Each 'entry' contains a path of the file
+        /// which will be locked or queried. Duplicate path arguments in the batch are
+        /// considered only once.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public t.Task<LockFileBatchResult> GetFileLockBatchAsync(col.IEnumerable<LockFileArg> entries)
+        {
+            var lockFileBatchArg = new LockFileBatchArg(entries);
+
+            return this.GetFileLockBatchAsync(lockFileBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get file lock batch route.</para>
+        /// </summary>
+        /// <param name="entries">List of 'entries'. Each 'entry' contains a path of the file
+        /// which will be locked or queried. Duplicate path arguments in the batch are
+        /// considered only once.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetFileLockBatch(col.IEnumerable<LockFileArg> entries,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var lockFileBatchArg = new LockFileBatchArg(entries);
+
+            return this.BeginGetFileLockBatch(lockFileBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get file lock batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public LockFileBatchResult EndGetFileLockBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LockFileBatchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the metadata for a file or folder.</para>
         /// <para>Note: Metadata for the root folder is unsupported.</para>
         /// </summary>
@@ -2862,6 +2951,119 @@ namespace Dropbox.Api.Files.Routes
         public enc.IDownloadResponse<FileMetadata> EndGetThumbnail(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<enc.IDownloadResponse<FileMetadata>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Get a thumbnail for a file.</para>
+        /// </summary>
+        /// <param name="thumbnailV2Arg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ThumbnailV2Error"/>.</exception>
+        public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(ThumbnailV2Arg thumbnailV2Arg)
+        {
+            return this.Transport.SendDownloadRequestAsync<ThumbnailV2Arg, PreviewResult, ThumbnailV2Error>(thumbnailV2Arg, "content", "/files/get_thumbnail_v2", "user", global::Dropbox.Api.Files.ThumbnailV2Arg.Encoder, global::Dropbox.Api.Files.PreviewResult.Decoder, global::Dropbox.Api.Files.ThumbnailV2Error.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get thumbnail route.</para>
+        /// </summary>
+        /// <param name="thumbnailV2Arg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetThumbnailV2(ThumbnailV2Arg thumbnailV2Arg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetThumbnailV2Async(thumbnailV2Arg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get a thumbnail for a file.</para>
+        /// </summary>
+        /// <param name="resource">Information specifying which file to preview. This could be
+        /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
+        /// folder, with a relative path.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
+        /// images that are photos, jpeg should be preferred, while png is  better for
+        /// screenshots and digital arts.</param>
+        /// <param name="size">The size for the thumbnail image.</param>
+        /// <param name="mode">How to resize and crop the image to achieve the desired
+        /// size.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ThumbnailV2Error"/>.</exception>
+        public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(PathOrLink resource,
+                                                                                ThumbnailFormat format = null,
+                                                                                ThumbnailSize size = null,
+                                                                                ThumbnailMode mode = null)
+        {
+            var thumbnailV2Arg = new ThumbnailV2Arg(resource,
+                                                    format,
+                                                    size,
+                                                    mode);
+
+            return this.GetThumbnailV2Async(thumbnailV2Arg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get thumbnail route.</para>
+        /// </summary>
+        /// <param name="resource">Information specifying which file to preview. This could be
+        /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
+        /// folder, with a relative path.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
+        /// images that are photos, jpeg should be preferred, while png is  better for
+        /// screenshots and digital arts.</param>
+        /// <param name="size">The size for the thumbnail image.</param>
+        /// <param name="mode">How to resize and crop the image to achieve the desired
+        /// size.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetThumbnailV2(PathOrLink resource,
+                                                    ThumbnailFormat format = null,
+                                                    ThumbnailSize size = null,
+                                                    ThumbnailMode mode = null,
+                                                    sys.AsyncCallback callback = null,
+                                                    object callbackState = null)
+        {
+            var thumbnailV2Arg = new ThumbnailV2Arg(resource,
+                                                    format,
+                                                    size,
+                                                    mode);
+
+            return this.BeginGetThumbnailV2(thumbnailV2Arg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get thumbnail route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="ThumbnailV2Error"/>.</exception>
+        public enc.IDownloadResponse<PreviewResult> EndGetThumbnailV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<PreviewResult>>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3705,8 +3907,102 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Lock the files at the given paths. A locked file will be writable only by the
+        /// lock holder. A successful response indicates that the file has been locked. Returns
+        /// a list of the locked file paths and their metadata after this operation.</para>
+        /// </summary>
+        /// <param name="lockFileBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public t.Task<LockFileBatchResult> LockFileBatchAsync(LockFileBatchArg lockFileBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<LockFileBatchArg, LockFileBatchResult, LockFileError>(lockFileBatchArg, "api", "/files/lock_file_batch", "user", global::Dropbox.Api.Files.LockFileBatchArg.Encoder, global::Dropbox.Api.Files.LockFileBatchResult.Decoder, global::Dropbox.Api.Files.LockFileError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the lock file batch route.</para>
+        /// </summary>
+        /// <param name="lockFileBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLockFileBatch(LockFileBatchArg lockFileBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.LockFileBatchAsync(lockFileBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Lock the files at the given paths. A locked file will be writable only by the
+        /// lock holder. A successful response indicates that the file has been locked. Returns
+        /// a list of the locked file paths and their metadata after this operation.</para>
+        /// </summary>
+        /// <param name="entries">List of 'entries'. Each 'entry' contains a path of the file
+        /// which will be locked or queried. Duplicate path arguments in the batch are
+        /// considered only once.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public t.Task<LockFileBatchResult> LockFileBatchAsync(col.IEnumerable<LockFileArg> entries)
+        {
+            var lockFileBatchArg = new LockFileBatchArg(entries);
+
+            return this.LockFileBatchAsync(lockFileBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the lock file batch route.</para>
+        /// </summary>
+        /// <param name="entries">List of 'entries'. Each 'entry' contains a path of the file
+        /// which will be locked or queried. Duplicate path arguments in the batch are
+        /// considered only once.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginLockFileBatch(col.IEnumerable<LockFileArg> entries,
+                                                   sys.AsyncCallback callback,
+                                                   object callbackState = null)
+        {
+            var lockFileBatchArg = new LockFileBatchArg(entries);
+
+            return this.BeginLockFileBatch(lockFileBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the lock file batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public LockFileBatchResult EndLockFileBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LockFileBatchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
         /// <para>If the source path is a folder all its contents will be moved.</para>
+        /// <para>Note that we do not currently support case-only renaming.</para>
         /// </summary>
         /// <param name="relocationArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3738,6 +4034,7 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
         /// <para>If the source path is a folder all its contents will be moved.</para>
+        /// <para>Note that we do not currently support case-only renaming.</para>
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
@@ -3963,7 +4260,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Move multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
+        /// Dropbox. Note that we do not currently support case-only renaming.</para>
         /// <para>This route will replace <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The main
         /// difference is this route will return status for each entry, while <see
@@ -4000,7 +4297,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Move multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
+        /// Dropbox. Note that we do not currently support case-only renaming.</para>
         /// <para>This route will replace <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The main
         /// difference is this route will return status for each entry, while <see
@@ -4080,8 +4377,6 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Move multiple files or folders to different locations at once in the user's
         /// Dropbox.</para>
-        /// <para>This route is 'all or nothing', which means if one entry fails, the whole
-        /// transaction will abort.</para>
         /// <para>This route will return job ID immediately and do the async moving job in
         /// background. Please use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
@@ -4090,6 +4385,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated, please use MoveBatchAsync instead.")]
         public t.Task<RelocationBatchLaunch> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
         {
             return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
@@ -4104,6 +4400,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatch instead.")]
         public sys.IAsyncResult BeginMoveBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MoveBatchAsync(relocationBatchArg);
@@ -4114,8 +4411,6 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Move multiple files or folders to different locations at once in the user's
         /// Dropbox.</para>
-        /// <para>This route is 'all or nothing', which means if one entry fails, the whole
-        /// transaction will abort.</para>
         /// <para>This route will return job ID immediately and do the async moving job in
         /// background. Please use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
@@ -4137,6 +4432,7 @@ namespace Dropbox.Api.Files.Routes
         /// copies.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated, please use MoveBatchAsync instead.")]
         public t.Task<RelocationBatchLaunch> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
                                                             bool autorename = false,
                                                             bool allowSharedFolder = false,
@@ -4172,6 +4468,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatch instead.")]
         public sys.IAsyncResult BeginMoveBatch(col.IEnumerable<RelocationPath> entries,
                                                bool autorename = false,
                                                bool allowSharedFolder = false,
@@ -4194,6 +4491,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated, please use EndMoveBatch instead.")]
         public RelocationBatchLaunch EndMoveBatch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchLaunch>;
@@ -4307,6 +4605,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckAsync instead.")]
         public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -4321,6 +4620,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheck instead.")]
         public sys.IAsyncResult BeginMoveBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MoveBatchCheckAsync(pollArg);
@@ -4340,6 +4640,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckAsync instead.")]
         public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -4357,6 +4658,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheck instead.")]
         public sys.IAsyncResult BeginMoveBatchCheck(string asyncJobId,
                                                     sys.AsyncCallback callback,
                                                     object callbackState = null)
@@ -4376,6 +4678,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndMoveBatchCheck instead.")]
         public RelocationBatchJobStatus EndMoveBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchJobStatus>;
@@ -4512,7 +4815,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file.</param>
+        /// file. No two groups in the input should  refer to the same template.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -4532,7 +4835,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file.</param>
+        /// file. No two groups in the input should  refer to the same template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -4604,8 +4907,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>The properties overwrite route</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
-        /// <param name="propertyGroups">The property groups "snapshot" updates to force
-        /// apply.</param>
+        /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
+        /// No two groups in the input should  refer to the same template.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -4624,8 +4927,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the properties overwrite route.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
-        /// <param name="propertyGroups">The property groups "snapshot" updates to force
-        /// apply.</param>
+        /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
+        /// No two groups in the input should  refer to the same template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -5289,6 +5592,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use SearchAsync instead.")]
         public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
         {
             return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", "user", global::Dropbox.Api.Files.SearchArg.Encoder, global::Dropbox.Api.Files.SearchResult.Decoder, global::Dropbox.Api.Files.SearchError.Decoder);
@@ -5303,6 +5607,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginSearch instead.")]
         public sys.IAsyncResult BeginSearch(SearchArg searchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.SearchAsync(searchArg);
@@ -5317,9 +5622,10 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path in the user's Dropbox to search. Should probably be a
         /// folder.</param>
-        /// <param name="query">The string to search for. The search string is split on spaces
-        /// into multiple tokens. For file name searching, the last token is used for prefix
-        /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
+        /// <param name="query">The string to search for. Query string may be rewritten to
+        /// improve relevance of results. The string is split on spaces into multiple tokens.
+        /// For file name searching, the last token is used for prefix matching (i.e. "bat c"
+        /// matches "bat cave" but not "batman car").</param>
         /// <param name="start">The starting index within the search results (used for
         /// paging).</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
@@ -5330,6 +5636,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use SearchAsync instead.")]
         public t.Task<SearchResult> SearchAsync(string path,
                                                 string query,
                                                 ulong start = 0,
@@ -5350,9 +5657,10 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">The path in the user's Dropbox to search. Should probably be a
         /// folder.</param>
-        /// <param name="query">The string to search for. The search string is split on spaces
-        /// into multiple tokens. For file name searching, the last token is used for prefix
-        /// matching (i.e. "bat c" matches "bat cave" but not "batman car").</param>
+        /// <param name="query">The string to search for. Query string may be rewritten to
+        /// improve relevance of results. The string is split on spaces into multiple tokens.
+        /// For file name searching, the last token is used for prefix matching (i.e. "bat c"
+        /// matches "bat cave" but not "batman car").</param>
         /// <param name="start">The starting index within the search results (used for
         /// paging).</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
@@ -5364,6 +5672,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginSearch instead.")]
         public sys.IAsyncResult BeginSearch(string path,
                                             string query,
                                             ulong start = 0,
@@ -5390,9 +5699,319 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndSearch instead.")]
         public SearchResult EndSearch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SearchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Searches for files and folders.</para>
+        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
+        /// along with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
+        /// be used to retrieve a maximum of 10,000 matches.</para>
+        /// <para>Recent changes may not immediately be reflected in search results due to a
+        /// short delay in indexing. Duplicate results may be returned across pages. Some
+        /// results may not be returned.</para>
+        /// </summary>
+        /// <param name="searchV2Arg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public t.Task<SearchV2Result> SearchV2Async(SearchV2Arg searchV2Arg)
+        {
+            return this.Transport.SendRpcRequestAsync<SearchV2Arg, SearchV2Result, SearchError>(searchV2Arg, "api", "/files/search_v2", "user", global::Dropbox.Api.Files.SearchV2Arg.Encoder, global::Dropbox.Api.Files.SearchV2Result.Decoder, global::Dropbox.Api.Files.SearchError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the search route.</para>
+        /// </summary>
+        /// <param name="searchV2Arg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSearchV2(SearchV2Arg searchV2Arg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SearchV2Async(searchV2Arg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Searches for files and folders.</para>
+        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
+        /// along with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
+        /// be used to retrieve a maximum of 10,000 matches.</para>
+        /// <para>Recent changes may not immediately be reflected in search results due to a
+        /// short delay in indexing. Duplicate results may be returned across pages. Some
+        /// results may not be returned.</para>
+        /// </summary>
+        /// <param name="query">The string to search for. May match across multiple fields
+        /// based on the request arguments. Query string may be rewritten to improve relevance
+        /// of results.</param>
+        /// <param name="options">Options for more targeted search results.</param>
+        /// <param name="includeHighlights">The include highlights</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public t.Task<SearchV2Result> SearchV2Async(string query,
+                                                    SearchOptions options = null,
+                                                    bool includeHighlights = false)
+        {
+            var searchV2Arg = new SearchV2Arg(query,
+                                              options,
+                                              includeHighlights);
+
+            return this.SearchV2Async(searchV2Arg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the search route.</para>
+        /// </summary>
+        /// <param name="query">The string to search for. May match across multiple fields
+        /// based on the request arguments. Query string may be rewritten to improve relevance
+        /// of results.</param>
+        /// <param name="options">Options for more targeted search results.</param>
+        /// <param name="includeHighlights">The include highlights</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSearchV2(string query,
+                                              SearchOptions options = null,
+                                              bool includeHighlights = false,
+                                              sys.AsyncCallback callback = null,
+                                              object callbackState = null)
+        {
+            var searchV2Arg = new SearchV2Arg(query,
+                                              options,
+                                              includeHighlights);
+
+            return this.BeginSearchV2(searchV2Arg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the search route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public SearchV2Result EndSearchV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SearchV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Fetches the next page of search results returned from <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />.</para>
+        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
+        /// along with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
+        /// be used to retrieve a maximum of 10,000 matches.</para>
+        /// <para>Recent changes may not immediately be reflected in search results due to a
+        /// short delay in indexing. Duplicate results may be returned across pages. Some
+        /// results may not be returned.</para>
+        /// </summary>
+        /// <param name="searchV2ContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public t.Task<SearchV2Result> SearchContinueV2Async(SearchV2ContinueArg searchV2ContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<SearchV2ContinueArg, SearchV2Result, SearchError>(searchV2ContinueArg, "api", "/files/search/continue_v2", "user", global::Dropbox.Api.Files.SearchV2ContinueArg.Encoder, global::Dropbox.Api.Files.SearchV2Result.Decoder, global::Dropbox.Api.Files.SearchError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the search continue route.</para>
+        /// </summary>
+        /// <param name="searchV2ContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSearchContinueV2(SearchV2ContinueArg searchV2ContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SearchContinueV2Async(searchV2ContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Fetches the next page of search results returned from <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />.</para>
+        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
+        /// along with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
+        /// be used to retrieve a maximum of 10,000 matches.</para>
+        /// <para>Recent changes may not immediately be reflected in search results due to a
+        /// short delay in indexing. Duplicate results may be returned across pages. Some
+        /// results may not be returned.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />. Used to fetch the
+        /// next page of results.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public t.Task<SearchV2Result> SearchContinueV2Async(string cursor)
+        {
+            var searchV2ContinueArg = new SearchV2ContinueArg(cursor);
+
+            return this.SearchContinueV2Async(searchV2ContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the search continue route.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />. Used to fetch the
+        /// next page of results.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSearchContinueV2(string cursor,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var searchV2ContinueArg = new SearchV2ContinueArg(cursor);
+
+            return this.BeginSearchContinueV2(searchV2ContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the search continue route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
+        public SearchV2Result EndSearchContinueV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SearchV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Unlock the files at the given paths. A locked file can only be unlocked by
+        /// the lock holder or, if a business account, a team admin. A successful response
+        /// indicates that the file has been unlocked. Returns a list of the unlocked file
+        /// paths and their metadata after this operation.</para>
+        /// </summary>
+        /// <param name="unlockFileBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public t.Task<LockFileBatchResult> UnlockFileBatchAsync(UnlockFileBatchArg unlockFileBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UnlockFileBatchArg, LockFileBatchResult, LockFileError>(unlockFileBatchArg, "api", "/files/unlock_file_batch", "user", global::Dropbox.Api.Files.UnlockFileBatchArg.Encoder, global::Dropbox.Api.Files.LockFileBatchResult.Decoder, global::Dropbox.Api.Files.LockFileError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the unlock file batch route.</para>
+        /// </summary>
+        /// <param name="unlockFileBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUnlockFileBatch(UnlockFileBatchArg unlockFileBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UnlockFileBatchAsync(unlockFileBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Unlock the files at the given paths. A locked file can only be unlocked by
+        /// the lock holder or, if a business account, a team admin. A successful response
+        /// indicates that the file has been unlocked. Returns a list of the unlocked file
+        /// paths and their metadata after this operation.</para>
+        /// </summary>
+        /// <param name="entries">List of 'entries'. Each 'entry' contains a path of the file
+        /// which will be unlocked. Duplicate path arguments in the batch are considered only
+        /// once.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public t.Task<LockFileBatchResult> UnlockFileBatchAsync(col.IEnumerable<UnlockFileArg> entries)
+        {
+            var unlockFileBatchArg = new UnlockFileBatchArg(entries);
+
+            return this.UnlockFileBatchAsync(unlockFileBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the unlock file batch route.</para>
+        /// </summary>
+        /// <param name="entries">List of 'entries'. Each 'entry' contains a path of the file
+        /// which will be unlocked. Duplicate path arguments in the batch are considered only
+        /// once.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUnlockFileBatch(col.IEnumerable<UnlockFileArg> entries,
+                                                     sys.AsyncCallback callback,
+                                                     object callbackState = null)
+        {
+            var unlockFileBatchArg = new UnlockFileBatchArg(entries);
+
+            return this.BeginUnlockFileBatch(unlockFileBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the unlock file batch route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="LockFileError"/>.</exception>
+        public LockFileBatchResult EndUnlockFileBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<LockFileBatchResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();

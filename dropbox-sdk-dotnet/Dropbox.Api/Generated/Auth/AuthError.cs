@@ -167,6 +167,28 @@ namespace Dropbox.Api.Auth
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is RouteAccessDenied</para>
+        /// </summary>
+        public bool IsRouteAccessDenied
+        {
+            get
+            {
+                return this is RouteAccessDenied;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RouteAccessDenied, or <c>null</c>.</para>
+        /// </summary>
+        public RouteAccessDenied AsRouteAccessDenied
+        {
+            get
+            {
+                return this as RouteAccessDenied;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -238,6 +260,12 @@ namespace Dropbox.Api.Auth
                     MissingScope.Encoder.EncodeFields((MissingScope)value, writer);
                     return;
                 }
+                if (value is RouteAccessDenied)
+                {
+                    WriteProperty(".tag", "route_access_denied", writer, enc.StringEncoder.Instance);
+                    RouteAccessDenied.Encoder.EncodeFields((RouteAccessDenied)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -288,6 +316,8 @@ namespace Dropbox.Api.Auth
                         return ExpiredAccessToken.Decoder.DecodeFields(reader);
                     case "missing_scope":
                         return MissingScope.Decoder.DecodeFields(reader);
+                    case "route_access_denied":
+                        return RouteAccessDenied.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -736,6 +766,77 @@ namespace Dropbox.Api.Auth
                 {
                     return new MissingScope(global::Dropbox.Api.Auth.TokenScopeError.Decoder.DecodeFields(reader));
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The route is not available to public.</para>
+        /// </summary>
+        public sealed class RouteAccessDenied : AuthError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RouteAccessDenied> Encoder = new RouteAccessDeniedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RouteAccessDenied> Decoder = new RouteAccessDeniedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RouteAccessDenied" />
+            /// class.</para>
+            /// </summary>
+            private RouteAccessDenied()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RouteAccessDenied</para>
+            /// </summary>
+            public static readonly RouteAccessDenied Instance = new RouteAccessDenied();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RouteAccessDenied" />.</para>
+            /// </summary>
+            private class RouteAccessDeniedEncoder : enc.StructEncoder<RouteAccessDenied>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RouteAccessDenied value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RouteAccessDenied" />.</para>
+            /// </summary>
+            private class RouteAccessDeniedDecoder : enc.StructDecoder<RouteAccessDenied>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RouteAccessDenied"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RouteAccessDenied Create()
+                {
+                    return RouteAccessDenied.Instance;
+                }
+
             }
 
             #endregion

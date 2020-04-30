@@ -32,8 +32,8 @@ namespace Dropbox.Api.FileProperties
         /// class.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
-        /// <param name="propertyGroups">The property groups "snapshot" updates to force
-        /// apply.</param>
+        /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
+        /// No two groups in the input should  refer to the same template.</param>
         public OverwritePropertyGroupArg(string path,
                                          col.IEnumerable<PropertyGroup> propertyGroups)
         {
@@ -78,7 +78,8 @@ namespace Dropbox.Api.FileProperties
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>The property groups "snapshot" updates to force apply.</para>
+        /// <para>The property groups "snapshot" updates to force apply. No two groups in the
+        /// input should  refer to the same template.</para>
         /// </summary>
         public col.IList<PropertyGroup> PropertyGroups { get; protected set; }
 
