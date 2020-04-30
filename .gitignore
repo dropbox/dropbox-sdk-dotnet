@@ -3,6 +3,7 @@
 ## Visual studio stuff
 *.suo
 *.user
+.vs/
 
 #ignore build contents
 [dD]ebug/

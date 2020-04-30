@@ -36,6 +36,27 @@ namespace Dropbox.Api
     }
 
     /// <summary>
+    /// Used by <see cref="DropboxOAuth2Helper.GetAuthorizeUri" /> to specify which type of OAuth token to request.
+    /// </summary>
+    public enum TokenAccessType
+    {
+        /// <summary>
+        /// Creates one long-lived token with no expiration
+        /// </summary>
+        Legacy,
+
+        /// <summary>
+        /// Create one short-lived token with an expiration with a refresh token
+        /// </summary>
+        Offline,
+
+        /// <summary>
+        /// Create one short-lived token with an expiration
+        /// </summary>
+        Online
+    }
+
+    /// <summary>
     /// Contains methods that make authorizing with Dropbox easier.
     /// </summary>
     /// <example>
@@ -196,7 +217,7 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <param name="requireRole"If this parameter is specified, the user will be asked to authorize with a particular
+        /// <param name="requireRole">If this parameter is specified, the user will be asked to authorize with a particular
         /// type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
         /// verify the type of Dropbox account after authorization since the user could modify or remove the require_role
         /// parameter.</param>
@@ -204,12 +225,14 @@ namespace Dropbox.Api
         /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
         /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
         /// different account.</param>
+        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
+        /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy)
         {
             var uri = string.IsNullOrEmpty(redirectUri) ? null : new Uri(redirectUri);
 
-            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole, forceReauthentication);
+            return GetAuthorizeUri(oauthResponseType, clientId, uri, state, forceReapprove, disableSignup, requireRole, forceReauthentication, tokenAccessType);
         }
 
         /// <summary>
@@ -232,7 +255,7 @@ namespace Dropbox.Api
         /// <param name="disableSignup">When <c>true</c> (default is <c>false</c>) users will not be able to sign up for a
         /// Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
         /// iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</param>
-        /// <param name="requireRole"If this parameter is specified, the user will be asked to authorize with a particular
+        /// <param name="requireRole">If this parameter is specified, the user will be asked to authorize with a particular
         /// type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
         /// verify the type of Dropbox account after authorization since the user could modify or remove the require_role
         /// parameter.</param>
@@ -240,8 +263,10 @@ namespace Dropbox.Api
         /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
         /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
         /// different account.</param>
+        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
+        /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
-        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false)
+        public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy)
         {
             if (string.IsNullOrWhiteSpace(clientId))
             {
@@ -298,6 +323,11 @@ namespace Dropbox.Api
             if (forceReauthentication)
             {
                 queryBuilder.Append("&force_reauthentication=true");
+            }
+
+            if (tokenAccessType != TokenAccessType.Legacy)
+            {
+                queryBuilder.Append("&token_access_type=").Append(tokenAccessType.ToString().ToLower());
             }
 
             var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")
@@ -405,6 +435,7 @@ namespace Dropbox.Api
             }
 
             var httpClient = client ?? new HttpClient();
+
             try
             {
                 var parameters = new Dictionary<string, string>
@@ -424,18 +455,41 @@ namespace Dropbox.Api
                 var response = await httpClient.PostAsync("https://api.dropbox.com/oauth2/token", content).ConfigureAwait(false);
 
                 var raw = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                var json = JObject.Parse(raw);
+                JObject json = JObject.Parse(raw);
 
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new OAuth2Exception(json["error"].ToString(), json.Value<string>("error_description"));
                 }
 
+                string refreshToken = null;
+                if (json.Value<string>("refresh_token") != null)
+                {
+                    refreshToken = json["refresh_token"].ToString();
+                }
+
+                int expiresIn = -1;
+                if (json.Value<string>("expires_in") != null)
+                {
+                    expiresIn = json["expires_in"].ToObject<int>();
+                }
+
+                if (expiresIn == -1)
+                {
+                    return new OAuth2Response(
+                        json["access_token"].ToString(),
+                        json["uid"].ToString(),
+                        null,
+                        json["token_type"].ToString());
+                }
+                
                 return new OAuth2Response(
                     json["access_token"].ToString(),
+                    refreshToken,
                     json["uid"].ToString(),
                     null,
-                    json["token_type"].ToString());
+                    json["token_type"].ToString(),
+                    expiresIn);
             }
             finally
             {
@@ -524,6 +578,21 @@ namespace Dropbox.Api
     /// </summary>
     public sealed class OAuth2Response
     {
+        internal OAuth2Response(string accessToken, string refreshToken, string uid, string state, string tokenType, int expiresIn)
+        {
+            if (string.IsNullOrEmpty(accessToken) || uid == null)
+            {
+                throw new ArgumentException("Invalid OAuth 2.0 response, missing access_token and/or uid.");
+            }
+
+            this.AccessToken = accessToken;
+            this.Uid = uid;
+            this.State = state;
+            this.TokenType = tokenType;
+            this.RefreshToken = refreshToken;
+            this.ExpiresAt = DateTime.Now.AddSeconds(expiresIn);
+
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuth2Response"/> class.
         /// </summary>
@@ -542,6 +611,8 @@ namespace Dropbox.Api
             this.Uid = uid;
             this.State = state;
             this.TokenType = tokenType;
+            this.RefreshToken = null;
+            this.ExpiresAt = null;
         }
 
         /// <summary>
@@ -578,6 +649,17 @@ namespace Dropbox.Api
         /// This will always be <c>bearer</c> if set.
         /// </value>
         public string TokenType { get; private set; }
+
+        /// <summary>
+        /// Gets the refresh token, if offline or online access type was selected.
+        /// </summary>
+        public string RefreshToken { get; private set; }
+
+        /// <summary>
+        /// Gets the time of expiration of the access token, if the token will expire. 
+        /// This is only filled if offline or online access type was selected.
+        /// </summary>
+        public Nullable<DateTime> ExpiresAt { get; private set; }
     }
 
     /// <summary>

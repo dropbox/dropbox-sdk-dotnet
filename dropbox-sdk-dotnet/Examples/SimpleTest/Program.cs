@@ -16,7 +16,7 @@ namespace SimpleTest
     partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
-        // private const string ApiKey = "XXXXXXXXXXXXXXX";
+        private const string ApiKey = "XXXXXXXXXXXXXXX";
 
         // This loopback host is for demo purpose. If this port is not
         // available on your machine you need to update this URL with an unused port.
@@ -40,13 +40,21 @@ namespace SimpleTest
         [STAThread]
         static int Main(string[] args)
         {
+            Console.WriteLine("SimpleTest");
             var instance = new Program();
+            try
+            {
+                var task = Task.Run((Func<Task<int>>)instance.Run);
 
-            var task = Task.Run((Func<Task<int>>)instance.Run);
+                task.Wait();
 
-            task.Wait();
-
-            return task.Result;
+                return task.Result;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                throw e;
+            }
         }
 
         private async Task<int> Run()
@@ -317,11 +325,26 @@ namespace SimpleTest
         {
             Console.WriteLine("--- Creating Folder ---");
             var folderArg = new CreateFolderArg(path);
-            var folder = await client.Files.CreateFolderV2Async(folderArg);
+            try
+            {
+                var folder = await client.Files.CreateFolderV2Async(folderArg);
 
-            Console.WriteLine("Folder: " + path + " created!");
+                Console.WriteLine("Folder: " + path + " created!");
 
-            return folder.Metadata;
+                return folder.Metadata;
+            }
+            catch (ApiException<CreateFolderError> e)
+            {
+                if (e.Message.StartsWith("path/conflict/folder"))
+                {
+                    Console.WriteLine("Folder already exists... Skipping create");
+                    return null;
+                }
+                else
+                {
+                    throw e;
+                }
+            }
         }
 
         /// <summary>
