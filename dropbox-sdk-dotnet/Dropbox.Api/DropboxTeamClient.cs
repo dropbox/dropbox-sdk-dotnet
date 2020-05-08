@@ -44,7 +44,7 @@ namespace Dropbox.Api
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxTeamClient(string oauth2AccessToken, DropboxClientConfig config)
-            : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken))
+            : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, null, null, null, null))
         {
             if (oauth2AccessToken == null)
             {
@@ -77,7 +77,7 @@ namespace Dropbox.Api
         /// See documentation for <a href="https://www.dropbox.com/developers/documentation/http/teams">Dropbox-API-Select-Admin</a>
         /// for detail.
         /// </summary>
-        /// <param name="memberId">The member id of a team admin.</param>
+        /// <param name="adminId">The member id of a team admin.</param>
         /// <returns>The <see cref="DropboxClient"/></returns>
         public DropboxClient AsAdmin(string adminId)
         {

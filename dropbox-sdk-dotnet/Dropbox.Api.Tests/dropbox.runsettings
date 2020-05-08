@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
   <TestRunParameters>
-    <Parameter name="userAccessToken" value="acnM8nSkwbAAAAAAAAACEm_DnXJFrEDYsj-_HlvvX4GwLem4GdR3rj6ynevyilp6" />
-    <Parameter name="teamAccessToken" value="LqdsoiiofAAAAAAAAABW6oG6KnHyKYzlxoijr0DKMjHDaDSyiLbY5MtMam46-jRz" />
-    <Parameter name="appKey" value="uxpcdrgpsa1gz75" />
-    <Parameter name="appSecret" value="ms04larrnicix4l" />
+    <Parameter name="userAccessToken" value="" />
+    <Parameter name="teamAccessToken" value="" />
+    <Parameter name="appKey" value="" />
+    <Parameter name="appSecret" value="" />
   </TestRunParameters>
 </RunSettings>
