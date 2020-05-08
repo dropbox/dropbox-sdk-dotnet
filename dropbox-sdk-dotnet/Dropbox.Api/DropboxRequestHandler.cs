@@ -28,6 +28,7 @@ namespace Dropbox.Api
     /// </summary>
     internal sealed class DropboxRequestHandler : ITransport
     {
+        private const int TokenExpirationBuffer = 300;
         /// <summary>
         /// The API version
         /// </summary>
@@ -298,7 +299,7 @@ namespace Dropbox.Api
                     maxRetries = 0;
                 }
             }
-
+            CheckAndRefreshAccessToken();
             try
             {
                 while (true)
@@ -545,6 +546,49 @@ namespace Dropbox.Api
                 {
                     response.Dispose();
                 }
+            }
+        }
+
+        private void CheckAndRefreshAccessToken()
+        {
+            bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null & this.options.AppSecret != null;
+            bool needsRefresh = this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value;
+            bool needsToken = this.options.OAuth2AccessToken == null;
+            if ((needsRefresh || needsToken) && canRefresh)
+            {
+                RefreshAccessToken();
+            }
+        }
+
+        private async void RefreshAccessToken() 
+        { 
+            if (!(this.options.OAuth2RefreshToken != null && this.options.AppKey != null))
+            {
+                // Cannot refresh token if you do not have at a minimum refresh token and app key
+                return;
+            }
+
+            var url = "https://api.dropbox.com/oauth2/token";
+
+            var parameters = new Dictionary<string, string>
+                {
+                    { "refresh_token", this.options.OAuth2RefreshToken} ,
+                    { "grant_type", "refresh_token" },
+                    { "client_id", this.options.AppKey },
+                    { "client_secret", this.options.AppSecret }
+                };
+            var bodyContent = new FormUrlEncodedContent(parameters);
+
+            var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);
+            response.EnsureSuccessStatusCode();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                string accessToken = json["access_token"].ToString();
+                DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
+                this.options.OAuth2AccessToken = accessToken;
+                this.options.OAuth2AccessTokenExpiresAt = tokenExpiration;
             }
         }
 
@@ -816,9 +860,13 @@ namespace Dropbox.Api
         /// </summary>
         private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
 
-        public DropboxRequestHandlerOptions(DropboxClientConfig config, string oauth2AccessToken)
+        public DropboxRequestHandlerOptions(DropboxClientConfig config, string oauth2AccessToken, string oauth2RefreshToken, Nullable<DateTime> oauth2AccessTokenExpiresAt, string appKey, string appSecret)
             : this(
             oauth2AccessToken,
+            oauth2RefreshToken,
+            oauth2AccessTokenExpiresAt,
+            appKey,
+            appSecret,
             config.MaxRetriesOnError,
             config.UserAgent,
             DefaultApiDomain,
@@ -834,6 +882,10 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="DropboxRequestHandlerOptions"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
         /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
         /// <param name="userAgent">The user agent to use when making requests.</param>
         /// <param name="apiHostname">The hostname that will process api requests;
@@ -848,6 +900,10 @@ namespace Dropbox.Api
         /// http client with longer timeout will be created.</param>
         public DropboxRequestHandlerOptions(
             string oauth2AccessToken,
+            string oauth2RefreshToken,
+            Nullable<DateTime> oauth2AccessTokenExpiresAt,
+            string appKey,
+            string appSecret,
             int maxRetriesOnError,
             string userAgent,
             string apiHostname,
@@ -872,6 +928,10 @@ namespace Dropbox.Api
             this.HttpClient = httpClient;
             this.LongPollHttpClient = longPollHttpClient;
             this.OAuth2AccessToken = oauth2AccessToken;
+            this.OAuth2RefreshToken = oauth2RefreshToken;
+            this.OAuth2AccessTokenExpiresAt = oauth2AccessTokenExpiresAt;
+            this.AppKey = appKey;
+            this.AppSecret = appSecret;
             this.MaxClientRetries = maxRetriesOnError;
             this.HostMap = new Dictionary<string, string>
             {
@@ -889,7 +949,27 @@ namespace Dropbox.Api
         /// <summary>
         /// Gets the OAuth2 token.
         /// </summary>
-        public string OAuth2AccessToken { get; private set; }
+        public string OAuth2AccessToken { get; set; }
+
+        /// <summary>
+        /// Get the OAuth2 refresh token
+        /// </summary>
+        public string OAuth2RefreshToken { get; private set; }
+
+        /// <summary>
+        /// Gets the time the access token expires at
+        /// </summary>
+        public Nullable<DateTime> OAuth2AccessTokenExpiresAt { get; set; }
+
+        /// <summary>
+        /// Gets the app key to use when refreshing tokens
+        /// </summary>
+        public string AppKey { get; private set; }
+
+        /// <summary>
+        /// Gets the app secret to use when refreshing tokens
+        /// </summary>
+        public string AppSecret { get; private set; }
 
         /// <summary>
         /// Gets the HTTP client use to send requests to the server.

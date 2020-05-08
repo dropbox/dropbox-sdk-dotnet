@@ -32,7 +32,7 @@ namespace Dropbox.Api
         /// <param name="appSecret">The Dropbox app secret (e.g. consumer secret in OAuth).</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxAppClient(string appKey, string appSecret, DropboxClientConfig config)
-            : this(new DropboxRequestHandlerOptions(config, GetBasicAuthHeader(appKey, appSecret)))
+            : this(new DropboxRequestHandlerOptions(config, GetBasicAuthHeader(appKey, appSecret), null, null, null, null))
         {
         }
 

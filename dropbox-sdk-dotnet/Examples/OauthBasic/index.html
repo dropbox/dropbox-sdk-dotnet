@@ -1,0 +1,9 @@
+﻿<html>
+<script type="text/javascript">
+    function redirect() {
+        // Append fragment as query string so that server can receive it.
+        document.location.href = "/token?url_with_fragment=" + encodeURIComponent(document.location.href);
+    }
+</script>
+<body onload="redirect()"/>
+</html>
