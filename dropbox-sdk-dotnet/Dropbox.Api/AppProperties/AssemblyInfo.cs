@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 
 [assembly: AssemblyVersion("4.0.0")]
-[assembly: AssemblyFileVersion("4.0.7426")]
+[assembly: AssemblyFileVersion("4.0.7452")]
 
 #if DEBUG
 [assembly: InternalsVisibleTo("Dropbox.Api.Tests")]

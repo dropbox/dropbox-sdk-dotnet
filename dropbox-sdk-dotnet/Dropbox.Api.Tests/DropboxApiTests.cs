@@ -34,6 +34,21 @@ namespace Dropbox.Api.Tests
         public static string UserAccessToken;
 
         /// <summary>
+        /// The user refresh token.
+        /// </summary>
+        public static string UserRefreshToken;
+
+        /// <summary>
+        /// The app key
+        /// </summary>
+        public static string AppKey;
+
+        /// <summary>
+        /// The app secret
+        /// </summary>
+        public static string AppSecret;
+
+        /// <summary>
         /// The Dropbox client.
         /// </summary>
         public static DropboxClient Client;
@@ -53,16 +68,18 @@ namespace Dropbox.Api.Tests
         [ClassInitialize]
         public static void Initialize(TestContext context)
         {
+            
+            AppKey = context.Properties["appKey"].ToString();
+            AppSecret = context.Properties["appSecret"].ToString();
+            
+            UserRefreshToken = context.Properties["userRefreshToken"].ToString();
             UserAccessToken = context.Properties["userAccessToken"].ToString();
             Client = new DropboxClient(UserAccessToken);
 
             var teamToken = context.Properties["teamAccessToken"].ToString();
             TeamClient = new DropboxTeamClient(teamToken);
-
-            var appKey = context.Properties["appKey"].ToString();
-            var appSecret = context.Properties["appSecret"].ToString();
-
-            AppClient = new DropboxAppClient(appKey, appSecret);
+            
+            AppClient = new DropboxAppClient(AppKey, AppSecret);
         }
 
         [TestInitialize]
@@ -90,6 +107,130 @@ namespace Dropbox.Api.Tests
                 Client.Files.DeleteV2Async(entry.PathLower).Wait();
             }
         }
+
+        /// <summary>
+        /// Tests creating a client with only refresh token and
+        /// ensuring the client refreshed the token before making a call
+        /// </summary>
+        /// <returns>The <see cref="Task" /></returns>
+        [TestMethod]
+        public async Task TestRefreshClient()
+        {
+            var client = new DropboxClient(UserRefreshToken, AppKey, AppSecret);
+            var result = await client.Users.GetCurrentAccountAsync();
+            Assert.IsNotNull(result.Email);
+        }
+
+        /// <summary>
+        /// Test get authorization url
+        /// </summary>
+        /// <returns>The <see cref="Task"/></returns>
+        [TestMethod]
+        public async Task TestGetAuthorizationUri()
+        {
+            string clientId = "myclientid";
+            string[] redirectUris = new[] {"", "http://127.0.0.1:52475/"};
+            string[] states = new[] {"", "state"};
+            bool[] forceReapproves = new[] {false, true};
+            bool[] disableSignups = new[] {false, true};
+            string[] requireRoles = new[] {"", "role"};
+            bool[] forceReauthentications = new[] {false, true};
+            TokenAccessType[] tokenAccessTypes = new[]
+                {TokenAccessType.Legacy, TokenAccessType.Offline, TokenAccessType.Online};
+            foreach (string redirectUri in redirectUris)
+            {
+                foreach (var state in states)
+                {
+                    foreach (var forceReapprove in forceReapproves)
+                    {
+                        foreach (var disableSignup in disableSignups)
+                        {
+                            foreach (var requireRole in requireRoles)
+                            {
+                                foreach (var forceReauthentication in forceReauthentications)
+                                {
+                                    foreach (var tokenAccessType in tokenAccessTypes)
+                                    {
+                                        var authUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code,
+                                            clientId, redirectUri, state, forceReapprove, disableSignup,
+                                            requireRole, forceReauthentication, tokenAccessType).ToString();
+
+                                        Assert.IsTrue(authUri.StartsWith("https://www.dropbox.com/oauth2/authorize"));
+                                        Assert.IsTrue(authUri.Contains("response_type=code"));
+                                        Assert.IsTrue(authUri.Contains("client_id=" + clientId));
+
+                                        if (String.IsNullOrWhiteSpace(state))
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&state="));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&state=" + state));
+                                        }
+
+                                        if (String.IsNullOrWhiteSpace(redirectUri))
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&redirect_uri="));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&redirect_uri=" + Uri.EscapeDataString(redirectUri)));
+                                        }
+
+                                        if (forceReapprove)
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&force_reapprove=true"));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&force_reapprove="));
+                                        }
+
+                                        if (disableSignup)
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&disable_signup=true"));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&disable_signup="));
+                                        }
+
+                                        if (String.IsNullOrWhiteSpace(requireRole))
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&require_role="));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&require_role=" + requireRole));
+                                        }
+
+                                        if (forceReauthentication)
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&force_reauthentication=true"));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&force_reauthentication="));
+                                        }
+
+                                        if (tokenAccessType != TokenAccessType.Legacy)
+                                        {
+                                            Assert.IsTrue(authUri.Contains("&token_access_type=" + 
+                                                                           tokenAccessType.ToString().ToLower()));
+                                        }
+                                        else
+                                        {
+                                            Assert.IsFalse(authUri.Contains("&token_access_type="));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
 
         /// <summary>
         /// Test get metadata.

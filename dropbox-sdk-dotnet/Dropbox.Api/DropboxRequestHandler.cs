@@ -282,6 +282,7 @@ namespace Dropbox.Api
             Stream body = null)
         {
             var attempt = 0;
+            var hasRefreshed = false;
             var maxRetries = this.options.MaxClientRetries;
             var r = new Random();
 
@@ -299,7 +300,7 @@ namespace Dropbox.Api
                     maxRetries = 0;
                 }
             }
-            CheckAndRefreshAccessToken();
+            await CheckAndRefreshAccessToken();
             try
             {
                 while (true)
@@ -308,6 +309,15 @@ namespace Dropbox.Api
                     {
                         return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body)
                             .ConfigureAwait(false);
+                    }
+                    catch (AuthException e)
+                    {
+                        if (e.Message == "expired_access_token" && hasRefreshed)
+                        {
+                            throw;
+                        }
+                        await RefreshAccessToken();
+                        hasRefreshed = true;
                     }
                     catch (RateLimitException)
                     {
@@ -549,23 +559,24 @@ namespace Dropbox.Api
             }
         }
 
-        private void CheckAndRefreshAccessToken()
+        private async Task<bool> CheckAndRefreshAccessToken()
         {
             bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null & this.options.AppSecret != null;
             bool needsRefresh = this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value;
             bool needsToken = this.options.OAuth2AccessToken == null;
             if ((needsRefresh || needsToken) && canRefresh)
             {
-                RefreshAccessToken();
+                return await RefreshAccessToken();
             }
+            return false;
         }
 
-        private async void RefreshAccessToken() 
+        private async Task<bool> RefreshAccessToken() 
         { 
             if (!(this.options.OAuth2RefreshToken != null && this.options.AppKey != null))
             {
                 // Cannot refresh token if you do not have at a minimum refresh token and app key
-                return;
+                return false;
             }
 
             var url = "https://api.dropbox.com/oauth2/token";
@@ -580,6 +591,17 @@ namespace Dropbox.Api
             var bodyContent = new FormUrlEncodedContent(parameters);
 
             var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);
+            //if response is an invalid grant, we want to throw this exception rather than the one thrown in 
+            // response.EnsureSuccessStatusCode();
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                if (reason == "invalid_grant")
+                {
+                    throw AuthException.Decode(reason, () => new AuthException(GetRequestId(response)));
+                }
+            }
+            
             response.EnsureSuccessStatusCode();
 
             if (response.IsSuccessStatusCode)
@@ -589,7 +611,9 @@ namespace Dropbox.Api
                 DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
                 this.options.OAuth2AccessToken = accessToken;
                 this.options.OAuth2AccessTokenExpiresAt = tokenExpiration;
+                return true;
             }
+            return false;
         }
 
         /// <summary>

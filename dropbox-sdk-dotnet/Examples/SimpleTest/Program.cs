@@ -40,6 +40,7 @@ namespace SimpleTest
         [STAThread]
         static int Main(string[] args)
         {
+            Console.WriteLine("SimpleTest");
             var instance = new Program();
             try
             {
@@ -48,7 +49,8 @@ namespace SimpleTest
                 task.Wait();
 
                 return task.Result;
-            }catch(Exception e)
+            }
+            catch(Exception e)
             {
                 Console.WriteLine(e);
                 throw e;
@@ -337,7 +339,8 @@ namespace SimpleTest
                 {
                     Console.WriteLine("Folder already exists... Skipping create");
                     return null;
-                }else
+                }
+                else
                 {
                     throw e;
                 }

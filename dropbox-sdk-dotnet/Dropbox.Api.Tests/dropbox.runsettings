@@ -3,6 +3,7 @@
   <TestRunParameters>
     <Parameter name="userAccessToken" value="" />
     <Parameter name="teamAccessToken" value="" />
+    <Parameter name="userRefreshToken" value="" />
     <Parameter name="appKey" value="" />
     <Parameter name="appSecret" value="" />
   </TestRunParameters>

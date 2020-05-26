@@ -468,12 +468,21 @@ namespace Dropbox.Api
                     refreshToken = json["refresh_token"].ToString();
                 }
 
-                Nullable<int> expiresIn = null;
+                int expiresIn = -1;
                 if (json.Value<string>("expires_in") != null)
                 {
                     expiresIn = json["expires_in"].ToObject<int>();
                 }
 
+                if (expiresIn == -1)
+                {
+                    return new OAuth2Response(
+                        json["access_token"].ToString(),
+                        json["uid"].ToString(),
+                        null,
+                        json["token_type"].ToString());
+                }
+                
                 return new OAuth2Response(
                     json["access_token"].ToString(),
                     refreshToken,
@@ -569,7 +578,7 @@ namespace Dropbox.Api
     /// </summary>
     public sealed class OAuth2Response
     {
-        internal OAuth2Response(string accessToken, string refreshToken, string uid, string state, string tokenType, Nullable<int> expiresIn)
+        internal OAuth2Response(string accessToken, string refreshToken, string uid, string state, string tokenType, int expiresIn)
         {
             if (string.IsNullOrEmpty(accessToken) || uid == null)
             {
@@ -581,14 +590,8 @@ namespace Dropbox.Api
             this.State = state;
             this.TokenType = tokenType;
             this.RefreshToken = refreshToken;
-            if (expiresIn.HasValue)
-            {
-                this.ExpiresAt = DateTime.Now.AddSeconds(expiresIn.Value);
-            }else
-            {
-                this.ExpiresAt = null;
-            }
-            
+            this.ExpiresAt = DateTime.Now.AddSeconds(expiresIn);
+
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuth2Response"/> class.

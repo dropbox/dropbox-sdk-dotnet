@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33A16535-A722-4679-BD9F-A78576988519}</ProjectGuid>
+    <ProjectGuid>{AC53CD8C-710C-4019-8B62-F819F0D6EF38}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OauthTest</RootNamespace>
