@@ -312,12 +312,29 @@ namespace Dropbox.Api
                     }
                     catch (AuthException e)
                     {
-                        if (e.Message == "expired_access_token" && hasRefreshed)
+                        if (e.Message == "expired_access_token")
                         {
-                            throw;
+                            if (hasRefreshed)
+                            {
+                                throw;
+                            }
+                            else 
+                            {
+                                await RefreshAccessToken();
+                                hasRefreshed = true;
+                            }
+
                         }
-                        await RefreshAccessToken();
-                        hasRefreshed = true;
+                        else 
+                        {
+                            // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
+                            // do not count a rate limiting error as an attempt
+                            if (++attempt > maxRetries)
+                            {
+                                throw;
+                            }
+                        }
+                        
                     }
                     catch (RateLimitException)
                     {
@@ -570,10 +587,9 @@ namespace Dropbox.Api
             }
             return false;
         }
-
-        private async Task<bool> RefreshAccessToken() 
+        public async Task<bool> RefreshAccessToken(string[] scopeList = null) 
         { 
-            if (!(this.options.OAuth2RefreshToken != null && this.options.AppKey != null))
+            if (this.options.OAuth2RefreshToken == null || this.options.AppKey == null)
             {
                 // Cannot refresh token if you do not have at a minimum refresh token and app key
                 return false;
@@ -588,6 +604,12 @@ namespace Dropbox.Api
                     { "client_id", this.options.AppKey },
                     { "client_secret", this.options.AppSecret }
                 };
+
+            if (scopeList != null)
+            {
+                parameters.Add("scope", String.Join(" ", scopeList));
+            }
+
             var bodyContent = new FormUrlEncodedContent(parameters);
 
             var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);

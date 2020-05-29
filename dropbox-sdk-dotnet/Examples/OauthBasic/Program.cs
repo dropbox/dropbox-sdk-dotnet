@@ -61,8 +61,9 @@ namespace OauthTest
         {
             DropboxCertHelper.InitializeCertPinning();
 
-            var refreshToken = await this.GetAccessToken();
-            if (string.IsNullOrEmpty(refreshToken))
+            string[] scopeList = new string[3] { "files.metadata.read", "files.content.read", "account_info.read" };
+            var uid = await this.GetAccessToken(scopeList, IncludeGrantedScopes.None);
+            if (string.IsNullOrEmpty(uid))
             {
                 return 1;
             }
@@ -83,9 +84,29 @@ namespace OauthTest
                     HttpClient = httpClient
                 };
 
-                var client = new DropboxClient(refreshToken, ApiKey, ApiSecret, config);
-                await GetCurrentAccount(client);
+                var client = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
 
+                // This call should succeed since the correct scope has been acquired
+                await GetCurrentAccount(client);
+                
+                Console.WriteLine("Refreshing without scope account_info.read");
+                var newScopes = new string[] { "files.metadata.read", "files.content.read" };
+                await client.RefreshAccessToken(newScopes);
+                try
+                {
+                    // This should fail since token does not have "account_info.read" scope  
+                    await GetCurrentAccount(client);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Correctly failed with invalid scope");
+                }
+                Console.WriteLine("Attempting to try again with include_granted_scopes");
+                await this.GetAccessToken(newScopes, IncludeGrantedScopes.User);
+                var clientNew = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
+                await GetCurrentAccount(clientNew);
+
+                Console.WriteLine("Oauth Test Complete!");
                 Console.WriteLine("Exit with any key");
                 Console.ReadKey();
             }
@@ -154,15 +175,15 @@ namespace OauthTest
         }
 
         /// <summary>
-        /// Gets the dropbox access token.
+        /// Acquires a dropbox access token and saves it to the default settings for the app.
         /// <para>
         /// This fetches the access token from the applications settings, if it is not found there
         /// (or if the user chooses to reset the settings) then the UI in <see cref="LoginForm"/> is
         /// displayed to authorize the user.
         /// </para>
         /// </summary>
-        /// <returns>A valid access token or null.</returns>
-        private async Task<string> GetAccessToken()
+        /// <returns>A valid uid if a token was acquired or null.</returns>
+        private async Task<string> AcquireAccessToken(string[] scopeList, IncludeGrantedScopes includeGrantedScopes)
         {
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
@@ -180,7 +201,7 @@ namespace OauthTest
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri, state: state, tokenAccessType : TokenAccessType.Offline);
+                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri, state: state, tokenAccessType : TokenAccessType.Offline, scopeList : scopeList, includeGrantedScopes: includeGrantedScopes);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 
@@ -199,20 +220,29 @@ namespace OauthTest
                     Console.WriteLine("Finished Exchanging Code for Token");
                     // Bring console window to the front.
                     SetForegroundWindow(GetConsoleWindow());
-
                     accessToken = tokenResult.AccessToken;
                     refreshToken = tokenResult.RefreshToken;
                     var uid = tokenResult.Uid;
                     Console.WriteLine("Uid: {0}", uid);
                     Console.WriteLine("AccessToken: {0}", accessToken);
-                    Console.WriteLine("RefreshToken: {0}", refreshToken);
-                    Console.WriteLine("ExpiresAt: {0}", tokenResult.ExpiresAt);
-
-                    //Settings.Default.AccessToken = accessToken;
-                    Settings.Default.RefreshToken = refreshToken;
+                    if (tokenResult.RefreshToken != null)
+                    {
+                        Console.WriteLine("RefreshToken: {0}", refreshToken);
+                        Settings.Default.RefreshToken = refreshToken;
+                    }
+                    if (tokenResult.ExpiresAt != null)
+                    {
+                        Console.WriteLine("ExpiresAt: {0}", tokenResult.ExpiresAt);
+                    }
+                    if (tokenResult.ScopeList != null)
+                    {
+                        Console.WriteLine("Scopes: {0}", String.Join(" ", tokenResult.ScopeList));
+                    }
+                    Settings.Default.AccessToken = accessToken;
                     Settings.Default.Uid = uid;
-
                     Settings.Default.Save();
+                    http.Stop();
+                    return uid;
                 }
                 catch (Exception e)
                 {
@@ -221,7 +251,7 @@ namespace OauthTest
                 }
             }
 
-            return refreshToken;
+            return null;
         }
 
         /// <summary>
@@ -234,31 +264,39 @@ namespace OauthTest
         /// <returns>An asynchronous task.</returns>
         private async Task GetCurrentAccount(DropboxClient client)
         {
-            Console.WriteLine("Current Account:");
-            var full = await client.Users.GetCurrentAccountAsync();
-
-            Console.WriteLine("Account id    : {0}", full.AccountId);
-            Console.WriteLine("Country       : {0}", full.Country);
-            Console.WriteLine("Email         : {0}", full.Email);
-            Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
-            Console.WriteLine("Locale        : {0}", full.Locale);
-            Console.WriteLine("Name");
-            Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
-            Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
-            Console.WriteLine("  Given    : {0}", full.Name.GivenName);
-            Console.WriteLine("  Surname  : {0}", full.Name.Surname);
-            Console.WriteLine("Referral link : {0}", full.ReferralLink);
-
-            if (full.Team != null)
+            try
             {
-                Console.WriteLine("Team");
-                Console.WriteLine("  Id   : {0}", full.Team.Id);
-                Console.WriteLine("  Name : {0}", full.Team.Name);
+                Console.WriteLine("Current Account:");
+                var full = await client.Users.GetCurrentAccountAsync();
+
+                Console.WriteLine("Account id    : {0}", full.AccountId);
+                Console.WriteLine("Country       : {0}", full.Country);
+                Console.WriteLine("Email         : {0}", full.Email);
+                Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
+                Console.WriteLine("Locale        : {0}", full.Locale);
+                Console.WriteLine("Name");
+                Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
+                Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
+                Console.WriteLine("  Given    : {0}", full.Name.GivenName);
+                Console.WriteLine("  Surname  : {0}", full.Name.Surname);
+                Console.WriteLine("Referral link : {0}", full.ReferralLink);
+
+                if (full.Team != null)
+                {
+                    Console.WriteLine("Team");
+                    Console.WriteLine("  Id   : {0}", full.Team.Id);
+                    Console.WriteLine("  Name : {0}", full.Team.Name);
+                }
+                else
+                {
+                    Console.WriteLine("Team - None");
+                }
             }
-            else
+            catch (Exception e)
             {
-                Console.WriteLine("Team - None");
+                throw e;
             }
+
         }
     }
 }
