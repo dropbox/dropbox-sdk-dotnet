@@ -578,7 +578,7 @@ namespace Dropbox.Api
 
         private async Task<bool> CheckAndRefreshAccessToken()
         {
-            bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null & this.options.AppSecret != null;
+            bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null;
             bool needsRefresh = this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value;
             bool needsToken = this.options.OAuth2AccessToken == null;
             if ((needsRefresh || needsToken) && canRefresh)
@@ -588,7 +588,7 @@ namespace Dropbox.Api
             return false;
         }
         public async Task<bool> RefreshAccessToken(string[] scopeList = null) 
-        { 
+        {
             if (this.options.OAuth2RefreshToken == null || this.options.AppKey == null)
             {
                 // Cannot refresh token if you do not have at a minimum refresh token and app key
@@ -601,13 +601,17 @@ namespace Dropbox.Api
                 {
                     { "refresh_token", this.options.OAuth2RefreshToken} ,
                     { "grant_type", "refresh_token" },
-                    { "client_id", this.options.AppKey },
-                    { "client_secret", this.options.AppSecret }
+                    { "client_id", this.options.AppKey }
                 };
+
+            if (!string.IsNullOrEmpty(this.options.AppSecret))
+            {
+                parameters["client_secret"] = this.options.AppSecret;
+            }
 
             if (scopeList != null)
             {
-                parameters.Add("scope", String.Join(" ", scopeList));
+                parameters["scope"] =  String.Join(" ", scopeList);
             }
 
             var bodyContent = new FormUrlEncodedContent(parameters);

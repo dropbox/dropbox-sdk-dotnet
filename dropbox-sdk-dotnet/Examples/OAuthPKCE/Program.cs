@@ -1,4 +1,4 @@
-namespace OauthTest
+namespace OauthPKCE
 {
     using System;
     using System.IO;
@@ -13,10 +13,7 @@ namespace OauthTest
     partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
-        private const string ApiKey = "XXXXXXXXXXXXXXX";
-
-        // Add an ApiSecret (from https://www.dropbox.com/developers/apps) here
-        private const string ApiSecret = "XXXXXXXXXXXXXXX";
+        private const string ApiKey = "wo6j2esexgx1pit";
 
         // This loopback host is for demo purpose. If this port is not
         // available on your machine you need to update this URL with an unused port.
@@ -43,7 +40,7 @@ namespace OauthTest
             var instance = new Program();
             try
             {
-                Console.WriteLine("Example OAuth Application");
+                Console.WriteLine("Example OAuth PKCE Application");
                 var task = Task.Run((Func<Task<int>>)instance.Run);
 
                 task.Wait();
@@ -61,8 +58,7 @@ namespace OauthTest
         {
             DropboxCertHelper.InitializeCertPinning();
 
-            string[] scopeList = new string[3] { "files.metadata.read", "files.content.read", "account_info.read" };
-            var uid = await this.AcquireAccessToken(scopeList, IncludeGrantedScopes.None);
+            var uid = await this.AcquireAccessToken(null, IncludeGrantedScopes.None);
             if (string.IsNullOrEmpty(uid))
             {
                 return 1;
@@ -79,34 +75,17 @@ namespace OauthTest
 
             try
             {
-                var config = new DropboxClientConfig("SimpleOAuthApp")
+                var config = new DropboxClientConfig("SimplePKCEOAuthApp")
                 {
                     HttpClient = httpClient
                 };
 
-                var client = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
+                var client = new DropboxClient(Settings.Default.RefreshToken, ApiKey, config);
 
                 // This call should succeed since the correct scope has been acquired
                 await GetCurrentAccount(client);
-                
-                Console.WriteLine("Refreshing without scope account_info.read");
-                var newScopes = new string[] { "files.metadata.read", "files.content.read" };
-                await client.RefreshAccessToken(newScopes);
-                try
-                {
-                    // This should fail since token does not have "account_info.read" scope  
-                    await GetCurrentAccount(client);
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Correctly failed with invalid scope");
-                }
-                Console.WriteLine("Attempting to try again with include_granted_scopes");
-                await this.AcquireAccessToken(newScopes, IncludeGrantedScopes.User);
-                var clientNew = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
-                await GetCurrentAccount(clientNew);
 
-                Console.WriteLine("Oauth Test Complete!");
+                Console.WriteLine("Oauth PKCE Test Complete!");
                 Console.WriteLine("Exit with any key");
                 Console.ReadKey();
             }
@@ -201,7 +180,8 @@ namespace OauthTest
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri, state: state, tokenAccessType : TokenAccessType.Offline, scopeList : scopeList, includeGrantedScopes: includeGrantedScopes);
+                    var OAuthFlow = new PKCEOAuthFlow();
+                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri.ToString(), state: state, tokenAccessType : TokenAccessType.Offline, scopeList : scopeList, includeGrantedScopes: includeGrantedScopes);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 
@@ -216,7 +196,7 @@ namespace OauthTest
                     var redirectUri = await HandleJSRedirect(http);
 
                     Console.WriteLine("Exchanging code for token");
-                    var tokenResult = await DropboxOAuth2Helper.ProcessCodeFlowAsync(redirectUri, ApiKey, ApiSecret, RedirectUri.ToString(), state);
+                    var tokenResult = await OAuthFlow.ProcessCodeFlowAsync(redirectUri, ApiKey, RedirectUri.ToString(), state);
                     Console.WriteLine("Finished Exchanging Code for Token");
                     // Bring console window to the front.
                     SetForegroundWindow(GetConsoleWindow());
