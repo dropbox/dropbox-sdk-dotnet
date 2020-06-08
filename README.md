@@ -29,6 +29,8 @@ All requests need to be made with an OAuth 2 access token. To get started, once
 you've created an app, you can go to the app's console and generate an access
 token for your own Dropbox account.
 
+You can also view our OAuth [guide](https://www.dropbox.com/lp/developers/reference/oauth-guide.html)
+
 ## Examples
 
 Several examples can be found in the [examples](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples) directory:
