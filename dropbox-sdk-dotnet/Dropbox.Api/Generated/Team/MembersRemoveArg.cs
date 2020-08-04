@@ -46,11 +46,12 @@ namespace Dropbox.Api.Team
         /// account that is not restricted to team members. In order to keep the account the
         /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
         /// <param name="retainTeamShares">If provided, allows removed users to keep access to
-        /// folders already explicitly shared with them (not via a group) when they are
-        /// downgraded to a Basic account. Users will not retain access to folders that do not
-        /// allow external sharing. In order to keep the sharing relationships, the arguments
-        /// <paramref name="wipeData" /> should be set to <c>false</c> and <paramref
-        /// name="keepAccount" /> should be set to <c>true</c>.</param>
+        /// Dropbox folders (not Dropbox Paper folders) already explicitly shared with them
+        /// (not via a group) when they are downgraded to a Basic account. Users will not
+        /// retain access to folders that do not allow external sharing. In order to keep the
+        /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
+        /// <c>false</c> and <paramref name="keepAccount" /> should be set to
+        /// <c>true</c>.</param>
         public MembersRemoveArg(UserSelectorArg user,
                                 bool wipeData = true,
                                 UserSelectorArg transferDestId = null,
@@ -100,12 +101,12 @@ namespace Dropbox.Api.Team
         public bool KeepAccount { get; protected set; }
 
         /// <summary>
-        /// <para>If provided, allows removed users to keep access to folders already
-        /// explicitly shared with them (not via a group) when they are downgraded to a Basic
-        /// account. Users will not retain access to folders that do not allow external
-        /// sharing. In order to keep the sharing relationships, the arguments <see
-        /// cref="WipeData" /> should be set to <c>false</c> and <see cref="KeepAccount" />
-        /// should be set to <c>true</c>.</para>
+        /// <para>If provided, allows removed users to keep access to Dropbox folders (not
+        /// Dropbox Paper folders) already explicitly shared with them (not via a group) when
+        /// they are downgraded to a Basic account. Users will not retain access to folders
+        /// that do not allow external sharing. In order to keep the sharing relationships, the
+        /// arguments <see cref="WipeData" /> should be set to <c>false</c> and <see
+        /// cref="KeepAccount" /> should be set to <c>true</c>.</para>
         /// </summary>
         public bool RetainTeamShares { get; protected set; }
 

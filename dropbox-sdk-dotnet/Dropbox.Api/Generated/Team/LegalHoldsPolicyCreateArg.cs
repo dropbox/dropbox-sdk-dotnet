@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="name">Policy name.</param>
-        /// <param name="members">List of team members added to the hold.</param>
+        /// <param name="members">List of team member IDs added to the hold.</param>
         /// <param name="description">A description of the legal hold policy.</param>
         /// <param name="startDate">start date of the legal hold policy.</param>
         /// <param name="endDate">end date of the legal hold policy.</param>
@@ -90,7 +90,7 @@ namespace Dropbox.Api.Team
         public string Name { get; protected set; }
 
         /// <summary>
-        /// <para>List of team members added to the hold.</para>
+        /// <para>List of team member IDs added to the hold.</para>
         /// </summary>
         public col.IList<string> Members { get; protected set; }
 

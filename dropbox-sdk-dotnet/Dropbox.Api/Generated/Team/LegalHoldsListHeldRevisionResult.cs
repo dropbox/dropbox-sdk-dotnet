@@ -31,9 +31,14 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see
         /// cref="LegalHoldsListHeldRevisionResult" /> class.</para>
         /// </summary>
-        /// <param name="entries">Entries list.</param>
-        /// <param name="hasMore">Has more.</param>
-        /// <param name="cursor">List held revisions cursor.</param>
+        /// <param name="entries">List of file entries that under the hold.</param>
+        /// <param name="hasMore">True if there are more file entries that haven't been
+        /// returned. You can retrieve them with a call to
+        /// /legal_holds/list_held_revisions_continue.</param>
+        /// <param name="cursor">The cursor idicates where to continue reading file metadata
+        /// entries for the next API call. When there are no more entries, the cursor will
+        /// return none. Pass the cursor into
+        /// /2/team/legal_holds/list_held_revisions/continue.</param>
         public LegalHoldsListHeldRevisionResult(col.IEnumerable<LegalHoldHeldRevisionMetadata> entries,
                                                 bool hasMore,
                                                 string cursor = null)
@@ -70,17 +75,20 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Entries list.</para>
+        /// <para>List of file entries that under the hold.</para>
         /// </summary>
         public col.IList<LegalHoldHeldRevisionMetadata> Entries { get; protected set; }
 
         /// <summary>
-        /// <para>Has more.</para>
+        /// <para>True if there are more file entries that haven't been returned. You can
+        /// retrieve them with a call to /legal_holds/list_held_revisions_continue.</para>
         /// </summary>
         public bool HasMore { get; protected set; }
 
         /// <summary>
-        /// <para>List held revisions cursor.</para>
+        /// <para>The cursor idicates where to continue reading file metadata entries for the
+        /// next API call. When there are no more entries, the cursor will return none.</para>
+        /// <para>Pass the cursor into /2/team/legal_holds/list_held_revisions/continue.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

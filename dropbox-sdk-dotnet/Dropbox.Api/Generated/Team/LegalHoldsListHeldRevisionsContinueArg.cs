@@ -32,7 +32,9 @@ namespace Dropbox.Api.Team
         /// cref="LegalHoldsListHeldRevisionsContinueArg" /> class.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
-        /// <param name="cursor">cursor of list held revisions.</param>
+        /// <param name="cursor">The cursor idicates where to continue reading file metadata
+        /// entries for the next API call. When there are no more entries, the cursor will
+        /// return none.</param>
         public LegalHoldsListHeldRevisionsContinueArg(string id,
                                                       string cursor = null)
         {
@@ -74,7 +76,8 @@ namespace Dropbox.Api.Team
         public string Id { get; protected set; }
 
         /// <summary>
-        /// <para>cursor of list held revisions.</para>
+        /// <para>The cursor idicates where to continue reading file metadata entries for the
+        /// next API call. When there are no more entries, the cursor will return none.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

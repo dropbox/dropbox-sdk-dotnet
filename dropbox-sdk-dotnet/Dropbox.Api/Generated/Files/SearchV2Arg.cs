@@ -34,9 +34,12 @@ namespace Dropbox.Api.Files
         /// based on the request arguments. Query string may be rewritten to improve relevance
         /// of results.</param>
         /// <param name="options">Options for more targeted search results.</param>
-        /// <param name="includeHighlights">The include highlights</param>
+        /// <param name="matchFieldOptions">Options for search results match fields.</param>
+        /// <param name="includeHighlights">Deprecated and moved this option to
+        /// SearchMatchFieldOptions.</param>
         public SearchV2Arg(string query,
                            SearchOptions options = null,
+                           SearchMatchFieldOptions matchFieldOptions = null,
                            bool includeHighlights = false)
         {
             if (query == null)
@@ -46,6 +49,7 @@ namespace Dropbox.Api.Files
 
             this.Query = query;
             this.Options = options;
+            this.MatchFieldOptions = matchFieldOptions;
             this.IncludeHighlights = includeHighlights;
         }
 
@@ -73,7 +77,12 @@ namespace Dropbox.Api.Files
         public SearchOptions Options { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the include highlights of the search v2 arg</para>
+        /// <para>Options for search results match fields.</para>
+        /// </summary>
+        public SearchMatchFieldOptions MatchFieldOptions { get; protected set; }
+
+        /// <summary>
+        /// <para>Deprecated and moved this option to SearchMatchFieldOptions.</para>
         /// </summary>
         public bool IncludeHighlights { get; protected set; }
 
@@ -95,6 +104,10 @@ namespace Dropbox.Api.Files
                 if (value.Options != null)
                 {
                     WriteProperty("options", value.Options, writer, global::Dropbox.Api.Files.SearchOptions.Encoder);
+                }
+                if (value.MatchFieldOptions != null)
+                {
+                    WriteProperty("match_field_options", value.MatchFieldOptions, writer, global::Dropbox.Api.Files.SearchMatchFieldOptions.Encoder);
                 }
                 WriteProperty("include_highlights", value.IncludeHighlights, writer, enc.BooleanEncoder.Instance);
             }
@@ -134,6 +147,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "options":
                         value.Options = global::Dropbox.Api.Files.SearchOptions.Decoder.Decode(reader);
+                        break;
+                    case "match_field_options":
+                        value.MatchFieldOptions = global::Dropbox.Api.Files.SearchMatchFieldOptions.Decoder.Decode(reader);
                         break;
                     case "include_highlights":
                         value.IncludeHighlights = enc.BooleanDecoder.Instance.Decode(reader);

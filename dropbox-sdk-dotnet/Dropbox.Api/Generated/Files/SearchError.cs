@@ -79,6 +79,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InternalError</para>
+        /// </summary>
+        public bool IsInternalError
+        {
+            get
+            {
+                return this is InternalError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InternalError, or <c>null</c>.</para>
+        /// </summary>
+        public InternalError AsInternalError
+        {
+            get
+            {
+                return this as InternalError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -126,6 +148,12 @@ namespace Dropbox.Api.Files
                     InvalidArgument.Encoder.EncodeFields((InvalidArgument)value, writer);
                     return;
                 }
+                if (value is InternalError)
+                {
+                    WriteProperty(".tag", "internal_error", writer, enc.StringEncoder.Instance);
+                    InternalError.Encoder.EncodeFields((InternalError)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -168,6 +196,8 @@ namespace Dropbox.Api.Files
                         return Path.Decoder.DecodeFields(reader);
                     case "invalid_argument":
                         return InvalidArgument.Decoder.DecodeFields(reader);
+                    case "internal_error":
+                        return InternalError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -368,6 +398,76 @@ namespace Dropbox.Api.Files
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Something went wrong, please try again.</para>
+        /// </summary>
+        public sealed class InternalError : SearchError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InternalError> Encoder = new InternalErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InternalError> Decoder = new InternalErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InternalError" />
+            /// class.</para>
+            /// </summary>
+            private InternalError()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InternalError</para>
+            /// </summary>
+            public static readonly InternalError Instance = new InternalError();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InternalError" />.</para>
+            /// </summary>
+            private class InternalErrorEncoder : enc.StructEncoder<InternalError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InternalError value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InternalError" />.</para>
+            /// </summary>
+            private class InternalErrorDecoder : enc.StructDecoder<InternalError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InternalError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InternalError Create()
+                {
+                    return InternalError.Instance;
+                }
+
             }
 
             #endregion

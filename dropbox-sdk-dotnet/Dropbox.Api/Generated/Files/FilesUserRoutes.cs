@@ -2691,8 +2691,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para></para>
         /// <para>Example temporary upload link consumption request:</para>
         /// <para></para>
-        /// <para>curl -X POST
-        /// https://dl.dropboxusercontent.com/apitul/1/bNi2uIYF51cVBND</para>
+        /// <para>curl -X POST https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND</para>
         /// <para>--header "Content-Type: application/octet-stream"</para>
         /// <para>--data-binary @local_file.txt</para>
         /// <para></para>
@@ -2761,8 +2760,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para></para>
         /// <para>Example temporary upload link consumption request:</para>
         /// <para></para>
-        /// <para>curl -X POST
-        /// https://dl.dropboxusercontent.com/apitul/1/bNi2uIYF51cVBND</para>
+        /// <para>curl -X POST https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND</para>
         /// <para>--header "Content-Type: application/octet-stream"</para>
         /// <para>--data-binary @local_file.txt</para>
         /// <para></para>
@@ -5584,8 +5582,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Searches for files and folders.</para>
-        /// <para>Note: Recent changes may not immediately be reflected in search results due
-        /// to a short delay in indexing.</para>
+        /// <para>Note: Recent changes will be reflected in search results within a few seconds
+        /// and older revisions of existing files may still match your query for up to a few
+        /// days.</para>
         /// </summary>
         /// <param name="searchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5617,8 +5616,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Searches for files and folders.</para>
-        /// <para>Note: Recent changes may not immediately be reflected in search results due
-        /// to a short delay in indexing.</para>
+        /// <para>Note: Recent changes will be reflected in search results within a few seconds
+        /// and older revisions of existing files may still match your query for up to a few
+        /// days.</para>
         /// </summary>
         /// <param name="path">The path in the user's Dropbox to search. Should probably be a
         /// folder.</param>
@@ -5761,17 +5761,21 @@ namespace Dropbox.Api.Files.Routes
         /// based on the request arguments. Query string may be rewritten to improve relevance
         /// of results.</param>
         /// <param name="options">Options for more targeted search results.</param>
-        /// <param name="includeHighlights">The include highlights</param>
+        /// <param name="matchFieldOptions">Options for search results match fields.</param>
+        /// <param name="includeHighlights">Deprecated and moved this option to
+        /// SearchMatchFieldOptions.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
         public t.Task<SearchV2Result> SearchV2Async(string query,
                                                     SearchOptions options = null,
+                                                    SearchMatchFieldOptions matchFieldOptions = null,
                                                     bool includeHighlights = false)
         {
             var searchV2Arg = new SearchV2Arg(query,
                                               options,
+                                              matchFieldOptions,
                                               includeHighlights);
 
             return this.SearchV2Async(searchV2Arg);
@@ -5784,7 +5788,9 @@ namespace Dropbox.Api.Files.Routes
         /// based on the request arguments. Query string may be rewritten to improve relevance
         /// of results.</param>
         /// <param name="options">Options for more targeted search results.</param>
-        /// <param name="includeHighlights">The include highlights</param>
+        /// <param name="matchFieldOptions">Options for search results match fields.</param>
+        /// <param name="includeHighlights">Deprecated and moved this option to
+        /// SearchMatchFieldOptions.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -5792,12 +5798,14 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginSearchV2(string query,
                                               SearchOptions options = null,
+                                              SearchMatchFieldOptions matchFieldOptions = null,
                                               bool includeHighlights = false,
                                               sys.AsyncCallback callback = null,
                                               object callbackState = null)
         {
             var searchV2Arg = new SearchV2Arg(query,
                                               options,
+                                              matchFieldOptions,
                                               includeHighlights);
 
             return this.BeginSearchV2(searchV2Arg, callback, callbackState);

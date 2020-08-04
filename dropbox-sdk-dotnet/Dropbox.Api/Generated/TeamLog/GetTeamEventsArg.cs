@@ -37,14 +37,18 @@ namespace Dropbox.Api.TeamLog
         /// fetch again using <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
         /// />.</param>
-        /// <param name="accountId">Filter the events by account ID. Return ony events with
+        /// <param name="accountId">Filter the events by account ID. Return only events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
-        /// <param name="category">Filter the returned events to a single category.</param>
+        /// <param name="category">Filter the returned events to a single category. Note that
+        /// category shouldn't be provided together with event_type.</param>
+        /// <param name="eventType">Filter the returned events to a single event type. Note
+        /// that event_type shouldn't be provided together with category.</param>
         public GetTeamEventsArg(uint limit = 1000,
                                 string accountId = null,
                                 global::Dropbox.Api.TeamCommon.TimeRange time = null,
-                                EventCategory category = null)
+                                EventCategory category = null,
+                                EventTypeArg eventType = null)
         {
             if (limit < 1U)
             {
@@ -71,6 +75,7 @@ namespace Dropbox.Api.TeamLog
             this.AccountId = accountId;
             this.Time = time;
             this.Category = category;
+            this.EventType = eventType;
         }
 
         /// <summary>
@@ -95,7 +100,7 @@ namespace Dropbox.Api.TeamLog
         public uint Limit { get; protected set; }
 
         /// <summary>
-        /// <para>Filter the events by account ID. Return ony events with this account_id as
+        /// <para>Filter the events by account ID. Return only events with this account_id as
         /// either Actor, Context, or Participants.</para>
         /// </summary>
         public string AccountId { get; protected set; }
@@ -106,9 +111,16 @@ namespace Dropbox.Api.TeamLog
         public global::Dropbox.Api.TeamCommon.TimeRange Time { get; protected set; }
 
         /// <summary>
-        /// <para>Filter the returned events to a single category.</para>
+        /// <para>Filter the returned events to a single category. Note that category shouldn't
+        /// be provided together with event_type.</para>
         /// </summary>
         public EventCategory Category { get; protected set; }
+
+        /// <summary>
+        /// <para>Filter the returned events to a single event type. Note that event_type
+        /// shouldn't be provided together with category.</para>
+        /// </summary>
+        public EventTypeArg EventType { get; protected set; }
 
         #region Encoder class
 
@@ -136,6 +148,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.Category != null)
                 {
                     WriteProperty("category", value.Category, writer, global::Dropbox.Api.TeamLog.EventCategory.Encoder);
+                }
+                if (value.EventType != null)
+                {
+                    WriteProperty("event_type", value.EventType, writer, global::Dropbox.Api.TeamLog.EventTypeArg.Encoder);
                 }
             }
         }
@@ -180,6 +196,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "category":
                         value.Category = global::Dropbox.Api.TeamLog.EventCategory.Decoder.Decode(reader);
+                        break;
+                    case "event_type":
+                        value.EventType = global::Dropbox.Api.TeamLog.EventTypeArg.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

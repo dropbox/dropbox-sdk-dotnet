@@ -33,13 +33,14 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="id">The legal hold id.</param>
         /// <param name="name">Policy name.</param>
-        /// <param name="members">The members</param>
-        /// <param name="status">The status</param>
-        /// <param name="startDate">start date of the legal hold policy.</param>
+        /// <param name="members">Team members IDs and number of permanetly deleted members
+        /// under hold.</param>
+        /// <param name="status">The current state of the hold.</param>
+        /// <param name="startDate">Start date of the legal hold policy.</param>
         /// <param name="description">A description of the legal hold policy.</param>
         /// <param name="activationTime">The time at which the legal hold was
         /// activated.</param>
-        /// <param name="endDate">end date of the legal hold policy.</param>
+        /// <param name="endDate">End date of the legal hold policy.</param>
         public LegalHoldPolicy(string id,
                                string name,
                                MembersInfo members,
@@ -117,17 +118,17 @@ namespace Dropbox.Api.Team
         public string Name { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the members of the legal hold policy</para>
+        /// <para>Team members IDs and number of permanetly deleted members under hold.</para>
         /// </summary>
         public MembersInfo Members { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the status of the legal hold policy</para>
+        /// <para>The current state of the hold.</para>
         /// </summary>
         public LegalHoldStatus Status { get; protected set; }
 
         /// <summary>
-        /// <para>start date of the legal hold policy.</para>
+        /// <para>Start date of the legal hold policy.</para>
         /// </summary>
         public sys.DateTime StartDate { get; protected set; }
 
@@ -142,7 +143,7 @@ namespace Dropbox.Api.Team
         public sys.DateTime? ActivationTime { get; protected set; }
 
         /// <summary>
-        /// <para>end date of the legal hold policy.</para>
+        /// <para>End date of the legal hold policy.</para>
         /// </summary>
         public sys.DateTime? EndDate { get; protected set; }
 

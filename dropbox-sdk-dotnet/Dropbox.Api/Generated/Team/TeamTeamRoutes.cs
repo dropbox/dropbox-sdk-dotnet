@@ -1790,7 +1790,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates new legal hold policy.</para>
+        /// <para>Creates new legal hold policy. Note: Legal Holds is a paid add-on. Not all
+        /// teams have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyCreateArg">The request parameters</param>
@@ -1821,11 +1822,12 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates new legal hold policy.</para>
+        /// <para>Creates new legal hold policy. Note: Legal Holds is a paid add-on. Not all
+        /// teams have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="name">Policy name.</param>
-        /// <param name="members">List of team members added to the hold.</param>
+        /// <param name="members">List of team member IDs added to the hold.</param>
         /// <param name="description">A description of the legal hold policy.</param>
         /// <param name="startDate">start date of the legal hold policy.</param>
         /// <param name="endDate">end date of the legal hold policy.</param>
@@ -1853,7 +1855,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the legal holds create policy route.</para>
         /// </summary>
         /// <param name="name">Policy name.</param>
-        /// <param name="members">List of team members added to the hold.</param>
+        /// <param name="members">List of team member IDs added to the hold.</param>
         /// <param name="description">A description of the legal hold policy.</param>
         /// <param name="startDate">start date of the legal hold policy.</param>
         /// <param name="endDate">end date of the legal hold policy.</param>
@@ -1901,7 +1903,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Gets a legal hold by Id.</para>
+        /// <para>Gets a legal hold by Id. Note: Legal Holds is a paid add-on. Not all teams
+        /// have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsGetPolicyArg">The request parameters</param>
@@ -1932,7 +1935,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Gets a legal hold by Id.</para>
+        /// <para>Gets a legal hold by Id. Note: Legal Holds is a paid add-on. Not all teams
+        /// have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
@@ -1988,7 +1992,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The legal holds list held revisions route</para>
+        /// <para>List the file metadata that's under the hold. Note: Legal Holds is a paid
+        /// add-on. Not all teams have the feature.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListHeldRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2019,7 +2025,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The legal holds list held revisions route</para>
+        /// <para>List the file metadata that's under the hold. Note: Legal Holds is a paid
+        /// add-on. Not all teams have the feature.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2075,7 +2083,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The legal holds list held revisions continue route</para>
+        /// <para>Continue listing the file metadata that's under the hold. Note: Legal Holds
+        /// is a paid add-on. Not all teams have the feature.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListHeldRevisionsContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2107,10 +2117,14 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>The legal holds list held revisions continue route</para>
+        /// <para>Continue listing the file metadata that's under the hold. Note: Legal Holds
+        /// is a paid add-on. Not all teams have the feature.</para>
+        /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
-        /// <param name="cursor">cursor of list held revisions.</param>
+        /// <param name="cursor">The cursor idicates where to continue reading file metadata
+        /// entries for the next API call. When there are no more entries, the cursor will
+        /// return none.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2130,7 +2144,9 @@ namespace Dropbox.Api.Team.Routes
         /// route.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
-        /// <param name="cursor">cursor of list held revisions.</param>
+        /// <param name="cursor">The cursor idicates where to continue reading file metadata
+        /// entries for the next API call. When there are no more entries, the cursor will
+        /// return none.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2169,7 +2185,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists legal holds on a team.</para>
+        /// <para>Lists legal holds on a team. Note: Legal Holds is a paid add-on. Not all
+        /// teams have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListPoliciesArg">The request parameters</param>
@@ -2200,7 +2217,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists legal holds on a team.</para>
+        /// <para>Lists legal holds on a team. Note: Legal Holds is a paid add-on. Not all
+        /// teams have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="includeReleased">Whether to return holds that were released.</param>
@@ -2256,7 +2274,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Releases a legal hold by Id.</para>
+        /// <para>Releases a legal hold by Id. Note: Legal Holds is a paid add-on. Not all
+        /// teams have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyReleaseArg">The request parameters</param>
@@ -2286,7 +2305,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Releases a legal hold by Id.</para>
+        /// <para>Releases a legal hold by Id. Note: Legal Holds is a paid add-on. Not all
+        /// teams have the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
@@ -2338,7 +2358,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a legal hold.</para>
+        /// <para>Updates a legal hold. Note: Legal Holds is a paid add-on. Not all teams have
+        /// the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyUpdateArg">The request parameters</param>
@@ -2369,27 +2390,28 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a legal hold.</para>
+        /// <para>Updates a legal hold. Note: Legal Holds is a paid add-on. Not all teams have
+        /// the feature.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
-        /// <param name="members">List of team members to apply the policy on.</param>
         /// <param name="name">Policy new name.</param>
         /// <param name="description">Policy new description.</param>
+        /// <param name="members">List of team member IDs to apply the policy on.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsPolicyUpdateError"/>.</exception>
         public t.Task<LegalHoldPolicy> LegalHoldsUpdatePolicyAsync(string id,
-                                                                   col.IEnumerable<string> members,
                                                                    string name = null,
-                                                                   string description = null)
+                                                                   string description = null,
+                                                                   col.IEnumerable<string> members = null)
         {
             var legalHoldsPolicyUpdateArg = new LegalHoldsPolicyUpdateArg(id,
-                                                                          members,
                                                                           name,
-                                                                          description);
+                                                                          description,
+                                                                          members);
 
             return this.LegalHoldsUpdatePolicyAsync(legalHoldsPolicyUpdateArg);
         }
@@ -2398,25 +2420,25 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the legal holds update policy route.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
-        /// <param name="members">List of team members to apply the policy on.</param>
         /// <param name="name">Policy new name.</param>
         /// <param name="description">Policy new description.</param>
+        /// <param name="members">List of team member IDs to apply the policy on.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginLegalHoldsUpdatePolicy(string id,
-                                                            col.IEnumerable<string> members,
                                                             string name = null,
                                                             string description = null,
+                                                            col.IEnumerable<string> members = null,
                                                             sys.AsyncCallback callback = null,
                                                             object callbackState = null)
         {
             var legalHoldsPolicyUpdateArg = new LegalHoldsPolicyUpdateArg(id,
-                                                                          members,
                                                                           name,
-                                                                          description);
+                                                                          description,
+                                                                          members);
 
             return this.BeginLegalHoldsUpdatePolicy(legalHoldsPolicyUpdateArg, callback, callbackState);
         }
@@ -2765,8 +2787,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="appId">The application's unique id.</param>
         /// <param name="teamMemberId">The unique id of the member owning the device.</param>
-        /// <param name="keepAppFolder">Whether to keep the application dedicated folder (in
-        /// case the application uses  one).</param>
+        /// <param name="keepAppFolder">This flag is not longer supported, the application
+        /// dedicated folder (in case the application uses  one) will be kept.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -2788,8 +2810,8 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="appId">The application's unique id.</param>
         /// <param name="teamMemberId">The unique id of the member owning the device.</param>
-        /// <param name="keepAppFolder">Whether to keep the application dedicated folder (in
-        /// case the application uses  one).</param>
+        /// <param name="keepAppFolder">This flag is not longer supported, the application
+        /// dedicated folder (in case the application uses  one) will be kept.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -4474,11 +4496,12 @@ namespace Dropbox.Api.Team.Routes
         /// account that is not restricted to team members. In order to keep the account the
         /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
         /// <param name="retainTeamShares">If provided, allows removed users to keep access to
-        /// folders already explicitly shared with them (not via a group) when they are
-        /// downgraded to a Basic account. Users will not retain access to folders that do not
-        /// allow external sharing. In order to keep the sharing relationships, the arguments
-        /// <paramref name="wipeData" /> should be set to <c>false</c> and <paramref
-        /// name="keepAccount" /> should be set to <c>true</c>.</param>
+        /// Dropbox folders (not Dropbox Paper folders) already explicitly shared with them
+        /// (not via a group) when they are downgraded to a Basic account. Users will not
+        /// retain access to folders that do not allow external sharing. In order to keep the
+        /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
+        /// <c>false</c> and <paramref name="keepAccount" /> should be set to
+        /// <c>true</c>.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4518,11 +4541,12 @@ namespace Dropbox.Api.Team.Routes
         /// account that is not restricted to team members. In order to keep the account the
         /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
         /// <param name="retainTeamShares">If provided, allows removed users to keep access to
-        /// folders already explicitly shared with them (not via a group) when they are
-        /// downgraded to a Basic account. Users will not retain access to folders that do not
-        /// allow external sharing. In order to keep the sharing relationships, the arguments
-        /// <paramref name="wipeData" /> should be set to <c>false</c> and <paramref
-        /// name="keepAccount" /> should be set to <c>true</c>.</param>
+        /// Dropbox folders (not Dropbox Paper folders) already explicitly shared with them
+        /// (not via a group) when they are downgraded to a Basic account. Users will not
+        /// retain access to folders that do not allow external sharing. In order to keep the
+        /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
+        /// <c>false</c> and <paramref name="keepAccount" /> should be set to
+        /// <c>true</c>.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send

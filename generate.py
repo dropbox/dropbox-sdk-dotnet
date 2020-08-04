@@ -16,6 +16,7 @@ def main():
         shutil.rmtree(os.path.join(repo_path, 'Dropbox.Api', 'Generated'))
     except OSError:
         pass
+    print(os.path.join('stone'))
     try:
         subprocess.check_output(
             (['python', '-m', 'stone.cli', '--filter-by-route-attr', 'alpah_group=null', '-a:all', 'generator/csharp.stoneg.py'] +

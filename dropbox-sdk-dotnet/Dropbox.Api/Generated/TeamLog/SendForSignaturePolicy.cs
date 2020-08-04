@@ -11,71 +11,71 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The team membership type object</para>
+    /// <para>Policy for controlling team access to send for signature feature</para>
     /// </summary>
-    public class TeamMembershipType
+    public class SendForSignaturePolicy
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<TeamMembershipType> Encoder = new TeamMembershipTypeEncoder();
+        internal static enc.StructEncoder<SendForSignaturePolicy> Encoder = new SendForSignaturePolicyEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<TeamMembershipType> Decoder = new TeamMembershipTypeDecoder();
+        internal static enc.StructDecoder<SendForSignaturePolicy> Decoder = new SendForSignaturePolicyDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="TeamMembershipType" />
+        /// <para>Initializes a new instance of the <see cref="SendForSignaturePolicy" />
         /// class.</para>
         /// </summary>
-        public TeamMembershipType()
+        public SendForSignaturePolicy()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Full</para>
+        /// <para>Gets a value indicating whether this instance is Disabled</para>
         /// </summary>
-        public bool IsFull
+        public bool IsDisabled
         {
             get
             {
-                return this is Full;
+                return this is Disabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Full, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Disabled, or <c>null</c>.</para>
         /// </summary>
-        public Full AsFull
+        public Disabled AsDisabled
         {
             get
             {
-                return this as Full;
+                return this as Disabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Free</para>
+        /// <para>Gets a value indicating whether this instance is Enabled</para>
         /// </summary>
-        public bool IsFree
+        public bool IsEnabled
         {
             get
             {
-                return this is Free;
+                return this is Enabled;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Free, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Enabled, or <c>null</c>.</para>
         /// </summary>
-        public Free AsFree
+        public Enabled AsEnabled
         {
             get
             {
-                return this as Free;
+                return this as Enabled;
             }
         }
 
@@ -104,27 +104,27 @@ namespace Dropbox.Api.TeamLog
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="TeamMembershipType" />.</para>
+        /// <para>Encoder for  <see cref="SendForSignaturePolicy" />.</para>
         /// </summary>
-        private class TeamMembershipTypeEncoder : enc.StructEncoder<TeamMembershipType>
+        private class SendForSignaturePolicyEncoder : enc.StructEncoder<SendForSignaturePolicy>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(TeamMembershipType value, enc.IJsonWriter writer)
+            public override void EncodeFields(SendForSignaturePolicy value, enc.IJsonWriter writer)
             {
-                if (value is Full)
+                if (value is Disabled)
                 {
-                    WriteProperty(".tag", "full", writer, enc.StringEncoder.Instance);
-                    Full.Encoder.EncodeFields((Full)value, writer);
+                    WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
+                    Disabled.Encoder.EncodeFields((Disabled)value, writer);
                     return;
                 }
-                if (value is Free)
+                if (value is Enabled)
                 {
-                    WriteProperty(".tag", "free", writer, enc.StringEncoder.Instance);
-                    Free.Encoder.EncodeFields((Free)value, writer);
+                    WriteProperty(".tag", "enabled", writer, enc.StringEncoder.Instance);
+                    Enabled.Encoder.EncodeFields((Enabled)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -142,17 +142,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="TeamMembershipType" />.</para>
+        /// <para>Decoder for  <see cref="SendForSignaturePolicy" />.</para>
         /// </summary>
-        private class TeamMembershipTypeDecoder : enc.UnionDecoder<TeamMembershipType>
+        private class SendForSignaturePolicyDecoder : enc.UnionDecoder<SendForSignaturePolicy>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="TeamMembershipType" />.</para>
+            /// <para>Create a new instance of type <see cref="SendForSignaturePolicy"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override TeamMembershipType Create()
+            protected override SendForSignaturePolicy Create()
             {
-                return new TeamMembershipType();
+                return new SendForSignaturePolicy();
             }
 
             /// <summary>
@@ -161,14 +162,14 @@ namespace Dropbox.Api.TeamLog
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override TeamMembershipType Decode(string tag, enc.IJsonReader reader)
+            protected override SendForSignaturePolicy Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "full":
-                        return Full.Decoder.DecodeFields(reader);
-                    case "free":
-                        return Free.Decoder.DecodeFields(reader);
+                    case "disabled":
+                        return Disabled.Decoder.DecodeFields(reader);
+                    case "enabled":
+                        return Enabled.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -178,47 +179,47 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The full object</para>
+        /// <para>The disabled object</para>
         /// </summary>
-        public sealed class Full : TeamMembershipType
+        public sealed class Disabled : SendForSignaturePolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Full> Encoder = new FullEncoder();
+            internal static enc.StructEncoder<Disabled> Encoder = new DisabledEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Full> Decoder = new FullDecoder();
+            internal static enc.StructDecoder<Disabled> Decoder = new DisabledDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Full" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Disabled" /> class.</para>
             /// </summary>
-            private Full()
+            private Disabled()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Full</para>
+            /// <para>A singleton instance of Disabled</para>
             /// </summary>
-            public static readonly Full Instance = new Full();
+            public static readonly Disabled Instance = new Disabled();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Full" />.</para>
+            /// <para>Encoder for  <see cref="Disabled" />.</para>
             /// </summary>
-            private class FullEncoder : enc.StructEncoder<Full>
+            private class DisabledEncoder : enc.StructEncoder<Disabled>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Full value, enc.IJsonWriter writer)
+                public override void EncodeFields(Disabled value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -228,17 +229,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Full" />.</para>
+            /// <para>Decoder for  <see cref="Disabled" />.</para>
             /// </summary>
-            private class FullDecoder : enc.StructDecoder<Full>
+            private class DisabledDecoder : enc.StructDecoder<Disabled>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Full" />.</para>
+                /// <para>Create a new instance of type <see cref="Disabled" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Full Create()
+                protected override Disabled Create()
                 {
-                    return Full.Instance;
+                    return Disabled.Instance;
                 }
 
             }
@@ -247,47 +248,47 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The free object</para>
+        /// <para>The enabled object</para>
         /// </summary>
-        public sealed class Free : TeamMembershipType
+        public sealed class Enabled : SendForSignaturePolicy
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Free> Encoder = new FreeEncoder();
+            internal static enc.StructEncoder<Enabled> Encoder = new EnabledEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Free> Decoder = new FreeDecoder();
+            internal static enc.StructDecoder<Enabled> Decoder = new EnabledDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Free" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Enabled" /> class.</para>
             /// </summary>
-            private Free()
+            private Enabled()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Free</para>
+            /// <para>A singleton instance of Enabled</para>
             /// </summary>
-            public static readonly Free Instance = new Free();
+            public static readonly Enabled Instance = new Enabled();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Free" />.</para>
+            /// <para>Encoder for  <see cref="Enabled" />.</para>
             /// </summary>
-            private class FreeEncoder : enc.StructEncoder<Free>
+            private class EnabledEncoder : enc.StructEncoder<Enabled>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Free value, enc.IJsonWriter writer)
+                public override void EncodeFields(Enabled value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -297,17 +298,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Free" />.</para>
+            /// <para>Decoder for  <see cref="Enabled" />.</para>
             /// </summary>
-            private class FreeDecoder : enc.StructDecoder<Free>
+            private class EnabledDecoder : enc.StructDecoder<Enabled>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Free" />.</para>
+                /// <para>Create a new instance of type <see cref="Enabled" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Free Create()
+                protected override Enabled Create()
                 {
-                    return Free.Instance;
+                    return Enabled.Instance;
                 }
 
             }
@@ -318,7 +319,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : TeamMembershipType
+        public sealed class Other : SendForSignaturePolicy
         {
             #pragma warning disable 108
 
