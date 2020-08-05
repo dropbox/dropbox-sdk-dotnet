@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
   <TestRunParameters>
-    <Parameter name="userAccessToken" value="ictd5l0u-0AAAAAAAAAAAQTIWi08inUeCYCXgTT-nKghGSZehdKmdZKXPIzXRl2s" />
-    <Parameter name="teamAccessToken" value="2TxNsTWlsSAAAAAAAAAAAYSmFudzdQTaiSpcOedhn13d1mngcRK3yhkAwkI3pp-q" />
+    <Parameter name="userAccessToken" value="" />
+    <Parameter name="teamAccessToken" value="" />
     <Parameter name="userRefreshToken" value="" />
-    <Parameter name="appKey" value="wo6j2esexgx1pit" />
-    <Parameter name="appSecret" value="waax8s8bue8kqlp" />
+    <Parameter name="appKey" value="" />
+    <Parameter name="appSecret" value="" />
   </TestRunParameters>
 </RunSettings>

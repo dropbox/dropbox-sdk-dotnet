@@ -56,6 +56,7 @@ CSPROJ_START_BLOCK = r"""<Project Sdk="Microsoft.NET.Sdk">
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
