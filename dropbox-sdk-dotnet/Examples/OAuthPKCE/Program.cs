@@ -13,7 +13,7 @@ namespace OauthPKCE
     partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
-        private const string ApiKey = "wo6j2esexgx1pit";
+        private const string ApiKey = "XXXXXXXXXXXXXXX";
 
         // This loopback host is for demo purpose. If this port is not
         // available on your machine you need to update this URL with an unused port.
