@@ -33,8 +33,8 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="appId">The application's unique id.</param>
         /// <param name="teamMemberId">The unique id of the member owning the device.</param>
-        /// <param name="keepAppFolder">Whether to keep the application dedicated folder (in
-        /// case the application uses  one).</param>
+        /// <param name="keepAppFolder">This flag is not longer supported, the application
+        /// dedicated folder (in case the application uses  one) will be kept.</param>
         public RevokeLinkedApiAppArg(string appId,
                                      string teamMemberId,
                                      bool keepAppFolder = true)
@@ -77,8 +77,8 @@ namespace Dropbox.Api.Team
         public string TeamMemberId { get; protected set; }
 
         /// <summary>
-        /// <para>Whether to keep the application dedicated folder (in case the application
-        /// uses  one).</para>
+        /// <para>This flag is not longer supported, the application dedicated folder (in case
+        /// the application uses  one) will be kept.</para>
         /// </summary>
         public bool KeepAppFolder { get; protected set; }
 

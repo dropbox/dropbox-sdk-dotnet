@@ -1,4 +1,4 @@
-*.runsettings
+/dropbox-sdk-dotnet/Dropbox.Api.Tests/dropbox.runsettings
 
 ## Visual studio stuff
 *.suo

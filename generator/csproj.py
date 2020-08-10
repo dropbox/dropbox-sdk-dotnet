@@ -46,46 +46,20 @@ DOC_NONE_INCLUDES = [
     "packages.config",        
 ]
 
-CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+CSPROJ_START_BLOCK = r"""<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68180B54-4724-4CD1-BAA6-EE7BC309797C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>AppProperties</AppDesignerFolder>
     <RootNamespace>Dropbox.Api</RootNamespace>
     <AssemblyName>Dropbox.Api</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <BaseIntermediateOutputPath>net45obj\</BaseIntermediateOutputPath>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\net45</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\net45\Dropbox.Api.XML</DocumentationFile>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <NoWarn>419</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\net45</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\net45\Dropbox.Api.XML</DocumentationFile>
-    <NoWarn>419</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -97,17 +71,28 @@ CSPROJ_START_BLOCK = r"""<?xml version="1.0" encoding="utf-8"?>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+  </ItemGroup>  
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <None Include="packages.config" />
+  </ItemGroup>
+
+<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <None Remove="app.config" />
+    <None Remove="Dropbox.Api.nuspec" />
+    <None Remove="dropbox_api_key.snk" />
+    <None Remove="packages.config" />
+    <None Remove="packages.Dropbox.Api.Portable.config" />
+    <None Remove="packages.Dropbox.Api.Portable40.config" />
+    <None Remove="Settings.StyleCop" />
+    <None Remove="stone_summaries.xml" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 """
 
-CSPROJ_END_BLOCK = r"""  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+CSPROJ_END_BLOCK = r"""
 </Project>
 """
 

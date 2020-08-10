@@ -36,6 +36,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoOne</para>
+        /// </summary>
+        public bool IsNoOne
+        {
+            get
+            {
+                return this is NoOne;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoOne, or <c>null</c>.</para>
+        /// </summary>
+        public NoOne AsNoOne
+        {
+            get
+            {
+                return this as NoOne;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Password</para>
         /// </summary>
         public bool IsPassword
@@ -137,6 +159,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedLinkVisibility value, enc.IJsonWriter writer)
             {
+                if (value is NoOne)
+                {
+                    WriteProperty(".tag", "no_one", writer, enc.StringEncoder.Instance);
+                    NoOne.Encoder.EncodeFields((NoOne)value, writer);
+                    return;
+                }
                 if (value is Password)
                 {
                     WriteProperty(".tag", "password", writer, enc.StringEncoder.Instance);
@@ -193,6 +221,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "no_one":
+                        return NoOne.Decoder.DecodeFields(reader);
                     case "password":
                         return Password.Decoder.DecodeFields(reader);
                     case "public":
@@ -206,6 +236,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The no one object</para>
+        /// </summary>
+        public sealed class NoOne : SharedLinkVisibility
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoOne> Encoder = new NoOneEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoOne> Decoder = new NoOneDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoOne" /> class.</para>
+            /// </summary>
+            private NoOne()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NoOne</para>
+            /// </summary>
+            public static readonly NoOne Instance = new NoOne();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoOne" />.</para>
+            /// </summary>
+            private class NoOneEncoder : enc.StructEncoder<NoOne>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoOne value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoOne" />.</para>
+            /// </summary>
+            private class NoOneDecoder : enc.StructDecoder<NoOne>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoOne" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoOne Create()
+                {
+                    return NoOne.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The password object</para>

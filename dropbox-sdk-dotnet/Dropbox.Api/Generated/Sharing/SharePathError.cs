@@ -321,6 +321,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is IsVault</para>
+        /// </summary>
+        public bool IsIsVault
+        {
+            get
+            {
+                return this is IsVault;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a IsVault, or <c>null</c>.</para>
+        /// </summary>
+        public IsVault AsIsVault
+        {
+            get
+            {
+                return this as IsVault;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -434,6 +456,12 @@ namespace Dropbox.Api.Sharing
                     InsideOsxPackage.Encoder.EncodeFields((InsideOsxPackage)value, writer);
                     return;
                 }
+                if (value is IsVault)
+                {
+                    WriteProperty(".tag", "is_vault", writer, enc.StringEncoder.Instance);
+                    IsVault.Encoder.EncodeFields((IsVault)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -498,6 +526,8 @@ namespace Dropbox.Api.Sharing
                         return IsOsxPackage.Decoder.DecodeFields(reader);
                     case "inside_osx_package":
                         return InsideOsxPackage.Decoder.DecodeFields(reader);
+                    case "is_vault":
+                        return IsVault.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1434,6 +1464,75 @@ namespace Dropbox.Api.Sharing
                 protected override InsideOsxPackage Create()
                 {
                     return InsideOsxPackage.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support sharing the Vault folder.</para>
+        /// </summary>
+        public sealed class IsVault : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IsVault> Encoder = new IsVaultEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IsVault> Decoder = new IsVaultDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IsVault" /> class.</para>
+            /// </summary>
+            private IsVault()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of IsVault</para>
+            /// </summary>
+            public static readonly IsVault Instance = new IsVault();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="IsVault" />.</para>
+            /// </summary>
+            private class IsVaultEncoder : enc.StructEncoder<IsVault>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IsVault value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="IsVault" />.</para>
+            /// </summary>
+            private class IsVaultDecoder : enc.StructDecoder<IsVault>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IsVault" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IsVault Create()
+                {
+                    return IsVault.Instance;
                 }
 
             }

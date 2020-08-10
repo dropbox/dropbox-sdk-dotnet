@@ -302,6 +302,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CantMoveIntoVault</para>
+        /// </summary>
+        public bool IsCantMoveIntoVault
+        {
+            get
+            {
+                return this is CantMoveIntoVault;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CantMoveIntoVault, or <c>null</c>.</para>
+        /// </summary>
+        public CantMoveIntoVault AsCantMoveIntoVault
+        {
+            get
+            {
+                return this as CantMoveIntoVault;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -409,6 +431,12 @@ namespace Dropbox.Api.Files
                     CantMoveSharedFolder.Encoder.EncodeFields((CantMoveSharedFolder)value, writer);
                     return;
                 }
+                if (value is CantMoveIntoVault)
+                {
+                    WriteProperty(".tag", "cant_move_into_vault", writer, enc.StringEncoder.Instance);
+                    CantMoveIntoVault.Encoder.EncodeFields((CantMoveIntoVault)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -471,6 +499,8 @@ namespace Dropbox.Api.Files
                         return InternalError.Decoder.DecodeFields(reader);
                     case "cant_move_shared_folder":
                         return CantMoveSharedFolder.Decoder.DecodeFields(reader);
+                    case "cant_move_into_vault":
+                        return CantMoveIntoVault.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1406,6 +1436,106 @@ namespace Dropbox.Api.Files
                     return CantMoveSharedFolder.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Some content cannot be moved into Vault under certain circumstances, see
+        /// detailed error.</para>
+        /// </summary>
+        public sealed class CantMoveIntoVault : RelocationError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantMoveIntoVault> Encoder = new CantMoveIntoVaultEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantMoveIntoVault> Decoder = new CantMoveIntoVaultDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantMoveIntoVault" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public CantMoveIntoVault(MoveIntoVaultError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantMoveIntoVault" />
+            /// class.</para>
+            /// </summary>
+            private CantMoveIntoVault()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public MoveIntoVaultError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CantMoveIntoVault" />.</para>
+            /// </summary>
+            private class CantMoveIntoVaultEncoder : enc.StructEncoder<CantMoveIntoVault>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantMoveIntoVault value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("cant_move_into_vault", value.Value, writer, global::Dropbox.Api.Files.MoveIntoVaultError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CantMoveIntoVault" />.</para>
+            /// </summary>
+            private class CantMoveIntoVaultDecoder : enc.StructDecoder<CantMoveIntoVault>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantMoveIntoVault"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantMoveIntoVault Create()
+                {
+                    return new CantMoveIntoVault();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(CantMoveIntoVault value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "cant_move_into_vault":
+                            value.Value = global::Dropbox.Api.Files.MoveIntoVaultError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
             }
 
             #endregion

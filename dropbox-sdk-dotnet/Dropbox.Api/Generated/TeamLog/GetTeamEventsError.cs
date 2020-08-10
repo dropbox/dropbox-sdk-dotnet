@@ -81,6 +81,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidFilters</para>
+        /// </summary>
+        public bool IsInvalidFilters
+        {
+            get
+            {
+                return this is InvalidFilters;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidFilters, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidFilters AsInvalidFilters
+        {
+            get
+            {
+                return this as InvalidFilters;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -128,6 +150,12 @@ namespace Dropbox.Api.TeamLog
                     InvalidTimeRange.Encoder.EncodeFields((InvalidTimeRange)value, writer);
                     return;
                 }
+                if (value is InvalidFilters)
+                {
+                    WriteProperty(".tag", "invalid_filters", writer, enc.StringEncoder.Instance);
+                    InvalidFilters.Encoder.EncodeFields((InvalidFilters)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.TeamLog
                         return AccountIdNotFound.Decoder.DecodeFields(reader);
                     case "invalid_time_range":
                         return InvalidTimeRange.Decoder.DecodeFields(reader);
+                    case "invalid_filters":
+                        return InvalidFilters.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -312,6 +342,77 @@ namespace Dropbox.Api.TeamLog
                 protected override InvalidTimeRange Create()
                 {
                     return InvalidTimeRange.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Invalid filters. Do not specify both event_type and category parameters for
+        /// the same call.</para>
+        /// </summary>
+        public sealed class InvalidFilters : GetTeamEventsError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidFilters> Encoder = new InvalidFiltersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidFilters> Decoder = new InvalidFiltersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidFilters" />
+            /// class.</para>
+            /// </summary>
+            private InvalidFilters()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidFilters</para>
+            /// </summary>
+            public static readonly InvalidFilters Instance = new InvalidFilters();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidFilters" />.</para>
+            /// </summary>
+            private class InvalidFiltersEncoder : enc.StructEncoder<InvalidFilters>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidFilters value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidFilters" />.</para>
+            /// </summary>
+            private class InvalidFiltersDecoder : enc.StructDecoder<InvalidFilters>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidFilters" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidFilters Create()
+                {
+                    return InvalidFilters.Instance;
                 }
 
             }

@@ -97,10 +97,13 @@ namespace Dropbox.Api.TeamLog.Routes
         /// fetch again using <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
         /// />.</param>
-        /// <param name="accountId">Filter the events by account ID. Return ony events with
+        /// <param name="accountId">Filter the events by account ID. Return only events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
-        /// <param name="category">Filter the returned events to a single category.</param>
+        /// <param name="category">Filter the returned events to a single category. Note that
+        /// category shouldn't be provided together with event_type.</param>
+        /// <param name="eventType">Filter the returned events to a single event type. Note
+        /// that event_type shouldn't be provided together with category.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -109,12 +112,14 @@ namespace Dropbox.Api.TeamLog.Routes
         public t.Task<GetTeamEventsResult> GetEventsAsync(uint limit = 1000,
                                                           string accountId = null,
                                                           global::Dropbox.Api.TeamCommon.TimeRange time = null,
-                                                          EventCategory category = null)
+                                                          EventCategory category = null,
+                                                          EventTypeArg eventType = null)
         {
             var getTeamEventsArg = new GetTeamEventsArg(limit,
                                                         accountId,
                                                         time,
-                                                        category);
+                                                        category,
+                                                        eventType);
 
             return this.GetEventsAsync(getTeamEventsArg);
         }
@@ -128,10 +133,13 @@ namespace Dropbox.Api.TeamLog.Routes
         /// fetch again using <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync"
         /// />.</param>
-        /// <param name="accountId">Filter the events by account ID. Return ony events with
+        /// <param name="accountId">Filter the events by account ID. Return only events with
         /// this account_id as either Actor, Context, or Participants.</param>
         /// <param name="time">Filter by time range.</param>
-        /// <param name="category">Filter the returned events to a single category.</param>
+        /// <param name="category">Filter the returned events to a single category. Note that
+        /// category shouldn't be provided together with event_type.</param>
+        /// <param name="eventType">Filter the returned events to a single event type. Note
+        /// that event_type shouldn't be provided together with category.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -141,13 +149,15 @@ namespace Dropbox.Api.TeamLog.Routes
                                                string accountId = null,
                                                global::Dropbox.Api.TeamCommon.TimeRange time = null,
                                                EventCategory category = null,
+                                               EventTypeArg eventType = null,
                                                sys.AsyncCallback callback = null,
                                                object callbackState = null)
         {
             var getTeamEventsArg = new GetTeamEventsArg(limit,
                                                         accountId,
                                                         time,
-                                                        category);
+                                                        category,
+                                                        eventType);
 
             return this.BeginGetEvents(getTeamEventsArg, callback, callbackState);
         }

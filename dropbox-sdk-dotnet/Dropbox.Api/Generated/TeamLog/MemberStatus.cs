@@ -145,6 +145,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MovedToAnotherTeam</para>
+        /// </summary>
+        public bool IsMovedToAnotherTeam
+        {
+            get
+            {
+                return this is MovedToAnotherTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MovedToAnotherTeam, or <c>null</c>.</para>
+        /// </summary>
+        public MovedToAnotherTeam AsMovedToAnotherTeam
+        {
+            get
+            {
+                return this as MovedToAnotherTeam;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,6 +232,12 @@ namespace Dropbox.Api.TeamLog
                     Removed.Encoder.EncodeFields((Removed)value, writer);
                     return;
                 }
+                if (value is MovedToAnotherTeam)
+                {
+                    WriteProperty(".tag", "moved_to_another_team", writer, enc.StringEncoder.Instance);
+                    MovedToAnotherTeam.Encoder.EncodeFields((MovedToAnotherTeam)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -258,6 +286,8 @@ namespace Dropbox.Api.TeamLog
                         return Suspended.Decoder.DecodeFields(reader);
                     case "removed":
                         return Removed.Decoder.DecodeFields(reader);
+                    case "moved_to_another_team":
+                        return MovedToAnotherTeam.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -604,6 +634,77 @@ namespace Dropbox.Api.TeamLog
                 protected override Removed Create()
                 {
                     return Removed.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The moved to another team object</para>
+        /// </summary>
+        public sealed class MovedToAnotherTeam : MemberStatus
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MovedToAnotherTeam> Encoder = new MovedToAnotherTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MovedToAnotherTeam> Decoder = new MovedToAnotherTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MovedToAnotherTeam" />
+            /// class.</para>
+            /// </summary>
+            private MovedToAnotherTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MovedToAnotherTeam</para>
+            /// </summary>
+            public static readonly MovedToAnotherTeam Instance = new MovedToAnotherTeam();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MovedToAnotherTeam" />.</para>
+            /// </summary>
+            private class MovedToAnotherTeamEncoder : enc.StructEncoder<MovedToAnotherTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MovedToAnotherTeam value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MovedToAnotherTeam" />.</para>
+            /// </summary>
+            private class MovedToAnotherTeamDecoder : enc.StructDecoder<MovedToAnotherTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MovedToAnotherTeam"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MovedToAnotherTeam Create()
+                {
+                    return MovedToAnotherTeam.Instance;
                 }
 
             }

@@ -32,7 +32,7 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="metadata">The metadata for the matched file or folder.</param>
         /// <param name="highlightSpans">The list of HighlightSpan determines which parts of
-        /// the result should be highlighted.</param>
+        /// the file title should be highlighted.</param>
         public SearchMatchV2(MetadataV2 metadata,
                              col.IEnumerable<HighlightSpan> highlightSpans = null)
         {
@@ -63,7 +63,7 @@ namespace Dropbox.Api.Files
         public MetadataV2 Metadata { get; protected set; }
 
         /// <summary>
-        /// <para>The list of HighlightSpan determines which parts of the result should be
+        /// <para>The list of HighlightSpan determines which parts of the file title should be
         /// highlighted.</para>
         /// </summary>
         public col.IList<HighlightSpan> HighlightSpans { get; protected set; }

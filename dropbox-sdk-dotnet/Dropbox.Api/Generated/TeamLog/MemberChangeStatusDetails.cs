@@ -36,9 +36,15 @@ namespace Dropbox.Api.TeamLog
         /// historical data gap.</param>
         /// <param name="action">Additional information indicating the action taken that caused
         /// status change.</param>
+        /// <param name="newTeam">The user's new team name. This field is relevant when the
+        /// user is transferred off the team.</param>
+        /// <param name="previousTeam">The user's previous team name. This field is relevant
+        /// when the user is transferred onto the team.</param>
         public MemberChangeStatusDetails(MemberStatus newValue,
                                          MemberStatus previousValue = null,
-                                         ActionDetails action = null)
+                                         ActionDetails action = null,
+                                         string newTeam = null,
+                                         string previousTeam = null)
         {
             if (newValue == null)
             {
@@ -48,6 +54,8 @@ namespace Dropbox.Api.TeamLog
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
             this.Action = action;
+            this.NewTeam = newTeam;
+            this.PreviousTeam = previousTeam;
         }
 
         /// <summary>
@@ -77,6 +85,18 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public ActionDetails Action { get; protected set; }
 
+        /// <summary>
+        /// <para>The user's new team name. This field is relevant when the user is transferred
+        /// off the team.</para>
+        /// </summary>
+        public string NewTeam { get; protected set; }
+
+        /// <summary>
+        /// <para>The user's previous team name. This field is relevant when the user is
+        /// transferred onto the team.</para>
+        /// </summary>
+        public string PreviousTeam { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -99,6 +119,14 @@ namespace Dropbox.Api.TeamLog
                 if (value.Action != null)
                 {
                     WriteProperty("action", value.Action, writer, global::Dropbox.Api.TeamLog.ActionDetails.Encoder);
+                }
+                if (value.NewTeam != null)
+                {
+                    WriteProperty("new_team", value.NewTeam, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PreviousTeam != null)
+                {
+                    WriteProperty("previous_team", value.PreviousTeam, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -141,6 +169,12 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "action":
                         value.Action = global::Dropbox.Api.TeamLog.ActionDetails.Decoder.Decode(reader);
+                        break;
+                    case "new_team":
+                        value.NewTeam = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "previous_team":
+                        value.PreviousTeam = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

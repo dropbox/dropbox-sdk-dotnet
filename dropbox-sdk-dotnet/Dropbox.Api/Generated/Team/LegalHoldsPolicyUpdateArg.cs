@@ -32,13 +32,13 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
-        /// <param name="members">List of team members to apply the policy on.</param>
         /// <param name="name">Policy new name.</param>
         /// <param name="description">Policy new description.</param>
+        /// <param name="members">List of team member IDs to apply the policy on.</param>
         public LegalHoldsPolicyUpdateArg(string id,
-                                         col.IEnumerable<string> members,
                                          string name = null,
-                                         string description = null)
+                                         string description = null,
+                                         col.IEnumerable<string> members = null)
         {
             if (id == null)
             {
@@ -47,13 +47,6 @@ namespace Dropbox.Api.Team
             if (!re.Regex.IsMatch(id, @"\A(?:^pid_dbhid:.+)\z"))
             {
                 throw new sys.ArgumentOutOfRangeException("id", @"Value should match pattern '\A(?:^pid_dbhid:.+)\z'");
-            }
-
-            var membersList = enc.Util.ToList(members);
-
-            if (members == null)
-            {
-                throw new sys.ArgumentNullException("members");
             }
 
             if (name != null)
@@ -72,10 +65,12 @@ namespace Dropbox.Api.Team
                 }
             }
 
+            var membersList = enc.Util.ToList(members);
+
             this.Id = id;
-            this.Members = membersList;
             this.Name = name;
             this.Description = description;
+            this.Members = membersList;
         }
 
         /// <summary>
@@ -95,11 +90,6 @@ namespace Dropbox.Api.Team
         public string Id { get; protected set; }
 
         /// <summary>
-        /// <para>List of team members to apply the policy on.</para>
-        /// </summary>
-        public col.IList<string> Members { get; protected set; }
-
-        /// <summary>
         /// <para>Policy new name.</para>
         /// </summary>
         public string Name { get; protected set; }
@@ -108,6 +98,11 @@ namespace Dropbox.Api.Team
         /// <para>Policy new description.</para>
         /// </summary>
         public string Description { get; protected set; }
+
+        /// <summary>
+        /// <para>List of team member IDs to apply the policy on.</para>
+        /// </summary>
+        public col.IList<string> Members { get; protected set; }
 
         #region Encoder class
 
@@ -124,7 +119,6 @@ namespace Dropbox.Api.Team
             public override void EncodeFields(LegalHoldsPolicyUpdateArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("id", value.Id, writer, enc.StringEncoder.Instance);
-                WriteListProperty("members", value.Members, writer, enc.StringEncoder.Instance);
                 if (value.Name != null)
                 {
                     WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
@@ -132,6 +126,10 @@ namespace Dropbox.Api.Team
                 if (value.Description != null)
                 {
                     WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
+                }
+                if (value.Members.Count > 0)
+                {
+                    WriteListProperty("members", value.Members, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -169,14 +167,14 @@ namespace Dropbox.Api.Team
                     case "id":
                         value.Id = enc.StringDecoder.Instance.Decode(reader);
                         break;
-                    case "members":
-                        value.Members = ReadList<string>(reader, enc.StringDecoder.Instance);
-                        break;
                     case "name":
                         value.Name = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "description":
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "members":
+                        value.Members = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     default:
                         reader.Skip();

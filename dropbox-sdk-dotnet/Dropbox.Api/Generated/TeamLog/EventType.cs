@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The type of the event.</para>
+    /// <para>The type of the event with description.</para>
     /// </summary>
     public class EventType
     {
@@ -4133,6 +4133,52 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ExternalSharingCreateReport</para>
+        /// </summary>
+        public bool IsExternalSharingCreateReport
+        {
+            get
+            {
+                return this is ExternalSharingCreateReport;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ExternalSharingCreateReport, or <c>null</c>.</para>
+        /// </summary>
+        public ExternalSharingCreateReport AsExternalSharingCreateReport
+        {
+            get
+            {
+                return this as ExternalSharingCreateReport;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ExternalSharingReportFailed</para>
+        /// </summary>
+        public bool IsExternalSharingReportFailed
+        {
+            get
+            {
+                return this is ExternalSharingReportFailed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ExternalSharingReportFailed, or <c>null</c>.</para>
+        /// </summary>
+        public ExternalSharingReportFailed AsExternalSharingReportFailed
+        {
+            get
+            {
+                return this as ExternalSharingReportFailed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// NoExpirationLinkGenCreateReport</para>
         /// </summary>
         public bool IsNoExpirationLinkGenCreateReport
@@ -7216,6 +7262,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ContentAdministrationPolicyChanged</para>
+        /// </summary>
+        public bool IsContentAdministrationPolicyChanged
+        {
+            get
+            {
+                return this is ContentAdministrationPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContentAdministrationPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ContentAdministrationPolicyChanged AsContentAdministrationPolicyChanged
+        {
+            get
+            {
+                return this as ContentAdministrationPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// DataPlacementRestrictionChangePolicy</para>
         /// </summary>
         public bool IsDataPlacementRestrictionChangePolicy
@@ -8235,6 +8305,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as RewindPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendForSignaturePolicyChanged</para>
+        /// </summary>
+        public bool IsSendForSignaturePolicyChanged
+        {
+            get
+            {
+                return this is SendForSignaturePolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendForSignaturePolicyChanged, or <c>null</c>.</para>
+        /// </summary>
+        public SendForSignaturePolicyChanged AsSendForSignaturePolicyChanged
+        {
+            get
+            {
+                return this as SendForSignaturePolicyChanged;
             }
         }
 
@@ -10793,6 +10886,18 @@ namespace Dropbox.Api.TeamLog
                     ExportMembersReportFail.Encoder.EncodeFields((ExportMembersReportFail)value, writer);
                     return;
                 }
+                if (value is ExternalSharingCreateReport)
+                {
+                    WriteProperty(".tag", "external_sharing_create_report", writer, enc.StringEncoder.Instance);
+                    ExternalSharingCreateReport.Encoder.EncodeFields((ExternalSharingCreateReport)value, writer);
+                    return;
+                }
+                if (value is ExternalSharingReportFailed)
+                {
+                    WriteProperty(".tag", "external_sharing_report_failed", writer, enc.StringEncoder.Instance);
+                    ExternalSharingReportFailed.Encoder.EncodeFields((ExternalSharingReportFailed)value, writer);
+                    return;
+                }
                 if (value is NoExpirationLinkGenCreateReport)
                 {
                     WriteProperty(".tag", "no_expiration_link_gen_create_report", writer, enc.StringEncoder.Instance);
@@ -11609,6 +11714,12 @@ namespace Dropbox.Api.TeamLog
                     CameraUploadsPolicyChanged.Encoder.EncodeFields((CameraUploadsPolicyChanged)value, writer);
                     return;
                 }
+                if (value is ContentAdministrationPolicyChanged)
+                {
+                    WriteProperty(".tag", "content_administration_policy_changed", writer, enc.StringEncoder.Instance);
+                    ContentAdministrationPolicyChanged.Encoder.EncodeFields((ContentAdministrationPolicyChanged)value, writer);
+                    return;
+                }
                 if (value is DataPlacementRestrictionChangePolicy)
                 {
                     WriteProperty(".tag", "data_placement_restriction_change_policy", writer, enc.StringEncoder.Instance);
@@ -11871,6 +11982,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "rewind_policy_changed", writer, enc.StringEncoder.Instance);
                     RewindPolicyChanged.Encoder.EncodeFields((RewindPolicyChanged)value, writer);
+                    return;
+                }
+                if (value is SendForSignaturePolicyChanged)
+                {
+                    WriteProperty(".tag", "send_for_signature_policy_changed", writer, enc.StringEncoder.Instance);
+                    SendForSignaturePolicyChanged.Encoder.EncodeFields((SendForSignaturePolicyChanged)value, writer);
                     return;
                 }
                 if (value is SharingChangeFolderJoinPolicy)
@@ -12647,6 +12764,10 @@ namespace Dropbox.Api.TeamLog
                         return ExportMembersReport.Decoder.DecodeFields(reader);
                     case "export_members_report_fail":
                         return ExportMembersReportFail.Decoder.DecodeFields(reader);
+                    case "external_sharing_create_report":
+                        return ExternalSharingCreateReport.Decoder.DecodeFields(reader);
+                    case "external_sharing_report_failed":
+                        return ExternalSharingReportFailed.Decoder.DecodeFields(reader);
                     case "no_expiration_link_gen_create_report":
                         return NoExpirationLinkGenCreateReport.Decoder.DecodeFields(reader);
                     case "no_expiration_link_gen_report_failed":
@@ -12919,6 +13040,8 @@ namespace Dropbox.Api.TeamLog
                         return AllowDownloadEnabled.Decoder.DecodeFields(reader);
                     case "camera_uploads_policy_changed":
                         return CameraUploadsPolicyChanged.Decoder.DecodeFields(reader);
+                    case "content_administration_policy_changed":
+                        return ContentAdministrationPolicyChanged.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_change_policy":
                         return DataPlacementRestrictionChangePolicy.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_satisfy_policy":
@@ -13007,6 +13130,8 @@ namespace Dropbox.Api.TeamLog
                         return ResellerSupportChangePolicy.Decoder.DecodeFields(reader);
                     case "rewind_policy_changed":
                         return RewindPolicyChanged.Decoder.DecodeFields(reader);
+                    case "send_for_signature_policy_changed":
+                        return SendForSignaturePolicyChanged.Decoder.DecodeFields(reader);
                     case "sharing_change_folder_join_policy":
                         return SharingChangeFolderJoinPolicy.Decoder.DecodeFields(reader);
                     case "sharing_change_link_policy":
@@ -29470,6 +29595,186 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(reports) Report created: Data shared outside the team</para>
+        /// </summary>
+        public sealed class ExternalSharingCreateReport : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ExternalSharingCreateReport> Encoder = new ExternalSharingCreateReportEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ExternalSharingCreateReport> Decoder = new ExternalSharingCreateReportDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ExternalSharingCreateReport"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ExternalSharingCreateReport(ExternalSharingCreateReportType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ExternalSharingCreateReport"
+            /// /> class.</para>
+            /// </summary>
+            private ExternalSharingCreateReport()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ExternalSharingCreateReportType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ExternalSharingCreateReport" />.</para>
+            /// </summary>
+            private class ExternalSharingCreateReportEncoder : enc.StructEncoder<ExternalSharingCreateReport>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ExternalSharingCreateReport value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("external_sharing_create_report", value.Value, writer, global::Dropbox.Api.TeamLog.ExternalSharingCreateReportType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ExternalSharingCreateReport" />.</para>
+            /// </summary>
+            private class ExternalSharingCreateReportDecoder : enc.StructDecoder<ExternalSharingCreateReport>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ExternalSharingCreateReport"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ExternalSharingCreateReport Create()
+                {
+                    return new ExternalSharingCreateReport();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ExternalSharingCreateReport DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ExternalSharingCreateReport(global::Dropbox.Api.TeamLog.ExternalSharingCreateReportType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(reports) Couldn't create report: Data shared outside the team</para>
+        /// </summary>
+        public sealed class ExternalSharingReportFailed : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ExternalSharingReportFailed> Encoder = new ExternalSharingReportFailedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ExternalSharingReportFailed> Decoder = new ExternalSharingReportFailedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ExternalSharingReportFailed"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ExternalSharingReportFailed(ExternalSharingReportFailedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ExternalSharingReportFailed"
+            /// /> class.</para>
+            /// </summary>
+            private ExternalSharingReportFailed()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ExternalSharingReportFailedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ExternalSharingReportFailed" />.</para>
+            /// </summary>
+            private class ExternalSharingReportFailedEncoder : enc.StructEncoder<ExternalSharingReportFailed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ExternalSharingReportFailed value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("external_sharing_report_failed", value.Value, writer, global::Dropbox.Api.TeamLog.ExternalSharingReportFailedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ExternalSharingReportFailed" />.</para>
+            /// </summary>
+            private class ExternalSharingReportFailedDecoder : enc.StructDecoder<ExternalSharingReportFailed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ExternalSharingReportFailed"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ExternalSharingReportFailed Create()
+                {
+                    return new ExternalSharingReportFailed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ExternalSharingReportFailed DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ExternalSharingReportFailed(global::Dropbox.Api.TeamLog.ExternalSharingReportFailedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(reports) Report created: Links created with no expiration</para>
         /// </summary>
         public sealed class NoExpirationLinkGenCreateReport : EventType
@@ -41705,6 +42010,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(team_policies) Changed content management setting</para>
+        /// </summary>
+        public sealed class ContentAdministrationPolicyChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContentAdministrationPolicyChanged> Encoder = new ContentAdministrationPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContentAdministrationPolicyChanged> Decoder = new ContentAdministrationPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ContentAdministrationPolicyChanged" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ContentAdministrationPolicyChanged(ContentAdministrationPolicyChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ContentAdministrationPolicyChanged" /> class.</para>
+            /// </summary>
+            private ContentAdministrationPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ContentAdministrationPolicyChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContentAdministrationPolicyChanged" />.</para>
+            /// </summary>
+            private class ContentAdministrationPolicyChangedEncoder : enc.StructEncoder<ContentAdministrationPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContentAdministrationPolicyChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("content_administration_policy_changed", value.Value, writer, global::Dropbox.Api.TeamLog.ContentAdministrationPolicyChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContentAdministrationPolicyChanged" />.</para>
+            /// </summary>
+            private class ContentAdministrationPolicyChangedDecoder : enc.StructDecoder<ContentAdministrationPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ContentAdministrationPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContentAdministrationPolicyChanged Create()
+                {
+                    return new ContentAdministrationPolicyChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ContentAdministrationPolicyChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ContentAdministrationPolicyChanged(global::Dropbox.Api.TeamLog.ContentAdministrationPolicyChangedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(team_policies) Set restrictions on data center locations where team data
         /// resides</para>
         /// </summary>
@@ -45674,6 +46069,96 @@ namespace Dropbox.Api.TeamLog
                 public override RewindPolicyChanged DecodeFields(enc.IJsonReader reader)
                 {
                     return new RewindPolicyChanged(global::Dropbox.Api.TeamLog.RewindPolicyChangedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed send for signature policy for team</para>
+        /// </summary>
+        public sealed class SendForSignaturePolicyChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendForSignaturePolicyChanged> Encoder = new SendForSignaturePolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendForSignaturePolicyChanged> Decoder = new SendForSignaturePolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendForSignaturePolicyChanged" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendForSignaturePolicyChanged(SendForSignaturePolicyChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendForSignaturePolicyChanged" /> class.</para>
+            /// </summary>
+            private SendForSignaturePolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public SendForSignaturePolicyChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendForSignaturePolicyChanged" />.</para>
+            /// </summary>
+            private class SendForSignaturePolicyChangedEncoder : enc.StructEncoder<SendForSignaturePolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendForSignaturePolicyChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_for_signature_policy_changed", value.Value, writer, global::Dropbox.Api.TeamLog.SendForSignaturePolicyChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendForSignaturePolicyChanged" />.</para>
+            /// </summary>
+            private class SendForSignaturePolicyChangedDecoder : enc.StructDecoder<SendForSignaturePolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendForSignaturePolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendForSignaturePolicyChanged Create()
+                {
+                    return new SendForSignaturePolicyChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendForSignaturePolicyChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendForSignaturePolicyChanged(global::Dropbox.Api.TeamLog.SendForSignaturePolicyChangedType.Decoder.DecodeFields(reader));
                 }
             }
 

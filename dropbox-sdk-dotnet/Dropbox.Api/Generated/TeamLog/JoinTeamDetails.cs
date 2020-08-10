@@ -37,12 +37,13 @@ namespace Dropbox.Api.TeamLog
         /// has_linked_devices boolean field instead.</param>
         /// <param name="linkedSharedFolders">Linked shared folders. (Deprecated) Please use
         /// has_linked_shared_folders boolean field instead.</param>
-        /// <param name="wasLinkedAppsTruncated">True if the linked_apps list was truncated to
-        /// the maximum supported length (50).</param>
-        /// <param name="wasLinkedDevicesTruncated">True if the linked_devices list was
+        /// <param name="wasLinkedAppsTruncated">(Deprecated) True if the linked_apps list was
         /// truncated to the maximum supported length (50).</param>
-        /// <param name="wasLinkedSharedFoldersTruncated">True if the linked_shared_folders
+        /// <param name="wasLinkedDevicesTruncated">(Deprecated) True if the linked_devices
         /// list was truncated to the maximum supported length (50).</param>
+        /// <param name="wasLinkedSharedFoldersTruncated">(Deprecated) True if the
+        /// linked_shared_folders list was truncated to the maximum supported length
+        /// (50).</param>
         /// <param name="hasLinkedApps">True if the user had linked apps at event time.</param>
         /// <param name="hasLinkedDevices">True if the user had linked apps at event
         /// time.</param>
@@ -120,20 +121,20 @@ namespace Dropbox.Api.TeamLog
         public col.IList<FolderLogInfo> LinkedSharedFolders { get; protected set; }
 
         /// <summary>
-        /// <para>True if the linked_apps list was truncated to the maximum supported length
-        /// (50).</para>
+        /// <para>(Deprecated) True if the linked_apps list was truncated to the maximum
+        /// supported length (50).</para>
         /// </summary>
         public bool? WasLinkedAppsTruncated { get; protected set; }
 
         /// <summary>
-        /// <para>True if the linked_devices list was truncated to the maximum supported length
-        /// (50).</para>
+        /// <para>(Deprecated) True if the linked_devices list was truncated to the maximum
+        /// supported length (50).</para>
         /// </summary>
         public bool? WasLinkedDevicesTruncated { get; protected set; }
 
         /// <summary>
-        /// <para>True if the linked_shared_folders list was truncated to the maximum supported
-        /// length (50).</para>
+        /// <para>(Deprecated) True if the linked_shared_folders list was truncated to the
+        /// maximum supported length (50).</para>
         /// </summary>
         public bool? WasLinkedSharedFoldersTruncated { get; protected set; }
 

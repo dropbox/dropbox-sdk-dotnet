@@ -81,6 +81,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AppFolderRemovalNotSupported</para>
+        /// </summary>
+        public bool IsAppFolderRemovalNotSupported
+        {
+            get
+            {
+                return this is AppFolderRemovalNotSupported;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AppFolderRemovalNotSupported, or <c>null</c>.</para>
+        /// </summary>
+        public AppFolderRemovalNotSupported AsAppFolderRemovalNotSupported
+        {
+            get
+            {
+                return this as AppFolderRemovalNotSupported;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -128,6 +151,12 @@ namespace Dropbox.Api.Team
                     MemberNotFound.Encoder.EncodeFields((MemberNotFound)value, writer);
                     return;
                 }
+                if (value is AppFolderRemovalNotSupported)
+                {
+                    WriteProperty(".tag", "app_folder_removal_not_supported", writer, enc.StringEncoder.Instance);
+                    AppFolderRemovalNotSupported.Encoder.EncodeFields((AppFolderRemovalNotSupported)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +199,8 @@ namespace Dropbox.Api.Team
                         return AppNotFound.Decoder.DecodeFields(reader);
                     case "member_not_found":
                         return MemberNotFound.Decoder.DecodeFields(reader);
+                    case "app_folder_removal_not_supported":
+                        return AppFolderRemovalNotSupported.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -311,6 +342,77 @@ namespace Dropbox.Api.Team
                 protected override MemberNotFound Create()
                 {
                     return MemberNotFound.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>App folder removal is not supported.</para>
+        /// </summary>
+        public sealed class AppFolderRemovalNotSupported : RevokeLinkedAppError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AppFolderRemovalNotSupported> Encoder = new AppFolderRemovalNotSupportedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AppFolderRemovalNotSupported> Decoder = new AppFolderRemovalNotSupportedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AppFolderRemovalNotSupported" /> class.</para>
+            /// </summary>
+            private AppFolderRemovalNotSupported()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AppFolderRemovalNotSupported</para>
+            /// </summary>
+            public static readonly AppFolderRemovalNotSupported Instance = new AppFolderRemovalNotSupported();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AppFolderRemovalNotSupported" />.</para>
+            /// </summary>
+            private class AppFolderRemovalNotSupportedEncoder : enc.StructEncoder<AppFolderRemovalNotSupported>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AppFolderRemovalNotSupported value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AppFolderRemovalNotSupported" />.</para>
+            /// </summary>
+            private class AppFolderRemovalNotSupportedDecoder : enc.StructDecoder<AppFolderRemovalNotSupported>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="AppFolderRemovalNotSupported" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AppFolderRemovalNotSupported Create()
+                {
+                    return AppFolderRemovalNotSupported.Instance;
                 }
 
             }

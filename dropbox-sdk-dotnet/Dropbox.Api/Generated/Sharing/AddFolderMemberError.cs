@@ -300,6 +300,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidSharedFolder</para>
+        /// </summary>
+        public bool IsInvalidSharedFolder
+        {
+            get
+            {
+                return this is InvalidSharedFolder;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidSharedFolder, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidSharedFolder AsInvalidSharedFolder
+        {
+            get
+            {
+                return this as InvalidSharedFolder;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -407,6 +429,12 @@ namespace Dropbox.Api.Sharing
                     NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
                     return;
                 }
+                if (value is InvalidSharedFolder)
+                {
+                    WriteProperty(".tag", "invalid_shared_folder", writer, enc.StringEncoder.Instance);
+                    InvalidSharedFolder.Encoder.EncodeFields((InvalidSharedFolder)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -469,6 +497,8 @@ namespace Dropbox.Api.Sharing
                         return TeamFolder.Decoder.DecodeFields(reader);
                     case "no_permission":
                         return NoPermission.Decoder.DecodeFields(reader);
+                    case "invalid_shared_folder":
+                        return InvalidSharedFolder.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1424,6 +1454,77 @@ namespace Dropbox.Api.Sharing
                 protected override NoPermission Create()
                 {
                     return NoPermission.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Invalid shared folder error will be returned as an access_error.</para>
+        /// </summary>
+        public sealed class InvalidSharedFolder : AddFolderMemberError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidSharedFolder> Encoder = new InvalidSharedFolderEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidSharedFolder> Decoder = new InvalidSharedFolderDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidSharedFolder" />
+            /// class.</para>
+            /// </summary>
+            private InvalidSharedFolder()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidSharedFolder</para>
+            /// </summary>
+            public static readonly InvalidSharedFolder Instance = new InvalidSharedFolder();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidSharedFolder" />.</para>
+            /// </summary>
+            private class InvalidSharedFolderEncoder : enc.StructEncoder<InvalidSharedFolder>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidSharedFolder value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidSharedFolder" />.</para>
+            /// </summary>
+            private class InvalidSharedFolderDecoder : enc.StructDecoder<InvalidSharedFolder>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidSharedFolder"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidSharedFolder Create()
+                {
+                    return InvalidSharedFolder.Instance;
                 }
 
             }

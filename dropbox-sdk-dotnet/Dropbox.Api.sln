@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Tests", "Dropbo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OauthTest", "Examples\OauthBasic\OauthTest.csproj", "{AC53CD8C-710C-4019-8B62-F819F0D6EF38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthPKCE", "Examples\OAuthPKCE\OAuthPKCE.csproj", "{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Examples\UniversalDemo\UniversalDemo\UniversalDemo.Shared\UniversalDemo.Shared.projitems*{51d9899c-31d6-4c22-b894-e9498cb90577}*SharedItemsImports = 4
@@ -195,6 +197,22 @@ Global
 		{AC53CD8C-710C-4019-8B62-F819F0D6EF38}.Release|x64.Build.0 = Release|Any CPU
 		{AC53CD8C-710C-4019-8B62-F819F0D6EF38}.Release|x86.ActiveCfg = Release|Any CPU
 		{AC53CD8C-710C-4019-8B62-F819F0D6EF38}.Release|x86.Build.0 = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|x64.Build.0 = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|ARM.Build.0 = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|x64.ActiveCfg = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|x64.Build.0 = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

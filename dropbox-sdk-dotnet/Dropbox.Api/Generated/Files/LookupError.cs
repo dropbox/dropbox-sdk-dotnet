@@ -168,6 +168,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Locked</para>
+        /// </summary>
+        public bool IsLocked
+        {
+            get
+            {
+                return this is Locked;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Locked, or <c>null</c>.</para>
+        /// </summary>
+        public Locked AsLocked
+        {
+            get
+            {
+                return this as Locked;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -239,6 +261,12 @@ namespace Dropbox.Api.Files
                     UnsupportedContentType.Encoder.EncodeFields((UnsupportedContentType)value, writer);
                     return;
                 }
+                if (value is Locked)
+                {
+                    WriteProperty(".tag", "locked", writer, enc.StringEncoder.Instance);
+                    Locked.Encoder.EncodeFields((Locked)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -289,6 +317,8 @@ namespace Dropbox.Api.Files
                         return RestrictedContent.Decoder.DecodeFields(reader);
                     case "unsupported_content_type":
                         return UnsupportedContentType.Decoder.DecodeFields(reader);
+                    case "locked":
+                        return Locked.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -746,6 +776,75 @@ namespace Dropbox.Api.Files
                 protected override UnsupportedContentType Create()
                 {
                     return UnsupportedContentType.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The given path is locked.</para>
+        /// </summary>
+        public sealed class Locked : LookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Locked> Encoder = new LockedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Locked> Decoder = new LockedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Locked" /> class.</para>
+            /// </summary>
+            private Locked()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Locked</para>
+            /// </summary>
+            public static readonly Locked Instance = new Locked();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Locked" />.</para>
+            /// </summary>
+            private class LockedEncoder : enc.StructEncoder<Locked>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Locked value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Locked" />.</para>
+            /// </summary>
+            private class LockedDecoder : enc.StructDecoder<Locked>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Locked" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Locked Create()
+                {
+                    return Locked.Instance;
                 }
 
             }

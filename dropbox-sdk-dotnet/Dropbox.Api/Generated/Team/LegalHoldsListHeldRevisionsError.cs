@@ -342,7 +342,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The legal hold is not holding any revisions yet</para>
+        /// <para>The legal hold is not holding any revisions yet.</para>
         /// </summary>
         public sealed class LegalHoldStillEmpty : LegalHoldsListHeldRevisionsError
         {

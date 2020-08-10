@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Free</para>
-        /// </summary>
-        public bool IsFree
-        {
-            get
-            {
-                return this is Free;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Free, or <c>null</c>.</para>
-        /// </summary>
-        public Free AsFree
-        {
-            get
-            {
-                return this as Free;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Full</para>
         /// </summary>
         public bool IsFull
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Full;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Free</para>
+        /// </summary>
+        public bool IsFree
+        {
+            get
+            {
+                return this is Free;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Free, or <c>null</c>.</para>
+        /// </summary>
+        public Free AsFree
+        {
+            get
+            {
+                return this as Free;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TeamMembershipType value, enc.IJsonWriter writer)
             {
-                if (value is Free)
-                {
-                    WriteProperty(".tag", "free", writer, enc.StringEncoder.Instance);
-                    Free.Encoder.EncodeFields((Free)value, writer);
-                    return;
-                }
                 if (value is Full)
                 {
                     WriteProperty(".tag", "full", writer, enc.StringEncoder.Instance);
                     Full.Encoder.EncodeFields((Full)value, writer);
+                    return;
+                }
+                if (value is Free)
+                {
+                    WriteProperty(".tag", "free", writer, enc.StringEncoder.Instance);
+                    Free.Encoder.EncodeFields((Free)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -165,10 +165,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "free":
-                        return Free.Decoder.DecodeFields(reader);
                     case "full":
                         return Full.Decoder.DecodeFields(reader);
+                    case "free":
+                        return Free.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -176,75 +176,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The free object</para>
-        /// </summary>
-        public sealed class Free : TeamMembershipType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Free> Encoder = new FreeEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Free> Decoder = new FreeDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Free" /> class.</para>
-            /// </summary>
-            private Free()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Free</para>
-            /// </summary>
-            public static readonly Free Instance = new Free();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Free" />.</para>
-            /// </summary>
-            private class FreeEncoder : enc.StructEncoder<Free>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Free value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Free" />.</para>
-            /// </summary>
-            private class FreeDecoder : enc.StructDecoder<Free>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Free" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Free Create()
-                {
-                    return Free.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The full object</para>
@@ -308,6 +239,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Full Create()
                 {
                     return Full.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The free object</para>
+        /// </summary>
+        public sealed class Free : TeamMembershipType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Free> Encoder = new FreeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Free> Decoder = new FreeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Free" /> class.</para>
+            /// </summary>
+            private Free()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Free</para>
+            /// </summary>
+            public static readonly Free Instance = new Free();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Free" />.</para>
+            /// </summary>
+            private class FreeEncoder : enc.StructEncoder<Free>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Free value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Free" />.</para>
+            /// </summary>
+            private class FreeDecoder : enc.StructDecoder<Free>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Free" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Free Create()
+                {
+                    return Free.Instance;
                 }
 
             }

@@ -62,7 +62,7 @@ namespace OauthTest
             DropboxCertHelper.InitializeCertPinning();
 
             string[] scopeList = new string[3] { "files.metadata.read", "files.content.read", "account_info.read" };
-            var uid = await this.GetAccessToken(scopeList, IncludeGrantedScopes.None);
+            var uid = await this.AcquireAccessToken(scopeList, IncludeGrantedScopes.None);
             if (string.IsNullOrEmpty(uid))
             {
                 return 1;
@@ -102,7 +102,7 @@ namespace OauthTest
                     Console.WriteLine("Correctly failed with invalid scope");
                 }
                 Console.WriteLine("Attempting to try again with include_granted_scopes");
-                await this.GetAccessToken(newScopes, IncludeGrantedScopes.User);
+                await this.AcquireAccessToken(newScopes, IncludeGrantedScopes.User);
                 var clientNew = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
                 await GetCurrentAccount(clientNew);
 
