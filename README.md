@@ -3,12 +3,9 @@
 A .NET SDK for integrating with the Dropbox API v2.
 
 ## Support Platforms
- - .NET Framework 4+
- - Windows Store Apps
- - Windows Phone 8 and 8.1 Apps
- - Silverlight 5.0
+ - .NET Framework 4.5+
  - .NET Standard 2.0+
- - .NET Standard 1.x (Note: If you are using project.json, you need to add `portable-net45+win8` to imports under you frameworks section. If you are using .csproj file, you need to add `<PackageTargetFallback>portable-net45+win8</PackageTargetFallback>` element to your project.)
+ 
 ## Setup
 
 To get started with Dropbox.NET, we recommend you add it to your project using NuGet.
@@ -34,14 +31,10 @@ You can also view our OAuth [guide](https://www.dropbox.com/lp/developers/refere
 ## Examples
 
 Several examples can be found in the [examples](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples) directory:
-* [SimpleBlogDemo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleBlogDemo) — An ASP.NET MVC application that creates a simple blogging
-  platform, this shows how to upload and download files.
-* [SimpleBusinessDashboard](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleBusinessDashboard) — An ASP.NET MVC application that creates a simple business
-  dashboard, showcasing the Dropbox Business endpoints.
 * [SimpleTest](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleTest) — A windows console application that demonstrates basic use of the SDK;
   this also contains code that connects with OAuth2 using WPF.
-* [UniversalDemo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/UniversalDemo/UniversalDemo) — A slide show app for both Windows Store and
-  Windows Phone 8.1
+* [BasicOAuth](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/OauthBasic) - A simple console application the demonstrates the basic oauth flows
+* [PKCEOAuth](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/OAuthPKCE) - A simple console application that demonstrates authentication via PKCE
 
 ## Documentation
 
@@ -52,10 +45,9 @@ You can also build the SDK or create local nuget package from source code direct
 ### Basic Setup
 
 1. Prerequisites:
-   - Visual Studio 2013 or above.
-   - Python 2.7 or above.
+   - Visual Studio 2017 or above.
+   - Python 2.7
    - [Optional] Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases). This is only required for doc generation.
-   - [Optional] Visual Studio 2017 or above. This is required to generate .NET Standard package
 
 2. Clone the repository and update submodules.
    ```
