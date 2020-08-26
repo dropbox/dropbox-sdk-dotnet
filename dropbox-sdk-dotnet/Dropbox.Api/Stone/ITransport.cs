@@ -61,7 +61,7 @@ namespace Dropbox.Api.Stone
         /// <param name="route">The route name.</param>
         /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
-        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         Task<TResponse> SendRpcRequestAsync<TRequest, TResponse, TError>(
@@ -70,7 +70,7 @@ namespace Dropbox.Api.Stone
             string route,
             string auth,
             IEncoder<TRequest> requestEncoder,
-            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder);
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Dropbox.Api.Stone
         /// <param name="route">The route name.</param>
         /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
-        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         Task<TResponse> SendUploadRequestAsync<TRequest, TResponse, TError>(
@@ -95,7 +95,7 @@ namespace Dropbox.Api.Stone
             string route,
             string auth,
             IEncoder<TRequest> requestEncoder,
-            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder);
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Dropbox.Api.Stone
         /// <param name="route">The route name.</param>
         /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
-        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         Task<IDownloadResponse<TResponse>> SendDownloadRequestAsync<TRequest, TResponse, TError>(
@@ -118,7 +118,7 @@ namespace Dropbox.Api.Stone
             string route,
             string auth,
             IEncoder<TRequest> requestEncoder,
-            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder);
     }
 }
