@@ -2,72 +2,19 @@
 <package>
   <metadata>
     <id>Dropbox.Api</id>
-    <version>5.0.0</version>
+    <version>5.1.0</version>
     <title>Dropbox v2 API</title>
     <authors>Dropbox Inc</authors>
     <owners>Dropbox Inc</owners>
-    <licenseUrl>https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://www.dropbox.com/developers</projectUrl>
-    <iconUrl>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph.png</iconUrl>
+    <icon>images\icon.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Portable class library for accessing the Dropbox v2 API</description>
     <releaseNotes>
 Change Notes:
-- Move officially supported versions to Net45 and NetStandard2.0
-- Migrate from VS2015 to VS2017 build system
-- Move all build targets into single CSProj file
-
-- Add support for PKCE oauth flow
-- Add PKCE Oauth Example
-- Add System.Security.Cryptography as dependency
-
-(49cee186b12822462483dbca08dfb1335f55efbf)
-Files Namespace
-  - Add internal_error to SearchError union.
-  - Add locked to LookupError union.
-  - Add cant_move_into_vault to RelocationError union.
-  - Add MoveIntoVaultError union.
-  - Add SearchMatchFieldOptions struct.
-  - Add optional match_field_options to SearchV2Arg struct.
-  - Doc/example changes.
-
-Sharing Namespace
-  - Add is_vault to SharePathError union.
-  - Add invalid_shared_folder to AddFolderMemberError union.
-
-Team Namespace
-  - Make members field of LegalHoldsPolicyUpdateArg struct optional.
-  - Add app_folder_removal_not_supported to RevokeLinkedAppError union.
-  - Doc/example changes.
-
-Team Log Namespace
-  - Add auto_approve to InviteMethod union.
-  - Add moved_from_another_team to InviteMethod union.
-  - Add moved_from_another_team to MemberStatus union.
-  - Add no_one to SharedLinkVisibility union.
-  - Add optional new_team to MemberChangeStatusDetails struct.
-  - Add optional previous_team to MemberChangeStatusDetails struct.
-  - Add external_sharing_create_report_details to EventDetails union.
-  - Add external_sharing_report_failed to EventDetails union.
-  - Add content_administration_policy_changed_details to EventDetails
-union.
-  - Add external_sharing_create_report to EventType union.
-  - Add external_sharing_report_failed to EventType union.
-  - Add content_administration_policy_changed to EventType union.
-  - Add send_for_signature_policy_changed_details to EventDetails union.
-  - Add external_sharing_create_report to EventTypeArgs union.
-  - Add external_sharing_report_failed to EventTypeArgs union.
-  - Add content_administration_policy_changed to EventTypeArgs union.
-  - Add send_for_signature_policy_changed to EventTypeArgs union.
-  - Add SendForSignaturePolicy union.
-  - Add ExternalSharingCreateReportDetails struct.
-  - Add ExternalSharingReportFailedDetails struct.
-  - Add ContentAdministrationPolicyChangedDetails struct.
-  - Add SendForSignaturePolicyChangedDetails struct.
-  - Add ExternalSharingCreateReportType struct.
-  - Add ExternalSharingReportFailedType struct.
-  - Add ContentAdministrationPolicyChangedType struct.
-  - Add SendForSignaturePolicyChangedType struct.
+- Fix bug to add support for short-lived tokens to team client
+- Fix typo in DropboxRequestHandler
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
@@ -81,6 +28,7 @@ union.
     </dependencies>
   </metadata>
   <files>
+    <file src="..\..\icon.png" target="images\" />
     <file src="bin\Release\net45\Dropbox.Api.dll" target="lib\net45\Dropbox.Api.dll" />
     <file src="bin\Release\net45\Dropbox.Api.xml" target="lib\net45\Dropbox.Api.xml" />
     <file src="bin\Release\netstandard2.0\Dropbox.Api.dll" target="lib\netstandard2.0\Dropbox.Api.dll" />
