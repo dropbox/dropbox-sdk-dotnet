@@ -25,7 +25,7 @@ $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 $releaseNotes = @'
 Change Notes:
 - Fix bug to add support for short-lived tokens to team client
-- Fix type in DropboxRequestHandler
+- Fix typo in DropboxRequestHandler
 '@
 
 $builds = @(

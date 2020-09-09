@@ -14,7 +14,7 @@
     <releaseNotes>
 Change Notes:
 - Fix bug to add support for short-lived tokens to team client
-- Fix type in DropboxRequestHandler
+- Fix typo in DropboxRequestHandler
     </releaseNotes>
     <copyright>Copyright (c) Dropbox Inc. 2016</copyright>
     <tags>Dropbox Api</tags>
