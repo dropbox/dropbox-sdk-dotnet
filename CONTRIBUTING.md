@@ -18,6 +18,21 @@ We are more than happy to recieve pull requests helping us improve the state of 
 
 2. Please add tests confirming the new functionality works. Pull requests will not be merged without passing continuous integration tests unless the pull requests aims to fix existing issues with these tests.
 
+## Updating Generated Code
+
+Generated code can be updated by running the following code:
+
+```
+$ git submodule init
+$ git submodule update --remote --recursive
+$ cd stone
+$ python setup.py install
+$ cd ..
+$ python generate.py
+```
+
+Note: the `buildall.ps1` file also will update generated code so unless you are looking to explicitely test something new, this step is generally unnecessary
+
 ## Testing the Code
 
 Tests live under the Dropbox.Api.Tests Project.  Please fill in the dropbox.runsettings file with test tokens in order to successfully make calls to the Dropbox servers.

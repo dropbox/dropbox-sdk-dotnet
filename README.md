@@ -1,6 +1,6 @@
-[![Logo][logo]][repo]
+[![Logo][logo]](repo)
 
-[![NuGet](https://img.shields.io/badge/Frameworks-.NetFramework%204.5%20%7C%20.NetStandard%202.0-blue)](https://www.nuget.org/packages/Dropbox.Api)]
+[![NuGet](https://img.shields.io/badge/Frameworks-.NetFramework%204.5%20%7C%20.NetStandard%202.0-blue)](https://www.nuget.org/packages/Dropbox.Api)
 [![NuGet](https://img.shields.io/nuget/v/Dropbox.Api.svg)](https://www.nuget.org/packages/Dropbox.Api)
 [![codecov](https://codecov.io/gh/dropbox/dropbox-sdk-dotnet/branch/master/graph/badge.svg)](https://codecov.io/gh/dropbox/dropbox-sdk-dotnet)
 
@@ -16,13 +16,6 @@ Install via [NuGet](https://www.nuget.org/)
 
 ```
 PM> Install-Package Dropbox.Api
-```
-
-Install from source:
-
-```
-$ git clone https://github.com/dropbox/dropbox-sdk-dotnet
-$ cd dropbox-sdk-dotnet
 ```
 
 After installation, follow one of our [Examples][examples] or read the [Documentation][documentation].
@@ -52,7 +45,7 @@ If you need help that is not specific to this SDK, please reach out to [Dropbox 
 
 This SDK is distributed under the MIT license, please see [LICENSE][license] for more information.
 
-[logo]: 
+[logo]: logo
 [repo]: https://github.com/dropbox/dropbox-sdk-dotnet
 [documentation]: http://dropbox.github.io/dropbox-sdk-dotnet/html/R_Project_DotNetApiDocumentation.htm
 [examples]: https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples
