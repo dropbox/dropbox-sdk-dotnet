@@ -8,8 +8,13 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-        # No Need to Setup DotNet, 4.8 comes preinstalled on all runners
-      - name: Install Dependencies
-        run: dotnet restore dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj
+      - name: Setup NuGet.exe
+        uses: nuget/setup-nuget@v1.0.2
+        with:
+          nuget-version: latest
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
+      - name: Restore Packages
+        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build
-        run: dotnet build dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj --configuration Release
+        run: msbuild dropbox-sdk-dotnet\Dropbox.Api.sln -p:Configuration=Release
