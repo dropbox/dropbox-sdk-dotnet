@@ -8,10 +8,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup .Net
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 4.5
+        # No Need to Setup DotNet, 4.8 comes preinstalled on all runners
       - name: Install Dependencies
         run: dotnet restore
       - name: Build
