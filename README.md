@@ -1,88 +1,63 @@
-# Dropbox.NET
+[![Logo][logo]][repo]
 
-A .NET SDK for integrating with the Dropbox API v2.
+[![NuGet](https://img.shields.io/badge/Frameworks-.NetFramework%204.5%20%7C%20.NetStandard%202.0-blue)](https://www.nuget.org/packages/Dropbox.Api)]
+[![NuGet](https://img.shields.io/nuget/v/Dropbox.Api.svg)](https://www.nuget.org/packages/Dropbox.Api)
+[![codecov](https://codecov.io/gh/dropbox/dropbox-sdk-dotnet/branch/master/graph/badge.svg)](https://codecov.io/gh/dropbox/dropbox-sdk-dotnet)
 
-## Support Platforms
- - .NET Framework 4.5+
- - .NET Standard 2.0+
- 
-## Setup
+The offical Dropbox SDK for DotNet.
 
-To get started with Dropbox.NET, we recommend you add it to your project using NuGet.
+Documentation can be found on [Github Pages][documentation]
 
-To install `Dropbox.Api`, run the following command in the Package Manager Console:
+## Installation
 
-```PM> Install-Package Dropbox.Api```
+Create an app via the [Developer Console][devconsole]
 
-## Creating an application
+Install via [NuGet](https://www.nuget.org/)
 
-You need to create an Dropbox Application to make API requests.
+```
+PM> Install-Package Dropbox.Api
+```
 
-- Go to https://dropbox.com/developers/apps.
+Install from source:
 
-## Obtaining an access token
+```
+$ git clone https://github.com/dropbox/dropbox-sdk-dotnet
+$ cd dropbox-sdk-dotnet
+```
 
-All requests need to be made with an OAuth 2 access token. To get started, once
-you've created an app, you can go to the app's console and generate an access
-token for your own Dropbox account.
+After installation, follow one of our [Examples][examples] or read the [Documentation][documentation].
 
-You can also view our OAuth [guide](https://www.dropbox.com/lp/developers/reference/oauth-guide.html)
+You can also view our [OAuth guide][oauthguide].
 
 ## Examples
 
-Several examples can be found in the [examples](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples) directory:
-* [SimpleTest](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleTest) — A windows console application that demonstrates basic use of the SDK;
-  this also contains code that connects with OAuth2 using WPF.
-* [BasicOAuth](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/OauthBasic) - A simple console application the demonstrates the basic oauth flows
-* [PKCEOAuth](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/OAuthPKCE) - A simple console application that demonstrates authentication via PKCE
+We provide [Examples][examples] to help get you started with a lot of the basic functionality in the SDK.
 
-## Documentation
+- **OAuth**
+    - [OAuth Basic](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/OauthBasic) - Simple application that runs through a basic OAuth flow to acquire a token and make a call to users/get_current_account.
+    - [OAuth PKCE](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/OAuthPKCE) - Simple application that runs through an OAuth flow using [PKCE](https://oauth.net/2/pkce/) and acquires a token to make a call to users/get_current_account.
+- **Other Examples**
+    - [Simple Test](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleTest) - This is a simple test which validates some simple functionality (This is a good place to start to see how the SDK can be used)
+    - [Simple Blog Demo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleBlogDemo) - This is a simple demo of how the Dropbox SDK can be used to create a simple blog with backed up blog posts
+    - [Simple Business Dashboard](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/SimpleBusinessDashboard) - This is a demo of a business dashboard
+    - [Universal Demo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples/UniversalDemo/UniversalDemo) - This is an example of how to use the SDK across multiple platforms
 
-You can find out more details in the [full documentation for the Dropbox.NET SDK](http://dropbox.github.io/dropbox-sdk-dotnet/html/R_Project_DotNetApiDocumentation.htm).
+## Getting Help
 
-## Building from source
-You can also build the SDK or create local nuget package from source code directly.
-### Basic Setup
+If you find a bug, please see [CONTRIBUTING.md][contributing] for information on how to report it.
 
-1. Prerequisites:
-   - Visual Studio 2017 or above.
-   - Python 2.7
-   - [Optional] Sandcastle Help File Builder installed (https://github.com/EWSoftware/SHFB/releases). This is only required for doc generation.
+If you need help that is not specific to this SDK, please reach out to [Dropbox Support][support].
 
-2. Clone the repository and update submodules.
-   ```
-   git clone https://github.com/dropbox/dropbox-sdk-dotnet.git
-   cd dropbox-sdk-dotnet
-   git submodule init    
-   git submodule update # also do this after every "git checkout" and "git pull"
-   ```
-3. Install stone and its dependencies by running
-   ```
-   cd stone
-   python setup.py install
-   ```
+## License
 
-### Generate latest source code
+This SDK is distributed under the MIT license, please see [LICENSE][license] for more information.
 
-1. Inside `dropbox-sdk-dotnet` repo, run `generate.py` script to generate class for latest data types. This will also generate all csproj files.
-   ```
-   python generate.py
-   ```
-
-2. Open up the `Dropbox.Api.sln` in Visual Studio and run
-   the included examples as a sanity check.
-
-### Create nuget package (This needs to be done on Windows)
-1. Edit buildall.ps1 and update major version, release version and release notes.
-2. In Visual Studio Developer Command Prompt run
-   ```
-   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> 
-   ```
-   A .nukpg file will be generated in `Dropbox.Api` directory. Checkout [here](dropbox-sdk-dotnet/Dropbox.Api.Tests/dropbox.runsettings)
-   for the format of test settings file.
-
-### Generating Docs
-1. In Visual Studio Developer Command Prompt, run
-   ```
-   powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> -doc
-   ```
+[logo]: 
+[repo]: https://github.com/dropbox/dropbox-sdk-dotnet
+[documentation]: http://dropbox.github.io/dropbox-sdk-dotnet/html/R_Project_DotNetApiDocumentation.htm
+[examples]: https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples
+[license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE
+[contributing]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/CONTRIBUTING.md
+[devconsole]: https://dropbox.com/developers/apps
+[oauthguide]: https://www.dropbox.com/lp/developers/reference/oauth-guide
+[support]: https://www.dropbox.com/developers/contact
