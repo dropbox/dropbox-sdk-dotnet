@@ -3,11 +3,18 @@ on:
   pull_request:
 
 jobs:
-  CI:
+  DotNetFramework:
     continue-on-error: true
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Powershell Script
-        run: powershell -ExecutionPolicy Bypass -File ci.ps1 -testSettings dropbox-sdk-dotnet\Dropbox.Api.Tests\dropbox.runsettings
-        shell: powershell
+      - name: Setup .Net
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 4.5
+      - name: Install Dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj --configuration Release --no-restore
+      - name: Unit Test
+        run: dotnet test --no-restore --verbosity normal
