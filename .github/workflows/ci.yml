@@ -17,4 +17,4 @@ jobs:
       - name: Restore Packages
         run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api.sln -p:Configuration=Release
+        run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
