@@ -1,0 +1,13 @@
+name: CI
+on:
+  pull_requests:
+
+jobs:
+  CI:
+    continue-on-error: true
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Powershell Script
+        run: powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings dropbox-sdk-dotnet\Dropbox.Api.Tests\dropbox.runsettings
+        shell: powershell
