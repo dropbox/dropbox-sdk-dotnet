@@ -12,6 +12,4 @@ jobs:
       - name: Install Dependencies
         run: dotnet restore dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj
       - name: Build
-        run: dotnet build dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj --configuration Release --no-restore
-      - name: Unit Test
-        run: dotnet test dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj --no-restore --verbosity normal
+        run: dotnet build dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj --configuration Release
