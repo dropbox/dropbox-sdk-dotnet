@@ -1,0 +1,20 @@
+name: CI
+on:
+  pull_request:
+
+jobs:
+  DotNetFramework:
+    continue-on-error: true
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup NuGet.exe
+        uses: nuget/setup-nuget@v1.0.2
+        with:
+          nuget-version: latest
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
+      - name: Restore Packages
+        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
+      - name: Build
+        run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
