@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Unavailable</para>
-        /// </summary>
-        public bool IsUnavailable
-        {
-            get
-            {
-                return this is Unavailable;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Unavailable, or <c>null</c>.</para>
-        /// </summary>
-        public Unavailable AsUnavailable
-        {
-            get
-            {
-                return this as Unavailable;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Available</para>
         /// </summary>
         public bool IsAvailable
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Available;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Unavailable</para>
+        /// </summary>
+        public bool IsUnavailable
+        {
+            get
+            {
+                return this is Unavailable;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Unavailable, or <c>null</c>.</para>
+        /// </summary>
+        public Unavailable AsUnavailable
+        {
+            get
+            {
+                return this as Unavailable;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AccountCaptureAvailability value, enc.IJsonWriter writer)
             {
-                if (value is Unavailable)
-                {
-                    WriteProperty(".tag", "unavailable", writer, enc.StringEncoder.Instance);
-                    Unavailable.Encoder.EncodeFields((Unavailable)value, writer);
-                    return;
-                }
                 if (value is Available)
                 {
                     WriteProperty(".tag", "available", writer, enc.StringEncoder.Instance);
                     Available.Encoder.EncodeFields((Available)value, writer);
+                    return;
+                }
+                if (value is Unavailable)
+                {
+                    WriteProperty(".tag", "unavailable", writer, enc.StringEncoder.Instance);
+                    Unavailable.Encoder.EncodeFields((Unavailable)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -166,10 +166,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "unavailable":
-                        return Unavailable.Decoder.DecodeFields(reader);
                     case "available":
                         return Available.Decoder.DecodeFields(reader);
+                    case "unavailable":
+                        return Unavailable.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -177,6 +177,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The available object</para>
+        /// </summary>
+        public sealed class Available : AccountCaptureAvailability
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Available> Encoder = new AvailableEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Available> Decoder = new AvailableDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Available" /> class.</para>
+            /// </summary>
+            private Available()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Available</para>
+            /// </summary>
+            public static readonly Available Instance = new Available();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Available" />.</para>
+            /// </summary>
+            private class AvailableEncoder : enc.StructEncoder<Available>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Available value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Available" />.</para>
+            /// </summary>
+            private class AvailableDecoder : enc.StructDecoder<Available>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Available" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Available Create()
+                {
+                    return Available.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The unavailable object</para>
@@ -241,75 +310,6 @@ namespace Dropbox.Api.TeamLog
                 protected override Unavailable Create()
                 {
                     return Unavailable.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The available object</para>
-        /// </summary>
-        public sealed class Available : AccountCaptureAvailability
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Available> Encoder = new AvailableEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Available> Decoder = new AvailableDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Available" /> class.</para>
-            /// </summary>
-            private Available()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Available</para>
-            /// </summary>
-            public static readonly Available Instance = new Available();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Available" />.</para>
-            /// </summary>
-            private class AvailableEncoder : enc.StructEncoder<Available>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Available value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Available" />.</para>
-            /// </summary>
-            private class AvailableDecoder : enc.StructDecoder<Available>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Available" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Available Create()
-                {
-                    return Available.Instance;
                 }
 
             }
