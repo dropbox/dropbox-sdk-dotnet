@@ -52,7 +52,6 @@ jobs:
         run: |
           cd stone
           python -m pip install --upgrade pip
-          pip install ply
           python setup.py install
           cd ..
           python generate.py
