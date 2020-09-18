@@ -10,6 +10,7 @@ import subprocess
 def main():
     """The entry point for the program."""
     
+    stone_path = os.path.abspath('stone')
     repo_path = 'dropbox-sdk-dotnet'
     print('Generating Stone types')
     try:
@@ -20,7 +21,7 @@ def main():
         subprocess.check_output(
             (['python', '-m', 'stone.cli', '--filter-by-route-attr', 'alpah_group=null', '-a:all', 'generator/csharp.stoneg.py'] +
              [os.path.join(repo_path, 'Dropbox.Api')] + glob.glob('spec/*.stone')),
-            env={'PYTHONPATH': 'stone'})
+            cwd=stone_path)
     except subprocess.CalledProcessError as e:
         print(e.output)
 
