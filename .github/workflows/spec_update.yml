@@ -51,6 +51,7 @@ jobs:
       - name: Generate New Routes
         run: |
           cd stone
+          python -m pip install --upgrade pip
           python setup.py install
           cd ..
           python generate.py
