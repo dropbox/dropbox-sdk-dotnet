@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python environment
         uses: actions/setup-python@v2.1.2
         with:
-          python-version: 3.7
+          python-version: 2.7
       - name: Get current time
         uses: 1466587594/get-current-time@v2
         id: current-time
@@ -52,7 +52,6 @@ jobs:
         run: |
           cd stone
           python -m pip install --upgrade pip
-          pip install StringIO
           python setup.py install
           cd ..
           python generate.py
