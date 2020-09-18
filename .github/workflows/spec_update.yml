@@ -52,6 +52,7 @@ jobs:
         run: |
           cd stone
           python -m pip install --upgrade pip
+          pip install StringIO
           python setup.py install
           cd ..
           python generate.py
