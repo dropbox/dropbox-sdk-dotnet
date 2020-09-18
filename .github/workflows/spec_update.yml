@@ -54,7 +54,7 @@ jobs:
           python setup.py install
           cd ..
           python generate.py
-          git add /dropbox-sdk-dotnet/Dropbox.Api/Generated
+          git add dropbox-sdk-dotnet/Dropbox.Api/Generated
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.3.0
         if: steps.git-diff-num.outputs.num-diff != 0
