@@ -30,9 +30,26 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="LogoutDetails" /> class.</para>
         /// </summary>
+        /// <param name="loginId">Login session id.</param>
+        public LogoutDetails(string loginId = null)
+        {
+            this.LoginId = loginId;
+        }
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="LogoutDetails" /> class.</para>
+        /// </summary>
+        /// <remarks>This is to construct an instance of the object when
+        /// deserializing.</remarks>
+        [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public LogoutDetails()
         {
         }
+
+        /// <summary>
+        /// <para>Login session id.</para>
+        /// </summary>
+        public string LoginId { get; protected set; }
 
         #region Encoder class
 
@@ -48,6 +65,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(LogoutDetails value, enc.IJsonWriter writer)
             {
+                if (value.LoginId != null)
+                {
+                    WriteProperty("login_id", value.LoginId, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -80,6 +101,9 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (fieldName)
                 {
+                    case "login_id":
+                        value.LoginId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     default:
                         reader.Skip();
                         break;

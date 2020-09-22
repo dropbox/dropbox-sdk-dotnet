@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Viewer</para>
-        /// </summary>
-        public bool IsViewer
-        {
-            get
-            {
-                return this is Viewer;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Viewer, or <c>null</c>.</para>
-        /// </summary>
-        public Viewer AsViewer
-        {
-            get
-            {
-                return this as Viewer;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Commenter</para>
         /// </summary>
         public bool IsCommenter
@@ -102,6 +80,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Viewer</para>
+        /// </summary>
+        public bool IsViewer
+        {
+            get
+            {
+                return this is Viewer;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Viewer, or <c>null</c>.</para>
+        /// </summary>
+        public Viewer AsViewer
+        {
+            get
+            {
+                return this as Viewer;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -137,12 +137,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PaperAccessType value, enc.IJsonWriter writer)
             {
-                if (value is Viewer)
-                {
-                    WriteProperty(".tag", "viewer", writer, enc.StringEncoder.Instance);
-                    Viewer.Encoder.EncodeFields((Viewer)value, writer);
-                    return;
-                }
                 if (value is Commenter)
                 {
                     WriteProperty(".tag", "commenter", writer, enc.StringEncoder.Instance);
@@ -153,6 +147,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "editor", writer, enc.StringEncoder.Instance);
                     Editor.Encoder.EncodeFields((Editor)value, writer);
+                    return;
+                }
+                if (value is Viewer)
+                {
+                    WriteProperty(".tag", "viewer", writer, enc.StringEncoder.Instance);
+                    Viewer.Encoder.EncodeFields((Viewer)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -193,12 +193,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "viewer":
-                        return Viewer.Decoder.DecodeFields(reader);
                     case "commenter":
                         return Commenter.Decoder.DecodeFields(reader);
                     case "editor":
                         return Editor.Decoder.DecodeFields(reader);
+                    case "viewer":
+                        return Viewer.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -206,75 +206,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The viewer object</para>
-        /// </summary>
-        public sealed class Viewer : PaperAccessType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Viewer> Encoder = new ViewerEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Viewer> Decoder = new ViewerDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Viewer" /> class.</para>
-            /// </summary>
-            private Viewer()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Viewer</para>
-            /// </summary>
-            public static readonly Viewer Instance = new Viewer();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Viewer" />.</para>
-            /// </summary>
-            private class ViewerEncoder : enc.StructEncoder<Viewer>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Viewer value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Viewer" />.</para>
-            /// </summary>
-            private class ViewerDecoder : enc.StructDecoder<Viewer>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Viewer" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Viewer Create()
-                {
-                    return Viewer.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The commenter object</para>
@@ -407,6 +338,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Editor Create()
                 {
                     return Editor.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The viewer object</para>
+        /// </summary>
+        public sealed class Viewer : PaperAccessType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Viewer> Encoder = new ViewerEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Viewer> Decoder = new ViewerDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Viewer" /> class.</para>
+            /// </summary>
+            private Viewer()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Viewer</para>
+            /// </summary>
+            public static readonly Viewer Instance = new Viewer();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Viewer" />.</para>
+            /// </summary>
+            private class ViewerEncoder : enc.StructEncoder<Viewer>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Viewer value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Viewer" />.</para>
+            /// </summary>
+            private class ViewerDecoder : enc.StructDecoder<Viewer>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Viewer" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Viewer Create()
+                {
+                    return Viewer.Instance;
                 }
 
             }
