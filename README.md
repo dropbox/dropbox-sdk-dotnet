@@ -1,4 +1,4 @@
-[![Logo][logo]](repo)
+[![Logo][logo]][repo]
 
 [![NuGet](https://img.shields.io/badge/Frameworks-.NetFramework%204.5%20%7C%20.NetStandard%202.0-blue)](https://www.nuget.org/packages/Dropbox.Api)
 [![NuGet](https://img.shields.io/nuget/v/Dropbox.Api.svg)](https://www.nuget.org/packages/Dropbox.Api)
@@ -45,7 +45,7 @@ If you need help that is not specific to this SDK, please reach out to [Dropbox 
 
 This SDK is distributed under the MIT license, please see [LICENSE][license] for more information.
 
-[logo]: logo
+[logo]: https://cfl.dropboxstatic.com/static/images/sdk/dotnet_banner.png
 [repo]: https://github.com/dropbox/dropbox-sdk-dotnet
 [documentation]: http://dropbox.github.io/dropbox-sdk-dotnet/html/R_Project_DotNetApiDocumentation.htm
 [examples]: https://github.com/dropbox/dropbox-sdk-dotnet/tree/master/dropbox-sdk-dotnet/Examples
