@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Portable", "Dro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api.Portable40", "Dropbox.Api\Dropbox.Api.Portable40.csproj", "{D7B167CE-3AF8-478E-82F2-684D38F1DF98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropbox.Api", "Dropbox.Api\Dropbox.Api.csproj", "{68180B54-4724-4CD1-BAA6-EE7BC309797C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dropbox.Api", "Dropbox.Api\Dropbox.Api.csproj", "{68180B54-4724-4CD1-BAA6-EE7BC309797C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dropbox.Api.NetStandard", "Dropbox.Api\Dropbox.Api.NetStandard.csproj", "{B562AEC0-DAF8-457C-B5ED-AF03B133F168}"
 EndProject
@@ -27,6 +27,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OauthTest", "Examples\OauthBasic\OauthTest.csproj", "{AC53CD8C-710C-4019-8B62-F819F0D6EF38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthPKCE", "Examples\OAuthPKCE\OAuthPKCE.csproj", "{1DA8B62F-4AB9-4514-BE94-7D86BA4C130D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4E777A4-79F8-4CEE-9C19-6AA8CF7211CF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

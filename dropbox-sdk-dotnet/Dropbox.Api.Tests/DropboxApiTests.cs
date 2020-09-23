@@ -124,21 +124,20 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Test get authorization url
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
         [TestMethod]
-        public async Task TestGetAuthorizationUri()
+        public void TestGetAuthorizationUri()
         {
             string clientId = "myclientid";
-            string[] redirectUris = new[] {"", "http://127.0.0.1:52475/"};
-            string[] states = new[] {"", "state"};
-            bool[] forceReapproves = new[] {false, true};
-            bool[] disableSignups = new[] {false, true};
-            string[] requireRoles = new[] {"", "role"};
-            bool[] forceReauthentications = new[] {false, true};
+            string[] redirectUris = new[] { "", "http://127.0.0.1:52475/" };
+            string[] states = new[] { "", "state" };
+            bool[] forceReapproves = new[] { false, true };
+            bool[] disableSignups = new[] { false, true };
+            string[] requireRoles = new[] { "", "role" };
+            bool[] forceReauthentications = new[] { false, true };
             List<String[]> scopes = new List<String[]>();
             scopes.Add(null);
-            scopes.Add(new String[]{ "files.metadata.read", "files.content.read" });
-            IncludeGrantedScopes[] includeGrantedScopes = new[] {IncludeGrantedScopes.None, IncludeGrantedScopes.User, IncludeGrantedScopes.Team};
+            scopes.Add(new String[] { "files.metadata.read", "files.content.read" });
+            IncludeGrantedScopes[] includeGrantedScopes = new[] { IncludeGrantedScopes.None, IncludeGrantedScopes.User, IncludeGrantedScopes.Team };
 
             TokenAccessType[] tokenAccessTypes = new[]
                 {TokenAccessType.Legacy, TokenAccessType.Offline, TokenAccessType.Online};
@@ -243,7 +242,7 @@ namespace Dropbox.Api.Tests
 
                                                 if (includeGrantedScope != IncludeGrantedScopes.None)
                                                 {
-                                                    Assert.IsTrue(authUri.Contains("&include_granted_scopes=" + 
+                                                    Assert.IsTrue(authUri.Contains("&include_granted_scopes=" +
                                                                                     includeGrantedScope.ToString().ToLower()));
                                                 }
                                                 else
@@ -260,7 +259,7 @@ namespace Dropbox.Api.Tests
                 }
             }
         }
-        
+
 
         /// <summary>
         /// Test get metadata.
