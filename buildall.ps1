@@ -12,7 +12,7 @@ $nugetUrl = "http://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
 $solutionDir = Resolve-Path "dropbox-sdk-dotnet"
 $generatorDir = Resolve-Path "generator"
 $sourceDir = "$solutionDir\Dropbox.Api"
-$testsDir = "$solutionDir\Dropbox.Api.Tests"
+$testsDir = "$solutionDir\Dropbox.Api.Unit.Tests"
 $specDir = Resolve-Path "spec"
 $nugetDir = "$solutionDir\.nuget"
 $nugetPath = "$nugetDir\nuget.exe"
@@ -29,7 +29,7 @@ Change Notes:
 '@
 
 $builds = @(
-    @{Name = "Dropbox.Api"; Configuration="Release"; SignAssembly=$true; TestsName="Dropbox.Api.Tests"})
+    @{Name = "Dropbox.Api"; Configuration="Release"; SignAssembly=$true; TestsName="Dropbox.Api.Unit.Tests"})
 
 function RunCommand($command)
 {
