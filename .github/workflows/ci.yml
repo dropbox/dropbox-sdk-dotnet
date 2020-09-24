@@ -5,16 +5,20 @@ on:
 jobs:
   DotNetFramework:
     continue-on-error: true
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v2
       - name: Setup NuGet.exe
         uses: nuget/setup-nuget@v1.0.2
         with:
           nuget-version: latest
-      - name: Setup MSBuild
+      - name: Setup MSBuild (Windows)
         uses: microsoft/setup-msbuild@v1.0.1
+        if: matrix.os == 'windows-latest'
       - name: Restore Packages
         run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
+        run: msbuild dropbox-sdk-dotnet/Dropbox.Api/Dropbox.Api.csproj -p:Configuration=Release
