@@ -19,6 +19,6 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.1
         if: matrix.os == 'windows-latest'
       - name: Restore Packages
-        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
+        run: nuget restore dropbox-sdk-dotnet/Dropbox.Api.sln
       - name: Build
         run: msbuild dropbox-sdk-dotnet/Dropbox.Api/Dropbox.Api.csproj -p:Configuration=Release
