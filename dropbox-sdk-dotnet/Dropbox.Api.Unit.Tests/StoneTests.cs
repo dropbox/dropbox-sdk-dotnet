@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------------
-// <copyright file="DropboxApiTests.cs" company="Dropbox Inc">
+// <copyright file="StoneTests.cs" company="Dropbox Inc">
 //  Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace Dropbox.Api.Tests
+namespace Dropbox.Api.Unit.Tests
 {
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
