@@ -14,6 +14,8 @@ jobs:
           nuget-version: latest
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
+      - name: Setup VSTest.console.exe
+        uses: darenm/Setup-VSTest@v1
       - name: Restore Packages
         run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build
