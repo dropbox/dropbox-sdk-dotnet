@@ -18,3 +18,7 @@ jobs:
         run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build
         run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
+      - name: Build Tests
+        run: msbuild dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\Dropbox.Api.Unit.Tests.csproj -p:Configuration=Debug
+      - name: Run Unit Tests
+        run: vstest.console dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\bin\Debug\Dropbox.Api.Unit.Tests.dll
