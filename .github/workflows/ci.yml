@@ -14,7 +14,13 @@ jobs:
           nuget-version: latest
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
+      - name: Setup VSTest.console.exe
+        uses: darenm/Setup-VSTest@v1
       - name: Restore Packages
         run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build
         run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
+      - name: Build Tests
+        run: msbuild dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\Dropbox.Api.Unit.Tests.csproj -p:Configuration=Debug
+      - name: Run Unit Tests
+        run: vstest.console dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\bin\Debug\Dropbox.Api.Unit.Tests.dll

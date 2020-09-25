@@ -1,0 +1,15 @@
+﻿[*.cs]
+
+# Added CS0419, CS1574, CS1570, CS0618 on 9/23/20.  These should all be removed at some point.  Added to get intitial build passing.
+
+# CS0419: Ambiguous reference in cref attribute
+dotnet_diagnostic.CS0419.severity = silent
+
+# CS1574: XML comment has cref attribute that could not be resolved
+dotnet_diagnostic.CS1574.severity = silent
+
+# CS1570: XML comment has badly formed XML
+dotnet_diagnostic.CS1570.severity = silent
+
+# CS0618: Type or member is obsolete
+dotnet_diagnostic.CS0618.severity = silent

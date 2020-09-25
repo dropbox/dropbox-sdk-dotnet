@@ -1,17 +1,6 @@
 <StyleCopSettings Version="105">
   <GlobalSettings>
-    <CollectionProperty Name="RecognizedWords">
-      <Value>Dropbox</Value>
-      <Value>oauth</Value>
-      <Value>Auth</Value>
-      <Value>api</Value>
-      <Value>int</Value>
-      <Value>json</Value>
-      <Value>uid</Value>
-      <Value>nullable</Value>
-      <Value>non-ascii</Value>
-      <Value>backoff</Value>
-    </CollectionProperty>
+    <BooleanProperty Name="ViolationsAsErrors">True</BooleanProperty>
   </GlobalSettings>
   <Analyzers>
     <Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
@@ -19,16 +8,6 @@
         <StringProperty Name="CompanyName">Dropbox Inc</StringProperty>
         <StringProperty Name="Copyright">Copyright (c) Dropbox Inc. All rights reserved.</StringProperty>
       </AnalyzerSettings>
-    </Analyzer>
-    <Analyzer AnalyzerId="StyleCop.CSharp.MaintainabilityRules">
-      <Rules>
-        <Rule Name="FileMayOnlyContainASingleClass">
-          <RuleSettings>
-            <BooleanProperty Name="Enabled">False</BooleanProperty>
-          </RuleSettings>
-        </Rule>
-      </Rules>
-      <AnalyzerSettings />
     </Analyzer>
   </Analyzers>
 </StyleCopSettings>

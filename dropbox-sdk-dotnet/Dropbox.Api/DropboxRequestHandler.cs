@@ -80,6 +80,7 @@ namespace Dropbox.Api
         /// <param name="options">The configuration options for dropbox client.</param>
         /// <param name="selectUser">The member id of the selected user.</param>
         /// <param name="selectAdmin">The member id of the selected admin.</param>
+        /// <param name="pathRoot">The path root to make requests from.</param>
         public DropboxRequestHandler(
             DropboxRequestHandlerOptions options,
             string selectUser = null,

@@ -54,7 +54,6 @@ class DropboxCSharpGenerator(_CSharpGenerator):
                                          'Dropbox-Api-Path-Root header.')
                                          
         self._generate_xml_doc(api)
-        self._generate_csproj()
 
     def _generate_xml_doc(self, api):
         """

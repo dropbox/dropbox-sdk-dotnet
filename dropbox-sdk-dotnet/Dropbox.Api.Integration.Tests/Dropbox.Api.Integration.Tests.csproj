@@ -6,8 +6,8 @@
     <ProjectGuid>{0FDF769B-43F8-4907-98D5-A413BD9DE62D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dropbox.Api.Tests</RootNamespace>
-    <AssemblyName>Dropbox.Api.Tests</AssemblyName>
+    <RootNamespace>Dropbox.Api.Integration.Tests</RootNamespace>
+    <AssemblyName>Dropbox.Api.Integration.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -60,7 +60,6 @@
     <Compile Include="DropboxApiTests.cs" />
     <Compile Include="MockHttpMessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoneTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dropbox.runsettings" />
