@@ -23,9 +23,7 @@ $releaseVersion = "5.1.0"
 $assemblyInfoPath = "$sourceDir\AppProperties\AssemblyInfo.cs"
 $signKeyPath = "$sourceDir\dropbox_api_key.snk"
 $releaseNotes = @'
-Change Notes:
-- Fix bug to add support for short-lived tokens to team client
-- Fix typo in DropboxRequestHandler
+ See https://github.com/dropbox/dropbox-sdk-dotnet/releases for notes on the current release.
 '@
 
 $builds = @(
