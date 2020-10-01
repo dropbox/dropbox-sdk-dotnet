@@ -37,29 +37,6 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
-        /// ProactiveWarningNotification</para>
-        /// </summary>
-        public bool IsProactiveWarningNotification
-        {
-            get
-            {
-                return this is ProactiveWarningNotification;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a ProactiveWarningNotification, or <c>null</c>.</para>
-        /// </summary>
-        public ProactiveWarningNotification AsProactiveWarningNotification
-        {
-            get
-            {
-                return this as ProactiveWarningNotification;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
         /// ActionableNotification</para>
         /// </summary>
         public bool IsActionableNotification
@@ -78,6 +55,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as ActionableNotification;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProactiveWarningNotification</para>
+        /// </summary>
+        public bool IsProactiveWarningNotification
+        {
+            get
+            {
+                return this is ProactiveWarningNotification;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProactiveWarningNotification, or <c>null</c>.</para>
+        /// </summary>
+        public ProactiveWarningNotification AsProactiveWarningNotification
+        {
+            get
+            {
+                return this as ProactiveWarningNotification;
             }
         }
 
@@ -117,16 +117,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AccountCaptureNotificationType value, enc.IJsonWriter writer)
             {
-                if (value is ProactiveWarningNotification)
-                {
-                    WriteProperty(".tag", "proactive_warning_notification", writer, enc.StringEncoder.Instance);
-                    ProactiveWarningNotification.Encoder.EncodeFields((ProactiveWarningNotification)value, writer);
-                    return;
-                }
                 if (value is ActionableNotification)
                 {
                     WriteProperty(".tag", "actionable_notification", writer, enc.StringEncoder.Instance);
                     ActionableNotification.Encoder.EncodeFields((ActionableNotification)value, writer);
+                    return;
+                }
+                if (value is ProactiveWarningNotification)
+                {
+                    WriteProperty(".tag", "proactive_warning_notification", writer, enc.StringEncoder.Instance);
+                    ProactiveWarningNotification.Encoder.EncodeFields((ProactiveWarningNotification)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -168,10 +168,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "proactive_warning_notification":
-                        return ProactiveWarningNotification.Decoder.DecodeFields(reader);
                     case "actionable_notification":
                         return ActionableNotification.Decoder.DecodeFields(reader);
+                    case "proactive_warning_notification":
+                        return ProactiveWarningNotification.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -179,77 +179,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The proactive warning notification object</para>
-        /// </summary>
-        public sealed class ProactiveWarningNotification : AccountCaptureNotificationType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<ProactiveWarningNotification> Encoder = new ProactiveWarningNotificationEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<ProactiveWarningNotification> Decoder = new ProactiveWarningNotificationDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see
-            /// cref="ProactiveWarningNotification" /> class.</para>
-            /// </summary>
-            private ProactiveWarningNotification()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of ProactiveWarningNotification</para>
-            /// </summary>
-            public static readonly ProactiveWarningNotification Instance = new ProactiveWarningNotification();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="ProactiveWarningNotification" />.</para>
-            /// </summary>
-            private class ProactiveWarningNotificationEncoder : enc.StructEncoder<ProactiveWarningNotification>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(ProactiveWarningNotification value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="ProactiveWarningNotification" />.</para>
-            /// </summary>
-            private class ProactiveWarningNotificationDecoder : enc.StructDecoder<ProactiveWarningNotification>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see
-                /// cref="ProactiveWarningNotification" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override ProactiveWarningNotification Create()
-                {
-                    return ProactiveWarningNotification.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The actionable notification object</para>
@@ -315,6 +244,77 @@ namespace Dropbox.Api.TeamLog
                 protected override ActionableNotification Create()
                 {
                     return ActionableNotification.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The proactive warning notification object</para>
+        /// </summary>
+        public sealed class ProactiveWarningNotification : AccountCaptureNotificationType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProactiveWarningNotification> Encoder = new ProactiveWarningNotificationEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProactiveWarningNotification> Decoder = new ProactiveWarningNotificationDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProactiveWarningNotification" /> class.</para>
+            /// </summary>
+            private ProactiveWarningNotification()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProactiveWarningNotification</para>
+            /// </summary>
+            public static readonly ProactiveWarningNotification Instance = new ProactiveWarningNotification();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProactiveWarningNotification" />.</para>
+            /// </summary>
+            private class ProactiveWarningNotificationEncoder : enc.StructEncoder<ProactiveWarningNotification>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProactiveWarningNotification value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProactiveWarningNotification" />.</para>
+            /// </summary>
+            private class ProactiveWarningNotificationDecoder : enc.StructDecoder<ProactiveWarningNotification>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProactiveWarningNotification" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProactiveWarningNotification Create()
+                {
+                    return ProactiveWarningNotification.Instance;
                 }
 
             }
