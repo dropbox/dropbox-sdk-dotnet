@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is InheritMembers</para>
-        /// </summary>
-        public bool IsInheritMembers
-        {
-            get
-            {
-                return this is InheritMembers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a InheritMembers, or <c>null</c>.</para>
-        /// </summary>
-        public InheritMembers AsInheritMembers
-        {
-            get
-            {
-                return this as InheritMembers;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is DontInheritMembers</para>
         /// </summary>
         public bool IsDontInheritMembers
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as DontInheritMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is InheritMembers</para>
+        /// </summary>
+        public bool IsInheritMembers
+        {
+            get
+            {
+                return this is InheritMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InheritMembers, or <c>null</c>.</para>
+        /// </summary>
+        public InheritMembers AsInheritMembers
+        {
+            get
+            {
+                return this as InheritMembers;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedFolderMembersInheritancePolicy value, enc.IJsonWriter writer)
             {
-                if (value is InheritMembers)
-                {
-                    WriteProperty(".tag", "inherit_members", writer, enc.StringEncoder.Instance);
-                    InheritMembers.Encoder.EncodeFields((InheritMembers)value, writer);
-                    return;
-                }
                 if (value is DontInheritMembers)
                 {
                     WriteProperty(".tag", "dont_inherit_members", writer, enc.StringEncoder.Instance);
                     DontInheritMembers.Encoder.EncodeFields((DontInheritMembers)value, writer);
+                    return;
+                }
+                if (value is InheritMembers)
+                {
+                    WriteProperty(".tag", "inherit_members", writer, enc.StringEncoder.Instance);
+                    InheritMembers.Encoder.EncodeFields((InheritMembers)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -166,10 +166,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "inherit_members":
-                        return InheritMembers.Decoder.DecodeFields(reader);
                     case "dont_inherit_members":
                         return DontInheritMembers.Decoder.DecodeFields(reader);
+                    case "inherit_members":
+                        return InheritMembers.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -177,76 +177,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The inherit members object</para>
-        /// </summary>
-        public sealed class InheritMembers : SharedFolderMembersInheritancePolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<InheritMembers> Encoder = new InheritMembersEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<InheritMembers> Decoder = new InheritMembersDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="InheritMembers" />
-            /// class.</para>
-            /// </summary>
-            private InheritMembers()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of InheritMembers</para>
-            /// </summary>
-            public static readonly InheritMembers Instance = new InheritMembers();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="InheritMembers" />.</para>
-            /// </summary>
-            private class InheritMembersEncoder : enc.StructEncoder<InheritMembers>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(InheritMembers value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="InheritMembers" />.</para>
-            /// </summary>
-            private class InheritMembersDecoder : enc.StructDecoder<InheritMembers>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="InheritMembers" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override InheritMembers Create()
-                {
-                    return InheritMembers.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The dont inherit members object</para>
@@ -312,6 +242,76 @@ namespace Dropbox.Api.TeamLog
                 protected override DontInheritMembers Create()
                 {
                     return DontInheritMembers.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The inherit members object</para>
+        /// </summary>
+        public sealed class InheritMembers : SharedFolderMembersInheritancePolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InheritMembers> Encoder = new InheritMembersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InheritMembers> Decoder = new InheritMembersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InheritMembers" />
+            /// class.</para>
+            /// </summary>
+            private InheritMembers()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InheritMembers</para>
+            /// </summary>
+            public static readonly InheritMembers Instance = new InheritMembers();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InheritMembers" />.</para>
+            /// </summary>
+            private class InheritMembersEncoder : enc.StructEncoder<InheritMembers>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InheritMembers value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InheritMembers" />.</para>
+            /// </summary>
+            private class InheritMembersDecoder : enc.StructDecoder<InheritMembers>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InheritMembers" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InheritMembers Create()
+                {
+                    return InheritMembers.Instance;
                 }
 
             }
