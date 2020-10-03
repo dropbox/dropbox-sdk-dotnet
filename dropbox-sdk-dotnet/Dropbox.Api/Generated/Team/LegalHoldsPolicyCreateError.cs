@@ -194,6 +194,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidDate</para>
+        /// </summary>
+        public bool IsInvalidDate
+        {
+            get
+            {
+                return this is InvalidDate;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidDate, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidDate AsInvalidDate
+        {
+            get
+            {
+                return this as InvalidDate;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UnknownLegalHoldError</para>
         /// </summary>
         public bool IsUnknownLegalHoldError
@@ -316,6 +338,12 @@ namespace Dropbox.Api.Team
                     TeamExceededLegalHoldQuota.Encoder.EncodeFields((TeamExceededLegalHoldQuota)value, writer);
                     return;
                 }
+                if (value is InvalidDate)
+                {
+                    WriteProperty(".tag", "invalid_date", writer, enc.StringEncoder.Instance);
+                    InvalidDate.Encoder.EncodeFields((InvalidDate)value, writer);
+                    return;
+                }
                 if (value is UnknownLegalHoldError)
                 {
                     WriteProperty(".tag", "unknown_legal_hold_error", writer, enc.StringEncoder.Instance);
@@ -381,6 +409,8 @@ namespace Dropbox.Api.Team
                         return NameMustBeUnique.Decoder.DecodeFields(reader);
                     case "team_exceeded_legal_hold_quota":
                         return TeamExceededLegalHoldQuota.Decoder.DecodeFields(reader);
+                    case "invalid_date":
+                        return InvalidDate.Decoder.DecodeFields(reader);
                     case "unknown_legal_hold_error":
                         return UnknownLegalHoldError.Decoder.DecodeFields(reader);
                     case "insufficient_permissions":
@@ -885,6 +915,76 @@ namespace Dropbox.Api.Team
                 protected override TeamExceededLegalHoldQuota Create()
                 {
                     return TeamExceededLegalHoldQuota.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The provided date is invalid.</para>
+        /// </summary>
+        public sealed class InvalidDate : LegalHoldsPolicyCreateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidDate> Encoder = new InvalidDateEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidDate> Decoder = new InvalidDateDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidDate" />
+            /// class.</para>
+            /// </summary>
+            private InvalidDate()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidDate</para>
+            /// </summary>
+            public static readonly InvalidDate Instance = new InvalidDate();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidDate" />.</para>
+            /// </summary>
+            private class InvalidDateEncoder : enc.StructEncoder<InvalidDate>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidDate value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidDate" />.</para>
+            /// </summary>
+            private class InvalidDateDecoder : enc.StructDecoder<InvalidDate>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidDate" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidDate Create()
+                {
+                    return InvalidDate.Instance;
                 }
 
             }

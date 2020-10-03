@@ -35,28 +35,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Enabled</para>
-        /// </summary>
-        public bool IsEnabled
-        {
-            get
-            {
-                return this is Enabled;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Enabled, or <c>null</c>.</para>
-        /// </summary>
-        public Enabled AsEnabled
-        {
-            get
-            {
-                return this as Enabled;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Allow</para>
         /// </summary>
         public bool IsAllow
@@ -101,6 +79,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Enabled</para>
+        /// </summary>
+        public bool IsEnabled
+        {
+            get
+            {
+                return this is Enabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Enabled, or <c>null</c>.</para>
+        /// </summary>
+        public Enabled AsEnabled
+        {
+            get
+            {
+                return this as Enabled;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -136,12 +136,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PassPolicy value, enc.IJsonWriter writer)
             {
-                if (value is Enabled)
-                {
-                    WriteProperty(".tag", "enabled", writer, enc.StringEncoder.Instance);
-                    Enabled.Encoder.EncodeFields((Enabled)value, writer);
-                    return;
-                }
                 if (value is Allow)
                 {
                     WriteProperty(".tag", "allow", writer, enc.StringEncoder.Instance);
@@ -152,6 +146,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
                     Disabled.Encoder.EncodeFields((Disabled)value, writer);
+                    return;
+                }
+                if (value is Enabled)
+                {
+                    WriteProperty(".tag", "enabled", writer, enc.StringEncoder.Instance);
+                    Enabled.Encoder.EncodeFields((Enabled)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -192,12 +192,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "enabled":
-                        return Enabled.Decoder.DecodeFields(reader);
                     case "allow":
                         return Allow.Decoder.DecodeFields(reader);
                     case "disabled":
                         return Disabled.Decoder.DecodeFields(reader);
+                    case "enabled":
+                        return Enabled.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -205,75 +205,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The enabled object</para>
-        /// </summary>
-        public sealed class Enabled : PassPolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Enabled> Encoder = new EnabledEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Enabled> Decoder = new EnabledDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Enabled" /> class.</para>
-            /// </summary>
-            private Enabled()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Enabled</para>
-            /// </summary>
-            public static readonly Enabled Instance = new Enabled();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Enabled" />.</para>
-            /// </summary>
-            private class EnabledEncoder : enc.StructEncoder<Enabled>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Enabled value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Enabled" />.</para>
-            /// </summary>
-            private class EnabledDecoder : enc.StructDecoder<Enabled>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Enabled" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Enabled Create()
-                {
-                    return Enabled.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The allow object</para>
@@ -406,6 +337,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Disabled Create()
                 {
                     return Disabled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The enabled object</para>
+        /// </summary>
+        public sealed class Enabled : PassPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Enabled> Encoder = new EnabledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Enabled> Decoder = new EnabledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Enabled" /> class.</para>
+            /// </summary>
+            private Enabled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Enabled</para>
+            /// </summary>
+            public static readonly Enabled Instance = new Enabled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Enabled" />.</para>
+            /// </summary>
+            private class EnabledEncoder : enc.StructEncoder<Enabled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Enabled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Enabled" />.</para>
+            /// </summary>
+            private class EnabledDecoder : enc.StructDecoder<Enabled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Enabled" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Enabled Create()
+                {
+                    return Enabled.Instance;
                 }
 
             }

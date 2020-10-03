@@ -35,68 +35,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Milliseconds</para>
+        /// <para>Gets a value indicating whether this instance is Days</para>
         /// </summary>
-        public bool IsMilliseconds
+        public bool IsDays
         {
             get
             {
-                return this is Milliseconds;
+                return this is Days;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Milliseconds, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Days, or <c>null</c>.</para>
         /// </summary>
-        public Milliseconds AsMilliseconds
+        public Days AsDays
         {
             get
             {
-                return this as Milliseconds;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Seconds</para>
-        /// </summary>
-        public bool IsSeconds
-        {
-            get
-            {
-                return this is Seconds;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Seconds, or <c>null</c>.</para>
-        /// </summary>
-        public Seconds AsSeconds
-        {
-            get
-            {
-                return this as Seconds;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Minutes</para>
-        /// </summary>
-        public bool IsMinutes
-        {
-            get
-            {
-                return this is Minutes;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Minutes, or <c>null</c>.</para>
-        /// </summary>
-        public Minutes AsMinutes
-        {
-            get
-            {
-                return this as Minutes;
+                return this as Days;
             }
         }
 
@@ -123,46 +79,46 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Days</para>
+        /// <para>Gets a value indicating whether this instance is Milliseconds</para>
         /// </summary>
-        public bool IsDays
+        public bool IsMilliseconds
         {
             get
             {
-                return this is Days;
+                return this is Milliseconds;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Days, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Milliseconds, or <c>null</c>.</para>
         /// </summary>
-        public Days AsDays
+        public Milliseconds AsMilliseconds
         {
             get
             {
-                return this as Days;
+                return this as Milliseconds;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Weeks</para>
+        /// <para>Gets a value indicating whether this instance is Minutes</para>
         /// </summary>
-        public bool IsWeeks
+        public bool IsMinutes
         {
             get
             {
-                return this is Weeks;
+                return this is Minutes;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Weeks, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Minutes, or <c>null</c>.</para>
         /// </summary>
-        public Weeks AsWeeks
+        public Minutes AsMinutes
         {
             get
             {
-                return this as Weeks;
+                return this as Minutes;
             }
         }
 
@@ -185,6 +141,50 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Months;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Seconds</para>
+        /// </summary>
+        public bool IsSeconds
+        {
+            get
+            {
+                return this is Seconds;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Seconds, or <c>null</c>.</para>
+        /// </summary>
+        public Seconds AsSeconds
+        {
+            get
+            {
+                return this as Seconds;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Weeks</para>
+        /// </summary>
+        public bool IsWeeks
+        {
+            get
+            {
+                return this is Weeks;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Weeks, or <c>null</c>.</para>
+        /// </summary>
+        public Weeks AsWeeks
+        {
+            get
+            {
+                return this as Weeks;
             }
         }
 
@@ -246,22 +246,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TimeUnit value, enc.IJsonWriter writer)
             {
-                if (value is Milliseconds)
+                if (value is Days)
                 {
-                    WriteProperty(".tag", "milliseconds", writer, enc.StringEncoder.Instance);
-                    Milliseconds.Encoder.EncodeFields((Milliseconds)value, writer);
-                    return;
-                }
-                if (value is Seconds)
-                {
-                    WriteProperty(".tag", "seconds", writer, enc.StringEncoder.Instance);
-                    Seconds.Encoder.EncodeFields((Seconds)value, writer);
-                    return;
-                }
-                if (value is Minutes)
-                {
-                    WriteProperty(".tag", "minutes", writer, enc.StringEncoder.Instance);
-                    Minutes.Encoder.EncodeFields((Minutes)value, writer);
+                    WriteProperty(".tag", "days", writer, enc.StringEncoder.Instance);
+                    Days.Encoder.EncodeFields((Days)value, writer);
                     return;
                 }
                 if (value is Hours)
@@ -270,22 +258,34 @@ namespace Dropbox.Api.TeamLog
                     Hours.Encoder.EncodeFields((Hours)value, writer);
                     return;
                 }
-                if (value is Days)
+                if (value is Milliseconds)
                 {
-                    WriteProperty(".tag", "days", writer, enc.StringEncoder.Instance);
-                    Days.Encoder.EncodeFields((Days)value, writer);
+                    WriteProperty(".tag", "milliseconds", writer, enc.StringEncoder.Instance);
+                    Milliseconds.Encoder.EncodeFields((Milliseconds)value, writer);
                     return;
                 }
-                if (value is Weeks)
+                if (value is Minutes)
                 {
-                    WriteProperty(".tag", "weeks", writer, enc.StringEncoder.Instance);
-                    Weeks.Encoder.EncodeFields((Weeks)value, writer);
+                    WriteProperty(".tag", "minutes", writer, enc.StringEncoder.Instance);
+                    Minutes.Encoder.EncodeFields((Minutes)value, writer);
                     return;
                 }
                 if (value is Months)
                 {
                     WriteProperty(".tag", "months", writer, enc.StringEncoder.Instance);
                     Months.Encoder.EncodeFields((Months)value, writer);
+                    return;
+                }
+                if (value is Seconds)
+                {
+                    WriteProperty(".tag", "seconds", writer, enc.StringEncoder.Instance);
+                    Seconds.Encoder.EncodeFields((Seconds)value, writer);
+                    return;
+                }
+                if (value is Weeks)
+                {
+                    WriteProperty(".tag", "weeks", writer, enc.StringEncoder.Instance);
+                    Weeks.Encoder.EncodeFields((Weeks)value, writer);
                     return;
                 }
                 if (value is Years)
@@ -332,20 +332,20 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "milliseconds":
-                        return Milliseconds.Decoder.DecodeFields(reader);
-                    case "seconds":
-                        return Seconds.Decoder.DecodeFields(reader);
-                    case "minutes":
-                        return Minutes.Decoder.DecodeFields(reader);
-                    case "hours":
-                        return Hours.Decoder.DecodeFields(reader);
                     case "days":
                         return Days.Decoder.DecodeFields(reader);
-                    case "weeks":
-                        return Weeks.Decoder.DecodeFields(reader);
+                    case "hours":
+                        return Hours.Decoder.DecodeFields(reader);
+                    case "milliseconds":
+                        return Milliseconds.Decoder.DecodeFields(reader);
+                    case "minutes":
+                        return Minutes.Decoder.DecodeFields(reader);
                     case "months":
                         return Months.Decoder.DecodeFields(reader);
+                    case "seconds":
+                        return Seconds.Decoder.DecodeFields(reader);
+                    case "weeks":
+                        return Weeks.Decoder.DecodeFields(reader);
                     case "years":
                         return Years.Decoder.DecodeFields(reader);
                     default:
@@ -357,48 +357,47 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The milliseconds object</para>
+        /// <para>The days object</para>
         /// </summary>
-        public sealed class Milliseconds : TimeUnit
+        public sealed class Days : TimeUnit
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Milliseconds> Encoder = new MillisecondsEncoder();
+            internal static enc.StructEncoder<Days> Encoder = new DaysEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Milliseconds> Decoder = new MillisecondsDecoder();
+            internal static enc.StructDecoder<Days> Decoder = new DaysDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Milliseconds" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Days" /> class.</para>
             /// </summary>
-            private Milliseconds()
+            private Days()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Milliseconds</para>
+            /// <para>A singleton instance of Days</para>
             /// </summary>
-            public static readonly Milliseconds Instance = new Milliseconds();
+            public static readonly Days Instance = new Days();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Milliseconds" />.</para>
+            /// <para>Encoder for  <see cref="Days" />.</para>
             /// </summary>
-            private class MillisecondsEncoder : enc.StructEncoder<Milliseconds>
+            private class DaysEncoder : enc.StructEncoder<Days>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Milliseconds value, enc.IJsonWriter writer)
+                public override void EncodeFields(Days value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -408,155 +407,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Milliseconds" />.</para>
+            /// <para>Decoder for  <see cref="Days" />.</para>
             /// </summary>
-            private class MillisecondsDecoder : enc.StructDecoder<Milliseconds>
+            private class DaysDecoder : enc.StructDecoder<Days>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Milliseconds" />.</para>
+                /// <para>Create a new instance of type <see cref="Days" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Milliseconds Create()
+                protected override Days Create()
                 {
-                    return Milliseconds.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The seconds object</para>
-        /// </summary>
-        public sealed class Seconds : TimeUnit
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Seconds> Encoder = new SecondsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Seconds> Decoder = new SecondsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Seconds" /> class.</para>
-            /// </summary>
-            private Seconds()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Seconds</para>
-            /// </summary>
-            public static readonly Seconds Instance = new Seconds();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Seconds" />.</para>
-            /// </summary>
-            private class SecondsEncoder : enc.StructEncoder<Seconds>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Seconds value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Seconds" />.</para>
-            /// </summary>
-            private class SecondsDecoder : enc.StructDecoder<Seconds>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Seconds" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Seconds Create()
-                {
-                    return Seconds.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The minutes object</para>
-        /// </summary>
-        public sealed class Minutes : TimeUnit
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Minutes> Encoder = new MinutesEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Minutes> Decoder = new MinutesDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Minutes" /> class.</para>
-            /// </summary>
-            private Minutes()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Minutes</para>
-            /// </summary>
-            public static readonly Minutes Instance = new Minutes();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Minutes" />.</para>
-            /// </summary>
-            private class MinutesEncoder : enc.StructEncoder<Minutes>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Minutes value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Minutes" />.</para>
-            /// </summary>
-            private class MinutesDecoder : enc.StructDecoder<Minutes>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Minutes" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Minutes Create()
-                {
-                    return Minutes.Instance;
+                    return Days.Instance;
                 }
 
             }
@@ -634,47 +495,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The days object</para>
+        /// <para>The milliseconds object</para>
         /// </summary>
-        public sealed class Days : TimeUnit
+        public sealed class Milliseconds : TimeUnit
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Days> Encoder = new DaysEncoder();
+            internal static enc.StructEncoder<Milliseconds> Encoder = new MillisecondsEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Days> Decoder = new DaysDecoder();
+            internal static enc.StructDecoder<Milliseconds> Decoder = new MillisecondsDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Days" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Milliseconds" />
+            /// class.</para>
             /// </summary>
-            private Days()
+            private Milliseconds()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Days</para>
+            /// <para>A singleton instance of Milliseconds</para>
             /// </summary>
-            public static readonly Days Instance = new Days();
+            public static readonly Milliseconds Instance = new Milliseconds();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Days" />.</para>
+            /// <para>Encoder for  <see cref="Milliseconds" />.</para>
             /// </summary>
-            private class DaysEncoder : enc.StructEncoder<Days>
+            private class MillisecondsEncoder : enc.StructEncoder<Milliseconds>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Days value, enc.IJsonWriter writer)
+                public override void EncodeFields(Milliseconds value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -684,17 +546,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Days" />.</para>
+            /// <para>Decoder for  <see cref="Milliseconds" />.</para>
             /// </summary>
-            private class DaysDecoder : enc.StructDecoder<Days>
+            private class MillisecondsDecoder : enc.StructDecoder<Milliseconds>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Days" />.</para>
+                /// <para>Create a new instance of type <see cref="Milliseconds" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Days Create()
+                protected override Milliseconds Create()
                 {
-                    return Days.Instance;
+                    return Milliseconds.Instance;
                 }
 
             }
@@ -703,47 +565,47 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The weeks object</para>
+        /// <para>The minutes object</para>
         /// </summary>
-        public sealed class Weeks : TimeUnit
+        public sealed class Minutes : TimeUnit
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Weeks> Encoder = new WeeksEncoder();
+            internal static enc.StructEncoder<Minutes> Encoder = new MinutesEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Weeks> Decoder = new WeeksDecoder();
+            internal static enc.StructDecoder<Minutes> Decoder = new MinutesDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Weeks" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Minutes" /> class.</para>
             /// </summary>
-            private Weeks()
+            private Minutes()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Weeks</para>
+            /// <para>A singleton instance of Minutes</para>
             /// </summary>
-            public static readonly Weeks Instance = new Weeks();
+            public static readonly Minutes Instance = new Minutes();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Weeks" />.</para>
+            /// <para>Encoder for  <see cref="Minutes" />.</para>
             /// </summary>
-            private class WeeksEncoder : enc.StructEncoder<Weeks>
+            private class MinutesEncoder : enc.StructEncoder<Minutes>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Weeks value, enc.IJsonWriter writer)
+                public override void EncodeFields(Minutes value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -753,17 +615,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Weeks" />.</para>
+            /// <para>Decoder for  <see cref="Minutes" />.</para>
             /// </summary>
-            private class WeeksDecoder : enc.StructDecoder<Weeks>
+            private class MinutesDecoder : enc.StructDecoder<Minutes>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Weeks" />.</para>
+                /// <para>Create a new instance of type <see cref="Minutes" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Weeks Create()
+                protected override Minutes Create()
                 {
-                    return Weeks.Instance;
+                    return Minutes.Instance;
                 }
 
             }
@@ -833,6 +695,144 @@ namespace Dropbox.Api.TeamLog
                 protected override Months Create()
                 {
                     return Months.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The seconds object</para>
+        /// </summary>
+        public sealed class Seconds : TimeUnit
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Seconds> Encoder = new SecondsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Seconds> Decoder = new SecondsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Seconds" /> class.</para>
+            /// </summary>
+            private Seconds()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Seconds</para>
+            /// </summary>
+            public static readonly Seconds Instance = new Seconds();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Seconds" />.</para>
+            /// </summary>
+            private class SecondsEncoder : enc.StructEncoder<Seconds>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Seconds value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Seconds" />.</para>
+            /// </summary>
+            private class SecondsDecoder : enc.StructDecoder<Seconds>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Seconds" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Seconds Create()
+                {
+                    return Seconds.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The weeks object</para>
+        /// </summary>
+        public sealed class Weeks : TimeUnit
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Weeks> Encoder = new WeeksEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Weeks> Decoder = new WeeksDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Weeks" /> class.</para>
+            /// </summary>
+            private Weeks()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Weeks</para>
+            /// </summary>
+            public static readonly Weeks Instance = new Weeks();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Weeks" />.</para>
+            /// </summary>
+            private class WeeksEncoder : enc.StructEncoder<Weeks>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Weeks value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Weeks" />.</para>
+            /// </summary>
+            private class WeeksDecoder : enc.StructDecoder<Weeks>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Weeks" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Weeks Create()
+                {
+                    return Weeks.Instance;
                 }
 
             }

@@ -35,24 +35,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NotJoined</para>
+        /// <para>Gets a value indicating whether this instance is Active</para>
         /// </summary>
-        public bool IsNotJoined
+        public bool IsActive
         {
             get
             {
-                return this is NotJoined;
+                return this is Active;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a NotJoined, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Active, or <c>null</c>.</para>
         /// </summary>
-        public NotJoined AsNotJoined
+        public Active AsActive
         {
             get
             {
-                return this as NotJoined;
+                return this as Active;
             }
         }
 
@@ -79,46 +79,46 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Active</para>
+        /// <para>Gets a value indicating whether this instance is MovedToAnotherTeam</para>
         /// </summary>
-        public bool IsActive
+        public bool IsMovedToAnotherTeam
         {
             get
             {
-                return this is Active;
+                return this is MovedToAnotherTeam;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Active, or <c>null</c>.</para>
+        /// <para>Gets this instance as a MovedToAnotherTeam, or <c>null</c>.</para>
         /// </summary>
-        public Active AsActive
+        public MovedToAnotherTeam AsMovedToAnotherTeam
         {
             get
             {
-                return this as Active;
+                return this as MovedToAnotherTeam;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Suspended</para>
+        /// <para>Gets a value indicating whether this instance is NotJoined</para>
         /// </summary>
-        public bool IsSuspended
+        public bool IsNotJoined
         {
             get
             {
-                return this is Suspended;
+                return this is NotJoined;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Suspended, or <c>null</c>.</para>
+        /// <para>Gets this instance as a NotJoined, or <c>null</c>.</para>
         /// </summary>
-        public Suspended AsSuspended
+        public NotJoined AsNotJoined
         {
             get
             {
-                return this as Suspended;
+                return this as NotJoined;
             }
         }
 
@@ -145,24 +145,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is MovedToAnotherTeam</para>
+        /// <para>Gets a value indicating whether this instance is Suspended</para>
         /// </summary>
-        public bool IsMovedToAnotherTeam
+        public bool IsSuspended
         {
             get
             {
-                return this is MovedToAnotherTeam;
+                return this is Suspended;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a MovedToAnotherTeam, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Suspended, or <c>null</c>.</para>
         /// </summary>
-        public MovedToAnotherTeam AsMovedToAnotherTeam
+        public Suspended AsSuspended
         {
             get
             {
-                return this as MovedToAnotherTeam;
+                return this as Suspended;
             }
         }
 
@@ -202,10 +202,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(MemberStatus value, enc.IJsonWriter writer)
             {
-                if (value is NotJoined)
+                if (value is Active)
                 {
-                    WriteProperty(".tag", "not_joined", writer, enc.StringEncoder.Instance);
-                    NotJoined.Encoder.EncodeFields((NotJoined)value, writer);
+                    WriteProperty(".tag", "active", writer, enc.StringEncoder.Instance);
+                    Active.Encoder.EncodeFields((Active)value, writer);
                     return;
                 }
                 if (value is Invited)
@@ -214,16 +214,16 @@ namespace Dropbox.Api.TeamLog
                     Invited.Encoder.EncodeFields((Invited)value, writer);
                     return;
                 }
-                if (value is Active)
+                if (value is MovedToAnotherTeam)
                 {
-                    WriteProperty(".tag", "active", writer, enc.StringEncoder.Instance);
-                    Active.Encoder.EncodeFields((Active)value, writer);
+                    WriteProperty(".tag", "moved_to_another_team", writer, enc.StringEncoder.Instance);
+                    MovedToAnotherTeam.Encoder.EncodeFields((MovedToAnotherTeam)value, writer);
                     return;
                 }
-                if (value is Suspended)
+                if (value is NotJoined)
                 {
-                    WriteProperty(".tag", "suspended", writer, enc.StringEncoder.Instance);
-                    Suspended.Encoder.EncodeFields((Suspended)value, writer);
+                    WriteProperty(".tag", "not_joined", writer, enc.StringEncoder.Instance);
+                    NotJoined.Encoder.EncodeFields((NotJoined)value, writer);
                     return;
                 }
                 if (value is Removed)
@@ -232,10 +232,10 @@ namespace Dropbox.Api.TeamLog
                     Removed.Encoder.EncodeFields((Removed)value, writer);
                     return;
                 }
-                if (value is MovedToAnotherTeam)
+                if (value is Suspended)
                 {
-                    WriteProperty(".tag", "moved_to_another_team", writer, enc.StringEncoder.Instance);
-                    MovedToAnotherTeam.Encoder.EncodeFields((MovedToAnotherTeam)value, writer);
+                    WriteProperty(".tag", "suspended", writer, enc.StringEncoder.Instance);
+                    Suspended.Encoder.EncodeFields((Suspended)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -276,18 +276,18 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "not_joined":
-                        return NotJoined.Decoder.DecodeFields(reader);
-                    case "invited":
-                        return Invited.Decoder.DecodeFields(reader);
                     case "active":
                         return Active.Decoder.DecodeFields(reader);
-                    case "suspended":
-                        return Suspended.Decoder.DecodeFields(reader);
-                    case "removed":
-                        return Removed.Decoder.DecodeFields(reader);
+                    case "invited":
+                        return Invited.Decoder.DecodeFields(reader);
                     case "moved_to_another_team":
                         return MovedToAnotherTeam.Decoder.DecodeFields(reader);
+                    case "not_joined":
+                        return NotJoined.Decoder.DecodeFields(reader);
+                    case "removed":
+                        return Removed.Decoder.DecodeFields(reader);
+                    case "suspended":
+                        return Suspended.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -297,47 +297,47 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The not joined object</para>
+        /// <para>The active object</para>
         /// </summary>
-        public sealed class NotJoined : MemberStatus
+        public sealed class Active : MemberStatus
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<NotJoined> Encoder = new NotJoinedEncoder();
+            internal static enc.StructEncoder<Active> Encoder = new ActiveEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<NotJoined> Decoder = new NotJoinedDecoder();
+            internal static enc.StructDecoder<Active> Decoder = new ActiveDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NotJoined" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="Active" /> class.</para>
             /// </summary>
-            private NotJoined()
+            private Active()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of NotJoined</para>
+            /// <para>A singleton instance of Active</para>
             /// </summary>
-            public static readonly NotJoined Instance = new NotJoined();
+            public static readonly Active Instance = new Active();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="NotJoined" />.</para>
+            /// <para>Encoder for  <see cref="Active" />.</para>
             /// </summary>
-            private class NotJoinedEncoder : enc.StructEncoder<NotJoined>
+            private class ActiveEncoder : enc.StructEncoder<Active>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(NotJoined value, enc.IJsonWriter writer)
+                public override void EncodeFields(Active value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -347,17 +347,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="NotJoined" />.</para>
+            /// <para>Decoder for  <see cref="Active" />.</para>
             /// </summary>
-            private class NotJoinedDecoder : enc.StructDecoder<NotJoined>
+            private class ActiveDecoder : enc.StructDecoder<Active>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="NotJoined" />.</para>
+                /// <para>Create a new instance of type <see cref="Active" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override NotJoined Create()
+                protected override Active Create()
                 {
-                    return NotJoined.Instance;
+                    return Active.Instance;
                 }
 
             }
@@ -435,47 +435,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The active object</para>
+        /// <para>The moved to another team object</para>
         /// </summary>
-        public sealed class Active : MemberStatus
+        public sealed class MovedToAnotherTeam : MemberStatus
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Active> Encoder = new ActiveEncoder();
+            internal static enc.StructEncoder<MovedToAnotherTeam> Encoder = new MovedToAnotherTeamEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Active> Decoder = new ActiveDecoder();
+            internal static enc.StructDecoder<MovedToAnotherTeam> Decoder = new MovedToAnotherTeamDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Active" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="MovedToAnotherTeam" />
+            /// class.</para>
             /// </summary>
-            private Active()
+            private MovedToAnotherTeam()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Active</para>
+            /// <para>A singleton instance of MovedToAnotherTeam</para>
             /// </summary>
-            public static readonly Active Instance = new Active();
+            public static readonly MovedToAnotherTeam Instance = new MovedToAnotherTeam();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Active" />.</para>
+            /// <para>Encoder for  <see cref="MovedToAnotherTeam" />.</para>
             /// </summary>
-            private class ActiveEncoder : enc.StructEncoder<Active>
+            private class MovedToAnotherTeamEncoder : enc.StructEncoder<MovedToAnotherTeam>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Active value, enc.IJsonWriter writer)
+                public override void EncodeFields(MovedToAnotherTeam value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -485,17 +486,18 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Active" />.</para>
+            /// <para>Decoder for  <see cref="MovedToAnotherTeam" />.</para>
             /// </summary>
-            private class ActiveDecoder : enc.StructDecoder<Active>
+            private class MovedToAnotherTeamDecoder : enc.StructDecoder<MovedToAnotherTeam>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Active" />.</para>
+                /// <para>Create a new instance of type <see cref="MovedToAnotherTeam"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Active Create()
+                protected override MovedToAnotherTeam Create()
                 {
-                    return Active.Instance;
+                    return MovedToAnotherTeam.Instance;
                 }
 
             }
@@ -504,47 +506,47 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The suspended object</para>
+        /// <para>The not joined object</para>
         /// </summary>
-        public sealed class Suspended : MemberStatus
+        public sealed class NotJoined : MemberStatus
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Suspended> Encoder = new SuspendedEncoder();
+            internal static enc.StructEncoder<NotJoined> Encoder = new NotJoinedEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Suspended> Decoder = new SuspendedDecoder();
+            internal static enc.StructDecoder<NotJoined> Decoder = new NotJoinedDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Suspended" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="NotJoined" /> class.</para>
             /// </summary>
-            private Suspended()
+            private NotJoined()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Suspended</para>
+            /// <para>A singleton instance of NotJoined</para>
             /// </summary>
-            public static readonly Suspended Instance = new Suspended();
+            public static readonly NotJoined Instance = new NotJoined();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Suspended" />.</para>
+            /// <para>Encoder for  <see cref="NotJoined" />.</para>
             /// </summary>
-            private class SuspendedEncoder : enc.StructEncoder<Suspended>
+            private class NotJoinedEncoder : enc.StructEncoder<NotJoined>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Suspended value, enc.IJsonWriter writer)
+                public override void EncodeFields(NotJoined value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -554,17 +556,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Suspended" />.</para>
+            /// <para>Decoder for  <see cref="NotJoined" />.</para>
             /// </summary>
-            private class SuspendedDecoder : enc.StructDecoder<Suspended>
+            private class NotJoinedDecoder : enc.StructDecoder<NotJoined>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Suspended" />.</para>
+                /// <para>Create a new instance of type <see cref="NotJoined" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Suspended Create()
+                protected override NotJoined Create()
                 {
-                    return Suspended.Instance;
+                    return NotJoined.Instance;
                 }
 
             }
@@ -642,48 +644,47 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The moved to another team object</para>
+        /// <para>The suspended object</para>
         /// </summary>
-        public sealed class MovedToAnotherTeam : MemberStatus
+        public sealed class Suspended : MemberStatus
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<MovedToAnotherTeam> Encoder = new MovedToAnotherTeamEncoder();
+            internal static enc.StructEncoder<Suspended> Encoder = new SuspendedEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<MovedToAnotherTeam> Decoder = new MovedToAnotherTeamDecoder();
+            internal static enc.StructDecoder<Suspended> Decoder = new SuspendedDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MovedToAnotherTeam" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Suspended" /> class.</para>
             /// </summary>
-            private MovedToAnotherTeam()
+            private Suspended()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of MovedToAnotherTeam</para>
+            /// <para>A singleton instance of Suspended</para>
             /// </summary>
-            public static readonly MovedToAnotherTeam Instance = new MovedToAnotherTeam();
+            public static readonly Suspended Instance = new Suspended();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="MovedToAnotherTeam" />.</para>
+            /// <para>Encoder for  <see cref="Suspended" />.</para>
             /// </summary>
-            private class MovedToAnotherTeamEncoder : enc.StructEncoder<MovedToAnotherTeam>
+            private class SuspendedEncoder : enc.StructEncoder<Suspended>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MovedToAnotherTeam value, enc.IJsonWriter writer)
+                public override void EncodeFields(Suspended value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -693,18 +694,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="MovedToAnotherTeam" />.</para>
+            /// <para>Decoder for  <see cref="Suspended" />.</para>
             /// </summary>
-            private class MovedToAnotherTeamDecoder : enc.StructDecoder<MovedToAnotherTeam>
+            private class SuspendedDecoder : enc.StructDecoder<Suspended>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="MovedToAnotherTeam"
-                /// />.</para>
+                /// <para>Create a new instance of type <see cref="Suspended" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override MovedToAnotherTeam Create()
+                protected override Suspended Create()
                 {
-                    return MovedToAnotherTeam.Instance;
+                    return Suspended.Instance;
                 }
 
             }

@@ -240,7 +240,8 @@ namespace Dropbox.Api.Files.Routes
         /// detects conflict. For example, always return a conflict error when <paramref
         /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
-        /// deleted.</param>
+        /// deleted. This also forces a conflict even when the target path refers to a file
+        /// with identical contents.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -290,7 +291,8 @@ namespace Dropbox.Api.Files.Routes
         /// detects conflict. For example, always return a conflict error when <paramref
         /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
-        /// deleted.</param>
+        /// deleted. This also forces a conflict even when the target path refers to a file
+        /// with identical contents.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -6097,7 +6099,8 @@ namespace Dropbox.Api.Files.Routes
         /// detects conflict. For example, always return a conflict error when <paramref
         /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
-        /// deleted.</param>
+        /// deleted. This also forces a conflict even when the target path refers to a file
+        /// with identical contents.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -6145,7 +6148,8 @@ namespace Dropbox.Api.Files.Routes
         /// detects conflict. For example, always return a conflict error when <paramref
         /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
-        /// deleted.</param>
+        /// deleted. This also forces a conflict even when the target path refers to a file
+        /// with identical contents.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>

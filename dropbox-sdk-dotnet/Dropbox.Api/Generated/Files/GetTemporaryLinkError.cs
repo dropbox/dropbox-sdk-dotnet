@@ -305,8 +305,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The user's email address needs to be verified to use this
-        /// functionality.</para>
+        /// <para>This user's email address is not verified. This functionality is only
+        /// available on accounts with a verified email address. Users can verify their email
+        /// address <a href="https://www.dropbox.com/help/317">here</a>.</para>
         /// </summary>
         public sealed class EmailNotVerified : GetTemporaryLinkError
         {
