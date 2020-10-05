@@ -36,72 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Invited</para>
-        /// </summary>
-        public bool IsInvited
-        {
-            get
-            {
-                return this is Invited;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Invited, or <c>null</c>.</para>
-        /// </summary>
-        public Invited AsInvited
-        {
-            get
-            {
-                return this as Invited;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Expired</para>
-        /// </summary>
-        public bool IsExpired
-        {
-            get
-            {
-                return this is Expired;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Expired, or <c>null</c>.</para>
-        /// </summary>
-        public Expired AsExpired
-        {
-            get
-            {
-                return this as Expired;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Revoked</para>
-        /// </summary>
-        public bool IsRevoked
-        {
-            get
-            {
-                return this is Revoked;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Revoked, or <c>null</c>.</para>
-        /// </summary>
-        public Revoked AsRevoked
-        {
-            get
-            {
-                return this as Revoked;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Accepted</para>
         /// </summary>
         public bool IsAccepted
@@ -146,6 +80,72 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Expired</para>
+        /// </summary>
+        public bool IsExpired
+        {
+            get
+            {
+                return this is Expired;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Expired, or <c>null</c>.</para>
+        /// </summary>
+        public Expired AsExpired
+        {
+            get
+            {
+                return this as Expired;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Invited</para>
+        /// </summary>
+        public bool IsInvited
+        {
+            get
+            {
+                return this is Invited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Invited, or <c>null</c>.</para>
+        /// </summary>
+        public Invited AsInvited
+        {
+            get
+            {
+                return this as Invited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Revoked</para>
+        /// </summary>
+        public bool IsRevoked
+        {
+            get
+            {
+                return this is Revoked;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Revoked, or <c>null</c>.</para>
+        /// </summary>
+        public Revoked AsRevoked
+        {
+            get
+            {
+                return this as Revoked;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -181,24 +181,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TrustedTeamsRequestAction value, enc.IJsonWriter writer)
             {
-                if (value is Invited)
-                {
-                    WriteProperty(".tag", "invited", writer, enc.StringEncoder.Instance);
-                    Invited.Encoder.EncodeFields((Invited)value, writer);
-                    return;
-                }
-                if (value is Expired)
-                {
-                    WriteProperty(".tag", "expired", writer, enc.StringEncoder.Instance);
-                    Expired.Encoder.EncodeFields((Expired)value, writer);
-                    return;
-                }
-                if (value is Revoked)
-                {
-                    WriteProperty(".tag", "revoked", writer, enc.StringEncoder.Instance);
-                    Revoked.Encoder.EncodeFields((Revoked)value, writer);
-                    return;
-                }
                 if (value is Accepted)
                 {
                     WriteProperty(".tag", "accepted", writer, enc.StringEncoder.Instance);
@@ -209,6 +191,24 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "declined", writer, enc.StringEncoder.Instance);
                     Declined.Encoder.EncodeFields((Declined)value, writer);
+                    return;
+                }
+                if (value is Expired)
+                {
+                    WriteProperty(".tag", "expired", writer, enc.StringEncoder.Instance);
+                    Expired.Encoder.EncodeFields((Expired)value, writer);
+                    return;
+                }
+                if (value is Invited)
+                {
+                    WriteProperty(".tag", "invited", writer, enc.StringEncoder.Instance);
+                    Invited.Encoder.EncodeFields((Invited)value, writer);
+                    return;
+                }
+                if (value is Revoked)
+                {
+                    WriteProperty(".tag", "revoked", writer, enc.StringEncoder.Instance);
+                    Revoked.Encoder.EncodeFields((Revoked)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -250,16 +250,16 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "invited":
-                        return Invited.Decoder.DecodeFields(reader);
-                    case "expired":
-                        return Expired.Decoder.DecodeFields(reader);
-                    case "revoked":
-                        return Revoked.Decoder.DecodeFields(reader);
                     case "accepted":
                         return Accepted.Decoder.DecodeFields(reader);
                     case "declined":
                         return Declined.Decoder.DecodeFields(reader);
+                    case "expired":
+                        return Expired.Decoder.DecodeFields(reader);
+                    case "invited":
+                        return Invited.Decoder.DecodeFields(reader);
+                    case "revoked":
+                        return Revoked.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -267,213 +267,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The invited object</para>
-        /// </summary>
-        public sealed class Invited : TrustedTeamsRequestAction
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Invited> Encoder = new InvitedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Invited> Decoder = new InvitedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Invited" /> class.</para>
-            /// </summary>
-            private Invited()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Invited</para>
-            /// </summary>
-            public static readonly Invited Instance = new Invited();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Invited" />.</para>
-            /// </summary>
-            private class InvitedEncoder : enc.StructEncoder<Invited>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Invited value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Invited" />.</para>
-            /// </summary>
-            private class InvitedDecoder : enc.StructDecoder<Invited>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Invited" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Invited Create()
-                {
-                    return Invited.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The expired object</para>
-        /// </summary>
-        public sealed class Expired : TrustedTeamsRequestAction
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Expired> Encoder = new ExpiredEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Expired> Decoder = new ExpiredDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Expired" /> class.</para>
-            /// </summary>
-            private Expired()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Expired</para>
-            /// </summary>
-            public static readonly Expired Instance = new Expired();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Expired" />.</para>
-            /// </summary>
-            private class ExpiredEncoder : enc.StructEncoder<Expired>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Expired value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Expired" />.</para>
-            /// </summary>
-            private class ExpiredDecoder : enc.StructDecoder<Expired>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Expired" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Expired Create()
-                {
-                    return Expired.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The revoked object</para>
-        /// </summary>
-        public sealed class Revoked : TrustedTeamsRequestAction
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Revoked> Encoder = new RevokedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Revoked> Decoder = new RevokedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Revoked" /> class.</para>
-            /// </summary>
-            private Revoked()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Revoked</para>
-            /// </summary>
-            public static readonly Revoked Instance = new Revoked();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Revoked" />.</para>
-            /// </summary>
-            private class RevokedEncoder : enc.StructEncoder<Revoked>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Revoked value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Revoked" />.</para>
-            /// </summary>
-            private class RevokedDecoder : enc.StructDecoder<Revoked>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Revoked" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Revoked Create()
-                {
-                    return Revoked.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The accepted object</para>
@@ -606,6 +399,213 @@ namespace Dropbox.Api.TeamLog
                 protected override Declined Create()
                 {
                     return Declined.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The expired object</para>
+        /// </summary>
+        public sealed class Expired : TrustedTeamsRequestAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Expired> Encoder = new ExpiredEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Expired> Decoder = new ExpiredDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Expired" /> class.</para>
+            /// </summary>
+            private Expired()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Expired</para>
+            /// </summary>
+            public static readonly Expired Instance = new Expired();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Expired" />.</para>
+            /// </summary>
+            private class ExpiredEncoder : enc.StructEncoder<Expired>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Expired value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Expired" />.</para>
+            /// </summary>
+            private class ExpiredDecoder : enc.StructDecoder<Expired>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Expired" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Expired Create()
+                {
+                    return Expired.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The invited object</para>
+        /// </summary>
+        public sealed class Invited : TrustedTeamsRequestAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Invited> Encoder = new InvitedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Invited> Decoder = new InvitedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Invited" /> class.</para>
+            /// </summary>
+            private Invited()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Invited</para>
+            /// </summary>
+            public static readonly Invited Instance = new Invited();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Invited" />.</para>
+            /// </summary>
+            private class InvitedEncoder : enc.StructEncoder<Invited>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Invited value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Invited" />.</para>
+            /// </summary>
+            private class InvitedDecoder : enc.StructDecoder<Invited>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Invited" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Invited Create()
+                {
+                    return Invited.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The revoked object</para>
+        /// </summary>
+        public sealed class Revoked : TrustedTeamsRequestAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Revoked> Encoder = new RevokedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Revoked> Decoder = new RevokedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Revoked" /> class.</para>
+            /// </summary>
+            private Revoked()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Revoked</para>
+            /// </summary>
+            public static readonly Revoked Instance = new Revoked();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Revoked" />.</para>
+            /// </summary>
+            private class RevokedEncoder : enc.StructEncoder<Revoked>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Revoked value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Revoked" />.</para>
+            /// </summary>
+            private class RevokedDecoder : enc.StructDecoder<Revoked>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Revoked" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Revoked Create()
+                {
+                    return Revoked.Instance;
                 }
 
             }

@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is MobileDeviceSession</para>
-        /// </summary>
-        public bool IsMobileDeviceSession
-        {
-            get
-            {
-                return this is MobileDeviceSession;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MobileDeviceSession, or <c>null</c>.</para>
-        /// </summary>
-        public MobileDeviceSession AsMobileDeviceSession
-        {
-            get
-            {
-                return this as MobileDeviceSession;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is DesktopDeviceSession</para>
         /// </summary>
         public bool IsDesktopDeviceSession
@@ -80,28 +58,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is WebDeviceSession</para>
-        /// </summary>
-        public bool IsWebDeviceSession
-        {
-            get
-            {
-                return this is WebDeviceSession;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a WebDeviceSession, or <c>null</c>.</para>
-        /// </summary>
-        public WebDeviceSession AsWebDeviceSession
-        {
-            get
-            {
-                return this as WebDeviceSession;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is LegacyDeviceSession</para>
         /// </summary>
         public bool IsLegacyDeviceSession
@@ -120,6 +76,50 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as LegacyDeviceSession;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is MobileDeviceSession</para>
+        /// </summary>
+        public bool IsMobileDeviceSession
+        {
+            get
+            {
+                return this is MobileDeviceSession;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MobileDeviceSession, or <c>null</c>.</para>
+        /// </summary>
+        public MobileDeviceSession AsMobileDeviceSession
+        {
+            get
+            {
+                return this as MobileDeviceSession;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is WebDeviceSession</para>
+        /// </summary>
+        public bool IsWebDeviceSession
+        {
+            get
+            {
+                return this is WebDeviceSession;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a WebDeviceSession, or <c>null</c>.</para>
+        /// </summary>
+        public WebDeviceSession AsWebDeviceSession
+        {
+            get
+            {
+                return this as WebDeviceSession;
             }
         }
 
@@ -159,28 +159,28 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(LinkedDeviceLogInfo value, enc.IJsonWriter writer)
             {
-                if (value is MobileDeviceSession)
-                {
-                    WriteProperty(".tag", "mobile_device_session", writer, enc.StringEncoder.Instance);
-                    MobileDeviceSession.Encoder.EncodeFields((MobileDeviceSession)value, writer);
-                    return;
-                }
                 if (value is DesktopDeviceSession)
                 {
                     WriteProperty(".tag", "desktop_device_session", writer, enc.StringEncoder.Instance);
                     DesktopDeviceSession.Encoder.EncodeFields((DesktopDeviceSession)value, writer);
                     return;
                 }
-                if (value is WebDeviceSession)
-                {
-                    WriteProperty(".tag", "web_device_session", writer, enc.StringEncoder.Instance);
-                    WebDeviceSession.Encoder.EncodeFields((WebDeviceSession)value, writer);
-                    return;
-                }
                 if (value is LegacyDeviceSession)
                 {
                     WriteProperty(".tag", "legacy_device_session", writer, enc.StringEncoder.Instance);
                     LegacyDeviceSession.Encoder.EncodeFields((LegacyDeviceSession)value, writer);
+                    return;
+                }
+                if (value is MobileDeviceSession)
+                {
+                    WriteProperty(".tag", "mobile_device_session", writer, enc.StringEncoder.Instance);
+                    MobileDeviceSession.Encoder.EncodeFields((MobileDeviceSession)value, writer);
+                    return;
+                }
+                if (value is WebDeviceSession)
+                {
+                    WriteProperty(".tag", "web_device_session", writer, enc.StringEncoder.Instance);
+                    WebDeviceSession.Encoder.EncodeFields((WebDeviceSession)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -221,14 +221,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "mobile_device_session":
-                        return MobileDeviceSession.Decoder.DecodeFields(reader);
                     case "desktop_device_session":
                         return DesktopDeviceSession.Decoder.DecodeFields(reader);
-                    case "web_device_session":
-                        return WebDeviceSession.Decoder.DecodeFields(reader);
                     case "legacy_device_session":
                         return LegacyDeviceSession.Decoder.DecodeFields(reader);
+                    case "mobile_device_session":
+                        return MobileDeviceSession.Decoder.DecodeFields(reader);
+                    case "web_device_session":
+                        return WebDeviceSession.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -236,96 +236,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>mobile device session's details.</para>
-        /// </summary>
-        public sealed class MobileDeviceSession : LinkedDeviceLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MobileDeviceSession> Encoder = new MobileDeviceSessionEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MobileDeviceSession> Decoder = new MobileDeviceSessionDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MobileDeviceSession" />
-            /// class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public MobileDeviceSession(MobileDeviceSessionLogInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MobileDeviceSession" />
-            /// class.</para>
-            /// </summary>
-            private MobileDeviceSession()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public MobileDeviceSessionLogInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MobileDeviceSession" />.</para>
-            /// </summary>
-            private class MobileDeviceSessionEncoder : enc.StructEncoder<MobileDeviceSession>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MobileDeviceSession value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("mobile_device_session", value.Value, writer, global::Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MobileDeviceSession" />.</para>
-            /// </summary>
-            private class MobileDeviceSessionDecoder : enc.StructDecoder<MobileDeviceSession>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MobileDeviceSession"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MobileDeviceSession Create()
-                {
-                    return new MobileDeviceSession();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MobileDeviceSession DecodeFields(enc.IJsonReader reader)
-                {
-                    return new MobileDeviceSession(global::Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>desktop device session's details.</para>
@@ -418,95 +328,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>web device session's details.</para>
-        /// </summary>
-        public sealed class WebDeviceSession : LinkedDeviceLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<WebDeviceSession> Encoder = new WebDeviceSessionEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<WebDeviceSession> Decoder = new WebDeviceSessionDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="WebDeviceSession" />
-            /// class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public WebDeviceSession(WebDeviceSessionLogInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="WebDeviceSession" />
-            /// class.</para>
-            /// </summary>
-            private WebDeviceSession()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public WebDeviceSessionLogInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="WebDeviceSession" />.</para>
-            /// </summary>
-            private class WebDeviceSessionEncoder : enc.StructEncoder<WebDeviceSession>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(WebDeviceSession value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("web_device_session", value.Value, writer, global::Dropbox.Api.TeamLog.WebDeviceSessionLogInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="WebDeviceSession" />.</para>
-            /// </summary>
-            private class WebDeviceSessionDecoder : enc.StructDecoder<WebDeviceSession>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="WebDeviceSession" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override WebDeviceSession Create()
-                {
-                    return new WebDeviceSession();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override WebDeviceSession DecodeFields(enc.IJsonReader reader)
-                {
-                    return new WebDeviceSession(global::Dropbox.Api.TeamLog.WebDeviceSessionLogInfo.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>legacy device session's details.</para>
         /// </summary>
         public sealed class LegacyDeviceSession : LinkedDeviceLogInfo
@@ -590,6 +411,185 @@ namespace Dropbox.Api.TeamLog
                 public override LegacyDeviceSession DecodeFields(enc.IJsonReader reader)
                 {
                     return new LegacyDeviceSession(global::Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>mobile device session's details.</para>
+        /// </summary>
+        public sealed class MobileDeviceSession : LinkedDeviceLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MobileDeviceSession> Encoder = new MobileDeviceSessionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MobileDeviceSession> Decoder = new MobileDeviceSessionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MobileDeviceSession" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MobileDeviceSession(MobileDeviceSessionLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MobileDeviceSession" />
+            /// class.</para>
+            /// </summary>
+            private MobileDeviceSession()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public MobileDeviceSessionLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MobileDeviceSession" />.</para>
+            /// </summary>
+            private class MobileDeviceSessionEncoder : enc.StructEncoder<MobileDeviceSession>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MobileDeviceSession value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("mobile_device_session", value.Value, writer, global::Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MobileDeviceSession" />.</para>
+            /// </summary>
+            private class MobileDeviceSessionDecoder : enc.StructDecoder<MobileDeviceSession>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MobileDeviceSession"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MobileDeviceSession Create()
+                {
+                    return new MobileDeviceSession();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MobileDeviceSession DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MobileDeviceSession(global::Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>web device session's details.</para>
+        /// </summary>
+        public sealed class WebDeviceSession : LinkedDeviceLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<WebDeviceSession> Encoder = new WebDeviceSessionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<WebDeviceSession> Decoder = new WebDeviceSessionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="WebDeviceSession" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public WebDeviceSession(WebDeviceSessionLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="WebDeviceSession" />
+            /// class.</para>
+            /// </summary>
+            private WebDeviceSession()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public WebDeviceSessionLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="WebDeviceSession" />.</para>
+            /// </summary>
+            private class WebDeviceSessionEncoder : enc.StructEncoder<WebDeviceSession>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(WebDeviceSession value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("web_device_session", value.Value, writer, global::Dropbox.Api.TeamLog.WebDeviceSessionLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="WebDeviceSession" />.</para>
+            /// </summary>
+            private class WebDeviceSessionDecoder : enc.StructDecoder<WebDeviceSession>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="WebDeviceSession" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override WebDeviceSession Create()
+                {
+                    return new WebDeviceSession();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override WebDeviceSession DecodeFields(enc.IJsonReader reader)
+                {
+                    return new WebDeviceSession(global::Dropbox.Api.TeamLog.WebDeviceSessionLogInfo.Decoder.DecodeFields(reader));
                 }
             }
 

@@ -58,28 +58,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Offboard</para>
-        /// </summary>
-        public bool IsOffboard
-        {
-            get
-            {
-                return this is Offboard;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Offboard, or <c>null</c>.</para>
-        /// </summary>
-        public Offboard AsOffboard
-        {
-            get
-            {
-                return this as Offboard;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Leave</para>
         /// </summary>
         public bool IsLeave
@@ -98,6 +76,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Leave;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Offboard</para>
+        /// </summary>
+        public bool IsOffboard
+        {
+            get
+            {
+                return this is Offboard;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Offboard, or <c>null</c>.</para>
+        /// </summary>
+        public Offboard AsOffboard
+        {
+            get
+            {
+                return this as Offboard;
             }
         }
 
@@ -166,16 +166,16 @@ namespace Dropbox.Api.TeamLog
                     Delete.Encoder.EncodeFields((Delete)value, writer);
                     return;
                 }
-                if (value is Offboard)
-                {
-                    WriteProperty(".tag", "offboard", writer, enc.StringEncoder.Instance);
-                    Offboard.Encoder.EncodeFields((Offboard)value, writer);
-                    return;
-                }
                 if (value is Leave)
                 {
                     WriteProperty(".tag", "leave", writer, enc.StringEncoder.Instance);
                     Leave.Encoder.EncodeFields((Leave)value, writer);
+                    return;
+                }
+                if (value is Offboard)
+                {
+                    WriteProperty(".tag", "offboard", writer, enc.StringEncoder.Instance);
+                    Offboard.Encoder.EncodeFields((Offboard)value, writer);
                     return;
                 }
                 if (value is OffboardAndRetainTeamFolders)
@@ -225,10 +225,10 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "delete":
                         return Delete.Decoder.DecodeFields(reader);
-                    case "offboard":
-                        return Offboard.Decoder.DecodeFields(reader);
                     case "leave":
                         return Leave.Decoder.DecodeFields(reader);
+                    case "offboard":
+                        return Offboard.Decoder.DecodeFields(reader);
                     case "offboard_and_retain_team_folders":
                         return OffboardAndRetainTeamFolders.Decoder.DecodeFields(reader);
                     default:
@@ -309,75 +309,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The offboard object</para>
-        /// </summary>
-        public sealed class Offboard : MemberRemoveActionType
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Offboard> Encoder = new OffboardEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Offboard> Decoder = new OffboardDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Offboard" /> class.</para>
-            /// </summary>
-            private Offboard()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Offboard</para>
-            /// </summary>
-            public static readonly Offboard Instance = new Offboard();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Offboard" />.</para>
-            /// </summary>
-            private class OffboardEncoder : enc.StructEncoder<Offboard>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Offboard value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Offboard" />.</para>
-            /// </summary>
-            private class OffboardDecoder : enc.StructDecoder<Offboard>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Offboard" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Offboard Create()
-                {
-                    return Offboard.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>The leave object</para>
         /// </summary>
         public sealed class Leave : MemberRemoveActionType
@@ -439,6 +370,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Leave Create()
                 {
                     return Leave.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The offboard object</para>
+        /// </summary>
+        public sealed class Offboard : MemberRemoveActionType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Offboard> Encoder = new OffboardEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Offboard> Decoder = new OffboardDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Offboard" /> class.</para>
+            /// </summary>
+            private Offboard()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Offboard</para>
+            /// </summary>
+            public static readonly Offboard Instance = new Offboard();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Offboard" />.</para>
+            /// </summary>
+            private class OffboardEncoder : enc.StructEncoder<Offboard>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Offboard value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Offboard" />.</para>
+            /// </summary>
+            private class OffboardDecoder : enc.StructDecoder<Offboard>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Offboard" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Offboard Create()
+                {
+                    return Offboard.Instance;
                 }
 
             }
