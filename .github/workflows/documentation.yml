@@ -1,0 +1,29 @@
+name: Documentation
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  Documentation:
+    continue-on-error: true
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup NuGet.exe
+        uses: nuget/setup-nuget@v1.0.2
+        with:
+          nuget-version: latest
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
+      - name: Restore Packages
+        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
+      - name: Build Docs
+        run: msbuild doc\StoneDocs.shfbproj
+      - name: Push Documentation
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: doc\Help # The folder the action should deploy.
