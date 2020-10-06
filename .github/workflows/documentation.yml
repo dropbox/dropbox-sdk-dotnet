@@ -20,7 +20,7 @@ jobs:
       - name: Restore Packages
         run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
       - name: Build Docs
-        run: msbuild doc\StoneDocs.shfbproj
+        run: msbuild doc\StoneDocs.shfbproj # Follow https://ewsoftware.github.io/SHFB/html/50ad2c8c-5004-4b4c-a77f-97b8c403c9f2.htm
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
