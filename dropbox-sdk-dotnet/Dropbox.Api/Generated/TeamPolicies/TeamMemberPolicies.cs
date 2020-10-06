@@ -40,9 +40,12 @@ namespace Dropbox.Api.TeamPolicies
         /// documentation.</param>
         /// <param name="officeAddin">The admin policy around the Dropbox Office Add-In for
         /// this team.</param>
+        /// <param name="suggestMembersPolicy">The team policy on if teammembers are allowed to
+        /// suggest users for admins to invite to the team.</param>
         public TeamMemberPolicies(TeamSharingPolicies sharing,
                                   EmmState emmState,
-                                  OfficeAddInPolicy officeAddin)
+                                  OfficeAddInPolicy officeAddin,
+                                  SuggestMembersPolicy suggestMembersPolicy)
         {
             if (sharing == null)
             {
@@ -59,9 +62,15 @@ namespace Dropbox.Api.TeamPolicies
                 throw new sys.ArgumentNullException("officeAddin");
             }
 
+            if (suggestMembersPolicy == null)
+            {
+                throw new sys.ArgumentNullException("suggestMembersPolicy");
+            }
+
             this.Sharing = sharing;
             this.EmmState = emmState;
             this.OfficeAddin = officeAddin;
+            this.SuggestMembersPolicy = suggestMembersPolicy;
         }
 
         /// <summary>
@@ -94,6 +103,12 @@ namespace Dropbox.Api.TeamPolicies
         /// </summary>
         public OfficeAddInPolicy OfficeAddin { get; protected set; }
 
+        /// <summary>
+        /// <para>The team policy on if teammembers are allowed to suggest users for admins to
+        /// invite to the team.</para>
+        /// </summary>
+        public SuggestMembersPolicy SuggestMembersPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -111,6 +126,7 @@ namespace Dropbox.Api.TeamPolicies
                 WriteProperty("sharing", value.Sharing, writer, global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
                 WriteProperty("emm_state", value.EmmState, writer, global::Dropbox.Api.TeamPolicies.EmmState.Encoder);
                 WriteProperty("office_addin", value.OfficeAddin, writer, global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Encoder);
+                WriteProperty("suggest_members_policy", value.SuggestMembersPolicy, writer, global::Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Encoder);
             }
         }
 
@@ -151,6 +167,9 @@ namespace Dropbox.Api.TeamPolicies
                         break;
                     case "office_addin":
                         value.OfficeAddin = global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Decoder.Decode(reader);
+                        break;
+                    case "suggest_members_policy":
+                        value.SuggestMembersPolicy = global::Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

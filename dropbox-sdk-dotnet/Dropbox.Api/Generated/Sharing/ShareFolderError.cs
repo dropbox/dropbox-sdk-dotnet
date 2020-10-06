@@ -343,7 +343,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The current user's e-mail address is unverified.</para>
+        /// <para>This user's email address is not verified. This functionality is only
+        /// available on accounts with a verified email address. Users can verify their email
+        /// address <a href="https://www.dropbox.com/help/317">here</a>.</para>
         /// </summary>
         public sealed class EmailUnverified : ShareFolderError
         {

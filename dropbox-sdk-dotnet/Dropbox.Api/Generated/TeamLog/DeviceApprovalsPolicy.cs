@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Unlimited</para>
-        /// </summary>
-        public bool IsUnlimited
-        {
-            get
-            {
-                return this is Unlimited;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Unlimited, or <c>null</c>.</para>
-        /// </summary>
-        public Unlimited AsUnlimited
-        {
-            get
-            {
-                return this as Unlimited;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Limited</para>
         /// </summary>
         public bool IsLimited
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Limited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Unlimited</para>
+        /// </summary>
+        public bool IsUnlimited
+        {
+            get
+            {
+                return this is Unlimited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Unlimited, or <c>null</c>.</para>
+        /// </summary>
+        public Unlimited AsUnlimited
+        {
+            get
+            {
+                return this as Unlimited;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceApprovalsPolicy value, enc.IJsonWriter writer)
             {
-                if (value is Unlimited)
-                {
-                    WriteProperty(".tag", "unlimited", writer, enc.StringEncoder.Instance);
-                    Unlimited.Encoder.EncodeFields((Unlimited)value, writer);
-                    return;
-                }
                 if (value is Limited)
                 {
                     WriteProperty(".tag", "limited", writer, enc.StringEncoder.Instance);
                     Limited.Encoder.EncodeFields((Limited)value, writer);
+                    return;
+                }
+                if (value is Unlimited)
+                {
+                    WriteProperty(".tag", "unlimited", writer, enc.StringEncoder.Instance);
+                    Unlimited.Encoder.EncodeFields((Unlimited)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -166,10 +166,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "unlimited":
-                        return Unlimited.Decoder.DecodeFields(reader);
                     case "limited":
                         return Limited.Decoder.DecodeFields(reader);
+                    case "unlimited":
+                        return Unlimited.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -177,75 +177,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The unlimited object</para>
-        /// </summary>
-        public sealed class Unlimited : DeviceApprovalsPolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Unlimited> Encoder = new UnlimitedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Unlimited> Decoder = new UnlimitedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Unlimited" /> class.</para>
-            /// </summary>
-            private Unlimited()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Unlimited</para>
-            /// </summary>
-            public static readonly Unlimited Instance = new Unlimited();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Unlimited" />.</para>
-            /// </summary>
-            private class UnlimitedEncoder : enc.StructEncoder<Unlimited>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Unlimited value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Unlimited" />.</para>
-            /// </summary>
-            private class UnlimitedDecoder : enc.StructDecoder<Unlimited>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Unlimited" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Unlimited Create()
-                {
-                    return Unlimited.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The limited object</para>
@@ -309,6 +240,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Limited Create()
                 {
                     return Limited.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The unlimited object</para>
+        /// </summary>
+        public sealed class Unlimited : DeviceApprovalsPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Unlimited> Encoder = new UnlimitedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Unlimited> Decoder = new UnlimitedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Unlimited" /> class.</para>
+            /// </summary>
+            private Unlimited()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Unlimited</para>
+            /// </summary>
+            public static readonly Unlimited Instance = new Unlimited();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Unlimited" />.</para>
+            /// </summary>
+            private class UnlimitedEncoder : enc.StructEncoder<Unlimited>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Unlimited value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Unlimited" />.</para>
+            /// </summary>
+            private class UnlimitedDecoder : enc.StructDecoder<Unlimited>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Unlimited" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Unlimited Create()
+                {
+                    return Unlimited.Instance;
                 }
 
             }

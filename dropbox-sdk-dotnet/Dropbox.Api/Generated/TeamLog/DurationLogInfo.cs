@@ -13,6 +13,8 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>Represents a time duration: unit and amount</para>
     /// </summary>
+    /// <seealso cref="GovernancePolicyCreateDetails" />
+    /// <seealso cref="GovernancePolicyEditDurationDetails" />
     public class DurationLogInfo
     {
         #pragma warning disable 108

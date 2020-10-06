@@ -44,6 +44,7 @@ namespace Dropbox.Api.FileRequests
         /// folder.</param>
         /// <param name="deadline">The deadline for this file request. Only set if the request
         /// has a deadline.</param>
+        /// <param name="description">A description of the file request.</param>
         public FileRequest(string id,
                            string url,
                            string title,
@@ -51,7 +52,8 @@ namespace Dropbox.Api.FileRequests
                            bool isOpen,
                            long fileCount,
                            string destination = null,
-                           FileRequestDeadline deadline = null)
+                           FileRequestDeadline deadline = null,
+                           string description = null)
         {
             if (id == null)
             {
@@ -100,6 +102,7 @@ namespace Dropbox.Api.FileRequests
             this.FileCount = fileCount;
             this.Destination = destination;
             this.Deadline = deadline;
+            this.Description = description;
         }
 
         /// <summary>
@@ -156,6 +159,11 @@ namespace Dropbox.Api.FileRequests
         /// </summary>
         public FileRequestDeadline Deadline { get; protected set; }
 
+        /// <summary>
+        /// <para>A description of the file request.</para>
+        /// </summary>
+        public string Description { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -183,6 +191,10 @@ namespace Dropbox.Api.FileRequests
                 if (value.Deadline != null)
                 {
                     WriteProperty("deadline", value.Deadline, writer, global::Dropbox.Api.FileRequests.FileRequestDeadline.Encoder);
+                }
+                if (value.Description != null)
+                {
+                    WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -239,6 +251,9 @@ namespace Dropbox.Api.FileRequests
                         break;
                     case "deadline":
                         value.Deadline = global::Dropbox.Api.FileRequests.FileRequestDeadline.Decoder.Decode(reader);
+                        break;
+                    case "description":
+                        value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

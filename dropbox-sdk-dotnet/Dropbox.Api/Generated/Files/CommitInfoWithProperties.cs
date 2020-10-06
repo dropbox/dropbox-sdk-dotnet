@@ -51,7 +51,8 @@ namespace Dropbox.Api.Files
         /// detects conflict. For example, always return a conflict error when <paramref
         /// name="mode" /> = <see cref="Dropbox.Api.Files.WriteMode.Update" /> and the given
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
-        /// deleted.</param>
+        /// deleted. This also forces a conflict even when the target path refers to a file
+        /// with identical contents.</param>
         public CommitInfoWithProperties(string path,
                                         WriteMode mode = null,
                                         bool autorename = false,

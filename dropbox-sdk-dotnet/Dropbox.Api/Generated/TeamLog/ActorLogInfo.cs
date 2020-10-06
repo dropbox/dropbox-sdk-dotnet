@@ -35,28 +35,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is User</para>
-        /// </summary>
-        public bool IsUser
-        {
-            get
-            {
-                return this is User;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a User, or <c>null</c>.</para>
-        /// </summary>
-        public User AsUser
-        {
-            get
-            {
-                return this as User;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Admin</para>
         /// </summary>
         public bool IsAdmin
@@ -75,6 +53,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Admin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Anonymous</para>
+        /// </summary>
+        public bool IsAnonymous
+        {
+            get
+            {
+                return this is Anonymous;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Anonymous, or <c>null</c>.</para>
+        /// </summary>
+        public Anonymous AsAnonymous
+        {
+            get
+            {
+                return this as Anonymous;
             }
         }
 
@@ -101,28 +101,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Reseller</para>
-        /// </summary>
-        public bool IsReseller
-        {
-            get
-            {
-                return this is Reseller;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Reseller, or <c>null</c>.</para>
-        /// </summary>
-        public Reseller AsReseller
-        {
-            get
-            {
-                return this as Reseller;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Dropbox</para>
         /// </summary>
         public bool IsDropbox
@@ -145,24 +123,46 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Anonymous</para>
+        /// <para>Gets a value indicating whether this instance is Reseller</para>
         /// </summary>
-        public bool IsAnonymous
+        public bool IsReseller
         {
             get
             {
-                return this is Anonymous;
+                return this is Reseller;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Anonymous, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Reseller, or <c>null</c>.</para>
         /// </summary>
-        public Anonymous AsAnonymous
+        public Reseller AsReseller
         {
             get
             {
-                return this as Anonymous;
+                return this as Reseller;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is User</para>
+        /// </summary>
+        public bool IsUser
+        {
+            get
+            {
+                return this is User;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a User, or <c>null</c>.</para>
+        /// </summary>
+        public User AsUser
+        {
+            get
+            {
+                return this as User;
             }
         }
 
@@ -202,16 +202,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ActorLogInfo value, enc.IJsonWriter writer)
             {
-                if (value is User)
-                {
-                    WriteProperty(".tag", "user", writer, enc.StringEncoder.Instance);
-                    User.Encoder.EncodeFields((User)value, writer);
-                    return;
-                }
                 if (value is Admin)
                 {
                     WriteProperty(".tag", "admin", writer, enc.StringEncoder.Instance);
                     Admin.Encoder.EncodeFields((Admin)value, writer);
+                    return;
+                }
+                if (value is Anonymous)
+                {
+                    WriteProperty(".tag", "anonymous", writer, enc.StringEncoder.Instance);
+                    Anonymous.Encoder.EncodeFields((Anonymous)value, writer);
                     return;
                 }
                 if (value is App)
@@ -220,22 +220,22 @@ namespace Dropbox.Api.TeamLog
                     App.Encoder.EncodeFields((App)value, writer);
                     return;
                 }
-                if (value is Reseller)
-                {
-                    WriteProperty(".tag", "reseller", writer, enc.StringEncoder.Instance);
-                    Reseller.Encoder.EncodeFields((Reseller)value, writer);
-                    return;
-                }
                 if (value is Dropbox)
                 {
                     WriteProperty(".tag", "dropbox", writer, enc.StringEncoder.Instance);
                     Dropbox.Encoder.EncodeFields((Dropbox)value, writer);
                     return;
                 }
-                if (value is Anonymous)
+                if (value is Reseller)
                 {
-                    WriteProperty(".tag", "anonymous", writer, enc.StringEncoder.Instance);
-                    Anonymous.Encoder.EncodeFields((Anonymous)value, writer);
+                    WriteProperty(".tag", "reseller", writer, enc.StringEncoder.Instance);
+                    Reseller.Encoder.EncodeFields((Reseller)value, writer);
+                    return;
+                }
+                if (value is User)
+                {
+                    WriteProperty(".tag", "user", writer, enc.StringEncoder.Instance);
+                    User.Encoder.EncodeFields((User)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -276,18 +276,18 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "user":
-                        return User.Decoder.DecodeFields(reader);
                     case "admin":
                         return Admin.Decoder.DecodeFields(reader);
-                    case "app":
-                        return App.Decoder.DecodeFields(reader);
-                    case "reseller":
-                        return Reseller.Decoder.DecodeFields(reader);
-                    case "dropbox":
-                        return Dropbox.Decoder.DecodeFields(reader);
                     case "anonymous":
                         return Anonymous.Decoder.DecodeFields(reader);
+                    case "app":
+                        return App.Decoder.DecodeFields(reader);
+                    case "dropbox":
+                        return Dropbox.Decoder.DecodeFields(reader);
+                    case "reseller":
+                        return Reseller.Decoder.DecodeFields(reader);
+                    case "user":
+                        return User.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -295,102 +295,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The user who did the action.</para>
-        /// </summary>
-        public sealed class User : ActorLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<User> Encoder = new UserEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<User> Decoder = new UserDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="User" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public User(UserLogInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="User" /> class.</para>
-            /// </summary>
-            private User()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public UserLogInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="User" />.</para>
-            /// </summary>
-            private class UserEncoder : enc.StructEncoder<User>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(User value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("user", value.Value, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="User" />.</para>
-            /// </summary>
-            private class UserDecoder : enc.StructDecoder<User>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="User" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override User Create()
-                {
-                    return new User();
-                }
-
-                /// <summary>
-                /// <para>Set given field.</para>
-                /// </summary>
-                /// <param name="value">The field value.</param>
-                /// <param name="fieldName">The field name.</param>
-                /// <param name="reader">The json reader.</param>
-                protected override void SetField(User value, string fieldName, enc.IJsonReader reader)
-                {
-                    switch (fieldName)
-                    {
-                        case "user":
-                            value.Value = global::Dropbox.Api.TeamLog.UserLogInfo.Decoder.Decode(reader);
-                            break;
-                        default:
-                            reader.Skip();
-                            break;
-                    }
-                }
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The admin who did the action.</para>
@@ -483,6 +387,75 @@ namespace Dropbox.Api.TeamLog
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Anonymous actor.</para>
+        /// </summary>
+        public sealed class Anonymous : ActorLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Anonymous> Encoder = new AnonymousEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Anonymous> Decoder = new AnonymousDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Anonymous" /> class.</para>
+            /// </summary>
+            private Anonymous()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Anonymous</para>
+            /// </summary>
+            public static readonly Anonymous Instance = new Anonymous();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Anonymous" />.</para>
+            /// </summary>
+            private class AnonymousEncoder : enc.StructEncoder<Anonymous>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Anonymous value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Anonymous" />.</para>
+            /// </summary>
+            private class AnonymousDecoder : enc.StructDecoder<Anonymous>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Anonymous" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Anonymous Create()
+                {
+                    return Anonymous.Instance;
+                }
+
             }
 
             #endregion
@@ -585,6 +558,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Action done by Dropbox.</para>
+        /// </summary>
+        public sealed class Dropbox : ActorLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Dropbox> Encoder = new DropboxEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Dropbox> Decoder = new DropboxDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Dropbox" /> class.</para>
+            /// </summary>
+            private Dropbox()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Dropbox</para>
+            /// </summary>
+            public static readonly Dropbox Instance = new Dropbox();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Dropbox" />.</para>
+            /// </summary>
+            private class DropboxEncoder : enc.StructEncoder<Dropbox>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Dropbox value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Dropbox" />.</para>
+            /// </summary>
+            private class DropboxDecoder : enc.StructDecoder<Dropbox>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Dropbox" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Dropbox Create()
+                {
+                    return Dropbox.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Action done by reseller.</para>
         /// </summary>
         public sealed class Reseller : ActorLogInfo
@@ -672,48 +714,57 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Action done by Dropbox.</para>
+        /// <para>The user who did the action.</para>
         /// </summary>
-        public sealed class Dropbox : ActorLogInfo
+        public sealed class User : ActorLogInfo
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Dropbox> Encoder = new DropboxEncoder();
+            internal static enc.StructEncoder<User> Encoder = new UserEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Dropbox> Decoder = new DropboxDecoder();
+            internal static enc.StructDecoder<User> Decoder = new UserDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Dropbox" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="User" /> class.</para>
             /// </summary>
-            private Dropbox()
+            /// <param name="value">The value</param>
+            public User(UserLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="User" /> class.</para>
+            /// </summary>
+            private User()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Dropbox</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly Dropbox Instance = new Dropbox();
+            public UserLogInfo Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Dropbox" />.</para>
+            /// <para>Encoder for  <see cref="User" />.</para>
             /// </summary>
-            private class DropboxEncoder : enc.StructEncoder<Dropbox>
+            private class UserEncoder : enc.StructEncoder<User>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Dropbox value, enc.IJsonWriter writer)
+                public override void EncodeFields(User value, enc.IJsonWriter writer)
                 {
+                    WriteProperty("user", value.Value, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
                 }
             }
 
@@ -722,88 +773,37 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Dropbox" />.</para>
+            /// <para>Decoder for  <see cref="User" />.</para>
             /// </summary>
-            private class DropboxDecoder : enc.StructDecoder<Dropbox>
+            private class UserDecoder : enc.StructDecoder<User>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Dropbox" />.</para>
+                /// <para>Create a new instance of type <see cref="User" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Dropbox Create()
+                protected override User Create()
                 {
-                    return Dropbox.Instance;
+                    return new User();
                 }
 
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Anonymous actor.</para>
-        /// </summary>
-        public sealed class Anonymous : ActorLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Anonymous> Encoder = new AnonymousEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Anonymous> Decoder = new AnonymousDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Anonymous" /> class.</para>
-            /// </summary>
-            private Anonymous()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Anonymous</para>
-            /// </summary>
-            public static readonly Anonymous Instance = new Anonymous();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Anonymous" />.</para>
-            /// </summary>
-            private class AnonymousEncoder : enc.StructEncoder<Anonymous>
-            {
                 /// <summary>
-                /// <para>Encode fields of given value.</para>
+                /// <para>Set given field.</para>
                 /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Anonymous value, enc.IJsonWriter writer)
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(User value, string fieldName, enc.IJsonReader reader)
                 {
+                    switch (fieldName)
+                    {
+                        case "user":
+                            value.Value = global::Dropbox.Api.TeamLog.UserLogInfo.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Anonymous" />.</para>
-            /// </summary>
-            private class AnonymousDecoder : enc.StructDecoder<Anonymous>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Anonymous" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Anonymous Create()
-                {
-                    return Anonymous.Instance;
-                }
-
             }
 
             #endregion
