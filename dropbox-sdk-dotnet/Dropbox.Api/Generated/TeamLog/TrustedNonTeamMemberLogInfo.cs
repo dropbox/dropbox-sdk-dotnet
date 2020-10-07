@@ -40,7 +40,7 @@ namespace Dropbox.Api.TeamLog
         /// data gap.</param>
         /// <param name="email">User email address. Might be missing due to historical data
         /// gap.</param>
-        /// <param name="team">Details about this useru2019s trusted team.</param>
+        /// <param name="team">Details about this user's trusted team.</param>
         public TrustedNonTeamMemberLogInfo(TrustedNonTeamMemberType trustedNonTeamMemberType,
                                            string accountId = null,
                                            string displayName = null,
@@ -74,7 +74,7 @@ namespace Dropbox.Api.TeamLog
         public TrustedNonTeamMemberType TrustedNonTeamMemberType { get; protected set; }
 
         /// <summary>
-        /// <para>Details about this useru2019s trusted team.</para>
+        /// <para>Details about this user's trusted team.</para>
         /// </summary>
         public TeamLogInfo Team { get; protected set; }
 
