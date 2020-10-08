@@ -167,6 +167,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is OperationSuppressed</para>
+        /// </summary>
+        public bool IsOperationSuppressed
+        {
+            get
+            {
+                return this is OperationSuppressed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a OperationSuppressed, or <c>null</c>.</para>
+        /// </summary>
+        public OperationSuppressed AsOperationSuppressed
+        {
+            get
+            {
+                return this as OperationSuppressed;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is
         /// TooManyWriteOperations</para>
         /// </summary>
@@ -261,6 +283,12 @@ namespace Dropbox.Api.Files
                     TeamFolder.Encoder.EncodeFields((TeamFolder)value, writer);
                     return;
                 }
+                if (value is OperationSuppressed)
+                {
+                    WriteProperty(".tag", "operation_suppressed", writer, enc.StringEncoder.Instance);
+                    OperationSuppressed.Encoder.EncodeFields((OperationSuppressed)value, writer);
+                    return;
+                }
                 if (value is TooManyWriteOperations)
                 {
                     WriteProperty(".tag", "too_many_write_operations", writer, enc.StringEncoder.Instance);
@@ -317,6 +345,8 @@ namespace Dropbox.Api.Files
                         return DisallowedName.Decoder.DecodeFields(reader);
                     case "team_folder":
                         return TeamFolder.Decoder.DecodeFields(reader);
+                    case "operation_suppressed":
+                        return OperationSuppressed.Decoder.DecodeFields(reader);
                     case "too_many_write_operations":
                         return TooManyWriteOperations.Decoder.DecodeFields(reader);
                     default:
@@ -803,6 +833,77 @@ namespace Dropbox.Api.Files
                 protected override TeamFolder Create()
                 {
                     return TeamFolder.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This file operation is not allowed at this path.</para>
+        /// </summary>
+        public sealed class OperationSuppressed : WriteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<OperationSuppressed> Encoder = new OperationSuppressedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<OperationSuppressed> Decoder = new OperationSuppressedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="OperationSuppressed" />
+            /// class.</para>
+            /// </summary>
+            private OperationSuppressed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of OperationSuppressed</para>
+            /// </summary>
+            public static readonly OperationSuppressed Instance = new OperationSuppressed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="OperationSuppressed" />.</para>
+            /// </summary>
+            private class OperationSuppressedEncoder : enc.StructEncoder<OperationSuppressed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(OperationSuppressed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="OperationSuppressed" />.</para>
+            /// </summary>
+            private class OperationSuppressedDecoder : enc.StructDecoder<OperationSuppressed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="OperationSuppressed"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override OperationSuppressed Create()
+                {
+                    return OperationSuppressed.Instance;
                 }
 
             }

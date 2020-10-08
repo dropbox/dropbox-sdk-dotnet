@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Team</para>
-        /// </summary>
-        public bool IsTeam
-        {
-            get
-            {
-                return this is Team;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Team, or <c>null</c>.</para>
-        /// </summary>
-        public Team AsTeam
-        {
-            get
-            {
-                return this as Team;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Organization</para>
         /// </summary>
         public bool IsOrganization
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Organization;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Team</para>
+        /// </summary>
+        public bool IsTeam
+        {
+            get
+            {
+                return this is Team;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Team, or <c>null</c>.</para>
+        /// </summary>
+        public Team AsTeam
+        {
+            get
+            {
+                return this as Team;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FedExtraDetails value, enc.IJsonWriter writer)
             {
-                if (value is Team)
-                {
-                    WriteProperty(".tag", "team", writer, enc.StringEncoder.Instance);
-                    Team.Encoder.EncodeFields((Team)value, writer);
-                    return;
-                }
                 if (value is Organization)
                 {
                     WriteProperty(".tag", "organization", writer, enc.StringEncoder.Instance);
                     Organization.Encoder.EncodeFields((Organization)value, writer);
+                    return;
+                }
+                if (value is Team)
+                {
+                    WriteProperty(".tag", "team", writer, enc.StringEncoder.Instance);
+                    Team.Encoder.EncodeFields((Team)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -165,10 +165,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "team":
-                        return Team.Decoder.DecodeFields(reader);
                     case "organization":
                         return Organization.Decoder.DecodeFields(reader);
+                    case "team":
+                        return Team.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -176,93 +176,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>More details about the team.</para>
-        /// </summary>
-        public sealed class Team : FedExtraDetails
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Team> Encoder = new TeamEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Team> Decoder = new TeamDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public Team(TeamDetails value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
-            /// </summary>
-            private Team()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public TeamDetails Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Team" />.</para>
-            /// </summary>
-            private class TeamEncoder : enc.StructEncoder<Team>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Team value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("team", value.Value, writer, global::Dropbox.Api.TeamLog.TeamDetails.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Team" />.</para>
-            /// </summary>
-            private class TeamDecoder : enc.StructDecoder<Team>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Team" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Team Create()
-                {
-                    return new Team();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Team DecodeFields(enc.IJsonReader reader)
-                {
-                    return new Team(global::Dropbox.Api.TeamLog.TeamDetails.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>More details about the organization.</para>
@@ -347,6 +260,93 @@ namespace Dropbox.Api.TeamLog
                 public override Organization DecodeFields(enc.IJsonReader reader)
                 {
                     return new Organization(global::Dropbox.Api.TeamLog.OrganizationDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>More details about the team.</para>
+        /// </summary>
+        public sealed class Team : FedExtraDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Team> Encoder = new TeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Team> Decoder = new TeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public Team(TeamDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Team" /> class.</para>
+            /// </summary>
+            private Team()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Team" />.</para>
+            /// </summary>
+            private class TeamEncoder : enc.StructEncoder<Team>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Team value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team", value.Value, writer, global::Dropbox.Api.TeamLog.TeamDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Team" />.</para>
+            /// </summary>
+            private class TeamDecoder : enc.StructDecoder<Team>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Team" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Team Create()
+                {
+                    return new Team();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Team DecodeFields(enc.IJsonReader reader)
+                {
+                    return new Team(global::Dropbox.Api.TeamLog.TeamDetails.Decoder.DecodeFields(reader));
                 }
             }
 
