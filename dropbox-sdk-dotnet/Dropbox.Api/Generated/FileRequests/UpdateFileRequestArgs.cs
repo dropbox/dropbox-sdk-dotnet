@@ -40,11 +40,13 @@ namespace Dropbox.Api.FileRequests
         /// <param name="deadline">The new deadline for the file request. Deadlines can only be
         /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
+        /// <param name="description">The description of the file request.</param>
         public UpdateFileRequestArgs(string id,
                                      string title = null,
                                      string destination = null,
                                      UpdateFileRequestDeadline deadline = null,
-                                     bool? open = null)
+                                     bool? open = null,
+                                     string description = null)
         {
             if (id == null)
             {
@@ -84,6 +86,7 @@ namespace Dropbox.Api.FileRequests
             this.Destination = destination;
             this.Deadline = deadline;
             this.Open = open;
+            this.Description = description;
         }
 
         /// <summary>
@@ -126,6 +129,11 @@ namespace Dropbox.Api.FileRequests
         /// </summary>
         public bool? Open { get; protected set; }
 
+        /// <summary>
+        /// <para>The description of the file request.</para>
+        /// </summary>
+        public string Description { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -153,6 +161,10 @@ namespace Dropbox.Api.FileRequests
                 if (value.Open != null)
                 {
                     WriteProperty("open", value.Open.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.Description != null)
+                {
+                    WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -201,6 +213,9 @@ namespace Dropbox.Api.FileRequests
                         break;
                     case "open":
                         value.Open = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "description":
+                        value.Description = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

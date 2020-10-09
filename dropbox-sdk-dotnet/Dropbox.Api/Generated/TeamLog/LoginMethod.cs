@@ -35,139 +35,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Password</para>
-        /// </summary>
-        public bool IsPassword
-        {
-            get
-            {
-                return this is Password;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Password, or <c>null</c>.</para>
-        /// </summary>
-        public Password AsPassword
-        {
-            get
-            {
-                return this as Password;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// TwoFactorAuthentication</para>
-        /// </summary>
-        public bool IsTwoFactorAuthentication
-        {
-            get
-            {
-                return this is TwoFactorAuthentication;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a TwoFactorAuthentication, or <c>null</c>.</para>
-        /// </summary>
-        public TwoFactorAuthentication AsTwoFactorAuthentication
-        {
-            get
-            {
-                return this as TwoFactorAuthentication;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Saml</para>
-        /// </summary>
-        public bool IsSaml
-        {
-            get
-            {
-                return this is Saml;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Saml, or <c>null</c>.</para>
-        /// </summary>
-        public Saml AsSaml
-        {
-            get
-            {
-                return this as Saml;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is GoogleOauth</para>
-        /// </summary>
-        public bool IsGoogleOauth
-        {
-            get
-            {
-                return this is GoogleOauth;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a GoogleOauth, or <c>null</c>.</para>
-        /// </summary>
-        public GoogleOauth AsGoogleOauth
-        {
-            get
-            {
-                return this as GoogleOauth;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is WebSession</para>
-        /// </summary>
-        public bool IsWebSession
-        {
-            get
-            {
-                return this is WebSession;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a WebSession, or <c>null</c>.</para>
-        /// </summary>
-        public WebSession AsWebSession
-        {
-            get
-            {
-                return this as WebSession;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is QrCode</para>
-        /// </summary>
-        public bool IsQrCode
-        {
-            get
-            {
-                return this is QrCode;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a QrCode, or <c>null</c>.</para>
-        /// </summary>
-        public QrCode AsQrCode
-        {
-            get
-            {
-                return this as QrCode;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is AppleOauth</para>
         /// </summary>
         public bool IsAppleOauth
@@ -213,6 +80,139 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is GoogleOauth</para>
+        /// </summary>
+        public bool IsGoogleOauth
+        {
+            get
+            {
+                return this is GoogleOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GoogleOauth, or <c>null</c>.</para>
+        /// </summary>
+        public GoogleOauth AsGoogleOauth
+        {
+            get
+            {
+                return this as GoogleOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Password</para>
+        /// </summary>
+        public bool IsPassword
+        {
+            get
+            {
+                return this is Password;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Password, or <c>null</c>.</para>
+        /// </summary>
+        public Password AsPassword
+        {
+            get
+            {
+                return this as Password;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is QrCode</para>
+        /// </summary>
+        public bool IsQrCode
+        {
+            get
+            {
+                return this is QrCode;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a QrCode, or <c>null</c>.</para>
+        /// </summary>
+        public QrCode AsQrCode
+        {
+            get
+            {
+                return this as QrCode;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Saml</para>
+        /// </summary>
+        public bool IsSaml
+        {
+            get
+            {
+                return this is Saml;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Saml, or <c>null</c>.</para>
+        /// </summary>
+        public Saml AsSaml
+        {
+            get
+            {
+                return this as Saml;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TwoFactorAuthentication</para>
+        /// </summary>
+        public bool IsTwoFactorAuthentication
+        {
+            get
+            {
+                return this is TwoFactorAuthentication;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TwoFactorAuthentication, or <c>null</c>.</para>
+        /// </summary>
+        public TwoFactorAuthentication AsTwoFactorAuthentication
+        {
+            get
+            {
+                return this as TwoFactorAuthentication;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is WebSession</para>
+        /// </summary>
+        public bool IsWebSession
+        {
+            get
+            {
+                return this is WebSession;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a WebSession, or <c>null</c>.</para>
+        /// </summary>
+        public WebSession AsWebSession
+        {
+            get
+            {
+                return this as WebSession;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -248,42 +248,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(LoginMethod value, enc.IJsonWriter writer)
             {
-                if (value is Password)
-                {
-                    WriteProperty(".tag", "password", writer, enc.StringEncoder.Instance);
-                    Password.Encoder.EncodeFields((Password)value, writer);
-                    return;
-                }
-                if (value is TwoFactorAuthentication)
-                {
-                    WriteProperty(".tag", "two_factor_authentication", writer, enc.StringEncoder.Instance);
-                    TwoFactorAuthentication.Encoder.EncodeFields((TwoFactorAuthentication)value, writer);
-                    return;
-                }
-                if (value is Saml)
-                {
-                    WriteProperty(".tag", "saml", writer, enc.StringEncoder.Instance);
-                    Saml.Encoder.EncodeFields((Saml)value, writer);
-                    return;
-                }
-                if (value is GoogleOauth)
-                {
-                    WriteProperty(".tag", "google_oauth", writer, enc.StringEncoder.Instance);
-                    GoogleOauth.Encoder.EncodeFields((GoogleOauth)value, writer);
-                    return;
-                }
-                if (value is WebSession)
-                {
-                    WriteProperty(".tag", "web_session", writer, enc.StringEncoder.Instance);
-                    WebSession.Encoder.EncodeFields((WebSession)value, writer);
-                    return;
-                }
-                if (value is QrCode)
-                {
-                    WriteProperty(".tag", "qr_code", writer, enc.StringEncoder.Instance);
-                    QrCode.Encoder.EncodeFields((QrCode)value, writer);
-                    return;
-                }
                 if (value is AppleOauth)
                 {
                     WriteProperty(".tag", "apple_oauth", writer, enc.StringEncoder.Instance);
@@ -294,6 +258,42 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "first_party_token_exchange", writer, enc.StringEncoder.Instance);
                     FirstPartyTokenExchange.Encoder.EncodeFields((FirstPartyTokenExchange)value, writer);
+                    return;
+                }
+                if (value is GoogleOauth)
+                {
+                    WriteProperty(".tag", "google_oauth", writer, enc.StringEncoder.Instance);
+                    GoogleOauth.Encoder.EncodeFields((GoogleOauth)value, writer);
+                    return;
+                }
+                if (value is Password)
+                {
+                    WriteProperty(".tag", "password", writer, enc.StringEncoder.Instance);
+                    Password.Encoder.EncodeFields((Password)value, writer);
+                    return;
+                }
+                if (value is QrCode)
+                {
+                    WriteProperty(".tag", "qr_code", writer, enc.StringEncoder.Instance);
+                    QrCode.Encoder.EncodeFields((QrCode)value, writer);
+                    return;
+                }
+                if (value is Saml)
+                {
+                    WriteProperty(".tag", "saml", writer, enc.StringEncoder.Instance);
+                    Saml.Encoder.EncodeFields((Saml)value, writer);
+                    return;
+                }
+                if (value is TwoFactorAuthentication)
+                {
+                    WriteProperty(".tag", "two_factor_authentication", writer, enc.StringEncoder.Instance);
+                    TwoFactorAuthentication.Encoder.EncodeFields((TwoFactorAuthentication)value, writer);
+                    return;
+                }
+                if (value is WebSession)
+                {
+                    WriteProperty(".tag", "web_session", writer, enc.StringEncoder.Instance);
+                    WebSession.Encoder.EncodeFields((WebSession)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -334,22 +334,22 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "password":
-                        return Password.Decoder.DecodeFields(reader);
-                    case "two_factor_authentication":
-                        return TwoFactorAuthentication.Decoder.DecodeFields(reader);
-                    case "saml":
-                        return Saml.Decoder.DecodeFields(reader);
-                    case "google_oauth":
-                        return GoogleOauth.Decoder.DecodeFields(reader);
-                    case "web_session":
-                        return WebSession.Decoder.DecodeFields(reader);
-                    case "qr_code":
-                        return QrCode.Decoder.DecodeFields(reader);
                     case "apple_oauth":
                         return AppleOauth.Decoder.DecodeFields(reader);
                     case "first_party_token_exchange":
                         return FirstPartyTokenExchange.Decoder.DecodeFields(reader);
+                    case "google_oauth":
+                        return GoogleOauth.Decoder.DecodeFields(reader);
+                    case "password":
+                        return Password.Decoder.DecodeFields(reader);
+                    case "qr_code":
+                        return QrCode.Decoder.DecodeFields(reader);
+                    case "saml":
+                        return Saml.Decoder.DecodeFields(reader);
+                    case "two_factor_authentication":
+                        return TwoFactorAuthentication.Decoder.DecodeFields(reader);
+                    case "web_session":
+                        return WebSession.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -357,423 +357,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The password object</para>
-        /// </summary>
-        public sealed class Password : LoginMethod
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Password> Encoder = new PasswordEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Password> Decoder = new PasswordDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Password" /> class.</para>
-            /// </summary>
-            private Password()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Password</para>
-            /// </summary>
-            public static readonly Password Instance = new Password();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Password" />.</para>
-            /// </summary>
-            private class PasswordEncoder : enc.StructEncoder<Password>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Password value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Password" />.</para>
-            /// </summary>
-            private class PasswordDecoder : enc.StructDecoder<Password>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Password" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Password Create()
-                {
-                    return Password.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The two factor authentication object</para>
-        /// </summary>
-        public sealed class TwoFactorAuthentication : LoginMethod
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<TwoFactorAuthentication> Encoder = new TwoFactorAuthenticationEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<TwoFactorAuthentication> Decoder = new TwoFactorAuthenticationDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="TwoFactorAuthentication" />
-            /// class.</para>
-            /// </summary>
-            private TwoFactorAuthentication()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of TwoFactorAuthentication</para>
-            /// </summary>
-            public static readonly TwoFactorAuthentication Instance = new TwoFactorAuthentication();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="TwoFactorAuthentication" />.</para>
-            /// </summary>
-            private class TwoFactorAuthenticationEncoder : enc.StructEncoder<TwoFactorAuthentication>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(TwoFactorAuthentication value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="TwoFactorAuthentication" />.</para>
-            /// </summary>
-            private class TwoFactorAuthenticationDecoder : enc.StructDecoder<TwoFactorAuthentication>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="TwoFactorAuthentication"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override TwoFactorAuthentication Create()
-                {
-                    return TwoFactorAuthentication.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The saml object</para>
-        /// </summary>
-        public sealed class Saml : LoginMethod
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Saml> Encoder = new SamlEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Saml> Decoder = new SamlDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Saml" /> class.</para>
-            /// </summary>
-            private Saml()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Saml</para>
-            /// </summary>
-            public static readonly Saml Instance = new Saml();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Saml" />.</para>
-            /// </summary>
-            private class SamlEncoder : enc.StructEncoder<Saml>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Saml value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Saml" />.</para>
-            /// </summary>
-            private class SamlDecoder : enc.StructDecoder<Saml>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Saml" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Saml Create()
-                {
-                    return Saml.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The google oauth object</para>
-        /// </summary>
-        public sealed class GoogleOauth : LoginMethod
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<GoogleOauth> Encoder = new GoogleOauthEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<GoogleOauth> Decoder = new GoogleOauthDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="GoogleOauth" />
-            /// class.</para>
-            /// </summary>
-            private GoogleOauth()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of GoogleOauth</para>
-            /// </summary>
-            public static readonly GoogleOauth Instance = new GoogleOauth();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="GoogleOauth" />.</para>
-            /// </summary>
-            private class GoogleOauthEncoder : enc.StructEncoder<GoogleOauth>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(GoogleOauth value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="GoogleOauth" />.</para>
-            /// </summary>
-            private class GoogleOauthDecoder : enc.StructDecoder<GoogleOauth>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="GoogleOauth" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override GoogleOauth Create()
-                {
-                    return GoogleOauth.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The web session object</para>
-        /// </summary>
-        public sealed class WebSession : LoginMethod
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<WebSession> Encoder = new WebSessionEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<WebSession> Decoder = new WebSessionDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="WebSession" /> class.</para>
-            /// </summary>
-            private WebSession()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of WebSession</para>
-            /// </summary>
-            public static readonly WebSession Instance = new WebSession();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="WebSession" />.</para>
-            /// </summary>
-            private class WebSessionEncoder : enc.StructEncoder<WebSession>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(WebSession value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="WebSession" />.</para>
-            /// </summary>
-            private class WebSessionDecoder : enc.StructDecoder<WebSession>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="WebSession" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override WebSession Create()
-                {
-                    return WebSession.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The qr code object</para>
-        /// </summary>
-        public sealed class QrCode : LoginMethod
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<QrCode> Encoder = new QrCodeEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<QrCode> Decoder = new QrCodeDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="QrCode" /> class.</para>
-            /// </summary>
-            private QrCode()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of QrCode</para>
-            /// </summary>
-            public static readonly QrCode Instance = new QrCode();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="QrCode" />.</para>
-            /// </summary>
-            private class QrCodeEncoder : enc.StructEncoder<QrCode>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(QrCode value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="QrCode" />.</para>
-            /// </summary>
-            private class QrCodeDecoder : enc.StructDecoder<QrCode>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="QrCode" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override QrCode Create()
-                {
-                    return QrCode.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The apple oauth object</para>
@@ -908,6 +491,423 @@ namespace Dropbox.Api.TeamLog
                 protected override FirstPartyTokenExchange Create()
                 {
                     return FirstPartyTokenExchange.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The google oauth object</para>
+        /// </summary>
+        public sealed class GoogleOauth : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GoogleOauth> Encoder = new GoogleOauthEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GoogleOauth> Decoder = new GoogleOauthDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GoogleOauth" />
+            /// class.</para>
+            /// </summary>
+            private GoogleOauth()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GoogleOauth</para>
+            /// </summary>
+            public static readonly GoogleOauth Instance = new GoogleOauth();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GoogleOauth" />.</para>
+            /// </summary>
+            private class GoogleOauthEncoder : enc.StructEncoder<GoogleOauth>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GoogleOauth value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GoogleOauth" />.</para>
+            /// </summary>
+            private class GoogleOauthDecoder : enc.StructDecoder<GoogleOauth>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GoogleOauth" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GoogleOauth Create()
+                {
+                    return GoogleOauth.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The password object</para>
+        /// </summary>
+        public sealed class Password : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Password> Encoder = new PasswordEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Password> Decoder = new PasswordDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Password" /> class.</para>
+            /// </summary>
+            private Password()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Password</para>
+            /// </summary>
+            public static readonly Password Instance = new Password();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Password" />.</para>
+            /// </summary>
+            private class PasswordEncoder : enc.StructEncoder<Password>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Password value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Password" />.</para>
+            /// </summary>
+            private class PasswordDecoder : enc.StructDecoder<Password>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Password" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Password Create()
+                {
+                    return Password.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The qr code object</para>
+        /// </summary>
+        public sealed class QrCode : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<QrCode> Encoder = new QrCodeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<QrCode> Decoder = new QrCodeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="QrCode" /> class.</para>
+            /// </summary>
+            private QrCode()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of QrCode</para>
+            /// </summary>
+            public static readonly QrCode Instance = new QrCode();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="QrCode" />.</para>
+            /// </summary>
+            private class QrCodeEncoder : enc.StructEncoder<QrCode>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(QrCode value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="QrCode" />.</para>
+            /// </summary>
+            private class QrCodeDecoder : enc.StructDecoder<QrCode>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="QrCode" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override QrCode Create()
+                {
+                    return QrCode.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The saml object</para>
+        /// </summary>
+        public sealed class Saml : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Saml> Encoder = new SamlEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Saml> Decoder = new SamlDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Saml" /> class.</para>
+            /// </summary>
+            private Saml()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Saml</para>
+            /// </summary>
+            public static readonly Saml Instance = new Saml();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Saml" />.</para>
+            /// </summary>
+            private class SamlEncoder : enc.StructEncoder<Saml>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Saml value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Saml" />.</para>
+            /// </summary>
+            private class SamlDecoder : enc.StructDecoder<Saml>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Saml" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Saml Create()
+                {
+                    return Saml.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The two factor authentication object</para>
+        /// </summary>
+        public sealed class TwoFactorAuthentication : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TwoFactorAuthentication> Encoder = new TwoFactorAuthenticationEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TwoFactorAuthentication> Decoder = new TwoFactorAuthenticationDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TwoFactorAuthentication" />
+            /// class.</para>
+            /// </summary>
+            private TwoFactorAuthentication()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TwoFactorAuthentication</para>
+            /// </summary>
+            public static readonly TwoFactorAuthentication Instance = new TwoFactorAuthentication();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TwoFactorAuthentication" />.</para>
+            /// </summary>
+            private class TwoFactorAuthenticationEncoder : enc.StructEncoder<TwoFactorAuthentication>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TwoFactorAuthentication value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TwoFactorAuthentication" />.</para>
+            /// </summary>
+            private class TwoFactorAuthenticationDecoder : enc.StructDecoder<TwoFactorAuthentication>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TwoFactorAuthentication"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TwoFactorAuthentication Create()
+                {
+                    return TwoFactorAuthentication.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The web session object</para>
+        /// </summary>
+        public sealed class WebSession : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<WebSession> Encoder = new WebSessionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<WebSession> Decoder = new WebSessionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="WebSession" /> class.</para>
+            /// </summary>
+            private WebSession()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of WebSession</para>
+            /// </summary>
+            public static readonly WebSession Instance = new WebSession();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="WebSession" />.</para>
+            /// </summary>
+            private class WebSessionEncoder : enc.StructEncoder<WebSession>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(WebSession value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="WebSession" />.</para>
+            /// </summary>
+            private class WebSessionDecoder : enc.StructDecoder<WebSession>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="WebSession" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override WebSession Create()
+                {
+                    return WebSession.Instance;
                 }
 
             }

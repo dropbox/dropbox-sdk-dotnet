@@ -36,6 +36,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AllUsers</para>
+        /// </summary>
+        public bool IsAllUsers
+        {
+            get
+            {
+                return this is AllUsers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AllUsers, or <c>null</c>.</para>
+        /// </summary>
+        public AllUsers AsAllUsers
+        {
+            get
+            {
+                return this as AllUsers;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Disabled</para>
         /// </summary>
         public bool IsDisabled
@@ -80,28 +102,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AllUsers</para>
-        /// </summary>
-        public bool IsAllUsers
-        {
-            get
-            {
-                return this is AllUsers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a AllUsers, or <c>null</c>.</para>
-        /// </summary>
-        public AllUsers AsAllUsers
-        {
-            get
-            {
-                return this as AllUsers;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -137,6 +137,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AccountCapturePolicy value, enc.IJsonWriter writer)
             {
+                if (value is AllUsers)
+                {
+                    WriteProperty(".tag", "all_users", writer, enc.StringEncoder.Instance);
+                    AllUsers.Encoder.EncodeFields((AllUsers)value, writer);
+                    return;
+                }
                 if (value is Disabled)
                 {
                     WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
@@ -147,12 +153,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "invited_users", writer, enc.StringEncoder.Instance);
                     InvitedUsers.Encoder.EncodeFields((InvitedUsers)value, writer);
-                    return;
-                }
-                if (value is AllUsers)
-                {
-                    WriteProperty(".tag", "all_users", writer, enc.StringEncoder.Instance);
-                    AllUsers.Encoder.EncodeFields((AllUsers)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -193,12 +193,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "all_users":
+                        return AllUsers.Decoder.DecodeFields(reader);
                     case "disabled":
                         return Disabled.Decoder.DecodeFields(reader);
                     case "invited_users":
                         return InvitedUsers.Decoder.DecodeFields(reader);
-                    case "all_users":
-                        return AllUsers.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -206,6 +206,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The all users object</para>
+        /// </summary>
+        public sealed class AllUsers : AccountCapturePolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AllUsers> Encoder = new AllUsersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AllUsers> Decoder = new AllUsersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AllUsers" /> class.</para>
+            /// </summary>
+            private AllUsers()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AllUsers</para>
+            /// </summary>
+            public static readonly AllUsers Instance = new AllUsers();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AllUsers" />.</para>
+            /// </summary>
+            private class AllUsersEncoder : enc.StructEncoder<AllUsers>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AllUsers value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AllUsers" />.</para>
+            /// </summary>
+            private class AllUsersDecoder : enc.StructDecoder<AllUsers>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AllUsers" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AllUsers Create()
+                {
+                    return AllUsers.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The disabled object</para>
@@ -339,75 +408,6 @@ namespace Dropbox.Api.TeamLog
                 protected override InvitedUsers Create()
                 {
                     return InvitedUsers.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The all users object</para>
-        /// </summary>
-        public sealed class AllUsers : AccountCapturePolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<AllUsers> Encoder = new AllUsersEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<AllUsers> Decoder = new AllUsersDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AllUsers" /> class.</para>
-            /// </summary>
-            private AllUsers()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of AllUsers</para>
-            /// </summary>
-            public static readonly AllUsers Instance = new AllUsers();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="AllUsers" />.</para>
-            /// </summary>
-            private class AllUsersEncoder : enc.StructEncoder<AllUsers>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(AllUsers value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="AllUsers" />.</para>
-            /// </summary>
-            private class AllUsersDecoder : enc.StructDecoder<AllUsers>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="AllUsers" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override AllUsers Create()
-                {
-                    return AllUsers.Instance;
                 }
 
             }

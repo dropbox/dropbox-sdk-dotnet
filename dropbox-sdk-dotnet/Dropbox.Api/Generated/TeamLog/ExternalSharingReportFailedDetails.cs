@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Couldn't create report: Data shared outside the team.</para>
+    /// <para>Couldn't create External sharing report.</para>
     /// </summary>
     public class ExternalSharingReportFailedDetails
     {
