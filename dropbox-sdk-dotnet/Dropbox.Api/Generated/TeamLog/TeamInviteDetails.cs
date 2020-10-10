@@ -32,7 +32,10 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="inviteMethod">How the user was invited to the team.</param>
-        public TeamInviteDetails(InviteMethod inviteMethod)
+        /// <param name="additionalLicensePurchase">True if the invitation incurred an
+        /// additional license purchase.</param>
+        public TeamInviteDetails(InviteMethod inviteMethod,
+                                 bool? additionalLicensePurchase = null)
         {
             if (inviteMethod == null)
             {
@@ -40,6 +43,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.InviteMethod = inviteMethod;
+            this.AdditionalLicensePurchase = additionalLicensePurchase;
         }
 
         /// <summary>
@@ -58,6 +62,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public InviteMethod InviteMethod { get; protected set; }
 
+        /// <summary>
+        /// <para>True if the invitation incurred an additional license purchase.</para>
+        /// </summary>
+        public bool? AdditionalLicensePurchase { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,6 +82,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(TeamInviteDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("invite_method", value.InviteMethod, writer, global::Dropbox.Api.TeamLog.InviteMethod.Encoder);
+                if (value.AdditionalLicensePurchase != null)
+                {
+                    WriteProperty("additional_license_purchase", value.AdditionalLicensePurchase.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 
@@ -107,6 +120,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "invite_method":
                         value.InviteMethod = global::Dropbox.Api.TeamLog.InviteMethod.Decoder.Decode(reader);
+                        break;
+                    case "additional_license_purchase":
+                        value.AdditionalLicensePurchase = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
