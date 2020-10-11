@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Remove</para>
-        /// </summary>
-        public bool IsRemove
-        {
-            get
-            {
-                return this is Remove;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Remove, or <c>null</c>.</para>
-        /// </summary>
-        public Remove AsRemove
-        {
-            get
-            {
-                return this as Remove;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Keep</para>
         /// </summary>
         public bool IsKeep
@@ -76,6 +54,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Keep;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Remove</para>
+        /// </summary>
+        public bool IsRemove
+        {
+            get
+            {
+                return this is Remove;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Remove, or <c>null</c>.</para>
+        /// </summary>
+        public Remove AsRemove
+        {
+            get
+            {
+                return this as Remove;
             }
         }
 
@@ -115,16 +115,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(DeviceUnlinkPolicy value, enc.IJsonWriter writer)
             {
-                if (value is Remove)
-                {
-                    WriteProperty(".tag", "remove", writer, enc.StringEncoder.Instance);
-                    Remove.Encoder.EncodeFields((Remove)value, writer);
-                    return;
-                }
                 if (value is Keep)
                 {
                     WriteProperty(".tag", "keep", writer, enc.StringEncoder.Instance);
                     Keep.Encoder.EncodeFields((Keep)value, writer);
+                    return;
+                }
+                if (value is Remove)
+                {
+                    WriteProperty(".tag", "remove", writer, enc.StringEncoder.Instance);
+                    Remove.Encoder.EncodeFields((Remove)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -165,10 +165,10 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "remove":
-                        return Remove.Decoder.DecodeFields(reader);
                     case "keep":
                         return Keep.Decoder.DecodeFields(reader);
+                    case "remove":
+                        return Remove.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -176,75 +176,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The remove object</para>
-        /// </summary>
-        public sealed class Remove : DeviceUnlinkPolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Remove> Encoder = new RemoveEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Remove> Decoder = new RemoveDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Remove" /> class.</para>
-            /// </summary>
-            private Remove()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Remove</para>
-            /// </summary>
-            public static readonly Remove Instance = new Remove();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Remove" />.</para>
-            /// </summary>
-            private class RemoveEncoder : enc.StructEncoder<Remove>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Remove value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Remove" />.</para>
-            /// </summary>
-            private class RemoveDecoder : enc.StructDecoder<Remove>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Remove" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Remove Create()
-                {
-                    return Remove.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The keep object</para>
@@ -308,6 +239,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Keep Create()
                 {
                     return Keep.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The remove object</para>
+        /// </summary>
+        public sealed class Remove : DeviceUnlinkPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Remove> Encoder = new RemoveEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Remove> Decoder = new RemoveDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Remove" /> class.</para>
+            /// </summary>
+            private Remove()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Remove</para>
+            /// </summary>
+            public static readonly Remove Instance = new Remove();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Remove" />.</para>
+            /// </summary>
+            private class RemoveEncoder : enc.StructEncoder<Remove>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Remove value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Remove" />.</para>
+            /// </summary>
+            private class RemoveDecoder : enc.StructDecoder<Remove>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Remove" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Remove Create()
+                {
+                    return Remove.Instance;
                 }
 
             }

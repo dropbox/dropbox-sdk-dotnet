@@ -370,7 +370,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The caller's email should be verified.</para>
+        /// <para>This user's email address is not verified. This functionality is only
+        /// available on accounts with a verified email address. Users can verify their email
+        /// address <a href="https://www.dropbox.com/help/317">here</a>.</para>
         /// </summary>
         public sealed class EmailNotVerified : ModifySharedLinkSettingsError
         {

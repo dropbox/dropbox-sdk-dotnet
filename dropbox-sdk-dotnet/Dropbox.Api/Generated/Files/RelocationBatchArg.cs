@@ -36,13 +36,7 @@ namespace Dropbox.Api.Files
         /// cref="RelocationPath" />.</param>
         /// <param name="autorename">If there's a conflict with any file, have the Dropbox
         /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">If true, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> will copy
-        /// contents in shared folder, otherwise <see
-        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
-        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
-        /// This field is always true for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</param>
+        /// <param name="allowSharedFolder">This flag has no effect.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
@@ -70,12 +64,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>If true, <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync"
-        /// /> will copy contents in shared folder, otherwise <see
-        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
-        /// if <see cref="Dropbox.Api.Files.RelocationPath.FromPath" /> contains shared folder.
-        /// This field is always true for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />.</para>
+        /// <para>This flag has no effect.</para>
         /// </summary>
         public bool AllowSharedFolder { get; protected set; }
 
