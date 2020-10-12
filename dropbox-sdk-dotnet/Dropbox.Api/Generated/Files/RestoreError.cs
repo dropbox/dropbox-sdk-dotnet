@@ -101,6 +101,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InProgress</para>
+        /// </summary>
+        public bool IsInProgress
+        {
+            get
+            {
+                return this is InProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InProgress, or <c>null</c>.</para>
+        /// </summary>
+        public InProgress AsInProgress
+        {
+            get
+            {
+                return this as InProgress;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -154,6 +176,12 @@ namespace Dropbox.Api.Files
                     InvalidRevision.Encoder.EncodeFields((InvalidRevision)value, writer);
                     return;
                 }
+                if (value is InProgress)
+                {
+                    WriteProperty(".tag", "in_progress", writer, enc.StringEncoder.Instance);
+                    InProgress.Encoder.EncodeFields((InProgress)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -198,6 +226,8 @@ namespace Dropbox.Api.Files
                         return PathWrite.Decoder.DecodeFields(reader);
                     case "invalid_revision":
                         return InvalidRevision.Decoder.DecodeFields(reader);
+                    case "in_progress":
+                        return InProgress.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -399,7 +429,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The revision is invalid. It may not exist.</para>
+        /// <para>The revision is invalid. It may not exist or may point to a deleted
+        /// file.</para>
         /// </summary>
         public sealed class InvalidRevision : RestoreError
         {
@@ -461,6 +492,75 @@ namespace Dropbox.Api.Files
                 protected override InvalidRevision Create()
                 {
                     return InvalidRevision.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The restore is currently executing, but has not yet completed.</para>
+        /// </summary>
+        public sealed class InProgress : RestoreError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InProgress> Encoder = new InProgressEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InProgress> Decoder = new InProgressDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InProgress" /> class.</para>
+            /// </summary>
+            private InProgress()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InProgress</para>
+            /// </summary>
+            public static readonly InProgress Instance = new InProgress();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InProgress" />.</para>
+            /// </summary>
+            private class InProgressEncoder : enc.StructEncoder<InProgress>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InProgress value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InProgress" />.</para>
+            /// </summary>
+            private class InProgressDecoder : enc.StructDecoder<InProgress>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InProgress" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InProgress Create()
+                {
+                    return InProgress.Instance;
                 }
 
             }

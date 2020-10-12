@@ -37,6 +37,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Authenticator</para>
+        /// </summary>
+        public bool IsAuthenticator
+        {
+            get
+            {
+                return this is Authenticator;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Authenticator, or <c>null</c>.</para>
+        /// </summary>
+        public Authenticator AsAuthenticator
+        {
+            get
+            {
+                return this as Authenticator;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Disabled</para>
         /// </summary>
         public bool IsDisabled
@@ -103,28 +125,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Authenticator</para>
-        /// </summary>
-        public bool IsAuthenticator
-        {
-            get
-            {
-                return this is Authenticator;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Authenticator, or <c>null</c>.</para>
-        /// </summary>
-        public Authenticator AsAuthenticator
-        {
-            get
-            {
-                return this as Authenticator;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -160,6 +160,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(TfaConfiguration value, enc.IJsonWriter writer)
             {
+                if (value is Authenticator)
+                {
+                    WriteProperty(".tag", "authenticator", writer, enc.StringEncoder.Instance);
+                    Authenticator.Encoder.EncodeFields((Authenticator)value, writer);
+                    return;
+                }
                 if (value is Disabled)
                 {
                     WriteProperty(".tag", "disabled", writer, enc.StringEncoder.Instance);
@@ -176,12 +182,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "sms", writer, enc.StringEncoder.Instance);
                     Sms.Encoder.EncodeFields((Sms)value, writer);
-                    return;
-                }
-                if (value is Authenticator)
-                {
-                    WriteProperty(".tag", "authenticator", writer, enc.StringEncoder.Instance);
-                    Authenticator.Encoder.EncodeFields((Authenticator)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -222,14 +222,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "authenticator":
+                        return Authenticator.Decoder.DecodeFields(reader);
                     case "disabled":
                         return Disabled.Decoder.DecodeFields(reader);
                     case "enabled":
                         return Enabled.Decoder.DecodeFields(reader);
                     case "sms":
                         return Sms.Decoder.DecodeFields(reader);
-                    case "authenticator":
-                        return Authenticator.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -237,6 +237,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The authenticator object</para>
+        /// </summary>
+        public sealed class Authenticator : TfaConfiguration
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Authenticator> Encoder = new AuthenticatorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Authenticator> Decoder = new AuthenticatorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Authenticator" />
+            /// class.</para>
+            /// </summary>
+            private Authenticator()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Authenticator</para>
+            /// </summary>
+            public static readonly Authenticator Instance = new Authenticator();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Authenticator" />.</para>
+            /// </summary>
+            private class AuthenticatorEncoder : enc.StructEncoder<Authenticator>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Authenticator value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Authenticator" />.</para>
+            /// </summary>
+            private class AuthenticatorDecoder : enc.StructDecoder<Authenticator>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Authenticator" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Authenticator Create()
+                {
+                    return Authenticator.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The disabled object</para>
@@ -438,76 +508,6 @@ namespace Dropbox.Api.TeamLog
                 protected override Sms Create()
                 {
                     return Sms.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The authenticator object</para>
-        /// </summary>
-        public sealed class Authenticator : TfaConfiguration
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Authenticator> Encoder = new AuthenticatorEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Authenticator> Decoder = new AuthenticatorDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Authenticator" />
-            /// class.</para>
-            /// </summary>
-            private Authenticator()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Authenticator</para>
-            /// </summary>
-            public static readonly Authenticator Instance = new Authenticator();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Authenticator" />.</para>
-            /// </summary>
-            private class AuthenticatorEncoder : enc.StructEncoder<Authenticator>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Authenticator value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Authenticator" />.</para>
-            /// </summary>
-            private class AuthenticatorDecoder : enc.StructDecoder<Authenticator>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Authenticator" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Authenticator Create()
-                {
-                    return Authenticator.Instance;
                 }
 
             }

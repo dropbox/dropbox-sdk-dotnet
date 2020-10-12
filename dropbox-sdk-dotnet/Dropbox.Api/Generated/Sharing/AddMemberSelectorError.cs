@@ -565,8 +565,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The value is the ID of the Dropbox user with an unverified e-mail address.
-        /// Invite unverified users by e-mail address instead of by their Dropbox ID.</para>
+        /// <para>The value is the ID of the Dropbox user with an unverified email address.
+        /// Invite unverified users by email address instead of by their Dropbox ID.</para>
         /// </summary>
         public sealed class UnverifiedDropboxId : AddMemberSelectorError
         {
