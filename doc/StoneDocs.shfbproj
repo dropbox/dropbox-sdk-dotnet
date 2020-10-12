@@ -20,7 +20,7 @@
     <DocumentationSources>
       <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\stone_summaries.xml" />
 <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\bin\Release\net45\Dropbox.Api.dll" />
-<DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\bin\Release\Dropbox.Api.XML" />
+<DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\bin\Release\net45\Dropbox.Api.XML" />
 <DocumentationSource sourceFile="..\dropbox-sdk-dotnet\Dropbox.Api\Generated\namespace_summaries.xml" /></DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>

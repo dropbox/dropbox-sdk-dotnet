@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The offical Dropbox SDK for DotNet.</description>
     <releaseNotes>
-    See https://github.com/dropbox/dropbox-sdk-dotnet/releases for notes on the current release.
+ See https://github.com/dropbox/dropbox-sdk-dotnet/releases for notes on the current release.
     </releaseNotes>
     <copyright>Copyright (c) 2020 Dropbox Inc., http://www.dropbox.com/</copyright>
     <tags>Dropbox Api</tags>
