@@ -47,6 +47,10 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("paths");
             }
+            if (pathsList.Count > 10000)
+            {
+                throw new sys.ArgumentOutOfRangeException("paths", "List should at at most 10000 items");
+            }
 
             this.Paths = pathsList;
             this.Autorename = autorename;

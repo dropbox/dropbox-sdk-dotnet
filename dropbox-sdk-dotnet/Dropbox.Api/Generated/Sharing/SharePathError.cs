@@ -343,6 +343,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is IsFamily</para>
+        /// </summary>
+        public bool IsIsFamily
+        {
+            get
+            {
+                return this is IsFamily;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a IsFamily, or <c>null</c>.</para>
+        /// </summary>
+        public IsFamily AsIsFamily
+        {
+            get
+            {
+                return this as IsFamily;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -462,6 +484,12 @@ namespace Dropbox.Api.Sharing
                     IsVault.Encoder.EncodeFields((IsVault)value, writer);
                     return;
                 }
+                if (value is IsFamily)
+                {
+                    WriteProperty(".tag", "is_family", writer, enc.StringEncoder.Instance);
+                    IsFamily.Encoder.EncodeFields((IsFamily)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -528,6 +556,8 @@ namespace Dropbox.Api.Sharing
                         return InsideOsxPackage.Decoder.DecodeFields(reader);
                     case "is_vault":
                         return IsVault.Decoder.DecodeFields(reader);
+                    case "is_family":
+                        return IsFamily.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1533,6 +1563,75 @@ namespace Dropbox.Api.Sharing
                 protected override IsVault Create()
                 {
                     return IsVault.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support sharing the Family folder.</para>
+        /// </summary>
+        public sealed class IsFamily : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IsFamily> Encoder = new IsFamilyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IsFamily> Decoder = new IsFamilyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IsFamily" /> class.</para>
+            /// </summary>
+            private IsFamily()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of IsFamily</para>
+            /// </summary>
+            public static readonly IsFamily Instance = new IsFamily();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="IsFamily" />.</para>
+            /// </summary>
+            private class IsFamilyEncoder : enc.StructEncoder<IsFamily>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IsFamily value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="IsFamily" />.</para>
+            /// </summary>
+            private class IsFamilyDecoder : enc.StructDecoder<IsFamily>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IsFamily" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IsFamily Create()
+                {
+                    return IsFamily.Instance;
                 }
 
             }
