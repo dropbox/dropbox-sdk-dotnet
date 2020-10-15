@@ -58,28 +58,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is SpecificMembers</para>
-        /// </summary>
-        public bool IsSpecificMembers
-        {
-            get
-            {
-                return this is SpecificMembers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a SpecificMembers, or <c>null</c>.</para>
-        /// </summary>
-        public SpecificMembers AsSpecificMembers
-        {
-            get
-            {
-                return this as SpecificMembers;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Everyone</para>
         /// </summary>
         public bool IsEveryone
@@ -98,6 +76,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Everyone;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is SpecificMembers</para>
+        /// </summary>
+        public bool IsSpecificMembers
+        {
+            get
+            {
+                return this is SpecificMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SpecificMembers, or <c>null</c>.</para>
+        /// </summary>
+        public SpecificMembers AsSpecificMembers
+        {
+            get
+            {
+                return this as SpecificMembers;
             }
         }
 
@@ -143,16 +143,16 @@ namespace Dropbox.Api.TeamLog
                     Disabled.Encoder.EncodeFields((Disabled)value, writer);
                     return;
                 }
-                if (value is SpecificMembers)
-                {
-                    WriteProperty(".tag", "specific_members", writer, enc.StringEncoder.Instance);
-                    SpecificMembers.Encoder.EncodeFields((SpecificMembers)value, writer);
-                    return;
-                }
                 if (value is Everyone)
                 {
                     WriteProperty(".tag", "everyone", writer, enc.StringEncoder.Instance);
                     Everyone.Encoder.EncodeFields((Everyone)value, writer);
+                    return;
+                }
+                if (value is SpecificMembers)
+                {
+                    WriteProperty(".tag", "specific_members", writer, enc.StringEncoder.Instance);
+                    SpecificMembers.Encoder.EncodeFields((SpecificMembers)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -196,10 +196,10 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "disabled":
                         return Disabled.Decoder.DecodeFields(reader);
-                    case "specific_members":
-                        return SpecificMembers.Decoder.DecodeFields(reader);
                     case "everyone":
                         return Everyone.Decoder.DecodeFields(reader);
+                    case "specific_members":
+                        return SpecificMembers.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -278,6 +278,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The everyone object</para>
+        /// </summary>
+        public sealed class Everyone : MemberSendInvitePolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Everyone> Encoder = new EveryoneEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Everyone> Decoder = new EveryoneDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Everyone" /> class.</para>
+            /// </summary>
+            private Everyone()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Everyone</para>
+            /// </summary>
+            public static readonly Everyone Instance = new Everyone();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Everyone" />.</para>
+            /// </summary>
+            private class EveryoneEncoder : enc.StructEncoder<Everyone>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Everyone value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Everyone" />.</para>
+            /// </summary>
+            private class EveryoneDecoder : enc.StructDecoder<Everyone>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Everyone" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Everyone Create()
+                {
+                    return Everyone.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The specific members object</para>
         /// </summary>
         public sealed class SpecificMembers : MemberSendInvitePolicy
@@ -340,75 +409,6 @@ namespace Dropbox.Api.TeamLog
                 protected override SpecificMembers Create()
                 {
                     return SpecificMembers.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The everyone object</para>
-        /// </summary>
-        public sealed class Everyone : MemberSendInvitePolicy
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Everyone> Encoder = new EveryoneEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Everyone> Decoder = new EveryoneDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Everyone" /> class.</para>
-            /// </summary>
-            private Everyone()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Everyone</para>
-            /// </summary>
-            public static readonly Everyone Instance = new Everyone();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Everyone" />.</para>
-            /// </summary>
-            private class EveryoneEncoder : enc.StructEncoder<Everyone>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Everyone value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Everyone" />.</para>
-            /// </summary>
-            private class EveryoneDecoder : enc.StructDecoder<Everyone>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Everyone" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Everyone Create()
-                {
-                    return Everyone.Instance;
                 }
 
             }

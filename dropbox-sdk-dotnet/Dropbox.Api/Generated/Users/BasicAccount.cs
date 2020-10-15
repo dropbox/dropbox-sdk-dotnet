@@ -33,10 +33,10 @@ namespace Dropbox.Api.Users
         /// </summary>
         /// <param name="accountId">The user's unique Dropbox ID.</param>
         /// <param name="name">Details of a user's name.</param>
-        /// <param name="email">The user's e-mail address. Do not rely on this without checking
+        /// <param name="email">The user's email address. Do not rely on this without checking
         /// the <paramref name="emailVerified" /> field. Even then, it's possible that the user
-        /// has since lost access to their e-mail.</param>
-        /// <param name="emailVerified">Whether the user has verified their e-mail
+        /// has since lost access to their email.</param>
+        /// <param name="emailVerified">Whether the user has verified their email
         /// address.</param>
         /// <param name="disabled">Whether the user has been disabled.</param>
         /// <param name="isTeammate">Whether this user is a teammate of the current user. If
