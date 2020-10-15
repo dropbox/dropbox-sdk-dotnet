@@ -113,15 +113,8 @@ namespace Dropbox.Api.Unit.Tests
                                                     Assert.IsFalse(authUri.Contains("&force_reauthentication="));
                                                 }
 
-                                                if (tokenAccessType != TokenAccessType.Legacy)
-                                                {
-                                                    Assert.IsTrue(authUri.Contains("&token_access_type=" +
-                                                                                   tokenAccessType.ToString().ToLower()));
-                                                }
-                                                else
-                                                {
-                                                    Assert.IsFalse(authUri.Contains("&token_access_type="));
-                                                }
+                                                Assert.IsTrue(authUri.Contains("&token_access_type=" +
+                                                                                tokenAccessType.ToString().ToLower()));
 
                                                 if (scope != null)
                                                 {
