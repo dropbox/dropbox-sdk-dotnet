@@ -2561,8 +2561,12 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>List shared links of this user.</para>
-        /// <para>If no path is given, returns a list of all shared links for the current
-        /// user.</para>
+        /// <para>If no path is given, returns a list of all shared links for the current user.
+        /// For members of business teams using team space and member folders, returns all
+        /// shared links in the team member's home folder unless the team space ID is specified
+        /// in the request header. For more information, refer to the <a
+        /// href="https://www.dropbox.com/developers/reference/namespace-guide">Namespace
+        /// Guide</a>.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path - direct links to the given path and links to parent
         /// folders of the given path. Links to parent folders can be suppressed by setting
@@ -2597,8 +2601,12 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>List shared links of this user.</para>
-        /// <para>If no path is given, returns a list of all shared links for the current
-        /// user.</para>
+        /// <para>If no path is given, returns a list of all shared links for the current user.
+        /// For members of business teams using team space and member folders, returns all
+        /// shared links in the team member's home folder unless the team space ID is specified
+        /// in the request header. For more information, refer to the <a
+        /// href="https://www.dropbox.com/developers/reference/namespace-guide">Namespace
+        /// Guide</a>.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path - direct links to the given path and links to parent
         /// folders of the given path. Links to parent folders can be suppressed by setting

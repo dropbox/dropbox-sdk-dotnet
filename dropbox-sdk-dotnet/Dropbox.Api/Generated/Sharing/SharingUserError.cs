@@ -148,8 +148,9 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>The current user must verify the account e-mail address before performing
-        /// this action.</para>
+        /// <para>This user's email address is not verified. This functionality is only
+        /// available on accounts with a verified email address. Users can verify their email
+        /// address <a href="https://www.dropbox.com/help/317">here</a>.</para>
         /// </summary>
         public sealed class EmailUnverified : SharingUserError
         {

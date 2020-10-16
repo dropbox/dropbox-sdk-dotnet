@@ -273,7 +273,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>E-mail address of member.</para>
+        /// <para>Email address of member.</para>
         /// </summary>
         public sealed class Email : MemberSelector
         {
