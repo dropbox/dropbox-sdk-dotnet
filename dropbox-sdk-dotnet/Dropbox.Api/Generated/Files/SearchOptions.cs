@@ -33,6 +33,8 @@ namespace Dropbox.Api.Files
         /// <param name="path">Scopes the search to a path in the user's Dropbox. Searches the
         /// entire Dropbox if not specified.</param>
         /// <param name="maxResults">The maximum number of search results to return.</param>
+        /// <param name="orderBy">Specified property of the order of search results. By
+        /// default, results are sorted by relevance.</param>
         /// <param name="fileStatus">Restricts search to the given file status.</param>
         /// <param name="filenameOnly">Restricts search to only match on filenames.</param>
         /// <param name="fileExtensions">Restricts search to only the extensions specified.
@@ -41,6 +43,7 @@ namespace Dropbox.Api.Files
         /// specified. Only supported for active file search.</param>
         public SearchOptions(string path = null,
                              ulong maxResults = 100,
+                             SearchOrderBy orderBy = null,
                              FileStatus fileStatus = null,
                              bool filenameOnly = false,
                              col.IEnumerable<string> fileExtensions = null,
@@ -73,6 +76,7 @@ namespace Dropbox.Api.Files
 
             this.Path = path;
             this.MaxResults = maxResults;
+            this.OrderBy = orderBy;
             this.FileStatus = fileStatus;
             this.FilenameOnly = filenameOnly;
             this.FileExtensions = fileExtensionsList;
@@ -102,6 +106,12 @@ namespace Dropbox.Api.Files
         /// <para>The maximum number of search results to return.</para>
         /// </summary>
         public ulong MaxResults { get; protected set; }
+
+        /// <summary>
+        /// <para>Specified property of the order of search results. By default, results are
+        /// sorted by relevance.</para>
+        /// </summary>
+        public SearchOrderBy OrderBy { get; protected set; }
 
         /// <summary>
         /// <para>Restricts search to the given file status.</para>
@@ -144,6 +154,10 @@ namespace Dropbox.Api.Files
                     WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("max_results", value.MaxResults, writer, enc.UInt64Encoder.Instance);
+                if (value.OrderBy != null)
+                {
+                    WriteProperty("order_by", value.OrderBy, writer, global::Dropbox.Api.Files.SearchOrderBy.Encoder);
+                }
                 WriteProperty("file_status", value.FileStatus, writer, global::Dropbox.Api.Files.FileStatus.Encoder);
                 WriteProperty("filename_only", value.FilenameOnly, writer, enc.BooleanEncoder.Instance);
                 if (value.FileExtensions.Count > 0)
@@ -191,6 +205,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "max_results":
                         value.MaxResults = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "order_by":
+                        value.OrderBy = global::Dropbox.Api.Files.SearchOrderBy.Decoder.Decode(reader);
                         break;
                     case "file_status":
                         value.FileStatus = global::Dropbox.Api.Files.FileStatus.Decoder.Decode(reader);
