@@ -36,28 +36,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Invited</para>
-        /// </summary>
-        public bool IsInvited
-        {
-            get
-            {
-                return this is Invited;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Invited, or <c>null</c>.</para>
-        /// </summary>
-        public Invited AsInvited
-        {
-            get
-            {
-                return this as Invited;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is AcceptedInvite</para>
         /// </summary>
         public bool IsAcceptedInvite
@@ -76,28 +54,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as AcceptedInvite;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is RejectedInvite</para>
-        /// </summary>
-        public bool IsRejectedInvite
-        {
-            get
-            {
-                return this is RejectedInvite;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a RejectedInvite, or <c>null</c>.</para>
-        /// </summary>
-        public RejectedInvite AsRejectedInvite
-        {
-            get
-            {
-                return this as RejectedInvite;
             }
         }
 
@@ -124,28 +80,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is RemovedTeam</para>
-        /// </summary>
-        public bool IsRemovedTeam
-        {
-            get
-            {
-                return this is RemovedTeam;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a RemovedTeam, or <c>null</c>.</para>
-        /// </summary>
-        public RemovedTeam AsRemovedTeam
-        {
-            get
-            {
-                return this as RemovedTeam;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is InviteExpired</para>
         /// </summary>
         public bool IsInviteExpired
@@ -164,6 +98,72 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as InviteExpired;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Invited</para>
+        /// </summary>
+        public bool IsInvited
+        {
+            get
+            {
+                return this is Invited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Invited, or <c>null</c>.</para>
+        /// </summary>
+        public Invited AsInvited
+        {
+            get
+            {
+                return this as Invited;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is RejectedInvite</para>
+        /// </summary>
+        public bool IsRejectedInvite
+        {
+            get
+            {
+                return this is RejectedInvite;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RejectedInvite, or <c>null</c>.</para>
+        /// </summary>
+        public RejectedInvite AsRejectedInvite
+        {
+            get
+            {
+                return this as RejectedInvite;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is RemovedTeam</para>
+        /// </summary>
+        public bool IsRemovedTeam
+        {
+            get
+            {
+                return this is RemovedTeam;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RemovedTeam, or <c>null</c>.</para>
+        /// </summary>
+        public RemovedTeam AsRemovedTeam
+        {
+            get
+            {
+                return this as RemovedTeam;
             }
         }
 
@@ -203,22 +203,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(FedHandshakeAction value, enc.IJsonWriter writer)
             {
-                if (value is Invited)
-                {
-                    WriteProperty(".tag", "invited", writer, enc.StringEncoder.Instance);
-                    Invited.Encoder.EncodeFields((Invited)value, writer);
-                    return;
-                }
                 if (value is AcceptedInvite)
                 {
                     WriteProperty(".tag", "accepted_invite", writer, enc.StringEncoder.Instance);
                     AcceptedInvite.Encoder.EncodeFields((AcceptedInvite)value, writer);
-                    return;
-                }
-                if (value is RejectedInvite)
-                {
-                    WriteProperty(".tag", "rejected_invite", writer, enc.StringEncoder.Instance);
-                    RejectedInvite.Encoder.EncodeFields((RejectedInvite)value, writer);
                     return;
                 }
                 if (value is CanceledInvite)
@@ -227,16 +215,28 @@ namespace Dropbox.Api.TeamLog
                     CanceledInvite.Encoder.EncodeFields((CanceledInvite)value, writer);
                     return;
                 }
-                if (value is RemovedTeam)
-                {
-                    WriteProperty(".tag", "removed_team", writer, enc.StringEncoder.Instance);
-                    RemovedTeam.Encoder.EncodeFields((RemovedTeam)value, writer);
-                    return;
-                }
                 if (value is InviteExpired)
                 {
                     WriteProperty(".tag", "invite_expired", writer, enc.StringEncoder.Instance);
                     InviteExpired.Encoder.EncodeFields((InviteExpired)value, writer);
+                    return;
+                }
+                if (value is Invited)
+                {
+                    WriteProperty(".tag", "invited", writer, enc.StringEncoder.Instance);
+                    Invited.Encoder.EncodeFields((Invited)value, writer);
+                    return;
+                }
+                if (value is RejectedInvite)
+                {
+                    WriteProperty(".tag", "rejected_invite", writer, enc.StringEncoder.Instance);
+                    RejectedInvite.Encoder.EncodeFields((RejectedInvite)value, writer);
+                    return;
+                }
+                if (value is RemovedTeam)
+                {
+                    WriteProperty(".tag", "removed_team", writer, enc.StringEncoder.Instance);
+                    RemovedTeam.Encoder.EncodeFields((RemovedTeam)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -277,18 +277,18 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "invited":
-                        return Invited.Decoder.DecodeFields(reader);
                     case "accepted_invite":
                         return AcceptedInvite.Decoder.DecodeFields(reader);
-                    case "rejected_invite":
-                        return RejectedInvite.Decoder.DecodeFields(reader);
                     case "canceled_invite":
                         return CanceledInvite.Decoder.DecodeFields(reader);
-                    case "removed_team":
-                        return RemovedTeam.Decoder.DecodeFields(reader);
                     case "invite_expired":
                         return InviteExpired.Decoder.DecodeFields(reader);
+                    case "invited":
+                        return Invited.Decoder.DecodeFields(reader);
+                    case "rejected_invite":
+                        return RejectedInvite.Decoder.DecodeFields(reader);
+                    case "removed_team":
+                        return RemovedTeam.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -296,75 +296,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The invited object</para>
-        /// </summary>
-        public sealed class Invited : FedHandshakeAction
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Invited> Encoder = new InvitedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Invited> Decoder = new InvitedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Invited" /> class.</para>
-            /// </summary>
-            private Invited()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Invited</para>
-            /// </summary>
-            public static readonly Invited Instance = new Invited();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Invited" />.</para>
-            /// </summary>
-            private class InvitedEncoder : enc.StructEncoder<Invited>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Invited value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Invited" />.</para>
-            /// </summary>
-            private class InvitedDecoder : enc.StructDecoder<Invited>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Invited" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Invited Create()
-                {
-                    return Invited.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The accepted invite object</para>
@@ -429,76 +360,6 @@ namespace Dropbox.Api.TeamLog
                 protected override AcceptedInvite Create()
                 {
                     return AcceptedInvite.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>The rejected invite object</para>
-        /// </summary>
-        public sealed class RejectedInvite : FedHandshakeAction
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<RejectedInvite> Encoder = new RejectedInviteEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<RejectedInvite> Decoder = new RejectedInviteDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="RejectedInvite" />
-            /// class.</para>
-            /// </summary>
-            private RejectedInvite()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of RejectedInvite</para>
-            /// </summary>
-            public static readonly RejectedInvite Instance = new RejectedInvite();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="RejectedInvite" />.</para>
-            /// </summary>
-            private class RejectedInviteEncoder : enc.StructEncoder<RejectedInvite>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(RejectedInvite value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="RejectedInvite" />.</para>
-            /// </summary>
-            private class RejectedInviteDecoder : enc.StructDecoder<RejectedInvite>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="RejectedInvite" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override RejectedInvite Create()
-                {
-                    return RejectedInvite.Instance;
                 }
 
             }
@@ -577,76 +438,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The removed team object</para>
-        /// </summary>
-        public sealed class RemovedTeam : FedHandshakeAction
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<RemovedTeam> Encoder = new RemovedTeamEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<RemovedTeam> Decoder = new RemovedTeamDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="RemovedTeam" />
-            /// class.</para>
-            /// </summary>
-            private RemovedTeam()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of RemovedTeam</para>
-            /// </summary>
-            public static readonly RemovedTeam Instance = new RemovedTeam();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="RemovedTeam" />.</para>
-            /// </summary>
-            private class RemovedTeamEncoder : enc.StructEncoder<RemovedTeam>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(RemovedTeam value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="RemovedTeam" />.</para>
-            /// </summary>
-            private class RemovedTeamDecoder : enc.StructDecoder<RemovedTeam>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="RemovedTeam" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override RemovedTeam Create()
-                {
-                    return RemovedTeam.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>The invite expired object</para>
         /// </summary>
         public sealed class InviteExpired : FedHandshakeAction
@@ -709,6 +500,215 @@ namespace Dropbox.Api.TeamLog
                 protected override InviteExpired Create()
                 {
                     return InviteExpired.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The invited object</para>
+        /// </summary>
+        public sealed class Invited : FedHandshakeAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Invited> Encoder = new InvitedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Invited> Decoder = new InvitedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Invited" /> class.</para>
+            /// </summary>
+            private Invited()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Invited</para>
+            /// </summary>
+            public static readonly Invited Instance = new Invited();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Invited" />.</para>
+            /// </summary>
+            private class InvitedEncoder : enc.StructEncoder<Invited>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Invited value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Invited" />.</para>
+            /// </summary>
+            private class InvitedDecoder : enc.StructDecoder<Invited>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Invited" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Invited Create()
+                {
+                    return Invited.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The rejected invite object</para>
+        /// </summary>
+        public sealed class RejectedInvite : FedHandshakeAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RejectedInvite> Encoder = new RejectedInviteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RejectedInvite> Decoder = new RejectedInviteDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RejectedInvite" />
+            /// class.</para>
+            /// </summary>
+            private RejectedInvite()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RejectedInvite</para>
+            /// </summary>
+            public static readonly RejectedInvite Instance = new RejectedInvite();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RejectedInvite" />.</para>
+            /// </summary>
+            private class RejectedInviteEncoder : enc.StructEncoder<RejectedInvite>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RejectedInvite value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RejectedInvite" />.</para>
+            /// </summary>
+            private class RejectedInviteDecoder : enc.StructDecoder<RejectedInvite>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RejectedInvite" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RejectedInvite Create()
+                {
+                    return RejectedInvite.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The removed team object</para>
+        /// </summary>
+        public sealed class RemovedTeam : FedHandshakeAction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RemovedTeam> Encoder = new RemovedTeamEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RemovedTeam> Decoder = new RemovedTeamDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RemovedTeam" />
+            /// class.</para>
+            /// </summary>
+            private RemovedTeam()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of RemovedTeam</para>
+            /// </summary>
+            public static readonly RemovedTeam Instance = new RemovedTeam();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RemovedTeam" />.</para>
+            /// </summary>
+            private class RemovedTeamEncoder : enc.StructEncoder<RemovedTeam>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RemovedTeam value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RemovedTeam" />.</para>
+            /// </summary>
+            private class RemovedTeamDecoder : enc.StructDecoder<RemovedTeam>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RemovedTeam" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RemovedTeam Create()
+                {
+                    return RemovedTeam.Instance;
                 }
 
             }

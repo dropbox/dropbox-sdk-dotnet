@@ -147,7 +147,7 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>E-mail address of invited user.</para>
+        /// <para>Email address of invited user.</para>
         /// </summary>
         public sealed class Email : InviteeInfo
         {
