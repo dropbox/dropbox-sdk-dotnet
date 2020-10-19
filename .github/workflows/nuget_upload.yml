@@ -25,4 +25,4 @@ jobs:
       - name: Publish
         run: |
           nuget setApiKey ${{ secrets.NUGET_TOKEN }}
-          nuget push *.nupkg 
+          nuget push *.nupkg -Source https://api.nuget.org/v3/index.json
