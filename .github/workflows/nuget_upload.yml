@@ -23,4 +23,6 @@ jobs:
       - name: Pack
         run: nuget pack dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.nuspec
       - name: Publish
-        run: nuget push *.nupkg --ApiKey ${{ secrets.NUGET_TOKEN }}
+        run: |
+          nuget setApiKey ${{ secrets.NUGET_TOKEN }}
+          nuget push *.nupkg 
