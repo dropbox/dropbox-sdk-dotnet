@@ -40,11 +40,15 @@ namespace Dropbox.Api.Files
         public SearchV2Arg(string query,
                            SearchOptions options = null,
                            SearchMatchFieldOptions matchFieldOptions = null,
-                           bool includeHighlights = false)
+                           bool? includeHighlights = null)
         {
             if (query == null)
             {
                 throw new sys.ArgumentNullException("query");
+            }
+            if (query.Length > 1000)
+            {
+                throw new sys.ArgumentOutOfRangeException("query", "Length should be at most 1000");
             }
 
             this.Query = query;
@@ -61,7 +65,6 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SearchV2Arg()
         {
-            this.IncludeHighlights = false;
         }
 
         /// <summary>
@@ -84,7 +87,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Deprecated and moved this option to SearchMatchFieldOptions.</para>
         /// </summary>
-        public bool IncludeHighlights { get; protected set; }
+        public bool? IncludeHighlights { get; protected set; }
 
         #region Encoder class
 
@@ -109,7 +112,10 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty("match_field_options", value.MatchFieldOptions, writer, global::Dropbox.Api.Files.SearchMatchFieldOptions.Encoder);
                 }
-                WriteProperty("include_highlights", value.IncludeHighlights, writer, enc.BooleanEncoder.Instance);
+                if (value.IncludeHighlights != null)
+                {
+                    WriteProperty("include_highlights", value.IncludeHighlights.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 

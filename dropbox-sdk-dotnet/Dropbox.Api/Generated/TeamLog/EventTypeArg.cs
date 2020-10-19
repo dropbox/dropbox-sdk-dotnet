@@ -345,6 +345,394 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyAddFolders</para>
+        /// </summary>
+        public bool IsGovernancePolicyAddFolders
+        {
+            get
+            {
+                return this is GovernancePolicyAddFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyAddFolders, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyAddFolders AsGovernancePolicyAddFolders
+        {
+            get
+            {
+                return this as GovernancePolicyAddFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyCreate</para>
+        /// </summary>
+        public bool IsGovernancePolicyCreate
+        {
+            get
+            {
+                return this is GovernancePolicyCreate;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyCreate, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyCreate AsGovernancePolicyCreate
+        {
+            get
+            {
+                return this as GovernancePolicyCreate;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyDelete</para>
+        /// </summary>
+        public bool IsGovernancePolicyDelete
+        {
+            get
+            {
+                return this is GovernancePolicyDelete;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyDelete, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyDelete AsGovernancePolicyDelete
+        {
+            get
+            {
+                return this as GovernancePolicyDelete;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyEditDetails</para>
+        /// </summary>
+        public bool IsGovernancePolicyEditDetails
+        {
+            get
+            {
+                return this is GovernancePolicyEditDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyEditDetails, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyEditDetails AsGovernancePolicyEditDetails
+        {
+            get
+            {
+                return this as GovernancePolicyEditDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyEditDuration</para>
+        /// </summary>
+        public bool IsGovernancePolicyEditDuration
+        {
+            get
+            {
+                return this is GovernancePolicyEditDuration;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyEditDuration, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyEditDuration AsGovernancePolicyEditDuration
+        {
+            get
+            {
+                return this as GovernancePolicyEditDuration;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyRemoveFolders</para>
+        /// </summary>
+        public bool IsGovernancePolicyRemoveFolders
+        {
+            get
+            {
+                return this is GovernancePolicyRemoveFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyRemoveFolders, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyRemoveFolders AsGovernancePolicyRemoveFolders
+        {
+            get
+            {
+                return this as GovernancePolicyRemoveFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsActivateAHold</para>
+        /// </summary>
+        public bool IsLegalHoldsActivateAHold
+        {
+            get
+            {
+                return this is LegalHoldsActivateAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsActivateAHold, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsActivateAHold AsLegalHoldsActivateAHold
+        {
+            get
+            {
+                return this as LegalHoldsActivateAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is LegalHoldsAddMembers</para>
+        /// </summary>
+        public bool IsLegalHoldsAddMembers
+        {
+            get
+            {
+                return this is LegalHoldsAddMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsAddMembers, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsAddMembers AsLegalHoldsAddMembers
+        {
+            get
+            {
+                return this as LegalHoldsAddMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsChangeHoldDetails</para>
+        /// </summary>
+        public bool IsLegalHoldsChangeHoldDetails
+        {
+            get
+            {
+                return this is LegalHoldsChangeHoldDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsChangeHoldDetails, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsChangeHoldDetails AsLegalHoldsChangeHoldDetails
+        {
+            get
+            {
+                return this as LegalHoldsChangeHoldDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsChangeHoldName</para>
+        /// </summary>
+        public bool IsLegalHoldsChangeHoldName
+        {
+            get
+            {
+                return this is LegalHoldsChangeHoldName;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsChangeHoldName, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsChangeHoldName AsLegalHoldsChangeHoldName
+        {
+            get
+            {
+                return this as LegalHoldsChangeHoldName;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is LegalHoldsExportAHold</para>
+        /// </summary>
+        public bool IsLegalHoldsExportAHold
+        {
+            get
+            {
+                return this is LegalHoldsExportAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsExportAHold, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsExportAHold AsLegalHoldsExportAHold
+        {
+            get
+            {
+                return this as LegalHoldsExportAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsExportCancelled</para>
+        /// </summary>
+        public bool IsLegalHoldsExportCancelled
+        {
+            get
+            {
+                return this is LegalHoldsExportCancelled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsExportCancelled, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsExportCancelled AsLegalHoldsExportCancelled
+        {
+            get
+            {
+                return this as LegalHoldsExportCancelled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsExportDownloaded</para>
+        /// </summary>
+        public bool IsLegalHoldsExportDownloaded
+        {
+            get
+            {
+                return this is LegalHoldsExportDownloaded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsExportDownloaded, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsExportDownloaded AsLegalHoldsExportDownloaded
+        {
+            get
+            {
+                return this as LegalHoldsExportDownloaded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsExportRemoved</para>
+        /// </summary>
+        public bool IsLegalHoldsExportRemoved
+        {
+            get
+            {
+                return this is LegalHoldsExportRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsExportRemoved, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsExportRemoved AsLegalHoldsExportRemoved
+        {
+            get
+            {
+                return this as LegalHoldsExportRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsReleaseAHold</para>
+        /// </summary>
+        public bool IsLegalHoldsReleaseAHold
+        {
+            get
+            {
+                return this is LegalHoldsReleaseAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsReleaseAHold, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsReleaseAHold AsLegalHoldsReleaseAHold
+        {
+            get
+            {
+                return this as LegalHoldsReleaseAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// LegalHoldsRemoveMembers</para>
+        /// </summary>
+        public bool IsLegalHoldsRemoveMembers
+        {
+            get
+            {
+                return this is LegalHoldsRemoveMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsRemoveMembers, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsRemoveMembers AsLegalHoldsRemoveMembers
+        {
+            get
+            {
+                return this as LegalHoldsRemoveMembers;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is LegalHoldsReportAHold</para>
+        /// </summary>
+        public bool IsLegalHoldsReportAHold
+        {
+            get
+            {
+                return this is LegalHoldsReportAHold;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LegalHoldsReportAHold, or <c>null</c>.</para>
+        /// </summary>
+        public LegalHoldsReportAHold AsLegalHoldsReportAHold
+        {
+            get
+            {
+                return this as LegalHoldsReportAHold;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is DeviceChangeIpDesktop</para>
         /// </summary>
         public bool IsDeviceChangeIpDesktop
@@ -543,6 +931,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as DeviceManagementEnabled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DeviceSyncBackupStatusChanged</para>
+        /// </summary>
+        public bool IsDeviceSyncBackupStatusChanged
+        {
+            get
+            {
+                return this is DeviceSyncBackupStatusChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DeviceSyncBackupStatusChanged, or <c>null</c>.</para>
+        /// </summary>
+        public DeviceSyncBackupStatusChanged AsDeviceSyncBackupStatusChanged
+        {
+            get
+            {
+                return this as DeviceSyncBackupStatusChanged;
             }
         }
 
@@ -1787,256 +2198,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as GroupRename;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsActivateAHold</para>
-        /// </summary>
-        public bool IsLegalHoldsActivateAHold
-        {
-            get
-            {
-                return this is LegalHoldsActivateAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsActivateAHold, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsActivateAHold AsLegalHoldsActivateAHold
-        {
-            get
-            {
-                return this as LegalHoldsActivateAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is LegalHoldsAddMembers</para>
-        /// </summary>
-        public bool IsLegalHoldsAddMembers
-        {
-            get
-            {
-                return this is LegalHoldsAddMembers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsAddMembers, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsAddMembers AsLegalHoldsAddMembers
-        {
-            get
-            {
-                return this as LegalHoldsAddMembers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsChangeHoldDetails</para>
-        /// </summary>
-        public bool IsLegalHoldsChangeHoldDetails
-        {
-            get
-            {
-                return this is LegalHoldsChangeHoldDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsChangeHoldDetails, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsChangeHoldDetails AsLegalHoldsChangeHoldDetails
-        {
-            get
-            {
-                return this as LegalHoldsChangeHoldDetails;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsChangeHoldName</para>
-        /// </summary>
-        public bool IsLegalHoldsChangeHoldName
-        {
-            get
-            {
-                return this is LegalHoldsChangeHoldName;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsChangeHoldName, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsChangeHoldName AsLegalHoldsChangeHoldName
-        {
-            get
-            {
-                return this as LegalHoldsChangeHoldName;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is LegalHoldsExportAHold</para>
-        /// </summary>
-        public bool IsLegalHoldsExportAHold
-        {
-            get
-            {
-                return this is LegalHoldsExportAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsExportAHold, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsExportAHold AsLegalHoldsExportAHold
-        {
-            get
-            {
-                return this as LegalHoldsExportAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsExportCancelled</para>
-        /// </summary>
-        public bool IsLegalHoldsExportCancelled
-        {
-            get
-            {
-                return this is LegalHoldsExportCancelled;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsExportCancelled, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsExportCancelled AsLegalHoldsExportCancelled
-        {
-            get
-            {
-                return this as LegalHoldsExportCancelled;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsExportDownloaded</para>
-        /// </summary>
-        public bool IsLegalHoldsExportDownloaded
-        {
-            get
-            {
-                return this is LegalHoldsExportDownloaded;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsExportDownloaded, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsExportDownloaded AsLegalHoldsExportDownloaded
-        {
-            get
-            {
-                return this as LegalHoldsExportDownloaded;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsExportRemoved</para>
-        /// </summary>
-        public bool IsLegalHoldsExportRemoved
-        {
-            get
-            {
-                return this is LegalHoldsExportRemoved;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsExportRemoved, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsExportRemoved AsLegalHoldsExportRemoved
-        {
-            get
-            {
-                return this as LegalHoldsExportRemoved;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsReleaseAHold</para>
-        /// </summary>
-        public bool IsLegalHoldsReleaseAHold
-        {
-            get
-            {
-                return this is LegalHoldsReleaseAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsReleaseAHold, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsReleaseAHold AsLegalHoldsReleaseAHold
-        {
-            get
-            {
-                return this as LegalHoldsReleaseAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// LegalHoldsRemoveMembers</para>
-        /// </summary>
-        public bool IsLegalHoldsRemoveMembers
-        {
-            get
-            {
-                return this is LegalHoldsRemoveMembers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsRemoveMembers, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsRemoveMembers AsLegalHoldsRemoveMembers
-        {
-            get
-            {
-                return this as LegalHoldsRemoveMembers;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is LegalHoldsReportAHold</para>
-        /// </summary>
-        public bool IsLegalHoldsReportAHold
-        {
-            get
-            {
-                return this is LegalHoldsReportAHold;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHoldsReportAHold, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHoldsReportAHold AsLegalHoldsReportAHold
-        {
-            get
-            {
-                return this as LegalHoldsReportAHold;
             }
         }
 
@@ -6259,6 +6420,52 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ShmodelDisableDownloads</para>
+        /// </summary>
+        public bool IsShmodelDisableDownloads
+        {
+            get
+            {
+                return this is ShmodelDisableDownloads;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ShmodelDisableDownloads, or <c>null</c>.</para>
+        /// </summary>
+        public ShmodelDisableDownloads AsShmodelDisableDownloads
+        {
+            get
+            {
+                return this as ShmodelDisableDownloads;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ShmodelEnableDownloads</para>
+        /// </summary>
+        public bool IsShmodelEnableDownloads
+        {
+            get
+            {
+                return this is ShmodelEnableDownloads;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ShmodelEnableDownloads, or <c>null</c>.</para>
+        /// </summary>
+        public ShmodelEnableDownloads AsShmodelEnableDownloads
+        {
+            get
+            {
+                return this as ShmodelEnableDownloads;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is ShmodelGroupShare</para>
         /// </summary>
         public bool IsShmodelGroupShare
@@ -7257,6 +7464,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as CameraUploadsPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ComputerBackupPolicyChanged</para>
+        /// </summary>
+        public bool IsComputerBackupPolicyChanged
+        {
+            get
+            {
+                return this is ComputerBackupPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ComputerBackupPolicyChanged, or <c>null</c>.</para>
+        /// </summary>
+        public ComputerBackupPolicyChanged AsComputerBackupPolicyChanged
+        {
+            get
+            {
+                return this as ComputerBackupPolicyChanged;
             }
         }
 
@@ -8583,6 +8813,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// TeamBrandingPolicyChanged</para>
+        /// </summary>
+        public bool IsTeamBrandingPolicyChanged
+        {
+            get
+            {
+                return this is TeamBrandingPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamBrandingPolicyChanged, or <c>null</c>.</para>
+        /// </summary>
+        public TeamBrandingPolicyChanged AsTeamBrandingPolicyChanged
+        {
+            get
+            {
+                return this as TeamBrandingPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// TeamExtensionsPolicyChanged</para>
         /// </summary>
         public bool IsTeamExtensionsPolicyChanged
@@ -9878,6 +10131,108 @@ namespace Dropbox.Api.TeamLog
                     FileUnresolveComment.Encoder.EncodeFields((FileUnresolveComment)value, writer);
                     return;
                 }
+                if (value is GovernancePolicyAddFolders)
+                {
+                    WriteProperty(".tag", "governance_policy_add_folders", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyAddFolders.Encoder.EncodeFields((GovernancePolicyAddFolders)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyCreate)
+                {
+                    WriteProperty(".tag", "governance_policy_create", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyCreate.Encoder.EncodeFields((GovernancePolicyCreate)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyDelete)
+                {
+                    WriteProperty(".tag", "governance_policy_delete", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyDelete.Encoder.EncodeFields((GovernancePolicyDelete)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyEditDetails)
+                {
+                    WriteProperty(".tag", "governance_policy_edit_details", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyEditDetails.Encoder.EncodeFields((GovernancePolicyEditDetails)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyEditDuration)
+                {
+                    WriteProperty(".tag", "governance_policy_edit_duration", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyEditDuration.Encoder.EncodeFields((GovernancePolicyEditDuration)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyRemoveFolders)
+                {
+                    WriteProperty(".tag", "governance_policy_remove_folders", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyRemoveFolders.Encoder.EncodeFields((GovernancePolicyRemoveFolders)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsActivateAHold)
+                {
+                    WriteProperty(".tag", "legal_holds_activate_a_hold", writer, enc.StringEncoder.Instance);
+                    LegalHoldsActivateAHold.Encoder.EncodeFields((LegalHoldsActivateAHold)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsAddMembers)
+                {
+                    WriteProperty(".tag", "legal_holds_add_members", writer, enc.StringEncoder.Instance);
+                    LegalHoldsAddMembers.Encoder.EncodeFields((LegalHoldsAddMembers)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsChangeHoldDetails)
+                {
+                    WriteProperty(".tag", "legal_holds_change_hold_details", writer, enc.StringEncoder.Instance);
+                    LegalHoldsChangeHoldDetails.Encoder.EncodeFields((LegalHoldsChangeHoldDetails)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsChangeHoldName)
+                {
+                    WriteProperty(".tag", "legal_holds_change_hold_name", writer, enc.StringEncoder.Instance);
+                    LegalHoldsChangeHoldName.Encoder.EncodeFields((LegalHoldsChangeHoldName)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsExportAHold)
+                {
+                    WriteProperty(".tag", "legal_holds_export_a_hold", writer, enc.StringEncoder.Instance);
+                    LegalHoldsExportAHold.Encoder.EncodeFields((LegalHoldsExportAHold)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsExportCancelled)
+                {
+                    WriteProperty(".tag", "legal_holds_export_cancelled", writer, enc.StringEncoder.Instance);
+                    LegalHoldsExportCancelled.Encoder.EncodeFields((LegalHoldsExportCancelled)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsExportDownloaded)
+                {
+                    WriteProperty(".tag", "legal_holds_export_downloaded", writer, enc.StringEncoder.Instance);
+                    LegalHoldsExportDownloaded.Encoder.EncodeFields((LegalHoldsExportDownloaded)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsExportRemoved)
+                {
+                    WriteProperty(".tag", "legal_holds_export_removed", writer, enc.StringEncoder.Instance);
+                    LegalHoldsExportRemoved.Encoder.EncodeFields((LegalHoldsExportRemoved)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsReleaseAHold)
+                {
+                    WriteProperty(".tag", "legal_holds_release_a_hold", writer, enc.StringEncoder.Instance);
+                    LegalHoldsReleaseAHold.Encoder.EncodeFields((LegalHoldsReleaseAHold)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsRemoveMembers)
+                {
+                    WriteProperty(".tag", "legal_holds_remove_members", writer, enc.StringEncoder.Instance);
+                    LegalHoldsRemoveMembers.Encoder.EncodeFields((LegalHoldsRemoveMembers)value, writer);
+                    return;
+                }
+                if (value is LegalHoldsReportAHold)
+                {
+                    WriteProperty(".tag", "legal_holds_report_a_hold", writer, enc.StringEncoder.Instance);
+                    LegalHoldsReportAHold.Encoder.EncodeFields((LegalHoldsReportAHold)value, writer);
+                    return;
+                }
                 if (value is DeviceChangeIpDesktop)
                 {
                     WriteProperty(".tag", "device_change_ip_desktop", writer, enc.StringEncoder.Instance);
@@ -9930,6 +10285,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "device_management_enabled", writer, enc.StringEncoder.Instance);
                     DeviceManagementEnabled.Encoder.EncodeFields((DeviceManagementEnabled)value, writer);
+                    return;
+                }
+                if (value is DeviceSyncBackupStatusChanged)
+                {
+                    WriteProperty(".tag", "device_sync_backup_status_changed", writer, enc.StringEncoder.Instance);
+                    DeviceSyncBackupStatusChanged.Encoder.EncodeFields((DeviceSyncBackupStatusChanged)value, writer);
                     return;
                 }
                 if (value is DeviceUnlink)
@@ -10260,72 +10621,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "group_rename", writer, enc.StringEncoder.Instance);
                     GroupRename.Encoder.EncodeFields((GroupRename)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsActivateAHold)
-                {
-                    WriteProperty(".tag", "legal_holds_activate_a_hold", writer, enc.StringEncoder.Instance);
-                    LegalHoldsActivateAHold.Encoder.EncodeFields((LegalHoldsActivateAHold)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsAddMembers)
-                {
-                    WriteProperty(".tag", "legal_holds_add_members", writer, enc.StringEncoder.Instance);
-                    LegalHoldsAddMembers.Encoder.EncodeFields((LegalHoldsAddMembers)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsChangeHoldDetails)
-                {
-                    WriteProperty(".tag", "legal_holds_change_hold_details", writer, enc.StringEncoder.Instance);
-                    LegalHoldsChangeHoldDetails.Encoder.EncodeFields((LegalHoldsChangeHoldDetails)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsChangeHoldName)
-                {
-                    WriteProperty(".tag", "legal_holds_change_hold_name", writer, enc.StringEncoder.Instance);
-                    LegalHoldsChangeHoldName.Encoder.EncodeFields((LegalHoldsChangeHoldName)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsExportAHold)
-                {
-                    WriteProperty(".tag", "legal_holds_export_a_hold", writer, enc.StringEncoder.Instance);
-                    LegalHoldsExportAHold.Encoder.EncodeFields((LegalHoldsExportAHold)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsExportCancelled)
-                {
-                    WriteProperty(".tag", "legal_holds_export_cancelled", writer, enc.StringEncoder.Instance);
-                    LegalHoldsExportCancelled.Encoder.EncodeFields((LegalHoldsExportCancelled)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsExportDownloaded)
-                {
-                    WriteProperty(".tag", "legal_holds_export_downloaded", writer, enc.StringEncoder.Instance);
-                    LegalHoldsExportDownloaded.Encoder.EncodeFields((LegalHoldsExportDownloaded)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsExportRemoved)
-                {
-                    WriteProperty(".tag", "legal_holds_export_removed", writer, enc.StringEncoder.Instance);
-                    LegalHoldsExportRemoved.Encoder.EncodeFields((LegalHoldsExportRemoved)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsReleaseAHold)
-                {
-                    WriteProperty(".tag", "legal_holds_release_a_hold", writer, enc.StringEncoder.Instance);
-                    LegalHoldsReleaseAHold.Encoder.EncodeFields((LegalHoldsReleaseAHold)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsRemoveMembers)
-                {
-                    WriteProperty(".tag", "legal_holds_remove_members", writer, enc.StringEncoder.Instance);
-                    LegalHoldsRemoveMembers.Encoder.EncodeFields((LegalHoldsRemoveMembers)value, writer);
-                    return;
-                }
-                if (value is LegalHoldsReportAHold)
-                {
-                    WriteProperty(".tag", "legal_holds_report_a_hold", writer, enc.StringEncoder.Instance);
-                    LegalHoldsReportAHold.Encoder.EncodeFields((LegalHoldsReportAHold)value, writer);
                     return;
                 }
                 if (value is AccountLockOrUnlocked)
@@ -11444,6 +11739,18 @@ namespace Dropbox.Api.TeamLog
                     SharedNoteOpened.Encoder.EncodeFields((SharedNoteOpened)value, writer);
                     return;
                 }
+                if (value is ShmodelDisableDownloads)
+                {
+                    WriteProperty(".tag", "shmodel_disable_downloads", writer, enc.StringEncoder.Instance);
+                    ShmodelDisableDownloads.Encoder.EncodeFields((ShmodelDisableDownloads)value, writer);
+                    return;
+                }
+                if (value is ShmodelEnableDownloads)
+                {
+                    WriteProperty(".tag", "shmodel_enable_downloads", writer, enc.StringEncoder.Instance);
+                    ShmodelEnableDownloads.Encoder.EncodeFields((ShmodelEnableDownloads)value, writer);
+                    return;
+                }
                 if (value is ShmodelGroupShare)
                 {
                     WriteProperty(".tag", "shmodel_group_share", writer, enc.StringEncoder.Instance);
@@ -11712,6 +12019,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "camera_uploads_policy_changed", writer, enc.StringEncoder.Instance);
                     CameraUploadsPolicyChanged.Encoder.EncodeFields((CameraUploadsPolicyChanged)value, writer);
+                    return;
+                }
+                if (value is ComputerBackupPolicyChanged)
+                {
+                    WriteProperty(".tag", "computer_backup_policy_changed", writer, enc.StringEncoder.Instance);
+                    ComputerBackupPolicyChanged.Encoder.EncodeFields((ComputerBackupPolicyChanged)value, writer);
                     return;
                 }
                 if (value is ContentAdministrationPolicyChanged)
@@ -12054,6 +12367,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "sso_change_policy", writer, enc.StringEncoder.Instance);
                     SsoChangePolicy.Encoder.EncodeFields((SsoChangePolicy)value, writer);
+                    return;
+                }
+                if (value is TeamBrandingPolicyChanged)
+                {
+                    WriteProperty(".tag", "team_branding_policy_changed", writer, enc.StringEncoder.Instance);
+                    TeamBrandingPolicyChanged.Encoder.EncodeFields((TeamBrandingPolicyChanged)value, writer);
                     return;
                 }
                 if (value is TeamExtensionsPolicyChanged)
@@ -12428,6 +12747,40 @@ namespace Dropbox.Api.TeamLog
                         return FileUnlikeComment.Decoder.DecodeFields(reader);
                     case "file_unresolve_comment":
                         return FileUnresolveComment.Decoder.DecodeFields(reader);
+                    case "governance_policy_add_folders":
+                        return GovernancePolicyAddFolders.Decoder.DecodeFields(reader);
+                    case "governance_policy_create":
+                        return GovernancePolicyCreate.Decoder.DecodeFields(reader);
+                    case "governance_policy_delete":
+                        return GovernancePolicyDelete.Decoder.DecodeFields(reader);
+                    case "governance_policy_edit_details":
+                        return GovernancePolicyEditDetails.Decoder.DecodeFields(reader);
+                    case "governance_policy_edit_duration":
+                        return GovernancePolicyEditDuration.Decoder.DecodeFields(reader);
+                    case "governance_policy_remove_folders":
+                        return GovernancePolicyRemoveFolders.Decoder.DecodeFields(reader);
+                    case "legal_holds_activate_a_hold":
+                        return LegalHoldsActivateAHold.Decoder.DecodeFields(reader);
+                    case "legal_holds_add_members":
+                        return LegalHoldsAddMembers.Decoder.DecodeFields(reader);
+                    case "legal_holds_change_hold_details":
+                        return LegalHoldsChangeHoldDetails.Decoder.DecodeFields(reader);
+                    case "legal_holds_change_hold_name":
+                        return LegalHoldsChangeHoldName.Decoder.DecodeFields(reader);
+                    case "legal_holds_export_a_hold":
+                        return LegalHoldsExportAHold.Decoder.DecodeFields(reader);
+                    case "legal_holds_export_cancelled":
+                        return LegalHoldsExportCancelled.Decoder.DecodeFields(reader);
+                    case "legal_holds_export_downloaded":
+                        return LegalHoldsExportDownloaded.Decoder.DecodeFields(reader);
+                    case "legal_holds_export_removed":
+                        return LegalHoldsExportRemoved.Decoder.DecodeFields(reader);
+                    case "legal_holds_release_a_hold":
+                        return LegalHoldsReleaseAHold.Decoder.DecodeFields(reader);
+                    case "legal_holds_remove_members":
+                        return LegalHoldsRemoveMembers.Decoder.DecodeFields(reader);
+                    case "legal_holds_report_a_hold":
+                        return LegalHoldsReportAHold.Decoder.DecodeFields(reader);
                     case "device_change_ip_desktop":
                         return DeviceChangeIpDesktop.Decoder.DecodeFields(reader);
                     case "device_change_ip_mobile":
@@ -12446,6 +12799,8 @@ namespace Dropbox.Api.TeamLog
                         return DeviceManagementDisabled.Decoder.DecodeFields(reader);
                     case "device_management_enabled":
                         return DeviceManagementEnabled.Decoder.DecodeFields(reader);
+                    case "device_sync_backup_status_changed":
+                        return DeviceSyncBackupStatusChanged.Decoder.DecodeFields(reader);
                     case "device_unlink":
                         return DeviceUnlink.Decoder.DecodeFields(reader);
                     case "emm_refresh_auth_token":
@@ -12556,28 +12911,6 @@ namespace Dropbox.Api.TeamLog
                         return GroupRemoveMember.Decoder.DecodeFields(reader);
                     case "group_rename":
                         return GroupRename.Decoder.DecodeFields(reader);
-                    case "legal_holds_activate_a_hold":
-                        return LegalHoldsActivateAHold.Decoder.DecodeFields(reader);
-                    case "legal_holds_add_members":
-                        return LegalHoldsAddMembers.Decoder.DecodeFields(reader);
-                    case "legal_holds_change_hold_details":
-                        return LegalHoldsChangeHoldDetails.Decoder.DecodeFields(reader);
-                    case "legal_holds_change_hold_name":
-                        return LegalHoldsChangeHoldName.Decoder.DecodeFields(reader);
-                    case "legal_holds_export_a_hold":
-                        return LegalHoldsExportAHold.Decoder.DecodeFields(reader);
-                    case "legal_holds_export_cancelled":
-                        return LegalHoldsExportCancelled.Decoder.DecodeFields(reader);
-                    case "legal_holds_export_downloaded":
-                        return LegalHoldsExportDownloaded.Decoder.DecodeFields(reader);
-                    case "legal_holds_export_removed":
-                        return LegalHoldsExportRemoved.Decoder.DecodeFields(reader);
-                    case "legal_holds_release_a_hold":
-                        return LegalHoldsReleaseAHold.Decoder.DecodeFields(reader);
-                    case "legal_holds_remove_members":
-                        return LegalHoldsRemoveMembers.Decoder.DecodeFields(reader);
-                    case "legal_holds_report_a_hold":
-                        return LegalHoldsReportAHold.Decoder.DecodeFields(reader);
                     case "account_lock_or_unlocked":
                         return AccountLockOrUnlocked.Decoder.DecodeFields(reader);
                     case "emm_error":
@@ -12950,6 +13283,10 @@ namespace Dropbox.Api.TeamLog
                         return SharedLinkView.Decoder.DecodeFields(reader);
                     case "shared_note_opened":
                         return SharedNoteOpened.Decoder.DecodeFields(reader);
+                    case "shmodel_disable_downloads":
+                        return ShmodelDisableDownloads.Decoder.DecodeFields(reader);
+                    case "shmodel_enable_downloads":
+                        return ShmodelEnableDownloads.Decoder.DecodeFields(reader);
                     case "shmodel_group_share":
                         return ShmodelGroupShare.Decoder.DecodeFields(reader);
                     case "showcase_access_granted":
@@ -13040,6 +13377,8 @@ namespace Dropbox.Api.TeamLog
                         return AllowDownloadEnabled.Decoder.DecodeFields(reader);
                     case "camera_uploads_policy_changed":
                         return CameraUploadsPolicyChanged.Decoder.DecodeFields(reader);
+                    case "computer_backup_policy_changed":
+                        return ComputerBackupPolicyChanged.Decoder.DecodeFields(reader);
                     case "content_administration_policy_changed":
                         return ContentAdministrationPolicyChanged.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_change_policy":
@@ -13154,6 +13493,8 @@ namespace Dropbox.Api.TeamLog
                         return SmartSyncOptOut.Decoder.DecodeFields(reader);
                     case "sso_change_policy":
                         return SsoChangePolicy.Decoder.DecodeFields(reader);
+                    case "team_branding_policy_changed":
+                        return TeamBrandingPolicyChanged.Decoder.DecodeFields(reader);
                     case "team_extensions_policy_changed":
                         return TeamExtensionsPolicyChanged.Decoder.DecodeFields(reader);
                     case "team_selective_sync_policy_changed":
@@ -14253,6 +14594,1213 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(data_governance) Added folders to policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyAddFolders : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyAddFolders> Encoder = new GovernancePolicyAddFoldersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyAddFolders> Decoder = new GovernancePolicyAddFoldersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GovernancePolicyAddFolders"
+            /// /> class.</para>
+            /// </summary>
+            private GovernancePolicyAddFolders()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyAddFolders</para>
+            /// </summary>
+            public static readonly GovernancePolicyAddFolders Instance = new GovernancePolicyAddFolders();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyAddFolders" />.</para>
+            /// </summary>
+            private class GovernancePolicyAddFoldersEncoder : enc.StructEncoder<GovernancePolicyAddFolders>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyAddFolders value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyAddFolders" />.</para>
+            /// </summary>
+            private class GovernancePolicyAddFoldersDecoder : enc.StructDecoder<GovernancePolicyAddFolders>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GovernancePolicyAddFolders"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyAddFolders Create()
+                {
+                    return GovernancePolicyAddFolders.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Activated a new policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyCreate : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyCreate> Encoder = new GovernancePolicyCreateEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyCreate> Decoder = new GovernancePolicyCreateDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GovernancePolicyCreate" />
+            /// class.</para>
+            /// </summary>
+            private GovernancePolicyCreate()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyCreate</para>
+            /// </summary>
+            public static readonly GovernancePolicyCreate Instance = new GovernancePolicyCreate();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyCreate" />.</para>
+            /// </summary>
+            private class GovernancePolicyCreateEncoder : enc.StructEncoder<GovernancePolicyCreate>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyCreate value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyCreate" />.</para>
+            /// </summary>
+            private class GovernancePolicyCreateDecoder : enc.StructDecoder<GovernancePolicyCreate>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GovernancePolicyCreate"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyCreate Create()
+                {
+                    return GovernancePolicyCreate.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Deleted a policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyDelete : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyDelete> Encoder = new GovernancePolicyDeleteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyDelete> Decoder = new GovernancePolicyDeleteDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GovernancePolicyDelete" />
+            /// class.</para>
+            /// </summary>
+            private GovernancePolicyDelete()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyDelete</para>
+            /// </summary>
+            public static readonly GovernancePolicyDelete Instance = new GovernancePolicyDelete();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyDelete" />.</para>
+            /// </summary>
+            private class GovernancePolicyDeleteEncoder : enc.StructEncoder<GovernancePolicyDelete>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyDelete value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyDelete" />.</para>
+            /// </summary>
+            private class GovernancePolicyDeleteDecoder : enc.StructDecoder<GovernancePolicyDelete>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GovernancePolicyDelete"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyDelete Create()
+                {
+                    return GovernancePolicyDelete.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Edited policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyEditDetails : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyEditDetails> Encoder = new GovernancePolicyEditDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyEditDetails> Decoder = new GovernancePolicyEditDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GovernancePolicyEditDetails"
+            /// /> class.</para>
+            /// </summary>
+            private GovernancePolicyEditDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyEditDetails</para>
+            /// </summary>
+            public static readonly GovernancePolicyEditDetails Instance = new GovernancePolicyEditDetails();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyEditDetails" />.</para>
+            /// </summary>
+            private class GovernancePolicyEditDetailsEncoder : enc.StructEncoder<GovernancePolicyEditDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyEditDetails value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyEditDetails" />.</para>
+            /// </summary>
+            private class GovernancePolicyEditDetailsDecoder : enc.StructDecoder<GovernancePolicyEditDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GovernancePolicyEditDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyEditDetails Create()
+                {
+                    return GovernancePolicyEditDetails.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Changed policy duration</para>
+        /// </summary>
+        public sealed class GovernancePolicyEditDuration : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyEditDuration> Encoder = new GovernancePolicyEditDurationEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyEditDuration> Decoder = new GovernancePolicyEditDurationDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyEditDuration" /> class.</para>
+            /// </summary>
+            private GovernancePolicyEditDuration()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyEditDuration</para>
+            /// </summary>
+            public static readonly GovernancePolicyEditDuration Instance = new GovernancePolicyEditDuration();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyEditDuration" />.</para>
+            /// </summary>
+            private class GovernancePolicyEditDurationEncoder : enc.StructEncoder<GovernancePolicyEditDuration>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyEditDuration value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyEditDuration" />.</para>
+            /// </summary>
+            private class GovernancePolicyEditDurationDecoder : enc.StructDecoder<GovernancePolicyEditDuration>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyEditDuration" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyEditDuration Create()
+                {
+                    return GovernancePolicyEditDuration.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Removed folders from policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyRemoveFolders : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyRemoveFolders> Encoder = new GovernancePolicyRemoveFoldersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyRemoveFolders> Decoder = new GovernancePolicyRemoveFoldersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyRemoveFolders" /> class.</para>
+            /// </summary>
+            private GovernancePolicyRemoveFolders()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyRemoveFolders</para>
+            /// </summary>
+            public static readonly GovernancePolicyRemoveFolders Instance = new GovernancePolicyRemoveFolders();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyRemoveFolders" />.</para>
+            /// </summary>
+            private class GovernancePolicyRemoveFoldersEncoder : enc.StructEncoder<GovernancePolicyRemoveFolders>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyRemoveFolders value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyRemoveFolders" />.</para>
+            /// </summary>
+            private class GovernancePolicyRemoveFoldersDecoder : enc.StructDecoder<GovernancePolicyRemoveFolders>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyRemoveFolders" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyRemoveFolders Create()
+                {
+                    return GovernancePolicyRemoveFolders.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Activated a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsActivateAHold : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsActivateAHold> Encoder = new LegalHoldsActivateAHoldEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsActivateAHold> Decoder = new LegalHoldsActivateAHoldDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsActivateAHold" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsActivateAHold()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsActivateAHold</para>
+            /// </summary>
+            public static readonly LegalHoldsActivateAHold Instance = new LegalHoldsActivateAHold();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsActivateAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsActivateAHoldEncoder : enc.StructEncoder<LegalHoldsActivateAHold>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsActivateAHold value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsActivateAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsActivateAHoldDecoder : enc.StructDecoder<LegalHoldsActivateAHold>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsActivateAHold"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsActivateAHold Create()
+                {
+                    return LegalHoldsActivateAHold.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Added members to a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsAddMembers : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsAddMembers> Encoder = new LegalHoldsAddMembersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsAddMembers> Decoder = new LegalHoldsAddMembersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsAddMembers" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsAddMembers()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsAddMembers</para>
+            /// </summary>
+            public static readonly LegalHoldsAddMembers Instance = new LegalHoldsAddMembers();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsAddMembers" />.</para>
+            /// </summary>
+            private class LegalHoldsAddMembersEncoder : enc.StructEncoder<LegalHoldsAddMembers>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsAddMembers value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsAddMembers" />.</para>
+            /// </summary>
+            private class LegalHoldsAddMembersDecoder : enc.StructDecoder<LegalHoldsAddMembers>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsAddMembers"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsAddMembers Create()
+                {
+                    return LegalHoldsAddMembers.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Edited details for a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsChangeHoldDetails : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsChangeHoldDetails> Encoder = new LegalHoldsChangeHoldDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsChangeHoldDetails> Decoder = new LegalHoldsChangeHoldDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsChangeHoldDetails"
+            /// /> class.</para>
+            /// </summary>
+            private LegalHoldsChangeHoldDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsChangeHoldDetails</para>
+            /// </summary>
+            public static readonly LegalHoldsChangeHoldDetails Instance = new LegalHoldsChangeHoldDetails();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsChangeHoldDetails" />.</para>
+            /// </summary>
+            private class LegalHoldsChangeHoldDetailsEncoder : enc.StructEncoder<LegalHoldsChangeHoldDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsChangeHoldDetails value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsChangeHoldDetails" />.</para>
+            /// </summary>
+            private class LegalHoldsChangeHoldDetailsDecoder : enc.StructDecoder<LegalHoldsChangeHoldDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsChangeHoldDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsChangeHoldDetails Create()
+                {
+                    return LegalHoldsChangeHoldDetails.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Renamed a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsChangeHoldName : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsChangeHoldName> Encoder = new LegalHoldsChangeHoldNameEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsChangeHoldName> Decoder = new LegalHoldsChangeHoldNameDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsChangeHoldName" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsChangeHoldName()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsChangeHoldName</para>
+            /// </summary>
+            public static readonly LegalHoldsChangeHoldName Instance = new LegalHoldsChangeHoldName();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsChangeHoldName" />.</para>
+            /// </summary>
+            private class LegalHoldsChangeHoldNameEncoder : enc.StructEncoder<LegalHoldsChangeHoldName>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsChangeHoldName value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsChangeHoldName" />.</para>
+            /// </summary>
+            private class LegalHoldsChangeHoldNameDecoder : enc.StructDecoder<LegalHoldsChangeHoldName>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsChangeHoldName"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsChangeHoldName Create()
+                {
+                    return LegalHoldsChangeHoldName.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Exported hold</para>
+        /// </summary>
+        public sealed class LegalHoldsExportAHold : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsExportAHold> Encoder = new LegalHoldsExportAHoldEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsExportAHold> Decoder = new LegalHoldsExportAHoldDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportAHold" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsExportAHold()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsExportAHold</para>
+            /// </summary>
+            public static readonly LegalHoldsExportAHold Instance = new LegalHoldsExportAHold();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsExportAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsExportAHoldEncoder : enc.StructEncoder<LegalHoldsExportAHold>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsExportAHold value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsExportAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsExportAHoldDecoder : enc.StructDecoder<LegalHoldsExportAHold>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsExportAHold"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsExportAHold Create()
+                {
+                    return LegalHoldsExportAHold.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Canceled export for a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsExportCancelled : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsExportCancelled> Encoder = new LegalHoldsExportCancelledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsExportCancelled> Decoder = new LegalHoldsExportCancelledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportCancelled"
+            /// /> class.</para>
+            /// </summary>
+            private LegalHoldsExportCancelled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsExportCancelled</para>
+            /// </summary>
+            public static readonly LegalHoldsExportCancelled Instance = new LegalHoldsExportCancelled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsExportCancelled" />.</para>
+            /// </summary>
+            private class LegalHoldsExportCancelledEncoder : enc.StructEncoder<LegalHoldsExportCancelled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsExportCancelled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsExportCancelled" />.</para>
+            /// </summary>
+            private class LegalHoldsExportCancelledDecoder : enc.StructDecoder<LegalHoldsExportCancelled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsExportCancelled"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsExportCancelled Create()
+                {
+                    return LegalHoldsExportCancelled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Downloaded export for a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsExportDownloaded : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsExportDownloaded> Encoder = new LegalHoldsExportDownloadedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsExportDownloaded> Decoder = new LegalHoldsExportDownloadedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportDownloaded"
+            /// /> class.</para>
+            /// </summary>
+            private LegalHoldsExportDownloaded()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsExportDownloaded</para>
+            /// </summary>
+            public static readonly LegalHoldsExportDownloaded Instance = new LegalHoldsExportDownloaded();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsExportDownloaded" />.</para>
+            /// </summary>
+            private class LegalHoldsExportDownloadedEncoder : enc.StructEncoder<LegalHoldsExportDownloaded>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsExportDownloaded value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsExportDownloaded" />.</para>
+            /// </summary>
+            private class LegalHoldsExportDownloadedDecoder : enc.StructDecoder<LegalHoldsExportDownloaded>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsExportDownloaded"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsExportDownloaded Create()
+                {
+                    return LegalHoldsExportDownloaded.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Removed export for a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsExportRemoved : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsExportRemoved> Encoder = new LegalHoldsExportRemovedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsExportRemoved> Decoder = new LegalHoldsExportRemovedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportRemoved" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsExportRemoved()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsExportRemoved</para>
+            /// </summary>
+            public static readonly LegalHoldsExportRemoved Instance = new LegalHoldsExportRemoved();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsExportRemoved" />.</para>
+            /// </summary>
+            private class LegalHoldsExportRemovedEncoder : enc.StructEncoder<LegalHoldsExportRemoved>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsExportRemoved value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsExportRemoved" />.</para>
+            /// </summary>
+            private class LegalHoldsExportRemovedDecoder : enc.StructDecoder<LegalHoldsExportRemoved>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsExportRemoved"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsExportRemoved Create()
+                {
+                    return LegalHoldsExportRemoved.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Released a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsReleaseAHold : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsReleaseAHold> Encoder = new LegalHoldsReleaseAHoldEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsReleaseAHold> Decoder = new LegalHoldsReleaseAHoldDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsReleaseAHold" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsReleaseAHold()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsReleaseAHold</para>
+            /// </summary>
+            public static readonly LegalHoldsReleaseAHold Instance = new LegalHoldsReleaseAHold();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsReleaseAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsReleaseAHoldEncoder : enc.StructEncoder<LegalHoldsReleaseAHold>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsReleaseAHold value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsReleaseAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsReleaseAHoldDecoder : enc.StructDecoder<LegalHoldsReleaseAHold>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsReleaseAHold"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsReleaseAHold Create()
+                {
+                    return LegalHoldsReleaseAHold.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Removed members from a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsRemoveMembers : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsRemoveMembers> Encoder = new LegalHoldsRemoveMembersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsRemoveMembers> Decoder = new LegalHoldsRemoveMembersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsRemoveMembers" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsRemoveMembers()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsRemoveMembers</para>
+            /// </summary>
+            public static readonly LegalHoldsRemoveMembers Instance = new LegalHoldsRemoveMembers();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsRemoveMembers" />.</para>
+            /// </summary>
+            private class LegalHoldsRemoveMembersEncoder : enc.StructEncoder<LegalHoldsRemoveMembers>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsRemoveMembers value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsRemoveMembers" />.</para>
+            /// </summary>
+            private class LegalHoldsRemoveMembersDecoder : enc.StructDecoder<LegalHoldsRemoveMembers>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsRemoveMembers"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsRemoveMembers Create()
+                {
+                    return LegalHoldsRemoveMembers.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Created a summary report for a hold</para>
+        /// </summary>
+        public sealed class LegalHoldsReportAHold : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LegalHoldsReportAHold> Encoder = new LegalHoldsReportAHoldEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LegalHoldsReportAHold> Decoder = new LegalHoldsReportAHoldDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LegalHoldsReportAHold" />
+            /// class.</para>
+            /// </summary>
+            private LegalHoldsReportAHold()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LegalHoldsReportAHold</para>
+            /// </summary>
+            public static readonly LegalHoldsReportAHold Instance = new LegalHoldsReportAHold();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LegalHoldsReportAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsReportAHoldEncoder : enc.StructEncoder<LegalHoldsReportAHold>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LegalHoldsReportAHold value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LegalHoldsReportAHold" />.</para>
+            /// </summary>
+            private class LegalHoldsReportAHoldDecoder : enc.StructDecoder<LegalHoldsReportAHold>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LegalHoldsReportAHold"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LegalHoldsReportAHold Create()
+                {
+                    return LegalHoldsReportAHold.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(devices) Changed IP address associated with active desktop session</para>
         /// </summary>
         public sealed class DeviceChangeIpDesktop : EventTypeArg
@@ -14883,6 +16431,77 @@ namespace Dropbox.Api.TeamLog
                 protected override DeviceManagementEnabled Create()
                 {
                     return DeviceManagementEnabled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(devices) Enabled/disabled backup for computer</para>
+        /// </summary>
+        public sealed class DeviceSyncBackupStatusChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DeviceSyncBackupStatusChanged> Encoder = new DeviceSyncBackupStatusChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DeviceSyncBackupStatusChanged> Decoder = new DeviceSyncBackupStatusChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DeviceSyncBackupStatusChanged" /> class.</para>
+            /// </summary>
+            private DeviceSyncBackupStatusChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DeviceSyncBackupStatusChanged</para>
+            /// </summary>
+            public static readonly DeviceSyncBackupStatusChanged Instance = new DeviceSyncBackupStatusChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DeviceSyncBackupStatusChanged" />.</para>
+            /// </summary>
+            private class DeviceSyncBackupStatusChangedEncoder : enc.StructEncoder<DeviceSyncBackupStatusChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DeviceSyncBackupStatusChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DeviceSyncBackupStatusChanged" />.</para>
+            /// </summary>
+            private class DeviceSyncBackupStatusChangedDecoder : enc.StructDecoder<DeviceSyncBackupStatusChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DeviceSyncBackupStatusChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DeviceSyncBackupStatusChanged Create()
+                {
+                    return DeviceSyncBackupStatusChanged.Instance;
                 }
 
             }
@@ -18768,787 +20387,6 @@ namespace Dropbox.Api.TeamLog
                 protected override GroupRename Create()
                 {
                     return GroupRename.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Activated a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsActivateAHold : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsActivateAHold> Encoder = new LegalHoldsActivateAHoldEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsActivateAHold> Decoder = new LegalHoldsActivateAHoldDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsActivateAHold" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsActivateAHold()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsActivateAHold</para>
-            /// </summary>
-            public static readonly LegalHoldsActivateAHold Instance = new LegalHoldsActivateAHold();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsActivateAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsActivateAHoldEncoder : enc.StructEncoder<LegalHoldsActivateAHold>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsActivateAHold value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsActivateAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsActivateAHoldDecoder : enc.StructDecoder<LegalHoldsActivateAHold>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsActivateAHold"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsActivateAHold Create()
-                {
-                    return LegalHoldsActivateAHold.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Added members to a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsAddMembers : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsAddMembers> Encoder = new LegalHoldsAddMembersEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsAddMembers> Decoder = new LegalHoldsAddMembersDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsAddMembers" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsAddMembers()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsAddMembers</para>
-            /// </summary>
-            public static readonly LegalHoldsAddMembers Instance = new LegalHoldsAddMembers();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsAddMembers" />.</para>
-            /// </summary>
-            private class LegalHoldsAddMembersEncoder : enc.StructEncoder<LegalHoldsAddMembers>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsAddMembers value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsAddMembers" />.</para>
-            /// </summary>
-            private class LegalHoldsAddMembersDecoder : enc.StructDecoder<LegalHoldsAddMembers>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsAddMembers"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsAddMembers Create()
-                {
-                    return LegalHoldsAddMembers.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Edited details for a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsChangeHoldDetails : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsChangeHoldDetails> Encoder = new LegalHoldsChangeHoldDetailsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsChangeHoldDetails> Decoder = new LegalHoldsChangeHoldDetailsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsChangeHoldDetails"
-            /// /> class.</para>
-            /// </summary>
-            private LegalHoldsChangeHoldDetails()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsChangeHoldDetails</para>
-            /// </summary>
-            public static readonly LegalHoldsChangeHoldDetails Instance = new LegalHoldsChangeHoldDetails();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsChangeHoldDetails" />.</para>
-            /// </summary>
-            private class LegalHoldsChangeHoldDetailsEncoder : enc.StructEncoder<LegalHoldsChangeHoldDetails>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsChangeHoldDetails value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsChangeHoldDetails" />.</para>
-            /// </summary>
-            private class LegalHoldsChangeHoldDetailsDecoder : enc.StructDecoder<LegalHoldsChangeHoldDetails>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsChangeHoldDetails"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsChangeHoldDetails Create()
-                {
-                    return LegalHoldsChangeHoldDetails.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Renamed a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsChangeHoldName : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsChangeHoldName> Encoder = new LegalHoldsChangeHoldNameEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsChangeHoldName> Decoder = new LegalHoldsChangeHoldNameDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsChangeHoldName" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsChangeHoldName()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsChangeHoldName</para>
-            /// </summary>
-            public static readonly LegalHoldsChangeHoldName Instance = new LegalHoldsChangeHoldName();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsChangeHoldName" />.</para>
-            /// </summary>
-            private class LegalHoldsChangeHoldNameEncoder : enc.StructEncoder<LegalHoldsChangeHoldName>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsChangeHoldName value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsChangeHoldName" />.</para>
-            /// </summary>
-            private class LegalHoldsChangeHoldNameDecoder : enc.StructDecoder<LegalHoldsChangeHoldName>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsChangeHoldName"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsChangeHoldName Create()
-                {
-                    return LegalHoldsChangeHoldName.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Exported hold</para>
-        /// </summary>
-        public sealed class LegalHoldsExportAHold : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsExportAHold> Encoder = new LegalHoldsExportAHoldEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsExportAHold> Decoder = new LegalHoldsExportAHoldDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportAHold" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsExportAHold()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsExportAHold</para>
-            /// </summary>
-            public static readonly LegalHoldsExportAHold Instance = new LegalHoldsExportAHold();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsExportAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsExportAHoldEncoder : enc.StructEncoder<LegalHoldsExportAHold>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsExportAHold value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsExportAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsExportAHoldDecoder : enc.StructDecoder<LegalHoldsExportAHold>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsExportAHold"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsExportAHold Create()
-                {
-                    return LegalHoldsExportAHold.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Canceled export for a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsExportCancelled : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsExportCancelled> Encoder = new LegalHoldsExportCancelledEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsExportCancelled> Decoder = new LegalHoldsExportCancelledDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportCancelled"
-            /// /> class.</para>
-            /// </summary>
-            private LegalHoldsExportCancelled()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsExportCancelled</para>
-            /// </summary>
-            public static readonly LegalHoldsExportCancelled Instance = new LegalHoldsExportCancelled();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsExportCancelled" />.</para>
-            /// </summary>
-            private class LegalHoldsExportCancelledEncoder : enc.StructEncoder<LegalHoldsExportCancelled>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsExportCancelled value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsExportCancelled" />.</para>
-            /// </summary>
-            private class LegalHoldsExportCancelledDecoder : enc.StructDecoder<LegalHoldsExportCancelled>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsExportCancelled"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsExportCancelled Create()
-                {
-                    return LegalHoldsExportCancelled.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Downloaded export for a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsExportDownloaded : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsExportDownloaded> Encoder = new LegalHoldsExportDownloadedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsExportDownloaded> Decoder = new LegalHoldsExportDownloadedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportDownloaded"
-            /// /> class.</para>
-            /// </summary>
-            private LegalHoldsExportDownloaded()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsExportDownloaded</para>
-            /// </summary>
-            public static readonly LegalHoldsExportDownloaded Instance = new LegalHoldsExportDownloaded();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsExportDownloaded" />.</para>
-            /// </summary>
-            private class LegalHoldsExportDownloadedEncoder : enc.StructEncoder<LegalHoldsExportDownloaded>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsExportDownloaded value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsExportDownloaded" />.</para>
-            /// </summary>
-            private class LegalHoldsExportDownloadedDecoder : enc.StructDecoder<LegalHoldsExportDownloaded>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsExportDownloaded"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsExportDownloaded Create()
-                {
-                    return LegalHoldsExportDownloaded.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Removed export for a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsExportRemoved : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsExportRemoved> Encoder = new LegalHoldsExportRemovedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsExportRemoved> Decoder = new LegalHoldsExportRemovedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsExportRemoved" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsExportRemoved()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsExportRemoved</para>
-            /// </summary>
-            public static readonly LegalHoldsExportRemoved Instance = new LegalHoldsExportRemoved();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsExportRemoved" />.</para>
-            /// </summary>
-            private class LegalHoldsExportRemovedEncoder : enc.StructEncoder<LegalHoldsExportRemoved>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsExportRemoved value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsExportRemoved" />.</para>
-            /// </summary>
-            private class LegalHoldsExportRemovedDecoder : enc.StructDecoder<LegalHoldsExportRemoved>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsExportRemoved"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsExportRemoved Create()
-                {
-                    return LegalHoldsExportRemoved.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Released a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsReleaseAHold : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsReleaseAHold> Encoder = new LegalHoldsReleaseAHoldEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsReleaseAHold> Decoder = new LegalHoldsReleaseAHoldDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsReleaseAHold" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsReleaseAHold()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsReleaseAHold</para>
-            /// </summary>
-            public static readonly LegalHoldsReleaseAHold Instance = new LegalHoldsReleaseAHold();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsReleaseAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsReleaseAHoldEncoder : enc.StructEncoder<LegalHoldsReleaseAHold>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsReleaseAHold value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsReleaseAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsReleaseAHoldDecoder : enc.StructDecoder<LegalHoldsReleaseAHold>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsReleaseAHold"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsReleaseAHold Create()
-                {
-                    return LegalHoldsReleaseAHold.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Removed members from a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsRemoveMembers : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsRemoveMembers> Encoder = new LegalHoldsRemoveMembersEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsRemoveMembers> Decoder = new LegalHoldsRemoveMembersDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsRemoveMembers" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsRemoveMembers()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsRemoveMembers</para>
-            /// </summary>
-            public static readonly LegalHoldsRemoveMembers Instance = new LegalHoldsRemoveMembers();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsRemoveMembers" />.</para>
-            /// </summary>
-            private class LegalHoldsRemoveMembersEncoder : enc.StructEncoder<LegalHoldsRemoveMembers>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsRemoveMembers value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsRemoveMembers" />.</para>
-            /// </summary>
-            private class LegalHoldsRemoveMembersDecoder : enc.StructDecoder<LegalHoldsRemoveMembers>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsRemoveMembers"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsRemoveMembers Create()
-                {
-                    return LegalHoldsRemoveMembers.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>(legal_holds) Created a summary report for a hold</para>
-        /// </summary>
-        public sealed class LegalHoldsReportAHold : EventTypeArg
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHoldsReportAHold> Encoder = new LegalHoldsReportAHoldEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHoldsReportAHold> Decoder = new LegalHoldsReportAHoldDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHoldsReportAHold" />
-            /// class.</para>
-            /// </summary>
-            private LegalHoldsReportAHold()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHoldsReportAHold</para>
-            /// </summary>
-            public static readonly LegalHoldsReportAHold Instance = new LegalHoldsReportAHold();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHoldsReportAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsReportAHoldEncoder : enc.StructEncoder<LegalHoldsReportAHold>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHoldsReportAHold value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHoldsReportAHold" />.</para>
-            /// </summary>
-            private class LegalHoldsReportAHoldDecoder : enc.StructDecoder<LegalHoldsReportAHold>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHoldsReportAHold"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHoldsReportAHold Create()
-                {
-                    return LegalHoldsReportAHold.Instance;
                 }
 
             }
@@ -26149,7 +26987,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(reports) Report created: Data shared outside the team</para>
+        /// <para>(reports) Created External sharing report</para>
         /// </summary>
         public sealed class ExternalSharingCreateReport : EventTypeArg
         {
@@ -26220,7 +27058,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(reports) Couldn't create report: Data shared outside the team</para>
+        /// <para>(reports) Couldn't create External sharing report</para>
         /// </summary>
         public sealed class ExternalSharingReportFailed : EventTypeArg
         {
@@ -32766,6 +33604,148 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(sharing) Disabled downloads for link (deprecated, no longer logged)</para>
+        /// </summary>
+        public sealed class ShmodelDisableDownloads : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ShmodelDisableDownloads> Encoder = new ShmodelDisableDownloadsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ShmodelDisableDownloads> Decoder = new ShmodelDisableDownloadsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ShmodelDisableDownloads" />
+            /// class.</para>
+            /// </summary>
+            private ShmodelDisableDownloads()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ShmodelDisableDownloads</para>
+            /// </summary>
+            public static readonly ShmodelDisableDownloads Instance = new ShmodelDisableDownloads();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ShmodelDisableDownloads" />.</para>
+            /// </summary>
+            private class ShmodelDisableDownloadsEncoder : enc.StructEncoder<ShmodelDisableDownloads>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ShmodelDisableDownloads value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ShmodelDisableDownloads" />.</para>
+            /// </summary>
+            private class ShmodelDisableDownloadsDecoder : enc.StructDecoder<ShmodelDisableDownloads>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ShmodelDisableDownloads"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ShmodelDisableDownloads Create()
+                {
+                    return ShmodelDisableDownloads.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Enabled downloads for link (deprecated, no longer logged)</para>
+        /// </summary>
+        public sealed class ShmodelEnableDownloads : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ShmodelEnableDownloads> Encoder = new ShmodelEnableDownloadsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ShmodelEnableDownloads> Decoder = new ShmodelEnableDownloadsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ShmodelEnableDownloads" />
+            /// class.</para>
+            /// </summary>
+            private ShmodelEnableDownloads()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ShmodelEnableDownloads</para>
+            /// </summary>
+            public static readonly ShmodelEnableDownloads Instance = new ShmodelEnableDownloads();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ShmodelEnableDownloads" />.</para>
+            /// </summary>
+            private class ShmodelEnableDownloadsEncoder : enc.StructEncoder<ShmodelEnableDownloads>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ShmodelEnableDownloads value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ShmodelEnableDownloads" />.</para>
+            /// </summary>
+            private class ShmodelEnableDownloadsDecoder : enc.StructDecoder<ShmodelEnableDownloads>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ShmodelEnableDownloads"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ShmodelEnableDownloads Create()
+                {
+                    return ShmodelEnableDownloads.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(sharing) Shared link with group (deprecated, no longer logged)</para>
         /// </summary>
         public sealed class ShmodelGroupShare : EventTypeArg
@@ -35939,6 +36919,77 @@ namespace Dropbox.Api.TeamLog
                 protected override CameraUploadsPolicyChanged Create()
                 {
                     return CameraUploadsPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed computer backup policy for team</para>
+        /// </summary>
+        public sealed class ComputerBackupPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ComputerBackupPolicyChanged> Encoder = new ComputerBackupPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ComputerBackupPolicyChanged> Decoder = new ComputerBackupPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ComputerBackupPolicyChanged"
+            /// /> class.</para>
+            /// </summary>
+            private ComputerBackupPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ComputerBackupPolicyChanged</para>
+            /// </summary>
+            public static readonly ComputerBackupPolicyChanged Instance = new ComputerBackupPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ComputerBackupPolicyChanged" />.</para>
+            /// </summary>
+            private class ComputerBackupPolicyChangedEncoder : enc.StructEncoder<ComputerBackupPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ComputerBackupPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ComputerBackupPolicyChanged" />.</para>
+            /// </summary>
+            private class ComputerBackupPolicyChangedDecoder : enc.StructDecoder<ComputerBackupPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ComputerBackupPolicyChanged"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ComputerBackupPolicyChanged Create()
+                {
+                    return ComputerBackupPolicyChanged.Instance;
                 }
 
             }
@@ -40005,6 +41056,77 @@ namespace Dropbox.Api.TeamLog
                 protected override SsoChangePolicy Create()
                 {
                     return SsoChangePolicy.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed team branding policy for team</para>
+        /// </summary>
+        public sealed class TeamBrandingPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamBrandingPolicyChanged> Encoder = new TeamBrandingPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamBrandingPolicyChanged> Decoder = new TeamBrandingPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamBrandingPolicyChanged"
+            /// /> class.</para>
+            /// </summary>
+            private TeamBrandingPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamBrandingPolicyChanged</para>
+            /// </summary>
+            public static readonly TeamBrandingPolicyChanged Instance = new TeamBrandingPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamBrandingPolicyChanged" />.</para>
+            /// </summary>
+            private class TeamBrandingPolicyChangedEncoder : enc.StructEncoder<TeamBrandingPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamBrandingPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamBrandingPolicyChanged" />.</para>
+            /// </summary>
+            private class TeamBrandingPolicyChangedDecoder : enc.StructDecoder<TeamBrandingPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamBrandingPolicyChanged"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamBrandingPolicyChanged Create()
+                {
+                    return TeamBrandingPolicyChanged.Instance;
                 }
 
             }

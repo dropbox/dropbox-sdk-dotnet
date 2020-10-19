@@ -31,9 +31,11 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="SearchMatchV2" /> class.</para>
         /// </summary>
         /// <param name="metadata">The metadata for the matched file or folder.</param>
+        /// <param name="matchType">The type of the match.</param>
         /// <param name="highlightSpans">The list of HighlightSpan determines which parts of
         /// the file title should be highlighted.</param>
         public SearchMatchV2(MetadataV2 metadata,
+                             SearchMatchTypeV2 matchType = null,
                              col.IEnumerable<HighlightSpan> highlightSpans = null)
         {
             if (metadata == null)
@@ -44,6 +46,7 @@ namespace Dropbox.Api.Files
             var highlightSpansList = enc.Util.ToList(highlightSpans);
 
             this.Metadata = metadata;
+            this.MatchType = matchType;
             this.HighlightSpans = highlightSpansList;
         }
 
@@ -61,6 +64,11 @@ namespace Dropbox.Api.Files
         /// <para>The metadata for the matched file or folder.</para>
         /// </summary>
         public MetadataV2 Metadata { get; protected set; }
+
+        /// <summary>
+        /// <para>The type of the match.</para>
+        /// </summary>
+        public SearchMatchTypeV2 MatchType { get; protected set; }
 
         /// <summary>
         /// <para>The list of HighlightSpan determines which parts of the file title should be
@@ -83,6 +91,10 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(SearchMatchV2 value, enc.IJsonWriter writer)
             {
                 WriteProperty("metadata", value.Metadata, writer, global::Dropbox.Api.Files.MetadataV2.Encoder);
+                if (value.MatchType != null)
+                {
+                    WriteProperty("match_type", value.MatchType, writer, global::Dropbox.Api.Files.SearchMatchTypeV2.Encoder);
+                }
                 if (value.HighlightSpans.Count > 0)
                 {
                     WriteListProperty("highlight_spans", value.HighlightSpans, writer, global::Dropbox.Api.Files.HighlightSpan.Encoder);
@@ -121,6 +133,9 @@ namespace Dropbox.Api.Files
                 {
                     case "metadata":
                         value.Metadata = global::Dropbox.Api.Files.MetadataV2.Decoder.Decode(reader);
+                        break;
+                    case "match_type":
+                        value.MatchType = global::Dropbox.Api.Files.SearchMatchTypeV2.Decoder.Decode(reader);
                         break;
                     case "highlight_spans":
                         value.HighlightSpans = ReadList<HighlightSpan>(reader, global::Dropbox.Api.Files.HighlightSpan.Decoder);
