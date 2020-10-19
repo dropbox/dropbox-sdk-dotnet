@@ -357,10 +357,8 @@ namespace Dropbox.Api
                 queryBuilder.Append("&force_reauthentication=true");
             }
 
-            if (tokenAccessType != TokenAccessType.Legacy)
-            {
-                queryBuilder.Append("&token_access_type=").Append(tokenAccessType.ToString().ToLower());
-            }
+            queryBuilder.Append("&token_access_type=").Append(tokenAccessType.ToString().ToLower());
+            
 
             if (scopeList != null)
             {
