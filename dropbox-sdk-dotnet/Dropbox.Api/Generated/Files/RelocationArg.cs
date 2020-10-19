@@ -33,12 +33,7 @@ namespace Dropbox.Api.Files
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">If true, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" /> will copy contents in
-        /// shared folder, otherwise <see
-        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
-        /// if <paramref name="fromPath" /> contains shared folder. This field is always true
-        /// for <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</param>
+        /// <param name="allowSharedFolder">This flag has no effect.</param>
         /// <param name="autorename">If there's a conflict, have the Dropbox server try to
         /// autorename the file to avoid the conflict.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
@@ -70,11 +65,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>If true, <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyAsync" />
-        /// will copy contents in shared folder, otherwise <see
-        /// cref="Dropbox.Api.Files.RelocationError.CantCopySharedFolder" /> will be returned
-        /// if <see cref="FromPath" /> contains shared folder. This field is always true for
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveAsync" />.</para>
+        /// <para>This flag has no effect.</para>
         /// </summary>
         public bool AllowSharedFolder { get; protected set; }
 

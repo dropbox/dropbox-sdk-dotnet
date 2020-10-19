@@ -35,6 +35,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AutoApprove</para>
+        /// </summary>
+        public bool IsAutoApprove
+        {
+            get
+            {
+                return this is AutoApprove;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AutoApprove, or <c>null</c>.</para>
+        /// </summary>
+        public AutoApprove AsAutoApprove
+        {
+            get
+            {
+                return this as AutoApprove;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is InviteLink</para>
         /// </summary>
         public bool IsInviteLink
@@ -57,24 +79,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AutoApprove</para>
+        /// <para>Gets a value indicating whether this instance is MemberInvite</para>
         /// </summary>
-        public bool IsAutoApprove
+        public bool IsMemberInvite
         {
             get
             {
-                return this is AutoApprove;
+                return this is MemberInvite;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a AutoApprove, or <c>null</c>.</para>
+        /// <para>Gets this instance as a MemberInvite, or <c>null</c>.</para>
         /// </summary>
-        public AutoApprove AsAutoApprove
+        public MemberInvite AsMemberInvite
         {
             get
             {
-                return this as AutoApprove;
+                return this as MemberInvite;
             }
         }
 
@@ -136,16 +158,22 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(InviteMethod value, enc.IJsonWriter writer)
             {
+                if (value is AutoApprove)
+                {
+                    WriteProperty(".tag", "auto_approve", writer, enc.StringEncoder.Instance);
+                    AutoApprove.Encoder.EncodeFields((AutoApprove)value, writer);
+                    return;
+                }
                 if (value is InviteLink)
                 {
                     WriteProperty(".tag", "invite_link", writer, enc.StringEncoder.Instance);
                     InviteLink.Encoder.EncodeFields((InviteLink)value, writer);
                     return;
                 }
-                if (value is AutoApprove)
+                if (value is MemberInvite)
                 {
-                    WriteProperty(".tag", "auto_approve", writer, enc.StringEncoder.Instance);
-                    AutoApprove.Encoder.EncodeFields((AutoApprove)value, writer);
+                    WriteProperty(".tag", "member_invite", writer, enc.StringEncoder.Instance);
+                    MemberInvite.Encoder.EncodeFields((MemberInvite)value, writer);
                     return;
                 }
                 if (value is MovedFromAnotherTeam)
@@ -192,10 +220,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "invite_link":
-                        return InviteLink.Decoder.DecodeFields(reader);
                     case "auto_approve":
                         return AutoApprove.Decoder.DecodeFields(reader);
+                    case "invite_link":
+                        return InviteLink.Decoder.DecodeFields(reader);
+                    case "member_invite":
+                        return MemberInvite.Decoder.DecodeFields(reader);
                     case "moved_from_another_team":
                         return MovedFromAnotherTeam.Decoder.DecodeFields(reader);
                     default:
@@ -205,6 +235,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The auto approve object</para>
+        /// </summary>
+        public sealed class AutoApprove : InviteMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AutoApprove> Encoder = new AutoApproveEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AutoApprove> Decoder = new AutoApproveDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AutoApprove" />
+            /// class.</para>
+            /// </summary>
+            private AutoApprove()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AutoApprove</para>
+            /// </summary>
+            public static readonly AutoApprove Instance = new AutoApprove();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AutoApprove" />.</para>
+            /// </summary>
+            private class AutoApproveEncoder : enc.StructEncoder<AutoApprove>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AutoApprove value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AutoApprove" />.</para>
+            /// </summary>
+            private class AutoApproveDecoder : enc.StructDecoder<AutoApprove>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AutoApprove" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AutoApprove Create()
+                {
+                    return AutoApprove.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The invite link object</para>
@@ -276,48 +376,48 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The auto approve object</para>
+        /// <para>The member invite object</para>
         /// </summary>
-        public sealed class AutoApprove : InviteMethod
+        public sealed class MemberInvite : InviteMethod
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<AutoApprove> Encoder = new AutoApproveEncoder();
+            internal static enc.StructEncoder<MemberInvite> Encoder = new MemberInviteEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<AutoApprove> Decoder = new AutoApproveDecoder();
+            internal static enc.StructDecoder<MemberInvite> Decoder = new MemberInviteDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AutoApprove" />
+            /// <para>Initializes a new instance of the <see cref="MemberInvite" />
             /// class.</para>
             /// </summary>
-            private AutoApprove()
+            private MemberInvite()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of AutoApprove</para>
+            /// <para>A singleton instance of MemberInvite</para>
             /// </summary>
-            public static readonly AutoApprove Instance = new AutoApprove();
+            public static readonly MemberInvite Instance = new MemberInvite();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="AutoApprove" />.</para>
+            /// <para>Encoder for  <see cref="MemberInvite" />.</para>
             /// </summary>
-            private class AutoApproveEncoder : enc.StructEncoder<AutoApprove>
+            private class MemberInviteEncoder : enc.StructEncoder<MemberInvite>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(AutoApprove value, enc.IJsonWriter writer)
+                public override void EncodeFields(MemberInvite value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -327,17 +427,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="AutoApprove" />.</para>
+            /// <para>Decoder for  <see cref="MemberInvite" />.</para>
             /// </summary>
-            private class AutoApproveDecoder : enc.StructDecoder<AutoApprove>
+            private class MemberInviteDecoder : enc.StructDecoder<MemberInvite>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="AutoApprove" />.</para>
+                /// <para>Create a new instance of type <see cref="MemberInvite" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override AutoApprove Create()
+                protected override MemberInvite Create()
                 {
-                    return AutoApprove.Instance;
+                    return MemberInvite.Instance;
                 }
 
             }

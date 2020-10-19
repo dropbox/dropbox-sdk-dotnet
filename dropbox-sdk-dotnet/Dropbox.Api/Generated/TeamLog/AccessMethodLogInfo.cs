@@ -36,46 +36,46 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is EndUser</para>
+        /// <para>Gets a value indicating whether this instance is AdminConsole</para>
         /// </summary>
-        public bool IsEndUser
+        public bool IsAdminConsole
         {
             get
             {
-                return this is EndUser;
+                return this is AdminConsole;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a EndUser, or <c>null</c>.</para>
+        /// <para>Gets this instance as a AdminConsole, or <c>null</c>.</para>
         /// </summary>
-        public EndUser AsEndUser
+        public AdminConsole AsAdminConsole
         {
             get
             {
-                return this as EndUser;
+                return this as AdminConsole;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is SignInAs</para>
+        /// <para>Gets a value indicating whether this instance is Api</para>
         /// </summary>
-        public bool IsSignInAs
+        public bool IsApi
         {
             get
             {
-                return this is SignInAs;
+                return this is Api;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a SignInAs, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Api, or <c>null</c>.</para>
         /// </summary>
-        public SignInAs AsSignInAs
+        public Api AsApi
         {
             get
             {
-                return this as SignInAs;
+                return this as Api;
             }
         }
 
@@ -102,24 +102,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is AdminConsole</para>
+        /// <para>Gets a value indicating whether this instance is EndUser</para>
         /// </summary>
-        public bool IsAdminConsole
+        public bool IsEndUser
         {
             get
             {
-                return this is AdminConsole;
+                return this is EndUser;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a AdminConsole, or <c>null</c>.</para>
+        /// <para>Gets this instance as a EndUser, or <c>null</c>.</para>
         /// </summary>
-        public AdminConsole AsAdminConsole
+        public EndUser AsEndUser
         {
             get
             {
-                return this as AdminConsole;
+                return this as EndUser;
             }
         }
 
@@ -146,24 +146,24 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Api</para>
+        /// <para>Gets a value indicating whether this instance is SignInAs</para>
         /// </summary>
-        public bool IsApi
+        public bool IsSignInAs
         {
             get
             {
-                return this is Api;
+                return this is SignInAs;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Api, or <c>null</c>.</para>
+        /// <para>Gets this instance as a SignInAs, or <c>null</c>.</para>
         /// </summary>
-        public Api AsApi
+        public SignInAs AsSignInAs
         {
             get
             {
-                return this as Api;
+                return this as SignInAs;
             }
         }
 
@@ -203,16 +203,16 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AccessMethodLogInfo value, enc.IJsonWriter writer)
             {
-                if (value is EndUser)
+                if (value is AdminConsole)
                 {
-                    WriteProperty(".tag", "end_user", writer, enc.StringEncoder.Instance);
-                    EndUser.Encoder.EncodeFields((EndUser)value, writer);
+                    WriteProperty(".tag", "admin_console", writer, enc.StringEncoder.Instance);
+                    AdminConsole.Encoder.EncodeFields((AdminConsole)value, writer);
                     return;
                 }
-                if (value is SignInAs)
+                if (value is Api)
                 {
-                    WriteProperty(".tag", "sign_in_as", writer, enc.StringEncoder.Instance);
-                    SignInAs.Encoder.EncodeFields((SignInAs)value, writer);
+                    WriteProperty(".tag", "api", writer, enc.StringEncoder.Instance);
+                    Api.Encoder.EncodeFields((Api)value, writer);
                     return;
                 }
                 if (value is ContentManager)
@@ -221,10 +221,10 @@ namespace Dropbox.Api.TeamLog
                     ContentManager.Encoder.EncodeFields((ContentManager)value, writer);
                     return;
                 }
-                if (value is AdminConsole)
+                if (value is EndUser)
                 {
-                    WriteProperty(".tag", "admin_console", writer, enc.StringEncoder.Instance);
-                    AdminConsole.Encoder.EncodeFields((AdminConsole)value, writer);
+                    WriteProperty(".tag", "end_user", writer, enc.StringEncoder.Instance);
+                    EndUser.Encoder.EncodeFields((EndUser)value, writer);
                     return;
                 }
                 if (value is EnterpriseConsole)
@@ -233,10 +233,10 @@ namespace Dropbox.Api.TeamLog
                     EnterpriseConsole.Encoder.EncodeFields((EnterpriseConsole)value, writer);
                     return;
                 }
-                if (value is Api)
+                if (value is SignInAs)
                 {
-                    WriteProperty(".tag", "api", writer, enc.StringEncoder.Instance);
-                    Api.Encoder.EncodeFields((Api)value, writer);
+                    WriteProperty(".tag", "sign_in_as", writer, enc.StringEncoder.Instance);
+                    SignInAs.Encoder.EncodeFields((SignInAs)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -277,18 +277,18 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "end_user":
-                        return EndUser.Decoder.DecodeFields(reader);
-                    case "sign_in_as":
-                        return SignInAs.Decoder.DecodeFields(reader);
-                    case "content_manager":
-                        return ContentManager.Decoder.DecodeFields(reader);
                     case "admin_console":
                         return AdminConsole.Decoder.DecodeFields(reader);
-                    case "enterprise_console":
-                        return EnterpriseConsole.Decoder.DecodeFields(reader);
                     case "api":
                         return Api.Decoder.DecodeFields(reader);
+                    case "content_manager":
+                        return ContentManager.Decoder.DecodeFields(reader);
+                    case "end_user":
+                        return EndUser.Decoder.DecodeFields(reader);
+                    case "enterprise_console":
+                        return EnterpriseConsole.Decoder.DecodeFields(reader);
+                    case "sign_in_as":
+                        return SignInAs.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -296,6 +296,271 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Admin console session details.</para>
+        /// </summary>
+        public sealed class AdminConsole : AccessMethodLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminConsole> Encoder = new AdminConsoleEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminConsole> Decoder = new AdminConsoleDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminConsole" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AdminConsole(WebSessionLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminConsole" />
+            /// class.</para>
+            /// </summary>
+            private AdminConsole()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public WebSessionLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminConsole" />.</para>
+            /// </summary>
+            private class AdminConsoleEncoder : enc.StructEncoder<AdminConsole>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminConsole value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("admin_console", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminConsole" />.</para>
+            /// </summary>
+            private class AdminConsoleDecoder : enc.StructDecoder<AdminConsole>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AdminConsole" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminConsole Create()
+                {
+                    return new AdminConsole();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AdminConsole DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AdminConsole(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Api session details.</para>
+        /// </summary>
+        public sealed class Api : AccessMethodLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Api> Encoder = new ApiEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Api> Decoder = new ApiDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Api" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public Api(ApiSessionLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Api" /> class.</para>
+            /// </summary>
+            private Api()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ApiSessionLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Api" />.</para>
+            /// </summary>
+            private class ApiEncoder : enc.StructEncoder<Api>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Api value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("api", value.Value, writer, global::Dropbox.Api.TeamLog.ApiSessionLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Api" />.</para>
+            /// </summary>
+            private class ApiDecoder : enc.StructDecoder<Api>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Api" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Api Create()
+                {
+                    return new Api();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override Api DecodeFields(enc.IJsonReader reader)
+                {
+                    return new Api(global::Dropbox.Api.TeamLog.ApiSessionLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Content manager session details.</para>
+        /// </summary>
+        public sealed class ContentManager : AccessMethodLogInfo
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContentManager> Encoder = new ContentManagerEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContentManager> Decoder = new ContentManagerDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContentManager" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ContentManager(WebSessionLogInfo value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContentManager" />
+            /// class.</para>
+            /// </summary>
+            private ContentManager()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public WebSessionLogInfo Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContentManager" />.</para>
+            /// </summary>
+            private class ContentManagerEncoder : enc.StructEncoder<ContentManager>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContentManager value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("content_manager", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContentManager" />.</para>
+            /// </summary>
+            private class ContentManagerDecoder : enc.StructDecoder<ContentManager>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ContentManager" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContentManager Create()
+                {
+                    return new ContentManager();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ContentManager DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ContentManager(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>End user session details.</para>
@@ -394,271 +659,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Sign in as session details.</para>
-        /// </summary>
-        public sealed class SignInAs : AccessMethodLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<SignInAs> Encoder = new SignInAsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<SignInAs> Decoder = new SignInAsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SignInAs" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public SignInAs(WebSessionLogInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="SignInAs" /> class.</para>
-            /// </summary>
-            private SignInAs()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public WebSessionLogInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="SignInAs" />.</para>
-            /// </summary>
-            private class SignInAsEncoder : enc.StructEncoder<SignInAs>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(SignInAs value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("sign_in_as", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="SignInAs" />.</para>
-            /// </summary>
-            private class SignInAsDecoder : enc.StructDecoder<SignInAs>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="SignInAs" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override SignInAs Create()
-                {
-                    return new SignInAs();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override SignInAs DecodeFields(enc.IJsonReader reader)
-                {
-                    return new SignInAs(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Content manager session details.</para>
-        /// </summary>
-        public sealed class ContentManager : AccessMethodLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<ContentManager> Encoder = new ContentManagerEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<ContentManager> Decoder = new ContentManagerDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="ContentManager" />
-            /// class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public ContentManager(WebSessionLogInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="ContentManager" />
-            /// class.</para>
-            /// </summary>
-            private ContentManager()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public WebSessionLogInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="ContentManager" />.</para>
-            /// </summary>
-            private class ContentManagerEncoder : enc.StructEncoder<ContentManager>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(ContentManager value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("content_manager", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="ContentManager" />.</para>
-            /// </summary>
-            private class ContentManagerDecoder : enc.StructDecoder<ContentManager>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="ContentManager" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override ContentManager Create()
-                {
-                    return new ContentManager();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override ContentManager DecodeFields(enc.IJsonReader reader)
-                {
-                    return new ContentManager(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Admin console session details.</para>
-        /// </summary>
-        public sealed class AdminConsole : AccessMethodLogInfo
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<AdminConsole> Encoder = new AdminConsoleEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<AdminConsole> Decoder = new AdminConsoleDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AdminConsole" />
-            /// class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public AdminConsole(WebSessionLogInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="AdminConsole" />
-            /// class.</para>
-            /// </summary>
-            private AdminConsole()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public WebSessionLogInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="AdminConsole" />.</para>
-            /// </summary>
-            private class AdminConsoleEncoder : enc.StructEncoder<AdminConsole>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(AdminConsole value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("admin_console", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="AdminConsole" />.</para>
-            /// </summary>
-            private class AdminConsoleDecoder : enc.StructDecoder<AdminConsole>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="AdminConsole" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override AdminConsole Create()
-                {
-                    return new AdminConsole();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override AdminConsole DecodeFields(enc.IJsonReader reader)
-                {
-                    return new AdminConsole(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>Enterprise console session details.</para>
         /// </summary>
         public sealed class EnterpriseConsole : AccessMethodLogInfo
@@ -749,57 +749,57 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Api session details.</para>
+        /// <para>Sign in as session details.</para>
         /// </summary>
-        public sealed class Api : AccessMethodLogInfo
+        public sealed class SignInAs : AccessMethodLogInfo
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Api> Encoder = new ApiEncoder();
+            internal static enc.StructEncoder<SignInAs> Encoder = new SignInAsEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Api> Decoder = new ApiDecoder();
+            internal static enc.StructDecoder<SignInAs> Decoder = new SignInAsDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Api" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="SignInAs" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Api(ApiSessionLogInfo value)
+            public SignInAs(WebSessionLogInfo value)
             {
                 this.Value = value;
             }
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Api" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="SignInAs" /> class.</para>
             /// </summary>
-            private Api()
+            private SignInAs()
             {
             }
 
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public ApiSessionLogInfo Value { get; private set; }
+            public WebSessionLogInfo Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Api" />.</para>
+            /// <para>Encoder for  <see cref="SignInAs" />.</para>
             /// </summary>
-            private class ApiEncoder : enc.StructEncoder<Api>
+            private class SignInAsEncoder : enc.StructEncoder<SignInAs>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Api value, enc.IJsonWriter writer)
+                public override void EncodeFields(SignInAs value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("api", value.Value, writer, global::Dropbox.Api.TeamLog.ApiSessionLogInfo.Encoder);
+                    WriteProperty("sign_in_as", value.Value, writer, global::Dropbox.Api.TeamLog.WebSessionLogInfo.Encoder);
                 }
             }
 
@@ -808,17 +808,17 @@ namespace Dropbox.Api.TeamLog
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Api" />.</para>
+            /// <para>Decoder for  <see cref="SignInAs" />.</para>
             /// </summary>
-            private class ApiDecoder : enc.StructDecoder<Api>
+            private class SignInAsDecoder : enc.StructDecoder<SignInAs>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Api" />.</para>
+                /// <para>Create a new instance of type <see cref="SignInAs" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Api Create()
+                protected override SignInAs Create()
                 {
-                    return new Api();
+                    return new SignInAs();
                 }
 
                 /// <summary>
@@ -826,9 +826,9 @@ namespace Dropbox.Api.TeamLog
                 /// </summary>
                 /// <param name="reader">The json reader.</param>
                 /// <returns>The decoded object.</returns>
-                public override Api DecodeFields(enc.IJsonReader reader)
+                public override SignInAs DecodeFields(enc.IJsonReader reader)
                 {
-                    return new Api(global::Dropbox.Api.TeamLog.ApiSessionLogInfo.Decoder.DecodeFields(reader));
+                    return new SignInAs(global::Dropbox.Api.TeamLog.WebSessionLogInfo.Decoder.DecodeFields(reader));
                 }
             }
 

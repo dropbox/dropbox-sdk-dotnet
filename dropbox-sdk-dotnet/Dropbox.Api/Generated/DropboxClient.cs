@@ -10,7 +10,6 @@ namespace Dropbox.Api
     using Dropbox.Api.Account.Routes;
     using Dropbox.Api.Auth.Routes;
     using Dropbox.Api.Check.Routes;
-    using Dropbox.Api.CloudDocs.Routes;
     using Dropbox.Api.Contacts.Routes;
     using Dropbox.Api.FileProperties.Routes;
     using Dropbox.Api.FileRequests.Routes;
@@ -35,11 +34,6 @@ namespace Dropbox.Api
         /// <para>Gets the Check routes.</para>
         /// </summary>
         public CheckUserRoutes Check { get; private set; }
-
-        /// <summary>
-        /// <para>Gets the CloudDocs routes.</para>
-        /// </summary>
-        public CloudDocsUserRoutes CloudDocs { get; private set; }
 
         /// <summary>
         /// <para>Gets the Contacts routes.</para>
@@ -85,7 +79,6 @@ namespace Dropbox.Api
             this.Account = new AccountUserRoutes(transport);
             this.Auth = new AuthUserRoutes(transport);
             this.Check = new CheckUserRoutes(transport);
-            this.CloudDocs = new CloudDocsUserRoutes(transport);
             this.Contacts = new ContactsUserRoutes(transport);
             this.FileProperties = new FilePropertiesUserRoutes(transport);
             this.FileRequests = new FileRequestsUserRoutes(transport);

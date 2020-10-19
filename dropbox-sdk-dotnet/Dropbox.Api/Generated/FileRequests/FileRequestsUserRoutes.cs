@@ -121,6 +121,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="open">Whether or not the file request should be open. If the file
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
+        /// <param name="description">A description of the file request.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -129,12 +130,14 @@ namespace Dropbox.Api.FileRequests.Routes
         public t.Task<FileRequest> CreateAsync(string title,
                                                string destination,
                                                FileRequestDeadline deadline = null,
-                                               bool open = true)
+                                               bool open = true,
+                                               string description = null)
         {
             var createFileRequestArgs = new CreateFileRequestArgs(title,
                                                                   destination,
                                                                   deadline,
-                                                                  open);
+                                                                  open,
+                                                                  description);
 
             return this.CreateAsync(createFileRequestArgs);
         }
@@ -151,6 +154,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="open">Whether or not the file request should be open. If the file
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
+        /// <param name="description">A description of the file request.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -160,13 +164,15 @@ namespace Dropbox.Api.FileRequests.Routes
                                             string destination,
                                             FileRequestDeadline deadline = null,
                                             bool open = true,
+                                            string description = null,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
             var createFileRequestArgs = new CreateFileRequestArgs(title,
                                                                   destination,
                                                                   deadline,
-                                                                  open);
+                                                                  open,
+                                                                  description);
 
             return this.BeginCreate(createFileRequestArgs, callback, callbackState);
         }
@@ -692,6 +698,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="deadline">The new deadline for the file request. Deadlines can only be
         /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
+        /// <param name="description">The description of the file request.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -701,13 +708,15 @@ namespace Dropbox.Api.FileRequests.Routes
                                                string title = null,
                                                string destination = null,
                                                UpdateFileRequestDeadline deadline = null,
-                                               bool? open = null)
+                                               bool? open = null,
+                                               string description = null)
         {
             var updateFileRequestArgs = new UpdateFileRequestArgs(id,
                                                                   title,
                                                                   destination,
                                                                   deadline,
-                                                                  open);
+                                                                  open,
+                                                                  description);
 
             return this.UpdateAsync(updateFileRequestArgs);
         }
@@ -723,6 +732,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="deadline">The new deadline for the file request. Deadlines can only be
         /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
+        /// <param name="description">The description of the file request.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -733,6 +743,7 @@ namespace Dropbox.Api.FileRequests.Routes
                                             string destination = null,
                                             UpdateFileRequestDeadline deadline = null,
                                             bool? open = null,
+                                            string description = null,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
@@ -740,7 +751,8 @@ namespace Dropbox.Api.FileRequests.Routes
                                                                   title,
                                                                   destination,
                                                                   deadline,
-                                                                  open);
+                                                                  open,
+                                                                  description);
 
             return this.BeginUpdate(updateFileRequestArgs, callback, callbackState);
         }
