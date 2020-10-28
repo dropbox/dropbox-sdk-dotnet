@@ -980,6 +980,53 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DropboxPasswordsExported</para>
+        /// </summary>
+        public bool IsDropboxPasswordsExported
+        {
+            get
+            {
+                return this is DropboxPasswordsExported;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DropboxPasswordsExported, or <c>null</c>.</para>
+        /// </summary>
+        public DropboxPasswordsExported AsDropboxPasswordsExported
+        {
+            get
+            {
+                return this as DropboxPasswordsExported;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DropboxPasswordsNewDeviceEnrolled</para>
+        /// </summary>
+        public bool IsDropboxPasswordsNewDeviceEnrolled
+        {
+            get
+            {
+                return this is DropboxPasswordsNewDeviceEnrolled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DropboxPasswordsNewDeviceEnrolled, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DropboxPasswordsNewDeviceEnrolled AsDropboxPasswordsNewDeviceEnrolled
+        {
+            get
+            {
+                return this as DropboxPasswordsNewDeviceEnrolled;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is EmmRefreshAuthToken</para>
         /// </summary>
         public bool IsEmmRefreshAuthToken
@@ -7469,6 +7516,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ClassificationChangePolicy</para>
+        /// </summary>
+        public bool IsClassificationChangePolicy
+        {
+            get
+            {
+                return this is ClassificationChangePolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ClassificationChangePolicy, or <c>null</c>.</para>
+        /// </summary>
+        public ClassificationChangePolicy AsClassificationChangePolicy
+        {
+            get
+            {
+                return this as ClassificationChangePolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ComputerBackupPolicyChanged</para>
         /// </summary>
         public bool IsComputerBackupPolicyChanged
@@ -10299,6 +10369,18 @@ namespace Dropbox.Api.TeamLog
                     DeviceUnlink.Encoder.EncodeFields((DeviceUnlink)value, writer);
                     return;
                 }
+                if (value is DropboxPasswordsExported)
+                {
+                    WriteProperty(".tag", "dropbox_passwords_exported", writer, enc.StringEncoder.Instance);
+                    DropboxPasswordsExported.Encoder.EncodeFields((DropboxPasswordsExported)value, writer);
+                    return;
+                }
+                if (value is DropboxPasswordsNewDeviceEnrolled)
+                {
+                    WriteProperty(".tag", "dropbox_passwords_new_device_enrolled", writer, enc.StringEncoder.Instance);
+                    DropboxPasswordsNewDeviceEnrolled.Encoder.EncodeFields((DropboxPasswordsNewDeviceEnrolled)value, writer);
+                    return;
+                }
                 if (value is EmmRefreshAuthToken)
                 {
                     WriteProperty(".tag", "emm_refresh_auth_token", writer, enc.StringEncoder.Instance);
@@ -12021,6 +12103,12 @@ namespace Dropbox.Api.TeamLog
                     CameraUploadsPolicyChanged.Encoder.EncodeFields((CameraUploadsPolicyChanged)value, writer);
                     return;
                 }
+                if (value is ClassificationChangePolicy)
+                {
+                    WriteProperty(".tag", "classification_change_policy", writer, enc.StringEncoder.Instance);
+                    ClassificationChangePolicy.Encoder.EncodeFields((ClassificationChangePolicy)value, writer);
+                    return;
+                }
                 if (value is ComputerBackupPolicyChanged)
                 {
                     WriteProperty(".tag", "computer_backup_policy_changed", writer, enc.StringEncoder.Instance);
@@ -12803,6 +12891,10 @@ namespace Dropbox.Api.TeamLog
                         return DeviceSyncBackupStatusChanged.Decoder.DecodeFields(reader);
                     case "device_unlink":
                         return DeviceUnlink.Decoder.DecodeFields(reader);
+                    case "dropbox_passwords_exported":
+                        return DropboxPasswordsExported.Decoder.DecodeFields(reader);
+                    case "dropbox_passwords_new_device_enrolled":
+                        return DropboxPasswordsNewDeviceEnrolled.Decoder.DecodeFields(reader);
                     case "emm_refresh_auth_token":
                         return EmmRefreshAuthToken.Decoder.DecodeFields(reader);
                     case "account_capture_change_availability":
@@ -13377,6 +13469,8 @@ namespace Dropbox.Api.TeamLog
                         return AllowDownloadEnabled.Decoder.DecodeFields(reader);
                     case "camera_uploads_policy_changed":
                         return CameraUploadsPolicyChanged.Decoder.DecodeFields(reader);
+                    case "classification_change_policy":
+                        return ClassificationChangePolicy.Decoder.DecodeFields(reader);
                     case "computer_backup_policy_changed":
                         return ComputerBackupPolicyChanged.Decoder.DecodeFields(reader);
                     case "content_administration_policy_changed":
@@ -16572,6 +16666,148 @@ namespace Dropbox.Api.TeamLog
                 protected override DeviceUnlink Create()
                 {
                     return DeviceUnlink.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(devices) Exported passwords</para>
+        /// </summary>
+        public sealed class DropboxPasswordsExported : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DropboxPasswordsExported> Encoder = new DropboxPasswordsExportedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DropboxPasswordsExported> Decoder = new DropboxPasswordsExportedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DropboxPasswordsExported" />
+            /// class.</para>
+            /// </summary>
+            private DropboxPasswordsExported()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DropboxPasswordsExported</para>
+            /// </summary>
+            public static readonly DropboxPasswordsExported Instance = new DropboxPasswordsExported();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DropboxPasswordsExported" />.</para>
+            /// </summary>
+            private class DropboxPasswordsExportedEncoder : enc.StructEncoder<DropboxPasswordsExported>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DropboxPasswordsExported value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DropboxPasswordsExported" />.</para>
+            /// </summary>
+            private class DropboxPasswordsExportedDecoder : enc.StructDecoder<DropboxPasswordsExported>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DropboxPasswordsExported"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DropboxPasswordsExported Create()
+                {
+                    return DropboxPasswordsExported.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(devices) Enrolled new Dropbox Passwords device</para>
+        /// </summary>
+        public sealed class DropboxPasswordsNewDeviceEnrolled : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DropboxPasswordsNewDeviceEnrolled> Encoder = new DropboxPasswordsNewDeviceEnrolledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DropboxPasswordsNewDeviceEnrolled> Decoder = new DropboxPasswordsNewDeviceEnrolledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DropboxPasswordsNewDeviceEnrolled" /> class.</para>
+            /// </summary>
+            private DropboxPasswordsNewDeviceEnrolled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DropboxPasswordsNewDeviceEnrolled</para>
+            /// </summary>
+            public static readonly DropboxPasswordsNewDeviceEnrolled Instance = new DropboxPasswordsNewDeviceEnrolled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DropboxPasswordsNewDeviceEnrolled" />.</para>
+            /// </summary>
+            private class DropboxPasswordsNewDeviceEnrolledEncoder : enc.StructEncoder<DropboxPasswordsNewDeviceEnrolled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DropboxPasswordsNewDeviceEnrolled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DropboxPasswordsNewDeviceEnrolled" />.</para>
+            /// </summary>
+            private class DropboxPasswordsNewDeviceEnrolledDecoder : enc.StructDecoder<DropboxPasswordsNewDeviceEnrolled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DropboxPasswordsNewDeviceEnrolled" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DropboxPasswordsNewDeviceEnrolled Create()
+                {
+                    return DropboxPasswordsNewDeviceEnrolled.Instance;
                 }
 
             }
@@ -36919,6 +37155,77 @@ namespace Dropbox.Api.TeamLog
                 protected override CameraUploadsPolicyChanged Create()
                 {
                     return CameraUploadsPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed classification policy for team</para>
+        /// </summary>
+        public sealed class ClassificationChangePolicy : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ClassificationChangePolicy> Encoder = new ClassificationChangePolicyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ClassificationChangePolicy> Decoder = new ClassificationChangePolicyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ClassificationChangePolicy"
+            /// /> class.</para>
+            /// </summary>
+            private ClassificationChangePolicy()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ClassificationChangePolicy</para>
+            /// </summary>
+            public static readonly ClassificationChangePolicy Instance = new ClassificationChangePolicy();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ClassificationChangePolicy" />.</para>
+            /// </summary>
+            private class ClassificationChangePolicyEncoder : enc.StructEncoder<ClassificationChangePolicy>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ClassificationChangePolicy value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ClassificationChangePolicy" />.</para>
+            /// </summary>
+            private class ClassificationChangePolicyDecoder : enc.StructDecoder<ClassificationChangePolicy>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ClassificationChangePolicy"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ClassificationChangePolicy Create()
+                {
+                    return ClassificationChangePolicy.Instance;
                 }
 
             }
