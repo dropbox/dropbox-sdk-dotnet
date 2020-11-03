@@ -53,6 +53,6 @@ powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TES
 
 [issues]: https://github.com/dropbox/dropbox-sdk-dotnet/issues
 [pr]: https://github.com/dropbox/dropbox-sdk-dotnet/pulls
-[coc]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/CODE_OF_CONDUCT.md
-[license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE
+[coc]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/CODE_OF_CONDUCT.md
+[license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/LICENSE
 [cla]: https://opensource.dropbox.com/cla/
