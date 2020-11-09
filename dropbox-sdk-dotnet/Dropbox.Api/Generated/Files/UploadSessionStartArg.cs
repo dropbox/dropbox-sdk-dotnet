@@ -35,9 +35,14 @@ namespace Dropbox.Api.Files
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
-        public UploadSessionStartArg(bool close = false)
+        /// <param name="sessionType">Type of upload session you want to start. If not
+        /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
+        /// />.</param>
+        public UploadSessionStartArg(bool close = false,
+                                     UploadSessionType sessionType = null)
         {
             this.Close = close;
+            this.SessionType = sessionType;
         }
 
         /// <summary>
@@ -60,6 +65,12 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool Close { get; protected set; }
 
+        /// <summary>
+        /// <para>Type of upload session you want to start. If not specified, default is <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Sequential" />.</para>
+        /// </summary>
+        public UploadSessionType SessionType { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +86,10 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(UploadSessionStartArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("close", value.Close, writer, enc.BooleanEncoder.Instance);
+                if (value.SessionType != null)
+                {
+                    WriteProperty("session_type", value.SessionType, writer, global::Dropbox.Api.Files.UploadSessionType.Encoder);
+                }
             }
         }
 
@@ -110,6 +125,9 @@ namespace Dropbox.Api.Files
                 {
                     case "close":
                         value.Close = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "session_type":
+                        value.SessionType = global::Dropbox.Api.Files.UploadSessionType.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

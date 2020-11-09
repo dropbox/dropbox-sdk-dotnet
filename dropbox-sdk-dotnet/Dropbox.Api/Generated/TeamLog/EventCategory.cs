@@ -35,6 +35,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AdminAlerting</para>
+        /// </summary>
+        public bool IsAdminAlerting
+        {
+            get
+            {
+                return this is AdminAlerting;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AdminAlerting, or <c>null</c>.</para>
+        /// </summary>
+        public AdminAlerting AsAdminAlerting
+        {
+            get
+            {
+                return this as AdminAlerting;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Apps</para>
         /// </summary>
         public bool IsApps
@@ -532,6 +554,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(EventCategory value, enc.IJsonWriter writer)
             {
+                if (value is AdminAlerting)
+                {
+                    WriteProperty(".tag", "admin_alerting", writer, enc.StringEncoder.Instance);
+                    AdminAlerting.Encoder.EncodeFields((AdminAlerting)value, writer);
+                    return;
+                }
                 if (value is Apps)
                 {
                     WriteProperty(".tag", "apps", writer, enc.StringEncoder.Instance);
@@ -696,6 +724,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "admin_alerting":
+                        return AdminAlerting.Decoder.DecodeFields(reader);
                     case "apps":
                         return Apps.Decoder.DecodeFields(reader);
                     case "comments":
@@ -745,6 +775,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Events that involve team related alerts.</para>
+        /// </summary>
+        public sealed class AdminAlerting : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminAlerting> Encoder = new AdminAlertingEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminAlerting> Decoder = new AdminAlertingDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminAlerting" />
+            /// class.</para>
+            /// </summary>
+            private AdminAlerting()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AdminAlerting</para>
+            /// </summary>
+            public static readonly AdminAlerting Instance = new AdminAlerting();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminAlerting" />.</para>
+            /// </summary>
+            private class AdminAlertingEncoder : enc.StructEncoder<AdminAlerting>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminAlerting value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminAlerting" />.</para>
+            /// </summary>
+            private class AdminAlertingDecoder : enc.StructDecoder<AdminAlerting>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AdminAlerting" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminAlerting Create()
+                {
+                    return AdminAlerting.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>Events that apply to management of linked apps.</para>
