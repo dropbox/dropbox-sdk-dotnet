@@ -148,6 +148,76 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ConcurrentSessionDataNotAllowed</para>
+        /// </summary>
+        public bool IsConcurrentSessionDataNotAllowed
+        {
+            get
+            {
+                return this is ConcurrentSessionDataNotAllowed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ConcurrentSessionDataNotAllowed, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ConcurrentSessionDataNotAllowed AsConcurrentSessionDataNotAllowed
+        {
+            get
+            {
+                return this as ConcurrentSessionDataNotAllowed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ConcurrentSessionNotClosed</para>
+        /// </summary>
+        public bool IsConcurrentSessionNotClosed
+        {
+            get
+            {
+                return this is ConcurrentSessionNotClosed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ConcurrentSessionNotClosed, or <c>null</c>.</para>
+        /// </summary>
+        public ConcurrentSessionNotClosed AsConcurrentSessionNotClosed
+        {
+            get
+            {
+                return this as ConcurrentSessionNotClosed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ConcurrentSessionMissingData</para>
+        /// </summary>
+        public bool IsConcurrentSessionMissingData
+        {
+            get
+            {
+                return this is ConcurrentSessionMissingData;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ConcurrentSessionMissingData, or <c>null</c>.</para>
+        /// </summary>
+        public ConcurrentSessionMissingData AsConcurrentSessionMissingData
+        {
+            get
+            {
+                return this as ConcurrentSessionMissingData;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -213,6 +283,24 @@ namespace Dropbox.Api.Files
                     TooManyWriteOperations.Encoder.EncodeFields((TooManyWriteOperations)value, writer);
                     return;
                 }
+                if (value is ConcurrentSessionDataNotAllowed)
+                {
+                    WriteProperty(".tag", "concurrent_session_data_not_allowed", writer, enc.StringEncoder.Instance);
+                    ConcurrentSessionDataNotAllowed.Encoder.EncodeFields((ConcurrentSessionDataNotAllowed)value, writer);
+                    return;
+                }
+                if (value is ConcurrentSessionNotClosed)
+                {
+                    WriteProperty(".tag", "concurrent_session_not_closed", writer, enc.StringEncoder.Instance);
+                    ConcurrentSessionNotClosed.Encoder.EncodeFields((ConcurrentSessionNotClosed)value, writer);
+                    return;
+                }
+                if (value is ConcurrentSessionMissingData)
+                {
+                    WriteProperty(".tag", "concurrent_session_missing_data", writer, enc.StringEncoder.Instance);
+                    ConcurrentSessionMissingData.Encoder.EncodeFields((ConcurrentSessionMissingData)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -262,6 +350,12 @@ namespace Dropbox.Api.Files
                         return TooManySharedFolderTargets.Decoder.DecodeFields(reader);
                     case "too_many_write_operations":
                         return TooManyWriteOperations.Decoder.DecodeFields(reader);
+                    case "concurrent_session_data_not_allowed":
+                        return ConcurrentSessionDataNotAllowed.Decoder.DecodeFields(reader);
+                    case "concurrent_session_not_closed":
+                        return ConcurrentSessionNotClosed.Decoder.DecodeFields(reader);
+                    case "concurrent_session_missing_data":
+                        return ConcurrentSessionMissingData.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -703,6 +797,220 @@ namespace Dropbox.Api.Files
                 protected override TooManyWriteOperations Create()
                 {
                     return TooManyWriteOperations.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Uploading data not allowed when finishing concurrent upload session.</para>
+        /// </summary>
+        public sealed class ConcurrentSessionDataNotAllowed : UploadSessionFinishError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ConcurrentSessionDataNotAllowed> Encoder = new ConcurrentSessionDataNotAllowedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ConcurrentSessionDataNotAllowed> Decoder = new ConcurrentSessionDataNotAllowedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ConcurrentSessionDataNotAllowed" /> class.</para>
+            /// </summary>
+            private ConcurrentSessionDataNotAllowed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ConcurrentSessionDataNotAllowed</para>
+            /// </summary>
+            public static readonly ConcurrentSessionDataNotAllowed Instance = new ConcurrentSessionDataNotAllowed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ConcurrentSessionDataNotAllowed" />.</para>
+            /// </summary>
+            private class ConcurrentSessionDataNotAllowedEncoder : enc.StructEncoder<ConcurrentSessionDataNotAllowed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ConcurrentSessionDataNotAllowed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ConcurrentSessionDataNotAllowed" />.</para>
+            /// </summary>
+            private class ConcurrentSessionDataNotAllowedDecoder : enc.StructDecoder<ConcurrentSessionDataNotAllowed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ConcurrentSessionDataNotAllowed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ConcurrentSessionDataNotAllowed Create()
+                {
+                    return ConcurrentSessionDataNotAllowed.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Concurrent upload sessions need to be closed before finishing.</para>
+        /// </summary>
+        public sealed class ConcurrentSessionNotClosed : UploadSessionFinishError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ConcurrentSessionNotClosed> Encoder = new ConcurrentSessionNotClosedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ConcurrentSessionNotClosed> Decoder = new ConcurrentSessionNotClosedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ConcurrentSessionNotClosed"
+            /// /> class.</para>
+            /// </summary>
+            private ConcurrentSessionNotClosed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ConcurrentSessionNotClosed</para>
+            /// </summary>
+            public static readonly ConcurrentSessionNotClosed Instance = new ConcurrentSessionNotClosed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ConcurrentSessionNotClosed" />.</para>
+            /// </summary>
+            private class ConcurrentSessionNotClosedEncoder : enc.StructEncoder<ConcurrentSessionNotClosed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ConcurrentSessionNotClosed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ConcurrentSessionNotClosed" />.</para>
+            /// </summary>
+            private class ConcurrentSessionNotClosedDecoder : enc.StructDecoder<ConcurrentSessionNotClosed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ConcurrentSessionNotClosed"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ConcurrentSessionNotClosed Create()
+                {
+                    return ConcurrentSessionNotClosed.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Not all pieces of data were uploaded before trying to finish the
+        /// session.</para>
+        /// </summary>
+        public sealed class ConcurrentSessionMissingData : UploadSessionFinishError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ConcurrentSessionMissingData> Encoder = new ConcurrentSessionMissingDataEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ConcurrentSessionMissingData> Decoder = new ConcurrentSessionMissingDataDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ConcurrentSessionMissingData" /> class.</para>
+            /// </summary>
+            private ConcurrentSessionMissingData()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ConcurrentSessionMissingData</para>
+            /// </summary>
+            public static readonly ConcurrentSessionMissingData Instance = new ConcurrentSessionMissingData();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ConcurrentSessionMissingData" />.</para>
+            /// </summary>
+            private class ConcurrentSessionMissingDataEncoder : enc.StructEncoder<ConcurrentSessionMissingData>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ConcurrentSessionMissingData value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ConcurrentSessionMissingData" />.</para>
+            /// </summary>
+            private class ConcurrentSessionMissingDataDecoder : enc.StructDecoder<ConcurrentSessionMissingData>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ConcurrentSessionMissingData" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ConcurrentSessionMissingData Create()
+                {
+                    return ConcurrentSessionMissingData.Instance;
                 }
 
             }

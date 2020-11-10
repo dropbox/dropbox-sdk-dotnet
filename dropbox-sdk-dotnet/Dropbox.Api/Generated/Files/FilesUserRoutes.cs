@@ -6716,14 +6716,43 @@ namespace Dropbox.Api.Files.Routes
         /// month. For more information, see the <a
         /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
         /// transport limit page</a>.</para>
+        /// <para>By default, upload sessions require you to send content of the file in
+        /// sequential order via consecutive <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> calls.
+        /// For better performance, you can instead optionally use a <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" /> upload session. To start a
+        /// new concurrent session, set <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartArg.SessionType" /> to <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" />. After that, you can send
+        /// file data in concurrent <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// requests. Finally finish the session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />.</para>
+        /// <para>There are couple of constraints with concurrent sessions to make them work.
+        /// You can not send data with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> call,
+        /// only with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
+        /// Also data uploaded in <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
+        /// must be multiple of 4194304 bytes (except for last <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> with
+        /// <see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> to <c>true</c>, that
+        /// may contain any remaining data).</para>
         /// </summary>
         /// <param name="uploadSessionStartArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UploadSessionStartError"/>.</exception>
         public t.Task<UploadSessionStartResult> UploadSessionStartAsync(UploadSessionStartArg uploadSessionStartArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionStartArg, UploadSessionStartResult, enc.Empty>(uploadSessionStartArg, body, "content", "/files/upload_session/start", "user", global::Dropbox.Api.Files.UploadSessionStartArg.Encoder, global::Dropbox.Api.Files.UploadSessionStartResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendUploadRequestAsync<UploadSessionStartArg, UploadSessionStartResult, UploadSessionStartError>(uploadSessionStartArg, body, "content", "/files/upload_session/start", "user", global::Dropbox.Api.Files.UploadSessionStartArg.Encoder, global::Dropbox.Api.Files.UploadSessionStartResult.Decoder, global::Dropbox.Api.Files.UploadSessionStartError.Decoder);
         }
 
         /// <summary>
@@ -6764,18 +6793,52 @@ namespace Dropbox.Api.Files.Routes
         /// month. For more information, see the <a
         /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
         /// transport limit page</a>.</para>
+        /// <para>By default, upload sessions require you to send content of the file in
+        /// sequential order via consecutive <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />, <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> calls.
+        /// For better performance, you can instead optionally use a <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" /> upload session. To start a
+        /// new concurrent session, set <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartArg.SessionType" /> to <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" />. After that, you can send
+        /// file data in concurrent <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// requests. Finally finish the session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />.</para>
+        /// <para>There are couple of constraints with concurrent sessions to make them work.
+        /// You can not send data with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> call,
+        /// only with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
+        /// Also data uploaded in <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
+        /// must be multiple of 4194304 bytes (except for last <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> with
+        /// <see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> to <c>true</c>, that
+        /// may contain any remaining data).</para>
         /// </summary>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
+        /// <param name="sessionType">Type of upload session you want to start. If not
+        /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
+        /// />.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UploadSessionStartError"/>.</exception>
         public t.Task<UploadSessionStartResult> UploadSessionStartAsync(bool close = false,
+                                                                        UploadSessionType sessionType = null,
                                                                         io.Stream body = null)
         {
-            var uploadSessionStartArg = new UploadSessionStartArg(close);
+            var uploadSessionStartArg = new UploadSessionStartArg(close,
+                                                                  sessionType);
 
             return this.UploadSessionStartAsync(uploadSessionStartArg, body);
         }
@@ -6787,6 +6850,9 @@ namespace Dropbox.Api.Files.Routes
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
+        /// <param name="sessionType">Type of upload session you want to start. If not
+        /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
+        /// />.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -6794,11 +6860,13 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionStart(bool close = false,
+                                                        UploadSessionType sessionType = null,
                                                         io.Stream body = null,
                                                         sys.AsyncCallback callback = null,
                                                         object callbackState = null)
         {
-            var uploadSessionStartArg = new UploadSessionStartArg(close);
+            var uploadSessionStartArg = new UploadSessionStartArg(close,
+                                                                  sessionType);
 
             return this.BeginUploadSessionStart(uploadSessionStartArg, body, callback, callbackState);
         }
@@ -6810,6 +6878,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UploadSessionStartError"/>.</exception>
         public UploadSessionStartResult EndUploadSessionStart(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<UploadSessionStartResult>;

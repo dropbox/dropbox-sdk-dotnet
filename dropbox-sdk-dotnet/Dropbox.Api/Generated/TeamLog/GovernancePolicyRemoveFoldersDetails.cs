@@ -35,10 +35,12 @@ namespace Dropbox.Api.TeamLog
         /// <param name="name">Policy name.</param>
         /// <param name="policyType">Policy type.</param>
         /// <param name="folders">Folders.</param>
+        /// <param name="reason">Reason.</param>
         public GovernancePolicyRemoveFoldersDetails(string governancePolicyId,
                                                     string name,
                                                     PolicyType policyType = null,
-                                                    col.IEnumerable<string> folders = null)
+                                                    col.IEnumerable<string> folders = null,
+                                                    string reason = null)
         {
             if (governancePolicyId == null)
             {
@@ -56,6 +58,7 @@ namespace Dropbox.Api.TeamLog
             this.Name = name;
             this.PolicyType = policyType;
             this.Folders = foldersList;
+            this.Reason = reason;
         }
 
         /// <summary>
@@ -89,6 +92,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public col.IList<string> Folders { get; protected set; }
 
+        /// <summary>
+        /// <para>Reason.</para>
+        /// </summary>
+        public string Reason { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -112,6 +120,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.Folders.Count > 0)
                 {
                     WriteListProperty("folders", value.Folders, writer, enc.StringEncoder.Instance);
+                }
+                if (value.Reason != null)
+                {
+                    WriteProperty("reason", value.Reason, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -157,6 +169,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "folders":
                         value.Folders = ReadList<string>(reader, enc.StringDecoder.Instance);
+                        break;
+                    case "reason":
+                        value.Reason = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
