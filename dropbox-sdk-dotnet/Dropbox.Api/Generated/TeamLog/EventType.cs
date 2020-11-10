@@ -35,6 +35,30 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AdminAlertingChangedAlertConfig</para>
+        /// </summary>
+        public bool IsAdminAlertingChangedAlertConfig
+        {
+            get
+            {
+                return this is AdminAlertingChangedAlertConfig;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AdminAlertingChangedAlertConfig, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public AdminAlertingChangedAlertConfig AsAdminAlertingChangedAlertConfig
+        {
+            get
+            {
+                return this as AdminAlertingChangedAlertConfig;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is AppLinkTeam</para>
         /// </summary>
         public bool IsAppLinkTeam
@@ -2715,6 +2739,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as MemberChangeName;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MemberChangeResellerRole</para>
+        /// </summary>
+        public bool IsMemberChangeResellerRole
+        {
+            get
+            {
+                return this is MemberChangeResellerRole;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberChangeResellerRole, or <c>null</c>.</para>
+        /// </summary>
+        public MemberChangeResellerRole AsMemberChangeResellerRole
+        {
+            get
+            {
+                return this as MemberChangeResellerRole;
             }
         }
 
@@ -9227,6 +9274,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamProfileAddBackground</para>
+        /// </summary>
+        public bool IsTeamProfileAddBackground
+        {
+            get
+            {
+                return this is TeamProfileAddBackground;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamProfileAddBackground, or <c>null</c>.</para>
+        /// </summary>
+        public TeamProfileAddBackground AsTeamProfileAddBackground
+        {
+            get
+            {
+                return this as TeamProfileAddBackground;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TeamProfileAddLogo</para>
         /// </summary>
         public bool IsTeamProfileAddLogo
@@ -9245,6 +9315,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamProfileAddLogo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamProfileChangeBackground</para>
+        /// </summary>
+        public bool IsTeamProfileChangeBackground
+        {
+            get
+            {
+                return this is TeamProfileChangeBackground;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamProfileChangeBackground, or <c>null</c>.</para>
+        /// </summary>
+        public TeamProfileChangeBackground AsTeamProfileChangeBackground
+        {
+            get
+            {
+                return this as TeamProfileChangeBackground;
             }
         }
 
@@ -9313,6 +9406,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamProfileChangeName;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamProfileRemoveBackground</para>
+        /// </summary>
+        public bool IsTeamProfileRemoveBackground
+        {
+            get
+            {
+                return this is TeamProfileRemoveBackground;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamProfileRemoveBackground, or <c>null</c>.</para>
+        /// </summary>
+        public TeamProfileRemoveBackground AsTeamProfileRemoveBackground
+        {
+            get
+            {
+                return this as TeamProfileRemoveBackground;
             }
         }
 
@@ -10117,6 +10233,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(EventType value, enc.IJsonWriter writer)
             {
+                if (value is AdminAlertingChangedAlertConfig)
+                {
+                    WriteProperty(".tag", "admin_alerting_changed_alert_config", writer, enc.StringEncoder.Instance);
+                    AdminAlertingChangedAlertConfig.Encoder.EncodeFields((AdminAlertingChangedAlertConfig)value, writer);
+                    return;
+                }
                 if (value is AppLinkTeam)
                 {
                     WriteProperty(".tag", "app_link_team", writer, enc.StringEncoder.Instance);
@@ -10829,6 +10951,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "member_change_name", writer, enc.StringEncoder.Instance);
                     MemberChangeName.Encoder.EncodeFields((MemberChangeName)value, writer);
+                    return;
+                }
+                if (value is MemberChangeResellerRole)
+                {
+                    WriteProperty(".tag", "member_change_reseller_role", writer, enc.StringEncoder.Instance);
+                    MemberChangeResellerRole.Encoder.EncodeFields((MemberChangeResellerRole)value, writer);
                     return;
                 }
                 if (value is MemberChangeStatus)
@@ -12547,10 +12675,22 @@ namespace Dropbox.Api.TeamLog
                     TeamMergeTo.Encoder.EncodeFields((TeamMergeTo)value, writer);
                     return;
                 }
+                if (value is TeamProfileAddBackground)
+                {
+                    WriteProperty(".tag", "team_profile_add_background", writer, enc.StringEncoder.Instance);
+                    TeamProfileAddBackground.Encoder.EncodeFields((TeamProfileAddBackground)value, writer);
+                    return;
+                }
                 if (value is TeamProfileAddLogo)
                 {
                     WriteProperty(".tag", "team_profile_add_logo", writer, enc.StringEncoder.Instance);
                     TeamProfileAddLogo.Encoder.EncodeFields((TeamProfileAddLogo)value, writer);
+                    return;
+                }
+                if (value is TeamProfileChangeBackground)
+                {
+                    WriteProperty(".tag", "team_profile_change_background", writer, enc.StringEncoder.Instance);
+                    TeamProfileChangeBackground.Encoder.EncodeFields((TeamProfileChangeBackground)value, writer);
                     return;
                 }
                 if (value is TeamProfileChangeDefaultLanguage)
@@ -12569,6 +12709,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "team_profile_change_name", writer, enc.StringEncoder.Instance);
                     TeamProfileChangeName.Encoder.EncodeFields((TeamProfileChangeName)value, writer);
+                    return;
+                }
+                if (value is TeamProfileRemoveBackground)
+                {
+                    WriteProperty(".tag", "team_profile_remove_background", writer, enc.StringEncoder.Instance);
+                    TeamProfileRemoveBackground.Encoder.EncodeFields((TeamProfileRemoveBackground)value, writer);
                     return;
                 }
                 if (value is TeamProfileRemoveLogo)
@@ -12807,6 +12953,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "admin_alerting_changed_alert_config":
+                        return AdminAlertingChangedAlertConfig.Decoder.DecodeFields(reader);
                     case "app_link_team":
                         return AppLinkTeam.Decoder.DecodeFields(reader);
                     case "app_link_user":
@@ -13045,6 +13193,8 @@ namespace Dropbox.Api.TeamLog
                         return MemberChangeMembershipType.Decoder.DecodeFields(reader);
                     case "member_change_name":
                         return MemberChangeName.Decoder.DecodeFields(reader);
+                    case "member_change_reseller_role":
+                        return MemberChangeResellerRole.Decoder.DecodeFields(reader);
                     case "member_change_status":
                         return MemberChangeStatus.Decoder.DecodeFields(reader);
                     case "member_delete_manual_contacts":
@@ -13617,14 +13767,20 @@ namespace Dropbox.Api.TeamLog
                         return TeamMergeFrom.Decoder.DecodeFields(reader);
                     case "team_merge_to":
                         return TeamMergeTo.Decoder.DecodeFields(reader);
+                    case "team_profile_add_background":
+                        return TeamProfileAddBackground.Decoder.DecodeFields(reader);
                     case "team_profile_add_logo":
                         return TeamProfileAddLogo.Decoder.DecodeFields(reader);
+                    case "team_profile_change_background":
+                        return TeamProfileChangeBackground.Decoder.DecodeFields(reader);
                     case "team_profile_change_default_language":
                         return TeamProfileChangeDefaultLanguage.Decoder.DecodeFields(reader);
                     case "team_profile_change_logo":
                         return TeamProfileChangeLogo.Decoder.DecodeFields(reader);
                     case "team_profile_change_name":
                         return TeamProfileChangeName.Decoder.DecodeFields(reader);
+                    case "team_profile_remove_background":
+                        return TeamProfileRemoveBackground.Decoder.DecodeFields(reader);
                     case "team_profile_remove_logo":
                         return TeamProfileRemoveLogo.Decoder.DecodeFields(reader);
                     case "tfa_add_backup_phone":
@@ -13698,6 +13854,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>(admin_alerting) Changed an alert setting</para>
+        /// </summary>
+        public sealed class AdminAlertingChangedAlertConfig : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminAlertingChangedAlertConfig> Encoder = new AdminAlertingChangedAlertConfigEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminAlertingChangedAlertConfig> Decoder = new AdminAlertingChangedAlertConfigDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AdminAlertingChangedAlertConfig" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AdminAlertingChangedAlertConfig(AdminAlertingChangedAlertConfigType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AdminAlertingChangedAlertConfig" /> class.</para>
+            /// </summary>
+            private AdminAlertingChangedAlertConfig()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public AdminAlertingChangedAlertConfigType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminAlertingChangedAlertConfig" />.</para>
+            /// </summary>
+            private class AdminAlertingChangedAlertConfigEncoder : enc.StructEncoder<AdminAlertingChangedAlertConfig>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminAlertingChangedAlertConfig value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("admin_alerting_changed_alert_config", value.Value, writer, global::Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminAlertingChangedAlertConfig" />.</para>
+            /// </summary>
+            private class AdminAlertingChangedAlertConfigDecoder : enc.StructDecoder<AdminAlertingChangedAlertConfig>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="AdminAlertingChangedAlertConfig" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminAlertingChangedAlertConfig Create()
+                {
+                    return new AdminAlertingChangedAlertConfig();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AdminAlertingChangedAlertConfig DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AdminAlertingChangedAlertConfig(global::Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>(apps) Linked app for team</para>
@@ -24356,6 +24602,96 @@ namespace Dropbox.Api.TeamLog
                 public override MemberChangeName DecodeFields(enc.IJsonReader reader)
                 {
                     return new MemberChangeName(global::Dropbox.Api.TeamLog.MemberChangeNameType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(members) Changed team member reseller role</para>
+        /// </summary>
+        public sealed class MemberChangeResellerRole : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberChangeResellerRole> Encoder = new MemberChangeResellerRoleEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberChangeResellerRole> Decoder = new MemberChangeResellerRoleDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberChangeResellerRole" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MemberChangeResellerRole(MemberChangeResellerRoleType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberChangeResellerRole" />
+            /// class.</para>
+            /// </summary>
+            private MemberChangeResellerRole()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public MemberChangeResellerRoleType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberChangeResellerRole" />.</para>
+            /// </summary>
+            private class MemberChangeResellerRoleEncoder : enc.StructEncoder<MemberChangeResellerRole>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberChangeResellerRole value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("member_change_reseller_role", value.Value, writer, global::Dropbox.Api.TeamLog.MemberChangeResellerRoleType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberChangeResellerRole" />.</para>
+            /// </summary>
+            private class MemberChangeResellerRoleDecoder : enc.StructDecoder<MemberChangeResellerRole>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MemberChangeResellerRole"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberChangeResellerRole Create()
+                {
+                    return new MemberChangeResellerRole();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MemberChangeResellerRole DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MemberChangeResellerRole(global::Dropbox.Api.TeamLog.MemberChangeResellerRoleType.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -50115,6 +50451,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(team_profile) Added team background to display on shared link headers</para>
+        /// </summary>
+        public sealed class TeamProfileAddBackground : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamProfileAddBackground> Encoder = new TeamProfileAddBackgroundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamProfileAddBackground> Decoder = new TeamProfileAddBackgroundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamProfileAddBackground" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamProfileAddBackground(TeamProfileAddBackgroundType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamProfileAddBackground" />
+            /// class.</para>
+            /// </summary>
+            private TeamProfileAddBackground()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamProfileAddBackgroundType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamProfileAddBackground" />.</para>
+            /// </summary>
+            private class TeamProfileAddBackgroundEncoder : enc.StructEncoder<TeamProfileAddBackground>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamProfileAddBackground value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_profile_add_background", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileAddBackgroundType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamProfileAddBackground" />.</para>
+            /// </summary>
+            private class TeamProfileAddBackgroundDecoder : enc.StructDecoder<TeamProfileAddBackground>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamProfileAddBackground"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamProfileAddBackground Create()
+                {
+                    return new TeamProfileAddBackground();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamProfileAddBackground DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamProfileAddBackground(global::Dropbox.Api.TeamLog.TeamProfileAddBackgroundType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(team_profile) Added team logo to display on shared link headers</para>
         /// </summary>
         public sealed class TeamProfileAddLogo : EventType
@@ -50198,6 +50624,97 @@ namespace Dropbox.Api.TeamLog
                 public override TeamProfileAddLogo DecodeFields(enc.IJsonReader reader)
                 {
                     return new TeamProfileAddLogo(global::Dropbox.Api.TeamLog.TeamProfileAddLogoType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_profile) Changed team background displayed on shared link
+        /// headers</para>
+        /// </summary>
+        public sealed class TeamProfileChangeBackground : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamProfileChangeBackground> Encoder = new TeamProfileChangeBackgroundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamProfileChangeBackground> Decoder = new TeamProfileChangeBackgroundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamProfileChangeBackground"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamProfileChangeBackground(TeamProfileChangeBackgroundType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamProfileChangeBackground"
+            /// /> class.</para>
+            /// </summary>
+            private TeamProfileChangeBackground()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamProfileChangeBackgroundType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamProfileChangeBackground" />.</para>
+            /// </summary>
+            private class TeamProfileChangeBackgroundEncoder : enc.StructEncoder<TeamProfileChangeBackground>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamProfileChangeBackground value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_profile_change_background", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileChangeBackgroundType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamProfileChangeBackground" />.</para>
+            /// </summary>
+            private class TeamProfileChangeBackgroundDecoder : enc.StructDecoder<TeamProfileChangeBackground>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamProfileChangeBackground"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamProfileChangeBackground Create()
+                {
+                    return new TeamProfileChangeBackground();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamProfileChangeBackground DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamProfileChangeBackground(global::Dropbox.Api.TeamLog.TeamProfileChangeBackgroundType.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -50468,6 +50985,97 @@ namespace Dropbox.Api.TeamLog
                 public override TeamProfileChangeName DecodeFields(enc.IJsonReader reader)
                 {
                     return new TeamProfileChangeName(global::Dropbox.Api.TeamLog.TeamProfileChangeNameType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_profile) Removed team background displayed on shared link
+        /// headers</para>
+        /// </summary>
+        public sealed class TeamProfileRemoveBackground : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamProfileRemoveBackground> Encoder = new TeamProfileRemoveBackgroundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamProfileRemoveBackground> Decoder = new TeamProfileRemoveBackgroundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamProfileRemoveBackground"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamProfileRemoveBackground(TeamProfileRemoveBackgroundType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamProfileRemoveBackground"
+            /// /> class.</para>
+            /// </summary>
+            private TeamProfileRemoveBackground()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamProfileRemoveBackgroundType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamProfileRemoveBackground" />.</para>
+            /// </summary>
+            private class TeamProfileRemoveBackgroundEncoder : enc.StructEncoder<TeamProfileRemoveBackground>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamProfileRemoveBackground value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_profile_remove_background", value.Value, writer, global::Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamProfileRemoveBackground" />.</para>
+            /// </summary>
+            private class TeamProfileRemoveBackgroundDecoder : enc.StructDecoder<TeamProfileRemoveBackground>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamProfileRemoveBackground"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamProfileRemoveBackground Create()
+                {
+                    return new TeamProfileRemoveBackground();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamProfileRemoveBackground DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamProfileRemoveBackground(global::Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundType.Decoder.DecodeFields(reader));
                 }
             }
 
