@@ -4298,6 +4298,53 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ClassificationCreateReport</para>
+        /// </summary>
+        public bool IsClassificationCreateReport
+        {
+            get
+            {
+                return this is ClassificationCreateReport;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ClassificationCreateReport, or <c>null</c>.</para>
+        /// </summary>
+        public ClassificationCreateReport AsClassificationCreateReport
+        {
+            get
+            {
+                return this as ClassificationCreateReport;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ClassificationCreateReportFail</para>
+        /// </summary>
+        public bool IsClassificationCreateReportFail
+        {
+            get
+            {
+                return this is ClassificationCreateReportFail;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ClassificationCreateReportFail, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ClassificationCreateReportFail AsClassificationCreateReportFail
+        {
+            get
+            {
+                return this as ClassificationCreateReportFail;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// EmmCreateExceptionsReport</para>
         /// </summary>
         public bool IsEmmCreateExceptionsReport
@@ -11367,6 +11414,18 @@ namespace Dropbox.Api.TeamLog
                     PasswordResetAll.Encoder.EncodeFields((PasswordResetAll)value, writer);
                     return;
                 }
+                if (value is ClassificationCreateReport)
+                {
+                    WriteProperty(".tag", "classification_create_report", writer, enc.StringEncoder.Instance);
+                    ClassificationCreateReport.Encoder.EncodeFields((ClassificationCreateReport)value, writer);
+                    return;
+                }
+                if (value is ClassificationCreateReportFail)
+                {
+                    WriteProperty(".tag", "classification_create_report_fail", writer, enc.StringEncoder.Instance);
+                    ClassificationCreateReportFail.Encoder.EncodeFields((ClassificationCreateReportFail)value, writer);
+                    return;
+                }
                 if (value is EmmCreateExceptionsReport)
                 {
                     WriteProperty(".tag", "emm_create_exceptions_report", writer, enc.StringEncoder.Instance);
@@ -13331,6 +13390,10 @@ namespace Dropbox.Api.TeamLog
                         return PasswordReset.Decoder.DecodeFields(reader);
                     case "password_reset_all":
                         return PasswordResetAll.Decoder.DecodeFields(reader);
+                    case "classification_create_report":
+                        return ClassificationCreateReport.Decoder.DecodeFields(reader);
+                    case "classification_create_report_fail":
+                        return ClassificationCreateReportFail.Decoder.DecodeFields(reader);
                     case "emm_create_exceptions_report":
                         return EmmCreateExceptionsReport.Decoder.DecodeFields(reader);
                     case "emm_create_usage_report":
@@ -27229,6 +27292,148 @@ namespace Dropbox.Api.TeamLog
                 protected override PasswordResetAll Create()
                 {
                     return PasswordResetAll.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(reports) Created Classification report</para>
+        /// </summary>
+        public sealed class ClassificationCreateReport : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ClassificationCreateReport> Encoder = new ClassificationCreateReportEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ClassificationCreateReport> Decoder = new ClassificationCreateReportDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ClassificationCreateReport"
+            /// /> class.</para>
+            /// </summary>
+            private ClassificationCreateReport()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ClassificationCreateReport</para>
+            /// </summary>
+            public static readonly ClassificationCreateReport Instance = new ClassificationCreateReport();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ClassificationCreateReport" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportEncoder : enc.StructEncoder<ClassificationCreateReport>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ClassificationCreateReport value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ClassificationCreateReport" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportDecoder : enc.StructDecoder<ClassificationCreateReport>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ClassificationCreateReport"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ClassificationCreateReport Create()
+                {
+                    return ClassificationCreateReport.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(reports) Couldn't create Classification report</para>
+        /// </summary>
+        public sealed class ClassificationCreateReportFail : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ClassificationCreateReportFail> Encoder = new ClassificationCreateReportFailEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ClassificationCreateReportFail> Decoder = new ClassificationCreateReportFailDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ClassificationCreateReportFail" /> class.</para>
+            /// </summary>
+            private ClassificationCreateReportFail()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ClassificationCreateReportFail</para>
+            /// </summary>
+            public static readonly ClassificationCreateReportFail Instance = new ClassificationCreateReportFail();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ClassificationCreateReportFail" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportFailEncoder : enc.StructEncoder<ClassificationCreateReportFail>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ClassificationCreateReportFail value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ClassificationCreateReportFail" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportFailDecoder : enc.StructDecoder<ClassificationCreateReportFail>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ClassificationCreateReportFail" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ClassificationCreateReportFail Create()
+                {
+                    return ClassificationCreateReportFail.Instance;
                 }
 
             }

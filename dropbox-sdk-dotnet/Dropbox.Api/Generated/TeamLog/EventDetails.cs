@@ -4417,6 +4417,54 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ClassificationCreateReportDetails</para>
+        /// </summary>
+        public bool IsClassificationCreateReportDetails
+        {
+            get
+            {
+                return this is ClassificationCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ClassificationCreateReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ClassificationCreateReportDetails AsClassificationCreateReportDetails
+        {
+            get
+            {
+                return this as ClassificationCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ClassificationCreateReportFailDetails</para>
+        /// </summary>
+        public bool IsClassificationCreateReportFailDetails
+        {
+            get
+            {
+                return this is ClassificationCreateReportFailDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ClassificationCreateReportFailDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ClassificationCreateReportFailDetails AsClassificationCreateReportFailDetails
+        {
+            get
+            {
+                return this as ClassificationCreateReportFailDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// EmmCreateExceptionsReportDetails</para>
         /// </summary>
         public bool IsEmmCreateExceptionsReportDetails
@@ -11671,6 +11719,18 @@ namespace Dropbox.Api.TeamLog
                     PasswordResetAllDetails.Encoder.EncodeFields((PasswordResetAllDetails)value, writer);
                     return;
                 }
+                if (value is ClassificationCreateReportDetails)
+                {
+                    WriteProperty(".tag", "classification_create_report_details", writer, enc.StringEncoder.Instance);
+                    ClassificationCreateReportDetails.Encoder.EncodeFields((ClassificationCreateReportDetails)value, writer);
+                    return;
+                }
+                if (value is ClassificationCreateReportFailDetails)
+                {
+                    WriteProperty(".tag", "classification_create_report_fail_details", writer, enc.StringEncoder.Instance);
+                    ClassificationCreateReportFailDetails.Encoder.EncodeFields((ClassificationCreateReportFailDetails)value, writer);
+                    return;
+                }
                 if (value is EmmCreateExceptionsReportDetails)
                 {
                     WriteProperty(".tag", "emm_create_exceptions_report_details", writer, enc.StringEncoder.Instance);
@@ -13641,6 +13701,10 @@ namespace Dropbox.Api.TeamLog
                         return PasswordResetDetails.Decoder.DecodeFields(reader);
                     case "password_reset_all_details":
                         return PasswordResetAllDetails.Decoder.DecodeFields(reader);
+                    case "classification_create_report_details":
+                        return ClassificationCreateReportDetails.Decoder.DecodeFields(reader);
+                    case "classification_create_report_fail_details":
+                        return ClassificationCreateReportFailDetails.Decoder.DecodeFields(reader);
                     case "emm_create_exceptions_report_details":
                         return EmmCreateExceptionsReportDetails.Decoder.DecodeFields(reader);
                     case "emm_create_usage_report_details":
@@ -31203,6 +31267,186 @@ namespace Dropbox.Api.TeamLog
                 public override PasswordResetAllDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PasswordResetAllDetails(global::Dropbox.Api.TeamLog.PasswordResetAllDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The classification create report details object</para>
+        /// </summary>
+        public sealed class ClassificationCreateReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ClassificationCreateReportDetails> Encoder = new ClassificationCreateReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ClassificationCreateReportDetails> Decoder = new ClassificationCreateReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ClassificationCreateReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ClassificationCreateReportDetails(global::Dropbox.Api.TeamLog.ClassificationCreateReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ClassificationCreateReportDetails" /> class.</para>
+            /// </summary>
+            private ClassificationCreateReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ClassificationCreateReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ClassificationCreateReportDetails" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportDetailsEncoder : enc.StructEncoder<ClassificationCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ClassificationCreateReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("classification_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.ClassificationCreateReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ClassificationCreateReportDetails" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportDetailsDecoder : enc.StructDecoder<ClassificationCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ClassificationCreateReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ClassificationCreateReportDetails Create()
+                {
+                    return new ClassificationCreateReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ClassificationCreateReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ClassificationCreateReportDetails(global::Dropbox.Api.TeamLog.ClassificationCreateReportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The classification create report fail details object</para>
+        /// </summary>
+        public sealed class ClassificationCreateReportFailDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ClassificationCreateReportFailDetails> Encoder = new ClassificationCreateReportFailDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ClassificationCreateReportFailDetails> Decoder = new ClassificationCreateReportFailDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ClassificationCreateReportFailDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ClassificationCreateReportFailDetails(global::Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ClassificationCreateReportFailDetails" /> class.</para>
+            /// </summary>
+            private ClassificationCreateReportFailDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ClassificationCreateReportFailDetails" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportFailDetailsEncoder : enc.StructEncoder<ClassificationCreateReportFailDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ClassificationCreateReportFailDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("classification_create_report_fail_details", value.Value, writer, global::Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ClassificationCreateReportFailDetails" />.</para>
+            /// </summary>
+            private class ClassificationCreateReportFailDetailsDecoder : enc.StructDecoder<ClassificationCreateReportFailDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ClassificationCreateReportFailDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ClassificationCreateReportFailDetails Create()
+                {
+                    return new ClassificationCreateReportFailDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ClassificationCreateReportFailDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ClassificationCreateReportFailDetails(global::Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.Decoder.DecodeFields(reader));
                 }
             }
 
