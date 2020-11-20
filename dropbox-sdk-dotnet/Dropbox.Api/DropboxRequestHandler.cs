@@ -154,7 +154,7 @@ namespace Dropbox.Api
         /// <param name="route">The route name.</param>
         /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
-        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
@@ -166,7 +166,7 @@ namespace Dropbox.Api
             string route,
             string auth,
             IEncoder<TRequest> requestEncoder,
-            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder);
@@ -179,7 +179,7 @@ namespace Dropbox.Api
                     res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
             }
 
-            return JsonReader.Read(res.ObjectResult, resposneDecoder);
+            return JsonReader.Read(res.ObjectResult, responseDecoder);
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace Dropbox.Api
         /// <param name="route">The route name.</param>
         /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
-        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
@@ -207,7 +207,7 @@ namespace Dropbox.Api
             string route,
             string auth,
             IEncoder<TRequest> requestEncoder,
-            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
@@ -220,7 +220,7 @@ namespace Dropbox.Api
                     res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
             }
 
-            return JsonReader.Read(res.ObjectResult, resposneDecoder);
+            return JsonReader.Read(res.ObjectResult, responseDecoder);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Dropbox.Api
         /// <param name="route">The route name.</param>
         /// <param name="auth">The auth type of the route.</param>
         /// <param name="requestEncoder">The request encoder.</param>
-        /// <param name="resposneDecoder">The response decoder.</param>
+        /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
         /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
@@ -246,7 +246,7 @@ namespace Dropbox.Api
             string route,
             string auth,
             IEncoder<TRequest> requestEncoder,
-            IDecoder<TResponse> resposneDecoder,
+            IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder)
         {
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
@@ -259,7 +259,7 @@ namespace Dropbox.Api
                     res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
             }
 
-            var response = JsonReader.Read(res.ObjectResult, resposneDecoder);
+            var response = JsonReader.Read(res.ObjectResult, responseDecoder);
             return new DownloadResponse<TResponse>(response, res.HttpResponse);
         }
 
