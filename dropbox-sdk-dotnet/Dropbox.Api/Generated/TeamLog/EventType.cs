@@ -59,6 +59,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AdminAlertingTriggeredAlert</para>
+        /// </summary>
+        public bool IsAdminAlertingTriggeredAlert
+        {
+            get
+            {
+                return this is AdminAlertingTriggeredAlert;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AdminAlertingTriggeredAlert, or <c>null</c>.</para>
+        /// </summary>
+        public AdminAlertingTriggeredAlert AsAdminAlertingTriggeredAlert
+        {
+            get
+            {
+                return this as AdminAlertingTriggeredAlert;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is AppLinkTeam</para>
         /// </summary>
         public bool IsAppLinkTeam
@@ -393,6 +416,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyAddFolderFailed</para>
+        /// </summary>
+        public bool IsGovernancePolicyAddFolderFailed
+        {
+            get
+            {
+                return this is GovernancePolicyAddFolderFailed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyAddFolderFailed, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyAddFolderFailed AsGovernancePolicyAddFolderFailed
+        {
+            get
+            {
+                return this as GovernancePolicyAddFolderFailed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// GovernancePolicyCreate</para>
         /// </summary>
         public bool IsGovernancePolicyCreate
@@ -485,6 +532,52 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyExportCreated</para>
+        /// </summary>
+        public bool IsGovernancePolicyExportCreated
+        {
+            get
+            {
+                return this is GovernancePolicyExportCreated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyExportCreated, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyExportCreated AsGovernancePolicyExportCreated
+        {
+            get
+            {
+                return this as GovernancePolicyExportCreated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyExportRemoved</para>
+        /// </summary>
+        public bool IsGovernancePolicyExportRemoved
+        {
+            get
+            {
+                return this is GovernancePolicyExportRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyExportRemoved, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyExportRemoved AsGovernancePolicyExportRemoved
+        {
+            get
+            {
+                return this as GovernancePolicyExportRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// GovernancePolicyRemoveFolders</para>
         /// </summary>
         public bool IsGovernancePolicyRemoveFolders
@@ -503,6 +596,53 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as GovernancePolicyRemoveFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyReportCreated</para>
+        /// </summary>
+        public bool IsGovernancePolicyReportCreated
+        {
+            get
+            {
+                return this is GovernancePolicyReportCreated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyReportCreated, or <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyReportCreated AsGovernancePolicyReportCreated
+        {
+            get
+            {
+                return this as GovernancePolicyReportCreated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyZipPartDownloaded</para>
+        /// </summary>
+        public bool IsGovernancePolicyZipPartDownloaded
+        {
+            get
+            {
+                return this is GovernancePolicyZipPartDownloaded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyZipPartDownloaded, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyZipPartDownloaded AsGovernancePolicyZipPartDownloaded
+        {
+            get
+            {
+                return this as GovernancePolicyZipPartDownloaded;
             }
         }
 
@@ -10286,6 +10426,12 @@ namespace Dropbox.Api.TeamLog
                     AdminAlertingChangedAlertConfig.Encoder.EncodeFields((AdminAlertingChangedAlertConfig)value, writer);
                     return;
                 }
+                if (value is AdminAlertingTriggeredAlert)
+                {
+                    WriteProperty(".tag", "admin_alerting_triggered_alert", writer, enc.StringEncoder.Instance);
+                    AdminAlertingTriggeredAlert.Encoder.EncodeFields((AdminAlertingTriggeredAlert)value, writer);
+                    return;
+                }
                 if (value is AppLinkTeam)
                 {
                     WriteProperty(".tag", "app_link_team", writer, enc.StringEncoder.Instance);
@@ -10376,6 +10522,12 @@ namespace Dropbox.Api.TeamLog
                     GovernancePolicyAddFolders.Encoder.EncodeFields((GovernancePolicyAddFolders)value, writer);
                     return;
                 }
+                if (value is GovernancePolicyAddFolderFailed)
+                {
+                    WriteProperty(".tag", "governance_policy_add_folder_failed", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyAddFolderFailed.Encoder.EncodeFields((GovernancePolicyAddFolderFailed)value, writer);
+                    return;
+                }
                 if (value is GovernancePolicyCreate)
                 {
                     WriteProperty(".tag", "governance_policy_create", writer, enc.StringEncoder.Instance);
@@ -10400,10 +10552,34 @@ namespace Dropbox.Api.TeamLog
                     GovernancePolicyEditDuration.Encoder.EncodeFields((GovernancePolicyEditDuration)value, writer);
                     return;
                 }
+                if (value is GovernancePolicyExportCreated)
+                {
+                    WriteProperty(".tag", "governance_policy_export_created", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyExportCreated.Encoder.EncodeFields((GovernancePolicyExportCreated)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyExportRemoved)
+                {
+                    WriteProperty(".tag", "governance_policy_export_removed", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyExportRemoved.Encoder.EncodeFields((GovernancePolicyExportRemoved)value, writer);
+                    return;
+                }
                 if (value is GovernancePolicyRemoveFolders)
                 {
                     WriteProperty(".tag", "governance_policy_remove_folders", writer, enc.StringEncoder.Instance);
                     GovernancePolicyRemoveFolders.Encoder.EncodeFields((GovernancePolicyRemoveFolders)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyReportCreated)
+                {
+                    WriteProperty(".tag", "governance_policy_report_created", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyReportCreated.Encoder.EncodeFields((GovernancePolicyReportCreated)value, writer);
+                    return;
+                }
+                if (value is GovernancePolicyZipPartDownloaded)
+                {
+                    WriteProperty(".tag", "governance_policy_zip_part_downloaded", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyZipPartDownloaded.Encoder.EncodeFields((GovernancePolicyZipPartDownloaded)value, writer);
                     return;
                 }
                 if (value is LegalHoldsActivateAHold)
@@ -13014,6 +13190,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "admin_alerting_changed_alert_config":
                         return AdminAlertingChangedAlertConfig.Decoder.DecodeFields(reader);
+                    case "admin_alerting_triggered_alert":
+                        return AdminAlertingTriggeredAlert.Decoder.DecodeFields(reader);
                     case "app_link_team":
                         return AppLinkTeam.Decoder.DecodeFields(reader);
                     case "app_link_user":
@@ -13044,6 +13222,8 @@ namespace Dropbox.Api.TeamLog
                         return FileUnresolveComment.Decoder.DecodeFields(reader);
                     case "governance_policy_add_folders":
                         return GovernancePolicyAddFolders.Decoder.DecodeFields(reader);
+                    case "governance_policy_add_folder_failed":
+                        return GovernancePolicyAddFolderFailed.Decoder.DecodeFields(reader);
                     case "governance_policy_create":
                         return GovernancePolicyCreate.Decoder.DecodeFields(reader);
                     case "governance_policy_delete":
@@ -13052,8 +13232,16 @@ namespace Dropbox.Api.TeamLog
                         return GovernancePolicyEditDetails.Decoder.DecodeFields(reader);
                     case "governance_policy_edit_duration":
                         return GovernancePolicyEditDuration.Decoder.DecodeFields(reader);
+                    case "governance_policy_export_created":
+                        return GovernancePolicyExportCreated.Decoder.DecodeFields(reader);
+                    case "governance_policy_export_removed":
+                        return GovernancePolicyExportRemoved.Decoder.DecodeFields(reader);
                     case "governance_policy_remove_folders":
                         return GovernancePolicyRemoveFolders.Decoder.DecodeFields(reader);
+                    case "governance_policy_report_created":
+                        return GovernancePolicyReportCreated.Decoder.DecodeFields(reader);
+                    case "governance_policy_zip_part_downloaded":
+                        return GovernancePolicyZipPartDownloaded.Decoder.DecodeFields(reader);
                     case "legal_holds_activate_a_hold":
                         return LegalHoldsActivateAHold.Decoder.DecodeFields(reader);
                     case "legal_holds_add_members":
@@ -14002,6 +14190,96 @@ namespace Dropbox.Api.TeamLog
                 public override AdminAlertingChangedAlertConfig DecodeFields(enc.IJsonReader reader)
                 {
                     return new AdminAlertingChangedAlertConfig(global::Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(admin_alerting) Triggered security alert</para>
+        /// </summary>
+        public sealed class AdminAlertingTriggeredAlert : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminAlertingTriggeredAlert> Encoder = new AdminAlertingTriggeredAlertEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminAlertingTriggeredAlert> Decoder = new AdminAlertingTriggeredAlertDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminAlertingTriggeredAlert"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AdminAlertingTriggeredAlert(AdminAlertingTriggeredAlertType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminAlertingTriggeredAlert"
+            /// /> class.</para>
+            /// </summary>
+            private AdminAlertingTriggeredAlert()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public AdminAlertingTriggeredAlertType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminAlertingTriggeredAlert" />.</para>
+            /// </summary>
+            private class AdminAlertingTriggeredAlertEncoder : enc.StructEncoder<AdminAlertingTriggeredAlert>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminAlertingTriggeredAlert value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("admin_alerting_triggered_alert", value.Value, writer, global::Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminAlertingTriggeredAlert" />.</para>
+            /// </summary>
+            private class AdminAlertingTriggeredAlertDecoder : enc.StructDecoder<AdminAlertingTriggeredAlert>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AdminAlertingTriggeredAlert"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminAlertingTriggeredAlert Create()
+                {
+                    return new AdminAlertingTriggeredAlert();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AdminAlertingTriggeredAlert DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AdminAlertingTriggeredAlert(global::Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertType.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -15353,6 +15631,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(data_governance) Couldn't add a folder to a policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyAddFolderFailed : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyAddFolderFailed> Encoder = new GovernancePolicyAddFolderFailedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyAddFolderFailed> Decoder = new GovernancePolicyAddFolderFailedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyAddFolderFailed" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GovernancePolicyAddFolderFailed(GovernancePolicyAddFolderFailedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyAddFolderFailed" /> class.</para>
+            /// </summary>
+            private GovernancePolicyAddFolderFailed()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public GovernancePolicyAddFolderFailedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyAddFolderFailed" />.</para>
+            /// </summary>
+            private class GovernancePolicyAddFolderFailedEncoder : enc.StructEncoder<GovernancePolicyAddFolderFailed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyAddFolderFailed value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("governance_policy_add_folder_failed", value.Value, writer, global::Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyAddFolderFailed" />.</para>
+            /// </summary>
+            private class GovernancePolicyAddFolderFailedDecoder : enc.StructDecoder<GovernancePolicyAddFolderFailed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyAddFolderFailed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyAddFolderFailed Create()
+                {
+                    return new GovernancePolicyAddFolderFailed();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GovernancePolicyAddFolderFailed DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GovernancePolicyAddFolderFailed(global::Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(data_governance) Activated a new policy</para>
         /// </summary>
         public sealed class GovernancePolicyCreate : EventType
@@ -15713,6 +16081,186 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(data_governance) Created a policy download</para>
+        /// </summary>
+        public sealed class GovernancePolicyExportCreated : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyExportCreated> Encoder = new GovernancePolicyExportCreatedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyExportCreated> Decoder = new GovernancePolicyExportCreatedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyExportCreated" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GovernancePolicyExportCreated(GovernancePolicyExportCreatedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyExportCreated" /> class.</para>
+            /// </summary>
+            private GovernancePolicyExportCreated()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public GovernancePolicyExportCreatedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyExportCreated" />.</para>
+            /// </summary>
+            private class GovernancePolicyExportCreatedEncoder : enc.StructEncoder<GovernancePolicyExportCreated>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyExportCreated value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("governance_policy_export_created", value.Value, writer, global::Dropbox.Api.TeamLog.GovernancePolicyExportCreatedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyExportCreated" />.</para>
+            /// </summary>
+            private class GovernancePolicyExportCreatedDecoder : enc.StructDecoder<GovernancePolicyExportCreated>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyExportCreated" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyExportCreated Create()
+                {
+                    return new GovernancePolicyExportCreated();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GovernancePolicyExportCreated DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GovernancePolicyExportCreated(global::Dropbox.Api.TeamLog.GovernancePolicyExportCreatedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Removed a policy download</para>
+        /// </summary>
+        public sealed class GovernancePolicyExportRemoved : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyExportRemoved> Encoder = new GovernancePolicyExportRemovedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyExportRemoved> Decoder = new GovernancePolicyExportRemovedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyExportRemoved" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GovernancePolicyExportRemoved(GovernancePolicyExportRemovedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyExportRemoved" /> class.</para>
+            /// </summary>
+            private GovernancePolicyExportRemoved()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public GovernancePolicyExportRemovedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyExportRemoved" />.</para>
+            /// </summary>
+            private class GovernancePolicyExportRemovedEncoder : enc.StructEncoder<GovernancePolicyExportRemoved>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyExportRemoved value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("governance_policy_export_removed", value.Value, writer, global::Dropbox.Api.TeamLog.GovernancePolicyExportRemovedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyExportRemoved" />.</para>
+            /// </summary>
+            private class GovernancePolicyExportRemovedDecoder : enc.StructDecoder<GovernancePolicyExportRemoved>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyExportRemoved" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyExportRemoved Create()
+                {
+                    return new GovernancePolicyExportRemoved();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GovernancePolicyExportRemoved DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GovernancePolicyExportRemoved(global::Dropbox.Api.TeamLog.GovernancePolicyExportRemovedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(data_governance) Removed folders from policy</para>
         /// </summary>
         public sealed class GovernancePolicyRemoveFolders : EventType
@@ -15796,6 +16344,186 @@ namespace Dropbox.Api.TeamLog
                 public override GovernancePolicyRemoveFolders DecodeFields(enc.IJsonReader reader)
                 {
                     return new GovernancePolicyRemoveFolders(global::Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Created a summary report for a policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyReportCreated : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyReportCreated> Encoder = new GovernancePolicyReportCreatedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyReportCreated> Decoder = new GovernancePolicyReportCreatedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyReportCreated" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GovernancePolicyReportCreated(GovernancePolicyReportCreatedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyReportCreated" /> class.</para>
+            /// </summary>
+            private GovernancePolicyReportCreated()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public GovernancePolicyReportCreatedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyReportCreated" />.</para>
+            /// </summary>
+            private class GovernancePolicyReportCreatedEncoder : enc.StructEncoder<GovernancePolicyReportCreated>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyReportCreated value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("governance_policy_report_created", value.Value, writer, global::Dropbox.Api.TeamLog.GovernancePolicyReportCreatedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyReportCreated" />.</para>
+            /// </summary>
+            private class GovernancePolicyReportCreatedDecoder : enc.StructDecoder<GovernancePolicyReportCreated>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyReportCreated" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyReportCreated Create()
+                {
+                    return new GovernancePolicyReportCreated();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GovernancePolicyReportCreated DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GovernancePolicyReportCreated(global::Dropbox.Api.TeamLog.GovernancePolicyReportCreatedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Downloaded content from a policy</para>
+        /// </summary>
+        public sealed class GovernancePolicyZipPartDownloaded : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyZipPartDownloaded> Encoder = new GovernancePolicyZipPartDownloadedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyZipPartDownloaded> Decoder = new GovernancePolicyZipPartDownloadedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyZipPartDownloaded" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GovernancePolicyZipPartDownloaded(GovernancePolicyZipPartDownloadedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyZipPartDownloaded" /> class.</para>
+            /// </summary>
+            private GovernancePolicyZipPartDownloaded()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public GovernancePolicyZipPartDownloadedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyZipPartDownloaded" />.</para>
+            /// </summary>
+            private class GovernancePolicyZipPartDownloadedEncoder : enc.StructEncoder<GovernancePolicyZipPartDownloaded>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyZipPartDownloaded value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("governance_policy_zip_part_downloaded", value.Value, writer, global::Dropbox.Api.TeamLog.GovernancePolicyZipPartDownloadedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyZipPartDownloaded" />.</para>
+            /// </summary>
+            private class GovernancePolicyZipPartDownloadedDecoder : enc.StructDecoder<GovernancePolicyZipPartDownloaded>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyZipPartDownloaded" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyZipPartDownloaded Create()
+                {
+                    return new GovernancePolicyZipPartDownloaded();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GovernancePolicyZipPartDownloaded DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GovernancePolicyZipPartDownloaded(global::Dropbox.Api.TeamLog.GovernancePolicyZipPartDownloadedType.Decoder.DecodeFields(reader));
                 }
             }
 
