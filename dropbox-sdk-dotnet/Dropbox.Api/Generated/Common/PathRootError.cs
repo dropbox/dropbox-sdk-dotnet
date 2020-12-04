@@ -178,7 +178,7 @@ namespace Dropbox.Api.Common
 
         /// <summary>
         /// <para>The root namespace id in Dropbox-API-Path-Root header is not valid. The value
-        /// of this error is use's latest root info.</para>
+        /// of this error is the user's latest root info.</para>
         /// </summary>
         public sealed class InvalidRoot : PathRootError
         {
