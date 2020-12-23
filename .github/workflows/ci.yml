@@ -3,7 +3,7 @@ on:
   pull_request:
 
 jobs:
-  DotNetFramework:
+  CI:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -11,4 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Unit Tests
-        run: dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests --verbosity normal
+        run: dotnet test \
+        dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests \
+        --verbosity normal \
+        --collect:"XPlat Code Coverage" \
+        -- \
+        'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
+      - name: Publish Coverage
+        uses: codecov/codecov-action@v1.0.15
+        with:
+          flags: unit
+          fail_ci_if_error: true
+          directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
