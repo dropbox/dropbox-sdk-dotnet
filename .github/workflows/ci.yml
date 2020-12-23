@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Unit Tests
-        run: dotnet test dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests --verbosity normal
+        run: dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests --verbosity normal
