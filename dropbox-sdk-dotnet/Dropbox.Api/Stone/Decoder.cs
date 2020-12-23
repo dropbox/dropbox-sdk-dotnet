@@ -268,7 +268,7 @@ namespace Dropbox.Api.Stone
         /// <returns>The value.</returns>
         public DateTime Decode(IJsonReader reader)
         {
-            return reader.ReadDateTime();
+            return DateTime.Parse(reader.ReadString(), CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind);
         }
     }
 

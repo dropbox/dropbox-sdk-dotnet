@@ -476,5 +476,38 @@ namespace Dropbox.Api.Tests
             }
             Assert.IsTrue(canceled);
         }
+
+          /// <summary>
+        /// Test upload with a date-time format file name.
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        public async Task TestUploadWithDateName()
+        {
+            var fileNameWithDateFormat = DateTime.Now.ToString("s");
+            var response = await Client.Files.UploadAsync($"{TestingPath}/{fileNameWithDateFormat}", body: GetStream("abc"));
+            Assert.AreEqual(response.Name, fileNameWithDateFormat);
+            Assert.AreEqual(response.PathLower, $"{TestingPath.ToLower()}/{fileNameWithDateFormat.ToLowerInvariant()}");
+            Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{fileNameWithDateFormat}");
+            var downloadResponse = await Client.Files.DownloadAsync($"{TestingPath}/{fileNameWithDateFormat}");
+            var content = await downloadResponse.GetContentAsStringAsync();
+            Assert.AreEqual("abc", content);
+        }
+
+        /// <summary>
+        /// Test folder creation with a date-time format folder name.
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        public async Task TestCreateFolderWithDateFormat()
+        {
+            var folderNameWithDateFormat = DateTime.Now.ToString("s");
+            var response = await Client.Files.CreateFolderAsync($"{TestingPath}/{folderNameWithDateFormat}");
+            Assert.AreEqual(response.Name, folderNameWithDateFormat);
+            Assert.AreEqual(response.PathLower, $"{TestingPath.ToLower()}/{folderNameWithDateFormat.ToLowerInvariant()}");
+            Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{folderNameWithDateFormat}");
+            var folders = await Client.Files.ListFolderAsync($"/{TestingPath}");
+            Assert.IsTrue(folders.Entries.Any(f => f.Name == folderNameWithDateFormat));
+        }
     }
 }
