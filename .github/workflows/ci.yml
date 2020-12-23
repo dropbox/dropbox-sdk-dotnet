@@ -16,8 +16,9 @@ jobs:
         --verbosity normal \
         --collect:"XPlat Code Coverage" \
         -- \
-        'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
+        DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs
       - name: Publish Coverage
+        if: ${{ matrix.os == "ubuntu-latest" }}
         uses: codecov/codecov-action@v1.0.15
         with:
           flags: unit
