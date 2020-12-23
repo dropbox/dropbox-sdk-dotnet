@@ -19,7 +19,7 @@ jobs:
           -- \
           'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
-        if: ${{ matrix.os == "ubuntu-latest" }}
+        if: ${{ matrix.os == ubuntu-latest }}
         uses: codecov/codecov-action@v1.0.15
         with:
           flags: unit
