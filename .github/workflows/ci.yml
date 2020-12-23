@@ -4,23 +4,11 @@ on:
 
 jobs:
   DotNetFramework:
-    continue-on-error: true
-    runs-on: windows-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Setup NuGet.exe
-        uses: nuget/setup-nuget@v1.0.5
-        with:
-          nuget-version: latest
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.1
-      - name: Setup VSTest.console.exe
-        uses: darenm/Setup-VSTest@v1.1.1
-      - name: Restore Packages
-        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
-      - name: Build
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
-      - name: Build Tests
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\Dropbox.Api.Unit.Tests.csproj -p:Configuration=Debug
       - name: Run Unit Tests
-        run: vstest.console dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\bin\Debug\Dropbox.Api.Unit.Tests.dll
+        run: dotnet test dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests --verbosity normal

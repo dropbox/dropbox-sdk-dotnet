@@ -1,48 +1,23 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>AppProperties</AppDesignerFolder>
-    <RootNamespace>Dropbox.Api</RootNamespace>
-    <AssemblyName>Dropbox.Api</AssemblyName>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
-    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <Title>Dropbox.Api</Title>
+    <Description>Official Dropbox .Net v2 SDK</Description>
+    <Company>Dropbox Inc.</Company>
+    <Product>Dropbox.Api</Product>
+    <Copyright>Copyright © Dropbox Inc</Copyright>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>  
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <None Include="packages.config" />
-  </ItemGroup>
-
-<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <None Remove="app.config" />
-    <None Remove="Dropbox.Api.nuspec" />
-    <None Remove="dropbox_api_key.snk" />
-    <None Remove="packages.config" />
-    <None Remove="packages.Dropbox.Api.Portable.config" />
-    <None Remove="packages.Dropbox.Api.Portable40.config" />
-    <None Remove="stone_summaries.xml" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
   <ItemGroup>
-    <None Include="..\.editorconfig" Link=".editorconfig" />
-    <None Include="packages.config" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Dropbox.Api.Intrgration.Tests" Condition="'$(Configuration)' == 'Debug'" />
+    <InternalsVisibleTo Include="Dropbox.Api.Unit.Tests" Condition="'$(Configuration)' == 'Debug'" />
   </ItemGroup>
 
 </Project>

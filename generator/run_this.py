@@ -1,5 +1,3 @@
-from __future__ import print_function, unicode_literals
-
 import imp
 import os
 import os.path
@@ -33,7 +31,7 @@ if __name__ == '__main__':
     try:
         api = tower.parse()
     except InvalidSpec as e:
-        print('%s:%s: error: %s' % (e.path, e.lineno, e.msg), file=sys.stderr)
+        print('{}:{}: error: {}'.format(e.path, e.lineno, e.msg), file=sys.stderr)
         sys.exit(1)
 
     if api is None:
