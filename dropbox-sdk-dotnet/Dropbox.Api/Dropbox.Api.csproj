@@ -8,7 +8,7 @@
     <Description>Official Dropbox .Net v2 SDK</Description>
     <Company>Dropbox Inc.</Company>
     <Product>Dropbox.Api</Product>
-    <Copyright>Copyright © Dropbox Inc</Copyright>
+    <Copyright>Copyright © 2020 Dropbox Inc</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
