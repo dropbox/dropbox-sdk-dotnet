@@ -3,24 +3,30 @@ on:
   pull_request:
 
 jobs:
-  DotNetFramework:
-    continue-on-error: true
-    runs-on: windows-latest
+  UnitTests:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Setup NuGet.exe
-        uses: nuget/setup-nuget@v1.0.5
-        with:
-          nuget-version: latest
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.1
-      - name: Setup VSTest.console.exe
-        uses: darenm/Setup-VSTest@v1.1.1
-      - name: Restore Packages
-        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
-      - name: Build
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
-      - name: Build Tests
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\Dropbox.Api.Unit.Tests.csproj -p:Configuration=Debug
       - name: Run Unit Tests
-        run: vstest.console dropbox-sdk-dotnet\Dropbox.Api.Unit.Tests\bin\Debug\Dropbox.Api.Unit.Tests.dll
+        run: |
+          dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests
+  Coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Unit Tests
+        run: |
+          dotnet test \
+          dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests \
+          --collect:"XPlat Code Coverage" \
+          -- \
+          'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
+      - name: Publish Coverage
+        uses: codecov/codecov-action@v1.0.15
+        with:
+          flags: unit
+          fail_ci_if_error: true
+          directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
