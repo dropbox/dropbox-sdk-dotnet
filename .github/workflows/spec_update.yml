@@ -1,5 +1,5 @@
 name: Spec Update
-on: 
+on:
   workflow_dispatch:
   repository_dispatch:
     types: [spec_update]
@@ -49,11 +49,7 @@ jobs:
           echo "::set-output name=commit::$commit"
       - name: Generate New Routes
         run: |
-          cd stone
-          python -m pip install --upgrade pip
-          python setup.py install
-          cd ..
-          python generate.py
+          ./scripts/generate_stone.ps1
           git add dropbox-sdk-dotnet/Dropbox.Api/Generated
           git add stone
           git add spec

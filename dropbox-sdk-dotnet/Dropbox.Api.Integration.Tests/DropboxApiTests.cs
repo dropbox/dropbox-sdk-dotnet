@@ -66,24 +66,24 @@ namespace Dropbox.Api.Tests
         private readonly static string TestingPath = "/Testing/Dropbox.Api.Tests";
 
         [ClassInitialize]
-        public static void Initialize(TestContext context)
+        public static void ClassInitialize(TestContext context)
         {
-            
+
             AppKey = context.Properties["appKey"].ToString();
             AppSecret = context.Properties["appSecret"].ToString();
-            
+
             UserRefreshToken = context.Properties["userRefreshToken"].ToString();
             UserAccessToken = context.Properties["userAccessToken"].ToString();
             Client = new DropboxClient(UserAccessToken);
 
             var teamToken = context.Properties["teamAccessToken"].ToString();
             TeamClient = new DropboxTeamClient(teamToken);
-            
+
             AppClient = new DropboxAppClient(AppKey, AppSecret);
         }
 
         [TestInitialize]
-        public async void Initialize()
+        public async Task Initialize()
         {
             try
             {
@@ -408,12 +408,12 @@ namespace Dropbox.Api.Tests
         /// </summary>
         /// <param name="content">The string content.</param>
         /// <returns>The memory stream.</returns>
-        private static MemoryStream GetStream(string content) 
+        private static MemoryStream GetStream(string content)
         {
             var buffer = Encoding.UTF8.GetBytes(content);
             return new MemoryStream(buffer);
         }
-        
+
         /// Test User-Agent header is set with default values.
         /// </summary>
         /// <returns>The <see cref="Task"/></returns>
