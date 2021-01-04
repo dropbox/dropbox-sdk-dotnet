@@ -90,7 +90,10 @@ namespace Dropbox.Api.Stone
         /// <returns>The decoded object.</returns>
         public static T Read<T>(string json, IDecoder<T> decoder)
         {
-            var reader = new JsonReader(new JsonTextReader(new StringReader(json)));
+            var reader = new JsonReader(new JsonTextReader(new StringReader(json))
+            {
+                DateParseHandling = DateParseHandling.None
+            });
             return decoder.Decode(reader);
         }
 
