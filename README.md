@@ -1,6 +1,6 @@
 [![Logo][logo]][repo]
 
-[![NuGet](https://img.shields.io/badge/Frameworks-.NetFramework%204.5%20%7C%20.NetStandard%202.0-blue)](https://www.nuget.org/packages/Dropbox.Api)
+[![NuGet](https://img.shields.io/badge/Frameworks-.NetStandard%202.0-blue)](https://www.nuget.org/packages/Dropbox.Api)
 [![NuGet](https://img.shields.io/nuget/v/Dropbox.Api.svg)](https://www.nuget.org/packages/Dropbox.Api)
 [![codecov](https://codecov.io/gh/dropbox/dropbox-sdk-dotnet/branch/main/graph/badge.svg)](https://codecov.io/gh/dropbox/dropbox-sdk-dotnet)
 
