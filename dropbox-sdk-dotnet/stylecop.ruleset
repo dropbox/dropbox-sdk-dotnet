@@ -1,0 +1,10 @@
+<RuleSet
+    Name="Rules for Dropbox .NET SDK"
+    Description="StyleCopAnalyzers rules for the Dropbox .NET SDK"
+    ToolsVersion="14.0"
+>
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1402" Action="None" />
+    <Rule Id="SA1649" Action="None" />
+  </Rules>
+</RuleSet>

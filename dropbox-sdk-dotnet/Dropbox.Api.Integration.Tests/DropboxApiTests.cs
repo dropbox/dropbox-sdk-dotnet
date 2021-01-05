@@ -14,13 +14,11 @@ namespace Dropbox.Api.Tests
     using System.Net.Http;
     using System.Text;
     using System.Threading.Tasks;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Dropbox.Api.Auth;
     using Dropbox.Api.Common;
-    using Dropbox.Api.Users;
     using Dropbox.Api.Files;
+    using Dropbox.Api.Users;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
     /// The test class for Dropbox API.
@@ -28,95 +26,106 @@ namespace Dropbox.Api.Tests
     [TestClass]
     public class DropboxApiTests
     {
+        private static readonly string TestingPath = "/Testing/Dropbox.Api.Tests";
+
         /// <summary>
         /// The user access token.
         /// </summary>
-        public static string UserAccessToken;
+        private static string userAccessToken;
 
         /// <summary>
         /// The user refresh token.
         /// </summary>
-        public static string UserRefreshToken;
+        private static string userRefreshToken;
 
         /// <summary>
-        /// The app key
+        /// The app key.
         /// </summary>
-        public static string AppKey;
+        private static string appKey;
 
         /// <summary>
-        /// The app secret
+        /// The app secret.
         /// </summary>
-        public static string AppSecret;
+        private static string appSecret;
 
         /// <summary>
         /// The Dropbox client.
         /// </summary>
-        public static DropboxClient Client;
+        private static DropboxClient client;
 
         /// <summary>
         /// The Dropbox team client.
         /// </summary>
-        public static DropboxTeamClient TeamClient;
+        private static DropboxTeamClient teamClient;
 
         /// <summary>
         /// The Dropbox app client.
         /// </summary>
-        public static DropboxAppClient AppClient;
+        private static DropboxAppClient appClient;
 
-        private readonly static string TestingPath = "/Testing/Dropbox.Api.Tests";
-
+        /// <summary>
+        /// Set up Dropbox clients.
+        /// </summary>
+        /// <param name="context">The VSTest context.</param>
         [ClassInitialize]
         public static void ClassInitialize(TestContext context)
         {
+            appKey = context.Properties["appKey"].ToString();
+            appSecret = context.Properties["appSecret"].ToString();
 
-            AppKey = context.Properties["appKey"].ToString();
-            AppSecret = context.Properties["appSecret"].ToString();
-
-            UserRefreshToken = context.Properties["userRefreshToken"].ToString();
-            UserAccessToken = context.Properties["userAccessToken"].ToString();
-            Client = new DropboxClient(UserAccessToken);
+            userRefreshToken = context.Properties["userRefreshToken"].ToString();
+            userAccessToken = context.Properties["userAccessToken"].ToString();
+            client = new DropboxClient(userAccessToken);
 
             var teamToken = context.Properties["teamAccessToken"].ToString();
-            TeamClient = new DropboxTeamClient(teamToken);
+            teamClient = new DropboxTeamClient(teamToken);
 
-            AppClient = new DropboxAppClient(AppKey, AppSecret);
+            appClient = new DropboxAppClient(appKey, appSecret);
         }
 
+        /// <summary>
+        /// Ensure that the rest folder exissts and is empty before test execution.
+        /// </summary>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         [TestInitialize]
         public async Task Initialize()
         {
             try
             {
-                var result = await Client.Files.ListFolderAsync(TestingPath);
+                var result = await client.Files.ListFolderAsync(TestingPath);
                 Assert.AreEqual(0, result.Entries.Count);
-            } catch (ApiException<ListFolderError>)
+            }
+            catch (ApiException<ListFolderError>)
             {
                 // create folder if it doesn't exist
-                var result = Client.Files.CreateFolderV2Async(TestingPath).Result;
+                var result = client.Files.CreateFolderV2Async(TestingPath).Result;
                 Assert.AreEqual(TestingPath, result.Metadata.PathDisplay);
             }
         }
 
-
+        /// <summary>
+        /// Cleans up created files after test execution.
+        /// </summary>
         [TestCleanup]
         public void Cleanup()
         {
-            var result = Client.Files.ListFolderAsync(TestingPath).Result;
+            var result = client.Files.ListFolderAsync(TestingPath).Result;
 
-            foreach (var entry in result.Entries) {
-                Client.Files.DeleteV2Async(entry.PathLower).Wait();
+            foreach (var entry in result.Entries)
+            {
+                client.Files.DeleteV2Async(entry.PathLower).Wait();
             }
         }
 
         /// <summary>
         /// Tests creating a client with only refresh token and
-        /// ensuring the client refreshed the token before making a call
+        /// ensuring the client refreshed the token before making a call.
         /// </summary>
-        /// <returns>The <see cref="Task" /></returns>
+        /// <returns>The <see cref="Task" />.</returns>
         [TestMethod]
         public async Task TestRefreshClient()
         {
-            var client = new DropboxClient(UserRefreshToken, AppKey, AppSecret);
+            var client = new DropboxClient(userRefreshToken, appKey, appSecret);
             var result = await client.Users.GetCurrentAccountAsync();
             Assert.IsNotNull(result.Email);
         }
@@ -124,15 +133,15 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Test get metadata.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestGetMetadata()
         {
-            await Client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
-            var metadata = await Client.Files.GetMetadataAsync(TestingPath + "/Foo.txt");
+            await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
+            var metadata = await client.Files.GetMetadataAsync(TestingPath + "/Foo.txt");
             Assert.AreEqual("Foo.txt", metadata.Name);
             Assert.AreEqual(TestingPath.ToLower() + "/foo.txt", metadata.PathLower);
-            Assert.AreEqual(TestingPath  + "/Foo.txt", metadata.PathDisplay);
+            Assert.AreEqual(TestingPath + "/Foo.txt", metadata.PathDisplay);
             Assert.IsTrue(metadata.IsFile);
 
             var file = metadata.AsFile;
@@ -142,17 +151,17 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Test get metadata.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestListFolder()
         {
             var files = new HashSet<string> { "a.txt", "b.txt", "c.txt" };
             foreach (var file in files)
             {
-                await Client.Files.UploadAsync(TestingPath + "/" + file, body: GetStream("abc"));
+                await client.Files.UploadAsync(TestingPath + "/" + file, body: GetStream("abc"));
             }
 
-            var response = await Client.Files.ListFolderAsync(TestingPath);
+            var response = await client.Files.ListFolderAsync(TestingPath);
             Assert.AreEqual(files.Count, response.Entries.Count);
             foreach (var entry in response.Entries)
             {
@@ -166,15 +175,15 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Test upload.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestUpload()
         {
-            var response = await Client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
+            var response = await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
             Assert.AreEqual(response.Name, "Foo.txt");
             Assert.AreEqual(response.PathLower, TestingPath.ToLower() + "/foo.txt");
             Assert.AreEqual(response.PathDisplay, TestingPath + "/Foo.txt");
-            var downloadResponse = await Client.Files.DownloadAsync(TestingPath + "/Foo.txt");
+            var downloadResponse = await client.Files.DownloadAsync(TestingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
         }
@@ -182,7 +191,7 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Test upload with retry.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestUploadRetry()
         {
@@ -194,7 +203,7 @@ namespace Dropbox.Api.Tests
                 {
                     var error = new HttpResponseMessage(HttpStatusCode.InternalServerError)
                     {
-                        Content = new StringContent("Error")
+                        Content = new StringContent("Error"),
                     };
 
                     return Task.FromResult(error);
@@ -205,25 +214,24 @@ namespace Dropbox.Api.Tests
 
             var mockClient = new HttpClient(mockHandler);
             var client = new DropboxClient(
-                UserAccessToken,
+                userAccessToken,
                 new DropboxClientConfig { HttpClient = mockClient, MaxRetriesOnError = 10 });
 
             var response = await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
-            var downloadResponse = await Client.Files.DownloadAsync(TestingPath + "/Foo.txt");
+            var downloadResponse = await DropboxApiTests.client.Files.DownloadAsync(TestingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
         }
 
-
         /// <summary>
         /// Test upload.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestDownload()
         {
-            await Client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
-            var downloadResponse = await Client.Files.DownloadAsync(TestingPath + "/Foo.txt");
+            await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
+            var downloadResponse = await client.Files.DownloadAsync(TestingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
             var response = downloadResponse.Response;
@@ -232,16 +240,17 @@ namespace Dropbox.Api.Tests
             Assert.AreEqual(response.PathDisplay, TestingPath + "/Foo.txt");
         }
 
+        /// <summary>
         /// Test rate limit error handling.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>A <see cref="Task"/> representing the result of the asynchronous operation.</returns>
         [TestMethod]
         public async Task TestRateLimit()
         {
             var body = "{\"error_summary\": \"too_many_requests/..\", \"error\": {\"reason\": {\".tag\": \"too_many_requests\"}, \"retry_after\": 100}}";
             var mockResponse = new HttpResponseMessage((HttpStatusCode)429)
             {
-                Content = new StringContent(body, Encoding.UTF8, "application/json")
+                Content = new StringContent(body, Encoding.UTF8, "application/json"),
             };
 
             mockResponse.Headers.Add("X-Dropbox-Request-Id", "123");
@@ -261,16 +270,17 @@ namespace Dropbox.Api.Tests
             }
         }
 
+        /// <summary>
         /// Test request id handling.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestRequestId()
         {
             var funcs = new List<Func<Task>>
             {
-                () => Client.Files.GetMetadataAsync("/noob"), // 409
-                () => Client.Files.GetMetadataAsync("/"), // 400
+                () => client.Files.GetMetadataAsync("/noob"), // 409
+                () => client.Files.GetMetadataAsync("/"), // 400
             };
 
             foreach (var func in funcs)
@@ -286,60 +296,63 @@ namespace Dropbox.Api.Tests
             }
         }
 
+        /// <summary>
         /// Test team auth.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestTeamAuth()
         {
-            var result = await TeamClient.Team.GetInfoAsync();
+            var result = await teamClient.Team.GetInfoAsync();
             Assert.IsNotNull(result.TeamId);
             Assert.IsNotNull(result.Name);
         }
 
+        /// <summary>
         /// Test team auth select user.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestTeamAuthSelectUser()
         {
-            var result = await TeamClient.Team.MembersListAsync();
+            var result = await teamClient.Team.MembersListAsync();
             var memberId = result.Members[0].Profile.TeamMemberId;
 
-            var userClient = TeamClient.AsMember(memberId);
+            var userClient = teamClient.AsMember(memberId);
             var account = await userClient.Users.GetCurrentAccountAsync();
             Assert.AreEqual(account.TeamMemberId, memberId);
         }
 
-
+        /// <summary>
         /// Test team auth select admin.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestTeamAuthSelectAdmin()
         {
-            var result = await TeamClient.Team.MembersListAsync();
+            var result = await teamClient.Team.MembersListAsync();
             var adminId = result.Members.Where(m => m.Role.IsTeamAdmin).First().Profile.TeamMemberId;
 
-            var userClient = TeamClient.AsAdmin(adminId);
+            var userClient = teamClient.AsAdmin(adminId);
             var account = await userClient.Users.GetCurrentAccountAsync();
             Assert.AreEqual(account.TeamMemberId, adminId);
 
             // TODO: Add permission specific tests.
         }
 
+        /// <summary>
         /// Test team auth select admin.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestPathRoot()
         {
-            await Client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
+            await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
 
-            var pathRootClient = Client.WithPathRoot(PathRoot.Home.Instance);
+            var pathRootClient = client.WithPathRoot(PathRoot.Home.Instance);
             var metadata = await pathRootClient.Files.GetMetadataAsync(TestingPath + "/Foo.txt");
             Assert.AreEqual(TestingPath.ToLower() + "/foo.txt", metadata.PathLower);
-            pathRootClient = Client.WithPathRoot(new PathRoot.Root("123"));
+            pathRootClient = client.WithPathRoot(new PathRoot.Root("123"));
 
             var exceptionRaised = false;
 
@@ -357,66 +370,59 @@ namespace Dropbox.Api.Tests
             Assert.IsTrue(exceptionRaised);
         }
 
+        /// <summary>
         /// Test app auth.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestAppAuth()
         {
             try
             {
-                var result = await AppClient.Auth.TokenFromOauth1Async("foo", "bar");
+                var result = await appClient.Auth.TokenFromOauth1Async("foo", "bar");
             }
             catch (ApiException<TokenFromOAuth1Error>)
             {
             }
         }
 
+        /// <summary>
         /// Test no auth.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestNoAuth()
         {
-            var result = await Client.Files.ListFolderAsync("", recursive: true);
+            var result = await client.Files.ListFolderAsync(string.Empty, recursive: true);
             var cursor = result.Cursor;
 
-            var task = Client.Files.ListFolderLongpollAsync(cursor);
-            await Client.Files.UploadAsync(TestingPath + "/foo.txt", body: GetStream("abc"));
+            var task = client.Files.ListFolderLongpollAsync(cursor);
+            await client.Files.UploadAsync(TestingPath + "/foo.txt", body: GetStream("abc"));
             var response = await task;
             Assert.IsTrue(response.Changes);
         }
 
+        /// <summary>
         /// Test APM flow.
         /// </summary>
         [TestMethod]
         public void TaskAPM()
         {
-            var result = Client.Users.BeginGetCurrentAccount(null);
-            var account = Client.Users.EndGetCurrentAccount(result);
+            var result = client.Users.BeginGetCurrentAccount(null);
+            var account = client.Users.EndGetCurrentAccount(result);
             var accountId = account.AccountId;
 
-            result = Client.Users.BeginGetAccountBatch(new string[] { accountId }, null);
-            var accounts = Client.Users.EndGetAccountBatch(result);
+            result = client.Users.BeginGetAccountBatch(new string[] { accountId }, null);
+            var accounts = client.Users.EndGetAccountBatch(result);
 
             Assert.AreEqual(accounts.Count, 1);
             Assert.AreEqual(accounts[0].AccountId, accountId);
         }
 
         /// <summary>
-        /// Converts string to a memory stream.
-        /// </summary>
-        /// <param name="content">The string content.</param>
-        /// <returns>The memory stream.</returns>
-        private static MemoryStream GetStream(string content)
-        {
-            var buffer = Encoding.UTF8.GetBytes(content);
-            return new MemoryStream(buffer);
-        }
-
         /// Test User-Agent header is set with default values.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestUserAgentDefault()
         {
@@ -428,14 +434,15 @@ namespace Dropbox.Api.Tests
             });
 
             var mockClient = new HttpClient(mockHandler);
-            var client = new DropboxClient(UserAccessToken, new DropboxClientConfig { HttpClient = mockClient });
+            var client = new DropboxClient(userAccessToken, new DropboxClientConfig { HttpClient = mockClient });
             await client.Users.GetCurrentAccountAsync();
             Assert.IsTrue(lastRequest.Headers.UserAgent.ToString().Contains("OfficialDropboxDotNetSDKv2"));
         }
 
+        /// <summary>
         /// Test User-Agent header is populated with user supplied value in DropboxClientConfig.
         /// </summary>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         [TestMethod]
         public async Task TestUserAgentUserSupplied()
         {
@@ -448,24 +455,25 @@ namespace Dropbox.Api.Tests
 
             var mockClient = new HttpClient(mockHandler);
             var userAgent = "UserAgentTest";
-            var client = new DropboxClient(UserAccessToken, new DropboxClientConfig { HttpClient = mockClient, UserAgent = userAgent });
+            var client = new DropboxClient(userAccessToken, new DropboxClientConfig { HttpClient = mockClient, UserAgent = userAgent });
             await client.Users.GetCurrentAccountAsync();
             Assert.IsTrue(lastRequest.Headers.UserAgent.ToString().Contains(userAgent));
         }
 
         /// <summary>
-        /// Test cancel request of Dispose DropboxClient
+        /// Test cancel request of Dispose DropboxClient.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task"/> representing the asynchronous unit test.</returns>
         [TestMethod]
         public async Task TestDropboxClientDispose()
         {
             var canceled = false;
             Task<FullAccount> task;
-            using (var client = new DropboxClient(UserAccessToken))
+            using (var client = new DropboxClient(userAccessToken))
             {
                 task = client.Users.GetCurrentAccountAsync();
             }
+
             try
             {
                 await task;
@@ -474,22 +482,23 @@ namespace Dropbox.Api.Tests
             {
                 canceled = true;
             }
+
             Assert.IsTrue(canceled);
         }
 
-          /// <summary>
+        /// <summary>
         /// Test upload with a date-time format file name.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task"/> representing the asynchronous unit test.</returns>
         [TestMethod]
         public async Task TestUploadWithDateName()
         {
             var fileNameWithDateFormat = DateTime.Now.ToString("s");
-            var response = await Client.Files.UploadAsync($"{TestingPath}/{fileNameWithDateFormat}", body: GetStream("abc"));
+            var response = await client.Files.UploadAsync($"{TestingPath}/{fileNameWithDateFormat}", body: GetStream("abc"));
             Assert.AreEqual(response.Name, fileNameWithDateFormat);
             Assert.AreEqual(response.PathLower, $"{TestingPath.ToLower()}/{fileNameWithDateFormat.ToLowerInvariant()}");
             Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{fileNameWithDateFormat}");
-            var downloadResponse = await Client.Files.DownloadAsync($"{TestingPath}/{fileNameWithDateFormat}");
+            var downloadResponse = await client.Files.DownloadAsync($"{TestingPath}/{fileNameWithDateFormat}");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
         }
@@ -497,17 +506,28 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Test folder creation with a date-time format folder name.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task"/> representing the asynchronous unit test.</returns>
         [TestMethod]
         public async Task TestCreateFolderWithDateFormat()
         {
             var folderNameWithDateFormat = DateTime.Now.ToString("s");
-            var response = await Client.Files.CreateFolderAsync($"{TestingPath}/{folderNameWithDateFormat}");
+            var response = await client.Files.CreateFolderAsync($"{TestingPath}/{folderNameWithDateFormat}");
             Assert.AreEqual(response.Name, folderNameWithDateFormat);
             Assert.AreEqual(response.PathLower, $"{TestingPath.ToLower()}/{folderNameWithDateFormat.ToLowerInvariant()}");
             Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{folderNameWithDateFormat}");
-            var folders = await Client.Files.ListFolderAsync($"/{TestingPath}");
+            var folders = await client.Files.ListFolderAsync($"/{TestingPath}");
             Assert.IsTrue(folders.Entries.Any(f => f.Name == folderNameWithDateFormat));
+        }
+
+        /// <summary>
+        /// Converts string to a memory stream.
+        /// </summary>
+        /// <param name="content">The string content.</param>
+        /// <returns>The memory stream.</returns>
+        private static MemoryStream GetStream(string content)
+        {
+            var buffer = Encoding.UTF8.GetBytes(content);
+            return new MemoryStream(buffer);
         }
     }
 }

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="Encoder.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -30,7 +30,8 @@ namespace Dropbox.Api.Stone
     /// Encoder for nullable struct.
     /// </summary>
     /// <typeparam name="T">Type of the struct.</typeparam>
-    internal sealed class NullableEncoder<T> : IEncoder<T?> where T : struct
+    internal sealed class NullableEncoder<T> : IEncoder<T?>
+        where T : struct
     {
         /// <summary>
         /// The encoder.
@@ -301,7 +302,7 @@ namespace Dropbox.Api.Stone
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
-        /// <param name="writer">The writer.</param> 
+        /// <param name="writer">The writer.</param>
         public void Encode(string value, IJsonWriter writer)
         {
             writer.WriteString(value);
@@ -322,7 +323,7 @@ namespace Dropbox.Api.Stone
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
-        /// <param name="writer">The writer.</param> 
+        /// <param name="writer">The writer.</param>
         public void Encode(Empty value, IJsonWriter writer)
         {
         }
@@ -332,13 +333,14 @@ namespace Dropbox.Api.Stone
     /// Encoder for struct type.
     /// </summary>
     /// <typeparam name="T">The type.</typeparam>
-    internal abstract class StructEncoder<T> : IEncoder<T> where T : class
+    internal abstract class StructEncoder<T> : IEncoder<T>
+        where T : class
     {
         /// <summary>
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
-        /// <param name="writer">The writer.</param> 
+        /// <param name="writer">The writer.</param>
         public void Encode(T value, IJsonWriter writer)
         {
             if (value == null)
@@ -365,7 +367,7 @@ namespace Dropbox.Api.Stone
         /// <typeparam name="TProperty">The property.</typeparam>
         /// <param name="propertyName">The property name.</param>
         /// <param name="value">The value.</param>
-        /// <param name="writer">The writer.</param> 
+        /// <param name="writer">The writer.</param>
         /// <param name="encoder">The encoder.</param>
         protected static void WriteProperty<TProperty>(string propertyName, TProperty value, IJsonWriter writer, IEncoder<TProperty> encoder)
         {
@@ -379,7 +381,7 @@ namespace Dropbox.Api.Stone
         /// <typeparam name="TProperty">The property.</typeparam>
         /// <param name="propertyName">The property name.</param>
         /// <param name="value">The value.</param>
-        /// <param name="writer">The writer.</param> 
+        /// <param name="writer">The writer.</param>
         /// <param name="encoder">The encoder.</param>
         protected static void WriteListProperty<TProperty>(string propertyName, IList<TProperty> value, IJsonWriter writer, IEncoder<TProperty> encoder)
         {
@@ -430,7 +432,7 @@ namespace Dropbox.Api.Stone
         /// The encode.
         /// </summary>
         /// <param name="value">The value.</param>
-        /// <param name="writer">The writer.</param> 
+        /// <param name="writer">The writer.</param>
         public void Encode(IList<T> value, IJsonWriter writer)
         {
             Encode(value, writer, this.itemEncoder);

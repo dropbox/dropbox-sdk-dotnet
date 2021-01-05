@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="Util.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -16,16 +16,16 @@ namespace Dropbox.Api.Stone
     internal static class Util
     {
         /// <summary>
-        /// Converts a <see cref="T:System.Threading.Tasks.Task`1"/> to the APM
+        /// Converts a <see cref="T:System.Threading.Tasks.Task`1"/> to the APM.
         /// </summary>
         /// <typeparam name="TResult">The type of the task result.</typeparam>
         /// <param name="task">The task to convert.</param>
         /// <param name="callback">The callback provided to the begin method.</param>
         /// <param name="state">
         /// The state that is passed into the <see cref="IAsyncResult"/>.</param>
-        /// <returns>The <see cref="IAsyncResult"/> that will be returned by the 
+        /// <returns>The <see cref="IAsyncResult"/> that will be returned by the
         /// begin method.</returns>
-        /// <exception cref="System.ArgumentNullException">Thrown if 
+        /// <exception cref="System.ArgumentNullException">Thrown if
         /// <paramref name="task"/> is null.</exception>
         public static IAsyncResult ToApm<TResult>(
             this Task<TResult> task,
@@ -53,25 +53,22 @@ namespace Dropbox.Api.Stone
                         completion.TrySetResult(t.Result);
                     }
 
-                    if (callback != null)
-                    {
-                        callback(completion.Task);
-                    }
+                    callback?.Invoke(completion.Task);
                 });
 
             return completion.Task;
         }
 
         /// <summary>
-        /// Converts a <see cref="Task"/> to the APM
+        /// Converts a <see cref="Task"/> to the APM.
         /// </summary>
         /// <param name="task">The task to convert.</param>
         /// <param name="callback">The callback provided to the begin method.</param>
         /// <param name="state">
         /// The state that is passed into the <see cref="IAsyncResult"/>.</param>
-        /// <returns>The <see cref="IAsyncResult"/> that will be returned by the 
+        /// <returns>The <see cref="IAsyncResult"/> that will be returned by the
         /// begin method.</returns>
-        /// <exception cref="System.ArgumentNullException">Thrown if 
+        /// <exception cref="System.ArgumentNullException">Thrown if
         /// <paramref name="task"/> is null.</exception>
         public static IAsyncResult ToApm(
             this Task task,
@@ -99,10 +96,7 @@ namespace Dropbox.Api.Stone
                         completion.TrySetResult(true);
                     }
 
-                    if (callback != null)
-                    {
-                        callback(completion.Task);
-                    }
+                    callback?.Invoke(completion.Task);
                 });
 
             return completion.Task;
