@@ -20,7 +20,7 @@ jobs:
           -- \
           'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
-        uses: codecov/codecov-action@v1.1.1
+        uses: codecov/codecov-action@v1.2.0
         with:
           flags: unit
           fail_ci_if_error: true
