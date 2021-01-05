@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
-// <copyright file="DropboxClient.common.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// <copyright file="DropboxException.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ namespace Dropbox.Api
         /// <summary>
         /// The request id.
         /// </summary>
-        private string requestId;
+        private readonly string requestId;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DropboxException"/> class.
@@ -49,7 +49,7 @@ namespace Dropbox.Api
     }
 
     /// <summary>
-    /// General HTTP exception
+    /// General HTTP exception.
     /// </summary>
     public class HttpException : DropboxException
     {
@@ -69,7 +69,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Gets the HTTP status code that prompted this exception
+        /// Gets the HTTP status code that prompted this exception.
         /// </summary>
         /// <value>
         /// The status code.
@@ -108,8 +108,10 @@ namespace Dropbox.Api
     public partial class AuthException
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="AuthException"/> class.
         /// <para>Initializes a new instance of the <see cref="AuthException"/> class.</para>
         /// </summary>
+        /// <param name="requestId">The Dropbox request ID.</param>
         internal AuthException(string requestId)
             : base(requestId)
         {
@@ -118,7 +120,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Gets the HTTP status code that prompted this exception
+        /// Gets the HTTP status code that prompted this exception.
         /// </summary>
         /// <value>
         /// The status code.
@@ -142,8 +144,10 @@ namespace Dropbox.Api
     public partial class AccessException
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="AccessException"/> class.
         /// <para>Initializes a new instance of the <see cref="AccessException"/> class.</para>
         /// </summary>
+        /// <param name="requestId">The Dropbox request ID.</param>
         internal AccessException(string requestId)
             : base(requestId)
         {
@@ -156,8 +160,10 @@ namespace Dropbox.Api
     public partial class PathRootException
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="PathRootException"/> class.
         /// <para>Initializes a new instance of the <see cref="PathRootException"/> class.</para>
         /// </summary>
+        /// <param name="requestId">The Dropbox request ID.</param>
         internal PathRootException(string requestId)
             : base(requestId)
         {
@@ -205,8 +211,10 @@ namespace Dropbox.Api
     public partial class RateLimitException
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="RateLimitException"/> class.
         /// <para>Initializes a new instance of the <see cref="requestId"/> class.</para>
         /// </summary>
+        /// <param name="requestId">The Dropbox request ID.</param>
         internal RateLimitException(string requestId)
             : base(requestId)
         {
@@ -215,7 +223,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Gets the HTTP status code that prompted this exception
+        /// Gets the HTTP status code that prompted this exception.
         /// </summary>
         /// <value>
         /// The status code.

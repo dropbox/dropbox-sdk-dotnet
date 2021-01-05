@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="IEncoder.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 

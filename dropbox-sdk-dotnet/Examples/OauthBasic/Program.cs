@@ -88,7 +88,7 @@ namespace OauthTest
 
                 // This call should succeed since the correct scope has been acquired
                 await GetCurrentAccount(client);
-                
+
                 Console.WriteLine("Refreshing without scope account_info.read");
                 var newScopes = new string[] { "files.metadata.read", "files.content.read" };
                 await client.RefreshAccessToken(newScopes);
@@ -170,7 +170,7 @@ namespace OauthTest
             }
 
             var redirectUri = new Uri(context.Request.QueryString["url_with_fragment"]);
-            
+
             return redirectUri;
         }
 
@@ -201,7 +201,7 @@ namespace OauthTest
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri, state: state, tokenAccessType : TokenAccessType.Offline, scopeList : scopeList, includeGrantedScopes: includeGrantedScopes);
+                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri, state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 

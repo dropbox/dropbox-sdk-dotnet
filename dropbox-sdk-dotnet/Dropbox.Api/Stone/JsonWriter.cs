@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="JsonWriter.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ namespace Dropbox.Api.Stone
 
             var json = builder.ToString();
 
-            return !string.IsNullOrEmpty(json) ? json .Replace("\x7f", "\\u007f"): "null";
+            return !string.IsNullOrEmpty(json) ? json.Replace("\x7f", "\\u007f") : "null";
         }
 
         /// <summary>

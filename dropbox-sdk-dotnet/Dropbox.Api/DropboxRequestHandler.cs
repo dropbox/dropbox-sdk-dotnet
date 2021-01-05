@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="DropboxRequestHandler.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -17,10 +17,8 @@ namespace Dropbox.Api
     using System.Reflection;
     using System.Text;
     using System.Threading.Tasks;
-
-    using Dropbox.Api.Stone;
     using Dropbox.Api.Common;
-
+    using Dropbox.Api.Stone;
     using Newtonsoft.Json.Linq;
 
     /// <summary>
@@ -29,8 +27,9 @@ namespace Dropbox.Api
     internal sealed class DropboxRequestHandler : ITransport
     {
         private const int TokenExpirationBuffer = 300;
+
         /// <summary>
-        /// The API version
+        /// The API version.
         /// </summary>
         private const string ApiVersion = "2";
 
@@ -75,7 +74,7 @@ namespace Dropbox.Api
         private readonly HttpClient defaultLongPollHttpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(480) };
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxRequestHandler"/> class.
+        /// Initializes a new instance of the <see cref="DropboxRequestHandler"/> class.
         /// </summary>
         /// <param name="options">The configuration options for dropbox client.</param>
         /// <param name="selectUser">The member id of the selected user.</param>
@@ -87,43 +86,19 @@ namespace Dropbox.Api
             string selectAdmin = null,
             PathRoot pathRoot = null)
         {
-            if (options == null)
-            {
-                throw new ArgumentNullException("options");
-            }
-
-            this.options = options;
+            this.options = options ?? throw new ArgumentNullException("options");
             this.selectUser = selectUser;
             this.selectAdmin = selectAdmin;
             this.pathRoot = pathRoot;
         }
 
         /// <summary>
-        /// Set the value for Dropbox-Api-Path-Root header.
-        /// </summary>
-        /// <param name="pathRoot">The path root object.</param>
-        /// <returns>A <see cref="DropboxClient"/> instance with Dropbox-Api-Path-Root header set.</returns>
-        internal DropboxRequestHandler WithPathRoot(PathRoot pathRoot)
-        {
-            if (pathRoot == null)
-            {
-                throw new ArgumentNullException("pathRoot");
-            }
-
-            return new DropboxRequestHandler(
-                this.options,
-                selectUser: this.selectUser,
-                selectAdmin: this.selectAdmin,
-                pathRoot: pathRoot);
-        }
-
-        /// <summary>
-        /// The known route styles
+        /// The known route styles.
         /// </summary>
         internal enum RouteStyle
         {
             /// <summary>
-            /// RPC style means that the argument and result of a route are contained in the 
+            /// RPC style means that the argument and result of a route are contained in the
             /// HTTP body.
             /// </summary>
             Rpc,
@@ -140,7 +115,7 @@ namespace Dropbox.Api
             /// header. The HTTP request body contains a binary payload. The result comes
             /// back in a <c>Dropbox-API-Result</c> header.
             /// </summary>
-            Upload
+            Upload,
         }
 
         /// <summary>
@@ -264,11 +239,101 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Uses the refresh token to obtain a new access token.
+        /// </summary>
+        /// <param name="scopeList">The scope list.</param>
+        /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
+        public async Task<bool> RefreshAccessToken(string[] scopeList = null)
+        {
+            if (this.options.OAuth2RefreshToken == null || this.options.AppKey == null)
+            {
+                // Cannot refresh token if you do not have at a minimum refresh token and app key
+                return false;
+            }
+
+            var url = "https://api.dropbox.com/oauth2/token";
+
+            var parameters = new Dictionary<string, string>
+                {
+                    { "refresh_token", this.options.OAuth2RefreshToken },
+                    { "grant_type", "refresh_token" },
+                    { "client_id", this.options.AppKey },
+                };
+
+            if (!string.IsNullOrEmpty(this.options.AppSecret))
+            {
+                parameters["client_secret"] = this.options.AppSecret;
+            }
+
+            if (scopeList != null)
+            {
+                parameters["scope"] = string.Join(" ", scopeList);
+            }
+
+            var bodyContent = new FormUrlEncodedContent(parameters);
+
+            var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);
+
+            // if response is an invalid grant, we want to throw this exception rather than the one thrown in
+            // response.EnsureSuccessStatusCode();
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                if (reason == "invalid_grant")
+                {
+                    throw AuthException.Decode(reason, () => new AuthException(this.GetRequestId(response)));
+                }
+            }
+
+            response.EnsureSuccessStatusCode();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                string accessToken = json["access_token"].ToString();
+                DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
+                this.options.OAuth2AccessToken = accessToken;
+                this.options.OAuth2AccessTokenExpiresAt = tokenExpiration;
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// The public dispose.
+        /// </summary>
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Set the value for Dropbox-Api-Path-Root header.
+        /// </summary>
+        /// <param name="pathRoot">The path root object.</param>
+        /// <returns>A <see cref="DropboxClient"/> instance with Dropbox-Api-Path-Root header set.</returns>
+        internal DropboxRequestHandler WithPathRoot(PathRoot pathRoot)
+        {
+            if (pathRoot == null)
+            {
+                throw new ArgumentNullException("pathRoot");
+            }
+
+            return new DropboxRequestHandler(
+                this.options,
+                selectUser: this.selectUser,
+                selectAdmin: this.selectAdmin,
+                pathRoot: pathRoot);
+        }
+
+        /// <summary>
         /// Requests the JSON string with retry.
         /// </summary>
         /// <param name="host">The host.</param>
-        /// <param name="auth">The auth type of the route.</param>
         /// <param name="routeName">Name of the route.</param>
+        /// <param name="auth">The auth type of the route.</param>
         /// <param name="routeStyle">The route style.</param>
         /// <param name="requestArg">The request argument.</param>
         /// <param name="body">The body to upload if <paramref name="routeStyle"/>
@@ -301,7 +366,8 @@ namespace Dropbox.Api
                     maxRetries = 0;
                 }
             }
-            await CheckAndRefreshAccessToken();
+
+            await this.CheckAndRefreshAccessToken();
             try
             {
                 while (true)
@@ -319,14 +385,13 @@ namespace Dropbox.Api
                             {
                                 throw;
                             }
-                            else 
+                            else
                             {
-                                await RefreshAccessToken();
+                                await this.RefreshAccessToken();
                                 hasRefreshed = true;
                             }
-
                         }
-                        else 
+                        else
                         {
                             // dropbox maps 503 - ServiceUnavailable to be a rate limiting error.
                             // do not count a rate limiting error as an attempt
@@ -335,7 +400,6 @@ namespace Dropbox.Api
                                 throw;
                             }
                         }
-                        
                     }
                     catch (RateLimitException)
                     {
@@ -377,15 +441,14 @@ namespace Dropbox.Api
         /// Attempts to extract the value of a field named <c>error</c> from <paramref name="text"/>
         /// if it is a valid JSON object.
         /// </summary>
-        /// <param name="text">The text to check</param>
+        /// <param name="text">The text to check.</param>
         /// <returns>The contents of the error field if present, otherwise <paramref name="text" />.</returns>
         private string CheckForError(string text)
         {
             try
             {
                 var obj = JObject.Parse(text);
-                JToken error;
-                if (obj.TryGetValue("error", out error))
+                if (obj.TryGetValue("error", out JToken error))
                 {
                     return error.ToString();
                 }
@@ -468,7 +531,7 @@ namespace Dropbox.Api
                     request.Headers.Add(DropboxApiArgHeader, requestArg);
 
                     // This is required to force libcurl remove default content type header.
-                    request.Content = new StringContent("");
+                    request.Content = new StringContent(string.Empty);
                     request.Content.Headers.ContentType = null;
 
                     completionOption = HttpCompletionOption.ResponseHeadersRead;
@@ -491,9 +554,9 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.getHttpClient(host).SendAsync(request, completionOption).ConfigureAwait(false);
+            var response = await this.GetHttpClient(host).SendAsync(request, completionOption).ConfigureAwait(false);
 
-            var requestId = GetRequestId(response);
+            var requestId = this.GetRequestId(response);
             try
             {
                 if ((int)response.StatusCode >= 500)
@@ -511,22 +574,22 @@ namespace Dropbox.Api
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw AuthException.Decode(reason, () => new AuthException(GetRequestId(response)));
+                    throw AuthException.Decode(reason, () => new AuthException(this.GetRequestId(response)));
                 }
                 else if ((int)response.StatusCode == 429)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw RateLimitException.Decode(reason, () => new RateLimitException(GetRequestId(response)));
+                    throw RateLimitException.Decode(reason, () => new RateLimitException(this.GetRequestId(response)));
                 }
                 else if (response.StatusCode == HttpStatusCode.Forbidden)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw AccessException.Decode(reason, () => new AccessException(GetRequestId(response)));
+                    throw AccessException.Decode(reason, () => new AccessException(this.GetRequestId(response)));
                 }
                 else if ((int)response.StatusCode == 422)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw PathRootException.Decode(reason, () => new PathRootException(GetRequestId(response)));
+                    throw PathRootException.Decode(reason, () => new PathRootException(this.GetRequestId(response)));
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
                     response.StatusCode == HttpStatusCode.NotFound)
@@ -537,7 +600,7 @@ namespace Dropbox.Api
                     {
                         IsError = true,
                         ObjectResult = reason,
-                        RequestId = GetRequestId(response)
+                        RequestId = this.GetRequestId(response),
                     };
                 }
                 else if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
@@ -549,7 +612,7 @@ namespace Dropbox.Api
                         {
                             IsError = false,
                             ObjectResult = response.Headers.GetValues(DropboxApiResultHeader).FirstOrDefault(),
-                            HttpResponse = response
+                            HttpResponse = response,
                         };
                     }
                     else
@@ -557,7 +620,7 @@ namespace Dropbox.Api
                         return new Result
                         {
                             IsError = false,
-                            ObjectResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false)
+                            ObjectResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false),
                         };
                     }
                 }
@@ -584,62 +647,9 @@ namespace Dropbox.Api
             bool needsToken = this.options.OAuth2AccessToken == null;
             if ((needsRefresh || needsToken) && canRefresh)
             {
-                return await RefreshAccessToken();
-            }
-            return false;
-        }
-        public async Task<bool> RefreshAccessToken(string[] scopeList = null) 
-        {
-            if (this.options.OAuth2RefreshToken == null || this.options.AppKey == null)
-            {
-                // Cannot refresh token if you do not have at a minimum refresh token and app key
-                return false;
+                return await this.RefreshAccessToken();
             }
 
-            var url = "https://api.dropbox.com/oauth2/token";
-
-            var parameters = new Dictionary<string, string>
-                {
-                    { "refresh_token", this.options.OAuth2RefreshToken} ,
-                    { "grant_type", "refresh_token" },
-                    { "client_id", this.options.AppKey }
-                };
-
-            if (!string.IsNullOrEmpty(this.options.AppSecret))
-            {
-                parameters["client_secret"] = this.options.AppSecret;
-            }
-
-            if (scopeList != null)
-            {
-                parameters["scope"] =  String.Join(" ", scopeList);
-            }
-
-            var bodyContent = new FormUrlEncodedContent(parameters);
-
-            var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);
-            //if response is an invalid grant, we want to throw this exception rather than the one thrown in 
-            // response.EnsureSuccessStatusCode();
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
-            {
-                var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                if (reason == "invalid_grant")
-                {
-                    throw AuthException.Decode(reason, () => new AuthException(GetRequestId(response)));
-                }
-            }
-            
-            response.EnsureSuccessStatusCode();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
-                string accessToken = json["access_token"].ToString();
-                DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
-                this.options.OAuth2AccessToken = accessToken;
-                this.options.OAuth2AccessTokenExpiresAt = tokenExpiration;
-                return true;
-            }
             return false;
         }
 
@@ -651,8 +661,10 @@ namespace Dropbox.Api
         /// <returns>The uri for this route.</returns>
         private Uri GetRouteUri(string hostname, string routeName)
         {
-            var builder = new UriBuilder("https", hostname);
-            builder.Path = "/" + ApiVersion + routeName;
+            var builder = new UriBuilder("https", hostname)
+            {
+                Path = "/" + ApiVersion + routeName,
+            };
             return builder.Uri;
         }
 
@@ -663,9 +675,7 @@ namespace Dropbox.Api
         /// <returns>The request id.</returns>
         private string GetRequestId(HttpResponseMessage response)
         {
-            IEnumerable<string> requestId;
-
-            if (response.Headers.TryGetValues("X-Dropbox-Request-Id", out requestId))
+            if (response.Headers.TryGetValues("X-Dropbox-Request-Id", out IEnumerable<string> requestId))
             {
                 return requestId.FirstOrDefault();
             }
@@ -678,7 +688,7 @@ namespace Dropbox.Api
         /// </summary>
         /// <param name="host">The host type.</param>
         /// <returns>The <see cref="HttpClient"/>.</returns>
-        private HttpClient getHttpClient(string host)
+        private HttpClient GetHttpClient(string host)
         {
             if (host == HostType.ApiNotify)
             {
@@ -705,17 +715,8 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// The public dispose.
-        /// </summary>
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        /// <summary>
         /// Used to return un-typed result information to the layer that can interpret the
-        /// object types
+        /// object types.
         /// </summary>
         private class Result
         {
@@ -796,7 +797,7 @@ namespace Dropbox.Api
             }
 
             /// <summary>
-            /// Asynchronously gets the content as <see cref="String" />.
+            /// Asynchronously gets the content as <see cref="string" />.
             /// </summary>
             /// <returns>The downloaded content as a string.</returns>
             public Task<string> GetContentAsStringAsync()
@@ -833,6 +834,7 @@ namespace Dropbox.Api
         {
         }
 
+        /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
             // Do not dispose the stream.
@@ -892,17 +894,17 @@ namespace Dropbox.Api
     internal sealed class DropboxRequestHandlerOptions
     {
         /// <summary>
-        /// The default api domain
+        /// The default api domain.
         /// </summary>
         private const string DefaultApiDomain = "api.dropboxapi.com";
 
         /// <summary>
-        /// The default api content domain
+        /// The default api content domain.
         /// </summary>
         private const string DefaultApiContentDomain = "content.dropboxapi.com";
 
         /// <summary>
-        /// The default api notify domain
+        /// The default api notify domain.
         /// </summary>
         private const string DefaultApiNotifyDomain = "notify.dropboxapi.com";
 
@@ -911,7 +913,16 @@ namespace Dropbox.Api
         /// </summary>
         private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
 
-        public DropboxRequestHandlerOptions(DropboxClientConfig config, string oauth2AccessToken, string oauth2RefreshToken, Nullable<DateTime> oauth2AccessTokenExpiresAt, string appKey, string appSecret)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxRequestHandlerOptions"/> class.
+        /// </summary>
+        /// <param name="config">The client configuration.</param>
+        /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
+        public DropboxRequestHandlerOptions(DropboxClientConfig config, string oauth2AccessToken, string oauth2RefreshToken, DateTime? oauth2AccessTokenExpiresAt, string appKey, string appSecret)
             : this(
             oauth2AccessToken,
             oauth2RefreshToken,
@@ -928,15 +939,14 @@ namespace Dropbox.Api
         {
         }
 
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DropboxRequestHandlerOptions"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
-        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
         /// <param name="maxRetriesOnError">The maximum retries on a 5xx error.</param>
         /// <param name="userAgent">The user agent to use when making requests.</param>
         /// <param name="apiHostname">The hostname that will process api requests;
@@ -945,14 +955,14 @@ namespace Dropbox.Api
         /// this is for internal Dropbox use only.</param>
         /// <param name="apiNotifyHostname">The hostname that will process api notify requests;
         /// this is for internal Dropbox use only.</param>
-        /// <param name="httpClient">The custom http client. If not provided, a default 
+        /// <param name="httpClient">The custom http client. If not provided, a default
         /// http client will be created.</param>
-        /// <param name="longPollHttpClient">The custom http client for long poll. If not provided, a default 
+        /// <param name="longPollHttpClient">The custom http client for long poll. If not provided, a default
         /// http client with longer timeout will be created.</param>
         public DropboxRequestHandlerOptions(
             string oauth2AccessToken,
             string oauth2RefreshToken,
-            Nullable<DateTime> oauth2AccessTokenExpiresAt,
+            DateTime? oauth2AccessTokenExpiresAt,
             string appKey,
             string appSecret,
             int maxRetriesOnError,
@@ -988,7 +998,7 @@ namespace Dropbox.Api
             {
                 { HostType.Api, apiHostname },
                 { HostType.ApiContent, apiContentHostname },
-                { HostType.ApiNotify, apiNotifyHostname }
+                { HostType.ApiNotify, apiNotifyHostname },
             };
         }
 
@@ -998,27 +1008,27 @@ namespace Dropbox.Api
         public int MaxClientRetries { get; private set; }
 
         /// <summary>
-        /// Gets the OAuth2 token.
+        /// Gets or sets the OAuth2 token.
         /// </summary>
         public string OAuth2AccessToken { get; set; }
 
         /// <summary>
-        /// Get the OAuth2 refresh token
+        /// Gets get the OAuth2 refresh token.
         /// </summary>
         public string OAuth2RefreshToken { get; private set; }
 
         /// <summary>
-        /// Gets the time the access token expires at
+        /// Gets or sets the time the access token expires at.
         /// </summary>
-        public Nullable<DateTime> OAuth2AccessTokenExpiresAt { get; set; }
+        public DateTime? OAuth2AccessTokenExpiresAt { get; set; }
 
         /// <summary>
-        /// Gets the app key to use when refreshing tokens
+        /// Gets the app key to use when refreshing tokens.
         /// </summary>
         public string AppKey { get; private set; }
 
         /// <summary>
-        /// Gets the app secret to use when refreshing tokens
+        /// Gets the app secret to use when refreshing tokens.
         /// </summary>
         public string AppSecret { get; private set; }
 

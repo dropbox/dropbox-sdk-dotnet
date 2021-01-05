@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="IJsonReader.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -55,57 +55,57 @@ namespace Dropbox.Api.Stone
         void Skip();
 
         /// <summary>
-        /// Read value as Int32
+        /// Read value as Int32.
         /// </summary>
         /// <returns>The value.</returns>
         int ReadInt32();
 
         /// <summary>
-        /// Read value as Int64
+        /// Read value as Int64.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         long ReadInt64();
 
         /// <summary>
-        /// Read value as UInt32
+        /// Read value as UInt32.
         /// </summary>
         /// <returns>The value.</returns>
         uint ReadUInt32();
 
         /// <summary>
-        /// Read value as UInt64
+        /// Read value as UInt64.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         ulong ReadUInt64();
 
         /// <summary>
-        /// Read value as double
+        /// Read value as double.
         /// </summary>
         /// <returns>The value.</returns>
         double ReadDouble();
 
         /// <summary>
-        /// Read value as float
+        /// Read value as float.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         float ReadSingle();
 
         /// <summary>
-        /// Read value as DateTime
+        /// Read value as DateTime.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         DateTime ReadDateTime();
 
         /// <summary>
         /// Read value as boolean.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         bool ReadBoolean();
 
         /// <summary>
-        /// Read value as bytes
+        /// Read value as bytes.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         byte[] ReadBytes();
 
         /// <summary>

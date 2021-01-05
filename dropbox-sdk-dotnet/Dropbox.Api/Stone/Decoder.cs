@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="Decoder.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -31,7 +31,8 @@ namespace Dropbox.Api.Stone
     /// Decoder for nullable struct.
     /// </summary>
     /// <typeparam name="T">Type of the struct.</typeparam>
-    internal sealed class NullableDecoder<T> : IDecoder<T?> where T : struct
+    internal sealed class NullableDecoder<T> : IDecoder<T?>
+        where T : struct
     {
         /// <summary>
         /// The decoder.
@@ -318,7 +319,8 @@ namespace Dropbox.Api.Stone
     /// Decoder for struct type.
     /// </summary>
     /// <typeparam name="T">The struct type.</typeparam>
-    internal abstract class StructDecoder<T> : IDecoder<T> where T : class
+    internal abstract class StructDecoder<T> : IDecoder<T>
+        where T : class
     {
         /// <summary>
         /// The decode.
@@ -351,9 +353,7 @@ namespace Dropbox.Api.Stone
         {
             var obj = this.Create();
 
-            string fieldName;
-
-            while (TryReadPropertyName(reader, out fieldName))
+            while (TryReadPropertyName(reader, out string fieldName))
             {
                 this.SetField(obj, fieldName, reader);
             }
@@ -441,7 +441,8 @@ namespace Dropbox.Api.Stone
     /// Decoder for union type.
     /// </summary>
     /// <typeparam name="T">The union type.</typeparam>
-    internal abstract class UnionDecoder<T> : StructDecoder<T> where T : class
+    internal abstract class UnionDecoder<T> : StructDecoder<T>
+        where T : class
     {
         /// <summary>
         /// Decode fields without ensuring start and end object.
@@ -450,9 +451,7 @@ namespace Dropbox.Api.Stone
         /// <returns>The decoded object.</returns>
         public override T DecodeFields(IJsonReader reader)
         {
-            string fieldName;
-
-            if (!StructDecoder<T>.TryReadPropertyName(reader, out fieldName))
+            if (!StructDecoder<T>.TryReadPropertyName(reader, out string fieldName))
             {
                 throw new InvalidOperationException("Not property found.");
             }
@@ -532,9 +531,7 @@ namespace Dropbox.Api.Stone
 
             EnsureStartArray(reader);
 
-            T item;
-
-            while (TryReadArrayItem(reader, itemDecoder, out item))
+            while (TryReadArrayItem(reader, itemDecoder, out T item))
             {
                 list.Add(item);
             }
@@ -591,7 +588,7 @@ namespace Dropbox.Api.Stone
         /// <returns>If succeeded.</returns>
         private static bool TryReadArrayItem(IJsonReader reader, IDecoder<T> decoder, out T value)
         {
-            value = default(T);
+            value = default;
 
             while (!reader.IsEndArray)
             {
