@@ -18,6 +18,7 @@ namespace Dropbox.Api.Tests
     using Dropbox.Api.Common;
     using Dropbox.Api.Files;
     using Dropbox.Api.Users;
+    using Microsoft.Extensions.Configuration;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
@@ -70,14 +71,20 @@ namespace Dropbox.Api.Tests
         [ClassInitialize]
         public static void ClassInitialize(TestContext context)
         {
-            appKey = context.Properties["appKey"].ToString();
-            appSecret = context.Properties["appSecret"].ToString();
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("settings.json", optional: true)
+                .AddEnvironmentVariables(prefix: "DROPBOX_")
+                .Build();
 
-            userRefreshToken = context.Properties["userRefreshToken"].ToString();
-            userAccessToken = context.Properties["userAccessToken"].ToString();
+            appKey = config["appKey"];
+            appSecret = config["appSecret"];
+
+            userRefreshToken = config["userRefreshToken"];
+            userAccessToken = config["userAccessToken"];
             client = new DropboxClient(userAccessToken);
 
-            var teamToken = context.Properties["teamAccessToken"].ToString();
+            var teamToken = config["teamAccessToken"];
             teamClient = new DropboxTeamClient(teamToken);
 
             appClient = new DropboxAppClient(appKey, appSecret);
