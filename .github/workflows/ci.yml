@@ -20,7 +20,22 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Run Integration Tests
+      - name: Test Legacy User
+        env:
+          DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
+          DROPBOX_INTEGRATION_appSecret: ${{ secrets.LEGACY_APP_SECRET }}
+          DROPBOX_INTEGRATION_userAccessToken: ${{ secrets.LEGACY_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ secrets.LEGACY_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_ACCESS_TOKEN }}
+        run: |
+          dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests
+      - name: Test Scoped User
+        env:
+          DROPBOX_INTEGRATION_appKey: ${{ secrets.SCOPED_APP_KEY }}
+          DROPBOX_INTEGRATION_appSecret: ${{ secrets.SCOPED_APP_SECRET }}
+          DROPBOX_INTEGRATION_userAccessToken: ${{ secrets.SCOPED_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ secrets.SCOPED_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_ACCESS_TOKEN }}
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests
   Linter:
