@@ -74,7 +74,7 @@ namespace Dropbox.Api.Tests
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("settings.json", optional: true)
-                .AddEnvironmentVariables(prefix: "DROPBOX_")
+                .AddEnvironmentVariables(prefix: "DROPBOX_INTEGRATION_")
                 .Build();
 
             appKey = config["appKey"];
