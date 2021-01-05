@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
-// <copyright file="DropboxOAuth2Helper.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// <copyright file="DropboxOauth2Helper.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ namespace Dropbox.Api
         /// callback which should be converted into a bearer token using the <see cref="DropboxOAuth2Helper.ProcessCodeFlowAsync"/>
         /// method. This is the recommended flow for apps that are running on a server.
         /// </summary>
-        Code
+        Code,
     }
 
     /// <summary>
@@ -55,11 +55,11 @@ namespace Dropbox.Api
         /// <summary>
         /// Create one short-lived token with an expiration
         /// </summary>
-        Online
+        Online,
     }
 
     /// <summary>
-    /// Which scopes that have already been granted to include when requesting scopes
+    /// Which scopes that have already been granted to include when requesting scopes.
     /// </summary>
     public enum IncludeGrantedScopes
     {
@@ -67,14 +67,16 @@ namespace Dropbox.Api
         /// Default, requests only the scopes passed in to the oauth request
         /// </summary>
         None,
+
         /// <summary>
         /// Token should include all previously granted user scopes as well as requested scopes
         /// </summary>
-        User, 
+        User,
+
         /// <summary>
         /// Token should include all previously granted team scopes as well as requested scopes
         /// </summary>
-        Team
+        Team,
     }
 
     /// <summary>
@@ -177,7 +179,7 @@ namespace Dropbox.Api
     /// on a field in the web app's user database associated with the current user, this helps prevent cross-site request forgery.
     /// </para>
     /// <para>
-    /// The <c>AuthAsync</c> method handles the route represented by the <c>RedirectUri</c>. The ASP.Net infrastructure has already 
+    /// The <c>AuthAsync</c> method handles the route represented by the <c>RedirectUri</c>. The ASP.Net infrastructure has already
     /// parsed the query string and extracted the <c>code</c> and <c>state</c> arguments. After validating that the <c>state</c>
     /// matches the value stored in the user record in the <c>Connect</c> method, authorization is completed by calling
     /// <see cref="DropboxOAuth2Helper.ProcessCodeFlowAsync"/>. This returns an <see cref="OAuth2Response"/> containing the access token
@@ -190,27 +192,27 @@ namespace Dropbox.Api
     ///     var user = this.store.CurrentUser();
     ///     user.ConnectState = Guid.NewGuid().ToString("N");
     ///     this.store.SaveChanges();
-    /// 
+    ///
     ///     var redirect = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Code, AppKey, RedirectUri, user.ConnectState);
     ///     return Redirect(redirect.ToString());
     /// }
-    /// 
+    ///
     /// // GET: /Home/Auth
     /// public async Task&lt;ActionResult&gt; AuthAsync(string code, string state)
     /// {
     ///     var user = this.store.CurrentUser();
-    ///     
+    ///
     ///     if (user.ConnectState != state)
     ///     {
     ///         this.Flash("There was an error connecting to Dropbox.");
     ///         return this.RedirectToAction("Index");
     ///     }
-    ///     
+    ///
     ///     OAuth2Response response = await DropboxOAuth2Helper.ProcessCodeFlowAsync(code, AppKey, AppSecret, RedirectUri);
-    ///     
+    ///
     ///     user.DropboxAccessToken = response.AccessToken;
     ///     await this.store.SaveChangesAsync();
-    ///     
+    ///
     ///     this.Flash("This account has been connected to Dropbox.");
     ///     return this.RedirectToAction("Profile");
     /// }
@@ -219,9 +221,9 @@ namespace Dropbox.Api
     public static class DropboxOAuth2Helper
     {
         /// <summary>
-        /// Length of Code Verifier for PKCE to be used in OAuth Flow
+        /// Length of Code Verifier for PKCE to be used in OAuth Flow.
         /// </summary>
-        public static int PKCEVerifierLength = 128;
+        private static readonly int PKCEVerifierLength = 128;
 
         /// <summary>
         /// Gets the URI used to start the OAuth2.0 authorization flow.
@@ -231,7 +233,7 @@ namespace Dropbox.Api
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="redirectUri">Where to redirect the user after authorization has completed. This must be the exact URI
         /// registered in the <a href="https://www.dropbox.com/developers/apps">App Console</a>; even <c>localhost</c>
-        /// must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code. 
+        /// must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code.
         /// If the redirect URI is omitted, the code will be presented directly to the user and they will be invited to enter
         /// the information in your app.</param>
         /// <param name="state">Up to 500 bytes of arbitrary data that will be passed back to <paramref name="redirectUri"/>.
@@ -251,11 +253,11 @@ namespace Dropbox.Api
         /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
         /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
         /// different account.</param>
-        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
+        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" />
         /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
-        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</param>
-        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</param>
-        /// <param name="codeChallenge">If using PKCE, please us the PKCEOAuthFlow object</param>
+        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app.</param>
+        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None.</param>
+        /// <param name="codeChallenge">If using PKCE, please us the PKCEOAuthFlow object.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None, string codeChallenge = null)
         {
@@ -272,7 +274,7 @@ namespace Dropbox.Api
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="redirectUri">Where to redirect the user after authorization has completed. This must be the exact URI
         /// registered in the <a href="https://www.dropbox.com/developers/apps">App Console</a>; even <c>localhost</c>
-        /// must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code. 
+        /// must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code.
         /// If the redirect URI is omitted, the code will be presented directly to the user and they will be invited to enter
         /// the information in your app.</param>
         /// <param name="state">Up to 500 bytes of arbitrary data that will be passed back to <paramref name="redirectUri"/>.
@@ -292,11 +294,11 @@ namespace Dropbox.Api
         /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
         /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
         /// different account.</param>
-        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
+        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" />
         /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
-        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</param>
-        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</param>
-        /// <param name="codeChallenge">If using PKCE, please us the PKCEOAuthFlow object</param>
+        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app.</param>
+        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None.</param>
+        /// <param name="codeChallenge">If using PKCE, please us the PKCEOAuthFlow object.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None, string codeChallenge = null)
         {
@@ -304,7 +306,7 @@ namespace Dropbox.Api
             {
                 throw new ArgumentNullException("clientId");
             }
-            
+
             if (redirectUri == null && oauthResponseType != OAuthResponseType.Code)
             {
                 throw new ArgumentNullException("redirectUri");
@@ -358,14 +360,13 @@ namespace Dropbox.Api
             }
 
             queryBuilder.Append("&token_access_type=").Append(tokenAccessType.ToString().ToLower());
-            
 
             if (scopeList != null)
             {
-                queryBuilder.Append("&scope=").Append(String.Join(" ", scopeList));
+                queryBuilder.Append("&scope=").Append(string.Join(" ", scopeList));
             }
 
-            if(includeGrantedScopes != IncludeGrantedScopes.None)
+            if (includeGrantedScopes != IncludeGrantedScopes.None)
             {
                 queryBuilder.Append("&include_granted_scopes=").Append(includeGrantedScopes.ToString().ToLower());
             }
@@ -377,7 +378,7 @@ namespace Dropbox.Api
 
             var uriBuilder = new UriBuilder("https://www.dropbox.com/oauth2/authorize")
             {
-                Query = queryBuilder.ToString()
+                Query = queryBuilder.ToString(),
             };
 
             return uriBuilder.Uri;
@@ -398,9 +399,9 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// 
+        /// Generates a PKCE code verifier.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The PKCE code verifier.</returns>
         public static string GeneratePKCECodeVerifier()
         {
             var bytes = new byte[PKCEVerifierLength];
@@ -413,10 +414,10 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// 
+        /// Hashes a PKCE code verifier to generate a code challenge.
         /// </summary>
-        /// <param name="codeVerifier"></param>
-        /// <returns></returns>
+        /// <param name="codeVerifier">The PKCE code verifier.</param>
+        /// <returns>The PKCE code challenge.</returns>
         public static string GeneratePKCECodeChallenge(string codeVerifier)
         {
             using (var sha256 = SHA256.Create())
@@ -430,11 +431,11 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Parses the token fragment. When using the OAuth 2.0 token or implicit grant flow, the 
+        /// Parses the token fragment. When using the OAuth 2.0 token or implicit grant flow, the
         /// user will be redirected to a URI with a fragment containing the authorization token.
         /// </summary>
         /// <param name="redirectedUri">The redirected URI.</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <returns>The authorization response, containing the access token and uid of the authorized user.</returns>
         public static OAuth2Response ParseTokenFragment(Uri redirectedUri)
         {
             if (redirectedUri == null)
@@ -489,14 +490,14 @@ namespace Dropbox.Api
         /// <param name="code">The code acquired in the query parameters of the redirect from the initial authorize url.</param>
         /// <param name="appKey">The application key, found in the
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
-        /// <param name="appSecret">The application secret, found in the 
+        /// <param name="appSecret">The application secret, found in the
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a> This is optional if using PKCE.</param>
         /// <param name="redirectUri">The redirect URI that was provided in the initial authorize URI,
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
-        /// <param name="codeVerifier">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <param name="codeVerifier">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object.</param>
+        /// <returns>The authorization response, containing the access token and uid of the authorized user.</returns>
         public static async Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret = null, string redirectUri = null, HttpClient client = null, string codeVerifier = null)
         {
             if (string.IsNullOrEmpty(code))
@@ -520,10 +521,10 @@ namespace Dropbox.Api
                 {
                     { "code", code },
                     { "grant_type", "authorization_code" },
-                    { "client_id", appKey }
+                    { "client_id", appKey },
                 };
 
-                if(!string.IsNullOrEmpty(appSecret))
+                if (!string.IsNullOrEmpty(appSecret))
                 {
                     parameters["client_secret"] = appSecret;
                 }
@@ -537,6 +538,7 @@ namespace Dropbox.Api
                 {
                     parameters["redirect_uri"] = redirectUri;
                 }
+
                 var content = new FormUrlEncodedContent(parameters);
                 var response = await httpClient.PostAsync("https://api.dropbox.com/oauth2/token", content).ConfigureAwait(false);
 
@@ -574,7 +576,7 @@ namespace Dropbox.Api
                         null,
                         json["token_type"].ToString());
                 }
-                
+
                 return new OAuth2Response(
                     json["access_token"].ToString(),
                     refreshToken,
@@ -599,15 +601,15 @@ namespace Dropbox.Api
         /// <param name="responseUri">The URI to which the user was redirected after the initial authorization request.</param>
         /// <param name="appKey">The application key, found in the
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
-        /// <param name="appSecret">The application secret, found in the 
+        /// <param name="appSecret">The application secret, found in the
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="redirectUri">The redirect URI that was provided in the initial authorize URI,
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="state">The state parameter (if any) that matches that used in the initial authorize URI.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
-        /// <param name="codeVerifier">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <param name="codeVerifier">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object.</param>
+        /// <returns>The authorization response, containing the access token and uid of the authorized user.</returns>
         public static Task<OAuth2Response> ProcessCodeFlowAsync(Uri responseUri, string appKey, string appSecret, string redirectUri = null, string state = null, HttpClient client = null, string codeVerifier = null)
         {
             if (responseUri == null)
@@ -669,31 +671,33 @@ namespace Dropbox.Api
 
     /// <summary>
     /// Object used to execute OAuth through PKCE
-    /// Use this object to maintain code verifier and challenge using S256 method
+    /// Use this object to maintain code verifier and challenge using S256 method.
     /// </summary>
     public class PKCEOAuthFlow
     {
         /// <summary>
-        /// Default constructor that also generates code verifier and code challenge to be used in PKCE flow
+        /// Initializes a new instance of the <see cref="PKCEOAuthFlow"/> class.
+        /// Default constructor that also generates code verifier and code challenge to be used in PKCE flow.
         /// </summary>
         public PKCEOAuthFlow()
         {
             this.CodeVerifier = DropboxOAuth2Helper.GeneratePKCECodeVerifier();
-            this.CodeChallenge = DropboxOAuth2Helper.GeneratePKCECodeChallenge(CodeVerifier);
+            this.CodeChallenge = DropboxOAuth2Helper.GeneratePKCECodeChallenge(this.CodeVerifier);
         }
 
-        private string CodeVerifier { get; set;  }
+        private string CodeVerifier { get; set; }
+
         private string CodeChallenge { get; set; }
 
         /// <summary>
-        /// Gets the URI used to start the OAuth2.0 authorization flow.  Passes in codeChallenge generated in this class
+        /// Gets the URI used to start the OAuth2.0 authorization flow.  Passes in codeChallenge generated in this class.
         /// </summary>
         /// <param name="oauthResponseType">The grant type requested, either <c>Token</c> or <c>Code</c>.</param>
         /// <param name="clientId">The apps key, found in the
         /// <a href="https://www.dropbox.com/developers/apps">App Console</a>.</param>
         /// <param name="redirectUri">Where to redirect the user after authorization has completed. This must be the exact URI
         /// registered in the <a href="https://www.dropbox.com/developers/apps">App Console</a>; even <c>localhost</c>
-        /// must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code. 
+        /// must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code.
         /// If the redirect URI is omitted, the code will be presented directly to the user and they will be invited to enter
         /// the information in your app.</param>
         /// <param name="state">Up to 500 bytes of arbitrary data that will be passed back to <paramref name="redirectUri"/>.
@@ -713,10 +717,10 @@ namespace Dropbox.Api
         /// This will make sure the user is brought to a page where they can create a new account or sign in to another account.
         /// This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
         /// different account.</param>
-        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" /> 
+        /// <param name="tokenAccessType">Determines the type of token to request.  See <see cref="TokenAccessType" />
         /// for information on specific types available.  If none is specified, this will use the legacy type.</param>
-        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</param>
-        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</param>
+        /// <param name="scopeList">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app.</param>
+        /// <param name="includeGrantedScopes">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None.</param>
         /// <returns>The uri of a web page which must be displayed to the user in order to authorize the app.</returns>
         public Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None)
         {
@@ -733,7 +737,7 @@ namespace Dropbox.Api
         /// this is only used to validate that it matches the original request, it is not used to redirect
         /// again.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <returns>The authorization response, containing the access token and uid of the authorized user.</returns>
         public Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string redirectUri = null, HttpClient client = null)
         {
             return DropboxOAuth2Helper.ProcessCodeFlowAsync(code, appKey, null, redirectUri, client, this.CodeVerifier);
@@ -750,19 +754,28 @@ namespace Dropbox.Api
         /// again.</param>
         /// <param name="state">The state parameter (if any) that matches that used in the initial authorize URI.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
-        /// <returns>The authorization response, containing the access token and uid of the authorized user</returns>
+        /// <returns>The authorization response, containing the access token and uid of the authorized user.</returns>
         public Task<OAuth2Response> ProcessCodeFlowAsync(Uri responseUri, string appKey, string redirectUri = null, string state = null, HttpClient client = null)
         {
             return DropboxOAuth2Helper.ProcessCodeFlowAsync(responseUri, appKey, null, redirectUri, state, client, this.CodeVerifier);
         }
-
     }
 
     /// <summary>
-    /// Contains the parameters passed in a successful authorization response. 
+    /// Contains the parameters passed in a successful authorization response.
     /// </summary>
     public sealed class OAuth2Response
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OAuth2Response"/> class.
+        /// </summary>
+        /// <param name="accessToken">The access token.</param>
+        /// <param name="refreshToken">The refresh token.</param>
+        /// <param name="uid">The uid.</param>
+        /// <param name="state">The state.</param>
+        /// <param name="tokenType">The token type.</param>
+        /// <param name="expiresIn">The duration until token expiry in seconds.</param>
+        /// <param name="scopeList">The scope list.</param>
         internal OAuth2Response(string accessToken, string refreshToken, string uid, string state, string tokenType, int expiresIn, string[] scopeList)
         {
             if (string.IsNullOrEmpty(accessToken) || uid == null)
@@ -778,6 +791,7 @@ namespace Dropbox.Api
             this.ExpiresAt = DateTime.Now.AddSeconds(expiresIn);
             this.ScopeList = scopeList;
         }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuth2Response"/> class.
         /// </summary>
@@ -802,7 +816,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Gets the access token, a token which can be used to make calls to the Dropbox API
+        /// Gets the access token, a token which can be used to make calls to the Dropbox API.
         /// </summary>
         /// <remarks>
         /// Pass this as the <c>oauth2AccessToken</c> argument when creating an instance
@@ -842,13 +856,13 @@ namespace Dropbox.Api
         public string RefreshToken { get; private set; }
 
         /// <summary>
-        /// Gets the time of expiration of the access token, if the token will expire. 
+        /// Gets the time of expiration of the access token, if the token will expire.
         /// This is only filled if offline or online access type was selected.
         /// </summary>
-        public Nullable<DateTime> ExpiresAt { get; private set; }
+        public DateTime? ExpiresAt { get; private set; }
 
         /// <summary>
-        /// List of scopes this oauth2 request granted the user
+        /// Gets list of scopes this oauth2 request granted the user.
         /// </summary>
         public string[] ScopeList { get; private set; }
     }
@@ -862,8 +876,9 @@ namespace Dropbox.Api
         /// Initializes a new instance of the <see cref="OAuth2Exception"/> class.
         /// </summary>
         /// <param name="message">The message.</param>
-        /// <param name="errorDescription">The error description</param>
-        public OAuth2Exception(string message, string errorDescription = null) : base(message)
+        /// <param name="errorDescription">The error description.</param>
+        public OAuth2Exception(string message, string errorDescription = null)
+            : base(message)
         {
             this.ErrorDescription = errorDescription;
         }

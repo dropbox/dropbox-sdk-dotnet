@@ -4,35 +4,43 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace Dropbox.Api.Unit.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// All the unit tests.
+    /// </summary>
     [TestClass]
     public class UnitTests
     {
         /// <summary>
-        /// Test get authorization url
+        /// Test get authorization url.
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1000:KeywordsMustBeSpacedCorrectly", Justification = "False positive.")]
         [TestMethod]
         public void TestGetAuthorizationUri()
         {
             string clientId = "myclientid";
-            string[] redirectUris = new[] { "", "http://127.0.0.1:52475/" };
-            string[] states = new[] { "", "state" };
+            string[] redirectUris = new[] { string.Empty, "http://127.0.0.1:52475/" };
+            string[] states = new[] { string.Empty, "state" };
             bool[] forceReapproves = new[] { false, true };
             bool[] disableSignups = new[] { false, true };
-            string[] requireRoles = new[] { "", "role" };
+            string[] requireRoles = new[] { string.Empty, "role" };
             bool[] forceReauthentications = new[] { false, true };
-            List<String[]> scopes = new List<String[]>();
-            scopes.Add(null);
-            scopes.Add(new String[] { "files.metadata.read", "files.content.read" });
+            List<string[]> scopes = new()
+            {
+                null,
+                new string[] { "files.metadata.read", "files.content.read" },
+            };
             IncludeGrantedScopes[] includeGrantedScopes = new[] { IncludeGrantedScopes.None, IncludeGrantedScopes.User, IncludeGrantedScopes.Team };
 
             TokenAccessType[] tokenAccessTypes = new[]
-                {TokenAccessType.Legacy, TokenAccessType.Offline, TokenAccessType.Online};
+                {
+                    TokenAccessType.Legacy, TokenAccessType.Offline, TokenAccessType.Online,
+                };
             foreach (string redirectUri in redirectUris)
             {
                 foreach (var state in states)
@@ -51,15 +59,25 @@ namespace Dropbox.Api.Unit.Tests
                                         {
                                             foreach (var includeGrantedScope in includeGrantedScopes)
                                             {
-                                                var authUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code,
-                                            clientId, redirectUri, state, forceReapprove, disableSignup,
-                                            requireRole, forceReauthentication, tokenAccessType, scope, includeGrantedScope).ToString();
+                                                var authUri = DropboxOAuth2Helper.GetAuthorizeUri(
+                                                    OAuthResponseType.Code,
+                                                    clientId,
+                                                    redirectUri,
+                                                    state,
+                                                    forceReapprove,
+                                                    disableSignup,
+                                                    requireRole,
+                                                    forceReauthentication,
+                                                    tokenAccessType,
+                                                    scope,
+                                                    includeGrantedScope)
+                                                .ToString();
 
                                                 Assert.IsTrue(authUri.StartsWith("https://www.dropbox.com/oauth2/authorize"));
                                                 Assert.IsTrue(authUri.Contains("response_type=code"));
                                                 Assert.IsTrue(authUri.Contains("client_id=" + clientId));
 
-                                                if (String.IsNullOrWhiteSpace(state))
+                                                if (string.IsNullOrWhiteSpace(state))
                                                 {
                                                     Assert.IsFalse(authUri.Contains("&state="));
                                                 }
@@ -68,7 +86,7 @@ namespace Dropbox.Api.Unit.Tests
                                                     Assert.IsTrue(authUri.Contains("&state=" + state));
                                                 }
 
-                                                if (String.IsNullOrWhiteSpace(redirectUri))
+                                                if (string.IsNullOrWhiteSpace(redirectUri))
                                                 {
                                                     Assert.IsFalse(authUri.Contains("&redirect_uri="));
                                                 }
@@ -95,7 +113,7 @@ namespace Dropbox.Api.Unit.Tests
                                                     Assert.IsFalse(authUri.Contains("&disable_signup="));
                                                 }
 
-                                                if (String.IsNullOrWhiteSpace(requireRole))
+                                                if (string.IsNullOrWhiteSpace(requireRole))
                                                 {
                                                     Assert.IsFalse(authUri.Contains("&require_role="));
                                                 }
@@ -118,7 +136,7 @@ namespace Dropbox.Api.Unit.Tests
 
                                                 if (scope != null)
                                                 {
-                                                    Assert.IsTrue(authUri.Contains("&scope=" + String.Join(" ", scope)));
+                                                    Assert.IsTrue(authUri.Contains("&scope=" + string.Join(" ", scope)));
                                                 }
                                                 else
                                                 {

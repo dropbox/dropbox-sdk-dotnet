@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="DropboxClientBase.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -30,19 +30,19 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes routes.
-        /// </summary>
-        /// <param name="transport"></param>
-        internal abstract void InitializeRoutes(ITransport transport);
-
-        /// <summary>
         /// The public dispose.
         /// </summary>
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        /// <summary>
+        /// Initializes routes.
+        /// </summary>
+        /// <param name="transport">The transport.</param>
+        internal abstract void InitializeRoutes(ITransport transport);
 
         /// <summary>
         /// The actual disposing logic.

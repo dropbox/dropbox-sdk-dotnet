@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="ITransport.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -39,14 +39,14 @@ namespace Dropbox.Api.Stone
         Task<byte[]> GetContentAsByteArrayAsync();
 
         /// <summary>
-        /// Asynchronously gets the content as <see cref="String"/>.
+        /// Asynchronously gets the content as <see cref="string"/>.
         /// </summary>
         /// <returns>The downloaded content as a string.</returns>
         Task<string> GetContentAsStringAsync();
     }
 
     /// <summary>
-    /// An interface that abstracts route transports
+    /// An interface that abstracts route transports.
     /// </summary>
     internal interface ITransport : IDisposable
     {
