@@ -13,8 +13,21 @@ jobs:
       - name: Run Unit Tests
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests
+  IntegrationTests:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Integration Tests
+        run: |
+          dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests
   Linter:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
       - name: Run Linter
