@@ -16,9 +16,10 @@ jobs:
   Linter:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Run Linter
         run: |
           # Install latest dotnet-format
           dotnet tool install -g dotnet-format --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
-          dotnet restore dropbox-sdk-dotnet/Dropbox.Api.sln
-          dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/Dropbox.Api.sln
+          dotnet restore dropbox-sdk-dotnet/
+          dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
