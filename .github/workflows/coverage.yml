@@ -25,3 +25,43 @@ jobs:
           flags: unit
           fail_ci_if_error: true
           directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
+  Integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Turnstyle
+        uses: softprops/turnstyle@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Test Legacy User
+        env:
+          DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
+          DROPBOX_INTEGRATION_appSecret: ${{ secrets.LEGACY_APP_SECRET }}
+          DROPBOX_INTEGRATION_userAccessToken: ${{ secrets.LEGACY_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ secrets.LEGACY_APP_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_APP_ACCESS_TOKEN }}
+        run: |
+          dotnet test \
+          dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests \
+          --collect:"XPlat Code Coverage" \
+          -- \
+          'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
+      - name: Test Scoped User
+        env:
+          DROPBOX_INTEGRATION_appKey: ${{ secrets.SCOPED_APP_KEY }}
+          DROPBOX_INTEGRATION_appSecret: ${{ secrets.SCOPED_APP_SECRET }}
+          DROPBOX_INTEGRATION_userAccessToken: ${{ secrets.SCOPED_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ secrets.SCOPED_APP_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_APP_ACCESS_TOKEN }}
+        run: |
+          dotnet test \
+          dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests \
+          --collect:"XPlat Code Coverage" \
+          -- \
+          'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
+      - name: Publish Coverage
+        uses: codecov/codecov-action@v1.2.0
+        with:
+          flags: integration
+          fail_ci_if_error: true
+          directory: dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/TestResults/
