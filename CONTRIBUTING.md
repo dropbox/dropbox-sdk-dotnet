@@ -36,7 +36,7 @@ dotnet build dropbox-sdk-dotnet/Dropbox.Api/
 
 ### Running tests
 
-Testing is also straightforward. Make sure to fill out `dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/dropbox.runsettings` before running integration tests.
+Testing is also straightforward. Make sure to create `dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/settings.json` (see `settings.json.example` for a template) before running integration tests.
 
 ```sh
 dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/
