@@ -13,11 +13,11 @@ jobs:
       - name: Run Unit Tests
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests
-  # We need separate jobs for each platform to ensure integration tests don't run concurrently
   IntegrationTests:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
+      max-parallel: 1
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
