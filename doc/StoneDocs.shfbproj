@@ -90,6 +90,19 @@ del Help\Web* /Q</PostBuildEvent>
     </Content>
     <Content Include="styles\branding-Website.css" />
   </ItemGroup>
-  <!-- Import the SHFB build targets -->
-  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+
+  <!-- See https://ewsoftware.github.io/SHFB/html/50ad2c8c-5004-4b4c-a77f-97b8c403c9f2.htm -->
+  <!-- Import the common properties to support NuGet restore -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+          Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
+  <!-- Import the common build targets during NuGet restore because before the
+       packages are being installed, $(SHFBROOT) is not set yet -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets"
+          Condition="'$(MSBuildRestoreSessionId)' != ''"/>
+
+  <!-- Import the SHFB build targets during build -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets"
+          Condition="'$(MSBuildRestoreSessionId)' == ''"/>
+
 </Project>

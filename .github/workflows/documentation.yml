@@ -1,28 +1,24 @@
 name: Documentation
 on:
   pull_request:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 
 jobs:
   Documentation:
-    continue-on-error: true
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup NuGet.exe
-        uses: nuget/setup-nuget@v1.0.2
+      - name: Build Documentation
+        run: dotnet build doc/StoneDocs.shfbproj
+      - name: Upload Documentation
+        uses: actions/upload-artifact@v2
         with:
-          nuget-version: latest
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.1
-      - name: Restore Packages
-        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
-      - name: Build Docs
-        run: msbuild doc\StoneDocs.shfbproj # Follow https://ewsoftware.github.io/SHFB/html/50ad2c8c-5004-4b4c-a77f-97b8c403c9f2.htm
+          name: Documentation
+          path: doc\Help
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
+        if: github.event_name == 'release'
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
