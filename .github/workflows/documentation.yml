@@ -18,11 +18,11 @@ jobs:
         run: |
           dotnet restore doc/StoneDocs.shfbproj
           msbuild doc/StoneDocs.shfbproj # WinForms refuse to work with .NET 5.0
+          tar -cvzf doc/Help.tar.gz doc/Help
       - name: Upload Documentation
         uses: actions/upload-artifact@v2
         with:
-          name: Documentation
-          path: doc/Help
+          path: doc/Help.tar.gz
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         if: github.event_name == 'release'
