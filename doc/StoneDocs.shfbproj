@@ -56,10 +56,12 @@
     </TransformComponentArguments>
     <ComponentConfigurations>
     </ComponentConfigurations>
-    <PostBuildEvent>rmdir Help/toc /S /Q
-rmdir Help/fti /S /Q
-del Help/Search* /Q
-del Help/Web* /Q</PostBuildEvent>
+    <PostBuildEvent>
+      rm -rf Help/toc
+      rm -rf Help/fti
+      rm -f Help/Search*
+      rm -f Help/Web*
+    </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
