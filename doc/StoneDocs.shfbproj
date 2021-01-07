@@ -96,6 +96,10 @@ del Help\Web* /Q</PostBuildEvent>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
           Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
 
+  <ItemGroup>
+    <PackageReference Include="EWSoftware.SHFB" Version="2020.3.6" />
+  </ItemGroup>
+
   <!-- Import the common build targets during NuGet restore because before the
        packages are being installed, $(SHFBROOT) is not set yet -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets"
