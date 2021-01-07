@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="DropboxCertHelper.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -28,18 +28,18 @@ namespace Dropbox.Api
     /// <para>
     /// These helper methods allow client code to check if the certificate used by a Dropbox server
     /// was issued with a certificate chain that originates with a root certificate that Dropbox
-    /// either currently uses, or may use in the future. These methods would be called before calling 
+    /// either currently uses, or may use in the future. These methods would be called before calling
     /// the <see cref="DropboxClient"/> constructor.
     /// </para>
     /// </remarks>
     public static class DropboxCertHelper
     {
         /// <summary>
-        /// The public keys of the known valid root certificates
+        /// The public keys of the known valid root certificates.
         /// </summary>
         [SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1515:SingleLineCommentMustBePrecededByBlankLine", Justification = "Reviewed.")]
         private static readonly HashSet<string> ValidRoots = new HashSet<string>
-        { 
+        {
             // CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
             "3082010A0282010100AD0E15CEE443805CB187F3B760F97112A5AEDC269488AAF4CEF520" +
             "392858600CF880DAA9159532613CB5B128848A8ADC9F0A0C83177A8F90AC8AE779535C31" +
@@ -209,9 +209,9 @@ namespace Dropbox.Api
             return ValidRoots.Contains(publicKeyString);
         }
 
-# if PORTABLE
-# elif PORTABLE40
-# else
+#if PORTABLE
+#elif PORTABLE40
+#else
         /// <summary>
         /// Initializes ssl certificate pinning.
         /// </summary>

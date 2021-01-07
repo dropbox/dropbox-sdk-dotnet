@@ -149,7 +149,7 @@ namespace OauthPKCE
             }
 
             var redirectUri = new Uri(context.Request.QueryString["url_with_fragment"]);
-            
+
             return redirectUri;
         }
 
@@ -181,7 +181,7 @@ namespace OauthPKCE
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
                     var OAuthFlow = new PKCEOAuthFlow();
-                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri.ToString(), state: state, tokenAccessType : TokenAccessType.Offline, scopeList : scopeList, includeGrantedScopes: includeGrantedScopes);
+                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri.ToString(), state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 

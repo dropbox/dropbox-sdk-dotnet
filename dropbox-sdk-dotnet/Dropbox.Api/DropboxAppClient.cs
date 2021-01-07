@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="DropboxAppClient.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ namespace Dropbox.Api
     public sealed partial class DropboxAppClient : DropboxClientBase
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxAppClient"/> class.
         /// </summary>
         /// <param name="appKey">The Dropbox app key (e.g. consumer key in OAuth).</param>
         /// <param name="appSecret">The Dropbox app secret (e.g. consumer secret in OAuth).</param>
@@ -24,9 +24,8 @@ namespace Dropbox.Api
         {
         }
 
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxAppClient"/> class.
         /// </summary>
         /// <param name="appKey">The Dropbox app key (e.g. consumer key in OAuth).</param>
         /// <param name="appSecret">The Dropbox app secret (e.g. consumer secret in OAuth).</param>
@@ -37,7 +36,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxAppClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxAppClient"/> class.
         /// </summary>
         /// <param name="options">The request handler options.</param>
         private DropboxAppClient(DropboxRequestHandlerOptions options)

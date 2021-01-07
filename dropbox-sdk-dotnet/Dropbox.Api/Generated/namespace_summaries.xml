@@ -58,17 +58,6 @@
                 namespace.</para>
             </summary>
         </member>
-        <member name="N:Dropbox.Api.CloudDocs">
-            <summary>
-                <para>Endpoints and datatypes for Cloud Docs.</para>
-            </summary>
-        </member>
-        <member name="N:Dropbox.Api.CloudDocs.Routes">
-            <summary>
-                <para>Contains the routes for the <see cref="N:Dropbox.Api.CloudDocs" />
-                namespace.</para>
-            </summary>
-        </member>
         <member name="N:Dropbox.Api.Common">
             <summary>
                 <para>Contains the types used by the routes declared in <see
@@ -215,18 +204,6 @@
         <member name="N:Dropbox.Api.Sharing.Routes">
             <summary>
                 <para>Contains the routes for the <see cref="N:Dropbox.Api.Sharing" />
-                namespace.</para>
-            </summary>
-        </member>
-        <member name="N:Dropbox.Api.StoneFixtures">
-            <summary>
-                <para>Contains the types used by the routes declared in <see
-                cref="T:Dropbox.Api.StoneFixtures.Routes.StoneFixturesRoutes" />.</para>
-            </summary>
-        </member>
-        <member name="N:Dropbox.Api.StoneFixtures.Routes">
-            <summary>
-                <para>Contains the routes for the <see cref="N:Dropbox.Api.StoneFixtures" />
                 namespace.</para>
             </summary>
         </member>

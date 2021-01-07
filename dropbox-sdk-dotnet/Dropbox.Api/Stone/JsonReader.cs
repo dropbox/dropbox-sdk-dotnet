@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="JsonReader.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -90,7 +90,10 @@ namespace Dropbox.Api.Stone
         /// <returns>The decoded object.</returns>
         public static T Read<T>(string json, IDecoder<T> decoder)
         {
-            var reader = new JsonReader(new JsonTextReader(new StringReader(json)));
+            var reader = new JsonReader(new JsonTextReader(new StringReader(json))
+            {
+                DateParseHandling = DateParseHandling.None,
+            });
             return decoder.Decode(reader);
         }
 
@@ -102,7 +105,7 @@ namespace Dropbox.Api.Stone
         {
             return this.reader.Read();
         }
-        
+
         /// <summary>
         /// Skip current token.
         /// </summary>
@@ -113,7 +116,7 @@ namespace Dropbox.Api.Stone
         }
 
         /// <summary>
-        /// Read value as Int32
+        /// Read value as Int32.
         /// </summary>
         /// <returns>The value.</returns>
         int IJsonReader.ReadInt32()
@@ -122,16 +125,16 @@ namespace Dropbox.Api.Stone
         }
 
         /// <summary>
-        /// Read value as Int64
+        /// Read value as Int64.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         long IJsonReader.ReadInt64()
         {
             return this.ReadValue<long>();
         }
 
         /// <summary>
-        /// Read value as UInt32
+        /// Read value as UInt32.
         /// </summary>
         /// <returns>The value.</returns>
         uint IJsonReader.ReadUInt32()
@@ -140,16 +143,16 @@ namespace Dropbox.Api.Stone
         }
 
         /// <summary>
-        /// Read value as UInt64
+        /// Read value as UInt64.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         ulong IJsonReader.ReadUInt64()
         {
             return Convert.ToUInt64(this.ReadValue<long>());
         }
 
         /// <summary>
-        /// Read value as double
+        /// Read value as double.
         /// </summary>
         /// <returns>The value.</returns>
         double IJsonReader.ReadDouble()
@@ -158,36 +161,36 @@ namespace Dropbox.Api.Stone
         }
 
         /// <summary>
-        /// Read value as float
+        /// Read value as float.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         float IJsonReader.ReadSingle()
         {
             return Convert.ToSingle(this.ReadValue<double>());
         }
 
         /// <summary>
-        /// Read value as DateTime
+        /// Read value as DateTime.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         DateTime IJsonReader.ReadDateTime()
         {
             return this.ReadValue<DateTime>();
         }
 
         /// <summary>
-        /// Read value as boolean
+        /// Read value as boolean.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         bool IJsonReader.ReadBoolean()
         {
             return this.ReadValue<bool>();
         }
 
         /// <summary>
-        /// Read value as bytes
+        /// Read value as bytes.
         /// </summary>
-        /// <returns>The value</returns>
+        /// <returns>The value.</returns>
         byte[] IJsonReader.ReadBytes()
         {
             return this.ReadValue<byte[]>();

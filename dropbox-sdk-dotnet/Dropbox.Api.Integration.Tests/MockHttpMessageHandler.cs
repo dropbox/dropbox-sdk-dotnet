@@ -11,23 +11,32 @@ namespace Dropbox.Api.Tests
     using System.Threading;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// A mock HTTP handler for use with integration tests.
+    /// </summary>
     public class MockHttpMessageHandler : HttpClientHandler
     {
-        public delegate Task<HttpResponseMessage> Sender(HttpRequestMessage message);
-
         /// <summary>
         /// The mock handler.
         /// </summary>
-        Func<HttpRequestMessage, Sender, Task<HttpResponseMessage>> handler;
+        private readonly Func<HttpRequestMessage, Sender, Task<HttpResponseMessage>> handler;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MockHttpMessageHandler"/> class.
         /// </summary>
         /// <param name="response">The mock response.</param>
+        /// <param name="handler">The mock handler.</param>
         public MockHttpMessageHandler(Func<HttpRequestMessage, Sender, Task<HttpResponseMessage>> handler)
         {
             this.handler = handler;
         }
+
+        /// <summary>
+        /// HTTP sender alias.
+        /// </summary>
+        /// <param name="message">The request message.</param>
+        /// <returns>A <see cref="Task"/> for fetching a <see cref="HttpResponseMessage"></returns>.
+        public delegate Task<HttpResponseMessage> Sender(HttpRequestMessage message);
 
         /// <summary>
         /// The send async override.

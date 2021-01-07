@@ -6069,6 +6069,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetActivityReport> ReportsGetActivityAsync(DateRange dateRange)
         {
             return this.Transport.SendRpcRequestAsync<DateRange, GetActivityReport, DateRangeError>(dateRange, "api", "/team/reports/get_activity", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetActivityReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
@@ -6083,6 +6084,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetActivity(DateRange dateRange, sys.AsyncCallback callback, object state = null)
         {
             var task = this.ReportsGetActivityAsync(dateRange);
@@ -6101,6 +6103,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetActivityReport> ReportsGetActivityAsync(sys.DateTime? startDate = null,
                                                                  sys.DateTime? endDate = null)
         {
@@ -6121,6 +6124,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetActivity(sys.DateTime? startDate = null,
                                                         sys.DateTime? endDate = null,
                                                         sys.AsyncCallback callback = null,
@@ -6142,6 +6146,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetActivityReport EndReportsGetActivity(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetActivityReport>;
@@ -6162,6 +6167,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetDevicesReport> ReportsGetDevicesAsync(DateRange dateRange)
         {
             return this.Transport.SendRpcRequestAsync<DateRange, GetDevicesReport, DateRangeError>(dateRange, "api", "/team/reports/get_devices", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetDevicesReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
@@ -6176,6 +6182,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetDevices(DateRange dateRange, sys.AsyncCallback callback, object state = null)
         {
             var task = this.ReportsGetDevicesAsync(dateRange);
@@ -6194,6 +6201,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetDevicesReport> ReportsGetDevicesAsync(sys.DateTime? startDate = null,
                                                                sys.DateTime? endDate = null)
         {
@@ -6214,6 +6222,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetDevices(sys.DateTime? startDate = null,
                                                        sys.DateTime? endDate = null,
                                                        sys.AsyncCallback callback = null,
@@ -6235,6 +6244,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetDevicesReport EndReportsGetDevices(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetDevicesReport>;
@@ -6255,6 +6265,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetMembershipReport> ReportsGetMembershipAsync(DateRange dateRange)
         {
             return this.Transport.SendRpcRequestAsync<DateRange, GetMembershipReport, DateRangeError>(dateRange, "api", "/team/reports/get_membership", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetMembershipReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
@@ -6269,6 +6280,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetMembership(DateRange dateRange, sys.AsyncCallback callback, object state = null)
         {
             var task = this.ReportsGetMembershipAsync(dateRange);
@@ -6287,6 +6299,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetMembershipReport> ReportsGetMembershipAsync(sys.DateTime? startDate = null,
                                                                      sys.DateTime? endDate = null)
         {
@@ -6307,6 +6320,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetMembership(sys.DateTime? startDate = null,
                                                           sys.DateTime? endDate = null,
                                                           sys.AsyncCallback callback = null,
@@ -6328,6 +6342,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetMembershipReport EndReportsGetMembership(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetMembershipReport>;
@@ -6348,6 +6363,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetStorageReport> ReportsGetStorageAsync(DateRange dateRange)
         {
             return this.Transport.SendRpcRequestAsync<DateRange, GetStorageReport, DateRangeError>(dateRange, "api", "/team/reports/get_storage", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetStorageReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
@@ -6362,6 +6378,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetStorage(DateRange dateRange, sys.AsyncCallback callback, object state = null)
         {
             var task = this.ReportsGetStorageAsync(dateRange);
@@ -6380,6 +6397,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetStorageReport> ReportsGetStorageAsync(sys.DateTime? startDate = null,
                                                                sys.DateTime? endDate = null)
         {
@@ -6400,6 +6418,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginReportsGetStorage(sys.DateTime? startDate = null,
                                                        sys.DateTime? endDate = null,
                                                        sys.AsyncCallback callback = null,
@@ -6421,6 +6440,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetStorageReport EndReportsGetStorage(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetStorageReport>;

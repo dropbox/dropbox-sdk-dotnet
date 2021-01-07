@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="StructuredException.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -79,7 +79,6 @@ namespace Dropbox.Api
             /// The function which creates the exception.
             /// </summary>
             private readonly Func<TException> execptionFunc;
-
 
             /// <summary>
             /// Initializes a new instance of the <see cref="StructuredExceptionDecoder{TException}"/> class.

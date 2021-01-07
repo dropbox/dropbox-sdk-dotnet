@@ -146,6 +146,54 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ConcurrentSessionInvalidOffset</para>
+        /// </summary>
+        public bool IsConcurrentSessionInvalidOffset
+        {
+            get
+            {
+                return this is ConcurrentSessionInvalidOffset;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ConcurrentSessionInvalidOffset, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ConcurrentSessionInvalidOffset AsConcurrentSessionInvalidOffset
+        {
+            get
+            {
+                return this as ConcurrentSessionInvalidOffset;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ConcurrentSessionInvalidDataSize</para>
+        /// </summary>
+        public bool IsConcurrentSessionInvalidDataSize
+        {
+            get
+            {
+                return this is ConcurrentSessionInvalidDataSize;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ConcurrentSessionInvalidDataSize, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ConcurrentSessionInvalidDataSize AsConcurrentSessionInvalidDataSize
+        {
+            get
+            {
+                return this as ConcurrentSessionInvalidDataSize;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -211,6 +259,18 @@ namespace Dropbox.Api.Files
                     TooLarge.Encoder.EncodeFields((TooLarge)value, writer);
                     return;
                 }
+                if (value is ConcurrentSessionInvalidOffset)
+                {
+                    WriteProperty(".tag", "concurrent_session_invalid_offset", writer, enc.StringEncoder.Instance);
+                    ConcurrentSessionInvalidOffset.Encoder.EncodeFields((ConcurrentSessionInvalidOffset)value, writer);
+                    return;
+                }
+                if (value is ConcurrentSessionInvalidDataSize)
+                {
+                    WriteProperty(".tag", "concurrent_session_invalid_data_size", writer, enc.StringEncoder.Instance);
+                    ConcurrentSessionInvalidDataSize.Encoder.EncodeFields((ConcurrentSessionInvalidDataSize)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -260,6 +320,10 @@ namespace Dropbox.Api.Files
                         return NotClosed.Decoder.DecodeFields(reader);
                     case "too_large":
                         return TooLarge.Decoder.DecodeFields(reader);
+                    case "concurrent_session_invalid_offset":
+                        return ConcurrentSessionInvalidOffset.Decoder.DecodeFields(reader);
+                    case "concurrent_session_invalid_data_size":
+                        return ConcurrentSessionInvalidDataSize.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -632,6 +696,150 @@ namespace Dropbox.Api.Files
                 protected override TooLarge Create()
                 {
                     return TooLarge.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>For concurrent upload sessions, offset needs to be multiple of 4194304
+        /// bytes.</para>
+        /// </summary>
+        public sealed class ConcurrentSessionInvalidOffset : UploadSessionLookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ConcurrentSessionInvalidOffset> Encoder = new ConcurrentSessionInvalidOffsetEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ConcurrentSessionInvalidOffset> Decoder = new ConcurrentSessionInvalidOffsetDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ConcurrentSessionInvalidOffset" /> class.</para>
+            /// </summary>
+            private ConcurrentSessionInvalidOffset()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ConcurrentSessionInvalidOffset</para>
+            /// </summary>
+            public static readonly ConcurrentSessionInvalidOffset Instance = new ConcurrentSessionInvalidOffset();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ConcurrentSessionInvalidOffset" />.</para>
+            /// </summary>
+            private class ConcurrentSessionInvalidOffsetEncoder : enc.StructEncoder<ConcurrentSessionInvalidOffset>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ConcurrentSessionInvalidOffset value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ConcurrentSessionInvalidOffset" />.</para>
+            /// </summary>
+            private class ConcurrentSessionInvalidOffsetDecoder : enc.StructDecoder<ConcurrentSessionInvalidOffset>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ConcurrentSessionInvalidOffset" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ConcurrentSessionInvalidOffset Create()
+                {
+                    return ConcurrentSessionInvalidOffset.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>For concurrent upload sessions, only chunks with size multiple of 4194304
+        /// bytes can be uploaded.</para>
+        /// </summary>
+        public sealed class ConcurrentSessionInvalidDataSize : UploadSessionLookupError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ConcurrentSessionInvalidDataSize> Encoder = new ConcurrentSessionInvalidDataSizeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ConcurrentSessionInvalidDataSize> Decoder = new ConcurrentSessionInvalidDataSizeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ConcurrentSessionInvalidDataSize" /> class.</para>
+            /// </summary>
+            private ConcurrentSessionInvalidDataSize()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ConcurrentSessionInvalidDataSize</para>
+            /// </summary>
+            public static readonly ConcurrentSessionInvalidDataSize Instance = new ConcurrentSessionInvalidDataSize();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ConcurrentSessionInvalidDataSize" />.</para>
+            /// </summary>
+            private class ConcurrentSessionInvalidDataSizeEncoder : enc.StructEncoder<ConcurrentSessionInvalidDataSize>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ConcurrentSessionInvalidDataSize value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ConcurrentSessionInvalidDataSize" />.</para>
+            /// </summary>
+            private class ConcurrentSessionInvalidDataSizeDecoder : enc.StructDecoder<ConcurrentSessionInvalidDataSize>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ConcurrentSessionInvalidDataSize" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ConcurrentSessionInvalidDataSize Create()
+                {
+                    return ConcurrentSessionInvalidDataSize.Instance;
                 }
 
             }

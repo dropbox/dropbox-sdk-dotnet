@@ -18,41 +18,58 @@ We are more than happy to recieve pull requests helping us improve the state of 
 
 2. Please add tests confirming the new functionality works. Pull requests will not be merged without passing continuous integration tests unless the pull requests aims to fix existing issues with these tests.
 
-## Updating Generated Code
+## Working with the SDK
 
-Generated code can be updated by running the following code:
+This guide is geared towards developing on a Linux machine. Visual Studio may or may not behave as expected.
 
-```
-$ git submodule init
-$ git submodule update --remote --recursive
-$ cd stone
-$ python setup.py install
-$ cd ..
-$ python generate.py
-```
+You'll need to install the following tools.
+* .NET 5.0
+* PowerShell
 
-Note: the `buildall.ps1` file also will update generated code so unless you are looking to explicitely test something new, this step is generally unnecessary
+### Building
 
-## Testing the Code
+Building using the `dotnet` CLI is straightforward.
 
-Tests live under the Dropbox.Api.Tests Project.  Please fill in the dropbox.runsettings file with test tokens in order to successfully make calls to the Dropbox servers.
-
-The tests are run as a part of the build script we use, this can be run the following way: 
-
-```
-powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> 
+```sh
+dotnet build dropbox-sdk-dotnet/Dropbox.Api/
 ```
 
-Where test settings is the `dropbox.runsettings` file mentioned above.
+### Running tests
 
-If you need to test the documentation, you can add the `-doc` flag to the build command to also generate that.
+Testing is also straightforward. Make sure to create `dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/settings.json` (see `settings.json.example` for a template) before running integration tests.
 
+```sh
+dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/
+dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/
 ```
-powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings <PATH_TO_TEST_SETTINGS> -doc
+
+### Linting
+
+You can use [dotnet-format](https://github.com/dotnet/format) to lint from the command line.
+
+```sh
+# Install a recent dotnet-format build
+dotnet tool install -g dotnet-format --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+# Optionally omit `--check` to auto-fix lint issues
+dotnet format --check --fix-whitespace --fix-style info --fix-analyzers info dropbox-sdk-dotnet/
 ```
+
+### Updating Generated Code
+
+Install PowerShell and execute `./scripts/generate_stone.ps1` to regenerate Stone types.
+
+```sh
+git submodule init
+git submodule update --remote --recursive
+./scripts/generate_stone.ps1
+```
+
+### Cutting New Versions (for Dropboxers)
+
+To cut a new version, create a new GitHub release using `vX.Y.Z` as the tag name. GitHub Actions will automatically build the SDK and publish it to NuGet as version `X.Y.Z`.
 
 [issues]: https://github.com/dropbox/dropbox-sdk-dotnet/issues
 [pr]: https://github.com/dropbox/dropbox-sdk-dotnet/pulls
-[coc]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/CODE_OF_CONDUCT.md
-[license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE
+[coc]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/CODE_OF_CONDUCT.md
+[license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/LICENSE
 [cla]: https://opensource.dropbox.com/cla/

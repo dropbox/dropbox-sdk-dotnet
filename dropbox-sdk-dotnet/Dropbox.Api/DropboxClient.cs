@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 // <copyright file="DropboxClient.cs" company="Dropbox Inc">
-//  Copyright (c) Dropbox Inc. All rights reserved.
+// Copyright (c) Dropbox Inc. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ namespace Dropbox.Api
         private readonly DropboxRequestHandler requestHandler;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2Token">The oauth2 access token for making client requests.</param>
         public DropboxClient(string oauth2Token)
@@ -30,20 +30,20 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2RefreshToken">The oauth2 access token for making client requests.</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
         public DropboxClient(string oauth2RefreshToken, string appKey)
             : this(null, oauth2RefreshToken, appKey, null, new DropboxClientConfig())
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2RefreshToken">The oauth2 access token for making client requests.</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2RefreshToken, string appKey, DropboxClientConfig config)
             : this(null, oauth2RefreshToken, appKey, null, config)
@@ -51,11 +51,11 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
-        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2RefreshToken, string appKey, string appSecret, DropboxClientConfig config)
             : this(null, oauth2RefreshToken, appKey, appSecret, config)
@@ -63,18 +63,18 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class. 
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
-        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
         public DropboxClient(string oauth2RefreshToken, string appKey, string appSecret)
             : this(null, oauth2RefreshToken, appKey, appSecret, new DropboxClientConfig())
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
@@ -84,20 +84,20 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
         public DropboxClient(string oauth2AccessToken, DateTime oauth2AccessTokenExpiresAt)
             : this(oauth2AccessToken, null, oauth2AccessTokenExpiresAt, null, null, new DropboxClientConfig())
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2AccessToken, DateTime oauth2AccessTokenExpiresAt, DropboxClientConfig config)
             : this(oauth2AccessToken, null, oauth2AccessTokenExpiresAt, null, null, config)
@@ -105,26 +105,25 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
-        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
         public DropboxClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, string appSecret)
             : this(oauth2AccessToken, oauth2RefreshToken, oauth2AccessTokenExpiresAt, appKey, appSecret, new DropboxClientConfig())
         {
-
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, DropboxClientConfig config)
             : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, oauth2RefreshToken, oauth2AccessTokenExpiresAt, appKey, null))
@@ -136,26 +135,25 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
         public DropboxClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey)
             : this(oauth2AccessToken, oauth2RefreshToken, oauth2AccessTokenExpiresAt, appKey, null, new DropboxClientConfig())
         {
-
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
-        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="oauth2AccessTokenExpiresAt">The time when the current access token expires, can be null if using long-lived tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, string appSecret, DropboxClientConfig config)
             : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, oauth2RefreshToken, oauth2AccessTokenExpiresAt, appKey, appSecret))
@@ -167,12 +165,12 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
         /// </summary>
         /// <param name="oauth2AccessToken">The oauth2 access token for making client requests.</param>
-        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens</param>
-        /// <param name="appKey">The app key to be used for refreshing tokens</param>
-        /// <param name="appSecret">The app secret to be used for refreshing tokens</param>
+        /// <param name="oauth2RefreshToken">The oauth2 refresh token for refreshing access tokens.</param>
+        /// <param name="appKey">The app key to be used for refreshing tokens.</param>
+        /// <param name="appSecret">The app secret to be used for refreshing tokens.</param>
         /// <param name="config">The <see cref="DropboxClientConfig"/>.</param>
         public DropboxClient(string oauth2AccessToken, string oauth2RefreshToken, string appKey, string appSecret, DropboxClientConfig config)
             : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, oauth2RefreshToken, null, appKey, appSecret))
@@ -181,6 +179,34 @@ namespace Dropbox.Api
             {
                 throw new ArgumentException("Cannot pass in both null access and refresh token");
             }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
+        /// </summary>
+        /// <param name="options">The request handler options.</param>
+        /// <param name="selectUser">The member id of the selected user. If provided together with
+        /// a team access token, actions will be performed on this this user's Dropbox.</param>
+        /// <param name="selectAdmin">The member id of the selected admin. If provided together with
+        /// a team access token, access is allowed for all team owned contents.</param>
+        /// <param name="pathRoot">The path root value used as Dropbox-Api-Path-Root header.</param>
+        internal DropboxClient(
+            DropboxRequestHandlerOptions options,
+            string selectUser = null,
+            string selectAdmin = null,
+            PathRoot pathRoot = null)
+            : this(new DropboxRequestHandler(options, selectUser: selectUser, selectAdmin: selectAdmin, pathRoot: pathRoot))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DropboxClient"/> class.
+        /// </summary>
+        /// <param name="requestHandler">The request handler.</param>
+        private DropboxClient(DropboxRequestHandler requestHandler)
+            : base(requestHandler)
+        {
+            this.requestHandler = requestHandler;
         }
 
         /// <summary>
@@ -227,40 +253,13 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Refreshes access token regardless of if existing token is expired
+        /// Refreshes access token regardless of if existing token is expired.
         /// </summary>
-        /// <param name="scopeList">subset of scopes to refresh token with, or null to refresh with all scopes</param>
-        /// <returns>true if token is successfully refreshed, false otherwise</returns>
+        /// <param name="scopeList">subset of scopes to refresh token with, or null to refresh with all scopes.</param>
+        /// <returns>true if token is successfully refreshed, false otherwise.</returns>
         public Task<bool> RefreshAccessToken(string[] scopeList)
         {
             return this.requestHandler.RefreshAccessToken(scopeList);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
-        /// </summary>
-        /// <param name="options">The request handler options.</param>
-        /// <param name="selectUser">The member id of the selected user. If provided together with
-        /// a team access token, actions will be performed on this this user's Dropbox.</param>
-        /// <param name="selectAdmin">The member id of the selected admin. If provided together with
-        /// a team access token, access is allowed for all team owned contents.</param>
-        /// <param name="pathRoot">The path root value used as Dropbox-Api-Path-Root header.</param>
-        internal DropboxClient(
-            DropboxRequestHandlerOptions options,
-            string selectUser = null,
-            string selectAdmin = null,
-            PathRoot pathRoot = null)
-            : this(new DropboxRequestHandler(options, selectUser: selectUser, selectAdmin: selectAdmin, pathRoot: pathRoot))
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:Dropbox.Api.DropboxClient"/> class.
-        /// </summary>
-        /// <param name="requestHandler">The request handler.</param>
-        private DropboxClient(DropboxRequestHandler requestHandler): base(requestHandler)
-        {
-            this.requestHandler = requestHandler;
         }
     }
 }

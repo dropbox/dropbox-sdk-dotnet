@@ -7,14 +7,19 @@
 namespace Dropbox.Api.Unit.Tests
 {
     using System;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Dropbox.Api.Files;
     using Dropbox.Api.Stone;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    /// <summary>
+    /// Tests related to stone serialization.
+    /// </summary>
     [TestClass]
     public class StoneTests
     {
+        /// <summary>
+        /// Smoke test for nested unions.
+        /// </summary>
         [TestMethod]
         public void TestNestedUnion()
         {

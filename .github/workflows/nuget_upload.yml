@@ -1,25 +1,26 @@
-name: Publish to Nuget
+name: Publish to NuGet
 
 on:
+  workflow_dispatch:
   release:
     types: [created]
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup NuGet.exe
-        uses: nuget/setup-nuget@v1.0.2
-        with:
-          nuget-version: latest
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.1
-      - name: Restore Packages
-        run: nuget restore dropbox-sdk-dotnet\Dropbox.Api.sln
-      - name: Build
-        run: msbuild dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.csproj -p:Configuration=Release
       - name: Pack
-        run: nuget pack dropbox-sdk-dotnet\Dropbox.Api\Dropbox.Api.nuspec
-      - name: Publish
-        run: nuget push *.nupkg -ApiKey ${{ secrets.NUGET_TOKEN }}
+        run: |
+          dotnet pack \
+          dropbox-sdk-dotnet/Dropbox.Api \
+          -p:Configuration=Release \
+          -p:Version=$(echo "${{ github.event.release.tag_name }}" | cut -c 2-) \
+          -p:AssemblyOriginatorKeyFile=dropbox_api_key.snk \
+          -p:SignAssembly=true
+      - name: Push
+        run: |
+          dotnet nuget push \
+          dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$(echo "${{ github.event.release.tag_name }}" | cut -c 2-).nupkg \
+          --source https://api.nuget.org/v3/index.json \
+          --api-key ${{ secrets.NUGET_TOKEN }}

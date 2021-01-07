@@ -35,10 +35,10 @@ namespace Dropbox.Api.Users
         /// </summary>
         /// <param name="accountId">The user's unique Dropbox ID.</param>
         /// <param name="name">Details of a user's name.</param>
-        /// <param name="email">The user's e-mail address. Do not rely on this without checking
+        /// <param name="email">The user's email address. Do not rely on this without checking
         /// the <paramref name="emailVerified" /> field. Even then, it's possible that the user
-        /// has since lost access to their e-mail.</param>
-        /// <param name="emailVerified">Whether the user has verified their e-mail
+        /// has since lost access to their email.</param>
+        /// <param name="emailVerified">Whether the user has verified their email
         /// address.</param>
         /// <param name="disabled">Whether the user has been disabled.</param>
         /// <param name="profilePhotoUrl">URL for the photo representing the user, if one is
@@ -102,14 +102,14 @@ namespace Dropbox.Api.Users
         public Name Name { get; protected set; }
 
         /// <summary>
-        /// <para>The user's e-mail address. Do not rely on this without checking the <see
+        /// <para>The user's email address. Do not rely on this without checking the <see
         /// cref="EmailVerified" /> field. Even then, it's possible that the user has since
-        /// lost access to their e-mail.</para>
+        /// lost access to their email.</para>
         /// </summary>
         public string Email { get; protected set; }
 
         /// <summary>
-        /// <para>Whether the user has verified their e-mail address.</para>
+        /// <para>Whether the user has verified their email address.</para>
         /// </summary>
         public bool EmailVerified { get; protected set; }
 

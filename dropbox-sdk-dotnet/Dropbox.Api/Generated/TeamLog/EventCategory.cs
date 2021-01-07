@@ -35,6 +35,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AdminAlerting</para>
+        /// </summary>
+        public bool IsAdminAlerting
+        {
+            get
+            {
+                return this is AdminAlerting;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AdminAlerting, or <c>null</c>.</para>
+        /// </summary>
+        public AdminAlerting AsAdminAlerting
+        {
+            get
+            {
+                return this as AdminAlerting;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Apps</para>
         /// </summary>
         public bool IsApps
@@ -75,6 +97,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Comments;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is DataGovernance</para>
+        /// </summary>
+        public bool IsDataGovernance
+        {
+            get
+            {
+                return this is DataGovernance;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DataGovernance, or <c>null</c>.</para>
+        /// </summary>
+        public DataGovernance AsDataGovernance
+        {
+            get
+            {
+                return this as DataGovernance;
             }
         }
 
@@ -185,28 +229,6 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Groups;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is LegalHolds</para>
-        /// </summary>
-        public bool IsLegalHolds
-        {
-            get
-            {
-                return this is LegalHolds;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a LegalHolds, or <c>null</c>.</para>
-        /// </summary>
-        public LegalHolds AsLegalHolds
-        {
-            get
-            {
-                return this as LegalHolds;
             }
         }
 
@@ -532,6 +554,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(EventCategory value, enc.IJsonWriter writer)
             {
+                if (value is AdminAlerting)
+                {
+                    WriteProperty(".tag", "admin_alerting", writer, enc.StringEncoder.Instance);
+                    AdminAlerting.Encoder.EncodeFields((AdminAlerting)value, writer);
+                    return;
+                }
                 if (value is Apps)
                 {
                     WriteProperty(".tag", "apps", writer, enc.StringEncoder.Instance);
@@ -542,6 +570,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "comments", writer, enc.StringEncoder.Instance);
                     Comments.Encoder.EncodeFields((Comments)value, writer);
+                    return;
+                }
+                if (value is DataGovernance)
+                {
+                    WriteProperty(".tag", "data_governance", writer, enc.StringEncoder.Instance);
+                    DataGovernance.Encoder.EncodeFields((DataGovernance)value, writer);
                     return;
                 }
                 if (value is Devices)
@@ -572,12 +606,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "groups", writer, enc.StringEncoder.Instance);
                     Groups.Encoder.EncodeFields((Groups)value, writer);
-                    return;
-                }
-                if (value is LegalHolds)
-                {
-                    WriteProperty(".tag", "legal_holds", writer, enc.StringEncoder.Instance);
-                    LegalHolds.Encoder.EncodeFields((LegalHolds)value, writer);
                     return;
                 }
                 if (value is Logins)
@@ -696,10 +724,14 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "admin_alerting":
+                        return AdminAlerting.Decoder.DecodeFields(reader);
                     case "apps":
                         return Apps.Decoder.DecodeFields(reader);
                     case "comments":
                         return Comments.Decoder.DecodeFields(reader);
+                    case "data_governance":
+                        return DataGovernance.Decoder.DecodeFields(reader);
                     case "devices":
                         return Devices.Decoder.DecodeFields(reader);
                     case "domains":
@@ -710,8 +742,6 @@ namespace Dropbox.Api.TeamLog
                         return FileRequests.Decoder.DecodeFields(reader);
                     case "groups":
                         return Groups.Decoder.DecodeFields(reader);
-                    case "legal_holds":
-                        return LegalHolds.Decoder.DecodeFields(reader);
                     case "logins":
                         return Logins.Decoder.DecodeFields(reader);
                     case "members":
@@ -745,6 +775,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Events that involve team related alerts.</para>
+        /// </summary>
+        public sealed class AdminAlerting : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminAlerting> Encoder = new AdminAlertingEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminAlerting> Decoder = new AdminAlertingDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminAlerting" />
+            /// class.</para>
+            /// </summary>
+            private AdminAlerting()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AdminAlerting</para>
+            /// </summary>
+            public static readonly AdminAlerting Instance = new AdminAlerting();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminAlerting" />.</para>
+            /// </summary>
+            private class AdminAlertingEncoder : enc.StructEncoder<AdminAlerting>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminAlerting value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminAlerting" />.</para>
+            /// </summary>
+            private class AdminAlertingDecoder : enc.StructDecoder<AdminAlerting>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AdminAlerting" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminAlerting Create()
+                {
+                    return AdminAlerting.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>Events that apply to management of linked apps.</para>
@@ -877,6 +977,76 @@ namespace Dropbox.Api.TeamLog
                 protected override Comments Create()
                 {
                     return Comments.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Events that involve data governance actions</para>
+        /// </summary>
+        public sealed class DataGovernance : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DataGovernance> Encoder = new DataGovernanceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DataGovernance> Decoder = new DataGovernanceDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DataGovernance" />
+            /// class.</para>
+            /// </summary>
+            private DataGovernance()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DataGovernance</para>
+            /// </summary>
+            public static readonly DataGovernance Instance = new DataGovernance();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DataGovernance" />.</para>
+            /// </summary>
+            private class DataGovernanceEncoder : enc.StructEncoder<DataGovernance>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DataGovernance value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DataGovernance" />.</para>
+            /// </summary>
+            private class DataGovernanceDecoder : enc.StructDecoder<DataGovernance>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DataGovernance" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DataGovernance Create()
+                {
+                    return DataGovernance.Instance;
                 }
 
             }
@@ -1227,75 +1397,6 @@ namespace Dropbox.Api.TeamLog
                 protected override Groups Create()
                 {
                     return Groups.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Events that involve placing holds on content for litigation reasons</para>
-        /// </summary>
-        public sealed class LegalHolds : EventCategory
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<LegalHolds> Encoder = new LegalHoldsEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<LegalHolds> Decoder = new LegalHoldsDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="LegalHolds" /> class.</para>
-            /// </summary>
-            private LegalHolds()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of LegalHolds</para>
-            /// </summary>
-            public static readonly LegalHolds Instance = new LegalHolds();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="LegalHolds" />.</para>
-            /// </summary>
-            private class LegalHoldsEncoder : enc.StructEncoder<LegalHolds>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(LegalHolds value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="LegalHolds" />.</para>
-            /// </summary>
-            private class LegalHoldsDecoder : enc.StructDecoder<LegalHolds>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="LegalHolds" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override LegalHolds Create()
-                {
-                    return LegalHolds.Instance;
                 }
 
             }
