@@ -18,8 +18,8 @@
     <HtmlHelpName>DotNetApiDocumentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
+      <DocumentationSource sourceFile="../dropbox-sdk-dotnet/Dropbox.Api/Dropbox.Api.csproj" />
       <DocumentationSource sourceFile="../dropbox-sdk-dotnet/Dropbox.Api/stone_summaries.xml" />
-      <DocumentationSource sourceFile="../dropbox-sdk-dotnet/Dropbox.Api/bin/Release/netstandard2.0/Dropbox.Api.xml" />
       <DocumentationSource sourceFile="../dropbox-sdk-dotnet/Dropbox.Api/Generated/namespace_summaries.xml" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
