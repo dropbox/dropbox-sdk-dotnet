@@ -11,6 +11,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.2
+      - name: Build SDK
+        run: |
+          dotnet build dropbox-sdk-dotnet/Dropbox.Api --configuration Release
       - name: Build Documentation
         run: |
           msbuild doc/StoneDocs.shfbproj /t:Restore
