@@ -12,7 +12,9 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Build Documentation
-        run: msbuild doc/StoneDocs.shfbproj '/t:Restore;Build'
+        run: |
+          msbuild doc/StoneDocs.shfbproj /t:Restore
+          msbuild doc/StoneDocs.shfbproj
       - name: Upload Documentation
         uses: actions/upload-artifact@v2
         with:
