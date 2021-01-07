@@ -9,8 +9,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
       - name: Build Documentation
-        run: dotnet build doc/StoneDocs.shfbproj
+        run: msbuild doc/StoneDocs.shfbproj
       - name: Upload Documentation
         uses: actions/upload-artifact@v2
         with:

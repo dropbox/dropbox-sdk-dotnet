@@ -98,8 +98,6 @@ del Help\Web* /Q</PostBuildEvent>
 
   <ItemGroup>
     <PackageReference Include="EWSoftware.SHFB" Version="2020.3.6" />
-    <!-- Required for WinForms -->
-    <FrameworkReference Include="Microsoft.WindowsDesktop.App" />
   </ItemGroup>
 
   <!-- Import the common build targets during NuGet restore because before the
