@@ -11,9 +11,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.2
+      - name: Build SDK
+        run: |
+          dotnet build dropbox-sdk-dotnet/Dropbox.Api
       - name: Build Documentation
         run: |
-          dotnet restore dropbox-sdk-dotnet/Dropbox.Api
           dotnet restore doc/StoneDocs.shfbproj
           # We have to use msbuild when actually generating the docs for WinForms to work.
           msbuild doc/StoneDocs.shfbproj
