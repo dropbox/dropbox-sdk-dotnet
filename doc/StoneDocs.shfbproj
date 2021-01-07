@@ -7,6 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1e44f241-ec24-4d32-8837-868cbe134f98}</ProjectGuid>
+    <TargetFramework>net5.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
     <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
