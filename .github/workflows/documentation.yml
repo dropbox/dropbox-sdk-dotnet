@@ -9,6 +9,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Build SDK
+        run: |
+          dotnet build dropbox-sdk-dotnet/Dropbox.Api
       - name: Build Documentation
         run: |
           dotnet build doc/StoneDocs.shfbproj
