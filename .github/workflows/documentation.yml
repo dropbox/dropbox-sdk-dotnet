@@ -12,16 +12,16 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Build Documentation
-        run: msbuild doc/StoneDocs.shfbproj /t:Restore;Build
+        run: msbuild doc/StoneDocs.shfbproj '/t:Restore;Build'
       - name: Upload Documentation
         uses: actions/upload-artifact@v2
         with:
           name: Documentation
-          path: doc\Help
+          path: doc/Help
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         if: github.event_name == 'release'
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: doc\Help # The folder the action should deploy.
+          FOLDER: doc/Help # The folder the action should deploy.
