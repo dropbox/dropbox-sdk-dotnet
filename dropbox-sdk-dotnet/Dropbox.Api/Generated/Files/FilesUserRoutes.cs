@@ -1281,7 +1281,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateFolderAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CreateFolderV2Async instead.")]
         public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
         {
             return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", "user", global::Dropbox.Api.Files.CreateFolderArg.Encoder, global::Dropbox.Api.Files.FolderMetadata.Decoder, global::Dropbox.Api.Files.CreateFolderError.Decoder);
@@ -1296,7 +1296,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateFolder instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCreateFolderV2 instead.")]
         public sys.IAsyncResult BeginCreateFolder(CreateFolderArg createFolderArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CreateFolderAsync(createFolderArg);
@@ -1315,7 +1315,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateFolderAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CreateFolderV2Async instead.")]
         public t.Task<FolderMetadata> CreateFolderAsync(string path,
                                                         bool autorename = false)
         {
@@ -1336,7 +1336,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateFolder instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCreateFolderV2 instead.")]
         public sys.IAsyncResult BeginCreateFolder(string path,
                                                   bool autorename = false,
                                                   sys.AsyncCallback callback = null,
@@ -1358,7 +1358,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCreateFolder instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndCreateFolderV2 instead.")]
         public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FolderMetadata>;
