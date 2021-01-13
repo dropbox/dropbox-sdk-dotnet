@@ -1,3 +1,7 @@
+// <copyright file="BlogHelpers.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+
 namespace SimpleBlogDemo.Helpers
 {
     using System;
@@ -5,16 +9,16 @@ namespace SimpleBlogDemo.Helpers
     using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
-    using System.Web;
-    using System.Web.Mvc;
-
     using Dropbox.Api;
     using Dropbox.Api.Files;
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Html;
+    using Microsoft.AspNetCore.Mvc;
     using SimpleBlogDemo.Models;
 
     public static class BlogHelpers
     {
-        private static Dictionary<string, Article> ArticleCache = new Dictionary<string, Article>();
+        private static Dictionary<string, Article> articleCache = new Dictionary<string, Article>();
 
         public static async Task<Article> GetArticle(this DropboxClient client, string blogName, ArticleMetadata metadata, bool bypassCache = false)
         {
@@ -28,9 +32,9 @@ namespace SimpleBlogDemo.Helpers
             Article article;
             if (!bypassCache)
             {
-                lock (ArticleCache)
+                lock (articleCache)
                 {
-                    if (ArticleCache.TryGetValue(key, out article))
+                    if (articleCache.TryGetValue(key, out article))
                     {
                         if (article.Metadata.Rev == metadata.Rev)
                         {
@@ -63,9 +67,9 @@ namespace SimpleBlogDemo.Helpers
                 throw;
             }
 
-            lock (ArticleCache)
+            lock (articleCache)
             {
-                ArticleCache[key] = article;
+                articleCache[key] = article;
             }
 
             return article;
@@ -75,15 +79,15 @@ namespace SimpleBlogDemo.Helpers
         {
             var prefix = blogName + ":";
 
-            lock (ArticleCache)
+            lock (articleCache)
             {
-                var keys = from k in ArticleCache.Keys
+                var keys = from k in articleCache.Keys
                            where k.StartsWith(prefix)
                            select k;
 
                 foreach (var key in keys)
                 {
-                    ArticleCache.Remove(key);
+                    articleCache.Remove(key);
                 }
             }
         }
@@ -179,7 +183,7 @@ namespace SimpleBlogDemo.Helpers
                 return new Blog
                 {
                     BlogName = user.BlogName,
-                    BlogArticles = new List<ArticleMetadata>(await client.GetArticleList()).AsReadOnly()
+                    BlogArticles = new List<ArticleMetadata>(await client.GetArticleList()).AsReadOnly(),
                 };
             }
         }
@@ -220,11 +224,11 @@ namespace SimpleBlogDemo.Helpers
                 Name = parsed.Item1,
                 Date = parsed.Item2,
                 DisplayName = parsed.Item3,
-                Rev = rev
+                Rev = rev,
             };
         }
     }
- 
+
     public class Article
     {
         public Article(string name, ArticleMetadata metadata, HtmlString content)

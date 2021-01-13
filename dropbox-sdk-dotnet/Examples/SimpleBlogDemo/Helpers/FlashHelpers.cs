@@ -1,49 +1,59 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
-using System.Web.Mvc;
+// <copyright file="FlashHelpers.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
 
 namespace SimpleBlogDemo.Helpers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Text.Json;
+    using System.Web;
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Html;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+
     public enum FlashLevel
     {
         Success,
         Info,
         Warning,
-        Danger
+        Danger,
     }
 
     public static class FlashHelpers
     {
-        public static void Flash(this ControllerBase controller, string message, FlashLevel level = FlashLevel.Info)
+        public static void Flash(this Controller controller, string message, FlashLevel level = FlashLevel.Info)
         {
-            object flashStackObject;
-            List<FlashItem> flashStack;
-
-            if (!controller.TempData.TryGetValue("flash", out flashStackObject))
+            if (!controller.TempData.TryGetValue("flash", out object flashStackJson))
             {
-                flashStackObject = new List<FlashItem>();
-                controller.TempData["flash"] = flashStackObject;
+                flashStackJson = JsonSerializer.Serialize(new List<FlashItem>());
+                controller.TempData["flash"] = flashStackJson;
             }
 
-            flashStack = flashStackObject as List<FlashItem>;
+            var flashStack = JsonSerializer.Deserialize<List<FlashItem>>((string)flashStackJson);
 
-            flashStack.Add(new FlashItem {
+            flashStack.Add(new FlashItem
+            {
                 Message = message,
-                Level = level
+                Level = level,
             });
+
+            controller.TempData["flash"] = JsonSerializer.Serialize(flashStack);
         }
 
-        public static HtmlString RenderFlash(this HtmlHelper html)
+        public static HtmlString RenderFlash(this IHtmlHelper html)
         {
-            object flashStackObject;
-            List<FlashItem> flashStack;
+            List<FlashItem> flashStack = null;
 
-            html.ViewContext.TempData.TryGetValue("flash", out flashStackObject);
+            if (html.ViewContext.TempData.TryGetValue("flash", out object flashStackJson))
+            {
+                Console.WriteLine("got some flash");
+                flashStack = JsonSerializer.Deserialize<List<FlashItem>>((string)flashStackJson);
+            }
 
-            flashStack = flashStackObject as List<FlashItem>;
             if (flashStack == null || flashStack.Count == 0)
             {
                 return null;
@@ -53,12 +63,12 @@ namespace SimpleBlogDemo.Helpers
             if (flashStack.Count > 1)
             {
                 flashStack.RemoveAt(0);
-                html.ViewContext.TempData["flash"] = flashStack;
+                html.ViewContext.TempData["flash"] = JsonSerializer.Serialize(flashStack);
             }
 
             var level = top.Level.ToString().ToLowerInvariant();
-            var message = HttpUtility.HtmlEncode(top.Message).Replace("\r", "").Replace("\n", "<br />\n").Replace("'", "@squo;");
-            
+            var message = HttpUtility.HtmlEncode(top.Message).Replace("\r", string.Empty).Replace("\n", "<br />\n").Replace("'", "@squo;");
+
             var builder = new StringBuilder();
             builder.AppendFormat("<div class=\"margin-top-10 alert alert-{0}\">", level).AppendLine();
             builder.AppendLine("  <span class=\"close\" data-dismiss=\"alert\">&times;</span>");
@@ -68,9 +78,10 @@ namespace SimpleBlogDemo.Helpers
             return new HtmlString(builder.ToString());
         }
 
-        class FlashItem
+        private class FlashItem
         {
             public string Message { get; set; }
+
             public FlashLevel Level { get; set; }
         }
     }

@@ -4,14 +4,21 @@ An example web app built using Dropbox API v2 .NET SDK. This app allows you to p
 
 ## Setup
 
-To run this web app, load Dropbox.Api.sln in Visual Studio and set SimpleBlogDemo as startup project.
+Create `appsettings.json` using `appsettings.json.example` as a template. The example settings use SQLite as a backing store for the demo. You will need to supply your own app credentials. You can find them from the App Console at https://www.dropbox.com/developers/apps. Be sure to add http://localhost:5000/Home/Auth to the redirect URL list in the app console.
 
-In appSettings section of Web.config, set DropboxAppKey and DropboxAppSecret to be your app key and secret. You can find them from the App Console at https://www.dropbox.com/developers/apps
-
-Add http://localhost:5000/Home/Auth to the redirect URL list in the app console.
+To set up database tables, run the following:
+```
+dotnet tool install --global dotnet-ef
+dotnet ef database update
+```
 
 ## Run
 
-In Visual Studio, launch the web app in your desired browser. You can sign up for a test account by clicking the sign up button (make sure you put a blog name here, it will link to article creation page).
+Launch the demo by running `dotnet run` and navigating to http://localhost:5000. You can sign up for a test account by clicking the sign up button (make sure you put a blog name here, it will link to article creation page).
 
 After registration, you can click the connect button which will kick out the OAuth flow. Once connected, all articles you create will be saved under /{Your Dropbox App Name} folder.
+
+
+## Caveats
+
+This demo serves only to demonstrate the Dropbox .NET SDK and should not be used as an example of how to implement a ASP.NET Core project.

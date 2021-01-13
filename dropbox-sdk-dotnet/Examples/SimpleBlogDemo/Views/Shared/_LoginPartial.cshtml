@@ -1,5 +1,8 @@
-@using WebMatrix.WebData
-@if (WebSecurity.IsAuthenticated)
+@using SimpleBlogDemo.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<UserProfile> SignInManager
+@inject UserManager<UserProfile> UserManager
+@if (SignInManager.IsSignedIn(User))
 {
     using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {

@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using SimpleBusinessDashboard.Helpers;
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Simple Blog Demo</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/js/modernizr.js"></script>
+    <link rel="stylesheet" href="~/css/SimpleBusinessDashboard.css" />
 </head>
 <body>
     <div id="nav-bar">
@@ -26,9 +27,9 @@
         @RenderBody()
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/graph")
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/graph.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

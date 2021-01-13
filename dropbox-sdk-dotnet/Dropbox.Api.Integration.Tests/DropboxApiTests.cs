@@ -67,9 +67,12 @@ namespace Dropbox.Api.Tests
         /// <summary>
         /// Set up Dropbox clients.
         /// </summary>
-        /// <param name="context">The VSTest context.</param>
         [ClassInitialize]
-        public static void ClassInitialize(TestContext context)
+#pragma warning disable SA1313 // False positive for _ paramter
+#pragma warning disable SA1611 // False positive for _ paramter
+        public static void ClassInitialize(TestContext _)
+#pragma warning restore SA1313
+#pragma warning restore SA1611
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())

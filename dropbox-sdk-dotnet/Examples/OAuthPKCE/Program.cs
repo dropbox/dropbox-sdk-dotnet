@@ -1,3 +1,7 @@
+// <copyright file="Program.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+
 namespace OauthPKCE
 {
     using System;
@@ -6,11 +10,16 @@ namespace OauthPKCE
     using System.Net;
     using System.Net.Http;
     using System.Runtime.InteropServices;
+    using System.Text.Json;
+    using System.Text.Json.Serialization;
     using System.Threading.Tasks;
 
     using Dropbox.Api;
 
-    partial class Program
+    /// <summary>
+    /// A simple Example program to retrieve information about a Dropbox account.
+    /// </summary>
+    internal partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
         private const string ApiKey = "XXXXXXXXXXXXXXX";
@@ -21,21 +30,15 @@ namespace OauthPKCE
 
         // URL to receive OAuth 2 redirect from Dropbox server.
         // You also need to register this redirect URL on https://www.dropbox.com/developers/apps.
-        private readonly Uri RedirectUri = new Uri(LoopbackHost + "authorize");
+        private readonly Uri redirectUri = new(LoopbackHost + "authorize");
 
         // URL to receive access token from JS.
-        private readonly Uri JSRedirectUri = new Uri(LoopbackHost + "token");
+        private readonly Uri jSRedirectUri = new(LoopbackHost + "token");
 
-
-        [DllImport("kernel32.dll", ExactSpelling = true)]
-        private static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
+        private readonly string settingsPath = Path.Join(Directory.GetCurrentDirectory(), "settings.json");
 
         [STAThread]
-        static int Main(string[] args)
+        private static int Main()
         {
             var instance = new Program();
             try
@@ -50,8 +53,57 @@ namespace OauthPKCE
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw e;
+                throw;
             }
+        }
+
+        /// <summary>
+        /// Gets information about the currently authorized account.
+        /// <para>
+        /// This demonstrates calling a simple rpc style api from the Users namespace.
+        /// </para>
+        /// </summary>
+        /// <param name="client">The Dropbox client.</param>
+        /// <returns>An asynchronous task.</returns>
+        private static async Task GetCurrentAccount(DropboxClient client)
+        {
+            Console.WriteLine("Current Account:");
+            var full = await client.Users.GetCurrentAccountAsync();
+
+            Console.WriteLine("Account id    : {0}", full.AccountId);
+            Console.WriteLine("Country       : {0}", full.Country);
+            Console.WriteLine("Email         : {0}", full.Email);
+            Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
+            Console.WriteLine("Locale        : {0}", full.Locale);
+            Console.WriteLine("Name");
+            Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
+            Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
+            Console.WriteLine("  Given    : {0}", full.Name.GivenName);
+            Console.WriteLine("  Surname  : {0}", full.Name.Surname);
+            Console.WriteLine("Referral link : {0}", full.ReferralLink);
+
+            if (full.Team != null)
+            {
+                Console.WriteLine("Team");
+                Console.WriteLine("  Id   : {0}", full.Team.Id);
+                Console.WriteLine("  Name : {0}", full.Team.Name);
+            }
+            else
+            {
+                Console.WriteLine("Team - None");
+            }
+        }
+
+        private void WriteSettings(Settings settings)
+        {
+            File.WriteAllText(
+                this.settingsPath,
+                JsonSerializer.Serialize(settings));
+        }
+
+        private Settings ReadSettings()
+        {
+            return JsonSerializer.Deserialize<Settings>(File.ReadAllText(this.settingsPath));
         }
 
         private async Task<int> Run()
@@ -66,21 +118,23 @@ namespace OauthPKCE
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            var httpClient = new HttpClient(new SocketsHttpHandler())
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
-                Timeout = TimeSpan.FromMinutes(20)
+                Timeout = TimeSpan.FromMinutes(20),
             };
 
             try
             {
                 var config = new DropboxClientConfig("SimplePKCEOAuthApp")
                 {
-                    HttpClient = httpClient
+                    HttpClient = httpClient,
                 };
 
-                var client = new DropboxClient(Settings.Default.RefreshToken, ApiKey, config);
+                var settings = this.ReadSettings();
+
+                var client = new DropboxClient(settings.RefreshToken, ApiKey, config);
 
                 // This call should succeed since the correct scope has been acquired
                 await GetCurrentAccount(client);
@@ -109,13 +163,13 @@ namespace OauthPKCE
         /// inline JS which can send URL fragment to local server as URL parameter.
         /// </summary>
         /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         private async Task HandleOAuth2Redirect(HttpListener http)
         {
             var context = await http.GetContextAsync();
 
             // We only care about request to RedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+            while (context.Request.Url.AbsolutePath != this.redirectUri.AbsolutePath)
             {
                 context = await http.GetContextAsync();
             }
@@ -137,13 +191,13 @@ namespace OauthPKCE
         /// complete the authorization flow.
         /// </summary>
         /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="OAuth2Response"/></returns>
+        /// <returns>The <see cref="OAuth2Response"/>.</returns>
         private async Task<Uri> HandleJSRedirect(HttpListener http)
         {
             var context = await http.GetContextAsync();
 
             // We only care about request to TokenRedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
+            while (context.Request.Url.AbsolutePath != this.jSRedirectUri.AbsolutePath)
             {
                 context = await http.GetContextAsync();
             }
@@ -167,62 +221,74 @@ namespace OauthPKCE
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
-                Settings.Default.Reset();
+                this.WriteSettings(new Settings());
             }
+
             Console.WriteLine();
+            var settings = this.ReadSettings();
 
-            var accessToken = Settings.Default.AccessToken;
-            var refreshToken = Settings.Default.RefreshToken;
-
-            if (string.IsNullOrEmpty(accessToken))
+            if (string.IsNullOrEmpty(settings.AccessToken))
             {
                 try
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var OAuthFlow = new PKCEOAuthFlow();
-                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri.ToString(), state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
+                    var oAuthFlow = new PKCEOAuthFlow();
+                    var authorizeUri = oAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, this.redirectUri.ToString(), state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        System.Diagnostics.Process.Start($"\"{authorizeUri}\"");
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    {
+                        System.Diagnostics.Process.Start("xdg-open", $"\"{authorizeUri}\"");
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    {
+                        System.Diagnostics.Process.Start("open", $"\"{authorizeUri}\"");
+                    }
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
-                    await HandleOAuth2Redirect(http);
+                    await this.HandleOAuth2Redirect(http);
 
                     // Handle redirect from JS and process OAuth response.
-                    var redirectUri = await HandleJSRedirect(http);
+                    var redirectUri = await this.HandleJSRedirect(http);
 
                     Console.WriteLine("Exchanging code for token");
-                    var tokenResult = await OAuthFlow.ProcessCodeFlowAsync(redirectUri, ApiKey, RedirectUri.ToString(), state);
+                    var tokenResult = await oAuthFlow.ProcessCodeFlowAsync(redirectUri, ApiKey, this.redirectUri.ToString(), state);
                     Console.WriteLine("Finished Exchanging Code for Token");
+
                     // Bring console window to the front.
-                    SetForegroundWindow(GetConsoleWindow());
-                    accessToken = tokenResult.AccessToken;
-                    refreshToken = tokenResult.RefreshToken;
+                    var accessToken = tokenResult.AccessToken;
+                    var refreshToken = tokenResult.RefreshToken;
                     var uid = tokenResult.Uid;
                     Console.WriteLine("Uid: {0}", uid);
                     Console.WriteLine("AccessToken: {0}", accessToken);
                     if (tokenResult.RefreshToken != null)
                     {
                         Console.WriteLine("RefreshToken: {0}", refreshToken);
-                        Settings.Default.RefreshToken = refreshToken;
+                        settings.RefreshToken = refreshToken;
                     }
+
                     if (tokenResult.ExpiresAt != null)
                     {
                         Console.WriteLine("ExpiresAt: {0}", tokenResult.ExpiresAt);
                     }
+
                     if (tokenResult.ScopeList != null)
                     {
-                        Console.WriteLine("Scopes: {0}", String.Join(" ", tokenResult.ScopeList));
+                        Console.WriteLine("Scopes: {0}", string.Join(" ", tokenResult.ScopeList));
                     }
-                    Settings.Default.AccessToken = accessToken;
-                    Settings.Default.Uid = uid;
-                    Settings.Default.Save();
+
+                    settings.AccessToken = accessToken;
+                    settings.Uid = uid;
+                    this.WriteSettings(settings);
                     http.Stop();
-                    return uid;
                 }
                 catch (Exception e)
                 {
@@ -231,52 +297,16 @@ namespace OauthPKCE
                 }
             }
 
-            return null;
+            return settings.Uid;
         }
 
-        /// <summary>
-        /// Gets information about the currently authorized account.
-        /// <para>
-        /// This demonstrates calling a simple rpc style api from the Users namespace.
-        /// </para>
-        /// </summary>
-        /// <param name="client">The Dropbox client.</param>
-        /// <returns>An asynchronous task.</returns>
-        private async Task GetCurrentAccount(DropboxClient client)
+        private class Settings
         {
-            try
-            {
-                Console.WriteLine("Current Account:");
-                var full = await client.Users.GetCurrentAccountAsync();
+            public string AccessToken { get; set; } = string.Empty;
 
-                Console.WriteLine("Account id    : {0}", full.AccountId);
-                Console.WriteLine("Country       : {0}", full.Country);
-                Console.WriteLine("Email         : {0}", full.Email);
-                Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
-                Console.WriteLine("Locale        : {0}", full.Locale);
-                Console.WriteLine("Name");
-                Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
-                Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
-                Console.WriteLine("  Given    : {0}", full.Name.GivenName);
-                Console.WriteLine("  Surname  : {0}", full.Name.Surname);
-                Console.WriteLine("Referral link : {0}", full.ReferralLink);
+            public string RefreshToken { get; set; } = string.Empty;
 
-                if (full.Team != null)
-                {
-                    Console.WriteLine("Team");
-                    Console.WriteLine("  Id   : {0}", full.Team.Id);
-                    Console.WriteLine("  Name : {0}", full.Team.Name);
-                }
-                else
-                {
-                    Console.WriteLine("Team - None");
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-
+            public string Uid { get; set; } = string.Empty;
         }
     }
 }

@@ -1,0 +1,39 @@
+[
+    {
+        "outputFilename": "wwwroot/js/jquery.js",
+        "inputFiles": [
+            "Scripts/jquery-*.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/jqueryval.js",
+        "inputFiles": [
+            "Scripts/jquery.validate*.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/modernizr.js",
+        "inputFiles": [
+            "Scripts/modernizr-*.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/bootstrap.js",
+        "inputFiles": [
+            "Scripts/bootstrap.js",
+            "Scripts/respond.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/preview.js",
+        "inputFiles": [
+            "Scripts/preview.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/css/SimpleBlogDemo.css",
+        "inputFiles": [
+            "Content/*.css",
+        ]
+    }
+]

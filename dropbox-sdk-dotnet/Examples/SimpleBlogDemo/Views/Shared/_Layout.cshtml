@@ -1,11 +1,12 @@
+@using SimpleBlogDemo.Helpers;
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Simple Blog Demo</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/js/modernizr.js"></script>
+    <link rel="stylesheet" href="~/css/SimpleBlogDemo.css" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,8 +29,8 @@
         @RenderBody()
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/js/jquery.js" /></script>
+    <script src="~/js/bootstrap.js" /></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

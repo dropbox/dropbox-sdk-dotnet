@@ -1,0 +1,36 @@
+[
+    {
+        "outputFilename": "wwwroot/js/jquery.js",
+        "inputFiles": [
+            "Scripts/jquery-*.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/modernizr.js",
+        "inputFiles": [
+            "Scripts/modernizr-*.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/graph.js",
+        "inputFiles": [
+            "Scripts/raphael-min.js",
+            "Scripts/morris-data.js",
+            "Scripts/sb-admin-2.js",
+            "Scripts/morris.js",
+            "Scripts/sb-admin-2.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/js/bootstrap.js",
+        "inputFiles": [
+            "Scripts/bootstrap.js"
+        ]
+    },
+    {
+        "outputFilename": "wwwroot/css/SimpleBusinessDashboard.css",
+        "inputFiles": [
+            "Content/*.css",
+        ]
+    }
+]

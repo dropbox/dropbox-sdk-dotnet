@@ -1,21 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations.Schema;
+// <copyright file="UserProfile.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
 
 namespace SimpleBlogDemo.Models
 {
-    public class UserProfile
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore;
+
+    public class UserProfile : IdentityUser<int>
     {
-        public int ID { get; set; }
-
-        [Required, StringLength(255, MinimumLength = 3)]
-        public string UserName { get; set; }
-
         public string DropboxAccessToken { get; set; }
 
         [RegularExpression("^[A-Za-z][A-Za-z'-']*[A-Za-z]$")]
@@ -25,8 +26,20 @@ namespace SimpleBlogDemo.Models
         public string ConnectState { get; set; }
     }
 
-    public class UsersStore : DbContext
+    public class ApplicationDbContext : IdentityDbContext<UserProfile, IdentityRole<int>, int>
     {
-        public DbSet<UserProfile> Users { get; set; }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            // Customize the ASP.NET Core Identity model and override the defaults if needed.
+            // For example, you can rename the ASP.NET Core Identity table names and more.
+            // Add your customizations after calling base.OnModelCreating(builder);
+        }
     }
 }

@@ -1,6 +1,8 @@
 @{
 ViewBag.Title = "Home";
 }
+@using Microsoft.Extensions.Configuration;
+@inject IConfiguration Configuration
 <div id="main-display">
     <div id="main-content-form">
         <div class="row">
@@ -99,12 +101,12 @@ ViewBag.Title = "Home";
                             @foreach (var member in @ViewBag.TeamMembers)
                             {
                                 string role = "Placeholder Role";
-                                        
+
                                 @:<tr>
                                     @:<td>@member.Profile.Email</td>
                                     @:<td>@member.Profile.Name.DisplayName</td>
                                     @:<td>@member.Profile.Status.IsActive</td>
-                                            
+
                                     if (member.Role.IsTeamAdmin)
                                     {
                                         role = "Admin";
@@ -113,7 +115,7 @@ ViewBag.Title = "Home";
                                     {
                                         role = "Member";
                                     }
-                                        
+
                                     @:<td>@role</td>
                                 @:</tr>
                             }
@@ -134,8 +136,8 @@ ViewBag.Title = "Home";
             </div>
         </div>
         <div class="row">
-            
-        @if (string.IsNullOrWhiteSpace(MvcApplication.AccessToken))
+
+        @if (string.IsNullOrWhiteSpace(Configuration["AccessToken"]))
         {
             @:<div>
                 @:<a class="custom-btn" href="/Home/Connect">
@@ -158,31 +160,34 @@ ViewBag.Title = "Home";
         @Html.AntiForgeryToken();
     }
 </div>
-<script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function(event) {
-        var d = new Date()
-        var dataList = [];
-        var activeUsers =  @ViewBag.ActiveUsers;
-        var index = activeUsers.length;
+@section scripts
+{
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var d = new Date()
+            var dataList = [];
+            var activeUsers =  @ViewBag.ActiveUsers;
+            var index = activeUsers.length;
 
-        /* generate a week's worth of data */
-        for (var i = 6; i >= 0; i--) {
-            var map = {};
-            map["y"] = (d.getMonth() + 1) + "/" + (d.getDate() - i) + "/" + d.getFullYear();
-            map["a"] = activeUsers[index - i - 1] == null ? 0 : activeUsers[index - i - 1];
-            dataList.push(map);
-        }
+            /* generate a week's worth of data */
+            for (var i = 6; i >= 0; i--) {
+                var map = {};
+                map["y"] = (d.getMonth() + 1) + "/" + (d.getDate() - i) + "/" + d.getFullYear();
+                map["a"] = activeUsers[index - i - 1] == null ? 0 : activeUsers[index - i - 1];
+                dataList.push(map);
+            }
 
-        var dataInput = JSON.parse(JSON.stringify(dataList));
+            var dataInput = JSON.parse(JSON.stringify(dataList));
 
-        Morris.Bar({
-            element: 'morris-bar-chart',
-            data: dataInput,
-            xkey: 'y',
-            ykeys: ['a'],
-            labels: ['Number Users'],
-            hideHover: 'auto',
-            resize: true
+            Morris.Bar({
+                element: 'morris-bar-chart',
+                data: dataInput,
+                xkey: 'y',
+                ykeys: ['a'],
+                labels: ['Number Users'],
+                hideHover: 'auto',
+                resize: true
+            });
         });
-    });
-</script>
+    </script>
+}

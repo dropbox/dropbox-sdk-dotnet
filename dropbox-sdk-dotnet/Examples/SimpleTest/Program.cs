@@ -1,3 +1,7 @@
+// <copyright file="Program.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+
 namespace SimpleTest
 {
     using System;
@@ -6,6 +10,7 @@ namespace SimpleTest
     using System.Net;
     using System.Net.Http;
     using System.Runtime.InteropServices;
+    using System.Text.Json;
     using System.Threading.Tasks;
 
     using Dropbox.Api;
@@ -13,7 +18,7 @@ namespace SimpleTest
     using Dropbox.Api.Files;
     using Dropbox.Api.Team;
 
-    partial class Program
+    internal partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
         private const string ApiKey = "XXXXXXXXXXXXXXX";
@@ -24,21 +29,15 @@ namespace SimpleTest
 
         // URL to receive OAuth 2 redirect from Dropbox server.
         // You also need to register this redirect URL on https://www.dropbox.com/developers/apps.
-        private readonly Uri RedirectUri = new Uri(LoopbackHost + "authorize");
+        private readonly Uri redirectUri = new Uri(LoopbackHost + "authorize");
 
         // URL to receive access token from JS.
-        private readonly Uri JSRedirectUri = new Uri(LoopbackHost + "token");
+        private readonly Uri jSRedirectUri = new Uri(LoopbackHost + "token");
 
-
-        [DllImport("kernel32.dll", ExactSpelling = true)]
-        private static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
+        private readonly string settingsPath = Path.Join(Directory.GetCurrentDirectory(), "settings.json");
 
         [STAThread]
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             Console.WriteLine("SimpleTest");
             var instance = new Program();
@@ -53,8 +52,20 @@ namespace SimpleTest
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw e;
+                throw;
             }
+        }
+
+        private void WriteSettings(Settings settings)
+        {
+            File.WriteAllText(
+                this.settingsPath,
+                JsonSerializer.Serialize(settings));
+        }
+
+        private Settings ReadSettings()
+        {
+            return JsonSerializer.Deserialize<Settings>(File.ReadAllText(this.settingsPath));
         }
 
         private async Task<int> Run()
@@ -69,22 +80,22 @@ namespace SimpleTest
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            var httpClient = new HttpClient(new SocketsHttpHandler())
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
-                Timeout = TimeSpan.FromMinutes(20)
+                Timeout = TimeSpan.FromMinutes(20),
             };
 
             try
             {
                 var config = new DropboxClientConfig("SimpleTestApp")
                 {
-                    HttpClient = httpClient
+                    HttpClient = httpClient,
                 };
 
                 var client = new DropboxClient(accessToken, config);
-                await RunUserTests(client);
+                await this.RunUserTests(client);
 
                 // Tests below are for Dropbox Business endpoints. To run these tests, make sure the ApiKey is for
                 // a Dropbox Business app and you have an admin account to log in.
@@ -115,24 +126,24 @@ namespace SimpleTest
         /// <returns>An asynchronous task.</returns>
         private async Task RunUserTests(DropboxClient client)
         {
-            await GetCurrentAccount(client);
+            await this.GetCurrentAccount(client);
 
             var path = "/DotNetApi/Help";
-            var folder = await CreateFolder(client, path);
-            var list = await ListFolder(client, path);
+            var folder = await this.CreateFolder(client, path);
+            var list = await this.ListFolder(client, path);
 
             var firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
             if (firstFile != null)
             {
-                await Download(client, path, firstFile.AsFile);
+                await this.Download(client, path, firstFile.AsFile);
             }
 
             var pathInTeamSpace = "/Test";
-            await ListFolderInTeamSpace(client, pathInTeamSpace);
+            await this.ListFolderInTeamSpace(client, pathInTeamSpace);
 
-            await Upload(client, path, "Test.txt", "This is a text file");
+            await this.Upload(client, path, "Test.txt", "This is a text file");
 
-            await ChunkUpload(client, path, "Binary");
+            await this.ChunkUpload(client, path, "Binary");
         }
 
         /// <summary>
@@ -152,7 +163,7 @@ namespace SimpleTest
                 // just pass in team member id in to AsMember function which returns a user client.
                 // This client will operates on this team member's Dropbox.
                 var userClient = client.AsMember(member.Profile.TeamMemberId);
-                await RunUserTests(userClient);
+                await this.RunUserTests(userClient);
             }
         }
 
@@ -162,13 +173,13 @@ namespace SimpleTest
         /// inline JS which can send URL fragment to local server as URL parameter.
         /// </summary>
         /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         private async Task HandleOAuth2Redirect(HttpListener http)
         {
             var context = await http.GetContextAsync();
 
             // We only care about request to RedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+            while (context.Request.Url.AbsolutePath != this.redirectUri.AbsolutePath)
             {
                 context = await http.GetContextAsync();
             }
@@ -190,13 +201,13 @@ namespace SimpleTest
         /// complete the authorization flow.
         /// </summary>
         /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="OAuth2Response"/></returns>
+        /// <returns>The <see cref="OAuth2Response"/>.</returns>
         private async Task<OAuth2Response> HandleJSRedirect(HttpListener http)
         {
             var context = await http.GetContextAsync();
 
             // We only care about request to TokenRedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
+            while (context.Request.Url.AbsolutePath != this.jSRedirectUri.AbsolutePath)
             {
                 context = await http.GetContextAsync();
             }
@@ -222,31 +233,43 @@ namespace SimpleTest
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
-                Settings.Default.Reset();
+                this.WriteSettings(new Settings());
             }
+
             Console.WriteLine();
 
-            var accessToken = Settings.Default.AccessToken;
+            var settings = this.ReadSettings();
 
-            if (string.IsNullOrEmpty(accessToken))
+            if (string.IsNullOrEmpty(settings.AccessToken))
             {
                 try
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, RedirectUri, state: state);
+                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, this.redirectUri, state: state);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        System.Diagnostics.Process.Start($"\"{authorizeUri}\"");
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    {
+                        System.Diagnostics.Process.Start("xdg-open", $"\"{authorizeUri}\"");
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    {
+                        System.Diagnostics.Process.Start("open", $"\"{authorizeUri}\"");
+                    }
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
-                    await HandleOAuth2Redirect(http);
+                    await this.HandleOAuth2Redirect(http);
 
                     // Handle redirect from JS and process OAuth response.
-                    var result = await HandleJSRedirect(http);
+                    var result = await this.HandleJSRedirect(http);
 
                     if (result.State != state)
                     {
@@ -256,17 +279,14 @@ namespace SimpleTest
 
                     Console.WriteLine("and back...");
 
-                    // Bring console window to the front.
-                    SetForegroundWindow(GetConsoleWindow());
-
-                    accessToken = result.AccessToken;
+                    var accessToken = result.AccessToken;
                     var uid = result.Uid;
                     Console.WriteLine("Uid: {0}", uid);
 
-                    Settings.Default.AccessToken = accessToken;
-                    Settings.Default.Uid = uid;
+                    settings.AccessToken = accessToken;
+                    settings.Uid = uid;
 
-                    Settings.Default.Save();
+                    this.WriteSettings(settings);
                 }
                 catch (Exception e)
                 {
@@ -275,7 +295,7 @@ namespace SimpleTest
                 }
             }
 
-            return accessToken;
+            return settings.AccessToken;
         }
 
         /// <summary>
@@ -318,8 +338,8 @@ namespace SimpleTest
         /// Creates the specified folder.
         /// </summary>
         /// <remarks>This demonstrates calling an rpc style api in the Files namespace.</remarks>
-        /// <param name="path">The path of the folder to create.</param>
         /// <param name="client">The Dropbox client.</param>
+        /// <param name="path">The path of the folder to create.</param>
         /// <returns>The result from the ListFolderAsync call.</returns>
         private async Task<FolderMetadata> CreateFolder(DropboxClient client, string path)
         {
@@ -342,7 +362,7 @@ namespace SimpleTest
                 }
                 else
                 {
-                    throw e;
+                    throw;
                 }
             }
         }
@@ -354,7 +374,7 @@ namespace SimpleTest
         /// </summary>
         /// <param name="client">The Dropbox client.</param>
         /// <param name="path">The path to list.</param>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         private async Task ListFolderInTeamSpace(DropboxClient client, string path)
         {
             // Fetch root namespace info from user's account info.
@@ -370,7 +390,7 @@ namespace SimpleTest
                 {
                     // Point path root to namespace id of team space.
                     client = client.WithPathRoot(new PathRoot.Root(account.RootInfo.RootNamespaceId));
-                    await ListFolder(client, path);
+                    await this.ListFolder(client, path);
                 }
                 catch (PathRootException ex)
                 {
@@ -385,8 +405,8 @@ namespace SimpleTest
         /// Lists the items within a folder.
         /// </summary>
         /// <remarks>This demonstrates calling an rpc style api in the Files namespace.</remarks>
-        /// <param name="path">The path to list.</param>
         /// <param name="client">The Dropbox client.</param>
+        /// <param name="path">The path to list.</param>
         /// <returns>The result from the ListFolderAsync call.</returns>
         private async Task<ListFolderResult> ListFolder(DropboxClient client, string path)
         {
@@ -403,7 +423,8 @@ namespace SimpleTest
             {
                 var file = item.AsFile;
 
-                Console.WriteLine("F{0,8} {1}",
+                Console.WriteLine(
+                    "F{0,8} {1}",
                     file.Size,
                     item.Name);
             }
@@ -412,6 +433,7 @@ namespace SimpleTest
             {
                 Console.WriteLine("   ...");
             }
+
             return list;
         }
 
@@ -422,7 +444,7 @@ namespace SimpleTest
         /// <param name="client">The Dropbox client.</param>
         /// <param name="folder">The folder path in which the file should be found.</param>
         /// <param name="file">The file to download within <paramref name="folder"/>.</param>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         private async Task Download(DropboxClient client, string folder, FileMetadata file)
         {
             Console.WriteLine("Download file...");
@@ -443,7 +465,7 @@ namespace SimpleTest
         /// <param name="folder">The folder to upload the file.</param>
         /// <param name="fileName">The name of the file.</param>
         /// <param name="fileContent">The file content.</param>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         private async Task Upload(DropboxClient client, string folder, string fileName, string fileContent)
         {
             Console.WriteLine("Upload file...");
@@ -463,12 +485,13 @@ namespace SimpleTest
         /// <param name="client">The Dropbox client.</param>
         /// <param name="folder">The folder to upload the file.</param>
         /// <param name="fileName">The name of the file.</param>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         private async Task ChunkUpload(DropboxClient client, string folder, string fileName)
         {
             Console.WriteLine("Chunk upload file...");
+
             // Chunk size is 128KB.
-            const int chunkSize = 128 * 1024;
+            const uint chunkSize = 128 * 1024;
 
             // Create a random file of 1MB in size.
             var fileContent = new byte[1024 * 1024];
@@ -476,15 +499,15 @@ namespace SimpleTest
 
             using (var stream = new MemoryStream(fileContent))
             {
-                int numChunks = (int)Math.Ceiling((double)stream.Length / chunkSize);
+                ulong numChunks = (ulong)Math.Ceiling((double)stream.Length / chunkSize);
 
                 byte[] buffer = new byte[chunkSize];
                 string sessionId = null;
 
-                for (var idx = 0; idx < numChunks; idx++)
+                for (ulong idx = 0; idx < numChunks; idx++)
                 {
                     Console.WriteLine("Start uploading chunk {0}", idx);
-                    var byteRead = stream.Read(buffer, 0, chunkSize);
+                    var byteRead = stream.Read(buffer, 0, (int)chunkSize);
 
                     using (MemoryStream memStream = new MemoryStream(buffer, 0, byteRead))
                     {
@@ -493,7 +516,6 @@ namespace SimpleTest
                             var result = await client.Files.UploadSessionStartAsync(body: memStream);
                             sessionId = result.SessionId;
                         }
-
                         else
                         {
                             UploadSessionCursor cursor = new UploadSessionCursor(sessionId, (ulong)(chunkSize * idx));
@@ -502,7 +524,6 @@ namespace SimpleTest
                             {
                                 await client.Files.UploadSessionFinishAsync(cursor, new CommitInfo(folder + "/" + fileName), memStream);
                             }
-
                             else
                             {
                                 await client.Files.UploadSessionAppendV2Async(cursor, body: memStream);
@@ -530,6 +551,13 @@ namespace SimpleTest
             }
 
             return members;
+        }
+
+        private class Settings
+        {
+            public string AccessToken { get; set; } = string.Empty;
+
+            public string Uid { get; set; } = string.Empty;
         }
     }
 }

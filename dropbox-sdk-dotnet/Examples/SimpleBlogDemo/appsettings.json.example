@@ -1,0 +1,7 @@
+{
+    "ConnectionStrings": {
+        "UserStore": "Filename=./UserStore.sqlite"
+    },
+    "AppKey": "",
+    "AppSecret": ""
+}

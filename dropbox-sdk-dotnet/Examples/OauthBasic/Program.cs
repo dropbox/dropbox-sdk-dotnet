@@ -1,3 +1,7 @@
+// <copyright file="Program.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+
 namespace OauthTest
 {
     using System;
@@ -6,11 +10,15 @@ namespace OauthTest
     using System.Net;
     using System.Net.Http;
     using System.Runtime.InteropServices;
+    using System.Text.Json;
     using System.Threading.Tasks;
 
     using Dropbox.Api;
 
-    partial class Program
+    /// <summary>
+    /// Example program to fetch information about a Dropbox user.
+    /// </summary>
+    internal partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
         private const string ApiKey = "XXXXXXXXXXXXXXX";
@@ -24,21 +32,15 @@ namespace OauthTest
 
         // URL to receive OAuth 2 redirect from Dropbox server.
         // You also need to register this redirect URL on https://www.dropbox.com/developers/apps.
-        private readonly Uri RedirectUri = new Uri(LoopbackHost + "authorize");
+        private readonly Uri redirectUri = new Uri(LoopbackHost + "authorize");
 
         // URL to receive access token from JS.
-        private readonly Uri JSRedirectUri = new Uri(LoopbackHost + "token");
+        private readonly Uri jSRedirectUri = new Uri(LoopbackHost + "token");
 
-
-        [DllImport("kernel32.dll", ExactSpelling = true)]
-        private static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
+        private readonly string settingsPath = Path.Join(Directory.GetCurrentDirectory(), "settings.json");
 
         [STAThread]
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             var instance = new Program();
             try
@@ -53,8 +55,20 @@ namespace OauthTest
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw e;
+                throw;
             }
+        }
+
+        private void WriteSettings(Settings settings)
+        {
+            File.WriteAllText(
+                this.settingsPath,
+                JsonSerializer.Serialize(settings));
+        }
+
+        private Settings ReadSettings()
+        {
+            return JsonSerializer.Deserialize<Settings>(File.ReadAllText(this.settingsPath));
         }
 
         private async Task<int> Run()
@@ -70,41 +84,44 @@ namespace OauthTest
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            var httpClient = new HttpClient(new SocketsHttpHandler())
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
-                Timeout = TimeSpan.FromMinutes(20)
+                Timeout = TimeSpan.FromMinutes(20),
             };
 
             try
             {
                 var config = new DropboxClientConfig("SimpleOAuthApp")
                 {
-                    HttpClient = httpClient
+                    HttpClient = httpClient,
                 };
 
-                var client = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
+                var settings = this.ReadSettings();
+
+                var client = new DropboxClient(settings.AccessToken, settings.RefreshToken, ApiKey, ApiSecret, config);
 
                 // This call should succeed since the correct scope has been acquired
-                await GetCurrentAccount(client);
+                await this.GetCurrentAccount(client);
 
                 Console.WriteLine("Refreshing without scope account_info.read");
                 var newScopes = new string[] { "files.metadata.read", "files.content.read" };
                 await client.RefreshAccessToken(newScopes);
                 try
                 {
-                    // This should fail since token does not have "account_info.read" scope  
-                    await GetCurrentAccount(client);
+                    // This should fail since token does not have "account_info.read" scope
+                    await this.GetCurrentAccount(client);
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Correctly failed with invalid scope");
                 }
+
                 Console.WriteLine("Attempting to try again with include_granted_scopes");
                 await this.AcquireAccessToken(newScopes, IncludeGrantedScopes.User);
-                var clientNew = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
-                await GetCurrentAccount(clientNew);
+                var clientNew = new DropboxClient(settings.AccessToken, settings.RefreshToken, ApiKey, ApiSecret, config);
+                await this.GetCurrentAccount(clientNew);
 
                 Console.WriteLine("Oauth Test Complete!");
                 Console.WriteLine("Exit with any key");
@@ -130,13 +147,13 @@ namespace OauthTest
         /// inline JS which can send URL fragment to local server as URL parameter.
         /// </summary>
         /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="Task"/></returns>
+        /// <returns>The <see cref="Task"/>.</returns>
         private async Task HandleOAuth2Redirect(HttpListener http)
         {
             var context = await http.GetContextAsync();
 
             // We only care about request to RedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+            while (context.Request.Url.AbsolutePath != this.redirectUri.AbsolutePath)
             {
                 context = await http.GetContextAsync();
             }
@@ -158,13 +175,13 @@ namespace OauthTest
         /// complete the authorization flow.
         /// </summary>
         /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="OAuth2Response"/></returns>
+        /// <returns>The <see cref="OAuth2Response"/>.</returns>
         private async Task<Uri> HandleJSRedirect(HttpListener http)
         {
             var context = await http.GetContextAsync();
 
             // We only care about request to TokenRedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
+            while (context.Request.Url.AbsolutePath != this.jSRedirectUri.AbsolutePath)
             {
                 context = await http.GetContextAsync();
             }
@@ -188,59 +205,73 @@ namespace OauthTest
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
-                Settings.Default.Reset();
+                this.WriteSettings(new Settings());
             }
+
             Console.WriteLine();
 
-            var accessToken = Settings.Default.AccessToken;
-            var refreshToken = Settings.Default.RefreshToken;
+            var settings = this.ReadSettings();
 
-            if (string.IsNullOrEmpty(accessToken))
+            if (string.IsNullOrEmpty(settings.AccessToken))
             {
                 try
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri, state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
+                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, this.redirectUri, state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        System.Diagnostics.Process.Start($"\"{authorizeUri}\"");
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    {
+                        System.Diagnostics.Process.Start("xdg-open", $"\"{authorizeUri}\"");
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    {
+                        System.Diagnostics.Process.Start("open", $"\"{authorizeUri}\"");
+                    }
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
-                    await HandleOAuth2Redirect(http);
+                    await this.HandleOAuth2Redirect(http);
 
                     // Handle redirect from JS and process OAuth response.
-                    var redirectUri = await HandleJSRedirect(http);
+                    var redirectUri = await this.HandleJSRedirect(http);
 
                     Console.WriteLine("Exchanging code for token");
-                    var tokenResult = await DropboxOAuth2Helper.ProcessCodeFlowAsync(redirectUri, ApiKey, ApiSecret, RedirectUri.ToString(), state);
+                    var tokenResult = await DropboxOAuth2Helper.ProcessCodeFlowAsync(redirectUri, ApiKey, ApiSecret, this.redirectUri.ToString(), state);
                     Console.WriteLine("Finished Exchanging Code for Token");
+
                     // Bring console window to the front.
-                    SetForegroundWindow(GetConsoleWindow());
-                    accessToken = tokenResult.AccessToken;
-                    refreshToken = tokenResult.RefreshToken;
+                    var accessToken = tokenResult.AccessToken;
+                    var refreshToken = tokenResult.RefreshToken;
                     var uid = tokenResult.Uid;
                     Console.WriteLine("Uid: {0}", uid);
                     Console.WriteLine("AccessToken: {0}", accessToken);
                     if (tokenResult.RefreshToken != null)
                     {
                         Console.WriteLine("RefreshToken: {0}", refreshToken);
-                        Settings.Default.RefreshToken = refreshToken;
+                        settings.RefreshToken = refreshToken;
                     }
+
                     if (tokenResult.ExpiresAt != null)
                     {
                         Console.WriteLine("ExpiresAt: {0}", tokenResult.ExpiresAt);
                     }
+
                     if (tokenResult.ScopeList != null)
                     {
-                        Console.WriteLine("Scopes: {0}", String.Join(" ", tokenResult.ScopeList));
+                        Console.WriteLine("Scopes: {0}", string.Join(" ", tokenResult.ScopeList));
                     }
-                    Settings.Default.AccessToken = accessToken;
-                    Settings.Default.Uid = uid;
-                    Settings.Default.Save();
+
+                    settings.AccessToken = accessToken;
+                    settings.Uid = uid;
+                    this.WriteSettings(settings);
                     http.Stop();
                     return uid;
                 }
@@ -251,7 +282,7 @@ namespace OauthTest
                 }
             }
 
-            return null;
+            return settings.Uid;
         }
 
         /// <summary>
@@ -264,39 +295,40 @@ namespace OauthTest
         /// <returns>An asynchronous task.</returns>
         private async Task GetCurrentAccount(DropboxClient client)
         {
-            try
+            Console.WriteLine("Current Account:");
+            var full = await client.Users.GetCurrentAccountAsync();
+
+            Console.WriteLine("Account id    : {0}", full.AccountId);
+            Console.WriteLine("Country       : {0}", full.Country);
+            Console.WriteLine("Email         : {0}", full.Email);
+            Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
+            Console.WriteLine("Locale        : {0}", full.Locale);
+            Console.WriteLine("Name");
+            Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
+            Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
+            Console.WriteLine("  Given    : {0}", full.Name.GivenName);
+            Console.WriteLine("  Surname  : {0}", full.Name.Surname);
+            Console.WriteLine("Referral link : {0}", full.ReferralLink);
+
+            if (full.Team != null)
             {
-                Console.WriteLine("Current Account:");
-                var full = await client.Users.GetCurrentAccountAsync();
-
-                Console.WriteLine("Account id    : {0}", full.AccountId);
-                Console.WriteLine("Country       : {0}", full.Country);
-                Console.WriteLine("Email         : {0}", full.Email);
-                Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
-                Console.WriteLine("Locale        : {0}", full.Locale);
-                Console.WriteLine("Name");
-                Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
-                Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
-                Console.WriteLine("  Given    : {0}", full.Name.GivenName);
-                Console.WriteLine("  Surname  : {0}", full.Name.Surname);
-                Console.WriteLine("Referral link : {0}", full.ReferralLink);
-
-                if (full.Team != null)
-                {
-                    Console.WriteLine("Team");
-                    Console.WriteLine("  Id   : {0}", full.Team.Id);
-                    Console.WriteLine("  Name : {0}", full.Team.Name);
-                }
-                else
-                {
-                    Console.WriteLine("Team - None");
-                }
+                Console.WriteLine("Team");
+                Console.WriteLine("  Id   : {0}", full.Team.Id);
+                Console.WriteLine("  Name : {0}", full.Team.Name);
             }
-            catch (Exception e)
+            else
             {
-                throw e;
+                Console.WriteLine("Team - None");
             }
+        }
 
+        private class Settings
+        {
+            public string AccessToken { get; set; } = string.Empty;
+
+            public string RefreshToken { get; set; } = string.Empty;
+
+            public string Uid { get; set; } = string.Empty;
         }
     }
 }

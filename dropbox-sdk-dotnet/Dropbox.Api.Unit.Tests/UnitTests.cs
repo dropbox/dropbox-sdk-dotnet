@@ -19,7 +19,6 @@ namespace Dropbox.Api.Unit.Tests
         /// <summary>
         /// Test get authorization url.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1000:KeywordsMustBeSpacedCorrectly", Justification = "False positive.")]
         [TestMethod]
         public void TestGetAuthorizationUri()
         {

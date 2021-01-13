@@ -1,39 +1,52 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebMatrix.WebData;
-
-using SimpleBlogDemo.Helpers;
-using System.Globalization;
-using SimpleBlogDemo.Models;
-using System.Web.Configuration;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Web.Script.Serialization;
-using Dropbox.Api;
+// <copyright file="HomeController.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
 
 namespace SimpleBlogDemo.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Dropbox.Api;
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using SimpleBlogDemo.Helpers;
+    using SimpleBlogDemo.Models;
+
     [RequireHttpsOrXForwarded]
-    public partial class HomeController : AsyncController
+    public partial class HomeController : Controller
     {
-        private UsersStore store = new UsersStore();
-        private UserProfile currentUser;
+        private readonly SignInManager<UserProfile> signInManager;
+        private readonly UserManager<UserProfile> userManager;
+        private IConfiguration configuration;
+
+        public HomeController(IConfiguration configuration, UserManager<UserProfile> userManager, SignInManager<UserProfile> signInManager)
+        {
+            this.configuration = configuration;
+            this.userManager = userManager;
+            this.signInManager = signInManager;
+        }
 
         private string RedirectUri
         {
             get
             {
-                if (this.Request.Url.Host.ToLowerInvariant() == "localhost")
+                if (this.Request.Host.Host.ToLowerInvariant() == "localhost")
                 {
-                    return string.Format("http://{0}:{1}/Home/Auth", this.Request.Url.Host, this.Request.Url.Port);
+                    return string.Format("http://{0}:{1}/Home/Auth", this.Request.Host.Host, this.Request.Host.Port);
                 }
 
                 var builder = new UriBuilder(
                     Uri.UriSchemeHttps,
-                    this.Request.Url.Host);
+                    this.Request.Host.ToString());
 
                 builder.Path = "/Home/Auth";
 
@@ -41,24 +54,17 @@ namespace SimpleBlogDemo.Controllers
             }
         }
 
-        protected override void Initialize(System.Web.Routing.RequestContext requestContext)
-        {
-            this.currentUser = this.store.CurrentUser();
-
-            base.Initialize(requestContext);
-        }
-
         // GET: /Home
         public async Task<ActionResult> IndexAsync()
         {
-            if (WebSecurity.IsAuthenticated)
+            if (this.userManager.GetUserId(this.User) != null)
             {
                 return this.RedirectToAction("Profile");
             }
 
             var blogs = new List<Blog>();
 
-            foreach (var user in store.Users)
+            foreach (var user in this.userManager.Users)
             {
                 var blog = await Blog.FromUserAsync(user);
 
@@ -70,23 +76,24 @@ namespace SimpleBlogDemo.Controllers
 
             blogs.Sort((l, r) => r.MostRecent.CompareTo(l.MostRecent));
 
-            return View(blogs);
+            return this.View(blogs);
         }
 
         // GET: /Home/Register
         public ActionResult Register()
         {
-            if (WebSecurity.IsAuthenticated)
+            if (this.userManager.GetUserId(this.User) != null)
             {
                 return this.RedirectToAction("Profile");
             }
 
-            return View();
+            return this.View();
         }
 
         // POST: /Home/Register
-        [HttpPost, ValidateAntiForgeryToken]
-        public ActionResult Register(string username, string password1, string password2, string blogname, bool remember = false)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Register(string username, string password1, string password2, string blogname, bool remember = false)
         {
             if (string.IsNullOrWhiteSpace(username))
             {
@@ -98,9 +105,10 @@ namespace SimpleBlogDemo.Controllers
             {
                 this.Flash("Password must not be empty and both passwords must match.", FlashLevel.Warning);
             }
-            else if (WebSecurity.UserExists(username))
+            else if (await this.userManager.FindByNameAsync(username) != null)
             {
-                this.Flash(string.Format(
+                this.Flash(
+                    string.Format(
                     CultureInfo.InvariantCulture,
                     "Username '{0}' already exists, choose something else.",
                     username),
@@ -108,17 +116,17 @@ namespace SimpleBlogDemo.Controllers
             }
             else
             {
-                var parameters = new Dictionary<string, object>();
-                if (!string.IsNullOrEmpty(blogname))
+                var user = new UserProfile
                 {
-                    parameters["BlogName"] = blogname;
-                }
-                WebSecurity.CreateUserAndAccount(username, password1, parameters, requireConfirmationToken: false);
-                WebSecurity.Login(username, password1, persistCookie: remember);
+                    UserName = username,
+                    BlogName = blogname,
+                };
+                await this.userManager.CreateAsync(user, password1);
+                await this.signInManager.PasswordSignInAsync(user, password1, remember, false);
                 return this.RedirectToAction("Profile");
             }
 
-            return View();
+            return this.View();
         }
 
         // Get /Home/Profile
@@ -127,35 +135,41 @@ namespace SimpleBlogDemo.Controllers
         {
             await Task.Delay(0);
 
-            return View(this.currentUser);
+            return this.View(await this.GetCurrentUser(this.HttpContext));
         }
 
         // Post /Home/Profile
-        [HttpPost, ValidateAntiForgeryToken, Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<ActionResult> ProfileAsync(UserProfile profile)
         {
-            if (this.currentUser.ID != profile.ID)
+            var currentUser = await this.GetCurrentUser(this.HttpContext);
+            if (currentUser.Id != profile.Id)
             {
                 return this.RedirectToAction("Index");
             }
 
-            this.currentUser.BlogName = profile.BlogName;
-            await this.store.SaveChangesAsync();
+            currentUser.BlogName = profile.BlogName;
+            await this.userManager.UpdateAsync(currentUser);
 
-            return View(this.currentUser);
+            return this.View(currentUser);
         }
 
         // POST : /Home/Disconnect
-        [HttpPost, ValidateAntiForgeryToken, Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<ActionResult> DisconnectAsync()
         {
-            if (!string.IsNullOrWhiteSpace(this.currentUser.BlogName))
+            var currentUser = await this.GetCurrentUser(this.HttpContext);
+            if (!string.IsNullOrWhiteSpace(currentUser.BlogName))
             {
-                this.FlushCache(this.currentUser.BlogName);
+                this.FlushCache(currentUser.BlogName);
             }
 
-            this.currentUser.DropboxAccessToken = string.Empty;
-            await store.SaveChangesAsync();
+            currentUser.DropboxAccessToken = string.Empty;
+            await this.userManager.UpdateAsync(currentUser);
 
             this.Flash("This account has been disconnected from Dropbox.", FlashLevel.Success);
             return this.RedirectToAction("Profile");
@@ -163,32 +177,35 @@ namespace SimpleBlogDemo.Controllers
 
         // GET: /Home/Connect
         [Authorize]
-        public ActionResult Connect()
+        public async Task<ActionResult> Connect()
         {
-            if (!string.IsNullOrWhiteSpace(this.currentUser.DropboxAccessToken))
+            var currentUser = await this.GetCurrentUser(this.HttpContext);
+            if (!string.IsNullOrWhiteSpace(currentUser.DropboxAccessToken))
             {
                 return this.RedirectToAction("Index");
             }
 
-            this.currentUser.ConnectState = Guid.NewGuid().ToString("N");
-            store.SaveChanges();
+            currentUser.ConnectState = Guid.NewGuid().ToString("N");
+            await this.userManager.UpdateAsync(currentUser);
 
             var redirect = DropboxOAuth2Helper.GetAuthorizeUri(
                 OAuthResponseType.Code,
-                MvcApplication.AppKey,
-                RedirectUri,
-                this.currentUser.ConnectState);
+                this.configuration["AppKey"],
+                this.RedirectUri,
+                currentUser.ConnectState);
 
-            return Redirect(redirect.ToString());
+            return this.Redirect(redirect.ToString());
         }
 
         // GET: /Home/Auth
         [Authorize]
         public async Task<ActionResult> AuthAsync(string code, string state)
         {
+            Console.WriteLine("auth");
+            var currentUser = await this.GetCurrentUser(this.HttpContext);
             try
             {
-                if (this.currentUser.ConnectState != state)
+                if (currentUser.ConnectState != state)
                 {
                     this.Flash("There was an error connecting to Dropbox.");
                     return this.RedirectToAction("Index");
@@ -196,95 +213,103 @@ namespace SimpleBlogDemo.Controllers
 
                 var response = await DropboxOAuth2Helper.ProcessCodeFlowAsync(
                     code,
-                    MvcApplication.AppKey,
-                    MvcApplication.AppSecret,
+                    this.configuration["AppKey"],
+                    this.configuration["AppSecret"],
                     this.RedirectUri);
 
-                this.currentUser.DropboxAccessToken = response.AccessToken;
-                this.currentUser.ConnectState = string.Empty;
-                await this.store.SaveChangesAsync();
+                currentUser.DropboxAccessToken = response.AccessToken;
+                currentUser.ConnectState = string.Empty;
+                await this.userManager.UpdateAsync(currentUser);
 
                 this.Flash("This account has been connected to Dropbox.", FlashLevel.Success);
-                return RedirectToAction("Profile");
+                return this.RedirectToAction("Profile");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 var message = string.Format(
                     "code: {0}\nAppKey: {1}\nAppSecret: {2}\nRedirectUri: {3}\nException : {4}",
                     code,
-                    MvcApplication.AppKey,
-                    MvcApplication.AppSecret,
+                    this.configuration["AppKey"],
+                    this.configuration["AppSecret"],
                     this.RedirectUri,
                     e);
                 this.Flash(message, FlashLevel.Danger);
-                return RedirectToAction("Profile");
+                return this.RedirectToAction("Profile");
             }
         }
 
         // POST: /Home/LogOff
-        [HttpPost, ValidateAntiForgeryToken]
-        public ActionResult LogOff()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> LogOff()
         {
-            if (WebSecurity.IsAuthenticated)
+            if (this.userManager.GetUserId(this.User) != null)
             {
-                WebSecurity.Logout();
+                await this.signInManager.SignOutAsync();
             }
 
-            return RedirectToAction("Index");
+            return this.RedirectToAction("Index");
         }
 
         // GET: /Home/SignIn
-        public ActionResult SignIn(string returnUrl=null)
+        public ActionResult SignIn(string returnUrl = null)
         {
-            if (WebSecurity.IsAuthenticated)
+            if (this.userManager.GetUserId(this.User) != null)
             {
                 if (!string.IsNullOrEmpty(returnUrl))
                 {
-                    return Redirect(returnUrl);
+                    return this.Redirect(returnUrl);
                 }
                 else
                 {
-                    return RedirectToAction("Profile");
+                    return this.RedirectToAction("Profile");
                 }
             }
 
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
+            this.ViewBag.ReturnUrl = returnUrl;
+            return this.View();
         }
 
-        [HttpPost, ValidateAntiForgeryToken]
-        public ActionResult SignIn(string username, string password, string returnUrl = null, bool remember = false)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> SignIn(string username, string password, string returnUrl = null, bool remember = false)
         {
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 this.Flash("Incorrect username or password.", FlashLevel.Danger);
-                ViewBag.ReturnUrl = returnUrl;
-                return View();
+                this.ViewBag.ReturnUrl = returnUrl;
+                return this.View();
             }
 
-            if (!WebSecurity.IsAuthenticated)
+            if (this.userManager.GetUserId(this.User) == null)
             {
-                var result = WebSecurity.Login(username, password, persistCookie: remember);
-                if (!result)
+                var result = await this.signInManager.PasswordSignInAsync(username, password, remember, false);
+                if (!result.Succeeded)
                 {
                     this.Flash("Incorrect username or password.", FlashLevel.Warning);
-                    ViewBag.ReturnUrl = returnUrl;
-                    return View();
+                    this.ViewBag.ReturnUrl = returnUrl;
+                    return this.View();
                 }
                 else if (remember)
                 {
-                    Response.Cookies.Get(".ASPXAUTH").Expires = DateTime.UtcNow.AddDays(30);
+                    // TODO: fixme
+                    // Response.Cookies.Get(".ASPXAUTH").Expires = DateTime.UtcNow.AddDays(30);
                 }
-           }
+            }
 
             if (!string.IsNullOrEmpty(returnUrl))
             {
-                return Redirect(returnUrl);
+                return this.Redirect(returnUrl);
             }
             else
             {
-                return RedirectToAction("Profile");
+                return this.RedirectToAction("Profile");
             }
+        }
+
+        private async Task<UserProfile> GetCurrentUser(HttpContext context)
+        {
+            return await this.userManager.GetUserAsync(context.User);
         }
     }
 }

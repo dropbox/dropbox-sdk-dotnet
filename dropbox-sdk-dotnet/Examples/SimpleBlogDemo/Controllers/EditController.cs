@@ -1,40 +1,44 @@
+// <copyright file="EditController.cs" company="Dropbox Inc">
+// Copyright (c) Dropbox Inc. All rights reserved.
+// </copyright>
+
 namespace SimpleBlogDemo.Controllers
 {
-    using System.Linq;
-    using System.Threading.Tasks;
-    using System.Web.Mvc;
-
-    using SimpleBlogDemo.Helpers;
-    using SimpleBlogDemo.Models;
-    using System.IO;
-    using System.Text;
-    using Dropbox.Api.Files;
-    using Dropbox.Api;
     using System;
     using System.Globalization;
-    using System.Web;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Dropbox.Api;
+    using Dropbox.Api.Files;
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using SimpleBlogDemo.Helpers;
+    using SimpleBlogDemo.Models;
 
-    [Authorize, RequireHttpsOrXForwarded]
-    public class EditController : AsyncController
+    [Authorize]
+    [RequireHttpsOrXForwarded]
+    public class EditController : Controller
     {
-        private UsersStore store = new UsersStore();
-        private UserProfile currentUser;
+        private readonly UserManager<UserProfile> userManager;
 
-        protected override void Initialize(System.Web.Routing.RequestContext requestContext)
+        public EditController(UserManager<UserProfile> userManager)
         {
-            this.currentUser = this.store.CurrentUser();
-
-            base.Initialize(requestContext);
+            this.userManager = userManager;
         }
 
         // GET: Edit/{id}
         public async Task<ActionResult> IndexAsync(string id)
         {
-            using (var client = this.currentUser.GetAuthenticatedClient())
+            using (var client = await this.GetAuthenticatedClient(this.HttpContext))
             {
                 if (client == null)
                 {
-                    return RedirectToAction("Profile", "Home");
+                    return this.RedirectToAction("Profile", "Home");
                 }
 
                 var articles = await client.GetArticleList();
@@ -44,30 +48,31 @@ namespace SimpleBlogDemo.Controllers
                 var selected = filtered.FirstOrDefault();
                 if (selected == null)
                 {
-                    return RedirectToAction("Display", "Blogs", new { blogname = this.currentUser.BlogName });
+                    return this.RedirectToAction("Display", "Blogs", new { blogname = (await this.GetCurrentUser(this.HttpContext)).BlogName });
                 }
 
                 using (var download = await client.Files.DownloadAsync("/" + selected.Filename))
                 {
                     var markdown = await download.GetContentAsStringAsync();
 
-                    return View(Tuple.Create(markdown, selected));
+                    return this.View(Tuple.Create(markdown, selected));
                 }
             }
         }
 
         // POST: /Edit
-        [HttpPost, ValidateAntiForgeryToken, ValidateInput(enableValidation: false)]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> IndexAsync(
             string filename,
             string content,
             string rev)
         {
-            using (var client = this.currentUser.GetAuthenticatedClient())
+            using (var client = await this.GetAuthenticatedClient(this.HttpContext))
             {
                 if (client == null)
                 {
-                    return RedirectToAction("Profile", "Home");
+                    return this.RedirectToAction("Profile", "Home");
                 }
 
                 using (var mem = new MemoryStream(Encoding.UTF8.GetBytes(content)))
@@ -88,23 +93,23 @@ namespace SimpleBlogDemo.Controllers
                             var reason = uploadError.Value.Reason;
                             var id = filename.Split('.')[0];
 
-                            var message = string.Format( "Unable to update {0}. Reason: {1}", id, reason);
+                            var message = string.Format("Unable to update {0}. Reason: {1}", id, reason);
 
                             this.Flash(message, FlashLevel.Warning);
-                            return RedirectToAction("Index", new { id = id });
+                            return this.RedirectToAction("Index", new { id = id });
                         }
                     }
                 }
 
                 var metadata = ArticleMetadata.Parse(filename, rev);
 
-                await client.GetArticle(this.currentUser.BlogName, metadata, bypassCache: true);
+                await client.GetArticle((await this.GetCurrentUser(this.HttpContext)).BlogName, metadata, bypassCache: true);
 
                 this.Flash(string.Format(
                     "Updated '{0}'.", metadata.Name));
-                return Redirect(string.Format(
+                return this.Redirect(string.Format(
                     "/Blogs/{0}/{1}",
-                    this.currentUser.BlogName,
+                    (await this.GetCurrentUser(this.HttpContext)).BlogName,
                     metadata.DisplayName));
             }
         }
@@ -112,11 +117,12 @@ namespace SimpleBlogDemo.Controllers
         // GET: /Add
         public ActionResult Add()
         {
-            return View();
+            return this.View();
         }
 
         // POST: /Add
-        [HttpPost, ValidateAntiForgeryToken, ValidateInput(enableValidation: false)]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> AddAsync(string name, DateTime date, string content)
         {
             var filename = string.Format(
@@ -125,11 +131,11 @@ namespace SimpleBlogDemo.Controllers
                 name,
                 date);
 
-            using (var client = this.currentUser.GetAuthenticatedClient())
+            using (var client = await this.GetAuthenticatedClient(this.HttpContext))
             {
                 if (client == null)
                 {
-                    return RedirectToAction("Profile", "Home");
+                    return this.RedirectToAction("Profile", "Home");
                 }
 
                 using (var mem = new MemoryStream(Encoding.UTF8.GetBytes(content)))
@@ -138,10 +144,10 @@ namespace SimpleBlogDemo.Controllers
 
                     var metadata = ArticleMetadata.Parse(upload.Name, upload.Rev);
 
-                    return Redirect(string.Format(
+                    return this.Redirect(string.Format(
                         CultureInfo.InvariantCulture,
                         "/Blogs/{0}/{1}",
-                        this.currentUser.BlogName,
+                        (await this.GetCurrentUser(this.HttpContext)).BlogName,
                         metadata.DisplayName));
                 }
             }
@@ -149,10 +155,22 @@ namespace SimpleBlogDemo.Controllers
 
         // POST: /Preview
         // This is called by an ajax request in preview.js
-        [HttpPost, ValidateAntiForgeryToken, ValidateInput(enableValidation: false)]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Preview(string markdown)
         {
-            return Content(markdown.ParseMarkdown().ToString());
+            return this.Content(markdown.ParseMarkdown().ToString());
+        }
+
+        private async Task<UserProfile> GetCurrentUser(HttpContext context)
+        {
+            return await this.userManager.GetUserAsync(context.User);
+        }
+
+        private async Task<DropboxClient> GetAuthenticatedClient(HttpContext context)
+        {
+            var user = await this.GetCurrentUser(context);
+            return new DropboxClient(user.DropboxAccessToken, new DropboxClientConfig("SimpleBlogDemo"));
         }
     }
 }

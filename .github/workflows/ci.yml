@@ -15,6 +15,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Build SDK, Tests, and Examples
+        run: |
+          dotnet build dropbox-sdk-dotnet
       - name: Run Unit Tests
         # We don't have a good cross-platform way of splitting long lines
         run: |

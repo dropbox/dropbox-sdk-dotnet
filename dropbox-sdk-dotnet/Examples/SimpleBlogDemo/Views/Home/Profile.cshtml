@@ -12,7 +12,7 @@
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.ID);
+            @Html.HiddenFor(model => model.Id);
             @Html.HiddenFor(model => model.UserName);
 
             <div class="form-group">

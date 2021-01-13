@@ -1,3 +1,4 @@
+@using SimpleBlogDemo.Helpers;
 @model Tuple<Article, List<ArticleMetadata>, string, bool>
 
 @{
@@ -12,7 +13,7 @@
 @article.Content
 
 <div class="row">
-    @for (var i = 0; i < list.Count; i++) 
+    @for (var i = 0; i < list.Count; i++)
     {
         var curr = list[i];
         if (curr.DisplayName == article.Metadata.DisplayName)
