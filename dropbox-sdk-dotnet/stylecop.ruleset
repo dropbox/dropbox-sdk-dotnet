@@ -3,6 +3,10 @@
     Description="StyleCopAnalyzers rules for the Dropbox .NET SDK"
     ToolsVersion="14.0"
 >
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CS0419" Action="Info" />
+    <Rule Id="CS0618" Action="Info" />
+  </Rules>
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
     <Rule Id="SA1402" Action="None" />
     <Rule Id="SA1649" Action="None" />

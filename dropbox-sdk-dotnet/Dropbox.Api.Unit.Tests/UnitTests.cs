@@ -29,7 +29,9 @@ namespace Dropbox.Api.Unit.Tests
             bool[] disableSignups = new[] { false, true };
             string[] requireRoles = new[] { string.Empty, "role" };
             bool[] forceReauthentications = new[] { false, true };
+#pragma warning disable SA1000 // conflicts with IDE settings
             List<string[]> scopes = new()
+#pragma warning restore SA1000
             {
                 null,
                 new string[] { "files.metadata.read", "files.content.read" },

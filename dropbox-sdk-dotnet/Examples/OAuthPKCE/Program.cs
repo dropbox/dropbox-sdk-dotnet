@@ -28,12 +28,15 @@ namespace OauthPKCE
         // available on your machine you need to update this URL with an unused port.
         private const string LoopbackHost = "http://127.0.0.1:52475/";
 
+#pragma warning disable SA1000 // conflicts with IDE rules
+
         // URL to receive OAuth 2 redirect from Dropbox server.
         // You also need to register this redirect URL on https://www.dropbox.com/developers/apps.
         private readonly Uri redirectUri = new(LoopbackHost + "authorize");
 
         // URL to receive access token from JS.
         private readonly Uri jSRedirectUri = new(LoopbackHost + "token");
+#pragma warning restore SA1000
 
         private readonly string settingsPath = Path.Join(Directory.GetCurrentDirectory(), "settings.json");
 

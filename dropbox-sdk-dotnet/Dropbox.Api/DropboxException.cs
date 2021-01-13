@@ -212,7 +212,7 @@ namespace Dropbox.Api
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RateLimitException"/> class.
-        /// <para>Initializes a new instance of the <see cref="requestId"/> class.</para>
+        /// <para>Initializes a new instance of the <see cref="RateLimitException"/> class.</para>
         /// </summary>
         /// <param name="requestId">The Dropbox request ID.</param>
         internal RateLimitException(string requestId)
