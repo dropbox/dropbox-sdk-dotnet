@@ -2117,4 +2117,4 @@ class _CSharpGenerator(CodeBackend):
             self.emit('[sys.Obsolete("This function is deprecated")]')
         else:
             self.emit('[sys.Obsolete("This function is deprecated, please use {}{}{} instead.")]'
-                    .format(prefix, self._public_name(deprecated.by.name), suffix))
+                    .format(prefix, self._public_route_name(deprecated.by.name, deprecated.by.version), suffix))

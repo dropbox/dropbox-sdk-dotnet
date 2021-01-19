@@ -470,7 +470,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CopyV2Async instead.")]
         public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
         {
             return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
@@ -485,7 +485,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopy instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCopyV2 instead.")]
         public sys.IAsyncResult BeginCopy(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CopyAsync(relocationArg);
@@ -510,7 +510,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CopyV2Async instead.")]
         public t.Task<Metadata> CopyAsync(string fromPath,
                                           string toPath,
                                           bool allowSharedFolder = false,
@@ -542,7 +542,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopy instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCopyV2 instead.")]
         public sys.IAsyncResult BeginCopy(string fromPath,
                                           string toPath,
                                           bool allowSharedFolder = false,
@@ -569,7 +569,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCopy instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndCopyV2 instead.")]
         public Metadata EndCopy(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
@@ -698,7 +698,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CopyBatchV2Async instead.")]
         public t.Task<RelocationBatchLaunch> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
         {
             return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
@@ -713,7 +713,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatch instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchV2 instead.")]
         public sys.IAsyncResult BeginCopyBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CopyBatchAsync(relocationBatchArg);
@@ -739,7 +739,7 @@ namespace Dropbox.Api.Files.Routes
         /// copies.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CopyBatchV2Async instead.")]
         public t.Task<RelocationBatchLaunch> CopyBatchAsync(col.IEnumerable<RelocationPath> entries,
                                                             bool autorename = false,
                                                             bool allowSharedFolder = false,
@@ -769,7 +769,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatch instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchV2 instead.")]
         public sys.IAsyncResult BeginCopyBatch(col.IEnumerable<RelocationPath> entries,
                                                bool autorename = false,
                                                bool allowSharedFolder = false,
@@ -792,7 +792,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        [sys.Obsolete("This function is deprecated, please use EndCopyBatch instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndCopyBatchV2 instead.")]
         public RelocationBatchLaunch EndCopyBatch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchLaunch>;
@@ -906,7 +906,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchCheckAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CopyBatchCheckV2Async instead.")]
         public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/copy_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -921,7 +921,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchCheck instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchCheckV2 instead.")]
         public sys.IAsyncResult BeginCopyBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CopyBatchCheckAsync(pollArg);
@@ -941,7 +941,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchCheckAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CopyBatchCheckV2Async instead.")]
         public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -959,7 +959,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchCheck instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchCheckV2 instead.")]
         public sys.IAsyncResult BeginCopyBatchCheck(string asyncJobId,
                                                     sys.AsyncCallback callback,
                                                     object callbackState = null)
@@ -979,7 +979,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCopyBatchCheck instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndCopyBatchCheckV2 instead.")]
         public RelocationBatchJobStatus EndCopyBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchJobStatus>;
@@ -1281,7 +1281,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateFolderAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CreateFolderV2Async instead.")]
         public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
         {
             return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", "user", global::Dropbox.Api.Files.CreateFolderArg.Encoder, global::Dropbox.Api.Files.FolderMetadata.Decoder, global::Dropbox.Api.Files.CreateFolderError.Decoder);
@@ -1296,7 +1296,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateFolder instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCreateFolderV2 instead.")]
         public sys.IAsyncResult BeginCreateFolder(CreateFolderArg createFolderArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CreateFolderAsync(createFolderArg);
@@ -1315,7 +1315,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateFolderAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use CreateFolderV2Async instead.")]
         public t.Task<FolderMetadata> CreateFolderAsync(string path,
                                                         bool autorename = false)
         {
@@ -1336,7 +1336,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateFolder instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginCreateFolderV2 instead.")]
         public sys.IAsyncResult BeginCreateFolder(string path,
                                                   bool autorename = false,
                                                   sys.AsyncCallback callback = null,
@@ -1358,7 +1358,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCreateFolder instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndCreateFolderV2 instead.")]
         public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FolderMetadata>;
@@ -1682,7 +1682,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use DeleteAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use DeleteV2Async instead.")]
         public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
         {
             return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", "user", global::Dropbox.Api.Files.DeleteArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.DeleteError.Decoder);
@@ -1697,7 +1697,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginDelete instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginDeleteV2 instead.")]
         public sys.IAsyncResult BeginDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DeleteAsync(deleteArg);
@@ -1720,7 +1720,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use DeleteAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use DeleteV2Async instead.")]
         public t.Task<Metadata> DeleteAsync(string path,
                                             string parentRev = null)
         {
@@ -1741,7 +1741,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginDelete instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginDeleteV2 instead.")]
         public sys.IAsyncResult BeginDelete(string path,
                                             string parentRev = null,
                                             sys.AsyncCallback callback = null,
@@ -1762,7 +1762,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndDelete instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndDeleteV2 instead.")]
         public Metadata EndDelete(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
@@ -4085,7 +4085,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use MoveV2Async instead.")]
         public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
         {
             return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
@@ -4100,7 +4100,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMove instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginMoveV2 instead.")]
         public sys.IAsyncResult BeginMove(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MoveAsync(relocationArg);
@@ -4125,7 +4125,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use MoveV2Async instead.")]
         public t.Task<Metadata> MoveAsync(string fromPath,
                                           string toPath,
                                           bool allowSharedFolder = false,
@@ -4157,7 +4157,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMove instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginMoveV2 instead.")]
         public sys.IAsyncResult BeginMove(string fromPath,
                                           string toPath,
                                           bool allowSharedFolder = false,
@@ -4184,7 +4184,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndMove instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndMoveV2 instead.")]
         public Metadata EndMove(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
@@ -4323,7 +4323,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use MoveBatchV2Async instead.")]
         public t.Task<RelocationBatchLaunch> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
         {
             return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
@@ -4338,7 +4338,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatch instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchV2 instead.")]
         public sys.IAsyncResult BeginMoveBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MoveBatchAsync(relocationBatchArg);
@@ -4364,7 +4364,7 @@ namespace Dropbox.Api.Files.Routes
         /// copies.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use MoveBatchV2Async instead.")]
         public t.Task<RelocationBatchLaunch> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
                                                             bool autorename = false,
                                                             bool allowSharedFolder = false,
@@ -4394,7 +4394,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatch instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchV2 instead.")]
         public sys.IAsyncResult BeginMoveBatch(col.IEnumerable<RelocationPath> entries,
                                                bool autorename = false,
                                                bool allowSharedFolder = false,
@@ -4417,7 +4417,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        [sys.Obsolete("This function is deprecated, please use EndMoveBatch instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndMoveBatchV2 instead.")]
         public RelocationBatchLaunch EndMoveBatch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchLaunch>;
@@ -4531,7 +4531,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckV2Async instead.")]
         public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -4546,7 +4546,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheck instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheckV2 instead.")]
         public sys.IAsyncResult BeginMoveBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MoveBatchCheckAsync(pollArg);
@@ -4566,7 +4566,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckV2Async instead.")]
         public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -4584,7 +4584,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheck instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheckV2 instead.")]
         public sys.IAsyncResult BeginMoveBatchCheck(string asyncJobId,
                                                     sys.AsyncCallback callback,
                                                     object callbackState = null)
@@ -4604,7 +4604,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndMoveBatchCheck instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndMoveBatchCheckV2 instead.")]
         public RelocationBatchJobStatus EndMoveBatchCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchJobStatus>;
@@ -5525,7 +5525,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use SearchAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use SearchV2Async instead.")]
         public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
         {
             return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", "user", global::Dropbox.Api.Files.SearchArg.Encoder, global::Dropbox.Api.Files.SearchResult.Decoder, global::Dropbox.Api.Files.SearchError.Decoder);
@@ -5540,7 +5540,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginSearch instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginSearchV2 instead.")]
         public sys.IAsyncResult BeginSearch(SearchArg searchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.SearchAsync(searchArg);
@@ -5570,7 +5570,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use SearchAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use SearchV2Async instead.")]
         public t.Task<SearchResult> SearchAsync(string path,
                                                 string query,
                                                 ulong start = 0,
@@ -5606,7 +5606,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginSearch instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginSearchV2 instead.")]
         public sys.IAsyncResult BeginSearch(string path,
                                             string query,
                                             ulong start = 0,
@@ -5633,7 +5633,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndSearch instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndSearchV2 instead.")]
         public SearchResult EndSearch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SearchResult>;
@@ -6260,7 +6260,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use UploadSessionAppendAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
         public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
         {
             return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
@@ -6276,7 +6276,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppend instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppendV2 instead.")]
         public sys.IAsyncResult BeginUploadSessionAppend(UploadSessionCursor uploadSessionCursor, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionAppendAsync(uploadSessionCursor, body);
@@ -6305,7 +6305,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use UploadSessionAppendAsync instead.")]
+        [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
         public t.Task UploadSessionAppendAsync(string sessionId,
                                                ulong offset,
                                                io.Stream body)
@@ -6331,7 +6331,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppend instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppendV2 instead.")]
         public sys.IAsyncResult BeginUploadSessionAppend(string sessionId,
                                                          ulong offset,
                                                          io.Stream body,
@@ -6353,7 +6353,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UploadSessionLookupError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndUploadSessionAppend instead.")]
+        [sys.Obsolete("This function is deprecated, please use EndUploadSessionAppendV2 instead.")]
         public void EndUploadSessionAppend(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task;
