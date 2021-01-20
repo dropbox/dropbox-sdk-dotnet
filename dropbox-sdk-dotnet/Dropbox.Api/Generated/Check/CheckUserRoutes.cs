@@ -8,6 +8,7 @@ namespace Dropbox.Api.Check.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -38,11 +39,12 @@ namespace Dropbox.Api.Check.Routes
         /// infrastructure is working and that the access token is valid.</para>
         /// </summary>
         /// <param name="echoArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<EchoResult> UserAsync(EchoArg echoArg)
+        public t.Task<EchoResult> UserAsync(EchoArg echoArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<EchoArg, EchoResult, enc.Empty>(echoArg, "api", "/check/user", "user", global::Dropbox.Api.Check.EchoArg.Encoder, global::Dropbox.Api.Check.EchoResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<EchoArg, EchoResult, enc.Empty>(echoArg, "api", "/check/user", "user", global::Dropbox.Api.Check.EchoArg.Encoder, global::Dropbox.Api.Check.EchoResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -69,13 +71,15 @@ namespace Dropbox.Api.Check.Routes
         /// infrastructure is working and that the access token is valid.</para>
         /// </summary>
         /// <param name="query">The string that you'd like to be echoed back to you.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<EchoResult> UserAsync(string query = "")
+        public t.Task<EchoResult> UserAsync(string query = "",
+                                            tr.CancellationToken cancellationToken = default)
         {
             var echoArg = new EchoArg(query);
 
-            return this.UserAsync(echoArg);
+            return this.UserAsync(echoArg, cancellationToken);
         }
 
         /// <summary>

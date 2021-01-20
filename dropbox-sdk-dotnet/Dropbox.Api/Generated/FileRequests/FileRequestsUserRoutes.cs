@@ -8,6 +8,7 @@ namespace Dropbox.Api.FileRequests.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -34,14 +35,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Returns the total number of file requests owned by this user. Includes both
         /// open and closed file requests.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CountFileRequestsError"/>.</exception>
-        public t.Task<CountFileRequestsResult> CountAsync()
+        public t.Task<CountFileRequestsResult> CountAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, CountFileRequestsResult, CountFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/count", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.CountFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.CountFileRequestsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, CountFileRequestsResult, CountFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/count", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.CountFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.CountFileRequestsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -83,14 +85,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Creates a file request for this user.</para>
         /// </summary>
         /// <param name="createFileRequestArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFileRequestError"/>.</exception>
-        public t.Task<FileRequest> CreateAsync(CreateFileRequestArgs createFileRequestArgs)
+        public t.Task<FileRequest> CreateAsync(CreateFileRequestArgs createFileRequestArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<CreateFileRequestArgs, FileRequest, CreateFileRequestError>(createFileRequestArgs, "api", "/file_requests/create", "user", global::Dropbox.Api.FileRequests.CreateFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.FileRequest.Decoder, global::Dropbox.Api.FileRequests.CreateFileRequestError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateFileRequestArgs, FileRequest, CreateFileRequestError>(createFileRequestArgs, "api", "/file_requests/create", "user", global::Dropbox.Api.FileRequests.CreateFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.FileRequest.Decoder, global::Dropbox.Api.FileRequests.CreateFileRequestError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -122,6 +125,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
         /// <param name="description">A description of the file request.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -131,7 +135,8 @@ namespace Dropbox.Api.FileRequests.Routes
                                                string destination,
                                                FileRequestDeadline deadline = null,
                                                bool open = true,
-                                               string description = null)
+                                               string description = null,
+                                               tr.CancellationToken cancellationToken = default)
         {
             var createFileRequestArgs = new CreateFileRequestArgs(title,
                                                                   destination,
@@ -139,7 +144,7 @@ namespace Dropbox.Api.FileRequests.Routes
                                                                   open,
                                                                   description);
 
-            return this.CreateAsync(createFileRequestArgs);
+            return this.CreateAsync(createFileRequestArgs, cancellationToken);
         }
 
         /// <summary>
@@ -202,14 +207,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Delete a batch of closed file requests.</para>
         /// </summary>
         /// <param name="deleteFileRequestArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DeleteFileRequestError"/>.</exception>
-        public t.Task<DeleteFileRequestsResult> DeleteAsync(DeleteFileRequestArgs deleteFileRequestArgs)
+        public t.Task<DeleteFileRequestsResult> DeleteAsync(DeleteFileRequestArgs deleteFileRequestArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteFileRequestArgs, DeleteFileRequestsResult, DeleteFileRequestError>(deleteFileRequestArgs, "api", "/file_requests/delete", "user", global::Dropbox.Api.FileRequests.DeleteFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.DeleteFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.DeleteFileRequestError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DeleteFileRequestArgs, DeleteFileRequestsResult, DeleteFileRequestError>(deleteFileRequestArgs, "api", "/file_requests/delete", "user", global::Dropbox.Api.FileRequests.DeleteFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.DeleteFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.DeleteFileRequestError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -232,16 +238,18 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Delete a batch of closed file requests.</para>
         /// </summary>
         /// <param name="ids">List IDs of the file requests to delete.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DeleteFileRequestError"/>.</exception>
-        public t.Task<DeleteFileRequestsResult> DeleteAsync(col.IEnumerable<string> ids)
+        public t.Task<DeleteFileRequestsResult> DeleteAsync(col.IEnumerable<string> ids,
+                                                            tr.CancellationToken cancellationToken = default)
         {
             var deleteFileRequestArgs = new DeleteFileRequestArgs(ids);
 
-            return this.DeleteAsync(deleteFileRequestArgs);
+            return this.DeleteAsync(deleteFileRequestArgs, cancellationToken);
         }
 
         /// <summary>
@@ -286,14 +294,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <summary>
         /// <para>Delete all closed file requests owned by this user.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DeleteAllClosedFileRequestsError"/>.</exception>
-        public t.Task<DeleteAllClosedFileRequestsResult> DeleteAllClosedAsync()
+        public t.Task<DeleteAllClosedFileRequestsResult> DeleteAllClosedAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, DeleteAllClosedFileRequestsResult, DeleteAllClosedFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/delete_all_closed", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, DeleteAllClosedFileRequestsResult, DeleteAllClosedFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/delete_all_closed", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -336,14 +345,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Returns the specified file request.</para>
         /// </summary>
         /// <param name="getFileRequestArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetFileRequestError"/>.</exception>
-        public t.Task<FileRequest> GetAsync(GetFileRequestArgs getFileRequestArgs)
+        public t.Task<FileRequest> GetAsync(GetFileRequestArgs getFileRequestArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetFileRequestArgs, FileRequest, GetFileRequestError>(getFileRequestArgs, "api", "/file_requests/get", "user", global::Dropbox.Api.FileRequests.GetFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.FileRequest.Decoder, global::Dropbox.Api.FileRequests.GetFileRequestError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetFileRequestArgs, FileRequest, GetFileRequestError>(getFileRequestArgs, "api", "/file_requests/get", "user", global::Dropbox.Api.FileRequests.GetFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.FileRequest.Decoder, global::Dropbox.Api.FileRequests.GetFileRequestError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -366,16 +376,18 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Returns the specified file request.</para>
         /// </summary>
         /// <param name="id">The ID of the file request to retrieve.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetFileRequestError"/>.</exception>
-        public t.Task<FileRequest> GetAsync(string id)
+        public t.Task<FileRequest> GetAsync(string id,
+                                            tr.CancellationToken cancellationToken = default)
         {
             var getFileRequestArgs = new GetFileRequestArgs(id);
 
-            return this.GetAsync(getFileRequestArgs);
+            return this.GetAsync(getFileRequestArgs, cancellationToken);
         }
 
         /// <summary>
@@ -422,14 +434,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// folder.</para>
         /// </summary>
         /// <param name="listFileRequestsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileRequestsError"/>.</exception>
-        public t.Task<ListFileRequestsV2Result> ListV2Async(ListFileRequestsArg listFileRequestsArg)
+        public t.Task<ListFileRequestsV2Result> ListV2Async(ListFileRequestsArg listFileRequestsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileRequestsArg, ListFileRequestsV2Result, ListFileRequestsError>(listFileRequestsArg, "api", "/file_requests/list_v2", "user", global::Dropbox.Api.FileRequests.ListFileRequestsArg.Encoder, global::Dropbox.Api.FileRequests.ListFileRequestsV2Result.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileRequestsArg, ListFileRequestsV2Result, ListFileRequestsError>(listFileRequestsArg, "api", "/file_requests/list_v2", "user", global::Dropbox.Api.FileRequests.ListFileRequestsArg.Encoder, global::Dropbox.Api.FileRequests.ListFileRequestsV2Result.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -455,16 +468,18 @@ namespace Dropbox.Api.FileRequests.Routes
         /// </summary>
         /// <param name="limit">The maximum number of file requests that should be returned per
         /// request.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileRequestsError"/>.</exception>
-        public t.Task<ListFileRequestsV2Result> ListV2Async(ulong limit = 1000)
+        public t.Task<ListFileRequestsV2Result> ListV2Async(ulong limit = 1000,
+                                                            tr.CancellationToken cancellationToken = default)
         {
             var listFileRequestsArg = new ListFileRequestsArg(limit);
 
-            return this.ListV2Async(listFileRequestsArg);
+            return this.ListV2Async(listFileRequestsArg, cancellationToken);
         }
 
         /// <summary>
@@ -511,14 +526,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// folder permission, this will only return file requests with destinations in the app
         /// folder.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileRequestsError"/>.</exception>
-        public t.Task<ListFileRequestsResult> ListAsync()
+        public t.Task<ListFileRequestsResult> ListAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, ListFileRequestsResult, ListFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/list", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.ListFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, ListFileRequestsResult, ListFileRequestsError>(enc.Empty.Instance, "api", "/file_requests/list", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileRequests.ListFileRequestsResult.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -567,14 +583,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// />.</para>
         /// </summary>
         /// <param name="listFileRequestsContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileRequestsContinueError"/>.</exception>
-        public t.Task<ListFileRequestsV2Result> ListContinueAsync(ListFileRequestsContinueArg listFileRequestsContinueArg)
+        public t.Task<ListFileRequestsV2Result> ListContinueAsync(ListFileRequestsContinueArg listFileRequestsContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileRequestsContinueArg, ListFileRequestsV2Result, ListFileRequestsContinueError>(listFileRequestsContinueArg, "api", "/file_requests/list/continue", "user", global::Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Encoder, global::Dropbox.Api.FileRequests.ListFileRequestsV2Result.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileRequestsContinueArg, ListFileRequestsV2Result, ListFileRequestsContinueError>(listFileRequestsContinueArg, "api", "/file_requests/list/continue", "user", global::Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Encoder, global::Dropbox.Api.FileRequests.ListFileRequestsV2Result.Decoder, global::Dropbox.Api.FileRequests.ListFileRequestsContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -605,16 +622,18 @@ namespace Dropbox.Api.FileRequests.Routes
         /// </summary>
         /// <param name="cursor">The cursor returned by the previous API call specified in the
         /// endpoint description.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileRequestsContinueError"/>.</exception>
-        public t.Task<ListFileRequestsV2Result> ListContinueAsync(string cursor)
+        public t.Task<ListFileRequestsV2Result> ListContinueAsync(string cursor,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var listFileRequestsContinueArg = new ListFileRequestsContinueArg(cursor);
 
-            return this.ListContinueAsync(listFileRequestsContinueArg);
+            return this.ListContinueAsync(listFileRequestsContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -661,14 +680,15 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <para>Update a file request.</para>
         /// </summary>
         /// <param name="updateFileRequestArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UpdateFileRequestError"/>.</exception>
-        public t.Task<FileRequest> UpdateAsync(UpdateFileRequestArgs updateFileRequestArgs)
+        public t.Task<FileRequest> UpdateAsync(UpdateFileRequestArgs updateFileRequestArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFileRequestArgs, FileRequest, UpdateFileRequestError>(updateFileRequestArgs, "api", "/file_requests/update", "user", global::Dropbox.Api.FileRequests.UpdateFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.FileRequest.Decoder, global::Dropbox.Api.FileRequests.UpdateFileRequestError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFileRequestArgs, FileRequest, UpdateFileRequestError>(updateFileRequestArgs, "api", "/file_requests/update", "user", global::Dropbox.Api.FileRequests.UpdateFileRequestArgs.Encoder, global::Dropbox.Api.FileRequests.FileRequest.Decoder, global::Dropbox.Api.FileRequests.UpdateFileRequestError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -699,6 +719,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// set by Professional and Business accounts.</param>
         /// <param name="open">Whether to set this file request as open or closed.</param>
         /// <param name="description">The description of the file request.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -709,7 +730,8 @@ namespace Dropbox.Api.FileRequests.Routes
                                                string destination = null,
                                                UpdateFileRequestDeadline deadline = null,
                                                bool? open = null,
-                                               string description = null)
+                                               string description = null,
+                                               tr.CancellationToken cancellationToken = default)
         {
             var updateFileRequestArgs = new UpdateFileRequestArgs(id,
                                                                   title,
@@ -718,7 +740,7 @@ namespace Dropbox.Api.FileRequests.Routes
                                                                   open,
                                                                   description);
 
-            return this.UpdateAsync(updateFileRequestArgs);
+            return this.UpdateAsync(updateFileRequestArgs, cancellationToken);
         }
 
         /// <summary>

@@ -8,6 +8,7 @@ namespace Dropbox.Api.Contacts.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -34,10 +35,11 @@ namespace Dropbox.Api.Contacts.Routes
         /// <para>Removes all manually added contacts. You'll still keep contacts who are on
         /// your team or who you imported. New contacts will be added when you share.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        public t.Task DeleteManualContactsAsync()
+        public t.Task DeleteManualContactsAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, enc.Empty, enc.Empty>(enc.Empty.Instance, "api", "/contacts/delete_manual_contacts", "user", enc.EmptyEncoder.Instance, enc.EmptyDecoder.Instance, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, enc.Empty, enc.Empty>(enc.Empty.Instance, "api", "/contacts/delete_manual_contacts", "user", enc.EmptyEncoder.Instance, enc.EmptyDecoder.Instance, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -74,13 +76,14 @@ namespace Dropbox.Api.Contacts.Routes
         /// <para>Removes manually added contacts from the given list.</para>
         /// </summary>
         /// <param name="deleteManualContactsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DeleteManualContactsError"/>.</exception>
-        public t.Task DeleteManualContactsBatchAsync(DeleteManualContactsArg deleteManualContactsArg)
+        public t.Task DeleteManualContactsBatchAsync(DeleteManualContactsArg deleteManualContactsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteManualContactsArg, enc.Empty, DeleteManualContactsError>(deleteManualContactsArg, "api", "/contacts/delete_manual_contacts_batch", "user", global::Dropbox.Api.Contacts.DeleteManualContactsArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Contacts.DeleteManualContactsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DeleteManualContactsArg, enc.Empty, DeleteManualContactsError>(deleteManualContactsArg, "api", "/contacts/delete_manual_contacts_batch", "user", global::Dropbox.Api.Contacts.DeleteManualContactsArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Contacts.DeleteManualContactsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -103,15 +106,17 @@ namespace Dropbox.Api.Contacts.Routes
         /// <para>Removes manually added contacts from the given list.</para>
         /// </summary>
         /// <param name="emailAddresses">List of manually added contacts to be deleted.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DeleteManualContactsError"/>.</exception>
-        public t.Task DeleteManualContactsBatchAsync(col.IEnumerable<string> emailAddresses)
+        public t.Task DeleteManualContactsBatchAsync(col.IEnumerable<string> emailAddresses,
+                                                     tr.CancellationToken cancellationToken = default)
         {
             var deleteManualContactsArg = new DeleteManualContactsArg(emailAddresses);
 
-            return this.DeleteManualContactsBatchAsync(deleteManualContactsArg);
+            return this.DeleteManualContactsBatchAsync(deleteManualContactsArg, cancellationToken);
         }
 
         /// <summary>

@@ -8,6 +8,7 @@ namespace Dropbox.Api.Paper.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -43,14 +44,15 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task DocsArchiveAsync(RefPaperDoc refPaperDoc)
+        public t.Task DocsArchiveAsync(RefPaperDoc refPaperDoc, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/archive", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/archive", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -83,16 +85,18 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for more information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task DocsArchiveAsync(string docId)
+        public t.Task DocsArchiveAsync(string docId,
+                                       tr.CancellationToken cancellationToken = default)
         {
             var refPaperDoc = new RefPaperDoc(docId);
 
-            return this.DocsArchiveAsync(refPaperDoc);
+            return this.DocsArchiveAsync(refPaperDoc, cancellationToken);
         }
 
         /// <summary>
@@ -145,15 +149,16 @@ namespace Dropbox.Api.Paper.Routes
         /// </summary>
         /// <param name="paperDocCreateArgs">The request parameters</param>
         /// <param name="body">The content to upload.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocCreateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(PaperDocCreateArgs paperDocCreateArgs, io.Stream body)
+        public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(PaperDocCreateArgs paperDocCreateArgs, io.Stream body, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendUploadRequestAsync<PaperDocCreateArgs, PaperDocCreateUpdateResult, PaperDocCreateError>(paperDocCreateArgs, body, "api", "/paper/docs/create", "user", global::Dropbox.Api.Paper.PaperDocCreateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocCreateError.Decoder);
+            return this.Transport.SendUploadRequestAsync<PaperDocCreateArgs, PaperDocCreateUpdateResult, PaperDocCreateError>(paperDocCreateArgs, body, "api", "/paper/docs/create", "user", global::Dropbox.Api.Paper.PaperDocCreateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocCreateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -189,6 +194,7 @@ namespace Dropbox.Api.Paper.Routes
         /// created. The API user has to have write access to this folder or error is
         /// thrown.</param>
         /// <param name="body">The document to upload</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -197,12 +203,13 @@ namespace Dropbox.Api.Paper.Routes
         [sys.Obsolete("This function is deprecated")]
         public t.Task<PaperDocCreateUpdateResult> DocsCreateAsync(ImportFormat importFormat,
                                                                   string parentFolderId = null,
-                                                                  io.Stream body = null)
+                                                                  io.Stream body = null,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var paperDocCreateArgs = new PaperDocCreateArgs(importFormat,
                                                             parentFolderId);
 
-            return this.DocsCreateAsync(paperDocCreateArgs, body);
+            return this.DocsCreateAsync(paperDocCreateArgs, body, cancellationToken);
         }
 
         /// <summary>
@@ -264,15 +271,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="paperDocExport">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(PaperDocExport paperDocExport)
+        public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(PaperDocExport paperDocExport, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendDownloadRequestAsync<PaperDocExport, PaperDocExportResult, DocLookupError>(paperDocExport, "api", "/paper/docs/download", "user", global::Dropbox.Api.Paper.PaperDocExport.Encoder, global::Dropbox.Api.Paper.PaperDocExportResult.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<PaperDocExport, PaperDocExportResult, DocLookupError>(paperDocExport, "api", "/paper/docs/download", "user", global::Dropbox.Api.Paper.PaperDocExport.Encoder, global::Dropbox.Api.Paper.PaperDocExportResult.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -304,6 +312,7 @@ namespace Dropbox.Api.Paper.Routes
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="exportFormat">The export format</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -311,12 +320,13 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(string docId,
-                                                                                     ExportFormat exportFormat)
+                                                                                     ExportFormat exportFormat,
+                                                                                     tr.CancellationToken cancellationToken = default)
         {
             var paperDocExport = new PaperDocExport(docId,
                                                     exportFormat);
 
-            return this.DocsDownloadAsync(paperDocExport);
+            return this.DocsDownloadAsync(paperDocExport, cancellationToken);
         }
 
         /// <summary>
@@ -377,15 +387,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnFolderArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListAsync(ListUsersOnFolderArgs listUsersOnFolderArgs)
+        public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListAsync(ListUsersOnFolderArgs listUsersOnFolderArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderArgs, ListUsersOnFolderResponse, DocLookupError>(listUsersOnFolderArgs, "api", "/paper/docs/folder_users/list", "user", global::Dropbox.Api.Paper.ListUsersOnFolderArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderArgs, ListUsersOnFolderResponse, DocLookupError>(listUsersOnFolderArgs, "api", "/paper/docs/folder_users/list", "user", global::Dropbox.Api.Paper.ListUsersOnFolderArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -422,6 +433,7 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="limit">Size limit per batch. The maximum number of users that can be
         /// retrieved per batch is 1000. Higher value results in invalid arguments
         /// error.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -429,12 +441,13 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListAsync(string docId,
-                                                                          int limit = 1000)
+                                                                          int limit = 1000,
+                                                                          tr.CancellationToken cancellationToken = default)
         {
             var listUsersOnFolderArgs = new ListUsersOnFolderArgs(docId,
                                                                   limit);
 
-            return this.DocsFolderUsersListAsync(listUsersOnFolderArgs);
+            return this.DocsFolderUsersListAsync(listUsersOnFolderArgs, cancellationToken);
         }
 
         /// <summary>
@@ -496,15 +509,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnFolderContinueArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListContinueAsync(ListUsersOnFolderContinueArgs listUsersOnFolderContinueArgs)
+        public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListContinueAsync(ListUsersOnFolderContinueArgs listUsersOnFolderContinueArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderContinueArgs, ListUsersOnFolderResponse, ListUsersCursorError>(listUsersOnFolderContinueArgs, "api", "/paper/docs/folder_users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnFolderContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnFolderContinueArgs, ListUsersOnFolderResponse, ListUsersCursorError>(listUsersOnFolderContinueArgs, "api", "/paper/docs/folder_users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnFolderContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnFolderResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -542,6 +556,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync" /> or <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync"
         /// />. Allows for pagination.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -549,12 +564,13 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="ListUsersCursorError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnFolderResponse> DocsFolderUsersListContinueAsync(string docId,
-                                                                                  string cursor)
+                                                                                  string cursor,
+                                                                                  tr.CancellationToken cancellationToken = default)
         {
             var listUsersOnFolderContinueArgs = new ListUsersOnFolderContinueArgs(docId,
                                                                                   cursor);
 
-            return this.DocsFolderUsersListContinueAsync(listUsersOnFolderContinueArgs);
+            return this.DocsFolderUsersListContinueAsync(listUsersOnFolderContinueArgs, cancellationToken);
         }
 
         /// <summary>
@@ -623,15 +639,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(RefPaperDoc refPaperDoc)
+        public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(RefPaperDoc refPaperDoc, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, FoldersContainingPaperDoc, DocLookupError>(refPaperDoc, "api", "/paper/docs/get_folder_info", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.FoldersContainingPaperDoc.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, FoldersContainingPaperDoc, DocLookupError>(refPaperDoc, "api", "/paper/docs/get_folder_info", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.FoldersContainingPaperDoc.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -669,17 +686,19 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(string docId)
+        public t.Task<FoldersContainingPaperDoc> DocsGetFolderInfoAsync(string docId,
+                                                                        tr.CancellationToken cancellationToken = default)
         {
             var refPaperDoc = new RefPaperDoc(docId);
 
-            return this.DocsGetFolderInfoAsync(refPaperDoc);
+            return this.DocsGetFolderInfoAsync(refPaperDoc, cancellationToken);
         }
 
         /// <summary>
@@ -736,12 +755,13 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listPaperDocsArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsArgs listPaperDocsArgs)
+        public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsArgs listPaperDocsArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListPaperDocsArgs, ListPaperDocsResponse, enc.Empty>(listPaperDocsArgs, "api", "/paper/docs/list", "user", global::Dropbox.Api.Paper.ListPaperDocsArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListPaperDocsArgs, ListPaperDocsResponse, enc.Empty>(listPaperDocsArgs, "api", "/paper/docs/list", "user", global::Dropbox.Api.Paper.ListPaperDocsArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -782,20 +802,22 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="limit">Size limit per batch. The maximum number of docs that can be
         /// retrieved per batch is 1000. Higher value results in invalid arguments
         /// error.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsFilterBy filterBy = null,
                                                            ListPaperDocsSortBy sortBy = null,
                                                            ListPaperDocsSortOrder sortOrder = null,
-                                                           int limit = 1000)
+                                                           int limit = 1000,
+                                                           tr.CancellationToken cancellationToken = default)
         {
             var listPaperDocsArgs = new ListPaperDocsArgs(filterBy,
                                                           sortBy,
                                                           sortOrder,
                                                           limit);
 
-            return this.DocsListAsync(listPaperDocsArgs);
+            return this.DocsListAsync(listPaperDocsArgs, cancellationToken);
         }
 
         /// <summary>
@@ -863,15 +885,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listPaperDocsContinueArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListDocsCursorError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListPaperDocsResponse> DocsListContinueAsync(ListPaperDocsContinueArgs listPaperDocsContinueArgs)
+        public t.Task<ListPaperDocsResponse> DocsListContinueAsync(ListPaperDocsContinueArgs listPaperDocsContinueArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListPaperDocsContinueArgs, ListPaperDocsResponse, ListDocsCursorError>(listPaperDocsContinueArgs, "api", "/paper/docs/list/continue", "user", global::Dropbox.Api.Paper.ListPaperDocsContinueArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, global::Dropbox.Api.Paper.ListDocsCursorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListPaperDocsContinueArgs, ListPaperDocsResponse, ListDocsCursorError>(listPaperDocsContinueArgs, "api", "/paper/docs/list/continue", "user", global::Dropbox.Api.Paper.ListPaperDocsContinueArgs.Encoder, global::Dropbox.Api.Paper.ListPaperDocsResponse.Decoder, global::Dropbox.Api.Paper.ListDocsCursorError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -907,17 +930,19 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync" /> or <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />. Allows
         /// for pagination.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListDocsCursorError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListPaperDocsResponse> DocsListContinueAsync(string cursor)
+        public t.Task<ListPaperDocsResponse> DocsListContinueAsync(string cursor,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var listPaperDocsContinueArgs = new ListPaperDocsContinueArgs(cursor);
 
-            return this.DocsListContinueAsync(listPaperDocsContinueArgs);
+            return this.DocsListContinueAsync(listPaperDocsContinueArgs, cancellationToken);
         }
 
         /// <summary>
@@ -977,14 +1002,15 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task DocsPermanentlyDeleteAsync(RefPaperDoc refPaperDoc)
+        public t.Task DocsPermanentlyDeleteAsync(RefPaperDoc refPaperDoc, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/permanently_delete", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, enc.Empty, DocLookupError>(refPaperDoc, "api", "/paper/docs/permanently_delete", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1017,16 +1043,18 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task DocsPermanentlyDeleteAsync(string docId)
+        public t.Task DocsPermanentlyDeleteAsync(string docId,
+                                                 tr.CancellationToken cancellationToken = default)
         {
             var refPaperDoc = new RefPaperDoc(docId);
 
-            return this.DocsPermanentlyDeleteAsync(refPaperDoc);
+            return this.DocsPermanentlyDeleteAsync(refPaperDoc, cancellationToken);
         }
 
         /// <summary>
@@ -1078,15 +1106,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="refPaperDoc">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(RefPaperDoc refPaperDoc)
+        public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(RefPaperDoc refPaperDoc, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RefPaperDoc, SharingPolicy, DocLookupError>(refPaperDoc, "api", "/paper/docs/sharing_policy/get", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.SharingPolicy.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RefPaperDoc, SharingPolicy, DocLookupError>(refPaperDoc, "api", "/paper/docs/sharing_policy/get", "user", global::Dropbox.Api.Paper.RefPaperDoc.Encoder, global::Dropbox.Api.Paper.SharingPolicy.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1117,17 +1146,19 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(string docId)
+        public t.Task<SharingPolicy> DocsSharingPolicyGetAsync(string docId,
+                                                               tr.CancellationToken cancellationToken = default)
         {
             var refPaperDoc = new RefPaperDoc(docId);
 
-            return this.DocsSharingPolicyGetAsync(refPaperDoc);
+            return this.DocsSharingPolicyGetAsync(refPaperDoc, cancellationToken);
         }
 
         /// <summary>
@@ -1186,14 +1217,15 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="paperDocSharingPolicy">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task DocsSharingPolicySetAsync(PaperDocSharingPolicy paperDocSharingPolicy)
+        public t.Task DocsSharingPolicySetAsync(PaperDocSharingPolicy paperDocSharingPolicy, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<PaperDocSharingPolicy, enc.Empty, DocLookupError>(paperDocSharingPolicy, "api", "/paper/docs/sharing_policy/set", "user", global::Dropbox.Api.Paper.PaperDocSharingPolicy.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PaperDocSharingPolicy, enc.Empty, DocLookupError>(paperDocSharingPolicy, "api", "/paper/docs/sharing_policy/set", "user", global::Dropbox.Api.Paper.PaperDocSharingPolicy.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1230,18 +1262,20 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="sharingPolicy">The default sharing policy to be set for the Paper
         /// doc.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task DocsSharingPolicySetAsync(string docId,
-                                                SharingPolicy sharingPolicy)
+                                                SharingPolicy sharingPolicy,
+                                                tr.CancellationToken cancellationToken = default)
         {
             var paperDocSharingPolicy = new PaperDocSharingPolicy(docId,
                                                                   sharingPolicy);
 
-            return this.DocsSharingPolicySetAsync(paperDocSharingPolicy);
+            return this.DocsSharingPolicySetAsync(paperDocSharingPolicy, cancellationToken);
         }
 
         /// <summary>
@@ -1298,15 +1332,16 @@ namespace Dropbox.Api.Paper.Routes
         /// </summary>
         /// <param name="paperDocUpdateArgs">The request parameters</param>
         /// <param name="body">The content to upload.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperDocUpdateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body)
+        public t.Task<PaperDocCreateUpdateResult> DocsUpdateAsync(PaperDocUpdateArgs paperDocUpdateArgs, io.Stream body, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendUploadRequestAsync<PaperDocUpdateArgs, PaperDocCreateUpdateResult, PaperDocUpdateError>(paperDocUpdateArgs, body, "api", "/paper/docs/update", "user", global::Dropbox.Api.Paper.PaperDocUpdateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocUpdateError.Decoder);
+            return this.Transport.SendUploadRequestAsync<PaperDocUpdateArgs, PaperDocCreateUpdateResult, PaperDocUpdateError>(paperDocUpdateArgs, body, "api", "/paper/docs/update", "user", global::Dropbox.Api.Paper.PaperDocUpdateArgs.Encoder, global::Dropbox.Api.Paper.PaperDocCreateUpdateResult.Decoder, global::Dropbox.Api.Paper.PaperDocUpdateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1344,6 +1379,7 @@ namespace Dropbox.Api.Paper.Routes
         /// writes.</param>
         /// <param name="importFormat">The format of provided data.</param>
         /// <param name="body">The document to upload</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1354,14 +1390,15 @@ namespace Dropbox.Api.Paper.Routes
                                                                   PaperDocUpdatePolicy docUpdatePolicy,
                                                                   long revision,
                                                                   ImportFormat importFormat,
-                                                                  io.Stream body)
+                                                                  io.Stream body,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var paperDocUpdateArgs = new PaperDocUpdateArgs(docId,
                                                             docUpdatePolicy,
                                                             revision,
                                                             importFormat);
 
-            return this.DocsUpdateAsync(paperDocUpdateArgs, body);
+            return this.DocsUpdateAsync(paperDocUpdateArgs, body, cancellationToken);
         }
 
         /// <summary>
@@ -1431,15 +1468,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="addPaperDocUser">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<col.List<AddPaperDocUserMemberResult>> DocsUsersAddAsync(AddPaperDocUser addPaperDocUser)
+        public t.Task<col.List<AddPaperDocUserMemberResult>> DocsUsersAddAsync(AddPaperDocUser addPaperDocUser, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<AddPaperDocUser, col.List<AddPaperDocUserMemberResult>, DocLookupError>(addPaperDocUser, "api", "/paper/docs/users/add", "user", global::Dropbox.Api.Paper.AddPaperDocUser.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Paper.AddPaperDocUserMemberResult.Decoder), global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddPaperDocUser, col.List<AddPaperDocUserMemberResult>, DocLookupError>(addPaperDocUser, "api", "/paper/docs/users/add", "user", global::Dropbox.Api.Paper.AddPaperDocUser.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Paper.AddPaperDocUserMemberResult.Decoder), global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1478,6 +1516,7 @@ namespace Dropbox.Api.Paper.Routes
         /// successfully added member.</param>
         /// <param name="quiet">Clients should set this to true if no email message shall be
         /// sent to added users.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1487,14 +1526,15 @@ namespace Dropbox.Api.Paper.Routes
         public t.Task<col.List<AddPaperDocUserMemberResult>> DocsUsersAddAsync(string docId,
                                                                                col.IEnumerable<AddMember> members,
                                                                                string customMessage = null,
-                                                                               bool quiet = false)
+                                                                               bool quiet = false,
+                                                                               tr.CancellationToken cancellationToken = default)
         {
             var addPaperDocUser = new AddPaperDocUser(docId,
                                                       members,
                                                       customMessage,
                                                       quiet);
 
-            return this.DocsUsersAddAsync(addPaperDocUser);
+            return this.DocsUsersAddAsync(addPaperDocUser, cancellationToken);
         }
 
         /// <summary>
@@ -1565,15 +1605,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnPaperDocArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListUsersOnPaperDocResponse> DocsUsersListAsync(ListUsersOnPaperDocArgs listUsersOnPaperDocArgs)
+        public t.Task<ListUsersOnPaperDocResponse> DocsUsersListAsync(ListUsersOnPaperDocArgs listUsersOnPaperDocArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocArgs, ListUsersOnPaperDocResponse, DocLookupError>(listUsersOnPaperDocArgs, "api", "/paper/docs/users/list", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocArgs, ListUsersOnPaperDocResponse, DocLookupError>(listUsersOnPaperDocArgs, "api", "/paper/docs/users/list", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1613,6 +1654,7 @@ namespace Dropbox.Api.Paper.Routes
         /// error.</param>
         /// <param name="filterBy">Specify this attribute if you want to obtain users that have
         /// already accessed the Paper doc.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1621,13 +1663,14 @@ namespace Dropbox.Api.Paper.Routes
         [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListAsync(string docId,
                                                                       int limit = 1000,
-                                                                      UserOnPaperDocFilter filterBy = null)
+                                                                      UserOnPaperDocFilter filterBy = null,
+                                                                      tr.CancellationToken cancellationToken = default)
         {
             var listUsersOnPaperDocArgs = new ListUsersOnPaperDocArgs(docId,
                                                                       limit,
                                                                       filterBy);
 
-            return this.DocsUsersListAsync(listUsersOnPaperDocArgs);
+            return this.DocsUsersListAsync(listUsersOnPaperDocArgs, cancellationToken);
         }
 
         /// <summary>
@@ -1693,15 +1736,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="listUsersOnPaperDocContinueArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListUsersCursorError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<ListUsersOnPaperDocResponse> DocsUsersListContinueAsync(ListUsersOnPaperDocContinueArgs listUsersOnPaperDocContinueArgs)
+        public t.Task<ListUsersOnPaperDocResponse> DocsUsersListContinueAsync(ListUsersOnPaperDocContinueArgs listUsersOnPaperDocContinueArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocContinueArgs, ListUsersOnPaperDocResponse, ListUsersCursorError>(listUsersOnPaperDocContinueArgs, "api", "/paper/docs/users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListUsersOnPaperDocContinueArgs, ListUsersOnPaperDocResponse, ListUsersCursorError>(listUsersOnPaperDocContinueArgs, "api", "/paper/docs/users/list/continue", "user", global::Dropbox.Api.Paper.ListUsersOnPaperDocContinueArgs.Encoder, global::Dropbox.Api.Paper.ListUsersOnPaperDocResponse.Decoder, global::Dropbox.Api.Paper.ListUsersCursorError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1738,6 +1782,7 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersListAsync" /> or <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersListContinueAsync" />.
         /// Allows for pagination.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1745,12 +1790,13 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="ListUsersCursorError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<ListUsersOnPaperDocResponse> DocsUsersListContinueAsync(string docId,
-                                                                              string cursor)
+                                                                              string cursor,
+                                                                              tr.CancellationToken cancellationToken = default)
         {
             var listUsersOnPaperDocContinueArgs = new ListUsersOnPaperDocContinueArgs(docId,
                                                                                       cursor);
 
-            return this.DocsUsersListContinueAsync(listUsersOnPaperDocContinueArgs);
+            return this.DocsUsersListContinueAsync(listUsersOnPaperDocContinueArgs, cancellationToken);
         }
 
         /// <summary>
@@ -1813,14 +1859,15 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="removePaperDocUser">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task DocsUsersRemoveAsync(RemovePaperDocUser removePaperDocUser)
+        public t.Task DocsUsersRemoveAsync(RemovePaperDocUser removePaperDocUser, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RemovePaperDocUser, enc.Empty, DocLookupError>(removePaperDocUser, "api", "/paper/docs/users/remove", "user", global::Dropbox.Api.Paper.RemovePaperDocUser.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemovePaperDocUser, enc.Empty, DocLookupError>(removePaperDocUser, "api", "/paper/docs/users/remove", "user", global::Dropbox.Api.Paper.RemovePaperDocUser.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Paper.DocLookupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1855,18 +1902,20 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="member">User which should be removed from the Paper doc. Specify only
         /// email address or Dropbox account ID.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task DocsUsersRemoveAsync(string docId,
-                                           global::Dropbox.Api.Sharing.MemberSelector member)
+                                           global::Dropbox.Api.Sharing.MemberSelector member,
+                                           tr.CancellationToken cancellationToken = default)
         {
             var removePaperDocUser = new RemovePaperDocUser(docId,
                                                             member);
 
-            return this.DocsUsersRemoveAsync(removePaperDocUser);
+            return this.DocsUsersRemoveAsync(removePaperDocUser, cancellationToken);
         }
 
         /// <summary>
@@ -1922,15 +1971,16 @@ namespace Dropbox.Api.Paper.Routes
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="paperFolderCreateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PaperFolderCreateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<PaperFolderCreateResult> FoldersCreateAsync(PaperFolderCreateArg paperFolderCreateArg)
+        public t.Task<PaperFolderCreateResult> FoldersCreateAsync(PaperFolderCreateArg paperFolderCreateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<PaperFolderCreateArg, PaperFolderCreateResult, PaperFolderCreateError>(paperFolderCreateArg, "api", "/paper/folders/create", "user", global::Dropbox.Api.Paper.PaperFolderCreateArg.Encoder, global::Dropbox.Api.Paper.PaperFolderCreateResult.Decoder, global::Dropbox.Api.Paper.PaperFolderCreateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PaperFolderCreateArg, PaperFolderCreateResult, PaperFolderCreateError>(paperFolderCreateArg, "api", "/paper/folders/create", "user", global::Dropbox.Api.Paper.PaperFolderCreateArg.Encoder, global::Dropbox.Api.Paper.PaperFolderCreateResult.Decoder, global::Dropbox.Api.Paper.PaperFolderCreateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1970,6 +2020,7 @@ namespace Dropbox.Api.Paper.Routes
         /// folder will inherit the type (private or team folder) from its parent. We will by
         /// default create a top-level private folder if both parent_folder_id and
         /// is_team_folder are not supplied.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1978,13 +2029,14 @@ namespace Dropbox.Api.Paper.Routes
         [sys.Obsolete("This function is deprecated")]
         public t.Task<PaperFolderCreateResult> FoldersCreateAsync(string name,
                                                                   string parentFolderId = null,
-                                                                  bool? isTeamFolder = null)
+                                                                  bool? isTeamFolder = null,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var paperFolderCreateArg = new PaperFolderCreateArg(name,
                                                                 parentFolderId,
                                                                 isTeamFolder);
 
-            return this.FoldersCreateAsync(paperFolderCreateArg);
+            return this.FoldersCreateAsync(paperFolderCreateArg, cancellationToken);
         }
 
         /// <summary>

@@ -8,6 +8,7 @@ namespace Dropbox.Api.Auth.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -34,14 +35,15 @@ namespace Dropbox.Api.Auth.Routes
         /// token.</para>
         /// </summary>
         /// <param name="tokenFromOAuth1Arg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TokenFromOAuth1Error"/>.</exception>
-        public t.Task<TokenFromOAuth1Result> TokenFromOauth1Async(TokenFromOAuth1Arg tokenFromOAuth1Arg)
+        public t.Task<TokenFromOAuth1Result> TokenFromOauth1Async(TokenFromOAuth1Arg tokenFromOAuth1Arg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TokenFromOAuth1Arg, TokenFromOAuth1Result, TokenFromOAuth1Error>(tokenFromOAuth1Arg, "api", "/auth/token/from_oauth1", "app", global::Dropbox.Api.Auth.TokenFromOAuth1Arg.Encoder, global::Dropbox.Api.Auth.TokenFromOAuth1Result.Decoder, global::Dropbox.Api.Auth.TokenFromOAuth1Error.Decoder);
+            return this.Transport.SendRpcRequestAsync<TokenFromOAuth1Arg, TokenFromOAuth1Result, TokenFromOAuth1Error>(tokenFromOAuth1Arg, "api", "/auth/token/from_oauth1", "app", global::Dropbox.Api.Auth.TokenFromOAuth1Arg.Encoder, global::Dropbox.Api.Auth.TokenFromOAuth1Result.Decoder, global::Dropbox.Api.Auth.TokenFromOAuth1Error.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -67,18 +69,20 @@ namespace Dropbox.Api.Auth.Routes
         /// <param name="oauth1Token">The supplied OAuth 1.0 access token.</param>
         /// <param name="oauth1TokenSecret">The token secret associated with the supplied
         /// access token.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TokenFromOAuth1Error"/>.</exception>
         public t.Task<TokenFromOAuth1Result> TokenFromOauth1Async(string oauth1Token,
-                                                                  string oauth1TokenSecret)
+                                                                  string oauth1TokenSecret,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var tokenFromOAuth1Arg = new TokenFromOAuth1Arg(oauth1Token,
                                                             oauth1TokenSecret);
 
-            return this.TokenFromOauth1Async(tokenFromOAuth1Arg);
+            return this.TokenFromOauth1Async(tokenFromOAuth1Arg, cancellationToken);
         }
 
         /// <summary>

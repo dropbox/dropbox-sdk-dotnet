@@ -8,6 +8,7 @@ namespace Dropbox.Api.Account.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -34,14 +35,15 @@ namespace Dropbox.Api.Account.Routes
         /// <para>Sets a user's profile photo.</para>
         /// </summary>
         /// <param name="setProfilePhotoArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SetProfilePhotoError"/>.</exception>
-        public t.Task<SetProfilePhotoResult> SetProfilePhotoAsync(SetProfilePhotoArg setProfilePhotoArg)
+        public t.Task<SetProfilePhotoResult> SetProfilePhotoAsync(SetProfilePhotoArg setProfilePhotoArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<SetProfilePhotoArg, SetProfilePhotoResult, SetProfilePhotoError>(setProfilePhotoArg, "api", "/account/set_profile_photo", "user", global::Dropbox.Api.Account.SetProfilePhotoArg.Encoder, global::Dropbox.Api.Account.SetProfilePhotoResult.Decoder, global::Dropbox.Api.Account.SetProfilePhotoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SetProfilePhotoArg, SetProfilePhotoResult, SetProfilePhotoError>(setProfilePhotoArg, "api", "/account/set_profile_photo", "user", global::Dropbox.Api.Account.SetProfilePhotoArg.Encoder, global::Dropbox.Api.Account.SetProfilePhotoResult.Decoder, global::Dropbox.Api.Account.SetProfilePhotoError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -64,16 +66,18 @@ namespace Dropbox.Api.Account.Routes
         /// <para>Sets a user's profile photo.</para>
         /// </summary>
         /// <param name="photo">Image to set as the user's new profile photo.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SetProfilePhotoError"/>.</exception>
-        public t.Task<SetProfilePhotoResult> SetProfilePhotoAsync(PhotoSourceArg photo)
+        public t.Task<SetProfilePhotoResult> SetProfilePhotoAsync(PhotoSourceArg photo,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var setProfilePhotoArg = new SetProfilePhotoArg(photo);
 
-            return this.SetProfilePhotoAsync(setProfilePhotoArg);
+            return this.SetProfilePhotoAsync(setProfilePhotoArg, cancellationToken);
         }
 
         /// <summary>
