@@ -8,6 +8,7 @@ namespace Dropbox.Api.Auth.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -32,10 +33,11 @@ namespace Dropbox.Api.Auth.Routes
         /// <summary>
         /// <para>Disables the access token used to authenticate the call.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
-        public t.Task TokenRevokeAsync()
+        public t.Task TokenRevokeAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, enc.Empty, enc.Empty>(enc.Empty.Instance, "api", "/auth/token/revoke", "user", enc.EmptyEncoder.Instance, enc.EmptyDecoder.Instance, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, enc.Empty, enc.Empty>(enc.Empty.Instance, "api", "/auth/token/revoke", "user", enc.EmptyEncoder.Instance, enc.EmptyDecoder.Instance, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>

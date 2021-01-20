@@ -8,6 +8,7 @@ namespace Dropbox.Api.Sharing.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -34,14 +35,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Adds specified members to a file.</para>
         /// </summary>
         /// <param name="addFileMemberArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AddFileMemberError"/>.</exception>
-        public t.Task<col.List<FileMemberActionResult>> AddFileMemberAsync(AddFileMemberArgs addFileMemberArgs)
+        public t.Task<col.List<FileMemberActionResult>> AddFileMemberAsync(AddFileMemberArgs addFileMemberArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<AddFileMemberArgs, col.List<FileMemberActionResult>, AddFileMemberError>(addFileMemberArgs, "api", "/sharing/add_file_member", "user", global::Dropbox.Api.Sharing.AddFileMemberArgs.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.FileMemberActionResult.Decoder), global::Dropbox.Api.Sharing.AddFileMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddFileMemberArgs, col.List<FileMemberActionResult>, AddFileMemberError>(addFileMemberArgs, "api", "/sharing/add_file_member", "user", global::Dropbox.Api.Sharing.AddFileMemberArgs.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.FileMemberActionResult.Decoder), global::Dropbox.Api.Sharing.AddFileMemberError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -75,6 +77,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -85,7 +88,8 @@ namespace Dropbox.Api.Sharing.Routes
                                                                            string customMessage = null,
                                                                            bool quiet = false,
                                                                            AccessLevel accessLevel = null,
-                                                                           bool addMessageAsComment = false)
+                                                                           bool addMessageAsComment = false,
+                                                                           tr.CancellationToken cancellationToken = default)
         {
             var addFileMemberArgs = new AddFileMemberArgs(file,
                                                           members,
@@ -94,7 +98,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                           accessLevel,
                                                           addMessageAsComment);
 
-            return this.AddFileMemberAsync(addFileMemberArgs);
+            return this.AddFileMemberAsync(addFileMemberArgs, cancellationToken);
         }
 
         /// <summary>
@@ -166,13 +170,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// behalf.</para>
         /// </summary>
         /// <param name="addFolderMemberArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AddFolderMemberError"/>.</exception>
-        public t.Task AddFolderMemberAsync(AddFolderMemberArg addFolderMemberArg)
+        public t.Task AddFolderMemberAsync(AddFolderMemberArg addFolderMemberArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<AddFolderMemberArg, enc.Empty, AddFolderMemberError>(addFolderMemberArg, "api", "/sharing/add_folder_member", "user", global::Dropbox.Api.Sharing.AddFolderMemberArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.AddFolderMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddFolderMemberArg, enc.Empty, AddFolderMemberError>(addFolderMemberArg, "api", "/sharing/add_folder_member", "user", global::Dropbox.Api.Sharing.AddFolderMemberArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.AddFolderMemberError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -206,6 +211,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -213,14 +219,15 @@ namespace Dropbox.Api.Sharing.Routes
         public t.Task AddFolderMemberAsync(string sharedFolderId,
                                            col.IEnumerable<AddMember> members,
                                            bool quiet = false,
-                                           string customMessage = null)
+                                           string customMessage = null,
+                                           tr.CancellationToken cancellationToken = default)
         {
             var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
                                                             members,
                                                             quiet,
                                                             customMessage);
 
-            return this.AddFolderMemberAsync(addFolderMemberArg);
+            return this.AddFolderMemberAsync(addFolderMemberArg, cancellationToken);
         }
 
         /// <summary>
@@ -275,15 +282,16 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Identical to update_file_member but with less information returned.</para>
         /// </summary>
         /// <param name="changeFileMemberAccessArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FileMemberActionError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use UpdateFileMemberAsync instead.")]
-        public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(ChangeFileMemberAccessArgs changeFileMemberAccessArgs)
+        public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(ChangeFileMemberAccessArgs changeFileMemberAccessArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ChangeFileMemberAccessArgs, FileMemberActionResult, FileMemberActionError>(changeFileMemberAccessArgs, "api", "/sharing/change_file_member_access", "user", global::Dropbox.Api.Sharing.ChangeFileMemberAccessArgs.Encoder, global::Dropbox.Api.Sharing.FileMemberActionResult.Decoder, global::Dropbox.Api.Sharing.FileMemberActionError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ChangeFileMemberAccessArgs, FileMemberActionResult, FileMemberActionError>(changeFileMemberAccessArgs, "api", "/sharing/change_file_member_access", "user", global::Dropbox.Api.Sharing.ChangeFileMemberAccessArgs.Encoder, global::Dropbox.Api.Sharing.FileMemberActionResult.Decoder, global::Dropbox.Api.Sharing.FileMemberActionError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -309,6 +317,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="file">File for which we are changing a member's access.</param>
         /// <param name="member">The member whose access we are changing.</param>
         /// <param name="accessLevel">The new access level for the member.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -317,13 +326,14 @@ namespace Dropbox.Api.Sharing.Routes
         [sys.Obsolete("This function is deprecated, please use UpdateFileMemberAsync instead.")]
         public t.Task<FileMemberActionResult> ChangeFileMemberAccessAsync(string file,
                                                                           MemberSelector member,
-                                                                          AccessLevel accessLevel)
+                                                                          AccessLevel accessLevel,
+                                                                          tr.CancellationToken cancellationToken = default)
         {
             var changeFileMemberAccessArgs = new ChangeFileMemberAccessArgs(file,
                                                                             member,
                                                                             accessLevel);
 
-            return this.ChangeFileMemberAccessAsync(changeFileMemberAccessArgs);
+            return this.ChangeFileMemberAccessAsync(changeFileMemberAccessArgs, cancellationToken);
         }
 
         /// <summary>
@@ -377,14 +387,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns the status of an asynchronous job.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<JobStatus> CheckJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<JobStatus> CheckJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, JobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.JobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, JobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.JobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -408,16 +419,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<JobStatus> CheckJobStatusAsync(string asyncJobId)
+        public t.Task<JobStatus> CheckJobStatusAsync(string asyncJobId,
+                                                     tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.CheckJobStatusAsync(pollArg);
+            return this.CheckJobStatusAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -464,14 +477,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns the status of an asynchronous job for sharing a folder.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RemoveMemberJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_remove_member_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.RemoveMemberJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RemoveMemberJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_remove_member_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.RemoveMemberJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -496,16 +510,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(string asyncJobId)
+        public t.Task<RemoveMemberJobStatus> CheckRemoveMemberJobStatusAsync(string asyncJobId,
+                                                                             tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.CheckRemoveMemberJobStatusAsync(pollArg);
+            return this.CheckRemoveMemberJobStatusAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -553,14 +569,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns the status of an asynchronous job for sharing a folder.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, ShareFolderJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_share_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, ShareFolderJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/sharing/check_share_job_status", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -584,16 +601,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(string asyncJobId)
+        public t.Task<ShareFolderJobStatus> CheckShareJobStatusAsync(string asyncJobId,
+                                                                     tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.CheckShareJobStatusAsync(pollArg);
+            return this.CheckShareJobStatusAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -652,15 +671,16 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</para>
         /// </summary>
         /// <param name="createSharedLinkArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
-        public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
+        public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", "user", global::Dropbox.Api.Sharing.CreateSharedLinkArg.Encoder, global::Dropbox.Api.Sharing.PathLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", "user", global::Dropbox.Api.Sharing.CreateSharedLinkArg.Encoder, global::Dropbox.Api.Sharing.PathLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -701,6 +721,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
         /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
         /// assume it's a file or folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -709,13 +730,14 @@ namespace Dropbox.Api.Sharing.Routes
         [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(string path,
                                                               bool shortUrl = false,
-                                                              PendingUploadMode pendingUpload = null)
+                                                              PendingUploadMode pendingUpload = null,
+                                                              tr.CancellationToken cancellationToken = default)
         {
             var createSharedLinkArg = new CreateSharedLinkArg(path,
                                                               shortUrl,
                                                               pendingUpload);
 
-            return this.CreateSharedLinkAsync(createSharedLinkArg);
+            return this.CreateSharedLinkAsync(createSharedLinkArg, cancellationToken);
         }
 
         /// <summary>
@@ -775,14 +797,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// shared folder settings).</para>
         /// </summary>
         /// <param name="createSharedLinkWithSettingsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkWithSettingsError"/>.</exception>
-        public t.Task<SharedLinkMetadata> CreateSharedLinkWithSettingsAsync(CreateSharedLinkWithSettingsArg createSharedLinkWithSettingsArg)
+        public t.Task<SharedLinkMetadata> CreateSharedLinkWithSettingsAsync(CreateSharedLinkWithSettingsArg createSharedLinkWithSettingsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<CreateSharedLinkWithSettingsArg, SharedLinkMetadata, CreateSharedLinkWithSettingsError>(createSharedLinkWithSettingsArg, "api", "/sharing/create_shared_link_with_settings", "user", global::Dropbox.Api.Sharing.CreateSharedLinkWithSettingsArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CreateSharedLinkWithSettingsArg, SharedLinkMetadata, CreateSharedLinkWithSettingsError>(createSharedLinkWithSettingsArg, "api", "/sharing/create_shared_link_with_settings", "user", global::Dropbox.Api.Sharing.CreateSharedLinkWithSettingsArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -811,18 +834,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="path">The path to be shared by the shared link.</param>
         /// <param name="settings">The requested settings for the newly created shared
         /// link.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkWithSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> CreateSharedLinkWithSettingsAsync(string path,
-                                                                            SharedLinkSettings settings = null)
+                                                                            SharedLinkSettings settings = null,
+                                                                            tr.CancellationToken cancellationToken = default)
         {
             var createSharedLinkWithSettingsArg = new CreateSharedLinkWithSettingsArg(path,
                                                                                       settings);
 
-            return this.CreateSharedLinkWithSettingsAsync(createSharedLinkWithSettingsArg);
+            return this.CreateSharedLinkWithSettingsAsync(createSharedLinkWithSettingsArg, cancellationToken);
         }
 
         /// <summary>
@@ -873,14 +898,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns shared file metadata.</para>
         /// </summary>
         /// <param name="getFileMetadataArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetFileMetadataError"/>.</exception>
-        public t.Task<SharedFileMetadata> GetFileMetadataAsync(GetFileMetadataArg getFileMetadataArg)
+        public t.Task<SharedFileMetadata> GetFileMetadataAsync(GetFileMetadataArg getFileMetadataArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetFileMetadataArg, SharedFileMetadata, GetFileMetadataError>(getFileMetadataArg, "api", "/sharing/get_file_metadata", "user", global::Dropbox.Api.Sharing.GetFileMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMetadata.Decoder, global::Dropbox.Api.Sharing.GetFileMetadataError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetFileMetadataArg, SharedFileMetadata, GetFileMetadataError>(getFileMetadataArg, "api", "/sharing/get_file_metadata", "user", global::Dropbox.Api.Sharing.GetFileMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMetadata.Decoder, global::Dropbox.Api.Sharing.GetFileMetadataError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -907,18 +933,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the file.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetFileMetadataError"/>.</exception>
         public t.Task<SharedFileMetadata> GetFileMetadataAsync(string file,
-                                                               col.IEnumerable<FileAction> actions = null)
+                                                               col.IEnumerable<FileAction> actions = null,
+                                                               tr.CancellationToken cancellationToken = default)
         {
             var getFileMetadataArg = new GetFileMetadataArg(file,
                                                             actions);
 
-            return this.GetFileMetadataAsync(getFileMetadataArg);
+            return this.GetFileMetadataAsync(getFileMetadataArg, cancellationToken);
         }
 
         /// <summary>
@@ -970,14 +998,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns shared file metadata.</para>
         /// </summary>
         /// <param name="getFileMetadataBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
-        public t.Task<col.List<GetFileMetadataBatchResult>> GetFileMetadataBatchAsync(GetFileMetadataBatchArg getFileMetadataBatchArg)
+        public t.Task<col.List<GetFileMetadataBatchResult>> GetFileMetadataBatchAsync(GetFileMetadataBatchArg getFileMetadataBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetFileMetadataBatchArg, col.List<GetFileMetadataBatchResult>, SharingUserError>(getFileMetadataBatchArg, "api", "/sharing/get_file_metadata/batch", "user", global::Dropbox.Api.Sharing.GetFileMetadataBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.GetFileMetadataBatchResult.Decoder), global::Dropbox.Api.Sharing.SharingUserError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetFileMetadataBatchArg, col.List<GetFileMetadataBatchResult>, SharingUserError>(getFileMetadataBatchArg, "api", "/sharing/get_file_metadata/batch", "user", global::Dropbox.Api.Sharing.GetFileMetadataBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.GetFileMetadataBatchResult.Decoder), global::Dropbox.Api.Sharing.SharingUserError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1004,18 +1033,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the file.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
         public t.Task<col.List<GetFileMetadataBatchResult>> GetFileMetadataBatchAsync(col.IEnumerable<string> files,
-                                                                                      col.IEnumerable<FileAction> actions = null)
+                                                                                      col.IEnumerable<FileAction> actions = null,
+                                                                                      tr.CancellationToken cancellationToken = default)
         {
             var getFileMetadataBatchArg = new GetFileMetadataBatchArg(files,
                                                                       actions);
 
-            return this.GetFileMetadataBatchAsync(getFileMetadataBatchArg);
+            return this.GetFileMetadataBatchAsync(getFileMetadataBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -1067,14 +1098,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns shared folder metadata by its folder ID.</para>
         /// </summary>
         /// <param name="getMetadataArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
-        public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(GetMetadataArgs getMetadataArgs)
+        public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(GetMetadataArgs getMetadataArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetMetadataArgs, SharedFolderMetadata, SharedFolderAccessError>(getMetadataArgs, "api", "/sharing/get_folder_metadata", "user", global::Dropbox.Api.Sharing.GetMetadataArgs.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.SharedFolderAccessError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetMetadataArgs, SharedFolderMetadata, SharedFolderAccessError>(getMetadataArgs, "api", "/sharing/get_folder_metadata", "user", global::Dropbox.Api.Sharing.GetMetadataArgs.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.SharedFolderAccessError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1101,18 +1133,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMetadata> GetFolderMetadataAsync(string sharedFolderId,
-                                                                   col.IEnumerable<FolderAction> actions = null)
+                                                                   col.IEnumerable<FolderAction> actions = null,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var getMetadataArgs = new GetMetadataArgs(sharedFolderId,
                                                       actions);
 
-            return this.GetFolderMetadataAsync(getMetadataArgs);
+            return this.GetFolderMetadataAsync(getMetadataArgs, cancellationToken);
         }
 
         /// <summary>
@@ -1164,14 +1198,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Download the shared link's file from a user's Dropbox.</para>
         /// </summary>
         /// <param name="getSharedLinkMetadataArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetSharedLinkFileError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
+        public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendDownloadRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, GetSharedLinkFileError>(getSharedLinkMetadataArg, "content", "/sharing/get_shared_link_file", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.GetSharedLinkFileError.Decoder);
+            return this.Transport.SendDownloadRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, GetSharedLinkFileError>(getSharedLinkMetadataArg, "content", "/sharing/get_shared_link_file", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.GetSharedLinkFileError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1199,6 +1234,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// path should be used.</param>
         /// <param name="linkPassword">If the shared link has a password, this parameter can be
         /// used.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1206,13 +1242,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="GetSharedLinkFileError"/>.</exception>
         public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(string url,
                                                                                         string path = null,
-                                                                                        string linkPassword = null)
+                                                                                        string linkPassword = null,
+                                                                                        tr.CancellationToken cancellationToken = default)
         {
             var getSharedLinkMetadataArg = new GetSharedLinkMetadataArg(url,
                                                                         path,
                                                                         linkPassword);
 
-            return this.GetSharedLinkFileAsync(getSharedLinkMetadataArg);
+            return this.GetSharedLinkFileAsync(getSharedLinkMetadataArg, cancellationToken);
         }
 
         /// <summary>
@@ -1267,14 +1304,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Get the shared link's metadata.</para>
         /// </summary>
         /// <param name="getSharedLinkMetadataArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharedLinkError"/>.</exception>
-        public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
+        public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1302,6 +1340,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// path should be used.</param>
         /// <param name="linkPassword">If the shared link has a password, this parameter can be
         /// used.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1309,13 +1348,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedLinkError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(string url,
                                                                      string path = null,
-                                                                     string linkPassword = null)
+                                                                     string linkPassword = null,
+                                                                     tr.CancellationToken cancellationToken = default)
         {
             var getSharedLinkMetadataArg = new GetSharedLinkMetadataArg(url,
                                                                         path,
                                                                         linkPassword);
 
-            return this.GetSharedLinkMetadataAsync(getSharedLinkMetadataArg);
+            return this.GetSharedLinkMetadataAsync(getSharedLinkMetadataArg, cancellationToken);
         }
 
         /// <summary>
@@ -1376,15 +1416,16 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Note that the url field in the response is never the shortened URL.</para>
         /// </summary>
         /// <param name="getSharedLinksArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
-        public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
+        public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", "user", global::Dropbox.Api.Sharing.GetSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.GetSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.GetSharedLinksError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", "user", global::Dropbox.Api.Sharing.GetSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.GetSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.GetSharedLinksError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1416,17 +1457,19 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="path">See <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync" />
         /// description.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
-        public t.Task<GetSharedLinksResult> GetSharedLinksAsync(string path = null)
+        public t.Task<GetSharedLinksResult> GetSharedLinksAsync(string path = null,
+                                                                tr.CancellationToken cancellationToken = default)
         {
             var getSharedLinksArg = new GetSharedLinksArg(path);
 
-            return this.GetSharedLinksAsync(getSharedLinksArg);
+            return this.GetSharedLinksAsync(getSharedLinksArg, cancellationToken);
         }
 
         /// <summary>
@@ -1477,14 +1520,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// uninherited members.</para>
         /// </summary>
         /// <param name="listFileMembersArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileMembersError"/>.</exception>
-        public t.Task<SharedFileMembers> ListFileMembersAsync(ListFileMembersArg listFileMembersArg)
+        public t.Task<SharedFileMembers> ListFileMembersAsync(ListFileMembersArg listFileMembersArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileMembersArg, SharedFileMembers, ListFileMembersError>(listFileMembersArg, "api", "/sharing/list_file_members", "user", global::Dropbox.Api.Sharing.ListFileMembersArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMembers.Decoder, global::Dropbox.Api.Sharing.ListFileMembersError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileMembersArg, SharedFileMembers, ListFileMembersError>(listFileMembersArg, "api", "/sharing/list_file_members", "user", global::Dropbox.Api.Sharing.ListFileMembersArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMembers.Decoder, global::Dropbox.Api.Sharing.ListFileMembersError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1514,6 +1558,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// a parent shared folder.</param>
         /// <param name="limit">Number of members to return max per query. Defaults to 100 if
         /// no limit is specified.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1522,14 +1567,15 @@ namespace Dropbox.Api.Sharing.Routes
         public t.Task<SharedFileMembers> ListFileMembersAsync(string file,
                                                               col.IEnumerable<MemberAction> actions = null,
                                                               bool includeInherited = true,
-                                                              uint limit = 100)
+                                                              uint limit = 100,
+                                                              tr.CancellationToken cancellationToken = default)
         {
             var listFileMembersArg = new ListFileMembersArg(file,
                                                             actions,
                                                             includeInherited,
                                                             limit);
 
-            return this.ListFileMembersAsync(listFileMembersArg);
+            return this.ListFileMembersAsync(listFileMembersArg, cancellationToken);
         }
 
         /// <summary>
@@ -1591,14 +1637,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// are not returned for this endpoint.</para>
         /// </summary>
         /// <param name="listFileMembersBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
-        public t.Task<col.List<ListFileMembersBatchResult>> ListFileMembersBatchAsync(ListFileMembersBatchArg listFileMembersBatchArg)
+        public t.Task<col.List<ListFileMembersBatchResult>> ListFileMembersBatchAsync(ListFileMembersBatchArg listFileMembersBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileMembersBatchArg, col.List<ListFileMembersBatchResult>, SharingUserError>(listFileMembersBatchArg, "api", "/sharing/list_file_members/batch", "user", global::Dropbox.Api.Sharing.ListFileMembersBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.ListFileMembersBatchResult.Decoder), global::Dropbox.Api.Sharing.SharingUserError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileMembersBatchArg, col.List<ListFileMembersBatchResult>, SharingUserError>(listFileMembersBatchArg, "api", "/sharing/list_file_members/batch", "user", global::Dropbox.Api.Sharing.ListFileMembersBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Sharing.ListFileMembersBatchResult.Decoder), global::Dropbox.Api.Sharing.SharingUserError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1627,18 +1674,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="files">Files for which to return members.</param>
         /// <param name="limit">Number of members to return max per query. Defaults to 10 if no
         /// limit is specified.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
         public t.Task<col.List<ListFileMembersBatchResult>> ListFileMembersBatchAsync(col.IEnumerable<string> files,
-                                                                                      uint limit = 10)
+                                                                                      uint limit = 10,
+                                                                                      tr.CancellationToken cancellationToken = default)
         {
             var listFileMembersBatchArg = new ListFileMembersBatchArg(files,
                                                                       limit);
 
-            return this.ListFileMembersBatchAsync(listFileMembersBatchArg);
+            return this.ListFileMembersBatchAsync(listFileMembersBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -1691,14 +1740,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// use this to paginate through all shared file members.</para>
         /// </summary>
         /// <param name="listFileMembersContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileMembersContinueError"/>.</exception>
-        public t.Task<SharedFileMembers> ListFileMembersContinueAsync(ListFileMembersContinueArg listFileMembersContinueArg)
+        public t.Task<SharedFileMembers> ListFileMembersContinueAsync(ListFileMembersContinueArg listFileMembersContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFileMembersContinueArg, SharedFileMembers, ListFileMembersContinueError>(listFileMembersContinueArg, "api", "/sharing/list_file_members/continue", "user", global::Dropbox.Api.Sharing.ListFileMembersContinueArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMembers.Decoder, global::Dropbox.Api.Sharing.ListFileMembersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFileMembersContinueArg, SharedFileMembers, ListFileMembersContinueError>(listFileMembersContinueArg, "api", "/sharing/list_file_members/continue", "user", global::Dropbox.Api.Sharing.ListFileMembersContinueArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMembers.Decoder, global::Dropbox.Api.Sharing.ListFileMembersContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1729,16 +1779,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// />, or <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileMembersContinueError"/>.</exception>
-        public t.Task<SharedFileMembers> ListFileMembersContinueAsync(string cursor)
+        public t.Task<SharedFileMembers> ListFileMembersContinueAsync(string cursor,
+                                                                      tr.CancellationToken cancellationToken = default)
         {
             var listFileMembersContinueArg = new ListFileMembersContinueArg(cursor);
 
-            return this.ListFileMembersContinueAsync(listFileMembersContinueArg);
+            return this.ListFileMembersContinueAsync(listFileMembersContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -1789,14 +1841,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Returns shared folder membership by its folder ID.</para>
         /// </summary>
         /// <param name="listFolderMembersArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharedFolderAccessError"/>.</exception>
-        public t.Task<SharedFolderMembers> ListFolderMembersAsync(ListFolderMembersArgs listFolderMembersArgs)
+        public t.Task<SharedFolderMembers> ListFolderMembersAsync(ListFolderMembersArgs listFolderMembersArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderMembersArgs, SharedFolderMembers, SharedFolderAccessError>(listFolderMembersArgs, "api", "/sharing/list_folder_members", "user", global::Dropbox.Api.Sharing.ListFolderMembersArgs.Encoder, global::Dropbox.Api.Sharing.SharedFolderMembers.Decoder, global::Dropbox.Api.Sharing.SharedFolderAccessError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderMembersArgs, SharedFolderMembers, SharedFolderAccessError>(listFolderMembersArgs, "api", "/sharing/list_folder_members", "user", global::Dropbox.Api.Sharing.ListFolderMembersArgs.Encoder, global::Dropbox.Api.Sharing.SharedFolderMembers.Decoder, global::Dropbox.Api.Sharing.SharedFolderAccessError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1825,6 +1878,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// member.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1832,13 +1886,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId,
                                                                   col.IEnumerable<MemberAction> actions = null,
-                                                                  uint limit = 1000)
+                                                                  uint limit = 1000,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
                                                                   actions,
                                                                   limit);
 
-            return this.ListFolderMembersAsync(listFolderMembersArgs);
+            return this.ListFolderMembersAsync(listFolderMembersArgs, cancellationToken);
         }
 
         /// <summary>
@@ -1896,14 +1951,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// this to paginate through all shared folder members.</para>
         /// </summary>
         /// <param name="listFolderMembersContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFolderMembersContinueError"/>.</exception>
-        public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(ListFolderMembersContinueArg listFolderMembersContinueArg)
+        public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(ListFolderMembersContinueArg listFolderMembersContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFolderMembersContinueArg, SharedFolderMembers, ListFolderMembersContinueError>(listFolderMembersContinueArg, "api", "/sharing/list_folder_members/continue", "user", global::Dropbox.Api.Sharing.ListFolderMembersContinueArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMembers.Decoder, global::Dropbox.Api.Sharing.ListFolderMembersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFolderMembersContinueArg, SharedFolderMembers, ListFolderMembersContinueError>(listFolderMembersContinueArg, "api", "/sharing/list_folder_members/continue", "user", global::Dropbox.Api.Sharing.ListFolderMembersContinueArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMembers.Decoder, global::Dropbox.Api.Sharing.ListFolderMembersContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1932,16 +1988,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFolderMembersContinueError"/>.</exception>
-        public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(string cursor)
+        public t.Task<SharedFolderMembers> ListFolderMembersContinueAsync(string cursor,
+                                                                          tr.CancellationToken cancellationToken = default)
         {
             var listFolderMembersContinueArg = new ListFolderMembersContinueArg(cursor);
 
-            return this.ListFolderMembersContinueAsync(listFolderMembersContinueArg);
+            return this.ListFolderMembersContinueAsync(listFolderMembersContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -1991,11 +2049,12 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Return the list of all shared folders the current user has access to.</para>
         /// </summary>
         /// <param name="listFoldersArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListFoldersResult> ListFoldersAsync(ListFoldersArgs listFoldersArgs)
+        public t.Task<ListFoldersResult> ListFoldersAsync(ListFoldersArgs listFoldersArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_folders", "user", global::Dropbox.Api.Sharing.ListFoldersArgs.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_folders", "user", global::Dropbox.Api.Sharing.ListFoldersArgs.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -2022,15 +2081,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<ListFoldersResult> ListFoldersAsync(uint limit = 1000,
-                                                          col.IEnumerable<FolderAction> actions = null)
+                                                          col.IEnumerable<FolderAction> actions = null,
+                                                          tr.CancellationToken cancellationToken = default)
         {
             var listFoldersArgs = new ListFoldersArgs(limit,
                                                       actions);
 
-            return this.ListFoldersAsync(listFoldersArgs);
+            return this.ListFoldersAsync(listFoldersArgs, cancellationToken);
         }
 
         /// <summary>
@@ -2084,14 +2145,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</para>
         /// </summary>
         /// <param name="listFoldersContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
-        public t.Task<ListFoldersResult> ListFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg)
+        public t.Task<ListFoldersResult> ListFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_folders/continue", "user", global::Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, global::Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_folders/continue", "user", global::Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, global::Dropbox.Api.Sharing.ListFoldersContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2120,16 +2182,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="cursor">The cursor returned by the previous API call specified in the
         /// endpoint description.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
-        public t.Task<ListFoldersResult> ListFoldersContinueAsync(string cursor)
+        public t.Task<ListFoldersResult> ListFoldersContinueAsync(string cursor,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var listFoldersContinueArg = new ListFoldersContinueArg(cursor);
 
-            return this.ListFoldersContinueAsync(listFoldersContinueArg);
+            return this.ListFoldersContinueAsync(listFoldersContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -2177,11 +2241,12 @@ namespace Dropbox.Api.Sharing.Routes
         /// unmount.</para>
         /// </summary>
         /// <param name="listFoldersArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListFoldersResult> ListMountableFoldersAsync(ListFoldersArgs listFoldersArgs)
+        public t.Task<ListFoldersResult> ListMountableFoldersAsync(ListFoldersArgs listFoldersArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_mountable_folders", "user", global::Dropbox.Api.Sharing.ListFoldersArgs.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ListFoldersArgs, ListFoldersResult, enc.Empty>(listFoldersArgs, "api", "/sharing/list_mountable_folders", "user", global::Dropbox.Api.Sharing.ListFoldersArgs.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -2209,15 +2274,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<ListFoldersResult> ListMountableFoldersAsync(uint limit = 1000,
-                                                                   col.IEnumerable<FolderAction> actions = null)
+                                                                   col.IEnumerable<FolderAction> actions = null,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var listFoldersArgs = new ListFoldersArgs(limit,
                                                       actions);
 
-            return this.ListMountableFoldersAsync(listFoldersArgs);
+            return this.ListMountableFoldersAsync(listFoldersArgs, cancellationToken);
         }
 
         /// <summary>
@@ -2273,14 +2340,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</para>
         /// </summary>
         /// <param name="listFoldersContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
-        public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg)
+        public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(ListFoldersContinueArg listFoldersContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_mountable_folders/continue", "user", global::Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, global::Dropbox.Api.Sharing.ListFoldersContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFoldersContinueArg, ListFoldersResult, ListFoldersContinueError>(listFoldersContinueArg, "api", "/sharing/list_mountable_folders/continue", "user", global::Dropbox.Api.Sharing.ListFoldersContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFoldersResult.Decoder, global::Dropbox.Api.Sharing.ListFoldersContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2312,16 +2380,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="cursor">The cursor returned by the previous API call specified in the
         /// endpoint description.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFoldersContinueError"/>.</exception>
-        public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(string cursor)
+        public t.Task<ListFoldersResult> ListMountableFoldersContinueAsync(string cursor,
+                                                                           tr.CancellationToken cancellationToken = default)
         {
             var listFoldersContinueArg = new ListFoldersContinueArg(cursor);
 
-            return this.ListMountableFoldersContinueAsync(listFoldersContinueArg);
+            return this.ListMountableFoldersContinueAsync(listFoldersContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -2371,14 +2441,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// not include unclaimed invitations.</para>
         /// </summary>
         /// <param name="listFilesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
-        public t.Task<ListFilesResult> ListReceivedFilesAsync(ListFilesArg listFilesArg)
+        public t.Task<ListFilesResult> ListReceivedFilesAsync(ListFilesArg listFilesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFilesArg, ListFilesResult, SharingUserError>(listFilesArg, "api", "/sharing/list_received_files", "user", global::Dropbox.Api.Sharing.ListFilesArg.Encoder, global::Dropbox.Api.Sharing.ListFilesResult.Decoder, global::Dropbox.Api.Sharing.SharingUserError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFilesArg, ListFilesResult, SharingUserError>(listFilesArg, "api", "/sharing/list_received_files", "user", global::Dropbox.Api.Sharing.ListFilesArg.Encoder, global::Dropbox.Api.Sharing.ListFilesResult.Decoder, global::Dropbox.Api.Sharing.SharingUserError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2408,18 +2479,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the file.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
         public t.Task<ListFilesResult> ListReceivedFilesAsync(uint limit = 100,
-                                                              col.IEnumerable<FileAction> actions = null)
+                                                              col.IEnumerable<FileAction> actions = null,
+                                                              tr.CancellationToken cancellationToken = default)
         {
             var listFilesArg = new ListFilesArg(limit,
                                                 actions);
 
-            return this.ListReceivedFilesAsync(listFilesArg);
+            return this.ListReceivedFilesAsync(listFilesArg, cancellationToken);
         }
 
         /// <summary>
@@ -2474,14 +2547,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</para>
         /// </summary>
         /// <param name="listFilesContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFilesContinueError"/>.</exception>
-        public t.Task<ListFilesResult> ListReceivedFilesContinueAsync(ListFilesContinueArg listFilesContinueArg)
+        public t.Task<ListFilesResult> ListReceivedFilesContinueAsync(ListFilesContinueArg listFilesContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListFilesContinueArg, ListFilesResult, ListFilesContinueError>(listFilesContinueArg, "api", "/sharing/list_received_files/continue", "user", global::Dropbox.Api.Sharing.ListFilesContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFilesResult.Decoder, global::Dropbox.Api.Sharing.ListFilesContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListFilesContinueArg, ListFilesResult, ListFilesContinueError>(listFilesContinueArg, "api", "/sharing/list_received_files/continue", "user", global::Dropbox.Api.Sharing.ListFilesContinueArg.Encoder, global::Dropbox.Api.Sharing.ListFilesResult.Decoder, global::Dropbox.Api.Sharing.ListFilesContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2507,16 +2581,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="cursor">Cursor in <see
         /// cref="Dropbox.Api.Sharing.ListFilesResult.Cursor" />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFilesContinueError"/>.</exception>
-        public t.Task<ListFilesResult> ListReceivedFilesContinueAsync(string cursor)
+        public t.Task<ListFilesResult> ListReceivedFilesContinueAsync(string cursor,
+                                                                      tr.CancellationToken cancellationToken = default)
         {
             var listFilesContinueArg = new ListFilesContinueArg(cursor);
 
-            return this.ListReceivedFilesContinueAsync(listFilesContinueArg);
+            return this.ListReceivedFilesContinueAsync(listFilesContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -2573,14 +2649,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// direct_only to true.</para>
         /// </summary>
         /// <param name="listSharedLinksArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListSharedLinksError"/>.</exception>
-        public t.Task<ListSharedLinksResult> ListSharedLinksAsync(ListSharedLinksArg listSharedLinksArg)
+        public t.Task<ListSharedLinksResult> ListSharedLinksAsync(ListSharedLinksArg listSharedLinksArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListSharedLinksArg, ListSharedLinksResult, ListSharedLinksError>(listSharedLinksArg, "api", "/sharing/list_shared_links", "user", global::Dropbox.Api.Sharing.ListSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.ListSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.ListSharedLinksError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListSharedLinksArg, ListSharedLinksResult, ListSharedLinksError>(listSharedLinksArg, "api", "/sharing/list_shared_links", "user", global::Dropbox.Api.Sharing.ListSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.ListSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.ListSharedLinksError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2621,6 +2698,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="directOnly">See <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />
         /// description.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2628,13 +2706,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ListSharedLinksError"/>.</exception>
         public t.Task<ListSharedLinksResult> ListSharedLinksAsync(string path = null,
                                                                   string cursor = null,
-                                                                  bool? directOnly = null)
+                                                                  bool? directOnly = null,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var listSharedLinksArg = new ListSharedLinksArg(path,
                                                             cursor,
                                                             directOnly);
 
-            return this.ListSharedLinksAsync(listSharedLinksArg);
+            return this.ListSharedLinksAsync(listSharedLinksArg, cancellationToken);
         }
 
         /// <summary>
@@ -2699,14 +2778,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// requested visibility.</para>
         /// </summary>
         /// <param name="modifySharedLinkSettingsArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
-        public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(ModifySharedLinkSettingsArgs modifySharedLinkSettingsArgs)
+        public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(ModifySharedLinkSettingsArgs modifySharedLinkSettingsArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ModifySharedLinkSettingsArgs, SharedLinkMetadata, ModifySharedLinkSettingsError>(modifySharedLinkSettingsArgs, "api", "/sharing/modify_shared_link_settings", "user", global::Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ModifySharedLinkSettingsArgs, SharedLinkMetadata, ModifySharedLinkSettingsError>(modifySharedLinkSettingsArgs, "api", "/sharing/modify_shared_link_settings", "user", global::Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2739,6 +2819,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="settings">Set of settings for the shared link.</param>
         /// <param name="removeExpiration">If set to true, removes the expiration of the shared
         /// link.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2746,13 +2827,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="ModifySharedLinkSettingsError"/>.</exception>
         public t.Task<SharedLinkMetadata> ModifySharedLinkSettingsAsync(string url,
                                                                         SharedLinkSettings settings,
-                                                                        bool removeExpiration = false)
+                                                                        bool removeExpiration = false,
+                                                                        tr.CancellationToken cancellationToken = default)
         {
             var modifySharedLinkSettingsArgs = new ModifySharedLinkSettingsArgs(url,
                                                                                 settings,
                                                                                 removeExpiration);
 
-            return this.ModifySharedLinkSettingsAsync(modifySharedLinkSettingsArgs);
+            return this.ModifySharedLinkSettingsAsync(modifySharedLinkSettingsArgs, cancellationToken);
         }
 
         /// <summary>
@@ -2807,14 +2889,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// mounted, the shared folder will appear in their Dropbox.</para>
         /// </summary>
         /// <param name="mountFolderArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MountFolderError"/>.</exception>
-        public t.Task<SharedFolderMetadata> MountFolderAsync(MountFolderArg mountFolderArg)
+        public t.Task<SharedFolderMetadata> MountFolderAsync(MountFolderArg mountFolderArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MountFolderArg, SharedFolderMetadata, MountFolderError>(mountFolderArg, "api", "/sharing/mount_folder", "user", global::Dropbox.Api.Sharing.MountFolderArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.MountFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MountFolderArg, SharedFolderMetadata, MountFolderError>(mountFolderArg, "api", "/sharing/mount_folder", "user", global::Dropbox.Api.Sharing.MountFolderArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.MountFolderError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2839,16 +2922,18 @@ namespace Dropbox.Api.Sharing.Routes
         /// mounted, the shared folder will appear in their Dropbox.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MountFolderError"/>.</exception>
-        public t.Task<SharedFolderMetadata> MountFolderAsync(string sharedFolderId)
+        public t.Task<SharedFolderMetadata> MountFolderAsync(string sharedFolderId,
+                                                             tr.CancellationToken cancellationToken = default)
         {
             var mountFolderArg = new MountFolderArg(sharedFolderId);
 
-            return this.MountFolderAsync(mountFolderArg);
+            return this.MountFolderAsync(mountFolderArg, cancellationToken);
         }
 
         /// <summary>
@@ -2896,13 +2981,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// parent folder.</para>
         /// </summary>
         /// <param name="relinquishFileMembershipArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFileMembershipError"/>.</exception>
-        public t.Task RelinquishFileMembershipAsync(RelinquishFileMembershipArg relinquishFileMembershipArg)
+        public t.Task RelinquishFileMembershipAsync(RelinquishFileMembershipArg relinquishFileMembershipArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RelinquishFileMembershipArg, enc.Empty, RelinquishFileMembershipError>(relinquishFileMembershipArg, "api", "/sharing/relinquish_file_membership", "user", global::Dropbox.Api.Sharing.RelinquishFileMembershipArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.RelinquishFileMembershipError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelinquishFileMembershipArg, enc.Empty, RelinquishFileMembershipError>(relinquishFileMembershipArg, "api", "/sharing/relinquish_file_membership", "user", global::Dropbox.Api.Sharing.RelinquishFileMembershipArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.RelinquishFileMembershipError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2927,15 +3013,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// parent folder.</para>
         /// </summary>
         /// <param name="file">The path or id for the file.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFileMembershipError"/>.</exception>
-        public t.Task RelinquishFileMembershipAsync(string file)
+        public t.Task RelinquishFileMembershipAsync(string file,
+                                                    tr.CancellationToken cancellationToken = default)
         {
             var relinquishFileMembershipArg = new RelinquishFileMembershipArg(file);
 
-            return this.RelinquishFileMembershipAsync(relinquishFileMembershipArg);
+            return this.RelinquishFileMembershipAsync(relinquishFileMembershipArg, cancellationToken);
         }
 
         /// <summary>
@@ -2982,14 +3070,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// leave_a_copy is true.</para>
         /// </summary>
         /// <param name="relinquishFolderMembershipArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(RelinquishFolderMembershipArg relinquishFolderMembershipArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(RelinquishFolderMembershipArg relinquishFolderMembershipArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RelinquishFolderMembershipArg, global::Dropbox.Api.Async.LaunchEmptyResult, RelinquishFolderMembershipError>(relinquishFolderMembershipArg, "api", "/sharing/relinquish_folder_membership", "user", global::Dropbox.Api.Sharing.RelinquishFolderMembershipArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelinquishFolderMembershipArg, global::Dropbox.Api.Async.LaunchEmptyResult, RelinquishFolderMembershipError>(relinquishFolderMembershipArg, "api", "/sharing/relinquish_folder_membership", "user", global::Dropbox.Api.Sharing.RelinquishFolderMembershipArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Sharing.RelinquishFolderMembershipError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3018,18 +3107,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="leaveACopy">Keep a copy of the folder's contents upon relinquishing
         /// membership.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RelinquishFolderMembershipError"/>.</exception>
         public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> RelinquishFolderMembershipAsync(string sharedFolderId,
-                                                                                                   bool leaveACopy = false)
+                                                                                                   bool leaveACopy = false,
+                                                                                                   tr.CancellationToken cancellationToken = default)
         {
             var relinquishFolderMembershipArg = new RelinquishFolderMembershipArg(sharedFolderId,
                                                                                   leaveACopy);
 
-            return this.RelinquishFolderMembershipAsync(relinquishFolderMembershipArg);
+            return this.RelinquishFolderMembershipAsync(relinquishFolderMembershipArg, cancellationToken);
         }
 
         /// <summary>
@@ -3079,15 +3170,16 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Identical to remove_file_member_2 but with less information returned.</para>
         /// </summary>
         /// <param name="removeFileMemberArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFileMemberError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use RemoveFileMember2Async instead.")]
-        public t.Task<FileMemberActionIndividualResult> RemoveFileMemberAsync(RemoveFileMemberArg removeFileMemberArg)
+        public t.Task<FileMemberActionIndividualResult> RemoveFileMemberAsync(RemoveFileMemberArg removeFileMemberArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberActionIndividualResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberActionIndividualResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3114,6 +3206,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="member">Member to remove from this file. Note that even if an email is
         /// specified, it may result in the removal of a user (not an invitee) if the user's
         /// main account corresponds to that email address.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3121,12 +3214,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="RemoveFileMemberError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use RemoveFileMember2Async instead.")]
         public t.Task<FileMemberActionIndividualResult> RemoveFileMemberAsync(string file,
-                                                                              MemberSelector member)
+                                                                              MemberSelector member,
+                                                                              tr.CancellationToken cancellationToken = default)
         {
             var removeFileMemberArg = new RemoveFileMemberArg(file,
                                                               member);
 
-            return this.RemoveFileMemberAsync(removeFileMemberArg);
+            return this.RemoveFileMemberAsync(removeFileMemberArg, cancellationToken);
         }
 
         /// <summary>
@@ -3179,14 +3273,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Removes a specified member from the file.</para>
         /// </summary>
         /// <param name="removeFileMemberArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFileMemberError"/>.</exception>
-        public t.Task<FileMemberRemoveActionResult> RemoveFileMember2Async(RemoveFileMemberArg removeFileMemberArg)
+        public t.Task<FileMemberRemoveActionResult> RemoveFileMember2Async(RemoveFileMemberArg removeFileMemberArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberRemoveActionResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member_2", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberRemoveActionResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberRemoveActionResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member_2", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberRemoveActionResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3212,18 +3307,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="member">Member to remove from this file. Note that even if an email is
         /// specified, it may result in the removal of a user (not an invitee) if the user's
         /// main account corresponds to that email address.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFileMemberError"/>.</exception>
         public t.Task<FileMemberRemoveActionResult> RemoveFileMember2Async(string file,
-                                                                           MemberSelector member)
+                                                                           MemberSelector member,
+                                                                           tr.CancellationToken cancellationToken = default)
         {
             var removeFileMemberArg = new RemoveFileMemberArg(file,
                                                               member);
 
-            return this.RemoveFileMember2Async(removeFileMemberArg);
+            return this.RemoveFileMember2Async(removeFileMemberArg, cancellationToken);
         }
 
         /// <summary>
@@ -3275,14 +3372,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// folder to remove another member.</para>
         /// </summary>
         /// <param name="removeFolderMemberArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFolderMemberError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(RemoveFolderMemberArg removeFolderMemberArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(RemoveFolderMemberArg removeFolderMemberArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveFolderMemberArg, global::Dropbox.Api.Async.LaunchResultBase, RemoveFolderMemberError>(removeFolderMemberArg, "api", "/sharing/remove_folder_member", "user", global::Dropbox.Api.Sharing.RemoveFolderMemberArg.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, global::Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveFolderMemberArg, global::Dropbox.Api.Async.LaunchResultBase, RemoveFolderMemberError>(removeFolderMemberArg, "api", "/sharing/remove_folder_member", "user", global::Dropbox.Api.Sharing.RemoveFolderMemberArg.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, global::Dropbox.Api.Sharing.RemoveFolderMemberError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3310,6 +3408,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="leaveACopy">If true, the removed user will keep their copy of the
         /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
         /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3317,13 +3416,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="RemoveFolderMemberError"/>.</exception>
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> RemoveFolderMemberAsync(string sharedFolderId,
                                                                                           MemberSelector member,
-                                                                                          bool leaveACopy)
+                                                                                          bool leaveACopy,
+                                                                                          tr.CancellationToken cancellationToken = default)
         {
             var removeFolderMemberArg = new RemoveFolderMemberArg(sharedFolderId,
                                                                   member,
                                                                   leaveACopy);
 
-            return this.RemoveFolderMemberAsync(removeFolderMemberArg);
+            return this.RemoveFolderMemberAsync(removeFolderMemberArg, cancellationToken);
         }
 
         /// <summary>
@@ -3383,13 +3483,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// argument.</para>
         /// </summary>
         /// <param name="revokeSharedLinkArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeSharedLinkError"/>.</exception>
-        public t.Task RevokeSharedLinkAsync(RevokeSharedLinkArg revokeSharedLinkArg)
+        public t.Task RevokeSharedLinkAsync(RevokeSharedLinkArg revokeSharedLinkArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeSharedLinkArg, enc.Empty, RevokeSharedLinkError>(revokeSharedLinkArg, "api", "/sharing/revoke_shared_link", "user", global::Dropbox.Api.Sharing.RevokeSharedLinkArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.RevokeSharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeSharedLinkArg, enc.Empty, RevokeSharedLinkError>(revokeSharedLinkArg, "api", "/sharing/revoke_shared_link", "user", global::Dropbox.Api.Sharing.RevokeSharedLinkArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.RevokeSharedLinkError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3418,15 +3519,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// argument.</para>
         /// </summary>
         /// <param name="url">URL of the shared link.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeSharedLinkError"/>.</exception>
-        public t.Task RevokeSharedLinkAsync(string url)
+        public t.Task RevokeSharedLinkAsync(string url,
+                                            tr.CancellationToken cancellationToken = default)
         {
             var revokeSharedLinkArg = new RevokeSharedLinkArg(url);
 
-            return this.RevokeSharedLinkAsync(revokeSharedLinkArg);
+            return this.RevokeSharedLinkAsync(revokeSharedLinkArg, cancellationToken);
         }
 
         /// <summary>
@@ -3474,14 +3577,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// until the action completes to get the metadata for the folder.</para>
         /// </summary>
         /// <param name="setAccessInheritanceArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SetAccessInheritanceError"/>.</exception>
-        public t.Task<ShareFolderLaunch> SetAccessInheritanceAsync(SetAccessInheritanceArg setAccessInheritanceArg)
+        public t.Task<ShareFolderLaunch> SetAccessInheritanceAsync(SetAccessInheritanceArg setAccessInheritanceArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<SetAccessInheritanceArg, ShareFolderLaunch, SetAccessInheritanceError>(setAccessInheritanceArg, "api", "/sharing/set_access_inheritance", "user", global::Dropbox.Api.Sharing.SetAccessInheritanceArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, global::Dropbox.Api.Sharing.SetAccessInheritanceError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SetAccessInheritanceArg, ShareFolderLaunch, SetAccessInheritanceError>(setAccessInheritanceArg, "api", "/sharing/set_access_inheritance", "user", global::Dropbox.Api.Sharing.SetAccessInheritanceArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, global::Dropbox.Api.Sharing.SetAccessInheritanceError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3511,18 +3615,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="accessInheritance">The access inheritance settings for the
         /// folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SetAccessInheritanceError"/>.</exception>
         public t.Task<ShareFolderLaunch> SetAccessInheritanceAsync(string sharedFolderId,
-                                                                   AccessInheritance accessInheritance = null)
+                                                                   AccessInheritance accessInheritance = null,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var setAccessInheritanceArg = new SetAccessInheritanceArg(sharedFolderId,
                                                                       accessInheritance);
 
-            return this.SetAccessInheritanceAsync(setAccessInheritanceArg);
+            return this.SetAccessInheritanceAsync(setAccessInheritanceArg, cancellationToken);
         }
 
         /// <summary>
@@ -3579,14 +3685,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// until the action completes to get the metadata for the folder.</para>
         /// </summary>
         /// <param name="shareFolderArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ShareFolderError"/>.</exception>
-        public t.Task<ShareFolderLaunch> ShareFolderAsync(ShareFolderArg shareFolderArg)
+        public t.Task<ShareFolderLaunch> ShareFolderAsync(ShareFolderArg shareFolderArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ShareFolderArg, ShareFolderLaunch, ShareFolderError>(shareFolderArg, "api", "/sharing/share_folder", "user", global::Dropbox.Api.Sharing.ShareFolderArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, global::Dropbox.Api.Sharing.ShareFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ShareFolderArg, ShareFolderLaunch, ShareFolderError>(shareFolderArg, "api", "/sharing/share_folder", "user", global::Dropbox.Api.Sharing.ShareFolderArg.Encoder, global::Dropbox.Api.Sharing.ShareFolderLaunch.Decoder, global::Dropbox.Api.Sharing.ShareFolderError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3635,6 +3742,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3648,7 +3756,8 @@ namespace Dropbox.Api.Sharing.Routes
                                                           ViewerInfoPolicy viewerInfoPolicy = null,
                                                           AccessInheritance accessInheritance = null,
                                                           col.IEnumerable<FolderAction> actions = null,
-                                                          LinkSettings linkSettings = null)
+                                                          LinkSettings linkSettings = null,
+                                                          tr.CancellationToken cancellationToken = default)
         {
             var shareFolderArg = new ShareFolderArg(path,
                                                     aclUpdatePolicy,
@@ -3660,7 +3769,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                     actions,
                                                     linkSettings);
 
-            return this.ShareFolderAsync(shareFolderArg);
+            return this.ShareFolderAsync(shareFolderArg, cancellationToken);
         }
 
         /// <summary>
@@ -3744,13 +3853,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// the shared folder to perform a transfer.</para>
         /// </summary>
         /// <param name="transferFolderArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TransferFolderError"/>.</exception>
-        public t.Task TransferFolderAsync(TransferFolderArg transferFolderArg)
+        public t.Task TransferFolderAsync(TransferFolderArg transferFolderArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TransferFolderArg, enc.Empty, TransferFolderError>(transferFolderArg, "api", "/sharing/transfer_folder", "user", global::Dropbox.Api.Sharing.TransferFolderArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.TransferFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TransferFolderArg, enc.Empty, TransferFolderError>(transferFolderArg, "api", "/sharing/transfer_folder", "user", global::Dropbox.Api.Sharing.TransferFolderArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.TransferFolderError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3778,17 +3888,19 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="toDropboxId">A account or team member ID to transfer ownership
         /// to.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TransferFolderError"/>.</exception>
         public t.Task TransferFolderAsync(string sharedFolderId,
-                                          string toDropboxId)
+                                          string toDropboxId,
+                                          tr.CancellationToken cancellationToken = default)
         {
             var transferFolderArg = new TransferFolderArg(sharedFolderId,
                                                           toDropboxId);
 
-            return this.TransferFolderAsync(transferFolderArg);
+            return this.TransferFolderAsync(transferFolderArg, cancellationToken);
         }
 
         /// <summary>
@@ -3837,13 +3949,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.MountFolderAsync" />.</para>
         /// </summary>
         /// <param name="unmountFolderArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnmountFolderError"/>.</exception>
-        public t.Task UnmountFolderAsync(UnmountFolderArg unmountFolderArg)
+        public t.Task UnmountFolderAsync(UnmountFolderArg unmountFolderArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UnmountFolderArg, enc.Empty, UnmountFolderError>(unmountFolderArg, "api", "/sharing/unmount_folder", "user", global::Dropbox.Api.Sharing.UnmountFolderArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.UnmountFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UnmountFolderArg, enc.Empty, UnmountFolderError>(unmountFolderArg, "api", "/sharing/unmount_folder", "user", global::Dropbox.Api.Sharing.UnmountFolderArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.UnmountFolderError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3868,15 +3981,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.MountFolderAsync" />.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnmountFolderError"/>.</exception>
-        public t.Task UnmountFolderAsync(string sharedFolderId)
+        public t.Task UnmountFolderAsync(string sharedFolderId,
+                                         tr.CancellationToken cancellationToken = default)
         {
             var unmountFolderArg = new UnmountFolderArg(sharedFolderId);
 
-            return this.UnmountFolderAsync(unmountFolderArg);
+            return this.UnmountFolderAsync(unmountFolderArg, cancellationToken);
         }
 
         /// <summary>
@@ -3919,13 +4034,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Remove all members from this file. Does not remove inherited members.</para>
         /// </summary>
         /// <param name="unshareFileArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFileError"/>.</exception>
-        public t.Task UnshareFileAsync(UnshareFileArg unshareFileArg)
+        public t.Task UnshareFileAsync(UnshareFileArg unshareFileArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UnshareFileArg, enc.Empty, UnshareFileError>(unshareFileArg, "api", "/sharing/unshare_file", "user", global::Dropbox.Api.Sharing.UnshareFileArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.UnshareFileError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UnshareFileArg, enc.Empty, UnshareFileError>(unshareFileArg, "api", "/sharing/unshare_file", "user", global::Dropbox.Api.Sharing.UnshareFileArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Sharing.UnshareFileError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3948,15 +4064,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Remove all members from this file. Does not remove inherited members.</para>
         /// </summary>
         /// <param name="file">The file to unshare.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFileError"/>.</exception>
-        public t.Task UnshareFileAsync(string file)
+        public t.Task UnshareFileAsync(string file,
+                                       tr.CancellationToken cancellationToken = default)
         {
             var unshareFileArg = new UnshareFileArg(file);
 
-            return this.UnshareFileAsync(unshareFileArg);
+            return this.UnshareFileAsync(unshareFileArg, cancellationToken);
         }
 
         /// <summary>
@@ -4002,14 +4120,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// determine if the action has completed successfully.</para>
         /// </summary>
         /// <param name="unshareFolderArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(UnshareFolderArg unshareFolderArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(UnshareFolderArg unshareFolderArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UnshareFolderArg, global::Dropbox.Api.Async.LaunchEmptyResult, UnshareFolderError>(unshareFolderArg, "api", "/sharing/unshare_folder", "user", global::Dropbox.Api.Sharing.UnshareFolderArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Sharing.UnshareFolderError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UnshareFolderArg, global::Dropbox.Api.Async.LaunchEmptyResult, UnshareFolderError>(unshareFolderArg, "api", "/sharing/unshare_folder", "user", global::Dropbox.Api.Sharing.UnshareFolderArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Sharing.UnshareFolderError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4038,18 +4157,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="leaveACopy">If true, members of this shared folder will get a copy of
         /// this folder after it's unshared. Otherwise, it will be removed from their Dropbox.
         /// The current user, who is an owner, will always retain their copy.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UnshareFolderError"/>.</exception>
         public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> UnshareFolderAsync(string sharedFolderId,
-                                                                                      bool leaveACopy = false)
+                                                                                      bool leaveACopy = false,
+                                                                                      tr.CancellationToken cancellationToken = default)
         {
             var unshareFolderArg = new UnshareFolderArg(sharedFolderId,
                                                         leaveACopy);
 
-            return this.UnshareFolderAsync(unshareFolderArg);
+            return this.UnshareFolderAsync(unshareFolderArg, cancellationToken);
         }
 
         /// <summary>
@@ -4100,14 +4221,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Changes a member's access on a shared file.</para>
         /// </summary>
         /// <param name="updateFileMemberArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FileMemberActionError"/>.</exception>
-        public t.Task<MemberAccessLevelResult> UpdateFileMemberAsync(UpdateFileMemberArgs updateFileMemberArgs)
+        public t.Task<MemberAccessLevelResult> UpdateFileMemberAsync(UpdateFileMemberArgs updateFileMemberArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFileMemberArgs, MemberAccessLevelResult, FileMemberActionError>(updateFileMemberArgs, "api", "/sharing/update_file_member", "user", global::Dropbox.Api.Sharing.UpdateFileMemberArgs.Encoder, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, global::Dropbox.Api.Sharing.FileMemberActionError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFileMemberArgs, MemberAccessLevelResult, FileMemberActionError>(updateFileMemberArgs, "api", "/sharing/update_file_member", "user", global::Dropbox.Api.Sharing.UpdateFileMemberArgs.Encoder, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, global::Dropbox.Api.Sharing.FileMemberActionError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4132,6 +4254,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="file">File for which we are changing a member's access.</param>
         /// <param name="member">The member whose access we are changing.</param>
         /// <param name="accessLevel">The new access level for the member.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4139,13 +4262,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="FileMemberActionError"/>.</exception>
         public t.Task<MemberAccessLevelResult> UpdateFileMemberAsync(string file,
                                                                      MemberSelector member,
-                                                                     AccessLevel accessLevel)
+                                                                     AccessLevel accessLevel,
+                                                                     tr.CancellationToken cancellationToken = default)
         {
             var updateFileMemberArgs = new UpdateFileMemberArgs(file,
                                                                 member,
                                                                 accessLevel);
 
-            return this.UpdateFileMemberAsync(updateFileMemberArgs);
+            return this.UpdateFileMemberAsync(updateFileMemberArgs, cancellationToken);
         }
 
         /// <summary>
@@ -4198,14 +4322,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// permissions.</para>
         /// </summary>
         /// <param name="updateFolderMemberArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UpdateFolderMemberError"/>.</exception>
-        public t.Task<MemberAccessLevelResult> UpdateFolderMemberAsync(UpdateFolderMemberArg updateFolderMemberArg)
+        public t.Task<MemberAccessLevelResult> UpdateFolderMemberAsync(UpdateFolderMemberArg updateFolderMemberArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFolderMemberArg, MemberAccessLevelResult, UpdateFolderMemberError>(updateFolderMemberArg, "api", "/sharing/update_folder_member", "user", global::Dropbox.Api.Sharing.UpdateFolderMemberArg.Encoder, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, global::Dropbox.Api.Sharing.UpdateFolderMemberError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFolderMemberArg, MemberAccessLevelResult, UpdateFolderMemberError>(updateFolderMemberArg, "api", "/sharing/update_folder_member", "user", global::Dropbox.Api.Sharing.UpdateFolderMemberArg.Encoder, global::Dropbox.Api.Sharing.MemberAccessLevelResult.Decoder, global::Dropbox.Api.Sharing.UpdateFolderMemberError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4234,6 +4359,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// time.</param>
         /// <param name="accessLevel">The new access level for <paramref name="member" />. <see
         /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> is disallowed.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4241,13 +4367,14 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="UpdateFolderMemberError"/>.</exception>
         public t.Task<MemberAccessLevelResult> UpdateFolderMemberAsync(string sharedFolderId,
                                                                        MemberSelector member,
-                                                                       AccessLevel accessLevel)
+                                                                       AccessLevel accessLevel,
+                                                                       tr.CancellationToken cancellationToken = default)
         {
             var updateFolderMemberArg = new UpdateFolderMemberArg(sharedFolderId,
                                                                   member,
                                                                   accessLevel);
 
-            return this.UpdateFolderMemberAsync(updateFolderMemberArg);
+            return this.UpdateFolderMemberAsync(updateFolderMemberArg, cancellationToken);
         }
 
         /// <summary>
@@ -4304,14 +4431,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// the shared folder to update its policies.</para>
         /// </summary>
         /// <param name="updateFolderPolicyArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UpdateFolderPolicyError"/>.</exception>
-        public t.Task<SharedFolderMetadata> UpdateFolderPolicyAsync(UpdateFolderPolicyArg updateFolderPolicyArg)
+        public t.Task<SharedFolderMetadata> UpdateFolderPolicyAsync(UpdateFolderPolicyArg updateFolderPolicyArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateFolderPolicyArg, SharedFolderMetadata, UpdateFolderPolicyError>(updateFolderPolicyArg, "api", "/sharing/update_folder_policy", "user", global::Dropbox.Api.Sharing.UpdateFolderPolicyArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.UpdateFolderPolicyError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateFolderPolicyArg, SharedFolderMetadata, UpdateFolderPolicyError>(updateFolderPolicyArg, "api", "/sharing/update_folder_policy", "user", global::Dropbox.Api.Sharing.UpdateFolderPolicyArg.Encoder, global::Dropbox.Api.Sharing.SharedFolderMetadata.Decoder, global::Dropbox.Api.Sharing.UpdateFolderPolicyError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4350,6 +4478,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// `FolderPermission`s that should appear in the  response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the  authenticated user can perform on the folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4361,7 +4490,8 @@ namespace Dropbox.Api.Sharing.Routes
                                                                     ViewerInfoPolicy viewerInfoPolicy = null,
                                                                     SharedLinkPolicy sharedLinkPolicy = null,
                                                                     LinkSettings linkSettings = null,
-                                                                    col.IEnumerable<FolderAction> actions = null)
+                                                                    col.IEnumerable<FolderAction> actions = null,
+                                                                    tr.CancellationToken cancellationToken = default)
         {
             var updateFolderPolicyArg = new UpdateFolderPolicyArg(sharedFolderId,
                                                                   memberPolicy,
@@ -4371,7 +4501,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                                   linkSettings,
                                                                   actions);
 
-            return this.UpdateFolderPolicyAsync(updateFolderPolicyArg);
+            return this.UpdateFolderPolicyAsync(updateFolderPolicyArg, cancellationToken);
         }
 
         /// <summary>
