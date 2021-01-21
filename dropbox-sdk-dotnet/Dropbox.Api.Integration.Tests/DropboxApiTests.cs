@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
+using System.Threading;
+
 namespace Dropbox.Api.Tests
 {
     using System;
@@ -524,6 +526,123 @@ namespace Dropbox.Api.Tests
             Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{folderNameWithDateFormat}");
             var folders = await client.Files.ListFolderAsync($"/{TestingPath}");
             Assert.IsTrue(folders.Entries.Any(f => f.Name == folderNameWithDateFormat));
+        }
+
+        /// <summary>
+        /// Test retry with cancellation token.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestRetryWithCancellation()
+        {
+            var count = 0;
+
+            var mockHandler = new MockHttpMessageHandler((r, s) =>
+            {
+                if (count++ < 3)
+                {
+                    var error = new HttpResponseMessage(HttpStatusCode.InternalServerError)
+                    {
+                        Content = new StringContent("Error"),
+                    };
+
+                    return Task.FromResult(error);
+                }
+
+                return s(r);
+            });
+            var mockClient = new HttpClient(mockHandler);
+            var mockedClient = new DropboxClient(userAccessToken, new DropboxClientConfig { HttpClient = mockClient, MaxRetriesOnError = 10 });
+            var filePath = $"{TestingPath}/{DateTime.Now.Ticks}.txt";
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () =>
+            {
+                using var ctx = new CancellationTokenSource();
+                var response = mockedClient.Files.UploadAsync(filePath, body: GetStream("abc"), cancellationToken: ctx.Token);
+                ctx.Cancel();
+                await response;
+            });
+            await Assert.ThrowsExceptionAsync<ApiException<GetMetadataError>>(async () =>
+            {
+                await DropboxApiTests.client.Files.GetMetadataAsync(filePath);
+            });
+        }
+
+        /// <summary>
+        /// Test download with cancellation token.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestDownloadWithCancellation()
+        {
+            var filePath = $"{TestingPath}/{DateTime.Now.Ticks}.txt";
+            await client.Files.UploadAsync(filePath, body: GetStream("abc"));
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () =>
+            {
+                using var cts = new CancellationTokenSource();
+                var downloadResponse = client.Files.DownloadAsync(TestingPath + "/Foo.txt", cancellationToken: cts.Token);
+                cts.Cancel();
+                await downloadResponse;
+            });
+        }
+
+        /// <summary>
+        /// Test upload with cancellation token.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestUploadWithCancellation()
+        {
+            var filePath = $"{TestingPath}/{DateTime.Now.Ticks}.txt";
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () =>
+            {
+                using var cts = new CancellationTokenSource();
+                var response = client.Files.UploadAsync(filePath, body: GetStream("abc"), cancellationToken: cts.Token);
+                cts.Cancel();
+                await response;
+            });
+            await Assert.ThrowsExceptionAsync<ApiException<GetMetadataError>>(async () =>
+            {
+                await client.Files.GetMetadataAsync(filePath);
+            });
+        }
+
+        /// <summary>
+        /// Test CreateFolder with cancellation token.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestCreateFolderWithCancellation()
+        {
+            var folderPath = $"{TestingPath}/{DateTime.Now.Ticks}";
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () =>
+            {
+                using var cts = new CancellationTokenSource();
+                var response = client.Files.CreateFolderAsync(folderPath, cancellationToken: cts.Token);
+                cts.Cancel();
+                await response;
+            });
+            await Assert.ThrowsExceptionAsync<ApiException<GetMetadataError>>(async () =>
+            {
+                await client.Files.GetMetadataAsync(folderPath);
+            });
+        }
+
+        /// <summary>
+        /// Test refresh access token with cancellation token.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestRefreshAccessTokenWithCancellation()
+        {
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () =>
+            {
+                var clientToRefreshToken = new DropboxClient(userRefreshToken, appKey, appSecret);
+                using var cts = new CancellationTokenSource();
+                var response = clientToRefreshToken.RefreshAccessToken(Array.Empty<string>(), cts.Token);
+                cts.Cancel();
+                var isRefreshed = await response;
+                Assert.IsFalse(isRefreshed);
+            });
         }
 
         /// <summary>

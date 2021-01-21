@@ -6,8 +6,8 @@
 
 namespace Dropbox.Api.Stone
 {
-    using System;
-    using System.Collections.Generic;
+    using System.Threading;
+    using System.Threading.Tasks;
 
     /// <summary>
     /// The encoder interface.
@@ -20,6 +20,8 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        void Encode(T value, IJsonWriter writer);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task Encode(T value, IJsonWriter writer, CancellationToken cancellationToken = default);
     }
 }

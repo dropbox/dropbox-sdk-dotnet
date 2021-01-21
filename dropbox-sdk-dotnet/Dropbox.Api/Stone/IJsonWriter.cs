@@ -7,6 +7,8 @@
 namespace Dropbox.Api.Stone
 {
     using System;
+    using System.Threading;
+    using System.Threading.Tasks;
 
     /// <summary>
     /// The json writer interface.
@@ -17,91 +19,123 @@ namespace Dropbox.Api.Stone
         /// Write a Int32 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteInt32(int value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteInt32(int value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a Int64 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteInt64(long value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteInt64(long value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a UInt32 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteUInt32(uint value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteUInt32(uint value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a UInt64 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteUInt64(ulong value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteUInt64(ulong value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a double value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteDouble(double value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteDouble(double value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a single value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteSingle(float value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteSingle(float value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a DateTime value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteDateTime(DateTime value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteDateTime(DateTime value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a boolean value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteBoolean(bool value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteBoolean(bool value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a byte[] value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteBytes(byte[] value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteBytes(byte[] value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a string value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void WriteString(string value);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteString(string value, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write a null value.
         /// </summary>
-        void WriteNull();
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteNull(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write start object.
         /// </summary>
-        void WriteStartObject();
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteStartObject(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write end object.
         /// </summary>
-        void WriteEndObject();
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteEndObject(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write start array.
         /// </summary>
-        void WriteStartArray();
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteStartArray(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write end array.
         /// </summary>
-        void WriteEndArray();
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WriteEndArray(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Write property name.
         /// </summary>
         /// <param name="name">The property name.</param>
-        void WritePropertyName(string name);
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        Task WritePropertyName(string name, CancellationToken cancellationToken = default);
     }
 }
