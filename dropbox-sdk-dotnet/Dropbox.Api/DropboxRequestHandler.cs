@@ -148,7 +148,7 @@ namespace Dropbox.Api
             IDecoder<TError> errorDecoder,
             CancellationToken cancellationToken)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder);
+            var serializedArg = await JsonWriter.WriteAsync(request, requestEncoder, cancellationToken: cancellationToken);
             var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Rpc, serializedArg, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
@@ -191,7 +191,7 @@ namespace Dropbox.Api
             IDecoder<TError> errorDecoder,
             CancellationToken cancellationToken)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder, true);
+            var serializedArg = await JsonWriter.WriteAsync(request, requestEncoder, true, cancellationToken);
             var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Upload, serializedArg, body, cancellationToken)
                 .ConfigureAwait(false);
 
@@ -232,7 +232,7 @@ namespace Dropbox.Api
             IDecoder<TError> errorDecoder,
             CancellationToken cancellationToken)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder, true);
+            var serializedArg = await JsonWriter.WriteAsync(request, requestEncoder, true, cancellationToken);
             var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Download, serializedArg, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
@@ -530,7 +530,7 @@ namespace Dropbox.Api
             {
                 request.Headers.TryAddWithoutValidation(
                     "Dropbox-Api-Path-Root",
-                    JsonWriter.Write(this.pathRoot, PathRoot.Encoder));
+                    await JsonWriter.WriteAsync(this.pathRoot, PathRoot.Encoder, cancellationToken: cancellationToken));
             }
 
             var completionOption = HttpCompletionOption.ResponseContentRead;

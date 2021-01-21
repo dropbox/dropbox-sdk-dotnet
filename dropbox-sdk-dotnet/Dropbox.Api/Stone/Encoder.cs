@@ -8,6 +8,8 @@ namespace Dropbox.Api.Stone
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading;
+    using System.Threading.Tasks;
 
     /// <summary>
     /// The factory class for encoders.
@@ -52,15 +54,17 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(T? value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(T? value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
             if (value == null)
             {
-                writer.WriteNull();
+                await writer.WriteNull(cancellationToken);
                 return;
             }
 
-            this.encoder.Encode(value.Value, writer);
+            await this.encoder.Encode(value.Value, writer, cancellationToken);
         }
     }
 
@@ -84,9 +88,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(int value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(int value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteInt32(value);
+            await writer.WriteInt32(value, cancellationToken);
         }
     }
 
@@ -110,9 +116,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(long value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(long value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteInt64(value);
+            await writer.WriteInt64(value, cancellationToken);
         }
     }
 
@@ -136,9 +144,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(uint value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(uint value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteUInt32(value);
+            await writer.WriteUInt32(value, cancellationToken);
         }
     }
 
@@ -162,9 +172,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(ulong value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(ulong value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteUInt64(value);
+            await writer.WriteUInt64(value, cancellationToken);
         }
     }
 
@@ -183,9 +195,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(float value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(float value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteSingle(value);
+            await writer.WriteSingle(value, cancellationToken);
         }
     }
 
@@ -209,9 +223,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(double value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(double value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteDouble(value);
+            await writer.WriteDouble(value, cancellationToken);
         }
     }
 
@@ -235,9 +251,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(bool value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(bool value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteBoolean(value);
+            await writer.WriteBoolean(value, cancellationToken);
         }
     }
 
@@ -261,9 +279,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(DateTime value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(DateTime value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteDateTime(value);
+            await writer.WriteDateTime(value, cancellationToken);
         }
     }
 
@@ -282,9 +302,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(byte[] value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(byte[] value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteBytes(value);
+            await writer.WriteBytes(value, cancellationToken);
         }
     }
 
@@ -303,9 +325,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(string value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(string value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            writer.WriteString(value);
+            await writer.WriteString(value, cancellationToken);
         }
     }
 
@@ -324,8 +348,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(Empty value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public Task Encode(Empty value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
+            return Task.CompletedTask;
         }
     }
 
@@ -341,17 +368,19 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(T value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(T value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
             if (value == null)
             {
-                writer.WriteNull();
+                await writer.WriteNull(cancellationToken);
                 return;
             }
 
-            writer.WriteStartObject();
+            await writer.WriteStartObject(cancellationToken);
             this.EncodeFields(value, writer);
-            writer.WriteEndObject();
+            await writer.WriteEndObject(cancellationToken);
         }
 
         /// <summary>
@@ -369,10 +398,12 @@ namespace Dropbox.Api.Stone
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
         /// <param name="encoder">The encoder.</param>
-        protected static void WriteProperty<TProperty>(string propertyName, TProperty value, IJsonWriter writer, IEncoder<TProperty> encoder)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        protected static async Task WriteProperty<TProperty>(string propertyName, TProperty value, IJsonWriter writer, IEncoder<TProperty> encoder, CancellationToken cancellationToken = default)
         {
-            writer.WritePropertyName(propertyName);
-            encoder.Encode(value, writer);
+            await writer.WritePropertyName(propertyName, cancellationToken);
+            await encoder.Encode(value, writer, cancellationToken);
         }
 
         /// <summary>
@@ -383,10 +414,12 @@ namespace Dropbox.Api.Stone
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
         /// <param name="encoder">The encoder.</param>
-        protected static void WriteListProperty<TProperty>(string propertyName, IList<TProperty> value, IJsonWriter writer, IEncoder<TProperty> encoder)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        protected static async Task WriteListProperty<TProperty>(string propertyName, IList<TProperty> value, IJsonWriter writer, IEncoder<TProperty> encoder, CancellationToken cancellationToken = default)
         {
-            writer.WritePropertyName(propertyName);
-            ListEncoder<TProperty>.Encode(value, writer, encoder);
+            await writer.WritePropertyName(propertyName, cancellationToken);
+            await ListEncoder<TProperty>.Encode(value, writer, encoder, cancellationToken);
         }
     }
 
@@ -416,16 +449,18 @@ namespace Dropbox.Api.Stone
         /// <param name="value">The list.</param>
         /// <param name="writer">The writer.</param>
         /// <param name="itemEncoder">The item encoder.</param>
-        public static void Encode(IList<T> value, IJsonWriter writer, IEncoder<T> itemEncoder)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public static async Task Encode(IList<T> value, IJsonWriter writer, IEncoder<T> itemEncoder, CancellationToken cancellationToken = default)
         {
-            writer.WriteStartArray();
+            await writer.WriteStartArray(cancellationToken);
 
             foreach (var item in value)
             {
-                itemEncoder.Encode(item, writer);
+                await itemEncoder.Encode(item, writer, cancellationToken);
             }
 
-            writer.WriteEndArray();
+            await writer.WriteEndArray(cancellationToken);
         }
 
         /// <summary>
@@ -433,9 +468,11 @@ namespace Dropbox.Api.Stone
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="writer">The writer.</param>
-        public void Encode(IList<T> value, IJsonWriter writer)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        public async Task Encode(IList<T> value, IJsonWriter writer, CancellationToken cancellationToken = default)
         {
-            Encode(value, writer, this.itemEncoder);
+            await Encode(value, writer, this.itemEncoder, cancellationToken);
         }
     }
 }

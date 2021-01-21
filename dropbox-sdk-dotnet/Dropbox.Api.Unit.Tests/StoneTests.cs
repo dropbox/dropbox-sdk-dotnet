@@ -7,6 +7,8 @@
 namespace Dropbox.Api.Unit.Tests
 {
     using System;
+    using System.Threading;
+    using System.Threading.Tasks;
     using Dropbox.Api.Files;
     using Dropbox.Api.Stone;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -21,9 +23,9 @@ namespace Dropbox.Api.Unit.Tests
         /// Smoke test for nested unions.
         /// </summary>
         [TestMethod]
-        public void TestNestedUnion()
+        public async Task TestNestedUnion()
         {
-            var result = JsonWriter.Write(
+            var result = await JsonWriter.WriteAsync(
                 new GetMetadataError.Path(LookupError.NotFound.Instance),
                 GetMetadataError.Encoder);
 
@@ -31,6 +33,24 @@ namespace Dropbox.Api.Unit.Tests
 
             Assert.IsTrue(obj.IsPath);
             Assert.IsTrue(obj.AsPath.Value.IsNotFound);
+        }
+
+        /// <summary>
+        /// Smoke test for JsonWriter with cancellation token.
+        /// </summary>
+        /// <returns>A <see cref="Task"/> representing the result of the asynchronous operation.</returns>
+        [TestMethod]
+        public async Task TestNestedUnionWithCancellation()
+        {
+            using var cts = new CancellationTokenSource();
+            cts.Cancel();
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () =>
+            {
+               await JsonWriter.WriteAsync(
+                    new GetMetadataError.Path(LookupError.NotFound.Instance),
+                    GetMetadataError.Encoder,
+                    cancellationToken: cts.Token);
+            });
         }
     }
 }
