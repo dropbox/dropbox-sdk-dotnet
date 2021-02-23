@@ -52,7 +52,6 @@ jobs:
         run: |
           python generator/generate_routes.py
           git add dropbox-sdk-dotnet/Dropbox.Api/Generated
-          git add stone
           git add spec
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.8.2
