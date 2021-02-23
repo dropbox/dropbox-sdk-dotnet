@@ -36,7 +36,7 @@ namespace Dropbox.Api.Files
         /// <param name="sessionId">The upload session ID (returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// />).</param>
-        /// <param name="offset">The amount of data that has been uploaded so far. We use this
+        /// <param name="offset">Offset in bytes at which data should be appended. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
         public UploadSessionCursor(string sessionId,
@@ -69,7 +69,7 @@ namespace Dropbox.Api.Files
         public string SessionId { get; protected set; }
 
         /// <summary>
-        /// <para>The amount of data that has been uploaded so far. We use this to make sure
+        /// <para>Offset in bytes at which data should be appended. We use this to make sure
         /// upload data isn't lost or duplicated in the event of a network error.</para>
         /// </summary>
         public ulong Offset { get; protected set; }

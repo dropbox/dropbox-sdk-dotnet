@@ -33,12 +33,9 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UserLogInfo" /> class.</para>
         /// </summary>
-        /// <param name="accountId">User unique ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="displayName">User display name. Might be missing due to historical
-        /// data gap.</param>
-        /// <param name="email">User email address. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="accountId">User unique ID.</param>
+        /// <param name="displayName">User display name.</param>
+        /// <param name="email">User email address.</param>
         protected UserLogInfo(string accountId = null,
                               string displayName = null,
                               string email = null)
@@ -148,17 +145,17 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>User unique ID. Might be missing due to historical data gap.</para>
+        /// <para>User unique ID.</para>
         /// </summary>
         public string AccountId { get; protected set; }
 
         /// <summary>
-        /// <para>User display name. Might be missing due to historical data gap.</para>
+        /// <para>User display name.</para>
         /// </summary>
         public string DisplayName { get; protected set; }
 
         /// <summary>
-        /// <para>User email address. Might be missing due to historical data gap.</para>
+        /// <para>User email address.</para>
         /// </summary>
         public string Email { get; protected set; }
 

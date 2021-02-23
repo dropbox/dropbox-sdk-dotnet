@@ -33,8 +33,7 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="assetIndex">Asset position in the Assets list.</param>
-        /// <param name="deadline">File request deadline. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="deadline">File request deadline.</param>
         public FileRequestDetails(ulong assetIndex,
                                   FileRequestDeadline deadline = null)
         {
@@ -59,7 +58,7 @@ namespace Dropbox.Api.TeamLog
         public ulong AssetIndex { get; protected set; }
 
         /// <summary>
-        /// <para>File request deadline. Might be missing due to historical data gap.</para>
+        /// <para>File request deadline.</para>
         /// </summary>
         public FileRequestDeadline Deadline { get; protected set; }
 

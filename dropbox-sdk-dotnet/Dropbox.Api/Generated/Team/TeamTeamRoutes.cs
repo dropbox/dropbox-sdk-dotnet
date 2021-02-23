@@ -5789,7 +5789,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Permission : Team member file access. The scope for the route is
+        /// files.team_metadata.write.</para>
         /// </summary>
         /// <param name="getTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5821,7 +5822,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Permission : Team member file access. The scope for the route is
+        /// files.team_metadata.write.</para>
         /// </summary>
         /// <param name="templateId">An identifier for template added by route  See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
@@ -5887,7 +5889,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Permission : Team member file access. The scope for the route is
+        /// files.team_metadata.write.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -6061,7 +6064,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's user activity.</para>
+        /// <para>Retrieves reporting data about a team's user activity. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -6093,7 +6097,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's user activity.</para>
+        /// <para>Retrieves reporting data about a team's user activity. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
@@ -6159,7 +6164,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's linked devices.</para>
+        /// <para>Retrieves reporting data about a team's linked devices. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -6191,7 +6197,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's linked devices.</para>
+        /// <para>Retrieves reporting data about a team's linked devices. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
@@ -6257,7 +6264,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's membership.</para>
+        /// <para>Retrieves reporting data about a team's membership. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -6289,7 +6297,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's membership.</para>
+        /// <para>Retrieves reporting data about a team's membership. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
@@ -6355,7 +6364,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's storage usage.</para>
+        /// <para>Retrieves reporting data about a team's storage usage. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -6387,7 +6397,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves reporting data about a team's storage usage.</para>
+        /// <para>Retrieves reporting data about a team's storage usage. Deprecated: Will be
+        /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>

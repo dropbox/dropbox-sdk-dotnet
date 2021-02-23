@@ -35,6 +35,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Disposition</para>
+        /// </summary>
+        public bool IsDisposition
+        {
+            get
+            {
+                return this is Disposition;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Disposition, or <c>null</c>.</para>
+        /// </summary>
+        public Disposition AsDisposition
+        {
+            get
+            {
+                return this as Disposition;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Retention</para>
         /// </summary>
         public bool IsRetention
@@ -92,6 +114,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(PolicyType value, enc.IJsonWriter writer)
             {
+                if (value is Disposition)
+                {
+                    WriteProperty(".tag", "disposition", writer, enc.StringEncoder.Instance);
+                    Disposition.Encoder.EncodeFields((Disposition)value, writer);
+                    return;
+                }
                 if (value is Retention)
                 {
                     WriteProperty(".tag", "retention", writer, enc.StringEncoder.Instance);
@@ -136,6 +164,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "disposition":
+                        return Disposition.Decoder.DecodeFields(reader);
                     case "retention":
                         return Retention.Decoder.DecodeFields(reader);
                     default:
@@ -145,6 +175,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The disposition object</para>
+        /// </summary>
+        public sealed class Disposition : PolicyType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Disposition> Encoder = new DispositionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Disposition> Decoder = new DispositionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Disposition" />
+            /// class.</para>
+            /// </summary>
+            private Disposition()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Disposition</para>
+            /// </summary>
+            public static readonly Disposition Instance = new Disposition();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Disposition" />.</para>
+            /// </summary>
+            private class DispositionEncoder : enc.StructEncoder<Disposition>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Disposition value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Disposition" />.</para>
+            /// </summary>
+            private class DispositionDecoder : enc.StructDecoder<Disposition>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Disposition" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Disposition Create()
+                {
+                    return Disposition.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The retention object</para>

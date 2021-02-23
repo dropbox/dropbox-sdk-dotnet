@@ -32,10 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FolderLogInfo" /> class.</para>
         /// </summary>
         /// <param name="path">Path relative to event context.</param>
-        /// <param name="displayName">Display name. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="fileId">Unique ID. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="displayName">Display name.</param>
+        /// <param name="fileId">Unique ID.</param>
         /// <param name="fileSize">File or folder size in bytes.</param>
         /// <param name="fileCount">Number of files within the folder.</param>
         public FolderLogInfo(PathLogInfo path,

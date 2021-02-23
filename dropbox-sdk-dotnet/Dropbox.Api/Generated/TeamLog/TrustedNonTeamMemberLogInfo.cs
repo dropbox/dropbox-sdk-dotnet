@@ -34,12 +34,9 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="trustedNonTeamMemberType">Indicates the type of the member of a
         /// trusted team.</param>
-        /// <param name="accountId">User unique ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="displayName">User display name. Might be missing due to historical
-        /// data gap.</param>
-        /// <param name="email">User email address. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="accountId">User unique ID.</param>
+        /// <param name="displayName">User display name.</param>
+        /// <param name="email">User email address.</param>
         /// <param name="team">Details about this user's trusted team.</param>
         public TrustedNonTeamMemberLogInfo(TrustedNonTeamMemberType trustedNonTeamMemberType,
                                            string accountId = null,

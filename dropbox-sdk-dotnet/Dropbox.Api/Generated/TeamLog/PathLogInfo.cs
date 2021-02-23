@@ -35,8 +35,7 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="namespaceRelative">Path relative to the namespace containing the
         /// content.</param>
-        /// <param name="contextual">Fully qualified path relative to event's context. Might be
-        /// missing due to historical data gap.</param>
+        /// <param name="contextual">Fully qualified path relative to event's context.</param>
         public PathLogInfo(NamespaceRelativePathLogInfo namespaceRelative,
                            string contextual = null)
         {
@@ -65,8 +64,7 @@ namespace Dropbox.Api.TeamLog
         public NamespaceRelativePathLogInfo NamespaceRelative { get; protected set; }
 
         /// <summary>
-        /// <para>Fully qualified path relative to event's context. Might be missing due to
-        /// historical data gap.</para>
+        /// <para>Fully qualified path relative to event's context.</para>
         /// </summary>
         public string Contextual { get; protected set; }
 

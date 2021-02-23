@@ -31,8 +31,7 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="SearchV2Arg" /> class.</para>
         /// </summary>
         /// <param name="query">The string to search for. May match across multiple fields
-        /// based on the request arguments. Query string may be rewritten to improve relevance
-        /// of results.</param>
+        /// based on the request arguments.</param>
         /// <param name="options">Options for more targeted search results.</param>
         /// <param name="matchFieldOptions">Options for search results match fields.</param>
         /// <param name="includeHighlights">Deprecated and moved this option to
@@ -69,8 +68,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The string to search for. May match across multiple fields based on the
-        /// request arguments. Query string may be rewritten to improve relevance of
-        /// results.</para>
+        /// request arguments.</para>
         /// </summary>
         public string Query { get; protected set; }
 

@@ -31,9 +31,15 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ExportInfo" /> class.</para>
         /// </summary>
         /// <param name="exportAs">Format to which the file can be exported to.</param>
-        public ExportInfo(string exportAs = null)
+        /// <param name="exportOptions">Additional formats to which the file can be exported.
+        /// These values can be specified as the export_format in /files/export.</param>
+        public ExportInfo(string exportAs = null,
+                          col.IEnumerable<string> exportOptions = null)
         {
+            var exportOptionsList = enc.Util.ToList(exportOptions);
+
             this.ExportAs = exportAs;
+            this.ExportOptions = exportOptionsList;
         }
 
         /// <summary>
@@ -50,6 +56,12 @@ namespace Dropbox.Api.Files
         /// <para>Format to which the file can be exported to.</para>
         /// </summary>
         public string ExportAs { get; protected set; }
+
+        /// <summary>
+        /// <para>Additional formats to which the file can be exported. These values can be
+        /// specified as the export_format in /files/export.</para>
+        /// </summary>
+        public col.IList<string> ExportOptions { get; protected set; }
 
         #region Encoder class
 
@@ -68,6 +80,10 @@ namespace Dropbox.Api.Files
                 if (value.ExportAs != null)
                 {
                     WriteProperty("export_as", value.ExportAs, writer, enc.StringEncoder.Instance);
+                }
+                if (value.ExportOptions.Count > 0)
+                {
+                    WriteListProperty("export_options", value.ExportOptions, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -103,6 +119,9 @@ namespace Dropbox.Api.Files
                 {
                     case "export_as":
                         value.ExportAs = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "export_options":
+                        value.ExportOptions = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     default:
                         reader.Skip();

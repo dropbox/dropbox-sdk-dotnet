@@ -37,10 +37,8 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="AppLogInfo" /> class.</para>
         /// </summary>
-        /// <param name="appId">App unique ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="displayName">App display name. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="appId">App unique ID.</param>
+        /// <param name="displayName">App display name.</param>
         protected AppLogInfo(string appId = null,
                              string displayName = null)
         {
@@ -128,12 +126,12 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>App unique ID. Might be missing due to historical data gap.</para>
+        /// <para>App unique ID.</para>
         /// </summary>
         public string AppId { get; protected set; }
 
         /// <summary>
-        /// <para>App display name. Might be missing due to historical data gap.</para>
+        /// <para>App display name.</para>
         /// </summary>
         public string DisplayName { get; protected set; }
 

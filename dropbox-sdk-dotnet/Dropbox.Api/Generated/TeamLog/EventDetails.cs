@@ -451,6 +451,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyContentDisposedDetails</para>
+        /// </summary>
+        public bool IsGovernancePolicyContentDisposedDetails
+        {
+            get
+            {
+                return this is GovernancePolicyContentDisposedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyContentDisposedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyContentDisposedDetails AsGovernancePolicyContentDisposedDetails
+        {
+            get
+            {
+                return this as GovernancePolicyContentDisposedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// GovernancePolicyCreateDetails</para>
         /// </summary>
         public bool IsGovernancePolicyCreateDetails
@@ -2035,6 +2059,76 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as FolderOverviewItemUnpinnedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ObjectLabelAddedDetails</para>
+        /// </summary>
+        public bool IsObjectLabelAddedDetails
+        {
+            get
+            {
+                return this is ObjectLabelAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ObjectLabelAddedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ObjectLabelAddedDetails AsObjectLabelAddedDetails
+        {
+            get
+            {
+                return this as ObjectLabelAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ObjectLabelRemovedDetails</para>
+        /// </summary>
+        public bool IsObjectLabelRemovedDetails
+        {
+            get
+            {
+                return this is ObjectLabelRemovedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ObjectLabelRemovedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ObjectLabelRemovedDetails AsObjectLabelRemovedDetails
+        {
+            get
+            {
+                return this as ObjectLabelRemovedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ObjectLabelUpdatedValueDetails</para>
+        /// </summary>
+        public bool IsObjectLabelUpdatedValueDetails
+        {
+            get
+            {
+                return this is ObjectLabelUpdatedValueDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ObjectLabelUpdatedValueDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ObjectLabelUpdatedValueDetails AsObjectLabelUpdatedValueDetails
+        {
+            get
+            {
+                return this as ObjectLabelUpdatedValueDetails;
             }
         }
 
@@ -10837,6 +10931,12 @@ namespace Dropbox.Api.TeamLog
                     GovernancePolicyAddFolderFailedDetails.Encoder.EncodeFields((GovernancePolicyAddFolderFailedDetails)value, writer);
                     return;
                 }
+                if (value is GovernancePolicyContentDisposedDetails)
+                {
+                    WriteProperty(".tag", "governance_policy_content_disposed_details", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyContentDisposedDetails.Encoder.EncodeFields((GovernancePolicyContentDisposedDetails)value, writer);
+                    return;
+                }
                 if (value is GovernancePolicyCreateDetails)
                 {
                     WriteProperty(".tag", "governance_policy_create_details", writer, enc.StringEncoder.Instance);
@@ -11243,6 +11343,24 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "folder_overview_item_unpinned_details", writer, enc.StringEncoder.Instance);
                     FolderOverviewItemUnpinnedDetails.Encoder.EncodeFields((FolderOverviewItemUnpinnedDetails)value, writer);
+                    return;
+                }
+                if (value is ObjectLabelAddedDetails)
+                {
+                    WriteProperty(".tag", "object_label_added_details", writer, enc.StringEncoder.Instance);
+                    ObjectLabelAddedDetails.Encoder.EncodeFields((ObjectLabelAddedDetails)value, writer);
+                    return;
+                }
+                if (value is ObjectLabelRemovedDetails)
+                {
+                    WriteProperty(".tag", "object_label_removed_details", writer, enc.StringEncoder.Instance);
+                    ObjectLabelRemovedDetails.Encoder.EncodeFields((ObjectLabelRemovedDetails)value, writer);
+                    return;
+                }
+                if (value is ObjectLabelUpdatedValueDetails)
+                {
+                    WriteProperty(".tag", "object_label_updated_value_details", writer, enc.StringEncoder.Instance);
+                    ObjectLabelUpdatedValueDetails.Encoder.EncodeFields((ObjectLabelUpdatedValueDetails)value, writer);
                     return;
                 }
                 if (value is RewindFolderDetails)
@@ -13539,6 +13657,8 @@ namespace Dropbox.Api.TeamLog
                         return GovernancePolicyAddFoldersDetails.Decoder.DecodeFields(reader);
                     case "governance_policy_add_folder_failed_details":
                         return GovernancePolicyAddFolderFailedDetails.Decoder.DecodeFields(reader);
+                    case "governance_policy_content_disposed_details":
+                        return GovernancePolicyContentDisposedDetails.Decoder.DecodeFields(reader);
                     case "governance_policy_create_details":
                         return GovernancePolicyCreateDetails.Decoder.DecodeFields(reader);
                     case "governance_policy_delete_details":
@@ -13675,6 +13795,12 @@ namespace Dropbox.Api.TeamLog
                         return FolderOverviewItemPinnedDetails.Decoder.DecodeFields(reader);
                     case "folder_overview_item_unpinned_details":
                         return FolderOverviewItemUnpinnedDetails.Decoder.DecodeFields(reader);
+                    case "object_label_added_details":
+                        return ObjectLabelAddedDetails.Decoder.DecodeFields(reader);
+                    case "object_label_removed_details":
+                        return ObjectLabelRemovedDetails.Decoder.DecodeFields(reader);
+                    case "object_label_updated_value_details":
+                        return ObjectLabelUpdatedValueDetails.Decoder.DecodeFields(reader);
                     case "rewind_folder_details":
                         return RewindFolderDetails.Decoder.DecodeFields(reader);
                     case "file_request_change_details":
@@ -16041,6 +16167,98 @@ namespace Dropbox.Api.TeamLog
                 public override GovernancePolicyAddFolderFailedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new GovernancePolicyAddFolderFailedDetails(global::Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The governance policy content disposed details object</para>
+        /// </summary>
+        public sealed class GovernancePolicyContentDisposedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyContentDisposedDetails> Encoder = new GovernancePolicyContentDisposedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyContentDisposedDetails> Decoder = new GovernancePolicyContentDisposedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyContentDisposedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GovernancePolicyContentDisposedDetails(global::Dropbox.Api.TeamLog.GovernancePolicyContentDisposedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyContentDisposedDetails" /> class.</para>
+            /// </summary>
+            private GovernancePolicyContentDisposedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.GovernancePolicyContentDisposedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyContentDisposedDetails"
+            /// />.</para>
+            /// </summary>
+            private class GovernancePolicyContentDisposedDetailsEncoder : enc.StructEncoder<GovernancePolicyContentDisposedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyContentDisposedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("governance_policy_content_disposed_details", value.Value, writer, global::Dropbox.Api.TeamLog.GovernancePolicyContentDisposedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyContentDisposedDetails"
+            /// />.</para>
+            /// </summary>
+            private class GovernancePolicyContentDisposedDetailsDecoder : enc.StructDecoder<GovernancePolicyContentDisposedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyContentDisposedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyContentDisposedDetails Create()
+                {
+                    return new GovernancePolicyContentDisposedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GovernancePolicyContentDisposedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GovernancePolicyContentDisposedDetails(global::Dropbox.Api.TeamLog.GovernancePolicyContentDisposedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -22183,6 +22401,276 @@ namespace Dropbox.Api.TeamLog
                 public override FolderOverviewItemUnpinnedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new FolderOverviewItemUnpinnedDetails(global::Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The object label added details object</para>
+        /// </summary>
+        public sealed class ObjectLabelAddedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ObjectLabelAddedDetails> Encoder = new ObjectLabelAddedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ObjectLabelAddedDetails> Decoder = new ObjectLabelAddedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelAddedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ObjectLabelAddedDetails(global::Dropbox.Api.TeamLog.ObjectLabelAddedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelAddedDetails" />
+            /// class.</para>
+            /// </summary>
+            private ObjectLabelAddedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ObjectLabelAddedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ObjectLabelAddedDetails" />.</para>
+            /// </summary>
+            private class ObjectLabelAddedDetailsEncoder : enc.StructEncoder<ObjectLabelAddedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ObjectLabelAddedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("object_label_added_details", value.Value, writer, global::Dropbox.Api.TeamLog.ObjectLabelAddedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ObjectLabelAddedDetails" />.</para>
+            /// </summary>
+            private class ObjectLabelAddedDetailsDecoder : enc.StructDecoder<ObjectLabelAddedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ObjectLabelAddedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ObjectLabelAddedDetails Create()
+                {
+                    return new ObjectLabelAddedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ObjectLabelAddedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ObjectLabelAddedDetails(global::Dropbox.Api.TeamLog.ObjectLabelAddedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The object label removed details object</para>
+        /// </summary>
+        public sealed class ObjectLabelRemovedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ObjectLabelRemovedDetails> Encoder = new ObjectLabelRemovedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ObjectLabelRemovedDetails> Decoder = new ObjectLabelRemovedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelRemovedDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ObjectLabelRemovedDetails(global::Dropbox.Api.TeamLog.ObjectLabelRemovedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelRemovedDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ObjectLabelRemovedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ObjectLabelRemovedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ObjectLabelRemovedDetails" />.</para>
+            /// </summary>
+            private class ObjectLabelRemovedDetailsEncoder : enc.StructEncoder<ObjectLabelRemovedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ObjectLabelRemovedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("object_label_removed_details", value.Value, writer, global::Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ObjectLabelRemovedDetails" />.</para>
+            /// </summary>
+            private class ObjectLabelRemovedDetailsDecoder : enc.StructDecoder<ObjectLabelRemovedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ObjectLabelRemovedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ObjectLabelRemovedDetails Create()
+                {
+                    return new ObjectLabelRemovedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ObjectLabelRemovedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ObjectLabelRemovedDetails(global::Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The object label updated value details object</para>
+        /// </summary>
+        public sealed class ObjectLabelUpdatedValueDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ObjectLabelUpdatedValueDetails> Encoder = new ObjectLabelUpdatedValueDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ObjectLabelUpdatedValueDetails> Decoder = new ObjectLabelUpdatedValueDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ObjectLabelUpdatedValueDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ObjectLabelUpdatedValueDetails(global::Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ObjectLabelUpdatedValueDetails" /> class.</para>
+            /// </summary>
+            private ObjectLabelUpdatedValueDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ObjectLabelUpdatedValueDetails" />.</para>
+            /// </summary>
+            private class ObjectLabelUpdatedValueDetailsEncoder : enc.StructEncoder<ObjectLabelUpdatedValueDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ObjectLabelUpdatedValueDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("object_label_updated_value_details", value.Value, writer, global::Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ObjectLabelUpdatedValueDetails" />.</para>
+            /// </summary>
+            private class ObjectLabelUpdatedValueDetailsDecoder : enc.StructDecoder<ObjectLabelUpdatedValueDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ObjectLabelUpdatedValueDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ObjectLabelUpdatedValueDetails Create()
+                {
+                    return new ObjectLabelUpdatedValueDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ObjectLabelUpdatedValueDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ObjectLabelUpdatedValueDetails(global::Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.Decoder.DecodeFields(reader));
                 }
             }
 

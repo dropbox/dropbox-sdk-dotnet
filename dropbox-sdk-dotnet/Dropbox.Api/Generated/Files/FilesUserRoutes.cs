@@ -2170,13 +2170,20 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.ExportInfo.ExportAs" /> populated.</para>
         /// </summary>
         /// <param name="path">The path of the file to be exported.</param>
+        /// <param name="exportFormat">The file format to which the file should be exported.
+        /// This must be one of the formats listed in the file's export_options returned by
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If none
+        /// is specified, the default format (specified in export_as in file metadata) will be
+        /// used.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="ExportError"/>.</exception>
-        public t.Task<enc.IDownloadResponse<ExportResult>> ExportAsync(string path)
+        public t.Task<enc.IDownloadResponse<ExportResult>> ExportAsync(string path,
+                                                                       string exportFormat = null)
         {
-            var exportArg = new ExportArg(path);
+            var exportArg = new ExportArg(path,
+                                          exportFormat);
 
             return this.ExportAsync(exportArg);
         }
@@ -2185,16 +2192,23 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the export route.</para>
         /// </summary>
         /// <param name="path">The path of the file to be exported.</param>
+        /// <param name="exportFormat">The file format to which the file should be exported.
+        /// This must be one of the formats listed in the file's export_options returned by
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If none
+        /// is specified, the default format (specified in export_as in file metadata) will be
+        /// used.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginExport(string path,
-                                            sys.AsyncCallback callback,
+                                            string exportFormat = null,
+                                            sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
-            var exportArg = new ExportArg(path);
+            var exportArg = new ExportArg(path,
+                                          exportFormat);
 
             return this.BeginExport(exportArg, callback, callbackState);
         }
@@ -2805,8 +2819,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a thumbnail for an image.</para>
         /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
-        /// be converted to a thumbnail.</para>
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="thumbnailArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2838,8 +2852,8 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Get a thumbnail for an image.</para>
         /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
-        /// be converted to a thumbnail.</para>
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="path">The path to the image file you want to thumbnail.</param>
         /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
@@ -2918,7 +2932,10 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for a file.</para>
+        /// <para>Get a thumbnail for an image.</para>
+        /// <para>This method currently supports files with the following file extensions: jpg,
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="thumbnailV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2948,7 +2965,10 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for a file.</para>
+        /// <para>Get a thumbnail for an image.</para>
+        /// <para>This method currently supports files with the following file extensions: jpg,
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
@@ -3034,8 +3054,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Get thumbnails for a list of images. We allow up to 25 thumbnails in a single
         /// batch.</para>
         /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
-        /// be converted to a thumbnail.</para>
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="getThumbnailBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3068,8 +3088,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Get thumbnails for a list of images. We allow up to 25 thumbnails in a single
         /// batch.</para>
         /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif and bmp. Photos that are larger than 20MB in size won't
-        /// be converted to a thumbnail.</para>
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="entries">List of files to get thumbnails.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4617,6 +4637,224 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>Creates a new Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="paperCreateArg">The request parameters</param>
+        /// <param name="body">The content to upload.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperCreateError"/>.</exception>
+        public t.Task<PaperCreateResult> PaperCreateAsync(PaperCreateArg paperCreateArg, io.Stream body)
+        {
+            return this.Transport.SendUploadRequestAsync<PaperCreateArg, PaperCreateResult, PaperCreateError>(paperCreateArg, body, "api", "/files/paper/create", "user", global::Dropbox.Api.Files.PaperCreateArg.Encoder, global::Dropbox.Api.Files.PaperCreateResult.Decoder, global::Dropbox.Api.Files.PaperCreateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the paper create route.</para>
+        /// </summary>
+        /// <param name="paperCreateArg">The request parameters.</param>
+        /// <param name="body">The content to upload.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPaperCreate(PaperCreateArg paperCreateArg, io.Stream body, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PaperCreateAsync(paperCreateArg, body);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Creates a new Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="path">The fully qualified path to the location in the user's Dropbox
+        /// where the Paper Doc should be created. This should include the document's title and
+        /// end with .paper.</param>
+        /// <param name="importFormat">The format of the provided data.</param>
+        /// <param name="body">The document to upload</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperCreateError"/>.</exception>
+        public t.Task<PaperCreateResult> PaperCreateAsync(string path,
+                                                          ImportFormat importFormat,
+                                                          io.Stream body)
+        {
+            var paperCreateArg = new PaperCreateArg(path,
+                                                    importFormat);
+
+            return this.PaperCreateAsync(paperCreateArg, body);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the paper create route.</para>
+        /// </summary>
+        /// <param name="path">The fully qualified path to the location in the user's Dropbox
+        /// where the Paper Doc should be created. This should include the document's title and
+        /// end with .paper.</param>
+        /// <param name="importFormat">The format of the provided data.</param>
+        /// <param name="body">The document to upload</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPaperCreate(string path,
+                                                 ImportFormat importFormat,
+                                                 io.Stream body,
+                                                 sys.AsyncCallback callback,
+                                                 object callbackState = null)
+        {
+            var paperCreateArg = new PaperCreateArg(path,
+                                                    importFormat);
+
+            return this.BeginPaperCreate(paperCreateArg, body, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the paper create route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperCreateError"/>.</exception>
+        public PaperCreateResult EndPaperCreate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PaperCreateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Updates an existing Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="paperUpdateArg">The request parameters</param>
+        /// <param name="body">The content to upload.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperUpdateError"/>.</exception>
+        public t.Task<PaperUpdateResult> PaperUpdateAsync(PaperUpdateArg paperUpdateArg, io.Stream body)
+        {
+            return this.Transport.SendUploadRequestAsync<PaperUpdateArg, PaperUpdateResult, PaperUpdateError>(paperUpdateArg, body, "api", "/files/paper/update", "user", global::Dropbox.Api.Files.PaperUpdateArg.Encoder, global::Dropbox.Api.Files.PaperUpdateResult.Decoder, global::Dropbox.Api.Files.PaperUpdateError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the paper update route.</para>
+        /// </summary>
+        /// <param name="paperUpdateArg">The request parameters.</param>
+        /// <param name="body">The content to upload.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPaperUpdate(PaperUpdateArg paperUpdateArg, io.Stream body, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.PaperUpdateAsync(paperUpdateArg, body);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates an existing Paper doc with the provided content.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to update. The path must correspond
+        /// to a Paper doc or an error will be returned.</param>
+        /// <param name="importFormat">The format of the provided data.</param>
+        /// <param name="docUpdatePolicy">How the provided content should be applied to the
+        /// doc.</param>
+        /// <param name="paperRevision">The latest doc revision. Required when
+        /// doc_update_policy is update. This value must match the current revision of the doc
+        /// or error revision_mismatch will be returned.</param>
+        /// <param name="body">The document to upload</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperUpdateError"/>.</exception>
+        public t.Task<PaperUpdateResult> PaperUpdateAsync(string path,
+                                                          ImportFormat importFormat,
+                                                          PaperDocUpdatePolicy docUpdatePolicy,
+                                                          long? paperRevision = null,
+                                                          io.Stream body = null)
+        {
+            var paperUpdateArg = new PaperUpdateArg(path,
+                                                    importFormat,
+                                                    docUpdatePolicy,
+                                                    paperRevision);
+
+            return this.PaperUpdateAsync(paperUpdateArg, body);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the paper update route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to update. The path must correspond
+        /// to a Paper doc or an error will be returned.</param>
+        /// <param name="importFormat">The format of the provided data.</param>
+        /// <param name="docUpdatePolicy">How the provided content should be applied to the
+        /// doc.</param>
+        /// <param name="paperRevision">The latest doc revision. Required when
+        /// doc_update_policy is update. This value must match the current revision of the doc
+        /// or error revision_mismatch will be returned.</param>
+        /// <param name="body">The document to upload</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginPaperUpdate(string path,
+                                                 ImportFormat importFormat,
+                                                 PaperDocUpdatePolicy docUpdatePolicy,
+                                                 long? paperRevision = null,
+                                                 io.Stream body = null,
+                                                 sys.AsyncCallback callback = null,
+                                                 object callbackState = null)
+        {
+            var paperUpdateArg = new PaperUpdateArg(path,
+                                                    importFormat,
+                                                    docUpdatePolicy,
+                                                    paperRevision);
+
+            return this.BeginPaperUpdate(paperUpdateArg, body, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the paper update route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="PaperUpdateError"/>.</exception>
+        public PaperUpdateResult EndPaperUpdate(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PaperUpdateResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Permanently delete the file or folder at a given path (see
         /// https://www.dropbox.com/en/help/40).</para>
         /// <para>If the given file or folder is not yet deleted, this route will first delete
@@ -5692,8 +5930,7 @@ namespace Dropbox.Api.Files.Routes
         /// results may not be returned.</para>
         /// </summary>
         /// <param name="query">The string to search for. May match across multiple fields
-        /// based on the request arguments. Query string may be rewritten to improve relevance
-        /// of results.</param>
+        /// based on the request arguments.</param>
         /// <param name="options">Options for more targeted search results.</param>
         /// <param name="matchFieldOptions">Options for search results match fields.</param>
         /// <param name="includeHighlights">Deprecated and moved this option to
@@ -5719,8 +5956,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the search route.</para>
         /// </summary>
         /// <param name="query">The string to search for. May match across multiple fields
-        /// based on the request arguments. Query string may be rewritten to improve relevance
-        /// of results.</param>
+        /// based on the request arguments.</param>
         /// <param name="options">Options for more targeted search results.</param>
         /// <param name="matchFieldOptions">Options for search results match fields.</param>
         /// <param name="includeHighlights">Deprecated and moved this option to
@@ -6297,7 +6533,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="sessionId">The upload session ID (returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// />).</param>
-        /// <param name="offset">The amount of data that has been uploaded so far. We use this
+        /// <param name="offset">Offset in bytes at which data should be appended. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
         /// <param name="body">The document to upload</param>
@@ -6322,7 +6558,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="sessionId">The upload session ID (returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// />).</param>
-        /// <param name="offset">The amount of data that has been uploaded so far. We use this
+        /// <param name="offset">Offset in bytes at which data should be appended. We use this
         /// to make sure upload data isn't lost or duplicated in the event of a network
         /// error.</param>
         /// <param name="body">The document to upload</param>
@@ -6705,11 +6941,11 @@ namespace Dropbox.Api.Files.Routes
         /// all the data to a file in Dropbox.</para>
         /// <para>A single request should not upload more than 150 MB. The maximum size of a
         /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>An upload session can be used for a maximum of 48 hours. Attempting to use an
+        /// <para>An upload session can be used for a maximum of 7 days. Attempting to use an
         /// <see cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
         /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />
-        /// more than 48 hours after its creation will return a <see
+        /// more than 7 days after its creation will return a <see
         /// cref="Dropbox.Api.Files.UploadSessionLookupError.NotFound" />.</para>
         /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
         /// Business teams with a limit on the number of data transport calls allowed per
@@ -6782,11 +7018,11 @@ namespace Dropbox.Api.Files.Routes
         /// all the data to a file in Dropbox.</para>
         /// <para>A single request should not upload more than 150 MB. The maximum size of a
         /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>An upload session can be used for a maximum of 48 hours. Attempting to use an
+        /// <para>An upload session can be used for a maximum of 7 days. Attempting to use an
         /// <see cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
         /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />
-        /// more than 48 hours after its creation will return a <see
+        /// more than 7 days after its creation will return a <see
         /// cref="Dropbox.Api.Files.UploadSessionLookupError.NotFound" />.</para>
         /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
         /// Business teams with a limit on the number of data transport calls allowed per

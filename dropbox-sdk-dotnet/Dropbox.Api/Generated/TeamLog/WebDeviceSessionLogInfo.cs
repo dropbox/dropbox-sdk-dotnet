@@ -35,14 +35,11 @@ namespace Dropbox.Api.TeamLog
         /// <param name="userAgent">Information on the hosting device.</param>
         /// <param name="os">Information on the hosting operating system.</param>
         /// <param name="browser">Information on the browser used for this web session.</param>
-        /// <param name="ipAddress">The IP address of the last activity from this session.
-        /// Might be missing due to historical data gap.</param>
-        /// <param name="created">The time this session was created. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="updated">The time of the last activity from this session. Might be
-        /// missing due to historical data gap.</param>
-        /// <param name="sessionInfo">Web session unique id. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="ipAddress">The IP address of the last activity from this
+        /// session.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
+        /// <param name="sessionInfo">Web session unique id.</param>
         public WebDeviceSessionLogInfo(string userAgent,
                                        string os,
                                        string browser,
@@ -100,7 +97,7 @@ namespace Dropbox.Api.TeamLog
         public string Browser { get; protected set; }
 
         /// <summary>
-        /// <para>Web session unique id. Might be missing due to historical data gap.</para>
+        /// <para>Web session unique id.</para>
         /// </summary>
         public WebSessionLogInfo SessionInfo { get; protected set; }
 

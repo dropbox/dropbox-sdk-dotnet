@@ -31,8 +31,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupJoinPolicyUpdatedDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="isCompanyManaged">Is company managed group. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="isCompanyManaged">Is company managed group.</param>
         /// <param name="joinPolicy">Group join policy.</param>
         public GroupJoinPolicyUpdatedDetails(bool? isCompanyManaged = null,
                                              GroupJoinPolicy joinPolicy = null)
@@ -53,7 +52,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Is company managed group. Might be missing due to historical data gap.</para>
+        /// <para>Is company managed group.</para>
         /// </summary>
         public bool? IsCompanyManaged { get; protected set; }
 
