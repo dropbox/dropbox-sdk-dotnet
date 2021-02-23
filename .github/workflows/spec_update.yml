@@ -12,16 +12,17 @@ jobs:
       - name: Setup Python environment
         uses: actions/setup-python@v2.2.1
         with:
-          python-version: 2.7
+          python-version: 3.7
       - name: Get current time
         uses: 1466587594/get-current-time@v2
         id: current-time
         with:
           format: YYYY_MM_DD
           utcOffset: "-08:00"
-      - name: Install SDK
+      - name: Install Requirements
         run: |
-          npm install
+          python -m pip install --upgrade pip
+          pip install -r generator/requirements-dev.txt
       - name: Update Modules
         run: |
           git submodule init
@@ -49,9 +50,8 @@ jobs:
           echo "::set-output name=commit::$commit"
       - name: Generate New Routes
         run: |
-          ./scripts/generate_stone.ps1
+          python generator/generate_routes.py
           git add dropbox-sdk-dotnet/Dropbox.Api/Generated
-          git add stone
           git add spec
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.8.2
