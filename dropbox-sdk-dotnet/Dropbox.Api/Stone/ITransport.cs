@@ -7,8 +7,8 @@
 namespace Dropbox.Api.Stone
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -71,7 +71,8 @@ namespace Dropbox.Api.Stone
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> responseDecoder,
-            IDecoder<TError> errorDecoder);
+            IDecoder<TError> errorDecoder,
+            CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Sends the upload request asynchronously.
@@ -96,7 +97,8 @@ namespace Dropbox.Api.Stone
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> responseDecoder,
-            IDecoder<TError> errorDecoder);
+            IDecoder<TError> errorDecoder,
+            CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Sends the download request asynchronously.
@@ -119,6 +121,7 @@ namespace Dropbox.Api.Stone
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> responseDecoder,
-            IDecoder<TError> errorDecoder);
+            IDecoder<TError> errorDecoder,
+            CancellationToken cancellationToken = default);
     }
 }

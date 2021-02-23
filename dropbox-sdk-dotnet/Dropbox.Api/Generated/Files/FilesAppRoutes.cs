@@ -8,6 +8,7 @@ namespace Dropbox.Api.Files.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -33,14 +34,15 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Get a thumbnail for a file.</para>
         /// </summary>
         /// <param name="thumbnailV2Arg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ThumbnailV2Error"/>.</exception>
-        public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(ThumbnailV2Arg thumbnailV2Arg)
+        public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(ThumbnailV2Arg thumbnailV2Arg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendDownloadRequestAsync<ThumbnailV2Arg, PreviewResult, ThumbnailV2Error>(thumbnailV2Arg, "content", "/files/get_thumbnail_v2", "app", global::Dropbox.Api.Files.ThumbnailV2Arg.Encoder, global::Dropbox.Api.Files.PreviewResult.Decoder, global::Dropbox.Api.Files.ThumbnailV2Error.Decoder);
+            return this.Transport.SendDownloadRequestAsync<ThumbnailV2Arg, PreviewResult, ThumbnailV2Error>(thumbnailV2Arg, "content", "/files/get_thumbnail_v2", "app", global::Dropbox.Api.Files.ThumbnailV2Arg.Encoder, global::Dropbox.Api.Files.PreviewResult.Decoder, global::Dropbox.Api.Files.ThumbnailV2Error.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -71,6 +73,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -79,14 +82,15 @@ namespace Dropbox.Api.Files.Routes
         public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(PathOrLink resource,
                                                                                 ThumbnailFormat format = null,
                                                                                 ThumbnailSize size = null,
-                                                                                ThumbnailMode mode = null)
+                                                                                ThumbnailMode mode = null,
+                                                                                tr.CancellationToken cancellationToken = default)
         {
             var thumbnailV2Arg = new ThumbnailV2Arg(resource,
                                                     format,
                                                     size,
                                                     mode);
 
-            return this.GetThumbnailV2Async(thumbnailV2Arg);
+            return this.GetThumbnailV2Async(thumbnailV2Arg, cancellationToken);
         }
 
         /// <summary>

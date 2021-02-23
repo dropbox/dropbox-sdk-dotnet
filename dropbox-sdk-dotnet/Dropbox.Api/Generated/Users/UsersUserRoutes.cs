@@ -8,6 +8,7 @@ namespace Dropbox.Api.Users.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -35,14 +36,15 @@ namespace Dropbox.Api.Users.Routes
         /// account.</para>
         /// </summary>
         /// <param name="userFeaturesGetValuesBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UserFeaturesGetValuesBatchError"/>.</exception>
-        public t.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(UserFeaturesGetValuesBatchArg userFeaturesGetValuesBatchArg)
+        public t.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(UserFeaturesGetValuesBatchArg userFeaturesGetValuesBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UserFeaturesGetValuesBatchArg, UserFeaturesGetValuesBatchResult, UserFeaturesGetValuesBatchError>(userFeaturesGetValuesBatchArg, "api", "/users/features/get_values", "user", global::Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Encoder, global::Dropbox.Api.Users.UserFeaturesGetValuesBatchResult.Decoder, global::Dropbox.Api.Users.UserFeaturesGetValuesBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UserFeaturesGetValuesBatchArg, UserFeaturesGetValuesBatchResult, UserFeaturesGetValuesBatchError>(userFeaturesGetValuesBatchArg, "api", "/users/features/get_values", "user", global::Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Encoder, global::Dropbox.Api.Users.UserFeaturesGetValuesBatchResult.Decoder, global::Dropbox.Api.Users.UserFeaturesGetValuesBatchError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -68,16 +70,18 @@ namespace Dropbox.Api.Users.Routes
         /// <param name="features">A list of features in <see cref="UserFeature" />. If the
         /// list is empty, this route will return <see cref="UserFeaturesGetValuesBatchError"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UserFeaturesGetValuesBatchError"/>.</exception>
-        public t.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(col.IEnumerable<UserFeature> features)
+        public t.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(col.IEnumerable<UserFeature> features,
+                                                                               tr.CancellationToken cancellationToken = default)
         {
             var userFeaturesGetValuesBatchArg = new UserFeaturesGetValuesBatchArg(features);
 
-            return this.FeaturesGetValuesAsync(userFeaturesGetValuesBatchArg);
+            return this.FeaturesGetValuesAsync(userFeaturesGetValuesBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -125,14 +129,15 @@ namespace Dropbox.Api.Users.Routes
         /// <para>Get information about a user's account.</para>
         /// </summary>
         /// <param name="getAccountArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetAccountError"/>.</exception>
-        public t.Task<BasicAccount> GetAccountAsync(GetAccountArg getAccountArg)
+        public t.Task<BasicAccount> GetAccountAsync(GetAccountArg getAccountArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetAccountArg, BasicAccount, GetAccountError>(getAccountArg, "api", "/users/get_account", "user", global::Dropbox.Api.Users.GetAccountArg.Encoder, global::Dropbox.Api.Users.BasicAccount.Decoder, global::Dropbox.Api.Users.GetAccountError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetAccountArg, BasicAccount, GetAccountError>(getAccountArg, "api", "/users/get_account", "user", global::Dropbox.Api.Users.GetAccountArg.Encoder, global::Dropbox.Api.Users.BasicAccount.Decoder, global::Dropbox.Api.Users.GetAccountError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -155,16 +160,18 @@ namespace Dropbox.Api.Users.Routes
         /// <para>Get information about a user's account.</para>
         /// </summary>
         /// <param name="accountId">A user's account identifier.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetAccountError"/>.</exception>
-        public t.Task<BasicAccount> GetAccountAsync(string accountId)
+        public t.Task<BasicAccount> GetAccountAsync(string accountId,
+                                                    tr.CancellationToken cancellationToken = default)
         {
             var getAccountArg = new GetAccountArg(accountId);
 
-            return this.GetAccountAsync(getAccountArg);
+            return this.GetAccountAsync(getAccountArg, cancellationToken);
         }
 
         /// <summary>
@@ -211,14 +218,15 @@ namespace Dropbox.Api.Users.Routes
         /// queried per request.</para>
         /// </summary>
         /// <param name="getAccountBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetAccountBatchError"/>.</exception>
-        public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(GetAccountBatchArg getAccountBatchArg)
+        public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(GetAccountBatchArg getAccountBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetAccountBatchArg, col.List<BasicAccount>, GetAccountBatchError>(getAccountBatchArg, "api", "/users/get_account_batch", "user", global::Dropbox.Api.Users.GetAccountBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Users.BasicAccount.Decoder), global::Dropbox.Api.Users.GetAccountBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetAccountBatchArg, col.List<BasicAccount>, GetAccountBatchError>(getAccountBatchArg, "api", "/users/get_account_batch", "user", global::Dropbox.Api.Users.GetAccountBatchArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Users.BasicAccount.Decoder), global::Dropbox.Api.Users.GetAccountBatchError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -243,16 +251,18 @@ namespace Dropbox.Api.Users.Routes
         /// </summary>
         /// <param name="accountIds">List of user account identifiers.  Should not contain any
         /// duplicate account IDs.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetAccountBatchError"/>.</exception>
-        public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(col.IEnumerable<string> accountIds)
+        public t.Task<col.List<BasicAccount>> GetAccountBatchAsync(col.IEnumerable<string> accountIds,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var getAccountBatchArg = new GetAccountBatchArg(accountIds);
 
-            return this.GetAccountBatchAsync(getAccountBatchArg);
+            return this.GetAccountBatchAsync(getAccountBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -298,11 +308,12 @@ namespace Dropbox.Api.Users.Routes
         /// <summary>
         /// <para>Get information about the current user's account.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<FullAccount> GetCurrentAccountAsync()
+        public t.Task<FullAccount> GetCurrentAccountAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.Users.FullAccount.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, FullAccount, enc.Empty>(enc.Empty.Instance, "api", "/users/get_current_account", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.Users.FullAccount.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -341,11 +352,12 @@ namespace Dropbox.Api.Users.Routes
         /// <summary>
         /// <para>Get the space usage information for the current user's account.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<SpaceUsage> GetSpaceUsageAsync()
+        public t.Task<SpaceUsage> GetSpaceUsageAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.Users.SpaceUsage.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, SpaceUsage, enc.Empty>(enc.Empty.Instance, "api", "/users/get_space_usage", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.Users.SpaceUsage.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>

@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
+using System.Threading;
+
 namespace Dropbox.Api
 {
     using System;
@@ -131,6 +133,7 @@ namespace Dropbox.Api
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
         /// This exception is thrown when there is an error reported by the server.
@@ -142,10 +145,11 @@ namespace Dropbox.Api
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> responseDecoder,
-            IDecoder<TError> errorDecoder)
+            IDecoder<TError> errorDecoder,
+            CancellationToken cancellationToken)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder);
-            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Rpc, serializedArg)
+            var serializedArg = await JsonWriter.WriteAsync(request, requestEncoder, cancellationToken: cancellationToken);
+            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Rpc, serializedArg, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
             if (res.IsError)
@@ -171,6 +175,7 @@ namespace Dropbox.Api
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
         /// This exception is thrown when there is an error reported by the server.
@@ -183,10 +188,11 @@ namespace Dropbox.Api
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> responseDecoder,
-            IDecoder<TError> errorDecoder)
+            IDecoder<TError> errorDecoder,
+            CancellationToken cancellationToken)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder, true);
-            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Upload, serializedArg, body)
+            var serializedArg = await JsonWriter.WriteAsync(request, requestEncoder, true, cancellationToken);
+            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Upload, serializedArg, body, cancellationToken)
                 .ConfigureAwait(false);
 
             if (res.IsError)
@@ -211,6 +217,7 @@ namespace Dropbox.Api
         /// <param name="requestEncoder">The request encoder.</param>
         /// <param name="responseDecoder">The response decoder.</param>
         /// <param name="errorDecoder">The error decoder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>An asynchronous task for the response.</returns>
         /// <exception cref="ApiException{TError}">
         /// This exception is thrown when there is an error reported by the server.
@@ -222,10 +229,11 @@ namespace Dropbox.Api
             string auth,
             IEncoder<TRequest> requestEncoder,
             IDecoder<TResponse> responseDecoder,
-            IDecoder<TError> errorDecoder)
+            IDecoder<TError> errorDecoder,
+            CancellationToken cancellationToken)
         {
-            var serializedArg = JsonWriter.Write(request, requestEncoder, true);
-            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Download, serializedArg)
+            var serializedArg = await JsonWriter.WriteAsync(request, requestEncoder, true, cancellationToken);
+            var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Download, serializedArg, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
             if (res.IsError)
@@ -242,8 +250,9 @@ namespace Dropbox.Api
         /// Uses the refresh token to obtain a new access token.
         /// </summary>
         /// <param name="scopeList">The scope list.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
-        public async Task<bool> RefreshAccessToken(string[] scopeList = null)
+        public async Task<bool> RefreshAccessToken(string[] scopeList = null, CancellationToken cancellationToken = default)
         {
             if (this.options.OAuth2RefreshToken == null || this.options.AppKey == null)
             {
@@ -272,7 +281,7 @@ namespace Dropbox.Api
 
             var bodyContent = new FormUrlEncodedContent(parameters);
 
-            var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);
+            var response = await this.defaultHttpClient.PostAsync(url, bodyContent, cancellationToken).ConfigureAwait(false);
 
             // if response is an invalid grant, we want to throw this exception rather than the one thrown in
             // response.EnsureSuccessStatusCode();
@@ -338,6 +347,7 @@ namespace Dropbox.Api
         /// <param name="requestArg">The request argument.</param>
         /// <param name="body">The body to upload if <paramref name="routeStyle"/>
         /// is <see cref="RouteStyle.Upload"/>.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The asynchronous task with the result.</returns>
         private async Task<Result> RequestJsonStringWithRetry(
             string host,
@@ -345,7 +355,8 @@ namespace Dropbox.Api
             string auth,
             RouteStyle routeStyle,
             string requestArg,
-            Stream body = null)
+            Stream body = null,
+            CancellationToken cancellationToken = default)
         {
             var attempt = 0;
             var hasRefreshed = false;
@@ -367,14 +378,14 @@ namespace Dropbox.Api
                 }
             }
 
-            await this.CheckAndRefreshAccessToken();
+            await this.CheckAndRefreshAccessToken(cancellationToken);
             try
             {
                 while (true)
                 {
                     try
                     {
-                        return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body)
+                        return await this.RequestJsonString(host, routeName, auth, routeStyle, requestArg, body, cancellationToken)
                             .ConfigureAwait(false);
                     }
                     catch (AuthException e)
@@ -387,7 +398,7 @@ namespace Dropbox.Api
                             }
                             else
                             {
-                                await this.RefreshAccessToken();
+                                await this.RefreshAccessToken(cancellationToken: cancellationToken);
                                 hasRefreshed = true;
                             }
                         }
@@ -418,9 +429,9 @@ namespace Dropbox.Api
                     // use exponential backoff
                     var backoff = TimeSpan.FromSeconds(Math.Pow(2, attempt) * r.NextDouble());
 #if PORTABLE40
-                    await TaskEx.Delay(backoff);
+                    await TaskEx.Delay(backoff, cancellationToken);
 #else
-                    await Task.Delay(backoff).ConfigureAwait(false);
+                    await Task.Delay(backoff, cancellationToken).ConfigureAwait(false);
 #endif
                     if (body != null)
                     {
@@ -471,6 +482,7 @@ namespace Dropbox.Api
         /// <param name="requestArg">The request argument.</param>
         /// <param name="body">The body to upload if <paramref name="routeStyle"/>
         /// is <see cref="RouteStyle.Upload"/>.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The asynchronous task with the result.</returns>
         private async Task<Result> RequestJsonString(
             string host,
@@ -478,7 +490,8 @@ namespace Dropbox.Api
             string auth,
             RouteStyle routeStyle,
             string requestArg,
-            Stream body = null)
+            Stream body = null,
+            CancellationToken cancellationToken = default)
         {
             var hostname = this.options.HostMap[host];
             var uri = this.GetRouteUri(hostname, routeName);
@@ -517,7 +530,7 @@ namespace Dropbox.Api
             {
                 request.Headers.TryAddWithoutValidation(
                     "Dropbox-Api-Path-Root",
-                    JsonWriter.Write(this.pathRoot, PathRoot.Encoder));
+                    await JsonWriter.WriteAsync(this.pathRoot, PathRoot.Encoder, cancellationToken: cancellationToken));
             }
 
             var completionOption = HttpCompletionOption.ResponseContentRead;
@@ -554,7 +567,7 @@ namespace Dropbox.Api
             }
 
             var disposeResponse = true;
-            var response = await this.GetHttpClient(host).SendAsync(request, completionOption).ConfigureAwait(false);
+            var response = await this.GetHttpClient(host).SendAsync(request, completionOption, cancellationToken).ConfigureAwait(false);
 
             var requestId = this.GetRequestId(response);
             try
@@ -640,14 +653,14 @@ namespace Dropbox.Api
             }
         }
 
-        private async Task<bool> CheckAndRefreshAccessToken()
+        private async Task<bool> CheckAndRefreshAccessToken(CancellationToken cancellationToken)
         {
             bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null;
             bool needsRefresh = this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value;
             bool needsToken = this.options.OAuth2AccessToken == null;
             if ((needsRefresh || needsToken) && canRefresh)
             {
-                return await this.RefreshAccessToken();
+                return await this.RefreshAccessToken(cancellationToken: cancellationToken);
             }
 
             return false;

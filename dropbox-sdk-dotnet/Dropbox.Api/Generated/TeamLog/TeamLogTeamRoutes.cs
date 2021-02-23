@@ -8,6 +8,7 @@ namespace Dropbox.Api.TeamLog.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -48,14 +49,15 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="getTeamEventsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetTeamEventsError"/>.</exception>
-        public t.Task<GetTeamEventsResult> GetEventsAsync(GetTeamEventsArg getTeamEventsArg)
+        public t.Task<GetTeamEventsResult> GetEventsAsync(GetTeamEventsArg getTeamEventsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetTeamEventsArg, GetTeamEventsResult, GetTeamEventsError>(getTeamEventsArg, "api", "/team_log/get_events", "team", global::Dropbox.Api.TeamLog.GetTeamEventsArg.Encoder, global::Dropbox.Api.TeamLog.GetTeamEventsResult.Decoder, global::Dropbox.Api.TeamLog.GetTeamEventsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetTeamEventsArg, GetTeamEventsResult, GetTeamEventsError>(getTeamEventsArg, "api", "/team_log/get_events", "team", global::Dropbox.Api.TeamLog.GetTeamEventsArg.Encoder, global::Dropbox.Api.TeamLog.GetTeamEventsResult.Decoder, global::Dropbox.Api.TeamLog.GetTeamEventsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -104,6 +106,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// category shouldn't be provided together with event_type.</param>
         /// <param name="eventType">Filter the returned events to a single event type. Note
         /// that event_type shouldn't be provided together with category.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -113,7 +116,8 @@ namespace Dropbox.Api.TeamLog.Routes
                                                           string accountId = null,
                                                           global::Dropbox.Api.TeamCommon.TimeRange time = null,
                                                           EventCategory category = null,
-                                                          EventTypeArg eventType = null)
+                                                          EventTypeArg eventType = null,
+                                                          tr.CancellationToken cancellationToken = default)
         {
             var getTeamEventsArg = new GetTeamEventsArg(limit,
                                                         accountId,
@@ -121,7 +125,7 @@ namespace Dropbox.Api.TeamLog.Routes
                                                         category,
                                                         eventType);
 
-            return this.GetEventsAsync(getTeamEventsArg);
+            return this.GetEventsAsync(getTeamEventsArg, cancellationToken);
         }
 
         /// <summary>
@@ -190,14 +194,15 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <para>Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="getTeamEventsContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetTeamEventsContinueError"/>.</exception>
-        public t.Task<GetTeamEventsResult> GetEventsContinueAsync(GetTeamEventsContinueArg getTeamEventsContinueArg)
+        public t.Task<GetTeamEventsResult> GetEventsContinueAsync(GetTeamEventsContinueArg getTeamEventsContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetTeamEventsContinueArg, GetTeamEventsResult, GetTeamEventsContinueError>(getTeamEventsContinueArg, "api", "/team_log/get_events/continue", "team", global::Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Encoder, global::Dropbox.Api.TeamLog.GetTeamEventsResult.Decoder, global::Dropbox.Api.TeamLog.GetTeamEventsContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetTeamEventsContinueArg, GetTeamEventsResult, GetTeamEventsContinueError>(getTeamEventsContinueArg, "api", "/team_log/get_events/continue", "team", global::Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Encoder, global::Dropbox.Api.TeamLog.GetTeamEventsResult.Decoder, global::Dropbox.Api.TeamLog.GetTeamEventsContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -224,16 +229,18 @@ namespace Dropbox.Api.TeamLog.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// events.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetTeamEventsContinueError"/>.</exception>
-        public t.Task<GetTeamEventsResult> GetEventsContinueAsync(string cursor)
+        public t.Task<GetTeamEventsResult> GetEventsContinueAsync(string cursor,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var getTeamEventsContinueArg = new GetTeamEventsContinueArg(cursor);
 
-            return this.GetEventsContinueAsync(getTeamEventsContinueArg);
+            return this.GetEventsContinueAsync(getTeamEventsContinueArg, cancellationToken);
         }
 
         /// <summary>

@@ -8,6 +8,7 @@ namespace Dropbox.Api.Team.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -33,14 +34,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>List all device sessions of a team's member.</para>
         /// </summary>
         /// <param name="listMemberDevicesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListMemberDevicesError"/>.</exception>
-        public t.Task<ListMemberDevicesResult> DevicesListMemberDevicesAsync(ListMemberDevicesArg listMemberDevicesArg)
+        public t.Task<ListMemberDevicesResult> DevicesListMemberDevicesAsync(ListMemberDevicesArg listMemberDevicesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListMemberDevicesArg, ListMemberDevicesResult, ListMemberDevicesError>(listMemberDevicesArg, "api", "/team/devices/list_member_devices", "team", global::Dropbox.Api.Team.ListMemberDevicesArg.Encoder, global::Dropbox.Api.Team.ListMemberDevicesResult.Decoder, global::Dropbox.Api.Team.ListMemberDevicesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMemberDevicesArg, ListMemberDevicesResult, ListMemberDevicesError>(listMemberDevicesArg, "api", "/team/devices/list_member_devices", "team", global::Dropbox.Api.Team.ListMemberDevicesArg.Encoder, global::Dropbox.Api.Team.ListMemberDevicesResult.Decoder, global::Dropbox.Api.Team.ListMemberDevicesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -69,6 +71,7 @@ namespace Dropbox.Api.Team.Routes
         /// team's member.</param>
         /// <param name="includeMobileClients">Whether to list linked mobile devices of the
         /// team's member.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -77,14 +80,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<ListMemberDevicesResult> DevicesListMemberDevicesAsync(string teamMemberId,
                                                                              bool includeWebSessions = true,
                                                                              bool includeDesktopClients = true,
-                                                                             bool includeMobileClients = true)
+                                                                             bool includeMobileClients = true,
+                                                                             tr.CancellationToken cancellationToken = default)
         {
             var listMemberDevicesArg = new ListMemberDevicesArg(teamMemberId,
                                                                 includeWebSessions,
                                                                 includeDesktopClients,
                                                                 includeMobileClients);
 
-            return this.DevicesListMemberDevicesAsync(listMemberDevicesArg);
+            return this.DevicesListMemberDevicesAsync(listMemberDevicesArg, cancellationToken);
         }
 
         /// <summary>
@@ -143,14 +147,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="listMembersDevicesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListMembersDevicesError"/>.</exception>
-        public t.Task<ListMembersDevicesResult> DevicesListMembersDevicesAsync(ListMembersDevicesArg listMembersDevicesArg)
+        public t.Task<ListMembersDevicesResult> DevicesListMembersDevicesAsync(ListMembersDevicesArg listMembersDevicesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListMembersDevicesArg, ListMembersDevicesResult, ListMembersDevicesError>(listMembersDevicesArg, "api", "/team/devices/list_members_devices", "team", global::Dropbox.Api.Team.ListMembersDevicesArg.Encoder, global::Dropbox.Api.Team.ListMembersDevicesResult.Decoder, global::Dropbox.Api.Team.ListMembersDevicesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMembersDevicesArg, ListMembersDevicesResult, ListMembersDevicesError>(listMembersDevicesArg, "api", "/team/devices/list_members_devices", "team", global::Dropbox.Api.Team.ListMembersDevicesArg.Encoder, global::Dropbox.Api.Team.ListMembersDevicesResult.Decoder, global::Dropbox.Api.Team.ListMembersDevicesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -184,6 +189,7 @@ namespace Dropbox.Api.Team.Routes
         /// members.</param>
         /// <param name="includeMobileClients">Whether to list mobile clients of the team
         /// members.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -192,14 +198,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<ListMembersDevicesResult> DevicesListMembersDevicesAsync(string cursor = null,
                                                                                bool includeWebSessions = true,
                                                                                bool includeDesktopClients = true,
-                                                                               bool includeMobileClients = true)
+                                                                               bool includeMobileClients = true,
+                                                                               tr.CancellationToken cancellationToken = default)
         {
             var listMembersDevicesArg = new ListMembersDevicesArg(cursor,
                                                                   includeWebSessions,
                                                                   includeDesktopClients,
                                                                   includeMobileClients);
 
-            return this.DevicesListMembersDevicesAsync(listMembersDevicesArg);
+            return this.DevicesListMembersDevicesAsync(listMembersDevicesArg, cancellationToken);
         }
 
         /// <summary>
@@ -262,15 +269,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="listTeamDevicesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use DevicesListMembersDevicesAsync instead.")]
-        public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(ListTeamDevicesArg listTeamDevicesArg)
+        public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(ListTeamDevicesArg listTeamDevicesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListTeamDevicesArg, ListTeamDevicesResult, ListTeamDevicesError>(listTeamDevicesArg, "api", "/team/devices/list_team_devices", "team", global::Dropbox.Api.Team.ListTeamDevicesArg.Encoder, global::Dropbox.Api.Team.ListTeamDevicesResult.Decoder, global::Dropbox.Api.Team.ListTeamDevicesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListTeamDevicesArg, ListTeamDevicesResult, ListTeamDevicesError>(listTeamDevicesArg, "api", "/team/devices/list_team_devices", "team", global::Dropbox.Api.Team.ListTeamDevicesArg.Encoder, global::Dropbox.Api.Team.ListTeamDevicesResult.Decoder, global::Dropbox.Api.Team.ListTeamDevicesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -305,6 +313,7 @@ namespace Dropbox.Api.Team.Routes
         /// members.</param>
         /// <param name="includeMobileClients">Whether to list mobile clients of the team
         /// members.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -314,14 +323,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(string cursor = null,
                                                                          bool includeWebSessions = true,
                                                                          bool includeDesktopClients = true,
-                                                                         bool includeMobileClients = true)
+                                                                         bool includeMobileClients = true,
+                                                                         tr.CancellationToken cancellationToken = default)
         {
             var listTeamDevicesArg = new ListTeamDevicesArg(cursor,
                                                             includeWebSessions,
                                                             includeDesktopClients,
                                                             includeMobileClients);
 
-            return this.DevicesListTeamDevicesAsync(listTeamDevicesArg);
+            return this.DevicesListTeamDevicesAsync(listTeamDevicesArg, cancellationToken);
         }
 
         /// <summary>
@@ -385,13 +395,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Revoke a device session of a team's member.</para>
         /// </summary>
         /// <param name="revokeDeviceSessionArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionError"/>.</exception>
-        public t.Task DevicesRevokeDeviceSessionAsync(RevokeDeviceSessionArg revokeDeviceSessionArg)
+        public t.Task DevicesRevokeDeviceSessionAsync(RevokeDeviceSessionArg revokeDeviceSessionArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionArg, enc.Empty, RevokeDeviceSessionError>(revokeDeviceSessionArg, "api", "/team/devices/revoke_device_session", "team", global::Dropbox.Api.Team.RevokeDeviceSessionArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.RevokeDeviceSessionError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionArg, enc.Empty, RevokeDeviceSessionError>(revokeDeviceSessionArg, "api", "/team/devices/revoke_device_session", "team", global::Dropbox.Api.Team.RevokeDeviceSessionArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.RevokeDeviceSessionError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -433,14 +444,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Revoke a list of device sessions of team members.</para>
         /// </summary>
         /// <param name="revokeDeviceSessionBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionBatchError"/>.</exception>
-        public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(RevokeDeviceSessionBatchArg revokeDeviceSessionBatchArg)
+        public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(RevokeDeviceSessionBatchArg revokeDeviceSessionBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionBatchArg, RevokeDeviceSessionBatchResult, RevokeDeviceSessionBatchError>(revokeDeviceSessionBatchArg, "api", "/team/devices/revoke_device_session_batch", "team", global::Dropbox.Api.Team.RevokeDeviceSessionBatchArg.Encoder, global::Dropbox.Api.Team.RevokeDeviceSessionBatchResult.Decoder, global::Dropbox.Api.Team.RevokeDeviceSessionBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeDeviceSessionBatchArg, RevokeDeviceSessionBatchResult, RevokeDeviceSessionBatchError>(revokeDeviceSessionBatchArg, "api", "/team/devices/revoke_device_session_batch", "team", global::Dropbox.Api.Team.RevokeDeviceSessionBatchArg.Encoder, global::Dropbox.Api.Team.RevokeDeviceSessionBatchResult.Decoder, global::Dropbox.Api.Team.RevokeDeviceSessionBatchError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -464,16 +476,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Revoke a list of device sessions of team members.</para>
         /// </summary>
         /// <param name="revokeDevices">The revoke devices</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeDeviceSessionBatchError"/>.</exception>
-        public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(col.IEnumerable<RevokeDeviceSessionArg> revokeDevices)
+        public t.Task<RevokeDeviceSessionBatchResult> DevicesRevokeDeviceSessionBatchAsync(col.IEnumerable<RevokeDeviceSessionArg> revokeDevices,
+                                                                                           tr.CancellationToken cancellationToken = default)
         {
             var revokeDeviceSessionBatchArg = new RevokeDeviceSessionBatchArg(revokeDevices);
 
-            return this.DevicesRevokeDeviceSessionBatchAsync(revokeDeviceSessionBatchArg);
+            return this.DevicesRevokeDeviceSessionBatchAsync(revokeDeviceSessionBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -523,14 +537,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team information.</para>
         /// </summary>
         /// <param name="featuresGetValuesBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FeaturesGetValuesBatchError"/>.</exception>
-        public t.Task<FeaturesGetValuesBatchResult> FeaturesGetValuesAsync(FeaturesGetValuesBatchArg featuresGetValuesBatchArg)
+        public t.Task<FeaturesGetValuesBatchResult> FeaturesGetValuesAsync(FeaturesGetValuesBatchArg featuresGetValuesBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<FeaturesGetValuesBatchArg, FeaturesGetValuesBatchResult, FeaturesGetValuesBatchError>(featuresGetValuesBatchArg, "api", "/team/features/get_values", "team", global::Dropbox.Api.Team.FeaturesGetValuesBatchArg.Encoder, global::Dropbox.Api.Team.FeaturesGetValuesBatchResult.Decoder, global::Dropbox.Api.Team.FeaturesGetValuesBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<FeaturesGetValuesBatchArg, FeaturesGetValuesBatchResult, FeaturesGetValuesBatchError>(featuresGetValuesBatchArg, "api", "/team/features/get_values", "team", global::Dropbox.Api.Team.FeaturesGetValuesBatchArg.Encoder, global::Dropbox.Api.Team.FeaturesGetValuesBatchResult.Decoder, global::Dropbox.Api.Team.FeaturesGetValuesBatchError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -557,16 +572,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="features">A list of features in <see cref="Feature" />. If the list is
         /// empty, this route will return <see cref="FeaturesGetValuesBatchError" />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="FeaturesGetValuesBatchError"/>.</exception>
-        public t.Task<FeaturesGetValuesBatchResult> FeaturesGetValuesAsync(col.IEnumerable<Feature> features)
+        public t.Task<FeaturesGetValuesBatchResult> FeaturesGetValuesAsync(col.IEnumerable<Feature> features,
+                                                                           tr.CancellationToken cancellationToken = default)
         {
             var featuresGetValuesBatchArg = new FeaturesGetValuesBatchArg(features);
 
-            return this.FeaturesGetValuesAsync(featuresGetValuesBatchArg);
+            return this.FeaturesGetValuesAsync(featuresGetValuesBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -612,11 +629,12 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Retrieves information about a team.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<TeamGetInfoResult> GetInfoAsync()
+        public t.Task<TeamGetInfoResult> GetInfoAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, TeamGetInfoResult, enc.Empty>(enc.Empty.Instance, "api", "/team/get_info", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Team.TeamGetInfoResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, TeamGetInfoResult, enc.Empty>(enc.Empty.Instance, "api", "/team/get_info", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Team.TeamGetInfoResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -657,14 +675,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupCreateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupCreateError"/>.</exception>
-        public t.Task<GroupFullInfo> GroupsCreateAsync(GroupCreateArg groupCreateArg)
+        public t.Task<GroupFullInfo> GroupsCreateAsync(GroupCreateArg groupCreateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupCreateArg, GroupFullInfo, GroupCreateError>(groupCreateArg, "api", "/team/groups/create", "team", global::Dropbox.Api.Team.GroupCreateArg.Encoder, global::Dropbox.Api.Team.GroupFullInfo.Decoder, global::Dropbox.Api.Team.GroupCreateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupCreateArg, GroupFullInfo, GroupCreateError>(groupCreateArg, "api", "/team/groups/create", "team", global::Dropbox.Api.Team.GroupCreateArg.Encoder, global::Dropbox.Api.Team.GroupFullInfo.Decoder, global::Dropbox.Api.Team.GroupCreateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -693,6 +712,7 @@ namespace Dropbox.Api.Team.Routes
         /// external ID to the group.</param>
         /// <param name="groupManagementType">Whether the team can be managed by selected
         /// users, or only by team admins.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -701,14 +721,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<GroupFullInfo> GroupsCreateAsync(string groupName,
                                                        bool addCreatorAsOwner = false,
                                                        string groupExternalId = null,
-                                                       global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null)
+                                                       global::Dropbox.Api.TeamCommon.GroupManagementType groupManagementType = null,
+                                                       tr.CancellationToken cancellationToken = default)
         {
             var groupCreateArg = new GroupCreateArg(groupName,
                                                     addCreatorAsOwner,
                                                     groupExternalId,
                                                     groupManagementType);
 
-            return this.GroupsCreateAsync(groupCreateArg);
+            return this.GroupsCreateAsync(groupCreateArg, cancellationToken);
         }
 
         /// <summary>
@@ -770,14 +791,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupSelector">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupDeleteError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> GroupsDeleteAsync(GroupSelector groupSelector)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> GroupsDeleteAsync(GroupSelector groupSelector, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupSelector, global::Dropbox.Api.Async.LaunchEmptyResult, GroupDeleteError>(groupSelector, "api", "/team/groups/delete", "team", global::Dropbox.Api.Team.GroupSelector.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.GroupDeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupSelector, global::Dropbox.Api.Async.LaunchEmptyResult, GroupDeleteError>(groupSelector, "api", "/team/groups/delete", "team", global::Dropbox.Api.Team.GroupSelector.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.GroupDeleteError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -824,14 +846,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsSelector">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsGetInfoError"/>.</exception>
-        public t.Task<col.List<GroupsGetInfoItem>> GroupsGetInfoAsync(GroupsSelector groupsSelector)
+        public t.Task<col.List<GroupsGetInfoItem>> GroupsGetInfoAsync(GroupsSelector groupsSelector, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsSelector, col.List<GroupsGetInfoItem>, GroupsGetInfoError>(groupsSelector, "api", "/team/groups/get_info", "team", global::Dropbox.Api.Team.GroupsSelector.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.GroupsGetInfoItem.Decoder), global::Dropbox.Api.Team.GroupsGetInfoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsSelector, col.List<GroupsGetInfoItem>, GroupsGetInfoError>(groupsSelector, "api", "/team/groups/get_info", "team", global::Dropbox.Api.Team.GroupsSelector.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.GroupsGetInfoItem.Decoder), global::Dropbox.Api.Team.GroupsGetInfoError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -881,14 +904,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, GroupsPollError>(pollArg, "api", "/team/groups/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Team.GroupsPollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, GroupsPollError>(pollArg, "api", "/team/groups/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Team.GroupsPollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -918,16 +942,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsPollError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(string asyncJobId)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> GroupsJobStatusGetAsync(string asyncJobId,
+                                                                                         tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.GroupsJobStatusGetAsync(pollArg);
+            return this.GroupsJobStatusGetAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -975,11 +1001,12 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<GroupsListResult> GroupsListAsync(GroupsListArg groupsListArg)
+        public t.Task<GroupsListResult> GroupsListAsync(GroupsListArg groupsListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsListArg, GroupsListResult, enc.Empty>(groupsListArg, "api", "/team/groups/list", "team", global::Dropbox.Api.Team.GroupsListArg.Encoder, global::Dropbox.Api.Team.GroupsListResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<GroupsListArg, GroupsListResult, enc.Empty>(groupsListArg, "api", "/team/groups/list", "team", global::Dropbox.Api.Team.GroupsListArg.Encoder, global::Dropbox.Api.Team.GroupsListResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -1003,13 +1030,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team Information.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<GroupsListResult> GroupsListAsync(uint limit = 1000)
+        public t.Task<GroupsListResult> GroupsListAsync(uint limit = 1000,
+                                                        tr.CancellationToken cancellationToken = default)
         {
             var groupsListArg = new GroupsListArg(limit);
 
-            return this.GroupsListAsync(groupsListArg);
+            return this.GroupsListAsync(groupsListArg, cancellationToken);
         }
 
         /// <summary>
@@ -1055,14 +1084,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsListContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsListContinueError"/>.</exception>
-        public t.Task<GroupsListResult> GroupsListContinueAsync(GroupsListContinueArg groupsListContinueArg)
+        public t.Task<GroupsListResult> GroupsListContinueAsync(GroupsListContinueArg groupsListContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsListContinueArg, GroupsListResult, GroupsListContinueError>(groupsListContinueArg, "api", "/team/groups/list/continue", "team", global::Dropbox.Api.Team.GroupsListContinueArg.Encoder, global::Dropbox.Api.Team.GroupsListResult.Decoder, global::Dropbox.Api.Team.GroupsListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsListContinueArg, GroupsListResult, GroupsListContinueError>(groupsListContinueArg, "api", "/team/groups/list/continue", "team", global::Dropbox.Api.Team.GroupsListContinueArg.Encoder, global::Dropbox.Api.Team.GroupsListResult.Decoder, global::Dropbox.Api.Team.GroupsListContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1089,16 +1119,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// groups.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsListContinueError"/>.</exception>
-        public t.Task<GroupsListResult> GroupsListContinueAsync(string cursor)
+        public t.Task<GroupsListResult> GroupsListContinueAsync(string cursor,
+                                                                tr.CancellationToken cancellationToken = default)
         {
             var groupsListContinueArg = new GroupsListContinueArg(cursor);
 
-            return this.GroupsListContinueAsync(groupsListContinueArg);
+            return this.GroupsListContinueAsync(groupsListContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -1150,14 +1182,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupMembersAddArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupMembersAddError"/>.</exception>
-        public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupMembersAddArg groupMembersAddArg)
+        public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupMembersAddArg groupMembersAddArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersAddArg, GroupMembersChangeResult, GroupMembersAddError>(groupMembersAddArg, "api", "/team/groups/members/add", "team", global::Dropbox.Api.Team.GroupMembersAddArg.Encoder, global::Dropbox.Api.Team.GroupMembersChangeResult.Decoder, global::Dropbox.Api.Team.GroupMembersAddError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersAddArg, GroupMembersChangeResult, GroupMembersAddError>(groupMembersAddArg, "api", "/team/groups/members/add", "team", global::Dropbox.Api.Team.GroupMembersAddArg.Encoder, global::Dropbox.Api.Team.GroupMembersChangeResult.Decoder, global::Dropbox.Api.Team.GroupMembersAddError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1189,6 +1222,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="returnMembers">Whether to return the list of members in the group.
         /// Note that the default value will cause all the group members  to be returned in the
         /// response. This may take a long time for large groups.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1196,13 +1230,14 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupMembersAddError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersAddAsync(GroupSelector @group,
                                                                       col.IEnumerable<MemberAccess> members,
-                                                                      bool returnMembers = true)
+                                                                      bool returnMembers = true,
+                                                                      tr.CancellationToken cancellationToken = default)
         {
             var groupMembersAddArg = new GroupMembersAddArg(@group,
                                                             members,
                                                             returnMembers);
 
-            return this.GroupsMembersAddAsync(groupMembersAddArg);
+            return this.GroupsMembersAddAsync(groupMembersAddArg, cancellationToken);
         }
 
         /// <summary>
@@ -1257,14 +1292,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsMembersListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupSelectorError"/>.</exception>
-        public t.Task<GroupsMembersListResult> GroupsMembersListAsync(GroupsMembersListArg groupsMembersListArg)
+        public t.Task<GroupsMembersListResult> GroupsMembersListAsync(GroupsMembersListArg groupsMembersListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsMembersListArg, GroupsMembersListResult, GroupSelectorError>(groupsMembersListArg, "api", "/team/groups/members/list", "team", global::Dropbox.Api.Team.GroupsMembersListArg.Encoder, global::Dropbox.Api.Team.GroupsMembersListResult.Decoder, global::Dropbox.Api.Team.GroupSelectorError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsMembersListArg, GroupsMembersListResult, GroupSelectorError>(groupsMembersListArg, "api", "/team/groups/members/list", "team", global::Dropbox.Api.Team.GroupsMembersListArg.Encoder, global::Dropbox.Api.Team.GroupsMembersListResult.Decoder, global::Dropbox.Api.Team.GroupSelectorError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1289,18 +1325,20 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="group">The group whose members are to be listed.</param>
         /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupSelectorError"/>.</exception>
         public t.Task<GroupsMembersListResult> GroupsMembersListAsync(GroupSelector @group,
-                                                                      uint limit = 1000)
+                                                                      uint limit = 1000,
+                                                                      tr.CancellationToken cancellationToken = default)
         {
             var groupsMembersListArg = new GroupsMembersListArg(@group,
                                                                 limit);
 
-            return this.GroupsMembersListAsync(groupsMembersListArg);
+            return this.GroupsMembersListAsync(groupsMembersListArg, cancellationToken);
         }
 
         /// <summary>
@@ -1352,14 +1390,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team information.</para>
         /// </summary>
         /// <param name="groupsMembersListContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsMembersListContinueError"/>.</exception>
-        public t.Task<GroupsMembersListResult> GroupsMembersListContinueAsync(GroupsMembersListContinueArg groupsMembersListContinueArg)
+        public t.Task<GroupsMembersListResult> GroupsMembersListContinueAsync(GroupsMembersListContinueArg groupsMembersListContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupsMembersListContinueArg, GroupsMembersListResult, GroupsMembersListContinueError>(groupsMembersListContinueArg, "api", "/team/groups/members/list/continue", "team", global::Dropbox.Api.Team.GroupsMembersListContinueArg.Encoder, global::Dropbox.Api.Team.GroupsMembersListResult.Decoder, global::Dropbox.Api.Team.GroupsMembersListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupsMembersListContinueArg, GroupsMembersListResult, GroupsMembersListContinueError>(groupsMembersListContinueArg, "api", "/team/groups/members/list/continue", "team", global::Dropbox.Api.Team.GroupsMembersListContinueArg.Encoder, global::Dropbox.Api.Team.GroupsMembersListResult.Decoder, global::Dropbox.Api.Team.GroupsMembersListContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1386,16 +1425,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// groups.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupsMembersListContinueError"/>.</exception>
-        public t.Task<GroupsMembersListResult> GroupsMembersListContinueAsync(string cursor)
+        public t.Task<GroupsMembersListResult> GroupsMembersListContinueAsync(string cursor,
+                                                                              tr.CancellationToken cancellationToken = default)
         {
             var groupsMembersListContinueArg = new GroupsMembersListContinueArg(cursor);
 
-            return this.GroupsMembersListContinueAsync(groupsMembersListContinueArg);
+            return this.GroupsMembersListContinueAsync(groupsMembersListContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -1449,14 +1490,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupMembersRemoveArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupMembersRemoveError"/>.</exception>
-        public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupMembersRemoveArg groupMembersRemoveArg)
+        public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupMembersRemoveArg groupMembersRemoveArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersRemoveArg, GroupMembersChangeResult, GroupMembersRemoveError>(groupMembersRemoveArg, "api", "/team/groups/members/remove", "team", global::Dropbox.Api.Team.GroupMembersRemoveArg.Encoder, global::Dropbox.Api.Team.GroupMembersChangeResult.Decoder, global::Dropbox.Api.Team.GroupMembersRemoveError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersRemoveArg, GroupMembersChangeResult, GroupMembersRemoveError>(groupMembersRemoveArg, "api", "/team/groups/members/remove", "team", global::Dropbox.Api.Team.GroupMembersRemoveArg.Encoder, global::Dropbox.Api.Team.GroupMembersChangeResult.Decoder, global::Dropbox.Api.Team.GroupMembersRemoveError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1490,6 +1532,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="returnMembers">Whether to return the list of members in the group.
         /// Note that the default value will cause all the group members  to be returned in the
         /// response. This may take a long time for large groups.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1497,13 +1540,14 @@ namespace Dropbox.Api.Team.Routes
         /// cref="GroupMembersRemoveError"/>.</exception>
         public t.Task<GroupMembersChangeResult> GroupsMembersRemoveAsync(GroupSelector @group,
                                                                          col.IEnumerable<UserSelectorArg> users,
-                                                                         bool returnMembers = true)
+                                                                         bool returnMembers = true,
+                                                                         tr.CancellationToken cancellationToken = default)
         {
             var groupMembersRemoveArg = new GroupMembersRemoveArg(@group,
                                                                   users,
                                                                   returnMembers);
 
-            return this.GroupsMembersRemoveAsync(groupMembersRemoveArg);
+            return this.GroupsMembersRemoveAsync(groupMembersRemoveArg, cancellationToken);
         }
 
         /// <summary>
@@ -1558,14 +1602,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupMembersSetAccessTypeArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupMemberSetAccessTypeError"/>.</exception>
-        public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupMembersSetAccessTypeArg groupMembersSetAccessTypeArg)
+        public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupMembersSetAccessTypeArg groupMembersSetAccessTypeArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupMembersSetAccessTypeArg, col.List<GroupsGetInfoItem>, GroupMemberSetAccessTypeError>(groupMembersSetAccessTypeArg, "api", "/team/groups/members/set_access_type", "team", global::Dropbox.Api.Team.GroupMembersSetAccessTypeArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.GroupsGetInfoItem.Decoder), global::Dropbox.Api.Team.GroupMemberSetAccessTypeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupMembersSetAccessTypeArg, col.List<GroupsGetInfoItem>, GroupMemberSetAccessTypeError>(groupMembersSetAccessTypeArg, "api", "/team/groups/members/set_access_type", "team", global::Dropbox.Api.Team.GroupMembersSetAccessTypeArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.GroupsGetInfoItem.Decoder), global::Dropbox.Api.Team.GroupMemberSetAccessTypeError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1596,6 +1641,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="returnMembers">Whether to return the list of members in the group.
         /// Note that the default value will cause all the group members  to be returned in the
         /// response. This may take a long time for large groups.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1604,14 +1650,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<col.List<GroupsGetInfoItem>> GroupsMembersSetAccessTypeAsync(GroupSelector @group,
                                                                                    UserSelectorArg user,
                                                                                    GroupAccessType accessType,
-                                                                                   bool returnMembers = true)
+                                                                                   bool returnMembers = true,
+                                                                                   tr.CancellationToken cancellationToken = default)
         {
             var groupMembersSetAccessTypeArg = new GroupMembersSetAccessTypeArg(@group,
                                                                                 user,
                                                                                 accessType,
                                                                                 returnMembers);
 
-            return this.GroupsMembersSetAccessTypeAsync(groupMembersSetAccessTypeArg);
+            return this.GroupsMembersSetAccessTypeAsync(groupMembersSetAccessTypeArg, cancellationToken);
         }
 
         /// <summary>
@@ -1671,14 +1718,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupUpdateArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GroupUpdateError"/>.</exception>
-        public t.Task<GroupFullInfo> GroupsUpdateAsync(GroupUpdateArgs groupUpdateArgs)
+        public t.Task<GroupFullInfo> GroupsUpdateAsync(GroupUpdateArgs groupUpdateArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GroupUpdateArgs, GroupFullInfo, GroupUpdateError>(groupUpdateArgs, "api", "/team/groups/update", "team", global::Dropbox.Api.Team.GroupUpdateArgs.Encoder, global::Dropbox.Api.Team.GroupFullInfo.Decoder, global::Dropbox.Api.Team.GroupUpdateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GroupUpdateArgs, GroupFullInfo, GroupUpdateError>(groupUpdateArgs, "api", "/team/groups/update", "team", global::Dropbox.Api.Team.GroupUpdateArgs.Encoder, global::Dropbox.Api.Team.GroupFullInfo.Decoder, global::Dropbox.Api.Team.GroupUpdateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1712,6 +1760,7 @@ namespace Dropbox.Api.Team.Routes
         /// empty string, the group's external id will be cleared.</param>
         /// <param name="newGroupManagementType">Set new group management type, if
         /// provided.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1721,7 +1770,8 @@ namespace Dropbox.Api.Team.Routes
                                                        bool returnMembers = true,
                                                        string newGroupName = null,
                                                        string newGroupExternalId = null,
-                                                       global::Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null)
+                                                       global::Dropbox.Api.TeamCommon.GroupManagementType newGroupManagementType = null,
+                                                       tr.CancellationToken cancellationToken = default)
         {
             var groupUpdateArgs = new GroupUpdateArgs(@group,
                                                       returnMembers,
@@ -1729,7 +1779,7 @@ namespace Dropbox.Api.Team.Routes
                                                       newGroupExternalId,
                                                       newGroupManagementType);
 
-            return this.GroupsUpdateAsync(groupUpdateArgs);
+            return this.GroupsUpdateAsync(groupUpdateArgs, cancellationToken);
         }
 
         /// <summary>
@@ -1795,14 +1845,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyCreateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsPolicyCreateError"/>.</exception>
-        public t.Task<LegalHoldPolicy> LegalHoldsCreatePolicyAsync(LegalHoldsPolicyCreateArg legalHoldsPolicyCreateArg)
+        public t.Task<LegalHoldPolicy> LegalHoldsCreatePolicyAsync(LegalHoldsPolicyCreateArg legalHoldsPolicyCreateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyCreateArg, LegalHoldPolicy, LegalHoldsPolicyCreateError>(legalHoldsPolicyCreateArg, "api", "/team/legal_holds/create_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsPolicyCreateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyCreateArg, LegalHoldPolicy, LegalHoldsPolicyCreateError>(legalHoldsPolicyCreateArg, "api", "/team/legal_holds/create_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsPolicyCreateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1831,6 +1882,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="description">A description of the legal hold policy.</param>
         /// <param name="startDate">start date of the legal hold policy.</param>
         /// <param name="endDate">end date of the legal hold policy.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1840,7 +1892,8 @@ namespace Dropbox.Api.Team.Routes
                                                                    col.IEnumerable<string> members,
                                                                    string description = null,
                                                                    sys.DateTime? startDate = null,
-                                                                   sys.DateTime? endDate = null)
+                                                                   sys.DateTime? endDate = null,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsPolicyCreateArg = new LegalHoldsPolicyCreateArg(name,
                                                                           members,
@@ -1848,7 +1901,7 @@ namespace Dropbox.Api.Team.Routes
                                                                           startDate,
                                                                           endDate);
 
-            return this.LegalHoldsCreatePolicyAsync(legalHoldsPolicyCreateArg);
+            return this.LegalHoldsCreatePolicyAsync(legalHoldsPolicyCreateArg, cancellationToken);
         }
 
         /// <summary>
@@ -1908,14 +1961,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsGetPolicyArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsGetPolicyError"/>.</exception>
-        public t.Task<LegalHoldPolicy> LegalHoldsGetPolicyAsync(LegalHoldsGetPolicyArg legalHoldsGetPolicyArg)
+        public t.Task<LegalHoldPolicy> LegalHoldsGetPolicyAsync(LegalHoldsGetPolicyArg legalHoldsGetPolicyArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsGetPolicyArg, LegalHoldPolicy, LegalHoldsGetPolicyError>(legalHoldsGetPolicyArg, "api", "/team/legal_holds/get_policy", "team", global::Dropbox.Api.Team.LegalHoldsGetPolicyArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsGetPolicyError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsGetPolicyArg, LegalHoldPolicy, LegalHoldsGetPolicyError>(legalHoldsGetPolicyArg, "api", "/team/legal_holds/get_policy", "team", global::Dropbox.Api.Team.LegalHoldsGetPolicyArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsGetPolicyError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1940,16 +1994,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsGetPolicyError"/>.</exception>
-        public t.Task<LegalHoldPolicy> LegalHoldsGetPolicyAsync(string id)
+        public t.Task<LegalHoldPolicy> LegalHoldsGetPolicyAsync(string id,
+                                                                tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsGetPolicyArg = new LegalHoldsGetPolicyArg(id);
 
-            return this.LegalHoldsGetPolicyAsync(legalHoldsGetPolicyArg);
+            return this.LegalHoldsGetPolicyAsync(legalHoldsGetPolicyArg, cancellationToken);
         }
 
         /// <summary>
@@ -1997,14 +2053,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListHeldRevisionsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
-        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsAsync(LegalHoldsListHeldRevisionsArg legalHoldsListHeldRevisionsArg)
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsAsync(LegalHoldsListHeldRevisionsArg legalHoldsListHeldRevisionsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsListHeldRevisionsArg, LegalHoldsListHeldRevisionResult, LegalHoldsListHeldRevisionsError>(legalHoldsListHeldRevisionsArg, "api", "/team/legal_holds/list_held_revisions", "team", global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsListHeldRevisionsArg, LegalHoldsListHeldRevisionResult, LegalHoldsListHeldRevisionsError>(legalHoldsListHeldRevisionsArg, "api", "/team/legal_holds/list_held_revisions", "team", global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2030,16 +2087,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
-        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsAsync(string id)
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsAsync(string id,
+                                                                                         tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsListHeldRevisionsArg = new LegalHoldsListHeldRevisionsArg(id);
 
-            return this.LegalHoldsListHeldRevisionsAsync(legalHoldsListHeldRevisionsArg);
+            return this.LegalHoldsListHeldRevisionsAsync(legalHoldsListHeldRevisionsArg, cancellationToken);
         }
 
         /// <summary>
@@ -2088,14 +2147,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListHeldRevisionsContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
-        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsContinueAsync(LegalHoldsListHeldRevisionsContinueArg legalHoldsListHeldRevisionsContinueArg)
+        public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsContinueAsync(LegalHoldsListHeldRevisionsContinueArg legalHoldsListHeldRevisionsContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsListHeldRevisionsContinueArg, LegalHoldsListHeldRevisionResult, LegalHoldsListHeldRevisionsError>(legalHoldsListHeldRevisionsContinueArg, "api", "/team/legal_holds/list_held_revisions_continue", "team", global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsListHeldRevisionsContinueArg, LegalHoldsListHeldRevisionResult, LegalHoldsListHeldRevisionsError>(legalHoldsListHeldRevisionsContinueArg, "api", "/team/legal_holds/list_held_revisions_continue", "team", global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListHeldRevisionsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2125,18 +2185,20 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="cursor">The cursor idicates where to continue reading file metadata
         /// entries for the next API call. When there are no more entries, the cursor will
         /// return none.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsListHeldRevisionsError"/>.</exception>
         public t.Task<LegalHoldsListHeldRevisionResult> LegalHoldsListHeldRevisionsContinueAsync(string id,
-                                                                                                 string cursor = null)
+                                                                                                 string cursor = null,
+                                                                                                 tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsListHeldRevisionsContinueArg = new LegalHoldsListHeldRevisionsContinueArg(id,
                                                                                                     cursor);
 
-            return this.LegalHoldsListHeldRevisionsContinueAsync(legalHoldsListHeldRevisionsContinueArg);
+            return this.LegalHoldsListHeldRevisionsContinueAsync(legalHoldsListHeldRevisionsContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -2190,14 +2252,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListPoliciesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsListPoliciesError"/>.</exception>
-        public t.Task<LegalHoldsListPoliciesResult> LegalHoldsListPoliciesAsync(LegalHoldsListPoliciesArg legalHoldsListPoliciesArg)
+        public t.Task<LegalHoldsListPoliciesResult> LegalHoldsListPoliciesAsync(LegalHoldsListPoliciesArg legalHoldsListPoliciesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsListPoliciesArg, LegalHoldsListPoliciesResult, LegalHoldsListPoliciesError>(legalHoldsListPoliciesArg, "api", "/team/legal_holds/list_policies", "team", global::Dropbox.Api.Team.LegalHoldsListPoliciesArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListPoliciesResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListPoliciesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsListPoliciesArg, LegalHoldsListPoliciesResult, LegalHoldsListPoliciesError>(legalHoldsListPoliciesArg, "api", "/team/legal_holds/list_policies", "team", global::Dropbox.Api.Team.LegalHoldsListPoliciesArg.Encoder, global::Dropbox.Api.Team.LegalHoldsListPoliciesResult.Decoder, global::Dropbox.Api.Team.LegalHoldsListPoliciesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2222,16 +2285,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="includeReleased">Whether to return holds that were released.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsListPoliciesError"/>.</exception>
-        public t.Task<LegalHoldsListPoliciesResult> LegalHoldsListPoliciesAsync(bool includeReleased = false)
+        public t.Task<LegalHoldsListPoliciesResult> LegalHoldsListPoliciesAsync(bool includeReleased = false,
+                                                                                tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsListPoliciesArg = new LegalHoldsListPoliciesArg(includeReleased);
 
-            return this.LegalHoldsListPoliciesAsync(legalHoldsListPoliciesArg);
+            return this.LegalHoldsListPoliciesAsync(legalHoldsListPoliciesArg, cancellationToken);
         }
 
         /// <summary>
@@ -2279,13 +2344,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyReleaseArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsPolicyReleaseError"/>.</exception>
-        public t.Task LegalHoldsReleasePolicyAsync(LegalHoldsPolicyReleaseArg legalHoldsPolicyReleaseArg)
+        public t.Task LegalHoldsReleasePolicyAsync(LegalHoldsPolicyReleaseArg legalHoldsPolicyReleaseArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyReleaseArg, enc.Empty, LegalHoldsPolicyReleaseError>(legalHoldsPolicyReleaseArg, "api", "/team/legal_holds/release_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyReleaseArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.LegalHoldsPolicyReleaseError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyReleaseArg, enc.Empty, LegalHoldsPolicyReleaseError>(legalHoldsPolicyReleaseArg, "api", "/team/legal_holds/release_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyReleaseArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.LegalHoldsPolicyReleaseError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2310,15 +2376,17 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsPolicyReleaseError"/>.</exception>
-        public t.Task LegalHoldsReleasePolicyAsync(string id)
+        public t.Task LegalHoldsReleasePolicyAsync(string id,
+                                                   tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsPolicyReleaseArg = new LegalHoldsPolicyReleaseArg(id);
 
-            return this.LegalHoldsReleasePolicyAsync(legalHoldsPolicyReleaseArg);
+            return this.LegalHoldsReleasePolicyAsync(legalHoldsPolicyReleaseArg, cancellationToken);
         }
 
         /// <summary>
@@ -2363,14 +2431,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyUpdateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="LegalHoldsPolicyUpdateError"/>.</exception>
-        public t.Task<LegalHoldPolicy> LegalHoldsUpdatePolicyAsync(LegalHoldsPolicyUpdateArg legalHoldsPolicyUpdateArg)
+        public t.Task<LegalHoldPolicy> LegalHoldsUpdatePolicyAsync(LegalHoldsPolicyUpdateArg legalHoldsPolicyUpdateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyUpdateArg, LegalHoldPolicy, LegalHoldsPolicyUpdateError>(legalHoldsPolicyUpdateArg, "api", "/team/legal_holds/update_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyUpdateArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsPolicyUpdateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<LegalHoldsPolicyUpdateArg, LegalHoldPolicy, LegalHoldsPolicyUpdateError>(legalHoldsPolicyUpdateArg, "api", "/team/legal_holds/update_policy", "team", global::Dropbox.Api.Team.LegalHoldsPolicyUpdateArg.Encoder, global::Dropbox.Api.Team.LegalHoldPolicy.Decoder, global::Dropbox.Api.Team.LegalHoldsPolicyUpdateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2398,6 +2467,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="name">Policy new name.</param>
         /// <param name="description">Policy new description.</param>
         /// <param name="members">List of team member IDs to apply the policy on.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2406,14 +2476,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<LegalHoldPolicy> LegalHoldsUpdatePolicyAsync(string id,
                                                                    string name = null,
                                                                    string description = null,
-                                                                   col.IEnumerable<string> members = null)
+                                                                   col.IEnumerable<string> members = null,
+                                                                   tr.CancellationToken cancellationToken = default)
         {
             var legalHoldsPolicyUpdateArg = new LegalHoldsPolicyUpdateArg(id,
                                                                           name,
                                                                           description,
                                                                           members);
 
-            return this.LegalHoldsUpdatePolicyAsync(legalHoldsPolicyUpdateArg);
+            return this.LegalHoldsUpdatePolicyAsync(legalHoldsPolicyUpdateArg, cancellationToken);
         }
 
         /// <summary>
@@ -2469,14 +2540,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Note, this endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="listMemberAppsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListMemberAppsError"/>.</exception>
-        public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(ListMemberAppsArg listMemberAppsArg)
+        public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(ListMemberAppsArg listMemberAppsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListMemberAppsArg, ListMemberAppsResult, ListMemberAppsError>(listMemberAppsArg, "api", "/team/linked_apps/list_member_linked_apps", "team", global::Dropbox.Api.Team.ListMemberAppsArg.Encoder, global::Dropbox.Api.Team.ListMemberAppsResult.Decoder, global::Dropbox.Api.Team.ListMemberAppsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMemberAppsArg, ListMemberAppsResult, ListMemberAppsError>(listMemberAppsArg, "api", "/team/linked_apps/list_member_linked_apps", "team", global::Dropbox.Api.Team.ListMemberAppsArg.Encoder, global::Dropbox.Api.Team.ListMemberAppsResult.Decoder, global::Dropbox.Api.Team.ListMemberAppsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2501,16 +2573,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Note, this endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="teamMemberId">The team member id.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListMemberAppsError"/>.</exception>
-        public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(string teamMemberId)
+        public t.Task<ListMemberAppsResult> LinkedAppsListMemberLinkedAppsAsync(string teamMemberId,
+                                                                                tr.CancellationToken cancellationToken = default)
         {
             var listMemberAppsArg = new ListMemberAppsArg(teamMemberId);
 
-            return this.LinkedAppsListMemberLinkedAppsAsync(listMemberAppsArg);
+            return this.LinkedAppsListMemberLinkedAppsAsync(listMemberAppsArg, cancellationToken);
         }
 
         /// <summary>
@@ -2558,14 +2632,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Note, this endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="listMembersAppsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListMembersAppsError"/>.</exception>
-        public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(ListMembersAppsArg listMembersAppsArg)
+        public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(ListMembersAppsArg listMembersAppsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListMembersAppsArg, ListMembersAppsResult, ListMembersAppsError>(listMembersAppsArg, "api", "/team/linked_apps/list_members_linked_apps", "team", global::Dropbox.Api.Team.ListMembersAppsArg.Encoder, global::Dropbox.Api.Team.ListMembersAppsResult.Decoder, global::Dropbox.Api.Team.ListMembersAppsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListMembersAppsArg, ListMembersAppsResult, ListMembersAppsError>(listMembersAppsArg, "api", "/team/linked_apps/list_members_linked_apps", "team", global::Dropbox.Api.Team.ListMembersAppsArg.Encoder, global::Dropbox.Api.Team.ListMembersAppsResult.Decoder, global::Dropbox.Api.Team.ListMembersAppsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2594,16 +2669,18 @@ namespace Dropbox.Api.Team.Routes
         /// /> the cursor shouldn't be passed. Then, if the result of the call includes a
         /// cursor, the following requests should include the received cursors in order to
         /// receive the next sub list of the team applications.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListMembersAppsError"/>.</exception>
-        public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(string cursor = null)
+        public t.Task<ListMembersAppsResult> LinkedAppsListMembersLinkedAppsAsync(string cursor = null,
+                                                                                  tr.CancellationToken cancellationToken = default)
         {
             var listMembersAppsArg = new ListMembersAppsArg(cursor);
 
-            return this.LinkedAppsListMembersLinkedAppsAsync(listMembersAppsArg);
+            return this.LinkedAppsListMembersLinkedAppsAsync(listMembersAppsArg, cancellationToken);
         }
 
         /// <summary>
@@ -2655,15 +2732,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
         /// </summary>
         /// <param name="listTeamAppsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
-        public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(ListTeamAppsArg listTeamAppsArg)
+        public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(ListTeamAppsArg listTeamAppsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ListTeamAppsArg, ListTeamAppsResult, ListTeamAppsError>(listTeamAppsArg, "api", "/team/linked_apps/list_team_linked_apps", "team", global::Dropbox.Api.Team.ListTeamAppsArg.Encoder, global::Dropbox.Api.Team.ListTeamAppsResult.Decoder, global::Dropbox.Api.Team.ListTeamAppsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ListTeamAppsArg, ListTeamAppsResult, ListTeamAppsError>(listTeamAppsArg, "api", "/team/linked_apps/list_team_linked_apps", "team", global::Dropbox.Api.Team.ListTeamAppsArg.Encoder, global::Dropbox.Api.Team.ListTeamAppsResult.Decoder, global::Dropbox.Api.Team.ListTeamAppsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2693,17 +2771,19 @@ namespace Dropbox.Api.Team.Routes
         /// the cursor shouldn't be passed. Then, if the result of the call includes a cursor,
         /// the following requests should include the received cursors in order to receive the
         /// next sub list of the team applications.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
-        public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(string cursor = null)
+        public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(string cursor = null,
+                                                                            tr.CancellationToken cancellationToken = default)
         {
             var listTeamAppsArg = new ListTeamAppsArg(cursor);
 
-            return this.LinkedAppsListTeamLinkedAppsAsync(listTeamAppsArg);
+            return this.LinkedAppsListTeamLinkedAppsAsync(listTeamAppsArg, cancellationToken);
         }
 
         /// <summary>
@@ -2756,13 +2836,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Revoke a linked application of the team member.</para>
         /// </summary>
         /// <param name="revokeLinkedApiAppArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppError"/>.</exception>
-        public t.Task LinkedAppsRevokeLinkedAppAsync(RevokeLinkedApiAppArg revokeLinkedApiAppArg)
+        public t.Task LinkedAppsRevokeLinkedAppAsync(RevokeLinkedApiAppArg revokeLinkedApiAppArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppArg, enc.Empty, RevokeLinkedAppError>(revokeLinkedApiAppArg, "api", "/team/linked_apps/revoke_linked_app", "team", global::Dropbox.Api.Team.RevokeLinkedApiAppArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.RevokeLinkedAppError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppArg, enc.Empty, RevokeLinkedAppError>(revokeLinkedApiAppArg, "api", "/team/linked_apps/revoke_linked_app", "team", global::Dropbox.Api.Team.RevokeLinkedApiAppArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.RevokeLinkedAppError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2789,19 +2870,21 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="teamMemberId">The unique id of the member owning the device.</param>
         /// <param name="keepAppFolder">This flag is not longer supported, the application
         /// dedicated folder (in case the application uses  one) will be kept.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppError"/>.</exception>
         public t.Task LinkedAppsRevokeLinkedAppAsync(string appId,
                                                      string teamMemberId,
-                                                     bool keepAppFolder = true)
+                                                     bool keepAppFolder = true,
+                                                     tr.CancellationToken cancellationToken = default)
         {
             var revokeLinkedApiAppArg = new RevokeLinkedApiAppArg(appId,
                                                                   teamMemberId,
                                                                   keepAppFolder);
 
-            return this.LinkedAppsRevokeLinkedAppAsync(revokeLinkedApiAppArg);
+            return this.LinkedAppsRevokeLinkedAppAsync(revokeLinkedApiAppArg, cancellationToken);
         }
 
         /// <summary>
@@ -2852,14 +2935,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Revoke a list of linked applications of the team members.</para>
         /// </summary>
         /// <param name="revokeLinkedApiAppBatchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppBatchError"/>.</exception>
-        public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(RevokeLinkedApiAppBatchArg revokeLinkedApiAppBatchArg)
+        public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(RevokeLinkedApiAppBatchArg revokeLinkedApiAppBatchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppBatchArg, RevokeLinkedAppBatchResult, RevokeLinkedAppBatchError>(revokeLinkedApiAppBatchArg, "api", "/team/linked_apps/revoke_linked_app_batch", "team", global::Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.Encoder, global::Dropbox.Api.Team.RevokeLinkedAppBatchResult.Decoder, global::Dropbox.Api.Team.RevokeLinkedAppBatchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RevokeLinkedApiAppBatchArg, RevokeLinkedAppBatchResult, RevokeLinkedAppBatchError>(revokeLinkedApiAppBatchArg, "api", "/team/linked_apps/revoke_linked_app_batch", "team", global::Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.Encoder, global::Dropbox.Api.Team.RevokeLinkedAppBatchResult.Decoder, global::Dropbox.Api.Team.RevokeLinkedAppBatchError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2883,16 +2967,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Revoke a list of linked applications of the team members.</para>
         /// </summary>
         /// <param name="revokeLinkedApp">The revoke linked app</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RevokeLinkedAppBatchError"/>.</exception>
-        public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(col.IEnumerable<RevokeLinkedApiAppArg> revokeLinkedApp)
+        public t.Task<RevokeLinkedAppBatchResult> LinkedAppsRevokeLinkedAppBatchAsync(col.IEnumerable<RevokeLinkedApiAppArg> revokeLinkedApp,
+                                                                                      tr.CancellationToken cancellationToken = default)
         {
             var revokeLinkedApiAppBatchArg = new RevokeLinkedApiAppBatchArg(revokeLinkedApp);
 
-            return this.LinkedAppsRevokeLinkedAppBatchAsync(revokeLinkedApiAppBatchArg);
+            return this.LinkedAppsRevokeLinkedAppBatchAsync(revokeLinkedApiAppBatchArg, cancellationToken);
         }
 
         /// <summary>
@@ -2939,14 +3025,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Add users to member space limits excluded users list.</para>
         /// </summary>
         /// <param name="excludedUsersUpdateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersUpdateError"/>.</exception>
-        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersAddAsync(ExcludedUsersUpdateArg excludedUsersUpdateArg)
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersAddAsync(ExcludedUsersUpdateArg excludedUsersUpdateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ExcludedUsersUpdateArg, ExcludedUsersUpdateResult, ExcludedUsersUpdateError>(excludedUsersUpdateArg, "api", "/team/member_space_limits/excluded_users/add", "team", global::Dropbox.Api.Team.ExcludedUsersUpdateArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersUpdateResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersUpdateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersUpdateArg, ExcludedUsersUpdateResult, ExcludedUsersUpdateError>(excludedUsersUpdateArg, "api", "/team/member_space_limits/excluded_users/add", "team", global::Dropbox.Api.Team.ExcludedUsersUpdateArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersUpdateResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersUpdateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -2970,16 +3057,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Add users to member space limits excluded users list.</para>
         /// </summary>
         /// <param name="users">List of users to be added/removed.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersUpdateError"/>.</exception>
-        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersAddAsync(col.IEnumerable<UserSelectorArg> users = null)
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersAddAsync(col.IEnumerable<UserSelectorArg> users = null,
+                                                                                        tr.CancellationToken cancellationToken = default)
         {
             var excludedUsersUpdateArg = new ExcludedUsersUpdateArg(users);
 
-            return this.MemberSpaceLimitsExcludedUsersAddAsync(excludedUsersUpdateArg);
+            return this.MemberSpaceLimitsExcludedUsersAddAsync(excludedUsersUpdateArg, cancellationToken);
         }
 
         /// <summary>
@@ -3026,14 +3115,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>List member space limits excluded users.</para>
         /// </summary>
         /// <param name="excludedUsersListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersListError"/>.</exception>
-        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(ExcludedUsersListArg excludedUsersListArg)
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(ExcludedUsersListArg excludedUsersListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ExcludedUsersListArg, ExcludedUsersListResult, ExcludedUsersListError>(excludedUsersListArg, "api", "/team/member_space_limits/excluded_users/list", "team", global::Dropbox.Api.Team.ExcludedUsersListArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersListResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersListArg, ExcludedUsersListResult, ExcludedUsersListError>(excludedUsersListArg, "api", "/team/member_space_limits/excluded_users/list", "team", global::Dropbox.Api.Team.ExcludedUsersListArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersListResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersListError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3057,16 +3147,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>List member space limits excluded users.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersListError"/>.</exception>
-        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(uint limit = 1000)
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(uint limit = 1000,
+                                                                                       tr.CancellationToken cancellationToken = default)
         {
             var excludedUsersListArg = new ExcludedUsersListArg(limit);
 
-            return this.MemberSpaceLimitsExcludedUsersListAsync(excludedUsersListArg);
+            return this.MemberSpaceLimitsExcludedUsersListAsync(excludedUsersListArg, cancellationToken);
         }
 
         /// <summary>
@@ -3113,14 +3205,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Continue listing member space limits excluded users.</para>
         /// </summary>
         /// <param name="excludedUsersListContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersListContinueError"/>.</exception>
-        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListContinueAsync(ExcludedUsersListContinueArg excludedUsersListContinueArg)
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListContinueAsync(ExcludedUsersListContinueArg excludedUsersListContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ExcludedUsersListContinueArg, ExcludedUsersListResult, ExcludedUsersListContinueError>(excludedUsersListContinueArg, "api", "/team/member_space_limits/excluded_users/list/continue", "team", global::Dropbox.Api.Team.ExcludedUsersListContinueArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersListResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersListContinueArg, ExcludedUsersListResult, ExcludedUsersListContinueError>(excludedUsersListContinueArg, "api", "/team/member_space_limits/excluded_users/list/continue", "team", global::Dropbox.Api.Team.ExcludedUsersListContinueArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersListResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersListContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3145,16 +3238,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// users.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersListContinueError"/>.</exception>
-        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListContinueAsync(string cursor)
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListContinueAsync(string cursor,
+                                                                                               tr.CancellationToken cancellationToken = default)
         {
             var excludedUsersListContinueArg = new ExcludedUsersListContinueArg(cursor);
 
-            return this.MemberSpaceLimitsExcludedUsersListContinueAsync(excludedUsersListContinueArg);
+            return this.MemberSpaceLimitsExcludedUsersListContinueAsync(excludedUsersListContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -3202,14 +3297,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Remove users from member space limits excluded users list.</para>
         /// </summary>
         /// <param name="excludedUsersUpdateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersUpdateError"/>.</exception>
-        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersRemoveAsync(ExcludedUsersUpdateArg excludedUsersUpdateArg)
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersRemoveAsync(ExcludedUsersUpdateArg excludedUsersUpdateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ExcludedUsersUpdateArg, ExcludedUsersUpdateResult, ExcludedUsersUpdateError>(excludedUsersUpdateArg, "api", "/team/member_space_limits/excluded_users/remove", "team", global::Dropbox.Api.Team.ExcludedUsersUpdateArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersUpdateResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersUpdateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<ExcludedUsersUpdateArg, ExcludedUsersUpdateResult, ExcludedUsersUpdateError>(excludedUsersUpdateArg, "api", "/team/member_space_limits/excluded_users/remove", "team", global::Dropbox.Api.Team.ExcludedUsersUpdateArg.Encoder, global::Dropbox.Api.Team.ExcludedUsersUpdateResult.Decoder, global::Dropbox.Api.Team.ExcludedUsersUpdateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3233,16 +3329,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Remove users from member space limits excluded users list.</para>
         /// </summary>
         /// <param name="users">List of users to be added/removed.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersUpdateError"/>.</exception>
-        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersRemoveAsync(col.IEnumerable<UserSelectorArg> users = null)
+        public t.Task<ExcludedUsersUpdateResult> MemberSpaceLimitsExcludedUsersRemoveAsync(col.IEnumerable<UserSelectorArg> users = null,
+                                                                                           tr.CancellationToken cancellationToken = default)
         {
             var excludedUsersUpdateArg = new ExcludedUsersUpdateArg(users);
 
-            return this.MemberSpaceLimitsExcludedUsersRemoveAsync(excludedUsersUpdateArg);
+            return this.MemberSpaceLimitsExcludedUsersRemoveAsync(excludedUsersUpdateArg, cancellationToken);
         }
 
         /// <summary>
@@ -3290,14 +3388,15 @@ namespace Dropbox.Api.Team.Routes
         /// maximum of 1000 members can be specified in a single call.</para>
         /// </summary>
         /// <param name="customQuotaUsersArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CustomQuotaError"/>.</exception>
-        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsGetCustomQuotaAsync(CustomQuotaUsersArg customQuotaUsersArg)
+        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsGetCustomQuotaAsync(CustomQuotaUsersArg customQuotaUsersArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<CustomQuotaUsersArg, col.List<CustomQuotaResult>, CustomQuotaError>(customQuotaUsersArg, "api", "/team/member_space_limits/get_custom_quota", "team", global::Dropbox.Api.Team.CustomQuotaUsersArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.CustomQuotaResult.Decoder), global::Dropbox.Api.Team.CustomQuotaError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CustomQuotaUsersArg, col.List<CustomQuotaResult>, CustomQuotaError>(customQuotaUsersArg, "api", "/team/member_space_limits/get_custom_quota", "team", global::Dropbox.Api.Team.CustomQuotaUsersArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.CustomQuotaResult.Decoder), global::Dropbox.Api.Team.CustomQuotaError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3322,16 +3421,18 @@ namespace Dropbox.Api.Team.Routes
         /// maximum of 1000 members can be specified in a single call.</para>
         /// </summary>
         /// <param name="users">List of users.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CustomQuotaError"/>.</exception>
-        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsGetCustomQuotaAsync(col.IEnumerable<UserSelectorArg> users)
+        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsGetCustomQuotaAsync(col.IEnumerable<UserSelectorArg> users,
+                                                                                        tr.CancellationToken cancellationToken = default)
         {
             var customQuotaUsersArg = new CustomQuotaUsersArg(users);
 
-            return this.MemberSpaceLimitsGetCustomQuotaAsync(customQuotaUsersArg);
+            return this.MemberSpaceLimitsGetCustomQuotaAsync(customQuotaUsersArg, cancellationToken);
         }
 
         /// <summary>
@@ -3379,14 +3480,15 @@ namespace Dropbox.Api.Team.Routes
         /// single call.</para>
         /// </summary>
         /// <param name="customQuotaUsersArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CustomQuotaError"/>.</exception>
-        public t.Task<col.List<RemoveCustomQuotaResult>> MemberSpaceLimitsRemoveCustomQuotaAsync(CustomQuotaUsersArg customQuotaUsersArg)
+        public t.Task<col.List<RemoveCustomQuotaResult>> MemberSpaceLimitsRemoveCustomQuotaAsync(CustomQuotaUsersArg customQuotaUsersArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<CustomQuotaUsersArg, col.List<RemoveCustomQuotaResult>, CustomQuotaError>(customQuotaUsersArg, "api", "/team/member_space_limits/remove_custom_quota", "team", global::Dropbox.Api.Team.CustomQuotaUsersArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.RemoveCustomQuotaResult.Decoder), global::Dropbox.Api.Team.CustomQuotaError.Decoder);
+            return this.Transport.SendRpcRequestAsync<CustomQuotaUsersArg, col.List<RemoveCustomQuotaResult>, CustomQuotaError>(customQuotaUsersArg, "api", "/team/member_space_limits/remove_custom_quota", "team", global::Dropbox.Api.Team.CustomQuotaUsersArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.RemoveCustomQuotaResult.Decoder), global::Dropbox.Api.Team.CustomQuotaError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3411,16 +3513,18 @@ namespace Dropbox.Api.Team.Routes
         /// single call.</para>
         /// </summary>
         /// <param name="users">List of users.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CustomQuotaError"/>.</exception>
-        public t.Task<col.List<RemoveCustomQuotaResult>> MemberSpaceLimitsRemoveCustomQuotaAsync(col.IEnumerable<UserSelectorArg> users)
+        public t.Task<col.List<RemoveCustomQuotaResult>> MemberSpaceLimitsRemoveCustomQuotaAsync(col.IEnumerable<UserSelectorArg> users,
+                                                                                                 tr.CancellationToken cancellationToken = default)
         {
             var customQuotaUsersArg = new CustomQuotaUsersArg(users);
 
-            return this.MemberSpaceLimitsRemoveCustomQuotaAsync(customQuotaUsersArg);
+            return this.MemberSpaceLimitsRemoveCustomQuotaAsync(customQuotaUsersArg, cancellationToken);
         }
 
         /// <summary>
@@ -3468,14 +3572,15 @@ namespace Dropbox.Api.Team.Routes
         /// 1000 members can be specified in a single call.</para>
         /// </summary>
         /// <param name="setCustomQuotaArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SetCustomQuotaError"/>.</exception>
-        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsSetCustomQuotaAsync(SetCustomQuotaArg setCustomQuotaArg)
+        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsSetCustomQuotaAsync(SetCustomQuotaArg setCustomQuotaArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<SetCustomQuotaArg, col.List<CustomQuotaResult>, SetCustomQuotaError>(setCustomQuotaArg, "api", "/team/member_space_limits/set_custom_quota", "team", global::Dropbox.Api.Team.SetCustomQuotaArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.CustomQuotaResult.Decoder), global::Dropbox.Api.Team.SetCustomQuotaError.Decoder);
+            return this.Transport.SendRpcRequestAsync<SetCustomQuotaArg, col.List<CustomQuotaResult>, SetCustomQuotaError>(setCustomQuotaArg, "api", "/team/member_space_limits/set_custom_quota", "team", global::Dropbox.Api.Team.SetCustomQuotaArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.CustomQuotaResult.Decoder), global::Dropbox.Api.Team.SetCustomQuotaError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3500,16 +3605,18 @@ namespace Dropbox.Api.Team.Routes
         /// 1000 members can be specified in a single call.</para>
         /// </summary>
         /// <param name="usersAndQuotas">List of users and their custom quotas.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SetCustomQuotaError"/>.</exception>
-        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsSetCustomQuotaAsync(col.IEnumerable<UserCustomQuotaArg> usersAndQuotas)
+        public t.Task<col.List<CustomQuotaResult>> MemberSpaceLimitsSetCustomQuotaAsync(col.IEnumerable<UserCustomQuotaArg> usersAndQuotas,
+                                                                                        tr.CancellationToken cancellationToken = default)
         {
             var setCustomQuotaArg = new SetCustomQuotaArg(usersAndQuotas);
 
-            return this.MemberSpaceLimitsSetCustomQuotaAsync(setCustomQuotaArg);
+            return this.MemberSpaceLimitsSetCustomQuotaAsync(setCustomQuotaArg, cancellationToken);
         }
 
         /// <summary>
@@ -3568,11 +3675,12 @@ namespace Dropbox.Api.Team.Routes
         /// actions taken on the user before they become 'active'.</para>
         /// </summary>
         /// <param name="membersAddArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<MembersAddLaunch> MembersAddAsync(MembersAddArg membersAddArg)
+        public t.Task<MembersAddLaunch> MembersAddAsync(MembersAddArg membersAddArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersAddArg, MembersAddLaunch, enc.Empty>(membersAddArg, "api", "/team/members/add", "team", global::Dropbox.Api.Team.MembersAddArg.Encoder, global::Dropbox.Api.Team.MembersAddLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<MembersAddArg, MembersAddLaunch, enc.Empty>(membersAddArg, "api", "/team/members/add", "team", global::Dropbox.Api.Team.MembersAddArg.Encoder, global::Dropbox.Api.Team.MembersAddLaunch.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -3608,15 +3716,17 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="newMembers">Details of new members to be added to the team.</param>
         /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<MembersAddLaunch> MembersAddAsync(col.IEnumerable<MemberAddArg> newMembers,
-                                                        bool forceAsync = false)
+                                                        bool forceAsync = false,
+                                                        tr.CancellationToken cancellationToken = default)
         {
             var membersAddArg = new MembersAddArg(newMembers,
                                                   forceAsync);
 
-            return this.MembersAddAsync(membersAddArg);
+            return this.MembersAddAsync(membersAddArg, cancellationToken);
         }
 
         /// <summary>
@@ -3665,14 +3775,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersAddJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersAddJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersAddJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersAddJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3699,16 +3810,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(string asyncJobId)
+        public t.Task<MembersAddJobStatus> MembersAddJobStatusGetAsync(string asyncJobId,
+                                                                       tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.MembersAddJobStatusGetAsync(pollArg);
+            return this.MembersAddJobStatusGetAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -3756,14 +3869,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersDeleteProfilePhotoArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersDeleteProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfo> MembersDeleteProfilePhotoAsync(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg)
+        public t.Task<TeamMemberInfo> MembersDeleteProfilePhotoAsync(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersDeleteProfilePhotoArg, TeamMemberInfo, MembersDeleteProfilePhotoError>(membersDeleteProfilePhotoArg, "api", "/team/members/delete_profile_photo", "team", global::Dropbox.Api.Team.MembersDeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersDeleteProfilePhotoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersDeleteProfilePhotoArg, TeamMemberInfo, MembersDeleteProfilePhotoError>(membersDeleteProfilePhotoArg, "api", "/team/members/delete_profile_photo", "team", global::Dropbox.Api.Team.MembersDeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersDeleteProfilePhotoError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3788,16 +3902,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="user">Identity of the user whose profile photo will be
         /// deleted.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersDeleteProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfo> MembersDeleteProfilePhotoAsync(UserSelectorArg user)
+        public t.Task<TeamMemberInfo> MembersDeleteProfilePhotoAsync(UserSelectorArg user,
+                                                                     tr.CancellationToken cancellationToken = default)
         {
             var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
 
-            return this.MembersDeleteProfilePhotoAsync(membersDeleteProfilePhotoArg);
+            return this.MembersDeleteProfilePhotoAsync(membersDeleteProfilePhotoArg, cancellationToken);
         }
 
         /// <summary>
@@ -3848,14 +3964,15 @@ namespace Dropbox.Api.Team.Routes
         /// cannot be matched to a valid team member.</para>
         /// </summary>
         /// <param name="membersGetInfoArgs">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersGetInfoError"/>.</exception>
-        public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(MembersGetInfoArgs membersGetInfoArgs)
+        public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(MembersGetInfoArgs membersGetInfoArgs, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersGetInfoArgs, col.List<MembersGetInfoItem>, MembersGetInfoError>(membersGetInfoArgs, "api", "/team/members/get_info", "team", global::Dropbox.Api.Team.MembersGetInfoArgs.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.MembersGetInfoItem.Decoder), global::Dropbox.Api.Team.MembersGetInfoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersGetInfoArgs, col.List<MembersGetInfoItem>, MembersGetInfoError>(membersGetInfoArgs, "api", "/team/members/get_info", "team", global::Dropbox.Api.Team.MembersGetInfoArgs.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.MembersGetInfoItem.Decoder), global::Dropbox.Api.Team.MembersGetInfoError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3882,16 +3999,18 @@ namespace Dropbox.Api.Team.Routes
         /// cannot be matched to a valid team member.</para>
         /// </summary>
         /// <param name="members">List of team members.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersGetInfoError"/>.</exception>
-        public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(col.IEnumerable<UserSelectorArg> members)
+        public t.Task<col.List<MembersGetInfoItem>> MembersGetInfoAsync(col.IEnumerable<UserSelectorArg> members,
+                                                                        tr.CancellationToken cancellationToken = default)
         {
             var membersGetInfoArgs = new MembersGetInfoArgs(members);
 
-            return this.MembersGetInfoAsync(membersGetInfoArgs);
+            return this.MembersGetInfoAsync(membersGetInfoArgs, cancellationToken);
         }
 
         /// <summary>
@@ -3938,14 +4057,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team information.</para>
         /// </summary>
         /// <param name="membersListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
-        public t.Task<MembersListResult> MembersListAsync(MembersListArg membersListArg)
+        public t.Task<MembersListResult> MembersListAsync(MembersListArg membersListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListResult, MembersListError>(membersListArg, "api", "/team/members/list", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListResult, MembersListError>(membersListArg, "api", "/team/members/list", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -3970,18 +4090,20 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
         /// <param name="includeRemoved">Whether to return removed members.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
         public t.Task<MembersListResult> MembersListAsync(uint limit = 1000,
-                                                          bool includeRemoved = false)
+                                                          bool includeRemoved = false,
+                                                          tr.CancellationToken cancellationToken = default)
         {
             var membersListArg = new MembersListArg(limit,
                                                     includeRemoved);
 
-            return this.MembersListAsync(membersListArg);
+            return this.MembersListAsync(membersListArg, cancellationToken);
         }
 
         /// <summary>
@@ -4033,14 +4155,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team information.</para>
         /// </summary>
         /// <param name="membersListContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListContinueError"/>.</exception>
-        public t.Task<MembersListResult> MembersListContinueAsync(MembersListContinueArg membersListContinueArg)
+        public t.Task<MembersListResult> MembersListContinueAsync(MembersListContinueArg membersListContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListResult, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue", "team", global::Dropbox.Api.Team.MembersListContinueArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListResult, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue", "team", global::Dropbox.Api.Team.MembersListContinueArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4067,16 +4190,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// members.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListContinueError"/>.</exception>
-        public t.Task<MembersListResult> MembersListContinueAsync(string cursor)
+        public t.Task<MembersListResult> MembersListContinueAsync(string cursor,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var membersListContinueArg = new MembersListContinueArg(cursor);
 
-            return this.MembersListContinueAsync(membersListContinueArg);
+            return this.MembersListContinueAsync(membersListContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -4128,14 +4253,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersDataTransferArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersTransferFormerMembersFilesError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersMoveFormerMemberFilesAsync(MembersDataTransferArg membersDataTransferArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersMoveFormerMemberFilesAsync(MembersDataTransferArg membersDataTransferArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersDataTransferArg, global::Dropbox.Api.Async.LaunchEmptyResult, MembersTransferFormerMembersFilesError>(membersDataTransferArg, "api", "/team/members/move_former_member_files", "team", global::Dropbox.Api.Team.MembersDataTransferArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.MembersTransferFormerMembersFilesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersDataTransferArg, global::Dropbox.Api.Async.LaunchEmptyResult, MembersTransferFormerMembersFilesError>(membersDataTransferArg, "api", "/team/members/move_former_member_files", "team", global::Dropbox.Api.Team.MembersDataTransferArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.MembersTransferFormerMembersFilesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4169,6 +4295,7 @@ namespace Dropbox.Api.Team.Routes
         /// transferred to this user.</param>
         /// <param name="transferAdminId">Errors during the transfer process will be sent via
         /// email to this user.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4176,13 +4303,14 @@ namespace Dropbox.Api.Team.Routes
         /// cref="MembersTransferFormerMembersFilesError"/>.</exception>
         public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersMoveFormerMemberFilesAsync(UserSelectorArg user,
                                                                                                      UserSelectorArg transferDestId,
-                                                                                                     UserSelectorArg transferAdminId)
+                                                                                                     UserSelectorArg transferAdminId,
+                                                                                                     tr.CancellationToken cancellationToken = default)
         {
             var membersDataTransferArg = new MembersDataTransferArg(user,
                                                                     transferDestId,
                                                                     transferAdminId);
 
-            return this.MembersMoveFormerMemberFilesAsync(membersDataTransferArg);
+            return this.MembersMoveFormerMemberFilesAsync(membersDataTransferArg, cancellationToken);
         }
 
         /// <summary>
@@ -4241,14 +4369,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersMoveFormerMemberFilesJobStatusCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersMoveFormerMemberFilesJobStatusCheckAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/move_former_member_files/job_status/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/move_former_member_files/job_status/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4276,16 +4405,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersMoveFormerMemberFilesJobStatusCheckAsync(string asyncJobId)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersMoveFormerMemberFilesJobStatusCheckAsync(string asyncJobId,
+                                                                                                                 tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.MembersMoveFormerMemberFilesJobStatusCheckAsync(pollArg);
+            return this.MembersMoveFormerMemberFilesJobStatusCheckAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -4336,13 +4467,14 @@ namespace Dropbox.Api.Team.Routes
         /// identify the user account.</para>
         /// </summary>
         /// <param name="membersRecoverArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersRecoverError"/>.</exception>
-        public t.Task MembersRecoverAsync(MembersRecoverArg membersRecoverArg)
+        public t.Task MembersRecoverAsync(MembersRecoverArg membersRecoverArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersRecoverArg, enc.Empty, MembersRecoverError>(membersRecoverArg, "api", "/team/members/recover", "team", global::Dropbox.Api.Team.MembersRecoverArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersRecoverError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersRecoverArg, enc.Empty, MembersRecoverError>(membersRecoverArg, "api", "/team/members/recover", "team", global::Dropbox.Api.Team.MembersRecoverArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersRecoverError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4368,15 +4500,17 @@ namespace Dropbox.Api.Team.Routes
         /// identify the user account.</para>
         /// </summary>
         /// <param name="user">Identity of user to recover.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersRecoverError"/>.</exception>
-        public t.Task MembersRecoverAsync(UserSelectorArg user)
+        public t.Task MembersRecoverAsync(UserSelectorArg user,
+                                          tr.CancellationToken cancellationToken = default)
         {
             var membersRecoverArg = new MembersRecoverArg(user);
 
-            return this.MembersRecoverAsync(membersRecoverArg);
+            return this.MembersRecoverAsync(membersRecoverArg, cancellationToken);
         }
 
         /// <summary>
@@ -4436,14 +4570,15 @@ namespace Dropbox.Api.Team.Routes
         /// />.</para>
         /// </summary>
         /// <param name="membersRemoveArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersRemoveError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(MembersRemoveArg membersRemoveArg)
+        public t.Task<global::Dropbox.Api.Async.LaunchEmptyResult> MembersRemoveAsync(MembersRemoveArg membersRemoveArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersRemoveArg, global::Dropbox.Api.Async.LaunchEmptyResult, MembersRemoveError>(membersRemoveArg, "api", "/team/members/remove", "team", global::Dropbox.Api.Team.MembersRemoveArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.MembersRemoveError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersRemoveArg, global::Dropbox.Api.Async.LaunchEmptyResult, MembersRemoveError>(membersRemoveArg, "api", "/team/members/remove", "team", global::Dropbox.Api.Team.MembersRemoveArg.Encoder, global::Dropbox.Api.Async.LaunchEmptyResult.Decoder, global::Dropbox.Api.Team.MembersRemoveError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4502,6 +4637,7 @@ namespace Dropbox.Api.Team.Routes
         /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
         /// <c>false</c> and <paramref name="keepAccount" /> should be set to
         /// <c>true</c>.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4512,7 +4648,8 @@ namespace Dropbox.Api.Team.Routes
                                                                                       UserSelectorArg transferDestId = null,
                                                                                       UserSelectorArg transferAdminId = null,
                                                                                       bool keepAccount = false,
-                                                                                      bool retainTeamShares = false)
+                                                                                      bool retainTeamShares = false,
+                                                                                      tr.CancellationToken cancellationToken = default)
         {
             var membersRemoveArg = new MembersRemoveArg(user,
                                                         wipeData,
@@ -4521,7 +4658,7 @@ namespace Dropbox.Api.Team.Routes
                                                         keepAccount,
                                                         retainTeamShares);
 
-            return this.MembersRemoveAsync(membersRemoveArg);
+            return this.MembersRemoveAsync(membersRemoveArg, cancellationToken);
         }
 
         /// <summary>
@@ -4599,14 +4736,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/remove/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, global::Dropbox.Api.Async.PollEmptyResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/remove/job_status/get", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Async.PollEmptyResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4634,16 +4772,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(string asyncJobId)
+        public t.Task<global::Dropbox.Api.Async.PollEmptyResult> MembersRemoveJobStatusGetAsync(string asyncJobId,
+                                                                                                tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.MembersRemoveJobStatusGetAsync(pollArg);
+            return this.MembersRemoveJobStatusGetAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -4694,14 +4834,15 @@ namespace Dropbox.Api.Team.Routes
         /// email address not on a verified domain a verification email will be sent.</para>
         /// </summary>
         /// <param name="addSecondaryEmailsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AddSecondaryEmailsError"/>.</exception>
-        public t.Task<AddSecondaryEmailsResult> MembersSecondaryEmailsAddAsync(AddSecondaryEmailsArg addSecondaryEmailsArg)
+        public t.Task<AddSecondaryEmailsResult> MembersSecondaryEmailsAddAsync(AddSecondaryEmailsArg addSecondaryEmailsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<AddSecondaryEmailsArg, AddSecondaryEmailsResult, AddSecondaryEmailsError>(addSecondaryEmailsArg, "api", "/team/members/secondary_emails/add", "team", global::Dropbox.Api.Team.AddSecondaryEmailsArg.Encoder, global::Dropbox.Api.Team.AddSecondaryEmailsResult.Decoder, global::Dropbox.Api.Team.AddSecondaryEmailsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddSecondaryEmailsArg, AddSecondaryEmailsResult, AddSecondaryEmailsError>(addSecondaryEmailsArg, "api", "/team/members/secondary_emails/add", "team", global::Dropbox.Api.Team.AddSecondaryEmailsArg.Encoder, global::Dropbox.Api.Team.AddSecondaryEmailsResult.Decoder, global::Dropbox.Api.Team.AddSecondaryEmailsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -4727,16 +4868,18 @@ namespace Dropbox.Api.Team.Routes
         /// email address not on a verified domain a verification email will be sent.</para>
         /// </summary>
         /// <param name="newSecondaryEmails">List of users and secondary emails to add.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AddSecondaryEmailsError"/>.</exception>
-        public t.Task<AddSecondaryEmailsResult> MembersSecondaryEmailsAddAsync(col.IEnumerable<UserSecondaryEmailsArg> newSecondaryEmails)
+        public t.Task<AddSecondaryEmailsResult> MembersSecondaryEmailsAddAsync(col.IEnumerable<UserSecondaryEmailsArg> newSecondaryEmails,
+                                                                               tr.CancellationToken cancellationToken = default)
         {
             var addSecondaryEmailsArg = new AddSecondaryEmailsArg(newSecondaryEmails);
 
-            return this.MembersSecondaryEmailsAddAsync(addSecondaryEmailsArg);
+            return this.MembersSecondaryEmailsAddAsync(addSecondaryEmailsArg, cancellationToken);
         }
 
         /// <summary>
@@ -4785,11 +4928,12 @@ namespace Dropbox.Api.Team.Routes
         /// secondary email and their primary email.</para>
         /// </summary>
         /// <param name="deleteSecondaryEmailsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<DeleteSecondaryEmailsResult> MembersSecondaryEmailsDeleteAsync(DeleteSecondaryEmailsArg deleteSecondaryEmailsArg)
+        public t.Task<DeleteSecondaryEmailsResult> MembersSecondaryEmailsDeleteAsync(DeleteSecondaryEmailsArg deleteSecondaryEmailsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DeleteSecondaryEmailsArg, DeleteSecondaryEmailsResult, enc.Empty>(deleteSecondaryEmailsArg, "api", "/team/members/secondary_emails/delete", "team", global::Dropbox.Api.Team.DeleteSecondaryEmailsArg.Encoder, global::Dropbox.Api.Team.DeleteSecondaryEmailsResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<DeleteSecondaryEmailsArg, DeleteSecondaryEmailsResult, enc.Empty>(deleteSecondaryEmailsArg, "api", "/team/members/secondary_emails/delete", "team", global::Dropbox.Api.Team.DeleteSecondaryEmailsArg.Encoder, global::Dropbox.Api.Team.DeleteSecondaryEmailsResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -4817,13 +4961,15 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="emailsToDelete">List of users and their secondary emails to
         /// delete.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<DeleteSecondaryEmailsResult> MembersSecondaryEmailsDeleteAsync(col.IEnumerable<UserSecondaryEmailsArg> emailsToDelete)
+        public t.Task<DeleteSecondaryEmailsResult> MembersSecondaryEmailsDeleteAsync(col.IEnumerable<UserSecondaryEmailsArg> emailsToDelete,
+                                                                                     tr.CancellationToken cancellationToken = default)
         {
             var deleteSecondaryEmailsArg = new DeleteSecondaryEmailsArg(emailsToDelete);
 
-            return this.MembersSecondaryEmailsDeleteAsync(deleteSecondaryEmailsArg);
+            return this.MembersSecondaryEmailsDeleteAsync(deleteSecondaryEmailsArg, cancellationToken);
         }
 
         /// <summary>
@@ -4869,11 +5015,12 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="resendVerificationEmailArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ResendVerificationEmailResult> MembersSecondaryEmailsResendVerificationEmailsAsync(ResendVerificationEmailArg resendVerificationEmailArg)
+        public t.Task<ResendVerificationEmailResult> MembersSecondaryEmailsResendVerificationEmailsAsync(ResendVerificationEmailArg resendVerificationEmailArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<ResendVerificationEmailArg, ResendVerificationEmailResult, enc.Empty>(resendVerificationEmailArg, "api", "/team/members/secondary_emails/resend_verification_emails", "team", global::Dropbox.Api.Team.ResendVerificationEmailArg.Encoder, global::Dropbox.Api.Team.ResendVerificationEmailResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<ResendVerificationEmailArg, ResendVerificationEmailResult, enc.Empty>(resendVerificationEmailArg, "api", "/team/members/secondary_emails/resend_verification_emails", "team", global::Dropbox.Api.Team.ResendVerificationEmailArg.Encoder, global::Dropbox.Api.Team.ResendVerificationEmailResult.Decoder, enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -4899,13 +5046,15 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="emailsToResend">List of users and secondary emails to resend
         /// verification emails to.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ResendVerificationEmailResult> MembersSecondaryEmailsResendVerificationEmailsAsync(col.IEnumerable<UserSecondaryEmailsArg> emailsToResend)
+        public t.Task<ResendVerificationEmailResult> MembersSecondaryEmailsResendVerificationEmailsAsync(col.IEnumerable<UserSecondaryEmailsArg> emailsToResend,
+                                                                                                         tr.CancellationToken cancellationToken = default)
         {
             var resendVerificationEmailArg = new ResendVerificationEmailArg(emailsToResend);
 
-            return this.MembersSecondaryEmailsResendVerificationEmailsAsync(resendVerificationEmailArg);
+            return this.MembersSecondaryEmailsResendVerificationEmailsAsync(resendVerificationEmailArg, cancellationToken);
         }
 
         /// <summary>
@@ -4954,13 +5103,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>No-op if team member is not pending.</para>
         /// </summary>
         /// <param name="userSelectorArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSendWelcomeError"/>.</exception>
-        public t.Task MembersSendWelcomeEmailAsync(UserSelectorArg userSelectorArg)
+        public t.Task MembersSendWelcomeEmailAsync(UserSelectorArg userSelectorArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UserSelectorArg, enc.Empty, MembersSendWelcomeError>(userSelectorArg, "api", "/team/members/send_welcome_email", "team", global::Dropbox.Api.Team.UserSelectorArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersSendWelcomeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UserSelectorArg, enc.Empty, MembersSendWelcomeError>(userSelectorArg, "api", "/team/members/send_welcome_email", "team", global::Dropbox.Api.Team.UserSelectorArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersSendWelcomeError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5002,14 +5152,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersSetPermissionsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSetPermissionsError"/>.</exception>
-        public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(MembersSetPermissionsArg membersSetPermissionsArg)
+        public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(MembersSetPermissionsArg membersSetPermissionsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersSetPermissionsArg, MembersSetPermissionsResult, MembersSetPermissionsError>(membersSetPermissionsArg, "api", "/team/members/set_admin_permissions", "team", global::Dropbox.Api.Team.MembersSetPermissionsArg.Encoder, global::Dropbox.Api.Team.MembersSetPermissionsResult.Decoder, global::Dropbox.Api.Team.MembersSetPermissionsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSetPermissionsArg, MembersSetPermissionsResult, MembersSetPermissionsError>(membersSetPermissionsArg, "api", "/team/members/set_admin_permissions", "team", global::Dropbox.Api.Team.MembersSetPermissionsArg.Encoder, global::Dropbox.Api.Team.MembersSetPermissionsResult.Decoder, global::Dropbox.Api.Team.MembersSetPermissionsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5035,18 +5186,20 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="user">Identity of user whose role will be set.</param>
         /// <param name="newRole">The new role of the member.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSetPermissionsError"/>.</exception>
         public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(UserSelectorArg user,
-                                                                                   AdminTier newRole)
+                                                                                   AdminTier newRole,
+                                                                                   tr.CancellationToken cancellationToken = default)
         {
             var membersSetPermissionsArg = new MembersSetPermissionsArg(user,
                                                                         newRole);
 
-            return this.MembersSetAdminPermissionsAsync(membersSetPermissionsArg);
+            return this.MembersSetAdminPermissionsAsync(membersSetPermissionsArg, cancellationToken);
         }
 
         /// <summary>
@@ -5097,14 +5250,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersSetProfileArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSetProfileError"/>.</exception>
-        public t.Task<TeamMemberInfo> MembersSetProfileAsync(MembersSetProfileArg membersSetProfileArg)
+        public t.Task<TeamMemberInfo> MembersSetProfileAsync(MembersSetProfileArg membersSetProfileArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfo, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfo, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5136,6 +5290,7 @@ namespace Dropbox.Api.Team.Routes
         /// using persistent ID SAML configuration.</param>
         /// <param name="newIsDirectoryRestricted">New value for whether the user is a
         /// directory restricted user.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -5147,7 +5302,8 @@ namespace Dropbox.Api.Team.Routes
                                                              string newGivenName = null,
                                                              string newSurname = null,
                                                              string newPersistentId = null,
-                                                             bool? newIsDirectoryRestricted = null)
+                                                             bool? newIsDirectoryRestricted = null,
+                                                             tr.CancellationToken cancellationToken = default)
         {
             var membersSetProfileArg = new MembersSetProfileArg(user,
                                                                 newEmail,
@@ -5157,7 +5313,7 @@ namespace Dropbox.Api.Team.Routes
                                                                 newPersistentId,
                                                                 newIsDirectoryRestricted);
 
-            return this.MembersSetProfileAsync(membersSetProfileArg);
+            return this.MembersSetProfileAsync(membersSetProfileArg, cancellationToken);
         }
 
         /// <summary>
@@ -5224,14 +5380,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersSetProfilePhotoArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSetProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfo> MembersSetProfilePhotoAsync(MembersSetProfilePhotoArg membersSetProfilePhotoArg)
+        public t.Task<TeamMemberInfo> MembersSetProfilePhotoAsync(MembersSetProfilePhotoArg membersSetProfilePhotoArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersSetProfilePhotoArg, TeamMemberInfo, MembersSetProfilePhotoError>(membersSetProfilePhotoArg, "api", "/team/members/set_profile_photo", "team", global::Dropbox.Api.Team.MembersSetProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfilePhotoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSetProfilePhotoArg, TeamMemberInfo, MembersSetProfilePhotoError>(membersSetProfilePhotoArg, "api", "/team/members/set_profile_photo", "team", global::Dropbox.Api.Team.MembersSetProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfilePhotoError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5256,18 +5413,20 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="user">Identity of the user whose profile photo will be set.</param>
         /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSetProfilePhotoError"/>.</exception>
         public t.Task<TeamMemberInfo> MembersSetProfilePhotoAsync(UserSelectorArg user,
-                                                                  global::Dropbox.Api.Account.PhotoSourceArg photo)
+                                                                  global::Dropbox.Api.Account.PhotoSourceArg photo,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
                                                                           photo);
 
-            return this.MembersSetProfilePhotoAsync(membersSetProfilePhotoArg);
+            return this.MembersSetProfilePhotoAsync(membersSetProfilePhotoArg, cancellationToken);
         }
 
         /// <summary>
@@ -5319,13 +5478,14 @@ namespace Dropbox.Api.Team.Routes
         /// identify the user account.</para>
         /// </summary>
         /// <param name="membersDeactivateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSuspendError"/>.</exception>
-        public t.Task MembersSuspendAsync(MembersDeactivateArg membersDeactivateArg)
+        public t.Task MembersSuspendAsync(MembersDeactivateArg membersDeactivateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersDeactivateArg, enc.Empty, MembersSuspendError>(membersDeactivateArg, "api", "/team/members/suspend", "team", global::Dropbox.Api.Team.MembersDeactivateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersSuspendError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersDeactivateArg, enc.Empty, MembersSuspendError>(membersDeactivateArg, "api", "/team/members/suspend", "team", global::Dropbox.Api.Team.MembersDeactivateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersSuspendError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5354,17 +5514,19 @@ namespace Dropbox.Api.Team.Routes
         /// moved.</param>
         /// <param name="wipeData">If provided, controls if the user's data will be deleted on
         /// their linked devices.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSuspendError"/>.</exception>
         public t.Task MembersSuspendAsync(UserSelectorArg user,
-                                          bool wipeData = true)
+                                          bool wipeData = true,
+                                          tr.CancellationToken cancellationToken = default)
         {
             var membersDeactivateArg = new MembersDeactivateArg(user,
                                                                 wipeData);
 
-            return this.MembersSuspendAsync(membersDeactivateArg);
+            return this.MembersSuspendAsync(membersDeactivateArg, cancellationToken);
         }
 
         /// <summary>
@@ -5415,13 +5577,14 @@ namespace Dropbox.Api.Team.Routes
         /// identify the user account.</para>
         /// </summary>
         /// <param name="membersUnsuspendArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersUnsuspendError"/>.</exception>
-        public t.Task MembersUnsuspendAsync(MembersUnsuspendArg membersUnsuspendArg)
+        public t.Task MembersUnsuspendAsync(MembersUnsuspendArg membersUnsuspendArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<MembersUnsuspendArg, enc.Empty, MembersUnsuspendError>(membersUnsuspendArg, "api", "/team/members/unsuspend", "team", global::Dropbox.Api.Team.MembersUnsuspendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersUnsuspendError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersUnsuspendArg, enc.Empty, MembersUnsuspendError>(membersUnsuspendArg, "api", "/team/members/unsuspend", "team", global::Dropbox.Api.Team.MembersUnsuspendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersUnsuspendError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5447,15 +5610,17 @@ namespace Dropbox.Api.Team.Routes
         /// identify the user account.</para>
         /// </summary>
         /// <param name="user">Identity of user to unsuspend.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersUnsuspendError"/>.</exception>
-        public t.Task MembersUnsuspendAsync(UserSelectorArg user)
+        public t.Task MembersUnsuspendAsync(UserSelectorArg user,
+                                            tr.CancellationToken cancellationToken = default)
         {
             var membersUnsuspendArg = new MembersUnsuspendArg(user);
 
-            return this.MembersUnsuspendAsync(membersUnsuspendArg);
+            return this.MembersUnsuspendAsync(membersUnsuspendArg, cancellationToken);
         }
 
         /// <summary>
@@ -5502,14 +5667,15 @@ namespace Dropbox.Api.Team.Routes
         /// other teams. Duplicates may occur in the list.</para>
         /// </summary>
         /// <param name="teamNamespacesListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamNamespacesListError"/>.</exception>
-        public t.Task<TeamNamespacesListResult> NamespacesListAsync(TeamNamespacesListArg teamNamespacesListArg)
+        public t.Task<TeamNamespacesListResult> NamespacesListAsync(TeamNamespacesListArg teamNamespacesListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamNamespacesListArg, TeamNamespacesListResult, TeamNamespacesListError>(teamNamespacesListArg, "api", "/team/namespaces/list", "team", global::Dropbox.Api.Team.TeamNamespacesListArg.Encoder, global::Dropbox.Api.Team.TeamNamespacesListResult.Decoder, global::Dropbox.Api.Team.TeamNamespacesListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamNamespacesListArg, TeamNamespacesListResult, TeamNamespacesListError>(teamNamespacesListArg, "api", "/team/namespaces/list", "team", global::Dropbox.Api.Team.TeamNamespacesListArg.Encoder, global::Dropbox.Api.Team.TeamNamespacesListResult.Decoder, global::Dropbox.Api.Team.TeamNamespacesListError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5536,16 +5702,18 @@ namespace Dropbox.Api.Team.Routes
         /// other teams. Duplicates may occur in the list.</para>
         /// </summary>
         /// <param name="limit">Specifying a value here has no effect.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamNamespacesListError"/>.</exception>
-        public t.Task<TeamNamespacesListResult> NamespacesListAsync(uint limit = 1000)
+        public t.Task<TeamNamespacesListResult> NamespacesListAsync(uint limit = 1000,
+                                                                    tr.CancellationToken cancellationToken = default)
         {
             var teamNamespacesListArg = new TeamNamespacesListArg(limit);
 
-            return this.NamespacesListAsync(teamNamespacesListArg);
+            return this.NamespacesListAsync(teamNamespacesListArg, cancellationToken);
         }
 
         /// <summary>
@@ -5594,14 +5762,15 @@ namespace Dropbox.Api.Team.Routes
         /// list.</para>
         /// </summary>
         /// <param name="teamNamespacesListContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamNamespacesListContinueError"/>.</exception>
-        public t.Task<TeamNamespacesListResult> NamespacesListContinueAsync(TeamNamespacesListContinueArg teamNamespacesListContinueArg)
+        public t.Task<TeamNamespacesListResult> NamespacesListContinueAsync(TeamNamespacesListContinueArg teamNamespacesListContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamNamespacesListContinueArg, TeamNamespacesListResult, TeamNamespacesListContinueError>(teamNamespacesListContinueArg, "api", "/team/namespaces/list/continue", "team", global::Dropbox.Api.Team.TeamNamespacesListContinueArg.Encoder, global::Dropbox.Api.Team.TeamNamespacesListResult.Decoder, global::Dropbox.Api.Team.TeamNamespacesListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamNamespacesListContinueArg, TeamNamespacesListResult, TeamNamespacesListContinueError>(teamNamespacesListContinueArg, "api", "/team/namespaces/list/continue", "team", global::Dropbox.Api.Team.TeamNamespacesListContinueArg.Encoder, global::Dropbox.Api.Team.TeamNamespacesListResult.Decoder, global::Dropbox.Api.Team.TeamNamespacesListContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5628,16 +5797,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// team-accessible namespaces.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamNamespacesListContinueError"/>.</exception>
-        public t.Task<TeamNamespacesListResult> NamespacesListContinueAsync(string cursor)
+        public t.Task<TeamNamespacesListResult> NamespacesListContinueAsync(string cursor,
+                                                                            tr.CancellationToken cancellationToken = default)
         {
             var teamNamespacesListContinueArg = new TeamNamespacesListContinueArg(cursor);
 
-            return this.NamespacesListContinueAsync(teamNamespacesListContinueArg);
+            return this.NamespacesListContinueAsync(teamNamespacesListContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -5684,15 +5855,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="addTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.AddTemplateResult> PropertiesTemplateAddAsync(global::Dropbox.Api.FileProperties.AddTemplateArg addTemplateArg)
+        public t.Task<global::Dropbox.Api.FileProperties.AddTemplateResult> PropertiesTemplateAddAsync(global::Dropbox.Api.FileProperties.AddTemplateArg addTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.AddTemplateArg, global::Dropbox.Api.FileProperties.AddTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(addTemplateArg, "api", "/team/properties/template/add", "team", global::Dropbox.Api.FileProperties.AddTemplateArg.Encoder, global::Dropbox.Api.FileProperties.AddTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.AddTemplateArg, global::Dropbox.Api.FileProperties.AddTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(addTemplateArg, "api", "/team/properties/template/add", "team", global::Dropbox.Api.FileProperties.AddTemplateArg.Encoder, global::Dropbox.Api.FileProperties.AddTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5721,6 +5893,7 @@ namespace Dropbox.Api.Team.Routes
         /// be up to 1024 bytes.</param>
         /// <param name="fields">Definitions of the property fields associated with this
         /// template. There can be up to 32 properties in a single template.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -5729,13 +5902,14 @@ namespace Dropbox.Api.Team.Routes
         [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.FileProperties.AddTemplateResult> PropertiesTemplateAddAsync(string name,
                                                                                                        string description,
-                                                                                                       col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> fields)
+                                                                                                       col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> fields,
+                                                                                                       tr.CancellationToken cancellationToken = default)
         {
             var addTemplateArg = new global::Dropbox.Api.FileProperties.AddTemplateArg(name,
                                                                                        description,
                                                                                        fields);
 
-            return this.PropertiesTemplateAddAsync(addTemplateArg);
+            return this.PropertiesTemplateAddAsync(addTemplateArg, cancellationToken);
         }
 
         /// <summary>
@@ -5792,15 +5966,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="getTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.FileProperties.GetTemplateArg getTemplateArg)
+        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.FileProperties.GetTemplateArg getTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.GetTemplateArg, global::Dropbox.Api.FileProperties.GetTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(getTemplateArg, "api", "/team/properties/template/get", "team", global::Dropbox.Api.FileProperties.GetTemplateArg.Encoder, global::Dropbox.Api.FileProperties.GetTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.GetTemplateArg, global::Dropbox.Api.FileProperties.GetTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(getTemplateArg, "api", "/team/properties/template/get", "team", global::Dropbox.Api.FileProperties.GetTemplateArg.Encoder, global::Dropbox.Api.FileProperties.GetTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5828,17 +6003,19 @@ namespace Dropbox.Api.Team.Routes
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(string templateId)
+        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(string templateId,
+                                                                                                       tr.CancellationToken cancellationToken = default)
         {
             var getTemplateArg = new global::Dropbox.Api.FileProperties.GetTemplateArg(templateId);
 
-            return this.PropertiesTemplateGetAsync(getTemplateArg);
+            return this.PropertiesTemplateGetAsync(getTemplateArg, cancellationToken);
         }
 
         /// <summary>
@@ -5889,15 +6066,16 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult> PropertiesTemplateListAsync()
+        public t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult> PropertiesTemplateListAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.FileProperties.ListTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.FileProperties.ListTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5942,15 +6120,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="updateTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(global::Dropbox.Api.FileProperties.UpdateTemplateArg updateTemplateArg)
+        public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(global::Dropbox.Api.FileProperties.UpdateTemplateArg updateTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.UpdateTemplateArg, global::Dropbox.Api.FileProperties.UpdateTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(updateTemplateArg, "api", "/team/properties/template/update", "team", global::Dropbox.Api.FileProperties.UpdateTemplateArg.Encoder, global::Dropbox.Api.FileProperties.UpdateTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.UpdateTemplateArg, global::Dropbox.Api.FileProperties.UpdateTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(updateTemplateArg, "api", "/team/properties/template/update", "team", global::Dropbox.Api.FileProperties.UpdateTemplateArg.Encoder, global::Dropbox.Api.FileProperties.UpdateTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -5984,6 +6163,7 @@ namespace Dropbox.Api.Team.Routes
         /// can be up to 1024 bytes.</param>
         /// <param name="addFields">Property field templates to be added to the group template.
         /// There can be up to 32 properties in a single template.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -5993,14 +6173,15 @@ namespace Dropbox.Api.Team.Routes
         public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
                                                                                                              string name = null,
                                                                                                              string description = null,
-                                                                                                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> addFields = null)
+                                                                                                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> addFields = null,
+                                                                                                             tr.CancellationToken cancellationToken = default)
         {
             var updateTemplateArg = new global::Dropbox.Api.FileProperties.UpdateTemplateArg(templateId,
                                                                                              name,
                                                                                              description,
                                                                                              addFields);
 
-            return this.PropertiesTemplateUpdateAsync(updateTemplateArg);
+            return this.PropertiesTemplateUpdateAsync(updateTemplateArg, cancellationToken);
         }
 
         /// <summary>
@@ -6064,15 +6245,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Retrieves reporting data about a team's user activity.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<GetActivityReport> ReportsGetActivityAsync(DateRange dateRange)
+        public t.Task<GetActivityReport> ReportsGetActivityAsync(DateRange dateRange, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetActivityReport, DateRangeError>(dateRange, "api", "/team/reports/get_activity", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetActivityReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetActivityReport, DateRangeError>(dateRange, "api", "/team/reports/get_activity", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetActivityReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6098,6 +6280,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -6105,12 +6288,13 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<GetActivityReport> ReportsGetActivityAsync(sys.DateTime? startDate = null,
-                                                                 sys.DateTime? endDate = null)
+                                                                 sys.DateTime? endDate = null,
+                                                                 tr.CancellationToken cancellationToken = default)
         {
             var dateRange = new DateRange(startDate,
                                           endDate);
 
-            return this.ReportsGetActivityAsync(dateRange);
+            return this.ReportsGetActivityAsync(dateRange, cancellationToken);
         }
 
         /// <summary>
@@ -6162,15 +6346,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Retrieves reporting data about a team's linked devices.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<GetDevicesReport> ReportsGetDevicesAsync(DateRange dateRange)
+        public t.Task<GetDevicesReport> ReportsGetDevicesAsync(DateRange dateRange, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetDevicesReport, DateRangeError>(dateRange, "api", "/team/reports/get_devices", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetDevicesReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetDevicesReport, DateRangeError>(dateRange, "api", "/team/reports/get_devices", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetDevicesReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6196,6 +6381,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -6203,12 +6389,13 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<GetDevicesReport> ReportsGetDevicesAsync(sys.DateTime? startDate = null,
-                                                               sys.DateTime? endDate = null)
+                                                               sys.DateTime? endDate = null,
+                                                               tr.CancellationToken cancellationToken = default)
         {
             var dateRange = new DateRange(startDate,
                                           endDate);
 
-            return this.ReportsGetDevicesAsync(dateRange);
+            return this.ReportsGetDevicesAsync(dateRange, cancellationToken);
         }
 
         /// <summary>
@@ -6260,15 +6447,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Retrieves reporting data about a team's membership.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<GetMembershipReport> ReportsGetMembershipAsync(DateRange dateRange)
+        public t.Task<GetMembershipReport> ReportsGetMembershipAsync(DateRange dateRange, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetMembershipReport, DateRangeError>(dateRange, "api", "/team/reports/get_membership", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetMembershipReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetMembershipReport, DateRangeError>(dateRange, "api", "/team/reports/get_membership", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetMembershipReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6294,6 +6482,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -6301,12 +6490,13 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<GetMembershipReport> ReportsGetMembershipAsync(sys.DateTime? startDate = null,
-                                                                     sys.DateTime? endDate = null)
+                                                                     sys.DateTime? endDate = null,
+                                                                     tr.CancellationToken cancellationToken = default)
         {
             var dateRange = new DateRange(startDate,
                                           endDate);
 
-            return this.ReportsGetMembershipAsync(dateRange);
+            return this.ReportsGetMembershipAsync(dateRange, cancellationToken);
         }
 
         /// <summary>
@@ -6358,15 +6548,16 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Retrieves reporting data about a team's storage usage.</para>
         /// </summary>
         /// <param name="dateRange">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
-        public t.Task<GetStorageReport> ReportsGetStorageAsync(DateRange dateRange)
+        public t.Task<GetStorageReport> ReportsGetStorageAsync(DateRange dateRange, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<DateRange, GetStorageReport, DateRangeError>(dateRange, "api", "/team/reports/get_storage", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetStorageReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder);
+            return this.Transport.SendRpcRequestAsync<DateRange, GetStorageReport, DateRangeError>(dateRange, "api", "/team/reports/get_storage", "team", global::Dropbox.Api.Team.DateRange.Encoder, global::Dropbox.Api.Team.GetStorageReport.Decoder, global::Dropbox.Api.Team.DateRangeError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6392,6 +6583,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
         /// or too long ago, this field will  be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -6399,12 +6591,13 @@ namespace Dropbox.Api.Team.Routes
         /// cref="DateRangeError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<GetStorageReport> ReportsGetStorageAsync(sys.DateTime? startDate = null,
-                                                               sys.DateTime? endDate = null)
+                                                               sys.DateTime? endDate = null,
+                                                               tr.CancellationToken cancellationToken = default)
         {
             var dateRange = new DateRange(startDate,
                                           endDate);
 
-            return this.ReportsGetStorageAsync(dateRange);
+            return this.ReportsGetStorageAsync(dateRange, cancellationToken);
         }
 
         /// <summary>
@@ -6457,14 +6650,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderIdArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderActivateError"/>.</exception>
-        public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(TeamFolderIdArg teamFolderIdArg)
+        public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(TeamFolderIdArg teamFolderIdArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderMetadata, TeamFolderActivateError>(teamFolderIdArg, "api", "/team/team_folder/activate", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderActivateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderMetadata, TeamFolderActivateError>(teamFolderIdArg, "api", "/team/team_folder/activate", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderActivateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6488,16 +6682,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderActivateError"/>.</exception>
-        public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(string teamFolderId)
+        public t.Task<TeamFolderMetadata> TeamFolderActivateAsync(string teamFolderId,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
 
-            return this.TeamFolderActivateAsync(teamFolderIdArg);
+            return this.TeamFolderActivateAsync(teamFolderIdArg, cancellationToken);
         }
 
         /// <summary>
@@ -6545,14 +6741,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderArchiveArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderArchiveError"/>.</exception>
-        public t.Task<TeamFolderArchiveLaunch> TeamFolderArchiveAsync(TeamFolderArchiveArg teamFolderArchiveArg)
+        public t.Task<TeamFolderArchiveLaunch> TeamFolderArchiveAsync(TeamFolderArchiveArg teamFolderArchiveArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderArchiveArg, TeamFolderArchiveLaunch, TeamFolderArchiveError>(teamFolderArchiveArg, "api", "/team/team_folder/archive", "team", global::Dropbox.Api.Team.TeamFolderArchiveArg.Encoder, global::Dropbox.Api.Team.TeamFolderArchiveLaunch.Decoder, global::Dropbox.Api.Team.TeamFolderArchiveError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderArchiveArg, TeamFolderArchiveLaunch, TeamFolderArchiveError>(teamFolderArchiveArg, "api", "/team/team_folder/archive", "team", global::Dropbox.Api.Team.TeamFolderArchiveArg.Encoder, global::Dropbox.Api.Team.TeamFolderArchiveLaunch.Decoder, global::Dropbox.Api.Team.TeamFolderArchiveError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6579,18 +6776,20 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <param name="forceAsyncOff">Whether to force the archive to happen
         /// synchronously.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderArchiveError"/>.</exception>
         public t.Task<TeamFolderArchiveLaunch> TeamFolderArchiveAsync(string teamFolderId,
-                                                                      bool forceAsyncOff = false)
+                                                                      bool forceAsyncOff = false,
+                                                                      tr.CancellationToken cancellationToken = default)
         {
             var teamFolderArchiveArg = new TeamFolderArchiveArg(teamFolderId,
                                                                 forceAsyncOff);
 
-            return this.TeamFolderArchiveAsync(teamFolderArchiveArg);
+            return this.TeamFolderArchiveAsync(teamFolderArchiveArg, cancellationToken);
         }
 
         /// <summary>
@@ -6641,14 +6840,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(global::Dropbox.Api.Async.PollArg pollArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, TeamFolderArchiveJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/team_folder/archive/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.TeamFolderArchiveJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, TeamFolderArchiveJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/team_folder/archive/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.TeamFolderArchiveJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6673,16 +6873,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(string asyncJobId)
+        public t.Task<TeamFolderArchiveJobStatus> TeamFolderArchiveCheckAsync(string asyncJobId,
+                                                                              tr.CancellationToken cancellationToken = default)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.TeamFolderArchiveCheckAsync(pollArg);
+            return this.TeamFolderArchiveCheckAsync(pollArg, cancellationToken);
         }
 
         /// <summary>
@@ -6730,14 +6932,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderCreateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderCreateError"/>.</exception>
-        public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(TeamFolderCreateArg teamFolderCreateArg)
+        public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(TeamFolderCreateArg teamFolderCreateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderCreateArg, TeamFolderMetadata, TeamFolderCreateError>(teamFolderCreateArg, "api", "/team/team_folder/create", "team", global::Dropbox.Api.Team.TeamFolderCreateArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderCreateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderCreateArg, TeamFolderMetadata, TeamFolderCreateError>(teamFolderCreateArg, "api", "/team/team_folder/create", "team", global::Dropbox.Api.Team.TeamFolderCreateArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderCreateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6763,18 +6966,20 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="name">Name for the new team folder.</param>
         /// <param name="syncSetting">The sync setting to apply to this team folder. Only
         /// permitted if the team has team selective sync enabled.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderCreateError"/>.</exception>
         public t.Task<TeamFolderMetadata> TeamFolderCreateAsync(string name,
-                                                                global::Dropbox.Api.Files.SyncSettingArg syncSetting = null)
+                                                                global::Dropbox.Api.Files.SyncSettingArg syncSetting = null,
+                                                                tr.CancellationToken cancellationToken = default)
         {
             var teamFolderCreateArg = new TeamFolderCreateArg(name,
                                                               syncSetting);
 
-            return this.TeamFolderCreateAsync(teamFolderCreateArg);
+            return this.TeamFolderCreateAsync(teamFolderCreateArg, cancellationToken);
         }
 
         /// <summary>
@@ -6825,11 +7030,12 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderIdListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(TeamFolderIdListArg teamFolderIdListArg)
+        public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(TeamFolderIdListArg teamFolderIdListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderIdListArg, col.List<TeamFolderGetInfoItem>, enc.Empty>(teamFolderIdListArg, "api", "/team/team_folder/get_info", "team", global::Dropbox.Api.Team.TeamFolderIdListArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.TeamFolderGetInfoItem.Decoder), enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdListArg, col.List<TeamFolderGetInfoItem>, enc.Empty>(teamFolderIdListArg, "api", "/team/team_folder/get_info", "team", global::Dropbox.Api.Team.TeamFolderIdListArg.Encoder, enc.Decoder.CreateListDecoder(global::Dropbox.Api.Team.TeamFolderGetInfoItem.Decoder), enc.EmptyDecoder.Instance, cancellationToken);
         }
 
         /// <summary>
@@ -6853,13 +7059,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderIds">The list of team folder IDs.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(col.IEnumerable<string> teamFolderIds)
+        public t.Task<col.List<TeamFolderGetInfoItem>> TeamFolderGetInfoAsync(col.IEnumerable<string> teamFolderIds,
+                                                                              tr.CancellationToken cancellationToken = default)
         {
             var teamFolderIdListArg = new TeamFolderIdListArg(teamFolderIds);
 
-            return this.TeamFolderGetInfoAsync(teamFolderIdListArg);
+            return this.TeamFolderGetInfoAsync(teamFolderIdListArg, cancellationToken);
         }
 
         /// <summary>
@@ -6903,14 +7111,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderListArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderListError"/>.</exception>
-        public t.Task<TeamFolderListResult> TeamFolderListAsync(TeamFolderListArg teamFolderListArg)
+        public t.Task<TeamFolderListResult> TeamFolderListAsync(TeamFolderListArg teamFolderListArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderListArg, TeamFolderListResult, TeamFolderListError>(teamFolderListArg, "api", "/team/team_folder/list", "team", global::Dropbox.Api.Team.TeamFolderListArg.Encoder, global::Dropbox.Api.Team.TeamFolderListResult.Decoder, global::Dropbox.Api.Team.TeamFolderListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderListArg, TeamFolderListResult, TeamFolderListError>(teamFolderListArg, "api", "/team/team_folder/list", "team", global::Dropbox.Api.Team.TeamFolderListArg.Encoder, global::Dropbox.Api.Team.TeamFolderListResult.Decoder, global::Dropbox.Api.Team.TeamFolderListError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -6934,16 +7143,18 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderListError"/>.</exception>
-        public t.Task<TeamFolderListResult> TeamFolderListAsync(uint limit = 1000)
+        public t.Task<TeamFolderListResult> TeamFolderListAsync(uint limit = 1000,
+                                                                tr.CancellationToken cancellationToken = default)
         {
             var teamFolderListArg = new TeamFolderListArg(limit);
 
-            return this.TeamFolderListAsync(teamFolderListArg);
+            return this.TeamFolderListAsync(teamFolderListArg, cancellationToken);
         }
 
         /// <summary>
@@ -6992,14 +7203,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderListContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderListContinueError"/>.</exception>
-        public t.Task<TeamFolderListResult> TeamFolderListContinueAsync(TeamFolderListContinueArg teamFolderListContinueArg)
+        public t.Task<TeamFolderListResult> TeamFolderListContinueAsync(TeamFolderListContinueArg teamFolderListContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderListContinueArg, TeamFolderListResult, TeamFolderListContinueError>(teamFolderListContinueArg, "api", "/team/team_folder/list/continue", "team", global::Dropbox.Api.Team.TeamFolderListContinueArg.Encoder, global::Dropbox.Api.Team.TeamFolderListResult.Decoder, global::Dropbox.Api.Team.TeamFolderListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderListContinueArg, TeamFolderListResult, TeamFolderListContinueError>(teamFolderListContinueArg, "api", "/team/team_folder/list/continue", "team", global::Dropbox.Api.Team.TeamFolderListContinueArg.Encoder, global::Dropbox.Api.Team.TeamFolderListResult.Decoder, global::Dropbox.Api.Team.TeamFolderListContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -7026,16 +7238,18 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of team
         /// folders.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderListContinueError"/>.</exception>
-        public t.Task<TeamFolderListResult> TeamFolderListContinueAsync(string cursor)
+        public t.Task<TeamFolderListResult> TeamFolderListContinueAsync(string cursor,
+                                                                        tr.CancellationToken cancellationToken = default)
         {
             var teamFolderListContinueArg = new TeamFolderListContinueArg(cursor);
 
-            return this.TeamFolderListContinueAsync(teamFolderListContinueArg);
+            return this.TeamFolderListContinueAsync(teamFolderListContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -7083,13 +7297,14 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderIdArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderPermanentlyDeleteError"/>.</exception>
-        public t.Task TeamFolderPermanentlyDeleteAsync(TeamFolderIdArg teamFolderIdArg)
+        public t.Task TeamFolderPermanentlyDeleteAsync(TeamFolderIdArg teamFolderIdArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, enc.Empty, TeamFolderPermanentlyDeleteError>(teamFolderIdArg, "api", "/team/team_folder/permanently_delete", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, enc.Empty, TeamFolderPermanentlyDeleteError>(teamFolderIdArg, "api", "/team/team_folder/permanently_delete", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -7114,15 +7329,17 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderPermanentlyDeleteError"/>.</exception>
-        public t.Task TeamFolderPermanentlyDeleteAsync(string teamFolderId)
+        public t.Task TeamFolderPermanentlyDeleteAsync(string teamFolderId,
+                                                       tr.CancellationToken cancellationToken = default)
         {
             var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
 
-            return this.TeamFolderPermanentlyDeleteAsync(teamFolderIdArg);
+            return this.TeamFolderPermanentlyDeleteAsync(teamFolderIdArg, cancellationToken);
         }
 
         /// <summary>
@@ -7167,14 +7384,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderRenameArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderRenameError"/>.</exception>
-        public t.Task<TeamFolderMetadata> TeamFolderRenameAsync(TeamFolderRenameArg teamFolderRenameArg)
+        public t.Task<TeamFolderMetadata> TeamFolderRenameAsync(TeamFolderRenameArg teamFolderRenameArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderRenameArg, TeamFolderMetadata, TeamFolderRenameError>(teamFolderRenameArg, "api", "/team/team_folder/rename", "team", global::Dropbox.Api.Team.TeamFolderRenameArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderRenameError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderRenameArg, TeamFolderMetadata, TeamFolderRenameError>(teamFolderRenameArg, "api", "/team/team_folder/rename", "team", global::Dropbox.Api.Team.TeamFolderRenameArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderRenameError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -7199,18 +7417,20 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <param name="name">New team folder name.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderRenameError"/>.</exception>
         public t.Task<TeamFolderMetadata> TeamFolderRenameAsync(string teamFolderId,
-                                                                string name)
+                                                                string name,
+                                                                tr.CancellationToken cancellationToken = default)
         {
             var teamFolderRenameArg = new TeamFolderRenameArg(teamFolderId,
                                                               name);
 
-            return this.TeamFolderRenameAsync(teamFolderRenameArg);
+            return this.TeamFolderRenameAsync(teamFolderRenameArg, cancellationToken);
         }
 
         /// <summary>
@@ -7260,14 +7480,15 @@ namespace Dropbox.Api.Team.Routes
         /// endpoint requires that the team has team selective sync enabled.</para>
         /// </summary>
         /// <param name="teamFolderUpdateSyncSettingsArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderUpdateSyncSettingsError"/>.</exception>
-        public t.Task<TeamFolderMetadata> TeamFolderUpdateSyncSettingsAsync(TeamFolderUpdateSyncSettingsArg teamFolderUpdateSyncSettingsArg)
+        public t.Task<TeamFolderMetadata> TeamFolderUpdateSyncSettingsAsync(TeamFolderUpdateSyncSettingsArg teamFolderUpdateSyncSettingsArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<TeamFolderUpdateSyncSettingsArg, TeamFolderMetadata, TeamFolderUpdateSyncSettingsError>(teamFolderUpdateSyncSettingsArg, "api", "/team/team_folder/update_sync_settings", "team", global::Dropbox.Api.Team.TeamFolderUpdateSyncSettingsArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderUpdateSyncSettingsError.Decoder);
+            return this.Transport.SendRpcRequestAsync<TeamFolderUpdateSyncSettingsArg, TeamFolderMetadata, TeamFolderUpdateSyncSettingsError>(teamFolderUpdateSyncSettingsArg, "api", "/team/team_folder/update_sync_settings", "team", global::Dropbox.Api.Team.TeamFolderUpdateSyncSettingsArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderUpdateSyncSettingsError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -7296,6 +7517,7 @@ namespace Dropbox.Api.Team.Routes
         /// meaningful if the team folder is not a shared team root.</param>
         /// <param name="contentSyncSettings">Sync settings to apply to contents of this team
         /// folder.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -7303,13 +7525,14 @@ namespace Dropbox.Api.Team.Routes
         /// cref="TeamFolderUpdateSyncSettingsError"/>.</exception>
         public t.Task<TeamFolderMetadata> TeamFolderUpdateSyncSettingsAsync(string teamFolderId,
                                                                             global::Dropbox.Api.Files.SyncSettingArg syncSetting = null,
-                                                                            col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSettingArg> contentSyncSettings = null)
+                                                                            col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSettingArg> contentSyncSettings = null,
+                                                                            tr.CancellationToken cancellationToken = default)
         {
             var teamFolderUpdateSyncSettingsArg = new TeamFolderUpdateSyncSettingsArg(teamFolderId,
                                                                                       syncSetting,
                                                                                       contentSyncSettings);
 
-            return this.TeamFolderUpdateSyncSettingsAsync(teamFolderUpdateSyncSettingsArg);
+            return this.TeamFolderUpdateSyncSettingsAsync(teamFolderUpdateSyncSettingsArg, cancellationToken);
         }
 
         /// <summary>
@@ -7364,14 +7587,15 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Returns the member profile of the admin who generated the team access token
         /// used to make the call.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TokenGetAuthenticatedAdminError"/>.</exception>
-        public t.Task<TokenGetAuthenticatedAdminResult> TokenGetAuthenticatedAdminAsync()
+        public t.Task<TokenGetAuthenticatedAdminResult> TokenGetAuthenticatedAdminAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, TokenGetAuthenticatedAdminResult, TokenGetAuthenticatedAdminError>(enc.Empty.Instance, "api", "/team/token/get_authenticated_admin", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.Decoder, global::Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, TokenGetAuthenticatedAdminResult, TokenGetAuthenticatedAdminError>(enc.Empty.Instance, "api", "/team/token/get_authenticated_admin", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.Decoder, global::Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Decoder, cancellationToken);
         }
 
         /// <summary>

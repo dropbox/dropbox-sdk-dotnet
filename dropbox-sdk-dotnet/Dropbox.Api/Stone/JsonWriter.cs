@@ -10,7 +10,8 @@ namespace Dropbox.Api.Stone
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
-
+    using System.Threading;
+    using System.Threading.Tasks;
     using Newtonsoft.Json;
 
     /// <summary>
@@ -39,8 +40,9 @@ namespace Dropbox.Api.Stone
         /// <param name="encodable">The object to write.</param>
         /// <param name="encoder">The encoder.</param>
         /// <param name="escapeNonAscii">If escape non-ascii characters.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The encoded object as a JSON string.</returns>
-        public static string Write<T>(T encodable, IEncoder<T> encoder, bool escapeNonAscii = false)
+        public static async Task<string> WriteAsync<T>(T encodable, IEncoder<T> encoder, bool escapeNonAscii = false, CancellationToken cancellationToken = default)
         {
             var builder = new StringBuilder();
             var textWriter = new JsonTextWriter(new StringWriter(builder)) { DateFormatString = "yyyy-MM-ddTHH:mm:ssZ" };
@@ -51,7 +53,7 @@ namespace Dropbox.Api.Stone
             }
 
             var writer = new JsonWriter(textWriter);
-            encoder.Encode(encodable, writer);
+            await encoder.Encode(encodable, writer, cancellationToken);
 
             var json = builder.ToString();
 
@@ -62,139 +64,171 @@ namespace Dropbox.Api.Stone
         /// Write a Int32 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteInt32(int value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteInt32(int value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a Int64 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteInt64(long value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteInt64(long value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a UInt32 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteUInt32(uint value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteUInt32(uint value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a UInt64 value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteUInt64(ulong value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteUInt64(ulong value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a double value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteDouble(double value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteDouble(double value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a single value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteSingle(float value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteSingle(float value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a DateTime value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteDateTime(DateTime value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteDateTime(DateTime value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value.ToUniversalTime());
+            await this.writer.WriteValueAsync(value.ToUniversalTime(), cancellationToken);
         }
 
         /// <summary>
         /// Write a boolean value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteBoolean(bool value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteBoolean(bool value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a byte[] value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteBytes(byte[] value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteBytes(byte[] value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a string value.
         /// </summary>
         /// <param name="value">The value.</param>
-        void IJsonWriter.WriteString(string value)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteString(string value, CancellationToken cancellationToken)
         {
-            this.writer.WriteValue(value);
+            await this.writer.WriteValueAsync(value, cancellationToken);
         }
 
         /// <summary>
         /// Write a null value.
         /// </summary>
-        void IJsonWriter.WriteNull()
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteNull(CancellationToken cancellationToken)
         {
-            this.writer.WriteNull();
+            await this.writer.WriteNullAsync(cancellationToken);
         }
 
         /// <summary>
         /// Write start object.
         /// </summary>
-        void IJsonWriter.WriteStartObject()
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteStartObject(CancellationToken cancellationToken)
         {
-            this.writer.WriteStartObject();
+            await this.writer.WriteStartObjectAsync(cancellationToken);
         }
 
         /// <summary>
         /// Write end object.
         /// </summary>
-        void IJsonWriter.WriteEndObject()
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteEndObject(CancellationToken cancellationToken)
         {
-            this.writer.WriteEndObject();
+            await this.writer.WriteEndObjectAsync(cancellationToken);
         }
 
         /// <summary>
         /// Write start array.
         /// </summary>
-        void IJsonWriter.WriteStartArray()
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteStartArray(CancellationToken cancellationToken)
         {
-            this.writer.WriteStartArray();
+            await this.writer.WriteStartArrayAsync(cancellationToken);
         }
 
         /// <summary>
         /// Write end array.
         /// </summary>
-        void IJsonWriter.WriteEndArray()
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WriteEndArray(CancellationToken cancellationToken)
         {
-            this.writer.WriteEndArray();
+            await this.writer.WriteEndArrayAsync(cancellationToken);
         }
 
         /// <summary>
         /// Write property name.
         /// </summary>
         /// <param name="name">The property name.</param>
-        void IJsonWriter.WritePropertyName(string name)
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
+        /// <returns>The task object representing the asynchronous operation.</returns>
+        async Task IJsonWriter.WritePropertyName(string name, CancellationToken cancellationToken)
         {
-            this.writer.WritePropertyName(name);
+            await this.writer.WritePropertyNameAsync(name, cancellationToken);
         }
     }
 }

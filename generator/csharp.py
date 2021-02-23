@@ -1846,6 +1846,7 @@ class _CSharpGenerator(CodeBackend):
                     self.emit('using io = System.IO;')
                     self.emit('using col = System.Collections.Generic;')
                     self.emit('using t = System.Threading.Tasks;')
+                    self.emit('using tr = System.Threading;')
                     self.emit('using enc = {}.Stone;'.format(self._namespace_name))
                     self.emit()
 
@@ -1929,8 +1930,10 @@ class _CSharpGenerator(CodeBackend):
                 body_arg = 'io.Stream body'
             ctor_args.append(ConstructorArg('io.Stream', 'body', body_arg,
                                             '<param name="body">The document to upload</param>'))
-
-        async_fn = 'public {} {}({})'.format(task_type, async_name, ', '.join(route_args))
+        
+        cancellationTokenArg_name = 'cancellationToken'
+        cancellationTokenArg = ['tr.CancellationToken {} = default'.format(cancellationTokenArg_name)]
+        async_fn = 'public {} {}({})'.format(task_type, async_name, ', '.join(route_args + cancellationTokenArg))
 
         apm_args = route_args + ['sys.AsyncCallback callback', 'object state = null']
         apm_fn = 'public sys.IAsyncResult Begin{}({})'.format(public_name, ', '.join(apm_args))
@@ -1944,6 +1947,7 @@ class _CSharpGenerator(CodeBackend):
                 self.emit_xml('The request parameters', 'param', name=arg_name)
             if route_style == 'upload':
                 self.emit_xml('The content to upload.', 'param', name='body')
+            self.emit_xml('The cancellation token to cancel operation.', 'param', name=cancellationTokenArg_name)
             if result_is_void:
                 self.emit_xml('The task that represents the asynchronous send operation.',
                               'returns')
@@ -1968,6 +1972,7 @@ class _CSharpGenerator(CodeBackend):
                 self._get_encoder(route.arg_data_type),
                 self._get_decoder(route.result_data_type),
                 self._get_decoder(route.error_data_type),
+                cancellationTokenArg_name
             ])
 
             self.emit('return this.Transport.Send{}RequestAsync<{}>({});'.format(
@@ -2009,6 +2014,7 @@ class _CSharpGenerator(CodeBackend):
                 self.emit_summary(route.doc or 'The {} route'.format(self._name_words(route.name)))
                 for arg in ctor_args:
                     self.emit_wrapped_text(arg.doc)
+                self.emit_xml('The cancellation token to cancel operation.', 'param', name=cancellationTokenArg_name)
                 if result_is_void:
                     self.emit_xml('The task that represents the asynchronous send operation.',
                                   'returns')
@@ -2023,7 +2029,7 @@ class _CSharpGenerator(CodeBackend):
 
             self._generate_obsolete_attribute(route.deprecated, suffix='Async')
             self.generate_multiline_list(
-                arg_list,
+                arg_list + cancellationTokenArg,
                 before='public {} {}'.format(task_type, async_name),
                 skip_last_sep=True
             )
@@ -2038,6 +2044,7 @@ class _CSharpGenerator(CodeBackend):
                 async_args = [arg_name]
                 if route_style == 'upload':
                     async_args.append('body')
+                async_args.append(cancellationTokenArg_name)
                 self.emit('return this.{}({});'.format(async_name, ', '.join(async_args)))
 
             self.emit()

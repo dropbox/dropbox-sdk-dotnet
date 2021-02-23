@@ -8,6 +8,7 @@ namespace Dropbox.Api.FileProperties.Routes
     using io = System.IO;
     using col = System.Collections.Generic;
     using t = System.Threading.Tasks;
+    using tr = System.Threading;
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
@@ -38,13 +39,14 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> to create new templates.</para>
         /// </summary>
         /// <param name="addPropertiesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AddPropertiesError"/>.</exception>
-        public t.Task PropertiesAddAsync(AddPropertiesArg addPropertiesArg)
+        public t.Task PropertiesAddAsync(AddPropertiesArg addPropertiesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<AddPropertiesArg, enc.Empty, AddPropertiesError>(addPropertiesArg, "api", "/file_properties/properties/add", "user", global::Dropbox.Api.FileProperties.AddPropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.AddPropertiesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddPropertiesArg, enc.Empty, AddPropertiesError>(addPropertiesArg, "api", "/file_properties/properties/add", "user", global::Dropbox.Api.FileProperties.AddPropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.AddPropertiesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -73,17 +75,19 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
         /// file. No two groups in the input should  refer to the same template.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AddPropertiesError"/>.</exception>
         public t.Task PropertiesAddAsync(string path,
-                                         col.IEnumerable<PropertyGroup> propertyGroups)
+                                         col.IEnumerable<PropertyGroup> propertyGroups,
+                                         tr.CancellationToken cancellationToken = default)
         {
             var addPropertiesArg = new AddPropertiesArg(path,
                                                         propertyGroups);
 
-            return this.PropertiesAddAsync(addPropertiesArg);
+            return this.PropertiesAddAsync(addPropertiesArg, cancellationToken);
         }
 
         /// <summary>
@@ -137,13 +141,14 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> will only delete fields that are explicitly marked for deletion.</para>
         /// </summary>
         /// <param name="overwritePropertyGroupArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="InvalidPropertyGroupError"/>.</exception>
-        public t.Task PropertiesOverwriteAsync(OverwritePropertyGroupArg overwritePropertyGroupArg)
+        public t.Task PropertiesOverwriteAsync(OverwritePropertyGroupArg overwritePropertyGroupArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<OverwritePropertyGroupArg, enc.Empty, InvalidPropertyGroupError>(overwritePropertyGroupArg, "api", "/file_properties/properties/overwrite", "user", global::Dropbox.Api.FileProperties.OverwritePropertyGroupArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Decoder);
+            return this.Transport.SendRpcRequestAsync<OverwritePropertyGroupArg, enc.Empty, InvalidPropertyGroupError>(overwritePropertyGroupArg, "api", "/file_properties/properties/overwrite", "user", global::Dropbox.Api.FileProperties.OverwritePropertyGroupArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.InvalidPropertyGroupError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -175,17 +180,19 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
         /// No two groups in the input should  refer to the same template.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="InvalidPropertyGroupError"/>.</exception>
         public t.Task PropertiesOverwriteAsync(string path,
-                                               col.IEnumerable<PropertyGroup> propertyGroups)
+                                               col.IEnumerable<PropertyGroup> propertyGroups,
+                                               tr.CancellationToken cancellationToken = default)
         {
             var overwritePropertyGroupArg = new OverwritePropertyGroupArg(path,
                                                                           propertyGroups);
 
-            return this.PropertiesOverwriteAsync(overwritePropertyGroupArg);
+            return this.PropertiesOverwriteAsync(overwritePropertyGroupArg, cancellationToken);
         }
 
         /// <summary>
@@ -243,13 +250,14 @@ namespace Dropbox.Api.FileProperties.Routes
         /// />.</para>
         /// </summary>
         /// <param name="removePropertiesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemovePropertiesError"/>.</exception>
-        public t.Task PropertiesRemoveAsync(RemovePropertiesArg removePropertiesArg)
+        public t.Task PropertiesRemoveAsync(RemovePropertiesArg removePropertiesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RemovePropertiesArg, enc.Empty, RemovePropertiesError>(removePropertiesArg, "api", "/file_properties/properties/remove", "user", global::Dropbox.Api.FileProperties.RemovePropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.RemovePropertiesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemovePropertiesArg, enc.Empty, RemovePropertiesError>(removePropertiesArg, "api", "/file_properties/properties/remove", "user", global::Dropbox.Api.FileProperties.RemovePropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.RemovePropertiesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -289,17 +297,19 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemovePropertiesError"/>.</exception>
         public t.Task PropertiesRemoveAsync(string path,
-                                            col.IEnumerable<string> propertyTemplateIds)
+                                            col.IEnumerable<string> propertyTemplateIds,
+                                            tr.CancellationToken cancellationToken = default)
         {
             var removePropertiesArg = new RemovePropertiesArg(path,
                                                               propertyTemplateIds);
 
-            return this.PropertiesRemoveAsync(removePropertiesArg);
+            return this.PropertiesRemoveAsync(removePropertiesArg, cancellationToken);
         }
 
         /// <summary>
@@ -350,14 +360,15 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <para>Search across property templates for particular property field values.</para>
         /// </summary>
         /// <param name="propertiesSearchArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PropertiesSearchError"/>.</exception>
-        public t.Task<PropertiesSearchResult> PropertiesSearchAsync(PropertiesSearchArg propertiesSearchArg)
+        public t.Task<PropertiesSearchResult> PropertiesSearchAsync(PropertiesSearchArg propertiesSearchArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<PropertiesSearchArg, PropertiesSearchResult, PropertiesSearchError>(propertiesSearchArg, "api", "/file_properties/properties/search", "user", global::Dropbox.Api.FileProperties.PropertiesSearchArg.Encoder, global::Dropbox.Api.FileProperties.PropertiesSearchResult.Decoder, global::Dropbox.Api.FileProperties.PropertiesSearchError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PropertiesSearchArg, PropertiesSearchResult, PropertiesSearchError>(propertiesSearchArg, "api", "/file_properties/properties/search", "user", global::Dropbox.Api.FileProperties.PropertiesSearchArg.Encoder, global::Dropbox.Api.FileProperties.PropertiesSearchResult.Decoder, global::Dropbox.Api.FileProperties.PropertiesSearchError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -382,18 +393,20 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <param name="queries">Queries to search.</param>
         /// <param name="templateFilter">Filter results to contain only properties associated
         /// with these template IDs.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PropertiesSearchError"/>.</exception>
         public t.Task<PropertiesSearchResult> PropertiesSearchAsync(col.IEnumerable<PropertiesSearchQuery> queries,
-                                                                    TemplateFilter templateFilter = null)
+                                                                    TemplateFilter templateFilter = null,
+                                                                    tr.CancellationToken cancellationToken = default)
         {
             var propertiesSearchArg = new PropertiesSearchArg(queries,
                                                               templateFilter);
 
-            return this.PropertiesSearchAsync(propertiesSearchArg);
+            return this.PropertiesSearchAsync(propertiesSearchArg, cancellationToken);
         }
 
         /// <summary>
@@ -445,14 +458,15 @@ namespace Dropbox.Api.FileProperties.Routes
         /// />, use this to paginate through all search results.</para>
         /// </summary>
         /// <param name="propertiesSearchContinueArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PropertiesSearchContinueError"/>.</exception>
-        public t.Task<PropertiesSearchResult> PropertiesSearchContinueAsync(PropertiesSearchContinueArg propertiesSearchContinueArg)
+        public t.Task<PropertiesSearchResult> PropertiesSearchContinueAsync(PropertiesSearchContinueArg propertiesSearchContinueArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<PropertiesSearchContinueArg, PropertiesSearchResult, PropertiesSearchContinueError>(propertiesSearchContinueArg, "api", "/file_properties/properties/search/continue", "user", global::Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Encoder, global::Dropbox.Api.FileProperties.PropertiesSearchResult.Decoder, global::Dropbox.Api.FileProperties.PropertiesSearchContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<PropertiesSearchContinueArg, PropertiesSearchResult, PropertiesSearchContinueError>(propertiesSearchContinueArg, "api", "/file_properties/properties/search/continue", "user", global::Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Encoder, global::Dropbox.Api.FileProperties.PropertiesSearchResult.Decoder, global::Dropbox.Api.FileProperties.PropertiesSearchContinueError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -481,16 +495,18 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="PropertiesSearchContinueError"/>.</exception>
-        public t.Task<PropertiesSearchResult> PropertiesSearchContinueAsync(string cursor)
+        public t.Task<PropertiesSearchResult> PropertiesSearchContinueAsync(string cursor,
+                                                                            tr.CancellationToken cancellationToken = default)
         {
             var propertiesSearchContinueArg = new PropertiesSearchContinueArg(cursor);
 
-            return this.PropertiesSearchContinueAsync(propertiesSearchContinueArg);
+            return this.PropertiesSearchContinueAsync(propertiesSearchContinueArg, cancellationToken);
         }
 
         /// <summary>
@@ -547,13 +563,14 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> will delete any fields that are omitted from a property group.</para>
         /// </summary>
         /// <param name="updatePropertiesArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UpdatePropertiesError"/>.</exception>
-        public t.Task PropertiesUpdateAsync(UpdatePropertiesArg updatePropertiesArg)
+        public t.Task PropertiesUpdateAsync(UpdatePropertiesArg updatePropertiesArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UpdatePropertiesArg, enc.Empty, UpdatePropertiesError>(updatePropertiesArg, "api", "/file_properties/properties/update", "user", global::Dropbox.Api.FileProperties.UpdatePropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.UpdatePropertiesError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdatePropertiesArg, enc.Empty, UpdatePropertiesError>(updatePropertiesArg, "api", "/file_properties/properties/update", "user", global::Dropbox.Api.FileProperties.UpdatePropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.UpdatePropertiesError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -585,17 +602,19 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="updatePropertyGroups">The property groups "delta" updates to
         /// apply.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="UpdatePropertiesError"/>.</exception>
         public t.Task PropertiesUpdateAsync(string path,
-                                            col.IEnumerable<PropertyGroupUpdate> updatePropertyGroups)
+                                            col.IEnumerable<PropertyGroupUpdate> updatePropertyGroups,
+                                            tr.CancellationToken cancellationToken = default)
         {
             var updatePropertiesArg = new UpdatePropertiesArg(path,
                                                               updatePropertyGroups);
 
-            return this.PropertiesUpdateAsync(updatePropertiesArg);
+            return this.PropertiesUpdateAsync(updatePropertiesArg, cancellationToken);
         }
 
         /// <summary>
@@ -645,14 +664,15 @@ namespace Dropbox.Api.FileProperties.Routes
         /// admin's behalf.</para>
         /// </summary>
         /// <param name="addTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ModifyTemplateError"/>.</exception>
-        public t.Task<AddTemplateResult> TemplatesAddForUserAsync(AddTemplateArg addTemplateArg)
+        public t.Task<AddTemplateResult> TemplatesAddForUserAsync(AddTemplateArg addTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<AddTemplateArg, AddTemplateResult, ModifyTemplateError>(addTemplateArg, "api", "/file_properties/templates/add_for_user", "user", global::Dropbox.Api.FileProperties.AddTemplateArg.Encoder, global::Dropbox.Api.FileProperties.AddTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<AddTemplateArg, AddTemplateResult, ModifyTemplateError>(addTemplateArg, "api", "/file_properties/templates/add_for_user", "user", global::Dropbox.Api.FileProperties.AddTemplateArg.Encoder, global::Dropbox.Api.FileProperties.AddTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -683,6 +703,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// be up to 1024 bytes.</param>
         /// <param name="fields">Definitions of the property fields associated with this
         /// template. There can be up to 32 properties in a single template.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -690,13 +711,14 @@ namespace Dropbox.Api.FileProperties.Routes
         /// cref="ModifyTemplateError"/>.</exception>
         public t.Task<AddTemplateResult> TemplatesAddForUserAsync(string name,
                                                                   string description,
-                                                                  col.IEnumerable<PropertyFieldTemplate> fields)
+                                                                  col.IEnumerable<PropertyFieldTemplate> fields,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var addTemplateArg = new AddTemplateArg(name,
                                                     description,
                                                     fields);
 
-            return this.TemplatesAddForUserAsync(addTemplateArg);
+            return this.TemplatesAddForUserAsync(addTemplateArg, cancellationToken);
         }
 
         /// <summary>
@@ -752,14 +774,15 @@ namespace Dropbox.Api.FileProperties.Routes
         /// team member or admin's behalf.</para>
         /// </summary>
         /// <param name="getTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TemplateError"/>.</exception>
-        public t.Task<GetTemplateResult> TemplatesGetForUserAsync(GetTemplateArg getTemplateArg)
+        public t.Task<GetTemplateResult> TemplatesGetForUserAsync(GetTemplateArg getTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<GetTemplateArg, GetTemplateResult, TemplateError>(getTemplateArg, "api", "/file_properties/templates/get_for_user", "user", global::Dropbox.Api.FileProperties.GetTemplateArg.Encoder, global::Dropbox.Api.FileProperties.GetTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetTemplateArg, GetTemplateResult, TemplateError>(getTemplateArg, "api", "/file_properties/templates/get_for_user", "user", global::Dropbox.Api.FileProperties.GetTemplateArg.Encoder, global::Dropbox.Api.FileProperties.GetTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -787,16 +810,18 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TemplateError"/>.</exception>
-        public t.Task<GetTemplateResult> TemplatesGetForUserAsync(string templateId)
+        public t.Task<GetTemplateResult> TemplatesGetForUserAsync(string templateId,
+                                                                  tr.CancellationToken cancellationToken = default)
         {
             var getTemplateArg = new GetTemplateArg(templateId);
 
-            return this.TemplatesGetForUserAsync(getTemplateArg);
+            return this.TemplatesGetForUserAsync(getTemplateArg, cancellationToken);
         }
 
         /// <summary>
@@ -848,14 +873,15 @@ namespace Dropbox.Api.FileProperties.Routes
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesGetForUserAsync"
         /// />. This endpoint can't be called on a team member or admin's behalf.</para>
         /// </summary>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TemplateError"/>.</exception>
-        public t.Task<ListTemplateResult> TemplatesListForUserAsync()
+        public t.Task<ListTemplateResult> TemplatesListForUserAsync(tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, ListTemplateResult, TemplateError>(enc.Empty.Instance, "api", "/file_properties/templates/list_for_user", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<enc.Empty, ListTemplateResult, TemplateError>(enc.Empty.Instance, "api", "/file_properties/templates/list_for_user", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -901,13 +927,14 @@ namespace Dropbox.Api.FileProperties.Routes
         /// cannot be undone.</para>
         /// </summary>
         /// <param name="removeTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TemplateError"/>.</exception>
-        public t.Task TemplatesRemoveForUserAsync(RemoveTemplateArg removeTemplateArg)
+        public t.Task TemplatesRemoveForUserAsync(RemoveTemplateArg removeTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<RemoveTemplateArg, enc.Empty, TemplateError>(removeTemplateArg, "api", "/file_properties/templates/remove_for_user", "user", global::Dropbox.Api.FileProperties.RemoveTemplateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RemoveTemplateArg, enc.Empty, TemplateError>(removeTemplateArg, "api", "/file_properties/templates/remove_for_user", "user", global::Dropbox.Api.FileProperties.RemoveTemplateArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.TemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -937,15 +964,17 @@ namespace Dropbox.Api.FileProperties.Routes
         /// /> or <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
         /// />.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TemplateError"/>.</exception>
-        public t.Task TemplatesRemoveForUserAsync(string templateId)
+        public t.Task TemplatesRemoveForUserAsync(string templateId,
+                                                  tr.CancellationToken cancellationToken = default)
         {
             var removeTemplateArg = new RemoveTemplateArg(templateId);
 
-            return this.TemplatesRemoveForUserAsync(removeTemplateArg);
+            return this.TemplatesRemoveForUserAsync(removeTemplateArg, cancellationToken);
         }
 
         /// <summary>
@@ -994,14 +1023,15 @@ namespace Dropbox.Api.FileProperties.Routes
         /// endpoint can't be called on a team member or admin's behalf.</para>
         /// </summary>
         /// <param name="updateTemplateArg">The request parameters</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ModifyTemplateError"/>.</exception>
-        public t.Task<UpdateTemplateResult> TemplatesUpdateForUserAsync(UpdateTemplateArg updateTemplateArg)
+        public t.Task<UpdateTemplateResult> TemplatesUpdateForUserAsync(UpdateTemplateArg updateTemplateArg, tr.CancellationToken cancellationToken = default)
         {
-            return this.Transport.SendRpcRequestAsync<UpdateTemplateArg, UpdateTemplateResult, ModifyTemplateError>(updateTemplateArg, "api", "/file_properties/templates/update_for_user", "user", global::Dropbox.Api.FileProperties.UpdateTemplateArg.Encoder, global::Dropbox.Api.FileProperties.UpdateTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
+            return this.Transport.SendRpcRequestAsync<UpdateTemplateArg, UpdateTemplateResult, ModifyTemplateError>(updateTemplateArg, "api", "/file_properties/templates/update_for_user", "user", global::Dropbox.Api.FileProperties.UpdateTemplateArg.Encoder, global::Dropbox.Api.FileProperties.UpdateTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder, cancellationToken);
         }
 
         /// <summary>
@@ -1036,6 +1066,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// can be up to 1024 bytes.</param>
         /// <param name="addFields">Property field templates to be added to the group template.
         /// There can be up to 32 properties in a single template.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1044,14 +1075,15 @@ namespace Dropbox.Api.FileProperties.Routes
         public t.Task<UpdateTemplateResult> TemplatesUpdateForUserAsync(string templateId,
                                                                         string name = null,
                                                                         string description = null,
-                                                                        col.IEnumerable<PropertyFieldTemplate> addFields = null)
+                                                                        col.IEnumerable<PropertyFieldTemplate> addFields = null,
+                                                                        tr.CancellationToken cancellationToken = default)
         {
             var updateTemplateArg = new UpdateTemplateArg(templateId,
                                                           name,
                                                           description,
                                                           addFields);
 
-            return this.TemplatesUpdateForUserAsync(updateTemplateArg);
+            return this.TemplatesUpdateForUserAsync(updateTemplateArg, cancellationToken);
         }
 
         /// <summary>

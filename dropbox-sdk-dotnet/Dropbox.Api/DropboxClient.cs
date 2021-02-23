@@ -7,6 +7,7 @@
 namespace Dropbox.Api
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
     using Dropbox.Api.Common;
 
@@ -256,10 +257,11 @@ namespace Dropbox.Api
         /// Refreshes access token regardless of if existing token is expired.
         /// </summary>
         /// <param name="scopeList">subset of scopes to refresh token with, or null to refresh with all scopes.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel operation.</param>
         /// <returns>true if token is successfully refreshed, false otherwise.</returns>
-        public Task<bool> RefreshAccessToken(string[] scopeList)
+        public Task<bool> RefreshAccessToken(string[] scopeList, CancellationToken cancellationToken = default)
         {
-            return this.requestHandler.RefreshAccessToken(scopeList);
+            return this.requestHandler.RefreshAccessToken(scopeList, cancellationToken);
         }
     }
 }
