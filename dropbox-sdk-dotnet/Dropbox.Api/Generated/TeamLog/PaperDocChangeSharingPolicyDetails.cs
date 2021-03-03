@@ -32,10 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// cref="PaperDocChangeSharingPolicyDetails" /> class.</para>
         /// </summary>
         /// <param name="eventUuid">Event unique identifier.</param>
-        /// <param name="publicSharingPolicy">Sharing policy with external users. Might be
-        /// missing due to historical data gap.</param>
-        /// <param name="teamSharingPolicy">Sharing policy with team. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="publicSharingPolicy">Sharing policy with external users.</param>
+        /// <param name="teamSharingPolicy">Sharing policy with team.</param>
         public PaperDocChangeSharingPolicyDetails(string eventUuid,
                                                   string publicSharingPolicy = null,
                                                   string teamSharingPolicy = null)
@@ -67,13 +65,12 @@ namespace Dropbox.Api.TeamLog
         public string EventUuid { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing policy with external users. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>Sharing policy with external users.</para>
         /// </summary>
         public string PublicSharingPolicy { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing policy with team. Might be missing due to historical data gap.</para>
+        /// <para>Sharing policy with team.</para>
         /// </summary>
         public string TeamSharingPolicy { get; protected set; }
 

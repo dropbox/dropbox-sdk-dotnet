@@ -32,8 +32,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="MobileSessionLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="sessionId">Session ID. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="sessionId">Session ID.</param>
         public MobileSessionLogInfo(string sessionId = null)
             : base(sessionId)
         {

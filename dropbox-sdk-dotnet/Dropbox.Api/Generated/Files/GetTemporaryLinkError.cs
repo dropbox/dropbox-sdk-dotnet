@@ -102,6 +102,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NotAllowed</para>
+        /// </summary>
+        public bool IsNotAllowed
+        {
+            get
+            {
+                return this is NotAllowed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NotAllowed, or <c>null</c>.</para>
+        /// </summary>
+        public NotAllowed AsNotAllowed
+        {
+            get
+            {
+                return this as NotAllowed;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.Files
                     UnsupportedFile.Encoder.EncodeFields((UnsupportedFile)value, writer);
                     return;
                 }
+                if (value is NotAllowed)
+                {
+                    WriteProperty(".tag", "not_allowed", writer, enc.StringEncoder.Instance);
+                    NotAllowed.Encoder.EncodeFields((NotAllowed)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +228,8 @@ namespace Dropbox.Api.Files
                         return EmailNotVerified.Decoder.DecodeFields(reader);
                     case "unsupported_file":
                         return UnsupportedFile.Decoder.DecodeFields(reader);
+                    case "not_allowed":
+                        return NotAllowed.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -440,6 +470,77 @@ namespace Dropbox.Api.Files
                 protected override UnsupportedFile Create()
                 {
                     return UnsupportedFile.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user is not allowed to request a temporary link to the specified file.
+        /// For example, this can occur if the file is restricted or if the user's links are <a
+        /// href="https://help.dropbox.com/files-folders/share/banned-links">banned</a>.</para>
+        /// </summary>
+        public sealed class NotAllowed : GetTemporaryLinkError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NotAllowed> Encoder = new NotAllowedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NotAllowed> Decoder = new NotAllowedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NotAllowed" /> class.</para>
+            /// </summary>
+            private NotAllowed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NotAllowed</para>
+            /// </summary>
+            public static readonly NotAllowed Instance = new NotAllowed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NotAllowed" />.</para>
+            /// </summary>
+            private class NotAllowedEncoder : enc.StructEncoder<NotAllowed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NotAllowed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NotAllowed" />.</para>
+            /// </summary>
+            private class NotAllowedDecoder : enc.StructDecoder<NotAllowed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NotAllowed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NotAllowed Create()
+                {
+                    return NotAllowed.Instance;
                 }
 
             }

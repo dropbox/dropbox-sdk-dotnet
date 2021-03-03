@@ -79,6 +79,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidExportFormat</para>
+        /// </summary>
+        public bool IsInvalidExportFormat
+        {
+            get
+            {
+                return this is InvalidExportFormat;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidExportFormat, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidExportFormat AsInvalidExportFormat
+        {
+            get
+            {
+                return this as InvalidExportFormat;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is RetryError</para>
         /// </summary>
         public bool IsRetryError
@@ -148,6 +170,12 @@ namespace Dropbox.Api.Files
                     NonExportable.Encoder.EncodeFields((NonExportable)value, writer);
                     return;
                 }
+                if (value is InvalidExportFormat)
+                {
+                    WriteProperty(".tag", "invalid_export_format", writer, enc.StringEncoder.Instance);
+                    InvalidExportFormat.Encoder.EncodeFields((InvalidExportFormat)value, writer);
+                    return;
+                }
                 if (value is RetryError)
                 {
                     WriteProperty(".tag", "retry_error", writer, enc.StringEncoder.Instance);
@@ -196,6 +224,8 @@ namespace Dropbox.Api.Files
                         return Path.Decoder.DecodeFields(reader);
                     case "non_exportable":
                         return NonExportable.Decoder.DecodeFields(reader);
+                    case "invalid_export_format":
+                        return InvalidExportFormat.Decoder.DecodeFields(reader);
                     case "retry_error":
                         return RetryError.Decoder.DecodeFields(reader);
                     default:
@@ -366,6 +396,77 @@ namespace Dropbox.Api.Files
                 protected override NonExportable Create()
                 {
                     return NonExportable.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The specified export format is not a valid option for this file type.</para>
+        /// </summary>
+        public sealed class InvalidExportFormat : ExportError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidExportFormat> Encoder = new InvalidExportFormatEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidExportFormat> Decoder = new InvalidExportFormatDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidExportFormat" />
+            /// class.</para>
+            /// </summary>
+            private InvalidExportFormat()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidExportFormat</para>
+            /// </summary>
+            public static readonly InvalidExportFormat Instance = new InvalidExportFormat();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidExportFormat" />.</para>
+            /// </summary>
+            private class InvalidExportFormatEncoder : enc.StructEncoder<InvalidExportFormat>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidExportFormat value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidExportFormat" />.</para>
+            /// </summary>
+            private class InvalidExportFormatDecoder : enc.StructDecoder<InvalidExportFormat>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidExportFormat"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidExportFormat Create()
+                {
+                    return InvalidExportFormat.Instance;
                 }
 
             }

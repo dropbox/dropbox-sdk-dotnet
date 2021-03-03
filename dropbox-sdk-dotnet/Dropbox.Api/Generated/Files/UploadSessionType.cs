@@ -178,7 +178,7 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>Pieces of content are uploaded sequentially one after another. This is the
+        /// <para>Pieces of data are uploaded sequentially one after another. This is the
         /// default behavior.</para>
         /// </summary>
         public sealed class Sequential : UploadSessionType

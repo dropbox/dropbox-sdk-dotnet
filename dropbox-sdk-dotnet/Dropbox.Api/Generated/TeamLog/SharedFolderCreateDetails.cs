@@ -31,8 +31,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SharedFolderCreateDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="targetNsId">Target namespace ID. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="targetNsId">Target namespace ID.</param>
         public SharedFolderCreateDetails(string targetNsId = null)
         {
             this.TargetNsId = targetNsId;
@@ -50,7 +49,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Target namespace ID. Might be missing due to historical data gap.</para>
+        /// <para>Target namespace ID.</para>
         /// </summary>
         public string TargetNsId { get; protected set; }
 

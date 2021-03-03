@@ -33,8 +33,7 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="SessionLogInfo" /> class.</para>
         /// </summary>
-        /// <param name="sessionId">Session ID. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="sessionId">Session ID.</param>
         protected SessionLogInfo(string sessionId = null)
         {
             this.SessionId = sessionId;
@@ -120,7 +119,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Session ID. Might be missing due to historical data gap.</para>
+        /// <para>Session ID.</para>
         /// </summary>
         public string SessionId { get; protected set; }
 

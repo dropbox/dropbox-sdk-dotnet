@@ -30,7 +30,10 @@ namespace Dropbox.Api.Files.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Get a thumbnail for a file.</para>
+        /// <para>Get a thumbnail for an image.</para>
+        /// <para>This method currently supports files with the following file extensions: jpg,
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="thumbnailV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -60,7 +63,10 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for a file.</para>
+        /// <para>Get a thumbnail for an image.</para>
+        /// <para>This method currently supports files with the following file extensions: jpg,
+        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
+        /// size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a

@@ -34,8 +34,7 @@ namespace Dropbox.Api.TeamLog
         /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="tokenKey">Shared link token key.</param>
-        /// <param name="sharingPermission">Sharing permission. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="sharingPermission">Sharing permission.</param>
         public SfTeamJoinFromOobLinkDetails(ulong targetAssetIndex,
                                             string originalFolderName,
                                             string tokenKey = null,
@@ -79,7 +78,7 @@ namespace Dropbox.Api.TeamLog
         public string TokenKey { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>Sharing permission.</para>
         /// </summary>
         public string SharingPermission { get; protected set; }
 

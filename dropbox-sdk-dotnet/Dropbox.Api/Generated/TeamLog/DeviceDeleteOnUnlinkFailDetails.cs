@@ -33,8 +33,7 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="numFailures">The number of times that remote file deletion
         /// failed.</param>
-        /// <param name="sessionInfo">Session unique id. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="sessionInfo">Session unique id.</param>
         /// <param name="displayName">The device name. Might be missing due to historical data
         /// gap.</param>
         public DeviceDeleteOnUnlinkFailDetails(long numFailures,
@@ -63,7 +62,7 @@ namespace Dropbox.Api.TeamLog
         public long NumFailures { get; protected set; }
 
         /// <summary>
-        /// <para>Session unique id. Might be missing due to historical data gap.</para>
+        /// <para>Session unique id.</para>
         /// </summary>
         public SessionLogInfo SessionInfo { get; protected set; }
 
