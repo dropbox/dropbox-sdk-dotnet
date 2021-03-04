@@ -34,8 +34,7 @@ namespace Dropbox.Api.TeamLog
         /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
         /// <param name="teamName">Team name.</param>
-        /// <param name="sharingPermission">Sharing permission. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="sharingPermission">Sharing permission.</param>
         public SfAddGroupDetails(ulong targetAssetIndex,
                                  string originalFolderName,
                                  string teamName,
@@ -84,7 +83,7 @@ namespace Dropbox.Api.TeamLog
         public string TeamName { get; protected set; }
 
         /// <summary>
-        /// <para>Sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>Sharing permission.</para>
         /// </summary>
         public string SharingPermission { get; protected set; }
 

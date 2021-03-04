@@ -31,8 +31,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SsoAddLogoutUrlDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="newValue">New single sign-on logout URL. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="newValue">New single sign-on logout URL.</param>
         public SsoAddLogoutUrlDetails(string newValue = null)
         {
             this.NewValue = newValue;
@@ -50,8 +49,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>New single sign-on logout URL. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>New single sign-on logout URL.</para>
         /// </summary>
         public string NewValue { get; protected set; }
 

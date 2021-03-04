@@ -32,12 +32,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="NonTeamMemberLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="accountId">User unique ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="displayName">User display name. Might be missing due to historical
-        /// data gap.</param>
-        /// <param name="email">User email address. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="accountId">User unique ID.</param>
+        /// <param name="displayName">User display name.</param>
+        /// <param name="email">User email address.</param>
         public NonTeamMemberLogInfo(string accountId = null,
                                     string displayName = null,
                                     string email = null)

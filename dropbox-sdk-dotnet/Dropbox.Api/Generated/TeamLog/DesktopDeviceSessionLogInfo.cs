@@ -38,14 +38,11 @@ namespace Dropbox.Api.TeamLog
         /// <param name="platform">Information on the hosting platform.</param>
         /// <param name="isDeleteOnUnlinkSupported">Whether itu2019s possible to delete all of
         /// the account files upon unlinking.</param>
-        /// <param name="ipAddress">The IP address of the last activity from this session.
-        /// Might be missing due to historical data gap.</param>
-        /// <param name="created">The time this session was created. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="updated">The time of the last activity from this session. Might be
-        /// missing due to historical data gap.</param>
-        /// <param name="sessionInfo">Desktop session unique id. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="ipAddress">The IP address of the last activity from this
+        /// session.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
+        /// <param name="sessionInfo">Desktop session unique id.</param>
         /// <param name="clientVersion">The Dropbox client version.</param>
         public DesktopDeviceSessionLogInfo(string hostName,
                                            global::Dropbox.Api.Team.DesktopPlatform clientType,
@@ -114,8 +111,7 @@ namespace Dropbox.Api.TeamLog
         public bool IsDeleteOnUnlinkSupported { get; protected set; }
 
         /// <summary>
-        /// <para>Desktop session unique id. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>Desktop session unique id.</para>
         /// </summary>
         public DesktopSessionLogInfo SessionInfo { get; protected set; }
 

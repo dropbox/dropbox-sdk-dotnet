@@ -38,9 +38,13 @@ namespace Dropbox.Api.Files
         /// be used to verify data integrity. Similar to content hash. For more information see
         /// our <a href="https://www.dropbox.com/developers/reference/content-hash">Content
         /// hash</a> page.</param>
+        /// <param name="paperRevision">If the file is a Paper doc, this gives the latest doc
+        /// revision which can be used in <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.PaperUpdateAsync" />.</param>
         public ExportMetadata(string name,
                               ulong size,
-                              string exportHash = null)
+                              string exportHash = null,
+                              long? paperRevision = null)
         {
             if (name == null)
             {
@@ -62,6 +66,7 @@ namespace Dropbox.Api.Files
             this.Name = name;
             this.Size = size;
             this.ExportHash = exportHash;
+            this.PaperRevision = paperRevision;
         }
 
         /// <summary>
@@ -93,6 +98,13 @@ namespace Dropbox.Api.Files
         /// </summary>
         public string ExportHash { get; protected set; }
 
+        /// <summary>
+        /// <para>If the file is a Paper doc, this gives the latest doc revision which can be
+        /// used in <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.PaperUpdateAsync"
+        /// />.</para>
+        /// </summary>
+        public long? PaperRevision { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -112,6 +124,10 @@ namespace Dropbox.Api.Files
                 if (value.ExportHash != null)
                 {
                     WriteProperty("export_hash", value.ExportHash, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PaperRevision != null)
+                {
+                    WriteProperty("paper_revision", value.PaperRevision.Value, writer, enc.Int64Encoder.Instance);
                 }
             }
         }
@@ -153,6 +169,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "export_hash":
                         value.ExportHash = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "paper_revision":
+                        value.PaperRevision = enc.Int64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

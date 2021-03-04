@@ -36,6 +36,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TransientError</para>
+        /// </summary>
+        public bool IsTransientError
+        {
+            get
+            {
+                return this is TransientError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TransientError, or <c>null</c>.</para>
+        /// </summary>
+        public TransientError AsTransientError
+        {
+            get
+            {
+                return this as TransientError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is InactiveLegalHold</para>
         /// </summary>
         public bool IsInactiveLegalHold
@@ -275,6 +297,12 @@ namespace Dropbox.Api.Team
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(LegalHoldsPolicyUpdateError value, enc.IJsonWriter writer)
             {
+                if (value is TransientError)
+                {
+                    WriteProperty(".tag", "transient_error", writer, enc.StringEncoder.Instance);
+                    TransientError.Encoder.EncodeFields((TransientError)value, writer);
+                    return;
+                }
                 if (value is InactiveLegalHold)
                 {
                     WriteProperty(".tag", "inactive_legal_hold", writer, enc.StringEncoder.Instance);
@@ -368,6 +396,8 @@ namespace Dropbox.Api.Team
             {
                 switch (tag)
                 {
+                    case "transient_error":
+                        return TransientError.Decoder.DecodeFields(reader);
                     case "inactive_legal_hold":
                         return InactiveLegalHold.Decoder.DecodeFields(reader);
                     case "legal_hold_performing_another_operation":
@@ -395,6 +425,76 @@ namespace Dropbox.Api.Team
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>Temporary infrastructure failure, please retry.</para>
+        /// </summary>
+        public sealed class TransientError : LegalHoldsPolicyUpdateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TransientError> Encoder = new TransientErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TransientError> Decoder = new TransientErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TransientError" />
+            /// class.</para>
+            /// </summary>
+            private TransientError()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TransientError</para>
+            /// </summary>
+            public static readonly TransientError Instance = new TransientError();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TransientError" />.</para>
+            /// </summary>
+            private class TransientErrorEncoder : enc.StructEncoder<TransientError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TransientError value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TransientError" />.</para>
+            /// </summary>
+            private class TransientErrorDecoder : enc.StructDecoder<TransientError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TransientError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TransientError Create()
+                {
+                    return TransientError.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>Trying to release an inactive legal hold.</para>

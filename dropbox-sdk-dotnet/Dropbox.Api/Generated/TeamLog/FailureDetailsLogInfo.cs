@@ -34,8 +34,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FailureDetailsLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="userFriendlyMessage">A user friendly explanation of the error. Might
-        /// be missing due to historical data gap.</param>
+        /// <param name="userFriendlyMessage">A user friendly explanation of the error.</param>
         /// <param name="technicalErrorMessage">A technical explanation of the error. This is
         /// relevant for some errors.</param>
         public FailureDetailsLogInfo(string userFriendlyMessage = null,
@@ -57,8 +56,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>A user friendly explanation of the error. Might be missing due to historical
-        /// data gap.</para>
+        /// <para>A user friendly explanation of the error.</para>
         /// </summary>
         public string UserFriendlyMessage { get; protected set; }
 

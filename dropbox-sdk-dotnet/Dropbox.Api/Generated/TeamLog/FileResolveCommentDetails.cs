@@ -31,8 +31,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="FileResolveCommentDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="commentText">Comment text. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="commentText">Comment text.</param>
         public FileResolveCommentDetails(string commentText = null)
         {
             this.CommentText = commentText;
@@ -50,7 +49,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Comment text. Might be missing due to historical data gap.</para>
+        /// <para>Comment text.</para>
         /// </summary>
         public string CommentText { get; protected set; }
 

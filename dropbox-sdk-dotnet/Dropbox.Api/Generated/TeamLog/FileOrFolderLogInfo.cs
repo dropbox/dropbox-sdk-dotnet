@@ -34,10 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="path">Path relative to event context.</param>
-        /// <param name="displayName">Display name. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="fileId">Unique ID. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="displayName">Display name.</param>
+        /// <param name="fileId">Unique ID.</param>
         /// <param name="fileSize">File or folder size in bytes.</param>
         public FileOrFolderLogInfo(PathLogInfo path,
                                    string displayName = null,
@@ -72,12 +70,12 @@ namespace Dropbox.Api.TeamLog
         public PathLogInfo Path { get; protected set; }
 
         /// <summary>
-        /// <para>Display name. Might be missing due to historical data gap.</para>
+        /// <para>Display name.</para>
         /// </summary>
         public string DisplayName { get; protected set; }
 
         /// <summary>
-        /// <para>Unique ID. Might be missing due to historical data gap.</para>
+        /// <para>Unique ID.</para>
         /// </summary>
         public string FileId { get; protected set; }
 

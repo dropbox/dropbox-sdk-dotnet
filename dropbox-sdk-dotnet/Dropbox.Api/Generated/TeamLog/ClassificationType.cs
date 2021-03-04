@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The type of classification (currently only PII)</para>
+    /// <para>The type of classification (currently only personal information)</para>
     /// </summary>
     public class ClassificationType
     {
@@ -33,6 +33,28 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public ClassificationType()
         {
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PersonalInformation</para>
+        /// </summary>
+        public bool IsPersonalInformation
+        {
+            get
+            {
+                return this is PersonalInformation;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PersonalInformation, or <c>null</c>.</para>
+        /// </summary>
+        public PersonalInformation AsPersonalInformation
+        {
+            get
+            {
+                return this as PersonalInformation;
+            }
         }
 
         /// <summary>
@@ -93,6 +115,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(ClassificationType value, enc.IJsonWriter writer)
             {
+                if (value is PersonalInformation)
+                {
+                    WriteProperty(".tag", "personal_information", writer, enc.StringEncoder.Instance);
+                    PersonalInformation.Encoder.EncodeFields((PersonalInformation)value, writer);
+                    return;
+                }
                 if (value is Pii)
                 {
                     WriteProperty(".tag", "pii", writer, enc.StringEncoder.Instance);
@@ -137,6 +165,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "personal_information":
+                        return PersonalInformation.Decoder.DecodeFields(reader);
                     case "pii":
                         return Pii.Decoder.DecodeFields(reader);
                     default:
@@ -146,6 +176,77 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The personal information object</para>
+        /// </summary>
+        public sealed class PersonalInformation : ClassificationType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PersonalInformation> Encoder = new PersonalInformationEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PersonalInformation> Decoder = new PersonalInformationDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PersonalInformation" />
+            /// class.</para>
+            /// </summary>
+            private PersonalInformation()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PersonalInformation</para>
+            /// </summary>
+            public static readonly PersonalInformation Instance = new PersonalInformation();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PersonalInformation" />.</para>
+            /// </summary>
+            private class PersonalInformationEncoder : enc.StructEncoder<PersonalInformation>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PersonalInformation value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PersonalInformation" />.</para>
+            /// </summary>
+            private class PersonalInformationDecoder : enc.StructDecoder<PersonalInformation>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PersonalInformation"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PersonalInformation Create()
+                {
+                    return PersonalInformation.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The pii object</para>

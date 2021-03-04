@@ -31,7 +31,13 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="ExportArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path of the file to be exported.</param>
-        public ExportArg(string path)
+        /// <param name="exportFormat">The file format to which the file should be exported.
+        /// This must be one of the formats listed in the file's export_options returned by
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If none
+        /// is specified, the default format (specified in export_as in file metadata) will be
+        /// used.</param>
+        public ExportArg(string path,
+                         string exportFormat = null)
         {
             if (path == null)
             {
@@ -43,6 +49,7 @@ namespace Dropbox.Api.Files
             }
 
             this.Path = path;
+            this.ExportFormat = exportFormat;
         }
 
         /// <summary>
@@ -60,6 +67,15 @@ namespace Dropbox.Api.Files
         /// </summary>
         public string Path { get; protected set; }
 
+        /// <summary>
+        /// <para>The file format to which the file should be exported. This must be one of the
+        /// formats listed in the file's export_options returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If none is
+        /// specified, the default format (specified in export_as in file metadata) will be
+        /// used.</para>
+        /// </summary>
+        public string ExportFormat { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -75,6 +91,10 @@ namespace Dropbox.Api.Files
             public override void EncodeFields(ExportArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                if (value.ExportFormat != null)
+                {
+                    WriteProperty("export_format", value.ExportFormat, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -109,6 +129,9 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         value.Path = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "export_format":
+                        value.ExportFormat = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

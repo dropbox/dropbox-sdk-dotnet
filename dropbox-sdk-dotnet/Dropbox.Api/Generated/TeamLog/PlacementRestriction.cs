@@ -124,6 +124,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UkOnly</para>
+        /// </summary>
+        public bool IsUkOnly
+        {
+            get
+            {
+                return this is UkOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UkOnly, or <c>null</c>.</para>
+        /// </summary>
+        public UkOnly AsUkOnly
+        {
+            get
+            {
+                return this as UkOnly;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -183,6 +205,12 @@ namespace Dropbox.Api.TeamLog
                     None.Encoder.EncodeFields((None)value, writer);
                     return;
                 }
+                if (value is UkOnly)
+                {
+                    WriteProperty(".tag", "uk_only", writer, enc.StringEncoder.Instance);
+                    UkOnly.Encoder.EncodeFields((UkOnly)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -229,6 +257,8 @@ namespace Dropbox.Api.TeamLog
                         return JapanOnly.Decoder.DecodeFields(reader);
                     case "none":
                         return None.Decoder.DecodeFields(reader);
+                    case "uk_only":
+                        return UkOnly.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -507,6 +537,75 @@ namespace Dropbox.Api.TeamLog
                 protected override None Create()
                 {
                     return None.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The uk only object</para>
+        /// </summary>
+        public sealed class UkOnly : PlacementRestriction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UkOnly> Encoder = new UkOnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UkOnly> Decoder = new UkOnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UkOnly" /> class.</para>
+            /// </summary>
+            private UkOnly()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UkOnly</para>
+            /// </summary>
+            public static readonly UkOnly Instance = new UkOnly();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UkOnly" />.</para>
+            /// </summary>
+            private class UkOnlyEncoder : enc.StructEncoder<UkOnly>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UkOnly value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UkOnly" />.</para>
+            /// </summary>
+            private class UkOnlyDecoder : enc.StructDecoder<UkOnly>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UkOnly" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UkOnly Create()
+                {
+                    return UkOnly.Instance;
                 }
 
             }

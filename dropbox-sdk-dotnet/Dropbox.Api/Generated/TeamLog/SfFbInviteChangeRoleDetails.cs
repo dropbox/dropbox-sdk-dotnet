@@ -33,10 +33,8 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="previousSharingPermission">Previous sharing permission. Might be
-        /// missing due to historical data gap.</param>
-        /// <param name="newSharingPermission">New sharing permission. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="previousSharingPermission">Previous sharing permission.</param>
+        /// <param name="newSharingPermission">New sharing permission.</param>
         public SfFbInviteChangeRoleDetails(ulong targetAssetIndex,
                                            string originalFolderName,
                                            string previousSharingPermission = null,
@@ -75,13 +73,12 @@ namespace Dropbox.Api.TeamLog
         public string OriginalFolderName { get; protected set; }
 
         /// <summary>
-        /// <para>Previous sharing permission. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>Previous sharing permission.</para>
         /// </summary>
         public string PreviousSharingPermission { get; protected set; }
 
         /// <summary>
-        /// <para>New sharing permission. Might be missing due to historical data gap.</para>
+        /// <para>New sharing permission.</para>
         /// </summary>
         public string NewSharingPermission { get; protected set; }
 

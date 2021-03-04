@@ -32,12 +32,9 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="NamespaceRelativePathLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="nsId">Namespace ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="relativePath">A path relative to the specified namespace ID. Might be
-        /// missing due to historical data gap.</param>
-        /// <param name="isSharedNamespace">True if the namespace is shared. Might be missing
-        /// due to historical data gap.</param>
+        /// <param name="nsId">Namespace ID.</param>
+        /// <param name="relativePath">A path relative to the specified namespace ID.</param>
+        /// <param name="isSharedNamespace">True if the namespace is shared.</param>
         public NamespaceRelativePathLogInfo(string nsId = null,
                                             string relativePath = null,
                                             bool? isSharedNamespace = null)
@@ -59,19 +56,17 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Namespace ID. Might be missing due to historical data gap.</para>
+        /// <para>Namespace ID.</para>
         /// </summary>
         public string NsId { get; protected set; }
 
         /// <summary>
-        /// <para>A path relative to the specified namespace ID. Might be missing due to
-        /// historical data gap.</para>
+        /// <para>A path relative to the specified namespace ID.</para>
         /// </summary>
         public string RelativePath { get; protected set; }
 
         /// <summary>
-        /// <para>True if the namespace is shared. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>True if the namespace is shared.</para>
         /// </summary>
         public bool? IsSharedNamespace { get; protected set; }
 

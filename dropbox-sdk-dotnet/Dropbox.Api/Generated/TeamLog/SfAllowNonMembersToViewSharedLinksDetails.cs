@@ -33,8 +33,7 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="targetAssetIndex">Target asset position in the Assets list.</param>
         /// <param name="originalFolderName">Original shared folder name.</param>
-        /// <param name="sharedFolderType">Shared folder type. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="sharedFolderType">Shared folder type.</param>
         public SfAllowNonMembersToViewSharedLinksDetails(ulong targetAssetIndex,
                                                          string originalFolderName,
                                                          string sharedFolderType = null)
@@ -71,7 +70,7 @@ namespace Dropbox.Api.TeamLog
         public string OriginalFolderName { get; protected set; }
 
         /// <summary>
-        /// <para>Shared folder type. Might be missing due to historical data gap.</para>
+        /// <para>Shared folder type.</para>
         /// </summary>
         public string SharedFolderType { get; protected set; }
 

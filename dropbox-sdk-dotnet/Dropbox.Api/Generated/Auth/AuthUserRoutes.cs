@@ -30,7 +30,9 @@ namespace Dropbox.Api.Auth.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Disables the access token used to authenticate the call.</para>
+        /// <para>Disables the access token used to authenticate the call. If there is a
+        /// corresponding refresh token for the access token, this disables that refresh token,
+        /// as well as any other access tokens for that refresh token.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         public t.Task TokenRevokeAsync()

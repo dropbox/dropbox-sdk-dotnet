@@ -32,14 +32,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="TeamMemberLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="accountId">User unique ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="displayName">User display name. Might be missing due to historical
-        /// data gap.</param>
-        /// <param name="email">User email address. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="teamMemberId">Team member ID. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="accountId">User unique ID.</param>
+        /// <param name="displayName">User display name.</param>
+        /// <param name="email">User email address.</param>
+        /// <param name="teamMemberId">Team member ID.</param>
         /// <param name="memberExternalId">Team member external ID.</param>
         /// <param name="team">Details about this user&#x2019s team for enterprise
         /// event.</param>
@@ -76,7 +72,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Team member ID. Might be missing due to historical data gap.</para>
+        /// <para>Team member ID.</para>
         /// </summary>
         public string TeamMemberId { get; protected set; }
 

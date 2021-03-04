@@ -32,8 +32,7 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="eventUuid">Event unique identifier.</param>
-        /// <param name="commentText">Comment text. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="commentText">Comment text.</param>
         public PaperDocEditCommentDetails(string eventUuid,
                                           string commentText = null)
         {
@@ -63,7 +62,7 @@ namespace Dropbox.Api.TeamLog
         public string EventUuid { get; protected set; }
 
         /// <summary>
-        /// <para>Comment text. Might be missing due to historical data gap.</para>
+        /// <para>Comment text.</para>
         /// </summary>
         public string CommentText { get; protected set; }
 
