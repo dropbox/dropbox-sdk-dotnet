@@ -32,8 +32,7 @@ namespace Dropbox.Api.TeamLog
         /// cref="SharedContentChangeViewerInfoPolicyDetails" /> class.</para>
         /// </summary>
         /// <param name="newValue">New viewer info policy.</param>
-        /// <param name="previousValue">Previous view info policy. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="previousValue">Previous view info policy.</param>
         public SharedContentChangeViewerInfoPolicyDetails(global::Dropbox.Api.Sharing.ViewerInfoPolicy newValue,
                                                           global::Dropbox.Api.Sharing.ViewerInfoPolicy previousValue = null)
         {
@@ -63,8 +62,7 @@ namespace Dropbox.Api.TeamLog
         public global::Dropbox.Api.Sharing.ViewerInfoPolicy NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Previous view info policy. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>Previous view info policy.</para>
         /// </summary>
         public global::Dropbox.Api.Sharing.ViewerInfoPolicy PreviousValue { get; protected set; }
 

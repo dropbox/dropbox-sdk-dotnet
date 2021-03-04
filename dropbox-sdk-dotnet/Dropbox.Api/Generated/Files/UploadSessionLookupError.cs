@@ -334,7 +334,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>The upload session ID was not found or has expired. Upload sessions are valid
-        /// for 48 hours.</para>
+        /// for 7 days.</para>
         /// </summary>
         public sealed class NotFound : UploadSessionLookupError
         {

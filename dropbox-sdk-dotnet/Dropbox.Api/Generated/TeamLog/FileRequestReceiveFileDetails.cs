@@ -36,10 +36,8 @@ namespace Dropbox.Api.TeamLog
         /// data gap.</param>
         /// <param name="fileRequestDetails">File request details. Might be missing due to
         /// historical data gap.</param>
-        /// <param name="submitterName">The name as provided by the submitter. Might be missing
-        /// due to historical data gap.</param>
-        /// <param name="submitterEmail">The email as provided by the submitter. Might be
-        /// missing due to historical data gap.</param>
+        /// <param name="submitterName">The name as provided by the submitter.</param>
+        /// <param name="submitterEmail">The email as provided by the submitter.</param>
         public FileRequestReceiveFileDetails(col.IEnumerable<string> submittedFileNames,
                                              string fileRequestId = null,
                                              FileRequestDetails fileRequestDetails = null,
@@ -107,14 +105,12 @@ namespace Dropbox.Api.TeamLog
         public FileRequestDetails FileRequestDetails { get; protected set; }
 
         /// <summary>
-        /// <para>The name as provided by the submitter. Might be missing due to historical
-        /// data gap.</para>
+        /// <para>The name as provided by the submitter.</para>
         /// </summary>
         public string SubmitterName { get; protected set; }
 
         /// <summary>
-        /// <para>The email as provided by the submitter. Might be missing due to historical
-        /// data gap.</para>
+        /// <para>The email as provided by the submitter.</para>
         /// </summary>
         public string SubmitterEmail { get; protected set; }
 

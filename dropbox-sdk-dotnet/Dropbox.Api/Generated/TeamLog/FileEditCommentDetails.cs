@@ -32,8 +32,7 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="previousCommentText">Previous comment text.</param>
-        /// <param name="commentText">Comment text. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="commentText">Comment text.</param>
         public FileEditCommentDetails(string previousCommentText,
                                       string commentText = null)
         {
@@ -63,7 +62,7 @@ namespace Dropbox.Api.TeamLog
         public string PreviousCommentText { get; protected set; }
 
         /// <summary>
-        /// <para>Comment text. Might be missing due to historical data gap.</para>
+        /// <para>Comment text.</para>
         /// </summary>
         public string CommentText { get; protected set; }
 

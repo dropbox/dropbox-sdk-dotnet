@@ -32,10 +32,8 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="TeamLinkedAppLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="appId">App unique ID. Might be missing due to historical data
-        /// gap.</param>
-        /// <param name="displayName">App display name. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="appId">App unique ID.</param>
+        /// <param name="displayName">App display name.</param>
         public TeamLinkedAppLogInfo(string appId = null,
                                     string displayName = null)
             : base(appId, displayName)

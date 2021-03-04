@@ -33,8 +33,8 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="deadline">The deadline for this file request. Might be missing due to
         /// historical data gap.</param>
-        /// <param name="allowLateUploads">If set, allow uploads after the deadline has passed.
-        /// Might be missing due to historical data gap.</param>
+        /// <param name="allowLateUploads">If set, allow uploads after the deadline has
+        /// passed.</param>
         public FileRequestDeadline(sys.DateTime? deadline = null,
                                    string allowLateUploads = null)
         {
@@ -60,8 +60,7 @@ namespace Dropbox.Api.TeamLog
         public sys.DateTime? Deadline { get; protected set; }
 
         /// <summary>
-        /// <para>If set, allow uploads after the deadline has passed. Might be missing due to
-        /// historical data gap.</para>
+        /// <para>If set, allow uploads after the deadline has passed.</para>
         /// </summary>
         public string AllowLateUploads { get; protected set; }
 

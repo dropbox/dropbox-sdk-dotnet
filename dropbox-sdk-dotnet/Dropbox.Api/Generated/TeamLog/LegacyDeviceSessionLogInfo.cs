@@ -32,14 +32,11 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="LegacyDeviceSessionLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="ipAddress">The IP address of the last activity from this session.
-        /// Might be missing due to historical data gap.</param>
-        /// <param name="created">The time this session was created. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="updated">The time of the last activity from this session. Might be
-        /// missing due to historical data gap.</param>
-        /// <param name="sessionInfo">Session unique id. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="ipAddress">The IP address of the last activity from this
+        /// session.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
+        /// <param name="sessionInfo">Session unique id.</param>
         /// <param name="displayName">The device name. Might be missing due to historical data
         /// gap.</param>
         /// <param name="isEmmManaged">Is device managed by emm. Might be missing due to
@@ -93,7 +90,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Session unique id. Might be missing due to historical data gap.</para>
+        /// <para>Session unique id.</para>
         /// </summary>
         public SessionLogInfo SessionInfo { get; protected set; }
 

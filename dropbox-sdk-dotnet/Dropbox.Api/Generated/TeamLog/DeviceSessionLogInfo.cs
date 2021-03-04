@@ -36,12 +36,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="DeviceSessionLogInfo" />
         /// class.</para>
         /// </summary>
-        /// <param name="ipAddress">The IP address of the last activity from this session.
-        /// Might be missing due to historical data gap.</param>
-        /// <param name="created">The time this session was created. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="updated">The time of the last activity from this session. Might be
-        /// missing due to historical data gap.</param>
+        /// <param name="ipAddress">The IP address of the last activity from this
+        /// session.</param>
+        /// <param name="created">The time this session was created.</param>
+        /// <param name="updated">The time of the last activity from this session.</param>
         protected DeviceSessionLogInfo(string ipAddress = null,
                                        sys.DateTime? created = null,
                                        sys.DateTime? updated = null)
@@ -155,20 +153,17 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The IP address of the last activity from this session. Might be missing due
-        /// to historical data gap.</para>
+        /// <para>The IP address of the last activity from this session.</para>
         /// </summary>
         public string IpAddress { get; protected set; }
 
         /// <summary>
-        /// <para>The time this session was created. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>The time this session was created.</para>
         /// </summary>
         public sys.DateTime? Created { get; protected set; }
 
         /// <summary>
-        /// <para>The time of the last activity from this session. Might be missing due to
-        /// historical data gap.</para>
+        /// <para>The time of the last activity from this session.</para>
         /// </summary>
         public sys.DateTime? Updated { get; protected set; }
 

@@ -35,6 +35,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is BillingAdmin</para>
+        /// </summary>
+        public bool IsBillingAdmin
+        {
+            get
+            {
+                return this is BillingAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a BillingAdmin, or <c>null</c>.</para>
+        /// </summary>
+        public BillingAdmin AsBillingAdmin
+        {
+            get
+            {
+                return this as BillingAdmin;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is LimitedAdmin</para>
         /// </summary>
         public bool IsLimitedAdmin
@@ -180,6 +202,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AdminRole value, enc.IJsonWriter writer)
             {
+                if (value is BillingAdmin)
+                {
+                    WriteProperty(".tag", "billing_admin", writer, enc.StringEncoder.Instance);
+                    BillingAdmin.Encoder.EncodeFields((BillingAdmin)value, writer);
+                    return;
+                }
                 if (value is LimitedAdmin)
                 {
                     WriteProperty(".tag", "limited_admin", writer, enc.StringEncoder.Instance);
@@ -248,6 +276,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "billing_admin":
+                        return BillingAdmin.Decoder.DecodeFields(reader);
                     case "limited_admin":
                         return LimitedAdmin.Decoder.DecodeFields(reader);
                     case "member_only":
@@ -265,6 +295,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The billing admin object</para>
+        /// </summary>
+        public sealed class BillingAdmin : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<BillingAdmin> Encoder = new BillingAdminEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<BillingAdmin> Decoder = new BillingAdminDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="BillingAdmin" />
+            /// class.</para>
+            /// </summary>
+            private BillingAdmin()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of BillingAdmin</para>
+            /// </summary>
+            public static readonly BillingAdmin Instance = new BillingAdmin();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="BillingAdmin" />.</para>
+            /// </summary>
+            private class BillingAdminEncoder : enc.StructEncoder<BillingAdmin>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(BillingAdmin value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="BillingAdmin" />.</para>
+            /// </summary>
+            private class BillingAdminDecoder : enc.StructDecoder<BillingAdmin>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="BillingAdmin" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override BillingAdmin Create()
+                {
+                    return BillingAdmin.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The limited admin object</para>

@@ -31,10 +31,8 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="GroupLogInfo" /> class.</para>
         /// </summary>
         /// <param name="displayName">The name of this group.</param>
-        /// <param name="groupId">The unique id of this group. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="externalId">External group ID. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="groupId">The unique id of this group.</param>
+        /// <param name="externalId">External group ID.</param>
         public GroupLogInfo(string displayName,
                             string groupId = null,
                             string externalId = null)
@@ -65,13 +63,12 @@ namespace Dropbox.Api.TeamLog
         public string DisplayName { get; protected set; }
 
         /// <summary>
-        /// <para>The unique id of this group. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>The unique id of this group.</para>
         /// </summary>
         public string GroupId { get; protected set; }
 
         /// <summary>
-        /// <para>External group ID. Might be missing due to historical data gap.</para>
+        /// <para>External group ID.</para>
         /// </summary>
         public string ExternalId { get; protected set; }
 

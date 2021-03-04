@@ -33,8 +33,7 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="previousValue">Previous single sign-on logout URL. Might be missing
         /// due to historical data gap.</param>
-        /// <param name="newValue">New single sign-on logout URL. Might be missing due to
-        /// historical data gap.</param>
+        /// <param name="newValue">New single sign-on logout URL.</param>
         public SsoChangeLogoutUrlDetails(string previousValue = null,
                                          string newValue = null)
         {
@@ -60,8 +59,7 @@ namespace Dropbox.Api.TeamLog
         public string PreviousValue { get; protected set; }
 
         /// <summary>
-        /// <para>New single sign-on logout URL. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>New single sign-on logout URL.</para>
         /// </summary>
         public string NewValue { get; protected set; }
 

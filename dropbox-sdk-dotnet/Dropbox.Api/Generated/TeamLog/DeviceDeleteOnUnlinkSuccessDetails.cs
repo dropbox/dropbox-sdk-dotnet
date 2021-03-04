@@ -31,8 +31,7 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see
         /// cref="DeviceDeleteOnUnlinkSuccessDetails" /> class.</para>
         /// </summary>
-        /// <param name="sessionInfo">Session unique id. Might be missing due to historical
-        /// data gap.</param>
+        /// <param name="sessionInfo">Session unique id.</param>
         /// <param name="displayName">The device name. Might be missing due to historical data
         /// gap.</param>
         public DeviceDeleteOnUnlinkSuccessDetails(SessionLogInfo sessionInfo = null,
@@ -54,7 +53,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Session unique id. Might be missing due to historical data gap.</para>
+        /// <para>Session unique id.</para>
         /// </summary>
         public SessionLogInfo SessionInfo { get; protected set; }
 

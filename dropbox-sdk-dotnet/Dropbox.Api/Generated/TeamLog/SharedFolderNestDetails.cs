@@ -31,14 +31,10 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="SharedFolderNestDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="previousParentNsId">Previous parent namespace ID. Might be missing due
-        /// to historical data gap.</param>
-        /// <param name="newParentNsId">New parent namespace ID. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="previousNsPath">Previous namespace path. Might be missing due to
-        /// historical data gap.</param>
-        /// <param name="newNsPath">New namespace path. Might be missing due to historical data
-        /// gap.</param>
+        /// <param name="previousParentNsId">Previous parent namespace ID.</param>
+        /// <param name="newParentNsId">New parent namespace ID.</param>
+        /// <param name="previousNsPath">Previous namespace path.</param>
+        /// <param name="newNsPath">New namespace path.</param>
         public SharedFolderNestDetails(string previousParentNsId = null,
                                        string newParentNsId = null,
                                        string previousNsPath = null,
@@ -62,23 +58,22 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Previous parent namespace ID. Might be missing due to historical data
-        /// gap.</para>
+        /// <para>Previous parent namespace ID.</para>
         /// </summary>
         public string PreviousParentNsId { get; protected set; }
 
         /// <summary>
-        /// <para>New parent namespace ID. Might be missing due to historical data gap.</para>
+        /// <para>New parent namespace ID.</para>
         /// </summary>
         public string NewParentNsId { get; protected set; }
 
         /// <summary>
-        /// <para>Previous namespace path. Might be missing due to historical data gap.</para>
+        /// <para>Previous namespace path.</para>
         /// </summary>
         public string PreviousNsPath { get; protected set; }
 
         /// <summary>
-        /// <para>New namespace path. Might be missing due to historical data gap.</para>
+        /// <para>New namespace path.</para>
         /// </summary>
         public string NewNsPath { get; protected set; }
 

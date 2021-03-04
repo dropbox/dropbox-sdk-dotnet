@@ -33,14 +33,15 @@ namespace Dropbox.Api.TeamLog
         /// /> class.</para>
         /// </summary>
         /// <param name="alertState">Alert state.</param>
-        public AdminAlertingAlertConfiguration(AdminAlertingAlertStatePolicy alertState)
+        /// <param name="sensitivityLevel">Sensitivity level.</param>
+        /// <param name="recipientsSettings">Recipient settings.</param>
+        public AdminAlertingAlertConfiguration(AdminAlertingAlertStatePolicy alertState = null,
+                                               AdminAlertingAlertSensitivity sensitivityLevel = null,
+                                               RecipientsConfiguration recipientsSettings = null)
         {
-            if (alertState == null)
-            {
-                throw new sys.ArgumentNullException("alertState");
-            }
-
             this.AlertState = alertState;
+            this.SensitivityLevel = sensitivityLevel;
+            this.RecipientsSettings = recipientsSettings;
         }
 
         /// <summary>
@@ -59,6 +60,16 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public AdminAlertingAlertStatePolicy AlertState { get; protected set; }
 
+        /// <summary>
+        /// <para>Sensitivity level.</para>
+        /// </summary>
+        public AdminAlertingAlertSensitivity SensitivityLevel { get; protected set; }
+
+        /// <summary>
+        /// <para>Recipient settings.</para>
+        /// </summary>
+        public RecipientsConfiguration RecipientsSettings { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,7 +84,18 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AdminAlertingAlertConfiguration value, enc.IJsonWriter writer)
             {
-                WriteProperty("alert_state", value.AlertState, writer, global::Dropbox.Api.TeamLog.AdminAlertingAlertStatePolicy.Encoder);
+                if (value.AlertState != null)
+                {
+                    WriteProperty("alert_state", value.AlertState, writer, global::Dropbox.Api.TeamLog.AdminAlertingAlertStatePolicy.Encoder);
+                }
+                if (value.SensitivityLevel != null)
+                {
+                    WriteProperty("sensitivity_level", value.SensitivityLevel, writer, global::Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Encoder);
+                }
+                if (value.RecipientsSettings != null)
+                {
+                    WriteProperty("recipients_settings", value.RecipientsSettings, writer, global::Dropbox.Api.TeamLog.RecipientsConfiguration.Encoder);
+                }
             }
         }
 
@@ -109,6 +131,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "alert_state":
                         value.AlertState = global::Dropbox.Api.TeamLog.AdminAlertingAlertStatePolicy.Decoder.Decode(reader);
+                        break;
+                    case "sensitivity_level":
+                        value.SensitivityLevel = global::Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Decoder.Decode(reader);
+                        break;
+                    case "recipients_settings":
+                        value.RecipientsSettings = global::Dropbox.Api.TeamLog.RecipientsConfiguration.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

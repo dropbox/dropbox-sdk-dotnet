@@ -440,6 +440,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// GovernancePolicyContentDisposed</para>
+        /// </summary>
+        public bool IsGovernancePolicyContentDisposed
+        {
+            get
+            {
+                return this is GovernancePolicyContentDisposed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GovernancePolicyContentDisposed, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public GovernancePolicyContentDisposed AsGovernancePolicyContentDisposed
+        {
+            get
+            {
+                return this as GovernancePolicyContentDisposed;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// GovernancePolicyCreate</para>
         /// </summary>
         public bool IsGovernancePolicyCreate
@@ -1987,6 +2011,73 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as FolderOverviewItemUnpinned;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ObjectLabelAdded</para>
+        /// </summary>
+        public bool IsObjectLabelAdded
+        {
+            get
+            {
+                return this is ObjectLabelAdded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ObjectLabelAdded, or <c>null</c>.</para>
+        /// </summary>
+        public ObjectLabelAdded AsObjectLabelAdded
+        {
+            get
+            {
+                return this as ObjectLabelAdded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ObjectLabelRemoved</para>
+        /// </summary>
+        public bool IsObjectLabelRemoved
+        {
+            get
+            {
+                return this is ObjectLabelRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ObjectLabelRemoved, or <c>null</c>.</para>
+        /// </summary>
+        public ObjectLabelRemoved AsObjectLabelRemoved
+        {
+            get
+            {
+                return this as ObjectLabelRemoved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ObjectLabelUpdatedValue</para>
+        /// </summary>
+        public bool IsObjectLabelUpdatedValue
+        {
+            get
+            {
+                return this is ObjectLabelUpdatedValue;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ObjectLabelUpdatedValue, or <c>null</c>.</para>
+        /// </summary>
+        public ObjectLabelUpdatedValue AsObjectLabelUpdatedValue
+        {
+            get
+            {
+                return this as ObjectLabelUpdatedValue;
             }
         }
 
@@ -10528,6 +10619,12 @@ namespace Dropbox.Api.TeamLog
                     GovernancePolicyAddFolderFailed.Encoder.EncodeFields((GovernancePolicyAddFolderFailed)value, writer);
                     return;
                 }
+                if (value is GovernancePolicyContentDisposed)
+                {
+                    WriteProperty(".tag", "governance_policy_content_disposed", writer, enc.StringEncoder.Instance);
+                    GovernancePolicyContentDisposed.Encoder.EncodeFields((GovernancePolicyContentDisposed)value, writer);
+                    return;
+                }
                 if (value is GovernancePolicyCreate)
                 {
                     WriteProperty(".tag", "governance_policy_create", writer, enc.StringEncoder.Instance);
@@ -10934,6 +11031,24 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "folder_overview_item_unpinned", writer, enc.StringEncoder.Instance);
                     FolderOverviewItemUnpinned.Encoder.EncodeFields((FolderOverviewItemUnpinned)value, writer);
+                    return;
+                }
+                if (value is ObjectLabelAdded)
+                {
+                    WriteProperty(".tag", "object_label_added", writer, enc.StringEncoder.Instance);
+                    ObjectLabelAdded.Encoder.EncodeFields((ObjectLabelAdded)value, writer);
+                    return;
+                }
+                if (value is ObjectLabelRemoved)
+                {
+                    WriteProperty(".tag", "object_label_removed", writer, enc.StringEncoder.Instance);
+                    ObjectLabelRemoved.Encoder.EncodeFields((ObjectLabelRemoved)value, writer);
+                    return;
+                }
+                if (value is ObjectLabelUpdatedValue)
+                {
+                    WriteProperty(".tag", "object_label_updated_value", writer, enc.StringEncoder.Instance);
+                    ObjectLabelUpdatedValue.Encoder.EncodeFields((ObjectLabelUpdatedValue)value, writer);
                     return;
                 }
                 if (value is RewindFolder)
@@ -13224,6 +13339,8 @@ namespace Dropbox.Api.TeamLog
                         return GovernancePolicyAddFolders.Decoder.DecodeFields(reader);
                     case "governance_policy_add_folder_failed":
                         return GovernancePolicyAddFolderFailed.Decoder.DecodeFields(reader);
+                    case "governance_policy_content_disposed":
+                        return GovernancePolicyContentDisposed.Decoder.DecodeFields(reader);
                     case "governance_policy_create":
                         return GovernancePolicyCreate.Decoder.DecodeFields(reader);
                     case "governance_policy_delete":
@@ -13360,6 +13477,12 @@ namespace Dropbox.Api.TeamLog
                         return FolderOverviewItemPinned.Decoder.DecodeFields(reader);
                     case "folder_overview_item_unpinned":
                         return FolderOverviewItemUnpinned.Decoder.DecodeFields(reader);
+                    case "object_label_added":
+                        return ObjectLabelAdded.Decoder.DecodeFields(reader);
+                    case "object_label_removed":
+                        return ObjectLabelRemoved.Decoder.DecodeFields(reader);
+                    case "object_label_updated_value":
+                        return ObjectLabelUpdatedValue.Decoder.DecodeFields(reader);
                     case "rewind_folder":
                         return RewindFolder.Decoder.DecodeFields(reader);
                     case "file_request_change":
@@ -15371,6 +15494,77 @@ namespace Dropbox.Api.TeamLog
                 protected override GovernancePolicyAddFolderFailed Create()
                 {
                     return GovernancePolicyAddFolderFailed.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(data_governance) Content disposed</para>
+        /// </summary>
+        public sealed class GovernancePolicyContentDisposed : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GovernancePolicyContentDisposed> Encoder = new GovernancePolicyContentDisposedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GovernancePolicyContentDisposed> Decoder = new GovernancePolicyContentDisposedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GovernancePolicyContentDisposed" /> class.</para>
+            /// </summary>
+            private GovernancePolicyContentDisposed()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GovernancePolicyContentDisposed</para>
+            /// </summary>
+            public static readonly GovernancePolicyContentDisposed Instance = new GovernancePolicyContentDisposed();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GovernancePolicyContentDisposed" />.</para>
+            /// </summary>
+            private class GovernancePolicyContentDisposedEncoder : enc.StructEncoder<GovernancePolicyContentDisposed>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GovernancePolicyContentDisposed value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GovernancePolicyContentDisposed" />.</para>
+            /// </summary>
+            private class GovernancePolicyContentDisposedDecoder : enc.StructDecoder<GovernancePolicyContentDisposed>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GovernancePolicyContentDisposed" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GovernancePolicyContentDisposed Create()
+                {
+                    return GovernancePolicyContentDisposed.Instance;
                 }
 
             }
@@ -20186,6 +20380,218 @@ namespace Dropbox.Api.TeamLog
                 protected override FolderOverviewItemUnpinned Create()
                 {
                     return FolderOverviewItemUnpinned.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(file_operations) Added a label</para>
+        /// </summary>
+        public sealed class ObjectLabelAdded : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ObjectLabelAdded> Encoder = new ObjectLabelAddedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ObjectLabelAdded> Decoder = new ObjectLabelAddedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelAdded" />
+            /// class.</para>
+            /// </summary>
+            private ObjectLabelAdded()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ObjectLabelAdded</para>
+            /// </summary>
+            public static readonly ObjectLabelAdded Instance = new ObjectLabelAdded();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ObjectLabelAdded" />.</para>
+            /// </summary>
+            private class ObjectLabelAddedEncoder : enc.StructEncoder<ObjectLabelAdded>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ObjectLabelAdded value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ObjectLabelAdded" />.</para>
+            /// </summary>
+            private class ObjectLabelAddedDecoder : enc.StructDecoder<ObjectLabelAdded>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ObjectLabelAdded" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ObjectLabelAdded Create()
+                {
+                    return ObjectLabelAdded.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(file_operations) Removed a label</para>
+        /// </summary>
+        public sealed class ObjectLabelRemoved : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ObjectLabelRemoved> Encoder = new ObjectLabelRemovedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ObjectLabelRemoved> Decoder = new ObjectLabelRemovedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelRemoved" />
+            /// class.</para>
+            /// </summary>
+            private ObjectLabelRemoved()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ObjectLabelRemoved</para>
+            /// </summary>
+            public static readonly ObjectLabelRemoved Instance = new ObjectLabelRemoved();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ObjectLabelRemoved" />.</para>
+            /// </summary>
+            private class ObjectLabelRemovedEncoder : enc.StructEncoder<ObjectLabelRemoved>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ObjectLabelRemoved value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ObjectLabelRemoved" />.</para>
+            /// </summary>
+            private class ObjectLabelRemovedDecoder : enc.StructDecoder<ObjectLabelRemoved>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ObjectLabelRemoved"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ObjectLabelRemoved Create()
+                {
+                    return ObjectLabelRemoved.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(file_operations) Updated a label's value</para>
+        /// </summary>
+        public sealed class ObjectLabelUpdatedValue : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ObjectLabelUpdatedValue> Encoder = new ObjectLabelUpdatedValueEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ObjectLabelUpdatedValue> Decoder = new ObjectLabelUpdatedValueDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ObjectLabelUpdatedValue" />
+            /// class.</para>
+            /// </summary>
+            private ObjectLabelUpdatedValue()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ObjectLabelUpdatedValue</para>
+            /// </summary>
+            public static readonly ObjectLabelUpdatedValue Instance = new ObjectLabelUpdatedValue();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ObjectLabelUpdatedValue" />.</para>
+            /// </summary>
+            private class ObjectLabelUpdatedValueEncoder : enc.StructEncoder<ObjectLabelUpdatedValue>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ObjectLabelUpdatedValue value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ObjectLabelUpdatedValue" />.</para>
+            /// </summary>
+            private class ObjectLabelUpdatedValueDecoder : enc.StructDecoder<ObjectLabelUpdatedValue>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ObjectLabelUpdatedValue"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ObjectLabelUpdatedValue Create()
+                {
+                    return ObjectLabelUpdatedValue.Instance;
                 }
 
             }
