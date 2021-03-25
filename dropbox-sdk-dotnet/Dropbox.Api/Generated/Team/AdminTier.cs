@@ -349,7 +349,9 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>User can do a limited set of common support tasks for existing users.</para>
+        /// <para>User can do a limited set of common support tasks for existing users. Note:
+        /// Dropbox is adding new types of admin roles; these may display as
+        /// support_admin.</para>
         /// </summary>
         public sealed class SupportAdmin : AdminTier
         {

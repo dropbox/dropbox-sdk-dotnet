@@ -80,6 +80,50 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MemberAndTeamFolders</para>
+        /// </summary>
+        public bool IsMemberAndTeamFolders
+        {
+            get
+            {
+                return this is MemberAndTeamFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberAndTeamFolders, or <c>null</c>.</para>
+        /// </summary>
+        public MemberAndTeamFolders AsMemberAndTeamFolders
+        {
+            get
+            {
+                return this as MemberAndTeamFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamFolders</para>
+        /// </summary>
+        public bool IsTeamFolders
+        {
+            get
+            {
+                return this is TeamFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolders, or <c>null</c>.</para>
+        /// </summary>
+        public TeamFolders AsTeamFolders
+        {
+            get
+            {
+                return this as TeamFolders;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +171,18 @@ namespace Dropbox.Api.TeamLog
                     Enabled.Encoder.EncodeFields((Enabled)value, writer);
                     return;
                 }
+                if (value is MemberAndTeamFolders)
+                {
+                    WriteProperty(".tag", "member_and_team_folders", writer, enc.StringEncoder.Instance);
+                    MemberAndTeamFolders.Encoder.EncodeFields((MemberAndTeamFolders)value, writer);
+                    return;
+                }
+                if (value is TeamFolders)
+                {
+                    WriteProperty(".tag", "team_folders", writer, enc.StringEncoder.Instance);
+                    TeamFolders.Encoder.EncodeFields((TeamFolders)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +226,10 @@ namespace Dropbox.Api.TeamLog
                         return Disabled.Decoder.DecodeFields(reader);
                     case "enabled":
                         return Enabled.Decoder.DecodeFields(reader);
+                    case "member_and_team_folders":
+                        return MemberAndTeamFolders.Decoder.DecodeFields(reader);
+                    case "team_folders":
+                        return TeamFolders.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -309,6 +369,147 @@ namespace Dropbox.Api.TeamLog
                 protected override Enabled Create()
                 {
                     return Enabled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The member and team folders object</para>
+        /// </summary>
+        public sealed class MemberAndTeamFolders : ClassificationPolicyEnumWrapper
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberAndTeamFolders> Encoder = new MemberAndTeamFoldersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberAndTeamFolders> Decoder = new MemberAndTeamFoldersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberAndTeamFolders" />
+            /// class.</para>
+            /// </summary>
+            private MemberAndTeamFolders()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MemberAndTeamFolders</para>
+            /// </summary>
+            public static readonly MemberAndTeamFolders Instance = new MemberAndTeamFolders();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberAndTeamFolders" />.</para>
+            /// </summary>
+            private class MemberAndTeamFoldersEncoder : enc.StructEncoder<MemberAndTeamFolders>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberAndTeamFolders value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberAndTeamFolders" />.</para>
+            /// </summary>
+            private class MemberAndTeamFoldersDecoder : enc.StructDecoder<MemberAndTeamFolders>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MemberAndTeamFolders"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberAndTeamFolders Create()
+                {
+                    return MemberAndTeamFolders.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team folders object</para>
+        /// </summary>
+        public sealed class TeamFolders : ClassificationPolicyEnumWrapper
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolders> Encoder = new TeamFoldersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolders> Decoder = new TeamFoldersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamFolders" />
+            /// class.</para>
+            /// </summary>
+            private TeamFolders()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamFolders</para>
+            /// </summary>
+            public static readonly TeamFolders Instance = new TeamFolders();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFolders" />.</para>
+            /// </summary>
+            private class TeamFoldersEncoder : enc.StructEncoder<TeamFolders>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolders value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFolders" />.</para>
+            /// </summary>
+            private class TeamFoldersDecoder : enc.StructDecoder<TeamFolders>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamFolders" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolders Create()
+                {
+                    return TeamFolders.Instance;
                 }
 
             }
