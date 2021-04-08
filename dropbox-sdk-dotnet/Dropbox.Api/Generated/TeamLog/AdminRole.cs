@@ -57,6 +57,50 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ComplianceAdmin</para>
+        /// </summary>
+        public bool IsComplianceAdmin
+        {
+            get
+            {
+                return this is ComplianceAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ComplianceAdmin, or <c>null</c>.</para>
+        /// </summary>
+        public ComplianceAdmin AsComplianceAdmin
+        {
+            get
+            {
+                return this as ComplianceAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ContentAdmin</para>
+        /// </summary>
+        public bool IsContentAdmin
+        {
+            get
+            {
+                return this is ContentAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContentAdmin, or <c>null</c>.</para>
+        /// </summary>
+        public ContentAdmin AsContentAdmin
+        {
+            get
+            {
+                return this as ContentAdmin;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is LimitedAdmin</para>
         /// </summary>
         public bool IsLimitedAdmin
@@ -97,6 +141,50 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as MemberOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ReportingAdmin</para>
+        /// </summary>
+        public bool IsReportingAdmin
+        {
+            get
+            {
+                return this is ReportingAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReportingAdmin, or <c>null</c>.</para>
+        /// </summary>
+        public ReportingAdmin AsReportingAdmin
+        {
+            get
+            {
+                return this as ReportingAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is SecurityAdmin</para>
+        /// </summary>
+        public bool IsSecurityAdmin
+        {
+            get
+            {
+                return this is SecurityAdmin;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SecurityAdmin, or <c>null</c>.</para>
+        /// </summary>
+        public SecurityAdmin AsSecurityAdmin
+        {
+            get
+            {
+                return this as SecurityAdmin;
             }
         }
 
@@ -208,6 +296,18 @@ namespace Dropbox.Api.TeamLog
                     BillingAdmin.Encoder.EncodeFields((BillingAdmin)value, writer);
                     return;
                 }
+                if (value is ComplianceAdmin)
+                {
+                    WriteProperty(".tag", "compliance_admin", writer, enc.StringEncoder.Instance);
+                    ComplianceAdmin.Encoder.EncodeFields((ComplianceAdmin)value, writer);
+                    return;
+                }
+                if (value is ContentAdmin)
+                {
+                    WriteProperty(".tag", "content_admin", writer, enc.StringEncoder.Instance);
+                    ContentAdmin.Encoder.EncodeFields((ContentAdmin)value, writer);
+                    return;
+                }
                 if (value is LimitedAdmin)
                 {
                     WriteProperty(".tag", "limited_admin", writer, enc.StringEncoder.Instance);
@@ -218,6 +318,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "member_only", writer, enc.StringEncoder.Instance);
                     MemberOnly.Encoder.EncodeFields((MemberOnly)value, writer);
+                    return;
+                }
+                if (value is ReportingAdmin)
+                {
+                    WriteProperty(".tag", "reporting_admin", writer, enc.StringEncoder.Instance);
+                    ReportingAdmin.Encoder.EncodeFields((ReportingAdmin)value, writer);
+                    return;
+                }
+                if (value is SecurityAdmin)
+                {
+                    WriteProperty(".tag", "security_admin", writer, enc.StringEncoder.Instance);
+                    SecurityAdmin.Encoder.EncodeFields((SecurityAdmin)value, writer);
                     return;
                 }
                 if (value is SupportAdmin)
@@ -278,10 +390,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "billing_admin":
                         return BillingAdmin.Decoder.DecodeFields(reader);
+                    case "compliance_admin":
+                        return ComplianceAdmin.Decoder.DecodeFields(reader);
+                    case "content_admin":
+                        return ContentAdmin.Decoder.DecodeFields(reader);
                     case "limited_admin":
                         return LimitedAdmin.Decoder.DecodeFields(reader);
                     case "member_only":
                         return MemberOnly.Decoder.DecodeFields(reader);
+                    case "reporting_admin":
+                        return ReportingAdmin.Decoder.DecodeFields(reader);
+                    case "security_admin":
+                        return SecurityAdmin.Decoder.DecodeFields(reader);
                     case "support_admin":
                         return SupportAdmin.Decoder.DecodeFields(reader);
                     case "team_admin":
@@ -359,6 +479,146 @@ namespace Dropbox.Api.TeamLog
                 protected override BillingAdmin Create()
                 {
                     return BillingAdmin.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The compliance admin object</para>
+        /// </summary>
+        public sealed class ComplianceAdmin : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ComplianceAdmin> Encoder = new ComplianceAdminEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ComplianceAdmin> Decoder = new ComplianceAdminDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ComplianceAdmin" />
+            /// class.</para>
+            /// </summary>
+            private ComplianceAdmin()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ComplianceAdmin</para>
+            /// </summary>
+            public static readonly ComplianceAdmin Instance = new ComplianceAdmin();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ComplianceAdmin" />.</para>
+            /// </summary>
+            private class ComplianceAdminEncoder : enc.StructEncoder<ComplianceAdmin>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ComplianceAdmin value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ComplianceAdmin" />.</para>
+            /// </summary>
+            private class ComplianceAdminDecoder : enc.StructDecoder<ComplianceAdmin>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ComplianceAdmin" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ComplianceAdmin Create()
+                {
+                    return ComplianceAdmin.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The content admin object</para>
+        /// </summary>
+        public sealed class ContentAdmin : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContentAdmin> Encoder = new ContentAdminEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContentAdmin> Decoder = new ContentAdminDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContentAdmin" />
+            /// class.</para>
+            /// </summary>
+            private ContentAdmin()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ContentAdmin</para>
+            /// </summary>
+            public static readonly ContentAdmin Instance = new ContentAdmin();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContentAdmin" />.</para>
+            /// </summary>
+            private class ContentAdminEncoder : enc.StructEncoder<ContentAdmin>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContentAdmin value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContentAdmin" />.</para>
+            /// </summary>
+            private class ContentAdminDecoder : enc.StructDecoder<ContentAdmin>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ContentAdmin" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContentAdmin Create()
+                {
+                    return ContentAdmin.Instance;
                 }
 
             }
@@ -498,6 +758,146 @@ namespace Dropbox.Api.TeamLog
                 protected override MemberOnly Create()
                 {
                     return MemberOnly.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The reporting admin object</para>
+        /// </summary>
+        public sealed class ReportingAdmin : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReportingAdmin> Encoder = new ReportingAdminEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReportingAdmin> Decoder = new ReportingAdminDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReportingAdmin" />
+            /// class.</para>
+            /// </summary>
+            private ReportingAdmin()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ReportingAdmin</para>
+            /// </summary>
+            public static readonly ReportingAdmin Instance = new ReportingAdmin();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReportingAdmin" />.</para>
+            /// </summary>
+            private class ReportingAdminEncoder : enc.StructEncoder<ReportingAdmin>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReportingAdmin value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReportingAdmin" />.</para>
+            /// </summary>
+            private class ReportingAdminDecoder : enc.StructDecoder<ReportingAdmin>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ReportingAdmin" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReportingAdmin Create()
+                {
+                    return ReportingAdmin.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The security admin object</para>
+        /// </summary>
+        public sealed class SecurityAdmin : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SecurityAdmin> Encoder = new SecurityAdminEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SecurityAdmin> Decoder = new SecurityAdminDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SecurityAdmin" />
+            /// class.</para>
+            /// </summary>
+            private SecurityAdmin()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of SecurityAdmin</para>
+            /// </summary>
+            public static readonly SecurityAdmin Instance = new SecurityAdmin();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SecurityAdmin" />.</para>
+            /// </summary>
+            private class SecurityAdminEncoder : enc.StructEncoder<SecurityAdmin>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SecurityAdmin value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SecurityAdmin" />.</para>
+            /// </summary>
+            private class SecurityAdminDecoder : enc.StructDecoder<SecurityAdmin>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SecurityAdmin" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SecurityAdmin Create()
+                {
+                    return SecurityAdmin.Instance;
                 }
 
             }

@@ -612,7 +612,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Access to the requested path is forbidden.</para>
+        /// <para>The user is not allowed to create a shared link to the specified file. For
+        /// example, this can occur if the file is restricted or if the user's links are  <a
+        /// href="https://help.dropbox.com/files-folders/share/banned-links">banned</a>.</para>
         /// </summary>
         public sealed class AccessDenied : CreateSharedLinkWithSettingsError
         {
