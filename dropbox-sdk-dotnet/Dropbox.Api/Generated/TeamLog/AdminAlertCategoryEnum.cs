@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InformationGovernance</para>
+        /// </summary>
+        public bool IsInformationGovernance
+        {
+            get
+            {
+                return this is InformationGovernance;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InformationGovernance, or <c>null</c>.</para>
+        /// </summary>
+        public InformationGovernance AsInformationGovernance
+        {
+            get
+            {
+                return this as InformationGovernance;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is MalwareSharing</para>
         /// </summary>
         public bool IsMalwareSharing
@@ -215,6 +237,12 @@ namespace Dropbox.Api.TeamLog
                     DataLossProtection.Encoder.EncodeFields((DataLossProtection)value, writer);
                     return;
                 }
+                if (value is InformationGovernance)
+                {
+                    WriteProperty(".tag", "information_governance", writer, enc.StringEncoder.Instance);
+                    InformationGovernance.Encoder.EncodeFields((InformationGovernance)value, writer);
+                    return;
+                }
                 if (value is MalwareSharing)
                 {
                     WriteProperty(".tag", "malware_sharing", writer, enc.StringEncoder.Instance);
@@ -282,6 +310,8 @@ namespace Dropbox.Api.TeamLog
                         return AccountTakeover.Decoder.DecodeFields(reader);
                     case "data_loss_protection":
                         return DataLossProtection.Decoder.DecodeFields(reader);
+                    case "information_governance":
+                        return InformationGovernance.Decoder.DecodeFields(reader);
                     case "malware_sharing":
                         return MalwareSharing.Decoder.DecodeFields(reader);
                     case "massive_file_operation":
@@ -432,6 +462,77 @@ namespace Dropbox.Api.TeamLog
                 protected override DataLossProtection Create()
                 {
                     return DataLossProtection.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The information governance object</para>
+        /// </summary>
+        public sealed class InformationGovernance : AdminAlertCategoryEnum
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InformationGovernance> Encoder = new InformationGovernanceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InformationGovernance> Decoder = new InformationGovernanceDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InformationGovernance" />
+            /// class.</para>
+            /// </summary>
+            private InformationGovernance()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InformationGovernance</para>
+            /// </summary>
+            public static readonly InformationGovernance Instance = new InformationGovernance();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InformationGovernance" />.</para>
+            /// </summary>
+            private class InformationGovernanceEncoder : enc.StructEncoder<InformationGovernance>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InformationGovernance value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InformationGovernance" />.</para>
+            /// </summary>
+            private class InformationGovernanceDecoder : enc.StructDecoder<InformationGovernance>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InformationGovernance"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InformationGovernance Create()
+                {
+                    return InformationGovernance.Instance;
                 }
 
             }

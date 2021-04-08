@@ -13,6 +13,7 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>App's logged information.</para>
     /// </summary>
+    /// <seealso cref="AppBlockedByPermissionsDetails" />
     /// <seealso cref="AppLinkTeamDetails" />
     /// <seealso cref="AppLinkUserDetails" />
     /// <seealso cref="AppUnlinkTeamDetails" />
