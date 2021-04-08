@@ -82,6 +82,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AppBlockedByPermissions</para>
+        /// </summary>
+        public bool IsAppBlockedByPermissions
+        {
+            get
+            {
+                return this is AppBlockedByPermissions;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AppBlockedByPermissions, or <c>null</c>.</para>
+        /// </summary>
+        public AppBlockedByPermissions AsAppBlockedByPermissions
+        {
+            get
+            {
+                return this as AppBlockedByPermissions;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is AppLinkTeam</para>
         /// </summary>
         public bool IsAppLinkTeam
@@ -7817,6 +7840,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AppPermissionsChanged</para>
+        /// </summary>
+        public bool IsAppPermissionsChanged
+        {
+            get
+            {
+                return this is AppPermissionsChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AppPermissionsChanged, or <c>null</c>.</para>
+        /// </summary>
+        public AppPermissionsChanged AsAppPermissionsChanged
+        {
+            get
+            {
+                return this as AppPermissionsChanged;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is
         /// CameraUploadsPolicyChanged</para>
         /// </summary>
@@ -10523,6 +10568,12 @@ namespace Dropbox.Api.TeamLog
                     AdminAlertingTriggeredAlert.Encoder.EncodeFields((AdminAlertingTriggeredAlert)value, writer);
                     return;
                 }
+                if (value is AppBlockedByPermissions)
+                {
+                    WriteProperty(".tag", "app_blocked_by_permissions", writer, enc.StringEncoder.Instance);
+                    AppBlockedByPermissions.Encoder.EncodeFields((AppBlockedByPermissions)value, writer);
+                    return;
+                }
                 if (value is AppLinkTeam)
                 {
                     WriteProperty(".tag", "app_link_team", writer, enc.StringEncoder.Instance);
@@ -12575,6 +12626,12 @@ namespace Dropbox.Api.TeamLog
                     AllowDownloadEnabled.Encoder.EncodeFields((AllowDownloadEnabled)value, writer);
                     return;
                 }
+                if (value is AppPermissionsChanged)
+                {
+                    WriteProperty(".tag", "app_permissions_changed", writer, enc.StringEncoder.Instance);
+                    AppPermissionsChanged.Encoder.EncodeFields((AppPermissionsChanged)value, writer);
+                    return;
+                }
                 if (value is CameraUploadsPolicyChanged)
                 {
                     WriteProperty(".tag", "camera_uploads_policy_changed", writer, enc.StringEncoder.Instance);
@@ -13307,6 +13364,8 @@ namespace Dropbox.Api.TeamLog
                         return AdminAlertingChangedAlertConfig.Decoder.DecodeFields(reader);
                     case "admin_alerting_triggered_alert":
                         return AdminAlertingTriggeredAlert.Decoder.DecodeFields(reader);
+                    case "app_blocked_by_permissions":
+                        return AppBlockedByPermissions.Decoder.DecodeFields(reader);
                     case "app_link_team":
                         return AppLinkTeam.Decoder.DecodeFields(reader);
                     case "app_link_user":
@@ -13991,6 +14050,8 @@ namespace Dropbox.Api.TeamLog
                         return AllowDownloadDisabled.Decoder.DecodeFields(reader);
                     case "allow_download_enabled":
                         return AllowDownloadEnabled.Decoder.DecodeFields(reader);
+                    case "app_permissions_changed":
+                        return AppPermissionsChanged.Decoder.DecodeFields(reader);
                     case "camera_uploads_policy_changed":
                         return CameraUploadsPolicyChanged.Decoder.DecodeFields(reader);
                     case "classification_change_policy":
@@ -14364,6 +14425,77 @@ namespace Dropbox.Api.TeamLog
                 protected override AdminAlertingTriggeredAlert Create()
                 {
                     return AdminAlertingTriggeredAlert.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(apps) Failed to connect app for member</para>
+        /// </summary>
+        public sealed class AppBlockedByPermissions : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AppBlockedByPermissions> Encoder = new AppBlockedByPermissionsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AppBlockedByPermissions> Decoder = new AppBlockedByPermissionsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AppBlockedByPermissions" />
+            /// class.</para>
+            /// </summary>
+            private AppBlockedByPermissions()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AppBlockedByPermissions</para>
+            /// </summary>
+            public static readonly AppBlockedByPermissions Instance = new AppBlockedByPermissions();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AppBlockedByPermissions" />.</para>
+            /// </summary>
+            private class AppBlockedByPermissionsEncoder : enc.StructEncoder<AppBlockedByPermissions>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AppBlockedByPermissions value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AppBlockedByPermissions" />.</para>
+            /// </summary>
+            private class AppBlockedByPermissionsDecoder : enc.StructDecoder<AppBlockedByPermissions>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AppBlockedByPermissions"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AppBlockedByPermissions Create()
+                {
+                    return AppBlockedByPermissions.Instance;
                 }
 
             }
@@ -38607,6 +38739,77 @@ namespace Dropbox.Api.TeamLog
                 protected override AllowDownloadEnabled Create()
                 {
                     return AllowDownloadEnabled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed app permissions</para>
+        /// </summary>
+        public sealed class AppPermissionsChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AppPermissionsChanged> Encoder = new AppPermissionsChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AppPermissionsChanged> Decoder = new AppPermissionsChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AppPermissionsChanged" />
+            /// class.</para>
+            /// </summary>
+            private AppPermissionsChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AppPermissionsChanged</para>
+            /// </summary>
+            public static readonly AppPermissionsChanged Instance = new AppPermissionsChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AppPermissionsChanged" />.</para>
+            /// </summary>
+            private class AppPermissionsChangedEncoder : enc.StructEncoder<AppPermissionsChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AppPermissionsChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AppPermissionsChanged" />.</para>
+            /// </summary>
+            private class AppPermissionsChangedDecoder : enc.StructDecoder<AppPermissionsChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AppPermissionsChanged"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AppPermissionsChanged Create()
+                {
+                    return AppPermissionsChanged.Instance;
                 }
 
             }
