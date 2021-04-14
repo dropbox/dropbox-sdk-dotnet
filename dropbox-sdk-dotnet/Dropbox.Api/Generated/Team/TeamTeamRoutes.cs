@@ -3841,6 +3841,53 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Get available TeamMemberRoles for the connected team. To be used with <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersSetAdminPermissionsV2Async"
+        /// />.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<MembersGetAvailableTeamMemberRolesResult> MembersGetAvailableTeamMemberRolesAsync()
+        {
+            return this.Transport.SendRpcRequestAsync<enc.Empty, MembersGetAvailableTeamMemberRolesResult, enc.Empty>(enc.Empty.Instance, "api", "/team/members/get_available_team_member_roles", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members get available team member roles
+        /// route.</para>
+        /// </summary>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersGetAvailableTeamMemberRoles(sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersGetAvailableTeamMemberRolesAsync();
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members get available team
+        /// member roles route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public MembersGetAvailableTeamMemberRolesResult EndMembersGetAvailableTeamMemberRoles(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersGetAvailableTeamMemberRolesResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns information about multiple team members.</para>
         /// <para>Permission : Team information</para>
         /// <para>This endpoint will return <see
@@ -4995,6 +5042,103 @@ namespace Dropbox.Api.Team.Routes
             {
                 throw new sys.InvalidOperationException();
             }
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's permissions.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersSetPermissions2Arg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetPermissions2Error"/>.</exception>
+        public t.Task<MembersSetPermissions2Result> MembersSetAdminPermissionsV2Async(MembersSetPermissions2Arg membersSetPermissions2Arg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersSetPermissions2Arg, MembersSetPermissions2Result, MembersSetPermissions2Error>(membersSetPermissions2Arg, "api", "/team/members/set_admin_permissions_v2", "team", global::Dropbox.Api.Team.MembersSetPermissions2Arg.Encoder, global::Dropbox.Api.Team.MembersSetPermissions2Result.Decoder, global::Dropbox.Api.Team.MembersSetPermissions2Error.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set admin permissions
+        /// route.</para>
+        /// </summary>
+        /// <param name="membersSetPermissions2Arg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetAdminPermissionsV2(MembersSetPermissions2Arg membersSetPermissions2Arg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSetAdminPermissionsV2Async(membersSetPermissions2Arg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's permissions.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose role will be set.</param>
+        /// <param name="newRoles">The new roles for the member. Send empty list to make user
+        /// member only. For now, only up to one role is allowed.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetPermissions2Error"/>.</exception>
+        public t.Task<MembersSetPermissions2Result> MembersSetAdminPermissionsV2Async(UserSelectorArg user,
+                                                                                      col.IEnumerable<string> newRoles = null)
+        {
+            var membersSetPermissions2Arg = new MembersSetPermissions2Arg(user,
+                                                                          newRoles);
+
+            return this.MembersSetAdminPermissionsV2Async(membersSetPermissions2Arg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set admin permissions
+        /// route.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose role will be set.</param>
+        /// <param name="newRoles">The new roles for the member. Send empty list to make user
+        /// member only. For now, only up to one role is allowed.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetAdminPermissionsV2(UserSelectorArg user,
+                                                                  col.IEnumerable<string> newRoles = null,
+                                                                  sys.AsyncCallback callback = null,
+                                                                  object callbackState = null)
+        {
+            var membersSetPermissions2Arg = new MembersSetPermissions2Arg(user,
+                                                                          newRoles);
+
+            return this.BeginMembersSetAdminPermissionsV2(membersSetPermissions2Arg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members set admin permissions
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetPermissions2Error"/>.</exception>
+        public MembersSetPermissions2Result EndMembersSetAdminPermissionsV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersSetPermissions2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
         }
 
         /// <summary>
