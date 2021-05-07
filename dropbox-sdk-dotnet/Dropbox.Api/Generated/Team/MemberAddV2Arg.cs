@@ -11,25 +11,25 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The member add arg object</para>
+    /// <para>The member add v2 arg object</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Team.MemberAddArgBase" />
-    public class MemberAddArg : MemberAddArgBase
+    public class MemberAddV2Arg : MemberAddArgBase
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MemberAddArg> Encoder = new MemberAddArgEncoder();
+        internal static enc.StructEncoder<MemberAddV2Arg> Encoder = new MemberAddV2ArgEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MemberAddArg> Decoder = new MemberAddArgDecoder();
+        internal static enc.StructDecoder<MemberAddV2Arg> Decoder = new MemberAddV2ArgDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MemberAddArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="MemberAddV2Arg" /> class.</para>
         /// </summary>
         /// <param name="memberEmail">The member email</param>
         /// <param name="memberGivenName">Member's first name.</param>
@@ -42,53 +42,58 @@ namespace Dropbox.Api.Team
         /// be useful for apps using single sign-on (SSO) flows for onboarding that want to
         /// handle announcements themselves.</param>
         /// <param name="isDirectoryRestricted">Whether a user is directory restricted.</param>
-        /// <param name="role">The role</param>
-        public MemberAddArg(string memberEmail,
-                            string memberGivenName = null,
-                            string memberSurname = null,
-                            string memberExternalId = null,
-                            string memberPersistentId = null,
-                            bool sendWelcomeEmail = true,
-                            bool? isDirectoryRestricted = null,
-                            AdminTier role = null)
+        /// <param name="roleIds">The role ids</param>
+        public MemberAddV2Arg(string memberEmail,
+                              string memberGivenName = null,
+                              string memberSurname = null,
+                              string memberExternalId = null,
+                              string memberPersistentId = null,
+                              bool sendWelcomeEmail = true,
+                              bool? isDirectoryRestricted = null,
+                              col.IEnumerable<string> roleIds = null)
             : base(memberEmail, memberGivenName, memberSurname, memberExternalId, memberPersistentId, sendWelcomeEmail, isDirectoryRestricted)
         {
-            if (role == null)
+            var roleIdsList = enc.Util.ToList(roleIds);
+
+            if (roleIds != null)
             {
-                role = global::Dropbox.Api.Team.AdminTier.MemberOnly.Instance;
+                if (roleIdsList.Count > 1)
+                {
+                    throw new sys.ArgumentOutOfRangeException("roleIds", "List should at at most 1 items");
+                }
             }
-            this.Role = role;
+
+            this.RoleIds = roleIdsList;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MemberAddArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="MemberAddV2Arg" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public MemberAddArg()
+        public MemberAddV2Arg()
         {
-            this.Role = global::Dropbox.Api.Team.AdminTier.MemberOnly.Instance;
         }
 
         /// <summary>
-        /// <para>Gets the role of the member add arg</para>
+        /// <para>Gets the role ids of the member add v2 arg</para>
         /// </summary>
-        public AdminTier Role { get; protected set; }
+        public col.IList<string> RoleIds { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MemberAddArg" />.</para>
+        /// <para>Encoder for  <see cref="MemberAddV2Arg" />.</para>
         /// </summary>
-        private class MemberAddArgEncoder : enc.StructEncoder<MemberAddArg>
+        private class MemberAddV2ArgEncoder : enc.StructEncoder<MemberAddV2Arg>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MemberAddArg value, enc.IJsonWriter writer)
+            public override void EncodeFields(MemberAddV2Arg value, enc.IJsonWriter writer)
             {
                 WriteProperty("member_email", value.MemberEmail, writer, enc.StringEncoder.Instance);
                 if (value.MemberGivenName != null)
@@ -112,7 +117,10 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty("is_directory_restricted", value.IsDirectoryRestricted.Value, writer, enc.BooleanEncoder.Instance);
                 }
-                WriteProperty("role", value.Role, writer, global::Dropbox.Api.Team.AdminTier.Encoder);
+                if (value.RoleIds.Count > 0)
+                {
+                    WriteListProperty("role_ids", value.RoleIds, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -122,17 +130,17 @@ namespace Dropbox.Api.Team
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MemberAddArg" />.</para>
+        /// <para>Decoder for  <see cref="MemberAddV2Arg" />.</para>
         /// </summary>
-        private class MemberAddArgDecoder : enc.StructDecoder<MemberAddArg>
+        private class MemberAddV2ArgDecoder : enc.StructDecoder<MemberAddV2Arg>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MemberAddArg" />.</para>
+            /// <para>Create a new instance of type <see cref="MemberAddV2Arg" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MemberAddArg Create()
+            protected override MemberAddV2Arg Create()
             {
-                return new MemberAddArg();
+                return new MemberAddV2Arg();
             }
 
             /// <summary>
@@ -141,7 +149,7 @@ namespace Dropbox.Api.Team
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(MemberAddArg value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(MemberAddV2Arg value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
@@ -166,8 +174,8 @@ namespace Dropbox.Api.Team
                     case "is_directory_restricted":
                         value.IsDirectoryRestricted = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
-                    case "role":
-                        value.Role = global::Dropbox.Api.Team.AdminTier.Decoder.Decode(reader);
+                    case "role_ids":
+                        value.RoleIds = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     default:
                         reader.Skip();

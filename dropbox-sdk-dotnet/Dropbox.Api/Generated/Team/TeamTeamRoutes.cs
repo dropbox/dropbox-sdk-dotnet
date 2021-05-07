@@ -3567,6 +3567,112 @@ namespace Dropbox.Api.Team.Routes
         /// surname for a user to use in the team invitation and for 'Perform as team member'
         /// actions taken on the user before they become 'active'.</para>
         /// </summary>
+        /// <param name="membersAddV2Arg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<MembersAddLaunchV2Result> MembersAddV2Async(MembersAddV2Arg membersAddV2Arg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersAddV2Arg, MembersAddLaunchV2Result, enc.Empty>(membersAddV2Arg, "api", "/team/members/add_v2", "team", global::Dropbox.Api.Team.MembersAddV2Arg.Encoder, global::Dropbox.Api.Team.MembersAddLaunchV2Result.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members add route.</para>
+        /// </summary>
+        /// <param name="membersAddV2Arg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersAddV2(MembersAddV2Arg membersAddV2Arg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersAddV2Async(membersAddV2Arg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Adds members to a team.</para>
+        /// <para>Permission : Team member management</para>
+        /// <para>A maximum of 20 members can be specified in a single call.</para>
+        /// <para>If no Dropbox account exists with the email address specified, a new Dropbox
+        /// account will be created with the given email address, and that account will be
+        /// invited to the team.</para>
+        /// <para>If a personal Dropbox account exists with the email address specified in the
+        /// call, this call will create a placeholder Dropbox account for the user on the team
+        /// and send an email inviting the user to migrate their existing personal account onto
+        /// the team.</para>
+        /// <para>Team member management apps are required to set an initial given_name and
+        /// surname for a user to use in the team invitation and for 'Perform as team member'
+        /// actions taken on the user before they become 'active'.</para>
+        /// </summary>
+        /// <param name="newMembers">Details of new members to be added to the team.</param>
+        /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<MembersAddLaunchV2Result> MembersAddV2Async(col.IEnumerable<MemberAddV2Arg> newMembers,
+                                                                  bool forceAsync = false)
+        {
+            var membersAddV2Arg = new MembersAddV2Arg(newMembers,
+                                                      forceAsync);
+
+            return this.MembersAddV2Async(membersAddV2Arg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members add route.</para>
+        /// </summary>
+        /// <param name="newMembers">Details of new members to be added to the team.</param>
+        /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersAddV2(col.IEnumerable<MemberAddV2Arg> newMembers,
+                                                  bool forceAsync = false,
+                                                  sys.AsyncCallback callback = null,
+                                                  object callbackState = null)
+        {
+            var membersAddV2Arg = new MembersAddV2Arg(newMembers,
+                                                      forceAsync);
+
+            return this.BeginMembersAddV2(membersAddV2Arg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members add route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public MembersAddLaunchV2Result EndMembersAddV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersAddLaunchV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Adds members to a team.</para>
+        /// <para>Permission : Team member management</para>
+        /// <para>A maximum of 20 members can be specified in a single call.</para>
+        /// <para>If no Dropbox account exists with the email address specified, a new Dropbox
+        /// account will be created with the given email address, and that account will be
+        /// invited to the team.</para>
+        /// <para>If a personal Dropbox account exists with the email address specified in the
+        /// call, this call will create a placeholder Dropbox account for the user on the team
+        /// and send an email inviting the user to migrate their existing personal account onto
+        /// the team.</para>
+        /// <para>Team member management apps are required to set an initial given_name and
+        /// surname for a user to use in the team invitation and for 'Perform as team member'
+        /// actions taken on the user before they become 'active'.</para>
+        /// </summary>
         /// <param name="membersAddArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -3660,6 +3766,99 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async" /> , use this to
+        /// poll the status of the asynchronous request.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<MembersAddJobStatusV2Result> MembersAddJobStatusGetV2Async(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersAddJobStatusV2Result, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get_v2", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersAddJobStatusV2Result.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members add job status get route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersAddJobStatusGetV2(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersAddJobStatusGetV2Async(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once an async_job_id is returned from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async" /> , use this to
+        /// poll the status of the asynchronous request.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<MembersAddJobStatusV2Result> MembersAddJobStatusGetV2Async(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.MembersAddJobStatusGetV2Async(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members add job status get route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersAddJobStatusGetV2(string asyncJobId,
+                                                              sys.AsyncCallback callback,
+                                                              object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginMembersAddJobStatusGetV2(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members add job status get
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public MembersAddJobStatusV2Result EndMembersAddJobStatusGetV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersAddJobStatusV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> , use this to poll
         /// the status of the asynchronous request.</para>
         /// <para>Permission : Team member management.</para>
@@ -3743,6 +3942,95 @@ namespace Dropbox.Api.Team.Routes
         public MembersAddJobStatus EndMembersAddJobStatusGet(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<MembersAddJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Deletes a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersDeleteProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersDeleteProfilePhotoV2Async(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersDeleteProfilePhotoArg, TeamMemberInfoV2Result, MembersDeleteProfilePhotoError>(membersDeleteProfilePhotoArg, "api", "/team/members/delete_profile_photo_v2", "team", global::Dropbox.Api.Team.MembersDeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersDeleteProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// </summary>
+        /// <param name="membersDeleteProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteProfilePhotoV2(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersDeleteProfilePhotoV2Async(membersDeleteProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Deletes a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be
+        /// deleted.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersDeleteProfilePhotoV2Async(UserSelectorArg user)
+        {
+            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+
+            return this.MembersDeleteProfilePhotoV2Async(membersDeleteProfilePhotoArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be
+        /// deleted.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteProfilePhotoV2(UserSelectorArg user,
+                                                                 sys.AsyncCallback callback,
+                                                                 object callbackState = null)
+        {
+            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+
+            return this.BeginMembersDeleteProfilePhotoV2(membersDeleteProfilePhotoArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members delete profile photo
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public TeamMemberInfoV2Result EndMembersDeleteProfilePhotoV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3894,6 +4182,99 @@ namespace Dropbox.Api.Team.Routes
         /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
         /// cannot be matched to a valid team member.</para>
         /// </summary>
+        /// <param name="membersGetInfoV2Arg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersGetInfoError"/>.</exception>
+        public t.Task<MembersGetInfoV2Result> MembersGetInfoV2Async(MembersGetInfoV2Arg membersGetInfoV2Arg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersGetInfoV2Arg, MembersGetInfoV2Result, MembersGetInfoError>(membersGetInfoV2Arg, "api", "/team/members/get_info_v2", "team", global::Dropbox.Api.Team.MembersGetInfoV2Arg.Encoder, global::Dropbox.Api.Team.MembersGetInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersGetInfoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members get info route.</para>
+        /// </summary>
+        /// <param name="membersGetInfoV2Arg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersGetInfoV2(MembersGetInfoV2Arg membersGetInfoV2Arg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersGetInfoV2Async(membersGetInfoV2Arg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns information about multiple team members.</para>
+        /// <para>Permission : Team information</para>
+        /// <para>This endpoint will return <see
+        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
+        /// cannot be matched to a valid team member.</para>
+        /// </summary>
+        /// <param name="members">List of team members.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersGetInfoError"/>.</exception>
+        public t.Task<MembersGetInfoV2Result> MembersGetInfoV2Async(col.IEnumerable<UserSelectorArg> members)
+        {
+            var membersGetInfoV2Arg = new MembersGetInfoV2Arg(members);
+
+            return this.MembersGetInfoV2Async(membersGetInfoV2Arg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members get info route.</para>
+        /// </summary>
+        /// <param name="members">List of team members.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersGetInfoV2(col.IEnumerable<UserSelectorArg> members,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var membersGetInfoV2Arg = new MembersGetInfoV2Arg(members);
+
+            return this.BeginMembersGetInfoV2(membersGetInfoV2Arg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members get info route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersGetInfoError"/>.</exception>
+        public MembersGetInfoV2Result EndMembersGetInfoV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersGetInfoV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns information about multiple team members.</para>
+        /// <para>Permission : Team information</para>
+        /// <para>This endpoint will return <see
+        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
+        /// cannot be matched to a valid team member.</para>
+        /// </summary>
         /// <param name="membersGetInfoArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -3990,6 +4371,99 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListV2Async(MembersListArg membersListArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListV2Result, MembersListError>(membersListArg, "api", "/team/members/list_v2", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListV2Result.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members list route.</para>
+        /// </summary>
+        /// <param name="membersListArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersListV2(MembersListArg membersListArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersListV2Async(membersListArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Lists members of a team.</para>
+        /// <para>Permission : Team information.</para>
+        /// </summary>
+        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="includeRemoved">Whether to return removed members.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListV2Async(uint limit = 1000,
+                                                              bool includeRemoved = false)
+        {
+            var membersListArg = new MembersListArg(limit,
+                                                    includeRemoved);
+
+            return this.MembersListV2Async(membersListArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members list route.</para>
+        /// </summary>
+        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="includeRemoved">Whether to return removed members.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersListV2(uint limit = 1000,
+                                                   bool includeRemoved = false,
+                                                   sys.AsyncCallback callback = null,
+                                                   object callbackState = null)
+        {
+            var membersListArg = new MembersListArg(limit,
+                                                    includeRemoved);
+
+            return this.BeginMembersListV2(membersListArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members list route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListError"/>.</exception>
+        public MembersListV2Result EndMembersListV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersListV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Lists members of a team.</para>
+        /// <para>Permission : Team information.</para>
+        /// </summary>
+        /// <param name="membersListArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListError"/>.</exception>
         public t.Task<MembersListResult> MembersListAsync(MembersListArg membersListArg)
         {
             return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListResult, MembersListError>(membersListArg, "api", "/team/members/list", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListResult.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder);
@@ -4065,6 +4539,99 @@ namespace Dropbox.Api.Team.Routes
         public MembersListResult EndMembersList(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<MembersListResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListV2Async" />, use this to
+        /// paginate through all team members.</para>
+        /// <para>Permission : Team information.</para>
+        /// </summary>
+        /// <param name="membersListContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListContinueError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListContinueV2Async(MembersListContinueArg membersListContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListV2Result, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue_v2", "team", global::Dropbox.Api.Team.MembersListContinueArg.Encoder, global::Dropbox.Api.Team.MembersListV2Result.Decoder, global::Dropbox.Api.Team.MembersListContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members list continue route.</para>
+        /// </summary>
+        /// <param name="membersListContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersListContinueV2(MembersListContinueArg membersListContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersListContinueV2Async(membersListContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListV2Async" />, use this to
+        /// paginate through all team members.</para>
+        /// <para>Permission : Team information.</para>
+        /// </summary>
+        /// <param name="cursor">Indicates from what point to get the next set of
+        /// members.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListContinueError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListContinueV2Async(string cursor)
+        {
+            var membersListContinueArg = new MembersListContinueArg(cursor);
+
+            return this.MembersListContinueV2Async(membersListContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members list continue route.</para>
+        /// </summary>
+        /// <param name="cursor">Indicates from what point to get the next set of
+        /// members.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersListContinueV2(string cursor,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var membersListContinueArg = new MembersListContinueArg(cursor);
+
+            return this.BeginMembersListContinueV2(membersListContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members list continue route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListContinueError"/>.</exception>
+        public MembersListV2Result EndMembersListContinueV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersListV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -5246,6 +5813,133 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersSetProfileError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfileV2Async(MembersSetProfileArg membersSetProfileArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfoV2Result, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile_v2", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile route.</para>
+        /// </summary>
+        /// <param name="membersSetProfileArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfileV2(MembersSetProfileArg membersSetProfileArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSetProfileV2Async(membersSetProfileArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose profile will be set.</param>
+        /// <param name="newEmail">New email for member.</param>
+        /// <param name="newExternalId">New external ID for member.</param>
+        /// <param name="newGivenName">New given name for member.</param>
+        /// <param name="newSurname">New surname for member.</param>
+        /// <param name="newPersistentId">New persistent ID. This field only available to teams
+        /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfileError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfileV2Async(UserSelectorArg user,
+                                                                       string newEmail = null,
+                                                                       string newExternalId = null,
+                                                                       string newGivenName = null,
+                                                                       string newSurname = null,
+                                                                       string newPersistentId = null,
+                                                                       bool? newIsDirectoryRestricted = null)
+        {
+            var membersSetProfileArg = new MembersSetProfileArg(user,
+                                                                newEmail,
+                                                                newExternalId,
+                                                                newGivenName,
+                                                                newSurname,
+                                                                newPersistentId,
+                                                                newIsDirectoryRestricted);
+
+            return this.MembersSetProfileV2Async(membersSetProfileArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile route.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose profile will be set.</param>
+        /// <param name="newEmail">New email for member.</param>
+        /// <param name="newExternalId">New external ID for member.</param>
+        /// <param name="newGivenName">New given name for member.</param>
+        /// <param name="newSurname">New surname for member.</param>
+        /// <param name="newPersistentId">New persistent ID. This field only available to teams
+        /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfileV2(UserSelectorArg user,
+                                                         string newEmail = null,
+                                                         string newExternalId = null,
+                                                         string newGivenName = null,
+                                                         string newSurname = null,
+                                                         string newPersistentId = null,
+                                                         bool? newIsDirectoryRestricted = null,
+                                                         sys.AsyncCallback callback = null,
+                                                         object callbackState = null)
+        {
+            var membersSetProfileArg = new MembersSetProfileArg(user,
+                                                                newEmail,
+                                                                newExternalId,
+                                                                newGivenName,
+                                                                newSurname,
+                                                                newPersistentId,
+                                                                newIsDirectoryRestricted);
+
+            return this.BeginMembersSetProfileV2(membersSetProfileArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members set profile route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfileError"/>.</exception>
+        public TeamMemberInfoV2Result EndMembersSetProfileV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersSetProfileArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfileError"/>.</exception>
         public t.Task<TeamMemberInfo> MembersSetProfileAsync(MembersSetProfileArg membersSetProfileArg)
         {
             return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfo, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfo.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder);
@@ -5355,6 +6049,99 @@ namespace Dropbox.Api.Team.Routes
         public TeamMemberInfo EndMembersSetProfile(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamMemberInfo>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="membersSetProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfilePhotoV2Async(MembersSetProfilePhotoArg membersSetProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersSetProfilePhotoArg, TeamMemberInfoV2Result, MembersSetProfilePhotoError>(membersSetProfilePhotoArg, "api", "/team/members/set_profile_photo_v2", "team", global::Dropbox.Api.Team.MembersSetProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersSetProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// </summary>
+        /// <param name="membersSetProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfilePhotoV2(MembersSetProfilePhotoArg membersSetProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSetProfilePhotoV2Async(membersSetProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile photo.</para>
+        /// <para>Permission : Team member management.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be set.</param>
+        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfilePhotoV2Async(UserSelectorArg user,
+                                                                            global::Dropbox.Api.Account.PhotoSourceArg photo)
+        {
+            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
+                                                                          photo);
+
+            return this.MembersSetProfilePhotoV2Async(membersSetProfilePhotoArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be set.</param>
+        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfilePhotoV2(UserSelectorArg user,
+                                                              global::Dropbox.Api.Account.PhotoSourceArg photo,
+                                                              sys.AsyncCallback callback,
+                                                              object callbackState = null)
+        {
+            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
+                                                                          photo);
+
+            return this.BeginMembersSetProfilePhotoV2(membersSetProfilePhotoArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members set profile photo
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public TeamMemberInfoV2Result EndMembersSetProfilePhotoV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
