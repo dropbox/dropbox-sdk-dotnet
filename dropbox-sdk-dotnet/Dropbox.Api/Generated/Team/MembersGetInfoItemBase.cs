@@ -11,52 +11,28 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Describes a result obtained for a single user whose id was specified in the
-    /// parameter of <see cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync"
-    /// />.</para>
+    /// <para>The members get info item base object</para>
     /// </summary>
-    public class MembersGetInfoItem
+    public class MembersGetInfoItemBase
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MembersGetInfoItem> Encoder = new MembersGetInfoItemEncoder();
+        internal static enc.StructEncoder<MembersGetInfoItemBase> Encoder = new MembersGetInfoItemBaseEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MembersGetInfoItem> Decoder = new MembersGetInfoItemDecoder();
+        internal static enc.StructDecoder<MembersGetInfoItemBase> Decoder = new MembersGetInfoItemBaseDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MembersGetInfoItem" />
+        /// <para>Initializes a new instance of the <see cref="MembersGetInfoItemBase" />
         /// class.</para>
         /// </summary>
-        public MembersGetInfoItem()
+        public MembersGetInfoItemBase()
         {
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is MemberInfo</para>
-        /// </summary>
-        public bool IsMemberInfo
-        {
-            get
-            {
-                return this is MemberInfo;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a MemberInfo, or <c>null</c>.</para>
-        /// </summary>
-        public MemberInfo AsMemberInfo
-        {
-            get
-            {
-                return this as MemberInfo;
-            }
         }
 
         /// <summary>
@@ -84,23 +60,17 @@ namespace Dropbox.Api.Team
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MembersGetInfoItem" />.</para>
+        /// <para>Encoder for  <see cref="MembersGetInfoItemBase" />.</para>
         /// </summary>
-        private class MembersGetInfoItemEncoder : enc.StructEncoder<MembersGetInfoItem>
+        private class MembersGetInfoItemBaseEncoder : enc.StructEncoder<MembersGetInfoItemBase>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MembersGetInfoItem value, enc.IJsonWriter writer)
+            public override void EncodeFields(MembersGetInfoItemBase value, enc.IJsonWriter writer)
             {
-                if (value is MemberInfo)
-                {
-                    WriteProperty(".tag", "member_info", writer, enc.StringEncoder.Instance);
-                    MemberInfo.Encoder.EncodeFields((MemberInfo)value, writer);
-                    return;
-                }
                 if (value is IdNotFound)
                 {
                     WriteProperty(".tag", "id_not_found", writer, enc.StringEncoder.Instance);
@@ -116,17 +86,18 @@ namespace Dropbox.Api.Team
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MembersGetInfoItem" />.</para>
+        /// <para>Decoder for  <see cref="MembersGetInfoItemBase" />.</para>
         /// </summary>
-        private class MembersGetInfoItemDecoder : enc.UnionDecoder<MembersGetInfoItem>
+        private class MembersGetInfoItemBaseDecoder : enc.UnionDecoder<MembersGetInfoItemBase>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MembersGetInfoItem" />.</para>
+            /// <para>Create a new instance of type <see cref="MembersGetInfoItemBase"
+            /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MembersGetInfoItem Create()
+            protected override MembersGetInfoItemBase Create()
             {
-                return new MembersGetInfoItem();
+                return new MembersGetInfoItemBase();
             }
 
             /// <summary>
@@ -135,12 +106,10 @@ namespace Dropbox.Api.Team
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override MembersGetInfoItem Decode(string tag, enc.IJsonReader reader)
+            protected override MembersGetInfoItemBase Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "member_info":
-                        return MemberInfo.Decoder.DecodeFields(reader);
                     case "id_not_found":
                         return IdNotFound.Decoder.DecodeFields(reader);
                     default:
@@ -152,100 +121,13 @@ namespace Dropbox.Api.Team
         #endregion
 
         /// <summary>
-        /// <para>Info about a team member.</para>
-        /// </summary>
-        public sealed class MemberInfo : MembersGetInfoItem
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<MemberInfo> Encoder = new MemberInfoEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<MemberInfo> Decoder = new MemberInfoDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberInfo" /> class.</para>
-            /// </summary>
-            /// <param name="value">The value</param>
-            public MemberInfo(TeamMemberInfo value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="MemberInfo" /> class.</para>
-            /// </summary>
-            private MemberInfo()
-            {
-            }
-
-            /// <summary>
-            /// <para>Gets the value of this instance.</para>
-            /// </summary>
-            public TeamMemberInfo Value { get; private set; }
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="MemberInfo" />.</para>
-            /// </summary>
-            private class MemberInfoEncoder : enc.StructEncoder<MemberInfo>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(MemberInfo value, enc.IJsonWriter writer)
-                {
-                    WriteProperty("member_info", value.Value, writer, global::Dropbox.Api.Team.TeamMemberInfo.Encoder);
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="MemberInfo" />.</para>
-            /// </summary>
-            private class MemberInfoDecoder : enc.StructDecoder<MemberInfo>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="MemberInfo" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override MemberInfo Create()
-                {
-                    return new MemberInfo();
-                }
-
-                /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
-                /// </summary>
-                /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override MemberInfo DecodeFields(enc.IJsonReader reader)
-                {
-                    return new MemberInfo(global::Dropbox.Api.Team.TeamMemberInfo.Decoder.DecodeFields(reader));
-                }
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>An ID that was provided as a parameter to <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync" /> or <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async" />, and did not
         /// match a corresponding user. This might be a team_member_id, an email, or an
         /// external ID, depending on how the method was called.</para>
         /// </summary>
-        public sealed class IdNotFound : MembersGetInfoItem
+        public sealed class IdNotFound : MembersGetInfoItemBase
         {
             #pragma warning disable 108
 
