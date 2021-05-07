@@ -14,6 +14,7 @@ namespace Dropbox.Api.Team
     /// <para>Profile of a user as a member of a team.</para>
     /// </summary>
     /// <seealso cref="TeamMemberInfo" />
+    /// <seealso cref="TeamMemberInfoV2" />
     /// <seealso cref="TokenGetAuthenticatedAdminResult" />
     /// <seealso cref="Global::Dropbox.Api.Team.MemberProfile" />
     public class TeamMemberProfile : MemberProfile

@@ -11,72 +11,65 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The members add arg object</para>
+    /// <para>The members add arg base object</para>
     /// </summary>
-    /// <seealso cref="Global::Dropbox.Api.Team.MembersAddArgBase" />
-    public class MembersAddArg : MembersAddArgBase
+    /// <seealso cref="MembersAddArg" />
+    /// <seealso cref="MembersAddV2Arg" />
+    public class MembersAddArgBase
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MembersAddArg> Encoder = new MembersAddArgEncoder();
+        internal static enc.StructEncoder<MembersAddArgBase> Encoder = new MembersAddArgBaseEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MembersAddArg> Decoder = new MembersAddArgDecoder();
+        internal static enc.StructDecoder<MembersAddArgBase> Decoder = new MembersAddArgBaseDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MembersAddArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="MembersAddArgBase" />
+        /// class.</para>
         /// </summary>
-        /// <param name="newMembers">Details of new members to be added to the team.</param>
         /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
-        public MembersAddArg(col.IEnumerable<MemberAddArg> newMembers,
-                             bool forceAsync = false)
-            : base(forceAsync)
+        public MembersAddArgBase(bool forceAsync = false)
         {
-            var newMembersList = enc.Util.ToList(newMembers);
-
-            if (newMembers == null)
-            {
-                throw new sys.ArgumentNullException("newMembers");
-            }
-
-            this.NewMembers = newMembersList;
+            this.ForceAsync = forceAsync;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MembersAddArg" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="MembersAddArgBase" />
+        /// class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public MembersAddArg()
+        public MembersAddArgBase()
         {
+            this.ForceAsync = false;
         }
 
         /// <summary>
-        /// <para>Details of new members to be added to the team.</para>
+        /// <para>Whether to force the add to happen asynchronously.</para>
         /// </summary>
-        public col.IList<MemberAddArg> NewMembers { get; protected set; }
+        public bool ForceAsync { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MembersAddArg" />.</para>
+        /// <para>Encoder for  <see cref="MembersAddArgBase" />.</para>
         /// </summary>
-        private class MembersAddArgEncoder : enc.StructEncoder<MembersAddArg>
+        private class MembersAddArgBaseEncoder : enc.StructEncoder<MembersAddArgBase>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MembersAddArg value, enc.IJsonWriter writer)
+            public override void EncodeFields(MembersAddArgBase value, enc.IJsonWriter writer)
             {
-                WriteListProperty("new_members", value.NewMembers, writer, global::Dropbox.Api.Team.MemberAddArg.Encoder);
                 WriteProperty("force_async", value.ForceAsync, writer, enc.BooleanEncoder.Instance);
             }
         }
@@ -87,17 +80,17 @@ namespace Dropbox.Api.Team
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MembersAddArg" />.</para>
+        /// <para>Decoder for  <see cref="MembersAddArgBase" />.</para>
         /// </summary>
-        private class MembersAddArgDecoder : enc.StructDecoder<MembersAddArg>
+        private class MembersAddArgBaseDecoder : enc.StructDecoder<MembersAddArgBase>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MembersAddArg" />.</para>
+            /// <para>Create a new instance of type <see cref="MembersAddArgBase" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MembersAddArg Create()
+            protected override MembersAddArgBase Create()
             {
-                return new MembersAddArg();
+                return new MembersAddArgBase();
             }
 
             /// <summary>
@@ -106,13 +99,10 @@ namespace Dropbox.Api.Team
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(MembersAddArg value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(MembersAddArgBase value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "new_members":
-                        value.NewMembers = ReadList<MemberAddArg>(reader, global::Dropbox.Api.Team.MemberAddArg.Decoder);
-                        break;
                     case "force_async":
                         value.ForceAsync = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
