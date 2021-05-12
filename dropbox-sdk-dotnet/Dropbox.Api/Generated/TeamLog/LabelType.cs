@@ -57,6 +57,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserDefinedTag</para>
+        /// </summary>
+        public bool IsUserDefinedTag
+        {
+            get
+            {
+                return this is UserDefinedTag;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserDefinedTag, or <c>null</c>.</para>
+        /// </summary>
+        public UserDefinedTag AsUserDefinedTag
+        {
+            get
+            {
+                return this as UserDefinedTag;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -96,6 +118,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "personal_information", writer, enc.StringEncoder.Instance);
                     PersonalInformation.Encoder.EncodeFields((PersonalInformation)value, writer);
+                    return;
+                }
+                if (value is UserDefinedTag)
+                {
+                    WriteProperty(".tag", "user_defined_tag", writer, enc.StringEncoder.Instance);
+                    UserDefinedTag.Encoder.EncodeFields((UserDefinedTag)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -138,6 +166,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "personal_information":
                         return PersonalInformation.Decoder.DecodeFields(reader);
+                    case "user_defined_tag":
+                        return UserDefinedTag.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -210,6 +240,76 @@ namespace Dropbox.Api.TeamLog
                 protected override PersonalInformation Create()
                 {
                     return PersonalInformation.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user defined tag object</para>
+        /// </summary>
+        public sealed class UserDefinedTag : LabelType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserDefinedTag> Encoder = new UserDefinedTagEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserDefinedTag> Decoder = new UserDefinedTagDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserDefinedTag" />
+            /// class.</para>
+            /// </summary>
+            private UserDefinedTag()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserDefinedTag</para>
+            /// </summary>
+            public static readonly UserDefinedTag Instance = new UserDefinedTag();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserDefinedTag" />.</para>
+            /// </summary>
+            private class UserDefinedTagEncoder : enc.StructEncoder<UserDefinedTag>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserDefinedTag value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserDefinedTag" />.</para>
+            /// </summary>
+            private class UserDefinedTagDecoder : enc.StructDecoder<UserDefinedTag>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserDefinedTag" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserDefinedTag Create()
+                {
+                    return UserDefinedTag.Instance;
                 }
 
             }
