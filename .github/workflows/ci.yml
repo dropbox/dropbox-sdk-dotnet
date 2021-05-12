@@ -14,7 +14,7 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Run Unit Tests
         # We don't have a good cross-platform way of splitting long lines
         run: |
@@ -33,7 +33,7 @@ jobs:
       max-parallel: 1
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Test Legacy User
         env:
           DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
@@ -65,7 +65,7 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Run Linter
         run: |
           # Install latest dotnet-format
