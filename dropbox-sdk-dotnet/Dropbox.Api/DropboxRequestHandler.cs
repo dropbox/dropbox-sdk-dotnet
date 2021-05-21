@@ -430,10 +430,7 @@ namespace Dropbox.Api
             }
             finally
             {
-                if (body != null)
-                {
-                    body.Dispose();
-                }
+                body?.Dispose();
             }
         }
 
