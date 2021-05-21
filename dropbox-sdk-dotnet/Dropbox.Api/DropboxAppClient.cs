@@ -62,7 +62,7 @@ namespace Dropbox.Api
                 throw new ArgumentNullException("appSecret");
             }
 
-            var rawValue = string.Format("{0}:{1}", appKey, appSecret);
+            var rawValue = $"{appKey}:{appSecret}";
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawValue));
         }
     }
