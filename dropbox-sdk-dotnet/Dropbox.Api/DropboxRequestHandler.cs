@@ -640,7 +640,8 @@ namespace Dropbox.Api
         private async Task<bool> CheckAndRefreshAccessToken()
         {
             bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null;
-            bool needsRefresh = this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value;
+            bool needsRefresh = (this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value) ||
+                (this.options.OAuth2RefreshToken != null && !this.options.OAuth2AccessTokenExpiresAt.HasValue);
             bool needsToken = this.options.OAuth2AccessToken == null;
             if ((needsRefresh || needsToken) && canRefresh)
             {
