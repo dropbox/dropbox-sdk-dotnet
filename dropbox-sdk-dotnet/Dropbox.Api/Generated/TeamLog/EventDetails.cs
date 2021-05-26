@@ -36,6 +36,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// AdminAlertingAlertStateChangedDetails</para>
+        /// </summary>
+        public bool IsAdminAlertingAlertStateChangedDetails
+        {
+            get
+            {
+                return this is AdminAlertingAlertStateChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AdminAlertingAlertStateChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public AdminAlertingAlertStateChangedDetails AsAdminAlertingAlertStateChangedDetails
+        {
+            get
+            {
+                return this as AdminAlertingAlertStateChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// AdminAlertingChangedAlertConfigDetails</para>
         /// </summary>
         public bool IsAdminAlertingChangedAlertConfigDetails
@@ -2153,6 +2177,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as ObjectLabelUpdatedValueDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// OrganizeFolderWithTidyDetails</para>
+        /// </summary>
+        public bool IsOrganizeFolderWithTidyDetails
+        {
+            get
+            {
+                return this is OrganizeFolderWithTidyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a OrganizeFolderWithTidyDetails, or <c>null</c>.</para>
+        /// </summary>
+        public OrganizeFolderWithTidyDetails AsOrganizeFolderWithTidyDetails
+        {
+            get
+            {
+                return this as OrganizeFolderWithTidyDetails;
             }
         }
 
@@ -10870,6 +10917,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(EventDetails value, enc.IJsonWriter writer)
             {
+                if (value is AdminAlertingAlertStateChangedDetails)
+                {
+                    WriteProperty(".tag", "admin_alerting_alert_state_changed_details", writer, enc.StringEncoder.Instance);
+                    AdminAlertingAlertStateChangedDetails.Encoder.EncodeFields((AdminAlertingAlertStateChangedDetails)value, writer);
+                    return;
+                }
                 if (value is AdminAlertingChangedAlertConfigDetails)
                 {
                     WriteProperty(".tag", "admin_alerting_changed_alert_config_details", writer, enc.StringEncoder.Instance);
@@ -11414,6 +11467,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "object_label_updated_value_details", writer, enc.StringEncoder.Instance);
                     ObjectLabelUpdatedValueDetails.Encoder.EncodeFields((ObjectLabelUpdatedValueDetails)value, writer);
+                    return;
+                }
+                if (value is OrganizeFolderWithTidyDetails)
+                {
+                    WriteProperty(".tag", "organize_folder_with_tidy_details", writer, enc.StringEncoder.Instance);
+                    OrganizeFolderWithTidyDetails.Encoder.EncodeFields((OrganizeFolderWithTidyDetails)value, writer);
                     return;
                 }
                 if (value is RewindFolderDetails)
@@ -13680,6 +13739,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "admin_alerting_alert_state_changed_details":
+                        return AdminAlertingAlertStateChangedDetails.Decoder.DecodeFields(reader);
                     case "admin_alerting_changed_alert_config_details":
                         return AdminAlertingChangedAlertConfigDetails.Decoder.DecodeFields(reader);
                     case "admin_alerting_triggered_alert_details":
@@ -13862,6 +13923,8 @@ namespace Dropbox.Api.TeamLog
                         return ObjectLabelRemovedDetails.Decoder.DecodeFields(reader);
                     case "object_label_updated_value_details":
                         return ObjectLabelUpdatedValueDetails.Decoder.DecodeFields(reader);
+                    case "organize_folder_with_tidy_details":
+                        return OrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader);
                     case "rewind_folder_details":
                         return RewindFolderDetails.Decoder.DecodeFields(reader);
                     case "file_request_change_details":
@@ -14611,6 +14674,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The admin alerting alert state changed details object</para>
+        /// </summary>
+        public sealed class AdminAlertingAlertStateChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminAlertingAlertStateChangedDetails> Encoder = new AdminAlertingAlertStateChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminAlertingAlertStateChangedDetails> Decoder = new AdminAlertingAlertStateChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AdminAlertingAlertStateChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AdminAlertingAlertStateChangedDetails(global::Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AdminAlertingAlertStateChangedDetails" /> class.</para>
+            /// </summary>
+            private AdminAlertingAlertStateChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminAlertingAlertStateChangedDetails" />.</para>
+            /// </summary>
+            private class AdminAlertingAlertStateChangedDetailsEncoder : enc.StructEncoder<AdminAlertingAlertStateChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminAlertingAlertStateChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("admin_alerting_alert_state_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminAlertingAlertStateChangedDetails" />.</para>
+            /// </summary>
+            private class AdminAlertingAlertStateChangedDetailsDecoder : enc.StructDecoder<AdminAlertingAlertStateChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="AdminAlertingAlertStateChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminAlertingAlertStateChangedDetails Create()
+                {
+                    return new AdminAlertingAlertStateChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AdminAlertingAlertStateChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AdminAlertingAlertStateChangedDetails(global::Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The admin alerting changed alert config details object</para>
@@ -22824,6 +22977,96 @@ namespace Dropbox.Api.TeamLog
                 public override ObjectLabelUpdatedValueDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ObjectLabelUpdatedValueDetails(global::Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The organize folder with tidy details object</para>
+        /// </summary>
+        public sealed class OrganizeFolderWithTidyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<OrganizeFolderWithTidyDetails> Encoder = new OrganizeFolderWithTidyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<OrganizeFolderWithTidyDetails> Decoder = new OrganizeFolderWithTidyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="OrganizeFolderWithTidyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public OrganizeFolderWithTidyDetails(global::Dropbox.Api.TeamLog.OrganizeFolderWithTidyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="OrganizeFolderWithTidyDetails" /> class.</para>
+            /// </summary>
+            private OrganizeFolderWithTidyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.OrganizeFolderWithTidyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="OrganizeFolderWithTidyDetails" />.</para>
+            /// </summary>
+            private class OrganizeFolderWithTidyDetailsEncoder : enc.StructEncoder<OrganizeFolderWithTidyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(OrganizeFolderWithTidyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("organize_folder_with_tidy_details", value.Value, writer, global::Dropbox.Api.TeamLog.OrganizeFolderWithTidyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="OrganizeFolderWithTidyDetails" />.</para>
+            /// </summary>
+            private class OrganizeFolderWithTidyDetailsDecoder : enc.StructDecoder<OrganizeFolderWithTidyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="OrganizeFolderWithTidyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override OrganizeFolderWithTidyDetails Create()
+                {
+                    return new OrganizeFolderWithTidyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override OrganizeFolderWithTidyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new OrganizeFolderWithTidyDetails(global::Dropbox.Api.TeamLog.OrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader));
                 }
             }
 
