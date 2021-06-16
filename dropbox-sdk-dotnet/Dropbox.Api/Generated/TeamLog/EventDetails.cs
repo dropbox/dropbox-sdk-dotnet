@@ -1681,6 +1681,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ApplyNamingConventionDetails</para>
+        /// </summary>
+        public bool IsApplyNamingConventionDetails
+        {
+            get
+            {
+                return this is ApplyNamingConventionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ApplyNamingConventionDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ApplyNamingConventionDetails AsApplyNamingConventionDetails
+        {
+            get
+            {
+                return this as ApplyNamingConventionDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is CreateFolderDetails</para>
         /// </summary>
         public bool IsCreateFolderDetails
@@ -2222,6 +2245,51 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as RewindFolderDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserTagsAddedDetails</para>
+        /// </summary>
+        public bool IsUserTagsAddedDetails
+        {
+            get
+            {
+                return this is UserTagsAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserTagsAddedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public UserTagsAddedDetails AsUserTagsAddedDetails
+        {
+            get
+            {
+                return this as UserTagsAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UserTagsRemovedDetails</para>
+        /// </summary>
+        public bool IsUserTagsRemovedDetails
+        {
+            get
+            {
+                return this is UserTagsRemovedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserTagsRemovedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public UserTagsRemovedDetails AsUserTagsRemovedDetails
+        {
+            get
+            {
+                return this as UserTagsRemovedDetails;
             }
         }
 
@@ -9326,6 +9394,78 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// SharingChangeLinkAllowChangeExpirationPolicyDetails</para>
+        /// </summary>
+        public bool IsSharingChangeLinkAllowChangeExpirationPolicyDetails
+        {
+            get
+            {
+                return this is SharingChangeLinkAllowChangeExpirationPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharingChangeLinkAllowChangeExpirationPolicyDetails,
+        /// or <c>null</c>.</para>
+        /// </summary>
+        public SharingChangeLinkAllowChangeExpirationPolicyDetails AsSharingChangeLinkAllowChangeExpirationPolicyDetails
+        {
+            get
+            {
+                return this as SharingChangeLinkAllowChangeExpirationPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SharingChangeLinkDefaultExpirationPolicyDetails</para>
+        /// </summary>
+        public bool IsSharingChangeLinkDefaultExpirationPolicyDetails
+        {
+            get
+            {
+                return this is SharingChangeLinkDefaultExpirationPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharingChangeLinkDefaultExpirationPolicyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharingChangeLinkDefaultExpirationPolicyDetails AsSharingChangeLinkDefaultExpirationPolicyDetails
+        {
+            get
+            {
+                return this as SharingChangeLinkDefaultExpirationPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SharingChangeLinkEnforcePasswordPolicyDetails</para>
+        /// </summary>
+        public bool IsSharingChangeLinkEnforcePasswordPolicyDetails
+        {
+            get
+            {
+                return this is SharingChangeLinkEnforcePasswordPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharingChangeLinkEnforcePasswordPolicyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharingChangeLinkEnforcePasswordPolicyDetails AsSharingChangeLinkEnforcePasswordPolicyDetails
+        {
+            get
+            {
+                return this as SharingChangeLinkEnforcePasswordPolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// SharingChangeLinkPolicyDetails</para>
         /// </summary>
         public bool IsSharingChangeLinkPolicyDetails
@@ -11337,6 +11477,12 @@ namespace Dropbox.Api.TeamLog
                     EnabledDomainInvitesDetails.Encoder.EncodeFields((EnabledDomainInvitesDetails)value, writer);
                     return;
                 }
+                if (value is ApplyNamingConventionDetails)
+                {
+                    WriteProperty(".tag", "apply_naming_convention_details", writer, enc.StringEncoder.Instance);
+                    ApplyNamingConventionDetails.Encoder.EncodeFields((ApplyNamingConventionDetails)value, writer);
+                    return;
+                }
                 if (value is CreateFolderDetails)
                 {
                     WriteProperty(".tag", "create_folder_details", writer, enc.StringEncoder.Instance);
@@ -11479,6 +11625,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "rewind_folder_details", writer, enc.StringEncoder.Instance);
                     RewindFolderDetails.Encoder.EncodeFields((RewindFolderDetails)value, writer);
+                    return;
+                }
+                if (value is UserTagsAddedDetails)
+                {
+                    WriteProperty(".tag", "user_tags_added_details", writer, enc.StringEncoder.Instance);
+                    UserTagsAddedDetails.Encoder.EncodeFields((UserTagsAddedDetails)value, writer);
+                    return;
+                }
+                if (value is UserTagsRemovedDetails)
+                {
+                    WriteProperty(".tag", "user_tags_removed_details", writer, enc.StringEncoder.Instance);
+                    UserTagsRemovedDetails.Encoder.EncodeFields((UserTagsRemovedDetails)value, writer);
                     return;
                 }
                 if (value is FileRequestChangeDetails)
@@ -13305,6 +13463,24 @@ namespace Dropbox.Api.TeamLog
                     SharingChangeFolderJoinPolicyDetails.Encoder.EncodeFields((SharingChangeFolderJoinPolicyDetails)value, writer);
                     return;
                 }
+                if (value is SharingChangeLinkAllowChangeExpirationPolicyDetails)
+                {
+                    WriteProperty(".tag", "sharing_change_link_allow_change_expiration_policy_details", writer, enc.StringEncoder.Instance);
+                    SharingChangeLinkAllowChangeExpirationPolicyDetails.Encoder.EncodeFields((SharingChangeLinkAllowChangeExpirationPolicyDetails)value, writer);
+                    return;
+                }
+                if (value is SharingChangeLinkDefaultExpirationPolicyDetails)
+                {
+                    WriteProperty(".tag", "sharing_change_link_default_expiration_policy_details", writer, enc.StringEncoder.Instance);
+                    SharingChangeLinkDefaultExpirationPolicyDetails.Encoder.EncodeFields((SharingChangeLinkDefaultExpirationPolicyDetails)value, writer);
+                    return;
+                }
+                if (value is SharingChangeLinkEnforcePasswordPolicyDetails)
+                {
+                    WriteProperty(".tag", "sharing_change_link_enforce_password_policy_details", writer, enc.StringEncoder.Instance);
+                    SharingChangeLinkEnforcePasswordPolicyDetails.Encoder.EncodeFields((SharingChangeLinkEnforcePasswordPolicyDetails)value, writer);
+                    return;
+                }
                 if (value is SharingChangeLinkPolicyDetails)
                 {
                     WriteProperty(".tag", "sharing_change_link_policy_details", writer, enc.StringEncoder.Instance);
@@ -13879,6 +14055,8 @@ namespace Dropbox.Api.TeamLog
                         return DomainVerificationRemoveDomainDetails.Decoder.DecodeFields(reader);
                     case "enabled_domain_invites_details":
                         return EnabledDomainInvitesDetails.Decoder.DecodeFields(reader);
+                    case "apply_naming_convention_details":
+                        return ApplyNamingConventionDetails.Decoder.DecodeFields(reader);
                     case "create_folder_details":
                         return CreateFolderDetails.Decoder.DecodeFields(reader);
                     case "file_add_details":
@@ -13927,6 +14105,10 @@ namespace Dropbox.Api.TeamLog
                         return OrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader);
                     case "rewind_folder_details":
                         return RewindFolderDetails.Decoder.DecodeFields(reader);
+                    case "user_tags_added_details":
+                        return UserTagsAddedDetails.Decoder.DecodeFields(reader);
+                    case "user_tags_removed_details":
+                        return UserTagsRemovedDetails.Decoder.DecodeFields(reader);
                     case "file_request_change_details":
                         return FileRequestChangeDetails.Decoder.DecodeFields(reader);
                     case "file_request_close_details":
@@ -14535,6 +14717,12 @@ namespace Dropbox.Api.TeamLog
                         return SendForSignaturePolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "sharing_change_folder_join_policy_details":
                         return SharingChangeFolderJoinPolicyDetails.Decoder.DecodeFields(reader);
+                    case "sharing_change_link_allow_change_expiration_policy_details":
+                        return SharingChangeLinkAllowChangeExpirationPolicyDetails.Decoder.DecodeFields(reader);
+                    case "sharing_change_link_default_expiration_policy_details":
+                        return SharingChangeLinkDefaultExpirationPolicyDetails.Decoder.DecodeFields(reader);
+                    case "sharing_change_link_enforce_password_policy_details":
+                        return SharingChangeLinkEnforcePasswordPolicyDetails.Decoder.DecodeFields(reader);
                     case "sharing_change_link_policy_details":
                         return SharingChangeLinkPolicyDetails.Decoder.DecodeFields(reader);
                     case "sharing_change_member_policy_details":
@@ -21006,6 +21194,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The apply naming convention details object</para>
+        /// </summary>
+        public sealed class ApplyNamingConventionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ApplyNamingConventionDetails> Encoder = new ApplyNamingConventionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ApplyNamingConventionDetails> Decoder = new ApplyNamingConventionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ApplyNamingConventionDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ApplyNamingConventionDetails(global::Dropbox.Api.TeamLog.ApplyNamingConventionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ApplyNamingConventionDetails" /> class.</para>
+            /// </summary>
+            private ApplyNamingConventionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ApplyNamingConventionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ApplyNamingConventionDetails" />.</para>
+            /// </summary>
+            private class ApplyNamingConventionDetailsEncoder : enc.StructEncoder<ApplyNamingConventionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ApplyNamingConventionDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("apply_naming_convention_details", value.Value, writer, global::Dropbox.Api.TeamLog.ApplyNamingConventionDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ApplyNamingConventionDetails" />.</para>
+            /// </summary>
+            private class ApplyNamingConventionDetailsDecoder : enc.StructDecoder<ApplyNamingConventionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ApplyNamingConventionDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ApplyNamingConventionDetails Create()
+                {
+                    return new ApplyNamingConventionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ApplyNamingConventionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ApplyNamingConventionDetails(global::Dropbox.Api.TeamLog.ApplyNamingConventionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The create folder details object</para>
         /// </summary>
         public sealed class CreateFolderDetails : EventDetails
@@ -23157,6 +23435,186 @@ namespace Dropbox.Api.TeamLog
                 public override RewindFolderDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new RewindFolderDetails(global::Dropbox.Api.TeamLog.RewindFolderDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user tags added details object</para>
+        /// </summary>
+        public sealed class UserTagsAddedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserTagsAddedDetails> Encoder = new UserTagsAddedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserTagsAddedDetails> Decoder = new UserTagsAddedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserTagsAddedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public UserTagsAddedDetails(global::Dropbox.Api.TeamLog.UserTagsAddedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserTagsAddedDetails" />
+            /// class.</para>
+            /// </summary>
+            private UserTagsAddedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.UserTagsAddedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserTagsAddedDetails" />.</para>
+            /// </summary>
+            private class UserTagsAddedDetailsEncoder : enc.StructEncoder<UserTagsAddedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserTagsAddedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("user_tags_added_details", value.Value, writer, global::Dropbox.Api.TeamLog.UserTagsAddedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserTagsAddedDetails" />.</para>
+            /// </summary>
+            private class UserTagsAddedDetailsDecoder : enc.StructDecoder<UserTagsAddedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserTagsAddedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserTagsAddedDetails Create()
+                {
+                    return new UserTagsAddedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserTagsAddedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new UserTagsAddedDetails(global::Dropbox.Api.TeamLog.UserTagsAddedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user tags removed details object</para>
+        /// </summary>
+        public sealed class UserTagsRemovedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserTagsRemovedDetails> Encoder = new UserTagsRemovedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserTagsRemovedDetails> Decoder = new UserTagsRemovedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserTagsRemovedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public UserTagsRemovedDetails(global::Dropbox.Api.TeamLog.UserTagsRemovedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserTagsRemovedDetails" />
+            /// class.</para>
+            /// </summary>
+            private UserTagsRemovedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.UserTagsRemovedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserTagsRemovedDetails" />.</para>
+            /// </summary>
+            private class UserTagsRemovedDetailsEncoder : enc.StructEncoder<UserTagsRemovedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserTagsRemovedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("user_tags_removed_details", value.Value, writer, global::Dropbox.Api.TeamLog.UserTagsRemovedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserTagsRemovedDetails" />.</para>
+            /// </summary>
+            private class UserTagsRemovedDetailsDecoder : enc.StructDecoder<UserTagsRemovedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserTagsRemovedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserTagsRemovedDetails Create()
+                {
+                    return new UserTagsRemovedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserTagsRemovedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new UserTagsRemovedDetails(global::Dropbox.Api.TeamLog.UserTagsRemovedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -50605,6 +51063,282 @@ namespace Dropbox.Api.TeamLog
                 public override SharingChangeFolderJoinPolicyDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new SharingChangeFolderJoinPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sharing change link allow change expiration policy details object</para>
+        /// </summary>
+        public sealed class SharingChangeLinkAllowChangeExpirationPolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharingChangeLinkAllowChangeExpirationPolicyDetails> Encoder = new SharingChangeLinkAllowChangeExpirationPolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharingChangeLinkAllowChangeExpirationPolicyDetails> Decoder = new SharingChangeLinkAllowChangeExpirationPolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharingChangeLinkAllowChangeExpirationPolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharingChangeLinkAllowChangeExpirationPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeLinkAllowChangeExpirationPolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharingChangeLinkAllowChangeExpirationPolicyDetails" /> class.</para>
+            /// </summary>
+            private SharingChangeLinkAllowChangeExpirationPolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharingChangeLinkAllowChangeExpirationPolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see
+            /// cref="SharingChangeLinkAllowChangeExpirationPolicyDetails" />.</para>
+            /// </summary>
+            private class SharingChangeLinkAllowChangeExpirationPolicyDetailsEncoder : enc.StructEncoder<SharingChangeLinkAllowChangeExpirationPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharingChangeLinkAllowChangeExpirationPolicyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sharing_change_link_allow_change_expiration_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharingChangeLinkAllowChangeExpirationPolicyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see
+            /// cref="SharingChangeLinkAllowChangeExpirationPolicyDetails" />.</para>
+            /// </summary>
+            private class SharingChangeLinkAllowChangeExpirationPolicyDetailsDecoder : enc.StructDecoder<SharingChangeLinkAllowChangeExpirationPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharingChangeLinkAllowChangeExpirationPolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharingChangeLinkAllowChangeExpirationPolicyDetails Create()
+                {
+                    return new SharingChangeLinkAllowChangeExpirationPolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharingChangeLinkAllowChangeExpirationPolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharingChangeLinkAllowChangeExpirationPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeLinkAllowChangeExpirationPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sharing change link default expiration policy details object</para>
+        /// </summary>
+        public sealed class SharingChangeLinkDefaultExpirationPolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharingChangeLinkDefaultExpirationPolicyDetails> Encoder = new SharingChangeLinkDefaultExpirationPolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharingChangeLinkDefaultExpirationPolicyDetails> Decoder = new SharingChangeLinkDefaultExpirationPolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharingChangeLinkDefaultExpirationPolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharingChangeLinkDefaultExpirationPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeLinkDefaultExpirationPolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharingChangeLinkDefaultExpirationPolicyDetails" /> class.</para>
+            /// </summary>
+            private SharingChangeLinkDefaultExpirationPolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharingChangeLinkDefaultExpirationPolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharingChangeLinkDefaultExpirationPolicyDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharingChangeLinkDefaultExpirationPolicyDetailsEncoder : enc.StructEncoder<SharingChangeLinkDefaultExpirationPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharingChangeLinkDefaultExpirationPolicyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sharing_change_link_default_expiration_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharingChangeLinkDefaultExpirationPolicyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharingChangeLinkDefaultExpirationPolicyDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharingChangeLinkDefaultExpirationPolicyDetailsDecoder : enc.StructDecoder<SharingChangeLinkDefaultExpirationPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharingChangeLinkDefaultExpirationPolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharingChangeLinkDefaultExpirationPolicyDetails Create()
+                {
+                    return new SharingChangeLinkDefaultExpirationPolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharingChangeLinkDefaultExpirationPolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharingChangeLinkDefaultExpirationPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeLinkDefaultExpirationPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sharing change link enforce password policy details object</para>
+        /// </summary>
+        public sealed class SharingChangeLinkEnforcePasswordPolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharingChangeLinkEnforcePasswordPolicyDetails> Encoder = new SharingChangeLinkEnforcePasswordPolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharingChangeLinkEnforcePasswordPolicyDetails> Decoder = new SharingChangeLinkEnforcePasswordPolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharingChangeLinkEnforcePasswordPolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharingChangeLinkEnforcePasswordPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeLinkEnforcePasswordPolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharingChangeLinkEnforcePasswordPolicyDetails" /> class.</para>
+            /// </summary>
+            private SharingChangeLinkEnforcePasswordPolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharingChangeLinkEnforcePasswordPolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharingChangeLinkEnforcePasswordPolicyDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharingChangeLinkEnforcePasswordPolicyDetailsEncoder : enc.StructEncoder<SharingChangeLinkEnforcePasswordPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharingChangeLinkEnforcePasswordPolicyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sharing_change_link_enforce_password_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharingChangeLinkEnforcePasswordPolicyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharingChangeLinkEnforcePasswordPolicyDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharingChangeLinkEnforcePasswordPolicyDetailsDecoder : enc.StructDecoder<SharingChangeLinkEnforcePasswordPolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharingChangeLinkEnforcePasswordPolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharingChangeLinkEnforcePasswordPolicyDetails Create()
+                {
+                    return new SharingChangeLinkEnforcePasswordPolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharingChangeLinkEnforcePasswordPolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharingChangeLinkEnforcePasswordPolicyDetails(global::Dropbox.Api.TeamLog.SharingChangeLinkEnforcePasswordPolicyDetails.Decoder.DecodeFields(reader));
                 }
             }
 
