@@ -32,11 +32,10 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="SharedLinkSettings" />
         /// class.</para>
         /// </summary>
-        /// <param name="requestedVisibility">The requested access for this shared
-        /// link.</param>
-        /// <param name="linkPassword">If <paramref name="requestedVisibility" /> is <see
-        /// cref="Dropbox.Api.Sharing.RequestedVisibility.Password" /> this is needed to
-        /// specify the password to access the link.</param>
+        /// <param name="requirePassword">Boolean flag to enable or disable password
+        /// protection.</param>
+        /// <param name="linkPassword">If <paramref name="requirePassword" /> is true, this is
+        /// needed to specify the password to access the link.</param>
         /// <param name="expires">Expiration time of the shared link. By default the link won't
         /// expire.</param>
         /// <param name="audience">The new audience who can benefit from the access level
@@ -46,17 +45,21 @@ namespace Dropbox.Api.Sharing
         /// field of `LinkPermissions.</param>
         /// <param name="access">Requested access level you want the audience to gain from this
         /// link. Note, modifying access level for an existing link is not supported.</param>
-        public SharedLinkSettings(RequestedVisibility requestedVisibility = null,
+        /// <param name="requestedVisibility">Use <paramref name="audience" /> instead.  The
+        /// requested access for this shared link.</param>
+        public SharedLinkSettings(bool? requirePassword = null,
                                   string linkPassword = null,
                                   sys.DateTime? expires = null,
                                   LinkAudience audience = null,
-                                  RequestedLinkAccessLevel access = null)
+                                  RequestedLinkAccessLevel access = null,
+                                  RequestedVisibility requestedVisibility = null)
         {
-            this.RequestedVisibility = requestedVisibility;
+            this.RequirePassword = requirePassword;
             this.LinkPassword = linkPassword;
             this.Expires = expires;
             this.Audience = audience;
             this.Access = access;
+            this.RequestedVisibility = requestedVisibility;
         }
 
         /// <summary>
@@ -71,14 +74,13 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The requested access for this shared link.</para>
+        /// <para>Boolean flag to enable or disable password protection.</para>
         /// </summary>
-        public RequestedVisibility RequestedVisibility { get; protected set; }
+        public bool? RequirePassword { get; protected set; }
 
         /// <summary>
-        /// <para>If <see cref="RequestedVisibility" /> is <see
-        /// cref="Dropbox.Api.Sharing.RequestedVisibility.Password" /> this is needed to
-        /// specify the password to access the link.</para>
+        /// <para>If <see cref="RequirePassword" /> is true, this is needed to specify the
+        /// password to access the link.</para>
         /// </summary>
         public string LinkPassword { get; protected set; }
 
@@ -102,6 +104,12 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public RequestedLinkAccessLevel Access { get; protected set; }
 
+        /// <summary>
+        /// <para>Use <see cref="Audience" /> instead.  The requested access for this shared
+        /// link.</para>
+        /// </summary>
+        public RequestedVisibility RequestedVisibility { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -116,9 +124,9 @@ namespace Dropbox.Api.Sharing
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharedLinkSettings value, enc.IJsonWriter writer)
             {
-                if (value.RequestedVisibility != null)
+                if (value.RequirePassword != null)
                 {
-                    WriteProperty("requested_visibility", value.RequestedVisibility, writer, global::Dropbox.Api.Sharing.RequestedVisibility.Encoder);
+                    WriteProperty("require_password", value.RequirePassword.Value, writer, enc.BooleanEncoder.Instance);
                 }
                 if (value.LinkPassword != null)
                 {
@@ -135,6 +143,10 @@ namespace Dropbox.Api.Sharing
                 if (value.Access != null)
                 {
                     WriteProperty("access", value.Access, writer, global::Dropbox.Api.Sharing.RequestedLinkAccessLevel.Encoder);
+                }
+                if (value.RequestedVisibility != null)
+                {
+                    WriteProperty("requested_visibility", value.RequestedVisibility, writer, global::Dropbox.Api.Sharing.RequestedVisibility.Encoder);
                 }
             }
         }
@@ -168,8 +180,8 @@ namespace Dropbox.Api.Sharing
             {
                 switch (fieldName)
                 {
-                    case "requested_visibility":
-                        value.RequestedVisibility = global::Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
+                    case "require_password":
+                        value.RequirePassword = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "link_password":
                         value.LinkPassword = enc.StringDecoder.Instance.Decode(reader);
@@ -182,6 +194,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "access":
                         value.Access = global::Dropbox.Api.Sharing.RequestedLinkAccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "requested_visibility":
+                        value.RequestedVisibility = global::Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

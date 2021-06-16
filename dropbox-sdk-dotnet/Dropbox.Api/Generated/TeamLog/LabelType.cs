@@ -57,6 +57,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TestOnly</para>
+        /// </summary>
+        public bool IsTestOnly
+        {
+            get
+            {
+                return this is TestOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TestOnly, or <c>null</c>.</para>
+        /// </summary>
+        public TestOnly AsTestOnly
+        {
+            get
+            {
+                return this as TestOnly;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserDefinedTag</para>
         /// </summary>
         public bool IsUserDefinedTag
@@ -120,6 +142,12 @@ namespace Dropbox.Api.TeamLog
                     PersonalInformation.Encoder.EncodeFields((PersonalInformation)value, writer);
                     return;
                 }
+                if (value is TestOnly)
+                {
+                    WriteProperty(".tag", "test_only", writer, enc.StringEncoder.Instance);
+                    TestOnly.Encoder.EncodeFields((TestOnly)value, writer);
+                    return;
+                }
                 if (value is UserDefinedTag)
                 {
                     WriteProperty(".tag", "user_defined_tag", writer, enc.StringEncoder.Instance);
@@ -166,6 +194,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "personal_information":
                         return PersonalInformation.Decoder.DecodeFields(reader);
+                    case "test_only":
+                        return TestOnly.Decoder.DecodeFields(reader);
                     case "user_defined_tag":
                         return UserDefinedTag.Decoder.DecodeFields(reader);
                     default:
@@ -240,6 +270,75 @@ namespace Dropbox.Api.TeamLog
                 protected override PersonalInformation Create()
                 {
                     return PersonalInformation.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The test only object</para>
+        /// </summary>
+        public sealed class TestOnly : LabelType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TestOnly> Encoder = new TestOnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TestOnly> Decoder = new TestOnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TestOnly" /> class.</para>
+            /// </summary>
+            private TestOnly()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TestOnly</para>
+            /// </summary>
+            public static readonly TestOnly Instance = new TestOnly();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TestOnly" />.</para>
+            /// </summary>
+            private class TestOnlyEncoder : enc.StructEncoder<TestOnly>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TestOnly value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TestOnly" />.</para>
+            /// </summary>
+            private class TestOnlyDecoder : enc.StructDecoder<TestOnly>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TestOnly" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TestOnly Create()
+                {
+                    return TestOnly.Instance;
                 }
 
             }

@@ -477,8 +477,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>A link-specific password is required to access the link. Login is not
-        /// required.</para>
+        /// <para>Use `require_password` instead. A link-specific password is required to
+        /// access the link. Login is not required.</para>
         /// </summary>
         public sealed class Password : LinkAudience
         {
