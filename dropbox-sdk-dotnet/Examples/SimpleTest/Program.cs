@@ -53,7 +53,7 @@ namespace SimpleTest
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw e;
+                throw;
             }
         }
 
@@ -69,7 +69,7 @@ namespace SimpleTest
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            var httpClient = new HttpClient(new HttpClientHandler())
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
@@ -115,17 +115,13 @@ namespace SimpleTest
         /// <returns>An asynchronous task.</returns>
         private async Task RunUserTests(DropboxClient client)
         {
+            
             await GetCurrentAccount(client);
 
             var path = "/DotNetApi/Help";
-            var folder = await CreateFolder(client, path);
-            var list = await ListFolder(client, path);
+            await DeleteFolder(client, path); // Removes items left older from the previous test run.
 
-            var firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
-            if (firstFile != null)
-            {
-                await Download(client, path, firstFile.AsFile);
-            }
+            var folder = await CreateFolder(client, path);
 
             var pathInTeamSpace = "/Test";
             await ListFolderInTeamSpace(client, pathInTeamSpace);
@@ -133,6 +129,16 @@ namespace SimpleTest
             await Upload(client, path, "Test.txt", "This is a text file");
 
             await ChunkUpload(client, path, "Binary");
+
+            ListFolderResult list = await ListFolder(client, path);
+
+            Metadata firstFile = list.Entries.FirstOrDefault(i => i.IsFile);
+            if (firstFile != null)
+            {
+                await Download(client, path, firstFile.AsFile);
+            }
+
+            await DeleteFolder(client, path);
         }
 
         /// <summary>
@@ -222,11 +228,12 @@ namespace SimpleTest
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
-                Settings.Default.Reset();
+                // Settings.Default.Reset();
             }
             Console.WriteLine();
 
-            var accessToken = Settings.Default.AccessToken;
+            
+            var accessToken = "";
 
             if (string.IsNullOrEmpty(accessToken))
             {
@@ -240,7 +247,12 @@ namespace SimpleTest
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    // Use StartInfo to ensure default browser launches.
+                    System.Diagnostics.ProcessStartInfo startInfo = 
+                        new System.Diagnostics.ProcessStartInfo(authorizeUri.ToString());
+                    startInfo.UseShellExecute = true;
+
+                    System.Diagnostics.Process.Start(startInfo);
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
                     await HandleOAuth2Redirect(http);
@@ -263,10 +275,10 @@ namespace SimpleTest
                     var uid = result.Uid;
                     Console.WriteLine("Uid: {0}", uid);
 
-                    Settings.Default.AccessToken = accessToken;
-                    Settings.Default.Uid = uid;
+                    //Settings.Default.AccessToken = accessToken;
+                    //Settings.Default.Uid = uid;
 
-                    Settings.Default.Save();
+                    //Settings.Default.Save();
                 }
                 catch (Exception e)
                 {
@@ -312,6 +324,43 @@ namespace SimpleTest
             {
                 Console.WriteLine("Team - None");
             }
+        }
+
+        /// <summary>
+        /// Delete the specified folder including any files within the folder
+        /// </summary>
+        /// <param name="client">The dropbox client object.</param>
+        /// <param name="path">The path to the target folder to delete.</param>
+        /// <returns></returns>
+        private async Task<bool> PathExists(DropboxClient client, string path)
+        {
+            try
+            {
+                await client.Files.GetMetadataAsync(path);
+                return true;
+            }
+            catch (DropboxException exception) when (exception.Message.StartsWith("path/not_found/"))
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Delete the specified folder including any files within the folder
+        /// </summary>
+        /// <param name="client">The dropbox client object.</param>
+        /// <param name="path">The path to the target folder to delete.</param>
+        /// <returns></returns>
+        private async Task<Metadata> DeleteFolder(DropboxClient client, string path)
+        {
+            if(await PathExists(client, path))
+            {
+                Console.WriteLine("--- Deleting Folder ---");
+                Metadata metadata =  await client.Files.DeleteAsync(path);
+                Console.WriteLine($"Deleted {metadata.PathLower}");
+                return metadata;
+            }
+            return null;
         }
 
         /// <summary>
