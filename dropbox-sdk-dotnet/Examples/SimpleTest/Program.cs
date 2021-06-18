@@ -15,9 +15,6 @@ namespace SimpleTest
 
     partial class Program
     {
-        // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
-        private const string ApiKey = "XXXXXXXXXXXXXXX";
-
         // This loopback host is for demo purpose. If this port is not
         // available on your machine you need to update this URL with an unused port.
         private const string LoopbackHost = "http://127.0.0.1:52475/";
@@ -225,31 +222,49 @@ namespace SimpleTest
         /// <returns>A valid access token or null.</returns>
         private async Task<string> GetAccessToken()
         {
+            Settings.Default.Upgrade();
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
-                // Settings.Default.Reset();
+                Settings.Default.Reset();
             }
             Console.WriteLine();
 
-            
-            var accessToken = "";
+            string apiKey = Settings.Default.ApiKey;
+            while (string.IsNullOrWhiteSpace(apiKey))
+            {
+                Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
+                Console.Write("Enter the API Key (or 'Quit' to exit): ");
+                apiKey = Console.ReadLine();
+                if(apiKey.ToLower()=="quit")
+                {
+                    Console.WriteLine("The API Key is required to connect to Dropbox.");
+                    apiKey = "";
+                    break;
+                }
+                else
+                {
+                    Settings.Default.ApiKey = apiKey;
+                }
+            }
 
-            if (string.IsNullOrEmpty(accessToken))
+            var accessToken = Settings.Default.AccessToken;
+
+            if (string.IsNullOrEmpty(accessToken) && !string.IsNullOrWhiteSpace(apiKey))
             {
                 try
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, RedirectUri, state: state);
+                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(
+                        OAuthResponseType.Token, apiKey, RedirectUri, state: state);
                     var http = new HttpListener();
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
                     // Use StartInfo to ensure default browser launches.
-                    System.Diagnostics.ProcessStartInfo startInfo = 
-                        new System.Diagnostics.ProcessStartInfo(authorizeUri.ToString());
+                    System.Diagnostics.ProcessStartInfo startInfo = new (authorizeUri.ToString());
                     startInfo.UseShellExecute = true;
 
                     System.Diagnostics.Process.Start(startInfo);
@@ -275,10 +290,8 @@ namespace SimpleTest
                     var uid = result.Uid;
                     Console.WriteLine("Uid: {0}", uid);
 
-                    //Settings.Default.AccessToken = accessToken;
-                    //Settings.Default.Uid = uid;
-
-                    //Settings.Default.Save();
+                    Settings.Default.AccessToken = accessToken;
+                    Settings.Default.Uid = uid;
                 }
                 catch (Exception e)
                 {
@@ -286,7 +299,8 @@ namespace SimpleTest
                     return null;
                 }
             }
-
+            Settings.Default.Save();
+            Settings.Default.Reload();
             return accessToken;
         }
 
@@ -332,7 +346,7 @@ namespace SimpleTest
         /// <param name="client">The dropbox client object.</param>
         /// <param name="path">The path to the target folder to delete.</param>
         /// <returns></returns>
-        private async Task<bool> PathExists(DropboxClient client, string path)
+        static private async Task<bool> PathExists(DropboxClient client, string path)
         {
             try
             {
@@ -351,7 +365,7 @@ namespace SimpleTest
         /// <param name="client">The dropbox client object.</param>
         /// <param name="path">The path to the target folder to delete.</param>
         /// <returns></returns>
-        private async Task<Metadata> DeleteFolder(DropboxClient client, string path)
+        static private async Task<Metadata> DeleteFolder(DropboxClient client, string path)
         {
             if(await PathExists(client, path))
             {
