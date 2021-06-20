@@ -219,12 +219,11 @@ namespace SimpleTest
             }
             Console.WriteLine();
 
-            string apiKey = GetApiKey();
-
             string accessToken = Settings.Default.AccessToken;
 
-            if (string.IsNullOrEmpty(accessToken) && !string.IsNullOrWhiteSpace(apiKey))
+            if (string.IsNullOrEmpty(accessToken))
             {
+                string apiKey = GetApiKey();
                 using var http = new HttpListener();
                 try
                 {
