@@ -1,6 +1,7 @@
 namespace SimpleTest
 {
     using System;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
     using System.Net;
@@ -35,27 +36,14 @@ namespace SimpleTest
         private static extern bool SetForegroundWindow(IntPtr hWnd);
 
         [STAThread]
-        static int Main(string[] args)
+        static async Task<int> Main()
         {
-            Console.WriteLine("SimpleTest");
-            var instance = new Program();
-            try
-            {
-                var task = Task.Run((Func<Task<int>>)instance.Run);
-
-                task.Wait();
-
-                return task.Result;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return await Task.Run(new Program().Run);
         }
 
         private async Task<int> Run()
         {
+            Console.WriteLine(nameof(SimpleTest));
             DropboxCertHelper.InitializeCertPinning();
 
             var accessToken = await this.GetAccessToken();
@@ -66,7 +54,8 @@ namespace SimpleTest
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new HttpClientHandler())
+            using HttpClientHandler httpClientHandler = new HttpClientHandler();
+            using var httpClient = new HttpClient(httpClientHandler)
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
@@ -230,50 +219,46 @@ namespace SimpleTest
             }
             Console.WriteLine();
 
-            string apiKey = Settings.Default.ApiKey;
-            while (string.IsNullOrWhiteSpace(apiKey))
-            {
-                Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
-                Console.Write("Enter the API Key (or 'Quit' to exit): ");
-                apiKey = Console.ReadLine();
-                if(apiKey.ToLower()=="quit")
-                {
-                    Console.WriteLine("The API Key is required to connect to Dropbox.");
-                    apiKey = "";
-                    break;
-                }
-                else
-                {
-                    Settings.Default.ApiKey = apiKey;
-                }
-            }
+            string apiKey = GetApiKey();
 
-            var accessToken = Settings.Default.AccessToken;
+            string accessToken = Settings.Default.AccessToken;
 
             if (string.IsNullOrEmpty(accessToken) && !string.IsNullOrWhiteSpace(apiKey))
             {
+                using var http = new HttpListener();
                 try
                 {
                     Console.WriteLine("Waiting for credentials.");
                     var state = Guid.NewGuid().ToString("N");
                     var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(
                         OAuthResponseType.Token, apiKey, RedirectUri, state: state);
-                    var http = new HttpListener();
+                    
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
                     // Use StartInfo to ensure default browser launches.
-                    System.Diagnostics.ProcessStartInfo startInfo = new (authorizeUri.ToString());
-                    startInfo.UseShellExecute = true;
+                    ProcessStartInfo startInfo = 
+                        new ProcessStartInfo(authorizeUri.ToString()) { UseShellExecute = true };
 
-                    System.Diagnostics.Process.Start(startInfo);
+                    try
+                    {
+                        // open browser for authentication
+                        Process.Start(startInfo);
+                        Console.WriteLine("Waiting for authentication...");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An unexpected error occured while opening the browser.");
+                    }
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
                     await HandleOAuth2Redirect(http);
 
                     // Handle redirect from JS and process OAuth response.
                     var result = await HandleJSRedirect(http);
+
+                    http.Stop();
 
                     if (result.State != state)
                     {
@@ -292,6 +277,8 @@ namespace SimpleTest
 
                     Settings.Default.AccessToken = accessToken;
                     Settings.Default.Uid = uid;
+                    Settings.Default.Save();
+                    Settings.Default.Reload();
                 }
                 catch (Exception e)
                 {
@@ -299,11 +286,37 @@ namespace SimpleTest
                     return null;
                 }
             }
-            Settings.Default.Save();
-            Settings.Default.Reload();
+
             return accessToken;
         }
 
+        /// <summary>
+        /// Retrieve the ApiKey from the user
+        /// </summary>
+        /// <returns>Return the ApiKey specified by the user</returns>
+        private static string GetApiKey()
+        {
+            string apiKey = Settings.Default.ApiKey;
+
+            while (string.IsNullOrWhiteSpace(apiKey))
+            {
+                Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
+                Console.Write("Enter the API Key (or 'Quit' to exit): ");
+                apiKey = Console.ReadLine();
+                if (apiKey.ToLower() == "quit")
+                {
+                    Console.WriteLine("The API Key is required to connect to Dropbox.");
+                    apiKey = null;
+                    break;
+                }
+                else
+                {
+                    Settings.Default.ApiKey = apiKey;
+                }
+            }
+
+            return string.IsNullOrWhiteSpace(apiKey) ? null : apiKey;
+        }
         /// <summary>
         /// Gets information about the currently authorized account.
         /// <para>
