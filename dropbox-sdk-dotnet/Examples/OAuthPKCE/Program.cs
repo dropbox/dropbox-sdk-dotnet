@@ -1,6 +1,7 @@
 namespace OauthPKCE
 {
     using System;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
     using System.Net;
@@ -9,12 +10,10 @@ namespace OauthPKCE
     using System.Threading.Tasks;
 
     using Dropbox.Api;
+    using OAuthPKCE;
 
     partial class Program
     {
-        // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
-        private const string ApiKey = "XXXXXXXXXXXXXXX";
-
         // This loopback host is for demo purpose. If this port is not
         // available on your machine you need to update this URL with an unused port.
         private const string LoopbackHost = "http://127.0.0.1:52475/";
@@ -35,30 +34,17 @@ namespace OauthPKCE
         private static extern bool SetForegroundWindow(IntPtr hWnd);
 
         [STAThread]
-        static int Main(string[] args)
+        static async Task<int> Main()
         {
-            var instance = new Program();
-            try
-            {
-                Console.WriteLine("Example OAuth PKCE Application");
-                var task = Task.Run((Func<Task<int>>)instance.Run);
-
-                task.Wait();
-
-                return task.Result;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw e;
-            }
+            return await Task.Run(new Program().Run);
         }
 
         private async Task<int> Run()
         {
+            Console.WriteLine("Example OAuth PKCE Application");
             DropboxCertHelper.InitializeCertPinning();
 
-            var uid = await this.AcquireAccessToken(null, IncludeGrantedScopes.None);
+            var uid = await AcquireOAuthTokens(null, IncludeGrantedScopes.None);
             if (string.IsNullOrEmpty(uid))
             {
                 return 1;
@@ -66,7 +52,8 @@ namespace OauthPKCE
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            using HttpClientHandler httpClientHandler = new HttpClientHandler();
+            using var httpClient = new HttpClient(httpClientHandler)
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
@@ -80,7 +67,7 @@ namespace OauthPKCE
                     HttpClient = httpClient
                 };
 
-                var client = new DropboxClient(Settings.Default.RefreshToken, ApiKey, config);
+                var client = new DropboxClient(Settings.Default.RefreshToken, Settings.Default.ApiKey, config);
 
                 // This call should succeed since the correct scope has been acquired
                 await GetCurrentAccount(client);
@@ -154,16 +141,17 @@ namespace OauthPKCE
         }
 
         /// <summary>
-        /// Acquires a dropbox access token and saves it to the default settings for the app.
+        /// Acquires a dropbox OAuth tokens and saves them to the default settings for the app.
         /// <para>
-        /// This fetches the access token from the applications settings, if it is not found there
+        /// This fetches the OAuth tokens from the applications settings, if it is not found there
         /// (or if the user chooses to reset the settings) then the UI in <see cref="LoginForm"/> is
         /// displayed to authorize the user.
         /// </para>
         /// </summary>
         /// <returns>A valid uid if a token was acquired or null.</returns>
-        private async Task<string> AcquireAccessToken(string[] scopeList, IncludeGrantedScopes includeGrantedScopes)
+        private async Task<string> AcquireOAuthTokens(string[] scopeList, IncludeGrantedScopes includeGrantedScopes)
         {
+            Settings.Default.Upgrade();
             Console.Write("Reset settings (Y/N) ");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
@@ -171,38 +159,54 @@ namespace OauthPKCE
             }
             Console.WriteLine();
 
-            var accessToken = Settings.Default.AccessToken;
-            var refreshToken = Settings.Default.RefreshToken;
+            string accessToken = Settings.Default.AccessToken;
+            string uid = Settings.Default.Uid;
 
             if (string.IsNullOrEmpty(accessToken))
             {
+                string apiKey = GetApiKey();
+
+                using var http = new HttpListener();
                 try
                 {
                     Console.WriteLine("Waiting for credentials.");
-                    var state = Guid.NewGuid().ToString("N");
+                    string state = Guid.NewGuid().ToString("N");
                     var OAuthFlow = new PKCEOAuthFlow();
-                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, ApiKey, RedirectUri.ToString(), state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
-                    var http = new HttpListener();
+                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, apiKey, RedirectUri.ToString(), state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    ProcessStartInfo startInfo = new ProcessStartInfo(
+                        authorizeUri.ToString()){ UseShellExecute = true };
+
+                    try
+                    {
+                        // open browser for authentication
+                        Process.Start(startInfo);
+                        Console.WriteLine("Waiting for authentication...");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An unexpected error occured while opening the browser.");
+                    }
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
                     await HandleOAuth2Redirect(http);
 
                     // Handle redirect from JS and process OAuth response.
-                    var redirectUri = await HandleJSRedirect(http);
+                    Uri redirectUri = await HandleJSRedirect(http);
+
+                    http.Stop();
 
                     Console.WriteLine("Exchanging code for token");
-                    var tokenResult = await OAuthFlow.ProcessCodeFlowAsync(redirectUri, ApiKey, RedirectUri.ToString(), state);
+                    var tokenResult = await OAuthFlow.ProcessCodeFlowAsync(redirectUri, apiKey, RedirectUri.ToString(), state);
                     Console.WriteLine("Finished Exchanging Code for Token");
                     // Bring console window to the front.
                     SetForegroundWindow(GetConsoleWindow());
                     accessToken = tokenResult.AccessToken;
-                    refreshToken = tokenResult.RefreshToken;
-                    var uid = tokenResult.Uid;
+                    string refreshToken = tokenResult.RefreshToken;
+                    uid = tokenResult.Uid;
                     Console.WriteLine("Uid: {0}", uid);
                     Console.WriteLine("AccessToken: {0}", accessToken);
                     if (tokenResult.RefreshToken != null)
@@ -221,8 +225,7 @@ namespace OauthPKCE
                     Settings.Default.AccessToken = accessToken;
                     Settings.Default.Uid = uid;
                     Settings.Default.Save();
-                    http.Stop();
-                    return uid;
+                    Settings.Default.Reload();
                 }
                 catch (Exception e)
                 {
@@ -231,7 +234,35 @@ namespace OauthPKCE
                 }
             }
 
-            return null;
+            return uid;
+        }
+
+        /// <summary>
+        /// Retrieve the ApiKey from the user
+        /// </summary>
+        /// <returns>Return the ApiKey specified by the user</returns>
+        private static string GetApiKey()
+        {
+            string apiKey = Settings.Default.ApiKey;
+            
+            while (string.IsNullOrWhiteSpace(apiKey))
+            {
+                Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
+                Console.Write("Enter the API Key (or 'Quit' to exit): ");
+                apiKey = Console.ReadLine();
+                if (apiKey.ToLower() == "quit")
+                {
+                    Console.WriteLine("The API Key is required to connect to Dropbox.");
+                    apiKey = null;
+                    break;
+                }
+                else
+                {
+                    Settings.Default.ApiKey = apiKey;
+                }
+            }
+
+            return string.IsNullOrWhiteSpace(apiKey) ? null : apiKey;
         }
 
         /// <summary>
