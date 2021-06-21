@@ -44,8 +44,8 @@ namespace OauthPKCE
             Console.WriteLine("Example OAuth PKCE Application");
             DropboxCertHelper.InitializeCertPinning();
 
-            var uid = await AcquireOAuthTokens(null, IncludeGrantedScopes.None);
-            if (string.IsNullOrEmpty(uid))
+            string accessToken = await GetOAuthTokens(null, IncludeGrantedScopes.None);
+            if (string.IsNullOrEmpty(accessToken))
             {
                 return 1;
             }
@@ -68,11 +68,8 @@ namespace OauthPKCE
                 };
 
                 var client = new DropboxClient(Settings.Default.RefreshToken, Settings.Default.ApiKey, config);
+				await GetCurrentAccount(client); // This call should succeed since the correct scope has been acquired
 
-                // This call should succeed since the correct scope has been acquired
-                await GetCurrentAccount(client);
-
-                Console.WriteLine("Oauth PKCE Test Complete!");
                 Console.WriteLine("Exit with any key");
                 Console.ReadKey();
             }
@@ -89,6 +86,7 @@ namespace OauthPKCE
 
             return 0;
         }
+
 
         /// <summary>
         /// Handles the redirect from Dropbox server. Because we are using token flow, the local
@@ -135,9 +133,7 @@ namespace OauthPKCE
                 context = await http.GetContextAsync();
             }
 
-            var redirectUri = new Uri(context.Request.QueryString["url_with_fragment"]);
-
-            return redirectUri;
+            return new Uri(context.Request.QueryString["url_with_fragment"]);
         }
 
         /// <summary>
@@ -148,8 +144,8 @@ namespace OauthPKCE
         /// displayed to authorize the user.
         /// </para>
         /// </summary>
-        /// <returns>A valid uid if a token was acquired or null.</returns>
-        private async Task<string> AcquireOAuthTokens(string[] scopeList, IncludeGrantedScopes includeGrantedScopes)
+        /// <returns>A valid access token if successful otherwise null.</returns>
+        private async Task<string> GetOAuthTokens(string[] scopeList, IncludeGrantedScopes includeGrantedScopes)
         {
             Settings.Default.Upgrade();
             Console.Write("Reset settings (Y/N) ");
@@ -159,32 +155,34 @@ namespace OauthPKCE
             }
             Console.WriteLine();
 
-            string accessToken = Settings.Default.AccessToken;
-            string uid = Settings.Default.Uid;
-
-            if (string.IsNullOrEmpty(accessToken))
+            if (string.IsNullOrEmpty(Settings.Default.AccessToken))
             {
                 string apiKey = GetApiKey();
 
                 using var http = new HttpListener();
                 try
                 {
-                    Console.WriteLine("Waiting for credentials.");
                     string state = Guid.NewGuid().ToString("N");
                     var OAuthFlow = new PKCEOAuthFlow();
-                    var authorizeUri = OAuthFlow.GetAuthorizeUri(OAuthResponseType.Code, apiKey, RedirectUri.ToString(), state: state, tokenAccessType: TokenAccessType.Offline, scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
+                    var authorizeUri = OAuthFlow.GetAuthorizeUri(
+                        OAuthResponseType.Code, apiKey, RedirectUri.ToString(), 
+                        state: state, tokenAccessType: TokenAccessType.Offline, 
+                        scopeList: scopeList, includeGrantedScopes: includeGrantedScopes);
+
                     http.Prefixes.Add(LoopbackHost);
 
                     http.Start();
 
+                    // Use StartInfo to ensure default browser launches.
                     ProcessStartInfo startInfo = new ProcessStartInfo(
-                        authorizeUri.ToString()){ UseShellExecute = true };
+                        authorizeUri.ToString())
+                    { UseShellExecute = true };
 
                     try
                     {
                         // open browser for authentication
+                        Console.WriteLine("Waiting for credentials and authorization.");
                         Process.Start(startInfo);
-                        Console.WriteLine("Waiting for authentication...");
                     }
                     catch (Exception)
                     {
@@ -199,33 +197,24 @@ namespace OauthPKCE
 
                     http.Stop();
 
-                    Console.WriteLine("Exchanging code for token");
-                    var tokenResult = await OAuthFlow.ProcessCodeFlowAsync(redirectUri, apiKey, RedirectUri.ToString(), state);
-                    Console.WriteLine("Finished Exchanging Code for Token");
+                    // Exchanging code for token
+                    var result = await OAuthFlow.ProcessCodeFlowAsync(
+                        redirectUri, apiKey, RedirectUri.ToString(), state);
+                    if (result.State != state)
+                    {
+                        // NOTE: Rightly or wrongly?, state is not returned or else
+                        // we would return null here.  
+						// See issue https://github.com/dropbox/dropbox-sdk-dotnet/issues/248
+                        Console.WriteLine("The state in the response doesn't match the state in the request.");
+                    }
+                    Console.WriteLine("OAuth token aquire complete");
+
                     // Bring console window to the front.
                     SetForegroundWindow(GetConsoleWindow());
-                    accessToken = tokenResult.AccessToken;
-                    string refreshToken = tokenResult.RefreshToken;
-                    uid = tokenResult.Uid;
-                    Console.WriteLine("Uid: {0}", uid);
-                    Console.WriteLine("AccessToken: {0}", accessToken);
-                    if (tokenResult.RefreshToken != null)
-                    {
-                        Console.WriteLine("RefreshToken: {0}", refreshToken);
-                        Settings.Default.RefreshToken = refreshToken;
-                    }
-                    if (tokenResult.ExpiresAt != null)
-                    {
-                        Console.WriteLine("ExpiresAt: {0}", tokenResult.ExpiresAt);
-                    }
-                    if (tokenResult.ScopeList != null)
-                    {
-                        Console.WriteLine("Scopes: {0}", String.Join(" ", tokenResult.ScopeList));
-                    }
-                    Settings.Default.AccessToken = accessToken;
-                    Settings.Default.Uid = uid;
-                    Settings.Default.Save();
-                    Settings.Default.Reload();
+
+                    DisplayOAuthResult(result);
+
+                    UpdateSettings(result);
                 }
                 catch (Exception e)
                 {
@@ -234,7 +223,32 @@ namespace OauthPKCE
                 }
             }
 
-            return uid;
+            return Settings.Default.AccessToken;
+        }
+
+        private static void UpdateSettings(OAuth2Response result)
+        {
+            // Foreach Settting, save off the value retrieved from the result.
+            foreach (System.Configuration.SettingsProperty item in Settings.Default.Properties)
+            {
+                if (typeof(OAuth2Response).GetProperty(item.Name) is System.Reflection.PropertyInfo property)
+                {
+                    Settings.Default[item.Name] = property.GetValue(result);
+                }
+            }
+
+            Settings.Default.Save();
+            Settings.Default.Reload();
+        }
+
+        private static void DisplayOAuthResult(OAuth2Response result)
+        {
+            Console.WriteLine("OAuth Result:");
+            Console.WriteLine("\tUid: {0}", result.Uid);
+            Console.WriteLine("\tAccessToken: {0}", result.AccessToken);
+            Console.WriteLine("\tRefreshToken: {0}", result.RefreshToken);
+            Console.WriteLine("\tExpiresAt: {0}", result.ExpiresAt);
+            Console.WriteLine("\tScopes: {0}", string.Join(" ", result.ScopeList?? new string[0]));
         }
 
         /// <summary>
@@ -273,41 +287,33 @@ namespace OauthPKCE
         /// </summary>
         /// <param name="client">The Dropbox client.</param>
         /// <returns>An asynchronous task.</returns>
-        private async Task GetCurrentAccount(DropboxClient client)
+        static private async Task GetCurrentAccount(DropboxClient client)
         {
-            try
+            Console.WriteLine("Current Account:");
+            var full = await client.Users.GetCurrentAccountAsync();
+
+            Console.WriteLine("Account id    : {0}", full.AccountId);
+            Console.WriteLine("Country       : {0}", full.Country);
+            Console.WriteLine("Email         : {0}", full.Email);
+            Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
+            Console.WriteLine("Locale        : {0}", full.Locale);
+            Console.WriteLine("Name");
+            Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
+            Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
+            Console.WriteLine("  Given    : {0}", full.Name.GivenName);
+            Console.WriteLine("  Surname  : {0}", full.Name.Surname);
+            Console.WriteLine("Referral link : {0}", full.ReferralLink);
+
+            if (full.Team != null)
             {
-                Console.WriteLine("Current Account:");
-                var full = await client.Users.GetCurrentAccountAsync();
-
-                Console.WriteLine("Account id    : {0}", full.AccountId);
-                Console.WriteLine("Country       : {0}", full.Country);
-                Console.WriteLine("Email         : {0}", full.Email);
-                Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
-                Console.WriteLine("Locale        : {0}", full.Locale);
-                Console.WriteLine("Name");
-                Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
-                Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
-                Console.WriteLine("  Given    : {0}", full.Name.GivenName);
-                Console.WriteLine("  Surname  : {0}", full.Name.Surname);
-                Console.WriteLine("Referral link : {0}", full.ReferralLink);
-
-                if (full.Team != null)
-                {
-                    Console.WriteLine("Team");
-                    Console.WriteLine("  Id   : {0}", full.Team.Id);
-                    Console.WriteLine("  Name : {0}", full.Team.Name);
-                }
-                else
-                {
-                    Console.WriteLine("Team - None");
-                }
+                Console.WriteLine("Team");
+                Console.WriteLine("  Id   : {0}", full.Team.Id);
+                Console.WriteLine("  Name : {0}", full.Team.Name);
             }
-            catch (Exception e)
+            else
             {
-                throw e;
+                Console.WriteLine("Team - None");
             }
-
         }
     }
 }

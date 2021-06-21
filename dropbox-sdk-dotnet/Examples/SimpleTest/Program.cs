@@ -6,6 +6,7 @@ namespace SimpleTest
     using System.Linq;
     using System.Net;
     using System.Net.Http;
+    using System.Reflection;
     using System.Runtime.InteropServices;
     using System.Threading.Tasks;
 
@@ -46,7 +47,7 @@ namespace SimpleTest
             Console.WriteLine(nameof(SimpleTest));
             DropboxCertHelper.InitializeCertPinning();
 
-            var accessToken = await this.GetAccessToken();
+            string accessToken = await GetOAuthTokens();
             if (string.IsNullOrEmpty(accessToken))
             {
                 return 1;
@@ -79,6 +80,9 @@ namespace SimpleTest
                 var client = new DropboxTeamClient(accessToken, userAgent: "SimpleTeamTestApp", httpClient: httpClient);
                 await RunTeamTests(client);
                 */
+				
+                Console.WriteLine("Exit with any key");
+                Console.ReadKey();
             }
             catch (HttpException e)
             {
@@ -92,6 +96,225 @@ namespace SimpleTest
             }
 
             return 0;
+        }
+
+
+        /// <summary>
+        /// Handles the redirect from Dropbox server. Because we are using token flow, the local
+        /// http server cannot directly receive the URL fragment. We need to return a HTML page with
+        /// inline JS which can send URL fragment to local server as URL parameter.
+        /// </summary>
+        /// <param name="http">The http listener.</param>
+        /// <returns>The <see cref="Task"/></returns>
+        private async Task HandleOAuth2Redirect(HttpListener http)
+        {
+            var context = await http.GetContextAsync();
+
+            // We only care about request to RedirectUri endpoint.
+            while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+            {
+                context = await http.GetContextAsync();
+            }
+
+            context.Response.ContentType = "text/html";
+
+            // Respond with a page which runs JS and sends URL fragment as query string
+            // to TokenRedirectUri.
+            using (var file = File.OpenRead("index.html"))
+            {
+                file.CopyTo(context.Response.OutputStream);
+            }
+
+            context.Response.OutputStream.Close();
+        }
+
+        /// <summary>
+        /// Handle the redirect from JS and process raw redirect URI with fragment to
+        /// complete the authorization flow.
+        /// </summary>
+        /// <param name="http">The http listener.</param>
+        /// <returns>The <see cref="OAuth2Response"/></returns>
+        private async Task<Uri> HandleJSRedirect(HttpListener http)
+        {
+            var context = await http.GetContextAsync();
+
+            // We only care about request to TokenRedirectUri endpoint.
+            while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
+            {
+                context = await http.GetContextAsync();
+            }
+
+            return new Uri(context.Request.QueryString["url_with_fragment"]);
+        }
+
+        /// <summary>
+        /// Acquires a dropbox OAuth tokens and saves them to the default settings for the app.
+        /// <para>
+        /// This fetches the OAuth tokens from the applications settings, if it is not found there
+        /// (or if the user chooses to reset the settings) then the UI in <see cref="LoginForm"/> is
+        /// displayed to authorize the user.
+        /// </para>
+        /// </summary>
+        /// <returns>A valid access token if successful otherwise null.</returns>
+        private async Task<string> GetOAuthTokens()
+        {
+            Settings.Default.Upgrade();
+            Console.Write("Reset settings (Y/N) ");
+            if (Console.ReadKey().Key == ConsoleKey.Y)
+            {
+                Settings.Default.Reset();
+            }
+            Console.WriteLine();
+
+            if (string.IsNullOrEmpty(Settings.Default.AccessToken))
+            {
+                string apiKey = GetApiKey();
+                using var http = new HttpListener();
+                try
+                {
+                    string state = Guid.NewGuid().ToString("N");
+                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(
+                        OAuthResponseType.Token, apiKey, RedirectUri, state: state);
+
+                    http.Prefixes.Add(LoopbackHost);
+
+                    http.Start();
+
+                    // Use StartInfo to ensure default browser launches.
+                    ProcessStartInfo startInfo = new ProcessStartInfo(
+                        authorizeUri.ToString()) { UseShellExecute = true };
+
+                    try
+                    {
+                        // open browser for authentication
+                        Console.WriteLine("Waiting for credentials and authorization.");
+                        Process.Start(startInfo);
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An unexpected error occured while opening the browser.");
+                    }
+
+                    // Handle OAuth redirect and send URL fragment to local server using JS.
+                    await HandleOAuth2Redirect(http);
+
+                    // Handle redirect from JS and process OAuth response.
+                    Uri redirectUri = await HandleJSRedirect(http);
+                    http.Stop();
+
+                    OAuth2Response result = DropboxOAuth2Helper.ParseTokenFragment(redirectUri);
+                    if (result.State != state)
+                    {
+                        // The state in the response doesn't match the state in the request.
+                        return null;
+                    }
+                    Console.WriteLine("OAuth token aquire complete");
+
+                    // Bring console window to the front.
+                    SetForegroundWindow(GetConsoleWindow());
+
+                    DisplayOAuthResult(result);
+
+                    UpdateSettings(result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error: {0}", e.Message);
+                    return null;
+                }
+            }
+
+            return Settings.Default.AccessToken;
+        }
+
+        private static void UpdateSettings(OAuth2Response result)
+        {
+            // Foreach Settting, save off the value retrieved from the result.
+            foreach (System.Configuration.SettingsProperty item in Settings.Default.Properties)
+            {
+                if (typeof(OAuth2Response).GetProperty(item.Name) is PropertyInfo property)
+                {
+                    Settings.Default[item.Name] = property.GetValue(result);
+                }
+            }
+
+            Settings.Default.Save();
+            Settings.Default.Reload();
+        }
+
+        private static void DisplayOAuthResult(OAuth2Response result)
+        {
+            Console.WriteLine("OAuth Result:");
+            Console.WriteLine("\tUid: {0}", result.Uid);
+            Console.WriteLine("\tAccessToken: {0}", result.AccessToken);
+            Console.WriteLine("\tRefreshToken: {0}", result.RefreshToken);
+            Console.WriteLine("\tExpiresAt: {0}", result.ExpiresAt);
+            Console.WriteLine("\tScopes: {0}", string.Join(" ", result.ScopeList?? new string[0]));
+        }
+
+        /// <summary>
+        /// Retrieve the ApiKey from the user
+        /// </summary>
+        /// <returns>Return the ApiKey specified by the user</returns>
+        private static string GetApiKey()
+        {
+            string apiKey = Settings.Default.ApiKey;
+            
+            while (string.IsNullOrWhiteSpace(apiKey))
+            {
+                Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
+                Console.Write("Enter the API Key (or 'Quit' to exit): ");
+                apiKey = Console.ReadLine();
+                if (apiKey.ToLower() == "quit")
+                {
+                    Console.WriteLine("The API Key is required to connect to Dropbox.");
+                    apiKey = null;
+                    break;
+                }
+                else
+                {
+                    Settings.Default.ApiKey = apiKey;
+                }
+            }
+
+            return string.IsNullOrWhiteSpace(apiKey) ? null : apiKey;
+        }
+
+        /// <summary>
+        /// Gets information about the currently authorized account.
+        /// <para>
+        /// This demonstrates calling a simple rpc style api from the Users namespace.
+        /// </para>
+        /// </summary>
+        /// <param name="client">The Dropbox client.</param>
+        /// <returns>An asynchronous task.</returns>
+        static private async Task GetCurrentAccount(DropboxClient client)
+        {
+            Console.WriteLine("Current Account:");
+            var full = await client.Users.GetCurrentAccountAsync();
+
+            Console.WriteLine("Account id    : {0}", full.AccountId);
+            Console.WriteLine("Country       : {0}", full.Country);
+            Console.WriteLine("Email         : {0}", full.Email);
+            Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
+            Console.WriteLine("Locale        : {0}", full.Locale);
+            Console.WriteLine("Name");
+            Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
+            Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
+            Console.WriteLine("  Given    : {0}", full.Name.GivenName);
+            Console.WriteLine("  Surname  : {0}", full.Name.Surname);
+            Console.WriteLine("Referral link : {0}", full.ReferralLink);
+
+            if (full.Team != null)
+            {
+                Console.WriteLine("Team");
+                Console.WriteLine("  Id   : {0}", full.Team.Id);
+                Console.WriteLine("  Name : {0}", full.Team.Name);
+            }
+            else
+            {
+                Console.WriteLine("Team - None");
+            }
         }
 
         /// <summary>
@@ -145,210 +368,6 @@ namespace SimpleTest
                 // This client will operates on this team member's Dropbox.
                 var userClient = client.AsMember(member.Profile.TeamMemberId);
                 await RunUserTests(userClient);
-            }
-        }
-
-        /// <summary>
-        /// Handles the redirect from Dropbox server. Because we are using token flow, the local
-        /// http server cannot directly receive the URL fragment. We need to return a HTML page with
-        /// inline JS which can send URL fragment to local server as URL parameter.
-        /// </summary>
-        /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="Task"/></returns>
-        private async Task HandleOAuth2Redirect(HttpListener http)
-        {
-            var context = await http.GetContextAsync();
-
-            // We only care about request to RedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
-            {
-                context = await http.GetContextAsync();
-            }
-
-            context.Response.ContentType = "text/html";
-
-            // Respond with a page which runs JS and sends URL fragment as query string
-            // to TokenRedirectUri.
-            using (var file = File.OpenRead("index.html"))
-            {
-                file.CopyTo(context.Response.OutputStream);
-            }
-
-            context.Response.OutputStream.Close();
-        }
-
-        /// <summary>
-        /// Handle the redirect from JS and process raw redirect URI with fragment to
-        /// complete the authorization flow.
-        /// </summary>
-        /// <param name="http">The http listener.</param>
-        /// <returns>The <see cref="OAuth2Response"/></returns>
-        private async Task<OAuth2Response> HandleJSRedirect(HttpListener http)
-        {
-            var context = await http.GetContextAsync();
-
-            // We only care about request to TokenRedirectUri endpoint.
-            while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
-            {
-                context = await http.GetContextAsync();
-            }
-
-            var redirectUri = new Uri(context.Request.QueryString["url_with_fragment"]);
-
-            var result = DropboxOAuth2Helper.ParseTokenFragment(redirectUri);
-
-            return result;
-        }
-
-        /// <summary>
-        /// Gets the dropbox access token.
-        /// <para>
-        /// This fetches the access token from the applications settings, if it is not found there
-        /// (or if the user chooses to reset the settings) then the UI in <see cref="LoginForm"/> is
-        /// displayed to authorize the user.
-        /// </para>
-        /// </summary>
-        /// <returns>A valid access token or null.</returns>
-        private async Task<string> GetAccessToken()
-        {
-            Settings.Default.Upgrade();
-            Console.Write("Reset settings (Y/N) ");
-            if (Console.ReadKey().Key == ConsoleKey.Y)
-            {
-                Settings.Default.Reset();
-            }
-            Console.WriteLine();
-
-            string accessToken = Settings.Default.AccessToken;
-
-            if (string.IsNullOrEmpty(accessToken))
-            {
-                string apiKey = GetApiKey();
-                using var http = new HttpListener();
-                try
-                {
-                    Console.WriteLine("Waiting for credentials.");
-                    var state = Guid.NewGuid().ToString("N");
-                    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(
-                        OAuthResponseType.Token, apiKey, RedirectUri, state: state);
-                    
-                    http.Prefixes.Add(LoopbackHost);
-
-                    http.Start();
-
-                    // Use StartInfo to ensure default browser launches.
-                    ProcessStartInfo startInfo = 
-                        new ProcessStartInfo(authorizeUri.ToString()) { UseShellExecute = true };
-
-                    try
-                    {
-                        // open browser for authentication
-                        Process.Start(startInfo);
-                        Console.WriteLine("Waiting for authentication...");
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("An unexpected error occured while opening the browser.");
-                    }
-
-                    // Handle OAuth redirect and send URL fragment to local server using JS.
-                    await HandleOAuth2Redirect(http);
-
-                    // Handle redirect from JS and process OAuth response.
-                    var result = await HandleJSRedirect(http);
-
-                    http.Stop();
-
-                    if (result.State != state)
-                    {
-                        // The state in the response doesn't match the state in the request.
-                        return null;
-                    }
-
-                    Console.WriteLine("and back...");
-
-                    // Bring console window to the front.
-                    SetForegroundWindow(GetConsoleWindow());
-
-                    accessToken = result.AccessToken;
-                    var uid = result.Uid;
-                    Console.WriteLine("Uid: {0}", uid);
-
-                    Settings.Default.AccessToken = accessToken;
-                    Settings.Default.Uid = uid;
-                    Settings.Default.Save();
-                    Settings.Default.Reload();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Error: {0}", e.Message);
-                    return null;
-                }
-            }
-
-            return accessToken;
-        }
-
-        /// <summary>
-        /// Retrieve the ApiKey from the user
-        /// </summary>
-        /// <returns>Return the ApiKey specified by the user</returns>
-        private static string GetApiKey()
-        {
-            string apiKey = Settings.Default.ApiKey;
-
-            while (string.IsNullOrWhiteSpace(apiKey))
-            {
-                Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
-                Console.Write("Enter the API Key (or 'Quit' to exit): ");
-                apiKey = Console.ReadLine();
-                if (apiKey.ToLower() == "quit")
-                {
-                    Console.WriteLine("The API Key is required to connect to Dropbox.");
-                    apiKey = null;
-                    break;
-                }
-                else
-                {
-                    Settings.Default.ApiKey = apiKey;
-                }
-            }
-
-            return string.IsNullOrWhiteSpace(apiKey) ? null : apiKey;
-        }
-        /// <summary>
-        /// Gets information about the currently authorized account.
-        /// <para>
-        /// This demonstrates calling a simple rpc style api from the Users namespace.
-        /// </para>
-        /// </summary>
-        /// <param name="client">The Dropbox client.</param>
-        /// <returns>An asynchronous task.</returns>
-        private async Task GetCurrentAccount(DropboxClient client)
-        {
-            var full = await client.Users.GetCurrentAccountAsync();
-
-            Console.WriteLine("Account id    : {0}", full.AccountId);
-            Console.WriteLine("Country       : {0}", full.Country);
-            Console.WriteLine("Email         : {0}", full.Email);
-            Console.WriteLine("Is paired     : {0}", full.IsPaired ? "Yes" : "No");
-            Console.WriteLine("Locale        : {0}", full.Locale);
-            Console.WriteLine("Name");
-            Console.WriteLine("  Display  : {0}", full.Name.DisplayName);
-            Console.WriteLine("  Familiar : {0}", full.Name.FamiliarName);
-            Console.WriteLine("  Given    : {0}", full.Name.GivenName);
-            Console.WriteLine("  Surname  : {0}", full.Name.Surname);
-            Console.WriteLine("Referral link : {0}", full.ReferralLink);
-
-            if (full.Team != null)
-            {
-                Console.WriteLine("Team");
-                Console.WriteLine("  Id   : {0}", full.Team.Id);
-                Console.WriteLine("  Name : {0}", full.Team.Name);
-            }
-            else
-            {
-                Console.WriteLine("Team - None");
             }
         }
 
