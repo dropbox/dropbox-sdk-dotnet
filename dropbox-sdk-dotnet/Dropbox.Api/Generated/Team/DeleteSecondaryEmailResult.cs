@@ -14,7 +14,7 @@ namespace Dropbox.Api.Team
     /// <para>Result of trying to delete a secondary email address. 'success' is the only value
     /// indicating that a secondary email was successfully deleted. The other values explain
     /// the type of error that occurred, and include the email for which the error
-    /// occured.</para>
+    /// occurred.</para>
     /// </summary>
     public class DeleteSecondaryEmailResult
     {
