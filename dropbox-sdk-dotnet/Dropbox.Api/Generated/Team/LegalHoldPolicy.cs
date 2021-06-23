@@ -33,7 +33,7 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="id">The legal hold id.</param>
         /// <param name="name">Policy name.</param>
-        /// <param name="members">Team members IDs and number of permanetly deleted members
+        /// <param name="members">Team members IDs and number of permanently deleted members
         /// under hold.</param>
         /// <param name="status">The current state of the hold.</param>
         /// <param name="startDate">Start date of the legal hold policy.</param>
@@ -118,7 +118,7 @@ namespace Dropbox.Api.Team
         public string Name { get; protected set; }
 
         /// <summary>
-        /// <para>Team members IDs and number of permanetly deleted members under hold.</para>
+        /// <para>Team members IDs and number of permanently deleted members under hold.</para>
         /// </summary>
         public MembersInfo Members { get; protected set; }
 

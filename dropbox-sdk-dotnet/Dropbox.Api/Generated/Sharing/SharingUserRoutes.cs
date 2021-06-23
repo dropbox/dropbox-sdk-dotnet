@@ -65,7 +65,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="file">File to which to add members.</param>
         /// <param name="members">Members to add. Note that even an email address is given,
-        /// this may result in a user being directy added to the membership if that email is
+        /// this may result in a user being directly added to the membership if that email is
         /// the user's main account email.</param>
         /// <param name="customMessage">Message to send to added members in their
         /// invitation.</param>
@@ -102,7 +102,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="file">File to which to add members.</param>
         /// <param name="members">Members to add. Note that even an email address is given,
-        /// this may result in a user being directy added to the membership if that email is
+        /// this may result in a user being directly added to the membership if that email is
         /// the user's main account email.</param>
         /// <param name="customMessage">Message to send to added members in their
         /// invitation.</param>

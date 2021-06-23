@@ -14,7 +14,7 @@ namespace Dropbox.Api.Team
     /// <para>Result of trying to resend verification email to a secondary email address.
     /// 'success' is the only value indicating that a verification email was successfully sent.
     /// The other values explain the type of error that occurred, and include the email for
-    /// which the error occured.</para>
+    /// which the error occurred.</para>
     /// </summary>
     public class ResendSecondaryEmailResult
     {

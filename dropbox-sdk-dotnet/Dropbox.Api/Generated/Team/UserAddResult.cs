@@ -14,7 +14,7 @@ namespace Dropbox.Api.Team
     /// <para>Result of trying to add secondary emails to a user. 'success' is the only value
     /// indicating that a user was successfully retrieved for adding secondary emails. The
     /// other values explain the type of error that occurred, and include the user for which
-    /// the error occured.</para>
+    /// the error occurred.</para>
     /// </summary>
     public class UserAddResult
     {
