@@ -2674,7 +2674,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>A successful temporary upload link consumption request returns the content
         /// hash of the uploaded data in JSON format.</para>
         /// <para></para>
-        /// <para>Example succesful temporary upload link consumption response:</para>
+        /// <para>Example successful temporary upload link consumption response:</para>
         /// <para>{"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}</para>
         /// <para></para>
         /// <para>An unsuccessful temporary upload link consumption request returns any of the
@@ -2743,7 +2743,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>A successful temporary upload link consumption request returns the content
         /// hash of the uploaded data in JSON format.</para>
         /// <para></para>
-        /// <para>Example succesful temporary upload link consumption response:</para>
+        /// <para>Example successful temporary upload link consumption response:</para>
         /// <para>{"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}</para>
         /// <para></para>
         /// <para>An unsuccessful temporary upload link consumption request returns any of the

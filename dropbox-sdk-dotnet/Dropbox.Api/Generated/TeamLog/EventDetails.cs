@@ -8844,6 +8844,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// InviteAcceptanceEmailPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsInviteAcceptanceEmailPolicyChangedDetails
+        {
+            get
+            {
+                return this is InviteAcceptanceEmailPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InviteAcceptanceEmailPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public InviteAcceptanceEmailPolicyChangedDetails AsInviteAcceptanceEmailPolicyChangedDetails
+        {
+            get
+            {
+                return this as InviteAcceptanceEmailPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// MemberRequestsChangePolicyDetails</para>
         /// </summary>
         public bool IsMemberRequestsChangePolicyDetails
@@ -13325,6 +13349,12 @@ namespace Dropbox.Api.TeamLog
                     IntegrationPolicyChangedDetails.Encoder.EncodeFields((IntegrationPolicyChangedDetails)value, writer);
                     return;
                 }
+                if (value is InviteAcceptanceEmailPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "invite_acceptance_email_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    InviteAcceptanceEmailPolicyChangedDetails.Encoder.EncodeFields((InviteAcceptanceEmailPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is MemberRequestsChangePolicyDetails)
                 {
                     WriteProperty(".tag", "member_requests_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -14671,6 +14701,8 @@ namespace Dropbox.Api.TeamLog
                         return GroupUserManagementChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "integration_policy_changed_details":
                         return IntegrationPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "invite_acceptance_email_policy_changed_details":
+                        return InviteAcceptanceEmailPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "member_requests_change_policy_details":
                         return MemberRequestsChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "member_send_invite_policy_changed_details":
@@ -48983,6 +49015,98 @@ namespace Dropbox.Api.TeamLog
                 public override IntegrationPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new IntegrationPolicyChangedDetails(global::Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The invite acceptance email policy changed details object</para>
+        /// </summary>
+        public sealed class InviteAcceptanceEmailPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InviteAcceptanceEmailPolicyChangedDetails> Encoder = new InviteAcceptanceEmailPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InviteAcceptanceEmailPolicyChangedDetails> Decoder = new InviteAcceptanceEmailPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="InviteAcceptanceEmailPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public InviteAcceptanceEmailPolicyChangedDetails(global::Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="InviteAcceptanceEmailPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private InviteAcceptanceEmailPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InviteAcceptanceEmailPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class InviteAcceptanceEmailPolicyChangedDetailsEncoder : enc.StructEncoder<InviteAcceptanceEmailPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InviteAcceptanceEmailPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("invite_acceptance_email_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InviteAcceptanceEmailPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class InviteAcceptanceEmailPolicyChangedDetailsDecoder : enc.StructDecoder<InviteAcceptanceEmailPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="InviteAcceptanceEmailPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InviteAcceptanceEmailPolicyChangedDetails Create()
+                {
+                    return new InviteAcceptanceEmailPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override InviteAcceptanceEmailPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new InviteAcceptanceEmailPolicyChangedDetails(global::Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
