@@ -14,8 +14,7 @@ namespace Dropbox.Api.Sharing
     /// <para>Arguments for <see
     /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.UpdateFileMemberAsync" />.</para>
     /// </summary>
-    /// <seealso cref="Global::Dropbox.Api.Sharing.ChangeFileMemberAccessArgs" />
-    public class UpdateFileMemberArgs : ChangeFileMemberAccessArgs
+    public class UpdateFileMemberArgs
     {
         #pragma warning disable 108
 
@@ -39,8 +38,33 @@ namespace Dropbox.Api.Sharing
         public UpdateFileMemberArgs(string file,
                                     MemberSelector member,
                                     AccessLevel accessLevel)
-            : base(file, member, accessLevel)
         {
+            if (file == null)
+            {
+                throw new sys.ArgumentNullException("file");
+            }
+            if (file.Length < 1)
+            {
+                throw new sys.ArgumentOutOfRangeException("file", "Length should be at least 1");
+            }
+            if (!re.Regex.IsMatch(file, @"\A(?:((/|id:).*|nspath:[0-9]+:.*)|ns:[0-9]+(/.*)?)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("file", @"Value should match pattern '\A(?:((/|id:).*|nspath:[0-9]+:.*)|ns:[0-9]+(/.*)?)\z'");
+            }
+
+            if (member == null)
+            {
+                throw new sys.ArgumentNullException("member");
+            }
+
+            if (accessLevel == null)
+            {
+                throw new sys.ArgumentNullException("accessLevel");
+            }
+
+            this.File = file;
+            this.Member = member;
+            this.AccessLevel = accessLevel;
         }
 
         /// <summary>
@@ -53,6 +77,21 @@ namespace Dropbox.Api.Sharing
         public UpdateFileMemberArgs()
         {
         }
+
+        /// <summary>
+        /// <para>File for which we are changing a member's access.</para>
+        /// </summary>
+        public string File { get; protected set; }
+
+        /// <summary>
+        /// <para>The member whose access we are changing.</para>
+        /// </summary>
+        public MemberSelector Member { get; protected set; }
+
+        /// <summary>
+        /// <para>The new access level for the member.</para>
+        /// </summary>
+        public AccessLevel AccessLevel { get; protected set; }
 
         #region Encoder class
 
