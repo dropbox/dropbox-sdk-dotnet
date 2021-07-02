@@ -3148,10 +3148,9 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
         /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
-        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
-        /// entries.</para>
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />
+        /// with the returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to
+        /// retrieve more entries.</para>
         /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
         /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
         /// through each entry in order and process them as follows to keep your local state in
@@ -3170,9 +3169,7 @@ namespace Dropbox.Api.Files.Routes
         /// the given path, remove it and all its children. If there's nothing at the given
         /// path, ignore this entry.</para>
         /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> calls
         /// with same parameters are made simultaneously by same API app for same user. If your
         /// app implements retry logic, please hold off the retry until the previous request
@@ -3208,10 +3205,9 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
         /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
-        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
-        /// entries.</para>
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />
+        /// with the returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to
+        /// retrieve more entries.</para>
         /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
         /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
         /// through each entry in order and process them as follows to keep your local state in
@@ -3230,9 +3226,7 @@ namespace Dropbox.Api.Files.Routes
         /// the given path, remove it and all its children. If there's nothing at the given
         /// path, ignore this entry.</para>
         /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> calls
         /// with same parameters are made simultaneously by same API app for same user. If your
         /// app implements retry logic, please hold off the retry until the previous request
@@ -3378,11 +3372,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
         /// paginate through all files and retrieve updates to the folder, following the same
         /// rules as documented for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />.</para>
         /// </summary>
         /// <param name="listFolderContinueArg">The request parameters</param>
@@ -3414,17 +3406,13 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
         /// paginate through all files and retrieve updates to the folder, following the same
         /// rules as documented for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -3442,9 +3430,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder continue route.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -3483,13 +3469,11 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderGetLatestCursorAsync" />
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync"
-        /// /> doesn't return any entries. This endpoint is for app which only needs to know
-        /// about new files and modifications and doesn't need to know about files that already
-        /// exist in Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync" />
+        /// doesn't return any entries. This endpoint is for app which only needs to know about
+        /// new files and modifications and doesn't need to know about files that already exist
+        /// in Dropbox.</para>
         /// </summary>
         /// <param name="listFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3521,13 +3505,11 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderGetLatestCursorAsync" />
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync"
-        /// /> doesn't return any entries. This endpoint is for app which only needs to know
-        /// about new files and modifications and doesn't need to know about files that already
-        /// exist in Dropbox.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync" />
+        /// doesn't return any entries. This endpoint is for app which only needs to know about
+        /// new files and modifications and doesn't need to know about files that already exist
+        /// in Dropbox.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
@@ -3670,9 +3652,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, this
-        /// call gives you a low-latency way to monitor an account for file changes. The
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />,
+        /// this call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
         /// endpoint is useful mostly for client-side apps. If you're looking for server-side
         /// notifications, check out our <a
@@ -3708,9 +3689,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, this
-        /// call gives you a low-latency way to monitor an account for file changes. The
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />,
+        /// this call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
         /// endpoint is useful mostly for client-side apps. If you're looking for server-side
         /// notifications, check out our <a
@@ -3718,9 +3698,7 @@ namespace Dropbox.Api.Files.Routes
         /// documentation</a>.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. Cursors
         /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
         /// /> to <c>true</c> are not supported.</param>
@@ -3746,9 +3724,7 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. Cursors
         /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
         /// /> to <c>true</c> are not supported.</param>

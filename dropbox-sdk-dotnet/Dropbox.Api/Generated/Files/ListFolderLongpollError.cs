@@ -150,7 +150,6 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Indicates that the cursor has been invalidated. Call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> to obtain a new
         /// cursor.</para>
         /// </summary>

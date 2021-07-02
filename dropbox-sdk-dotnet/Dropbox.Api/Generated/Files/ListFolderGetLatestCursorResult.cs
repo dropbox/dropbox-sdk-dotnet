@@ -32,7 +32,6 @@ namespace Dropbox.Api.Files
         /// /> class.</para>
         /// </summary>
         /// <param name="cursor">Pass the cursor into <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to see
         /// what's changed in the folder since your previous query.</param>
         public ListFolderGetLatestCursorResult(string cursor)
@@ -62,7 +61,6 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Pass the cursor into <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to see
         /// what's changed in the folder since your previous query.</para>
         /// </summary>
