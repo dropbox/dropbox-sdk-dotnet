@@ -32,8 +32,7 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="changes">Indicates whether new changes are available. If true, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
         /// retrieve the changes.</param>
         /// <param name="backoff">If present, backoff for at least this many seconds before
         /// calling <see
@@ -59,7 +58,6 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Indicates whether new changes are available. If true, call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> to
         /// retrieve the changes.</para>
         /// </summary>

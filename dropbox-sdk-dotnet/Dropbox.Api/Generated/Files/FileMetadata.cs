@@ -56,7 +56,6 @@ namespace Dropbox.Api.Files
         /// behavior will match the path provided in the Core API v1, and at least the last
         /// path component will have the correct casing. Changes to only the casing of paths
         /// won't be returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
         /// <param name="parentSharedFolderId">Please use <see
@@ -64,9 +63,7 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         /// <param name="mediaInfo">Additional information if the file is a photo or video.
         /// This field will not be set on entries returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailBatchAsync" />, starting
         /// December 2, 2019.</param>
@@ -81,7 +78,6 @@ namespace Dropbox.Api.Files
         /// properties with the property template specified.</param>
         /// <param name="hasExplicitSharedMembers">This flag will only be present if
         /// include_has_explicit_shared_members  is true in <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this  flag
         /// is present, it will be true if this file has any explicit shared  members. This is
@@ -210,9 +206,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>Additional information if the file is a photo or video. This field will not
         /// be set on entries returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailBatchAsync" />, starting
         /// December 2, 2019.</para>
@@ -249,12 +243,11 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>This flag will only be present if include_has_explicit_shared_members  is
-        /// true in <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this  flag
-        /// is present, it will be true if this file has any explicit shared  members. This is
-        /// different from sharing_info in that this could be true  in the case where a file
-        /// has explicit members but is not contained within  a shared folder.</para>
+        /// true in <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this
+        /// flag is present, it will be true if this file has any explicit shared  members.
+        /// This is different from sharing_info in that this could be true  in the case where a
+        /// file has explicit members but is not contained within  a shared folder.</para>
         /// </summary>
         public bool? HasExplicitSharedMembers { get; protected set; }
 
