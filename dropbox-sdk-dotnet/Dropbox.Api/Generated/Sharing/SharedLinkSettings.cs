@@ -47,12 +47,15 @@ namespace Dropbox.Api.Sharing
         /// link. Note, modifying access level for an existing link is not supported.</param>
         /// <param name="requestedVisibility">Use <paramref name="audience" /> instead.  The
         /// requested access for this shared link.</param>
+        /// <param name="allowDownload">Boolean flag to allow or not download capabilities for
+        /// shared links.</param>
         public SharedLinkSettings(bool? requirePassword = null,
                                   string linkPassword = null,
                                   sys.DateTime? expires = null,
                                   LinkAudience audience = null,
                                   RequestedLinkAccessLevel access = null,
-                                  RequestedVisibility requestedVisibility = null)
+                                  RequestedVisibility requestedVisibility = null,
+                                  bool? allowDownload = null)
         {
             this.RequirePassword = requirePassword;
             this.LinkPassword = linkPassword;
@@ -60,6 +63,7 @@ namespace Dropbox.Api.Sharing
             this.Audience = audience;
             this.Access = access;
             this.RequestedVisibility = requestedVisibility;
+            this.AllowDownload = allowDownload;
         }
 
         /// <summary>
@@ -110,6 +114,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public RequestedVisibility RequestedVisibility { get; protected set; }
 
+        /// <summary>
+        /// <para>Boolean flag to allow or not download capabilities for shared links.</para>
+        /// </summary>
+        public bool? AllowDownload { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -147,6 +156,10 @@ namespace Dropbox.Api.Sharing
                 if (value.RequestedVisibility != null)
                 {
                     WriteProperty("requested_visibility", value.RequestedVisibility, writer, global::Dropbox.Api.Sharing.RequestedVisibility.Encoder);
+                }
+                if (value.AllowDownload != null)
+                {
+                    WriteProperty("allow_download", value.AllowDownload.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -197,6 +210,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "requested_visibility":
                         value.RequestedVisibility = global::Dropbox.Api.Sharing.RequestedVisibility.Decoder.Decode(reader);
+                        break;
+                    case "allow_download":
+                        value.AllowDownload = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

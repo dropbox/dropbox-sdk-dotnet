@@ -35,6 +35,23 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="canRevoke">Whether the caller can revoke the shared link.</param>
+        /// <param name="visibilityPolicies">A list of policies that the user might be able to
+        /// set for the visibility.</param>
+        /// <param name="canSetExpiry">Whether the user can set the expiry settings of the
+        /// link. This refers to the ability to create a new expiry and modify an existing
+        /// expiry.</param>
+        /// <param name="canRemoveExpiry">Whether the user can remove the expiry of the
+        /// link.</param>
+        /// <param name="allowDownload">Whether the link can be downloaded or not.</param>
+        /// <param name="canAllowDownload">Whether the user can allow downloads via the link.
+        /// This refers to the ability to remove a no-download restriction on the link.</param>
+        /// <param name="canDisallowDownload">Whether the user can disallow downloads via the
+        /// link. This refers to the ability to impose a no-download restriction on the
+        /// link.</param>
+        /// <param name="allowComments">Whether comments are enabled for the linked file. This
+        /// takes the team commenting policy into account.</param>
+        /// <param name="teamRestrictsComments">Whether the team has disabled commenting
+        /// globally.</param>
         /// <param name="resolvedVisibility">The current visibility of the link after
         /// considering the shared links policies of the the team (in case the link's owner is
         /// part of a team) and the shared folder (in case the linked file is part of a shared
@@ -58,19 +75,64 @@ namespace Dropbox.Api.Sharing
         /// privileges. The `link_access_level` is a property of the link, and does not depend
         /// on who is calling this API. In particular, `link_access_level` does not take into
         /// account the API caller's current permissions to the content.</param>
+        /// <param name="audienceOptions">A list of link audience options the user might be
+        /// able to set as the new audience.</param>
+        /// <param name="canSetPassword">Whether the user can set a password for the
+        /// link.</param>
+        /// <param name="canRemovePassword">Whether the user can remove the password of the
+        /// link.</param>
+        /// <param name="requirePassword">Whether the user is required to provide a password to
+        /// view the link.</param>
+        /// <param name="canUseExtendedSharingControls">Whether the user can use extended
+        /// sharing controls, based on their account type.</param>
         public LinkPermissions(bool canRevoke,
+                               col.IEnumerable<VisibilityPolicy> visibilityPolicies,
+                               bool canSetExpiry,
+                               bool canRemoveExpiry,
+                               bool allowDownload,
+                               bool canAllowDownload,
+                               bool canDisallowDownload,
+                               bool allowComments,
+                               bool teamRestrictsComments,
                                ResolvedVisibility resolvedVisibility = null,
                                RequestedVisibility requestedVisibility = null,
                                SharedLinkAccessFailureReason revokeFailureReason = null,
                                LinkAudience effectiveAudience = null,
-                               LinkAccessLevel linkAccessLevel = null)
+                               LinkAccessLevel linkAccessLevel = null,
+                               col.IEnumerable<LinkAudienceOption> audienceOptions = null,
+                               bool? canSetPassword = null,
+                               bool? canRemovePassword = null,
+                               bool? requirePassword = null,
+                               bool? canUseExtendedSharingControls = null)
         {
+            var visibilityPoliciesList = enc.Util.ToList(visibilityPolicies);
+
+            if (visibilityPolicies == null)
+            {
+                throw new sys.ArgumentNullException("visibilityPolicies");
+            }
+
+            var audienceOptionsList = enc.Util.ToList(audienceOptions);
+
             this.CanRevoke = canRevoke;
+            this.VisibilityPolicies = visibilityPoliciesList;
+            this.CanSetExpiry = canSetExpiry;
+            this.CanRemoveExpiry = canRemoveExpiry;
+            this.AllowDownload = allowDownload;
+            this.CanAllowDownload = canAllowDownload;
+            this.CanDisallowDownload = canDisallowDownload;
+            this.AllowComments = allowComments;
+            this.TeamRestrictsComments = teamRestrictsComments;
             this.ResolvedVisibility = resolvedVisibility;
             this.RequestedVisibility = requestedVisibility;
             this.RevokeFailureReason = revokeFailureReason;
             this.EffectiveAudience = effectiveAudience;
             this.LinkAccessLevel = linkAccessLevel;
+            this.AudienceOptions = audienceOptionsList;
+            this.CanSetPassword = canSetPassword;
+            this.CanRemovePassword = canRemovePassword;
+            this.RequirePassword = requirePassword;
+            this.CanUseExtendedSharingControls = canUseExtendedSharingControls;
         }
 
         /// <summary>
@@ -88,6 +150,51 @@ namespace Dropbox.Api.Sharing
         /// <para>Whether the caller can revoke the shared link.</para>
         /// </summary>
         public bool CanRevoke { get; protected set; }
+
+        /// <summary>
+        /// <para>A list of policies that the user might be able to set for the
+        /// visibility.</para>
+        /// </summary>
+        public col.IList<VisibilityPolicy> VisibilityPolicies { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can set the expiry settings of the link. This refers to the
+        /// ability to create a new expiry and modify an existing expiry.</para>
+        /// </summary>
+        public bool CanSetExpiry { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can remove the expiry of the link.</para>
+        /// </summary>
+        public bool CanRemoveExpiry { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the link can be downloaded or not.</para>
+        /// </summary>
+        public bool AllowDownload { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can allow downloads via the link. This refers to the ability
+        /// to remove a no-download restriction on the link.</para>
+        /// </summary>
+        public bool CanAllowDownload { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can disallow downloads via the link. This refers to the
+        /// ability to impose a no-download restriction on the link.</para>
+        /// </summary>
+        public bool CanDisallowDownload { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether comments are enabled for the linked file. This takes the team
+        /// commenting policy into account.</para>
+        /// </summary>
+        public bool AllowComments { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the team has disabled commenting globally.</para>
+        /// </summary>
+        public bool TeamRestrictsComments { get; protected set; }
 
         /// <summary>
         /// <para>The current visibility of the link after considering the shared links
@@ -131,6 +238,33 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public LinkAccessLevel LinkAccessLevel { get; protected set; }
 
+        /// <summary>
+        /// <para>A list of link audience options the user might be able to set as the new
+        /// audience.</para>
+        /// </summary>
+        public col.IList<LinkAudienceOption> AudienceOptions { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can set a password for the link.</para>
+        /// </summary>
+        public bool? CanSetPassword { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can remove the password of the link.</para>
+        /// </summary>
+        public bool? CanRemovePassword { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user is required to provide a password to view the link.</para>
+        /// </summary>
+        public bool? RequirePassword { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can use extended sharing controls, based on their account
+        /// type.</para>
+        /// </summary>
+        public bool? CanUseExtendedSharingControls { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -146,6 +280,14 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(LinkPermissions value, enc.IJsonWriter writer)
             {
                 WriteProperty("can_revoke", value.CanRevoke, writer, enc.BooleanEncoder.Instance);
+                WriteListProperty("visibility_policies", value.VisibilityPolicies, writer, global::Dropbox.Api.Sharing.VisibilityPolicy.Encoder);
+                WriteProperty("can_set_expiry", value.CanSetExpiry, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("can_remove_expiry", value.CanRemoveExpiry, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("allow_download", value.AllowDownload, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("can_allow_download", value.CanAllowDownload, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("can_disallow_download", value.CanDisallowDownload, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("allow_comments", value.AllowComments, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("team_restricts_comments", value.TeamRestrictsComments, writer, enc.BooleanEncoder.Instance);
                 if (value.ResolvedVisibility != null)
                 {
                     WriteProperty("resolved_visibility", value.ResolvedVisibility, writer, global::Dropbox.Api.Sharing.ResolvedVisibility.Encoder);
@@ -165,6 +307,26 @@ namespace Dropbox.Api.Sharing
                 if (value.LinkAccessLevel != null)
                 {
                     WriteProperty("link_access_level", value.LinkAccessLevel, writer, global::Dropbox.Api.Sharing.LinkAccessLevel.Encoder);
+                }
+                if (value.AudienceOptions.Count > 0)
+                {
+                    WriteListProperty("audience_options", value.AudienceOptions, writer, global::Dropbox.Api.Sharing.LinkAudienceOption.Encoder);
+                }
+                if (value.CanSetPassword != null)
+                {
+                    WriteProperty("can_set_password", value.CanSetPassword.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.CanRemovePassword != null)
+                {
+                    WriteProperty("can_remove_password", value.CanRemovePassword.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.RequirePassword != null)
+                {
+                    WriteProperty("require_password", value.RequirePassword.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.CanUseExtendedSharingControls != null)
+                {
+                    WriteProperty("can_use_extended_sharing_controls", value.CanUseExtendedSharingControls.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -201,6 +363,30 @@ namespace Dropbox.Api.Sharing
                     case "can_revoke":
                         value.CanRevoke = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
+                    case "visibility_policies":
+                        value.VisibilityPolicies = ReadList<VisibilityPolicy>(reader, global::Dropbox.Api.Sharing.VisibilityPolicy.Decoder);
+                        break;
+                    case "can_set_expiry":
+                        value.CanSetExpiry = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_remove_expiry":
+                        value.CanRemoveExpiry = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "allow_download":
+                        value.AllowDownload = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_allow_download":
+                        value.CanAllowDownload = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_disallow_download":
+                        value.CanDisallowDownload = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "allow_comments":
+                        value.AllowComments = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "team_restricts_comments":
+                        value.TeamRestrictsComments = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
                     case "resolved_visibility":
                         value.ResolvedVisibility = global::Dropbox.Api.Sharing.ResolvedVisibility.Decoder.Decode(reader);
                         break;
@@ -215,6 +401,21 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "link_access_level":
                         value.LinkAccessLevel = global::Dropbox.Api.Sharing.LinkAccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "audience_options":
+                        value.AudienceOptions = ReadList<LinkAudienceOption>(reader, global::Dropbox.Api.Sharing.LinkAudienceOption.Decoder);
+                        break;
+                    case "can_set_password":
+                        value.CanSetPassword = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_remove_password":
+                        value.CanRemovePassword = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "require_password":
+                        value.RequirePassword = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_use_extended_sharing_controls":
+                        value.CanUseExtendedSharingControls = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
