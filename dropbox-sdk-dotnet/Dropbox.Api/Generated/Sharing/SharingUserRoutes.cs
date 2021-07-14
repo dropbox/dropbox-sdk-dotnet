@@ -538,10 +538,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Create a shared link.</para>
         /// <para>If a shared link already exists for the given path, that link is
         /// returned.</para>
-        /// <para>Note that in the returned <see cref="PathLinkMetadata" />, the <see
-        /// cref="Dropbox.Api.Sharing.PathLinkMetadata.Url" /> field is the shortened URL if
-        /// <see cref="Dropbox.Api.Sharing.CreateSharedLinkArg.ShortUrl" /> argument is set to
-        /// <c>true</c>.</para>
         /// <para>Previously, it was technically possible to break a shared link by moving or
         /// renaming the corresponding file or folder. In the future, this will no longer be
         /// the case, so your app shouldn't rely on this behavior. Instead, if your app needs
@@ -582,10 +578,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Create a shared link.</para>
         /// <para>If a shared link already exists for the given path, that link is
         /// returned.</para>
-        /// <para>Note that in the returned <see cref="PathLinkMetadata" />, the <see
-        /// cref="Dropbox.Api.Sharing.PathLinkMetadata.Url" /> field is the shortened URL if
-        /// <see cref="Dropbox.Api.Sharing.CreateSharedLinkArg.ShortUrl" /> argument is set to
-        /// <c>true</c>.</para>
         /// <para>Previously, it was technically possible to break a shared link by moving or
         /// renaming the corresponding file or folder. In the future, this will no longer be
         /// the case, so your app shouldn't rely on this behavior. Instead, if your app needs
@@ -594,7 +586,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// />.</para>
         /// </summary>
         /// <param name="path">The path to share.</param>
-        /// <param name="shortUrl">Whether to return a shortened URL.</param>
+        /// <param name="shortUrl">The short url</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
         /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
         /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
@@ -620,7 +612,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the create shared link route.</para>
         /// </summary>
         /// <param name="path">The path to share.</param>
-        /// <param name="shortUrl">Whether to return a shortened URL.</param>
+        /// <param name="shortUrl">The short url</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
         /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
         /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
@@ -1271,7 +1263,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// including collection links, up to a maximum of 1000 links.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path.  Collection links are never returned in this case.</para>
-        /// <para>Note that the url field in the response is never the shortened URL.</para>
         /// </summary>
         /// <param name="getSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1309,7 +1300,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// including collection links, up to a maximum of 1000 links.</para>
         /// <para>If a non-empty path is given, returns a list of all shared links that allow
         /// access to the given path.  Collection links are never returned in this case.</para>
-        /// <para>Note that the url field in the response is never the shortened URL.</para>
         /// </summary>
         /// <param name="path">See <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync" />
