@@ -12,7 +12,7 @@ namespace Dropbox.Api.TeamLog
 
     /// <summary>
     /// <para>Policy for deciding whether the team's default expiration days policy must be
-    /// enforced when an externally shared is updated</para>
+    /// enforced when an externally shared link is updated</para>
     /// </summary>
     public class ChangeLinkExpirationPolicy
     {

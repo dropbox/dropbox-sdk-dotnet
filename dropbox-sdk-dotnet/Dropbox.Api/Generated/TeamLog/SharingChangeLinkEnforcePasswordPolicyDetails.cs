@@ -11,8 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the allow remove or change expiration policy for the links shared outside
-    /// of the team.</para>
+    /// <para>Changed the password requirement for the links shared outside of the team.</para>
     /// </summary>
     public class SharingChangeLinkEnforcePasswordPolicyDetails
     {
