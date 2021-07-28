@@ -43090,8 +43090,8 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(team_policies) Changed the password requirement for the links shared outside
-        /// of the team</para>
+        /// <para>(team_policies) Changed the allow remove or change expiration policy for the
+        /// links shared outside of the team</para>
         /// </summary>
         public sealed class SharingChangeLinkAllowChangeExpirationPolicy : EventTypeArg
         {
@@ -43239,8 +43239,8 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(team_policies) Changed the allow remove or change expiration policy for the
-        /// links shared outside of the team</para>
+        /// <para>(team_policies) Changed the password requirement for the links shared outside
+        /// of the team</para>
         /// </summary>
         public sealed class SharingChangeLinkEnforcePasswordPolicy : EventTypeArg
         {
