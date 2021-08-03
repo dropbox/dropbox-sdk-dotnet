@@ -1146,7 +1146,6 @@ class _CSharpGenerator(CodeBackend):
         fields = list(union.fields)
         parent = union.parent_type
         while parent:
-            print(parent)
             fields.extend(parent.fields)
             parent = parent.parent_type
 
