@@ -101,6 +101,28 @@ namespace Dropbox.Api.Team
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is UserNotFound</para>
+        /// </summary>
+        public bool IsUserNotFound
+        {
+            get
+            {
+                return this is UserNotFound;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UserNotFound, or <c>null</c>.</para>
+        /// </summary>
+        public UserNotFound AsUserNotFound
+        {
+            get
+            {
+                return this as UserNotFound;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -131,6 +153,12 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "user_not_in_team", writer, enc.StringEncoder.Instance);
                     UserNotInTeam.Encoder.EncodeFields((UserNotInTeam)value, writer);
+                    return;
+                }
+                if (value is UserNotFound)
+                {
+                    WriteProperty(".tag", "user_not_found", writer, enc.StringEncoder.Instance);
+                    UserNotFound.Encoder.EncodeFields((UserNotFound)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -172,6 +200,8 @@ namespace Dropbox.Api.Team
                         return Other.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
                         return UserNotInTeam.Decoder.DecodeFields(reader);
+                    case "user_not_found":
+                        return UserNotFound.Decoder.DecodeFields(reader);
                 }
             }
         }
@@ -381,6 +411,77 @@ namespace Dropbox.Api.Team
                 protected override UserNotInTeam Create()
                 {
                     return UserNotInTeam.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>No matching user found. The provided team_member_id, email, or external_id
+        /// does not exist on this team.</para>
+        /// </summary>
+        public sealed class UserNotFound : MembersDeleteProfilePhotoError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UserNotFound> Encoder = new UserNotFoundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UserNotFound> Decoder = new UserNotFoundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserNotFound" />
+            /// class.</para>
+            /// </summary>
+            private UserNotFound()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UserNotFound</para>
+            /// </summary>
+            public static readonly UserNotFound Instance = new UserNotFound();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UserNotFound" />.</para>
+            /// </summary>
+            private class UserNotFoundEncoder : enc.StructEncoder<UserNotFound>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UserNotFound value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UserNotFound" />.</para>
+            /// </summary>
+            private class UserNotFoundDecoder : enc.StructDecoder<UserNotFound>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UserNotFound" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UserNotFound Create()
+                {
+                    return UserNotFound.Instance;
                 }
 
             }
