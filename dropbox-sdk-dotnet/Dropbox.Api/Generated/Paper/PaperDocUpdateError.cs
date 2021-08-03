@@ -189,6 +189,51 @@ namespace Dropbox.Api.Paper
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// InsufficientPermissions</para>
+        /// </summary>
+        public bool IsInsufficientPermissions
+        {
+            get
+            {
+                return this is InsufficientPermissions;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InsufficientPermissions, or <c>null</c>.</para>
+        /// </summary>
+        public InsufficientPermissions AsInsufficientPermissions
+        {
+            get
+            {
+                return this as InsufficientPermissions;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Other</para>
+        /// </summary>
+        public bool IsOther
+        {
+            get
+            {
+                return this is Other;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
+        /// </summary>
+        public Other AsOther
+        {
+            get
+            {
+                return this as Other;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -245,6 +290,18 @@ namespace Dropbox.Api.Paper
                     DocNotFound.Encoder.EncodeFields((DocNotFound)value, writer);
                     return;
                 }
+                if (value is InsufficientPermissions)
+                {
+                    WriteProperty(".tag", "insufficient_permissions", writer, enc.StringEncoder.Instance);
+                    InsufficientPermissions.Encoder.EncodeFields((InsufficientPermissions)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
@@ -291,6 +348,10 @@ namespace Dropbox.Api.Paper
                         return DocDeleted.Decoder.DecodeFields(reader);
                     case "doc_not_found":
                         return DocNotFound.Decoder.DecodeFields(reader);
+                    case "insufficient_permissions":
+                        return InsufficientPermissions.Decoder.DecodeFields(reader);
+                    case "other":
+                        return Other.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -785,6 +846,150 @@ namespace Dropbox.Api.Paper
                 protected override DocNotFound Create()
                 {
                     return DocNotFound.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Your account does not have permissions to perform this action. This may be
+        /// due to it only having access to Paper as files in the Dropbox filesystem. For more
+        /// information, refer to the <a
+        /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
+        /// Migration Guide</a>.</para>
+        /// </summary>
+        public sealed class InsufficientPermissions : PaperDocUpdateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InsufficientPermissions> Encoder = new InsufficientPermissionsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InsufficientPermissions> Decoder = new InsufficientPermissionsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InsufficientPermissions" />
+            /// class.</para>
+            /// </summary>
+            private InsufficientPermissions()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InsufficientPermissions</para>
+            /// </summary>
+            public static readonly InsufficientPermissions Instance = new InsufficientPermissions();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InsufficientPermissions" />.</para>
+            /// </summary>
+            private class InsufficientPermissionsEncoder : enc.StructEncoder<InsufficientPermissions>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InsufficientPermissions value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InsufficientPermissions" />.</para>
+            /// </summary>
+            private class InsufficientPermissionsDecoder : enc.StructDecoder<InsufficientPermissions>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InsufficientPermissions"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InsufficientPermissions Create()
+                {
+                    return InsufficientPermissions.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : PaperDocUpdateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
+            /// </summary>
+            private Other()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Other</para>
+            /// </summary>
+            public static readonly Other Instance = new Other();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherEncoder : enc.StructEncoder<Other>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherDecoder : enc.StructDecoder<Other>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return Other.Instance;
                 }
 
             }
