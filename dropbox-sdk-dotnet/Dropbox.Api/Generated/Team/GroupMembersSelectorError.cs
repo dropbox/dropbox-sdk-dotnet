@@ -81,6 +81,50 @@ namespace Dropbox.Api.Team
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is GroupNotFound</para>
+        /// </summary>
+        public bool IsGroupNotFound
+        {
+            get
+            {
+                return this is GroupNotFound;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GroupNotFound, or <c>null</c>.</para>
+        /// </summary>
+        public GroupNotFound AsGroupNotFound
+        {
+            get
+            {
+                return this as GroupNotFound;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Other</para>
+        /// </summary>
+        public bool IsOther
+        {
+            get
+            {
+                return this is Other;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Other, or <c>null</c>.</para>
+        /// </summary>
+        public Other AsOther
+        {
+            get
+            {
+                return this as Other;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -105,6 +149,18 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "system_managed_group_disallowed", writer, enc.StringEncoder.Instance);
                     SystemManagedGroupDisallowed.Encoder.EncodeFields((SystemManagedGroupDisallowed)value, writer);
+                    return;
+                }
+                if (value is GroupNotFound)
+                {
+                    WriteProperty(".tag", "group_not_found", writer, enc.StringEncoder.Instance);
+                    GroupNotFound.Encoder.EncodeFields((GroupNotFound)value, writer);
+                    return;
+                }
+                if (value is Other)
+                {
+                    WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
+                    Other.Encoder.EncodeFields((Other)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -144,6 +200,10 @@ namespace Dropbox.Api.Team
                         return MemberNotInGroup.Decoder.DecodeFields(reader);
                     case "system_managed_group_disallowed":
                         return SystemManagedGroupDisallowed.Decoder.DecodeFields(reader);
+                    case "group_not_found":
+                        return GroupNotFound.Decoder.DecodeFields(reader);
+                    case "other":
+                        return Other.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -286,6 +346,145 @@ namespace Dropbox.Api.Team
                 protected override SystemManagedGroupDisallowed Create()
                 {
                     return SystemManagedGroupDisallowed.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>No matching group found. No groups match the specified group ID.</para>
+        /// </summary>
+        public sealed class GroupNotFound : GroupMembersSelectorError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GroupNotFound> Encoder = new GroupNotFoundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GroupNotFound> Decoder = new GroupNotFoundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="GroupNotFound" />
+            /// class.</para>
+            /// </summary>
+            private GroupNotFound()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of GroupNotFound</para>
+            /// </summary>
+            public static readonly GroupNotFound Instance = new GroupNotFound();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="GroupNotFound" />.</para>
+            /// </summary>
+            private class GroupNotFoundEncoder : enc.StructEncoder<GroupNotFound>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GroupNotFound value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="GroupNotFound" />.</para>
+            /// </summary>
+            private class GroupNotFoundDecoder : enc.StructDecoder<GroupNotFound>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="GroupNotFound" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GroupNotFound Create()
+                {
+                    return GroupNotFound.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The other object</para>
+        /// </summary>
+        public sealed class Other : GroupMembersSelectorError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Other> Encoder = new OtherEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Other> Decoder = new OtherDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Other" /> class.</para>
+            /// </summary>
+            private Other()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Other</para>
+            /// </summary>
+            public static readonly Other Instance = new Other();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherEncoder : enc.StructEncoder<Other>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Other value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Other" />.</para>
+            /// </summary>
+            private class OtherDecoder : enc.StructDecoder<Other>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Other" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Other Create()
+                {
+                    return Other.Instance;
                 }
 
             }
