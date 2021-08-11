@@ -42,7 +42,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="isInherited">True if the member has access from a parent
         /// folder.</param>
         /// <param name="timeLastSeen">The UTC timestamp of when the user has last seen the
-        /// content, if they have.</param>
+        /// content. Only populated if the user has seen the content and the caller has a plan
+        /// that includes viewer history.</param>
         /// <param name="platformType">The platform on which the user has last seen the
         /// content, or unknown.</param>
         public UserFileMembershipInfo(AccessLevel accessType,
@@ -70,8 +71,9 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The UTC timestamp of when the user has last seen the content, if they
-        /// have.</para>
+        /// <para>The UTC timestamp of when the user has last seen the content. Only populated
+        /// if the user has seen the content and the caller has a plan that includes viewer
+        /// history.</para>
         /// </summary>
         public sys.DateTime? TimeLastSeen { get; protected set; }
 

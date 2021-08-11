@@ -7483,7 +7483,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Sets an active team folder's status to archived and removes all folder and
-        /// file members.</para>
+        /// file members. This endpoint cannot be used for teams that have a shared team
+        /// space.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderArchiveArg">The request parameters</param>
@@ -7515,7 +7516,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Sets an active team folder's status to archived and removes all folder and
-        /// file members.</para>
+        /// file members. This endpoint cannot be used for teams that have a shared team
+        /// space.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
@@ -7668,7 +7670,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new, active, team folder with no members.</para>
+        /// <para>Creates a new, active, team folder with no members. This endpoint can only be
+        /// used for teams that do not already have a shared team space.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderCreateArg">The request parameters</param>
@@ -7699,7 +7702,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new, active, team folder with no members.</para>
+        /// <para>Creates a new, active, team folder with no members. This endpoint can only be
+        /// used for teams that do not already have a shared team space.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="name">Name for the new team folder.</param>
@@ -8021,7 +8025,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Permanently deletes an archived team folder.</para>
+        /// <para>Permanently deletes an archived team folder. This endpoint cannot be used for
+        /// teams that have a shared team space.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderIdArg">The request parameters</param>
@@ -8052,7 +8057,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Permanently deletes an archived team folder.</para>
+        /// <para>Permanently deletes an archived team folder. This endpoint cannot be used for
+        /// teams that have a shared team space.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>

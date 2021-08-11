@@ -33,7 +33,8 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="leaveACopy">Keep a copy of the folder's contents upon relinquishing
-        /// membership.</param>
+        /// membership. This must be set to false when the folder is within a team folder or
+        /// another shared folder.</param>
         public RelinquishFolderMembershipArg(string sharedFolderId,
                                              bool leaveACopy = false)
         {
@@ -68,7 +69,9 @@ namespace Dropbox.Api.Sharing
         public string SharedFolderId { get; protected set; }
 
         /// <summary>
-        /// <para>Keep a copy of the folder's contents upon relinquishing membership.</para>
+        /// <para>Keep a copy of the folder's contents upon relinquishing membership. This must
+        /// be set to false when the folder is within a team folder or another shared
+        /// folder.</para>
         /// </summary>
         public bool LeaveACopy { get; protected set; }
 
