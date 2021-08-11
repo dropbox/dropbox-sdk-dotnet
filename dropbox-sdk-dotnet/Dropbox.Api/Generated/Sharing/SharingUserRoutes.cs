@@ -2905,7 +2905,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="leaveACopy">Keep a copy of the folder's contents upon relinquishing
-        /// membership.</param>
+        /// membership. This must be set to false when the folder is within a team folder or
+        /// another shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2925,7 +2926,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="leaveACopy">Keep a copy of the folder's contents upon relinquishing
-        /// membership.</param>
+        /// membership. This must be set to false when the folder is within a team folder or
+        /// another shared folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3197,7 +3199,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="member">The member to remove from the folder.</param>
         /// <param name="leaveACopy">If true, the removed user will keep their copy of the
         /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
-        /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
+        /// from their Dropbox. This must be set to false when removing a group, or when the
+        /// folder is within a team folder or another shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3221,7 +3224,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="member">The member to remove from the folder.</param>
         /// <param name="leaveACopy">If true, the removed user will keep their copy of the
         /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
-        /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
+        /// from their Dropbox. This must be set to false when removing a group, or when the
+        /// folder is within a team folder or another shared folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send

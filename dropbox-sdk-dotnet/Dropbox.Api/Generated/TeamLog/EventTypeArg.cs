@@ -8398,6 +8398,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ExternalDriveBackupPolicyChanged</para>
+        /// </summary>
+        public bool IsExternalDriveBackupPolicyChanged
+        {
+            get
+            {
+                return this is ExternalDriveBackupPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ExternalDriveBackupPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ExternalDriveBackupPolicyChanged AsExternalDriveBackupPolicyChanged
+        {
+            get
+            {
+                return this as ExternalDriveBackupPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// FileCommentsChangePolicy</para>
         /// </summary>
         public bool IsFileCommentsChangePolicy
@@ -12979,6 +13003,12 @@ namespace Dropbox.Api.TeamLog
                     ExtendedVersionHistoryChangePolicy.Encoder.EncodeFields((ExtendedVersionHistoryChangePolicy)value, writer);
                     return;
                 }
+                if (value is ExternalDriveBackupPolicyChanged)
+                {
+                    WriteProperty(".tag", "external_drive_backup_policy_changed", writer, enc.StringEncoder.Instance);
+                    ExternalDriveBackupPolicyChanged.Encoder.EncodeFields((ExternalDriveBackupPolicyChanged)value, writer);
+                    return;
+                }
                 if (value is FileCommentsChangePolicy)
                 {
                     WriteProperty(".tag", "file_comments_change_policy", writer, enc.StringEncoder.Instance);
@@ -14361,6 +14391,8 @@ namespace Dropbox.Api.TeamLog
                         return EmmRemoveException.Decoder.DecodeFields(reader);
                     case "extended_version_history_change_policy":
                         return ExtendedVersionHistoryChangePolicy.Decoder.DecodeFields(reader);
+                    case "external_drive_backup_policy_changed":
+                        return ExternalDriveBackupPolicyChanged.Decoder.DecodeFields(reader);
                     case "file_comments_change_policy":
                         return FileCommentsChangePolicy.Decoder.DecodeFields(reader);
                     case "file_locking_policy_changed":
@@ -40727,6 +40759,77 @@ namespace Dropbox.Api.TeamLog
                 protected override ExtendedVersionHistoryChangePolicy Create()
                 {
                     return ExtendedVersionHistoryChangePolicy.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed external drive backup policy for team</para>
+        /// </summary>
+        public sealed class ExternalDriveBackupPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ExternalDriveBackupPolicyChanged> Encoder = new ExternalDriveBackupPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ExternalDriveBackupPolicyChanged> Decoder = new ExternalDriveBackupPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ExternalDriveBackupPolicyChanged" /> class.</para>
+            /// </summary>
+            private ExternalDriveBackupPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ExternalDriveBackupPolicyChanged</para>
+            /// </summary>
+            public static readonly ExternalDriveBackupPolicyChanged Instance = new ExternalDriveBackupPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ExternalDriveBackupPolicyChanged" />.</para>
+            /// </summary>
+            private class ExternalDriveBackupPolicyChangedEncoder : enc.StructEncoder<ExternalDriveBackupPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ExternalDriveBackupPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ExternalDriveBackupPolicyChanged" />.</para>
+            /// </summary>
+            private class ExternalDriveBackupPolicyChangedDecoder : enc.StructDecoder<ExternalDriveBackupPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ExternalDriveBackupPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ExternalDriveBackupPolicyChanged Create()
+                {
+                    return ExternalDriveBackupPolicyChanged.Instance;
                 }
 
             }
