@@ -35,7 +35,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="member">The member to remove from the folder.</param>
         /// <param name="leaveACopy">If true, the removed user will keep their copy of the
         /// folder after it's unshared, assuming it was mounted. Otherwise, it will be removed
-        /// from their Dropbox. Also, this must be set to false when kicking a group.</param>
+        /// from their Dropbox. This must be set to false when removing a group, or when the
+        /// folder is within a team folder or another shared folder.</param>
         public RemoveFolderMemberArg(string sharedFolderId,
                                      MemberSelector member,
                                      bool leaveACopy)
@@ -83,7 +84,8 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>If true, the removed user will keep their copy of the folder after it's
         /// unshared, assuming it was mounted. Otherwise, it will be removed from their
-        /// Dropbox. Also, this must be set to false when kicking a group.</para>
+        /// Dropbox. This must be set to false when removing a group, or when the folder is
+        /// within a team folder or another shared folder.</para>
         /// </summary>
         public bool LeaveACopy { get; protected set; }
 
