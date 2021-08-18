@@ -8224,6 +8224,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// CaptureTranscriptPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsCaptureTranscriptPolicyChangedDetails
+        {
+            get
+            {
+                return this is CaptureTranscriptPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CaptureTranscriptPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CaptureTranscriptPolicyChangedDetails AsCaptureTranscriptPolicyChangedDetails
+        {
+            get
+            {
+                return this as CaptureTranscriptPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ClassificationChangePolicyDetails</para>
         /// </summary>
         public bool IsClassificationChangePolicyDetails
@@ -13217,6 +13241,12 @@ namespace Dropbox.Api.TeamLog
                     CameraUploadsPolicyChangedDetails.Encoder.EncodeFields((CameraUploadsPolicyChangedDetails)value, writer);
                     return;
                 }
+                if (value is CaptureTranscriptPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "capture_transcript_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    CaptureTranscriptPolicyChangedDetails.Encoder.EncodeFields((CaptureTranscriptPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is ClassificationChangePolicyDetails)
                 {
                     WriteProperty(".tag", "classification_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -14679,6 +14709,8 @@ namespace Dropbox.Api.TeamLog
                         return AppPermissionsChangedDetails.Decoder.DecodeFields(reader);
                     case "camera_uploads_policy_changed_details":
                         return CameraUploadsPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "capture_transcript_policy_changed_details":
+                        return CaptureTranscriptPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "classification_change_policy_details":
                         return ClassificationChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "computer_backup_policy_changed_details":
@@ -46683,6 +46715,96 @@ namespace Dropbox.Api.TeamLog
                 public override CameraUploadsPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new CameraUploadsPolicyChangedDetails(global::Dropbox.Api.TeamLog.CameraUploadsPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The capture transcript policy changed details object</para>
+        /// </summary>
+        public sealed class CaptureTranscriptPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CaptureTranscriptPolicyChangedDetails> Encoder = new CaptureTranscriptPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CaptureTranscriptPolicyChangedDetails> Decoder = new CaptureTranscriptPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CaptureTranscriptPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public CaptureTranscriptPolicyChangedDetails(global::Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CaptureTranscriptPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private CaptureTranscriptPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CaptureTranscriptPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class CaptureTranscriptPolicyChangedDetailsEncoder : enc.StructEncoder<CaptureTranscriptPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CaptureTranscriptPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("capture_transcript_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CaptureTranscriptPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class CaptureTranscriptPolicyChangedDetailsDecoder : enc.StructDecoder<CaptureTranscriptPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CaptureTranscriptPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CaptureTranscriptPolicyChangedDetails Create()
+                {
+                    return new CaptureTranscriptPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CaptureTranscriptPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new CaptureTranscriptPolicyChangedDetails(global::Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
