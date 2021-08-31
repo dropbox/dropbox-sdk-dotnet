@@ -18,10 +18,9 @@ jobs:
         with:
           args: install docfx
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
       - name: DocFX Build
-        working-directory: docs
-        run: docfx ../docfx.json
+        run: docfx docfx.json
         continue-on-error: false
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
