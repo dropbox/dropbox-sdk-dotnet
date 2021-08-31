@@ -13,15 +13,12 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.101
-      - name: Setup DocFX
-        uses: crazy-max/ghaction-chocolatey@v1
-        with:
-          args: install docfx
       - name: Install dependencies
         run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
-      - name: DocFX Build
-        run: docfx docfx.json
-        continue-on-error: false
+          - uses: nikeee/docfx-action@v1.0.0
+      name: Build Documentation
+      with:
+        args: docfx.json
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
